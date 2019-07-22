@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068981"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Tutorial: Uso de una condición de prueba personalizada para comprobar el resultado de un procedimiento almacenado
 En el tutorial de esta extensión de característica, creará una condición de prueba y comprobará su funcionalidad creando una prueba unitaria de SQL Server. El proceso incluye la creación de un proyecto de biblioteca de clases para la condición de prueba, así como su firma y su instalación. Si ya tiene una condición de prueba que desea actualizar, vea [Cómo: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  

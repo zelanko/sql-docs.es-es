@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a22f789aa967f7a6dcb9582083bf22c5698e99e7
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141219"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +69,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 ||||
 |---|---|---|
-|** _\* SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**\* _SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -435,7 +434,7 @@ El espacio total usado por los búferes viene determinado por: *buffercount/maxt
 > [!NOTE]
 > Para obtener información importante sobre cómo usar la opción `BUFFERCOUNT`, vea el blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Una opción de transferencia de datos BufferCount incorrecta puede agotar la memoria).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).
 
 > [!NOTE]
 > Al crear copias de seguridad con el Servicio del objeto de escritura de SQL, si la base de datos tiene configurado [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) o incluye [grupos de archivos con optimización para memoria](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), el valor de `MAXTRANSFERSIZE` en el momento de una restauración debe ser mayor o igual que el valor de `MAXTRANSFERSIZE` que se usó cuando se creó la copia de seguridad.
@@ -931,7 +930,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* Instancia administrada de <br />SQL Database \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Instancia administrada de <br />SQL Database \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -1045,7 +1044,7 @@ El espacio total usado por los búferes viene determinado por: *buffercount/maxt
 > [!NOTE]
 > Para obtener información importante sobre cómo usar la opción `BUFFERCOUNT`, vea el blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Una opción de transferencia de datos BufferCount incorrecta puede agotar la memoria).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).
+MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } Especifica la unidad de transferencia mayor (en bytes) que se debe usar entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el medio de copia de seguridad. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).
 
 > [!NOTE]
 > En el caso de las bases de datos con [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) habilitado que tienen un único archivo de datos, el valor predeterminado de `MAXTRANSFERSIZE` es 65536 (64 KB). En las bases de datos que no tienen cifrado TDE, el valor predeterminado de `MAXTRANSFERSIZE` es 1048576 (1 MB) cuando se usa la copia de seguridad en DISK y 65536 (64 KB) al usar VDI o TAPE.
@@ -1116,7 +1115,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 
 &nbsp;
 

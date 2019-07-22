@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1b91df1ecce9749ebdec3515a339ac31f2507b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2ad973cf845817a0dbd251bbee23ac6f13d7c04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110584"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Actualizar un proyecto de prueba anterior que contiene pruebas unitarias de base de datos
 Puede actualizar un proyecto de prueba anterior, que se creó en Visual Studio 2010 y que contiene pruebas unitarias de base de datos, para que use el nuevo entorno de ejecución y las nuevas herramientas de pruebas unitarias de base de datos de SQL Server Data Tools. Una vez actualizado un proyecto anterior, puede agregar pruebas unitarias de SQL Server al proyecto (consulte [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)) para obtener más información.  

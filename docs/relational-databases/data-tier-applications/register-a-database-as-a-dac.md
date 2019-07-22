@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cfcb3a58ee61e7cd4404ec32799fbc265acdc8f6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134678"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar una base de datos como una DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "53591359"
   
  No puede registra ninguna DAC si la base de datos tiene objetos que no se admiten en una DAC o usuarios contenidos. Para obtener más información acerca de los objetos admitidos por una DAC, vea [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  El registro de una DAC en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] requiere, por lo menos, permisos ALTER ANY LOGIN y DEFINITION VIEW en el ámbito de la base de datos, permisos SELECT en **sys.sql_expression_dependencies**y pertenencia al rol fijo de servidor **dbcreator** . Los miembros del rol fijo de servidor **sysadmin** o la cuenta de administrador del sistema de SQL Server integrada denominada **sa** también pueden registrar una DAC. El registro de una DAC que no tiene inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles **dbmanager** o **serveradmin** . El registro de una DAC que tiene inicios de sesión en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiere la pertenencia a los roles **loginmanager** o **serveradmin** .  
   
 ##  <a name="UsingRegisterDACWizard"></a> Usar el Asistente para registrar aplicación de capa de datos  
@@ -69,7 +68,7 @@ ms.locfileid: "53591359"
   
  **No volver a mostrar esta página.** - Haga clic en la casilla para evitar que la página se muestre en el futuro.  
   
- **Siguiente >**: avanza a la página **Definir propiedades**.  
+ **Siguiente >** : avanza a la página **Definir propiedades**.  
   
  **Cancelar** : sale del asistente sin registrar una DAC.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "53591359"
   
  **< Anterior**: vuelve a la página **Introducción**.  
   
- **Siguiente >**: comprueba que se puede crear una DAC a partir de los objetos de la base de datos y muestra los resultados en la página **Validación y resumen**.  
+ **Siguiente >** : comprueba que se puede crear una DAC a partir de los objetos de la base de datos y muestra los resultados en la página **Validación y resumen**.  
   
  **Cancelar** : sale del asistente sin registrar la DAC.  
   
@@ -102,18 +101,18 @@ ms.locfileid: "53591359"
   
  **< Anterior**: vuelve a la página **Definir propiedades** para cambiar las entradas.  
   
- **Siguiente >**: registra la DAC y muestra los resultados en la página **Registrar DAC**.  
+ **Siguiente >** : registra la DAC y muestra los resultados en la página **Registrar DAC**.  
   
  **Cancelar** : sale del asistente sin registrar la DAC.  
   
  [Usar el Asistente para registrar aplicación de capa de datos](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Validar objetos  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Muestra una barra de progreso cuando el asistente comprueba las dependencias de los objetos recuperados y comprueba que son todos objetos válidos para una DAC. _SchemaName_**.**_ObjectName_ identifican el objeto que se está comprobando.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Muestra una barra de progreso cuando el asistente comprueba las dependencias de los objetos recuperados y comprueba que son todos objetos válidos para una DAC. _SchemaName_ **.** _ObjectName_ identifican el objeto que se está comprobando.  
   
  **< Anterior**: vuelve a la página **Definir propiedades** para cambiar las entradas.  
   
- **Siguiente >**: registra la DAC y muestra los resultados en la página **Registrar DAC**.  
+ **Siguiente >** : registra la DAC y muestra los resultados en la página **Registrar DAC**.  
   
  **Cancelar** : sale del asistente sin registrar la DAC.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "53591359"
   
  **< Anterior**: vuelve a la página **Definir propiedades** para cambiar las entradas.  
   
- **Siguiente >**: registra la DAC y muestra los resultados en la página **Registrar DAC**.  
+ **Siguiente >** : registra la DAC y muestra los resultados en la página **Registrar DAC**.  
   
  **Cancelar** : sale del asistente sin registrar la DAC.  
   

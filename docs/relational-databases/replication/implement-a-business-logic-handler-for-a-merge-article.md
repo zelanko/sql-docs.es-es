@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8aed6c45ec44e6373db0d018a1190f7295e9775f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8285b4de85be5ce6f6fe79b60afe68650634a2b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128083"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementar un controlador de lógica de negocios para un artículo de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,18 +100,18 @@ ms.locfileid: "47658083"
   
 1.  En el publicador, ejecute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) para comprobar que el ensamblado aún no se ha registrado como un controlador de lógica de negocios.  
   
-2.  En el distribuidor, ejecute [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md), especificando un nombre descriptivo para el controlador de lógica de negocios para **@article_resolver**, un valor de **true** para **@is_dotnet_assembly**, el nombre del ensamblado para **@dotnet_assembly_name** y el nombre completo de la clase que invalida a <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para **@dotnet_class_name**.  
+2.  En el distribuidor, ejecute [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md), especificando un nombre descriptivo para el controlador de lógica de negocios para **@article_resolver** , un valor de **true** para **@is_dotnet_assembly** , el nombre del ensamblado para **@dotnet_assembly_name** y el nombre completo de la clase que invalida a <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  Si el ensamblado no está implementado en el mismo directorio que el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia de forma sincrónica dicho agente o en la caché de ensamblados global (GAC), debe especificar la ruta de acceso completa con el nombre del ensamblado para **@dotnet_assembly_name**. Al usar la sincronización web, debe especificar la ubicación de ensamblado en el servidor web.  
+    >  Si el ensamblado no está implementado en el mismo directorio que el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia de forma sincrónica dicho agente o en la caché de ensamblados global (GAC), debe especificar la ruta de acceso completa con el nombre del ensamblado para **@dotnet_assembly_name** . Al usar la sincronización web, debe especificar la ubicación de ensamblado en el servidor web.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Para usar un controlador de lógica de negocios con un nuevo artículo de tabla  
   
-1.  Ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para definir un artículo, especificando el nombre descriptivo del controlador de lógica de negocios para **@article_resolver**. Para más información, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+1.  Ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para definir un artículo, especificando el nombre descriptivo del controlador de lógica de negocios para **@article_resolver** . Para más información, consulte [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Para usar un controlador de lógica de negocios con un artículo de tabla existente  
   
-1.  Ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) especificando **@publication**, **@article** un valor de **article_resolver** para **@property** y el nombre descriptivo del controlador de lógica de negocios para **@value**.  
+1.  Ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) especificando **@publication** , **@article** un valor de **article_resolver** para **@property** y el nombre descriptivo del controlador de lógica de negocios para **@value** .  
   
 ###  <a name="TsqlExample"></a> Ejemplos (programación de la replicación)  
  Este ejemplo muestra un controlador de lógica de negocios que crea un registro de auditoría.  
@@ -125,7 +124,7 @@ ms.locfileid: "47658083"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../relational-databases/replication/codesnippet/tsql/implement-a-business-log_3.sql)]  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 #### <a name="to-create-a-business-logic-handler"></a>Para crear un controlador de lógica de negocios  
   
@@ -239,7 +238,7 @@ ms.locfileid: "47658083"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Implementar un solucionador de conflictos personalizado para un artículo de mezcla](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Depurar un controlador de lógica de negocios &#40;programación de la replicación&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
  [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)   

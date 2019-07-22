@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bbb2bda32081afff414f33a107381bfa46bc571
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084095"
 ---
 # <a name="log-file-viewer-f1-help"></a>Ayuda F1 del Visor de archivos de registro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "47595095"
   
  Para tener acceso a los archivos de registro en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin conexión, se debe tener acceso de lectura tanto al espacio de nombres WMI **Root\Microsoft\SqlServer\ComputerManagement10** como a la carpeta donde están almacenados los archivos de registro. Para obtener más información, vea la sección Seguridad del tema [Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Visor de archivos de registro](../../relational-databases/logs/log-file-viewer.md)   
  [Abrir el Visor de archivos de registro](../../relational-databases/logs/open-log-file-viewer.md)   
  [Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md)  

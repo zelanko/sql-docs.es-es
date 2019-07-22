@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9532f3fc6cb3d21a5cff19b542f1f877827e6553
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 231458e7c49fbffebb5568a9dcb1c3663b8f0c3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006797"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Ejemplo: Solicitud de esquemas como resultados con las opciones XMLDATA y XMLSCHEMA
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> se declara como un espacio de nombres. Para evitar conflictos de espacio de nombres al solicitar varios esquemas de datos XML en distintas consultas FOR XML, el identificador del espacio de nombres ( `Schema1` en este ejemplo) cambia en cada ejecución de la consulta. El identificador del espacio de nombres es **Schema**_**n**_, donde _**n**_ es un número entero.  
+>  <`Schema`> se declara como un espacio de nombres. Para evitar conflictos de espacio de nombres al solicitar varios esquemas de datos XML en distintas consultas FOR XML, el identificador del espacio de nombres ( `Schema1` en este ejemplo) cambia en cada ejecución de la consulta. El identificador del espacio de nombres es **Schema** _**n**_ , donde _**n**_ es un número entero.  
   
  Al especificar la opción `XMLSCHEMA` , se puede solicitar el esquema XSD del resultado.  
   

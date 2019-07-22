@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3001446fbb71e0aab0d765d58fb938d8e3af5e62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b895dcc560a6e42e9ba5abce39ee22b4075bde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002482"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administración y mantenimiento de la instancia de clúster de conmutación por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47738813"
 > [!IMPORTANT]  
 >  No utilice la misma cuenta para la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la cuenta de servicio de WSFC. Si la contraseña cambia en la cuenta de servicio de WSFC, la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no será satisfactoria.  
   
- En [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], se usan SID de servicio para las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ En [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], se usan SID de servicio para las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ## <a name="administering-a-failover-cluster-instance"></a>Administrar una instancia de clúster de conmutación por error  
   
@@ -63,7 +62,7 @@ ms.locfileid: "47738813"
 |Describe el procedimiento que se usa para recuperarse de un error de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Recuperarse de un error en una instancia de clúster de conmutación por error](../../../sql-server/failover-clusters/windows/recover-from-failover-cluster-instance-failure.md)|  
 |Describe el procedimiento que se usa para cambiar el recurso de dirección IP de una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Cambiar la dirección IP de una instancia de clúster de conmutación por error](../../../sql-server/failover-clusters/windows/change-the-ip-address-of-a-failover-cluster-instance.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar los valores de la propiedad HealthCheckTimeout](../../../sql-server/failover-clusters/windows/configure-healthchecktimeout-property-settings.md)   
  [Configurar los valores de la propiedad FailureConditionLevel](../../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md)   
  [Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error](../../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md)  

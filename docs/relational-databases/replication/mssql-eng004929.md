@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d9b1d88-1fbf-4089-b392-687d3b0220ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 47d7a65d50d067179af06e17470d8f9d5e8fecfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89efab8bdda62e4dd57870986f628cfdc6da1a12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067239"
 ---
 # <a name="mssqleng004929"></a>MSSQL_ENG004929
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47696333"
 ## <a name="user-action"></a>Acción del usuario  
  Para quitar la restricción, primero quite el artículo asociado con la tabla. Para obtener más información, vea [Agregar y quitar artículos de publicaciones existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md). Si se produce este error en una base de datos que no está replicada, ejecute [sp_removedbreplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) para asegurarse de que los objetos de la base de datos no están marcados como replicados.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

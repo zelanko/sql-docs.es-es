@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f8d0b6013631cf4b6d888f8e96c24dd9cb83146f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 84050cd000ae53b8b913a9652a4ddb323743c8da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046582"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de seguridad del Agente de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,9 +78,9 @@ ms.locfileid: "54130975"
 |Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|  
 |Agente de lectura de cola|**[\<distribuidor>].\<entero>**|  
   
- \*Para suscripciones de inserción a publicaciones de Oracle, el nombre del trabajo es **\<publicador>-\<publicador**> en lugar de **\<publicador>-\<baseDeDatosDePublicación>**.  
+ \*Para suscripciones de inserción a publicaciones de Oracle, el nombre del trabajo es **\<publicador>-\<publicador**> en lugar de **\<publicador>-\<baseDeDatosDePublicación>** .  
   
- \*\*Para suscripciones de extracción a publicaciones de Oracle, el nombre del trabajo es **\<publicador>-\<baseDeDatosDeDistribución**> en lugar de **\<publicador>-\<baseDeDatosDePublicación>**.  
+ \*\*Para suscripciones de extracción a publicaciones de Oracle, el nombre del trabajo es **\<publicador>-\<baseDeDatosDeDistribución**> en lugar de **\<publicador>-\<baseDeDatosDePublicación>** .  
   
  Al configurar la replicación se especifican las cuentas en las que se ejecutarán los agentes. No obstante, todos los pasos del trabajo se ejecutan en el contexto de seguridad de un *proxy*, por lo que la replicación lleva a cabo internamente las siguientes asignaciones para las cuentas de agente que especifique:  
   

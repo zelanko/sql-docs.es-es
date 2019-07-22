@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1b47a38cd1fc5cc4d95b611dbafbf8d30b22878
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140301"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Ver las dependencias de una tabla
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -45,10 +44,10 @@ ms.locfileid: "52407473"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Necesita el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en sys.sql_expression_dependencies para la base de datos. De forma predeterminada, solo se permite el permiso SELECT a los miembros del rol fijo de base de datos db_owner. Si se conceden los permisos SELECT y VIEW DEFINITION a otro usuario, el receptor puede ver todas las dependencias de la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-the-dependencies-of-a-table"></a>Para ver las dependencias de una tabla  
   
@@ -56,7 +55,7 @@ ms.locfileid: "52407473"
   
 2.  Haga clic con el botón derecho en una tabla y, después, haga clic en **Ver dependencias**.  
   
-3.  En el cuadro de diálogo **Dependencias del objeto**_\<nombre del objeto\>_, seleccione **Objetos que dependen de** _\<nombre del objeto\>_ u **Objetos de los que** **depende**_\<nombre del objeto\>_.  
+3.  En el cuadro de diálogo **Dependencias del objeto** _\<nombre del objeto\>_ , seleccione **Objetos que dependen de** _\<nombre del objeto\>_ u **Objetos de los que** **depende** _\<nombre del objeto\>_ .  
   
 4.  Seleccione un objeto en la cuadrícula **Dependencias** . El tipo de objeto (por ejemplo, "Desencadenador" o "Procedimiento almacenado"), aparece en el cuadro **Tipo** .  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9c087ed280233cadc67abc8cf0160b1c36664bc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57854937595ba57dee8c36bd4877fd05362f2e40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035206"
 ---
 # <a name="how-to-debug-database-objects"></a>Procedimientos: Depuración de objetos de base de datos
 Una prueba unitaria de SQL Server consta de lo siguiente:  

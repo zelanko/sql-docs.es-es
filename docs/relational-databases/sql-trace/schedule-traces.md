@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 620b79db-924b-4502-8af3-39efcfca245d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32d292d18a240554165f2850664faf93ae2a855f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12061040ea7fa1b34d892230fbba73f4c34a1949
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140691"
 ---
 # <a name="schedule-traces"></a>Programar seguimientos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "51669344"
   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)  
   
   

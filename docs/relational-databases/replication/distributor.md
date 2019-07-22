@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d4557c8b7c47904267b7bd4d203e3b4641baee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 910402b059f602d68428f5348ce35921942d918e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128261"
 ---
 # <a name="distributor"></a>Distribuidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47843433"
 > [!NOTE]  
 >  Para usar un servidor remoto como distribuidor, el servidor remoto debe estar configurado como distribuidor. Debe habilitar el servidor con el que se ejecuta el asistente como publicador en dicho distribuidor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar distribución](../../relational-databases/replication/configure-distribution.md)   
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   

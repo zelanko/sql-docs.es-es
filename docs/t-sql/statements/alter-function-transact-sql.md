@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02860ad96192b9f67820381d34f9dc05c6fb54db
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d33471982d291ba1f57d7d3d64a918cec1cc5e91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067490"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -217,7 +216,7 @@ RETURNS return_data_type
   
  Una función puede tener un máximo de 2.100 parámetros. El usuario debe proporcionar el valor de cada parámetro declarado cuando se ejecuta la función, a menos que se defina un valor predeterminado para el parámetro.  
   
- Especifique un nombre de parámetro con una arroba (**@**) como primer carácter. El nombre del parámetro debe cumplir las mismas reglas para [identifiers](../../relational-databases/databases/database-identifiers.md). Los parámetros son locales para la función; los mismos nombres de parámetro se pueden utilizar en otras funciones. Los parámetros solamente pueden ocupar el lugar de constantes; no se pueden utilizar en lugar de nombres de tablas, nombres de columnas o nombres de otros objetos de base de datos.  
+ Especifique un nombre de parámetro con una arroba ( **@** ) como primer carácter. El nombre del parámetro debe cumplir las mismas reglas para [identifiers](../../relational-databases/databases/database-identifiers.md). Los parámetros son locales para la función; los mismos nombres de parámetro se pueden utilizar en otras funciones. Los parámetros solamente pueden ocupar el lugar de constantes; no se pueden utilizar en lugar de nombres de tablas, nombres de columnas o nombres de otros objetos de base de datos.  
   
 > [!NOTE]  
 >  No se respeta ANSI_WARNINGS al pasar parámetros de un procedimiento almacenado, una función definida por el usuario o al declarar y establecer variables en una instrucción de lote. Por ejemplo, si una variable se define como **char(3)** y después se establece en un valor de más de tres caracteres, los datos se truncan hasta el tamaño definido y la instrucción INSERT o UPDATE se ejecuta correctamente.  
@@ -233,11 +232,11 @@ RETURNS return_data_type
   
 -   El esquema **dbo** de la base de datos actual.  
   
- [ **=**_default_ ]  
+ [ **=** _default_ ]  
  Es un valor predeterminado para el parámetro. Si se define un valor *default*, la función se puede ejecutar sin especificar un valor para ese parámetro.  
   
 > [!NOTE]  
->  Se pueden especificar valores predeterminados de parámetros para las funciones CLR, excepto para los tipos de datos **varchar(max)** y **varbinary(max)**.  
+>  Se pueden especificar valores predeterminados de parámetros para las funciones CLR, excepto para los tipos de datos **varchar(max)** y **varbinary(max)** .  
   
  Cuando un parámetro de la función tiene un valor predeterminado, se debe especificar la palabra clave DEFAULT al llamar a la función para recuperar el valor predeterminado. Este comportamiento es distinto del uso de parámetros con valores predeterminados en los procedimientos almacenados, donde la omisión del parámetro implica especificar el valor predeterminado.  
   
@@ -255,11 +254,11 @@ RETURNS return_data_type
  Especifica que la función escalar devuelve un valor escalar.  
   
  TABLE  
- Especifica que el valor devuelto de la función con valores de tabla es una tabla. Solamente se pueden pasar constantes y **@**_local\_variables_ a las funciones con valores de tabla.  
+ Especifica que el valor devuelto de la función con valores de tabla es una tabla. Solamente se pueden pasar constantes y **@** _local\_variables_ a las funciones con valores de tabla.  
   
  En las funciones insertadas con valores de tabla, el valor devuelto de TABLE se define mediante una única instrucción SELECT. Las funciones insertadas no tienen variables devueltas asociadas.  
   
- En las funciones con valores de tabla de múltiples instrucciones, **@**_return\_variable_ es una variable de TABLE, que se usa para almacenar y acumular las filas que se deben devolver como valor de la función. **@**_return\_variable_ solamente se puede especificar para funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], no para funciones CLR.  
+ En las funciones con valores de tabla de múltiples instrucciones, **@** _return\_variable_ es una variable de TABLE, que se usa para almacenar y acumular las filas que se deben devolver como valor de la función. **@** _return\_variable_ solamente se puede especificar para funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], no para funciones CLR.  
   
  *select-stmt*  
  Es la instrucción SELECT individual que define el valor devuelto de una función insertada con valores de tabla.  
@@ -267,7 +266,7 @@ RETURNS return_data_type
  EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Especifica el método de un ensamblado que se enlaza a la función. *assembly_name* debe coincidir con un ensamblado existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos actual con la visibilidad activada. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre completo de espacio de nombres que utiliza un punto (**.**) para separar las partes del espacio de nombres, el nombre de la clase debe delimitarse mediante paréntesis (**[]**) o comillas (**""**). *method_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como método estático en la clase especificada.  
+ Especifica el método de un ensamblado que se enlaza a la función. *assembly_name* debe coincidir con un ensamblado existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos actual con la visibilidad activada. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre completo de espacio de nombres que utiliza un punto ( **.** ) para separar las partes del espacio de nombres, el nombre de la clase debe delimitarse mediante paréntesis ( **[]** ) o comillas ( **""** ). *method_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como método estático en la clase especificada.  
   
 > [!NOTE]  
 >  De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ejecutar código CLR. Se pueden crear, modificar y quitar objetos de base de datos que hagan referencia a módulos de Common Language Runtime, pero estas referencias no se pueden ejecutar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se habilite la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitar esta opción, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
@@ -275,10 +274,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- _\<_table\_type\_definition_\>_**(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,**...*n* ]**)**  
+ _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  Define el tipo de datos de tabla para una función [!INCLUDE[tsql](../../includes/tsql-md.md)]. La declaración de tabla incluye definiciones de columna y restricciones de columna o de tabla.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)** **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Preview in some regions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Define los tipos de datos de tabla para una función CLR. La declaración de tabla solamente incluye nombres de columna y tipos de datos.  
   
@@ -355,7 +354,7 @@ Para obtener una lista de las condiciones que se deben cumplir para poder enlaza
  La propiedad ROWGUIDCOL no exige que los valores almacenados en la columna sean únicos. Del mismo modo, tampoco genera automáticamente valores para nuevas filas insertadas en la tabla. Si desea generar valores únicos para cada columna, use la función NEWID en instrucciones INSERT. Puede especificar un valor predeterminado; sin embargo, no puede especificar NEWID como valor predeterminado.  
   
  IDENTITY  
- Indica que la nueva columna es una columna de identidad. Cuando se agrega una nueva fila a la tabla, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente junto con las restricciones PRIMARY KEY como identificadores de fila exclusivos de la tabla. La propiedad IDENTITY se puede asignar a columnas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)**. Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. Se debe especificar los dos argumentos, *seed* e *increment*, o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
+ Indica que la nueva columna es una columna de identidad. Cuando se agrega una nueva fila a la tabla, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente junto con las restricciones PRIMARY KEY como identificadores de fila exclusivos de la tabla. La propiedad IDENTITY se puede asignar a columnas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)** . Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. Se debe especificar los dos argumentos, *seed* e *increment*, o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
   
  No se puede especificar IDENTITY para las funciones CLR con valores de tabla.  
   

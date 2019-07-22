@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0a4ea1f4977440ee53835f3c96ab5e60b3083ba
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 680e944326046ea2fc7694257977c6bc15a4f959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082270"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE (credencial de ámbito de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Especifica un permiso que puede revocarse en una credencial de ámbito de base de datos. Se muestra a continuación.  
   
- ON CERTIFICATE **::**_credential_name_  
+ ON CERTIFICATE **::** _credential_name_  
  Especifica la credencial de ámbito de bases de datos en la que se va a revocar el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
  *database_principal*  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 83d1ad7e793e7072345ad0b4ada34162d039ed45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111333"
 ---
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>b. Uso de @@IDENTITY y SCOPE_IDENTITY() con una replicación  
+### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Uso de @@IDENTITY y SCOPE_IDENTITY() con una replicación  
  Los ejemplos siguientes muestran cómo se usan `@@IDENTITY` y `SCOPE_IDENTITY()` para las inserciones en una base de datos publicada para la replicación de mezcla. Las dos tablas de los ejemplos se encuentran en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]: `Person.ContactType` no está publicado y `Sales.Customer` sí. La replicación de mezcla agrega desencadenadores a las tablas publicadas. Por lo tanto, `@@IDENTITY` puede devolver el valor de la inserción en una tabla de sistema de replicación en lugar de la inserción en una tabla de usuario.  
   
  La tabla `Person.ContactType` tiene un valor de identidad máximo de 20. Si inserta una fila en la tabla, `@@IDENTITY` y `SCOPE_IDENTITY()` devolverán el mismo valor.  

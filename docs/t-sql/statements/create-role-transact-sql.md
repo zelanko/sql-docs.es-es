@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1dc06f65e1c724466154197d156517b2c72827f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d3eb9e5c5b451854876cf31ae05641f12e8bc722
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006516"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +84,7 @@ CREATE ROLE buyers AUTHORIZATION BenMiller;
 GO  
 ```  
   
-### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>b. Crear un rol de base de datos que es propiedad de un rol fijo de base de datos  
+### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>B. Crear un rol de base de datos que es propiedad de un rol fijo de base de datos  
  En el siguiente ejemplo se crea el rol de base de datos `auditors` que es propiedad del rol fijo de base de datos `db_securityadmin`.  
   
 ```  

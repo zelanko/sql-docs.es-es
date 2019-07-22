@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f4136ac-3784-4a41-a98c-8a02308e4883
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78422797a35ae9bf66941aa987795a07c6e68726
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3f001b2cf1d268a45c12f263040f5560c1411eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111365"
 ---
 # <a name="mssqleng002627"></a>MSSQL_ENG002627
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47621903"
 |Identificador del evento|2627|  
 |Origen del evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Nombre simbólico|N/A|  
+|Nombre simbólico|N/D|  
 |Texto del mensaje|Infracción de la restricción '%.*ls'. No se puede insertar una fila de clave duplicada en el objeto '%.\*ls'.|  
   
 ## <a name="explanation"></a>Explicación  
@@ -58,7 +57,7 @@ ms.locfileid: "47621903"
   
      En la replicación de mezcla y la replicación transaccional con suscripciones actualizables, las columnas de identidad deben ser administradas automáticamente por la replicación. En la replicación transaccional de punto a punto, es necesario administrarlas manualmente. Para obtener más información, vea [Replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Replicación de mezcla](../../relational-databases/replication/merge/merge-replication.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c2addb0ed4dea6114b1abaa5e7474d6de6912f75
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 5389413091f57a5a0dfdad887edad675ee68ff64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136932"
 ---
 # <a name="change-workload-group-settings"></a>Cambiar la configuración del grupo de cargas de trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "55689818"
   
  Se permite la creación de índices para usar más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos admite este tratamiento especial; sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y el grupo de recursos de servidor.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Cambiar la configuración del grupo de cargas de trabajo requiere el permiso CONTROL SERVER.  
   
 ##  <a name="ChgWGProp"></a> Cambiar la configuración del grupo de cargas de trabajo mediante SQL Server Management Studio  

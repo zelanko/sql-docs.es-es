@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 71370adeca366b2002244c7f0aabfbca639579c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52600384a59ba02adee6dd897ff027f5611adf90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112509"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Crear una transformación asincrónica con el componente de script
 
@@ -75,7 +74,7 @@ ms.locfileid: "65805203"
 ### <a name="adding-variables"></a>Agregar variables  
  Si hay variables existentes cuyos valores quiere usar en el script, puede agregarlas en los campos de propiedades ReadOnlyVariables y ReadWriteVariables de la página **Script** del **Editor de transformación Script**.  
   
- Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. Para seleccionar varias variables, también puede hacer clic en el botón de puntos suspensivos (**…**) junto a los campos de propiedades **ReadOnlyVariables** y **ReadWriteVariables** y, después, seleccionar las variables en el cuadro de diálogo **Seleccionar variables**.  
+ Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. Para seleccionar varias variables, también puede hacer clic en el botón de puntos suspensivos ( **…** ) junto a los campos de propiedades **ReadOnlyVariables** y **ReadWriteVariables** y, después, seleccionar las variables en el cuadro de diálogo **Seleccionar variables**.  
   
  Para obtener información general sobre la forma de usar variables con el componente de script, vea [Using Variables in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md) (Uso de variables con el componente de script).  
   

@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d6e2115c42fb5fa7e0abb71e12db0c8c28569a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082169"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lección 6-4: Implementar el paquete de la lección 6
 
@@ -39,7 +38,7 @@ En esta tarea se:
   
 1.  Seleccione **Iniciar** > **Todos los programas** > **Microsoft SQL Server 2017** y luego **SQL Management Studio**.  
   
-2.  En el cuadro de diálogo **Conectar con el servidor**, compruebe la configuración predeterminada y seleccione **Conectar**. Para conectarse, el nombre del **Servidor** debe ser el nombre del equipo en el que está instalado SQL Server. Si el **Motor de base de datos** es una instancia con nombre, el nombre del **Servidor** debe ser el nombre de la instancia con el formato *\<nombre_equipo>\\\<nombre_instancia>*. 
+2.  En el cuadro de diálogo **Conectar con el servidor**, compruebe la configuración predeterminada y seleccione **Conectar**. Para conectarse, el nombre del **Servidor** debe ser el nombre del equipo en el que está instalado SQL Server. Si el **Motor de base de datos** es una instancia con nombre, el nombre del **Servidor** debe ser el nombre de la instancia con el formato *\<nombre_equipo>\\\<nombre_instancia>* . 
   
 3.  En el **Explorador de objetos**, expanda **Catálogos de Integration Services**.  
   
@@ -97,7 +96,7 @@ Al cerrar el Asistente para la conversión de proyectos de Integration Services,
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Crear y rellenar una carpeta de nuevos datos de ejemplo  
   
-1.  En el **Explorador de Windows**, en el nivel raíz de la unidad (por ejemplo, **C:\\**), cree una carpeta denominada **Datos de ejemplo dos**.  
+1.  En el **Explorador de Windows**, en el nivel raíz de la unidad (por ejemplo, **C:\\** ), cree una carpeta denominada **Datos de ejemplo dos**.  
   
 2.  Abra la carpeta **Datos de ejemplo** desde los [requisitos previos de la lección 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites) y copie cualquiera de los tres archivos de ejemplo.  
   

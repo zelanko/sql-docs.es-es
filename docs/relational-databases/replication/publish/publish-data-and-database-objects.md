@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cdf69cebcb9bae567ebaf4df898a7d6940e881b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085346"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar datos y objetos de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +152,7 @@ ms.locfileid: "54129015"
 -   Para publicar un objeto de base de datos que depende de uno o más objetos de base de datos, debe publicar todos los objetos a los que se hace referencia. Por ejemplo, si publica una vista que depende de una tabla, también debe publicar la tabla.  
   
     > [!NOTE]  
-    >  Si se agrega un artículo a una publicación de combinación y ya hay un artículo que depende de este nuevo artículo, debe especificar un orden de procesamiento para los dos artículos con el parámetro **@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) y [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **@processing_order** de **sp_addmergearticle**y el valor **2** para el parámetro **@processing_order** de **sp_changemergearticle**; especifique el nombre de la tabla para el parámetro **@article**. Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
+    >  Si se agrega un artículo a una publicación de combinación y ya hay un artículo que depende de este nuevo artículo, debe especificar un orden de procesamiento para los dos artículos con el parámetro **@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) y [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **@processing_order** de **sp_addmergearticle**y el valor **2** para el parámetro **@processing_order** de **sp_changemergearticle**; especifique el nombre de la tabla para el parámetro **@article** . Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
   
 -   Los nombres de publicación no pueden incluir los caracteres siguientes: % * [ ] | : " ? \ / < >.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "54129015"
   
 -   Para artículos de publicaciones que utilizan instantáneas en modo de carácter (que se utilizan para los que no son suscriptores de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y para los suscriptores de [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): de manera predeterminada, el propietario se deja en blanco. Como valor predeterminado del propietario se utiliza el propietario asociado con la cuenta utilizada por el Agente de distribución o el Agente de mezcla para conectarse con el suscriptor.  
   
- El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo: \<**_artículo_**>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para obtener más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) (Definir un artículo) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ El propietario del objeto se puede cambiar mediante el cuadro de diálogo **Propiedades del artículo: \<** _artículo_ **>** y mediante los siguientes procedimientos almacenados: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** y **sp_changemergearticle**. Para obtener más información, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md) (Definir un artículo) y [Ver y modificar las propiedades de un artículo](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Publicar datos en suscriptores que se ejecutan en versiones anteriores de SQL Server  
   
@@ -232,7 +231,7 @@ ms.locfileid: "54129015"
   
      Para obtener más información sobre estos parámetros, vea [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) y [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   
--   La replicación transaccional y la replicación de mezcla sin filtrar admiten la publicación de una tabla en varias publicaciones y la posterior suscripción en una única tabla en la base de datos de suscripciones (es lo que normalmente se denomina un escenario de acumulación). Este tipo de escenario se suele utilizar para agregar subconjuntos de datos de varias ubicaciones en una tabla en un suscriptor central. Las publicaciones de combinación filtradas no admiten el escenario de suscriptor central. En la replicación de mezcla, la acumulación se suele implementar a través de una única publicación con filtros de fila con parámetros. Para obtener más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   La replicación transaccional y la replicación de mezcla sin filtrar admiten la publicación de una tabla en varias publicaciones y la posterior suscripción en una única tabla en la base de datos de suscripciones (es lo que normalmente se denomina un escenario de acumulación). Este tipo de escenario se suele utilizar para agregar subconjuntos de datos de varias ubicaciones en una tabla en un suscriptor central. Las publicaciones de combinación filtradas no admiten el escenario de suscriptor central. En la replicación de mezcla, la acumulación se suele implementar a través de una única publicación con filtros de fila con parámetros. Para obtener más información, consulte [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f214f05b-5f0b-4786-b2ad-b8b4b6e58d72
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e5ed6c7f96b0c436e3b2df7da342a4b3f88ca5d0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 57647a5ddd5f5bb98095f951d3fd3522757e0616
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087134"
 ---
 # <a name="keep-the-locks-configuration-option-default-value"></a>Mantener el valor predeterminado de la opción de configuración Bloqueos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ EXEC sp_configure 'locks', 0;
   
  [Artículo 271509 de Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?linkid=117788)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

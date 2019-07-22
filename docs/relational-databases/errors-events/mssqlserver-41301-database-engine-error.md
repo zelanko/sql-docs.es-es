@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c6127e1e-2846-4ee9-bc42-2d896ea9730e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd700923bb41475c7ee9880f812adf6155407218
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a8000007cdf122e01d306978b8fb6612f6359ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043490"
 ---
 # <a name="mssqlserver41301"></a>MSSQLSERVER_41301
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,6 +40,6 @@ Este error también puede producirse si hay demasiadas transacciones dependiente
 ## <a name="user-action"></a>Acción del usuario  
 No haga ningún trabajo en la transacción. Llame a ROLLBACK TRAN para revertir la transacción. Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)  
   

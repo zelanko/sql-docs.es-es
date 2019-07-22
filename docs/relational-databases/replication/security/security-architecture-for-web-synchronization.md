@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: da88119ea55f758d6c56a72a2acd8ac5807bf714
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051852"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitectura de seguridad para la sincronización web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ ms.locfileid: "54124665"
 |Tipo de cuenta|Dónde se especifica la cuenta|  
 |---------------------|------------------------------------|  
 |Usuario de Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: los parámetros **@job_login** y **@job_password** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO (Replication Management Objects): las propiedades <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> para <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Cuenta de servicio de Windows para el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Administrador de configuración de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
+|Cuenta de servicio de Windows para el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Administrador de configuración de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |Aplicación independiente|El Agente de mezcla se ejecuta en el contexto del usuario de Windows que ejecuta la aplicación.|  
   
-## <a name="b-connection-to-the-subscriber"></a>b. Conexión al suscriptor  
+## <a name="b-connection-to-the-subscriber"></a>B. Conexión al suscriptor  
  El Agente de mezcla se conecta al suscriptor mediante la autenticación de Windows o la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El usuario de Windows o el inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que especifique debe asociarse a un usuario de base de datos que sea miembro del rol fijo de base de datos **dbowner** en la base de datos de suscripciones.  
   
 > [!NOTE]  

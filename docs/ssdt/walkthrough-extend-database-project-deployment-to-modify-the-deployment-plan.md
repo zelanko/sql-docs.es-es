@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fbd30a8b0e112d74bf9bd0d009592d753688fadd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d683bc743fe621b35cdc59588ce04f6ee96c5bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068974"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Tutorial: Ampliación de la implementación del proyecto de base de datos para modificar el plan de implementación
 Puede crear colaboradores de implementación para realizar acciones personalizadas al implementar un proyecto de SQL. Puede crear un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) o un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Utilice un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) para cambiar el plan antes de ejecutarlo y un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) para realizar operaciones mientras se ejecuta el plan. En este tutorial, creará un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) denominado SqlRestartableScriptContributor que agrega instrucciones IF a los lotes del script de implementación para permitir volver a ejecutar el script hasta que se completen en el caso de que se produzca un error durante la ejecución.  

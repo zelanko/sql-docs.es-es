@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0891c74cb08e30d497c6207596693e855283d5eb
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 929262bc559730b99407415a9b907091a479289f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087032"
 ---
 # <a name="outdated-backup"></a>Copia de seguridad no actualizada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "51512360"
   
  [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc5fb9ba2354c8ceb77066b5730a99949edc5ca6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 86f2d59e142458e68fe3946f7d6f56956b6562e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120407"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Información de publicación, Todas las suscripciones (Publicación de combinación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

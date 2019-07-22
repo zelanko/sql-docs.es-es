@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e99b9c4fbfa9b0d20a78a9d76e4730ce46966d3b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078027"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directiva TYPE en consultas FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ GO
 ```  
   
 ### <a name="querying-results-of-a-for-xml-query"></a>Consultar los resultados de una consulta FOR XML  
- Las consultas FOR XML devuelven XML. Por tanto, puede aplicar métodos del tipo **xml** , como **query()** y **value()**, al resultado XML devuelto por las consultas FOR XML.  
+ Las consultas FOR XML devuelven XML. Por tanto, puede aplicar métodos del tipo **xml** , como **query()** y **value()** , al resultado XML devuelto por las consultas FOR XML.  
   
  En la consulta siguiente, se usa el método `query()` del tipo de datos **xml** para consultar el resultado de la consulta `FOR XML`. Para obtener más información, vea [query&#40;&#41; &#40;método de tipo de datos xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
@@ -128,7 +127,7 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  La expresión de ruta de acceso XQuery del método `value()` recupera el primer número de teléfono de un contacto de cliente cuyo `BusinessEntityID` es `1`.  
   
 > [!NOTE]  
->  Si no se especifica la directiva TYPE, se devolverá el resultado de la consulta FOR XML con el tipo **nvarchar(max)**.  
+>  Si no se especifica la directiva TYPE, se devolverá el resultado de la consulta FOR XML con el tipo **nvarchar(max)** .  
   
 ### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>Utilizar resultados de consultas FOR XML en INSERT, UPDATE y DELETE (DML de Transact-SQL)  
  En el ejemplo siguiente se muestra el modo en el que se pueden utilizar las consultas FOR XML en instrucciones del lenguaje de manipulación de datos (DML). En este ejemplo, `FOR XML` devuelve una instancia del tipo **xml** . La instrucción `INSERT` inserta esta instancia de tipo XML en una tabla.  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b79d00b02f06395a083ee93a2916a7d3aa5f0233
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f6888525a9b213806267d253fca9c8f2c391766
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065595"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ALTER FULLTEXT CATALOG catalog_name
   
  Tenga en cuenta que, en función de la cantidad de datos indizados, una combinación maestra puede llevar cierto tiempo. La combinación maestra de una cantidad grande de datos puede crear una transacción de larga duración, con lo que se retrasa el truncamiento del registro de transacciones durante el punto de comprobación. En este caso, el registro de transacciones podría crecer significativamente bajo el modelo de recuperación completa. Como práctica recomendada, asegúrese de que su registro de transacciones contenga el espacio suficiente para una transacción de larga duración antes de reorganizar un índice de texto completo grande en una base de datos que use el modelo de recuperación completa. Para obtener más información, vea [Administrar el tamaño del archivo de registro de transacciones](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
   
- AS DEFAULT   
+ AS DEFAULT  
  Especifica que este catálogo es el predeterminado. Cuando se crean índices de texto completo sin especificar catálogos, se utiliza el catálogo predeterminado. Si hay un catálogo de texto completo predeterminado, al establecer este catálogo como AS DEFAULT, se invalidará el catálogo predeterminado existente.  
   
 ## <a name="permissions"></a>Permisos  
@@ -94,7 +93,7 @@ GO
 --Returned 0, which means the catalog is not accent sensitive.  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   

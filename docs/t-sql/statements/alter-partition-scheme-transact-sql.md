@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b184b04c2f1535aed86d0eb2dc1fd33a840f0e0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 593c2d8bf9cff3e10aaafc339aa82ef16c4bc09f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071238"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -83,7 +82,7 @@ NEXT USED test5fg;
   
  El grupo de archivos `test5fg` recibirá las particiones adicionales de una tabla o índice con particiones como resultado de una instrucción ALTER PARTITION FUNCTION.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   

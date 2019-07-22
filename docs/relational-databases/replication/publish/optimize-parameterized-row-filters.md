@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2c268c812f6629e2d6e77f199588bc62c9d45dfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df643e5881a4c53ee2a55c2cda53cdc3b3279ef5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059438"
 ---
 # <a name="optimize-parameterized-row-filters"></a>Optimizar los filtros de fila con parámetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47621343"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -47,23 +46,23 @@ ms.locfileid: "47621343"
   
      Con suscriptores de [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact, keep_partition_changes se debe establecer en true para asegurarse de que las eliminaciones se propagan correctamente. Si se establece en false, el suscriptor puede tener más filas de las esperadas.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Para optimizar los filtros de fila con parámetros se puede utilizar la siguiente configuración:  
   
  **Partition Options**  
- Establezca esta opción en la página **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>**, o en el cuadro de diálogo **Agregar filtro**. Los dos cuadros de diálogo están disponibles en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**. El cuadro de diálogo **Propiedades del artículo: \<artículo>** le permite especificar valores adicionales para esta opción que no están disponibles en el cuadro de diálogo **Agregar filtro**.  
+ Establezca esta opción en la página **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , o en el cuadro de diálogo **Agregar filtro**. Los dos cuadros de diálogo están disponibles en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . El cuadro de diálogo **Propiedades del artículo: \<artículo>** le permite especificar valores adicionales para esta opción que no están disponibles en el cuadro de diálogo **Agregar filtro**.  
   
  **Calcular particiones previamente**  
- Esta opción se establece en **True** de forma predeterminada si los artículos de la publicación cumplen un conjunto de requisitos. Para obtener más información sobre estos requisitos, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). Modifique esta opción en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**.  
+ Esta opción se establece en **True** de forma predeterminada si los artículos de la publicación cumplen un conjunto de requisitos. Para obtener más información sobre estos requisitos, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md). Modifique esta opción en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
   
  **Optimizar sincronización**  
- Esta opción debe establecerse en **True** solamente si **Calcular particiones previamente** se establece en **False**. Establezca esta opción en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**.  
+ Esta opción debe establecerse en **True** solamente si **Calcular particiones previamente** se establece en **False**. Establezca esta opción en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
   
- Para obtener más información sobre el uso del Asistente para nueva publicación y el acceso al cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Para obtener más información sobre el uso del Asistente para nueva publicación y el acceso al cuadro de diálogo **Propiedades de la publicación: \<Publicación>** , vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-partition-options-in-the-add-filter-or-edit-filter-dialog-box"></a>Para establecer opciones de partición en el cuadro de diálogo Agregar filtro o Editar filtro  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, haga clic en **Agregar** y luego en **Agregar filtro**.  
+1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Agregar** y luego en **Agregar filtro**.  
   
 2.  Cree un filtro con parámetros. Para más información, consulte [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -77,15 +76,15 @@ ms.locfileid: "47621343"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+5.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
 #### <a name="to-set-partition-options-in-the-article-properties---article-dialog-box"></a>Para establecer Opciones de partición en el cuadro de diálogo Propiedades del artículo: \<artículo>  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione una tabla y luego haga clic en **Propiedades del artículo**.  
+1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla y luego haga clic en **Propiedades del artículo**.  
   
 2.  Haga clic en **Establecer propiedades del artículo de Tabla resaltado** o **Establecer propiedades de todos los artículos de la tabla**.  
   
-3.  En la sección **Objeto de destino** de la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>**, especifique uno de los siguientes valores para **Opciones de partición**:  
+3.  En la sección **Objeto de destino** de la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , especifique uno de los siguientes valores para **Opciones de partición**:  
   
     -   **Superpuestas**  
   
@@ -99,11 +98,11 @@ ms.locfileid: "47621343"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+5.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
 #### <a name="to-set-precompute-partitions"></a>Para establecer Calcular particiones previamente  
   
-1.  En la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione un valor para la opción **Calcular particiones previamente**. La propiedad es de solo lectura si:  
+1.  En la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione un valor para la opción **Calcular particiones previamente**. La propiedad es de solo lectura si:  
   
     -   La publicación no cumple los requisitos de las particiones precalculadas.  
   
@@ -113,18 +112,18 @@ ms.locfileid: "47621343"
   
 #### <a name="to-set-optimize-synchronization"></a>Para establecer Optimizar sincronización  
   
-1.  En la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione un valor **True** para la opción **Optimizar la sincronización**.  
+1.  En la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione un valor **True** para la opción **Optimizar la sincronización**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
- Para las definiciones de las opciones de filtrado para **@keep_partition_changes** y **@use_partition_groups**, vea [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
+ Para las definiciones de las opciones de filtrado para **@keep_partition_changes** y **@use_partition_groups** , vea [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>Para especificar las optimizaciones de filtro de mezcla al crear una nueva publicación  
   
 1.  En la base de datos de publicación del publicador, ejecute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique **@publication** y un valor de **true** para uno de los siguientes parámetros:  
   
-    -   **@use_partition_groups**: la optimización de mayor rendimiento, siempre que los artículos cumplan los requisitos para las particiones precalculadas. Para obtener más información, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+    -   **@use_partition_groups** : la optimización de mayor rendimiento, siempre que los artículos cumplan los requisitos para las particiones precalculadas. Para obtener más información, vea [Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
     -   **@keep_partition_changes** : use esta optimización si no se pueden usar particiones precalculadas.  
   
@@ -148,22 +147,22 @@ ms.locfileid: "47621343"
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>Para ver y modificar los comportamientos de filtro de mezcla para una publicación existente  
   
-1.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), especificando **@publication**. Tenga en cuenta el valor de **keep_partition_changes** y **use_partition_groups** en el conjunto de resultados.  
+1.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), especificando **@publication** . Tenga en cuenta el valor de **keep_partition_changes** y **use_partition_groups** en el conjunto de resultados.  
   
-2.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique un valor de **use_partition_groups** para **@property** y un valor de **true** o **false** para **@value**.  
+2.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique un valor de **use_partition_groups** para **@property** y un valor de **true** o **false** para **@value** .  
   
-3.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique un valor de **keep_partition_changes** para **@property** y un valor de **true** o **false** para **@value**.  
+3.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique un valor de **keep_partition_changes** para **@property** y un valor de **true** o **false** para **@value** .  
   
     > [!NOTE]  
-    >  Al habilitar **keep_partition_changes**, debe deshabilitar primero **use_partition_groups** y especificar un valor de **1** para **@force_reinit_subscription**.  
+    >  Al habilitar **keep_partition_changes**, debe deshabilitar primero **use_partition_groups** y especificar un valor de **1** para **@force_reinit_subscription** .  
   
-4.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique un valor de **partition_options** para **@property** y el valor adecuado para **@value**. Vea [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para las definiciones de estas opciones de filtrado.  
+4.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique un valor de **partition_options** para **@property** y el valor adecuado para **@value** . Vea [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para las definiciones de estas opciones de filtrado.  
   
 5.  (Opcional) Inicie el Agente de instantáneas para regenerar la instantánea si es necesario. Para obtener información sobre qué cambios exigen la generación de una nueva instantánea, vea [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Generar automáticamente un conjunto de filtros de combinación entre artículos de mezcla &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md)   
- [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Definición y modificación de un filtro de fila con parámetros para un artículo de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

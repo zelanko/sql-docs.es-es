@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f3acc6908dd4f21e5d2d96f360f7de9adb37dabf
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 6fc55d4d0e68d83db7c7684d9c0d5cee3982a6c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086914"
 ---
 # <a name="policy-management-node-object-explorer"></a>Nodo Administración de directivas (Explorador de objetos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "51512456"
   
 -   [Importar directivas (cuadro de diálogo)](../../relational-databases/policy-based-management/import-policies-dialog-box.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

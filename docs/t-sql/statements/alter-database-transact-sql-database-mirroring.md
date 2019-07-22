@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8cdded8444f4778ec7ad46c8b677e6ebb496847b
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065818"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Creación de reflejo de la base de datos ALTER DATABASE (Transact-SQL)
 
@@ -88,11 +87,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
 **'** _partner_server_ **'** Especifica la dirección de red del servidor de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para actuar como un asociado de conmutación por error en la nueva sesión de creación de reflejo de la base de datos. Cada sesión requiere dos asociados: uno empieza como servidor principal y el otro como servidor reflejado. Se recomienda que estos asociados residan en equipos distintos.
 
-Esta opción se especifica una vez por sesión en cada asociado. Para iniciar una sesión de creación de reflejo de la base de datos, se necesitan dos instrucciones ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'**. El orden es relevante. Primero, conéctese al servidor reflejado y especifique la instancia del servidor principal como *partner_server* (SET PARTNER **='**_principal_server_**'**). Después, establezca la conexión con el servidor principal y especifique la instancia del servidor reflejado como *partner_server* (SET PARTNER **='**_mirror_server_**'**); de este modo, se inicia una sesión de creación de reflejo de la base de datos entre estos dos asociados. Para obtener más información, vea [Configurar la creación de reflejo de la base de datos](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
+Esta opción se especifica una vez por sesión en cada asociado. Para iniciar una sesión de creación de reflejo de la base de datos, se necesitan dos instrucciones ALTER DATABASE *database* SET PARTNER **='** _partner_server_ **'** . El orden es relevante. Primero, conéctese al servidor reflejado y especifique la instancia del servidor principal como *partner_server* (SET PARTNER **='** _principal_server_ **'** ). Después, establezca la conexión con el servidor principal y especifique la instancia del servidor reflejado como *partner_server* (SET PARTNER **='** _mirror_server_ **'** ); de este modo, se inicia una sesión de creación de reflejo de la base de datos entre estos dos asociados. Para obtener más información, vea [Configurar la creación de reflejo de la base de datos](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 
 El valor de *partner_server* es una dirección de red de servidor. Tiene la siguiente sintaxis:
 
-TCP **://**_\<dirección del sistema>_**:**_\<puerto>_
+TCP **://** _\<dirección del sistema>_ **:** _\<puerto>_
 
 donde
 
@@ -101,7 +100,7 @@ donde
 
 Para obtener más información, vea [Especificar una dirección de red de servidor - Creación de reflejo de la base de datos](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).
 
-En el ejemplo siguiente, se muestra la cláusula SET PARTNER **='**_partner_server_**'**:
+En el ejemplo siguiente, se muestra la cláusula SET PARTNER **='** _partner_server_ **'** :
 
 ```
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'
@@ -182,7 +181,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
  **'** _witness_server_ **'** Especifica una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que actúe como el servidor testigo para una sesión de creación de reflejo de la base de datos. Solo puede especificar instrucciones SET WITNESS en el servidor principal.
 
-En una instrucción SET WITNESS **='**_witness_server_**'**, la sintaxis de *witness_server* equivale a la sintaxis de *partner_server*.
+En una instrucción SET WITNESS **='** _witness_server_ **'** , la sintaxis de *witness_server* equivale a la sintaxis de *partner_server*.
 
 OFF Quita el testigo de la sesión de creación de reflejo de la base de datos. Si se establece el testigo en OFF, se deshabilita la conmutación automática por error. Si la base de datos se establece en FULL SAFETY y el testigo se establece en OFF, un error del servidor reflejado hace que el servidor principal anule la disponibilidad de la base de datos.
 
@@ -194,7 +193,7 @@ OFF Quita el testigo de la sesión de creación de reflejo de la base de datos. 
 
 La configuración de la creación de reflejo de la base de datos con un testigo requiere configurar la seguridad y preparar la base de datos reflejada, además de usar ALTER DATABASE para configurar los asociados. Para obtener un ejemplo del proceso de configuración completo, vea [Configurar la creación de reflejo de la base de datos](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 
-### <a name="b-manually-failing-over-a-database-mirroring-session"></a>b. Conmutación manual por error en una sesión de creación de reflejo de la base de datos
+### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. Conmutación manual por error en una sesión de creación de reflejo de la base de datos
 
 La conmutación manual por error se puede iniciar desde cualquier asociado de creación de reflejo de la base de datos. Antes de llevar a cabo la conmutación por error, debe comprobar si el servidor principal actual es realmente el servidor principal. Por ejemplo, para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], ejecute la siguiente consulta en la instancia del servidor que crea que es el servidor principal actual:
 

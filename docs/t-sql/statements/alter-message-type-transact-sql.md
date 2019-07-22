@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 42e41f16ba720b8641d8fdf8f8ce40a386de11d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4f54cc7e37c6def3b0fad29851012ef6e1a2829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071280"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ALTER MESSAGE TYPE message_type_name
  *message_type_name*  
  Es el nombre del tipo de mensaje que se va a cambiar. No se pueden especificar nombres de servidor, base de datos o esquema.  
   
- VALIDATION   
+ VALIDATION  
  Especifica cómo [!INCLUDE[ssSB](../../includes/sssb-md.md)] valida el cuerpo del mensaje para mensajes de este tipo.  
   
  Ninguno  
@@ -60,7 +59,7 @@ ALTER MESSAGE TYPE message_type_name
  EMPTY  
  El cuerpo del mensaje debe tener un valor NULL.  
   
- WELL_FORMED_XML   
+ WELL_FORMED_XML  
  El cuerpo del mensaje debe contener XML correcto.  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
@@ -85,7 +84,7 @@ ALTER MESSAGE TYPE
     VALIDATION = WELL_FORMED_XML ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [CREATE MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   

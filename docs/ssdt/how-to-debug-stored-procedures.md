@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f1cc7e8213f9282680f652512fe78c7bc5e8b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929624"
 ---
 # <a name="how-to-debug-stored-procedures"></a>Procedimientos: Depuración de procedimientos almacenados
 El depurador de Transact\-SQL le permite depurar de forma interactiva procedimientos almacenados mostrando la pila de llamadas de SQL, variables locales y parámetros para el procedimiento almacenado de SQL. Como ocurre con la depuración en otros lenguajes de programación, puede ver y modificar variables locales y parámetros, ver variables globales, así como controlar y administrar puntos de interrupción mientras depura un script de Transact\-SQL.  
@@ -57,7 +56,7 @@ En este ejemplo se muestra cómo crear y depurar un procedimiento almacenado de 
   
 7.  Haga clic en la flecha desplegable del botón verde de flecha en la barra de herramientas del editor de Transact\-SQL y seleccione **Ejecutar con el depurador** para ejecutar la consulta con la depuración activada.  
   
-8.  Como alternativa, puede iniciar la depuración desde el Explorador de objetos de SQL Server. Haga clic con el botón derecho en el procedimiento almacenado **AddProduct** (que se encuentra bajo la base de datos **Local** -> **TradeDev** - > **Programación** -> **Procedimientos almacenados**). Seleccione **Procedimiento de depuración…**. Si el objeto necesita parámetros, aparecerá el cuadro de diálogo **Procedimiento de depuración** con una tabla que contiene una fila para cada parámetro. Cada fila de la tabla contiene una columna para el nombre del parámetro y otra para el valor de dicho parámetro. Especifique valores para los parámetros y haga clic en Aceptar.  
+8.  Como alternativa, puede iniciar la depuración desde el Explorador de objetos de SQL Server. Haga clic con el botón derecho en el procedimiento almacenado **AddProduct** (que se encuentra bajo la base de datos **Local** -> **TradeDev** - > **Programación** -> **Procedimientos almacenados**). Seleccione **Procedimiento de depuración…** . Si el objeto necesita parámetros, aparecerá el cuadro de diálogo **Procedimiento de depuración** con una tabla que contiene una fila para cada parámetro. Cada fila de la tabla contiene una columna para el nombre del parámetro y otra para el valor de dicho parámetro. Especifique valores para los parámetros y haga clic en Aceptar.  
   
 9. Asegúrese de que se abre la ventana **Variables locales**. De lo contrario, haga clic en el menú **Depuración**, seleccione **Ventanas** y **Local**.  
   

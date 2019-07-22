@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fafe9e457a29a8247478ed9c638c3bddedeee0f
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 59efa5a8143d448ca322ab1b6efa86cbfa9f66d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934081"
 ---
 # <a name="update-statistics"></a>Actualizar estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "53380866"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Si usa UPDATE STATISTICS o realiza cambios con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], es necesario el permiso ALTER en la tabla o vista. Si usa `sp_updatestats`, necesita pertenecer al rol fijo de servidor **sysadmin** o ser propietario de la base de datos (**dbo**).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-update-a-statistics-object"></a>Para actualizar un objeto de estadísticas  
   
@@ -60,7 +59,7 @@ ms.locfileid: "53380866"
   
 5.  Haga clic con el botón derecho en el objeto de estadísticas que quiere actualizar y seleccione **Propiedades**.  
   
-6.  En el cuadro de diálogo **Propiedades de estadísticas -**_nombre\_estadísticas_, active la casilla **Actualizar estadísticas de estas columnas** y haga clic en **Aceptar**.  
+6.  En el cuadro de diálogo **Propiedades de estadísticas -** _nombre\_estadísticas_, active la casilla **Actualizar estadísticas de estas columnas** y haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

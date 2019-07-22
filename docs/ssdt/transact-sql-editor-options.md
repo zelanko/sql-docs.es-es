@@ -27,13 +27,12 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110631"
 ---
 # <a name="transact-sql-editor-options"></a>Opciones del Editor de Transact-SQL
 Este tema contiene información sobre algunas de las opciones del Editor de Transact-SQL. Para establecer estas opciones, navegue al cuadro de diálogo **Opción** a través del menú **Herramientas\Opciones**.  

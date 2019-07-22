@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dda1ea78f8a3c795562faa52478d736f9525a252
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129367"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permisos: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Almacenamiento de datos paralelos)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- \<permission>[ **,**...*n* ]  
+ \<permission>[ **,** ...*n* ]  
  Uno o varios permisos que se van a conceder, denegar o revocar.  
   
  ON [ \<class_type> :: ] *securable* La cláusula **ON** describe el parámetro protegible en el que se van a conceder, denegar o revocar permisos.  
@@ -88,10 +87,10 @@ REVOKE
  *securable*  
  Nombre del inicio de sesión, base de datos, tabla, vista, esquema, procedimiento, rol o usuario en el que se van a conceder, denegar o revocar permisos. El nombre del objeto se puede especificar con las reglas de nomenclatura de tres partes que se describen en [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
- TO *principal* [ **,**...*n* ]  
+ TO *principal* [ **,** ...*n* ]  
  Una o varias entidades de seguridad a las que se van a conceder, denegar o revocar permisos. "Principal" es el nombre de un inicio de sesión, un usuario de base de datos o un rol de base de datos.  
   
- FROM *principal* [ **,**...*n* ]  
+ FROM *principal* [ **,** ...*n* ]  
  Una o varias entidades de seguridad cuyos permisos se van a revocar.  "Principal" es el nombre de un inicio de sesión, un usuario de base de datos o un rol de base de datos. **FROM** solo se puede usar con una instrucción **REVOKE**. **TO** se puede usar con **GRANT**, **DENY** o **REVOKE**.  
   
  WITH GRANT OPTION  
@@ -244,7 +243,7 @@ REVOKE
   
  ![Póster de permisos de seguridad de APS](../../t-sql/statements/media/aps-security-perms-poster.png "Póster de permisos de seguridad de APS")  
   
- Para descargar una versión a tamaño completo de este póster, vea [Permisos de PDW de SQL Server](https://go.microsoft.com/fwlink/?LinkId=244249) en la sección de archivos del sitio de Yammer de APS (o solicítelo por correo electrónico a **apsdoc@microsoft.com**).  
+ Para descargar una versión a tamaño completo de este póster, vea [Permisos de PDW de SQL Server](https://go.microsoft.com/fwlink/?LinkId=244249) en la sección de archivos del sitio de Yammer de APS (o solicítelo por correo electrónico a **apsdoc@microsoft.com** ).  
   
 ## <a name="default-permissions"></a>Permisos predeterminados  
  En la lista siguiente se describen los permisos predeterminados:  
@@ -276,7 +275,7 @@ GRANT CONTROL SERVER TO [Ted];
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
-### <a name="b-granting-a-server-level-permission-to-a-login"></a>b. Conceder un permiso de nivel de servidor a un inicio de sesión  
+### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. Conceder un permiso de nivel de servidor a un inicio de sesión  
  En el ejemplo siguiente se concede un permiso de nivel de servidor en un inicio de sesión a una entidad de seguridad de servidor (otro inicio de sesión).  
   
 ```  

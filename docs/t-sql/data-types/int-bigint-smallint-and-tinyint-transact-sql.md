@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 758b31fc070c78e4129447cd02ef5c3360c9fc5e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077898"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint y tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,9 +57,9 @@ Las funciones solo devuelven **bigint** si la expresión de parámetro es un tip
 > [!CAUTION]  
 >  Cuando se usan los operadores aritméticos +, -, \*, / o % para llevar a cabo conversiones implícitas o explícitas de valores constantes **int**, **smallint**, **tinyint** o **bigint** en tipos de datos **float**, **real**, **decimal** o **numeric**, las reglas que aplica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al calcular el tipo de datos y la precisión de los resultados de la expresión varían dependiendo de si la consulta tiene parámetros automáticos o no.  
 >   
->  Por lo tanto, expresiones similares en las consultas pueden generar resultados diferentes. Cuando una consulta no tiene parámetros automáticos, el valor constante primero se convierte en **numeric**, cuya precisión es lo suficientemente grande como para conservar el valor de la constante, antes de realizar la conversión al tipo de datos especificado. Por ejemplo, el valor constante 1 se convierte en **numeric (1, 0)** y el valor constante 250 se convierte en **numeric (3, 0)**.  
+>  Por lo tanto, expresiones similares en las consultas pueden generar resultados diferentes. Cuando una consulta no tiene parámetros automáticos, el valor constante primero se convierte en **numeric**, cuya precisión es lo suficientemente grande como para conservar el valor de la constante, antes de realizar la conversión al tipo de datos especificado. Por ejemplo, el valor constante 1 se convierte en **numeric (1, 0)** y el valor constante 250 se convierte en **numeric (3, 0)** .  
 >   
->  Cuando una consulta tiene parámetros automáticos, el valor constante siempre se convierte en **numeric (10, 0)** antes de convertirse en el tipo de datos final. Cuando se utiliza el operador /, no solo puede diferir la precisión del tipo de los resultados entre consultas similares, sino que también puede variar el valor de los resultados. Por ejemplo, el valor de los resultados de una consulta con parámetros automáticos que incluye la expresión `SELECT CAST (1.0 / 7 AS float)` varía con respecto a la misma consulta cuando no tenga parámetros automáticos, puesto que los resultados de la primera se truncan para ajustarse al tipo de datos **numeric (10, 0)**.  
+>  Cuando una consulta tiene parámetros automáticos, el valor constante siempre se convierte en **numeric (10, 0)** antes de convertirse en el tipo de datos final. Cuando se utiliza el operador /, no solo puede diferir la precisión del tipo de los resultados entre consultas similares, sino que también puede variar el valor de los resultados. Por ejemplo, el valor de los resultados de una consulta con parámetros automáticos que incluye la expresión `SELECT CAST (1.0 / 7 AS float)` varía con respecto a la misma consulta cuando no tenga parámetros automáticos, puesto que los resultados de la primera se truncan para ajustarse al tipo de datos **numeric (10, 0)** .  
   
 ## <a name="converting-integer-data"></a>Convertir datos enteros
 Cuando se convierten implícitamente enteros en un tipo de datos de caracteres, si el entero es demasiado grande para ajustarse al campo de carácter, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escribe el carácter ASCII 42, el asterisco (*).

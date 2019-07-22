@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f04e82e0111f91f419bc21dcdc75b3a157a21ccb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 214b2e4cc7f72fd34b500a1cefb4fca07bc9b27b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043363"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47713956"
 |ClientProcessID|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se llena si el cliente proporciona el Id. de proceso.|9|Sí|  
 |DatabaseID|**int**|Id. de la base de datos en que se ejecuta el procedimiento almacenado. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|**nvarchar**|Nombre de la base de datos en la que se ejecuta el procedimiento almacenado.|35|Sí|  
-|EventSequence|**int**|Secuencia de un evento determinado en la solicitud.|51|no|  
+|EventSequence|**int**|Secuencia de un evento determinado en la solicitud.|51|No|  
 |EventSubClass|**int**|Describe la causa de la recompilación:<br /><br /> 1 = Esquema cambiado<br /><br /> 2 = Estadísticas cambiadas<br /><br /> 3 = Compilación diferida<br /><br /> 4 = Opción establecida cambiada<br /><br /> 5 = Tabla temporal cambiada<br /><br /> 6 = Conjunto de filas remoto cambiado<br /><br /> 7 = Permisos For Browse cambiados<br /><br /> 8 = Entorno de notificación de consultas cambiado<br /><br /> 9 = Vista de partición cambiada<br /><br /> 10 = Opciones de cursor cambiadas<br /><br /> 11 = Opción (volver a compilar) solicitada|21|Sí|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|**nvarchar**|Nombre del equipo en el que se ejecuta el cliente y que ha enviado esta instrucción. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -49,16 +48,16 @@ ms.locfileid: "47713956"
 |ObjectType|**int**|Valor que representa el tipo de objeto implicado en el evento. Para más información, consulte [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
 |Offset|**int**|Desplazamiento inicial de la instrucción en el procedimiento almacenado o proceso por lotes que causó la recompilación.|61|Sí|  
 |IdSolicitud|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|**nvarchar**|Nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que se realiza un seguimiento.|26|no|  
+|ServerName|**nvarchar**|Nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que se realiza un seguimiento.|26|No|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|**int**|Id. de proceso de servidor de la conexión.|12|Sí|  
-|SqlHandle|**varbinary**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a sys.dm_exec_sql_text para recuperar el texto SQL asociado.|63|no|  
+|SqlHandle|**varbinary**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a sys.dm_exec_sql_text para recuperar el texto SQL asociado.|63|No|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |TextData|**ntext**|Texto de la instrucción Transact-SQL que se ha recompilado.|1|Sí|  
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SP:Recompile (clase de eventos)](../../relational-databases/event-classes/sp-recompile-event-class.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1a9699fd12b438fabcb2ebafa34e073732c3a586
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 02d36b72c949db673bcc2d00918bd7571821d025
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111081"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ A partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssV
   
  Cuando se crea una publicación de Oracle, se crean los desencadenadores y las tablas de seguimiento para cada tabla publicada en la base de datos de Oracle. Cuando se realizan cambios en las tablas publicadas, los desencadenadores de la base de datos de las tablas se activan e insertan información en las tablas de seguimiento de la replicación de cada fila modificada. A continuación, el Agente de registro del LOG en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mueve la información de los cambios de datos de las tablas de seguimiento a la base de datos de distribución en el distribuidor. Finalmente, como sucede en la replicación transaccional estándar, el Agente de distribución mueve los cambios del distribuidor a los suscriptores.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Glosario de términos de publicaciones de Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Replicación de bases de datos heterogéneas](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  

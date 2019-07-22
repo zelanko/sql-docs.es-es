@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 597cebf9db40c2e119949c86341b4817a51c38ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3e720389f790282f1ad7a33302e2d277128178f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140949"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Comprobar el código de base de datos con pruebas unitarias de SQL Server
 Puede usar las pruebas unitarias de SQL Server para establecer un estado de línea base para la base de datos y después para comprobar los cambios subsiguientes que realice en los objetos de base de datos.  

@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: 1d3a3525-0bc5-466f-b097-5359dc74432d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 47cfb440c83f8d82ca92a7fbbcbee43ac8da53e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a0f0333989b44ffcfad86233313d7f4b3e8768e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934314"
 ---
 # <a name="publish-execution-of-stored-procedure-in-transactional-publication"></a>Publicación de la ejecución de procedimientos almacenados en la publicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Especifique que la ejecución de un procedimiento almacenado (y no solo su definición) se debe publicar en el cuadro de diálogo **Propiedades del artículo: \<artículo>**. Este cuadro de diálogo está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+  Especifique que la ejecución de un procedimiento almacenado (y no solo su definición) se debe publicar en el cuadro de diálogo **Propiedades del artículo: \<artículo>** . Este cuadro de diálogo está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
  La definición del procedimiento (la instrucción CREATE PROCEDURE) se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor.  
   
 ### <a name="to-publish-the-execution-of-a-stored-procedure"></a>Para publicar la ejecución de un procedimiento almacenado  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione un procedimiento almacenado.  
+1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione un procedimiento almacenado.  
   
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del procedimiento almacenado resaltado**.  
   
-3.  En el cuadro de diálogo **Propiedades del artículo: \<artículo>**, especifique uno de los siguientes valores para la opción **Replicar**:  
+3.  En el cuadro de diálogo **Propiedades del artículo: \<artículo>** , especifique uno de los siguientes valores para la opción **Replicar**:  
   
     -   **Ejecución del procedimiento almacenado**  
   
@@ -43,9 +42,9 @@ ms.locfileid: "47610643"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+5.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Publicar la ejecución de procedimientos almacenados en la replicación transaccional](../../../relational-databases/replication/transactional/publishing-stored-procedure-execution-in-transactional-replication.md)  
   
   

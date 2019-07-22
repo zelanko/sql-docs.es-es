@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59c1a336a1c3f3f006e660566ca31f636ea85205
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33e9af6e246d2fe48f93c452a7ae143ce40d96fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027818"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Ubicación del agente &lt;NombreAgente&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47684773"
 > [!NOTE]  
 >  El tipo de suscripción no se puede cambiar una vez creada la suscripción.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Información general sobre los agentes de replicación](../../relational-databases/replication/agents/replication-agents-overview.md)  

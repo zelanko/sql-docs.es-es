@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08da0ac24a7999235efc6150d313ca2bb2ae0ea7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041468"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurar la base de datos maestra (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "52502194"
   
 1.  Inicie la instancia de servidor en modo de usuario único.  
   
-     Para obtener más información sobre cómo especificar el parámetro de inicio de usuario único (**-m**), vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server &#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+     Para obtener más información sobre cómo especificar el parámetro de inicio de usuario único ( **-m**), vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server &#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
 2.  Para restaurar una copia de seguridad de base de datos completa de **maestra**, use la siguiente instrucción [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -46,7 +45,7 @@ ms.locfileid: "52502194"
  El ejemplo siguiente restaura la base de datos `master` en la instancia de servidor predeterminada. En el ejemplo se asume que la instancia de servidor ya se ejecuta en modo de usuario único. El ejemplo inicia `sqlcmd` y ejecuta una instrucción `RESTORE DATABASE` que restaura una copia de seguridad de base de datos completa de `master` desde un dispositivo de disco: `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]  
->  Para una instancia con nombre, el comando **sqlcmd** debe especificar la opción **-S**_\<nombreDeEquipo>_\\*\<nombreDeInstancia>*.  
+>  Para una instancia con nombre, el comando **sqlcmd** debe especificar la opción **-S** _\<nombreDeEquipo>_ \\ *\<nombreDeInstancia>* .  
   
 ```  
   

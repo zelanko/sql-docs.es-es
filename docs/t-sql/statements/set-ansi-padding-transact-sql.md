@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcbc2f6ae35c72f86ccbbc6d34f45384c88c2fd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62638422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041900"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -65,7 +64,7 @@ SET ANSI_PADDING ON
   
 |Configuración|char(*n*) NOT NULL o binary(*n*) NOT NULL|char(*n*) NULL o binary(*n*) NULL|varchar(*n*) o varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Rellena el valor original (con espacios en blanco finales en las columnas **char** y con ceros finales en las columnas **binary**) hasta completar la longitud de la columna.|Sigue las mismas reglas que para **char(**_n_**)** o **binary(**_n_**)** NOT NULL cuando SET ANSI_PADDING es ON.|Los espacios en blanco finales en los valores de caracteres insertados en las columnas **varchar** no se recortan. Los ceros a la derecha en los valores binarios insertados en las columnas **varbinary** no se recortan. Los valores no se rellenan hasta completar la longitud de la columna.|  
+|ON|Rellena el valor original (con espacios en blanco finales en las columnas **char** y con ceros finales en las columnas **binary**) hasta completar la longitud de la columna.|Sigue las mismas reglas que para **char(** _n_ **)** o **binary(** _n_ **)** NOT NULL cuando SET ANSI_PADDING es ON.|Los espacios en blanco finales en los valores de caracteres insertados en las columnas **varchar** no se recortan. Los ceros a la derecha en los valores binarios insertados en las columnas **varbinary** no se recortan. Los valores no se rellenan hasta completar la longitud de la columna.|  
 |OFF|Rellena el valor original (con espacios en blanco finales en las columnas **char** y con ceros finales en las columnas **binary**) hasta completar la longitud de la columna.|Sigue las mismas reglas que para **varchar** o **varbinary** cuando SET ANSI_PADDING está en OFF.|Los espacios en blanco finales en los valores de carácter insertados en una columna **varchar** se recortan. Los ceros a la derecha en los valores binarios insertados en una columna **varbinary** se recortan.|  
   
 > [!NOTE]  
@@ -75,7 +74,7 @@ ANSI_PADDING debe ser ON al crear o cambiar índices en columnas calculadas o vi
   
 El valor predeterminado de SET ANSI_PADDING es ON. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establecen automáticamente ANSI_PADDING en ON al conectarse. Esta opción se puede configurar en los orígenes de datos ODBC, en los atributos de conexión de ODBC o en las propiedades de conexión OLE DB establecidas en la aplicación antes de conectar. SET ANSI_PADDING tiene como opción predeterminada OFF en las conexiones desde aplicaciones DB-Library.  
   
- La opción SET ANSI_PADDING no afecta a los tipos de datos **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** y **nvarchar(max)**. Siempre muestran el comportamiento SET ANSI_PADDING ON. Esto significa que no se recortan los espacios y ceros a la derecha.  
+ La opción SET ANSI_PADDING no afecta a los tipos de datos **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)** , **varchar(max)** y **nvarchar(max)** . Siempre muestran el comportamiento SET ANSI_PADDING ON. Esto significa que no se recortan los espacios y ceros a la derecha.  
   
 Cuando ANSI_DEFAULTS es ON, se habilita ANSI_PADDING.  
   

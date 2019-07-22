@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c1e6878b4b6e1e0f77bba31b3bce57c79e531b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea010277a05a3c4442089d89a87c2983a99b2ccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010877"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuración de visibilidad de los metadatos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,9 +104,9 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>Beneficios y límites de la configuración de visibilidad de los metadatos  
  La configuración de visibilidad de los metadatos puede desempeñar un rol importante en el plan de seguridad global. Sin embargo, hay casos en los que un usuario con conocimientos y determinación puede forzar la divulgación de algunos metadatos. Es recomendable implementar permisos sobre los metadatos como una de las distintas medidas de defensa más completa.  
   
- Teóricamente, es posible forzar la emisión de metadatos en los mensajes de error mediante la manipulación del orden de evaluación de predicados en las consultas. La posibilidad de estos *ataques de prueba y error* no es específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es una implicación de las transformaciones asociativas y conmutativas que admite el álgebra relacional. Puede mitigar este riesgo mediante la limitación de la información que se devuelve en los mensajes de error. Para restringir más la visibilidad de metadatos de esta manera, puede iniciar el servidor con la marca de seguimiento 3625. Esta marca de seguimiento limita la cantidad de información que se muestra en los mensajes de error. A su vez, ayuda a evitar divulgaciones forzadas. La contrapartida es que los mensajes de error se simplificarán y puede resultar difícil su uso para fines de depuración. Para obtener más información, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) y [Marcas de seguimiento &amp;#40;Transact-SQL&amp;#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+ Teóricamente, es posible forzar la emisión de metadatos en los mensajes de error mediante la manipulación del orden de evaluación de predicados en las consultas. La posibilidad de estos *ataques de prueba y error* no es específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es una implicación de las transformaciones asociativas y conmutativas que admite el álgebra relacional. Puede mitigar este riesgo mediante la limitación de la información que se devuelve en los mensajes de error. Para restringir más la visibilidad de metadatos de esta manera, puede iniciar el servidor con la marca de seguimiento 3625. Esta marca de seguimiento limita la cantidad de información que se muestra en los mensajes de error. A su vez, ayuda a evitar divulgaciones forzadas. La contrapartida es que los mensajes de error se simplificarán y puede resultar difícil su uso para fines de depuración. Para obtener más información, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) y [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
- Los metadatos que se muestran a continuación no están sujetos a una divulgación forzada:   
+ Los metadatos que se muestran a continuación no están sujetos a una divulgación forzada:  
   
 -   El valor almacenado en la columna **provider_string** de **sys.servers**. Un usuario que no disponga de permiso ALTER ANY LINKED SERVER verá un valor NULL en esta columna.  
   
@@ -162,7 +161,7 @@ GO
 ### <a name="scope-of-permissions"></a>Ámbito de los permisos  
  Los permisos de un ámbito implican la posibilidad de ver los metadatos en dicho ámbito y en todos los ámbitos incluidos en el mismo. Por ejemplo, el permiso SELECT sobre un esquema implica que el receptor dispone del permiso SELECT sobre todos los elementos protegibles incluidos en dicho esquema. Por tanto, la concesión del permiso SELECT sobre un esquema permite al usuario ver los metadatos del esquema y todas las tablas, vistas, funciones, procedimientos, colas, sinónimos, tipos y colecciones de esquemas XML que estén incluidos en el mismo. Para obtener más información sobre ámbitos, vea [Jerarquía de permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   
-### <a name="precedence-of-deny"></a>Prioridad de DENY   
+### <a name="precedence-of-deny"></a>Prioridad de DENY  
  Normalmente, DENY tiene prioridad sobre otros permisos. Por ejemplo, si se concede a un usuario de la base de datos el permiso EXECUTE sobre un esquema, pero se le deniega el permiso EXECUTE sobre un procedimiento almacenado de dicho esquema, el usuario no podrá ver los metadatos de dicho procedimiento almacenado.  
   
  Además, si a un usuario se le deniega el permiso EXECUTE sobre un esquema pero se le concede el permiso EXECUTE sobre un procedimiento almacenado de dicho esquema, el usuario no podrá ver los metadatos de dicho procedimiento almacenado.  
@@ -190,7 +189,7 @@ GO
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 02c9c35d8609a0afd150be7a645a614250755aaa
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: e6bdd627d0ce40ca44ef42c263d04beb6104edd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040561"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ Es el número de la marca de seguimiento cuyo estado se muestra. Si no se especi
 Es una marca de posición que indica que se pueden especificar varias marcas de seguimiento.
   
 -1  
-Muestra el estado de las marcas de seguimiento habilitadas globalmente. Si se especifica -1 sin *trace#*, se muestran todas las marcas de seguimiento globales habilitadas.
+Muestra el estado de las marcas de seguimiento habilitadas globalmente. Si se especifica -1 sin *trace#* , se muestran todas las marcas de seguimiento globales habilitadas.
   
 WITH NO_INFOMSGS  
 Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.
@@ -65,7 +64,7 @@ En la tabla siguiente se describe la información del conjunto de resultados.
 |Nombre de columna|Descripción|  
 |---|---|
 |**TraceFlag**|Nombre de la marca de seguimiento.|  
-|**Estado**|Indica si la marca de seguimiento está establecida en ON o en OFF, ya sea globalmente o para la sesión.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
+|**Estado**|Indica si la marca de seguimiento está establecida en ON o en OFF, ya sea globalmente o para la sesión.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**Global**|Indica si la marca de seguimiento está establecida globalmente.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**Session**|Indica si la marca de seguimiento está establecida para la sesión.<br /><br /> 1 = True<br /><br /> 0 = False|  
   

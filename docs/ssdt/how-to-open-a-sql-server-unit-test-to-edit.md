@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d464ba2cd7b3b5b3cb2ac687f9f9e1b3ae8023b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52818b0d76ae5201fb9bf53376696fab54180cb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035154"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>Procedimientos: Apertura de una prueba unitaria de SQL Server para editarla
 Después de crear una prueba unitaria de SQL Server, puede usar el **Diseñador de pruebas unitarias de SQL Server** para agregar condiciones de prueba e instrucciones Transact\-SQL. Las pruebas creadas con el diseñador generan código de Visual C# o Visual Basic. Este código es lo que se ejecuta para las series de pruebas.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 35e69092efe820f5da955f982e04ef9b356decaa
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 22101d8ec2f24eeb1a93708adf52b2b24060ce28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987142"
 ---
 # <a name="view-plan-guide-properties"></a>Ver propiedades de la guía de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ ms.locfileid: "54143371"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o para los que el usuario tiene algún permiso.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>Para ver las propiedades de una guía de plan  
   

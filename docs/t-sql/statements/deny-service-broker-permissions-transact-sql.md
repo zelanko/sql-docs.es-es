@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b97c44ae954886058f771ad0ae6571ebe611927d
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984425"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY (permisos de Service Broker de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Especifica un permiso que se puede denegar para un elemento protegible de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Especifica el contrato en el que se va a denegar el permiso. El calificador de ámbito **::** es obligatorio.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Especifica el tipo de mensaje en el que se va a denegar el permiso. El calificador de ámbito **::** es obligatorio.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Especifica el enlace de servicio remoto en el que se va a denegar el permiso. El calificador de ámbito **::** es obligatorio.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Especifica la ruta en la que se va a denegar el permiso. El calificador de ámbito **::** es obligatorio.  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  Especifica el servicio en el que se va a denegar el permiso. El calificador de ámbito **::** es obligatorio.  
   
  *database_principal*  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 52ef837c789d9fd33c357cd5013549b7c47f48be
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: f3142f2474dbf00e165878d20fbdda53528fa930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040624"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +57,10 @@ Devuelve el tamaño actual del registro de transacciones y el porcentaje de espa
 > [!IMPORTANT]
 > Para obtener más información sobre la información de uso de espacio del registro de transacciones a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vea la sección [Comentarios](#Remarks) de este tema.
   
-**"sys.dm_os_latch_stats"**, CLEAR  
+**"sys.dm_os_latch_stats"** , CLEAR  
 Restablece las estadísticas de bloqueos temporales. Para obtener más información, vea [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md). Esta opción no está disponible en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-**"sys.dm_os_wait_stats"**, CLEAR  
+**"sys.dm_os_wait_stats"** , CLEAR  
 Restablece las estadísticas de esperas. Para obtener más información, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). Esta opción no está disponible en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 WITH NO_INFOMSGS  
@@ -109,7 +108,7 @@ msdb           3.99219      17.0132            0
 AdventureWorks 19.554688    17.748701          0  
 ```  
   
-### <a name="b-resetting-wait-statistics"></a>b. Restablecer las estadísticas de esperas  
+### <a name="b-resetting-wait-statistics"></a>B. Restablecer las estadísticas de esperas  
 En el ejemplo siguiente se restablecen las estadísticas de esperas para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ```sql  

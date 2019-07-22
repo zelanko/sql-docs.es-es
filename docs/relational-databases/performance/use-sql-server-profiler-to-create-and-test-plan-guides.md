@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: bc1fb5a5d5c397c8d7eb1a3d784394b46ca5a6fe
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 3137bffef524faf061322224e92941687bb16046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987271"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usar SQL Server Profiler para crear y probar guías de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Abra el archivo de texto del lote en el Bloc de notas y copie el texto en el búfer de copiar y pegar.  
   
-8.  Cree la guía de plan y pegue el texto copiado entre las comillas (**''**) especificadas para el argumento **@stmt** . Debe utilizar un carácter de escape con las comillas simples en el argumento **@stmt** utilizando delante de ellas otra comilla simple. Al insertar estas comillas simples, tenga cuidado de no agregar ni quitar ningún otro carácter. Por ejemplo, el literal de fecha **'** 20000101 **'** debe delimitarse como **''** 20000101 **''**.  
+8.  Cree la guía de plan y pegue el texto copiado entre las comillas ( **''** ) especificadas para el argumento **@stmt** . Debe utilizar un carácter de escape con las comillas simples en el argumento **@stmt** utilizando delante de ellas otra comilla simple. Al insertar estas comillas simples, tenga cuidado de no agregar ni quitar ningún otro carácter. Por ejemplo, el literal de fecha **'** 20000101 **'** debe delimitarse como **''** 20000101 **''** .  
   
  Ésta es la guía de plan:  
   

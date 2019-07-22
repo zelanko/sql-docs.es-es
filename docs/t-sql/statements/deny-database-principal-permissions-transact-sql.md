@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d781778f46617a8961506fb022854835717ea0bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62644579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114890"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (permisos de entidad de seguridad de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,15 +70,15 @@ DENY permission [ ,...n ]
  Especifica un permiso que se puede denegar en la entidad de seguridad de base de datos. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  USER ::*database_user*  
- Especifica la clase y nombre del usuario para el que se deniega el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ Especifica la clase y nombre del usuario para el que se deniega el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  ROLE ::*database_role*  
- Especifica la clase y el nombre del rol para el que se deniega el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ Especifica la clase y el nombre del rol para el que se deniega el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  APPLICATION ROLE ::*application_role*  
  **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Especifica la clase y el nombre del rol de aplicación para el que se deniega el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ Especifica la clase y el nombre del rol de aplicación para el que se deniega el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  CASCADE  
  Indica que el permiso que se va a denegar también se denegará a otras entidades de seguridad a las que esta entidad de seguridad ha concedido permisos.  
@@ -147,7 +146,7 @@ DENY permission [ ,...n ]
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL en la entidad de seguridad especificada o un permiso superior que implique el permiso CONTROL.  
   
- Los receptores del permiso CONTROL para una base de datos, como los miembros del rol fijo de base de datos db_owner, pueden denegar los permisos para cualquier elemento protegible en la base de datos.   
+ Los receptores del permiso CONTROL para una base de datos, como los miembros del rol fijo de base de datos db_owner, pueden denegar los permisos para cualquier elemento protegible en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
   

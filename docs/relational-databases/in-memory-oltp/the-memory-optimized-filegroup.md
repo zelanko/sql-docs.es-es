@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7558ff9f09d003088dc1f7c4d00d3a032d8c478a
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 265419b25df79ce491567cf563188ac70cdccc42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024971"
 ---
 # <a name="the-memory-optimized-filegroup"></a>El grupo de archivos con optimización para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ Al configurar el almacenamiento, debe proporcionar una cantidad de espacio en di
 > Si se establece un valor `MAXSIZE` para el grupo de archivos optimizados para memoria y los archivos de punto de control superan el tamaño máximo del contenedor, la base de datos se convertirá en SUSPECT.   
 > En este caso no intente establecer la base de datos OFFLINE y ONLINE, lo que haría que permaneciera en un estado RECOVERY_PENDING.
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)    
 [Opciones File y Filegroup de ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md) 

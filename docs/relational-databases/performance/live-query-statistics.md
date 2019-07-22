@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 5b60d4190ad25dd57098ef4cd107f1838886a767
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96b7659d84ce548ee95ae23bc437f60575df5e35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051883"
 ---
 # <a name="live-query-statistics"></a>Estadísticas de consulta activa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "53368417"
   
 ## <a name="to-view-live-query-statistics-for-any-query"></a>Para ver estadísticas de consultas dinámicas para cualquier consulta 
 
-También se puede acceder al plan de ejecución de consultas dinámicas desde el **[Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md)**; para ello, haga clic con el botón derecho en cualquier consulta de la tabla **Procesos** o **Consultas costosas activas**.  
+También se puede acceder al plan de ejecución de consultas dinámicas desde el **[Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md)** ; para ello, haga clic con el botón derecho en cualquier consulta de la tabla **Procesos** o **Consultas costosas activas**.  
   
  ![Botón Estadísticas de consulta activa en el Monitor de actividad](../../relational-databases/performance/media/livequerystatsactmon.png "Botón Estadísticas de consulta activa en el Monitor de actividad")  
   

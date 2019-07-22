@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4cdbd5b93bdc5d99e397cbbeb923b19da728d393
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 083408cbf75d027e5dc638b52199b6892adae73d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052299"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,18 +70,18 @@ CREATE FULLTEXT CATALOG catalog_name
  ON FILEGROUP *filegroup*  
  A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], esta cláusula no tiene ningún efecto.  
   
- IN PATH **'**_rootpath_**'**  
+ IN PATH **'** _rootpath_ **'**  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], esta cláusula no tiene ningún efecto.  
   
- ACCENT_SENSITIVITY = {ON|OFF}   
+ ACCENT_SENSITIVITY = {ON|OFF}  
  Especifica si el catálogo distingue los acentos para la indización de texto completo. Cuando se cambia esta propiedad, el índice debe volver a crearse. La opción predeterminada es utilizar la distinción de acentos que se haya especificado en la intercalación de base de datos. Para mostrar la intercalación de base de datos, use la vista de catálogo **sys.databases**.  
   
  Para determinar la configuración de la propiedad de distinción de acentos actual de un catálogo de texto completo, use la función FULLTEXTCATALOGPROPERTY con el valor de propiedad **accentsensitivity** en *catalog_name*. Si el valor devuelto es '1', el catálogo de texto completo distingue acentos; si el valor es '0', el catálogo no distingue acentos.  
   
- AS DEFAULT   
+ AS DEFAULT  
  Especifica que el catálogo es el predeterminado. Cuando se crean índices de texto completo sin especificar de forma explícita un catálogo de texto completo, se utiliza el catálogo predeterminado. Si un catálogo de texto completo existente ya se ha marcado como AS DEFAULT, configurar este nuevo catálogo como AS DEFAULT lo convertirá en el catálogo de texto completo predeterminado.  
   
  AUTHORIZATION *owner_name*  
@@ -116,7 +115,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume) KEY INDEX PK_JobCan
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)   

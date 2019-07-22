@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c24fd65d4292cdee4c0ba2c0ce5d944b0e4e24c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eea6c5cbc995cd73a9f799124772d2be396a9f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095481"
 ---
 # <a name="writing-pages"></a>Escribir páginas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,6 +55,6 @@ Una página desfasada se escribe en el disco de una de estas tres maneras:
 
 Los procesos de escritura diferida, escritura ///diligente/// y punto de comprobación no esperan a que se complete la operación de E/S. Siempre usan la operación de E/S asincrónica (o superpuesta) y continúan con otros trabajos; posteriormente, comprueban que la operación de E/S sea correcta. De este modo, SQL Server maximiza los recursos de la CPU y de E/S para las tareas apropiadas.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [Guía de arquitectura de páginas y extensiones](../relational-databases/pages-and-extents-architecture-guide.md)   
  [Leer páginas](../relational-databases/reading-pages.md)

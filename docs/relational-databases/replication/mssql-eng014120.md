@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b169a3b-30da-4981-b998-b52d61811572
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d1e17e2366021959615c7864918cf036081e3ba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cb395edd4d0c8cd9b9745967e210713bdb49388
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100240"
 ---
 # <a name="mssqleng014120"></a>MSSQL_ENG014120
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47600484"
 ## <a name="user-action"></a>Acción del usuario  
  Para quitar una base de datos de distribución, primero debe quitar la asociación entre el distribuidor y el publicador. Para obtener más información, vea [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Configurar distribución](../../relational-databases/replication/configure-distribution.md)  
   

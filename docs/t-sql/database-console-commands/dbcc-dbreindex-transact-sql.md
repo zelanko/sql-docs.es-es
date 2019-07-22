@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 9bc65e7f29f75d4aaf2f1e6366f29d45f04cafd0
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101991"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ DBCC DBREINDEX
   
 ## <a name="arguments"></a>Argumentos  
  *table_name*  
- Es el nombre de la tabla que contiene los índices especificados que se van a volver a generar. Los nombres de las tablas deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md)*.*  
+ Es el nombre de la tabla que contiene los índices especificados que se van a volver a generar. Los nombres de las tablas deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md) *.*  
   
  *index_name*  
  Es el nombre del índice que se va a volver a generar. Los nombres de los índices deben ajustarse a las reglas de los identificadores. Si se especifica *index_name*, debe especificarse *table_name*. Si no se especifica *index_name* o se indica como " ", se recompilan todos los índices de la tabla.  
@@ -103,7 +102,7 @@ DBCC DBREINDEX ('HumanResources.Employee', PK_Employee_BusinessEntityID,80);
 GO  
 ```  
   
-### <a name="b-rebuilding-all-indexes"></a>b. Volver a generar todos los índices  
+### <a name="b-rebuilding-all-indexes"></a>B. Volver a generar todos los índices  
 En este ejemplo se vuelven a generar todos los índices de la tabla `Employee` de `AdventureWorks` con un valor de factor de relleno de `70`.
   
 ```sql

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6f6540db42c0f83edd86b66a31fa2217762f4475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d76dd0507336a110337f01509440d4ad64afc085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129435"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ MOVE CONVERSATION conversation_handle
  La instrucción MOVE CONVERSATION mueve la conversación especificada por *conversation_handle* al grupo de conversaciones identificado por *conversation_group_id*. Los diálogos solo se pueden redirigir entre grupos de conversación que están asociados a la misma cola.  
   
 > [!IMPORTANT]  
->  Si la instrucción MOVE CONVERSATION no es la primera de un lote o un procedimiento almacenado, la instrucción anterior debe terminar en un punto y coma (**;**), que es el terminador de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Si la instrucción MOVE CONVERSATION no es la primera de un lote o un procedimiento almacenado, la instrucción anterior debe terminar en un punto y coma ( **;** ), que es el terminador de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  La instrucción MOVE CONVERSATION bloquea el grupo de conversaciones asociado con *conversation_handle* y el grupo de conversaciones especificado por *conversation_group_id* hasta que la transacción que contiene la instrucción se confirma o se revierte.  
   
@@ -82,7 +81,7 @@ SET @conversation_group_id =
 MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   

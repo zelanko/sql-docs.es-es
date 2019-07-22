@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035173"
 ---
 # <a name="how-to-fix-errors"></a>Procedimientos: Corrección de errores
 El panel Lista de errores muestra todos los errores de implementación o de compilación. Los errores de sintaxis y semánticos producidos por la edición en el Editor de Transact\-SQL o en el Diseñador de tablas también aparecen en la lista al editar entidades de base de datos y sus definiciones. La Lista de errores se actualiza dinámicamente a medida que se editan scripts en distintas pestañas. Después, puede seguir los errores identificados para la solución de problemas.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64ee2c630d026870e8133377d34610d831ccc360
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb2167462eaa219dab3b105b37bca3253e69e1d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988360"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
 
@@ -149,7 +148,7 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
  **Temas relacionados:** [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Administrador de conexiones ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [Administrador de conexiones ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Administrador de conexiones ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Administrador de conexiones con SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Conexión**  
- Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión, seleccione \<**Nueva conexión…**>.  
+ Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión, seleccione \<**Nueva conexión…** >.  
   
  **SQLSourceType**  
  Seleccione el tipo de origen de la instrucción SQL que ejecuta la tarea.  
@@ -191,13 +190,13 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Conexión de archivos  
  **FileConnection**  
- Seleccione un administrador de conexiones de archivos existente o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos existente o haga clic en \<**Nueva conexión...** > para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
- Seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una.  
+ Seleccione una variable existente o haga clic en \<**Nueva variable…** > para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -206,7 +205,7 @@ Use la página **Asignación de parámetros** del cuadro de diálogo **Editor de
   
 ### <a name="options"></a>Opciones  
  **Nombre de variable**  
- Tras agregar una asignación de parámetros haciendo clic en **Agregar**, seleccione en la lista una variable del sistema o definida por el usuario, o haga clic en \<**Nueva variable…**> para agregar una nueva variable mediante el cuadro de diálogo **Agregar variable**.  
+ Tras agregar una asignación de parámetros haciendo clic en **Agregar**, seleccione en la lista una variable del sistema o definida por el usuario, o haga clic en \<**Nueva variable…** > para agregar una nueva variable mediante el cuadro de diálogo **Agregar variable**.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -245,7 +244,7 @@ Utilice la página **Conjunto de resultados** del cuadro de diálogo **Editor de
  
   
  **Nombre de variable**  
- Para asignar el conjunto de resultados a una variable, seleccione una variable o haga clic en \<**Nueva variable…**> para agregar una variable nueva con el cuadro de diálogo **Agregar variable**.  
+ Para asignar el conjunto de resultados a una variable, seleccione una variable o haga clic en \<**Nueva variable…** > para agregar una variable nueva con el cuadro de diálogo **Agregar variable**.  
   
  **Agregar**  
  Haga clic para agregar una asignación de conjuntos de resultados.  
@@ -332,7 +331,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
   
 -   Un parámetro de salida del tipo de datos adecuado, tal y como se enumera en la tabla siguiente.  
   
-    |Tipo de parámetro**Output** |Tipo de datos de fecha|  
+    |Tipo de parámetro**Output**|Tipo de datos de fecha|  
     |-------------------------------|--------------------|  
     |DBDATE|**date**|  
     |DBTIME2|**time**|  
@@ -348,7 +347,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
   
 -   Un parámetro **output** del tipo de datos adecuado, tal y como se enumera en la tabla siguiente.  
   
-    |Tipo de parámetro**Output** |Tipo de datos de fecha|  
+    |Tipo de parámetro**Output**|Tipo de datos de fecha|  
     |-------------------------------|--------------------|  
     |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  

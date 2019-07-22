@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7e7a186efb5da3ef509f3ada02e301d0777ffd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895367"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configuración de la replicación (de mezcla) entre un servidor y clientes móviles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
 
     
   
-10. En la página **Filtrar filas de tabla**, seleccione **Employee (Human Resources)**, luego **Agregar** y, después, **Add Join to Extend the Selected Filter** (Agregar combinación para ampliar el filtro seleccionado).  
+10. En la página **Filtrar filas de tabla**, seleccione **Employee (Human Resources)** , luego **Agregar** y, después, **Add Join to Extend the Selected Filter** (Agregar combinación para ampliar el filtro seleccionado).  
   
     A. En el cuadro de diálogo **Agregar combinación**, seleccione **Sales.SalesOrderHeader** en **Tabla combinada**. Seleccione **Escribir instrucción de combinación manualmente** y complete la instrucción de combinación de la manera siguiente:  
   
@@ -139,7 +138,7 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
 
     ![Selección para crear una instantánea inmediatamente](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. En la página **Seguridad del agente**, elija **Configuración de seguridad**. Escriba <*Nombre_De_Equipo_Publicador>*>**\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y, luego, seleccione **Aceptar**. Seleccione **Siguiente**.  
+22. En la página **Seguridad del agente**, elija **Configuración de seguridad**. Escriba <*Nombre_De_Equipo_Publicador>* > **\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y, luego, seleccione **Aceptar**. Seleccione **Siguiente**.  
 
     ![Selecciones para configurar la seguridad del agente de instantáneas](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -167,7 +166,7 @@ En esta sección, se crea una publicación de mezcla mediante [!INCLUDE[ssManStu
   
    A. Seleccione la página **Lista de acceso a la publicación** y seleccione **Agregar**. 
   
-   B. En el cuadro de diálogo **Agregar acceso de publicación**, seleccione <*Nombre_De_Equipo_Publicador>*>**\repl_merge** y seleccione **Aceptar**. Vuelva a hacer clic en **Aceptar**. 
+   B. En el cuadro de diálogo **Agregar acceso de publicación**, seleccione <*Nombre_De_Equipo_Publicador>* > **\repl_merge** y seleccione **Aceptar**. Vuelva a hacer clic en **Aceptar**. 
 
    ![Selecciones para agregar el inicio de sesión del Agente de mezcla](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
@@ -205,7 +204,7 @@ En esta sección, se agrega una suscripción a la publicación de mezcla que se 
 
    ![Selecciones para agregar una base de datos al suscriptor](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. En la página **Seguridad del agente de mezcla**, seleccione el botón de puntos suspensivos (**...**). Escriba <*Nombre_De_Equipo_Suscriptor*>**\repl_merge** en el cuadro **Cuenta de proceso** y especifique la contraseña para esta cuenta. Seleccione **Aceptar**, **Siguiente** y, después, elija otra vez **Siguiente**.  
+8. En la página **Seguridad del agente de mezcla**, seleccione el botón de puntos suspensivos ( **...** ). Escriba <*Nombre_De_Equipo_Suscriptor*> **\repl_merge** en el cuadro **Cuenta de proceso** y especifique la contraseña para esta cuenta. Seleccione **Aceptar**, **Siguiente** y, después, elija otra vez **Siguiente**.  
 
    ![Selecciones para la seguridad del Agente de mezcla](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -227,7 +226,7 @@ En esta sección, se agrega una suscripción a la publicación de mezcla que se 
   
 1. Conéctese al suscriptor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión** y, después, seleccione **Nuevo inicio de sesión**.  
   
-   En la página **General**, seleccione **Buscar** y escriba <*Nombre_De_Equipo_Suscriptor>*>**\repl_merge** en el campo **Escriba el nombre de objeto**. Seleccione **Comprobar nombres** y, después, **Aceptar**. 
+   En la página **General**, seleccione **Buscar** y escriba <*Nombre_De_Equipo_Suscriptor>* > **\repl_merge** en el campo **Escriba el nombre de objeto**. Seleccione **Comprobar nombres** y, después, **Aceptar**. 
     
    ![Selecciones para configurar el inicio de sesión](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   

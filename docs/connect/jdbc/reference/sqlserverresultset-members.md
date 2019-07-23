@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 57e1859d4729860e7d8a5d11be4a4c3299bccced
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970564"
 ---
 # <a name="sqlserverresultset-members"></a>Miembros SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "66801500"
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|Recupera el modo de simultaneidad de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|Recupera el nombre del cursor de SQL que utiliza el objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un objeto java.sql.Date en el lenguaje de programación Java.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Recupera el valor de la columna especificada como un[clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) objeto.|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|Recupera el valor de la columna especificada como un objeto de[clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|Recupera el valor de la columna designada en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un valor de tipo **double** en el lenguaje de programación Java.|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|Recupera la dirección de la captura para este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|Recupera el tamaño de la captura para este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
@@ -126,7 +125,7 @@ ms.locfileid: "66801500"
 |[updateCharacterStream](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)|Actualiza la columna designada con un valor de flujo de caracteres.|  
 |[updateClob](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)|Actualiza la columna designada con un valor java.sql.Clob.|  
 |[updateDate](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)|Actualiza la columna designada con un valor de fecha.|  
-|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|Las actualizaciones de un [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) columna.|  
+|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|Actualiza una columna de [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
 |[updateDouble](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)|Actualiza la columna designada con un valor de tipo **double**.|  
 |[updateFloat](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)|Actualiza la columna designada con un valor de **float**.|  
 |[updateInt](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)|Actualiza la columna designada con un valor de tipo **int**.|  

@@ -1,5 +1,5 @@
 ---
-title: Método getClientInfo (java.lang.String) | Microsoft Docs
+title: Método getClientInfo (Java. lang. String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e8e632c4-d6cc-4c5e-b6ad-873579343b19
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b9fd6139a7fc36033c33fa4fc5301f5f7d0a4f14
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7d3005e2b5ae8628ab31ceeb6314159afd796e83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953136"
 ---
 # <a name="getclientinfo-method-javalangstring"></a>Método getClientInfo (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getClientInfo (java.lang.String name)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getClientInfo especificado por el método getClientInfo de la interfaz java.sql.Connection.  
+ Este método getClientInfo se especifica mediante el método getClientInfo en la interfaz java. SQL. Connection.  
   
  El [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] no admite propiedades de información de cliente. Como resultado, este método devuelve **null**.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 509de1454b2f86aa52028fdd6921fb02fedf5f27
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 45e56a0a5ddb7cf8aece6813d421b7ebb1685408
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977711"
 ---
 # <a name="isclosed-method-sqlserverconnection"></a>Método isClosed (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isClosed()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si la conexión está cerrada, **false** si no lo está.  
+ **true** si la conexión es Close, **false** en caso contrario.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método isClosed especificado por el método isClosed en la interfaz java.sql.Connection.  
+ Este método isClosed se especifica mediante el método isClosed en la interfaz java. SQL. Connection.  
   
  Comprueba el estado del objeto SQLServerConnection llamado. Una conexión está cerrada si se ha llamado en ella al método [close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) o si se han producido ciertos errores irrecuperables. Este método devolverá el valor **true** solo cuando se ha llamado tras llamar al método close.  
   

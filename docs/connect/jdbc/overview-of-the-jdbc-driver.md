@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956235"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Introducción al controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "66801798"
 |[Redistribución de Microsoft JDBC Driver](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Describe cómo registrarse para redistribuir Microsoft JDBC Driver.|  
 |[Más información sobre el controlador JDBC](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Describe dónde encontrar más información sobre Microsoft JDBC Driver, incluidos los vínculos a recursos externos.|  
 |[Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Matriz de compatibilidad y directiva de ciclo de vida de soporte de Microsoft JDBC Driver para SQL Server.|  
-|[Preguntas más frecuentes &#40;preguntas más frecuentes sobre&#41; para el controlador JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Preguntas más frecuentes sobre Microsoft JDBC Driver.|  
+|[Preguntas más&#41; frecuentes &#40;sobre las preguntas más frecuentes sobre el controlador JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Preguntas más frecuentes sobre Microsoft JDBC Driver.|  
 |[Dependencias de características de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Dependencias de características de Microsoft JDBC Driver para SQL Server.|
 
 ## <a name="see-also"></a>Consulte también  

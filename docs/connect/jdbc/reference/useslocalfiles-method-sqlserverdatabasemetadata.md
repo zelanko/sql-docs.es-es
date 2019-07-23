@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 69afb3a9-ed56-4191-88b8-bc46c03b817b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9fdbdf51d97a8b28bb7b357ea45cee09dc40133c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a88b6645445b9b9a4c644444ad3996377436112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001595"
 ---
 # <a name="useslocalfiles-method-sqlserverdatabasemetadata"></a>Método usesLocalFiles (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean usesLocalFiles()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método usesLocalFiles especificado por el método usesLocalFiles en la interfaz java.sql.DatabaseMetaData.  
+ Este método usesLocalFiles se especifica mediante el método usesLocalFiles en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

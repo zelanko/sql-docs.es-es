@@ -1,5 +1,5 @@
 ---
-title: Miembros SQLServerConnection | Microsoft Docs
+title: Miembros de SQLServerConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4612b0762d8a0d619a19b61b8bb10ef6a68d1ba0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3e3ba3d7da52f10b9bd51934b25f44a38a16be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971719"
 ---
 # <a name="sqlserverconnection-members"></a>Miembros SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,25 +43,25 @@ ms.locfileid: "66803076"
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|Borra todas las advertencias que se han notificado para este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|Libera inmediatamente la base de datos para este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) y los recursos de JDBC en lugar de esperar a que se liberen automáticamente.|  
-|[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|Fuerza la anulación-preparar las solicitudes para las instrucciones preparadas descartadas pendientes que se ejecutará.| 
+|[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|Fuerza la ejecución de las solicitudes de anulación de preparación de las instrucciones preparadas descartadas pendientes.| 
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)|Realiza todos los cambios efectuados desde la confirmación anterior o realiza una reversión permanente y libera los bloqueos de la base de datos que incorpore este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) en esos momentos.|  
-|[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|Crea un **java.sql.Blob** objeto sin datos.|  
-|[createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md)|Crea un **java.sql.Clob** objeto sin datos.|  
-|[createNClob](../../../connect/jdbc/reference/createnclob-method-sqlserverconnection.md)|Crea un **java.sql.NClob** objeto sin datos.|  
+|[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|Crea un objeto **java. SQL. BLOB** sin datos.|  
+|[createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md)|Crea un objeto **java. SQL. CLOB** sin datos.|  
+|[createNClob](../../../connect/jdbc/reference/createnclob-method-sqlserverconnection.md)|Crea un objeto **java. SQL. NClob** sin datos.|  
 |[createStatement](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)|Crea un objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) para enviar instrucciones SQL a la base de datos.|  
-|[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|Crea un **java.sql.SQLXML** objeto sin datos.|  
+|[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|Crea un objeto **java. SQL. SqlXml** sin datos.|  
 |[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|Recupera el modo de confirmación automática actual para este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|Recupera el nombre del catálogo actual para este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[Método getClientConnectionID &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|Obtiene el identificador de conexión del intento de conexión más reciente, independientemente de que dicho intento fuera correcto o erróneo.|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|Recupera información con respecto a las propiedades de información del cliente que admita el controlador JDBC.|  
-|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|Devuelve el valor de **disableStatementPooling** propiedad de conexión. Esta configuración controla si se habilita la agrupación de la instrucción o no para esta conexión.|
-|[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|Devuelve el número de pendientes actualmente preparada instrucción unprepare acciones.|
-|[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|Devuelve el valor de **enablePrepareOnFirstPreparedStatementCall** propiedad de conexión.|
+|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|Devuelve el valor de la propiedad de conexión **disableStatementPooling** . Esta configuración controla si la agrupación de instrucciones está habilitada o no para esta conexión.|
+|[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|Devuelve el número de acciones de despreparación de la instrucción preparada actualmente pendiente.|
+|[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|Devuelve el valor de la propiedad de conexión **enablePrepareOnFirstPreparedStatementCall** .|
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|Recupera la capacidad de alojamiento actual de los objetos [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) que se crean mediante el uso del objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|Recupera un objeto [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) que contiene los metadatos sobre la base de datos para la que este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) representa una conexión.|  
-|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|Devuelve el valor de **valor de serverPreparedStatementDiscardThreshold** propiedad de conexión.|  
-|[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|Devuelve el número actual de identificadores de instrucción preparada agrupados.|  
-|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|Devuelve el tamaño de la caché de la instrucción preparada para esta conexión.|  
+|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|Devuelve el valor de la propiedad de conexión **serverPreparedStatementDiscardThreshold** .|  
+|[getStatementHandleCacheEntryCount](../../../connect/jdbc/reference/getstatementhandlecacheentrycount-method-sqlserverconnection.md)|Devuelve el número actual de identificadores de instrucción preparados agrupados.|  
+|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverconnection.md)|Devuelve el tamaño de la memoria caché de instrucciones preparada para esta conexión.|  
 |[getTransactionIsolation](../../../connect/jdbc/reference/gettransactionisolation-method-sqlserverconnection.md)|Recupera el nivel de aislamiento de transacción actual para este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[getTypeMap](../../../connect/jdbc/reference/gettypemap-method-sqlserverconnection.md)|Recupera el objeto Map que está asociado a este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)|Recupera la primera advertencia que notifican las llamadas en este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
@@ -79,12 +78,12 @@ ms.locfileid: "66803076"
 |[setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md)|Establece el nombre del catálogo especificado para seleccionar un subespacio de la base de datos de este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) donde pueda funcionar.|  
 |[setClientInfo](../../../connect/jdbc/reference/setclientinfo-method-sqlserverconnection.md)|Establece el valor de las propiedades de la información del cliente.|  
 |[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverconnection.md)|Establece la agrupación de instrucciones en true o false.|  
-|[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|Especifica el nuevo valor de la **enablePrepareOnFirstPreparedStatementCall** propiedad de conexión.|  
+|[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|Especifica el nuevo valor de la propiedad de conexión **enablePrepareOnFirstPreparedStatementCall** .|  
 |[setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md)|Cambia la capacidad de alojamiento de los objetos [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) que se han creado mediante el uso de este objeto [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) según la capacidad de alojamiento determinada.|  
 |[setReadOnly](../../../connect/jdbc/reference/setreadonly-method-sqlserverconnection.md)|Establece este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) en modo de solo lectura como sugerencia para que el controlador JDBC pueda habilitar las optimizaciones de la base de datos.|  
 |[setSavepoint](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)|Crea un punto de retorno sin nombre en la transacción actual y devuelve el nuevo objeto [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) que lo representa.|  
-|[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|Establece el nuevo valor de la **valor de serverPreparedStatementDiscardThreshold** propiedad de conexión.|  
-|[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverconnection.md)|Establece el tamaño de la caché de la instrucción preparada para esta conexión.|  
+|[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverconnection.md)|Establece el nuevo valor de la propiedad de conexión **serverPreparedStatementDiscardThreshold** .|  
+|[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverconnection.md)|Establece el tamaño de la memoria caché de instrucciones preparada para esta conexión.|  
 |[setTransactionIsolation](../../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md)|Intenta cambiar el nivel de aislamiento de transacción para este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) según el que se haya determinado.|  
 |[setTypeMap](../../../connect/jdbc/reference/settypemap-method-sqlserverconnection.md)|Instala el objeto TypeMap determinado como la asignación de tipos para este objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c5f6df2e302b96d5f49785ee835650a2ef2f788
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132771"
 ---
 # <a name="dta-utility"></a>dta, utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +177,7 @@ dta -d AdventureWorks2012 ...
  Especifica que los índices filtrados se consideren para las nuevas recomendaciones. Para obtener más información, consulte [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Especifica que se deben tener en cuenta los índices de almacén de columnas para nuevas recomendaciones. DTA tendrá en cuenta los índices de almacén de columnas en clúster y no clúster. Para obtener más información, vea    
+ Especifica que se deben tener en cuenta los índices de almacén de columnas para nuevas recomendaciones. DTA tendrá en cuenta los índices de almacén de columnas agrupados y no agrupados. Para obtener más información, vea    
 [Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
@@ -217,7 +216,7 @@ dta -d AdventureWorks2012 ...
  Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n**.  
  
 **-iq**  
- Especifica que el Store de la consulta se utiliza como la carga de trabajo. Se analizan los primeros 1.000 eventos desde el Store de consultas para bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n**.  Para obtener más información, vea [Almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md) y [Optimización de la base de datos mediante carga de trabajo del Almacén de consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
+ Especifica que el Almacén de consultas se va a utilizar como carga de trabajo. Se analizan los primeros 1.000 eventos del Almacén de consultas para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n**.  Para obtener más información, vea [Almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md) y [Optimización de la base de datos mediante carga de trabajo del Almacén de consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
 |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -267,11 +266,11 @@ dta -n number_of_events -A 0
  En este caso es importante especificar un tiempo de optimización ilimitado (`-A 0`). De lo contrario, el Asistente para la optimización de motor de base de datos supone que el tiempo de optimización es de 8 horas de forma predeterminada.
  
  **-I** _time_window_in_hours_   
-   Especifica el período de tiempo (en horas) al necesario que se ejecute una consulta para que se considere DTA para la optimización cuando se usa **-iq** opción (carga de trabajo de consulta Store). 
+   Especifica el período de tiempo (en horas) en el que se debe haber ejecutado una consulta para que DTA lo tenga en cuenta para la optimización cuando se usa **la opción-IQ** (carga de trabajo de almacén de consultas). 
 ```  
 dta -iq -I 48  
 ```  
-En este caso, DTA se utilice la consulta Store como origen de carga de trabajo y solo tenga en cuenta las consultas que se han ejecutado con las últimas 48 horas.  
+En este caso, DTA usará Almacén de consultas como el origen de la carga de trabajo y solo tenga en cuenta las consultas que se han ejecutado con las últimas 48 horas.  
   ||  
 |-|  
 |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

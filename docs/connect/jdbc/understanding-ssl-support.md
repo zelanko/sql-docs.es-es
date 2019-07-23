@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe0ef2f88f2db6035bce1e7e72fd216882964e82
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 32820e38a8292068aa95c505a04292fbac2c69af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916608"
 ---
 # <a name="understanding-ssl-support"></a>Descripción de la compatibilidad con SSL
 
@@ -37,11 +36,11 @@ Con el fin de permitir que las aplicaciones usen el cifrado SSL, [!INCLUDE[jdbcN
   
  En la tabla siguiente se resume cómo se comporta la versión de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] en los posibles escenarios de conexión SSL. Cada escenario usa un conjunto diferente de propiedades de conexión SSL. La tabla incluye:  
   
-- **en blanco**: "la propiedad no existe en la cadena de conexión"  
+- **Blank**: "la propiedad no existe en la cadena de conexión"  
   
-- **valor**: "la propiedad existe en la cadena de conexión y su valor es válido"  
+- **valor**: "la propiedad existe en la cadena de conexión y su valor es válido".  
   
-- **cualquier**: "No importa si la propiedad existe en la cadena de conexión o su valor no es válido"  
+- **any**: "no importa si la propiedad existe en la cadena de conexión o si su valor es válido".  
   
 > [!NOTE]  
 > El mismo comportamiento se aplica para la autenticación de usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la autenticación integrada de Windows.  

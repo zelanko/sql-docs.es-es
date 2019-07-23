@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 70d55272e7c72a51c6a76e22238f2669b899ab0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b5172339873ba90b12f65b5334a9014563cd3f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989042"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Controlador OLE DB para la compatibilidad de SQL Server con la alta disponibilidad y la recuperación ante desastres
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este artículo se describen *controlador OLE DB para SQL Server* compatibilidad [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para más información sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clúster de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) y [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  En este artículo se describe *OLE DB driver for SQL Server* support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]for. Para más información sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clúster de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) y [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  Puede especificar el agente de escucha del grupo de disponibilidad de un determinado grupo de disponibilidad en la cadena de conexión. Si una aplicación de controlador OLE DB para SQL Server se conecta a una base de datos de un grupo de disponibilidad que conmuta por error, la conexión original se interrumpe y la aplicación debe abrir una nueva conexión para continuar el trabajo después de la conmutación por error.  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66780711"
 > El aumento del tiempo de espera de la conexión y la implementación de la lógica de reintento de conexión aumentarán la probabilidad de que una aplicación se conecte a un grupo de disponibilidad. Además, dado que una conexión puede producir un error debido a la conmutación por error de un grupo de disponibilidad, es aconsejable implementar la lógica de reintento de conexión y hacer que una conexión que no se ha podido establecer se reintente hasta que vuelva a conectarse.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Conectarse a MultiSubnetFailover  
- Especifique siempre **MultiSubnetFailover=Yes** al conectarse a una escucha de grupo de disponibilidad de AlwaysOn de SQL Server o a una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **MultiSubnetFailover** habilita una conmutación por error más rápida para todos los grupos de disponibilidad AlwaysOn y la instancia del clúster de conmutación por error en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y reducirá significativamente el tiempo de la conmutación por error en las topologías AlwaysOn únicas y de varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, el controlador OLE DB para SQL Server volverá a intentar la conexión TCP.  
+ Especifique siempre **MultiSubnetFailover=Yes** al conectarse a una escucha de grupo de disponibilidad de AlwaysOn de SQL Server o a una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **MultiSubnetFailover** habilita una conmutación por error más rápida para todos los grupos de disponibilidad AlwaysOn y la instancia del clúster de conmutación por error en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y reducirá significativamente el tiempo de la conmutación por error en las topologías AlwaysOn únicas y de varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, OLE DB controlador de SQL Server intentará la conexión TCP.  
   
  La propiedad de conexión **MultiSubnetFailover** indica que la aplicación se está implementando en un grupo de disponibilidad o una instancia de clúster de conmutación por error y que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentará conectarse a la base de datos en la instancia principal del controlador OLE DB para SQL Server mediante un intento de conexión a todas las direcciones IP. Cuando se especifica **MultiSubnetFailover=Yes** para una conexión, el cliente reintenta la conexión TCP más deprisa que los intervalos de retransmisión TCP predeterminados del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
   
@@ -75,9 +74,9 @@ El controlador devuelve un error si la creación de reflejo de la base de datos 
 
 
 ## <a name="ole-db"></a>OLE DB  
-El controlador OLE DB para SQL Server admite tanto la **ApplicationIntent** y **MultiSubnetFailover** palabras clave.   
+El controlador de OLE DB para SQL Server admite las palabras clave **ApplicationIntent** y **MultiSubnetFailover** .   
   
-Se agregaron las dos palabras clave de cadena de conexión de OLE DB para admitir [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en el controlador OLE DB para SQL Server:  
+Las dos palabras clave de cadena de conexión OLE DB se [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] agregaron para admitir en OLE DB controlador para SQL Server:  
   
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
@@ -92,7 +91,7 @@ Las propiedades de conexión equivalentes son:
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-Un controlador de OLE DB para aplicaciones de SQL Server puede usar uno de los métodos para especificar la intención de aplicación:  
+Un controlador de OLE DB para SQL Server aplicación puede usar uno de los métodos para especificar el intento de aplicación:  
   
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** usa el conjunto de propiedades previamente configurado para inicializar el origen de datos y crear el objeto de origen de datos. Especifique la intención de aplicaciones como una propiedad del proveedor o como parte de la cadena de propiedades extendidas.  
@@ -115,7 +114,7 @@ Las propiedades de conexión equivalentes son:
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
 
-Un controlador de OLE DB para aplicaciones de SQL Server puede usar uno de los métodos siguientes para establecer la opción MultiSubnetFailover:  
+Un controlador de OLE DB para SQL Server aplicación puede usar uno de los métodos siguientes para establecer la opción MultiSubnetFailover:  
 
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** usa el conjunto de propiedades previamente configurado para inicializar el origen de datos y crear el objeto de origen de datos. Especifique la intención de aplicaciones como una propiedad del proveedor o como parte de la cadena de propiedades extendidas.  
@@ -124,7 +123,7 @@ Un controlador de OLE DB para aplicaciones de SQL Server puede usar uno de los m
  **IDataInitialize::GetDataSource** toma una cadena de conexión de entrada que puede contener la palabra clave **MultiSubnetFailover**.  
 
 -   **IDBProperties::SetProperties**  
-Para establecer el **MultiSubnetFailover** valor de propiedad, llamada **IDBProperties:: SetProperties** pasando el **SSPROP_INIT_MULTISUBNETFAILOVER** propiedad con valor  **VARIANT_TRUE** o **VARIANT_FALSE** o **DBPROP_INIT_PROVIDERSTRING** propiedad con el valor "**MultiSubnetFailover = Yes** "o"**MultiSubnetFailover = No**".
+Para establecer el valor de la propiedad **MultiSubnetFailover** , llame a **IDBProperties:: SetProperties** pasando la propiedad **SSPROP_INIT_MULTISUBNETFAILOVER** con el valor **VARIANT_TRUE** o **VARIANT_FALSE** o **DBPROP_INIT_ Propiedad PROVIDERSTRING** con el valor que contiene "**MultiSubnetFailover = Yes**" o "**MultiSubnetFailover = no**".
 
 #### <a name="example"></a>Ejemplo
 

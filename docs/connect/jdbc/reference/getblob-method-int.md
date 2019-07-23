@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 452ab23f278ed0c7c3f25af5d1be38d35681c230
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d4ed9b8f6e4b29d5609ced88592b96de9c196d89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953816"
 ---
 # <a name="getblob-method-int"></a>Método getBlob (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Blob getBlob(int index)
  Un valor **int** que indica el índice del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un objeto de Blob.  
+ Objeto de BLOB.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9a02f7d9e8d16789151da19d705c49e39421e2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1f52dd565f634061468a0eee4fbfbb2855da99c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082223"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE (permisos de texto completo de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,10 +56,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Es el nombre de un permiso. Las asignaciones válidas de permisos a elementos protegibles se describen en la sección "Comentarios", más adelante en este tema.  
   
- ON FULLTEXT CATALOG **::**_nombre_catálogo_de_texto_completo_  
+ ON FULLTEXT CATALOG **::** _nombre_catálogo_de_texto_completo_  
  Especifica el catálogo de texto completo para el que se revoca el permiso. El calificador de ámbito **::** es obligatorio.  
   
- ON FULLTEXT STOPLIST **::**_nombre_de_la_lista_de_palabras_irrelevantes_de_texto_completo_  
+ ON FULLTEXT STOPLIST **::** _nombre_de_la_lista_de_palabras_irrelevantes_de_texto_completo_  
  Especifica la lista de palabras irrelevantes de texto completo en la que se revoca el permiso. El calificador de ámbito **::** es obligatorio.  
   
  *database_principal*  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b2106d2683a47e31c2f9c76535ee059a7f151883
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082398"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ REVERT
   
 ## <a name="arguments"></a>Argumentos  
  WITH COOKIE = @*varbinary_variable*  
- Especifica la cookie que se creó en la instrucción independiente [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) correspondiente. *@varbinary_variable* es **varbinary(100)**.  
+ Especifica la cookie que se creó en la instrucción independiente [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) correspondiente. *@varbinary_variable* es **varbinary(100)** .  
   
 ## <a name="remarks"></a>Notas  
  REVERT se puede especificar en un módulo, por ejemplo, en un procedimiento almacenado o una función definida por el usuario, o como una instrucción independiente. Cuando se especifica en un módulo, REVERT solo se aplica a las instrucciones EXECUTE AS definidas en el módulo. Por ejemplo, el siguiente procedimiento almacenado emite una instrucción `EXECUTE AS` seguida de una instrucción `REVERT`.  
@@ -131,7 +130,7 @@ DROP USER user2;
 GO  
 ```  
   
-### <a name="b-using-the-with-cookie-clause"></a>b. Usar la cláusula WITH COOKIE  
+### <a name="b-using-the-with-cookie-clause"></a>B. Usar la cláusula WITH COOKIE  
  En el ejemplo siguiente se establece el contexto de ejecución de una sesión en un usuario determinado y se especifica la cláusula WITH NO REVERT COOKIE = @*variable_varbinary*. La instrucción `REVERT` debe especificar el valor pasado a la variable `@cookie` en la instrucción `EXECUTE AS` para volver correctamente el contexto al llamador. Para ejecutar este ejemplo, deben existir el inicio de sesión `login1` y el usuario `user1` creados en el ejemplo A.  
   
 ```  

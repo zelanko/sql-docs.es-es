@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96e9da6c6bf1c394032abff79b7b869e08f4d3e9
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 1e0c9d8d91bce3cc632e6cfd8a5f50353a55793a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085929"
 ---
 # <a name="replication-snapshot-agent"></a>Agente de instantáneas de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,8 +79,8 @@ snapshot [ -?]
  **-?**  
  Imprime todos los parámetros disponibles.  
   
- **-Publisher**  _server_name_[**\\**_instance\_name_]  
- Es el nombre del publicador. Especifique nombreDeServidor para conectarse a la instancia predeterminada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server\_name_**\\**_instance\_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Publisher**  _server_name_[ **\\** _instance\_name_]  
+ Es el nombre del publicador. Especifique nombreDeServidor para conectarse a la instancia predeterminada de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server\_name_ **\\** _instance\_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-Publication** _publication_  
  Es el nombre de la publicación. Este parámetro solamente es válido si la publicación se define para tener siempre una instantánea disponible para las suscripciones nuevas o reinicializadas.  
@@ -95,10 +94,10 @@ snapshot [ -?]
  **-DefinitionFile** _def_path_and_file_name_  
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de línea de comandos para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
- **-Distributor** _server_name_[**\\**_instance\_name_]  
- Es el nombre del distribuidor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server\_name_**\\**_instance\_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Distributor** _server_name_[ **\\** _instance\_name_]  
+ Es el nombre del distribuidor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server\_name_ **\\** _instance\_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
- **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
+ **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  Es la prioridad de la conexión del Agente de instantáneas al distribuidor cuando se produce un interbloqueo. Este parámetro se especifica para resolver interbloqueos que se pueden producir entre las aplicaciones de usuario y el Agente de instantáneas durante la generación de instantáneas.  
   
 |Valor DistributorDeadlockPriority|Descripción|  
@@ -217,7 +216,7 @@ snapshot [ -?]
  **-PublisherDB** _publisher_database_  
  Es el nombre de la base de datos de publicación. *Este parámetro no se admite en publicadores de Oracle*.  
   
- **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  Es la prioridad de la conexión del Agente de instantáneas al publicador cuando se produce un interbloqueo. Este parámetro se especifica para resolver interbloqueos que se pueden producir entre las aplicaciones de usuario y el Agente de instantáneas durante la generación de instantáneas.  
   
 |Valor PublisherDeadlockPriority|Descripción|  
@@ -226,7 +225,7 @@ snapshot [ -?]
 |**0** (predeterminado)|No se asigna prioridad.|  
 |**1**|El Agente de instantáneas tiene la prioridad cuando se produce un interbloqueo en el publicador.|  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance\_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance\_name_]  
  Especifica la instancia del asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa en una sesión de creación de reflejo de la base de datos con la base de datos de publicación. Para obtener más información, vea [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** _publisher_login_  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4c3f4ed7312afcd19e7244b98ba781753ee22b9f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077916"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Referencia de los métodos del tipo de datos hierarchyid
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,11 +55,11 @@ El tipo **hierarchyid** codifica lógicamente la información de un nodo único 
   
 -   /0.1/0.2/  
   
-Pueden insertarse los nodos en cualquier ubicación. Los nodos insertados después de **/1/2/** pero antes de **/1/3/** pueden representarse como **/1/2.5/**. Los nodos insertados antes de 0 tienen la representación lógica de un número negativo. Por ejemplo, un nodo que viene antes de **/1/1/** puede representarse como **/1/-1/**. Los nodos no pueden tener ceros a la izquierda. Por ejemplo, **/1/1.1/** es válido, pero **/1/1.01/** no lo es. Para evitar errores, inserte los nodos mediante el método [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
+Pueden insertarse los nodos en cualquier ubicación. Los nodos insertados después de **/1/2/** pero antes de **/1/3/** pueden representarse como **/1/2.5/** . Los nodos insertados antes de 0 tienen la representación lógica de un número negativo. Por ejemplo, un nodo que viene antes de **/1/1/** puede representarse como **/1/-1/** . Los nodos no pueden tener ceros a la izquierda. Por ejemplo, **/1/1.1/** es válido, pero **/1/1.01/** no lo es. Para evitar errores, inserte los nodos mediante el método [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
   
 ## <a name="data-type-conversion"></a>Conversión de tipo de datos
 El tipo de datos **hierarchyid** puede convertirse a otros tipos de datos de la siguiente manera:
--   Use el método [ToString()](../../t-sql/data-types/tostring-database-engine.md) para convertir el valor **hierarchyid** a la representación lógica como un tipo de datos **nvarchar(4000)**.  
+-   Use el método [ToString()](../../t-sql/data-types/tostring-database-engine.md) para convertir el valor **hierarchyid** a la representación lógica como un tipo de datos **nvarchar(4000)** .  
 -   Use [Read ()](../../t-sql/data-types/read-database-engine.md) y [Write ()](../../t-sql/data-types/write-database-engine.md) para convertir **hierarchyid** en **varbinary**.  
 -   Para transmitir los parámetros de **hierarchyid** a través de SOAP, conviértalos previamente a cadenas.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6c2fd2c71c5272b8104eaf5b24fa8e7c0a9fc8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8cf804f934a08db335c55b15ab23b9e42a7ee9c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051321"
 ---
 # <a name="delete-xml-dml"></a>delete (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ SET @myDoc.modify('
 SELECT @myDoc  
 ```  
   
-### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>b. Eliminar nodos de un documento almacenado en una columna xml sin tipo  
+### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. Eliminar nodos de un documento almacenado en una columna xml sin tipo  
  En el siguiente ejemplo, una instrucción XML DML **delete** elimina el segundo elemento secundario de <`Features`> del documento almacenado en la columna.  
   
 ```  

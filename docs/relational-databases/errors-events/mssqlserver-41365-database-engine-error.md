@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4fc7ec15-b722-4e3d-b7f9-3d39d171e96e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b4a2f6dd67e80a30f94aec873e53004cea82d05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0844bcea9213a3f9272389ee9233ef1becdcd5ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123168"
 ---
 # <a name="mssqlserver41365"></a>MSSQLSERVER_41365
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +38,6 @@ Los archivos de puntos de comprobación que representan el intervalo no están d
 ## <a name="user-action"></a>Acción del usuario  
 Proporciona un mejor intervalo de transacciones para la combinación y la espera antes de emitir la misma solicitud de nuevo. Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [OLTP en memoria &#40;optimización en memoria&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e22a94fef64ac6b31d4a7609c01a50f11d5020bf
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006677"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Ejemplo: Especificación de la directiva XMLTEXT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +99,7 @@ FOR XML EXPLICIT;
   
  Si se especifica *AttributeName* con la directiva `xmltext`, se agregan los atributos del elemento <`overflow`> como atributos de los subelementos del elemento <`Parent`> que los incluye. El nombre especificado para *AttributeName* se convierte en el nombre del subelemento.  
   
- En esta consulta, se especifica *AttributeName*, <`overflow`>, junto con la directiva `xmltext`*:*  
+ En esta consulta, se especifica *AttributeName*, <`overflow`>, junto con la directiva `xmltext` *:*  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

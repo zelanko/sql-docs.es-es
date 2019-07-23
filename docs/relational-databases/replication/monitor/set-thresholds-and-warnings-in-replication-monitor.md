@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b3783bbaa861ad857efce87b82c50536757fd499
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e4866e0878411f6e81718df4184c1e5f2ac57f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111151"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Establecer umbrales y advertencias en el Monitor de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "54135476"
   
      Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Establezca opciones en el cuadro de diálogo **Propiedades de la alerta \<nombreDeAlerta>**:  
+3.  Establezca opciones en el cuadro de diálogo **Propiedades de la alerta \<nombreDeAlerta>** :  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   
@@ -151,7 +150,7 @@ ms.locfileid: "54135476"
   
      Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Establezca opciones en el cuadro de diálogo **Propiedades de la alerta \<nombreDeAlerta>**:  
+3.  Establezca opciones en el cuadro de diálogo **Propiedades de la alerta \<nombreDeAlerta>** :  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   

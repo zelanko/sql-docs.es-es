@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 168e53dde51641d79569eb3ef6a1930d0084d10f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d3e27e4f4fdf813e30775c2cf44cfb4ca272b10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114659"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos PostgreSQL (Asistente para importación y exportación de SQL Server)
 
@@ -55,7 +54,7 @@ Para conectarse a PostgreSQL con el controlador ODBC de PostgreSQL, ensamble una
 > Obtenga ayuda para ensamblar una cadena de conexión que funcione correctamente. O bien, en lugar de proporcionar una cadena de conexión, puede proporcionar un DSN (nombre de origen de datos) existente o crear uno nuevo. Para obtener más información acerca de estas opciones, consulte [Conectarse a un origen de datos ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 **Controlador**  
-Es el nombre del controlador ODBC, ya sea un **controlador ODBC de PostgreSQL (UNICODE)** o **Controlador ODBC de PostgreSQL (ANSI)**.
+Es el nombre del controlador ODBC, ya sea un **controlador ODBC de PostgreSQL (UNICODE)** o **Controlador ODBC de PostgreSQL (ANSI)** .
 
 **Server**  
 Nombre del servidor de PostgreSQL. 

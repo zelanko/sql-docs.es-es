@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506522"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252120"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services con Grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,25 +28,7 @@ ms.locfileid: "59506522"
  Una ventaja clave del uso de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] con los orígenes de datos [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] es aprovechar las réplicas secundarias legibles como un origen de datos de informes, al mismo tiempo que las réplicas secundarias proporcionan una base de datos principal.  
   
  Para obtener información general sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea las [preguntas más frecuentes sobre Always On en SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
-  
- **En este tema:**  
-  
--   [Requisitos para usar Reporting Services y Grupos de disponibilidad AlwaysOn](#bkmk_requirements)  
-  
--   [Orígenes de datos de informes y grupos de disponibilidad](#bkmk_reportdatasources)  
-  
--   [Diseñador de informes y grupos de disponibilidad](#bkmk_reportdesign)  
-  
--   [Bases de datos del servidor de informes y grupos de disponibilidad](#bkmk_reportserverdatabases)  
-  
--   -   [Diferencias entre el modo nativo de SharePoint](#bkmk_differences_in_server_mode)  
-  
-    -   [Preparar las bases de datos del servidor de informes para grupos de disponibilidad](#bkmk_prepare_databases)  
-  
-    -   [Pasos para completar la recuperación de desastres de bases de datos del servidor de informes](#bkmk_steps_to_complete_failover)  
-  
-    -   [Comportamiento del servidor de informes cuando se produce una conmutación por error](#bkmk_failover_behavior)  
-  
+
 ##  <a name="bkmk_requirements"></a> Requisitos para usar Reporting Services y Grupos de disponibilidad AlwaysOn  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y Power BI Report Server usa .NET Framework 4.0 y admite las propiedades de cadena de conexión de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para su uso con orígenes de datos.  
   

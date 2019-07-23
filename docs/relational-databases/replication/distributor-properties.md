@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e58ef266f992911dc8360925649959b1aedd13f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3e542e49811ed7f57a9b60dbf1f0428f69706bdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128308"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>Cuadro de diálogo Propiedades del distribuidor de Replicación de SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ La página **General** del cuadro de diálogo **Propiedades del distribuidor** l
  **Bases de datos**  
  La cuadrícula de propiedades de **Bases de datos** muestra el nombre y las propiedades de retención de las bases de datos del distribuidor. **Retención de transacción** representa el tiempo de almacenamiento de las transacciones de replicación transaccional (la retención de transacción también se denomina retención de distribución). **Retención de historial** representa el tiempo de almacenamiento de los metadatos del historial de todos los tipos de replicación. Para más información sobre la retención de la distribución, vea [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md) (Expiración y desactivación de la suscripción).  
   
- Haga clic en el botón de propiedades (**...**) en la cuadrícula de propiedades de **Bases de datos** para abrir el cuadro de diálogo **Propiedades de base de datos de distribución** .  
+ Haga clic en el botón de propiedades ( **...** ) en la cuadrícula de propiedades de **Bases de datos** para abrir el cuadro de diálogo **Propiedades de base de datos de distribución** .  
   
  **Nueva**  
  Haga clic para crear una nueva base de datos de distribución.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045644"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "57973814"
 |Bytes por fila||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite el almacenamiento de desbordamiento de fila, lo que habilita la inserción de columnas de longitud variable de manera no consecutiva. Solo se almacena una raíz de 24 bytes en el registro principal para las columnas de longitud variable que se insertan de manera no consecutiva; por ello, el límite real por fila es más alto que en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Compatibilidad con filas largas](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|  
 |Bytes por fila en tablas optimizadas para memoria||8,060|A partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , las tablas optimizadas para memoria admiten el almacenamiento no consecutivo. Las columnas de longitud variable se insertan de manera no consecutiva si el tamaño máximo de todas las columnas de la tabla supera los 8060 bytes; se trata de una decisión en tiempo de compilación. Solo se almacena una referencia de 8 bytes de forma consecutiva para las columnas almacenadas de forma no consecutiva. Para obtener más información, vea [Tamaño de tabla y fila de las tablas con optimización para memoria](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Bytes en texto de origen de un procedimiento almacenado||El menor del tamaño del lote o 250 MB||  
-|Bytes por columna **varchar(max)**, **varbinary(max)**, **xml**, **text**o **image**||2^31-1||  
+|Bytes por columna **varchar(max)** , **varbinary(max)** , **xml**, **text**o **image**||2^31-1||  
 |Caracteres por columna **ntext** o **nvarchar(max)**||2^30-1||  
 |Índices clúster por tabla||1||  
 |Columnas en GROUP BY y ORDER BY||Limitado solo por el número de bytes||  
@@ -76,7 +75,7 @@ ms.locfileid: "57973814"
 |Archivos por base de datos||32,767||  
 |Tamaño de archivo (datos)||16 terabytes||  
 |Tamaño de archivo (registro)||2 terabytes||  
-|Archivos de datos para datos optimizados para memoria por base de datos||4.096 en [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Las versiones posteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no imponen un límite tan estricto.||  
+|Archivos de datos para datos optimizados para memoria por base de datos||4\.096 en [!INCLUDE[ssSQL14](../includes/ssSQL14-md.md)]. Las versiones posteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no imponen un límite tan estricto.||  
 |Archivo delta por archivo de datos para datos optimizados para memoria||1||  
 |Referencias de tabla de claves externas por tabla||Saliente = 253. Entrante = 10 000.|Para ver las restricciones, vea [Create Foreign Key Relationships](../relational-databases/tables/create-foreign-key-relationships.md).|  
 |Longitud del identificador (en caracteres)||128||  

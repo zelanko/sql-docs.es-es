@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 17e717fd999109390c001bdab9aeee5629c1a119
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061063"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -220,7 +219,7 @@ WITH (
     KEY_PATH = 'https://contoso.vault/sales_db_tce_key'  
 );  
 ```  
-### <a name="b-creating-an-enclave-enabled-column-master-key"></a>b. Crear una clave maestra de columna habilitada para enclaves  
+### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Crear una clave maestra de columna habilitada para enclaves  
 En el siguiente ejemplo se crea una entrada de metadatos de la clave maestra de columna para una clave maestra de columna habilitada para el enclave. La clave maestra de columna habilitada para el enclave está almacenada en el almacén de certificados para las aplicaciones cliente que usan el proveedor MSSQL_CERTIFICATE_STORE para obtener acceso a la clave maestra de columna:  
   
 ```  

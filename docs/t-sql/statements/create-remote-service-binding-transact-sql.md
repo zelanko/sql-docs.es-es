@@ -37,13 +37,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 00726a70cc40548f3c75b786a9fa2b601ec9dd57
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117342"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
  El usuario que ejecuta la instrucción CREATE REMOTE SERVICE BINDING debe tener permiso de suplantación para la entidad de seguridad especificada en la instrucción.  
   
- Un enlace de servicio remoto no puede ser un objeto temporal. Se permiten los nombres de enlace de servicio remoto que empiecen por **#**, aunque se trata de objetos permanentes.  
+ Un enlace de servicio remoto no puede ser un objeto temporal. Se permiten los nombres de enlace de servicio remoto que empiecen por **#** , aunque se trata de objetos permanentes.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -106,7 +105,7 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser ;  
 ```  
   
-### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>b. Crear un enlace de servicio remoto con autenticación anónima  
+### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>B. Crear un enlace de servicio remoto con autenticación anónima  
  En el ejemplo siguiente se crea un enlace para el servicio `//Adventure-Works.com/services/AccountsPayable`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utiliza el certificado de la entidad de seguridad de base de datos `APUser` para intercambiar la clave de cifrado de sesión con el servicio remoto. Service Broker no se autentica en el servicio remoto. En la base de datos que hospeda el servicio remoto, los mensajes se entregan como usuario **guest** (invitado).  
   
 ```  

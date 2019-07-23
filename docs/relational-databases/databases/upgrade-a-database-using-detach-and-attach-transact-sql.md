@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b6b540227212058518a62debc6b113f31beab37
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a0df5b572fe7c26f250c2172e5fa87b9fd01da85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127132"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Actualizar una base de datos mediante Separar y Adjuntar (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

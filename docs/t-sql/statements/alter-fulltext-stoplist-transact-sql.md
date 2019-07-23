@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0a6c02a3211c029c311f07a91da9b26842fc4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 692f62c6a5b9d6268a27de350a860c0cb58c74bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067554"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |Formato|Descripción|  
 |------------|-----------------|  
-|String|*language_term* corresponde al valor de columna **alias** en la vista de compatibilidad [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La cadena debe estar delimitada con comillas sencillas, como en **'***language_term***'**.|  
+|String|*language_term* corresponde al valor de columna **alias** en la vista de compatibilidad [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). La cadena debe estar delimitada con comillas sencillas, como en **'***language_term***'** .|  
 |Integer|*language_term* es la configuración regional (LCID) del idioma.|  
 |Hexadecimal|*language_term* es 0x seguido del valor hexadecimal de LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda. Si el valor está en formato de juego de caracteres de doble byte (DBCS), SQL Server lo convertirá a Unicode.|  
   
@@ -101,7 +100,7 @@ ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'Spanish';
 ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'French';  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
  [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

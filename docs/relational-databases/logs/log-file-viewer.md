@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2f95f3fcc7f904ef7ff51139c71ee77fbfad213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084071"
 ---
 # <a name="log-file-viewer"></a>Visor de archivos de registro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "47671683"
 |Describe cómo ver los archivos de registro sin conexión a través de servidores registrados y cómo comprobar los permisos de WMI.|[Ver sin conexión archivos de registro](../../relational-databases/logs/view-offline-log-files.md)|  
 |Proporciona la Ayuda F1 del visor del archivo de registro.|[Ayuda F1 del Visor de archivos de registro](../../relational-databases/logs/log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [Registro de errores del Agente SQL Server](../../ssms/agent/sql-server-agent-error-log.md)  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4ff76e7d980081208f310dcae2a498f857151df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140963"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Usar aserciones de Transact-SQL en pruebas unitarias de SQL Server
 En una prueba unitaria de SQL Server, el script de prueba Transact\-SQL se ejecuta y devuelve un resultado. En ocasiones, los resultados se devuelven como un conjunto de resultados. Puede validar los resultados mediante condiciones de prueba. Por ejemplo, puede usar una condición de prueba para comprobar cuántas filas se devuelven en un conjunto de resultados determinado o comprobar cuánto tiempo tardó en ejecutarse una prueba determinada. Para más información sobre las condiciones de prueba, consulte [Usar condiciones de prueba en pruebas unitarias de SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  

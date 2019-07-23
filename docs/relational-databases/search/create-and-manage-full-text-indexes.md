@@ -12,14 +12,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5798c0048d10e074f0aa64c3d50ce14027865e4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082931"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Crear y administrar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -166,7 +165,7 @@ GO
  Este ejemplo devuelve una columna de conjunto de resultados denominada `Unique Key Column`, que muestra una única fila que contiene el nombre de la columna de clave única de la tabla Document, DocumentID. Tenga en cuenta que, si esta consulta contuviera un nombre de índice no válido, el nombre del índice no correspondiera a la tabla, la tabla no existiera, etc., devolvería NULL.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Indexar columnas varbinary(max) y xml  
- Si una columna **varbinary(max)**, **varbinary**o **xml** está indexada con texto completo, se puede consultar con los predicados de texto completo (CONTAINS y FREETEXT) y las funciones (CONTAINSTABLE y FREETEXTTABLE), igual que cualquier otra columna indexada de texto completo.
+ Si una columna **varbinary(max)** , **varbinary**o **xml** está indexada con texto completo, se puede consultar con los predicados de texto completo (CONTAINS y FREETEXT) y las funciones (CONTAINSTABLE y FREETEXTTABLE), igual que cualquier otra columna indexada de texto completo.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>Indexar datos varbinary(máximo) o varbinary  
  Una sola columna **varbinary(max)** o **varbinary** puede almacenar muchos tipos de documentos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite cualquier tipo de documento para el que tenga un filtro instalado que esté disponible en el sistema operativo. La extensión de archivo del documento identifica el tipo de cada documento. Por ejemplo, para la extensión de archivo .doc, la búsqueda de texto completo utiliza el filtro que admite los documentos de Microsoft Word. Para obtener una lista de los tipos de documentos disponibles, consulte la vista de catálogo [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  

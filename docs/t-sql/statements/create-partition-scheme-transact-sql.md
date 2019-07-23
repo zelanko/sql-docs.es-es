@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 83017a49354eb3da8220ae2fa4536961d1fed420
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048152"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,16 +62,16 @@ AS PARTITION partition_function_name
  Es el nombre de la función de partición que utiliza el esquema de partición. Las particiones creadas por la función de partición se asignan a los grupos de archivos especificados en el esquema de partición. *partition_function_name* ya debe existir en la base de datos. Una única partición no puede contener grupos de archivos FILESTREAM y no FILESTREAM a la vez.  
   
  ALL  
- Especifica que todas las particiones se asignan al grupo de archivos suministrado en *file_group_name* o al grupo de archivos principal si se especifica **[** PRIMARY **]**. Si se especifica ALL, solo se puede especificar un valor de *file_group_name*.  
+ Especifica que todas las particiones se asignan al grupo de archivos suministrado en *file_group_name* o al grupo de archivos principal si se especifica **[** PRIMARY **]** . Si se especifica ALL, solo se puede especificar un valor de *file_group_name*.  
   
- *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
+ *file_group_name* |  **[** PRIMARY **]** [ **,** _...n_]  
  Especifica los nombres de los grupos de archivos que almacenarán las particiones especificadas por *partition_function_name*. *file_group_name* ya debe existir en la base de datos.  
   
- Si se especifica **[** PRIMARY **]**, la partición se almacena en el grupo de archivos principal. Si se especifica ALL, solo se puede especificar un valor de *file_group_name*. A partir de la partición 1, las particiones se asignan a los grupos de archivos en el orden en que éstos aparecen en [**,**_...n_]. Se puede especificar el mismo valor de *file_group_name* más de una vez en [**,**_...n_]. Si *n* no es suficiente para contener el número de particiones especificadas en *partition_function_name*, CREATE PARTITION SCHEME generará un error.  
+ Si se especifica **[** PRIMARY **]** , la partición se almacena en el grupo de archivos principal. Si se especifica ALL, solo se puede especificar un valor de *file_group_name*. A partir de la partición 1, las particiones se asignan a los grupos de archivos en el orden en que éstos aparecen en [ **,** _...n_]. Se puede especificar el mismo valor de *file_group_name* más de una vez en [ **,** _...n_]. Si *n* no es suficiente para contener el número de particiones especificadas en *partition_function_name*, CREATE PARTITION SCHEME generará un error.  
   
  Si *partition_function_name* genera menos particiones que grupos de archivos, el primer grupo de archivos sin asignar se marca como NEXT USED y se muestra un mensaje informativo donde se indica el grupo de archivos NEXT USED. Si se especifica ALL, solo *file_group_name* mantiene su propiedad NEXT USED para este *partition_function_name*. El grupo de archivos NEXT USED recibirá una partición adicional si se crea una en una instrucción ALTER PARTITION FUNCTION. Si desea crear más grupos de archivos sin asignar para almacenar las nuevas particiones, utilice ALTER PARTITION SCHEME.  
   
- Al especificar el grupo de archivos principal en *file_group_name* [ 1 **,**_...n_], PRIMARY debe estar delimitado, como en **[** PRIMARY **]**, porque es una palabra clave.  
+ Al especificar el grupo de archivos principal en *file_group_name* [ 1 **,** _...n_], PRIMARY debe estar delimitado, como en **[** PRIMARY **]** , porque es una palabra clave.  
   
  Solo se admite PRIMARY para [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Vea el ejemplo E de abajo. 
   
@@ -107,7 +106,7 @@ TO (test1fg, test2fg, test3fg, test4fg);
 |**Partición**|1|2|3|4|  
 |**Valores**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
-### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>b. Crear un esquema de partición que asigne varias particiones al mismo grupo de archivos  
+### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. Crear un esquema de partición que asigne varias particiones al mismo grupo de archivos  
  Si todas las particiones se asignan al mismo grupo de archivos, utilice la palabra clave ALL. Sin embargo, si se asignan varias particiones (no todas) al mismo grupo de archivos, el nombre del grupo de archivos debe repetirse, tal como se muestra en el ejemplo siguiente.  
   
 ```  

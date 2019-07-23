@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d88513efe41a9c6b5662477d429abc5a8ce7ee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46acc1cb21cf27eb2cce60ca6c5a091bdd72d458
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126837"
 ---
 # <a name="strong-passwords"></a>Contraseñas seguras
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "47699431"
   
 -   Comienza por el carácter $ o \@.  
   
- Si se usa en una cadena de conexión de OLE DB u ODBC, el inicio de sesión o la contraseña no deben contener ninguno de estos caracteres: [] {}() , ; ? * ! \@. Estos caracteres se usan para inicializar una conexión o para separar valores de conexión.  
+ Si se usa en una cadena de conexión de OLE DB u ODBC, el inicio de sesión o la contraseña no deben contener ninguno de estos caracteres: [] {}() , ; ? * ! Columnas en la tabla de origen capturadas\@ Estos caracteres se usan para inicializar una conexión o para separar valores de conexión.  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Directiva de contraseñas](../../relational-databases/security/password-policy.md)  

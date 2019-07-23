@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 11caad507a8d8af50bae6c3d2b51807287ee694c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 81a8422cbab7eb10d0c74ad5cd758817a665eaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050784"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT (permisos de entidad de seguridad de servidor de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ GRANT permission [ ,...n ] }
  Especifica un permiso que puede concederse para un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  LOGIN **::** *SQL_Server_login*  
- Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a conceder el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a conceder el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  SERVER ROLE **::** *server_role*  
- Especifica el rol del servidor definido por el usuario en el que se concede el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ Especifica el rol del servidor definido por el usuario en el que se concede el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  TO \<server_principal> Especifica el rol de servidor o el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se va a conceder el permiso.  
   
@@ -119,7 +118,7 @@ GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-granting-view-definition-permission-with-grant-option"></a>b. Conceder el permiso VIEW DEFINITION con GRANT OPTION  
+### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. Conceder el permiso VIEW DEFINITION con GRANT OPTION  
  En el siguiente ejemplo se concede `VIEW DEFINITION` para el inicio de sesión `EricKurjan` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el inicio de sesión de `RMeyyappan` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con `GRANT OPTION`.  
   
 ```  

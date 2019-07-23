@@ -15,20 +15,19 @@ helpviewer_keywords:
 - persisted data source objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9369c4a533778fa460a1aa55cf6e7172ae78c340
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015942"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos de origen de datos persistentes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server es compatible con los objetos de origen de datos persistentes con el **IPersistFile** interfaz.  
+  El controlador de OLE DB para SQL Server admite objetos de origen de datos persistentes con la interfaz **IPersistFile** .  
   
 ## <a name="examples"></a>Ejemplos  
  **A. Guardar la inicialización del origen de datos:**  
@@ -233,6 +232,6 @@ HRESULT InitFromPersistedDS
  Se puede llamar al método **IPersistFile::Save** antes o después de llamar a **IDBInitialize::Initialize**. Si se llama al método después de un retorno correcto de **IDBInitialize::Initialize**, se asegura de que se guarde una especificación de origen de datos válida.  
   
 ## <a name="see-also"></a>Consulte también  
- [Objetos de origen de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objetos &#40;de origen de datos OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

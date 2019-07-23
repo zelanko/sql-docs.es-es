@@ -11,17 +11,16 @@ apitype: Assembly
 ms.assetid: 287d261a-0527-4890-b0d9-49d5645b41ae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 932303bf8fc7bb3394656847ef4d19275fc270d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5b05e14d8b14bf568cf7d1d1060dbc8e2aea3fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971789"
 ---
 # <a name="sqlserverclob-constructors"></a>Constructores SQLServerClob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Para obtener información sobre los miembros de [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) de clases, vea [miembros SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md).  
+  Para obtener información sobre los miembros de la clase [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) , consulte [miembros de SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md).  
   
   

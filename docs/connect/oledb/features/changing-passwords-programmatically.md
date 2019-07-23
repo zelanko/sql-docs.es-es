@@ -1,6 +1,6 @@
 ---
 title: Cambiar las contraseñas mediante programación | Microsoft Docs
-description: Cambiar las contraseñas mediante programación con el controlador de OLE DB para SQL Server
+description: Cambiar las contraseñas mediante programación con OLE DB controlador para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,20 +20,19 @@ helpviewer_keywords:
 - modifying passwords
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdf5afb7cc9eea9beed43726d3c107c9fde9b6e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989133"
 ---
 # <a name="changing-passwords-programmatically"></a>Cambiar las contraseñas mediante programación
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  En versiones anteriores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], cuando expiraba una contraseña de usuario, solo el administrador podía restablecerla. A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], controlador de OLE DB para SQL Server admite el control de la expiración de contraseña mediante programación a través de controlador de OLE DB y los cambios realizados en el **el inicio de sesión de SQL Server** cuadros de diálogo.  
+  En versiones anteriores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], cuando expiraba una contraseña de usuario, solo el administrador podía restablecerla. A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]de, OLE DB driver for SQL Server admite la administración de la expiración de contraseña mediante programación a través de OLE DB controlador y los cambios en los cuadros de diálogo **SQL Server inicio de sesión** .  
   
 > [!NOTE]  
 >  Cuando sea posible, solicite a los usuarios que escriban las credenciales en tiempo de ejecución y eviten almacenarlas en un formato guardado. Si tiene que conservar las credenciales, debe cifrarlas con la [API de cifrado de Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Para obtener más información sobre el uso de contraseñas seguras, vea [Contraseñas seguras](../../../relational-databases/security/strong-passwords.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "66777888"
 |18488|Error de inicio de sesión del usuario '%.*ls'. Motivo: se debe cambiar la contraseña de la cuenta.|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Controlador OLE DB para SQL Server  
- El controlador OLE DB para SQL Server admite la expiración de contraseña aunque una interfaz de usuario y mediante programación.  
+ El controlador de OLE DB para SQL Server admite la expiración de contraseña a través de una interfaz de usuario y mediante programación.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Expiración de contraseñas de la interfaz de usuario de OLE DB  
  El controlador OLE DB para SQL Server admite la expiración de contraseñas mediante los cambios realizados en los cuadros de diálogo **Inicio de sesión de SQL Server**. Si el valor de DBPROP_INIT_PROMPT está establecido en DBPROMPT_NOPROMPT, se producirá un error en el intento de conexión inicial si la contraseña ha expirado.  
@@ -90,7 +89,7 @@ ms.locfileid: "66777888"
   
  Si el intento de cambiar la contraseña produce un error inesperadamente, el servidor devuelve el código de error 18468. Se devuelve un error OLEDB estándar del intento de conexión.  
   
- Para obtener más información sobre el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, vea [propiedades de inicialización y autorización](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para obtener más información sobre el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, consulte [propiedades de inicialización y autorización](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
 ## <a name="see-also"></a>Consulte también  

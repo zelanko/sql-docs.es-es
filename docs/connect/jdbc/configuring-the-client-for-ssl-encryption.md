@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f5ec4a56beb5595353671c0f2aab18bf30e5f87
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7098df4d2a38c6a9415504bec6933afc4a4b310f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956898"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>Configurar el cliente para el cifrado SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66797470"
   
  Si la propiedad **trustStore** no se ha especificado o se ha establecido en null, el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se basará en el proveedor de seguridad subyacente de JVM, la Extensión de sockets seguros de Java (SunJSSE, Java Secure Socket Extension). El proveedor de SunJSSE proporciona un TrustManager predeterminado, que se utiliza para validar los certificados X.509 que devuelve SQL Server con el material de confianza que se proporciona en un almacén de confianza.  
   
- El elemento TrustManager intenta localizar trustStore predeterminado en el siguiente orden:  
+ El TrustManager intenta encontrar el trustStore predeterminado en el siguiente orden de búsqueda:  
   
 -   Si la propiedad del sistema "javax.net.ssl.trustStore" está definida, TrustManager intenta buscar el archivo trustStore predeterminado con el nombre de archivo que especifica dicha propiedad del sistema.  
   

@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: cde41743-1a5d-4930-91b3-4e5fccc1bc36
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7b6a1a95c19cd4ee296b5065aa9f59958df1be45
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 484e643a34c8ff2015c98c59c0198e53519714be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982541"
 ---
 # <a name="getlogwriter-method-sqlserverdatasource"></a>Método getLogWriter (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Este método solo se utiliza de forma interna. Para obtener más información acerca del registro, consulte [Tracing Driver Operation](../../../connect/jdbc/tracing-driver-operation.md).  
+  Este método solo se utiliza de forma interna. Para obtener más información sobre el registro, vea seguimiento de la [operación del controlador](../../../connect/jdbc/tracing-driver-operation.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,10 +35,10 @@ public java.io.PrintWriter getLogWriter()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un objeto PrintWriter.  
+ Objeto PrintWriter.  
   
 ## <a name="remarks"></a>Notas  
- Este método getLogWriter especificado por el método getLogWriter en la interfaz javax.sql.DataSource.  
+ Este método getLogWriter se especifica mediante el método getLogWriter en la interfaz javax. SQL. DataSource.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

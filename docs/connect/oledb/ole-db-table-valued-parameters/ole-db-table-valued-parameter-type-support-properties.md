@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 336ef7d2bf0f81994bbd004f60062d98df91eb54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d53abd4dc5d4a233e7b517fc9b5fecaa64185e0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015302"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Compatibilidad con tipos de parámetros con valores de tabla de OLE DB (propiedades)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66801141"
   En este tema se proporciona información sobre las propiedades de OLE DB y los conjuntos de propiedades asociados a los objetos de conjunto de filas de parámetro con valores de tabla.  
   
 ## <a name="properties"></a>Propiedades  
- A continuación, se muestra la lista de propiedades expuestas mediante el método IRowsetInfo::GetProperties en los objetos de conjunto de filas de parámetro con valores de tabla. Observe que todas las propiedades de conjunto de filas de parámetro con valores de tabla son de solo lectura. Por lo tanto, intenta establecer cualquiera de las propiedades mediante IOpenRowset:: OpenRowset o ITableDefinitionWithConstraints::CreateTableWithConstraints métodos en sus valores no predeterminados se producirá un error y no se creará ningún objeto.  
+ A continuación, se muestra la lista de propiedades expuestas mediante el método IRowsetInfo::GetProperties en los objetos de conjunto de filas de parámetro con valores de tabla. Observe que todas las propiedades de conjunto de filas de parámetro con valores de tabla son de solo lectura. Por lo tanto, si se intenta establecer cualquiera de las propiedades a través de los métodos IOpenRowset:: OpenRowset o ITableDefinitionWithConstraints:: CreateTableWithConstraints en sus valores no predeterminados, se producirá un error y no se creará ningún objeto.  
   
  No se enumeran aquí las propiedades no implementadas en el objeto de conjunto de filas de parámetro con valores. Para obtener una lista completa de las propiedades, vea la documentación de OLE DB en Data Access Components para Windows.  
   
@@ -79,14 +78,14 @@ ms.locfileid: "66801141"
  La propiedad siguiente establece los parámetros con valores de tabla admitidos.  
   
 ### <a name="dbpropsetsqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Esta propiedad se utiliza por el consumidor en el proceso de creación de un objeto de conjunto de filas de parámetro con valores de tabla mediante el uso de ITableDefinitionWithConstraints::CreateTableWithConstraints para cada columna a través de la estructura DBCOLUMNDESC, si es necesario.  
+ El consumidor utiliza esta propiedad en el proceso de creación de un objeto de conjunto de filas de parámetros con valores de tabla mediante ITableDefinitionWithConstraints:: CreateTableWithConstraints para cada columna a través de la estructura DBCOLUMNDESC, si es necesario.  
   
 |Id. de propiedad|Valor de la propiedad|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|L/E: de lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descripción: cuando se establece en VARIANT_TRUE, indica que la columna es calculada. VARIANT_FALSE indica que no es una columna calculada.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Estas propiedades son leídas por el consumidor al detectar la información de tipo de parámetro con valores de tabla en las llamadas a isscommandwithparameters:: Getparameterproperties y establecidas por el usuario al establecer las propiedades concretas sobre el parámetro con valores de tabla a través de isscommandwithparameters:: SetParameterProperties.  
+ El consumidor Lee estas propiedades mientras se detecta la información del tipo de parámetro con valores de tabla en las llamadas a ISSCommandWithParameters:: GetParameterProperties y se establece por el consumidor mientras se establecen propiedades específicas sobre el parámetro con valores de tabla. a través de ISSCommandWithParameters:: SetParameterProperties.  
   
  En la tabla siguiente se proporcionan descripciones detalladas de estas propiedades.  
   

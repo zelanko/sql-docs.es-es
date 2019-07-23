@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8fcc4a39edfaafd7ae66990a2f1161d781d1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936344"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Controladores de Microsoft para PHP para SQL Server
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Los Drivers de Microsoft para PHP para SQL Server habilitar la integración con SQL Server para las aplicaciones PHP. Los controladores son extensiones PHP que permiten la lectura y escritura de datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para tener acceso a datos en las bases de datos SQL de Azure y en todas las ediciones de SQL Server 2005 y posterior (incluidas las ediciones Express). Los controladores de hacer uso de características PHP, incluidas las secuencias PHP, para leer y escribir objetos grandes.  
+Los controladores de Microsoft para PHP para SQL Server permiten la integración con SQL Server para aplicaciones PHP. Los controladores son extensiones PHP que permiten leer y escribir datos de SQL Server desde scripts PHP. Los controladores proporcionan interfaces para tener acceso a los datos de Azure SQL Database y en todas las ediciones de SQL Server 2005 y versiones posteriores (incluidas las ediciones Express). Los controladores hacen uso de las características de PHP, incluidas las secuencias PHP, para leer y escribir objetos de gran tamaño.  
   
 ## <a name="getting-started"></a>Introducción  
 * [Step 1: Configure development environment for PHP development (Paso 1: configurar el entorno de desarrollo para el desarrollo de PHP)](step-1-configure-development-environment-for-php-development.md)  
@@ -40,12 +39,12 @@ Los Drivers de Microsoft para PHP para SQL Server habilitar la integración con 
 * [Recursos de soporte para los controladores de Microsoft para PHP para SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Descargar  
-* ![En círculo la flecha abajo de descarga](../../ssdt/media/download.png)[para descargar los controladores de PHP para SQL](download-drivers-php-sql-server.md)
+* ![Download-flecha abajo-circled](../../ssdt/media/download.png)[to download drivers for PHP for SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Ejemplos  
 * [Códigos de ejemplo de los controladores de Microsoft para PHP para SQL Server](code-samples-for-php-sql-driver.md)
-* [Introducción a PHP en Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
-* [Introducción a PHP en macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
-* [Introducción a PHP en Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
-* [Introducción a PHP en Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
-* [Introducción a PHP en SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)
+* [Introducción con PHP en Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
+* [Introducción con PHP en macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
+* [Introducción con PHP en Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
+* [Introducción con PHP en Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
+* [Introducción con PHP en SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)

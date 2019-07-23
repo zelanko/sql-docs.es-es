@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4255b78991e557ab36d7d0f97ab9be0fed5194a3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023771"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +117,7 @@ ms.locfileid: "67732105"
   
  Los valores de configuración de reproducción se especifican en elementos XML secundarios de los elementos `<ReplayOptions>` y `<OutputOptions>` del archivo de configuración de reproducción.  
   
-### <a name="replayoptions-element"></a>\<ReplayOptions > elemento  
+### <a name="replayoptions-element"></a>\<ReplayOptions >, elemento  
  Los valores especificados por el archivo de configuración de reproducción en el elemento `<ReplayOptions>` incluyen lo siguiente:  
   
 |Configuración|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
@@ -133,7 +132,7 @@ ms.locfileid: "67732105"
 |Tiempo de espera de la consulta|`<QueryTimeout>`|Especifica el valor del tiempo de espera máximo de una consulta, en segundos. Este valor solo es efectivo hasta que se haya devuelto la primera fila.|Entero >= 1<br /><br /> (`-1` para deshabilitar)|No. El valor es `3600`de forma predeterminada.|  
 |Subprocesos por cliente|`<ThreadsPerClient>`|Especifica el número de subprocesos de reproducción para cada cliente de reproducción.|Un entero entre `1` y `512`.|No. Si no se especifica, Distributed Replay usará el valor `255`.|  
   
-### <a name="outputoptions-element"></a>\<OutputOptions > elemento  
+### <a name="outputoptions-element"></a>\<OutputOptions >, elemento  
  Los valores especificados por el archivo de configuración de reproducción en el elemento `<OutputOptions>` incluyen lo siguiente:  
   
 |Configuración|Elemento XML|Descripción|Valores permitidos|Obligatorio|  
@@ -165,20 +164,20 @@ ms.locfileid: "67732105"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Posible problema cuando se ejecuta con la sincronización de modo de secuenciación
- Puede encontrar un síntoma en la que la funcionalidad de reproducción aparece "pausa" o las reproducciones eventos muy lentamente. Este fenómeno puede producirse si el seguimiento está reproduciendo se basa en datos o eventos que no existen en la base de datos restaurada. 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Posible problema al ejecutarse con el modo de secuenciación de sincronización
+ Es posible que encuentre un síntoma en el que la funcionalidad de reproducción aparezca en "retrete" o reproduzca eventos muy lentamente. Este fenómeno puede producirse si el seguimiento que se está reproduciendo se basa en los datos o eventos que no existen en la base de datos de destino restaurada. 
  
- Un ejemplo es una carga de trabajo capturada que usa WAITFOR, como en la instrucción WAITFOR de recepción de Service Broker. Cuando se usa el modo de secuenciación de sincronización, los lotes se reproducen en serie. Si se produce una INSERCIÓN en la base de datos de origen después de la copia de seguridad de base de datos, pero antes de la captura de reproducción se inició el seguimiento, la recepción de WAITFOR emitido durante la reproducción que tenga que esperar la duración completa de WAITFOR. Los eventos se establecen en reproducirse después de la recepción de WAITFOR estará detenida. Esto puede producir en el contador del monitor de rendimiento de las solicitudes de Batch/seg. la eliminación de destino de base de datos de reproducción en cero hasta que se complete la WAITFOR. 
+ Un ejemplo es una carga de trabajo capturada que utiliza WAITFOR, como en la instrucción de recepción WAITFOR de Service Broker. Al usar el modo de secuenciación de sincronización, los lotes se reproducen en serie. Si se produce una inserción en la base de datos de origen después de la copia de seguridad de la base de datos, pero antes de que se inicie el seguimiento de la captura de reproducción, la recepción WAITFOR emitida durante la reproducción puede tener que esperar toda la duración del evento WAITFOR. Los eventos se configuran para que se reproduzcan después de que se detenga la recepción WAITFOR. Esto puede dar lugar a que el contador del monitor de rendimiento de solicitudes de Batch/seg. de destino de la base de datos de reproducción caiga en cero hasta que se complete WAITFOR. 
  
- Si necesita usar el modo de sincronización y deseos para evitar este comportamiento, debe hacer lo siguiente:
+ Si necesita usar el modo de sincronización y desea evitar este comportamiento, debe hacer lo siguiente:
  
-1.  Poner las bases de datos que se va a usar como destinos de reproducción.
+1.  Ponga en reposo las bases de datos que va a usar como destinos de reproducción.
 
-2.  Permitir actividad pendiente para completar.
+2.  Permite que se completen todas las actividades pendientes.
 
-3.  Las bases de datos de copia de seguridad y permitir que las copias de seguridad en completarse.
+3.  Realice una copia de seguridad de las bases de datos y permita que se completen las copias de seguridad.
 
-4.  Iniciar la captura de seguimiento de reproducción distribuida y reanudar la carga de trabajo normal. 
+4.  Inicie la captura de seguimiento de Distributed Replay y reanude la carga de trabajo normal. 
  
  
 ## <a name="see-also"></a>Consulte también  

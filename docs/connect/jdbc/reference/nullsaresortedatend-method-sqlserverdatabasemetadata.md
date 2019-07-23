@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 713cf636-40f2-474a-8a5d-5aba4a310a9c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 248d28b199dfbdd92f84cca200735b8b3a66e8fc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0b81926e3e0e6b57f752391b3f6bac68b5ad7aee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976679"
 ---
 # <a name="nullsaresortedatend-method-sqlserverdatabasemetadata"></a>Método nullsAreSortedAtEnd (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean nullsAreSortedAtEnd()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método nullsAreSortedAtEnd especificado por el método nullsAreSortedAtEnd en la interfaz java.sql.DatabaseMetaData.  
+ Este método nullsAreSortedAtEnd se especifica mediante el método nullsAreSortedAtEnd en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

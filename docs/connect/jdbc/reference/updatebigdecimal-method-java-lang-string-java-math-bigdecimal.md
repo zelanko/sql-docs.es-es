@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b844cd9d-3d2d-4385-ab01-ecc89692054f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b0c1afa9be5944d74a5c8bd8cd7713246e23a36f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5eb50fafceefa312fe1b73daf2b2d88d4238403d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985433"
 ---
 # <a name="updatebigdecimal-method-javalangstring-javamathbigdecimal"></a>Método updateBigDecimal (java.lang.String, java.math.BigDecimal)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateBigDecimal(java.lang.String columnName,
   
  *x*  
   
- Un objeto BigDecimal.  
+ Objeto BigDecimal.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método updateBigDecimal especificado por el método updateBigDecimal en la interfaz java.sql.ResultSet.  
+ Este método updateBigDecimal se especifica mediante el método updateBigDecimal de la interfaz java. SQL. ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método updateBigDecimal &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)   

@@ -13,28 +13,27 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, sessions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: a2768acd897d996ec3076864a0586be74f22dbdf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bc162e77a7a0dd015f108f6d1fd675a8b78b1ecf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995191"
 ---
 # <a name="sessions"></a>Sesiones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Un controlador de OLE DB para la sesión de SQL Server representa una sola conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Un controlador de OLE DB para SQL Server sesión representa una conexión única a una instancia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de.  
   
- El controlador OLE DB para SQL Server requiere que las sesiones delimiten el espacio de transacción para un origen de datos. Todos los objetos de comando creados a partir de un objeto de sesión concreto participan en la transacción local o distribuida del objeto de sesión.  
+ El controlador de OLE DB para SQL Server requiere que las sesiones delimiten el espacio de transacciones para un origen de datos. Todos los objetos de comando creados a partir de un objeto de sesión concreto participan en la transacción local o distribuida del objeto de sesión.  
   
  El primer objeto de sesión creado en el origen de datos inicializado recibe la conexión a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] establecida en la inicialización. Cuando se liberan todas las referencias en las interfaces del objeto de sesión, la conexión a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pasa a estar disponible para otro objeto de sesión creado en el origen de datos.  
   
  Un objeto de sesión adicional creado en el origen de datos establece su propia conexión a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tal como especifica el origen de datos. La conexión a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se quita cuando la aplicación libera todas las referencias a los objetos creados en dicha sesión.  
   
- En el ejemplo siguiente se muestra cómo usar el controlador OLE DB para SQL Server para conectarse a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos:  
+ En el ejemplo siguiente se muestra cómo usar el controlador de OLE DB para SQL Server para conectarse [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una base de datos:  
   
 ```  
 int main()  
@@ -183,7 +182,7 @@ EXIT:
 }  
 ```  
   
- La conexión de objetos de sesión del controlador OLE DB para SQL Server a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede generar una sobrecarga significativa en las aplicaciones que crean y liberan objetos de sesión de forma continua. Puede minimizar la sobrecarga al administrar eficazmente controlador OLE DB para los objetos de sesión de SQL Server. Las aplicaciones del controlador OLE DB para SQL Server pueden mantener la conexión a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de un objeto de sesión activa si mantienen una referencia al menos en una interfaz del objeto.  
+ La conexión de objetos de sesión del controlador OLE DB para SQL Server a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede generar una sobrecarga significativa en las aplicaciones que crean y liberan objetos de sesión de forma continua. La sobrecarga se puede minimizar mediante la administración eficaz de OLE DB controlador para los objetos de sesión SQL Server. Las aplicaciones del controlador OLE DB para SQL Server pueden mantener la conexión a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de un objeto de sesión activa si mantienen una referencia al menos en una interfaz del objeto.  
   
  Si se mantiene un grupo de referencias a objeto de creación de comando, por ejemplo, se mantienen conexiones activas para estos objetos de sesión en el grupo. Como los objetos de sesión son necesarios, el código de mantenimiento de grupo pasa un puntero de interfaz **IDBCreateCommand** válido al método de aplicación que requiere la sesión. Cuando el método de aplicación ya no requiere la sesión, devuelve el puntero de interfaz al código de mantenimiento de grupo en lugar de liberar la referencia de la aplicación al objeto de creación de comando.  
   
@@ -191,6 +190,6 @@ EXIT:
 >  En el ejemplo anterior, se usa la interfaz **IDBCreateCommand** porque la interfaz **ICommand** implementa el método **GetDBSession**, el único método en el ámbito de comando o de conjunto de filas que permite a un objeto determinar la sesión en la que se ha creado. Por tanto, un objeto de comando, y solo un objeto de comando, permite a una aplicación recuperar un puntero de objeto de origen de datos a partir del cual se pueden crear sesiones adicionales.  
   
 ## <a name="see-also"></a>Consulte también  
- [Objetos de origen de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objetos &#40;de origen de datos OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

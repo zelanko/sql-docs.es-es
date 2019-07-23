@@ -1,19 +1,18 @@
 ---
 title: Uso de los KPI en Reporting Services | Microsoft Docs
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: 4e6a5bbf2d744475ca49e3917f6539e81e6439ea
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572808"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329363"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Uso de los KPI en Reporting Services
 
@@ -28,7 +27,10 @@ Si usa KPI en SQL Server Reporting Services, podrá visualizar rápidamente las 
 - ¿Qué adelanto o atraso llevo?  
   
 - ¿Cuáles son las cantidades mínimas que he completado?  
-  
+
+> [!NOTE]
+> Solo se puede acceder a los KPI en las ediciones Enterprise (Developer) del portal de SSRS.
+
 ## <a name="creating-a-dataset"></a>Creación de un conjunto de datos
 
 Un KPI solo utilizará la primera fila de datos de un conjunto de datos compartido. Asegúrese de que los datos que desea utilizar se encuentran en la primera fila. Para crear un conjunto de datos compartido, puede utilizar el Generador de informes o SQL Server Data Tools.  
@@ -57,7 +59,7 @@ Puede asignar valores estáticos o utilizar los datos de un conjunto de datos co
 | Objetivo | Se utiliza como comparación con un valor numérico y se muestra en forma de diferencia porcentual. |
 | Estado | Valor numérico que se usa para determinar el color del icono de KPI. Los valores válidos son 1 (verde), 0 (ámbar) y -1 (rojo). |
 | Conjunto de tendencias | Valores numéricos separados por comas usados para la visualización de gráficos. También puede establecerse en una columna de un conjunto de datos con valores que representen la tendencia. |
-| Contenido relacionado | La capacidad para establecer un vínculo de obtención de detalles. Este vínculo puede ser un informe móvil publicado en el portal o una dirección URL personalizada. |
+| Contenido relacionado | La capacidad de establecer un vínculo de obtención de detalles. Este vínculo puede ser un informe móvil publicado en el portal o una dirección URL personalizada. |
   
 > **Advertencia**: Aunque puede usar el valor de palabra para el campo **Estado** en tiempo de diseño, debe utilizar el valor de número si va a actualizar un conjunto de datos. Si actualiza un conjunto de datos con el valor de palabra, en lugar del de número, se podría dañar los KPI en el servidor.  
 >
@@ -89,17 +91,17 @@ Para usar datos de un conjunto de datos compartido, puede realizar los siguiente
 
 ## <a name="configuring-related-content"></a>Configuración de contenido relacionado
 
-Cuando se elige **informe móvil**, puede elegir el destino en un cuadro de diálogo.
+Al elegir **Informe móvil**, puede elegir el destino en un cuadro de diálogo.
 
    ![Informe móvil](media/rscreatekpi-related-content-mobile-report.png)
 
-Al hacer clic ahora en el KPI en el portal, se muestra una vista en miniatura del informe móvil en la lista desplegable de contenido relacionada. Al hacer clic en esta vista en miniatura puede navegar directamente, para este informe.
+Al hacer clic en el KPI en el portal, se muestra una miniatura del informe móvil en el menú desplegable contenido relacionado. Al hacer clic en esta miniatura, puede ir directamente a este informe.
 
-También puede especificar una dirección URL personalizada. Esta tarea puede ser cualquier cosa: un sitio Web, un sitio de SharePoint, una dirección URL a un informe de SSRS (que le permite pasar parámetros codificados de forma rígida).
+También puede especificar una dirección URL personalizada. Esta tarea puede ser cualquier cosa: un sitio web, un sitio de SharePoint, una dirección URL a un informe de SSRS (que le permitiría pasar parámetros codificados de forma rígida).
 
 ![Dirección URL personalizada](media/rscreatekpi-related-content-custom-url.png)
 
-Al hacer clic ahora en el KPI, la dirección URL se muestra en el contenido relacionado.
+Al hacer clic en el KPI, la dirección URL se muestra en contenido relacionado.
 
 Solo es posible agregar un informe móvil o una dirección URL personalizada.
   

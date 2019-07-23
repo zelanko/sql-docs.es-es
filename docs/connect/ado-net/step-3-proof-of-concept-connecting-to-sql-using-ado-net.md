@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ceea73eba8f1c01590218c106f3b2b10237408e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 743eab241fa9feb4a622054b3be48b887b804813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957614"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>Paso 3: Prueba de concepto de la conexión a SQL mediante ADO.NET
 
@@ -24,11 +23,11 @@ ms.locfileid: "66770567"
 - Artículo siguiente &nbsp;&nbsp;&nbsp;[Paso 4: Conectar la resistencia a SQL con ADO.NET](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-En este ejemplo de código de C# debe considerarse como una prueba de concepto solo. El código de ejemplo se ha simplificado para mayor claridad y no representa necesariamente las mejores prácticas recomendadas por Microsoft.  
+Este C# ejemplo de código se debe considerar solo una prueba de concepto. El código de ejemplo se simplifica para mayor claridad y no representa necesariamente las prácticas recomendadas recomendadas por Microsoft.  
   
-## <a name="step-1-connect"></a>Paso 1: conectar
+## <a name="step-1-connect"></a>Paso 1: conexión
   
-El método **SqlConnection.Open** se usa para conectarse a la base de datos SQL.  
+El método **SqlConnection. Open** se utiliza para conectarse a la base de datos SQL.  
 
 
 ```csharp
@@ -67,9 +66,9 @@ El método **SqlConnection.Open** se usa para conectarse a la base de datos SQL.
 
 ## <a name="step-2--execute-a-query"></a>Paso 2: Ejecutar una consulta  
   
-El método SqlCommand.ExecuteReader:  
+El método SqlCommand. ExecuteReader:  
   
-- Emite la instrucción SELECT de SQL para el sistema de SQL.  
+- Emite la instrucción SQL SELECT para el sistema SQL.  
 - Devuelve una instancia de SqlDataReader para proporcionar acceso a las filas de resultados.  
   
   
@@ -151,14 +150,14 @@ El método SqlCommand.ExecuteReader:
   
   
   
-## <a name="step-3-insert-a-row"></a>Paso 3: Insertar una fila  
+## <a name="step-3-insert-a-row"></a>Paso 3: insertar una fila  
   
   
-Este ejemplo se muestra cómo:  
+En este ejemplo se muestra cómo:  
   
-- Ejecutar una instrucción SQL INSERT pasando los parámetros de forma segura.  
-  - Uso de parámetros protege contra ataques de inyección SQL.  
-- Recuperar el valor generado automáticamente.  
+- Ejecutar una instrucción INSERT de SQL de forma segura mediante el paso de parámetros.  
+  - El uso de parámetros protege contra ataques por inyección de SQL.  
+- Recupere el valor generado automáticamente.  
   
   
   

@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 773b5bc08affdc513e7ee5897fbd4b0f3c24993e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ea65ca1cbf69db3628c7664fb3b481b6ffaa91ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979521"
 ---
 # <a name="getstatementpoolingcachesize-method-sqlserverconnection"></a>Método getStatementPoolingCacheSize (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Devuelve el tamaño de la caché de la instrucción preparada para esta conexión. '0' significa que no está habilitada la memoria caché.
+ Devuelve el tamaño de la memoria caché de instrucciones preparada para esta conexión. ' 0 ' significa que el almacenamiento en caché no está habilitado.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,13 +35,13 @@ public int getStatementPoolingCacheSize()
 ```  
 
 ## <a name="return-value"></a>Valor devuelto
- Un **int** que contiene el valor de **valor de statementPoolingCacheSize** propiedad de conexión.
+ **Entero** que contiene el valor de la propiedad de conexión **statementPoolingCacheSize** .
 
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Notas  
- Este método está disponible desde la versión del controlador JDBC 6.4 y en marcha.
+ Este método está disponible en la versión 6,4 y posteriores del controlador JDBC.
  
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

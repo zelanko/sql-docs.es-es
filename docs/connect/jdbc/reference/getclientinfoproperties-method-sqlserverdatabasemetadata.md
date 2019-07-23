@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1568aef4-f4c4-40a0-a1ab-9c106905bd92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bf9c0696c2169ee9b0dd1af198fcb50333c5d9ca
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08b919ec6b626cd61b757b380d24efffcada0d55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953102"
 ---
 # <a name="getclientinfoproperties-method-sqlserverdatabasemetadata"></a>Método getClientInfoProperties (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,16 +30,16 @@ public java.sql.ResultSet getClientInfoProperties()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un objeto de conjunto de resultados.  
+ Un objeto ResultSet.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getClientInfoProperties especificado por el método getClientInfoProperties de la interfaz java.sql.DatabaseMetaData.  
+ Este método getClientInfoProperties se especifica mediante el método getClientInfoProperties en la interfaz java. SQL. DatabaseMetaData.  
   
 > [!NOTE]  
->  Este método devuelve un conjunto de resultados vacío. El controlador permite establecer solo la **applicationName** y establece el **applicationName** solo en tiempo de conexión. SQL Server no proporciona soporte técnico para actualizar la información de la aplicación cliente una vez se haya establecido la conexión.  
+>  Este método devuelve un conjunto de resultados vacío. El controlador solo admite la configuración de **applicationName** y establece el valor de **applicationName** solo en el momento de la conexión. SQL Server no proporciona soporte técnico para actualizar la información de la aplicación cliente una vez se haya establecido la conexión.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

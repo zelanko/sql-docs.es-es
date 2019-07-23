@@ -1,5 +1,5 @@
 ---
-title: Método Length (SQLServerNClob) | Microsoft Docs
+title: Método length (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dd1fb351-b4f2-4ebe-80a0-8bafb0637906
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5fa3d153f6e36fe4eb45cc54da2326aec8e32dd8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e32b559d43e44e75d4f87ecf99cfd871727c9934
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976853"
 ---
 # <a name="length-method-sqlservernclob"></a>Método length (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public long length()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método de longitud especificado por el método length de la interfaz java.sql.NClob.  
+ Este método de longitud se especifica mediante el método length en la interfaz java. SQL. NClob.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

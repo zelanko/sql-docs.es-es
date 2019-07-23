@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 672dceac-ddfe-43e1-851b-5172b78fed9c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8e1ccbb33c1a7fae6128c967b81d181010b46e0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fdbd0de626b946d17e46f9a46f92235c3b9e1535
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953784"
 ---
 # <a name="getbigdecimal-method-sqlserverresultset"></a>Método getBigDecimal (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,10 +31,10 @@ ms.locfileid: "66799841"
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Método getBigDecimal &#40;int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-sqlserverresultset.md)|Recupera el valor del índice del nombre de la columna que se ha designado en la fila actual del objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como java.math.BigDecimal con precisión completa.|  
-|[Método getBigDecimal &#40;int, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-int-sqlserverresultset.md)|(En desuso). Recupera el valor del índice de la columna que se ha designado en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un objeto mediante la escala especificada.|  
-|[Método getBigDecimal &#40;java.lang.String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-sqlserverresultset.md)|Recupera el valor del nombre de la columna que se ha designado en la fila actual del objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como java.math.BigDecimal con precisión completa.|  
-|[Método getBigDecimal &#40;java.lang.String, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-int-sqlserverresultset.md)|(En desuso) recupera el valor del nombre de la columna que se ha designado en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un objeto mediante la escala especificada.|  
+|[método &#40;getBigDecimal int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-sqlserverresultset.md)|Recupera el valor del índice del nombre de la columna que se ha designado en la fila actual del objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como java.math.BigDecimal con precisión completa.|  
+|[método &#40;getBigDecimal int, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-int-int-sqlserverresultset.md)|(En desuso). Recupera el valor del índice de la columna que se ha designado en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un objeto mediante la escala especificada.|  
+|[método &#40;getBigDecimal Java. lang. String&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-sqlserverresultset.md)|Recupera el valor del nombre de la columna que se ha designado en la fila actual del objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como java.math.BigDecimal con precisión completa.|  
+|[método &#40;getBigDecimal Java. lang. String, int&#41; &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-int-sqlserverresultset.md)|(En desuso) recupera el valor del nombre de la columna que se ha designado en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un objeto mediante la escala especificada.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cd2418c9-e95d-4820-82bd-944287387b60
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a23a3487b759392329ba22284fba532d797ca53a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a4359c68d2376d933e919a03dcd230a9df9ea307
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968923"
 ---
 # <a name="supportssavepoints-method-sqlserverdatabasemetadata"></a>Método supportsSavepoints (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSavepoints()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si se admite. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método supportsSavepoints especificado por el método supportsSavepoints en la interfaz java.sql.DatabaseMetaData.  
+ Este método supportsSavepoints se especifica mediante el método supportsSavepoints en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: Método updateSQLXML (int, java.sql.SQLXML) | Microsoft Docs
+title: Método updateSQLXML (int, Java. SQL. SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5170751-fbe1-433b-96f5-4f237ba55f60
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b7b602b0f23c1791ba76df3846fcc223716a0dd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee90c33b2b546a3eaf48d52b7577200b7c23306b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998279"
 ---
 # <a name="updatesqlxml-method-int-javasqlsqlxml"></a>Método updateSQLXML (int, java.sql.SQLXML)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public void updateSQLXML(int columnIndex,
   
  *xmlObject*  
   
- Un objeto SQLXML.  
+ Objeto SQLXML.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método updateSQLXML especificado por el método updateSQLXML de la interfaz java.sql.ResultSet.  
+ Este método updateSQLXML se especifica mediante el método updateSQLXML de la interfaz java. SQL. ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método updateSQLXML &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   

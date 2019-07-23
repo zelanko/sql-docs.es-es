@@ -1,6 +1,6 @@
 ---
 title: Trabajar con aislamiento de instantánea | Microsoft Docs
-description: Trabajar con aislamiento de instantánea en el controlador de OLE DB para SQL Server
+description: Uso del aislamiento de instantáneas en OLE DB driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 74c80e0db7a6059e9a871553f2e11c6a16360ec3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 25d3dbaf09e5cdd6dc6726402275376766cf0591
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988687"
 ---
 # <a name="working-with-snapshot-isolation"></a>Trabajar con aislamiento de instantánea
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "66796014"
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujo un nuevo nivel de aislamiento de "instantánea" pensado para mejorar la simultaneidad en las aplicaciones de procesamiento de transacciones en línea (OLTP). En versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la simultaneidad se basada únicamente en el bloqueo, lo que podía provocar problemas de bloqueo e interbloqueo en algunas aplicaciones. El aislamiento de instantánea depende de las mejoras de las versiones de fila y está pensado para mejorar el rendimiento evitando situaciones de bloqueo de lectura-escritura.  
   
- Las transacciones que se inician bajo el aislamiento de instantánea leen una instantánea de la base de datos realizada al comenzar la transacción. Los cursores de servidor estáticos, dinámicos y controlados por conjunto de claves, al abrirse dentro de un contexto de transacciones de instantánea, actúan de forma muy similar a los cursores estáticos que se han abierto desde transacciones serializables. Sin embargo, cuando los cursores abiertos en los bloqueos de nivel de aislamiento de instantánea no se utilizan. Este hecho puede reducir el bloqueo en el servidor.  
+ Las transacciones que se inician bajo el aislamiento de instantánea leen una instantánea de la base de datos realizada al comenzar la transacción. Los cursores de servidor estáticos, dinámicos y controlados por conjunto de claves, al abrirse dentro de un contexto de transacciones de instantánea, actúan de forma muy similar a los cursores estáticos que se han abierto desde transacciones serializables. Sin embargo, cuando los cursores se abren en los bloqueos de nivel de aislamiento de instantánea no se realizan. Este hecho puede reducir el bloqueo en el servidor.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>Controlador OLE DB para SQL Server  
- El controlador OLE DB para SQL Server incluye mejoras que aprovechan el aislamiento de instantánea que se introdujo en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Estas mejoras incluyen cambios en los conjuntos de propiedades DBPROPSET_SESSION y DBPROPSET_DATASOURCEINFO.  
+ El controlador de OLE DB para SQL Server tiene mejoras que aprovechan el aislamiento de instantánea introducido en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Estas mejoras incluyen cambios en los conjuntos de propiedades DBPROPSET_SESSION y DBPROPSET_DATASOURCEINFO.  
   
 ### <a name="dbpropsetdatasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
- El conjunto de propiedades DBPROPSET_DATASOURCEINFO ha cambiado para indicar que se admite el nivel de aislamiento de instantánea mediante la adición del valor DBPROPVAL_TI_SNAPSHOT que se utiliza en la propiedad DBPROP_SUPPORTEDTXNISOLEVELS. Este nuevo valor indica que se admite el nivel del aislamiento de instantánea independientemente de que se haya habilitado o no el control de versiones en la base de datos. En la tabla siguiente se enumera los valores DBPROP_SUPPORTEDTXNISOLEVELS:  
+ El conjunto de propiedades DBPROPSET_DATASOURCEINFO ha cambiado para indicar que se admite el nivel de aislamiento de instantánea mediante la adición del valor DBPROPVAL_TI_SNAPSHOT que se utiliza en la propiedad DBPROP_SUPPORTEDTXNISOLEVELS. Este nuevo valor indica que se admite el nivel del aislamiento de instantánea independientemente de que se haya habilitado o no el control de versiones en la base de datos. En la tabla siguiente se enumeran los valores de DBPROP_SUPPORTEDTXNISOLEVELS:  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
@@ -58,7 +57,7 @@ ms.locfileid: "66796014"
 > [!NOTE]  
 >  Si se establece DBPROPVAL_TI_SNAPSHOT con las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se generan los errores DB_S_ERRORSOCCURRED o DB_E_ERRORSOCCURRED.  
   
- Para obtener información acerca de cómo se admite el aislamiento de instantánea en transacciones, vea [compatibilidad con transacciones locales](../../oledb/ole-db-transactions/supporting-local-transactions.md).  
+ Para obtener información sobre cómo se admite el aislamiento de instantáneas en transacciones, vea [admitir transacciones locales](../../oledb/ole-db-transactions/supporting-local-transactions.md).  
 
   
 ## <a name="see-also"></a>Consulte también  

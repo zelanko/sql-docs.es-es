@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b13f081338e26aaa33306998d3e562088609a6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e43c9e6c284a5a546f7648b72158597921aa922
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957484"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Obtener acceso a información de diagnóstico en el registro de eventos extendidos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66770521"
 ## <a name="details"></a>Detalles  
  Para las operaciones de conexión, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] enviará un identificador de conexión de cliente. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([Solución de problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](https://go.microsoft.com/fwlink/?LinkId=207752)) y buscar el campo **ClientConnectionID** para obtener información de diagnóstico sobre el error de conexión. Los identificadores de conexión del cliente se registran en el búfer de anillo únicamente si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete de inicio de sesión previo, no se generará un identificador de conexión del cliente.) El identificador de conexión del cliente es un GUID de 16 bytes. También puede buscar el identificador de conexión del cliente en la salida de destino de eventos extendidos si se agrega la acción **client_connection_id** a los eventos de una sesión de eventos extendidos. Si necesita más ayuda de diagnóstico del controlador cliente, puede habilitar el seguimiento, volver a ejecutar el comando de conexión y observar el campo **ClientConnectionID** en el seguimiento.  
   
- El cliente puede obtener Id. de conexión mediante programación usando [ISQLServerConnection, interfaz](../../connect/jdbc/reference/isqlserverconnection-interface.md). El identificador de conexión también estará presente en cualquier excepción relacionada con la conexión.  
+ Puede obtener el identificador de conexión de cliente mediante programación con la [interfaz ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). El identificador de conexión también estará presente en cualquier excepción relacionada con la conexión.  
   
  Cuando se produzca un error de conexión, el identificador de conexión de cliente en la información de seguimiento de diagnósticos integrados (BID) del servidor y en el búfer en anillo de conectividad puede ayudar a correlacionar las conexiones de cliente con las conexiones en el servidor. Para más información sobre los seguimientos de BID en el servidor, vea [Data Access Tracing](https://go.microsoft.com/fwlink/?LinkId=125805) (Seguimiento de acceso de datos). Tenga en cuenta que el artículo de seguimiento de acceso de datos también incluye información sobre el seguimiento de acceso de datos que no se aplica a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]; vea [Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md) para obtener información sobre cómo realizar un seguimiento de acceso de datos mediante [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   

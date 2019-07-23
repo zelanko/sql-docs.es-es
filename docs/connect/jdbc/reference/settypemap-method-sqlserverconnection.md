@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01548f5d9a2e54607ff0b260a39724591de4380e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a188d5d98aca0418a2452f29912f62604f3ffa90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972174"
 ---
 # <a name="settypemap-method-sqlserverconnection"></a>Método setTypeMap (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public void setTypeMap(java.util.Map map)
 #### <a name="parameters"></a>Parámetros  
  *map*  
   
- Un objeto TypeMap.  
+ Objeto TypeMap.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método setTypeMap especificado por el método setTypeMap en la interfaz java.sql.Connection.  
+ Este método setTypeMap se especifica mediante el método setTypeMap en la interfaz java. SQL. Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

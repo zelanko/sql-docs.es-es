@@ -1,6 +1,6 @@
 ---
 title: Detección de metadatos | Microsoft Docs
-description: Detección de metadatos en el controlador OLE DB para SQL Server
+description: Detección de metadatos en OLE DB controlador para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ed5020498dee14a34bd66076fc74a578bc09e69
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989060"
 ---
 # <a name="metadata-discovery"></a>Detección de metadatos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "66765964"
   
  También percibirá una mejora del rendimiento si especifica el formato de metadatos mediante IBCPSession::BCPSetBulkMode.  
   
- Es posible la detección de metadatos mejorada en el controlador OLE DB para SQL Server debido a la adición de dos procedimientos almacenados en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
+ La detección de metadatos mejorada en OLE DB controlador para SQL Server es posible gracias a la adición de dos procedimientos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]almacenados en:  
   
 -   sp_describe_first_result_set  
   

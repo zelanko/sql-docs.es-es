@@ -1,5 +1,5 @@
 ---
-title: Controlador OLE DB para la programación de SQL Server | Microsoft Docs
+title: OLE DB driver for SQL Server Programming | Microsoft Docs
 description: Programación del controlador OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,30 +18,29 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 54d0a800c3b651162edbf583c8f5e49005ed2628
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993933"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Programación del controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server es una API de COM de bajo nivel que se usa para tener acceso a datos. El controlador OLE DB para SQL Server es la opción recomendada para desarrollar herramientas, utilidades o componentes de bajo nivel que necesitan un alto rendimiento. El controlador OLE DB para SQL Server es un proveedor nativo de alto rendimiento con acceso directo al protocolo Flujo TDS de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  El controlador de OLE DB para SQL Server es una API COM de bajo nivel que se utiliza para tener acceso a los datos. El controlador OLE DB para SQL Server es la opción recomendada para desarrollar herramientas, utilidades o componentes de bajo nivel que necesitan un alto rendimiento. El controlador OLE DB para SQL Server es un proveedor nativo de alto rendimiento con acceso directo al protocolo Flujo TDS de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Controlador OLE DB para SQL Server proporciona compatibilidad con OLE DB para aplicaciones que se conecten a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ OLE DB controlador para SQL Server proporciona OLE DB compatibilidad con las aplicaciones que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]se conectan a.  
   
- El controlador OLE DB para SQL Server es un proveedor compatible con 2.0 versión de OLE DB.  
+ El controlador de OLE DB para SQL Server es un proveedor compatible con OLE DB versión 2,0.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 -   [Creación de un controlador OLE DB para la aplicación de SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [Objetos de origen de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Objetos &#40;de origen de datos OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Comandos](../../oledb/ole-db-commands/commands.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66795985"
   
 -   [Tablas e índices](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
--   [Tipos de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+-   [Tipos &#40;de datos OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
 -   [Compatibilidad con conjuntos de filas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66795985"
   
 -   [Compatibilidad con columnas dispersas &#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [Controlador OLE DB para SQL Server &#40;OLE DB&#41; referencia](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [OLE DB driver for SQL Server &#40;referencia&#41; OLE DB](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [Temas de procedimientos de OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

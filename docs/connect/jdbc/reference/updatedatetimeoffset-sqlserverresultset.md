@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 40d7fced-cce1-4534-b794-71bc735e53e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ade5c312691c1f6586e5d0b14253bc41c27c1490
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad3e197fb7e2e26a7652cf6a5aa9e6c3d0366cc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999067"
 ---
 # <a name="updatedatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Este método se agregó en [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
- Actualiza el valor de la columna especificada en un [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) valor.  
+ Actualiza el valor de la columna especificada en un valor de [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   

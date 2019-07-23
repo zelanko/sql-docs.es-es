@@ -1,5 +1,5 @@
 ---
-title: Las conversiones realizan de cliente a servidor | Microsoft Docs
+title: Conversiones realizadas de cliente a servidor | Microsoft Docs
 description: Conversiones realizadas de cliente a servidor
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995137"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversiones realizadas de cliente a servidor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66769307"
 ## <a name="conversions"></a>Conversiones  
  En este artículo, se describen las conversiones realizadas en el cliente. Si el cliente especifica una precisión de fracciones de segundos para un parámetro que difiere de la definida en el servidor, la conversión del cliente puede producir un error cuando el servidor permita llevar a cabo la operación. En concreto, el cliente trata cualquier truncamiento de fracciones de segundo como un error, mientras que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] redondea los valores de hora al segundo entero más próximo.  
   
- Si no se llama a ICommandWithParameters:: SetParameterInfo, los enlaces DBTYPE_DBTIMESTAMP se convierten como si fueran **datetime2**.  
+ Si no se llama a ICommandWithParameters:: SetParameterInfo, los enlaces de DBTYPE_DBTIMESTAMP se convierten como si fueran **datetime2**.  
   
 |A -><br /><br /> De|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  

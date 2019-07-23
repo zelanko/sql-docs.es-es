@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 63397a19-03a2-44bb-b661-7d62c95b6e4e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4197b96740685ff9aca98634b2dfd1acfdc92fb8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 62c639c73b629559c36300886781146f3cd14057
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975023"
 ---
 # <a name="setboolean-method-sqlserverpreparedstatement"></a>Método setBoolean (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public final void setBoolean(int n,
   
  *x*  
   
- Un **booleano** valor, ya sea **true** o **false**.  
+ Un valor **booleano** , ya sea **true** o **false**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

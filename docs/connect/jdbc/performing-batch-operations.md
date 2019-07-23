@@ -1,5 +1,5 @@
 ---
-title: Realizar operaciones por lotes | Microsoft Docs
+title: Realización de operaciones por lotes | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4923354c5f6dc013d9fee0284279bb5b6b887556
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956226"
 ---
 # <a name="performing-batch-operations"></a>Realizar operaciones por lotes
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66801814"
   
  Las clases [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) se pueden usar para enviar actualizaciones por lotes. El método [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) se usa para agregar un comando. El método [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) se usa para borrar la lista de comandos. El método [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) se usa para enviar todos los comandos para su procesamiento. Tan solo las instrucciones de lenguaje de definición de datos (DDL) y lenguaje de manipulación de datos (DML) que devuelven un recuento de actualizaciones sencillo se pueden ejecutar como parte de un lote.  
   
- El método executeBatch devuelve una matriz de valores **int** que se corresponde con el recuento de actualizaciones de cada comando. Si se produce un error en uno de los comandos, se produce un BatchUpdateException y debe usar el método getUpdateCounts de la clase BatchUpdateException para recuperar la matriz de recuento de actualización. Si un comando produce un error, el controlador sigue procesando los comandos restantes. No obstante, si un comando contiene un error de sintaxis, las instrucciones del lote generan un error.  
+ El método executeBatch devuelve una matriz de valores **int** que se corresponde con el recuento de actualizaciones de cada comando. Si se produce un error en uno de los comandos, se produce una BatchUpdateException y debe usar el método getUpdateCounts de la clase BatchUpdateException para recuperar la matriz de recuento de actualizaciones. Si un comando produce un error, el controlador sigue procesando los comandos restantes. No obstante, si un comando contiene un error de sintaxis, las instrucciones del lote generan un error.  
   
 > [!NOTE]  
 >  Si no necesita usar recuentos de actualizaciones, puede ejecutar primero la instrucción SET NOCOUNT ON para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De este modo, se reduce el tráfico de red y, además, se aumenta el rendimiento de la aplicación.  

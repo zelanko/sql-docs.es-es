@@ -1,6 +1,6 @@
 ---
-title: Uso de tipos definidos por el usuario | Microsoft Docs
-description: Mediante tipos definidos por el usuario con el controlador OLE DB para SQL Server
+title: Usar tipos definidos por el usuario | Microsoft Docs
+description: Usar tipos definidos por el usuario con OLE DB controlador para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: efc2c82f047beca82f1daeda6318f16803499f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 731e00fdf4c9f073348389f537fa812e10bcbab5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988800"
 ---
 # <a name="using-user-defined-types"></a>Usar tipos definidos por el usuario
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,18 +44,18 @@ ms.locfileid: "66802863"
 >  El método **IRowsetFind::FindNextRow** no funciona con el tipo de datos UDT. Si el UDT se usa como un tipo de columna de búsqueda, se devuelve DB_E_BADCOMPAREOP.  
   
 ### <a name="data-bindings-and-coercions"></a>Enlaces y conversiones de datos  
- En la tabla siguiente se describe el enlace y la conversión que tiene lugar al usar los tipos de datos enumerados con un UDT de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las columnas UDT se exponen a través del controlador OLE DB para SQL Server como DBTYPE_UDT. Puede obtener metadatos mediante los conjuntos de filas de esquema adecuados, de modo que pueda administrar sus propios tipos definidos como objetos.  
+ En la tabla siguiente se describe el enlace y la conversión que tiene lugar al usar los tipos de datos enumerados con un UDT de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las columnas UDT se exponen a través del controlador de OLE DB para SQL Server como DBTYPE_UDT. Puede obtener metadatos mediante los conjuntos de filas de esquema adecuados, de modo que pueda administrar sus propios tipos definidos como objetos.  
   
 |Tipo de datos|A datos XML<br /><br /> **UDT**|A datos XML<br /><br /> **non-UDT**|Desde datos XML<br /><br /> **UDT**|Desde datos XML<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_UDT|Admite<sup>6</sup>|Error<sup>1</sup>|Admite<sup>6</sup>|Error<sup>5</sup>|  
-|DBTYPE_BYTES|Admite<sup>6</sup>|N/D<sup>2</sup>|Admite<sup>6</sup>|N/D<sup>2</sup>|  
-|DBTYPE_WSTR|Admite<sup>3,6</sup>|N/D<sup>2</sup>|Admite<sup>4,6</sup>|N/D<sup>2</sup>|  
-|DBTYPE_BSTR|Admite<sup>3,6</sup>|N/D<sup>2</sup>|Admite<sup>4</sup>|N/D<sup>2</sup>|  
-|DBTYPE_STR|Admite<sup>3,6</sup>|N/D<sup>2</sup>|Admite<sup>4,6</sup>|N/D<sup>2</sup>|  
+|DBTYPE_UDT|Compatible<sup>6</sup>|Error<sup>1</sup>|Compatible<sup>6</sup>|Error<sup>5</sup>|  
+|DBTYPE_BYTES|Compatible<sup>6</sup>|N/D<sup>2</sup>|Compatible<sup>6</sup>|N/D<sup>2</sup>|  
+|DBTYPE_WSTR|Compatible<sup>3, 6</sup>|N/D<sup>2</sup>|Compatible<sup>4, 6</sup>|N/D<sup>2</sup>|  
+|DBTYPE_BSTR|Compatible<sup>3, 6</sup>|N/D<sup>2</sup>|Compatible<sup>4</sup>|N/D<sup>2</sup>|  
+|DBTYPE_STR|Compatible<sup>3, 6</sup>|N/D<sup>2</sup>|Compatible<sup>4, 6</sup>|N/D<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|No compatible|N/D<sup>2</sup>|No compatible|N/D<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Admite<sup>6</sup>|N/D<sup>2</sup>|Admite<sup>4</sup>|N/D<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Admite<sup>3,6</sup>|N/D<sup>2</sup>|N/D|N/D<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Compatible<sup>6</sup>|N/D<sup>2</sup>|Compatible<sup>4</sup>|N/D<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Compatible<sup>3, 6</sup>|N/D<sup>2</sup>|N/D|N/D<sup>2</sup>|  
   
  <sup>1</sup>Si se especifica un tipo de servidor distinto de DBTYPE_UDT con **ICommandWithParameters::SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_UDT, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED; el estado del parámetro es DBSTATUS_E_BADACCESSOR). De lo contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de UDT al tipo de datos del parámetro.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66802863"
  Las conversiones de datos que proporcionan los servicios principales de OLE DB (**IDataConvert**) no son aplicables a DBTYPE_UDT. No se admite ningún otro enlace.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Adiciones y cambios en los conjuntos de filas de OLE DB  
- Controlador OLE DB para SQL Server agrega nuevos valores o cambios a muchos de los principales conjuntos de filas de esquema de OLE DB.  
+ OLE DB controlador para SQL Server agrega nuevos valores o cambios a muchos de los conjuntos de filas de esquema de OLE DB principales.  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>El conjunto de filas de esquema PROCEDURE_PARAMETERS  
  Se han realizado las siguientes adiciones al conjunto de filas de esquema PROCEDURE_PARAMETERS.  
@@ -137,7 +136,7 @@ ms.locfileid: "66802863"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|El nombre de tipo completo (AQN) incluye el nombre de tipo precedido del espacio de nombres, si procede.|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Adiciones y cambios en los conjuntos de propiedades de OLE DB  
- Controlador OLE DB para SQL Server agrega nuevos valores o cambios a muchos de las principales propiedades de OLE DB conjuntos.  
+ OLE DB controlador para SQL Server agrega nuevos valores o cambios a muchos de los conjuntos de propiedades de OLE DB principales.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER  
  Para admitir los UDT mediante OLE DB, el controlador OLE DB para SQL Server implementa el nuevo conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER, que contiene los valores siguientes:  
@@ -173,7 +172,7 @@ ms.locfileid: "66802863"
  Si la definición UDT está en una base de datos diferente, deben especificarse las propiedades SSPROP_COL_UDT_CATALOGNAME y SSPROP_COL_UDT_SCHEMANAME.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Adiciones y cambios en las interfaces de OLE DB  
- Controlador OLE DB para SQL Server agrega nuevos valores o cambios a muchas de las interfaces OLE DB básicas.  
+ OLE DB controlador para SQL Server agrega nuevos valores o cambios a muchas de las interfaces de OLE DB principales.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>La interfaz ISSCommandWithParameters  
  Para admitir los UDT mediante OLE DB, el controlador OLE DB para SQL Server implementa diversos cambios, incluida la adición de la interfaz **ISSCommandWithParameters**. Esta nueva interfaz hereda de la interfaz OLE DB básica **ICommandWithParameters**. Además de los tres métodos heredados de **ICommandWithParameters**, **GetParameterInfo**, **MapParameterNames** y **SetParameterInfo**, **ISSCommandWithParameters** proporciona los métodos **GetParameterProperties** y **SetParameterProperties**, que se usan para administrar tipos de datos específicos del servidor.  
@@ -196,6 +195,6 @@ ms.locfileid: "66802863"
   
 ## <a name="see-also"></a>Consulte también  
  [Características del controlador OLE DB para SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [OLE DB &#40;ISSCommandWithParameters&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

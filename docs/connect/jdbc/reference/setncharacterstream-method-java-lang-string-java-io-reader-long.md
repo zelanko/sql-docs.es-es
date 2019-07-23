@@ -1,5 +1,5 @@
 ---
-title: Método setNCharacterStream al objeto de lector - long | Microsoft Docs
+title: 'Método setNCharacterStream al objeto lector: Long | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: af9a1ba8-7980-43fa-88e5-14f6cc5e897c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 770717283a7a24d91218a2da0eebc0382072548e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 73bd7fe7d3da0745f66e0a6d883d7024a318c95f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973886"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader-long"></a>Método setNCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void setNCharacterStream(java.lang.String parameterName,
   
  *value*  
   
- Un objeto lector.  
+ Objeto de lector.  
   
  *length*  
   
@@ -49,9 +48,9 @@ public final void setNCharacterStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método setNCharacterStream especificado por el método setNCharacterStream en la interfaz java.sql.CallableStatement.  
+ Este método setNCharacterStream se especifica mediante el método setNCharacterStream de la interfaz java. SQL. CallableStatement.  
   
- Este método se debe usar para **NCHAR**, **NVARCHAR**, **NTEXT**, y **XML** tipos de datos.  
+ Este método se debe usar para los tipos de datos **nchar**, **nvarchar**, **ntext**y **XML** .  
   
  Si la longitud del flujo es distinta a la especificada en el parámetro *length*, el controlador JDBC produce una excepción cuando la fila se actualiza o se inserta.  
   

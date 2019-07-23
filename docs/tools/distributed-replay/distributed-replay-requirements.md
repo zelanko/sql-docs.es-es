@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Requirements | Microsoft Docs
+title: Requisitos de Distributed Replay | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 73aca1900afc191dd3df795b1716b624d5c36201
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 12b27321182e19d2a366e44c0a5ad1c325ee486d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075030"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52527649"
 ### <a name="input-trace-versions"></a>Versiones de seguimiento de entrada  
  Distributed Replay admite los datos de seguimiento de entrada que se recopilan en las siguientes versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Actualización acumulativa 1 y versiones posterior. Consulte - [actualizaciones acumulativas de SQL Server 2017](https://aka.ms/sql2017cu).
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]Actualización acumulativa 1 y posteriores. Vea [SQL Server 2017 actualizaciones acumulativas](https://aka.ms/sql2017cu).
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -158,7 +157,7 @@ ms.locfileid: "52527649"
   
  La reproducción de eventos asociados a inicios de sesión que faltan o que son incorrectos tendrá como resultado errores de reproducción, pero la operación de reproducción continuará.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Seguridad de reproducción distribuida](../../tools/distributed-replay/distributed-replay-security.md)   
  [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  

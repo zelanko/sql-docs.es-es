@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 06225a1a-a58d-4bff-b2ef-be303f051644
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58d7cc10464098c6ae2c628819a05211236190aa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e8e1b235a8c779c652a8678802bbb91a1de83f38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969307"
 ---
 # <a name="supportslimitedouterjoins-method-sqlserverdatabasemetadata"></a>Método supportsLimitedOuterJoins (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsLimitedOuterJoins()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si se admite. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método supportsLimitedOuterJoins especificado por el método supportsLimitedOuterJoins en la interfaz java.sql.DatabaseMetaData.  
+ Este método supportsLimitedOuterJoins se especifica mediante el método supportsLimitedOuterJoins en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

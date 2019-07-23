@@ -1,5 +1,5 @@
 ---
-title: Parámetros y metadatos del conjunto de filas | Microsoft Docs
+title: Metadatos de parámetros y conjuntos de filas | Microsoft Docs
 description: Parámetros y metadatos de conjuntos de filas
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - metadata [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1109aeea10d08f3447f789698a5d464475ae4aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995098"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Metadatos: Parámetro y conjunto de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,11 +66,11 @@ ms.locfileid: "66769245"
 |datetime2 o DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- El *bPrecision* parámetro se omite.  
+ Se omite el parámetro *bPrecision* .  
   
- No se tiene en cuenta "DBPARAMFLAGS_SS_ISVARIABLESCALE" al enviar los datos al servidor. Las aplicaciones pueden exigir el uso de tipos heredados de flujo TDS mediante los nombres de tipo específico del proveedor "**datetime**" y "**smalldatetime**". Cuando se conecta a los servidores de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o posteriores), se usará el formato "**datetime2**" y, si es necesario, se producirá una conversión implícita de servidor cuando el nombre de tipo sea "**datetime2**" o "DBTYPE_DBTIMESTAMP". *bScale* se omite si los nombres de tipo específico del proveedor "**datetime**"o"**smalldatetime**" se usan. En caso contrario, las aplicaciones deben asegurarse de que *bScale* se ha establecido correctamente. Las aplicaciones actualizadas de MDAC y controlador de OLE DB para SQL Server desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] que usan "DBTYPE_DBTIMESTAMP" se producirá un error si no se establece *bScale* correctamente. Cuando esté conectado a las instancias de servidor anteriores a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], un valor *bScale* que no sea 0 o 3 con "DBTYPE_DBTIMESTAMP" es un error y se devolverá E_FAIL.  
+ No se tiene en cuenta "DBPARAMFLAGS_SS_ISVARIABLESCALE" al enviar los datos al servidor. Las aplicaciones pueden exigir el uso de tipos heredados de flujo TDS mediante los nombres de tipo específico del proveedor "**datetime**" y "**smalldatetime**". Cuando se conecta a los servidores de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o posteriores), se usará el formato "**datetime2**" y, si es necesario, se producirá una conversión implícita de servidor cuando el nombre de tipo sea "**datetime2**" o "DBTYPE_DBTIMESTAMP". *bScale* se omite si se usan los nombres de tipo específico del proveedor "**DateTime**" o "**smalldatetime**". De lo contrario, las aplicaciones deben asegurarse de que *bScale* se ha establecido correctamente. Se producirá un error en las aplicaciones actualizadas desde MDAC [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y OLE DB driver for SQL Server de que usan "DBTYPE_DBTIMESTAMP" si no establecen *bScale* correctamente. Cuando esté conectado a las instancias de servidor anteriores a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], un valor *bScale* que no sea 0 o 3 con "DBTYPE_DBTIMESTAMP" es un error y se devolverá E_FAIL.  
   
- Cuando no se llama a ICommandWithParameters:: SetParameterInfo, el proveedor implica el tipo de servidor en el tipo de enlace como se especifica en IAccessor:: CreateAccessor como sigue:  
+ Cuando no se llama a ICommandWithParameters:: SetParameterInfo, el proveedor implica el tipo de servidor del tipo de enlace tal y como se especifica en IAccessor:: CreateAccessor de la manera siguiente:  
   
 |Tipo de enlace|*pwszDataSourceType*<br /><br /> (depende del proveedor)|  
 |------------------|----------------------------------------------------|  

@@ -1,5 +1,5 @@
 ---
-title: Los conjuntos de filas | Microsoft Docs
+title: Conjuntos de filas | Microsoft Docs
 description: Conjuntos de filas en el controlador OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - rowsets [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 214e1b82f0ba25c34f28bf22d69d83cf45fe0c38
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 23d07cd93ada1d1eeae36b4e4ed104906feef88d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015370"
 ---
 # <a name="rowsets"></a>Conjuntos de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66801666"
 
   Un conjunto de filas es el que contiene columnas de datos. Los conjuntos de filas son objetos centrales que permiten a todos los proveedores de datos OLE DB exponer los datos del conjunto de resultados en formato tabular.  
   
- Después de que un consumidor crea una sesión mediante el método **IDBCreateSession::CreateSession**, el consumidor puede usar la interfaz **IDBCreateCommand** o **IOpenRowset** en la sesión para crear un conjunto de filas. El controlador OLE DB para SQL Server es compatible con ambas interfaces. Los dos métodos se describen aquí.  
+ Después de que un consumidor crea una sesión mediante el método **IDBCreateSession::CreateSession**, el consumidor puede usar la interfaz **IDBCreateCommand** o **IOpenRowset** en la sesión para crear un conjunto de filas. El controlador de OLE DB para SQL Server admite ambas interfaces. Los dos métodos se describen aquí.  
   
 -   Cree un conjunto de filas mediante una llamada al método **IOpenRowset::OpenRowset**.  
   

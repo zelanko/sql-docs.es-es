@@ -1,5 +1,5 @@
 ---
-title: Conjunto de datos de gran tamaño (OLE DB) | Microsoft Docs
+title: Establecer datos de gran tamaño (OLE DB) | Microsoft Docs
 description: Establecer datos de gran tamaño (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - large data
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: e423c1e8ab096e0ba9c3098145f5f070049bae5b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 72827ffa7866b624c50a83c0d3695f0f011cfe5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994678"
 ---
 # <a name="set-large-data-ole-db"></a>Establecer datos de gran tamaño (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

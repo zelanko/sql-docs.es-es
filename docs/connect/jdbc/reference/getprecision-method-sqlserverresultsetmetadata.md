@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: de46c96e-6ad6-4946-883e-807123658500
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32b428f217fa15c5dba7304b4d2aabfd16b52553
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 332b230730d9f9bb53a8e06856d1f2d7308401fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980774"
 ---
 # <a name="getprecision-method-sqlserverresultsetmetadata"></a>Método getPrecision (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getPrecision(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getPrecision especificado por el método getPrecision en la interfaz java.sql.ResultSetMetaData.  
+ Este método getPrecision se especifica mediante el método getPrecision de la interfaz java. SQL. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

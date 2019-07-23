@@ -1,5 +1,5 @@
 ---
-title: JDBC 4.1 Compliance para el controlador JDBC | Microsoft Docs
+title: Compatibilidad de JDBC 4,1 con el controlador JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7c21c548b113e9da03661ca3beb04b6757c92697
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bf37b74c06ac03ef135eab7a09d275bde78b867
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956378"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Cumplimiento de JDBC 4.1 con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "66781632"
   
 |Nueva característica|Descripción|  
 |-----------------|-----------------|  
-|Nueva función Escape<br /><br /> Secuencia de escape de devolución de filas limitada|Compatibilidad parcial<br /><br /> Sintaxis de escape: límite \<filas > [OFFSET < row_offset >](using-sql-escape-sequences.md).|  
+|Nueva función Escape<br /><br /> Secuencia de escape de devolución de filas limitada|Compatibilidad parcial<br /><br /> Sintaxis de escape: \<Limit Rows > [offset < row_offset >](using-sql-escape-sequences.md).|  
   
  La especificación de la API de Java Database Connectivity 4.1 es compatible con Microsoft JDBC Driver 4.2 para SQL Server, con las siguientes asignaciones de tipo de datos.  
   

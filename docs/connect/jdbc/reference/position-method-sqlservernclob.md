@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5b42f036-4cb0-449b-8036-b48e0a14609f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4c9634bb19ffa2194e225370f05f00f040a276dc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 327a22c8e661b35c00d6086d09f2f2a3a83ab8b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976333"
 ---
 # <a name="position-method-sqlservernclob"></a>Método position (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,8 +26,8 @@ ms.locfileid: "66801317"
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Método position &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|Recupera la posición del carácter en el que el especificado **NClob** objeto *searchstr* aparece en este **NClob** objeto.|  
-|[Método Position &#40;java.lang.String, long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|Recupera la posición de carácter en la que la subcadena especificada *searchstr* aparece en el **NCLOB** valor representado por este **NClob** objeto.|  
+|[Método position &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|Recupera la posición de carácter en la que el objeto **NCLOB** especificado *searchstr* aparece en este objeto **NCLOB** .|  
+|[método &#40;de posición Java. lang. String,&#41; &#40;Long SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|Recupera la posición de carácter en la que aparece la subcadena *searchstr* especificada en el valor **NCLOB** representado por este objeto **NCLOB** .|  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

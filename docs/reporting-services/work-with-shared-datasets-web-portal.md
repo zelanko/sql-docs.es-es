@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 85d63fa9515552f2c2acc5851f36e38f52017dda
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539101"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68222795"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Trabajar con conjuntos de datos compartidos: portal web
 
@@ -52,7 +52,7 @@ Para administrar un conjunto de datos compartido existente, puede hacer lo sigui
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   
-2.  Seleccione **Administrar**, que le llevará a la pantalla de edición.  
+2.  Seleccione **Administrar** , que le llevará a la pantalla de edición.  
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   

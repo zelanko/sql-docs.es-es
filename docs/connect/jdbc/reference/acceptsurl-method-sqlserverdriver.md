@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ca37a11eba988f0a4b65281ca6f6f4b0e83863f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7c51da69e7218f91630543fe7bee5ec0d7fd6b0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956027"
 ---
 # <a name="acceptsurl-method-sqlserverdriver"></a>Método acceptsURL (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public boolean acceptsURL(java.lang.String url)
 #### <a name="parameters"></a>Parámetros  
  *url*  
   
- Un **cadena** valor que contiene la dirección URL usada para conectarse a la base de datos.  
+ Valor de **cadena** que contiene la dirección URL utilizada para conectarse a la base de datos.  
   
 ## <a name="return-value"></a>Valor devuelto  
  **true** si la dirección URL especificada es válida. De lo contrario, se devuelve el valor **False**.  
@@ -47,7 +46,7 @@ public boolean acceptsURL(java.lang.String url)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método acceptsURL especificado por el método acceptsURL en la interfaz java.sql.Driver.  
+ Este método acceptsURL se especifica mediante el método acceptsURL de la interfaz java. SQL. driver.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

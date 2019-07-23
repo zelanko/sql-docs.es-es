@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con el conjunto de filas de esquema (OLE DB) | Microsoft Docs
+title: Compatibilidad con conjuntos de filas de esquema (OLE DB) | Microsoft Docs
 description: Compatibilidad con conjuntos de filas de esquema (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: b799ebd6205ebac01f832910dff0775afe5c0a93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4734255bc71b7f658b15db5c615910fbf3c6f5a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993928"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Compatibilidad con conjuntos de filas de esquema (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66795948"
   El controlador OLE DB para SQL Server también permite devolver información del esquema de un servidor vinculado al procesar consultas distribuidas de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Aunque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite los sinónimos, metadatos de sinónimos no se devuelve al controlador de OLE DB para SQL Server.  
+>  Aunque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite sinónimos, OLE DB controlador no devuelve los metadatos de los sinónimos para SQL Server.  
   
  En las tablas siguientes, se enumeran los conjuntos de filas de esquema y las columnas de restricción que admite el controlador OLE DB para SQL Server.  
   

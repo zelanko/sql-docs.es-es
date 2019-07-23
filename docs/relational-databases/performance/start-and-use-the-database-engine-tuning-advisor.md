@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 749f94658d03828b30de3b328df1abfc8c932d43
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4da908b06e467e1c80ce528ec95f1a5af0db7638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113311"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar y utilizar el Asistente para la optimización de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -399,7 +398,7 @@ database_name.owner_name.table_name
  **Seleccionar bases de datos y tablas para optimizar**  
  Especifica las bases de datos y tablas que se deben optimizar. Para especificar todas las bases de datos, seleccione la casilla del encabezado de columna **Nombre** . Para especificar bases de datos específicas, seleccione la casilla situada junto al nombre de la base de datos. De forma predeterminada, todas las tablas de las bases de datos seleccionadas se incluyen automáticamente en la sesión de optimización. Para excluir tablas, haga clic en la flecha de la columna **Tablas seleccionadas** y, a continuación, desactive las casillas situadas junto a las tablas que no desee optimizar.  
   
- Flecha abajo de**Tablas seleccionadas**   
+ Flecha abajo de**Tablas seleccionadas**  
  Expande la lista de tablas para poder seleccionar tablas individuales para su optimización.  
   
  **Guardar registro de optimización**  

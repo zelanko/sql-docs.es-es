@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4bca90e100baf2a7509636966ee1391645827bb9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 3d8b691febc1f52074451a777c7e163be8e10f80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077966"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ Se usa para modificar el árbol, de forma que los nodos se mueven de _oldRoot_ a
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Comparar dos ubicaciones de nodo  
-En el ejemplo siguiente se muestra el identificador hierarchyid actual de un nodo. También se muestra cuál sería el valor de **hierarchyid** del nodo si este se moviera para convertirse en descendiente del nodo **@NewParent**. Utiliza el método `ToString()` para mostrar las relaciones jerárquicas.
+En el ejemplo siguiente se muestra el identificador hierarchyid actual de un nodo. También se muestra cuál sería el valor de **hierarchyid** del nodo si este se moviera para convertirse en descendiente del nodo **@NewParent** . Utiliza el método `ToString()` para mostrar las relaciones jerárquicas.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  
@@ -81,7 +80,7 @@ WHERE OrgNode = @SubjectEmployee ;
 GO  
 ```  
   
-### <a name="b-updating-a-node-to-a-new-location"></a>b. Actualizar un nodo a una ubicación nueva  
+### <a name="b-updating-a-node-to-a-new-location"></a>B. Actualizar un nodo a una ubicación nueva  
 En el ejemplo siguiente se utiliza `GetReparentedValue()` en una instrucción UPDATE para mover un nodo de una ubicación anterior a una ubicación nueva en la jerarquía:
   
 ```sql

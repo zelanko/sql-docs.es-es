@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da5e69d974f33f7eeb60e185a5a4a67dae6c01a8
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7030f40419850454e90978168e72846331b5e865
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134661"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "53589699"
 ###  <a name="Security"></a> Seguridad  
  Para mejorar la seguridad, los inicios de sesión de la autenticación de SQL Server están almacenados en un paquete DAC sin ninguna contraseña. Cuando el paquete se implementa o actualiza, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y emplee ALTER LOGIN para habilitar el inicio de sesión y asignar una nueva contraseña que pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Una DAC solo la pueden actualizar miembros de los roles fijos de servidor **sysadmin** o **serveradmin** , o los inicios de sesión que pertenezcan al rol fijo de servidor **dbcreator** y dispongan de permisos ALTER ANY LOGIN. El inicio de sesión debe ser el propietario de la base de datos existente. La cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada denominada **sa** también puede actualizar una DAC.  
   
 ##  <a name="UsingDACUpgradeWizard"></a> Usar el Asistente Actualizar aplicación de capa de datos  
@@ -171,7 +170,7 @@ ms.locfileid: "53589699"
   
  **< Anterior:** vuelve a la página **Seleccionar paquete DAC**.  
   
- **Siguiente >**: avanza a la página **Opciones**.  
+ **Siguiente >** : avanza a la página **Opciones**.  
   
  **Cancelar:** termina el asistente sin implementar la DAC.  
   
@@ -205,7 +204,7 @@ ms.locfileid: "53589699"
   
  **< Anterior:** vuelve a la página **Detectar cambio**.  
   
- **Siguiente >**: avanza a la página **Resumen**.  
+ **Siguiente >** : avanza a la página **Resumen**.  
   
  **Cancelar:** termina el asistente sin implementar la DAC.  
   
@@ -216,7 +215,7 @@ ms.locfileid: "53589699"
   
  **< Anterior:** vuelve a la página **Revisar el plan de actualización**.  
   
- **Siguiente >**: implementa la DAC y muestra los resultados en la página **Actualizar DAC**.  
+ **Siguiente >** : implementa la DAC y muestra los resultados en la página **Actualizar DAC**.  
   
  **Cancelar:** termina el asistente sin implementar la DAC.  
   

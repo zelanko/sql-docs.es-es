@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5c19e21af440dd7f3293b706d38498e102c76248
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 834a5ba4ee456ad7e9dfd538468b66fe3472cd1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006541"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ CREATE MESSAGE TYPE message_type_name
  AUTHORIZATION *owner_name*  
  Establece el propietario del tipo de mensaje en el usuario o el rol de base de datos que se ha especificado. Cuando el usuario actual es **dbo** o **sa**, *owner_name* puede ser el nombre de cualquier usuario o rol válidos. En caso contrario, *owner_name* debe ser el nombre del usuario actual, el nombre de un usuario para el que el usuario actual tiene permiso IMPERSONATE o el nombre de un rol al que pertenece el usuario actual. Si se omite esta cláusula, el tipo de mensaje pertenece al usuario actual.  
   
- VALIDATION   
+ VALIDATION  
  Especifica cómo [!INCLUDE[ssSB](../../includes/sssb-md.md)] valida el cuerpo del mensaje para mensajes de este tipo. Si no se especifica esta cláusula, el valor predeterminado de la validación es NONE.  
   
  Ninguno  
@@ -72,7 +71,7 @@ CREATE MESSAGE TYPE message_type_name
  EMPTY  
  Especifica que el cuerpo del mensaje debe ser NULL.  
   
- WELL_FORMED_XML   
+ WELL_FORMED_XML  
  Especifica que el cuerpo del mensaje debe contener XML correcto.  
   
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
@@ -83,7 +82,7 @@ CREATE MESSAGE TYPE message_type_name
   
  Las dos partes de una conversación deben definir el mismo nombre para un tipo de mensaje. Para facilitar la solución de problemas, las dos partes de una conversación suelen especificar la misma validación para el tipo de mensaje, aunque [!INCLUDE[ssSB](../../includes/sssb-md.md)] no necesita que ambas partes de la conversación utilicen la misma validación.  
   
- Un tipo de mensaje no puede ser un objeto temporal. Se permiten los nombres de tipo de mensaje que empiezan por **#**, aunque se trata de objetos permanentes.  
+ Un tipo de mensaje no puede ser un objeto temporal. Se permiten los nombres de tipo de mensaje que empiezan por **#** , aunque se trata de objetos permanentes.  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, tienen permiso para crear un tipo de mensaje los miembros de los roles fijos de base de datos **db_ddladmin** o **db_owner** y el rol fijo de servidor **sysadmin**.  
@@ -103,7 +102,7 @@ CREATE MESSAGE TYPE
   VALIDATION = WELL_FORMED_XML ;     
 ```  
   
-### <a name="b-creating-a-message-type-containing-typed-xml"></a>b. Crear un tipo de mensaje que contenga XML con tipo  
+### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. Crear un tipo de mensaje que contenga XML con tipo  
  En el siguiente ejemplo se crea un tipo de mensaje para un informe de gastos codificado en XML. En el ejemplo se crea una colección de esquemas XML que contiene el esquema de un informe de gastos sencillo. En el ejemplo se crea a continuación un tipo de mensaje nuevo que valida los mensajes en relación con el esquema.  
   
 ```  

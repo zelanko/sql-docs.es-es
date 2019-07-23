@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 2199535e258dfce91d0fbf4f7c8b62b30da78528
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 7075de83b3f2d13d80d0eb08db1d780827eddeec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039083"
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]  
 >  El resultado "UID (user ID)" no tiene ningún sentido y se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### <a name="b-specifying-the-with-tableresults-option"></a>b. Especificar la opción WITH TABLERESULTS  
+### <a name="b-specifying-the-with-tableresults-option"></a>B. Especificar la opción WITH TABLERESULTS  
 El siguiente ejemplo carga los resultados del comando DBCC OPENTRAN en una tabla temporal.
   
 ```sql  

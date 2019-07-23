@@ -1,5 +1,5 @@
 ---
-title: Nombre de elemento de servidor (DTA) | Microsoft Docs
+title: Name (DTA, elemento de Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4fd95ca01f3b48bcb4acbbdda8b96988f7594045
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 86a6efb1f088b9ff41e51d74008e53bc7cfb6699
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034695"
 ---
 # <a name="name-element-for-server-dta"></a>Name (DTA, elemento de Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7a3b3027489b819cd5058f9080ca9633a2cf3ed
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a25b2b40b147cd0bd23e8c7554e548b6a577d539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099591"
 ---
 # <a name="database-properties-mirroring-page"></a>Propiedades de la base de datos (página Creación de reflejo)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "54132535"
   
  Las direcciones de red del servidor tienen la siguiente sintaxis básica:  
   
- TCP **://**_fully_qualified_domain_name_**:**_port_  
+ TCP **://** _fully_qualified_domain_name_ **:** _port_  
   
  donde  
   
@@ -100,7 +99,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Conmutación por error**  
  Haga clic para conmutar por error manualmente la base de datos principal a la base de datos reflejada.  
   
-> **NOTA:** Si la sesión de creación de reflejo se ejecuta en modo de rendimiento alto, la conmutación por error no se admite. Para conmutar por error manualmente, primero debe cambiar el modo de funcionamiento a **Seguridad alta sin conmutación automática por error (sincrónico)**. Una vez finalizada la conmutación por error, puede volver a cambiar el modo a **Rendimiento alto (asincrónico)** en la nueva instancia del servidor principal.  
+> **NOTA:** Si la sesión de creación de reflejo se ejecuta en modo de rendimiento alto, la conmutación por error no se admite. Para conmutar por error manualmente, primero debe cambiar el modo de funcionamiento a **Seguridad alta sin conmutación automática por error (sincrónico)** . Una vez finalizada la conmutación por error, puede volver a cambiar el modo a **Rendimiento alto (asincrónico)** en la nueva instancia del servidor principal.  
   
  Aparecerá un mensaje de confirmación. Si hace clic en **Sí**, se intentará una conmutación por error. El servidor principal intenta conectarse al servidor reflejado mediante la Autenticación de Windows. Si la Autenticación de Windows no funciona, el servidor principal muestra el cuadro de diálogo **Conectar con el servidor** . Si el servidor reflejado usa la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , seleccione **Autenticación de SQL Server** en el cuadro **Autenticación** . En el cuadro de texto **Inicio de sesión** , especifique la cuenta de inicio de sesión para conectar con el servidor reflejado, y en el cuadro de texto **Contraseña** , especifique la contraseña correspondiente a la cuenta.  
   

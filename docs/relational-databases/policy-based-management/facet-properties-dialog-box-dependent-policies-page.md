@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c2ab881c752c100d2fb9176eea377486382f8e07
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 538752d8752eb9cdba0adda94d03af498ccfbe05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087303"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Cuadro de diálogo Propiedades de faceta, página Directivas dependientes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51512196"
  **Creado**  
  Fecha en la que se creó la directiva.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

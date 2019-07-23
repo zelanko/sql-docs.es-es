@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 201e7de473a344d0d41269b259c503dc34f2a78c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082350"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>Disponibilidad de los permisos de grupo REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Especifica un permiso que se puede revocar en un grupo de disponibilidad. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- Especifica el grupo de disponibilidad en el que se va a revocar el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ Especifica el grupo de disponibilidad en el que se va a revocar el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  { FROM | TO } \<server_principal> Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que se va a revocar el permiso.  
   
@@ -114,7 +113,7 @@ REVOKE VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;
 GO  
 ```  
   
-### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>b. Revocar el permiso TAKE OWNERSHIP con CASCADE  
+### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. Revocar el permiso TAKE OWNERSHIP con CASCADE  
  En el siguiente ejemplo se revoca el permiso `TAKE OWNERSHIP` en el grupo de disponibilidad `MyAg` para el usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` y desde todas las entidades de seguridad a las que `PKomosinski` concedio TAKE OWNERSHIP en MyAg.  
   
 ```  

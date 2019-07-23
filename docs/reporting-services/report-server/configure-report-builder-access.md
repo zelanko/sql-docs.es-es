@@ -6,14 +6,13 @@ ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.date: 06/06/2019
-ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826909"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255173"
 ---
 # <a name="configure-report-builder-access"></a>Configurar el acceso al Generador de informes
 El Generador de informes es una herramienta de notificación ad hoc que se instala con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para modo nativo o para modo de integración con SharePoint.  
@@ -30,7 +29,7 @@ El acceso al Generador de informes depende de los factores siguientes:
 
 El Generador de informes no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-El equipo cliente debe tener la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 o 4.6.1 instalado para SSRS 2016 y 2017, respectivamente. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona la infraestructura para ejecutar aplicaciones [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+El equipo cliente debe tener [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instalado 4,6 o 4.6.1 para SSRS 2016 y 2017, respectivamente. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona la infraestructura para ejecutar aplicaciones [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
 
 Debe usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 o posterior, u otro explorador moderno.  
 
@@ -38,7 +37,7 @@ El Generador de informes siempre se ejecuta con confianza total; no se puede con
 
 ## <a name="enabling-and-disabling-report-builder"></a>Habilitar y deshabilitar el Generador de informes  
 
-El Generador de informes está habilitado de manera predeterminada. Los administradores del servidor de informes tienen la posibilidad de deshabilitar la característica Generador de informes; para ello, deben establecer la propiedad del sistema **ShowDownloadMenu** del servidor de informes en **false**. Al establecer esta propiedad, se deshabilitará al generador de informes, publicador de informes móviles y descarga de Power BI Mobile para ese servidor de informes.  
+El Generador de informes está habilitado de manera predeterminada. Los administradores del servidor de informes tienen la posibilidad de deshabilitar la característica Generador de informes; para ello, deben establecer la propiedad del sistema **ShowDownloadMenu** del servidor de informes en **false**. Al establecer esta propiedad, se deshabilitan las descargas de Generador de informes, Publicador de informes móviles y Power BI Mobile para ese servidor de informes.  
 
  Para establecer las propiedades del sistema del servidor de informes, puede usar Management Studio o script:   
 
@@ -110,8 +109,8 @@ Después de crear las asignaciones de roles, los usuarios tendrán permiso para 
 
 1. Inicie el portal web.  
 
-2. Haga clic en el icono de engranaje en la parte superior derecha de la página principal del portal web y seleccione **configuración del sitio** en el menú desplegable.  
-![el icono de engranaje portal web y un menú](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
+2. Haga clic en el icono de engranaje en la parte superior derecha de la Página principal del portal web y seleccione **configuración del sitio** en el menú desplegable.  
+![icono y menú de engranaje del portal web](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Haga clic en **Seguridad**.  
 

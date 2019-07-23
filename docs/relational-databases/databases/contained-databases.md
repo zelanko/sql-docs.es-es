@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afec1cde13ea1734fe0f7829f878715064f55641
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e42d7dbfe00ff957511d9853e39febd29b7aab66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137326"
 ---
 # <a name="contained-databases"></a>Bases de datos independientes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -150,7 +149,7 @@ ms.locfileid: "51559022"
 ### <a name="databaseuncontainedusage-event"></a>database_uncontained_usage, evento  
  Este XEvent tiene lugar siempre que una entidad dependiente se identifica en tiempo de ejecución. Esto incluye las entidades originadas en el código de cliente. Este Xevent solo tendrá lugar para las entidades dependientes reales. Sin embargo, el evento solo se produce en tiempo de ejecución. Por consiguiente, este XEvent no identificará las entidades de usuario dependientes que no se hayan ejecutado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características modificadas &#40;base de datos independiente&#41;](../../relational-databases/databases/modified-features-contained-database.md)   
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
  [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   

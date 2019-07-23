@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f0d16381b6548be02fdd8eae7f4d8e12509906a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bcd29d124982d5735be8838a0ff054a6a2150bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101535"
 ---
 # <a name="mssqlserver847"></a>MSSQLSERVER_847
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47688109"
 |Identificador del evento|847|  
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
-|Nombre simbólico|N/A|  
+|Nombre simbólico|N/D|  
 |Texto del mensaje|Se agotó el tiempo de espera mientras se esperaba el bloqueo temporal: clase '%ls', id. %p, tipo %d, Tarea 0x%p : %d, tiempo de espera %d, marcas 0x%I64x, tarea propietaria 0x%p. Esperando.|  
   
 ## <a name="explanation"></a>Explicación  

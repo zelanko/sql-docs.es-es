@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4958921d446e4678ce09eeb4c16f8faf5809dd2a
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 6b7bfc41b827cdfc2584c50a44e4e1f1e7c60be4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051231"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ SELECT @myDoc;
   
 El destino que se actualiza debe ser, como máximo, un nodo que se especifica de forma explícita en la expresión de ruta de acceso agregando un "[1]" al final de la expresión.  
   
-### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>b. Utilizar la expresión if para determinar el valor de reemplazo  
+### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>B. Utilizar la expresión if para determinar el valor de reemplazo  
 Puede especificar la expresión **if** en Expression2 de la instrucción **XML DML replace value of**, tal como se muestra en el ejemplo siguiente. Expression1 identifica que se debe actualizar el atributo LaborHours del primer centro de trabajo. Expression2 usa una expresión **if** para determinar el nuevo valor del atributo LaborHours.  
   
 ```sql

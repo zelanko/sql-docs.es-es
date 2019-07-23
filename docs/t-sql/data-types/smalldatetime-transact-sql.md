@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f4f4e7ae4f7ba11add01a0612fe9607fcb42104c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000553"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,7 +81,7 @@ SELECT @smalldatetime AS '@smalldatetime', @date AS 'date';
 --(1 row(s) affected)  
 ```  
   
-Cuando la conversión es a **time(n)**, se copian las horas, los minutos y los segundos. Las fracciones de segundo se establecen en 0. En el código siguiente se muestran los resultados de convertir un valor `smalldatetime` en un valor `time(4)`.
+Cuando la conversión es a **time(n)** , se copian las horas, los minutos y los segundos. Las fracciones de segundo se establecen en 0. En el código siguiente se muestran los resultados de convertir un valor `smalldatetime` en un valor `time(4)`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -114,7 +113,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-Cuando la conversión es a **datetimeoffset(n)**, el valor de **smalldatetime** se copia en el valor de **datetimeoffset(n)**. Las fracciones de segundo se establecen en 0 y el ajuste de zona horaria se establece en +00: 0. En el código siguiente se muestran los resultados de convertir un valor `smalldatetime` en un valor `datetimeoffset(4)`.
+Cuando la conversión es a **datetimeoffset(n)** , el valor de **smalldatetime** se copia en el valor de **datetimeoffset(n)** . Las fracciones de segundo se establecen en 0 y el ajuste de zona horaria se establece en +00: 0. En el código siguiente se muestran los resultados de convertir un valor `smalldatetime` en un valor `datetimeoffset(4)`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -130,7 +129,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetimeoffset AS 'datetimeoffset(4)
 --(1 row(s) affected)  
 ```  
   
-Cuando la conversión es a **datetime2(n)**, el valor de **smalldatetime** se copia en el valor de **datetime2(n)**. Las fracciones de segundo se establecen en 0. En el código siguiente se muestran los resultados de convertir un valor `smalldatetime` en un valor `datetime2(4)`.
+Cuando la conversión es a **datetime2(n)** , el valor de **smalldatetime** se copia en el valor de **datetime2(n)** . Las fracciones de segundo se establecen en 0. En el código siguiente se muestran los resultados de convertir un valor `smalldatetime` en un valor `datetime2(4)`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -164,7 +163,7 @@ SELECT
 |2007-05-08 12:35:30|2007-05-08 12:36:00|  
 |2007-05-08 12:59:59,998|2007-05-08 13:00:00|  
   
-### <a name="b-comparing-date-and-time-data-types"></a>b. Comparar tipos de datos de fecha y hora  
+### <a name="b-comparing-date-and-time-data-types"></a>B. Comparar tipos de datos de fecha y hora  
 En el ejemplo siguiente se comparan los resultados de convertir una cadena a cada tipo de datos de fecha y hora.
   
 ```sql

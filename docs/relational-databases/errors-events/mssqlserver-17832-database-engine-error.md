@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5def2cd5b24046fe41524ed26b149c335b1c1f0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c09e789738f8ca6633a56c36d626dd200ae70e78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137238"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "53590509"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SRV_BAD_LOGIN_PKT|  
-|Texto del mensaje|La estructura del paquete de inicio de sesión utilizado para abrir la conexión no es válida; se cerró la conexión. Póngase en contacto con el proveedor de la biblioteca cliente.%.*ls |  
+|Texto del mensaje|La estructura del paquete de inicio de sesión utilizado para abrir la conexión no es válida; se cerró la conexión. Póngase en contacto con el proveedor de la biblioteca cliente.%.*ls|  
   
 ## <a name="explanation"></a>Explicación  
 El equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pudo procesar el paquete de inicio de sesión de cliente. Esto puede deberse a que el paquete se creó incorrectamente o a que se dañó durante la transmisión. También puede deberse a la configuración del equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La dirección IP enumerada es la del equipo cliente.  
@@ -60,7 +59,7 @@ Para resolver este problema, aumente el valor de **MaxTokenSize** del equipo ser
   
 3.  Desplácese a **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**.  
   
-4.  Si el parámetro **MaxTokenSize** no está presente, haga clic con el botón derecho en **Parameters**, seleccione **Nuevo** y haga clic en Valor de **DWORD (32 bits)**. Denomine a la entrada del Registro **MaxTokenSize**.  
+4.  Si el parámetro **MaxTokenSize** no está presente, haga clic con el botón derecho en **Parameters**, seleccione **Nuevo** y haga clic en Valor de **DWORD (32 bits)** . Denomine a la entrada del Registro **MaxTokenSize**.  
   
 5.  Haga clic con el botón derecho en **MaxTokenSize** y, a continuación, haga clic en **Modificar**.  
   

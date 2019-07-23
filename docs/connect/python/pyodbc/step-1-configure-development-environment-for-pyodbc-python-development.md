@@ -1,5 +1,5 @@
 ---
-title: 'Paso 1: Configurar el entorno de desarrollo de Python pyodbc | Microsoft Docs'
+title: 'Paso 1: configurar el entorno de desarrollo de pyodbc Python | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/06/2018
 ms.prod: sql
@@ -10,29 +10,28 @@ ms.topic: conceptual
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 549118445c3aaac0f08328074dad412d8c257a49
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a1a43540d866faaf79b1c020eb255689862e6d97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992519"
 ---
 # <a name="step-1-configure-development-environment-for-pyodbc-python-development"></a>Paso 1: Configurar el entorno de desarrollo para el desarrollo de Python pyodbc
 
 ## <a name="windows"></a>Windows  
-Conexión a SQL Database mediante Python - pyodbc en Windows:
+Conéctese a SQL Database mediante Python-pyodbc en Windows:
   
 1. **Descargue el instalador de Python**.  
-  Si el equipo no tiene Python, instálelo. Vaya a la [página de descarga de Python](https://www.python.org/downloads/windows/) y descargue los instaladores adecuados. Por ejemplo, si se encuentra en un equipo de 64 bits, descargue al instalador de Python 2.7 o 3.7 (x 64).  
+  Si el equipo no tiene Python, instálelo. Vaya a la [Página de descarga de Python](https://www.python.org/downloads/windows/) y descargue el instalador adecuado. Por ejemplo, si está en un equipo de 64 bits, descargue el instalador de Python 2,7 o 3,7 (x64).  
   
-2. **Instale Python**.  Una vez descargado el instalador, realice los pasos siguientes: una. Haga doble clic en el archivo para iniciar al instalador. B. Seleccione su idioma y acepte los términos. c. Siga las instrucciones en pantalla y Python debe instalarse en el equipo. d. Puede comprobar que está instalado Python, vaya a `C:\Python27` o `C:\Python37` y ejecute `python -V` o `py -V` (para 3.x) 
+2. **Instale Python**.  Una vez descargado el instalador, realice los pasos siguientes: a. Haga doble clic en el archivo para iniciar el instalador. B. Seleccione su idioma y acepte los términos. c. Siga las instrucciones que aparecen en pantalla y Python debe estar instalado en el equipo. d. Para comprobar que Python está instalado, vaya `C:\Python27` a o `C:\Python37` y ejecute `python -V` o `py -V` (para 3. x). 
       
 3. [**Instale Microsoft ODBC Driver for SQL Server en Windows**](../../odbc/windows/system-requirements-installation-and-driver-files.md#installing-microsoft-odbc-driver-for-sql-server)
   
-4. **Abra cmd.exe como administrador**     
+4. **Abra cmd. exe como administrador.**     
 
-5. **Instale pyodbc con pip - Administrador de paquetes de Python** (reemplace `C:\Python27\Scripts` con la ruta de acceso de Python instalada)
+5. **Instalación de pyodbc con el administrador de paquetes de PIP-Python** (Reemplace `C:\Python27\Scripts` por la ruta de acceso de Python instalada)
 ```  
 > cd C:\Python27\Scripts  
 > pip install pyodbc  
@@ -40,13 +39,13 @@ Conexión a SQL Database mediante Python - pyodbc en Windows:
 
   
 ## <a name="linux"></a>Linux 
-Conexión a SQL Database mediante Python - pyodbc:
+Conéctese a SQL Database mediante Python-pyodbc:
   
 1. **Abrir terminal**  
 
 2. [**Instale Microsoft ODBC Driver for SQL Server en Linux**](../../odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
-3.  **Instale pyodbc**  
+3.  **Instalación de pyodbc**  
 ```  
 > sudo -H pip install pyodbc
 ```

@@ -10,25 +10,24 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8f4c34c1b6b945c28193a549a06546ec952a5d9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 87faa60456dd6d03f23d45346ab0dd103dc07c82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992507"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Paso 3: prueba de concepto de la conexión a SQL con pyodbc
 
-En este ejemplo debe considerarse como una prueba de concepto solo.  El código de ejemplo se ha simplificado para mayor claridad y no representa necesariamente las mejores prácticas recomendadas por Microsoft.  
+Este ejemplo solo debe considerarse una prueba de concepto.  El código de ejemplo se simplifica para mayor claridad y no representa necesariamente las prácticas recomendadas recomendadas por Microsoft.  
 
-**Ejecute el siguiente script de ejemplo** cree un archivo llamado test.py y agregue cada fragmento de código a medida que avanza. 
+**Ejecutar el script de ejemplo siguiente**  Cree un archivo denominado test.py y agregue cada fragmento de código a medida que vaya. 
 
 ```
 > python test.py
 ```
   
-## <a name="step-1--connect"></a>Paso 1: conectar  
+## <a name="step-1--connect"></a>Paso 1: conexión  
   
 ```python
 
@@ -46,9 +45,9 @@ cursor = cnxn.cursor()
 ```  
   
   
-## <a name="step-2--execute-query"></a>Paso 2: Ejecutar consulta  
+## <a name="step-2--execute-query"></a>Paso 2: ejecutar la consulta  
   
-El cursor.executefunction puede usarse para recuperar un conjunto de resultados de una consulta en SQL Database. Esta función acepta cualquier consulta básicamente y devuelve un conjunto de resultados que se puede iterar mediante el uso de cursor.fetchone)
+El cursor. ExecuteFunction se puede usar para recuperar un conjunto de resultados de una consulta en SQL Database. Esta función acepta básicamente cualquier consulta y devuelve un conjunto de resultados que se puede recorrer en iteración con el uso de cursor. fetchone ()
   
   
 ```python
@@ -61,9 +60,9 @@ while row:
 
 ```  
   
-## <a name="step-3--insert-a-row"></a>Paso 3: Insertar una fila  
+## <a name="step-3--insert-a-row"></a>Paso 3: insertar una fila  
   
-En este ejemplo se muestra cómo ejecutar un [insertar](../../../t-sql/statements/insert-transact-sql.md) instrucción de forma segura, pasar parámetros que protejan la aplicación de [inyección de código SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
+En este ejemplo verá cómo ejecutar una instrucción [Insert](../../../t-sql/statements/insert-transact-sql.md) de forma segura, pasar parámetros que protejan la aplicación del valor de [inyección de SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
   
   
 ```python
@@ -79,4 +78,4 @@ while row:
   `      
   ## <a name="next-steps"></a>Pasos siguientes  
   
-Para obtener más información, consulte el [Centro para desarrolladores de Python](https://azure.microsoft.com/develop/python/).
+Para obtener más información, vea el [Centro para desarrolladores de Python](https://azure.microsoft.com/develop/python/).

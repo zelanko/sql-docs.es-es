@@ -9,14 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87ae14a8acaa94873b81238d998f755a8ee0a8bd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7fd710359f6a2d97bebd9785dd010ff586f43cd1
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583658"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307584"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configuración de Always Encrypted con enclaves seguros
 
@@ -151,7 +150,7 @@ Para aprovisionar una clave de cifrado de columnas habilitada para el enclave, d
 
 Las siguientes limitaciones se aplican actualmente a las claves habilitadas para el enclave de aprovisionamiento:
 
-- Las claves maestras de columna habilitadas para enclave deben almacenarse en el [almacén de certificados de Windows](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/) o en [Azure Key Vault](/azure/key-vault/key-vault-whatis/). El almacenamiento de claves maestras de columna habilitadas para enclave en otros tipos de almacenes de claves, por ejemplo, módulos de seguridad de hardware o almacenes de claves personalizados, no se admite actualmente.
+- Las claves maestras de columna habilitadas para enclave deben almacenarse en el [almacén de certificados de Windows](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores) o en [Azure Key Vault](/azure/key-vault/key-vault-whatis/). El almacenamiento de claves maestras de columna habilitadas para enclave en otros tipos de almacenes de claves, por ejemplo, módulos de seguridad de hardware o almacenes de claves personalizados, no se admite actualmente.
 
 ### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Aprovisionamiento de claves habilitadas para el enclave mediante SQL Server Management Studio (SSMS)
 

@@ -1,5 +1,5 @@
 ---
-title: Base de datos hace caso omiso instrucción de definición de datos dentro de transacción | Microsoft Docs
+title: ¿La base de datos omite la instrucción de definición de datos dentro de la transacción | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fda0e082d8f0f35995e622f7f3a47b0a075f9eee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d1538cc4aaf3e62086f57602b29ce0e61bceb6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955207"
 ---
 # <a name="datadefinitionignoredintransactions-method-sqlserverdatabasemetadata"></a>Método dataDefinitionIgnoredInTransactions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean dataDefinitionIgnoredInTransactions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método dataDefinitionIgnoredInTransactions especificado por el método dataDefinitionIgnoredInTransactions en la interfaz java.sql.DatabaseMetaData.  
+ Este método dataDefinitionIgnoredInTransactions se especifica mediante el método dataDefinitionIgnoredInTransactions en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

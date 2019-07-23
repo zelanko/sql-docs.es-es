@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 50360a46d7eaba31ad60a94e3e624a641ec1c6ea
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006499"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ AS condition_expression
  *condition_expression*  
  Es la condición o condiciones que definen la regla. Una regla puede ser cualquier expresión válida en una cláusula WHERE y puede incluir elementos como operadores aritméticos, operadores relacionales y predicados (por ejemplo, IN, LIKE, BETWEEN). Una regla no puede hacer referencia a columnas u otros objetos de base de datos. Se pueden incluir funciones integradas que no hagan referencia a objetos de base de datos. No es posible utilizar funciones definidas por el usuario.  
   
- *condition_expression* incluye una variable. El carácter de arroba (**@**) precede a cada variable local. La expresión hace referencia al valor especificado con la instrucción UPDATE o INSERT. Se puede usar cualquier nombre o símbolo para representar el valor cuando se crea la regla, pero el primer carácter debe ser la arroba (**@**).  
+ *condition_expression* incluye una variable. El carácter de arroba ( **@** ) precede a cada variable local. La expresión hace referencia al valor especificado con la instrucción UPDATE o INSERT. Se puede usar cualquier nombre o símbolo para representar el valor cuando se crea la regla, pero el primer carácter debe ser la arroba ( **@** ).  
   
 > [!NOTE]  
 >  Evite crear reglas en expresiones que utilicen tipos de datos de alias. Aunque es posible crear reglas en expresiones que utilicen tipos de datos de alias, después de enlazar las reglas a las columnas o a los tipos de datos de alias, cuando se hace referencia a las expresiones, éstas no se compilan.  
@@ -76,7 +75,7 @@ AS condition_expression
 ## <a name="remarks"></a>Notas  
  CREATE RULE no se puede combinar con otras instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en un único lote. Las reglas no se aplican a los datos ya existentes en la base de datos en el momento en que se crean las reglas y no se pueden enlazar a los tipos de datos del sistema.  
   
- Una regla solo se puede crear en la base de datos actual. Una vez creada la regla, ejecute **sp_bindrule** para enlazarla a una columna o a un tipo de datos de alias. Una regla debe ser compatible con el tipo de datos de la columna. Por ejemplo, no se puede usar "\@value LIKE A%" como regla para una columna numérica. Una regla no se puede enlazar a una columna **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, de tipo definido por el usuario CLR o **timestamp**. Una regla no se puede enlazar a una columna calculada.  
+ Una regla solo se puede crear en la base de datos actual. Una vez creada la regla, ejecute **sp_bindrule** para enlazarla a una columna o a un tipo de datos de alias. Una regla debe ser compatible con el tipo de datos de la columna. Por ejemplo, no se puede usar "\@value LIKE A%" como regla para una columna numérica. Una regla no se puede enlazar a una columna **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, de tipo definido por el usuario CLR o **timestamp**. Una regla no se puede enlazar a una columna calculada.  
   
  Incluya las constantes de fecha y de caracteres entre comillas simples (') y preceda las constantes binarias de 0x. Si la regla no es compatible con la columna a la que se ha enlazado, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] devuelve un mensaje de error cuando se inserta un valor, pero no cuando se enlaza la regla.  
   
@@ -109,7 +108,7 @@ AS
 @range>= $1000 AND @range <$20000;  
 ```  
   
-### <a name="b-creating-a-rule-with-a-list"></a>b. Crear una regla con una lista  
+### <a name="b-creating-a-rule-with-a-list"></a>B. Crear una regla con una lista  
  En el siguiente ejemplo se crea una regla que restringe los valores reales especificados en las columnas (a las que la regla está enlazada) a solo aquellos enumerados en la regla.  
   
 ```  

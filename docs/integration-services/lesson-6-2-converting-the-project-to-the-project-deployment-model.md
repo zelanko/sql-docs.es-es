@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e03317e9d37387e6c2482aea3bdf102a0b063b03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26ac9a26448a49fb682b1d0458eeb4b499d251a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082195"
 ---
 # <a name="lesson-6-2-convert-the-project-to-the-project-deployment-model"></a>Lección 6-2: Convertir el proyecto al modelo de implementación de proyectos
 

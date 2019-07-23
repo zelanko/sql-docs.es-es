@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 489f5637aea2bc97dfcbb009d45747606b1ad9ae
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138741"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restauraciones de archivos (modelo de recuperación simple)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,13 +68,13 @@ ms.locfileid: "54241966"
   
  La secuencia de restauración solo contiene dos instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La primera instrucción restaura un archivo secundario, el archivo `A`, que se restaura usando WITH NORECOVERY. La segunda operación restaura otros dos archivos, `B` y `C` , que se restauran usando WITH RECOVERY desde un dispositivo de copia de seguridad diferente:  
   
-1.  RESTORE DATABASE *base_de_datos* FILE **=**_nombre_de_archivo_A_  
+1.  RESTORE DATABASE *base_de_datos* FILE **=** _nombre_de_archivo_A_  
   
      FROM *copia_de_seguridad_de_archivo_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *base_de_datos* FILE **=**_nombre_de_archivo_B_**,**_nombre_de_archivo_C_  
+2.  RESTORE DATABASE *base_de_datos* FILE **=** _nombre_de_archivo_B_ **,** _nombre_de_archivo_C_  
   
      FROM *copia_de_seguridad_de_archivos_B_y_C*  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b63d1cf4-dc1b-4e35-9a56-50436642eaaf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a242499204215f0d8ecdb16698bcc0fe07377db3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a64bc643e8d5a9d820b2bcd9cd307f033a869d7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974086"
 ---
 # <a name="setlogintimeout-method-sqlserverdatasource"></a>Método setLoginTimeout (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public void setLoginTimeout(int loginTimeout)
  Un valor **int**que representa el número de segundos durante los que se esperará. Un valor cero indica que el tiempo de espera es el predeterminado del sistema, que está especificado inicialmente en 15 segundos.  
   
 ## <a name="remarks"></a>Notas  
- Este método setLoginTimeout especificado por el método setLoginTimeout en la interfaz javax.sql.DataSource.  
+ El método setLoginTimeout especifica este método setLoginTimeout en la interfaz javax. SQL. DataSource.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

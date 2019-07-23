@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0e655ac992946cfe08a8ef63c7b6b8de3f8fef45
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 53cac5548d231896b72e0786516c1e32c994869a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050842"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT (permisos de extremo de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  Especifica un permiso que se puede conceder para un extremo. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- ON ENDPOINT **::**_endpoint_name_  
- Especifica el extremo en el que se va a conceder el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ ON ENDPOINT **::** _endpoint_name_  
+ Especifica el extremo en el que se va a conceder el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  TO \<server_principal>  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se va a conceder el permiso.  
@@ -105,7 +104,7 @@ GRANT VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;
 GO  
 ```  
   
-### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>b. Conceder el permiso TAKE OWNERSHIP con la opción GRANT  
+### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Conceder el permiso TAKE OWNERSHIP con la opción GRANT  
  En el siguiente ejemplo se concede el permiso `TAKE OWNERSHIP` para el extremo `Shipping83` al usuario `PKomosinski` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con `GRANT OPTION`.  
   
 ```  

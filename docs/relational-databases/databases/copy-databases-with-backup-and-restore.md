@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07cf3d71690dd7f7b493970b62ac0130a8530b16
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137318"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bases de datos con Copias de seguridad y restauración
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ Estos son otros aspectos que pueden afectar al proceso:
  El nombre de base de datos que se proporciona explícitamente al restaurar una base de datos se usa de forma automática como el nuevo nombre de la base de datos. Debido a que el nombre de la base de datos no existe, se crea uno nuevo con los archivos de la copia de seguridad.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Actualizar una base de datos por medio de la restauración  
- Al restaurar copias de seguridad de una versión anterior, es útil conocer de antemano si la ruta de acceso (unidad y directorio) de cada uno de los catálogos de texto completo de una copia de seguridad existe en el equipo de destino. Para obtener una lista de los nombres lógicos y físicos, la ruta de acceso y el nombre de archivo de todos los archivos de una copia de seguridad, incluidos los archivos de catálogo, use una instrucción RESTORE FILELISTONLY FROM *<backup_device>*. Para obtener más información, vea [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ Al restaurar copias de seguridad de una versión anterior, es útil conocer de antemano si la ruta de acceso (unidad y directorio) de cada uno de los catálogos de texto completo de una copia de seguridad existe en el equipo de destino. Para obtener una lista de los nombres lógicos y físicos, la ruta de acceso y el nombre de archivo de todos los archivos de una copia de seguridad, incluidos los archivos de catálogo, use una instrucción RESTORE FILELISTONLY FROM *<backup_device>* . Para obtener más información, vea [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  Si no existe la misma ruta de acceso en el equipo de destino, son dos las alternativas válidas:  
   

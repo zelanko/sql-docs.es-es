@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4b6b8e386ee8391ab40bf6152d3c8c3cf6e315f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113721"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,7 +113,7 @@ SELECT @datetime AS '@datetime', @date AS '@date';
 --2016-12-21 00:00:00.000 2016-12-21  
 ```  
   
-Cuando la conversión es desde **time(n)**, se copia el componente de hora y el componente de fecha se establece en "1900-01-01". Cuando la precisión de las fracciones del valor de **time(n)** sea superior a tres dígitos, el valor se truncará para ajustarse. En el siguiente ejemplo se muestran los resultados de convertir un valor `time(4)` en un valor `datetime`.  
+Cuando la conversión es desde **time(n)** , se copia el componente de hora y el componente de fecha se establece en "1900-01-01". Cuando la precisión de las fracciones del valor de **time(n)** sea superior a tres dígitos, el valor se truncará para ajustarse. En el siguiente ejemplo se muestran los resultados de convertir un valor `time(4)` en un valor `datetime`.  
   
 ```sql
 DECLARE @time time(4) = '12:10:05.1237';  
@@ -142,7 +141,7 @@ SELECT @datetime AS '@datetime', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.000 2016-12-01 12:32:00  
 ```  
   
-Cuando la conversión es desde **datetimeoffset(n)**, se copian los componentes de fecha y hora. Se trunca la zona horaria. Cuando la precisión de las fracciones del valor de **datetimeoffset(n)** sea superior a tres dígitos, el valor se truncará. En el siguiente ejemplo se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `datetime`.  
+Cuando la conversión es desde **datetimeoffset(n)** , se copian los componentes de fecha y hora. Se trunca la zona horaria. Cuando la precisión de las fracciones del valor de **datetimeoffset(n)** sea superior a tres dígitos, el valor se truncará. En el siguiente ejemplo se muestran los resultados de convertir un valor `datetimeoffset(4)` en un valor `datetime`.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1968-10-23 12:45:37.1234 +10:0';  
@@ -156,7 +155,7 @@ SELECT @datetime AS '@datetime', @datetimeoffset AS '@datetimeoffset';
 --1968-10-23 12:45:37.123 1968-10-23 12:45:37.1237 +01:0   
 ```  
   
-Cuando la conversión es desde **datetime2(n)**, se copian la fecha y la hora. Cuando la precisión de las fracciones del valor de **datetime2(n)** sea superior a tres dígitos, el valor se truncará. En el siguiente ejemplo se muestran los resultados de convertir un valor `datetime2(4)` en un valor `datetime`.  
+Cuando la conversión es desde **datetime2(n)** , se copian la fecha y la hora. Cuando la precisión de las fracciones del valor de **datetime2(n)** sea superior a tres dígitos, el valor se truncará. En el siguiente ejemplo se muestran los resultados de convertir un valor `datetime2(4)` en un valor `datetime`.  
   
 ```sql
 DECLARE @datetime2 datetime2(4) = '1968-10-23 12:45:37.1237';  

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 461e85a3df5e14cf26fcae612f47b811064f730e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 09e1e143f22c36e66670f9c02590e009e939a048
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101441"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilación nativa de tablas y procedimientos almacenados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -210,7 +209,7 @@ Entre los archivos que se generan cuando se compila una tabla o un procedimiento
 
 No se necesita ninguna interacción del usuario para administrar estos archivos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creará y quitará los archivos según sea necesario.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 

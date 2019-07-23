@@ -14,13 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38e4aa10089bcd96f0285d2e18cf763f31f45d7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 246f450a1782a6f00e32ce725c244915dc95054c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64478765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138359"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Uso del servicio Azure Blob Storage con SQL Server 2016
 
@@ -456,7 +455,7 @@ Para eliminar un conjunto de copia de seguridad de instantánea de archivos, sig
     ```  
     ![Panel de resultados que muestra 2 instantáneas de archivos eliminadas](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
 
-## <a name="10---remove-resources"></a>10\. Quitar recursos
+## <a name="10---remove-resources"></a>10. Quitar recursos
 
 Una vez que haya terminado con este tutorial, y para ahorrar recursos, asegúrese de eliminar el grupo de recursos creado con este fin. 
 

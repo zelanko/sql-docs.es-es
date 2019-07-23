@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9c595bd6d7cce21b9bf3428fadf772c4db4cdc07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3dcefdc7b229f0d36f3c14349cc4af73c9f8eb2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110662"
 ---
 # <a name="sql-server-unit-test-files"></a>Archivos de prueba unitaria de SQL Server
 Al igual que las pruebas unitarias para código administrado, las pruebas unitarias de SQL Server residen en proyectos de prueba. Puede ver los elementos que conforman una prueba unitaria de SQL Server en la jerarquía de un proyecto de prueba en el **Explorador de soluciones**.  

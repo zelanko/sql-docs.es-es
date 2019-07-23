@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: acc1c7b0-4abf-42f8-b9a9-c383b715a735
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89f0d5483ad44f62807d83ffc294a29156e65e85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 02bd8c4d017d391755eb9d61ef7685883a5ade51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115900"
 ---
 # <a name="objects-event-category"></a>Objetos (categoría de eventos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47701843"
 |[Object:Created (clase de eventos)](../../relational-databases/event-classes/object-created-event-class.md)|Indica que se ha creado un objeto; por ejemplo, mediante las instrucciones CREATE INDEX, CREATE TABLE o CREATE DATABASE.|  
 |[Object:Deleted (clase de eventos)](../../relational-databases/event-classes/object-deleted-event-class.md)|Indica que se ha eliminado un objeto; por ejemplo, mediante las instrucciones DROP INDEX o DROP TABLE.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

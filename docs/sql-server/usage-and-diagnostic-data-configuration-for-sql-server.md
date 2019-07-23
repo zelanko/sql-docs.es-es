@@ -3,18 +3,17 @@ title: Configuración de la recopilación de datos de uso y diagnóstico para SQ
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 44a8d6c22d7dd003f7c6e90963eb546e6ca1bf50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80b6e7444f77fbd764402643887dcee94eaec7aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65372757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091804"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Configuración de la recopilación de datos de uso y diagnóstico para SQL Server (CEIP)
 

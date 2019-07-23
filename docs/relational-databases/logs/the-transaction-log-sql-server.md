@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083937"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ El Agente de registro del LOG supervisa el registro de transacciones de cada bas
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Compatibilidad con las soluciones de alta disponibilidad y recuperación ante desastres
 Las soluciones de servidor en espera, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], creación de reflejo de la base de datos y trasvase de registros dependen en gran medida del registro de transacciones. 
 
-En un **escenario de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]**, cada actualización de una base de datos, la réplica principal, se reproduce de inmediato en copias completas e independientes de la base de datos, las réplicas secundarias. La réplica principal envía las entradas del registro inmediatamente a las réplicas secundarias, que aplican las entradas del registro entrantes a las bases de datos de los grupos de disponibilidad, poniéndolas al día. Para obtener más información, consulte [Instancias de clúster de conmutación por error de AlwaysOn](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
+En un **escenario de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]** , cada actualización de una base de datos, la réplica principal, se reproduce de inmediato en copias completas e independientes de la base de datos, las réplicas secundarias. La réplica principal envía las entradas del registro inmediatamente a las réplicas secundarias, que aplican las entradas del registro entrantes a las bases de datos de los grupos de disponibilidad, poniéndolas al día. Para obtener más información, consulte [Instancias de clúster de conmutación por error de AlwaysOn](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
 En un **escenario de trasvase de registros**, el servidor principal envía el registro de transacciones activo de la base de datos principal a uno o varios destinos. Los servidores secundarios restauran el registro en su base de datos secundaria local. Para obtener más información, consulte [Acerca del trasvase de registros](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
 

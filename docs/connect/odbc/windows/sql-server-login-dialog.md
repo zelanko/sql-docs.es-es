@@ -1,5 +1,5 @@
 ---
-title: Cuadro de diálogo de inicio de sesión SQL Server (ODBC) | Microsoft Docs
+title: Cuadro de diálogo SQL Server inicio de sesión (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: jroth
-ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989420"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Cuadro de diálogo Inicio de sesión de SQL Server (ODBC)
 
@@ -35,13 +34,13 @@ Para más información acerca de los nombres de servidor para diferentes tipos d
 ### <a name="authentication-mode"></a>Modo de autenticación
 
 Selecciona el modo de autenticación de uno de los siguientes:
-- **SQL Server** con Id. de inicio de sesión y contraseña
-- **Integrada de Windows** autenticación mediante la cuenta de usuario que ha iniciado sesión actualmente
-- **Contraseña de Active Directory** con Id. de inicio de sesión y contraseña
-- **Integrada en Active Directory** autenticación mediante la cuenta de usuario que ha iniciado sesión actualmente
+- **SQL Server** con el identificador de inicio de sesión y la contraseña
+- Autenticación **integrada de Windows** con la cuenta de usuario que ha iniciado sesión actualmente
+- **Active Directory contraseña** con el identificador de inicio de sesión y la contraseña
+- **Active Directory** la autenticación integrada mediante la cuenta de usuario que ha iniciado sesión actualmente
 - Autenticación **interactiva de Active Directory** con identificador de inicio de sesión
 
-Consulte [Asistente pantalla 2 de origen de datos](../../../connect/odbc/windows/dsn-wizard-2.md) para obtener más información sobre los modos de autenticación.
+Consulte la [pantalla del Asistente para orígenes de datos 2](../../../connect/odbc/windows/dsn-wizard-2.md) para obtener más información sobre los modos de autenticación.
 
 ### <a name="server-spn"></a>Dirección SPN del servidor
 
@@ -49,11 +48,11 @@ Si utiliza una conexión de confianza, puede especificar un nombre principal de 
 
 ### <a name="login-id"></a>Id. de inicio de sesión
 
-Especifica el identificador de inicio de sesión de SQL Server o Azure Active Directory que se usará para la conexión si **modo de autenticación** está establecido en **SQL Server** o **contraseña de Active Directory** o **Interactiva de active Directory**. En caso contrario, el **Id. de inicio de sesión** casilla está deshabilitada.
+Especifica el SQL Server o Azure Active Directory identificador de inicio de sesión que se usará para la conexión si el **modo de autenticación** está establecido en **SQL Server** o **Active Directory contraseña** o **Active Directory Interactive**. De lo contrario, el cuadro ID. de **Inicio de sesión** está deshabilitado.
 
 ### <a name="password"></a>Contraseña
 
-Especifica la contraseña para el identificador de inicio de sesión de SQL Server o Azure Active Directory utilizado para la conexión si **modo de autenticación** está establecido en **SQL Server** o **decontraseñadeActiveDirectory**. En caso contrario, el **contraseña** casilla está deshabilitada.
+Especifica la contraseña para el SQL Server o Azure Active Directory identificador de inicio de sesión usado para la conexión si el **modo de autenticación** está establecido en **SQL Server** o **Active Directory contraseña**. De lo contrario, el cuadro **contraseña** estará deshabilitado.
 
 ### <a name="options"></a>Opciones
 
@@ -101,7 +100,7 @@ Cuando se selecciona, se cifrarán los datos que se pasan a través de la conexi
 
 ### <a name="trust-server-certificate"></a>Certificado de servidor de confianza
 
-Esta opción solo es aplicable cuando **utilizar cifrado de alta seguridad para datos** está habilitado. Cuando se selecciona, no se validará el certificado del servidor para que el nombre de host correcto del servidor y ser emitido por una entidad de certificación de confianza.
+Esta opción solo es aplicable cuando está habilitado el **uso de cifrado seguro para datos** . Cuando se selecciona, el certificado del servidor no se validará para tener el nombre de host correcto del servidor y debe ser emitido por una entidad de certificación de confianza.
 
 ## <a name="see-also"></a>Consulte también
 

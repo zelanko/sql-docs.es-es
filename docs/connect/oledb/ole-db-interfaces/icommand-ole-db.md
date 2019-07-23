@@ -1,6 +1,6 @@
 ---
 title: ICommand (OLE DB) | Microsoft Docs
-description: Interfaz ICommand (OLE DB)
+description: ICommand (interfaz) (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,20 +12,19 @@ helpviewer_keywords:
 - ICommand [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9622dfa505fd00bca639d1cfd8919aef4145a85a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 722536a086abf280cacded3ecd2cd0d450a417ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994491"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este artículo trata el comportamiento de OLE DB que es específico para el controlador OLE DB para SQL Server.  
+  En este artículo se describe el comportamiento de OLE DB específico del controlador de OLE DB para SQL Server.  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
  Insertar datos que sean mayores que el tamaño de una columna suele producir un error. Sin embargo, hay situaciones en las que se devolverá S_OK pero *dwStatus* se configurará en DBSTATUS_S_TRUNCATED. Se suele producir al insertar datos con parámetros, donde la columna no es lo bastante grande para contener los datos y no se ha llamado a **ICommandWithParameters::SetParameterInfo**.  

@@ -1,5 +1,5 @@
 ---
-title: Usar UDT CLR grandes (OLE DB) | Microsoft Docs
+title: Usar UDT de CLR de gran tamaño (OLE DB) | Microsoft Docs
 description: Usar UDT de CLR de gran tamaño (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6518f898589ee7b2dabea97fde0765f62fd9e5a5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 07a3023f61f26bbc4850eaa495f134d87c6a61c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994611"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Usar UDT de CLR de gran tamaño (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  En este ejemplo se muestra cómo capturar filas con tipos definidos por el usuario grandes de un conjunto de resultados. Para obtener más información, consulte [Large CLR User-Defined tipos &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o posterior.  
+  En este ejemplo se muestra cómo capturar filas con tipos definidos por el usuario grandes de un conjunto de resultados. Para obtener más información, vea [ &#40;tipos CLR grandes definidos por el&#41;usuario OLE DB](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] o posterior.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo contiene dos proyectos. Un proyecto crea un ensamblado (DLL) a partir de código fuente de C#. Este ensamblado contiene el tipo CLR. Se agregará una tabla a la base de datos. Una columna de la tabla será de un tipo definido en el ensamblado. De forma predeterminada, en este ejemplo se usará la base de datos maestra. El segundo proyecto es una aplicación de C nativa que lee datos de la tabla.  

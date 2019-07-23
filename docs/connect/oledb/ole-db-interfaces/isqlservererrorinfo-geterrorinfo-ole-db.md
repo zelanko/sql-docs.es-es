@@ -15,22 +15,21 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6a43a5882529353a05b41a111ead20d0dd148078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015441"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Devuelve un puntero a un controlador OLE DB para SQL Server SSERRORINFO estructura que contiene el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detalles del error.  
+  Devuelve un puntero a un controlador de OLE DB para SQL Server estructura SSERRORINFO que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene los detalles del error.  
   
- El controlador OLE DB para SQL Server define el **ISQLServerErrorInfo** interfaz de errores. Esta interfaz devuelve los detalles de un error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], incluso la gravedad y el estado.  
+ El controlador de OLE DB para SQL Server define la interfaz de error **ISQLServerErrorInfo** . Esta interfaz devuelve los detalles de un error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], incluso la gravedad y el estado.  
 
   
 ## <a name="syntax"></a>Sintaxis  
@@ -54,10 +53,10 @@ HRESULT GetErrorInfo(
  El método se ha llevado a cabo de forma correcta.  
   
  E_INVALIDARG  
- Ya sea el *ppSSErrorInfo* o *ppErrorStrings* argumento era NULL.  
+ El argumento *ppSSErrorInfo* o *ppErrorStrings* era null.  
   
  E_OUTOFMEMORY  
- El controlador OLE DB para SQL Server no pudo asignar memoria suficiente para completar la solicitud.  
+ El controlador de OLE DB para SQL Server no pudo asignar memoria suficiente para completar la solicitud.  
   
 ## <a name="remarks"></a>Notas  
  El controlador OLE DB para SQL Server asigna memoria para las cadenas SSERRORINFO y OLECHAR devueltas a través de los punteros pasados por el consumidor. El consumidor debe desasignar esta memoria mediante el método **IMalloc::Free** cuando ya no requiera tener acceso a los datos de error.  

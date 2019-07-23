@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 030a1631-cfcd-41e0-beb5-47f93c01e8e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aea9ddeb1dcf1ad558ed11ce0e5bd9fec80ef6e8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e30758f99b3b3aa1b40319fda91760b253d17a9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977492"
 ---
 # <a name="isqlservercallablestatement-interface"></a>Interfaz ISQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public interface ISQLServerCallableStatement
 ```  
   
 ## <a name="remarks"></a>Notas  
- Esta interfaz se implementa mediante [clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
+ Esta interfaz se implementa mediante la [clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
  Esta interfaz expone los siguientes métodos específicos del [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  
   

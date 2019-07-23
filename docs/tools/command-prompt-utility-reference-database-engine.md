@@ -1,5 +1,5 @@
 ---
-title: Utilidades de símbolo del sistema de SQL (motor de base de datos) | Microsoft Docs
+title: Utilidades del símbolo del sistema de SQL (Motor de base de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5e83792a7d982dedf41e525fc7801fb76f1db7d5
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 8fdcb3b307f525ff9eda14006e6fd4f6378f418c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010421"
 ---
-# <a name="sql-command-prompt-utilities-database-engine"></a>Utilidades de símbolo del sistema de SQL (motor de base de datos)
+# <a name="sql-command-prompt-utilities-database-engine"></a>Utilidades del símbolo del sistema de SQL (Motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Las utilidades de símbolo del sistema permiten incluir en scripts las operaciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La siguiente tabla contiene una lista de utilidades de símbolo del sistema que se suministran junto con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
-Para obtener información sobre la *principal* interfaz gráfica de usuario SQL y herramientas de línea de comandos, consulte [Introducción a las herramientas de SQL](overview-sql-tools.md).
+Para obtener información sobre la GUI *principal* de SQL y las herramientas de línea de comandos, consulte [información general sobre herramientas de SQL](overview-sql-tools.md).
 
   
 |**Utilidad**|**Descripción**|**Instalada en**|  

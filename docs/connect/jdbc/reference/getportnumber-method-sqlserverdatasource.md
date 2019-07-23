@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e5dc38d0-4340-4ad7-a56e-1d2a0f0fd846
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b731bf5ce8272fe72167d77b96e523cd3ede1139
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 20850d10352a583abd7e0a8bd9747b6346ec3aaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980836"
 ---
 # <a name="getportnumber-method-sqlserverdatasource"></a>Método getPortNumber (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getPortNumber()
  El número de puerto es el número del puerto TCP/IP que se utiliza al abrir una conexión de socket con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no se establece la propiedad portNumber, el método getPortNumber devuelve el valor predeterminado de 1433.  
   
 > [!NOTE]  
->  El [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) método no realiza ninguna comprobación en el pasado en el valor del puerto del intervalo. Puede pasar números erróneos que no son válidos como 99999, sin desencadenar un error.  
+>  El método [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) no realiza ninguna comprobación de intervalo en el valor de Puerto pasado. Puede pasar números de agravios que no sean válidos, como 99999, sin desencadenar un error.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

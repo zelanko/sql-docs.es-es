@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c7f00b7f908a7b13f388df6dfd745a29000e4ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f49cdf12c4aaca9633670f7688783407acb05342
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957048"
 ---
 # <a name="working-with-data-types-jdbc"></a>Trabajar con tipos de datos (JDBC)
 
@@ -37,7 +36,7 @@ En los temas de esta sección se describe cómo usar los tipos de datos del cont
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Ejemplo de tipos de datos básicos](../../../connect/jdbc/code-samples/basic-data-types-sample.md)   | Describe cómo usar los métodos captadores del conjunto de resultados para recuperar valores de tipos de datos básicos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y cómo usar los métodos de actualización del conjunto de resultados para actualizar dichos valores.                                             |
 | [Ejemplos de tipos de datos SQLXML](../../../connect/jdbc/code-samples/sqlxml-data-type-sample.md)   | Describe cómo almacenar datos XML en una base de datos relacional, cómo recuperar datos XML desde una base de datos y cómo analizar datos XML con el tipo de datos Java de **SQLXML**.                                                                                   |
-| [Ejemplo de tipos de datos espaciales](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | Describe cómo almacenar los tipos de datos espaciales en SQL Server y cómo recuperar estos tipos desde SQL Server. También se explica cómo usar las clases recién definidas **geometría** y **Geography** desde el controlador, para administrar la referencia de Java de estos tipos de datos. |
+| [Ejemplo de tipos de datos espaciales](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | Describe cómo almacenar los tipos de datos espaciales en SQL Server y cómo recuperarlos de nuevo desde SQL Server. También describe cómo usar la **geometría** y la **geografía** de clases recién definidas del controlador para administrar la referencia de Java de estos tipos de objeto. |
   
 ## <a name="see-also"></a>Consulte también
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9dfa7781-d72f-407a-a8d4-1c78c9446d09
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ef4131bb99ab2569e4e91436174a481ecdb63d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc093dbd271a03f2efe4641986ced16ae1471f31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975519"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-long"></a>Método setAsciiStream (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void setAsciiStream(int parameterIndex,
   
  *x*  
   
- Un objeto java.io.InputStream.  
+ Objeto Java. IO. InputStream.  
   
  *length*  
   
@@ -49,7 +48,7 @@ public final void setAsciiStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método setAsciiStream especificado por el método setAsciiStream en la interfaz java.sql.PreparedStatement.  
+ Este método setAsciiStream se especifica mediante el método setAsciiStream de la interfaz java. SQL. PreparedStatement.  
   
  Si la longitud del flujo es distinta a la especificada en el parámetro *length*, el controlador JDBC produce una excepción cuando la fila se actualiza o se inserta.  
   

@@ -18,27 +18,26 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3221a4593bf3d7534c3f9def115e69edc3cfeb07
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 26e97354d54cb65578bcbb35d2c96fb6914270d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015201"
 ---
 # <a name="stored-procedures---calling"></a>Procedimientos almacenados: llamada
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Cuando se usa el controlador OLE DB para SQL Server, se pueden pasar parámetros a un procedimiento almacenado por:  
+  Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Al usar el controlador de OLE DB para SQL Server, se pueden pasar parámetros a un procedimiento almacenado:  
   
 -   Codificando de forma rígida el valor de datos.  
   
 -   Utilizando un marcador de parámetro (?) para especificar parámetros, enlazar una variable de programa al marcador de parámetro y, a continuación, colocar el valor de datos en la variable de programa.  
   
 > [!NOTE]  
->  Cuando se llama a procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante parámetros con nombre con OLE DB, los nombres de parámetro deben empezar con el carácter '\@'. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El controlador OLE DB para SQL Server exige esta restricción de forma más estricta que MDAC.  
+>  Cuando se llama a procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante parámetros con nombre con OLE DB, los nombres de parámetro deben empezar con el carácter '\@'. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El controlador de OLE DB para SQL Server aplica esta restricción de forma más estricta que MDAC.  
   
  Para admitir parámetros, se expone la interfaz **ICommandWithParameters** en el objeto de comando. Para usar parámetros, el cliente primero describe los parámetros al proveedor mediante una llamada al método **ICommandWithParameters::SetParameterInfo** (u opcionalmente prepara una instrucción de llamada que llama al método **GetParameterInfo**). A continuación, el consumidor crea un descriptor de acceso que especifica la estructura de un búfer y coloca los valores de parámetro en este búfer. Por último, pasa el identificador del descriptor de acceso y un puntero al búfer a **Execute**. En las llamadas posteriores a **Execute**, el cliente coloca nuevos valores de parámetro en el búfer y llama a **Execute** con el identificador del descriptor de acceso y el puntero al búfer.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "66795926"
 5.  Ejecute el comando mediante **ICommand::Execute**.  
   
 ## <a name="methods-of-calling-a-stored-procedure"></a>Métodos para llamar a un procedimiento almacenado  
- Al ejecutar un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el controlador OLE DB para SQL Server admite el:  
+ Al ejecutar un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el controlador de OLE DB para SQL Server admite:  
   
 -   Secuencia de escape ODBC CALL.  
   
@@ -109,7 +108,7 @@ ms.locfileid: "66795926"
   
  Cuando se utiliza la secuencia de escape RPC para ejecutar un procedimiento almacenado, el proveedor no llama a ninguna función del asistente para determinar la información de parámetros (como hace en el caso de la sintaxis ODBC CALL). La sintaxis RPC es más sencilla que la sintaxis ODBC CALL, por lo que el comando se analiza con mayor rapidez y se mejora el rendimiento. En este caso, necesita proporcionar la información de parámetros mediante la ejecución de **ICommandWithParameters::SetParameterInfo**.  
   
- La secuencia de escape RPC exige que tenga un valor devuelto. Si el procedimiento almacenado no devuelve un valor, el servidor devuelve de forma predeterminada un 0. Además, no puede abrir un cursor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el procedimiento almacenado. El procedimiento almacenado se prepara de forma implícita y la llamada a **ICommandPrepare::Prepare** produce un error. Debido a la incapacidad para preparar una llamada RPC, no puede consultar los metadatos de columna; IColumnsInfo:: GetColumnInfo e IColumnsRowset:: GetColumnsRowset devolverán DB_E_NOTPREPARED.  
+ La secuencia de escape RPC exige que tenga un valor devuelto. Si el procedimiento almacenado no devuelve un valor, el servidor devuelve de forma predeterminada un 0. Además, no puede abrir un cursor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el procedimiento almacenado. El procedimiento almacenado se prepara de forma implícita y la llamada a **ICommandPrepare::Prepare** produce un error. Debido a la incapacidad de preparar una llamada RPC, no se pueden consultar los metadatos de la columna; IColumnsInfo:: GetColumnInfo y IColumnsRowset:: GetColumnsRowset devolverán DB_E_NOTPREPARED.  
   
  Si conoce todos los metadatos de parámetros, la secuencia de escape RPC es la opción recomendada para ejecutar los procedimientos almacenados.  
   
@@ -119,10 +118,10 @@ ms.locfileid: "66795926"
 {rpc SalesByCategory}  
 ```  
   
- Para una aplicación de ejemplo que muestra una secuencia de escape RPC, vea [ejecutar un procedimiento almacenado &#40;mediante la sintaxis RPC&#41; y proceso de códigos de retorno y parámetros de salida &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Para obtener una aplicación de ejemplo que muestra una secuencia de escape RPC, vea [ejecutar &#40;un procedimiento almacenado&#41; mediante la sintaxis RPC y procesar códigos &#40;de&#41;retorno y parámetros de salida OLE DB](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instrucción EXECUTE de Transact-SQL:  
- Las secuencias de escape ODBC CALL y RPC son los métodos preferidos para llamar a un procedimiento almacenado en lugar de la instrucción [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). El controlador OLE DB para SQL Server utiliza el mecanismo RPC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para optimizar el procesamiento de comandos. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
+ Las secuencias de escape ODBC CALL y RPC son los métodos preferidos para llamar a un procedimiento almacenado en lugar de la instrucción [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). El controlador de OLE DB para SQL Server utiliza el mecanismo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC de para optimizar el procesamiento de comandos. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
   
  Este es un ejemplo de la instrucción **EXECUTE** de [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
   

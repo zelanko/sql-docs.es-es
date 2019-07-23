@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 24efba087c6e2f988e25517ceffb61463b0ec935
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8f3af347e41f3ba90b283b56d8cb2c1550b69006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978595"
 ---
 # <a name="gettrustmanagerconstructorarg-method-sqlserverdatasource"></a>Método getTrustManagerConstructorArg (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Devuelve el valor de cadena de la propiedad de conexión de propiedades de conexión.
+  Devuelve el valor de cadena de la propiedad de conexión propiedades.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,10 +35,10 @@ public java.lang.String getTrustManagerConstructorArg()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un **cadena** que contiene el valor de la propiedad de conexión de propiedades de conexión, o null si se establece ningún valor.  
+ Una **cadena** que contiene el valor de la propiedad de conexión propiedades, o null si no se establece ningún valor.  
   
 ## <a name="remarks"></a>Notas  
- Si no se establece la propiedad TrustManagerClass, el [getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md) método devuelve null.  
+ Si no se establece la propiedad TrustManagerClass, el método [getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md) devuelve NULL.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

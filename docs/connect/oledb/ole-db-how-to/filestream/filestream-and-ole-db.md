@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c06fdb1d2fc49cea50a3758ea900e291f8fa8796
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8229c20a500680c1b83304bc2e443c20838b5a02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015594"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream y OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
-  Esta sección contiene cuatro ejemplos que muestran cómo usar el controlador OLE DB para SQL Server con la característica filestream:  
+  Esta sección contiene cuatro ejemplos que muestran cómo usar OLE DB driver para SQL Server con la característica FileStream:  
   
 -   [Leer una columna FILESTREAM en el archivo mediante IBCPSession &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
   

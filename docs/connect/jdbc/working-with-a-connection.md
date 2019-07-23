@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fa216c6fb20ab5881865e2baf283d233b4abbfca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916085"
 ---
 # <a name="working-with-a-connection"></a>Trabajar con una conexión
 
@@ -94,7 +93,7 @@ Para conectarse a una base de datos específica de un servidor, use lo siguiente
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-Para obtener más ejemplos de dirección URL de conexión, consulte [generar URL de conexión](../../connect/jdbc/building-the-connection-url.md).
+Para obtener más ejemplos de URL de conexión, vea [crear la dirección URL de conexión](../../connect/jdbc/building-the-connection-url.md).
 
 ## <a name="creating-a-connection-with-a-custom-login-time-out"></a>Crear una conexión con tiempo de espera de inicio de sesión personalizado
 

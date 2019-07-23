@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 95d7af5f6b5c0d1b6a0f162d09cb64b954ce5d09
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 54e2ce24f4fd0b0d94344029cd2f56e378e579dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067355"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Mover una base de datos mediante Separar y Adjuntar (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "53591509"
     > [!IMPORTANT]  
     >  En el caso de una base de datos de producción, coloque la base de datos y el registro de transacciones en discos independientes.  
   
-     Para copiar archivos a través de la red en un disco de un equipo remoto, use el nombre UNC (Convención de nomenclatura universal) de la ubicación remota. Un nombre UNC toma la forma **\\\\**_nombreDeServidor_**\\**_nombreDelRecursoCompartido_**\\**_rutaDeAcceso_**\\**_nombreDeArchivo_. De la misma forma que al escribir archivos en el disco duro local, se debe conceder a la cuenta de usuario que usa la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los permisos necesarios para leer o escribir en archivos del disco remoto.  
+     Para copiar archivos a través de la red en un disco de un equipo remoto, use el nombre UNC (Convención de nomenclatura universal) de la ubicación remota. Un nombre UNC toma la forma **\\\\** _nombreDeServidor_ **\\** _nombreDelRecursoCompartido_ **\\** _rutaDeAcceso_ **\\** _nombreDeArchivo_. De la misma forma que al escribir archivos en el disco duro local, se debe conceder a la cuenta de usuario que usa la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los permisos necesarios para leer o escribir en archivos del disco remoto.  
   
 3.  Adjunte la base de datos movida y, opcionalmente, su registro ejecutando las siguientes instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   

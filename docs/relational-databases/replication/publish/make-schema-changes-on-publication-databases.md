@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c82c9913b75ca363d4ace1413c0c4413989c116a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db839c3afa5b3188a7a37f0575f23d3f9ebadce7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081736"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,9 +92,9 @@ ms.locfileid: "47605373"
   
 -   Para agregar una columna nueva a una tabla sin incluirla en una publicación existente, deshabilite la replicación de los cambios de esquema y después, ejecute ALTER TABLE \<tabla> ADD \<columna>.  
   
--   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>**.  
+-   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
   
-     Para más información, consulte [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Será necesario reinicializar las suscripciones.  
+     Para más información, consulte [definir y modificar un filtro de columna](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Será necesario reinicializar las suscripciones.  
   
 -   No se admite la posibilidad de agregar una columna de identidad a una tabla publicada porque puede dar como resultado la falta de convergencia cuando la columna se replica en el suscriptor. Los valores de la columna de identidad en el publicador dependen del orden en que se almacenen físicamente las filas de la tabla afectada. Las filas se pueden almacenar de forma diferente en el suscriptor; por tanto, el valor de la columna de identidad puede ser diferente para las mismas filas.  
   
@@ -103,9 +102,9 @@ ms.locfileid: "47605373"
   
 -   Para quitar una columna de una publicación existente y de la tabla del publicador, ejecute ALTER TABLE \<tabla> DROP \<columna>. De forma predeterminada, la columna se quitará de la tabla en todos los suscriptores.  
   
--   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>**.  
+-   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
   
-     Para más información, consulte [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Será necesario generar una instantánea nueva.  
+     Para más información, consulte [definir y modificar un filtro de columna](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Será necesario generar una instantánea nueva.  
   
 -   La columna que se quita no puede utilizarse en las cláusulas de filtro de ningún artículo de ninguna publicación de la base de datos.  
   
@@ -160,7 +159,7 @@ ms.locfileid: "47605373"
   
 -   La replicación de mezcla proporciona procedimientos almacenados para omitir los cambios de esquema durante la solución de problemas. Para obtener más información, vea [sp_markpendingschemachange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) y [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   

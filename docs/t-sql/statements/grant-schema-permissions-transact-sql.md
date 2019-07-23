@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d923201600adcf0e1bb4026e3feee28dea7e97
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050811"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT (permisos de esquema de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -139,7 +138,7 @@ AS *granting_principal*
 GRANT INSERT ON SCHEMA :: HumanResources TO guest;  
 ```  
   
-### <a name="b-granting-select-permission-on-schema-person-to-database-user-wiljo"></a>b. Conceder al usuario de base de datos WilJo el permiso SELECT en el esquema Person  
+### <a name="b-granting-select-permission-on-schema-person-to-database-user-wiljo"></a>B. Conceder al usuario de base de datos WilJo el permiso SELECT en el esquema Person  
   
 ```  
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  

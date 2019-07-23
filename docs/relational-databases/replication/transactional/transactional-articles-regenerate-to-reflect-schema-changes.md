@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a3bbb45c7ef3d9d30cee90de66b7db4b47b11873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0d667b80d2ad7d5b58351ff25d3b1d5b60176b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121271"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>Transactional Articles - Regenerate to Reflect Schema Changes (Artículos transaccionales: Volver a generar para reflejar cambios de esquema)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47842243"
   
     1.  Al ejecutar [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), asegúrese que el bit 0x02 de **@schema_option** está establecido en **true**.  
   
-    2.  Ejecute [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) y especifique un valor "insert", "update" o "delete" para el parámetro **@type** y el nombre del procedimiento de scripting personalizado para el parámetro **@value**.  
+    2.  Ejecute [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) y especifique un valor "insert", "update" o "delete" para el parámetro **@type** y el nombre del procedimiento de scripting personalizado para el parámetro **@value** .  
   
      La siguiente vez que se lleve a cabo un cambio de esquema, la replicación llamará a este procedimiento almacenado para crear un script de la definición para el nuevo procedimiento almacenado personalizado definido por el usuario y, después, propagará el procedimiento a cada suscriptor.  
   
@@ -40,11 +39,11 @@ ms.locfileid: "47842243"
   
     1.  Al ejecutar [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), establezca el bit 0x02 de **@schema_option** en **false** para que la replicación no genere automáticamente procedimientos personalizados en el suscriptor.  
   
-    2.  Antes de cada cambio de esquema, cree un nuevo archivo de script y registre el script con la replicación, ejecutando [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Especifique un valor de 'custom_script' para el parámetro **@type** y la ruta de acceso al script en el publicador para el parámetro **@value**.  
+    2.  Antes de cada cambio de esquema, cree un nuevo archivo de script y registre el script con la replicación, ejecutando [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Especifique un valor de 'custom_script' para el parámetro **@type** y la ruta de acceso al script en el publicador para el parámetro **@value** .  
   
      La siguiente vez que realice un cambio de esquema importante, este script se ejecutará en cada suscriptor en la misma transacción que el comando DDL. Una vez realizado el cambio de esquema, el script se elimina del registro. Debe volver a registrar el script para que se ejecute de nuevo después del siguiente cambio de esquema.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Especificar cómo se propagan los cambios para los artículos transaccionales](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)   
  [Realizar cambios de esquema en bases de datos de publicaciones](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  
   

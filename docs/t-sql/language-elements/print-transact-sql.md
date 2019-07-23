@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 549e5cf693aa72f891fa286fc2ba24ee3c952577
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc83aca49b6147835353538d809be121756ecda6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072404"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,13 +48,13 @@ PRINT msg_str | @local_variable | string_expr
  Es una cadena de caracteres o una constante de cadena Unicode. Para más información, vea [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).  
   
  **@** *local_variable*  
- Es una variable de cualquier tipo de datos de caracteres válido. **@**_local\_variable_ debe ser **char**, **nchar**, **varchar** o **nvarchar**, o bien se debe poder convertir implícitamente en estos tipos de datos.  
+ Es una variable de cualquier tipo de datos de caracteres válido. **@** _local\_variable_ debe ser **char**, **nchar**, **varchar** o **nvarchar**, o bien se debe poder convertir implícitamente en estos tipos de datos.  
   
  *string_expr*  
  Es una expresión que devuelve una cadena. Puede incluir valores literales concatenados, funciones y variables. Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="remarks"></a>Notas  
- Una cadena de mensaje puede tener una longitud de hasta 8.000 caracteres si es una cadena no Unicode, y de 4.000 caracteres si es una cadena Unicode. Las cadenas de mayor longitud se truncarán. Los tipos de datos **varchar(max)** y **nvarchar(max)** se truncan en tipos de datos que no sean mayores que **varchar(8000)** y **nvarchar(4000)**.  
+ Una cadena de mensaje puede tener una longitud de hasta 8.000 caracteres si es una cadena no Unicode, y de 4.000 caracteres si es una cadena Unicode. Las cadenas de mayor longitud se truncarán. Los tipos de datos **varchar(max)** y **nvarchar(max)** se truncan en tipos de datos que no sean mayores que **varchar(8000)** y **nvarchar(4000)** .  
   
  RAISERROR también se puede utilizar para devolver mensajes. RAISERROR ofrece una serie de ventajas en comparación con PRINT:  
   

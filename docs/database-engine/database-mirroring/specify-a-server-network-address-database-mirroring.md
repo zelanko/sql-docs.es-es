@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 630df054d6025d70e2dcc2b90d339d1499dbc237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1db02ef90af9e014e3481961daf08a1ce10a54c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048082"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Especificar una dirección de red de servidor (creación de reflejo de la base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "66795180"
 ##  <a name="Syntax"></a> Sintaxis para una dirección de red de servidor  
  La sintaxis para una dirección de red de servidor tiene el siguiente formato:  
   
- TCP<strong>://</strong>*\<dirección del sistema>*<strong>:</strong>*\<puerto>*  
+ TCP<strong>://</strong> *\<dirección del sistema>* <strong>:</strong> *\<puerto>*  
   
  donde  
   
@@ -41,15 +40,15 @@ ms.locfileid: "66795180"
   
     -   Si los sistemas están en el mismo dominio, puede utilizar el nombre del equipo; por ejemplo, `SYSTEM46`.  
   
-    -   Para utilizar una dirección IP, ésta debe ser única en el entorno. Recomendamos que utilice una dirección IP solo si es estática. La dirección IP puede ser IP Versión 4 (IPv4) o IP Versión 6 (IPv6). Las direcciones IPv6 se deben incluir entre corchetes, por ejemplo: **[**_<dirección_IPv6>_**]**.  
+    -   Para utilizar una dirección IP, ésta debe ser única en el entorno. Recomendamos que utilice una dirección IP solo si es estática. La dirección IP puede ser IP Versión 4 (IPv4) o IP Versión 6 (IPv6). Las direcciones IPv6 se deben incluir entre corchetes, por ejemplo: **[** _<dirección_IPv6>_ **]** .  
   
          Para conocer la dirección IP de un sistema, en el símbolo del sistema de Windows, escriba el comando **ipconfig** .  
   
     -   El nombre de dominio completo siempre funciona. Éste es una cadena de dirección definida localmente que tiene diferentes formatos en los distintos lugares. Con frecuencia, aunque no siempre, el nombre de dominio completo es un nombre compuesto que incluye el nombre del equipo y una serie de segmentos de dominio separados por puntos con el siguiente formato:  
   
-         _nombre_equipo_ **.** _segmento_dominio_[...**.**_segmento_dominio_]  
+         _nombre_equipo_ **.** _segmento_dominio_[... **.** _segmento_dominio_]  
   
-         donde *nombre_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_dominio*[...**.**_segmento_dominio_] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
+         donde *nombre_equipo*es el nombre de red del equipo que ejecuta la instancia de servidor y *segmento_dominio*[... **.** _segmento_dominio_] es la información restante de dominio del servidor; por ejemplo: `localinfo.corp.Adventure-Works.com`.  
   
          El contenido y el número de segmentos de dominio se determinan en la empresa u organización. Si no conoce el nombre de dominio completo del servidor, consulte con el administrador del sistema.  
   

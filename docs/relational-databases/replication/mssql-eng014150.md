@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78a147080f33cb78b4a752d362d6f62c6123cdf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d41e532936b29d7824c27da57653bafe0a304408
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100187"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +51,13 @@ ms.locfileid: "47674363"
 ## <a name="user-action"></a>Acción del usuario  
  El Agente de registro del LOG, el Agente de lectura de cola y el Agente de distribución se ejecutan normalmente de forma continua, mientras que el resto de agentes se ejecutan normalmente a petición o en función de una programación. Si no espera que un agente haya completado una ejecución, compruebe el estado del agente. Para más información, consulte [Monitor Replication Agents](../../relational-databases/replication/monitor/monitor-replication-agents.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Agente de distribución de replicación](../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Agente de registro del LOG de replicación](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Agente de mezcla de replicación](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Agente de lectura de cola de replicación](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Agente de instantáneas de replicación](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

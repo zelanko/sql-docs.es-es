@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af2cc62bd09dd2376c68ec5d66e4867369ef8b68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d87dd85b63a669ae0d390ac83203889f78c5cbfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043860"
 ---
 # <a name="execute-process-task"></a>Tarea Ejecutar proceso
 
@@ -117,15 +116,15 @@ ms.locfileid: "65727746"
  Escriba la ruta de acceso de la carpeta que contiene el ejecutable, o bien haga clic en el botón Examinar **(…)** y busque la carpeta.  
   
  **StandardInputVariable**  
- Seleccione una variable para proporcionar la entrada al proceso o haga clic en \<**Nueva variable…**> para crear una:  
+ Seleccione una variable para proporcionar la entrada al proceso o haga clic en \<**Nueva variable…** > para crear una:  
   
  **Temas relacionados:** [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- Seleccione una variable para capturar la salida del proceso o haga clic en \<**Nueva variable…**> para crear una.  
+ Seleccione una variable para capturar la salida del proceso o haga clic en \<**Nueva variable…** > para crear una.  
   
  **StandardErrorVariable**  
- Seleccione una variable para capturar la salida de error del procesador o haga clic en \<**Nueva variable…**> para crear una.  
+ Seleccione una variable para capturar la salida de error del procesador o haga clic en \<**Nueva variable…** > para crear una.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Esta opción indica si la tarea genera un error porque el código de salida del proceso es diferente del valor especificado en **SuccessValue**.  

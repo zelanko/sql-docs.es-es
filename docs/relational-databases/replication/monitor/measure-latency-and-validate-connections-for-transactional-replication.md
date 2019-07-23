@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36db42ae91837a8a003558878f4b59801e3059af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8593dc13115815792bb7912a220e2ad88c15fa3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083054"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir la latencia y validar las conexiones de la replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "47640893"
   
      [Replication Management Objects](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Los testigos de seguimiento también pueden ser útiles al detener el sistema, lo que implica detener todas las actividades y comprobar que todos los nodos han recibido todos los cambios pendientes. Para más información, vea [Poner en modo inactivo una topología de replicación &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
@@ -90,7 +89,7 @@ ms.locfileid: "47640893"
   
 3.  Haga clic en **Insertar seguimiento**.  
   
-4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**y **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
+4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**, **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Para ver información en el testigo de seguimiento insertado previamente  
   
@@ -100,7 +99,7 @@ ms.locfileid: "47640893"
   
 3.  Seleccione una hora en la lista desplegable **Hora de inserción** .  
   
-4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**y **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
+4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **Distribuidor a suscriptor**, **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
   
     > [!NOTE]  
     >  La información del testigo de seguimiento se guarda durante el mismo período que otros datos del historial, que depende del período de retención de historial de la base de datos de distribución. Para obtener información sobre cómo cambiar las propiedades de la base de datos de distribución, vea [Ver y modificar las propiedades del distribuidor y del publicador](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
@@ -113,28 +112,28 @@ ms.locfileid: "47640893"
   
 2.  (Opcional) en la base de datos de publicación del publicador, ejecute [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Compruebe que la suscripción existe y que el estado está activo.  
   
-3.  En la base de datos de publicación del publicador, ejecute [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md) y especifique **@publication**. Anote el valor del parámetro de salida **@tracer_token_id** .  
+3.  En la base de datos de publicación del publicador, ejecute [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md) y especifique **@publication** . Anote el valor del parámetro de salida **@tracer_token_id** .  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Para medir la latencia y validar las conexiones de una replicación transaccional  
   
 1.  Exponga un token de seguimiento en la publicación utilizando el procedimiento anterior.  
   
-2.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) y especifique **@publication**. Esto devuelve una lista de todos los testigos de seguimiento expuestos en la publicación. Anote el **tracer_id** que desee del conjunto de resultados.  
+2.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) y especifique **@publication** . Esto devuelve una lista de todos los testigos de seguimiento expuestos en la publicación. Anote el **tracer_id** que desee del conjunto de resultados.  
   
-3.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) y especifique **@publication** y el identificador del testigo de seguimiento del paso 2 para **@tracer_id**. Esto devuelve información de latencia del token de seguimiento seleccionado.  
+3.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) y especifique **@publication** y el identificador del testigo de seguimiento del paso 2 para **@tracer_id** . Esto devuelve información de latencia del token de seguimiento seleccionado.  
   
 #### <a name="to-remove-tracer-tokens"></a>Para quitar los testigos de seguimiento  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) y especifique **@publication**. Esto devuelve una lista de todos los testigos de seguimiento expuestos en la publicación. Anote el **tracer_id** del token de seguimiento que se va a eliminar del conjunto de resultados.  
+1.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) y especifique **@publication** . Esto devuelve una lista de todos los testigos de seguimiento expuestos en la publicación. Anote el **tracer_id** del token de seguimiento que se va a eliminar del conjunto de resultados.  
   
-2.  En la base de datos de publicación del publicador, ejecute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) y especifique **@publication** y el id. del seguimiento para eliminar desde el paso 2 para **@tracer_id**.  
+2.  En la base de datos de publicación del publicador, ejecute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) y especifique **@publication** y el id. del seguimiento para eliminar desde el paso 2 para **@tracer_id** .  
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  Este ejemplo expone un registro de token de seguimiento y utiliza el Id. devuelto del token de seguimiento expuesto para ver información de la latencia.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../relational-databases/replication/codesnippet/tsql/measure-latency-and-vali_1.sql)]  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 #### <a name="to-post-a-tracer-token-to-a-transactional-publication"></a>Para exponer un token de seguimiento en una publicación transaccional  
   

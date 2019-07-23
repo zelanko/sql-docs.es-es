@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 875b66df7f2788d253bad98b92f19c7d63393885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061029"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Especifica el nombre de la credencial que se va a crear. *credential_name* no puede comenzar por el signo de almohadilla (#). Las credenciales del sistema comienzan por ##.  Cuando se usa una Firma de acceso compartido (SAS), este nombre debe coincidir con la ruta de acceso de contenedor, comenzar por https y no contener una barra diagonal. Vea el ejemplo D de abajo.  
   
- IDENTITY **='**_identity\_name_**'**  
+ IDENTITY **='** _identity\_name_ **'**  
  Especifica el nombre de la cuenta que se utilizará para conectarse fuera del servidor. Cuando la credencial se usa para tener acceso a Azure Key Vault, **IDENTITY** es el nombre del almacén de claves. Vea el ejemplo C más adelante. Cuando la credencial usa una Firma de acceso compartido (SAS), **IDENTITY** es *SHARED ACCESS SIGNATURE*. Vea el ejemplo D de abajo.  
  
 > [!IMPORTANT]
 > Azure SQL Database solo admite las identidades de Azure Key Vault y de Firma de acceso compartido. No se admiten las identidades de usuario de Windows.
  
- SECRET **='**_secret_**'**  
+ SECRET **='** _secret_ **'**  
  Especifica el secreto necesario para la autenticación de salida.  
   
  Cuando se usa la credencial para acceder a Azure Key Vault, el argumento **SECRET** de **CREATE CREDENTIAL** requiere que los valores de *\<Client ID>* (sin guiones) y *\<Secret>* de una **entidad de servicio** en Azure Active Directory se pasen entre sí sin un espacio entre ellos. Vea el ejemplo C más adelante. Cuando la credencial usa una Firma de acceso compartido (SAS), **SECRET** es el token de la Firma de acceso compartido. Vea el ejemplo D de abajo.  Para información sobre cómo crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure, consulte [Lección 1: Crear una directiva de acceso almacenada y una firma de acceso compartido en un contenedor de Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
- Especifica el nombre de un *Proveedor de administración de claves de la empresa (EKM)*. Para más información sobre la administración de claves, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Especifica el nombre de un *Proveedor de administración de claves de la empresa (EKM)* . Para más información sobre la administración de claves, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
 ## <a name="remarks"></a>Notas  
 
@@ -96,7 +95,7 @@ CREATE CREDENTIAL AlterEgo WITH IDENTITY = 'Mary5',
 GO  
 ```  
   
-### <a name="b-creating-a-credential-for-ekm"></a>b. Crear una credencial de EKM  
+### <a name="b-creating-a-credential-for-ekm"></a>B. Crear una credencial de EKM  
  En el ejemplo siguiente se utiliza una cuenta creada previamente denominada `User1OnEKM` en un módulo EKM a través de las herramientas de administración de EKM, con un tipo de cuenta y una contraseña básicos. La cuenta **sysadmin** del servidor crea una credencial que se usa para conectar la cuenta de EKM y la asigna a la cuenta `User1` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 ```  
@@ -169,7 +168,7 @@ GO
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [Lección 2: Crear una credencial de SQL Server con una firma de acceso compartido](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
+ [Lección 2: Crear una credencial de SQL Server con una firma de acceso compartido](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)   
  [Firmas de acceso compartido](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
   
   

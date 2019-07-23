@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 44a8c71b-63d8-458b-8b5d-99d570067c3c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07fc18f3a2540fd1316078e7e53326d36964c735
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 361059daeb60402f564caa09837046117804ba6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059923"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +46,7 @@ LEFT ( character_expression , integer_expression )
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos binarios o de caracteres. *character_expression* puede ser una constante, una variable o una columna. *character_expression* puede ser cualquier tipo de datos (excepto **text** o **ntext**) que se pueda convertir implícitamente a **varchar** o **nvarchar**. De lo contrario, use la función [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para convertir *character_expression* explícitamente.  
   
  *integer_expression*  
- Es un entero positivo que especifica cuántos caracteres de *character_expression* se van a devolver. Si *integer_expression* es negativo, se devuelve un error. Si *integer_expression* es de tipo **bigint** y contiene un valor grande, *character_expression* debe ser de un tipo de datos de gran tamaño, como **varchar(max)**.  
+ Es un entero positivo que especifica cuántos caracteres de *character_expression* se van a devolver. Si *integer_expression* es negativo, se devuelve un error. Si *integer_expression* es de tipo **bigint** y contiene un valor grande, *character_expression* debe ser de un tipo de datos de gran tamaño, como **varchar(max)** .  
   
  El parámetro *integer_expression* cuenta un carácter suplente UTF 16 como un carácter.  
   

@@ -11,14 +11,13 @@ ms.topic: conceptual
 helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ae6d0d35da353a9307832989f562f3282af19e5
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860706"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354626"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 
@@ -140,14 +139,22 @@ Las combinaciones adaptables se pueden deshabilitar en el ámbito de base de dat
 Para deshabilitar las combinaciones adaptables para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
 Cuando se habilita, esta opción aparecerá como habilitada en [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 Para volver a habilitar las combinaciones adaptables para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
 ```
 
 También puede deshabilitar las combinaciones adaptables para una consulta específica si designa `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` como una [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por ejemplo:

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 235ff2ab-1c5a-45c7-a91b-9db69b958b60
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c25b9fdfa2979c2e6a36802b38990962662701cc
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 3c8baf2b846e33d7df51dfef3e24ee2b6028babb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109920"
 ---
 # <a name="asymmetric-keys-encryption-strength"></a>Intensidad del cifrado de claves asimétricas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "51511990"
 ## <a name="for-more-information"></a>Para obtener más información  
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

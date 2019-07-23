@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 7ffd282d-c2f6-4d1b-a7a6-859d18b388aa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0ad1abbbfe186841c75c15ad9d6a266726dc6eba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d8cbb5d941e9d5bd6476b0baa91d5891d6297d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973966"
 ---
 # <a name="setmultisubnetfailover-method-sqlserverdatasource"></a>setMultiSubnetFailover (método) (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Establece el valor de la **multiSubnetFailover** propiedad de conexión.  
+  Establece el valor de la propiedad de conexión **multiSubnetFailover** .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,10 +31,10 @@ public void setMultiSubnetFailover(boolean multiSubnetFailover);
 #### <a name="parameters"></a>Parámetros  
  *multiSubnetFailover*  
   
- El nuevo valor de la **multiSubnetFailover** propiedad de conexión.  
+ Nuevo valor de la propiedad de conexión **multiSubnetFailover** .  
   
 ## <a name="remarks"></a>Notas  
- Para obtener más información sobre la **multiSubnetFailover** propiedad de conexión, consulte [estableciendo las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md).  
+ Para obtener más información sobre la propiedad de conexión **multiSubnetFailover** , vea [establecer las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [SQLServerDataSource.getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)   

@@ -1,5 +1,5 @@
 ---
-title: Parámetros de salida de la compatibilidad con Streaming para BLOBs | Microsoft Docs
+title: Compatibilidad de streaming con parámetros de salida de BLOB | Microsoft Docs
 description: Compatibilidad con el streaming de parámetros de salida BLOB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5e3f4043dcdb24be56619a9c8a66281011218689
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0ff6386f1d2f953b2e28641edf7330ba85b9a19d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936515"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Compatibilidad con la transmisión por secuencias de parámetros de salida BLOB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

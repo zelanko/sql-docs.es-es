@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c63d7ea85cd36f6cbc6f536e7fc7f9f20def2ad2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 786f55e436b9582eaed875f8c7cd265b1d3e2cc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953453"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>Método getCatalogs (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +44,7 @@ public java.sql.ResultSet getCatalogs()
  El método getCatalogs especifica este método getCatalogs en la interfaz java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  En SQL Azure, debe conectarse a la base de datos maestra para llamar a **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure no es compatible con la devolución de todo el conjunto de catálogos de una base de datos de usuario. **SQLServerDatabaseMetaData.getCatalogs** usa la vista sys.databases para obtener los catálogos. Consulte la discusión de permisos de [sys.database_usage (base de datos de SQL Azure)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) comprender **SQLServerDatabaseMetaData.getCatalogs** comportamiento en SQL Azure.  
+>  En SQL Azure, debe conectarse a la base de datos maestra para llamar a **SQLServerDatabaseMetaData. getCatalogs**. SQL Azure no es compatible con la devolución de todo el conjunto de catálogos de una base de datos de usuario. **SQLServerDatabaseMetaData. getCatalogs** usa la vista sys. Databases para obtener los catálogos. Consulte la discusión de permisos en [Sys. database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) para comprender el comportamiento de **SQLServerDatabaseMetaData. getCatalogs** en SQL Azure.  
   
  El conjunto de resultados devuelto por el método getCatalogs contendrá la siguiente información:  
   

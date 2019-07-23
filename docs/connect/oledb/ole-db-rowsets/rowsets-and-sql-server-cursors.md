@@ -16,13 +16,12 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 503e0f8fcc7cac9a3001ec00fb872642c1fcecd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994179"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de filas y cursores de servidor de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "66803790"
   
  Los consumidores pueden solicitar distintos comportamientos de cursor en un conjunto de filas estableciendo determinadas propiedades del conjunto de filas. Si el consumidor no establece ninguna de estas propiedades del conjunto de filas o establece todas ellas en sus valores predeterminados, el controlador OLE DB para SQL Server implementa el conjunto de filas mediante un conjunto de resultados predeterminado. Si cualquiera de estas propiedades se establece en un valor distinto del valor predeterminado, el controlador OLE DB para SQL Server implementa el conjunto de filas mediante un cursor de servidor.  
   
- Las siguientes propiedades del conjunto de filas dirigir el controlador OLE DB para SQL Server use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursores. Algunas propiedades pueden combinarse con otras sin ningún riesgo. Por ejemplo, un conjunto de filas que exhibe las propiedades DBPROP_IRowsetChange y DBPROP_IRowsetScroll será un conjunto de filas de marcador que exhibe un comportamiento de actualización inmediato. Otras propiedades se excluyen mutuamente. Por ejemplo, un conjunto de filas que exhibe DBPROP_OTHERINSERT no puede contener marcadores.  
+ Las siguientes propiedades de conjunto de filas dirigen el controlador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB para que SQL Server utilice cursores. Algunas propiedades pueden combinarse con otras sin ningún riesgo. Por ejemplo, un conjunto de filas que exhibe las propiedades DBPROP_IRowsetChange y DBPROP_IRowsetScroll será un conjunto de filas de marcador que exhibe un comportamiento de actualización inmediato. Otras propiedades se excluyen mutuamente. Por ejemplo, un conjunto de filas que exhibe DBPROP_OTHERINSERT no puede contener marcadores.  
   
 |Id. de propiedad|Valor|Comportamiento del conjunto de filas|  
 |-----------------|-----------|---------------------|  

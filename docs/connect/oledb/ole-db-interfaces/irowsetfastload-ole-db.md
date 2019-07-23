@@ -13,20 +13,19 @@ helpviewer_keywords:
 - IRowsetFastLoad interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5bc52fcf28f6c50c491087e74e0d004ba7382940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d21e270eb7e2d387201d66df0bb566c3924d53c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994398"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  La interfaz **IRowsetFastLoad** expone la compatibilidad con las operaciones de copia masiva basadas en memoria de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Controlador OLE DB para los consumidores de SQL Server rápidamente, use la interfaz para agregar datos a una existente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla.  
+  La interfaz **IRowsetFastLoad** expone la compatibilidad con las operaciones de copia masiva basadas en memoria de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. OLE DB controlador para SQL Server los consumidores utilizan la interfaz para agregar rápidamente datos a una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla existente.  
   
  Si establece SSPROP_ENABLEFASTLOAD en VARIANT_TRUE para una sesión, no puede leer datos de conjuntos de filas devueltos posteriormente de dicha sesión. Cuando SSPROP_ENABLEFASTLOAD se establece en VARIANT_TRUE, todos los conjuntos de filas creados en la sesión serán de tipo IRowsetFastLoad. Los conjuntos de filas de tipo IRowsetFastLoad no admiten la funcionalidad de captura del conjunto de filas; por tanto, no se pueden leer los datos de estos conjuntos de filas.  
   

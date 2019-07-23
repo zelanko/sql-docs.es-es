@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009970"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Agrupación de conexiones dependientes del controlador ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -25,12 +24,12 @@ ms.locfileid: "66797799"
   
 -   Con independencia de las propiedades de conexión, las conexiones que usan `SQLDriverConnect` forman parte de un grupo independiente de las conexiones que usan `SQLConnect`.
 - Al usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la agrupación de conexiones dependientes del controlador, el controlador no emplea el contexto de seguridad del usuario de Windows para el subproceso actual con el fin de separar las conexiones del grupo. Es decir, si las conexiones contienen parámetros equivalentes en escenarios de suplantación de Windows con autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y usan las mismas credenciales de autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conectarse al back-end, varios usuarios de Windows podrían utilizar el mismo grupo de conexiones. Al usar la autenticación de Windows y la agrupación de conexiones dependientes del controlador, el controlador utiliza el contexto de seguridad del usuario de Windows en el subproceso actual con el fin de separar las conexiones del grupo. Es decir, en escenarios de suplantación de Windows, varios usuarios de Windows no compartirán las conexiones aunque utilicen los mismos parámetros.
-- Cuando se usa Azure Active Directory y la agrupación de conexiones dependientes del controlador, el controlador también usa el valor de autenticación para determinar la pertenencia del grupo de conexiones.
+- Al usar Azure Active Directory y la agrupación de conexiones que reconocen el controlador, el controlador también usa el valor de autenticación para determinar la pertenencia al grupo de conexiones.
   
 -   La característica de agrupación de conexiones dependientes del controlador impide que se devuelva una conexión incorrecta del grupo.  
   
--   Asimismo, reconoce los atributos de conexión específicos del controlador. Por lo tanto, si usa una conexión `SQL_COPT_SS_APPLICATION_INTENT` establecido como de solo lectura, dicha conexión obtendrá su propio grupo de conexiones.
--   Establecer el `SQL_COPT_SS_ACCESS_TOKEN` atributo hace que una conexión pueden agruparse por separado 
+-   Asimismo, reconoce los atributos de conexión específicos del controlador. Por lo tanto, si una `SQL_COPT_SS_APPLICATION_INTENT` conexión utiliza establecido en solo lectura, esa conexión obtiene su propio grupo de conexiones.
+-   Al establecer `SQL_COPT_SS_ACCESS_TOKEN` el atributo, se agrupa una conexión por separado. 
   
 Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena de conexión difiere entre la cadena de conexión y la cadena de conexión agrupada, el controlador utilizará una conexión agrupada. Sin embargo, se obtendrá un mejor rendimiento si coinciden todos los id. del atributo de conexión o palabras clave de cadena de conexión (para que coincida una conexión en el grupo, el controlador restablece el atributo). El rendimiento será peor, ya que, para restablecer los siguientes parámetros, se requiere una llamada de red adicional.  
   

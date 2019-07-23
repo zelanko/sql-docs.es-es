@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8d0173778acb15fe9588eb5959b7fd03c5391767
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 963eb40a05206125fe6d941af4af6b4fade2197e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971035"
 ---
 # <a name="sqlserverexception-constructors"></a>Constructores SQLServerException
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Inicializa una nueva instancia de la [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) clase.
+  Inicializa una nueva instancia de la clase [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) .
 
-  Para obtener información sobre los miembros de [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), consulte [miembros SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md).  
+  Para obtener información sobre los miembros de [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), consulte [miembros de SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md).  
   
   

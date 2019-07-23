@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ea0f95d0-0238-4dc8-9f26-7ff9b65f30c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 715787197357f6d10f0d116359155c86edb07187
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1b65281fbe6ba1f758bdd4e12ae834cee3347842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980051"
 ---
 # <a name="getsearchstringescape-method-sqlserverdatabasemetadata"></a>Método getSearchStringEscape (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getSearchStringEscape()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getSearchStringEscape especificado por el método getSearchStringEscape en la interfaz java.sql.DatabaseMetaData.  
+ Este método getSearchStringEscape se especifica mediante el método getSearchStringEscape en la interfaz java. SQL. DatabaseMetaData.  
   
  Este método solamente se utiliza para las búsquedas de modelos de metadatos. Devuelve "\\". Un modelo de búsqueda **String** puede establecer como caracteres de escape a los caracteres comodín ("%" y "_") y suministrarlos como literales anteponiendo una barra diagonal inversa. Esto convierte "\\%" en "[%]" y "\\\_" en "[\_]".  
   

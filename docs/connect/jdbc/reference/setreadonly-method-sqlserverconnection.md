@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bd11fd50-f092-43a0-a6bc-c63e70cff8da
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3f73a9fc5a6876bd0490fef73624664f84a0885
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bda879ceba5c6f1193ecdfa09995e851c2bcd6e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973148"
 ---
 # <a name="setreadonly-method-sqlserverconnection"></a>Método setReadOnly (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public void setReadOnly(boolean readOnly)
 #### <a name="parameters"></a>Parámetros  
  *readOnly*  
   
- **True** si la conexión se va a solo lectura. De lo contrario, se devuelve el valor **False**.  
+ **true** si la conexión va a ser de solo lectura. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método setReadOnly especificado por el método setReadOnly en la interfaz java.sql.Connection.  
+ Este método setReadOnly se especifica mediante el método setReadOnly en la interfaz java. SQL. Connection.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 5014dba9-1755-4769-b070-6cbeecee864e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ca0f6545f534e806a3ec49d4d7f6ae4dea452743
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 429e1720a6fac8c01ce2d201717787146bc8cc63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974355"
 ---
 # <a name="setdatetimeoffset-method-sqlserverpreparedstatement"></a>Método setDateTimeOffset (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Este método se agregó en [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
- Establece el valor de la columna especificada en el [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) valor.  
+ Establece el valor de la columna especificada en el valor de la [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +38,7 @@ public final void setDateTimeOffset(int n, microsoft.sql.DateTimeOffset x)
   
  *x*  
   
- El [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) objeto.  
+ Objeto de la [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

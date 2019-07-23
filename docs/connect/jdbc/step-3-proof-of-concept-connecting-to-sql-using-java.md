@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af6fc51c3aba34e8118d5519b5acf2fc9583738f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004288"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Paso 3: Prueba de concepto que se conecta a SQL con Java
   
-En este ejemplo debe considerarse como una prueba de concepto solo. El código de ejemplo se ha simplificado para mayor claridad y no representa necesariamente los mejores prácticas recomendadas por Microsoft.  
+Este ejemplo solo debe considerarse una prueba de concepto. El código de ejemplo se ha simplificado para mejorar la claridad y no representa necesariamente los procedimientos recomendados de Microsoft.  
   
-## <a name="step-1--connect"></a>Paso 1: conectar  
+## <a name="step-1--connect"></a>Paso 1: conexión  
   
-Utilice la clase de conexión para conectarse a SQL Database.   
+Use la clase de conexión para conectarse a SQL Database.   
   
 ```java  
 import java.sql.Connection;
@@ -56,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>Paso 2: ejecutar una consulta  
-En este ejemplo, conectarse a Azure SQL Database, ejecutar una instrucción SELECT y devolver las filas seleccionadas.   
+En este ejemplo, conéctese a Azure SQL Database, ejecute una instrucción SELECT y devuelva las filas seleccionadas.   
   
 ```java  
 import java.sql.Connection;
@@ -100,8 +99,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>Paso 3: Insertar una fila  
-En este ejemplo, ejecutar una instrucción INSERT, pasar parámetros y recuperar el valor de clave principal generada automáticamente.   
+## <a name="step-3-insert-a-row"></a>Paso 3: insertar una fila  
+En este ejemplo, ejecute una instrucción INSERT, pase parámetros y recupere el valor de clave principal generado automáticamente.   
   
 ```java  
 import java.sql.Connection;
@@ -149,5 +148,5 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="additional-samples"></a>Encontrará más ejemplos  
+## <a name="additional-samples"></a>Ejemplos adicionales  
 [Aplicaciones del controlador JDBC de ejemplo](../../connect/jdbc/sample-jdbc-driver-applications.md)

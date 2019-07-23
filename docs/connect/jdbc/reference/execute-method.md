@@ -1,5 +1,5 @@
 ---
-title: Método Execute () | Microsoft Docs
+title: Método execute () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7050a26a8fe98d5069cd52a58afe501bee738499
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9f7e87040fa74954435ed52f9923568e8bfed3fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954925"
 ---
 # <a name="execute-method-"></a>Método execute ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean execute()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si la instrucción devuelve un conjunto de resultados. **false** si devuelve un recuento de actualizaciones o no hay ningún resultado.  
+ **true** si la instrucción devuelve un conjunto de resultados. **false** si devuelve un recuento de actualizaciones o ningún resultado.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

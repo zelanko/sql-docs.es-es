@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c17cfbb6ba82b94c3f00aff9034c31b332df0e0d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 18dc87158bc1a6086cf8406423c123b0789b0f08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015544"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Enviar datos de blob a SQL SERVER mediante IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "66791176"
   
  Dado que DBTYPE_IUNKNOWN se especifica como tipo de datos del enlace, debe coincidir con el tipo de la columna o parámetro de destino. No se pueden realizar conversiones cuando se envían datos a través de ISequentialStream desde interfaces de conjunto de filas. En el caso de los parámetros, se debe evitar el uso de ICommandWithParameters::SetParameterInfo y especificar un tipo diferente para forzar una conversión; para ello, el proveedor debe almacenar en la memoria caché local todos los datos BLOB a fin de proceder a su conversión antes de enviarlos a SQL Server. El rendimiento no es bueno si se almacenan en la memoria caché datos BLOB grandes y se convierten localmente.  
   
- Para obtener más información, consulte [BLOB y objetos OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Para obtener más información, vea [blobs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  

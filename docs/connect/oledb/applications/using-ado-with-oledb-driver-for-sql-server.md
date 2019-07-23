@@ -15,13 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989240"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Uso de ADO con el controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,12 +29,12 @@ ms.locfileid: "66778049"
 
   Para aprovechar las características nuevas introducidas en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], como los conjuntos de resultados activos múltiples (MARS), las notificaciones de consulta, los tipos definidos por el usuario (UDT) o el nuevo tipo de datos **xml**, las aplicaciones existentes que usan Objetos de datos ActiveX (ADO) deberían usar el controlador OLE DB para SQL Server como su proveedor de acceso a datos.  
   
- Para permitir que ADO use las características nuevas de las versiones más recientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se han realizado algunas mejoras en el controlador OLE DB para SQL Server que extiende las características principales de OLE DB. Estas mejoras permiten a las aplicaciones ADO usar las características más recientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y usar dos tipos de datos introducidos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** y **udt**. Estas mejoras también aprovechan las mejoras realizadas en los tipos de datos **varchar**, **nvarchar** y **varbinary**. El controlador OLE DB para SQL Server agrega la propiedad de inicialización SSPROP_INIT_DATATYPECOMPATIBILITY al conjunto de propiedades DBPROPSET_SQLSERVERDBINIT para que las aplicaciones ADO la usen de modo que los nuevos tipos de datos se expongan de un modo compatible con ADO. Además, el controlador OLE DB para SQL Server también define una nueva palabra clave de conexión denominada **DataTypeCompatibility** que se establece en la cadena de conexión.  
+ Para permitir que ADO use las características nuevas de las versiones más recientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se han realizado algunas mejoras en el controlador OLE DB para SQL Server que extiende las características principales de OLE DB. Estas mejoras permiten a las aplicaciones ADO usar las características más recientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y usar dos tipos de datos introducidos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** y **udt**. Estas mejoras también aprovechan las mejoras realizadas en los tipos de datos **varchar**, **nvarchar** y **varbinary**. El controlador OLE DB para SQL Server agrega la propiedad de inicialización SSPROP_INIT_DATATYPECOMPATIBILITY al conjunto de propiedades DBPROPSET_SQLSERVERDBINIT para que las aplicaciones ADO la usen de modo que los nuevos tipos de datos se expongan de un modo compatible con ADO. Además, el controlador de OLE DB para SQL Server también define una nueva palabra clave de cadena de conexión denominada **DataTypeCompatibility** que se establece en la cadena de conexión.  
 
 > [!NOTE]  
->  Las aplicaciones ADO existentes pueden obtener acceso y actualizar XML, UDT, texto de valores grandes y valores de campo binarios mediante el proveedor SQLOLEDB. Los nuevos tipos de datos de mayor tamaño **varchar(max)** , **nvarchar(max)** y **varbinary(max)** se devuelven como los tipos ADO **adLongVarChar**, **adLongVarWChar** y **adLongVarBinary** respectivamente. Las columnas XML se devuelven como **adLongVarChar** y las columnas UDT se devuelven como **adVarBinary**. Sin embargo, si usa el controlador OLE DB para SQL Server (MSOLEDBSQL) en lugar de SQLOLEDB, debe asegurarse de establecer el **DataTypeCompatibility** palabra clave en "80" para que los nuevos tipos de datos se asignen correctamente a los tipos de datos de ADO.  
+>  Las aplicaciones ADO existentes pueden obtener acceso y actualizar XML, UDT, texto de valores grandes y valores de campo binarios mediante el proveedor SQLOLEDB. Los nuevos tipos de datos de mayor tamaño **varchar(max)** , **nvarchar(max)** y **varbinary(max)** se devuelven como los tipos ADO **adLongVarChar**, **adLongVarWChar** y **adLongVarBinary** respectivamente. Las columnas XML se devuelven como **adLongVarChar** y las columnas UDT se devuelven como **adVarBinary**. Sin embargo, si usa el controlador de OLE DB para SQL Server (MSOLEDBSQL) en lugar de SQLOLEDB, debe asegurarse de establecer la palabra clave **DataTypeCompatibility** en "80" para que los nuevos tipos de datos se asignen correctamente a los tipos de datos de ADO.  
 
-## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Habilitar el controlador OLE DB para SQL Server de ADO  
+## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Habilitar OLE DB controlador para SQL Server de ADO  
  Para habilitar el uso del controlador OLE DB para SQL Server, las aplicaciones ADO necesitarán implementar las siguientes palabras clave en sus cadenas de conexión:  
 
 -   `Provider=MSOLEDBSQL`  
@@ -59,7 +58,7 @@ con.Open
 ```  
 
 ## <a name="examples"></a>Ejemplos  
- Las secciones siguientes proporcionan ejemplos de cómo usar ADO con el controlador OLE DB para SQL Server.  
+ En las secciones siguientes se proporcionan ejemplos de cómo puede usar ADO con el controlador de OLE DB para SQL Server.  
 
 ### <a name="retrieving-xml-column-data"></a>Recuperar datos de columna XML  
  En este ejemplo, se usa un conjunto de registros para recuperar y mostrar los datos de una columna XML en la base de datos de ejemplo **AdventureWorks** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

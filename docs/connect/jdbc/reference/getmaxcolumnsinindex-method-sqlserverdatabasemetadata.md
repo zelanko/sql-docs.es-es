@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 108f0e2c-7dc5-4195-8248-0758a75a314e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbfc490be19a2707aaf7943d89c3bc577a7fa9be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6f98d3bdb5e893d1c120be059e1ad1de446dc8d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982250"
 ---
 # <a name="getmaxcolumnsinindex-method-sqlserverdatabasemetadata"></a>Método getMaxColumnsInIndex (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxColumnsInIndex()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getMaxColumnsInIndex especificado por el método getMaxColumnsInIndex en la interfaz java.sql.DatabaseMetaData.  
+ Este método getMaxColumnsInIndex se especifica mediante el método getMaxColumnsInIndex en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

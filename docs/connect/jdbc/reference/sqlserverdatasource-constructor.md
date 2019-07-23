@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 23c8012f-9642-42c4-be76-c1c6563e8912
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6053813e7f9cb30353c49f149c2dad591eb0fc4d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 251b02067ebad70c17904196fd7f2530407b7609
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971500"
 ---
 # <a name="sqlserverdatasource-constructor-"></a>Constructor () SQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

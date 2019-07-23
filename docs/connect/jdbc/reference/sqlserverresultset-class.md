@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: eaffcff1-286c-459f-83da-3150778480c9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71513f5e8006adffdb46b249f6358030d11b95a6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7e0a2185037f54aa7ed975667c0bdd5fb921c845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970613"
 ---
 # <a name="sqlserverresultset-class"></a>Clase SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public final class SQLServerResultSet
   
  La clase SQLServerResultSet proporciona muchos métodos mediante los que puede actualizar el conjunto de resultados con cualquier tipo de datos nativos de Java y muchos tipos de objetos de Java.  
   
- Esta clase admite la acción de desencapsular para la clase SQLServerResultSet, la interfaz ISQLServerResultSet y la interfaz java.sql.ResultSet. Para obtener más información, consulte [contenedores e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Esta clase admite la desencapsulación en la clase SQLServerResultSet, la interfaz ISQLServerResultSet y la interfaz java. SQL. ResultSet. Para obtener más información, vea [contenedores e interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

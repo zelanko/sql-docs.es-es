@@ -1,5 +1,5 @@
 ---
-title: Descripción del Control de simultaneidad | Microsoft Docs
+title: Descripción del control de simultaneidad | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf4d64d7a7f02e487c969e80a3a0578498f9b507
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b178b0c38b5891d4a3dc13ef620a217bf3ddb186
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004199"
 ---
 # <a name="understanding-concurrency-control"></a>Descripción del control de la simultaneidad
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "66798269"
 ## <a name="result-sets-that-are-not-updateable"></a>Conjuntos de resultados que no son actualizables  
  Un conjunto de resultados actualizable es aquel en el que las filas se pueden insertar, actualizar y eliminar. En los casos siguientes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede crear un cursor actualizable. La excepción que se genera es: "El conjunto de resultados no es actualizable".  
   
-|Causa|Descripción|Remedy|  
+|Causa|Descripción|Remedio|  
 |-----------|-----------------|------------|  
 |La instrucción no se crea con la sintaxis de JDBC 2.0 (o versiones posteriores)|JDBC 2.0 introdujo métodos nuevos para crear instrucciones. Si se usa la sintaxis de JDBC 1.0, el conjunto de resultados se establece de forma predeterminada como de solo lectura.|Especifique el tipo del conjunto de resultados y la simultaneidad al crear la instrucción.|  
 |La instrucción se crea con TYPE_SCROLL_INSENSITIVE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un cursor de instantánea estático. Se desconecta de las filas de la tabla subyacente para ayudar a proteger el cursor de las actualizaciones de filas de otros usuarios.|Use TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC o TYPE_FORWARD_ONLY con CONCUR_UPDATABLE para evitar crear un cursor estático.|  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 281799b3a7e7015e9fd2a545fb47840a5c62e5b4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8414497fed891e153399febf84151c82d915d77a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993589"
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>Aplicación de ejemplo (controlador PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +24,7 @@ La aplicación de ejemplo AdventureWorks Product Reviews es una aplicación web 
   
 ### <a name="running-the-example-application"></a>Ejecución de la aplicación de ejemplo  
   
-1.  Instale los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obtener información detallada, consulte [Introducción a los Drivers de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  Instale los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obtener información detallada, consulte [Introducción con los controladores de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  Copie el código que aparece más adelante en este documento en dos archivos: adventureworks_demo.php y photo.php.  
 3.  Coloque los archivos adventureworks_demo.php y photo.php en el directorio raíz del servidor web.  
 4.  Ejecute la aplicación iniciando https\://localhost/adventureworks_demo.php en el explorador.  
@@ -33,7 +32,7 @@ La aplicación de ejemplo AdventureWorks Product Reviews es una aplicación web 
 ## <a name="requirements"></a>Requisitos  
 Para ejecutar la aplicación de ejemplo AdventureWorks Product Reviews, el equipo debe cumplir los siguientes requisitos:  
   
--   El sistema cumple los requisitos de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obtener información detallada, consulte [requisitos del sistema para el Drivers de Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   El sistema cumple los requisitos de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obtener información detallada, consulte [requisitos del sistema para los controladores de Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
  -   Los archivos adventureworks_demo.php y photo.php están en el directorio raíz del servidor web. Los archivos deben contener el código que aparece más adelante en este documento.  
 -   SQL Server 2005 o SQL Server 2008, con la base de datos [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) conectada, están instalados en el equipo local.  
 -   Se ha instalado un explorador web.  
@@ -42,7 +41,7 @@ Para ejecutar la aplicación de ejemplo AdventureWorks Product Reviews, el equip
 Gracias a la aplicación de ejemplo AdventureWorks Product Reviews, puede saber cómo realizar las siguientes operaciones.  
   
 -   Cómo abrir una conexión a SQL Server mediante la autenticación de Windows  
--   Cómo preparar y ejecutar una consulta parametrizada.  
+-   Cómo preparar y ejecutar una consulta con parámetros.  
 -   Cómo recuperar datos.  
 -   Comprobación de posibles errores  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 721bc8e3-36c0-4fa6-8561-4f8d54c8265a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0493cd68d60234cb6263588f7d1ad46acd3d0c79
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a5b70b18a7b331ac448d5135d57e95741f76b85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968867"
 ---
 # <a name="supportsselectforupdate-method-sqlserverdatabasemetadata"></a>Método supportsSelectForUpdate (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSelectForUpdate()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si se admite. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método supportsSelectForUpdate especificado por el método supportsSelectForUpdate en la interfaz java.sql.DatabaseMetaData.  
+ Este método supportsSelectForUpdate se especifica mediante el método supportsSelectForUpdate en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

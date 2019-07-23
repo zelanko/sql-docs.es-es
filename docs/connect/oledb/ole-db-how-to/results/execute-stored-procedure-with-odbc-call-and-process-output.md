@@ -1,6 +1,6 @@
 ---
 title: Ejecutar un procedimiento almacenado con ODBC CALL y procesar la salida | Microsoft Docs
-description: Process códigos de retorno y parámetros de salida con el controlador de OLE DB para SQL Server
+description: Procesar códigos de retorno y parámetros de salida con OLE DB controlador para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 - ODBC CALL syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2985c343d7e7b330197ed5c0e3b7aeff1284d279
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015627"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Ejecutar procedimiento almacenado con ODBC CALL y procesar la salida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,13 +36,13 @@ ms.locfileid: "66791263"
   
 2.  Cree un conjunto de enlaces (uno para cada creador de parámetro) mediante una matriz de estructura DBBINDING.  
   
-3.  Crear un descriptor de acceso para los parámetros definidos mediante el **IAccessor:: CreateAccessor** método. El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
+3.  Cree un descriptor de acceso para los parámetros definidos mediante el método **IAccessor:: CreateAccessor** . El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
   
 4.  Rellene la estructura DBPARAMS.  
   
 5.  Llame al comando **Execute** (en este caso, una llamada a un procedimiento almacenado).  
   
-6.  Procesar el conjunto de filas y libérelo mediante el **IRowset:: Release** método.  
+6.  Procese el conjunto de filas y suéltelo mediante el método **IRowset:: Release** .  
   
 7.  Procese el código de retorno y los valores de parámetro de salida que se reciben del procedimiento almacenado.  
   

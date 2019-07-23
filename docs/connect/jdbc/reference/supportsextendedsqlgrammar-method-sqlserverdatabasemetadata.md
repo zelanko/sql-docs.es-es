@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8deb1987-c4e3-4599-8e37-0a04ec20b480
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f29d603f8275cd2bcc5585e38ab63277d8ece433
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0f006c4343c1a89fcb6387bc437a3415607ca094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969412"
 ---
 # <a name="supportsextendedsqlgrammar-method-sqlserverdatabasemetadata"></a>Método supportsExtendedSQLGrammar (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsExtendedSQLGrammar()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si se admite. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método supportsExtendedSQLGrammer especificado por el método supportsExtendedSQLGrammer en la interfaz java.sql.DatabaseMetaData.  
+ Este método supportsExtendedSQLGrammer se especifica mediante el método supportsExtendedSQLGrammer en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

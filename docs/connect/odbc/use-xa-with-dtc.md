@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ad963176194300054b97db8b6faa360bce17e558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2dbe0f90af6d3c51c55698ebd74c4972ea1d4db
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63190548"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252148"
 ---
 # <a name="using-xa-transactions"></a>Uso de las transacciones XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "63190548"
 
 ## <a name="overview"></a>Información general
 
-Microsoft ODBC Driver for SQL Server a partir de la versión 17.3 proporciona compatibilidad para las transacciones XA con el Coordinador de transacciones distribuidas (DTC) en Windows, Linux y Mac. La implementación de XA del lado del controlador permite que la aplicación cliente enviar operaciones de serie (por ejemplo, inicio, confirmación, una bifurcación de transacción de reversión, etc.) a la Transaction Manager (TM). Y, a continuación, la TM se puede comunicar con el Administrador de recursos (RM) según estas operaciones. Para obtener más información acerca de la especificación de XA y la implementación de Microsoft DTC (MS DTC), consulte [cómo funciona: SQL Server DTC(MSDTC and XA Transactions)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+El Microsoft ODBC Driver for SQL Server a partir de la versión 17,3 proporciona compatibilidad con las transacciones XA con el Coordinador de transacciones distribuidas (DTC) en Windows, Linux y Mac. La implementación de XA en el lado del controlador permite a la aplicación cliente enviar operaciones en serie (como iniciar, confirmar, revertir una bifurcación de transacción, etc.) al administrador de transacciones (TM). Y, a continuación, el TM se comunicará con el Administrador de recursos (RM) de acuerdo con estas operaciones. Para obtener más información acerca de la especificación de XA y la implementación de Microsoft para DTC (MS DTC), vea [Cómo funciona: SQL Server DTC (transacciones MSDTC y XA)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
 
 
 
-## <a name="the-xacallparam-structure"></a>La estructura XACALLPARAM
+## <a name="the-xacallparam-structure"></a>Estructura XACALLPARAM
 
-El `XACALLPARAM` estructura define la información necesaria para una solicitud de administrador de transacciones XA. Se define como sigue:
+La `XACALLPARAM` estructura define la información necesaria para una solicitud del administrador de transacciones XA. Se define de la siguiente manera:
 
 ```
 typedef struct XACallParam {    
@@ -46,27 +46,27 @@ typedef struct XACallParam {
 ```
 
 *sizeParam*  
-Tamaño de la `XACALLPARAM` estructura. Esto excluye el tamaño de los siguientes datos `XACALLPARAM`.
+Tamaño de la `XACALLPARAM` estructura. Esto excluye el tamaño de los datos que se `XACALLPARAM`indican a continuación.
 
 *operation*  
-La operación de XA para pasarse a la TM. Las operaciones posibles se definen en [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Operación XA que se va a pasar a TM. Las operaciones posibles se definen en [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
 
 *xid*  
-Identificador de la rama de transacción.
+Identificador de rama de transacción.
 
 *flags*  
-Marcas asociadas a la solicitud de TM. Los valores posibles se definen en [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
+Marcas asociadas a la solicitud de TM. Los valores posibles se definen en [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh).
 
 *status*  
-Estado de retorno de la TM. Consulte [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) encabezado para los Estados posibles de retorno.
+Devuelve el estado de TM. Vea el encabezado [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) para ver los posibles estados de devolución.
 
 *sizeData*  
-Tamaño de las siguientes acciones de búfer de datos `XACALLPARAM`. 
+Tamaño del búfer de datos siguiente `XACALLPARAM`. 
 
 *sizeReturned*  
 Tamaño de los datos devueltos.
 
-Para realizar una solicitud de TM el [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) función debe llamarse con atributo _sql_copt_ss_enlist_in_xa establecido_ y un puntero a la `XACALLPARAM` objeto.  
+Para realizar una solicitud de TM, se debe llamar a la función [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con el atributo _SQL_COPT_SS_ENLIST_IN_XA_ y un `XACALLPARAM` puntero al objeto.  
 
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -75,7 +75,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>Ejemplo de código 
 
-El ejemplo siguiente muestra cómo comunicarse con la TM para las transacciones XA y ejecutar distintas operaciones desde una aplicación cliente. Si la prueba se ejecuta en Microsoft SQL Server, MS DTC debe estar configurado correctamente para habilitar transacciones XA. Las definiciones de XA pueden encontrarse en el [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) archivo de encabezado. 
+En el ejemplo siguiente se muestra cómo comunicarse con las transacciones de TM para XA y ejecutar distintas operaciones desde una aplicación cliente. Si la prueba se ejecuta con Microsoft SQL Server, MS DTC debe estar configurado correctamente para habilitar las transacciones XA. Las definiciones de XA se pueden encontrar en el archivo de encabezado [xadefs. h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) . 
 
 ```
 
@@ -434,7 +434,7 @@ int main(int argc, char** argv)
 
 ```
 
-La `XATestRunner` clase implementa las llamadas XA posible al comunicarse con el servidor.
+La `XATestRunner` clase implementa las posibles llamadas XA al comunicarse con el servidor.
 
 ```
 

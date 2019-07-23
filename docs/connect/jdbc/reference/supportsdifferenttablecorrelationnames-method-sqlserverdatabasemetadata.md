@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b4f8db0c-2eaf-476b-b916-3e83355778f7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb739baaacaf84c4853a7c62a261832bb8c5d2bf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3c938fc0da6ed235f080492e573ad558d75751c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969427"
 ---
 # <a name="supportsdifferenttablecorrelationnames-method-sqlserverdatabasemetadata"></a>Método supportsDifferentTableCorrelationNames (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsDifferentTableCorrelationNames()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si se admite. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método supportsDifferentTableCorrelationNames especificado por el método supportsDifferentTableCorrelationNames en la interfaz java.sql.DatabaseMetaData.  
+ Este método supportsDifferentTableCorrelationNames se especifica mediante el método supportsDifferentTableCorrelationNames en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eddf7b58456a4730ff783ab4f53a9911da06d8db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f66746b15e96f49d96b428e8cf8844eeea12a12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972922"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>Método setServerPreparedStatementDiscardThreshold (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Especifica el comportamiento de una instancia de la conexión específica. Esta configuración controla cuántos pendientes preparado descarte instrucción acciones (sp_unprepare) pueden estar pendientes por conexión antes de que se ejecuta una llamada para limpiar los controladores pendientes en el servidor. Si el valor es < = 1 anular-preparación de las acciones se ejecutan inmediatamente en la instrucción preparada cierre. Si el valor se establece en 1 > estas llamadas se procesan por lotes juntos para evitar una sobrecarga de la llamada a sp_unprepare con demasiada frecuencia.
+ Especifica el comportamiento de una instancia de conexión concreta. Esta configuración controla el número de acciones de descarte de instrucciones preparada pendientes (sp_unprepare) que pueden quedar pendientes por conexión antes de que se ejecute una llamada para limpiar los controladores pendientes en el servidor. Cuando el valor es < = 1 las acciones de despreparar se ejecutan inmediatamente en el cierre de la instrucción preparada. Si el valor se establece en > 1, estas llamadas se agrupan por lotes para evitar la sobrecarga de llamar a sp_unprepare con demasiada frecuencia.
 
 
 ## <a name="syntax"></a>Sintaxis  
@@ -39,13 +38,13 @@ public void setServerPreparedStatementDiscardThreshold(boolean thresholdValue)
 #### <a name="parameters"></a>Parámetros  
  *thresholdValue*  
  
- El nuevo valor de la **valor de serverPreparedStatementDiscardThreshold** propiedad de conexión.  
+ Nuevo valor de la propiedad de conexión **serverPreparedStatementDiscardThreshold** .  
  
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Notas  
- Este método está disponible desde la versión del controlador JDBC 6.4 y en marcha.
+ Este método está disponible en la versión 6,4 y posteriores del controlador JDBC.
  
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

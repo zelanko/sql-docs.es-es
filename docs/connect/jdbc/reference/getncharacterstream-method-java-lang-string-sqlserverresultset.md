@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a117f3a3-9c25-41e1-9adb-a40e90620dd6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 52e2f0336c2c4bfbe6b14ce116c0888844afc000
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c2cd07b0420d8ca961c61c205c94cd19fe6666e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981639"
 ---
 # <a name="getncharacterstream-method-javalangstring-sqlserverresultset"></a>Método getNCharacterStream (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
  Un valor String que contiene la etiqueta de columna.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un objeto lector.  
+ Objeto de lector.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getNCharacterStream especificado por el método getNCharacterStream en la interfaz java.sql.ResultSet.  
+ Este método getNCharacterStream se especifica mediante el método getNCharacterStream de la interfaz java. SQL. ResultSet.  
   
- Este método puede usarse para recuperar el valor de un **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**, o **xml** columna en la fila actual de este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto. Si intenta utilizar este método para recuperar valores de otros tipos de datos, se producirá una excepción.  
+ Este método se puede usar para recuperar el valor de una columna **nvarchar**, **nchar**, **nvarchar (Max)** , **ntext**o **XML** en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) . Si intenta utilizar este método para recuperar valores de otros tipos de datos, se producirá una excepción.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

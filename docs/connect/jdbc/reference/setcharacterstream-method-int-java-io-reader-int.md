@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18e05d4707977499cff3864cef34e39f1bd45feb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3002c3375f14eb4c33554c960c567e4a3d8526b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974776"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>Método setCharacterStream (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setCharacterStream(int n,
   
  *reader*  
   
- Un objeto lector.  
+ Objeto de lector.  
   
  *length*  
   
@@ -54,7 +53,7 @@ public final void setCharacterStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método setCharacterStream especificado por el método setCharacterStream en la interfaz java.sql.PreparedStatement.  
+ Este método setCharacterStream se especifica mediante el método setCharacterStream de la interfaz java. SQL. PreparedStatement.  
   
  Si la longitud del flujo es distinta a la especificada en el parámetro *length*, el controlador JDBC produce una excepción cuando la fila se actualiza o se inserta.  
   

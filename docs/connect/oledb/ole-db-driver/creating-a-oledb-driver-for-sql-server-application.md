@@ -14,20 +14,19 @@ helpviewer_keywords:
 - OLE DB, creating applications
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c36ec6878f7ef981e72a64121c98c930e6481104
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4f7861e02b1ed203911f4e3f86575a9688c861fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015665"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Creación de un controlador OLE DB para la aplicación de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Creación de un controlador de OLE DB para aplicaciones de SQL Server incluye los siguientes pasos:  
+  La creación de un controlador de OLE DB para SQL Server aplicación conlleva estos pasos:  
   
 1.  Establecer una conexión con un origen de datos.  
   

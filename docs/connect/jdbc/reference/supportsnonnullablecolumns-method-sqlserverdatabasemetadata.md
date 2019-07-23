@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7c32ea64-460e-4636-8a3b-07c8abeed687
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3c3e8267ed8a56313b204c127f3712efcbea8d8e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eb65d3a7cc512b6131d32d386c04530234ee6121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969125"
 ---
 # <a name="supportsnonnullablecolumns-method-sqlserverdatabasemetadata"></a>Método supportsNonNullableColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsNonNullableColumns()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si se admite. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método supportsNonNullableColumns especificado por el método supportsNonNullableColumns en la interfaz java.sql.DatabaseMetaData.  
+ Este método supportsNonNullableColumns se especifica mediante el método supportsNonNullableColumns en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

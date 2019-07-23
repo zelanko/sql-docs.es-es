@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fd6be063-08eb-40cf-9201-5a9f62387726
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5b68714f1fe78a356556bc2a8f379eab60003c57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0265f06d589ea89b38f995f8a9616fd22bcf92ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975275"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-int"></a>Método setBinaryStream (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setBinaryStream(int n,
   
  *x*  
   
- Un objeto InputStream.  
+ Objeto InputStream.  
   
  *length*  
   
@@ -54,7 +53,7 @@ public final void setBinaryStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método setBinaryStream especificado por el método setBinaryStream en la interfaz java.sql.PreparedStatement.  
+ Este método setBinaryStream se especifica mediante el método setBinaryStream de la interfaz java. SQL. PreparedStatement.  
   
  Si la longitud del flujo es distinta a la especificada en el parámetro *length*, el controlador JDBC produce una excepción cuando la fila se actualiza o se inserta.  
   

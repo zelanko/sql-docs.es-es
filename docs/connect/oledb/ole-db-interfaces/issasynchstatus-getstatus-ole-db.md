@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: GetStatus (OLE DB) | Microsoft Docs'
+title: 'ISSAsynchStatus:: GetStatus (OLE DB) | Microsoft Docs'
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994378"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>Argumentos  
  *hChapter*[in]  
- Identificador de capítulo. Si el objeto de sondeo no es un objeto de conjunto de filas o la operación no se aplica a un capítulo, debe establecerse en DB_NULL_HCHAPTER, que se omite el proveedor.  
+ Identificador de capítulo. Si el objeto sondeado no es un objeto de conjunto de filas o la operación no se aplica a un capítulo, debe establecerse en DB_NULL_HCHAPTER, que es omitido por el proveedor.  
   
  *eOperation*[in]  
  Operación para la que se solicita el estado asincrónico. Se debe usar el siguiente valor:  
@@ -127,6 +126,6 @@ HRESULT GetStatus(
   
 ## <a name="see-also"></a>Consulte también  
  [Realizar operaciones asincrónicas](../../oledb/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [OLE DB &#40;ISSAsynchStatus&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

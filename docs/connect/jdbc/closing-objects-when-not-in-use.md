@@ -1,5 +1,5 @@
 ---
-title: Cerrar los objetos cuando no esté en uso | Microsoft Docs
+title: Cerrar objetos cuando no están en uso | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c5beda08263c98e519c9c8fc6c636d3aad550be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b2a9539599848f86a84cd03838c1fa7412c24fb1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957304"
 ---
 # <a name="closing-objects-when-not-in-use"></a>Cerrar los objetos cuando no se usan
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

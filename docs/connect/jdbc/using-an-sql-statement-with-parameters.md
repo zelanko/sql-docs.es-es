@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c2647b4737268a1550bd9e45deb9557ecc0f81d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6716f670c42172f1721968124d7113e8f1936ddc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916370"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>Usar una instrucción SQL con parámetros
 
@@ -26,7 +25,7 @@ Para trabajar con los datos de una base de datos de [!INCLUDE[ssNoVersion](../..
 
 Al generar la instrucción SQL, los parámetros IN se especifican mediante el carácter ? (signo de interrogación), que actúa como un marcador de posición para los valores de parámetros que se van a pasar a la instrucción SQL. Para especificar un valor para un parámetro, puede usar uno de los métodos de establecedor de la clase SQLServerPreparedStatement. El método de establecedor usado se determina mediante el tipo de datos del valor que desea pasar a la instrucción SQL.
 
-Al pasar un valor al método de establecedor, debe especificar no sólo el valor real que se va a usar en la instrucción SQL, sino también la posición ordinal del parámetro en la instrucción SQL. Por ejemplo, si la instrucción SQL contiene un único parámetro, su valor ordinal será 1. Si la instrucción contiene dos parámetros, el primer valor ordinal es 1 y el segundo 2.
+Al pasar un valor al método de establecedor, debe especificar no sólo el valor real que se va a usar en la instrucción SQL, sino también la posición ordinal del parámetro en la instrucción SQL. Por ejemplo, si la instrucción SQL contiene un solo parámetro, su valor ordinal será 1. Si la instrucción contiene dos parámetros, el primer valor ordinal es 1 y el segundo 2.
 
 En el siguiente ejemplo, se pasa una conexión abierta a la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] a la función, se genera una instrucción SQL preparada y se ejecuta con un solo valor de parámetro String y, luego, se leen los resultados del conjunto de resultados.
 

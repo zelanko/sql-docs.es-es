@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 776ff53a-8bf3-4864-a7b7-170fdef1a87b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1fec9c817e8671dd5d48f8c9d9fe13d611f864b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dd3c71aa058534342ddd70fdf1ae5256fb75e708
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968767"
 ---
 # <a name="supportsstoredprocedures-method-sqlserverdatabasemetadata"></a>Método supportsStoredProcedures (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsStoredProcedures()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si se admite. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método supportsStoredProcedures especificado por el método supportsStoredProcedures en la interfaz java.sql.DatabaseMetaData.  
+ Este método supportsStoredProcedures se especifica mediante el método supportsStoredProcedures en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

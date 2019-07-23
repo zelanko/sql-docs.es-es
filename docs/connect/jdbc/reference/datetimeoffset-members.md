@@ -1,5 +1,5 @@
 ---
-title: Los miembros de DateTimeOffset | Microsoft Docs
+title: Miembros DateTimeOffset | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8f03bc0fdff52678a79bebb217dd0731515e47be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ccdaa6df027edd9dac3243dffc420898543f9632
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955152"
 ---
 # <a name="datetimeoffset-members"></a>Miembros de DateTimeOffset
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,12 +32,12 @@ ms.locfileid: "66780421"
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|Compara este **DateTimeOffset** objeto a otro **DateTimeOffset** objeto según su hora en GMT.|  
-|[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|Compara este **DateTimeOffset** objeto a otro **objeto**.|  
-|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|Devuelve el desplazamiento, en minutos, de GMT esto **DateTimeOffset** objeto.|  
-|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|Devuelve el punto de tiempo representado por este **DateTimeOffset** objeto como un java.sql.Timestamp.|  
+|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|Compara este objeto **DateTimeOffset** con otro objeto **DateTimeOffset** según su hora en GMT.|  
+|[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|Compara este objeto **DateTimeOffset** con otro **objeto**.|  
+|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|Devuelve el desplazamiento, en minutos desde GMT, de este objeto **DateTimeOffset** .|  
+|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|Devuelve el punto en el tiempo representado por este objeto **DateTimeOffset** como Java. SQL. timestamp.|  
 |[hashCode](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|Devuelve un valor de código hash del objeto.|  
-|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|Devuelve una representación de cadena de la **DateTimeOffset** objeto.|  
+|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|Devuelve una representación de cadena del objeto **DateTimeOffset** .|  
 |[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|Crea un objeto **DateTimeOffset** que representa un punto cronológico dentro de un desplazamiento en concreto de GMT.|  
   
 ## <a name="inherited-methods"></a>Métodos heredados  

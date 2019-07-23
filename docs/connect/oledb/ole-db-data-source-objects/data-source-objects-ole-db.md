@@ -1,5 +1,5 @@
 ---
-title: Objetos (OLE DB) del origen de datos | Microsoft Docs
+title: Objetos de origen de datos (OLE DB) | Microsoft Docs
 description: Objetos de origen de datos (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,28 +18,27 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0394c5fd3b72c538904c9b8cf946316e76e6650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015923"
 ---
 # <a name="data-source-objects-ole-db"></a>Objetos de origen de datos (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server usa el término origen de datos para el conjunto de interfaces OLE DB usado para establecer un vínculo a un almacén de datos, como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Crear una instancia del objeto de origen de datos del proveedor es la primera tarea de un controlador de OLE DB para el consumidor de SQL Server.  
+  El controlador OLE DB para SQL Server usa el término origen de datos para el conjunto de interfaces OLE DB usado para establecer un vínculo a un almacén de datos, como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Crear una instancia del objeto de origen de datos del proveedor es la primera tarea de un controlador de OLE DB para SQL Server consumidor.  
   
- Todos los proveedores OLE DB declaran un identificador de clase (CLSID) para sí mismo. El CLSID para el controlador OLE DB para SQL Server es la C /C++ GUID CLSID_MSOLEDBSQL (el símbolo MSOLEDBSQL_CLSID se resuelve como el valor correcto progid en el archivo msoledbsql.h que se hace referencia). Con el CLSID, el consumidor usa la función de OLE **CoCreateInstance** para fabricar una instancia del objeto de origen de datos.  
+ Todos los proveedores OLE DB declaran un identificador de clase (CLSID) para sí mismo. El CLSID para el controlador de OLE DB para SQL Server es el CLSID_MSOLEDBSQLC++ de C/GUID (el símbolo MSOLEDBSQL_CLSID se resolverá en el ProgID correcto en el archivo MSOLEDBSQL. h al que haga referencia). Con el CLSID, el consumidor usa la función de OLE **CoCreateInstance** para fabricar una instancia del objeto de origen de datos.  
   
- Controlador OLE DB para SQL Server es un servidor en proceso. Las instancias de objetos del controlador OLE DB para SQL Server se crean mediante la macro CLSCTX_INPROC_SERVER para indicar el contexto ejecutable.  
+ OLE DB controlador de SQL Server es un servidor en proceso. Las instancias de objetos del controlador OLE DB para SQL Server se crean mediante la macro CLSCTX_INPROC_SERVER para indicar el contexto ejecutable.  
   
  El objeto de origen de datos del controlador OLE DB para SQL Server expone las interfaces de inicialización de OLE DB que permiten al consumidor conectarse a las bases de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existentes.  
   
- Todas las conexiones realizadas a través del controlador OLE DB para SQL Server establece automáticamente estas opciones:  
+ Todas las conexiones realizadas a través del controlador de OLE DB para SQL Server establecen estas opciones automáticamente:  
   
 -   SET ANSI_WARNINGS ON  
   

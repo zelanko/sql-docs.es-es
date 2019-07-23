@@ -1,5 +1,5 @@
 ---
-title: Cuadros de diálogo de SQL Server Profiler | Microsoft Docs
+title: SQL Server Profiler cuadros de diálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql
@@ -41,17 +41,16 @@ helpviewer_keywords:
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e042e9d81d389a323e092b2f370b03cb66c2921c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059698"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Cuadros de diálogo de SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft es una herramienta que captura eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un servidor. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema. Los siguientes son los comandos y opciones de configuración de los cuadros de diálogo de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de Microsoft es una herramienta que captura eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un servidor. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema. A continuación se muestran los comandos y la configuración disponibles en los cuadros [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]de diálogo de.  
 ## <a name="trace-properties"></a>Propiedades de seguimiento
 ### <a name="general-tab"></a>Pestaña General
 Utilice la pestaña **General** del cuadro de diálogo **Propiedades de seguimiento** para ver o especificar las propiedades de un seguimiento.  
@@ -87,7 +86,7 @@ Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedad
 |**Organizar columnas**|Cambia el orden de las columnas del seguimiento y agrupa los resultados en una o más columnas.  
 
 ## <a name="trace-template-properties"></a>Propiedades de la plantilla de seguimiento 
-### <a name="new-general-tab"></a>Nuevo (pestaña General)
+### <a name="new-general-tab"></a>Nuevo (pestaña general)
 Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para crear nuevas plantillas de seguimiento mediante las siguientes opciones. Para acceder a este cuadro de diálogo, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Archivo**, coloque el cursor sobre **Plantillas** y haga clic en **Nueva**.
 
 |Elemento|Descripción
@@ -97,7 +96,7 @@ Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plant
 |**Basar plantilla nueva en una existente**|Utilice una plantilla de la lista como base para esta plantilla. Todos los eventos, columnas de datos y filtros seleccionados coinciden inicialmente con los de la plantilla existente y se pueden modificar según sea necesario.  
 |**Usar como plantilla predeterminada para tipo de servidor seleccionado**|Utilice esta plantilla como valor predeterminado en seguimientos creados para este tipo de servidor.  
 
-### <a name="edit-general-tab"></a>Editar (pestaña General)
+### <a name="edit-general-tab"></a>Editar (pestaña general)
  Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para ver o editar las plantillas de seguimiento existentes utilizando las opciones que se muestran a continuación. Para obtener acceso a este cuadro de diálogo, en el menú [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **de** , seleccione **Plantillas**y, a continuación, haga clic en **Editar plantilla**.  
 
 |Elemento|Descripción
@@ -171,7 +170,7 @@ El cuadro de diálogo **Límite de contadores de rendimiento** se llena con los 
 2.  Seleccione los contadores que desea correlacionar con el archivo de seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
 
 Si desea seleccionar todos los contadores para un objeto de rendimiento, active la casilla que se encuentra junto a dicho objeto. Si selecciona el nodo superior, que indica el equipo, selecciona todos los objetos y contadores de rendimiento que contiene el archivo de registro de rendimiento. 
-## <a name="toolsoptions-general-options-page"></a>Herramientas/Opciones (página Opciones generales)
+## <a name="toolsoptions-general-options-page"></a>Herramientas/opciones (página Opciones generales)
 Utilice el cuadro de diálogo **Opciones generales** para ver o especificar las siguientes opciones.  
 ### <a name="display-options"></a>Opciones de presentación  
 

@@ -13,20 +13,19 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5b8f304d7681d3df4ae4c6f065a6128beb5822d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995120"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Compatibilidad con tipos de datos para mejoras de fecha y hora de OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este artículo se proporciona información acerca de OLE DB (controlador OLE DB para SQL Server) tipos que admiten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos de fecha y hora.  
+  En este artículo se proporciona información acerca de los tipos de OLE DB (OLE DB driver [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para SQL Server) que admiten tipos de datos de fecha y hora.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros  
  OLE DB proporciona dos nuevos tipos de datos para admitir los nuevos tipos de servidor: DBTYPE_DBTIME2 y DBTYPE_DBTIMESTAMPOFFSET. La tabla siguiente muestra la asignación completa de tipo de servidor:  
@@ -76,7 +75,7 @@ ms.locfileid: "66769394"
   
  Las implementaciones de las siguientes estructuras existentes de OLE DB se han modificado para admitir los nuevos tipos de datos de fecha y hora de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las definiciones, sin embargo, no han cambiado.  
   
--   DBTYPE_DATE (Es un tipo DATE de automatización. Se representa internamente como una **doble**... La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción de un día. Este tipo tiene una exactitud de 1 segundo, de modo que tiene una escala efectiva de 0.)  
+-   DBTYPE_DATE (Es un tipo DATE de automatización. Se representa internamente como **Double**. La parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte decimal es una fracción de un día. Este tipo tiene una exactitud de 1 segundo, de modo que tiene una escala efectiva de 0.)  
   
 -   DBTYPE_DBDATE  
   
@@ -161,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Aplicaciones que migran a controlador OLE DB para SQL Server y que usan **sql_variant** y dependen de la precisión limitada de **datetime** tendrán que actualizarse si el esquema subyacente está actualizado para usar **datetime2** lugar **datetime**.  
+ Las aplicaciones que migran a OLE DB controlador para SQL Server que usan **sql_variant** y que se basan en la precisión limitada de **DateTime** tendrán que actualizarse si el esquema subyacente se actualiza para usar **datetime2** en lugar de **DateTime**.  
   
  Las macros de acceso para SSVARIANT también se han extendido con la adición de lo siguiente:  
   
@@ -173,16 +172,16 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Asignar tipo de datos en ITableDefinition::CreateTable  
- La siguiente asignación de tipo se utiliza con estructuras DBCOLUMNDESC utilizadas por ITableDefinition:: CreateTable:  
+ La siguiente asignación de tipos se usa con las estructuras DBCOLUMNDESC que usa ITableDefinition:: CreateTable:  
   
 |Tipo de datos OLE DB (*wType*)|Tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Notas|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|Date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|El controlador OLE DB para SQL Server inspecciona los miembros *bScale* miembro para determinar la precisión de fracciones de segundo.|  
-|DBTYPE_DBTIME2|**time**(p)|El controlador OLE DB para SQL Server inspecciona los miembros *bScale* miembro para determinar la precisión de fracciones de segundo.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|El controlador OLE DB para SQL Server inspecciona los miembros *bScale* miembro para determinar la precisión de fracciones de segundo.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|El controlador de OLE DB para SQL Server inspecciona el miembro *bScale* de miembros para determinar la precisión de las fracciones de segundo.|  
+|DBTYPE_DBTIME2|**time**(p)|El controlador de OLE DB para SQL Server inspecciona el miembro *bScale* de miembros para determinar la precisión de las fracciones de segundo.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|El controlador de OLE DB para SQL Server inspecciona el miembro *bScale* de miembros para determinar la precisión de las fracciones de segundo.|  
   
- Cuando una aplicación especifica DBTYPE_DBTIMESTAMP en *wType*, puede invalidar la asignación a **datetime2** proporcionando un nombre de tipo *pwszTypeName*. Si **datetime** se especifica, *bScale* debe ser 3. Si **smalldatetime** se especifica, *bScale* debe ser 0. Si *bScale* no es coherente con *wType* y *pwszTypeName*, se devuelve DB_E_BADSCALE.  
+ Cuando una aplicación especifica DBTYPE_DBTIMESTAMP en *wType*, puede invalidar la asignación a **datetime2** proporcionando un nombre de tipo en *pwszTypeName*. Si se especifica **DateTime** , *bScale* debe ser 3. Si se especifica **smalldatetime** , *bScale* debe ser 0. Si *bScale* no es coherente con *wType* y *pwszTypeName*, se devuelve DB_E_BADSCALE.  
   
 ## <a name="see-also"></a>Consulte también  
  [Mejoras de fecha y hora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

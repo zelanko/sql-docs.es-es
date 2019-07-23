@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 989cb8fee55de2ec522e4517521815b467d7d946
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dcbce9783641376ae142e94ab5e45dc47fe16fef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981734"
 ---
 # <a name="getmoreresults-method-"></a>Método getMoreResults ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final boolean getMoreResults()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getMoreResults especificado por el método getMoreResults en la interfaz java.sql.Statement.  
+ Este método getMoreResults se especifica mediante el método getMoreResults en la interfaz java. SQL. Statement.  
   
  Al llamar implícitamente al método getMoreResults, se cierra los objetos de conjunto de resultados que estén abiertos en esos momentos y que hubieran obtenido con el método [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md).  
   

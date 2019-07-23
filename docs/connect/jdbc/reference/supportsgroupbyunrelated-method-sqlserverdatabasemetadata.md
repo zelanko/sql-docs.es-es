@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 455fe02e-3877-409b-8281-8e0491acd3e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e8cf15dc9151de38d37ce22e4794b9fb8e14300
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0c9ae064a25dc8386b38b11f79ab9ffb5b78a9ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969334"
 ---
 # <a name="supportsgroupbyunrelated-method-sqlserverdatabasemetadata"></a>Método supportsGroupByUnrelated (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsGroupByUnrelated()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si se admite. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método supportsGroupByUnrelated especificado por el método supportsGroupByUnrelated en la interfaz java.sql.DatabaseMetaData.  
+ Este método supportsGroupByUnrelated se especifica mediante el método supportsGroupByUnrelated en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

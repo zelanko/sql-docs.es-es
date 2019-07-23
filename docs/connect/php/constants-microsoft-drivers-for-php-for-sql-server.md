@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82fa4ef2f47143afe8f2331469a1eb07fd9b2522
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993700"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (controladores de Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,14 +64,14 @@ Puede especificar el atributo PDO::SQLSRV_ATTR_QUERY_TIMEOUT con [PDOStatement::
 ### <a name="direct-or-prepared-execution"></a>Ejecución directa o preparada  
 Puede seleccionar la ejecución de la consulta directa o la ejecución de la instrucción preparada con el atributo PDO::SQLSRV_ATTR_DIRECT_QUERY. PDO::SQLSRV_ATTR_DIRECT_QUERY puede definirse con [PDO::prepare](../../connect/php/pdo-prepare.md) o [PDO::setAttribute](../../connect/php/pdo-setattribute.md). Para obtener más información sobre PDO::SQLSRV_ATTR_DIRECT_QUERY, vea [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md) (Ejecución de la instrucción preparada o directa en el controlador PDO_SQLSRV).  
 
-### <a name="handling-numeric-fetches"></a>Control numérico de captura
-El atributo PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE puede utilizarse para controlar numéricos obtenciones de columnas con tipos SQL numéricos (bit, integer, smallint, tinyint, float y real). Cuando PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE se establece en true, los resultados de una columna de enteros se representan como ints, mientras que flota de SQL y reals se representan como valores de punto flotante. Este atributo se puede establecer con [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md). 
+### <a name="handling-numeric-fetches"></a>Controlar capturas numéricas
+El atributo PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE se puede usar para controlar las capturas numéricas de las columnas con tipos SQL numéricos (bit, entero, smallint, tinyint, float y real). Cuando PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE se establece en true, los resultados de una columna de enteros se representan como ints, mientras que los valores float y real de SQL se representan como valores flotantes. Este atributo se puede establecer con [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
-Puede modificar el comportamiento predeterminado de formato decimal con los atributos PDO::SQLSRV_ATTR_FORMAT_DECIMALS y PDO::SQLSRV_ATTR_DECIMAL_PLACES. El comportamiento de estos atributos es idéntico de las opciones correspondientes en el lado SQLSRV (**FormatDecimals** y **DecimalPlaces**), salvo que no se admiten parámetros de salida para el formato. Estos atributos se pueden establecer en el nivel de la conexión o la instrucción con [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) o [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), pero cualquier atributo de instrucción anulará las correspondientes atributo de conexión. Para más información, vea [Aplicación de formato a cadenas decimales y valores de moneda (controlador PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+Puede modificar el comportamiento del formato decimal predeterminado con los atributos PDO:: SQLSRV_ATTR_FORMAT_DECIMALS y PDO:: SQLSRV_ATTR_DECIMAL_PLACES. El comportamiento de estos atributos es idéntico a las opciones correspondientes en el lado de SQLSRV (**FormatDecimals** y **DecimalPlaces**), salvo que no se admiten los parámetros de salida para dar formato. Estos atributos se pueden establecer en el nivel de conexión o de instrucción con [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) o [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), pero cualquier atributo de instrucción invalidará el atributo de conexión correspondiente. Para más información, vea [Aplicación de formato a cadenas decimales y valores de moneda (controlador PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
 
 ### <a name="handling-date-and-time-fetches"></a>Control de las recuperaciones de fecha y hora
 
-El PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE especifica si se debe recuperar tipos de fecha y hora como [DateTime PHP](http://php.net/manual/en/class.datetime.php) objetos. Si el valor se deja como false, el comportamiento predeterminado es devolverlos como cadenas. Este atributo puede establecerse en el nivel de la conexión o la instrucción con [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) o [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), pero el atributo de instrucción anulará las correspondientes atributo de conexión. Para más información, vea [Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
+PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE especifica si se deben recuperar los tipos de fecha y hora como objetos de tipo de datos [php](http://php.net/manual/en/class.datetime.php) . Si el valor se deja como false, el comportamiento predeterminado es devolverlos como cadenas. Este atributo se puede establecer en el nivel de conexión o de instrucción con [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) o [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), pero el atributo de instrucción invalidará el atributo de conexión correspondiente. Para más información, vea [Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 En las siguientes secciones se incluyen las constantes que utiliza el controlador SQLSRV.  
@@ -161,7 +160,7 @@ En la siguiente tabla se muestran las constantes que se utilizan para describir 
 Para obtener más información sobre estas constantes, vea [Cómo especificar tipos de datos PHP](../../connect/php/how-to-specify-php-data-types.md)y [Cómo recuperar datos de caracteres como una secuencia usando el controlador SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md).  
   
 ### <a name="sqltype-constants"></a>Constantes de SQLTYPE  
-En la siguiente tabla se muestran las constantes que se utilizan para describir tipos de datos de SQL Server. Algunas constantes son similares a función y pueden tomar parámetros que corresponden a precisión, escala o longitud.  Al enlazar parámetros, se deben usar las constantes de tipo función. Para las comparaciones de tipo, se requieren las constantes (que no son de tipo de función) estándares. Para obtener información sobre los tipos de datos de SQL Server, vea [Tipos de datos (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md). Para obtener información sobre la precisión, la escala y la longitud, vea [Precisión, escala y longitud (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+En la siguiente tabla se muestran las constantes que se utilizan para describir tipos de datos de SQL Server. Algunas constantes son similares a las funciones y pueden tomar parámetros que correspondan a la precisión, la escala y la longitud.  Al enlazar parámetros, se deben usar las constantes de tipo función. En el caso de las comparaciones de tipos, se requieren las constantes estándar (no similares a las funciones). Para obtener información sobre los tipos de datos de SQL Server, vea [Tipos de datos (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md). Para obtener información sobre la precisión, la escala y la longitud, vea [Precisión, escala y longitud (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 |Constante de SQLSRV|Tipo de datos de SQL Server|  
 |-------------------|------------------------|  
@@ -214,7 +213,7 @@ En la siguiente tabla se muestran las constantes que se utilizan para describir 
   
 4.  La compatibilidad con este tipo se agregó en la versión 1.1 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
-5.  Estas constantes se deben usar en las operaciones de comparación de tipo y no reemplazan las constantes de tipo función con una sintaxis similar. Para enlazar parámetros, debe usar las constantes de tipo función.
+5.  Estas constantes se deben usar en las operaciones de comparación de tipos y no reemplazar las constantes similares a funciones con una sintaxis similar. En el caso de los parámetros de enlace, debe usar las constantes de tipo función.
 
   
 En la siguiente tabla se incluyen las constantes de SQLTYPE que aceptan parámetros y el intervalo de valores permitidos para cada parámetro.  

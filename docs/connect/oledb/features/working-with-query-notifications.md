@@ -1,6 +1,6 @@
 ---
-title: Trabajar con las notificaciones de consulta | Microsoft Docs
-description: Trabajar con las notificaciones de consulta en el controlador de OLE DB para SQL Server
+title: Trabajar con notificaciones de consulta | Microsoft Docs
+description: Trabajar con notificaciones de consulta en OLE DB driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 20860d018e8971089ee1eb80ec0303bdc63ef211
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.openlocfilehash: 5b563099b161fa9b55a72820edd3411a4c72b4fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67208348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988730"
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
 
@@ -35,7 +34,7 @@ ms.locfileid: "67208348"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Las notificaciones de consulta se introdujeron en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y el controlador OLE DB para SQL Server. Las notificaciones de consulta, creadas a partir de la infraestructura de Service Broker introducida en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], permiten notificar a las aplicaciones si los datos han cambiado. Esta característica resulta especialmente útil para las aplicaciones que proporcionan una caché de información de una base de datos, como una aplicación web, y necesitan recibir notificaciones si se modifican los datos de origen.
+Las notificaciones de consulta se [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujeron en y OLE DB controlador para SQL Server. Las notificaciones de consulta, creadas a partir de la infraestructura de Service Broker introducida en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], permiten notificar a las aplicaciones si los datos han cambiado. Esta característica resulta especialmente útil para las aplicaciones que proporcionan una caché de información de una base de datos, como una aplicación web, y necesitan recibir notificaciones si se modifican los datos de origen.
 
 Las notificaciones de consulta permiten al usuario solicitar notificaciones dentro de un período de tiempo de espera especificado si se modifican los datos subyacentes de una consulta. La solicitud de notificación especifica las opciones de notificación, entre las que se incluyen el nombre de servicio, el texto del mensaje y el valor de tiempo de espera para el servidor. Las notificaciones se entregan a través de una cola de Service Broker que las aplicaciones pueden sondear de cara a las notificaciones disponibles.
 
@@ -71,7 +70,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 
 ## <a name="ole-db-driver-for-sql-server"></a>Controlador OLE DB para SQL Server
 
-El controlador OLE DB para SQL Server es compatible con notificaciones al consumidor a la modificación del conjunto de filas. El consumidor recibe notificaciones en cada fase de modificación del conjunto de filas y ante cualquiera intento de modificación.
+El controlador de OLE DB para SQL Server admite la notificación de consumidor en la modificación del conjunto de filas. El consumidor recibe notificaciones en cada fase de modificación del conjunto de filas y ante cualquiera intento de modificación.
 
 > [!NOTE]
 > Pasar una consulta de notificación al servidor con **ICommand::Execute** es la única forma válida de suscribirse a notificaciones de consulta con el controlador OLE DB para SQL Server.
@@ -110,7 +109,7 @@ Iniciar una suscripción no garantiza que los mensajes posteriores se entregará
 > [!NOTE]
 > La preparación de instrucciones no hará nunca que se inicie una suscripción; esta acción solo se consigue mediante la ejecución de instrucciones, y las notificaciones de consulta no se verán afectadas por el uso de los servicios principales de OLE DB.
 
-Para obtener más información sobre el conjunto de propiedades DBPROPSET_SQLSERVERROWSET, vea [las propiedades del conjunto de filas y comportamientos](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).
+Para obtener más información sobre el conjunto de propiedades DBPROPSET_SQLSERVERROWSET, vea [propiedades y comportamientos de conjuntos de filas](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).
 
 ## <a name="see-also"></a>Consulte también
 

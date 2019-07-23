@@ -1,5 +1,5 @@
 ---
-title: Elemento de la columna de índice (DTA) | Microsoft Docs
+title: Column (DTA, elemento de index) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6d9d2ee76d1ac9acd230e04ec44dcf0b6c91087f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3abd394ea3b7c061deac894e611d1cae3e7d1c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949852"
 ---
 # <a name="column-element-for-index-dta"></a>Column (DTA, elemento de Index)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 868e14c72fbb7c32d394df2fbbdf5cd3a7c36738
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72ae0e8ed3c65a795723326d7ca49e2f5a909f18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971144"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>Constructor SQLServerException (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Inicializa una nueva instancia de la [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) clase cuando se especifica un **objeto**, un **cadena** objeto, un **cadena** (objeto), un **int**y un **booleano**.
+  Inicializa una nueva instancia de la clase [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) cuando se proporciona un **objeto**, un objeto de **cadena** , un objeto de **cadena** , un **entero**y un **valor booleano**.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,23 +41,23 @@ public SQLServerException(java.lang.Object obj,
 #### <a name="parameters"></a>Parámetros  
  *obj*  
   
- El búfer de E/S que generó la excepción.
+ Búfer de e/s que generó la excepción.
 
  *errText*  
   
- Una cadena que contiene el texto del error.
+ Cadena que contiene el texto del error.
   
  *sqlState*  
   
- Un objeto de enumeración que contiene el estado SQL.
+ Objeto de enumeración que contiene el estado de SQL.
  
  *errNum*  
   
- Un valor int que contienen el código de error para la excepción.
+ Un valor int que contiene el código de error para la excepción.
  
  *bStack*  
   
- Un valor booleano que indica si se debe generar el seguimiento de pila.
+ Un valor booleano que indica si se debe generar el seguimiento de la pila.
   
 ## <a name="see-also"></a>Consulte también  
  [Constructores SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

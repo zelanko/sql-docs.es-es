@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d6e0fc0bad10ad67c549a3ab3d505af899f67c45
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955121"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>Método deletesAreDetected (SQLServerDatabaseMetaData)
 
@@ -59,7 +58,7 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si reemplaza un intervalo a la fila eliminada. **false** si se quita la fila eliminada.  
+ **true** si un hueco reemplaza a la fila eliminada. **false** si se quita la fila eliminada.  
   
  Cuando se usa el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método devuelve **true** con los cursores TYPE_SS_SCROLL_KEYSET y **false** con todos los demás tipos de conjuntos de resultados.  
   
@@ -67,10 +66,10 @@ public boolean deletesAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método deletesAreDetected especificado por el método deletesAreDetected en la interfaz java.sql.DatabaseMetaData.  
+ Este método deletesAreDetected se especifica mediante el método deletesAreDetected en la interfaz java. SQL. DatabaseMetaData.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detecta las filas eliminadas para todos los tipos de cursor actualizable, aunque la detección es transitoria para los cursores dinámicos y hacia delante.  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]detecta las filas eliminadas para todos los tipos de cursores actualizables, aunque la detección es transitoria para los cursores de avance y dinámicos.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

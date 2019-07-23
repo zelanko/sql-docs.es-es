@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2822c0f80aa342881e820b2edce2f99388efdc68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a181d6e8b9a3ffbf9d65dc74cae967d6a1f40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936261"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +47,7 @@ PDOException
 ## <a name="remarks"></a>Notas  
 Puede cerrar un objeto de conexión estableciendo el valor de la instancia en Null.  
   
-Después de una conexión, PDO:: ErrorCode mostrará 01000 en lugar de 00000.  
+Después de una conexión, PDO:: errorCode muestra 01000 en lugar de 00000.  
   
 Si, por cualquier motivo, se produce un error en PDO::__construct, se genera una excepción, aunque PDO::ATTR_ERRMODE esté establecido en PDO::ERRMODE_SILENT.  
   

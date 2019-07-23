@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 946bcde93c9f024d921322b0d84b0ad162aec66d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d89a29af5aa3d2518f94101854371cea757e135c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980671"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>Método getPropertyInfo (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +45,13 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
  Una lista de parejas de valores de propiedad, que producen el valor NULL la primera vez que se utilizan.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Una matriz de objetos DriverPropertyInfo.  
+ Matriz de objetos DriverPropertyInfo.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getPropertyInfo especificado por el método getPropertyInfo en la interfaz java.sql.Driver.  
+ Este método getPropertyInfo se especifica mediante el método getPropertyInfo de la interfaz java. SQL. driver.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

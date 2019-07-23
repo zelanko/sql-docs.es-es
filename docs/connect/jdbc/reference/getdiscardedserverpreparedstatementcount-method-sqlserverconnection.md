@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2910453562cf78c4b88140de15885d4ddca5fe3a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5843deb0b1d598525efcc657b16fe0b610048a35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983624"
 ---
 # <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>Método getDiscardedServerPreparedStatementCount (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Devuelve el número de pendientes actualmente preparada instrucción unprepare acciones.
+ Devuelve el número de acciones de despreparación de la instrucción preparada actualmente pendiente.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,13 +35,13 @@ public int getDiscardedServerPreparedStatementCount()
 ```  
 
 ## <a name="return-value"></a>Valor devuelto
- Un **int** que contiene el número de la instrucción preparada pendiente actualmente unprepare acciones.
+ **Entero** que contiene el número de acciones de despreparación de la instrucción preparada actualmente vigente.
 
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Notas  
- Este método está disponible desde la versión del controlador JDBC 6.4 y en marcha.
+ Este método está disponible en la versión 6,4 y posteriores del controlador JDBC.
  
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

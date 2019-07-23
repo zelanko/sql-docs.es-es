@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bdc182db-4518-4bf2-b63a-05f58fdb4eb8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0002cfbcb149288846bdb53926b9744fb994a450
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d93c58d045741d281158a1716ab43b0b68e49bec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969496"
 ---
 # <a name="supportsdatamanipulationtransactionsonly-method-sqlserverdatabasemetadata"></a>Método supportsDataManipulationTransactionsOnly (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsDataManipulationTransactionsOnly()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si se admite. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método supportsDataManipulationTransactionsOnly especificado por el método supportsDataManipulationTransactionsOnly en la interfaz java.sql.DatabaseMetaData.  
+ Este método supportsDataManipulationTransactionsOnly se especifica mediante el método supportsDataManipulationTransactionsOnly en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

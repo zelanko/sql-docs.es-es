@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 327dcad497c934c787d509a41f0068691bf5588a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 567f5e7e3aca87b875e4f93c26d7caa5535a8c75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978604"
 ---
 # <a name="gettrustmanagerclass-method-sqlserverdatasource"></a>Método getTrustManagerClass (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +35,10 @@ public java.lang.String getTrustManagerClass()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un **cadena** que contiene el valor de la propiedad de conexión de TrustManagerClass, o null si se establece ningún valor.  
+ Una **cadena** que contiene el valor de la propiedad de conexión TrustManagerClass, o null si no se establece ningún valor.  
   
 ## <a name="remarks"></a>Notas  
- Si no se establece la propiedad TrustManagerClass, el [getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md) método devuelve null.  
+ Si no se establece la propiedad TrustManagerClass, el método [getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md) devuelve NULL.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

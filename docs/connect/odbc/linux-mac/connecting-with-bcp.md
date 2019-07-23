@@ -1,5 +1,5 @@
 ---
-title: Conexión con bcp | Microsoft Docs
+title: Conectar con BCP | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996621"
 ---
 # <a name="connecting-with-bcp"></a>Conexión con bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-La utilidad [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) está disponible en [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux y MacOS. Esta página documenta las diferencias con respecto a la versión de Windows de `bcp`.
+La utilidad [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) está disponible en [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux y MacOS. En esta página se documentan las diferencias de la `bcp`versión de Windows de.
   
 - El terminador de campo es una tabulación ("\t").  
   
@@ -103,7 +102,7 @@ Especifica el terminador de la fila.
 Especifica que se realice la copia masiva de datos de moneda, fecha y hora en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con el formato regional definido para la configuración regional del equipo cliente.  
   
 - -S *server*  
-Especifica el nombre de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia para conectarse a, o si es -D utiliza, un DSN.  
+Especifica el nombre de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia de a la que se va a conectar o si se usa-D, un DSN.  
   
 - -t *field_terminator*  
 Especifica el terminador del campo.  

@@ -1,5 +1,5 @@
 ---
-title: Información en Interfaces de Error | Microsoft Docs
+title: Información en interfaces de error | Microsoft Docs
 description: Información en interfaces de error
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 7b87011fc8d95d617562bb72ce6a3a6ee49ae0c5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4ff18864e37575f78d129abb1569b0ffe83d4685
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994934"
 ---
 # <a name="information-in-error-interfaces"></a>Información en interfaces de error
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66798128"
 
   El controlador OLE DB para SQL Server notifica alguna información de error y estado en las interfaces de error definidas por OLE DB **IErrorInfo**, **IErrorRecords** e **ISQLErrorInfo**.  
   
- El controlador OLE DB para SQL Server admite **IErrorInfo** funciones miembro como sigue.  
+ El controlador de OLE DB para SQL Server admite las funciones miembro de **IErrorInfo** como se indica a continuación.  
   
 |Función de miembro|Descripción|  
 |---------------------|-----------------|  
@@ -42,22 +41,22 @@ ms.locfileid: "66798128"
 |**GetHelpFile**|No compatible. Siempre devuelve NULL.|  
 |**GetSource**|Cadena "Controlador Microsoft OLE DB para SQL Server".|  
   
- El controlador OLE DB para SQL Server admite disponibles para el consumidor **IErrorRecords** funciones miembro como sigue.  
+ El controlador de OLE DB para SQL Server admite funciones miembro de **IErrorRecords** disponibles para el consumidor como se indica a continuación.  
   
 |Función de miembro|Descripción|  
 |---------------------|-----------------|  
 |**GetBasicErrorInfo**|Llena una estructura ERRORINFO con información básica acerca de un error. Una estructura ERRORINFO contiene miembros que identifican el valor devuelto HRESULT del error así como el proveedor y la interfaz a los que se aplica el error.|  
 |**GetCustomErrorObject**|Devuelve una referencia en las interfaces **ISQLErrorInfo** e [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).|  
 |**GetErrorInfo**|Devuelve una referencia en una interfaz **IErrorInfo**.|  
-|**GetErrorParameters**|El controlador OLE DB para SQL Server no devuelve parámetros al consumidor a través de **GetErrorParameters**.|  
+|**GetErrorParameters**|El controlador de OLE DB para SQL Server no devuelve parámetros al consumidor a través de **GetErrorParameters**.|  
 |**GetRecordCount**|Recuento de registros de error disponibles.|  
   
- El controlador OLE DB para SQL Server admite **ISQLErrorInfo:: GetSQLInfo** parámetros como se indica a continuación.  
+ El controlador de OLE DB para SQL Server admite los parámetros **ISQLErrorInfo:: GetSQLInfo** como se indica a continuación.  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|*pbstrSQLState*|Devuelve un valor SQLSTATE para el error. Los valores SQLSTATE se definen en las especificaciones SQL 92, ODBC e ISO SQL y API. Ni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ni el controlador OLE DB para SQL Server se definen valores SQLSTATE específicos de la implementación.|  
-|*plNativeError*|Devuelve el número de error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] procedente de **master.dbo.sysmessages** cuando está disponible. Errores nativos están disponibles después de un intento correcto para inicializar un controlador de OLE DB para el origen de datos de SQL Server. Antes del intento, el controlador OLE DB para SQL Server siempre devuelve cero.|  
+|*pbstrSQLState*|Devuelve un valor SQLSTATE para el error. Los valores SQLSTATE se definen en las especificaciones SQL 92, ODBC e ISO SQL y API. Ni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ni el controlador de OLE DB para los valores SQLSTATE específicos de la implementación definidos por el SQL Server.|  
+|*plNativeError*|Devuelve el número de error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] procedente de **master.dbo.sysmessages** cuando está disponible. Los errores nativos están disponibles después de un intento correcto de inicializar un controlador de OLE DB para SQL Server origen de datos. Antes del intento, el controlador de OLE DB para SQL Server siempre devuelve cero.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Errores](../../oledb/ole-db-errors/errors.md)  

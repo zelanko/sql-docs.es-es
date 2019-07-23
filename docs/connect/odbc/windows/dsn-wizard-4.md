@@ -1,5 +1,5 @@
 ---
-title: Origen de datos de pantalla del Asistente para 4 (controlador ODBC para SQL Server) | Microsoft Docs
+title: Pantalla del Asistente para orígenes de datos (controlador ODBC para SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989457"
 ---
 # <a name="data-source-wizard-screen-4"></a>Pantalla del Asistente para orígenes de datos 4
 
@@ -34,7 +33,7 @@ Cuando esta casilla está activada, los datos que se pasan a través de las cone
 
 ### <a name="trust-server-certificate"></a>Certificado de servidor de confianza
 
-Esta opción solo es aplicable cuando **utilizar cifrado de alta seguridad para datos** está habilitado. Cuando se selecciona, no se validará el certificado del servidor para que el nombre de host correcto del servidor y ser emitido por una entidad de certificación de confianza. 
+Esta opción solo es aplicable cuando está habilitado el **uso de cifrado seguro para datos** . Cuando se selecciona, el certificado del servidor no se validará para tener el nombre de host correcto del servidor y debe ser emitido por una entidad de certificación de confianza. 
 
 ### <a name="perform-translation-for-character-data"></a>Realizar conversión de los datos de caracteres
 
@@ -62,11 +61,11 @@ El registro de estadísticas es un archivo delimitado por tabuladores que se pue
 
 ### <a name="connect-retry-count"></a>Recuento de reintentos de la conexión
 
-Especifica el número de reintentos de un intento de conexión incorrecto.
+Especifica el número de veces que se reintentará un intento de conexión incorrecta.
 
 ### <a name="connect-retry-interval-seconds"></a>Intervalo de reintento de conexión (segundos)
 
-Especifica el número de segundos entre cada reintento de conexión. Para obtener más información sobre el funcionamiento de esto y el **número de reintentos de conexión** opciones, vea [resistencia de conexión en el controlador ODBC de Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
+Especifica el número de segundos entre cada reintento de conexión. Para obtener más información sobre el funcionamiento de esta y las opciones de **número** de reintentos de conexión, consulte [resistencia de conexión en el controlador ODBC de Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
 ### <a name="back"></a>Atrás
 
@@ -74,7 +73,7 @@ Haga clic en este botón para volver a la página anterior del asistente.
 
 ### <a name="finish"></a>Finalizar
 
-Si se ha completado la información especificada en esta pantalla, haga clic en **finalizar**. El DSN se crea con todos los atributos especificados en esta y otras pantallas del asistente y se proporcionan una oportunidad para probar el DSN recién creado.
+Si la información especificada en esta pantalla se ha completado, puede hacer clic en **Finalizar**. El DSN se crea con todos los atributos especificados en esta y otras pantallas del asistente, y se le da la oportunidad de probar el DSN recién creado.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3c0fb5d-ca05-43f7-9f38-fba6cf3705c6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0ae5ae416cc5732929e5e6131ec3cb97b57555c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4dd548fcd6342e4c69ea9acc1614d0bc899f7d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985324"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-long"></a>Método updateBinaryStream (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
   
  *x*  
   
- Un objeto InputStream.  
+ Objeto InputStream.  
   
  *length*  
   
@@ -49,7 +48,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método updateBinaryStream especificado por el método updateBinaryStream en la interfaz java.sql.ResultSet.  
+ Este método updateBinaryStream se especifica mediante el método updateBinaryStream de la interfaz java. SQL. ResultSet.  
   
  Este método pasa bytes desde un objeto InputStream a las columnas binarias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seleccionadas, como binary, varbinary, varbinary(max), image, xml y udt. Este método no admite la actualización de columnas de caracteres. Para actualizar las columnas de caracteres con un elemento InputStream, use el método [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   

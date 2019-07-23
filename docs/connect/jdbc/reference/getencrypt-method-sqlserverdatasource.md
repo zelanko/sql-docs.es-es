@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1cdb12dd-6e6f-4bbd-8f5f-9e630f3ee2c9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ae50bcd5499ffa3bd5c10ef492d78de4685402e8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d3764ff5b9308b4b370dda14e98787513c28458c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983378"
 ---
 # <a name="getencrypt-method-sqlserverdatasource"></a>Método getEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean getEncypt()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si cifrar está habilitado. De lo contrario, se devuelve el valor **False**.  
+ **true** si está habilitado el cifrado. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="remarks"></a>Notas  
  Si la propiedad encrypt se establece en **true**, el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] se asegura de que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa el cifrado SSL para todos los datos que se envían entre el cliente y el servidor, si el servidor tiene un certificado instalado.  

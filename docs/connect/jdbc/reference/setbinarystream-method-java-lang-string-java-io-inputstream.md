@@ -1,5 +1,5 @@
 ---
-title: Método a la secuencia de entrada setBinaryStream) | Microsoft Docs
+title: Método setBinaryStream para el flujo de entrada) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 339c8277-2d08-4094-9fa9-26c8ad3e7348
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0ed12a16c1ad8235ebe09488a29e8d32f6ca982
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 04a286c4d6c8b44482c254e7fe30b84836283df0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975134"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream"></a>Método setBinaryStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public void setBinaryStream(java.lang.String parameterName,
   
  *x*  
   
- Un objeto InputStream.  
+ Objeto InputStream.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método setBinaryStream especificado por el método setBinaryStream en la interfaz java.sql.CallableStatement.  
+ Este método setBinaryStream se especifica mediante el método setBinaryStream de la interfaz java. SQL. CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  
  [setBinaryStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   

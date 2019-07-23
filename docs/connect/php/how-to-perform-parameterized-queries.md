@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7783ac898dff9176a2a148f7c8e01a0ac28047b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993501"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Cómo realizar consultas con parámetros
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +31,7 @@ Los pasos para realizar una consulta con parámetros se pueden resumir en cuatro
   
 2.  Inicialice o actualice las variables PHP de los marcadores de posición en la consulta de Transact-SQL.  
   
-3.  Utilice las variables PHP del paso 2 para crear o actualizar una matriz de valores de parámetro que se corresponden, en orden, con los marcadores de posición de la cadena de Transact-SQL. Los valores de parámetro de la matriz deben estar en el mismo orden que los marcadores de posición diseñados para representarlos.
+3.  Utilice las variables PHP del paso 2 para crear o actualizar una matriz de valores de parámetro que se corresponden, en orden, con los marcadores de posición de la cadena de Transact-SQL. Los valores de parámetro de la matriz deben estar en el mismo orden que los marcadores de posición pensados para representarlos.
   
 4.  Ejecute la consulta:  
   

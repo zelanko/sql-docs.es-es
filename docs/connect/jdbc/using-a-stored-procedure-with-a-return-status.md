@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4077f11e28bc382976eb3da441cfd42a24a567f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eb5654563a0894abd497dfb0053b3e5667bf433d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916515"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Usar un procedimiento almacenado con un estado de devolución
 
@@ -29,7 +28,7 @@ Al llamar a este tipo de procedimiento almacenado mediante el controlador JDBC, 
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Para obtener más información acerca de las secuencias de escape SQL, consulte [usando secuencias de Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Para obtener más información sobre las secuencias de escape de SQL, vea [usar secuencias de escape de SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Al crear la secuencia de escape `call`, especifique el parámetro de estado de devolución mediante el carácter ? (signo de interrogación). Este carácter actúa como un marcador de posición para el valor del parámetro que devolverá el procedimiento almacenado. Para especificar un valor para un parámetro de estado de devolución, debe especificar el tipo de datos del parámetro mediante el método [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) de la clase SQLServerCallableStatement antes de ejecutar el procedimiento almacenado.
 

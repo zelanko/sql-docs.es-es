@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de tipos de datos SQLXML | Microsoft Docs
+title: Ejemplo de tipo de datos SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76b7aea17e3dcee07a7472a2a830ca4fb5212bf6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d5e616fa1a510633caf4e5e2e0b20266a1eb771
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004377"
 ---
 # <a name="sqlxml-data-type-sample"></a>Ejemplos de tipos de datos SQLXML
 
@@ -39,7 +38,7 @@ El archivo de código de este ejemplo se denomina SqlXmlDataType.java y se encue
 
 ## <a name="requirements"></a>Requisitos
 
-Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo sqljdbc4.jar. Si en la ruta de clase falta una entrada para sqljdbc4.jar, la aplicación de ejemplo genera la excepción común "Clase no encontrada". Para obtener más información sobre cómo establecer la ruta de clase, vea [con el controlador JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
+Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo sqljdbc4.jar. Si en la ruta de clase falta una entrada para sqljdbc4.jar, la aplicación de ejemplo genera la excepción común "Clase no encontrada". Para obtener más información sobre cómo establecer la ruta de clases, vea [usar el controlador JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
 
 Además, necesitará acceso a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] para ejecutar esta aplicación de ejemplo.
 

@@ -17,27 +17,26 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 29504408c66cb5bada0e180eeda8f41834e10288
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016052"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandos que generan resultados de varios conjuntos de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  El controlador OLE DB para SQL Server puede devolver varios conjuntos de filas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instrucciones. Las instrucciones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devuelven resultados de varios conjuntos de filas si se dan las condiciones siguientes:  
+  El controlador de OLE DB para SQL Server puede devolver varios conjuntos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] filas a partir de instrucciones. Las instrucciones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] devuelven resultados de varios conjuntos de filas si se dan las condiciones siguientes:  
   
 -   Las instrucciones SQL por lotes se envían como un comando único.  
   
 -   Los procedimientos almacenados implementan un lote de instrucciones SQL.  
   
 ## <a name="batches"></a>Lotes  
- El controlador OLE DB para SQL Server reconoce el carácter de punto y coma como delimitador de lote de instrucciones SQL:  
+ El controlador de OLE DB para SQL Server reconoce el carácter de punto y coma como delimitador de lotes para las instrucciones SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

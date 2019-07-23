@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con consultas de conjuntos de filas de esquema distribuidas | Microsoft Docs
+title: Compatibilidad con consultas distribuidas en conjuntos de filas de esquema | Microsoft Docs
 description: Compatibilidad con consultas distribuidas en conjuntos de filas de esquema
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 575ce4f2522299be723be159bb87e19f8fff1a1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 139186d64d2b7df6aca883a253e1f9fe3f062214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993877"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Conjuntos de filas de esquema: compatibilidad con consultas distribuidas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cab19268fe8cdc3bac7acf5ad76d64dc41a75d29
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8088334f4bc9cfd03c23af654fbef9eb478aa9a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989453"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Características de Microsoft ODBC Driver for SQL Server en Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -24,11 +23,11 @@ ms.locfileid: "66797756"
     
 ## <a name="microsoft-odbc-driver-131-for-sql-server-on-windows"></a>Microsoft ODBC Driver 13.1 for SQL Server en Windows
 
-El controlador ODBC 13.1 para SQL Server contiene toda la funcionalidad de la versión anterior (11) y agrega compatibilidad para la autenticación de Always Encrypted y Azure Active Directory cuando se usa junto con Microsoft SQL Server 2016.  
+El controlador ODBC 13,1 para SQL Server contiene toda la funcionalidad de la versión anterior (11) y agrega compatibilidad con la autenticación de Always Encrypted y Azure Active Directory cuando se usa junto con Microsoft SQL Server 2016.  
   
 Always Encrypted permite a los clientes cifrar datos confidenciales en aplicaciones de cliente y nunca revelar las claves de cifrado en SQL Server. Un controlador habilitado para Always Encrypted instalado en el equipo cliente consigue esto al cifrar y descifrar automáticamente los datos confidenciales en la aplicación cliente de SQL Server. El controlador cifra los datos en columnas confidenciales antes de pasar los datos a SQL Server y vuelve a escribir las consultas automáticamente para que se conserve la semántica de la aplicación. De forma similar, el controlador descifra de forma transparente los datos almacenados en columnas de base de datos cifradas que se incluyen en los resultados de la consulta. Para obtener más información, vea [Uso de Always Encrypted con ODBC Driver](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md).
  
-Azure Active Directory permite a los usuarios, DBA y los programadores de aplicaciones usar la autenticación de Azure Active Directory como un mecanismo de conexión a Microsoft Azure SQL Database y Microsoft SQL Server 2016 mediante identidades de Azure Active Directory (Azure AD ). Para obtener más información, consulte [mediante Azure Active Directory con el controlador ODBC](../../../connect/odbc/using-azure-active-directory.md), y [conectarse a SQL Database o SQL Data Warehouse por usar Azure Active Directory autenticación](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
+Azure Active Directory permite a los programadores de usuarios, DBA y aplicaciones usar la autenticación de Azure Active Directory como un mecanismo de conexión a Microsoft Azure SQL Database y Microsoft SQL Server 2016 mediante identidades en Azure Active Directory (Azure AD ). Para obtener más información, vea [usar Azure Active Directory con el controlador ODBC](../../../connect/odbc/using-azure-active-directory.md)y [conectarse a SQL Database o SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)mediante la autenticación de Azure Active Directory.   
   
 ## <a name="microsoft-odbc-driver-11-for-sql-server-on-windows"></a>Microsoft® ODBC Driver 11 for SQL Server® en Windows  
 
@@ -36,7 +35,7 @@ ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con
   
 Esta versión de ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contiene las siguientes características nuevas:  
   
-### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>opción -l de bcp.exe para especificar un tiempo de espera de inicio de sesión
+### <a name="bcpexe--l-option-for-specifying-a-login-timeout"></a>BCP. exe-l opción para especificar un tiempo de espera de inicio de sesión
  
 La opción -l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión de `bcp.exe` en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp.exe` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito. Un tiempo de espera de inicio de sesión de menos de 10 segundos (aproximadamente) no resulta confiable.  
   
@@ -51,11 +50,11 @@ Para garantizar que las aplicaciones permanecen conectadas a una base de datos S
   
 ## <a name="behavior-changes"></a>Cambios de comportamiento
 
-En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, el `-y0` opción `sqlcmd.exe` hace que la salida se trunque en 1 MB si el ancho de pantalla era 0.
+En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, la `-y0` opción para `sqlcmd.exe` provocar que la salida se trunque en 1 MB si el ancho de pantalla era 0.
   
 A partir de la versión ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], no existe ningún límite en la cantidad de datos que se pueden recuperar en una sola columna al especificar `-y0`. `sqlcmd.exe` ahora transmite columnas de hasta 2 GB (tamaño máximo del tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
-Otra diferencia es que si se especifica tanto `-h` y `-y0` ahora produce un error que informa de que las opciones son incompatibles. `-h`, que especifica el número de filas que se van a imprimir entre los encabezados de columna y que nunca ha sido compatible con `-y0`, se omitía, aunque no se imprimiera ningún encabezado.
+Otra diferencia es que la especificación `-h` de y `-y0` ahora genera un error que informa de que las opciones son incompatibles. `-h`, que especifica el número de filas que se van a imprimir entre los encabezados de columna y que nunca ha sido compatible con `-y0`, se omitía, aunque no se imprimiera ningún encabezado.
   
 Tenga en cuenta que `-y0` puede provocar problemas de rendimiento tanto en el servidor como en la red, en función del tamaño de los datos devueltos.
 

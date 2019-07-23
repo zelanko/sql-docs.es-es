@@ -1,5 +1,5 @@
 ---
-title: Miembros SQLServerConnectionPoolDataSource | Microsoft Docs
+title: Miembros de SQLServerConnectionPoolDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ca125846062a77b19c324a50f9ed13c528f1e051
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c1b930c13856dd6c0e0945c82364e811730ed236
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971593"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>Miembros SQLServerConnectionPoolDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "66800589"
 |[getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)|(Se hereda de [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Devuelve el valor de la propiedad de conexión **multiSubnetFailover**.|  
 |[getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)|Intenta establecer una conexión a bases de datos físicas que se pueda utilizar como una conexión agrupada.|  
 |[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)|(Se hereda de [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Devuelve el número de puerto actual que se utiliza para comunicar con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|Devuelve una referencia a este objeto de origen de datos.|  
+|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|Devuelve una referencia a este objeto DataSource.|  
 |[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|(Se hereda de [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Devuelve el tipo de cursor predeterminado que se utiliza para todos los conjuntos de resultados que se crean con el objeto DataSource.|  
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|(Se hereda de [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Devuelve un valor **Boolean** que indica si está habilitado el envío de parámetros de tipo String al servidor en formato UNICODE.|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|(Se hereda de [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Devuelve el nombre del equipo que está ejecutando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 39183d699bfa27430a35012d353b8f3bc70d6be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034774"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lección 1: Navegación básica en el Asistente para la optimización de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,25 +35,25 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio, ac
 Aquí encontrará instrucciones para restaurar bases de datos en SSMS: [Restaurar una base de datos](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
 
   >[!NOTE]
-  > Este tutorial está pensado para un usuario familiarizado con el uso de SQL Server Management Studio y las tareas de administración de base de datos básica. 
+  > Este tutorial está destinado a un usuario familiarizado con el uso de SQL Server Management Studio y tareas básicas de administración de bases de datos. 
   
 
 ## <a name="launch-database-tuning-advisor"></a>Inicio del Asistente para la optimización de motor de base de datos 
 Para empezar, abra la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos (DTA). La primera vez que se usa, un miembro del rol fijo de servidor **sysadmin** debe iniciar el Asistente para la optimización de motor de base de datos para inicializar la aplicación. Tras la inicialización, los miembros del rol fijo de base de datos **db_owner** pueden usar el asistente para optimizar bases de datos de su propiedad. Para obtener más información sobre cómo inicializar el Asistente para la optimización de motor de base de datos, consulte [Iniciar y usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-1. Inicie SQL Server Management Studio (SSMS). En el Windows **menú Inicio**, apunte a **todos los programas** y busque **SQL Server Management Studio**. 
-2. Una vez abierto SSMS, seleccione el **herramientas** menú y seleccione **Database Tuning Advisor**. 
+1. Inicie SQL Server Management Studio (SSMS). En el **menú Inicio**de Windows, seleccione **todos los programas** y busque **SQL Server Management Studio**. 
+2. Una vez que SSMS está abierto, seleccione el menú **herramientas** y seleccione Asistente para la **optimización de bases de datos**. 
 
   ![iniciar DTA desde SSMS](media/dta-tutorials/launch-dta.png)
 
-3. Lanzamientos de Asistente para la optimización de base de datos y se abre el **conectar al servidor** cuadro de diálogo. Compruebe la configuración predeterminada y, a continuación, seleccione **Connect** para conectarse a SQL Server.  
+3. Se inicia el Asistente para la optimización de bases de datos y abre el cuadro de diálogo **conectar al servidor** . Compruebe la configuración predeterminada y, a continuación, seleccione **conectar** para conectarse a la SQL Server.  
   
 De manera predeterminada, el Asistente para la optimización de motor de base de datos abre la configuración que muestra la ilustración siguiente:  
   
 ![Ventana predeterminada del Asistente para la optimización del motor de base de datos](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> El **Monitor de sesión** pestaña muestra el nombre de la sesión, que es el nombre del usuario conectado y los datos actuales. 
+> La pestaña **monitor de sesión** muestra el nombre de la sesión, que es el nombre del usuario conectado y los datos actuales. 
   
 Cuando se abre por primera vez, aparecen dos paneles principales en la GUI del Asistente para la optimización de motor de base de datos.  
   
@@ -65,11 +64,11 @@ Cuando se abre por primera vez, aparecen dos paneles principales en la GUI del A
 > [!NOTE]
 > El Asistente para la optimización de motor de base de datos admite archivos XML como entrada cuando se importa un script de [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el Editor de consultas de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Para obtener más información, consulte la sección sobre cómo iniciar el Asistente para la optimización de motor de base de datos desde el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en [Iniciar y usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
   
-## <a name="configure-tool-options-and-layout"></a>Configure las opciones de herramienta y diseño 
+## <a name="configure-tool-options-and-layout"></a>Configurar las opciones y el diseño de la herramienta 
 
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
 
-   ![Opciones de DTA](media/dta-tutorials/dta-settings.png) 
+   ![Opciones DTA](media/dta-tutorials/dta-settings.png) 
   
 2.  En el cuadro de diálogo **Opciones** , observe las opciones siguientes:  
   

@@ -1,6 +1,6 @@
 ---
-title: Las tablas e índices | Microsoft Docs
-description: Crear, modificar y droping tablas e índices con el controlador de OLE DB para SQL Server
+title: Tablas e índices | Microsoft Docs
+description: Crear, modificar y quitar tablas e índices con OLE DB controlador para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8fd98f67a35985474d73225db7991aeeafb9119e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015242"
 ---
 # <a name="tables-and-indexes"></a>Tablas e índices
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "66801587"
   
  La capacidad de crear o quitar tablas e índices depende de los derechos de acceso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del usuario de la aplicación de consumidor. La eliminación de una tabla se puede restringir en mayor medida mediante la presencia de restricciones de integridad referencia declarativas u otros factores.  
   
- La mayoría de las aplicaciones destinadas a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizar SQL-DMO en lugar de estos controladores de OLE DB para las interfaces de SQL Server. SQL-DMO es una colección de objetos de OLE Automation que admite todas las funciones administrativas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las aplicaciones con destino en varios proveedores OLE DB utilizan estas interfaces OLE DB genéricas que admiten los diferentes proveedores OLE DB.  
+ La mayoría de las [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplicaciones que tienen como destino usan SQL-DMO en lugar de estas OLE DB controlador para interfaces de SQL Server. SQL-DMO es una colección de objetos de OLE Automation que admite todas las funciones administrativas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las aplicaciones con destino en varios proveedores OLE DB utilizan estas interfaces OLE DB genéricas que admiten los diferentes proveedores OLE DB.  
   
  En el conjunto de propiedades específico de proveedor DBPROPSET_SQLSERVERCOLUMN, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] define la propiedad siguiente.  
   

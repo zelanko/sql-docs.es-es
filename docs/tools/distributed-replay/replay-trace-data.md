@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8717043764d67ab16217da7beecdc7bfee6515c3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 7495e00200455be05b621124c0276d07727d58cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949954"
 ---
 # <a name="replay-trace-data"></a>Reproducir datos de seguimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "67729347"
   
  Utilice la opción **replay** de la herramienta de administración para iniciar la fase de reproducción de eventos de Distributed Replay. Esta fase consta de dos partes: la distribución de los datos de seguimiento y el inicio y sincronización de la reproducción distribuida.  
   
- ![Distributed Replay de evento](../../tools/distributed-replay/media/eventreplay.gif "distribuye la reproducción de eventos")  
+ ![Reproducción de eventos distribuidos](../../tools/distributed-replay/media/eventreplay.gif "Reproducción de eventos distribuidos")  
   
  Puede reproducir los datos de seguimiento en uno de estos dos modos de secuenciación: modo "stres" o modo "synchronization". El comportamiento predeterminado es reproducir los datos de seguimiento en modo "stress". Para obtener más información sobre la fase de reproducción de eventos y los modos de secuenciación, vea [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 257dba1d93b2a22838cf7c3c631f65a29d517157
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 28c71784f8e51600aef111649b12f81b5878b324
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916380"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>Usar una instrucción SQL para modificar objetos de la base de datos
 
@@ -27,7 +26,7 @@ Para modificar objetos de la base de datos de [!INCLUDE[ssNoVersion](../../inclu
 Para ello, primero debe crear un objeto SQLServerStatement mediante el método [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
 
 > [!NOTE]  
-> Las instrucciones SQL que modifican objetos dentro de una base de datos, se llaman instrucciones de lenguaje de definición de datos (DDL). Estas instrucciones incluyen como `CREATE TABLE`, `DROP TABLE`, `CREATE INDEX`, y `DROP INDEX`. Para obtener más información sobre los tipos de instrucciones DDL compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> Las instrucciones SQL que modifican objetos dentro de una base de datos, se llaman instrucciones de lenguaje de definición de datos (DDL). Incluyen instrucciones `CREATE TABLE`como, `DROP TABLE`, `CREATE INDEX`y. `DROP INDEX` Para obtener más información sobre los tipos de instrucciones DDL compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 En el siguiente ejemplo, se pasa a la función una conexión abierta a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)], se construye una instrucción SQL que crea el elemento TestTable simple en la base de datos y luego se ejecuta la instrucción y se muestra el valor devuelto.
 

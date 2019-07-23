@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 139bcebb2f4e92d3cc9e25a3460a6283a93fc4f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a15256be44ace579c6dcc9aa74bf55fdc319e7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129929"
 ---
 # <a name="subscribe-to-publications"></a>Suscribirse a publicaciones
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ ms.locfileid: "47635553"
   
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Proteger el suscriptor](../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Desactivación y expiración de la suscripción](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   

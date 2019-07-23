@@ -26,15 +26,14 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c072fc97536259b16938cc36dcbc21dbbbb97b57
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943383"
 ---
-# <a name="examples-using-openxml"></a>Ejemplos: Usar OPENXML
+# <a name="examples-using-openxml"></a>Ejemplos: Uso de OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Los ejemplos de este tema muestran cómo se utiliza OPENXML para crear una vista de conjunto de filas de un documento XML. Para obtener más información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Los ejemplos muestran todos los aspectos de OPENXML, pero no especifican metapropiedades en OPENXML. Para obtener más información sobre cómo especificar metapropiedades en OPENXML, vea [Especificar metapropiedades en OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
@@ -97,7 +96,7 @@ LILAS      Carlos Gonzlez
   
  Si se ejecuta la misma instrucción SELECT con el parámetro *flags* establecido en **2** para indicar una asignación centrada en elementos, puesto que los elementos <`Customer`> no disponen de subelementos, los valores de **CustomerID** y **ContactName** de ambos clientes se devuelven como NULL.  
   
- \@xmlDocument también puede ser de tipo **xml** o de tipo **(n)varchar(max)**.  
+ \@xmlDocument también puede ser de tipo **xml** o de tipo **(n)varchar(max)** .  
   
  En el documento XML, si <`CustomerID`> y <`ContactName`> son subelementos, la asignación centrada en elementos recupera los valores.  
   
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
  En *SchemaDeclaration* , en la cláusula WITH, también se especifica *ColPattern* con los parámetros *ColName* y *ColType* . El parámetro opcional *ColPattern* es el patrón XPath especificado para indicar lo siguiente:  
   
--   El patrón XPath (**.**) especificado como *ColPattern* en la columna **ProdID** del conjunto de filas identifica el nodo de contexto (nodo actual). En cuanto al valor *rowpattern* especificado, es el atributo **ProductID** del elemento <`OrderDetail`>.  
+-   El patrón XPath ( **.** ) especificado como *ColPattern* en la columna **ProdID** del conjunto de filas identifica el nodo de contexto (nodo actual). En cuanto al valor *rowpattern* especificado, es el atributo **ProductID** del elemento <`OrderDetail`>.  
   
 -   *ColPattern*, **../\@Quantity**, especificado para la columna **Qty** del conjunto de filas, identifica el atributo **Quantity** del nodo principal (`OrderDetail`) del nodo de contexto \<ProductID>.  
   
@@ -525,7 +524,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Especificar un documento XML con varios nodos de texto  
- Si dispone de varios nodos de texto en un documento XML, una instrucción SELECT con *ColPattern*, **text()**, solamente devuelve el primer nodo de texto en lugar de todos. Por ejemplo:  
+ Si dispone de varios nodos de texto en un documento XML, una instrucción SELECT con *ColPattern*, **text()** , solamente devuelve el primer nodo de texto en lugar de todos. Por ejemplo:  
   
 ```  
 DECLARE @h int  
@@ -578,7 +577,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Específicamente, se está pasando una variable de tipo **xml** (\@x) a la función **sp_xml_preparedocument()**.  
+ Específicamente, se está pasando una variable de tipo **xml** (\@x) a la función **sp_xml_preparedocument()** .  
   
  El resultado es el siguiente:  
   
@@ -597,7 +596,7 @@ id  lname   xmlname                   OverFlow
   
  Tenga en cuenta las siguientes observaciones en cuanto al resultado:  
   
--   En el caso de la columna **lname** de tipo **varchar(30)**, su valor se recupera del elemento <`lname`> correspondiente.  
+-   En el caso de la columna **lname** de tipo **varchar(30)** , su valor se recupera del elemento <`lname`> correspondiente.  
   
 -   En el caso de la columna **xmlname** de tipo **xml** , se devuelve el elemento del mismo nombre como su valor.  
   

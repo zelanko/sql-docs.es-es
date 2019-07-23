@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948681"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "54125275"
   
  **Para establecer la opción sync with backup**  
   
--   Programación de la replicación [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Habilitar copias de seguridad coordinadas para la replicación transaccional &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
+-   Programación [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la replicación: [Habilitar copias de seguridad coordinadas para la replicación transaccional &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Restaurar bases de datos que participan en la replicación  
  Puede restaurar todas las bases de datos de una topología de replicación si hay copias de seguridad recientes disponibles y se siguen los pasos correctos. Los pasos de restauración de la base de datos de publicación dependen del tipo de replicación y de las opciones utilizadas. No obstante, los pasos de restauración de todas las demás bases de datos son independientes del tipo y de las opciones.  
@@ -215,7 +214,7 @@ ms.locfileid: "54125275"
   
 9. Después de la restauración, el intervalo de identidad asignado a cada tabla en la base de datos **A** también se utilizará en la base de datos **B**. Asegúrese de que la base de datos restaurada **B** haya recibido todos los cambios de la base de datos **B** que se propagaron a las bases de datos **A** y **C** y luego reinicie el intervalo de identidad para cada tabla.  
   
-    1.  Ejecute [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) en la base de datos **B** y recupere el parámetro de salida **@request_id**. Continúe en el paso b.  
+    1.  Ejecute [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) en la base de datos **B** y recupere el parámetro de salida **@request_id** . Continúe en el paso b.  
   
     2.  De forma predeterminada, el Agente de distribución está configurado para ejecutarse de forma continua, por lo que los tokens deben enviarse automáticamente a todos los nodos. Si el Agente de distribución no se está ejecutando de forma continua, ejecútelo. Para más información, vea [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) o [Iniciar y detener un Agente de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Continúe en el paso c.  
   
@@ -231,7 +230,7 @@ ms.locfileid: "54125275"
   
     1.  Detenga toda la actividad en las tablas publicadas de la topología punto a punto. Continúe en el paso b.  
   
-    2.  Ejecute [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) en la base de datos **B** y recupere el parámetro de salida **@request_id**. Continúe en el paso c.  
+    2.  Ejecute [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) en la base de datos **B** y recupere el parámetro de salida **@request_id** . Continúe en el paso c.  
   
     3.  De forma predeterminada, el Agente de distribución está configurado para ejecutarse de forma continua, por lo que los tokens deben enviarse automáticamente a todos los nodos. Si el Agente de distribución no se está ejecutando de forma continua, ejecútelo. Continúe en el paso d.  
   

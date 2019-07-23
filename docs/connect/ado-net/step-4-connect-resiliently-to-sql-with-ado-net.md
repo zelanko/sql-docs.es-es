@@ -1,5 +1,5 @@
 ---
-title: 'Paso 4: Conexión resistente a SQL con ADO.NET | Microsoft Docs'
+title: 'Paso 4: conexión resistente a SQL con ADO.NET | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -12,60 +12,59 @@ dev_langs:
 ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b3f7fc6d2d7ab6872bd7100fa51f05a9d9b957c8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a080f68497829657c60bbd96238b71123b70d87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957597"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Paso 4: Conectar la resistencia a SQL con ADO.NET
 
 - Artículo anterior:&nbsp;&nbsp;&nbsp;[Paso 3: Prueba de concepto de la conexión a SQL mediante ADO.NET](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)  
 
   
-En este tema se proporciona un ejemplo de código C# que muestra la lógica de reintento personalizada. La lógica de reintento proporciona confiabilidad. La lógica de reintento está diseñada para procesar correctamente los errores temporales o *errores transitorios* que tienden a desaparecer si el programa espera varios segundos y vuelve a intentarlo.  
+En este tema se C# proporciona un ejemplo de código que muestra la lógica de reintento personalizada. La lógica de reintento ofrece confiabilidad. La lógica de reintento está diseñada para procesar correctamente los errores *temporales o los* errores transitorios que tienden a desaparecer si el programa espera varios segundos y reintentos.  
   
 Los orígenes de errores transitorios incluyen:  
   
-- Un error breve de las funciones de red que es compatible con Internet.  
-- Un sistema en la nube podría ser el equilibrio de carga sus recursos en el momento en que se envió la consulta.  
+- Un breve error de las redes que admite Internet.  
+- Un sistema en la nube podría estar equilibrando la carga de sus recursos en el momento en que se envió la consulta.  
   
   
-Las clases de ADO.NET para conectarse a Microsoft SQL Server local también pueden conectarse a Azure SQL Database. Sin embargo, por sí mismos ADO.NET clases no pueden proporcionar la solidez y confiabilidad necesarias en su uso en producción. El programa cliente puede detectar errores transitorios del que se debe forma silenciosa y sencilla recuperarse y continuar por sí mismo.  
+Las clases ADO.NET para conectarse a su Microsoft SQL Server local también pueden conectarse a Azure SQL Database. Sin embargo, las clases ADO.NET no pueden proporcionar toda la robustez y la confiabilidad necesarias en el uso de producción. El programa cliente puede encontrar errores transitorios de los que debe recuperarse de forma silenciosa y correcta y continuar por sí solo.  
   
-## <a name="step-1-identify-transient-errors"></a>Paso 1: Identificar los errores transitorios  
+## <a name="step-1-identify-transient-errors"></a>Paso 1: identificación de errores transitorios  
   
-El programa debe distinguir entre errores transitorios frente a errores persistentes. Errores transitorios son las condiciones de error que se pueden borrar en un breve período de tiempo, como problemas de red transitorios.  Un ejemplo de un error persistente sería si el programa tiene un error ortográfico en el nombre de la base de datos de destino: en este caso, debería conservar el error "No dicha base de datos que se encuentra" y no tiene ninguna posibilidad de borrar en un breve período de tiempo.  
+El programa debe distinguir entre errores transitorios frente a errores persistentes. Los errores transitorios son condiciones de error que pueden borrarse en un breve período de tiempo, como problemas de red transitorios.  Un ejemplo de un error persistente sería si el programa tiene un error ortográfico en el nombre de la base de datos de destino; en este caso, el error "no se encontró esa base de datos" se conservaría y no tiene la posibilidad de borrar en un breve período de tiempo.  
   
-Está disponible en la lista de números de error que se clasifican como errores transitorios [mensajes de Error para las aplicaciones de cliente de base de datos SQL](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+La lista de números de error que se clasifican como errores transitorios está disponible en [los mensajes de error de las aplicaciones cliente de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
-## <a name="step-2-create-and-run-sample-application"></a>Paso 2: Crear y ejecutar la aplicación de ejemplo  
+## <a name="step-2-create-and-run-sample-application"></a>Paso 2: crear y ejecutar una aplicación de ejemplo  
   
-En este ejemplo se da por supuesto .NET Framework 4.5.1 o posterior está instalado.  El ejemplo de código de C# consta de un archivo denominado Program.cs. Su código se proporciona en la sección siguiente.  
+En este ejemplo se asume que se ha instalado .NET Framework 4.5.1 o posterior.  El C# ejemplo de código se compone de un archivo denominado Program.cs. Su código se proporciona en la sección siguiente.  
   
-### <a name="step-2a-capture-and-compile-the-code-sample"></a>Paso 2.a: capturar y compile el ejemplo de código  
+### <a name="step-2a-capture-and-compile-the-code-sample"></a>Paso 2. a: capturar y compilar el ejemplo de código  
   
 Puede compilar el ejemplo con los pasos siguientes:  
   
-1. En el [edición gratuita Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs), cree un nuevo proyecto a partir de la plantilla de aplicación de consola C#.  
-    - Archivo > Nuevo > proyecto > instalado > Plantillas > Visual C# > Windows > escritorio clásico > aplicación de consola  
-    - Denomine el proyecto **RetryAdo2**.  
+1. En la [edición gratuita de Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs), cree un nuevo proyecto a C# partir de la plantilla aplicación de consola.  
+    - Archivo > nuevo proyecto de > > instalado > Plantillas > C# aplicación de consola > de escritorio clásico de Windows > visual >  
+    - Asigne al proyecto el nombre **RetryAdo2**.  
 2. Abra el panel Explorador de soluciones.  
-    - Ver el nombre del proyecto.  
-    - Ver el nombre del archivo Program.cs.  
+    - Vea el nombre del proyecto.  
+    - Vea el nombre del archivo Program.cs.  
 3. Abra el archivo Program.cs.  
-4. Reemplazar completamente el contenido del archivo Program.cs con el código en el bloque de código siguiente.  
+4. Reemplace por completo el contenido del archivo Program.cs por el código del siguiente bloque de código.  
 5. Haga clic en el menú compilar > compilar solución.  
   
-### <a name="step-2b-copy-and-paste-sample-code"></a>Paso 2.b: copiar y pegar código de ejemplo  
+### <a name="step-2b-copy-and-paste-sample-code"></a>Paso 2. b: copiar y pegar el código de ejemplo  
   
-Pegue este código en su **Program.cs** archivo.  
+Pegue este código en el archivo **Program.CS** .  
   
-A continuación, debe editar las cadenas de nombre de servidor, contraseña y así sucesivamente. Puede encontrar estas cadenas en el método llamado **GetSqlConnectionStringBuilder**.  
+A continuación, debe modificar las cadenas para el nombre del servidor, la contraseña, etc. Puede encontrar estas cadenas en el método denominado **GetSqlConnectionStringBuilder**.  
   
-Nota: La cadena de conexión para el nombre del servidor está orientada a la base de datos de SQL Azure, ya que incluye el prefijo de cuatro caracteres de **tcp:** . Pero puede ajustar la cadena de servidor para conectarse a Microsoft SQL Server.  
+Nota: la cadena de conexión para el nombre del servidor está orientada hacia Azure SQL Database, porque incluye el prefijo de cuatro caracteres de **TCP:** . Sin embargo, puede ajustar la cadena de servidor para conectarse a su Microsoft SQL Server.  
   
   
 ```csharp
@@ -242,13 +241,13 @@ Nota: La cadena de conexión para el nombre del servidor está orientada a la ba
     }  
 ```  
   
-###  <a name="step-2c-run-the-program"></a>Paso 2.c: ejecutar el programa  
+###  <a name="step-2c-run-the-program"></a>Paso 2. c: ejecutar el programa  
   
   
-El **RetryAdo2.exe** ejecutable no entradas parámetros. Para ejecutar el archivo .exe:  
+El ejecutable **RetryAdo2. exe** no escribe ningún parámetro. Para ejecutar el archivo. exe:  
   
-1. Abra una ventana de la consola donde haya compilado el binario RetryAdo2.exe.  
-2. Ejecute RetryAdo2.exe sin parámetros de entrada.  
+1. Abra una ventana de consola donde haya compilado el archivo binario RetryAdo2. exe.  
+2. Ejecute RetryAdo2. exe sin parámetros de entrada.  
   
   
   
@@ -260,19 +259,19 @@ El **RetryAdo2.exe** ejecutable no entradas parámetros. Para ejecutar el archiv
   
   
   
-## <a name="step-3-ways-to-test-your-retry-logic"></a>Paso 3: Formas de probar la lógica de reintento  
+## <a name="step-3-ways-to-test-your-retry-logic"></a>Paso 3: formas de probar la lógica de reintento  
   
-Hay una gran variedad de formas puede simular un error transitorio para probar la lógica de reintento.  
+Hay varias maneras de simular un error transitorio para probar la lógica de reintento.  
   
   
-###  <a name="step-3a-throw-a-test-exception"></a>Paso 3.a: producir una excepción de prueba  
+###  <a name="step-3a-throw-a-test-exception"></a>Paso 3. a: iniciar una excepción de prueba  
   
 El ejemplo de código incluye:  
   
-- Una segunda clase pequeña denominada **TestSqlException**, con una propiedad denominada **número**.  
-- `//throw new TestSqlException(4060);` , que puede quitar el comentario.  
+- Una segunda clase pequeña denominada **TestSqlException**, con una propiedad denominada **Number**.  
+- `//throw new TestSqlException(4060);`, cuyo comentario se puede quitar.  
   
-Si quita los comentarios de la instrucción throw y vuelva a compilar, la siguiente ejecución de **RetryAdo2.exe** genera algo parecido a lo siguiente.  
+Si quita la marca de comentario de la instrucción throw y vuelve a compilar, la siguiente ejecución de **RetryAdo2. exe** genera algo parecido a lo siguiente.  
   
 ```  
     [C:\VS15\RetryAdo2\RetryAdo2\bin\Debug\]  
@@ -290,31 +289,31 @@ Si quita los comentarios de la instrucción throw y vuelva a compilar, la siguie
     >>  
 ```  
   
-###  <a name="step-3b-retest-with-a-persistent-error"></a>El paso 3.b: volver a probar con un error persistente  
+###  <a name="step-3b-retest-with-a-persistent-error"></a>Paso 3. b: reprueba con un error persistente  
   
-Para demostrar que el código controla errores persistentes correctamente, vuelva a ejecutar la prueba anterior no utilizar el número de un error transitorio real como 4060. En su lugar, use el número sin sentido 7654321. El programa debería tratarlo como un error persistente y omitir cualquier reintento.  
+Para demostrar que el código controla los errores persistentes correctamente, vuelva a ejecutar la prueba anterior, excepto no use el número de un error transitorio real como 4060. En su lugar, use el número que no sea 7654321. El programa debe tratarlo como un error persistente y debe omitir cualquier reintento.  
   
-###  <a name="step-3c-disconnect-from-the-network"></a>Paso 3.c: desconectar de la red  
+###  <a name="step-3c-disconnect-from-the-network"></a>Paso 3. c: desconexión de la red  
   
 1. Desconecte el equipo cliente de la red.  
-    - Para un equipo de escritorio, desconecte el cable de red.  
-    - Para un equipo portátil, presione la combinación de teclas para desactivar el adaptador de red de la función.  
-2. Inicie RetryAdo2.exe y espere a que la consola mostrar el primer error transitorio, probablemente 11001.  
-3. Volver a conectarse a la red mientras RetryAdo2.exe continúa ejecutándose.  
-4. Ver el éxito de informe de la consola en un reintento posterior.  
+    - Para un escritorio, desconecte el cable de red.  
+    - Para un equipo portátil, presione la combinación de funciones de teclas para desactivar el adaptador de red.  
+2. Inicie RetryAdo2. exe y espere a que la consola muestre el primer error transitorio, probablemente 11001.  
+3. Vuelva a conectarse a la red, mientras que RetryAdo2. exe continúa ejecutándose.  
+4. Observe que el informe de la consola se realizó correctamente en un reintento posterior.  
   
   
-###  <a name="step-2d-temporarily-misspell-the-server-name"></a>Paso 2.d: escribir mal temporalmente el nombre del servidor  
+###  <a name="step-2d-temporarily-misspell-the-server-name"></a>Paso 2. d: deletrear temporalmente el nombre del servidor  
   
 1. Agregue temporalmente 40615 como otro número de error a **TransientErrorNumbers**y vuelva a compilar.  
-2. Establezca un punto de interrupción en la línea: `new QC.SqlConnectionStringBuilder()`.  
-3. Use la *editar y continuar* característica para escribir mal deliberadamente el nombre del servidor, un par de líneas por debajo.  
-    - Permitir que el programa ejecute y vuelva a su punto de interrupción.  
+2. Establezca un punto de interrupción en la `new QC.SqlConnectionStringBuilder()`línea:.  
+3. Use la característica *Editar y continuar* para escribir incorrectamente el nombre del servidor, un par de líneas a continuación.  
+    - Deje que el programa se ejecute y vuelva al punto de interrupción.  
     - Se produce el error 40615.  
-4. Corrija el error ortográfico.  
-5. Deje que el programa se ejecutan y completan correctamente.  
+4. Corrija la ortografía.  
+5. Permita que el programa se ejecute y finalice correctamente.  
 6. Quite 40615 y vuelva a compilar.  
   
 ## <a name="next-steps"></a>Next Steps  
   
-Para explorar otros practicies recomendadas y directrices de diseño, visite [conectarse a SQL Database: vínculos, prácticas recomendadas y directrices de diseño](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Para explorar otras prácticas recomendadas y directrices de diseño, visite [conexión a SQL Database: vínculos, prácticas recomendadas y directrices de diseño](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

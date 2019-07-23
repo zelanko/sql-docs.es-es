@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 14ee8d172f48640f414bb27d4c600248acac99cb
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070315"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,13 +81,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > En Instancia administrada de Azure SQL Database, la auditoría de SQL funciona en el nivel de servidor y almacena archivos `.xel` en Azure Blob Storage.
   
- FILEPATH **= '**_os\_file\_path_**'**  
+ FILEPATH **= '** _os\_file\_path_ **'**  
  La ruta de acceso de la pista de auditoría. El nombre de archivo se genera en función del nombre de la auditoría y del GUID de la auditoría.  
   
- MAXSIZE **=**_max\_size_  
+ MAXSIZE **=** _max\_size_  
  Especifica el tamaño máximo que puede alcanzar el archivo de auditoría. El valor de *max_size* debe ser un entero seguido de **MB**, **GB**, **TB** o **UNLIMITED**. El tamaño mínimo que se puede especificar para *max_size* es 2 **MB** y el máximo, 2 147 483 647 **TB**. Si se especifica **UNLIMITED**, el archivo crecerá hasta que se llene el disco. Si se especifica un valor inferior a 2 MB, se produce el error MSG_MAXSIZE_TOO_SMALL. El valor predeterminado es **UNLIMITED**.  
   
- MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
  Especifica el número máximo de archivos que se deben conservar en el sistema de archivos. Si se establece MAX_ROLLOVER_FILES=0, no se impone ningún límite en cuanto al número de archivos de sustitución incremental que se crean. El valor predeterminado es 0. El número máximo de archivos que se pueden especificar es 2.147.483.647.  
   
  MAX_FILES =*integer*  
@@ -98,7 +97,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  Esta opción preasigna el archivo en el disco al valor de MAXSIZE. Solo se aplica si MAXSIZE no es igual a UNLIMITED. El valor predeterminado es OFF.  
   
- QUEUE_DELAY **=**_integer_  
+ QUEUE_DELAY **=** _integer_  
  Determina el tiempo, en milisegundos, que puede transcurrir antes de exigir que se procesen las acciones de auditoría. El valor 0 indica la entrega sincrónica. El valor mínimo que puede establecerse para la cola es 1000 (1 segundo), que es el valor predeterminado. El máximo es 2.147.483.647 (2.147.483,647 segundos, o 24 días, 20 horas, 31 minutos y 23,647 segundos). Si se especifica un número no válido, se producirá el error MSG_INVALID_QUEUE_DELAY.  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
@@ -167,7 +166,7 @@ WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="b-changing-a-server-audit-target"></a>b. Cambiar el destino de una auditoría de servidor  
+### <a name="b-changing-a-server-audit-target"></a>B. Cambiar el destino de una auditoría de servidor  
  En el ejemplo siguiente se cambia la auditoría de servidor denominada `HIPAA_Audit` a un destino de archivo.  
   
 ```  

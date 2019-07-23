@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67aad831c3e5a98817af9ecd34b17501089a1609
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127115"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar el Asistente para copiar bases de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ El Asistente para copiar bases de datos permite mover o copiar bases de datos y 
 -    Transferir trabajos del Agente SQL Server que hacen referencia a bases de datos que todavía no existen en el servidor de destino producirá un error en toda la operación.  El Asistente intenta crear un trabajo del Agente SQL Server antes de crear la base de datos.  Solución alternativa:
      1. Cree una base de datos de shell en el servidor de destino con el mismo nombre que el de la base de datos que se va a copiar o mover.  Vea [Crear una base de datos](../../relational-databases/databases/create-a-database.md).
      
-     2. De la página **Configurar base de datos de destino** , seleccione **Quitar cualquier base de datos del servidor de destino que tenga el mismo nombre y continuar con la transferencia (sobrescribiendo los archivos de base de datos existentes)**.
+     2. De la página **Configurar base de datos de destino** , seleccione **Quitar cualquier base de datos del servidor de destino que tenga el mismo nombre y continuar con la transferencia (sobrescribiendo los archivos de base de datos existentes)** .
 
 > **IMPORTANTE:** El método de **separar y adjuntar** hará que la propiedad de base de datos de origen y de destino llegue a establecerse en el inicio de sesión que ejecuta el **Asistente para copiar bases de datos**.  Vea [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md) para cambiar la propiedad de una base de datos.
   
@@ -99,7 +98,7 @@ El Asistente para copiar bases de datos permite mover o copiar bases de datos y 
   
 
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Debe ser miembro del rol fijo de servidor **sysadmin** tanto en el servidor de origen como en el servidor de destino.  
   
 ##  <a name="Overview"></a> Las páginas del Asistente para copiar bases de datos 
@@ -302,7 +301,7 @@ Independientemente de si elige **Mover** o **Copiar**, **Separar y adjuntar** o 
 
 1.  En el **Explorador de objetos**, conéctese a una instancia del Motor de base de datos de SQL Server y expándala.
 
-2.  Expanda **Bases de datos**, haga clic con el botón derecho en la base de datos deseada, seleccione **Tareas**y, después, haga clic en **Copiar base de datos...**.
+2.  Expanda **Bases de datos**, haga clic con el botón derecho en la base de datos deseada, seleccione **Tareas**y, después, haga clic en **Copiar base de datos...** .
 
 3.  Si aparece la página inicial **Asistente para copiar bases de datos** , haga clic en **Siguiente**.
 
@@ -321,9 +320,9 @@ En el siguiente ejemplo se moverá la base de datos `Sales` , un inicio de sesi�
   
 8.  Página **Seleccionar bases de datos**: active la casilla **Mover** para la base de datos deseada, `Sales`.  Haga clic en **Siguiente**.
   
-9.  Página **Configurar base de datos de destino**:  el **Asistente** ha identificado que `Sales` ya existe en el servidor de destino, como se ha creado en el **paso 6** anterior, y ha anexado `_new` al nombre de la **base de datos de destino**.  Elimine `_new` del cuadro de texto **Base de datos de destino** .  Si quiere, puede cambiar el **nombre de archivo**y la **carpeta de destino**.  Seleccione **Quitar cualquier base de datos del servidor de destino que tenga el mismo nombre y continuar con la transferencia (sobrescribiendo los archivos de base de datos existentes)**.  Haga clic en **Siguiente**.
+9.  Página **Configurar base de datos de destino**:  el **Asistente** ha identificado que `Sales` ya existe en el servidor de destino, como se ha creado en el **paso 6** anterior, y ha anexado `_new` al nombre de la **base de datos de destino**.  Elimine `_new` del cuadro de texto **Base de datos de destino** .  Si quiere, puede cambiar el **nombre de archivo**y la **carpeta de destino**.  Seleccione **Quitar cualquier base de datos del servidor de destino que tenga el mismo nombre y continuar con la transferencia (sobrescribiendo los archivos de base de datos existentes)** .  Haga clic en **Siguiente**.
   
-10. Página **Seleccionar los objetos de servidor**: en el panel **Objetos relacionados seleccionados:**, haga clic en el botón de puntos suspensivos de **Object name Logins** (Inicios de sesión del nombre de objeto).  En **Opciones de copia** , seleccione **Copiar solo los inicios de sesión seleccionados:**.  Active el cuadro de **Mostrar todos los inicios de sesión del servidor**.  Active el cuadro de **Inicio de sesión** para `contoso\Jennie`.  Haga clic en **Aceptar**.  En el panel **Objetos relacionados disponibles:** , seleccione **Trabajos del Agente SQL Server** y, después, haga clic en el botón **>** .  En el panel **Objetos relacionados seleccionados:** , haga clic en el botón de puntos suspensivos de **Trabajos del Agente SQL Server**.  En **Opciones de copia** , seleccione **Copiar solo los trabajos seleccionados:**.  Active el cuadro de `Jennie's Report`.  Haga clic en **Aceptar**.  Haga clic en **Siguiente**.  
+10. Página **Seleccionar los objetos de servidor**: en el panel **Objetos relacionados seleccionados:** , haga clic en el botón de puntos suspensivos de **Object name Logins** (Inicios de sesión del nombre de objeto).  En **Opciones de copia** , seleccione **Copiar solo los inicios de sesión seleccionados:** .  Active el cuadro de **Mostrar todos los inicios de sesión del servidor**.  Active el cuadro de **Inicio de sesión** para `contoso\Jennie`.  Haga clic en **Aceptar**.  En el panel **Objetos relacionados disponibles:** , seleccione **Trabajos del Agente SQL Server** y, después, haga clic en el botón **>** .  En el panel **Objetos relacionados seleccionados:** , haga clic en el botón de puntos suspensivos de **Trabajos del Agente SQL Server**.  En **Opciones de copia** , seleccione **Copiar solo los trabajos seleccionados:** .  Active el cuadro de `Jennie's Report`.  Haga clic en **Aceptar**.  Haga clic en **Siguiente**.  
   
 11. Página **Ubicación de los archivos de base de datos de origen**:  haga clic en el botón de puntos suspensivos de **Recurso compartido de archivos en el servidor de origen** y vaya a la ubicación de la carpeta especificada.  Por ejemplo, la ubicación de la carpeta `D:\MSSQL13.MSSQLSERVER\MSSQL\DATA` usa `\\Server1\D$\MSSQL13.MSSQLSERVER\MSSQL\DATA` para **Recurso compartido de archivos en el servidor de origen**.  Haga clic en **Siguiente**.
   
@@ -366,7 +365,7 @@ En este ejemplo, la base de datos `Sales` se copiará y creará como `SalesCopy`
 
 7.  Página **Seleccionar bases de datos**: active la casilla **Copiar** para la base de datos `Sales`.  Haga clic en **Siguiente**.
 
-8.  Página **Configurar base de datos de destino**: Cambie el nombre de la **base de datos de destino** por `SalesCopy`.  Si quiere, puede cambiar el **nombre de archivo**y la **carpeta de destino**.  Seleccione **Quitar cualquier base de datos del servidor de destino que tenga el mismo nombre y continuar con la transferencia (sobrescribiendo los archivos de base de datos existentes)**.  Haga clic en **Siguiente**.
+8.  Página **Configurar base de datos de destino**: Cambie el nombre de la **base de datos de destino** por `SalesCopy`.  Si quiere, puede cambiar el **nombre de archivo**y la **carpeta de destino**.  Seleccione **Quitar cualquier base de datos del servidor de destino que tenga el mismo nombre y continuar con la transferencia (sobrescribiendo los archivos de base de datos existentes)** .  Haga clic en **Siguiente**.
 
 9.  Página **Configurar el paquete**:  en el cuadro de texto **Nombre del paquete:** escriba `SalesCopy Weekly Refresh`.  Active la casilla de **¿Quiere guardar registros de transferencia?** .  Haga clic en **Siguiente**.
 

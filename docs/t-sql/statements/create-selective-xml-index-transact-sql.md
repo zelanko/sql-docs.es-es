@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d24a66ce59b3908a04e3ab7719265fbef3c96f58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30b70c57d90f7772368713ac378c809a3dd7c46e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117197"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREAR ÍNDICE XML SELECTIVO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -112,9 +111,9 @@ identifier
  *xml_column_name*  
  Es el nombre de la columna XML que contiene las rutas de acceso que se van a indizar.  
   
- [WITH XMLNAMESPACES **(**\<lista_de_espacios_de _nombres_xml>**)**] Es la lista de espacios de nombres usados por las rutas de acceso al índice. Para obtener información sobre la sintaxis de la cláusula WITH XMLNAMESPACES, vea [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<lista_de_espacios_de _nombres_xml> **)** ] Es la lista de espacios de nombres usados por las rutas de acceso al índice. Para obtener información sobre la sintaxis de la cláusula WITH XMLNAMESPACES, vea [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- FOR **(**\<lista_de_rutas_de_acceso_de_nodos_promocionados>**)** Es la lista de rutas de acceso que se va a indexar con sugerencias opcionales de optimización. Para obtener información sobre las rutas de acceso y las sugerencias de optimización que se pueden especificar en la instrucción CREATE o ALTER, vea [Especificación de rutas de acceso y sugerencias de optimización para índices XML selectivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+ FOR **(** \<lista_de_rutas_de_acceso_de_nodos_promocionados> **)** Es la lista de rutas de acceso que se va a indexar con sugerencias opcionales de optimización. Para obtener información sobre las rutas de acceso y las sugerencias de optimización que se pueden especificar en la instrucción CREATE o ALTER, vea [Especificación de rutas de acceso y sugerencias de optimización para índices XML selectivos](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
  WITH *\<opciones_de_índice>* Para obtener información sobre las opciones de índice, vea [CREATE XML INDEX &#40;índices XML selectivos&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   

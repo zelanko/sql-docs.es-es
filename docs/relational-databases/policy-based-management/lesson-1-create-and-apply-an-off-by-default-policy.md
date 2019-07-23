@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: fd8f7ff879e3e5a6ec2729abce4c294f69ad2c83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087108"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Lección 1: Creación y aplicación de una directiva Desactivado de forma predeterminada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio y a
   
 2.  En el cuadro de diálogo **Crear nueva condición** , en el cuadro **Nombre** , escriba **Correo desactivado**.   
     1. En el cuadro **Faceta** , confirme que está seleccionada la faceta **Configuración de área expuesta** .
-    1. En el cuadro de diálogo **Expresión** , en el cuadro **Campo** , seleccione **@DatabaseMailEnabled**, en el cuadro **Operador** seleccione **=** y en **Valor** seleccione **False**.  
+    1. En el cuadro de diálogo **Expresión** , en el cuadro **Campo** , seleccione **@DatabaseMailEnabled** , en el cuadro **Operador** seleccione **=** y en **Valor** seleccione **False**.  
     1. En la página **Descripción** , escriba la descripción de la condición y luego haga clic en **Aceptar** para crear la condición.  
 
     ![Condición Correo desactivado](Media/lesson-1-create-and-apply-an-off-by-default-policy/mail-off-condition.png) 
@@ -91,7 +90,7 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio y a
 
    
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 2: Creación y aplicación de una directiva de normas de denominación](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
+[Lección 2: Creación y aplicación de una directiva de normas de denominación](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   
   

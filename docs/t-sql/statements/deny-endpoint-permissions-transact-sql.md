@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b2599cd81950f20b8f1771e5508318955fd8eb80
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114849"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY (permisos de extremo de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  Especifica un permiso que se puede denegar en un extremo. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- ON ENDPOINT **::**_endpoint_name_  
- Especifica el extremo en el que se va a denegar el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ ON ENDPOINT **::** _endpoint_name_  
+ Especifica el extremo en el que se va a denegar el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  TO \<server_principal>  
  Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se va a denegar el permiso.  
@@ -105,7 +104,7 @@ DENY VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;
 GO  
 ```  
   
-### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>b. Denegar el permiso TAKE OWNERSHIP con la opción CASCADE  
+### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. Denegar el permiso TAKE OWNERSHIP con la opción CASCADE  
  En el siguiente ejemplo se deniega el permiso `TAKE OWNERSHIP` para el extremo `Shipping83` al usuario `PKomosinski` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a las entidades de seguridad a las que `PKomosinski` concedió `TAKE OWNERSHIP`.  
   
 ```  

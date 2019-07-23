@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ba08b2273102d43eed26d7b383a285d6568a63d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022198"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ SESSIONPROPERTY (option)
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|ANSI_NULLS|Especifica si se aplica el comportamiento conforme a ISO de iguales (=) y No iguales a (<>) cuando se utilizan con valores null.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
-|ANSI_PADDING|Controla el modo en que la columna almacena valores más cortos que el tamaño que tiene definido y cómo almacena valores con espacios en blanco finales en los datos binarios y de caracteres.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
-|ANSI_WARNINGS|Especifica si se aplica el comportamiento del estándar ISO de provocar mensajes de error o advertencias para ciertas condiciones, incluyendo los errores de división por 0 y de desbordamiento.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
-|ARITHABORT|Determina si se cancela una consulta cuando se produce un error de desbordamiento o división por cero durante su ejecución.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
-|CONCAT_NULL_YIELDS_ NULL|Determina si los resultados de la concatenación se tratan como valores NULL o como valores de cadena vacía.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
-|NUMERIC_ROUNDABORT|Especifica si se generan mensajes de error y advertencias cuando el redondeo en una expresión provoca una pérdida de precisión.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
-|QUOTED_IDENTIFIER|Especifica si las reglas de ISO en cuanto a si hay que seguir las comillas delimitadoras de identificadores y cadenas literales.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
+|ANSI_NULLS|Especifica si se aplica el comportamiento conforme a ISO de iguales (=) y No iguales a (<>) cuando se utilizan con valores null.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
+|ANSI_PADDING|Controla el modo en que la columna almacena valores más cortos que el tamaño que tiene definido y cómo almacena valores con espacios en blanco finales en los datos binarios y de caracteres.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
+|ANSI_WARNINGS|Especifica si se aplica el comportamiento del estándar ISO de provocar mensajes de error o advertencias para ciertas condiciones, incluyendo los errores de división por 0 y de desbordamiento.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
+|ARITHABORT|Determina si se cancela una consulta cuando se produce un error de desbordamiento o división por cero durante su ejecución.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
+|CONCAT_NULL_YIELDS_ NULL|Determina si los resultados de la concatenación se tratan como valores NULL o como valores de cadena vacía.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
+|NUMERIC_ROUNDABORT|Especifica si se generan mensajes de error y advertencias cuando el redondeo en una expresión provoca una pérdida de precisión.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
+|QUOTED_IDENTIFIER|Especifica si las reglas de ISO en cuanto a si hay que seguir las comillas delimitadoras de identificadores y cadenas literales.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |\<Cualquier otra cadena>|NULL = La entrada no es válida.|  
   
 ## <a name="return-types"></a>Tipos devueltos  

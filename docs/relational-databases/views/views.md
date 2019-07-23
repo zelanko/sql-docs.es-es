@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9209682962a974e7a8ff6ef6419517416d399d8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 48614fa846903b2104ee27f00dc57cc154adef92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131993"
 ---
 # <a name="views"></a>Vistas
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "51661894"
 |Describe cómo devolver información acerca de una vista, como la definición de la vista.|[Obtener información sobre una vista](../../relational-databases/views/get-information-about-a-view.md)|  
 |Describe cómo cambiar el nombre de una vista.|[Cambiar el nombre de las vistas](../../relational-databases/views/rename-views.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear vistas sobre columnas XML](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
   

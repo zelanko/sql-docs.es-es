@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 177ef5d128bc14ee112e2b0a19e05a10f174bbc9
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 8cb3c1c0eba5c39083b6a6b39b4040639909808c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101975"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ DBCC CLEANTABLE
  Suprime todos los mensajes de información.  
   
 ## <a name="remarks"></a>Notas  
-DBCC CLEANTABLE recupera el espacio que deja una columna de longitud variable quitada. Una columna de longitud variable puede tener uno de los siguientes tipos de datos: **varchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **varbinary**, **varbinary(max)**, **text**, **ntext**, **image**, **sql_variant** y **xml**. El comando no recupera espacio después de que se haya quitado una columna de longitud fija.
+DBCC CLEANTABLE recupera el espacio que deja una columna de longitud variable quitada. Una columna de longitud variable puede tener uno de los siguientes tipos de datos: **varchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **varbinary**, **varbinary(max)** , **text**, **ntext**, **image**, **sql_variant** y **xml**. El comando no recupera espacio después de que se haya quitado una columna de longitud fija.
 Si las columnas quitadas estuvieran almacenadas de manera consecutiva, DBCC CLEANTABLE recupera espacio de la unidad de asignación IN_ROW_DATA de la tabla. Si estuvieran almacenadas de manera no consecutiva, se recupera espacio de la unidad de asignación ROW_OVERFLOW_DATA o LOB_DATA en función del tipo de datos de la columna quitada. Si al recuperar espacio de una página ROW_OVERFLOW_DATA o LOB_DATA se crea una página vacía, DBCC CLEANTABLE la quita.
 DBCC CLEANTABLE se ejecuta como una o varias transacciones. Si no se especifica un tamaño de proceso por lotes, el comando procesa toda la tabla en una transacción y la tabla se bloquea en modo exclusivo durante la operación. Para algunas tablas grandes, la longitud de una transacción y el espacio de registro necesario puede ser muy grande. Si se especifica un tamaño de proceso por lotes, el comando se ejecuta en una serie de transacciones; cada una de ellas incluye el número de filas especificado. DBCC CLEANTABLE no se puede ejecutar como una transacción dentro de otra transacción.
 Esta operación se registra por completo.
@@ -95,7 +94,7 @@ WITH NO_INFOMSGS;
 GO  
 ```  
   
-### <a name="b-using-dbcc-cleantable-and-verifying-results"></a>b. Usar DBCC CLEANTABLE y comprobar los resultados  
+### <a name="b-using-dbcc-cleantable-and-verifying-results"></a>B. Usar DBCC CLEANTABLE y comprobar los resultados  
 En el ejemplo siguiente se crea y llena una tabla con varias columnas de longitud variable. Después se quitan dos columnas y se ejecuta DBCC CLEANTABLE para recuperar el espacio sin usar. Se ejecuta una consulta para comprobar los valores del recuento de páginas y el espacio ocupado antes y después de ejecutar el comando DBCC CLEANTABLE.
   
 ```sql  

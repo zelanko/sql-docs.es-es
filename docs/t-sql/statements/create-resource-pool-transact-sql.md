@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2f33399282eb92cd2fbdb2a0a57befcf362379d1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 42e114c1d3f884c40ce47edca84261c2582d8576
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117332"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ Adjunte el grupo de recursos de servidor a los programadores específicos. El va
   
 AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** asigna el grupo de recursos a las programaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indicadas por los identificadores especificados. Estos identificadores se asignan a los valores de la columna scheduler_id de [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
   
-Cuando se usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)**, se establece afinidad entre el grupo de recursos y los programadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se asignan a las CPU físicas correspondientes al nodo o al intervalo de nodos NUMA especificado. Puede usar la siguiente consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] para detectar la asignación entre la configuración física de NUMA y los identificadores de programador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+Cuando se usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , se establece afinidad entre el grupo de recursos y los programadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se asignan a las CPU físicas correspondientes al nodo o al intervalo de nodos NUMA especificado. Puede usar la siguiente consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] para detectar la asignación entre la configuración física de NUMA y los identificadores de programador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
 ```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  

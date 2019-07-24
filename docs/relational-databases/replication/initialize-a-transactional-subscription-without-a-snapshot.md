@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03931adbcd8de462f9562cc35083f080aabd7e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe907a62279c819c227772d70008ee96d172e229
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127889"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar una suscripción transaccional sin una instantánea
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47719943"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Habilitar la inicialización con una copia de seguridad para las publicaciones transaccionales &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
--   Programación de la replicación con Transact-SQL: [Inicializar una suscripción transaccional a partir de un copia de seguridad &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
+-   Programación de la replicación con Transact-SQL: [Inicializar una suscripción transaccional desde una copia de seguridad &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
 >  Si una suscripción se inicializa sin una instantánea, la cuenta con la que se ejecuta el servicio SQL Server en el publicador debe contar con permisos de escritura en la carpeta de instantáneas en el distribuidor. Para obtener más información sobre los permisos, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -76,7 +75,7 @@ ms.locfileid: "47719943"
   
  Para inicializar una suscripción con un método alternativo, vea [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Inicializar una suscripción](../../relational-databases/replication/initialize-a-subscription.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Los proveedores de almacén de claves personalizado | Microsoft Docs
+title: Proveedores de almacén de claves personalizado | Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
@@ -9,23 +9,22 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
-manager: jroth
 author: MightyPen
-ms.openlocfilehash: 84e729cd60a28ff8a58760bd3810ec538a327007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cf2946517be732094d01ff9889faf080a36e85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006500"
 ---
 # <a name="custom-keystore-providers"></a>Proveedores de almacén de claves personalizados
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>Información general
 
-La característica de cifrado de columna de SQL Server 2016 requiere que el cifrado columna claves de cifrado (ECEKs) almacenadas en el servidor se recuperados por el cliente y, a continuación, se descifran a claves de cifrado de columna (las CEK) para tener acceso a los datos almacenados en columnas cifradas. ECEKs se cifran mediante claves maestras de columna (CMK) y la seguridad de la CMK es importante para la seguridad del cifrado de columna. Por lo tanto, la CMK se debe almacenar en una ubicación segura; el propósito de un proveedor de almacén de claves de cifrado de columna es proporcionar una interfaz para permitir que el controlador ODBC acceder a ellos de forma segura almacenados CMK. Para los usuarios con su propio almacenamiento seguro, la interfaz del proveedor de almacén de claves personalizado proporciona un marco para implementar el acceso para proteger el almacenamiento de la CMK para el controlador ODBC, que, a continuación, se puede usar para realizar la CEK cifrado y descifrado.
+La característica de cifrado de columnas de SQL Server 2016 requiere que el cliente recupere las claves de cifrado de columnas cifradas (ECEKs) que se almacenan en el servidor y que, a continuación, se descifren en las claves de cifrado de columnas (las CEK) para tener acceso a los datos almacenados en columnas cifradas. ECEKs se cifran mediante claves maestras de columna (CMK) y la seguridad de CMK es importante para la seguridad del cifrado de columnas. Por lo tanto, el CMK debe almacenarse en una ubicación segura. el propósito de un proveedor de almacén de claves de cifrado de columnas es proporcionar una interfaz para permitir que el controlador ODBC tenga acceso a estos CMK almacenados de forma segura. Para los usuarios con su propio almacenamiento seguro, la interfaz del proveedor de almacén de claves personalizado proporciona un marco para implementar el acceso al almacenamiento seguro de CMK para el controlador ODBC, que se puede usar para realizar el cifrado y descifrado de CEK.
 
-Cada proveedor de almacén de claves contiene y administra uno o más CMK, que se identifica mediante rutas de acceso de claves: las cadenas de formato definido por el proveedor. Esto, junto con el algoritmo de cifrado también una cadena definida por el proveedor, puede utilizarse para realizar el cifrado de una CEK y el descifrado de una ECEK. El algoritmo, junto con ECEK y el nombre del proveedor, se almacenan en los metadatos de cifrado de la base de datos; consulte [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) y [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) para obtener más información. Por lo tanto, son las dos operaciones fundamentales de administración de claves:
+Cada proveedor de almacén de claves contiene y administra uno o más CMK, que se identifican mediante rutas de acceso clave: cadenas de un formato definido por el proveedor. Esto, junto con el algoritmo de cifrado, también una cadena definida por el proveedor, se puede usar para realizar el cifrado de un CEK y el descifrado de un ECEK. El algoritmo, junto con ECEK y el nombre del proveedor, se almacenan en los metadatos de cifrado de la base de datos; vea [crear clave maestra de columna](../../t-sql/statements/create-column-master-key-transact-sql.md) y [crear clave](../../t-sql/statements/create-column-encryption-key-transact-sql.md) de cifrado de columna para obtener más información. Por lo tanto, las dos operaciones fundamentales de administración de claves son:
 
 ```
 CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algorithm, ECEK)
@@ -35,13 +34,13 @@ CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algori
 ECEK = EncryptViaCEKeystoreProvider(CEKeyStoreProvider_name, Key_path, Key_algorithm, CEK)
 ```
 
-donde el `CEKeystoreProvider_name` se usa para identificar el proveedor de almacén de claves de cifrado de columna concreto (CEKeystoreProvider), y los demás argumentos se usan por el CEKeystoreProvider para cifrar o descifrar la CEK (E). El nombre y la ruta de acceso clave se proporcionan los metadatos de CMK, mientras que el algoritmo y el valor ECEK se proporcionan los metadatos de la CEK. Varios proveedores de almacén de claves pueden encontrarse junto con los proveedores integrados de forma predeterminada. Tras realizar una operación que requiere la CEK, el controlador usa los metadatos CMK para encontrar el proveedor de almacén de claves adecuado por su nombre y ejecuta su operación de descifrado, que puede expresarse como:
+`CEKeystoreProvider_name` donde se usa para identificar el proveedor de almacén de claves de cifrado de columnas específico (CEKeystoreProvider), y el CEKeystoreProvider usa los otros argumentos para cifrar o descifrar el (E) CEK. Los metadatos de CMK proporcionan el nombre y la ruta de rutas, mientras que los metadatos de CEK proporcionan el algoritmo y el valor ECEK. Pueden estar presentes varios proveedores de almacén de claves junto con los proveedores integrados predeterminados. Tras realizar una operación que requiere CEK, el controlador usa los metadatos de CMK para buscar el proveedor de almacén de claves adecuado por nombre y ejecuta su operación de descifrado, que se puede expresar de la siguiente manera:
 
 ```
 CEK = CEKeyStoreProvider_specific_decrypt(Key_path, Key_algorithm, ECEK)
 ```
 
-Aunque el controlador no tiene necesidad cifran las CEK, una herramienta de administración de claves que deba hacerlo con el fin de implementar operaciones como la creación de CMK y giro; Para ello, realiza la operación inversa:
+Aunque el controlador no tiene necesidad de cifrar las CEK, es posible que una herramienta de administración de claves tenga que hacerlo para implementar operaciones como la creación y la rotación de CMK. Esto requiere realizar la operación inversa:
 
 ```
 ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
@@ -49,11 +48,11 @@ ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
 
 ### <a name="cekeystoreprovider-interface"></a>Interfaz CEKeyStoreProvider
 
-Este documento describe en detalle la interfaz CEKeyStoreProvider. Un proveedor de almacén de claves que implementa esta interfaz se puede usar el controlador ODBC de Microsoft para SQL Server. Los implementadores de CEKeyStoreProvider pueden usar a esta guía para desarrollar proveedores de almacén de claves personalizado puede usar el controlador.
+En este documento se describe en detalle la interfaz CEKeyStoreProvider. El Microsoft ODBC Driver for SQL Server puede usar un proveedor de almacén de claves que implemente esta interfaz. Los implementadores de CEKeyStoreProvider pueden utilizar esta guía para desarrollar proveedores de almacén de claves personalizados que pueda usar el controlador.
 
-Una biblioteca de proveedor de almacén de claves ("biblioteca de proveedor") es una biblioteca de vínculos dinámicos que se puede cargar el controlador ODBC y contiene uno o varios proveedores de almacén de claves. El símbolo `CEKeystoreProvider` debe exportarse en una biblioteca de proveedor, y ser la dirección de una matriz terminada en null de punteros a `CEKeystoreProvider` estructuras, uno para cada proveedor de almacén de claves dentro de la biblioteca.
+Una biblioteca de proveedores de almacén de claves ("biblioteca de proveedores") es una biblioteca de vínculos dinámicos que puede cargar el controlador ODBC y contiene uno o más proveedores de almacén de claves. La biblioteca `CEKeystoreProvider` del proveedor debe exportar el símbolo y ser la dirección de una matriz terminada en NULL de punteros a `CEKeystoreProvider` estructuras, una para cada proveedor de almacén de claves dentro de la biblioteca.
 
-Un `CEKeystoreProvider` estructura define los puntos de entrada de un proveedor de almacén de claves único:
+Una `CEKeystoreProvider` estructura define los puntos de entrada de un único proveedor de almacén de claves:
 
 ```
 typedef struct CEKeystoreProvider {
@@ -83,114 +82,114 @@ typedef struct CEKeystoreProvider {
 
 |Nombre de campo|Descripción|
 |:--|:--|
-|`Name`|El nombre del proveedor de almacén de claves. No debe ser igual que cualquier otro proveedor de almacén de claves se cargaron previamente por el controlador o está presente en esta biblioteca. Cadena de caracteres anchos* terminada en NULL.|
+|`Name`|Nombre del proveedor de almacén de claves. No debe ser igual que cualquier otro proveedor de almacén de claves cargado previamente por el controlador o presente en esta biblioteca. Cadena de caracteres anchos* terminada en NULL.|
 |`Init`|Función de inicialización. Si no se requiere una función de inicialización, este campo puede ser null.|
-|`Read`|Proveedor de read, función. Puede ser null si no es necesario.|
-|`Write`|Función de escritura de proveedor. Requerido si lectura no es null. Puede ser null si no es necesario.|
-|`DecryptCEK`|Función ECEK descifrado. Esta función es la razón por la existencia de un proveedor de almacén de claves y no debe ser null.|
-|`EncryptCEK`|Función de cifrado de la CEK. El controlador no llama a esta función, pero se proporciona para permitir el acceso mediante programación a la creación de ECEK las herramientas de administración de claves. Puede ser null si no es necesario.|
-|`Free`|Función de finalización. Puede ser null si no es necesario.|
+|`Read`|Función read del proveedor. Puede ser null si no es necesario.|
+|`Write`|Función de escritura de proveedor. Obligatorio si Read no es NULL. Puede ser null si no es necesario.|
+|`DecryptCEK`|Función de descifrado de ECEK. Esta función es la razón por la existencia de un proveedor de almacén de claves y no debe ser null.|
+|`EncryptCEK`|Función de cifrado CEK. El controlador no llama a esta función, pero se proporciona para permitir el acceso mediante programación a la creación de ECEK mediante las herramientas de administración de claves. Puede ser null si no es necesario.|
+|`Free`|Función de terminación. Puede ser null si no es necesario.|
 
-Gratis, con la excepción de las funciones de esta interfaz todos tienen un par de parámetros, **ctx** y **onError**. El primero identifica el contexto en el que se llama a la función, mientras que se usa para notificar errores. Consulte [contextos](#context-association) y [Error Handling](#error-handling) a continuación para obtener más información.
+Con la excepción de Free, todas las funciones de esta interfaz tienen un par de parámetros, **CTX** y **OnError**. El primero identifica el contexto en el que se llama a la función, mientras que el último se usa para informar de errores. Vea [contextos](#context-association) y [control de errores](#error-handling) a continuación para obtener más información.
 
 ```
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
-Nombre de marcador de posición para una función de inicialización definido por el proveedor. El controlador llama a esta función una vez, después de un proveedor se ha cargado, pero antes del primer tiempo lo necesite para realizar el descifrado de ECEK o Read()/Write() las solicitudes. Utilice esta función para realizar cualquier inicialización que necesita. 
+Nombre del marcador de posición para una función de inicialización definida por el proveedor. El controlador llama a esta función una vez, después de que se haya cargado un proveedor, pero antes de la primera vez que lo necesita para realizar las solicitudes de descifrado ECEK o Read ()/Write (). Utilice esta función para realizar cualquier inicialización que necesite. 
 
 |Argumento|Descripción|
 |:--|:--|
-|`ctx`|[Entrada] Contexto de la operación.|
-|`onError`|[Entrada] Función de notificación de error.|
-|`Return Value`|Devolver distinto de cero para indicar el éxito o cero para indicar el error.|
+|`ctx`|Entradas Contexto de la operación.|
+|`onError`|Entradas Función de generación de informes de errores.|
+|`Return Value`|Devuelve un valor distinto de cero para indicar que se ha realizado correctamente, o cero para indicar un error.|
 
 ```
 int Read(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int *len);
 ```
 
-Nombre de marcador de posición para una función definida por el proveedor de comunicación. El controlador llama a esta función cuando la aplicación solicita para leer datos de un (anteriormente escrito-a) proveedor mediante el atributo de conexión SQL_COPT_SS_CEKEYSTOREDATA, lo que permite la aplicación lea datos arbitrarios desde el proveedor. Consulte [comunicarse con los proveedores de almacén de claves](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) para obtener más información.
+Nombre del marcador de posición para una función de comunicación definida por el proveedor. El controlador llama a esta función cuando la aplicación solicita leer datos de un proveedor (previamente escrito) mediante el atributo de conexión SQL_COPT_SS_CEKEYSTOREDATA, lo que permite a la aplicación leer datos arbitrarios del proveedor. Consulte [comunicación con proveedores de almacén de claves](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) para obtener más información.
 
 |Argumento|Descripción|
 |:--|:--|
-|`ctx`|[Entrada] Contexto de la operación.|
-|`onError`|[Entrada] Función de notificación de error.|
-|`data`|[Salida] Puntero a un búfer en el que el proveedor escribe datos en la aplicación se lee. Esto corresponde al campo de datos de la estructura CEKEYSTOREDATA.|
-|`len`|[Entrada] Puntero a un valor de longitud. Tras la entrada, se trata de la longitud máxima del búfer de datos y el proveedor no debe escribir más de * len bytes a él. Tras la devolución, debe actualizar el proveedor * len con el número de bytes escritos realmente.|
-|`Return Value`|Devolver distinto de cero para indicar el éxito o cero para indicar el error.|
+|`ctx`|Entradas Contexto de la operación.|
+|`onError`|Entradas Función de generación de informes de errores.|
+|`data`|Genere Puntero a un búfer en el que el proveedor escribe los datos que va a leer la aplicación. Esto corresponde al campo de datos de la estructura CEKEYSTOREDATA.|
+|`len`|Inout Puntero a un valor de longitud; en la entrada, esta es la longitud máxima del búfer de datos y el proveedor no debe escribir más de * Len bytes. Cuando se devuelve, el proveedor debe actualizar * Len con el número de bytes escritos realmente.|
+|`Return Value`|Devuelve un valor distinto de cero para indicar que se ha realizado correctamente, o cero para indicar un error.|
 
 ```
 int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len);
 ```
-Nombre de marcador de posición para una función definida por el proveedor de comunicación. El controlador llama a esta función cuando la aplicación solicita para escribir datos en un proveedor mediante el atributo de conexión SQL_COPT_SS_CEKEYSTOREDATA, lo que permite la aplicación escribir datos arbitrarios en el proveedor. Consulte [comunicarse con los proveedores de almacén de claves](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) para obtener más información.
+Nombre del marcador de posición para una función de comunicación definida por el proveedor. El controlador llama a esta función cuando la aplicación solicita escribir datos en un proveedor mediante el atributo de conexión SQL_COPT_SS_CEKEYSTOREDATA, lo que permite que la aplicación escriba datos arbitrarios en el proveedor. Consulte [comunicación con proveedores de almacén de claves](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) para obtener más información.
 
 |Argumento|Descripción|
 |:--|:--|
-|`ctx`|[Entrada] Contexto de la operación.|
-|`onError`|[Entrada] Función de notificación de error.|
-|`data`|[Entrada] Puntero a un búfer que contiene los datos del proveedor al leer. Esto corresponde al campo de datos de la estructura CEKEYSTOREDATA. El proveedor no debe leer más de bytes de longitud de este búfer.|
-|`len`|[Entrada] El número de bytes disponibles en los datos. Esto corresponde al campo de la estructura CEKEYSTOREDATA dataSize.|
-|`Return Value`|Devolver distinto de cero para indicar el éxito o cero para indicar el error.|
+|`ctx`|Entradas Contexto de la operación.|
+|`onError`|Entradas Función de generación de informes de errores.|
+|`data`|Entradas Puntero a un búfer que contiene los datos que el proveedor va a leer. Esto corresponde al campo de datos de la estructura CEKEYSTOREDATA. El proveedor no debe leer más de Len bytes de este búfer.|
+|`len`|Entradas Número de bytes disponibles en los datos. Esto corresponde al campo Datasize de la estructura CEKEYSTOREDATA.|
+|`Return Value`|Devuelve un valor distinto de cero para indicar que se ha realizado correctamente, o cero para indicar un error.|
 
 ```
 int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *ecek, unsigned short ecekLen, unsigned char **cekOut, unsigned short *cekLen);
 ```
-Nombre de marcador de posición para una función definida por el proveedor de descifrado de ECEK. El controlador llama a esta función para descifrar un cifrado por una CMK asociada a este proveedor en una CEK de ECEK.
+Nombre del marcador de posición para una función de descifrado de ECEK definida por el proveedor. El controlador llama a esta función para descifrar un ECEK cifrado por un CMK asociado a este proveedor en un CEK.
 
 |Argumento|Descripción|
 |:--|:--|
-|`ctx`|[Entrada] Contexto de la operación.|
-|`onError`|[Entrada] Función de notificación de error.|
-|`keyPath`|[Entrada] El valor de la [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadatos para la CMK ECEK determinado al que hace referencia. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar una CMK controlada por este proveedor.|
-|`alg`|[Entrada] El valor de la [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadatos para ECEK determinado. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar el algoritmo de cifrado usado para cifrar el ECEK determinado.|
-|`ecek`|[Entrada] Puntero a la que se va a descifrar ECEK.|
-|`ecekLen`|[Entrada] Longitud de ECEK.|
-|`cekOut`|[Salida] El proveedor deberá asignar memoria para ECEK descifrado y escribir su dirección en el puntero apuntado a cekOut. Debe ser posible liberar este bloque de memoria utilizando la [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o función (Linux/Mac) gratis. Si no hay memoria se ha asignado debido a un error o en caso contrario, el proveedor debe establecer * cekOut a un puntero nulo.|
-|`cekLen`|[Salida] El proveedor deberá escribir en la dirección cekLen apuntada a la longitud de ECEK descifrado que se ha escrito para ** cekOut.|
-|`Return Value`|Devolver distinto de cero para indicar el éxito o cero para indicar el error.|
+|`ctx`|Entradas Contexto de la operación.|
+|`onError`|Entradas Función de generación de informes de errores.|
+|`keyPath`|Entradas El valor del atributo de metadatos [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) para el CMK al que hace referencia el ECEK determinado. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar un CMK controlado por este proveedor.|
+|`alg`|Entradas El valor del atributo de metadatos del [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) para el ECEK especificado. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar el algoritmo de cifrado utilizado para cifrar el ECEK determinado.|
+|`ecek`|Entradas Puntero al ECEK que se va a descifrar.|
+|`ecekLen`|Entradas Longitud de ECEK.|
+|`cekOut`|Genere El proveedor debe asignar memoria para los ECEK descifrados y escribir su dirección en el puntero al que apunta cekOut. Debe ser posible liberar este bloque de memoria mediante la función [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o Free (Linux/Mac). Si no se asignó ninguna memoria debido a un error o de lo contrario, el proveedor debe establecer * cekOut en un puntero nulo.|
+|`cekLen`|Genere El proveedor debe escribir en la dirección a la que apunta cekLen la longitud del ECEK descifrado que ha escrito en * * cekOut.|
+|`Return Value`|Devuelve un valor distinto de cero para indicar que se ha realizado correctamente, o cero para indicar un error.|
 
 ```
 int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *cek,unsigned short cekLen, unsigned char **ecekOut, unsigned short *ecekLen);
 ```
-Nombre de marcador de posición para una función definida por el proveedor de cifrado de CEK. El controlador no llame a esta función ni exponer su funcionalidad a través de la interfaz ODBC, pero se proporciona para permitir el acceso mediante programación a la creación de ECEK las herramientas de administración de claves.
+Nombre del marcador de posición para una función de cifrado CEK definida por el proveedor. El controlador no llama a esta función ni expone su funcionalidad a través de la interfaz ODBC, pero se proporciona para permitir el acceso mediante programación a la creación de ECEK mediante las herramientas de administración de claves.
 
 |Argumento|Descripción|
 |:--|:--|
-|`ctx`|[Entrada] Contexto de la operación.|
-|`onError`|[Entrada] Función de notificación de error.|
-|`keyPath`|[Entrada] El valor de la [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadatos para la CMK ECEK determinado al que hace referencia. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar una CMK controlada por este proveedor.|
-|`alg`|[Entrada] El valor de la [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadatos para ECEK determinado. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar el algoritmo de cifrado usado para cifrar el ECEK determinado.|
-|`cek`|[Entrada] Puntero a la CEK se cifren.|
-|`cekLen`|[Entrada] Longitud de la CEK.|
-|`ecekOut`|[Salida] El proveedor deberá asignar memoria para la CEK cifrada y escribir su dirección en el puntero apuntado a ecekOut. Debe ser posible liberar este bloque de memoria utilizando la [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o función (Linux/Mac) gratis. Si no hay memoria se ha asignado debido a un error o en caso contrario, el proveedor debe establecer * ecekOut a un puntero nulo.|
-|`ecekLen`|[Salida] El proveedor deberá escribir en la dirección ecekLen apuntada a la longitud de la CEK cifrada que se ha escrito para ** ecekOut.|
-|`Return Value`|Devolver distinto de cero para indicar el éxito o cero para indicar el error.|
+|`ctx`|Entradas Contexto de la operación.|
+|`onError`|Entradas Función de generación de informes de errores.|
+|`keyPath`|Entradas El valor del atributo de metadatos [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) para el CMK al que hace referencia el ECEK determinado. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar un CMK controlado por este proveedor.|
+|`alg`|Entradas El valor del atributo de metadatos del [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) para el ECEK especificado. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar el algoritmo de cifrado utilizado para cifrar el ECEK determinado.|
+|`cek`|Entradas Puntero al CEK que se va a cifrar.|
+|`cekLen`|Entradas Longitud de CEK.|
+|`ecekOut`|Genere El proveedor debe asignar memoria para el CEK cifrado y escribir su dirección en el puntero al que apunta ecekOut. Debe ser posible liberar este bloque de memoria mediante la función [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o Free (Linux/Mac). Si no se asignó ninguna memoria debido a un error o de lo contrario, el proveedor debe establecer * ecekOut en un puntero nulo.|
+|`ecekLen`|Genere El proveedor debe escribir en la dirección a la que apunta ecekLen la longitud del CEK cifrado que ha escrito en * * ecekOut.|
+|`Return Value`|Devuelve un valor distinto de cero para indicar que se ha realizado correctamente, o cero para indicar un error.|
 
 ```
 void (*Free)();
 ```
-Nombre de marcador de posición para una función definida por el proveedor de terminación. El controlador puede llamar a esta función tras la finalización normal del proceso.
+Nombre del marcador de posición para una función de finalización definida por el proveedor. El controlador puede llamar a esta función tras la terminación normal del proceso.
 
 > [!NOTE]
-> *Cadenas de caracteres anchos son caracteres de 2 bytes (UTF-16) debido a cómo SQL Server almacena.*
+> *Las cadenas de caracteres anchos son caracteres de 2 bytes (UTF-16) debido a cómo SQL Server las almacena.*
 
 
 ### <a name="error-handling"></a>Tratamiento de errores
 
-Como es posible que se producen errores durante el procesamiento de un proveedor, se proporciona un mecanismo para permitir que se informe de errores hasta que el controlador con más detalle que un éxito/error booleano. Muchas de las funciones tienen un par de parámetros, **ctx** y **onError**, que se usan juntos para este propósito, además del valor devuelto correctos o con errores.
+A medida que se produzcan errores durante el procesamiento de un proveedor, se proporciona un mecanismo para que pueda notificar los errores de vuelta al controlador en detalles más específicos que un error o éxito booleano. Muchas de las funciones tienen un par de parámetros, **CTX** y **OnError**, que se usan juntos para este propósito, además del valor devuelto de éxito o error.
 
-El **ctx** parámetro identifica el contexto en el que se produce una operación de proveedor.
+El parámetro **CTX** identifica el contexto en el que se produce una operación de proveedor.
 
-El **onError** parámetro señala a una función de informes de errores, con el prototipo siguiente:
+El parámetro **OnError** apunta a una función de generación de informes de errores, con el prototipo siguiente:
 
 `typedef void errFunc(CEKEYSTORECONTEXT *ctx, const wchar_t *msg, ...);`
 
 |Argumento|Descripción|
 |:--|:--|
-|`ctx`|[Entrada] Para notificar el error en el contexto.|
-|`msg`|[Entrada] El mensaje de error para el informe. Cadena de caracteres anchos terminada en NULL. Para permitir que se presente la información con parámetros, esta cadena puede contener secuencias de formato para insertar el formato aceptado por el [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) función. Funcionalidad extendida se puede especificar mediante este parámetro, tal como se describe a continuación.|
-|…|[Entrada] Parámetros adicionales variadic ajustar especificadores de formato de mensaje, según corresponda.|
+|`ctx`|Entradas Contexto en el que se va a notificar el error.|
+|`msg`|Entradas Mensaje de error que se va a notificar. Cadena de caracteres anchos terminada en NULL. Para permitir que la información parametrizada esté presente, esta cadena puede contener secuencias de formato de inserción del formato aceptado por la función [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) . Este parámetro puede especificar la funcionalidad extendida, tal y como se describe a continuación.|
+|…|Entradas Parámetros variádicas adicionales para ajustar los especificadores de formato en MSG, según corresponda.|
 
-Para notificar cuando se ha producido un error, el onError de llamadas de proveedor, proporcionando el parámetro de contexto se pasa a la función de proveedor por el controlador y un mensaje de error con parámetros adicionales opcionales para dar formato. El proveedor puede llamar a esta función varias veces para enviar varios mensajes de error consecutivas en la invocación de una función de proveedor. Por ejemplo:
+Para notificar cuando se ha producido un error, el proveedor llama a OnError, proporcionando el parámetro de contexto pasado a la función de proveedor por el controlador y un mensaje de error con parámetros adicionales opcionales a los que se les va a dar formato. El proveedor puede llamar varias veces a esta función para enviar varios mensajes de error consecutivamente dentro de una invocación de función de proveedor. Por ejemplo:
 
 ```
     if (!doSomething(...))
@@ -202,18 +201,18 @@ Para notificar cuando se ha producido un error, el onError de llamadas de provee
 ```
 
 
-El `msg` parámetro normalmente es una cadena de caracteres anchos, pero las extensiones adicionales están disponibles:
+Normalmente `msg` , el parámetro es una cadena de caracteres anchos, pero hay extensiones adicionales disponibles:
 
-Pueden utilizarse mediante uno de los valores predefinidos especiales con la macro IDS_MSG, mensajes de error genéricos existentes y en un formulario localizado en el controlador. Por ejemplo, si un proveedor no puede asignar memoria, el `IDS_S1_001` se puede usar el mensaje "Error de asignación de memoria":
+Mediante el uso de uno de los valores predefinidos especiales con la macro IDS_MSG, se pueden usar los mensajes de error genéricos ya existentes y en una forma localizada en el controlador. Por ejemplo, si un proveedor no puede asignar memoria, se `IDS_S1_001` puede usar el mensaje "error de asignación de memoria":
 
 `onError(ctx, IDS_MSG(IDS_S1_001));`
 
-El error ser reconocido por el controlador, la función de proveedor debe devolver un error. Cuando esto se realiza en el contexto de una operación de ODBC, los errores registrados estará accesibles en el identificador de instrucción o la conexión a través del mecanismo de diagnóstico estándar de ODBC (`SQLError`, `SQLGetDiagRec`, y `SQLGetDiagField`).
+Para que el controlador reconozca el error, la función de proveedor debe devolver un error. Cuando esto se realiza en el contexto de una operación ODBC, los errores expuestos se volverán accesibles en el identificador de la conexión o la instrucción a través del`SQLError`mecanismo `SQLGetDiagRec`de diagnóstico `SQLGetDiagField`estándar de ODBC (, y).
 
 
 ### <a name="context-association"></a>Asociación de contexto
 
-El `CEKEYSTORECONTEXT` estructura, además de proporcionar contexto para la devolución de llamada de error, también puede utilizarse para determinar el contexto ODBC en el que se ejecuta una operación de proveedor. Esto permite a un proveedor asociar los datos a cada uno de estos contextos, por ejemplo, para implementar la configuración de cada conexión. Para este propósito, la estructura contiene punteros opacos 3 correspondiente al contexto de entorno, la conexión y la instrucción:
+La `CEKEYSTORECONTEXT` estructura, además de proporcionar el contexto para la devolución de llamada de error, también se puede usar para determinar el contexto ODBC en el que se ejecuta una operación de proveedor. Esto permite a un proveedor asociar datos a cada uno de estos contextos, por ejemplo, para implementar la configuración por conexión. Para este propósito, la estructura contiene tres punteros opacos correspondientes al entorno, la conexión y el contexto de la instrucción:
 
 ```
 typedef struct CEKeystoreContext
@@ -226,18 +225,18 @@ void *stmtCtx;
 
 |Campo|Descripción|
 |:--|:--|
-|`envCtx`|Contexto de entorno.|
-|`dbcCtx`|Contexto de conexión.|
+|`envCtx`|Contexto del entorno.|
+|`dbcCtx`|Contexto de la conexión.|
 |`stmtCtx`|Contexto de la instrucción.|
 
-Cada uno de estos contextos es un valor opaco que, mientras no es el mismo que el controlador ODBC correspondiente, se puede usar como un identificador único para el identificador: si controlar *X* está asociado con el valor de contexto *Y*, a continuación, No hay otros identificadores entorno, conexión o la instrucción que existen simultáneamente al mismo tiempo como *X* tendrá un valor de contexto de *Y*, y no se asociará ningún otro valor de contexto controlar *X*. Si está llevando a cabo la operación de proveedor no tiene un contexto de controlador determinado (por ejemplo, llamadas de SQLSetConnectAttr para cargar y configurar los proveedores, en el que no hay ningún identificador de instrucción) el correspondiente valor de contexto de la estructura es null.
+Cada uno de estos contextos es un valor opaco que, aunque no es el mismo que el identificador ODBC correspondiente, se puede usar como identificador único para el identificador: Si el identificador *X* está asociado con el valor de contexto *y*, no hay otro entorno, conexión ni los identificadores de instrucciones que existen simultáneamente al mismo tiempo que *X* tendrán un valor de *contexto de y*, y no se asociarán otros valores de contexto al identificador *X*. Si la operación del proveedor que se va a realizar no tiene un contexto de identificador determinado (por ejemplo, las llamadas de SQLSetConnectAttr para cargar y configurar proveedores, en los que no hay ningún identificador de instrucción) el valor de contexto correspondiente en la estructura es NULL.
 
 
 ## <a name="example"></a>Ejemplo
 
 ### <a name="keystore-provider"></a>Proveedor de almacén de claves
 
-El código siguiente es un ejemplo de una implementación de proveedor de almacén de claves mínima.
+El código siguiente es un ejemplo de una implementación mínima del proveedor de almacén de claves.
 
 ```
 /* Custom Keystore Provider Example
@@ -360,9 +359,9 @@ CEKEYSTOREPROVIDER *CEKeystoreProvider[] = {
 };
 ```
 
-### <a name="odbc-application"></a>Aplicación de ODBC
+### <a name="odbc-application"></a>Aplicación ODBC
 
-El código siguiente es una aplicación de demostración que usa el proveedor de almacén de claves anterior. Al ejecutarlo, asegúrese de que la biblioteca del proveedor está en el mismo directorio que el archivo binario de la aplicación, y que especifica la cadena de conexión (o especifica un DSN que contiene) el `ColumnEncryption=Enabled` configuración.
+El código siguiente es una aplicación de demostración que usa el proveedor de almacén de claves anterior. Al ejecutarlo, asegúrese de que la biblioteca del proveedor está en el mismo directorio que el archivo binario de la aplicación y que la cadena de conexión especifica (o especifica `ColumnEncryption=Enabled` un DSN que contiene) el valor.
 
 ```
 /*

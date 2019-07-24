@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 5f9be8fb680fcc3ccb0138318c21bb3072035338
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 7f4d77bba168f84b42aab0884369cf834af3779d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099230"
 ---
 # <a name="move-a-workload-group"></a>Mover un grupo de cargas de trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "55689878"
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No puede mover un grupo de cargas de trabajo si hay una operación de configuración del regulador de recursos pendiente. Es posible determinar si existe una configuración pendiente consultando la vista de administración dinámica [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) para obtener el estado actual de is_configuration_pending.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Mover un grupo de cargas de trabajo requiere un permiso CONTROL SERVER.  
   
 ##  <a name="MoveWGSSMS"></a> Mover un grupo de cargas de trabajo mediante SQL Server Management  

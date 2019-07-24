@@ -1,5 +1,5 @@
 ---
-title: Contenedores e Interfaces | Microsoft Docs
+title: Contenedores e interfaces | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 398a8f072fd264307c1da08af5a187490813e8ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7be51a27364107afe6b79ebcce5de109909b1836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916065"
 ---
 # <a name="wrappers-and-interfaces"></a>Contenedores e interfaces
 
@@ -28,9 +27,9 @@ ms.locfileid: "66780831"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite la interfaz java.sql.Wrapper. Esta interfaz proporciona un mecanismo para acceder a extensiones para la API de JDBC que son específicas de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] mediante una interfaz de proxy.
 
-La interfaz java.sql.Wrapper define dos métodos: **isWrapperFor** y **unwrap**. El método **isWrapperFor** comprueba si el objeto de entrada especificado implementa esta interfaz. El método **unwrap** devuelve un objeto que implementa esta interfaz para permitir el acceso a los métodos específicos de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
+La interfaz java. SQL. wrapper define dos métodos: **isWrapperFor** y **Unwrap**. El método **isWrapperFor** comprueba si el objeto de entrada especificado implementa esta interfaz. El método **unwrap** devuelve un objeto que implementa esta interfaz para permitir el acceso a los métodos específicos de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 
-**isWrapperFor** y **unwrap** métodos se exponen como sigue:
+los métodos **isWrapperFor** y **Unwrap** se exponen de la siguiente manera:
 
 - [Método isWrapperFor &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
 
@@ -42,7 +41,7 @@ La interfaz java.sql.Wrapper define dos métodos: **isWrapperFor** y **unwrap**.
 
 - [Método isWrapperFor &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
-- [Método Unwrap &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
+- [Unwrap ( &#40;método) SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
 - [Método isWrapperFor &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
@@ -50,11 +49,11 @@ La interfaz java.sql.Wrapper define dos métodos: **isWrapperFor** y **unwrap**.
 
 - [Método isWrapperFor &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
 
-- [Método Unwrap &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
+- [Unwrap ( &#40;método) SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
 
 - [Método isWrapperFor &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
 
-- [Método Unwrap &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+- [Unwrap ( &#40;método) SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
 
 ## <a name="interfaces"></a>Interfaces
 

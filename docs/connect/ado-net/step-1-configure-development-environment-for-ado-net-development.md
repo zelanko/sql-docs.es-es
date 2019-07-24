@@ -10,33 +10,32 @@ ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3aebe9cd16901581d5fdba8cd3d8302c5af30ae
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 945d36208fc4c8858b789f7037d256902aeb92f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957639"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Paso 1: Configurar el entorno de desarrollo para el desarrollo de ADO.NET
 
 - Siguiente artículo:&nbsp;&nbsp;&nbsp;[Paso 2: Crear una base de datos SQL para el desarrollo de ADO.NET](step-2-create-a-sql-database-for-ado-net-development.md)  
 
-## <a name="download-a-net-sql-driver"></a>Descargar un controlador de SQL de .NET
+## <a name="download-a-net-sql-driver"></a>Descargar un controlador .NET SQL
 
-Nuestro ejemplo de código actual usa ADO.NET de .NET Framework para Windows. .NET Core está disponible para Linux y MacOS (además de Windows).
+En el ejemplo de código actual se usa ADO.NET del .NET Framework, para Windows. .NET Core está disponible para Linux y MacOS (además de Windows).
 
 ### <a name="adonet-for-windows"></a>ADO.NET, para Windows
 
-1. ![En círculo la flecha abajo de descarga](../../ssdt/media/download.png)[para descargar e instalar .NET Framework, incluidas ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+1. ![Download-flecha abajo: con un círculo](../../ssdt/media/download.png)[para descargar e instalar .NET Framework, incluido ADO.net](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-2. Instalar Visual Studio Community o uno similar integra el entorno de desarrollo (IDE) para escribir y compilar código fuente de C#. Microsoft ofrece ahora Visual Studio Community para *libre*.  
+2. Instale Visual Studio Community o un entorno de desarrollo integrado (IDE) similar para escribir y compilar C# código fuente. Microsoft ofrece ahora Visual Studio Community de forma *gratuita*.  
     - [Descargar Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)  
     - [Más opciones para Visual Studio gratis](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET core, para Ubuntu Linux y MacOS
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>.NET Core, para Linux (Ubuntu y MacOS)
 
-Vínculos para descargar .NET Core, para una variedad de sistemas operativos, están disponibles en:
+Los vínculos para descargar .NET Core, para una variedad de sistemas operativos, están disponibles en:
 
-- ![En círculo la flecha abajo de descarga](../../ssdt/media/download.png)[para descargar e instalar .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Download-flecha abajo: con un círculo](../../ssdt/media/download.png)[para descargar e instalar .net Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

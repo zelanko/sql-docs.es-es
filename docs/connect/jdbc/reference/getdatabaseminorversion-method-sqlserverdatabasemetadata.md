@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 18163668-60d6-4d54-aaf1-c338b8c90f2a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 475a0f30a4efa8fb7a181b3b394b0ea1f72bf544
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e333f1d5d3f4463589407b7911fa90b6f2b7abf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984130"
 ---
 # <a name="getdatabaseminorversion-method-sqlserverdatabasemetadata"></a>Método getDatabaseMinorVersion (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getDatabaseMinorVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getDatabaseMinorVersion especificado por el método getDatabaseMinorVersion en la interfaz java.sql.DatabaseMetaData.  
+ Este método getDatabaseMinorVersion se especifica mediante el método getDatabaseMinorVersion en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

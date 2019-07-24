@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b8d4e1f7-14fc-4590-af98-1eda30d2ca6d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 80a0e6116e31080871e12470625d172098afb76f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d97ed3360db0d1a81f71225e4664c6624cb9da37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974702"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>Método setCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public final void setCharacterStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método setCharacterStream especificado por el método setCharacterStream en la interfaz java.sql.PreparedStatement.  
+ Este método setCharacterStream se especifica mediante el método setCharacterStream de la interfaz java. SQL. PreparedStatement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método setCharacterStream &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   

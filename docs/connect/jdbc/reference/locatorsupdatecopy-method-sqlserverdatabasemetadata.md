@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f6ec8c1d-7ff8-4bc5-8bd3-0199a9294a6e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01cf5c8d9d4d4b40e4f76040725a81e6424bb254
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5e9e800c326f18b5247d1257431bb2243ad00c57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976846"
 ---
 # <a name="locatorsupdatecopy-method-sqlserverdatabasemetadata"></a>Método locatorsUpdateCopy (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean locatorsUpdateCopy()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si las actualizaciones se realizan en una copia. **false** si las actualizaciones se realizan directamente.  
+ **true** si las actualizaciones se realizan en una copia. **false** si las actualizaciones se realizan directamente.  
   
 ## <a name="exceptions"></a>Excepciones  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Notas  
- Este método locatorsUpdateCopy especificado por el método locatorsUpdateCopy en la interfaz java.sql.DatabaseMetaData.  
+ Este método locatorsUpdateCopy se especifica mediante el método locatorsUpdateCopy en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

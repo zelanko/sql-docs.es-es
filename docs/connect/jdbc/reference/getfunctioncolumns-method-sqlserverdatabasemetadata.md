@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd4958db78e2e35d29bcc47428295db50f7e5678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982964"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Método getFunctionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -73,17 +72,17 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |DATA_TYPE|**smallint**|Valor del tipo de datos SQL de java.sql.Types.|  
 |TYPE_NAME|**String**|El nombre del tipo de datos.|  
 |PRECISION|**int**|Número total de dígitos significativos.|  
-|LENGTH|**int**|La longitud de los datos en bytes.|  
+|LENGTH|**int**|Longitud de los datos en bytes.|  
 |SCALE|**short**|Número de dígitos que se encuentran a la derecha del separador decimal.|  
 |RADIX|**short**|Base de tipos numéricos.|  
 |NULLABLE|**short**|Indica si el parámetro o valor devuelto puede contener un valor **null**.<br /><br /> **Puede ser uno de los siguientes valores:**<br /><br /> functionNoNulls (0): no se permite un valor NULL.<br /><br /> functionNullable (1): se permite un valor NULL.<br /><br /> functionNullableUnknown (2): desconocido.|  
 |REMARKS|**String**|Comentarios sobre una columna o un parámetro.|  
 |COLUMN_DEF|**String**|Valor predeterminado de la columna.<br /><br /> **Nota:** Esta información está disponible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es específica del controlador JDBC.|  
 |SQL_DATA_TYPE|**smallint**|Esta columna es igual que la columna **DATA_TYPE**, salvo por los tipos de datos **datetime** e **interval** de ISO.<br /><br /> **Nota:** Esta información está disponible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es específica del controlador JDBC.|  
-|SQL_DATETIME_SUB|**smallint**|El subcódigo **datetime** ISO **interval** si el valor de **SQL_DATA_TYPE** es **SQL_DATETIME** o **SQL_INTERVAL**. Para tipos de datos distinto **datetime** e ISO **intervalo**, esta columna es NULL.<br /><br /> **Nota:** Esta información está disponible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es específica del controlador JDBC.|  
+|SQL_DATETIME_SUB|**smallint**|El subcódigo **datetime** ISO **interval** si el valor de **SQL_DATA_TYPE** es **SQL_DATETIME** o **SQL_INTERVAL**. En el caso de tipos de datos distintos de **DateTime** e **Interval**de ISO, esta columna es NULL.<br /><br /> **Nota:** Esta información está disponible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es específica del controlador JDBC.|  
 |CHAR_OCTET_LENGTH|**int**|Longitud máxima de los parámetros o columnas basados en valores binarios o caracteres. Para los demás tipos de datos, es NULL.|  
 |ORDINAL_POSITION|**int**|Para los parámetros de entrada y salida, representa la posición a partir de 1.<br /><br /> Para las columnas de conjunto de resultados, es la posición de la columna en el conjunto de resultados a partir de 1.<br /><br /> Para el valor devuelto, es 0.|  
-|IS_NULLABLE|**String**|Determina la nulabilidad de un parámetro o columna.<br /><br /> Puede ser uno de los siguientes valores:<br /><br /> **Sí**: el parámetro o columna puede incluir valores NULL.<br /><br /> **NO**: la columna o parámetro no puede incluir valores NULL.<br /><br /> Cadena vacía (""): desconocido.|  
+|IS_NULLABLE|**String**|Determina la nulabilidad de un parámetro o columna.<br /><br /> Puede ser uno de los siguientes valores:<br /><br /> **Sí**: el parámetro o la columna puede incluir valores NULL.<br /><br /> **No**: el parámetro o la columna no puede incluir valores NULL.<br /><br /> Cadena vacía (""): desconocido.|  
 |SS_TYPE_CATALOG_NAME|**String**|Nombre del catálogo que contiene el tipo definido por el usuario (UDT).|  
 |SS_TYPE_SCHEMA_NAME|**String**|Nombre del esquema que contiene el tipo definido por el usuario (UDT).|  
 |SS_UDT_CATALOG_NAME|**String**|Tipo definido por el usuario (UDT) del nombre completo.|  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 630a93b0-6e3c-4255-a007-1097ce0ee243
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 38c4ccf19e42946506b274cdef2058726ccfe407
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3d70c72b860044a7e61b4a6dc5474c465fb60e89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955396"
 ---
 # <a name="createblob-method-sqlserverconnection"></a>Método createBlob (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,15 +30,15 @@ public java.sql.Blob createBlob()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un objeto de Blob.  
+ Objeto de BLOB.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método createBlob especificado por el método createBlob de la interfaz java.sql.Connection.  
+ Este método createBlob se especifica mediante el método createBlob en la interfaz java. SQL. Connection.  
   
- Este método reemplaza la necesidad de [SQLServerBlob Constructor &#40;SQLServerConnection, byte&#41;](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md).  
+ Este método reemplaza la necesidad del [constructor &#40;SQLServerBlob SQLServerConnection, byte&#41;](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

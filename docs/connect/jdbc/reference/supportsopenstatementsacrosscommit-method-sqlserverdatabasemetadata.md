@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e733586c-9222-43cb-92ea-ba474f442a43
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 003829ffe09782693f7d69f2c8b055c66252dbc4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dbc4dfe12daf675f16a632ed5caa8b7b3830ced0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969084"
 ---
 # <a name="supportsopenstatementsacrosscommit-method-sqlserverdatabasemetadata"></a>Método supportsOpenStatementsAcrossCommit (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsOpenStatementsAcrossCommit()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- **True** si se admite. De lo contrario, se devuelve el valor **False**.  
+ **true** si se admite. De lo contrario, se devuelve el valor **False**.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método supportsOpenStatementsAcrossCommit especificado por el método supportsOpenStatementsAcrossCommit en la interfaz java.sql.DatabaseMetaData.  
+ Este método supportsOpenStatementsAcrossCommit se especifica mediante el método supportsOpenStatementsAcrossCommit en la interfaz java. SQL. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

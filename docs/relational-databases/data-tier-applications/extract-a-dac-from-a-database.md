@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a056ecc18ed933b1f1fe18e3da0c62d239ea0a4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134793"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraer una DAC de una base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "53589879"
 ##  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  Una DAC se puede extraer solo de una base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. No puede extraer ninguna DAC si la base de datos tiene objetos que no se admiten en una DAC o usuarios contenidos. Para obtener más información acerca de los objetos admitidos por una DAC, vea [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  La extracción de una DAC requiere al menos permisos ALTER ANY LOGIN y VIEW DEFINITION en el ámbito de la base de datos, así como permisos SELECT en **sys.sql_expression_dependencies**. La extracción de una DAC la pueden realizar los miembros del rol fijo de servidor securityadmin que sean también miembros del rol fijo de base de datos database_owner en la base de datos de la que se extrae la DAC. Los miembros del rol fijo de servidor sysadmin o de la cuenta de administrador del sistema de SQL Server integrada denominada **sa** también pueden extraer una DAC.  
   
 ##  <a name="UsingDACExtractWizard"></a> Usar el Asistente de Extraer aplicación de capa de datos  
@@ -48,7 +47,7 @@ ms.locfileid: "53589879"
   
 2.  Expanda el nodo **Bases de datos** .  
   
-3.  Haga clic con el botón derecho en el nodo de la base de datos del que se va a extraer la DAC, haga clic en **Tareas** y, después, seleccione **Extraer aplicación de capa de datos...**.  
+3.  Haga clic con el botón derecho en el nodo de la base de datos del que se va a extraer la DAC, haga clic en **Tareas** y, después, seleccione **Extraer aplicación de capa de datos...** .  
   
 4.  Complete los cuadros de diálogo del asistente:  
   
@@ -76,7 +75,7 @@ ms.locfileid: "53589879"
 ###  <a name="SelectData"></a> Select data page  
 Seleccione los datos de referencia que quiera incluir en el archivo de paquete de la aplicación de capa de datos (DAC). La inclusión de datos en el paquete DAC es opcional. El paquete DAC ya incluirá el esquema de todos los objetos de base de datos compatibles y los objetos de instancia relacionados con la base de datos  
   
- Puede incluir hasta 10 MB de datos de referencia en el archivo del paquete DAC. Pero, en cuanto a las tablas que se van a incluir en el DAC, puede que no contengan tipos de datos de objetos binarios grandes (BLOB) como **image** o **varchar(max)**. Para extraer cantidades de datos más grandes con el fin de transferirlos a otra base de datos, use SQL Server Integration Services, la utilidad de copia masiva o una de las muchas otras técnicas de migración de datos.  
+ Puede incluir hasta 10 MB de datos de referencia en el archivo del paquete DAC. Pero, en cuanto a las tablas que se van a incluir en el DAC, puede que no contengan tipos de datos de objetos binarios grandes (BLOB) como **image** o **varchar(max)** . Para extraer cantidades de datos más grandes con el fin de transferirlos a otra base de datos, use SQL Server Integration Services, la utilidad de copia masiva o una de las muchas otras técnicas de migración de datos.  
   
  **Tabla de base de datos:** active la casilla situada junto a las tablas de base de datos que contengan los datos que quiera incluir en el paquete DAC. Puede seleccionar hasta diez tablas con 10.000 filas o menos.  
   

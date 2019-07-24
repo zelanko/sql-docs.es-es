@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 63bbff09e8f9d7ca6fa4658369194c9caee26648
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 9a62e627e372a7c280e0187a33accc9563da91c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136507"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de la versión de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "58658289"
 
 - [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Descargar SQL Server 2016 desde el **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
 - [![Azure Virtual Machine pequeña](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** para poner en marcha una máquina virtual con SQL Server 2016 SP1 ya instalado.
-- [![Descargar SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Para obtener la versión más reciente de SQL Server Management Studio, vea **[Descarga de SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)**.
+- [![Descargar SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Para obtener la versión más reciente de SQL Server Management Studio, vea **[Descarga de SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)** .
 
 ## <a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)
 

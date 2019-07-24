@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c4e8d429490a0dd7fe8f0a259d065f1f4914dd29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956172"
 ---
 # <a name="programming-with-sqlxml"></a>Programar con SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,11 +27,11 @@ ms.locfileid: "66794050"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>Leer y escribir datos XML con objetos SQLXML  
  En la lista siguiente se describe cómo usar los métodos de la API del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] para leer y escribir datos XML con objetos SQLXML:  
   
--   Para crear un objeto SQLXML, use el método [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Tenga en cuenta que este método crea un objeto SQLXML sin dato alguno. Para agregar **xml** datos al objeto SQLXML, llame a uno de los métodos siguientes que se especifican en la interfaz SQLXML: setResult, setCharacterStream, setBinaryStream, o setString.  
+-   Para crear un objeto SQLXML, use el método [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) de la clase [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Tenga en cuenta que este método crea un objeto SQLXML sin dato alguno. Para agregar datos **XML** a un objeto SQLXML, llame a uno de los métodos siguientes especificados en la interfaz SQLXML: SetResult, SetCharacterStream, SetBinaryStream o setString.  
   
 -   Para recuperar el propio objeto SQLXML, use los métodos getSQLXML de la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) o de la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
--   Para recuperar el **xml** datos de un objeto SQLXML, use uno de los métodos siguientes que se especifican en la interfaz SQLXML: getSource, getCharacterStream, getBinaryStream, o getString.  
+-   Para recuperar los datos **XML** de un objeto SQLXML, utilice uno de los métodos siguientes que se especifican en la interfaz SQLXML: GetSource, GetCharacterStream, GetBinaryStream o GetString.  
   
 -   Para actualizar los datos **xml** de un objeto SQLXML, use el método [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) de la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66794050"
  Los analizadores XML no pueden controlar valores vacíos. Sin embargo, SQL Server permite que las aplicaciones recuperen valores vacíos de columnas de base de datos del tipo de datos XML y los almacenen en ellas. Eso significa que al analizar los datos XML, si el valor subyacente está vacío, el analizador devuelve una excepción. En los resultados de DOM, el controlador JDBC capta esa excepción y devuelve un error. En los resultados de SAX y Stax, el error procede directamente del analizador.  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Almacenamiento en búfer adaptable y compatibilidad con SQLXML  
- Los flujos binarios y de caracteres devueltos por el objeto SQLXML obedecen a los modos de almacenamiento en búfer completo o adaptable. Por otra parte, si los analizadores XML no son secuencia, no obedecerán a los valores completos o adaptables. Para obtener más información sobre el almacenamiento en búfer adaptable, vea [usando almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md).  
+ Los flujos binarios y de caracteres devueltos por el objeto SQLXML obedecen a los modos de almacenamiento en búfer completo o adaptable. Por otra parte, si los analizadores XML no son secuencia, no obedecerán a los valores completos o adaptables. Para obtener más información sobre el almacenamiento en búfer adaptable, vea [usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md)  

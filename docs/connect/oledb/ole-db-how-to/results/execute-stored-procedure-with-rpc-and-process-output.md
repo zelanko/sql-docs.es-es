@@ -13,13 +13,12 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 4a0691795bdca0ec24b307362c6b2137c5741362
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994728"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Ejecutar procedimiento almacenado con RPC y procesar la salida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "66791270"
   
 3.  Cree un conjunto de enlaces (uno para cada creador de parámetro) mediante una matriz de estructuras DBBINDING.  
   
-4.  Crear un descriptor de acceso para los parámetros definidos mediante el **IAccessor:: CreateAccessor** método. El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
+4.  Cree un descriptor de acceso para los parámetros definidos mediante el método **IAccessor:: CreateAccessor** . El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
   
 5.  Rellene la estructura DBPARAMS.  
   
 6.  Llame al comando **Execute** (en este caso, una llamada a un procedimiento almacenado).  
   
-7.  Procesar el conjunto de filas y libérelo mediante el **IRowset:: Release** método.  
+7.  Procese el conjunto de filas y suéltelo mediante el método **IRowset:: Release** .  
   
 8.  Procese el código de retorno y los valores de parámetro de salida que se reciben del procedimiento almacenado.  
   

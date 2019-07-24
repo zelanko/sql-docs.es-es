@@ -1,40 +1,40 @@
 ---
-title: Configurar las implementaciones
+title: Configurar implementaciones
 titleSuffix: SQL Server big data clusters
-description: Obtenga información sobre cómo personalizar la implementación de un clúster de macrodatos con archivos de configuración.
+description: Obtenga información sobre cómo personalizar la implementación de un clúster de Big Data con archivos de configuración.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccd7b0955cbeaa22f10a2b81515d7afd892e135e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7559ecf9c7b17ca21c088ed531a347f88e89ee2
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958443"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419438"
 ---
-# <a name="configure-deployment-settings-for-big-data-clusters"></a>Configurar opciones de implementación para los clústeres de datos de gran tamaño
+# <a name="configure-deployment-settings-for-big-data-clusters"></a>Configuración de las opciones de implementación de clústeres de Big Data
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Para personalizar el archivo de configuración de implementación de clúster, puede usar cualquier editor de formato JSON, como VSCode. Estas modificaciones para fines de automatización de secuencias de comandos, use el **mssqlctl bdc sección** comando. En este artículo se explica cómo configurar las implementaciones de clústeres de datos de gran tamaño mediante la modificación de los archivos de configuración de implementación. Se proporcionan ejemplos de cómo cambiar la configuración para diferentes escenarios. Para obtener más información sobre cómo se usan archivos de configuración en las implementaciones, consulte la [instrucciones de implementación](deployment-guidance.md#configfile).
+Para personalizar los archivos de configuración de implementación de clústeres, puede usar cualquier editor de formato JSON, como VSCode. Para generar scripts para estas ediciones con fines de automatización, use el comando **azdata de configuración de BDC** . En este artículo se explica cómo configurar las implementaciones de clúster de Big Data mediante la modificación de los archivos de configuración de implementación. Proporciona ejemplos sobre cómo cambiar la configuración de distintos escenarios. Para obtener más información sobre cómo se usan los archivos de configuración en las implementaciones, vea la [Guía de implementación](deployment-guidance.md#configfile).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Instalar mssqlctl](deploy-install-mssqlctl.md).
+- [Instale azdata](deploy-install-azdata.md).
 
-- Cada uno de los ejemplos en esta sección se supone que ha creado una copia de uno de los archivos de configuración estándar. Para obtener más información, consulte [crear un archivo de configuración personalizado](deployment-guidance.md#customconfig). Por ejemplo, el siguiente comando crea un directorio llamado `custom` que contiene un archivo de configuración de implementación de JSON según el valor predeterminado **aks-dev-test** configuración:
+- En cada uno de los ejemplos de esta sección se supone que ha creado una copia de una de las configuraciones estándar. Para obtener más información, consulte [crear una configuración personalizada](deployment-guidance.md#customconfig). Por ejemplo, el siguiente comando crea un directorio denominado `custom` que contiene dos archivos de configuración de implementación JSON, **cluster. JSON** y **control. JSON**, basados en la configuración predeterminada de **AKS-dev-test** :
 
    ```bash
-   mssqlctl bdc config init --source aks-dev-test --target custom
+   azdata bdc config init --source aks-dev-test --target custom
    ```
 
-## <a id="clustername"></a> Cambiar el nombre de clúster
+## <a id="clustername"></a>Cambiar el nombre del clúster
 
-El nombre del clúster es el nombre del clúster datos de gran tamaño y el espacio de nombres de Kubernetes que se crearán en la implementación. Se especifica en la siguiente parte del archivo de configuración de implementación:
+El nombre del clúster es el nombre del clúster de Big Data y el espacio de nombres Kubernetes que se creará en la implementación. Se especifica en la siguiente parte del archivo de configuración de implementación **cluster. JSON** :
 
 ```json
 "metadata": {
@@ -43,18 +43,18 @@ El nombre del clúster es el nombre del clúster datos de gran tamaño y el espa
 },
 ```
 
-El siguiente comando envía un par clave-valor a la **--json valores** parámetro para cambiar el nombre del clúster de macrodatos a **test-cluster**:
+El comando siguiente envía un par clave-valor al parámetro **--JSON-** Values para cambiar el nombre del clúster de Big Data a **Test-Cluster**:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "metadata.name=test-cluster"
+azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
-> El nombre del clúster de macrodatos debe ser solo alfanuméricos caracteres en minúsculas, sin espacios en blanco. Todos los artefactos de Kubernetes (contenedores, pods, conjuntos con estado, los servicios) para el clúster se creará en un espacio de nombres con el mismo nombre que el clúster de nombre especificado.
+> El nombre del clúster de Big Data debe ser solo caracteres alfanuméricos en minúsculas, sin espacios. Todos los artefactos de Kubernetes (contenedores, pods, conjuntos de con estado, servicios) para el clúster se crearán en un espacio de nombres con el mismo nombre que el nombre de clúster especificado.
 
-## <a id="ports"></a> Puertos de punto de conexión de actualización
+## <a id="ports"></a>Actualizar puertos de extremo
 
-Los puntos de conexión se definen para el plano de control, así como para los grupos individuales. La siguiente parte del archivo de configuración muestra las definiciones de punto de conexión para el plano de control:
+Los puntos de conexión se definen para el controlador en el archivo **control. JSON** y para la puerta de enlace y SQL Server instancia maestra en las secciones correspondientes en **cluster. JSON**. La siguiente parte del archivo de configuración **control. JSON** muestra las definiciones de punto de conexión para el controlador:
 
 ```json
 "endpoints": [
@@ -71,92 +71,133 @@ Los puntos de conexión se definen para el plano de control, así como para los 
 ]
 ```
 
-En el ejemplo siguiente se usa en línea JSON para cambiar el puerto para el **controlador** punto de conexión:
+En el ejemplo siguiente se usa JSON en línea para cambiar el puerto del punto de conexión del **controlador** :
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> Configurar réplicas de grupo
+## <a id="replicas"></a>Configurar réplicas de grupo
 
-Las características de cada grupo, por ejemplo, el bloque de almacenamiento, se define en el archivo de configuración. Por ejemplo, en el siguiente fragmento muestra una definición de grupo de almacenamiento:
+Las características de cada grupo, como el grupo de almacenamiento, se definen en el archivo de configuración de **cluster. JSON** . Por ejemplo, la siguiente parte de **cluster. JSON** muestra una definición de grupo de almacenamiento:
 
 ```json
 "pools": [
-    {
-        "metadata": {
-            "kind": "Pool",
-            "name": "default"
-        },
-        "spec": {
-            "type": "Storage",
-            "replicas": 2,
-            "storage": {
-               "data": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "15Gi"
-               },
-               "logs": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "10Gi"
-               }
-           },
-        }
-    }
+   {
+       "metadata": {
+           "kind": "Pool",
+           "name": "default"
+       },
+       "spec": {
+           "type": "Storage",
+           "replicas": 2
+       }
+   }
 ]
 ```
 
-Puede configurar el número de instancias de un grupo mediante la modificación de la **réplicas** valor para cada grupo. En el ejemplo siguiente se usa en línea JSON para cambiar estos valores para los grupos de almacenamiento y datos `10` y `4` respectivamente:
+Puede configurar el número de instancias de un grupo modificando el valor de  las réplicas de cada grupo. En el ejemplo siguiente se usa JSON en línea para cambiar estos valores para el almacenamiento y los `10` grupos `4` de datos a y, respectivamente:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
+azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
 ```
 
-## <a id="storage"></a> Configurar el almacenamiento
+## <a id="storage"></a>Configurar el almacenamiento
 
-También puede cambiar la clase de almacenamiento y las características que se usan para cada grupo. El ejemplo siguiente asigna una clase de almacenamiento personalizado para el grupo de almacenamiento y actualiza el tamaño de la notificación de volumen persistente para almacenar datos de 100 GB. Debe tener esta sección del archivo de configuración para actualizar la configuración mediante el *mssqlctl bdc config set* de comandos, consulte el siguiente muestra cómo utilizar un archivo de revisión para agregar esta sección:
+También puede cambiar la clase de almacenamiento y las características que se usan para cada grupo. En el ejemplo siguiente se asigna una clase de almacenamiento personalizada al bloque de almacenamiento y se actualiza el tamaño de la demanda de volumen persistente para almacenar los datos en 100 GB. En primer lugar, cree un archivo patch. JSON como el que se muestra a continuación, que incluye la nueva sección de *almacenamiento* , además del *tipo* y las *réplicas* .
 
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+        "storage":{
+        "data":{
+                "size": "100Gi",
+                "className": "myStorageClass",
+                "accessMode":"ReadWriteOnce"
+                },
+        "logs":{
+                "size":"32Gi",
+                "className":"myStorageClass",
+                "accessMode":"ReadWriteOnce"
+                }
+                },
+        "type":"Storage",
+        "replicas":2
+      }
+    }
+  ]
+}
+```
+
+Después, puede usar el comando azdata de configuración de **BDC** para actualizar el archivo de configuración de **cluster. JSON** .
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
+azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 ```
 
 > [!NOTE]
-> Un archivo de configuración basado en **kubeadm-dev-test** no tiene una definición de almacenamiento para cada grupo, pero esto puede agregarse manualmente si es necesario.
+> Un archivo de configuración basado en **kubeadm-dev-test** no tiene una definición de almacenamiento para cada grupo, pero puede usar el proceso anterior para agregarlo si es necesario.
 
-Para obtener más información acerca de la configuración de almacenamiento, consulte [persistencia de datos con SQL Server al clúster de macrodatos en Kubernetes](concept-data-persistence.md).
+Para más información sobre la configuración del almacenamiento, consulte [persistencia de datos con SQL Server clúster de macrodatos en Kubernetes](concept-data-persistence.md).
 
-## <a id="sparkstorage"></a> Configurar el almacenamiento sin spark
+## <a id="sparkstorage"></a>Configuración del bloque de almacenamiento sin Spark
 
-También puede configurar los grupos de almacenamiento para ejecutar sin spark y crear un grupo independiente de spark. Esto le permite a escala spark compute power independiente de almacenamiento. Para ver cómo configurar el grupo de spark, consulte el [ejemplo de archivo de revisión JSON](#jsonpatch) al final de este artículo.
+También puede configurar los grupos de almacenamiento para que se ejecuten sin Spark y crear un grupo de Spark independiente. Esto le permite escalar la potencia de proceso de Spark independientemente del almacenamiento. Para ver cómo configurar el grupo de Spark, consulte el [ejemplo de archivo de revisión de JSON](#jsonpatch) al final de este artículo.
 
-Debe tener esta sección del archivo de configuración para actualizar la configuración mediante el `mssqlctl cluster config set command`. El siguiente archivo de revisión JSON muestra cómo agregar esto.
 
-De forma predeterminada, el **includeSpark** configuración para el grupo de almacenamiento se establece en true, por lo que debe agregar el **includeSpark** campo en la configuración de almacenamiento para poder realizar cambios:
 
-```bash
-mssqlctl cluster config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].includeSpark=false"
+De forma predeterminada, la configuración **includeSpark** para el grupo de almacenamiento está establecida en true, por lo que debe agregar el campo **includeSpark** a la configuración de almacenamiento para realizar cambios. El siguiente archivo de revisión JSON muestra cómo agregar este.
+
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+        "type":"Storage",
+        "replicas":2,
+        "includeSpark":false
+      }
+    }
+  ]
+}
 ```
 
-## <a id="podplacement"></a> Configurar selección de ubicación de pod mediante etiquetas de Kubernetes
+```bash
+azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
+```
 
-Puede controlar la colocación de pod en nodos de Kubernetes que cuente con recursos específicos para dar cabida a varios tipos de requisitos de carga de trabajo. Por ejemplo, es posible que desee garantizar los pods de grupo de almacenamiento se coloquen en nodos con más espacio de almacenamiento o las instancias maestras de SQL Server se colocan en los nodos que tengan recursos de memoria y CPU mayor. En este caso, primero creará un clúster de Kubernetes heterogéneo con diferentes tipos de hardware y, a continuación, [asignar etiquetas de nodo](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) en consecuencia. En el momento de la implementación de clúster de macrodatos, puede especificar las etiquetas de mismas nivel de grupo en el archivo de configuración de implementación de clúster. Kubernetes, a continuación, se encargará de ajustándola los pods en los nodos que coinciden con las etiquetas especificadas.
+## <a id="podplacement"></a>Configuración de la selección de ubicación Pod mediante etiquetas Kubernetes
 
-El ejemplo siguiente muestra cómo editar un archivo de configuración personalizada para incluir un valor de etiqueta de nodo para la instancia principal de SQL Server. Tenga en cuenta que no hay ningún *nodeLabel* clave en las configuraciones integradas, por lo que deberá modificar manualmente un archivo de configuración personalizado o crear un archivo de revisión y se aplican al archivo de configuración personalizada.
+Puede controlar la colocación de Pod en nodos de Kubernetes que tienen recursos específicos para acomodar varios tipos de requisitos de carga de trabajo. Por ejemplo, puede que desee asegurarse de que los pods del grupo de almacenamiento se colocan en los nodos con más almacenamiento o SQL Server instancias maestras se colocan en los nodos que tienen más recursos de CPU y memoria. En este caso, primero creará un clúster de Kubernetes heterogéneo con distintos tipos de hardware y, a continuación, [asignará etiquetas de nodo](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) en consecuencia. En el momento de implementar el clúster de Big Data, puede especificar las mismas etiquetas en el nivel de grupo del archivo de configuración de implementación de clúster. A continuación, Kubernetes se encargará de estableciendo los pods en los nodos que coincidan con las etiquetas especificadas.
 
-Cree un archivo denominado **patch.json** en el directorio actual con el siguiente contenido:
+En el ejemplo siguiente se muestra cómo editar un archivo de configuración personalizado para incluir una configuración de etiqueta de nodo para la instancia de SQL Server Master. Tenga en cuenta que no hay ninguna clave *nodeLabel* en las configuraciones integradas, por lo que tendrá que editar manualmente un archivo de configuración personalizado o crear un archivo de revisión y aplicarlo al archivo de configuración personalizada.
+
+Cree un archivo denominado **patch. JSON** en el directorio actual con el siguiente contenido:
 
 ```json
 {
   "patch": [
      {
-      "op": "add",
+      "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
-      "nodeLabel": "<yourNodeLabel>"
+           "type": "Master",
+         "replicas": 1,
+         "hadrEnabled": false,
+         "endpoints": [
+            {
+             "name": "Master",
+             "serviceType": "NodePort",
+             "port": 31433
+            }
+          ],
+         "nodeLabel": "<yourNodeLabel>"
        }
     }
   ]
@@ -164,35 +205,36 @@ Cree un archivo denominado **patch.json** en el directorio actual con el siguien
 ```
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
-## <a id="jsonpatch"></a> Archivos de revisión de JSON
+## <a id="jsonpatch"></a>Archivos de revisión de JSON
 
-Archivos de revisión de JSON configuran varias opciones de configuración a la vez. Para obtener más información sobre las revisiones JSON, consulte [revisiones de JSON en Python](https://github.com/stefankoegl/python-json-patch) y [JSONPath en línea evaluador](https://jsonpath.com/).
+Los archivos de revisión de JSON configuran varias opciones a la vez. Para obtener más información sobre las revisiones de JSON, consulte [revisiones de JSON en Python](https://github.com/stefankoegl/python-json-patch) y el [evaluador en línea de JSONPath](https://jsonpath.com/).
 
-La siguiente **patch.json** archivo lleva a cabo los siguientes cambios:
+El archivo **patch. JSON** siguiente realiza los siguientes cambios:
 
-- Actualiza el puerto del punto de conexión único.
-- Actualiza todos los extremos (**puerto** y **serviceType**).
-- Actualiza el almacenamiento de plano de control. Estas opciones son aplicables a todos los componentes de clúster, a menos que se invaliden en el nivel de grupo.
-- Actualiza el nombre de clase de almacenamiento en el almacenamiento de plano de control.
-- Actualiza la configuración del grupo de almacenamiento para el grupo de almacenamiento.
-- Actualiza la configuración de Spark para el grupo de almacenamiento.
-- Crea un grupo de spark con 2 réplicas para el clúster
-
-```json
-{
-  "patch": [
+- Actualiza el puerto del punto de conexión único en **control. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "$.spec.controlPlane.spec.endpoints[?(@.name=='Controller')].port",
-      "value": 30000
-    },
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.endpoints[?(@.name=='Controller')].port",
+          "value": 30000
+        }   
+      ]
+    }
+    ```
+
+- Actualiza todos los puntos de conexión (**Port** y **serviceType**) en **control. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.endpoints",
-      "value": [
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.endpoints",
+          "value": [
         {
           "serviceType": "LoadBalancer",
           "port": 30001,
@@ -203,12 +245,20 @@ La siguiente **patch.json** archivo lleva a cabo los siguientes cambios:
             "port": 30778,
             "name": "ServiceProxy"
         }
+          ]
+        }
       ]
-    },
+    }
+    ```
+
+- Actualiza la configuración de almacenamiento del controlador en **control. JSON**. Esta configuración se aplica a todos los componentes del clúster, a menos que se invalide en el nivel de grupo.
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.controlPlane",
-      "value": {
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.storage",
+          "value": {
           "data": {
             "className": "managed-premium",
             "accessMode": "ReadWriteOnce",
@@ -220,44 +270,80 @@ La siguiente **patch.json** archivo lleva a cabo los siguientes cambios:
             "size": "32Gi"
           }
         }
-    },
+        }   
+      ]
+    }
+    ```
+
+- Actualiza el nombre de la clase de almacenamiento en **control. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.storage.data.className",
-      "value": "managed-premium"
-    },
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.storage.data.className",
+          "value": "managed-premium"
+        }   
+      ]
+    }
+    ```
+
+- Actualiza la configuración de almacenamiento del grupo de almacenamiento en **cluster. JSON**.
+    ```json
     {
-      "op": "add",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
-      "value": {
-          "data": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "100Gi"
-          },
-          "logs": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "32Gi"
-          }
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+          "value": {
+        "type":"Storage",
+        "replicas":2,
+        "storage":{
+        "data":{
+            "size": "100Gi",
+            "className": "myStorageClass",
+            "accessMode":"ReadWriteOnce"
+            },
+        "logs":{
+            "size":"32Gi",
+            "className":"myStorageClass",
+            "accessMode":"ReadWriteOnce"
+            }
+            }
+         }
         }
-    },
+      ]
+    }
+    ```
+
+- Actualiza la configuración de Spark para el grupo de almacenamiento en **cluster. JSON**.
+    ```json
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
-      "value": {
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
+          "value": {
         "driverMemory": "2g",
         "driverCores": 1,
         "executorInstances": 3,
         "executorCores": 1,
         "executorMemory": "1536m"
-      }
-    },
+          }
+        }   
+      ]
+    }
+    ```
+
+- Crea un grupo de Spark con dos instancias en **cluster. JSON**.
+    ```json
     {
-      "op": "add",
-      "path": "spec.pools/-",
-      "value":
-      {
+      "patch": [
+        {
+          "op": "add",
+          "path": "spec.pools/-",
+          "value":
+          {
         "metadata": {
           "kind": "Pool",
           "name": "default"
@@ -288,21 +374,23 @@ La siguiente **patch.json** archivo lleva a cabo los siguientes cambios:
             "executorCores": 1
           }
         }
-      }
-    }   
-  ]
-}
-```
+          }
+        } 
+      ]
+    }
+    ```
+
+
 
 > [!TIP]
-> Para obtener más información sobre la estructura y las opciones para cambiar un archivo de configuración de implementación, consulte [referencia del archivo de configuración de implementación para los clústeres de macrodatos](reference-deployment-config.md).
+> Para obtener más información sobre la estructura y las opciones para cambiar un archivo de configuración de implementación, vea [Referencia del archivo de configuración de implementación para clústeres de Big Data](reference-deployment-config.md).
 
-Use **mssqlctl bdc config sección conjunto** para aplicar los cambios en el archivo de revisión JSON. El ejemplo siguiente se aplica el **patch.json** archivo a un archivo de configuración de implementación de destino **custom.json**.
+Use los comandos de **configuración de BDC de azdata** para aplicar los cambios en el archivo de revisión de JSON. En el ejemplo siguiente se aplica el archivo **patch. JSON** a un archivo de configuración de implementación de destino **Custom/cluster. JSON**.
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre el uso de archivos de configuración de las implementaciones de clústeres de datos de gran tamaño, vea [de clústeres de cómo implementar grandes de datos de SQL Server en Kubernetes](deployment-guidance.md#configfile).
+Para obtener más información sobre el uso de archivos de configuración en implementaciones de clúster de Big Data, consulte [cómo implementar clústeres de macrodatos SQL Server en Kubernetes](deployment-guidance.md#configfile).

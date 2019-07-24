@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6265aaf5121e50684e205b5d80199222b510f5d6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d2f5178c8a2ce5b527ce70e6a3d8fc139ccc9c72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977202"
 ---
 # <a name="isstatementpoolingenabled-method-sqlserverconnection"></a>Método isStatementPoolingEnabled (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isStatementPoolingEnabled()
 ```  
 
 ## <a name="return-value"></a>Valor devuelto
- Un **booleano** que contiene la marca que indica si está habilitada la agrupación de instrucciones o no.
+ Un **valor booleano** que contiene la marca que indica si la agrupación de instrucciones está habilitada o no.
 
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Notas  
- Este método está disponible desde la versión del controlador JDBC 6.4 y en marcha.
+ Este método está disponible en la versión 6,4 y posteriores del controlador JDBC.
  
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f14589bfdf5197bdb80e535e00d0fdbeba913529
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 954883c4c69e07493a15ef77eecfed606e9cf9a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916526"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>Usar un procedimiento almacenado con parámetros de entrada
 
@@ -29,7 +28,7 @@ Si usa el controlador JDBC para llamar a un procedimiento almacenado con los par
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> Para obtener más información acerca de las secuencias de escape SQL, consulte [usando secuencias de Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Para obtener más información sobre las secuencias de escape de SQL, vea [usar secuencias de escape de SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Al crear la secuencia de escape `call`, especifique los parámetros IN mediante el carácter ? (signo de interrogación). Este carácter actúa como un marcador de posición para los valores de parámetros pasados al procedimiento almacenado. Para especificar un valor para un parámetro, puede usar uno de los métodos de establecedor de la clase SQLServerPreparedStatement. El método del establecedor que puede usar se determina mediante el tipo del parámetro IN.
 

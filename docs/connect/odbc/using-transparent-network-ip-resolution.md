@@ -1,5 +1,5 @@
 ---
-title: Uso de resolución de direcciones IP de red transparente | Microsoft Docs
+title: Usar la resolución de IP de red transparente | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,24 +10,23 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94c7f34ebf66f4bf33acf51e44397a74de2367e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df5b0233168c52b4f79cdc6d2d03cd7b72e16046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008478"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>Uso de resolución de IP de red transparente
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-TransparentNetworkIPResolution es una revisión de la característica de MultiSubnetFailover existente, disponible en Microsoft ODBC Driver 13.1 para SQL Server, que afecta a la secuencia de conexión del controlador en el caso donde la primera dirección IP resuelta del nombre de host no lo hace responder y hay varias direcciones IP asociada con el nombre de host. Interactúa con MultiSubnetFailover para proporcionar las siguientes secuencias de tres conexiones:
+TransparentNetworkIPResolution es una revisión de la característica MultiSubnetFailover existente, disponible en Microsoft ODBC driver 13,1 for SQL Server, que afecta a la secuencia de conexión del controlador en caso de que la primera dirección IP resuelta del nombre de host no responda y hay varias direcciones IP asociadas con el nombre de host. Interactúa con MultiSubnetFailover para proporcionar las tres secuencias de conexión siguientes:
 
-* 0: uno está intentada IP, seguida de todas las direcciones IP en paralelo
-* 1: se ha intentado todas las direcciones IP en paralelo
-* 2: todas las direcciones IP se ha intentado una tras otra
+* 0: se intenta una IP, seguida de todas las direcciones IP en paralelo.
+* 1: se intentan todas las direcciones IP en paralelo
+* 2: todas las direcciones IP se intentan una tras otra
 
-|TransparentNetworkIPResolution|MultiSubnetFailover|Comportamiento|
+|TransparentNetworkIPResolution|MultiSubnetFailover|Químicos|
 |:-:|:-:|:-:|
 |(predeterminado).|(predeterminado).|0|
 |(predeterminado).|Habilitado|1|
@@ -39,13 +38,13 @@ TransparentNetworkIPResolution es una revisión de la característica de MultiSu
 |Deshabilitado|Habilitado|1|
 |Deshabilitado|Deshabilitado|2|
 
-El `TransparentNetworkIPResolution` cadena de conexión y DSN de palabra clave controla esta configuración en el nivel de la cadena de conexión. El valor predeterminado está habilitado.
+La `TransparentNetworkIPResolution` palabra clave de conexión y DSN controla esta configuración en el nivel de cadena de conexión. El valor predeterminado es habilitado.
 
 Palabra clave|Valores|Valor predeterminado
 -|-|-
 `TransparentNetworkIPResolution`|`Yes`, `No`|`Yes`
 
-El `SQL_COPT_SS_TNIR` atributo de conexión previa permite que una aplicación controlar esta configuración mediante programación:
+El `SQL_COPT_SS_TNIR` atributo anterior a la conexión permite a una aplicación controlar esta configuración mediante programación:
 
 Atributo de conexión|   Tamaño/Tipo|  Valor predeterminado| Valor| Descripción
 -|-|-|-|-

@@ -1,5 +1,5 @@
 ---
-title: Mediante la creación de reflejo (JDBC) | Microsoft Docs
+title: Usar la creación de reflejo de la base de datos (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2914adb0a69c680624365b7fe0af23f9615f6f05
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6c00b6a0697a4dc6f6e0a358b85fe1e211791826
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916253"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Usar la creación de reflejo de la base de datos (JDBC)
 
@@ -41,7 +40,7 @@ Cuando el servidor principal genera un error, la aplicación cliente recibe mens
 Si se ha establecido una conexión al inicio, el servidor principal envía la identidad de su asociado de conmutación por error al cliente que se va a usar al producirse la conmutación por error. Si la aplicación intenta establecer una conexión inicial con un servidor principal que ha generado un error, el cliente no conoce la identidad del asociado de conmutación por error. Para que los clientes puedan funcionar correctamente en este escenario, la propiedad de la cadena de conexión failoverPartner y, opcionalmente, el método de origen de datos [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) permiten al cliente especificar la identidad del asociado de conmutación por error por sí mismo. La propiedad del cliente se usa solo en este escenario; si el servidor principal está disponible, no se usa.
 
 > [!NOTE]  
-> Si se especifica failoverPartner en la cadena de conexión o con un objeto de origen de datos, la propiedad databaseName también se debe establecer para que no se inicie una excepción. Si failoverPartner y databaseName no se especifican explícitamente, la aplicación no intentará la conmutación por error cuando se produzcan errores en el servidor de base de datos principal. En otras palabras, la redirección transparente solo funciona para las conexiones que especifican explícitamente failoverPartner y databaseName. Para obtener más información acerca de failoverPartner y otras propiedades de cadena de conexión, consulte [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).
+> Si se especifica failoverPartner en la cadena de conexión o con un objeto de origen de datos, la propiedad databaseName también se debe establecer para que no se inicie una excepción. Si failoverPartner y databaseName no se especifican explícitamente, la aplicación no intentará la conmutación por error cuando se produzcan errores en el servidor de base de datos principal. En otras palabras, la redirección transparente solo funciona para las conexiones que especifican explícitamente failoverPartner y databaseName. Para obtener más información sobre failoverPartner y otras propiedades de cadena de conexión, vea [establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).
 
 Si el servidor asociado de conmutación por error suministrado por el cliente no hace referencia a un servidor que actúa como asociado de conmutación por error para la base de datos especificada, y si el servidor o la base de datos a los que se hace referencia está en una disposición de creación de reflejo de la base de datos, el servidor rechazará la conexión. Aunque la clase [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) proporciona el método [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md), este método solo devuelve el nombre del asociado de conmutación por error especificado en la cadena de conexión o el método setFailoverPartner. Para recuperar el nombre del asociado de conmutación por error real usado actualmente, emplee la siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]:
 

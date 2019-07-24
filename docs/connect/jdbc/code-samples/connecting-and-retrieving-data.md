@@ -1,5 +1,5 @@
 ---
-title: Conectarse y recuperar datos | Microsoft Docs
+title: Conexión y recuperación de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c87089b59855ef2c68a9e3b1051ed39850d7b17e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 310c66f6951a467b368fc44e1933bc6c8b6b36b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957273"
 ---
 # <a name="connecting-and-retrieving-data"></a>Conectar y recuperar datos
 
@@ -25,7 +24,7 @@ ms.locfileid: "66770073"
 Cuando se trabaja con el [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], hay dos métodos principales para establecer una conexión con una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Uno de estos métodos establece las propiedades de conexión en la URL de conexión y, a continuación, llama al método getConnection de la clase DriverManager para devolver un objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 > [!NOTE]  
-> Para obtener una lista de las propiedades de conexión admitidas por el controlador JDBC, consulte [estableciendo las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md).  
+> Para obtener una lista de las propiedades de conexión compatibles con el controlador JDBC, vea [establecer las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 El segundo método implica el establecimiento de las propiedades de conexión mediante los métodos establecedores de la clase [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) y, a continuación, la llamada al método [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) para devolver un objeto SQLServerDataSource.  
   

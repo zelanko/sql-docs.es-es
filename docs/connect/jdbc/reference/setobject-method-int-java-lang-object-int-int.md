@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d190ee20-d669-4c6f-a081-d5cfec2f72ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94a0dfd874332dfa58e9ca516365f39c6d6ea7b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 248b877ecbcda7ce69469fca67ecf3e3a22b54e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973479"
 ---
 # <a name="setobject-method-int-javalangobject-int-int"></a>Método setObject (int, java.lang.Object, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,7 +60,7 @@ public final void setObject(int n,
 ## <a name="remarks"></a>Notas  
  El método setObject especifica este método setObject en la interfaz java.sql.PreparedStatement.  
   
- A partir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador JDBC 3.0, se modifica el comportamiento de este método mediante el **sendTimeAsDatetime** propiedad de conexión ([estableciendo las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md)) y [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ A partir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la 3,0 del controlador JDBC, el comportamiento de este método se modifica mediante la propiedad de conexión **sendTimeAsDatetime** ([estableciendo las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md)) y [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
  Para más información, vea [Configurar el modo en que los valores java.sql.Time se envían al servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   

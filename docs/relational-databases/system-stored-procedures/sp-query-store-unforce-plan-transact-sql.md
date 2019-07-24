@@ -21,17 +21,17 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a00ac999dd3b6f96595f6abaf02b81e4684c55b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0cdb3fc64a18965594c315b589922b14b66be49b
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002613"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418915"
 ---
 # <a name="spquerystoreunforceplan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Habilita unforcing un plan determinado para una consulta determinada.  
+  Permite no forzar un plan determinado para una consulta determinada.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +43,9 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @query_id = ] query_id` Es el identificador de la consulta. *query_id* es un **bigint**, no tiene ningún valor predeterminado.  
+`[ @query_id = ] query_id`Es el identificador de la consulta. *query_id* es de tipo **BIGINT**y no tiene ningún valor predeterminado.  
   
-`[ @plan_id = ] plan_id` Es el identificador del plan de consulta que ya no se aplicarán. *plan_id* es un **bigint**, no tiene ningún valor predeterminado.  
+`[ @plan_id = ] plan_id`Es el identificador del plan de consulta que ya no se aplicará. *plan_id* es de tipo **BIGINT**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -53,10 +53,10 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el **EXECUTE** permiso en la base de datos y **insertar**, **actualización**, y **eliminar** permiso en el catálogo del almacén de consultas Vistas.  
+ Requiere el permiso **ALTER** en la base de datos.
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente devuelve información acerca de las consultas en el almacén de consultas.  
+ En el ejemplo siguiente se devuelve información sobre las consultas en el almacén de consultas.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -67,7 +67,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Después de identificar el query_id y plan_id que quiere no forzar, use el siguiente ejemplo para no forzar el plan.  
+ Después de identificar el query_id y el plan_id que desea deshacer, use el ejemplo siguiente para no forzar el plan.  
   
 ```  
 EXEC sp_query_store_unforce_plan 3, 3;  

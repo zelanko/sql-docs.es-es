@@ -1,29 +1,29 @@
 ---
 title: ¿Qué es la implementación de aplicaciones?
 titleSuffix: SQL Server 2019 big data clusters
-description: Este artículo describe la implementación de aplicaciones en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+description: En este artículo se describe la implementación de aplicaciones en un clúster de macrodatos SQL Server 2019 (versión preliminar).
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 03/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 43d65ce9b9335d22b453114139f7032613ac5359
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8cc44862af21c54bdbd0e4adbb35db912c3f7c9
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958828"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419408"
 ---
-# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>¿Qué es la implementación de aplicaciones en un clúster de macrodatos de 2019 de SQL Server?
+# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>¿Qué es la implementación de aplicaciones en un clúster de macrodatos SQL Server 2019?
 
-Implementación de aplicaciones permite la implementación de aplicaciones en el clúster de macrodatos, ya que proporciona interfaces para crear, administrar y ejecutar aplicaciones. Las aplicaciones implementadas en el clúster de macrodatos beneficiarán de la potencia de cálculo del clúster y pueden tener acceso a los datos que está disponibles en el clúster. Esto aumenta la escalabilidad y rendimiento de las aplicaciones, al administrar las aplicaciones donde residen los datos.
-Las secciones siguientes describen la arquitectura y la funcionalidad de implementación de la aplicación.
+La implementación de aplicaciones permite la implementación de aplicaciones en el clúster de Big Data proporcionando interfaces para crear, administrar y ejecutar aplicaciones. Las aplicaciones implementadas en el clúster de macrodatos se benefician de la capacidad de cálculo del clúster y pueden tener acceso a los datos que están disponibles en el clúster. Esto aumenta la escalabilidad y el rendimiento de las aplicaciones, al tiempo que se administran las aplicaciones en las que residen los datos.
+En las secciones siguientes se describe la arquitectura y la funcionalidad de la implementación de aplicaciones.
 
-## <a name="application-deployment-architecture"></a>Arquitectura de implementación de aplicación
+## <a name="application-deployment-architecture"></a>Arquitectura de implementación de aplicaciones
 
-Implementación de la aplicación consta de un controlador y controladores de tiempo de ejecución de la aplicación. Al crear una aplicación, un archivo de especificación (`spec.yaml`) se proporciona. Esto `spec.yaml` archivo contiene todo lo que el controlador necesita saber para implementar correctamente la aplicación. El siguiente es un ejemplo del contenido para `spec.yaml`:
+La implementación de la aplicación consta de un controlador y controladores de tiempo de ejecución de la aplicación. Al crear una aplicación, se proporciona un archivo`spec.yaml`de especificación (). Este `spec.yaml` archivo contiene todo lo que el controlador necesita saber para implementar correctamente la aplicación. A continuación se muestra un ejemplo del contenido de `spec.yaml`:
 
 ```yaml
 #spec.yaml
@@ -41,32 +41,32 @@ output: #output parameter the app expects and the type
   result: int
 ```
 
-Inspecciona el controlador de la `runtime` especificado en el `spec.yaml` de archivo y llama al controlador de tiempo de ejecución correspondiente. El controlador de tiempo de ejecución crea la aplicación. En primer lugar, un Kubernetes ReplicaSet se crea que contiene uno o varios pods, cada uno de los cuales contiene la aplicación para su implementación. El número de pods que se define mediante el `replicas` parámetro establecido el `spec.yaml` archivo para la aplicación. Cada pod puede tener uno de los grupos más. El número de grupos se define mediante el `poolsize` parámetro establecido el `spec.yaml` archivo.
+El controlador inspecciona el `runtime` especificado en el `spec.yaml` archivo y llama al controlador en tiempo de ejecución correspondiente. El controlador en tiempo de ejecución crea la aplicación. En primer lugar, se crea una Kubernetes ReplicaSet que contiene uno o varios pods, cada uno de los cuales contiene la aplicación que se va a implementar. El número de pods se define mediante el `replicas` parámetro establecido en el `spec.yaml` archivo de la aplicación. Cada Pod puede tener uno o más grupos. El número de grupos se define mediante el `poolsize` parámetro establecido en el `spec.yaml` archivo.
 
-Esta configuración tiene un impacto en la cantidad de solicitudes que puede controlar la implementación en paralelo. El número máximo de solicitudes en un momento dado es igual a `replicas` veces `poolsize`. Si tiene 5 réplicas y 2 grupos por réplica de la implementación puede controlar 10 solicitudes en paralelo. Consulte la siguiente imagen para una representación gráfica de `replicas` y `poolsize`:
+Esta configuración afecta a la cantidad de solicitudes que la implementación puede controlar en paralelo. El número máximo de solicitudes en un momento dado es igual a `replicas` veces. `poolsize` Si tiene 5 réplicas y 2 grupos por réplica, la implementación puede administrar 10 solicitudes en paralelo. Vea la imagen siguiente para obtener una representación gráfica `replicas` de `poolsize`y:
 
-![TamañoDeGrupo y réplicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+![Agrupar las réplicas y](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
-Después de que se ha creado el ReplicaSet y se han iniciado los pods, se crea un trabajo cron si un `schedule` se estableció el `spec.yaml` archivo. Por último, se crea un Kubernetes Service que puede usarse para administrar y ejecutar la aplicación (ver abajo).
+Una vez que se ha creado el ReplicaSet y se han iniciado los pods, se crea un trabajo `schedule` cron si se ha `spec.yaml` establecido un en el archivo. Por último, se crea un servicio de Kubernetes que se puede usar para administrar y ejecutar la aplicación (consulte a continuación).
 
-Cuando se ejecuta una aplicación, el servicio de Kubernetes para los servidores proxy de aplicación las solicitudes a una réplica y devuelve los resultados.
+Cuando se ejecuta una aplicación, el servicio Kubernetes de la aplicación realiza el proxy de las solicitudes a una réplica y devuelve los resultados.
 
 ## <a name="how-to-work-with-application-deployment"></a>Cómo trabajar con la implementación de aplicaciones
 
-Las dos interfaces principales para la implementación de aplicación son: 
-- [Interfaz de línea de comandos `mssqlctl`](big-data-cluster-create-apps.md)
+Las dos interfaces principales para la implementación de aplicaciones son: 
+- [Interfaz de línea de comandos`azdata`](big-data-cluster-create-apps.md)
 - [Extensión de Visual Studio Code y Azure Data Studio](app-deployment-extension.md)
 
-También es posible que una aplicación se ejecute mediante un servicio web RESTful. Para obtener más información, consulte [consumir las aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md).
+También es posible ejecutar una aplicación mediante un servicio web RESTful. Para más información, consulte [consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre cómo crear y ejecutar aplicaciones en clústeres de macrodatos de SQL Server, consulte lo siguiente:
+Para obtener más información sobre cómo crear y ejecutar aplicaciones en SQL Server clústeres de macrodatos, vea lo siguiente:
 
-- [Implementar aplicaciones con mssqlctl](big-data-cluster-create-apps.md)
-- [Implementar aplicaciones con la extensión de la implementación de aplicaciones](app-deployment-extension.md)
-- [Consumir las aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md)
+- [Implementación de aplicaciones mediante azdata](big-data-cluster-create-apps.md)
+- [Implementación de aplicaciones con la extensión de implementación de aplicaciones](app-deployment-extension.md)
+- [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md)
 
-Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte la información general siguiente:
+Para obtener más información acerca de los clústeres de macrodatos SQL Server, consulte la siguiente información general:
 
-- [¿Qué son los clústeres de macrodatos de 2019 de SQL Server?](big-data-cluster-overview.md)
+- [¿Qué son los clústeres de macrodatos SQL Server 2019?](big-data-cluster-overview.md)

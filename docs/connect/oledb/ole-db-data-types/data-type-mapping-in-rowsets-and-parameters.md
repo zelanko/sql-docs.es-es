@@ -1,5 +1,5 @@
 ---
-title: Asignación de tipos de datos en parámetros y conjuntos de filas | Microsoft Docs
+title: Asignación de tipos de datos en conjuntos de filas y parámetros | Microsoft Docs
 description: Asignar tipos de datos en conjuntos de filas y parámetros
 ms.custom: ''
 ms.date: 06/14/2018
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: de02099f7d54682b96713d861843b2cf5bd87ffb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 529c3189676ce704d10a90902bd44f7f2c8e8f6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995212"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +67,7 @@ ms.locfileid: "66769655"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- El controlador OLE DB para SQL Server admite las conversiones solicitadas por el consumidor de datos tal como se muestra en la ilustración.  
+ El controlador de OLE DB para SQL Server admite conversiones de datos solicitadas por el consumidor, tal como se muestra en la ilustración.  
   
  Los objetos **sql_variant** pueden contener datos de cualquier tipo de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] excepto text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp y los tipos definidos por el usuario de Common Language Runtime (CLR) de Microsoft .NET Framework. Una instancia de datos sql_variant no puede tener sql_variant como tipo de datos base subyacente. Por ejemplo, la columna puede contener valores **smallint** en algunas filas, valores **float** en otras filas y valores **char**/**nchar** en el resto.  
   
@@ -97,6 +96,6 @@ ms.locfileid: "66769655"
 |SSPROP_ALLOWNATIVEVARIANT|Tipo: VT_BOOL<br /><br /> L/E: de lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: determina si los datos se capturan como DBTYPE_VARIANT o DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT.<br /><br /> VARIANT_FALSE: el tipo de columna se devuelve como DBTYPE_VARIANT y el búfer contendrá la estructura VARIANT.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Tipos de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [Tipos &#40;de datos OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

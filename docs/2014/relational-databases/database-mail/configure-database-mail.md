@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872221"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418875"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
   En este tema se describe cómo habilitar y configurar el Correo electrónico de base de datos con el Asistente para configuración de Correo electrónico de base de datos y crear un script de configuración de Correo electrónico de base de datos mediante plantillas.  
@@ -67,7 +67,7 @@ ms.locfileid: "62872221"
   
 2.  Expanda el nodo **Administración** .  
   
-3.  Estrecho y haga clic en **Database Mail**y, a continuación, haga clic en **configurar correo electrónico de base de datos**.  
+3.  Haga clic con el botón derecho en **Correo electrónico de base de datos**y haga clic en **Configurar Correo electrónico de base de datos**.  
   
 4.  Complete los cuadros de diálogo del asistente.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62872221"
  Escriba la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Esta dirección es opcional. Por ejemplo, las respuestas a los mensajes de una cuenta del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden dirigirse al administrador de la base de datos, danw@Adventure-Works.com.  
   
  **Nombre del servidor**  
- Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Esto está típicamente en un formato similar a `smtp.` *< su_compañía >* `.com`. Si necesita ayuda, consulte a su administrador de correo.  
+ Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Normalmente, está en un formato similar a `smtp.` *< your_company >* `.com`. Si necesita ayuda, consulte a su administrador de correo.  
   
  **Número de puerto**  
  Escriba el número de puerto del servidor SMTP de esta cuenta. La mayor parte de los servidores SMTP utilizan el puerto 25.  

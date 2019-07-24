@@ -1,5 +1,5 @@
 ---
-title: Usar secuencias de Escape SQL | Microsoft Docs
+title: Usar secuencias de escape de SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005936"
 ---
 # <a name="using-sql-escape-sequences"></a>Usar secuencias de escape SQL
 
@@ -70,7 +69,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 
 En la tabla siguiente se muestran las diversas funciones que el controlador JDBC admite al usar un flujo de escape de funciones.  
   
-| Funciones de cadena                                                                                                                                                                                                                                                                                                                        | Funciones numéricas                                                                                                                                                                                                                                                                                                                                                                                                   | Funciones de fecha y hora                                                                                                                                                                                                                                                                                                                                             | Funciones del sistema                             |
+| Funciones de cadena                                                                                                                                                                                                                                                                                                                        | Funciones numéricas                                                                                                                                                                                                                                                                                                                                                                                                   | Funciones DateTime                                                                                                                                                                                                                                                                                                                                             | Funciones del sistema                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
 | ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> LTRIM<br /><br /> REPEAT<br /><br /> REPLACE<br /><br /> RIGHT<br /><br /> RTRIM<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> SUBSTRING<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> ROUND<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> DAYOFWEEK<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> NOW<br /><br /> QUARTER<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> WEEK<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> User |
 
@@ -112,7 +111,7 @@ Un procedimiento almacenado es un objeto ejecutable almacenado en la base de dat
 
 donde `procedure-name` y `parameter` especifican el nombre y un parámetro de un procedimiento almacenado, respectivamente.  
   
-Para obtener más información sobre el uso de la `call` secuencia con los procedimientos almacenados de escape, vea [utilizando instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+Para obtener más información sobre el `call` uso de la secuencia de escape con procedimientos almacenados, vea [usar instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
 ## <a name="outer-joins"></a>Combinaciones externas
 

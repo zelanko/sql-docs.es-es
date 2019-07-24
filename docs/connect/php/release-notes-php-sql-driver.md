@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b17e45fee91b293524cca39037f15fac15cd881e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23ac53a8515f55dfc0cad282fd14294e5f285af9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935914"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notas de la versión de los controladores de Microsoft para PHP para SQL Server
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Esta página describe las nuevas funciones de cada versión de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+En esta página se describe lo que se agregó en cada versión [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]de.  
 
 <!--
 Hello, We are standardizing the format of content inside our Release Notes (or What's New) articles.
@@ -47,58 +46,58 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 | Nuevo elemento | Detalles |
 | :------- | :------ |
 | Admite PHP 7.3. | &nbsp; |
-| Quita la compatibilidad para PHP 7.0. | &nbsp; |
-| Compatibilidad con Microsoft ODBC Driver 17.3 en todas las plataformas. | &nbsp; |
-| Compatibilidad con macOS Mojave. | Requiere el controlador ODBC 17.3 o superior. |
-| Compatibilidad con 18.10 Ubuntu y Suse Linux 15. | Ambos requieren ODBC Driver 17.3 o superior. |
-| Quitar la compatibilidad con Ubuntu 17.10 de Linux y macOS El capitán. | &nbsp; |
-| Compatibilidad con el Token de acceso de Azure AD. | En Linux y macOS, requiere el controlador ODBC 17.2 + y 2.3.6+ unixODBC. |
-| Compatibilidad con la autenticación con Azure AD mediante la identidad administrada para recursos de Azure. | Requiere el controlador ODBC 17.3 +. |
-| Nuevas funcionalidades de captura | &bull; &nbsp; Nueva marca PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE para pdo_sqlsrv devolver la fecha y hora como objetos.<br/><br/>&bull; &nbsp; Agregar opción ReturnDatesAsStrings a nivel de instrucción para sqlsrv.<br/><br/>&bull; &nbsp; Nuevas opciones de niveles de conexión y la instrucción para que ambos controladores para dar formato a valores decimales en los resultados recuperados. |
-| Compatibilidad con la compilación estática de controladores si los usuarios deciden construido a partir de código fuente. | &nbsp; |
-| Mejorar el rendimiento, almacenamiento en caché los metadatos de capturas y acelerar las conversiones de cadenas Unicode. | &nbsp; |
+| Se ha quitado la compatibilidad con PHP 7,0. | &nbsp; |
+| Compatibilidad con Microsoft ODBC driver 17,3 en todas las plataformas. | &nbsp; |
+| Compatibilidad con macOS Mojave. | Requiere el controlador ODBC 17,3 o superior. |
+| Compatibilidad con Ubuntu 18,10 y SUSE Linux 15. | Ambos requieren el controlador ODBC 17,3 o superior. |
+| Se ha quitado la compatibilidad con Linux Ubuntu 17,10 y macOS el Capitan. | &nbsp; |
+| Compatibilidad con Azure AD token de acceso. | En Linux y macOS, requiere el controlador ODBC 17.2 + y unixODBC 2.3.6 +. |
+| Compatibilidad con la autenticación con Azure AD mediante identidad administrada para recursos de Azure. | Requiere el controlador ODBC 17.3 +. |
+| Nuevas funcionalidades de captura | &bull;&nbsp; Nueva marca PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE de pdo_sqlsrv para devolver DateTime como objetos.<br/><br/>&bull;&nbsp; Agregue la opción ReturnDatesAsStrings al nivel de instrucción para sqlsrv.<br/><br/>&bull;&nbsp; Nuevas opciones en los niveles de conexión y de instrucción para ambos Controladores para dar formato a los valores decimales en los resultados capturados. |
+| Compatibilidad con la compilación estática de controladores si los usuarios deciden compilar desde el origen. | &nbsp; |
+| Rendimiento mejorado al almacenar en caché los metadatos en las capturas y acelerar las conversiones de cadenas Unicode. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="whats-new-in-version-53"></a>Novedades de la versión 5.3
 
-- Soporte técnico para Microsoft ODBC Driver 17.2 en todas las plataformas
-- Compatibilidad con macOS High Sierra (requiere ODBC Driver 17 y versiones posteriores)
-- Compatibilidad con Azure Key Vault para Always Encrypted para funcionalidades CRUD básicas tales que la característica Always Encrypted está disponible para todos admite las plataformas Windows, Linux o macOS [uso de Always Encrypted con los controladores de PHP para SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
-- Compatibilidad con Ubuntu 18.04 LTS (requiere ODBC Driver 17.2)
-- Compatibilidad con la resistencia de conexión en Linux o macOS también (requiere ODBC Driver 17.2)
+- Compatibilidad con Microsoft ODBC driver 17,2 en todas las plataformas
+- Compatibilidad con macOS High Sierra (requiere ODBC driver 17 y versiones posteriores)
+- Compatibilidad con Azure Key Vault para Always Encrypted de funcionalidades CRUD básicas, de modo que Always Encrypted característica está disponible para todas las plataformas compatibles con Windows, Linux o macOS [mediante Always Encrypted con los controladores php para SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Compatibilidad con Ubuntu 18,04 LTS (requiere el controlador ODBC 17,2)
+- Compatibilidad con la resistencia de conexión en Linux o macOS también (requiere el controlador ODBC 17,2)
 
 ## <a name="whats-new-in-version-52"></a>Novedades de la versión 5.2
 
-- Compatibilidad con PHP 7.2.1 y hasta en Windows y 7.2.0 y hasta en otras plataformas
-- Soporte técnico de Microsoft ODBC Driver 17
-  - Versión 17 ahora es el valor predeterminado en todas las plataformas
-- Compatibilidad con Ubuntu con 17.10, Debian 9 y Enterprise de Suse Linux 12
-- Quita la compatibilidad para 15.10 de Ubuntu
+- Compatibilidad con PHP 7.2.1 y up en Windows, y 7.2.0 y en otras plataformas
+- Compatibilidad con Microsoft ODBC driver 17
+  - La versión 17 es ahora la predeterminada en todas las plataformas
+- Compatibilidad con Ubuntu 17,10, Debian 9 y SuSE Enterprise Linux 12
+- Se quitó la compatibilidad con Ubuntu 15,10
 - Compatibilidad con Always Encrypted con funcionalidades CRUD en Windows. Para obtener más información, vea [Using Always Encrypted with the PHP Drivers for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md) (Uso de Always Encrypted con los controladores PHP para SQL Server).
-  - Compatibilidad con Windows Certificate Store
-  - Always Encrypted solo es compatible con Microsoft ODBC Driver 17 y versiones posteriores
-- Compatibilidad con configuraciones regionales que no sean UTF8 en Linux y macOS
-  - Solo se admiten configuraciones regionales que no sean UTF8 en Linux y macOS con Microsoft ODBC Driver 17 y versiones posteriores
+  - Compatibilidad con el almacén de certificados de Windows
+  - Always Encrypted solo se admite con Microsoft ODBC driver 17 y versiones posteriores
+- Compatibilidad con configuraciones regionales no UTF8 en Linux y macOS
+  - Las configuraciones regionales no UTF8 en Linux y macOS solo se admiten con Microsoft ODBC driver 17 y versiones posteriores
 - Compatibilidad con Azure SQL Data Warehouse
 - Compatibilidad con Instancia administrada de Azure SQL (versión preliminar privada ampliada).
 
 ## <a name="whats-new-in-version-43"></a>Novedades de la versión 4.3
 
 - Compatibilidad con PHP 7.1
-- Compatibilidad con macOS Sierra y macOS El capitán
-- Compatibilidad con Ubuntu 15.10 y Debian 8
-- Quita la compatibilidad para Ubuntu 15.04
-- Compatibilidad con grupos de disponibilidad Always On a través de la resolución de direcciones IP de red transparente. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md).
-- Se agregó compatibilidad para el tipo de datos sql_variant con limitación.
-- Soporte técnico de la resistencia de conexión inactiva en Windows. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md).
-- Compatibilidad con Linux y macOS de agrupación de conexiones. Para obtener más información, vea [Connection Pooling](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md) (Agrupación de conexiones).
-- Compatibilidad con autenticación de Azure Active Directory con ActiveDirectoryPassword y SqlPassword. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md).
+- Compatibilidad con macOS Sierra y macOS el Capitan
+- Compatibilidad con Ubuntu 15,10 y Debian 8
+- Se quitó la compatibilidad con Ubuntu 15,04
+- Compatibilidad con grupos de disponibilidad de Always On a través de la resolución de IP de red transparente. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md).
+- Compatibilidad agregada para el tipo de datos sql_variant con limitación.
+- Compatibilidad con resistencia de conexión inactiva en Windows. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md).
+- Compatibilidad con la agrupación de conexiones para Linux y macOS. Para obtener más información, vea [Connection Pooling](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md) (Agrupación de conexiones).
+- Compatibilidad con la autenticación de Azure Active Directory con ActiveDirectoryPassword y SqlPassword. Para obtener más información, consulte [Connection Options](../../connect/php/connection-options.md).
 
 ## <a name="whats-new-in-version-40"></a>Novedades de la versión 4.0
 
 - Compatibilidad con PHP 7.0  
-- Compatibilidad con 64 bits
-- Compatibilidad con Ubuntu 15.04, Ubuntu 16.04 y Red Hat 7
+- Compatibilidad completa con 64 bits
+- Compatibilidad con Ubuntu 15,04, Ubuntu 16,04 y RedHat 7
 
 ## <a name="whats-new-in-version-32"></a>Novedades de la versión 3.2
 

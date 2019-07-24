@@ -21,17 +21,17 @@ ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b865a0252b4a5f817d879dc2fd3318cfc11ecdd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f20c4740868e0256ceb88c604b5a3eb021d367e5
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990408"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418928"
 ---
 # <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Borra las estadísticas en tiempo de ejecución para un plan de consulta específico del almacén de consultas.  
+  Borra las estadísticas de tiempo de ejecución de un plan de consulta específico del almacén de consultas.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @plan_id = ] plan_id` Es el identificador del plan de consulta para que se van a borrar. *plan_id* es un **bigint**, no tiene ningún valor predeterminado.  
+`[ @plan_id = ] plan_id`Es el identificador del plan de consulta que se va a borrar. *plan_id* es de tipo **BIGINT**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -51,10 +51,10 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
+ Requiere el permiso **ALTER** en la base de datos. 
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente devuelve información acerca de las consultas en el almacén de consultas.  
+ En el ejemplo siguiente se devuelve información sobre las consultas en el almacén de consultas.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -65,7 +65,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Después de identificar el plan_id que desea borrar las estadísticas, use el ejemplo siguiente para eliminar las estadísticas de ejecución para un plan de consulta específica. Este ejemplo elimina las estadísticas de ejecución para el número 3 de plan.  
+ Después de identificar el plan_id en el que desea borrar las estadísticas, use el ejemplo siguiente para eliminar las estadísticas de ejecución de un plan de consulta específico. En este ejemplo se eliminan las estadísticas de ejecución para el plan número 3.  
   
 ```  
 EXEC sp_query_store_reset_exec_stats 3;  

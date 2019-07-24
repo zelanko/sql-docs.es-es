@@ -1,80 +1,80 @@
 ---
-title: Implementar aplicaciones con mssqlctl
+title: Implementación de aplicaciones mediante azdata
 titleSuffix: SQL Server big data clusters
-description: Implementar un script de Python o R como una aplicación en clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+description: Implemente un script de Python o R como una aplicación en SQL Server clúster de macrodatos de 2019 (versión preliminar).
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e3768ff5bfc01f2068b10ebd8afc18d12fa808c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 06b76e7eb8eec8db1993ca558a1f57355457c4ad
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958864"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419487"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Cómo implementar una aplicación en clúster de macrodatos de SQL Server (versión preliminar)
+# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Implementación de una aplicación en SQL Server clúster de macrodatos (versión preliminar)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe cómo implementar y administrar el script de R y Python como una aplicación dentro de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+En este artículo se describe cómo implementar y administrar scripts de R y Python como una aplicación dentro de un clúster de macrodatos SQL Server 2019 (versión preliminar).
 
-## <a name="whats-new-and-improved"></a>¿Qué es nuevo y mejorado
+## <a name="whats-new-and-improved"></a>Novedades y mejoras
 
 - Una única utilidad de línea de comandos para administrar el clúster y la aplicación.
-- Implementación de aplicaciones simplificada al tiempo que proporciona un control granular a través de los archivos de especificación.
-- Admite el hospedaje de tipos de aplicación adicionales: SSIS y MLeap (novedad en CTP 2.3)
-- [Extensión de VS Code](app-deployment-extension.md) para administrar la implementación de aplicaciones
+- Implementación simplificada de aplicaciones al mismo tiempo que proporciona un control granular a través de los archivos de especificación
+- Compatibilidad con el hospedaje de tipos de aplicación adicionales: SSIS y MLeap (novedad en CTP 2,3)
+- [Extensión vs Code](app-deployment-extension.md) para administrar la implementación de aplicaciones
 
-Las aplicaciones se implementan y administran mediante `mssqlctl` utilidad de línea de comandos. En este artículo se proporciona ejemplos de cómo implementar aplicaciones desde la línea de comandos. Para obtener información sobre cómo usar esto en Visual Studio Code consulte [extensión de VS Code](app-deployment-extension.md).
+Las aplicaciones se implementan y `azdata` administran mediante la utilidad de línea de comandos. En este artículo se proporcionan ejemplos de cómo implementar aplicaciones desde la línea de comandos. Para obtener información sobre cómo usar esto en Visual Studio Code consulte [extensión de vs Code](app-deployment-extension.md).
 
 Se admiten los siguientes tipos de aplicaciones:
 - Aplicaciones de R y Python (funciones, modelos y aplicaciones)
-- MLeap Servers
+- Servicio de MLeap
 - SQL Server Integration Services (SSIS)
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - [Clúster de macrodatos de SQL Server 2019](deployment-guidance.md)
-- [utilidad de línea de comandos mssqlctl](deploy-install-mssqlctl.md)
+- [utilidad de línea de comandos azdata](deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Capabilities
 
-En SQL Server 2019 (versión preliminar) puede crear, eliminar, describir, inicializar, lista ejecutar y actualizar la aplicación. En la tabla siguiente se describe los comandos de implementación de aplicación que puede usar con **mssqlctl**.
+En SQL Server 2019 (versión preliminar), puede crear, eliminar, describir, inicializar, enumerar y actualizar la aplicación. En la tabla siguiente se describen los comandos de implementación de aplicaciones que puede usar con **azdata**.
 
 |Comando |Descripción |
 |:---|:---|
-|`mssqlctl login` | Inicie sesión en un clúster de macrodatos de SQL Server |
-|`mssqlctl app create` | Crear la aplicación. |
-|`mssqlctl app delete` | Eliminar la aplicación. |
-|`mssqlctl app describe` | Describir la aplicación. |
-|`mssqlctl app init` | Nueva aplicación KickStart esqueleto. |
-|`mssqlctl app list` | Lista de aplicaciones. |
-|`mssqlctl app run` | Ejecutar la aplicación. |
-|`mssqlctl app update`| Actualizar la aplicación. |
+|`azdata login` | Inicio de sesión en un clúster de macrodatos SQL Server |
+|`azdata app create` | Cree la aplicación. |
+|`azdata app delete` | Eliminar aplicación. |
+|`azdata app describe` | Describir aplicación. |
+|`azdata app init` | Kickstart nuevo esqueleto de la aplicación. |
+|`azdata app list` | Enumerar las aplicaciones. |
+|`azdata app run` | Ejecute la aplicación. |
+|`azdata app update`| Actualice la aplicación. |
 
-También puede obtener ayuda con la `--help` parámetro como en el ejemplo siguiente:
+Puede obtener ayuda con el `--help` parámetro, como en el ejemplo siguiente:
 
 ```bash
-mssqlctl app create --help
+azdata app create --help
 ```
 
-Las secciones siguientes describen estos comandos en más detalle.
+En las secciones siguientes se describen estos comandos con más detalle.
 
 ## <a name="sign-in"></a>Iniciar sesión
 
-Antes de implementar o interactuar con las aplicaciones, primero inicie sesión en un clúster de macrodatos con SQL Server la `mssqlctl login` comando. Especifique la dirección IP externa de la `controller-svc-external` servicio (por ejemplo: `https://ip-address:30080`) junto con el nombre de usuario y la contraseña para el clúster.
+Antes de implementar aplicaciones o interactuar con ellas, inicie sesión primero en el SQL Server clúster de Big Data `azdata login` con el comando. Especifique la dirección IP externa del `controller-svc-external` servicio (por ejemplo: `https://ip-address:30080`) junto con el nombre de usuario y la contraseña para el clúster.
 
 ```bash
-mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
 ## <a name="aks"></a>AKS
 
-Si usa AKS, deberá ejecutar el comando siguiente para obtener la dirección IP de la `mgmtproxy-svc-external` servicio, ejecute este comando en una ventana cmd o bash:
+Si usa AKS, debe ejecutar el siguiente comando para obtener la dirección IP del `mgmtproxy-svc-external` servicio mediante la ejecución de este comando en una ventana de bash o CMD:
 
 
 ```bash
@@ -83,7 +83,7 @@ kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm o Minikube
 
-Si usas Kubeadm o Minikube, ejecute el siguiente comando para obtener la dirección IP para el inicio de sesión en el clúster
+Si usa Kubeadm o Minikube, ejecute el siguiente comando para obtener la dirección IP para iniciar sesión en el clúster.
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -91,25 +91,25 @@ kubectl get node --selector='node-role.kubernetes.io/master'
 
 ## <a name="create-an-app"></a>Creación de una aplicación
 
-Para crear una aplicación, utilice `mssqlctl` con el `app create` comando. Estos archivos residen localmente en el equipo que va a crear la aplicación.
+Para crear una aplicación, use `azdata` con el `app create` comando. Estos archivos residen localmente en el equipo desde el que va a crear la aplicación.
 
-Use la sintaxis siguiente para crear una nueva aplicación en clúster de macrodatos:
-
-```bash
-mssqlctl app create --spec <directory containing spec file>
-```
-
-El comando siguiente muestra un ejemplo del aspecto que podría tener este comando:
+Use la siguiente sintaxis para crear una nueva aplicación en el clúster de Big Data:
 
 ```bash
-mssqlctl app create --spec ./addpy
+azdata app create --spec <directory containing spec file>
 ```
 
-Esto supone que tiene la aplicación que se almacenan en el `addpy` carpeta. Esta carpeta también debe contener un archivo de especificación de la aplicación, denominada `spec.yaml`. Consulte [la página de implementación de aplicaciones](concept-application-deployment.md) para obtener más información sobre la `spec.yaml` archivo.
+El comando siguiente muestra un ejemplo de cómo podría ser este comando:
 
-Para implementar esta aplicación de ejemplo de aplicación, cree los siguientes archivos en un directorio llamado `addpy`:
+```bash
+azdata app create --spec ./addpy
+```
 
-- `add.py`. Copie el siguiente código de Python en este archivo:
+Se supone que la aplicación está almacenada en la `addpy` carpeta. Esta carpeta también debe contener un archivo de especificación para la aplicación, `spec.yaml`denominado. Consulte [la página de implementación de la aplicación](concept-application-deployment.md) para obtener más `spec.yaml` información sobre el archivo.
+
+Para implementar esta aplicación de ejemplo de aplicación, cree los siguientes archivos en un `addpy`directorio denominado:
+
+- `add.py` Copie el siguiente código de Python en este archivo:
    ```py
    #add.py
    def add(x,y):
@@ -117,7 +117,7 @@ Para implementar esta aplicación de ejemplo de aplicación, cree los siguientes
         return result
     result=add(x,y)
    ```
-- `spec.yaml` Copie el código siguiente en este archivo:
+- `spec.yaml` Copie el siguiente código en este archivo:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -137,16 +137,16 @@ Para implementar esta aplicación de ejemplo de aplicación, cree los siguientes
 A continuación, ejecute el siguiente comando:
 
 ```bash
-mssqlctl app create --spec ./addpy
+azdata app create --spec ./addpy
 ```
 
-Puede comprobar si la aplicación se implementa mediante el comando de lista:
+Puede comprobar si la aplicación se implementa con el comando list:
 
 ```bash
-mssqlctl app list
+azdata app list
 ```
 
-Si no se ha completado la implementación debería ver el `state` mostrar `WaitingforCreate` como en el ejemplo siguiente:
+Si la implementación no se ha completado, debería ver `state` el `WaitingforCreate` programa como el ejemplo siguiente:
 
 ```json
 [
@@ -158,7 +158,7 @@ Si no se ha completado la implementación debería ver el `state` mostrar `Waiti
 ]
 ```
 
-Después de la implementación es correcta, debería ver el `state` cambie a `Ready` estado:
+Una vez que la implementación se realiza correctamente, debería `state` ver el `Ready` cambio de estado:
 
 ```json
 [
@@ -170,29 +170,29 @@ Después de la implementación es correcta, debería ver el `state` cambie a `Re
 ]
 ```
 
-## <a name="list-an-app"></a>Publicar una aplicación
+## <a name="list-an-app"></a>Mostrar una aplicación
 
 Puede enumerar las aplicaciones que se crearon correctamente con el `app list` comando.
 
-El siguiente comando enumera todas las aplicaciones disponibles en el clúster de macrodatos:
+El siguiente comando muestra todas las aplicaciones disponibles en el clúster de Big Data:
 
 ```bash
-mssqlctl app list
+azdata app list
 ```
 
-Si especifica un nombre y versión, se enumeran esa aplicación específica y su estado (creación o listo):
+Si especifica un nombre y una versión, se muestra la aplicación específica y su estado (creación o preparación):
 
 ```bash
-mssqlctl app list --name <app_name> --version <app_version>
+azdata app list --name <app_name> --version <app_version>
 ```
 
-El ejemplo siguiente muestra este comando:
+En el ejemplo siguiente se muestra este comando:
 
 ```bash
-mssqlctl app list --name add-app --version v1
+azdata app list --name add-app --version v1
 ```
 
-Debería ver resultados similares al ejemplo siguiente:
+Debería ver una salida similar a la del ejemplo siguiente:
 
 ```json
 [
@@ -206,19 +206,19 @@ Debería ver resultados similares al ejemplo siguiente:
 
 ## <a name="run-an-app"></a>Ejecutar una aplicación
 
-Si la aplicación está en un `Ready` de estado, puede usarlo si lo ejecuta con los parámetros de entrada especificados. Use la siguiente sintaxis para ejecutar una aplicación:
+Si la aplicación está en un `Ready` estado, puede usarla mediante su ejecución con los parámetros de entrada especificados. Use la siguiente sintaxis para ejecutar una aplicación:
 
 ```bash
-mssqlctl app run --name <app_name> --version <app_version> --inputs <inputs_params>
+azdata app run --name <app_name> --version <app_version> --inputs <inputs_params>
 ```
 
-El comando de ejemplo siguiente muestra el comando run:
+El siguiente comando de ejemplo muestra el comando ejecutar:
 
 ```bash
-mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
+azdata app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
-Si la ejecución se realizó correctamente, debería ver la salida que especificó cuando creó la aplicación. A continuación se muestra un ejemplo.
+Si la ejecución se realizó correctamente, debería ver el resultado tal como se especificó al crear la aplicación. A continuación se muestra un ejemplo.
 
 ```json
 {
@@ -233,17 +233,17 @@ Si la ejecución se realizó correctamente, debería ver la salida que especific
 }
 ```
 
-## <a name="create-an-app-skeleton"></a>Creación de un esqueleto de la aplicación
+## <a name="create-an-app-skeleton"></a>Crear un esqueleto de la aplicación
 
-El comando init proporciona una plantilla scaffold con los artefactos relevantes que es necesaria para implementar una aplicación. El ejemplo siguiente crea hello puede hacerlo ejecutando el comando siguiente.
+El comando init proporciona un scaffolding con los artefactos relevantes necesarios para implementar una aplicación. En el ejemplo siguiente se crea Hello puede hacerlo mediante la ejecución del siguiente comando.
 
 ```bash
-mssqlctl app init --name hello --version v1 --template python
+azdata app init --name hello --version v1 --template python
 ```
 
-Esto creará una carpeta denominada hello.  También puede `cd` en el directorio e inspeccionar los archivos generados en la carpeta. spec.yaml define la aplicación, como nombre, versión y el código fuente. Puede editar la especificación para cambiar el nombre, versión, entradas y salidas.
+Se creará una carpeta denominada Hello.  Puede `cd` hacerlo en el directorio e inspeccionar los archivos generados en la carpeta. Spec. yaml define la aplicación, como el nombre, la versión y el código fuente. Puede editar las especificaciones para cambiar el nombre, la versión, la entrada y las salidas.
 
-Esta es una salida de ejemplo del comando init que ve en la carpeta
+Este es un ejemplo de salida del comando init que verá en la carpeta
 
 ```
 hello.py
@@ -253,9 +253,9 @@ spec.yaml
 
 ```
 
-## <a name="describe-an-app"></a>Describe una aplicación
+## <a name="describe-an-app"></a>Describir una aplicación
 
-El comando descripción proporciona información detallada acerca de la aplicación, incluido el punto final en el clúster. Esto se usa normalmente por un desarrollador de aplicaciones para compilar una aplicación mediante el cliente de swagger y usar el servicio Web para interactuar con la aplicación de forma RESTful. Consulte [consumir las aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información.
+El comando de Descripción proporciona información detallada sobre la aplicación, incluido el punto final del clúster. Normalmente, lo usa un desarrollador de aplicaciones para compilar una aplicación con el cliente de Swagger y usar el servicio WebService para interactuar con la aplicación de una manera de RESTful. Consulte uso [de aplicaciones en clústeres de Big Data](big-data-cluster-consume-apps.md) para obtener más información.
 
 ```json
 {
@@ -285,16 +285,16 @@ El comando descripción proporciona información detallada acerca de la aplicaci
 }
 ```
 
-## <a name="delete-an-app"></a>Eliminar una aplicación
+## <a name="delete-an-app"></a>Eliminación de una aplicación
 
-Para eliminar una aplicación desde el clúster de macrodatos, use la sintaxis siguiente:
+Para eliminar una aplicación del clúster de Big Data, use la sintaxis siguiente:
 
 ```bash
-mssqlctl app delete --name add-app --version v1
+azdata app delete --name add-app --version v1
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Explore cómo integrar las aplicaciones implementadas en SQL Server, clústeres de macrodatos en sus propias aplicaciones en [consumir las aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información. También puede consultar ejemplos adicionales en [ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy).
+Explore cómo integrar aplicaciones implementadas en SQL Server clústeres de macrodatos en sus propias aplicaciones en [consumir aplicaciones en clústeres](big-data-cluster-consume-apps.md) de macrodatos para obtener más información. También puede consultar los ejemplos adicionales en [ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy).
 
-Para obtener más información acerca de los clústeres de macrodatos de SQL Server, vea [¿cuáles son los clústeres de SQL Server 2019 macrodatos?](big-data-cluster-overview.md).
+Para más información sobre los clústeres de macrodatos de SQL Server, consulte [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md).

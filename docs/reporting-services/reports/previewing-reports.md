@@ -2,7 +2,6 @@
 title: Obtener una vista previa de los informes
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +9,12 @@ ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 6bd9a273347aa2010cf670ea3a87622e92d69f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82559832d11d9461665e89963026a267d9f0554c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935892"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267487"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Vista previa de los informes en SQL Server Reporting Services (SSRS)
 

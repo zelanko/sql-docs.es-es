@@ -1,71 +1,71 @@
 ---
 title: Montaje de ADLS Gen2 para los niveles de HDFS
 titleSuffix: How to mount ADLS Gen2
-description: Este artículo explica cómo configurar HDFS niveles para montar un sistema de archivos externo de Azure Data Lake Storage en HDFS en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos de Azure Data Lake Storage externo en HDFS en un clúster de macrodatos de SQL Server 2019 (versión preliminar).
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ce7836b66408fda5f60e5566625dc1aa460fa672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7d8a6dd53452700853dca9774ed0196ed7546fe
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958372"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419349"
 ---
-# <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Cómo Gen2 de ADLS de montaje para los niveles en un clúster de macrodatos HDFS
+# <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Cómo montar ADLS Gen2 para la organización en niveles de HDFS en un clúster de Big Data
 
-Las secciones siguientes proporcionan un ejemplo de cómo configurar la organización en niveles con un origen de datos de Azure Data Lake Storage Gen2 HDFS.
+En las secciones siguientes se proporciona un ejemplo de cómo configurar la organización en niveles de HDFS con un origen de datos de Azure Data Lake Storage Gen2.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Clúster de macrodatos implementada](deployment-guidance.md)
-- [Herramientas de datos de gran tamaño](deploy-big-data-tools.md)
-  - **mssqlctl**
+- [Clúster de Big Data implementado](deployment-guidance.md)
+- [Herramientas de macrodatos](deploy-big-data-tools.md)
+  - **azdata**
   - **kubectl**
 
-## <a id="load"></a> Cargar datos en Azure Data Lake Storage
+## <a id="load"></a>Cargar datos en Azure Data Lake Storage
 
-La siguiente sección describe cómo configurar Azure Data Lake almacenamiento Gen2 para probar los niveles de HDFS. Si ya tiene datos almacenados en Azure Data Lake Storage, puede omitir esta sección para usar sus propios datos.
+En la siguiente sección se describe cómo configurar Azure Data Lake Storage Gen2 para probar la organización en niveles de HDFS. Si ya tiene datos almacenados en Azure Data Lake Storage, puede omitir esta sección para usar sus propios datos.
 
-1. [Crear una cuenta de almacenamiento con las funcionalidades de Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+1. [Cree una cuenta de almacenamiento con capacidades de Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. [Crear un contenedor de blobs](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) en esta cuenta de almacenamiento para los datos externos.
+1. [Cree un contenedor](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) de blobs en esta cuenta de almacenamiento para los datos externos.
 
-1. Cargue un archivo CSV o Parquet en el contenedor. Se trata de los datos HDFS externos que se montará en HDFS en el clúster de macrodatos.
+1. Cargue un archivo CSV o parquet en el contenedor. Estos son los datos de HDFS externos que se montarán en HDFS en el clúster de Big Data.
 
 ## <a name="credentials-for-mounting"></a>Credenciales para el montaje
 
-## <a name="use-oauth-credentials-to-mount"></a>Use las credenciales de OAuth para montar
+## <a name="use-oauth-credentials-to-mount"></a>Usar credenciales de OAuth para montar
 
-Para poder usar las credenciales de OAuth para montar, deberá seguir los pasos siguientes:
+Para poder usar las credenciales de OAuth para montar, debe seguir los pasos siguientes:
 
-1. Vaya a la [portal de Azure](https://portal.azure.com)
-1. Vaya a "services" en el panel de navegación izquierdo y de reloj en "Azure Active Directory"
-1. Con "Registros de aplicaciones" en el menú, cree una "aplicación Web y siga el asistente. **Recuerde el nombre que se creen aquí**. Deberá agregar este nombre a la cuenta ADLS como un usuario autorizado.
-1. Una vez creada la aplicación web, vaya a "claves" en "configuración" de la aplicación.
-1. Seleccione que una duración de la clave y haga clic en guardan. **Guarde la clave generada.**
-1.  Vuelva a la página de registros de aplicaciones y haga clic en el botón "Puntos de conexión" en la parte superior. **Anote la dirección URL de "Extremo de Token"**
-1. Ahora debería tener lo siguiente que anotó para OAuth:
+1. Vaya a la [Azure portal](https://portal.azure.com)
+1. Vaya a "servicios" en el panel de navegación izquierdo y el reloj en "Azure Active Directory"
+1. Mediante "registros de aplicaciones" en el menú, cree una "aplicación web y siga el asistente. **Recuerde el nombre que cree aquí**. Tendrá que agregar este nombre a su cuenta de ADLS como usuario autorizado.
+1. Una vez creada la aplicación Web, vaya a "claves" en "configuración" para la aplicación.
+1. Seleccione una duración de clave y haga clic en guardar. **Guarde la clave generada.**
+1.  Vuelva a la página registros de aplicaciones y haga clic en el botón "puntos de conexión" en la parte superior. **Anote la dirección URL del "extremo del token"**
+1. Ahora debería tener en cuenta lo siguiente en OAuth:
 
-    - El "identificador de aplicación" de la aplicación Web que creó anteriormente en el paso 3
+    - "ID. de aplicación" de la aplicación web que creó anteriormente en el paso 3
     - La clave que acaba de generar en el paso 5
-    - El extremo de token del paso 6
+    - El punto de conexión del token del paso 6
 
-### <a name="adding-the-service-principal-to-your-adls-account"></a>Agregar a la entidad de servicio a su cuenta de ADLS
+### <a name="adding-the-service-principal-to-your-adls-account"></a>Adición de la entidad de servicio a la cuenta de ADLS
 
-1. Ir al portal nuevo y abra su cuenta de ADLS y seleccione el control de acceso (IAM) en el menú izquierdo.
-1. Seleccione "Agregar una asignación de roles" y busque el nombre que creó en el paso 3 anterior (tenga en cuenta que no se muestra en la lista, pero se encontrarán si busca el nombre completo).
-1. Ahora agregue el rol "Colaborador de datos de la Blob Storage (versión preliminar)".
+1. Vuelva al portal de nuevo y abra su cuenta de ADLS y seleccione control de acceso (IAM) en el menú de la izquierda.
+1. Seleccione "agregar una asignación de roles" y busque el nombre que creó en Step3 anterior (tenga en cuenta que no aparece en la lista, pero se encontrará si busca el nombre completo).
+1. Ahora, agregue el rol de "colaborador de datos de BLOB de almacenamiento (versión preliminar)".
 
-Espere entre 5 y 10 minutos antes de usar las credenciales para el montaje
+Espere 5-10 minutos antes de usar las credenciales para el montaje
 
-### <a name="set-environment-variable-for-oauth-credentials"></a>Establezca la variable de entorno para las credenciales de OAuth
+### <a name="set-environment-variable-for-oauth-credentials"></a>Establecer la variable de entorno para las credenciales de OAuth
 
-Abra un símbolo en un equipo cliente que puede tener acceso al clúster de macrodatos. Establezca una variable de entorno con el formato siguiente: Lista separada por tenga en cuenta que las credenciales deben estar en una coma. El comando 'set' se usa en Windows. Si usa Linux, use 'export' en su lugar.
+Abra un símbolo del sistema en un equipo cliente que pueda tener acceso al clúster de Big Data. Establezca una variable de entorno con el siguiente formato: Tenga en cuenta que las credenciales deben estar en una lista separada por comas. El comando "SET" se usa en Windows. Si usa Linux, use "Export" en su lugar.
 
    ```text
     set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
@@ -75,74 +75,82 @@ Abra un símbolo en un equipo cliente que puede tener acceso al clúster de macr
     fs.azure.account.oauth2.client.secret=[<key> from step5 above]
    ```
 
-## <a name="use-access-keys-to-mount"></a>Use las teclas de acceso para montar
+## <a name="use-access-keys-to-mount"></a>Usar claves de acceso para montar
 
-También puede montar mediante claves de acceso que se pueden obtener con su cuenta ADLS en el portal de Azure.
+También puede montar con las claves de acceso que puede obtener para la cuenta de ADLS en el Azure Portal.
 
  > [!TIP]
-   > Para obtener más información sobre cómo buscar la clave de acceso (`<storage-account-access-key>`) para la cuenta de almacenamiento, consulte [ver claves de cuenta y la cadena de conexión](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
+   > Para obtener más información sobre cómo buscar la clave de acceso`<storage-account-access-key>`() de la cuenta de almacenamiento, consulte [Ver claves de cuenta y cadena de conexión](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
 
-### <a name="set-environment-variable-for-access-key-credentials"></a>Establezca la variable de entorno para las credenciales de clave de acceso
+### <a name="set-environment-variable-for-access-key-credentials"></a>Establecer la variable de entorno para las credenciales de clave de acceso
 
-1. Abra un símbolo en un equipo cliente que puede tener acceso al clúster de macrodatos.
+1. Abra un símbolo del sistema en un equipo cliente que pueda tener acceso al clúster de Big Data.
 
-1. Abra un símbolo en un equipo cliente que puede tener acceso al clúster de macrodatos. Establezca una variable de entorno con el formato siguiente. Lista separada por tenga en cuenta que las credenciales deben estar en una coma. El comando 'set' se usa en Windows. Si usa Linux, use 'export' en su lugar.
+1. Abra un símbolo del sistema en un equipo cliente que pueda tener acceso al clúster de Big Data. Establezca una variable de entorno con el siguiente formato. Tenga en cuenta que las credenciales deben estar en una lista separada por comas. El comando "SET" se usa en Windows. Si usa Linux, use "Export" en su lugar.
 
    ```text
    set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
-## <a id="mount"></a> Montar el almacenamiento HDFS remoto
+## <a id="mount"></a>Montaje del almacenamiento de HDFS remoto
 
-Ahora que ha establecido la variable de entorno MOUNT_CREDENTIALS para las claves de acceso o uso de OAuth, puede iniciar el montaje. Los pasos siguientes montar el almacenamiento HDFS remoto en Azure Data Lake en el almacenamiento HDFS local de su clúster de macrodatos.
+Ahora que ha establecido la variable de entorno MOUNT_CREDENTIALS para las claves de acceso o el uso de OAuth, puede iniciar el montaje. En los pasos siguientes se monta el almacenamiento de HDFS remoto en Azure Data Lake al almacenamiento de HDFS local del clúster de Big Data.
 
-1. Use **kubectl** para buscar la dirección IP para el punto de conexión **controlador-svc-external** servicio en el clúster de macrodatos. Busque el **External-IP**.
+1. Use **kubectl** para buscar la dirección IP del **controlador de punto de conexión: servicio SVC-external** en el clúster de Big Data. Busque **external-IP**.
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
-1. Inicie sesión con **mssqlctl** utilizando la dirección IP externa del punto de conexión de controlador con el nombre de usuario del clúster y la contraseña:
+1. Inicie sesión con **azdata** mediante la dirección IP externa del punto de conexión del controlador con el nombre de usuario y la contraseña del clúster:
 
    ```bash
-   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
+   azdata login -e https://<IP-of-controller-svc-external>:30080/
    ```
-1. Establecer variable de entorno MOUNT_CREDENTIALS (desplácese para obtener instrucciones)
+1. Establezca la variable de entorno MOUNT_CREDENTIALS (Desplácese hacia arriba para obtener instrucciones)
 
-1. Montar el almacenamiento HDFS remoto en Azure mediante **crear montaje de bloque de almacenamiento de bdc mssqlctl**. Reemplace los valores de marcador de posición antes de ejecutar el comando siguiente:
+1. Monte el almacenamiento de HDFS remoto en Azure mediante el **almacenamiento de BDC de azdata creación del grupo de montaje**. Reemplace los valores de marcador de posición antes de ejecutar el siguiente comando:
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
+   azdata bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
-   > El montaje crear comando es asincrónica. En este momento, no hay ningún mensaje que indica si el montaje se realizó correctamente. Consulte la [estado](#status) sección para comprobar el estado de sus montajes.
+   > El comando mount Create es asincrónico. En este momento, no hay ningún mensaje que indique si el montaje tuvo éxito. Consulte la sección [Estado](#status) para comprobar el estado de los montajes.
 
-Si ha montado correctamente, podrá consultar los datos HDFS y ejecutar trabajos de Spark en él. Aparecerá en el HDFS del clúster de macrodatos en la ubicación especificada por `--mount-path`.
+Si se monta correctamente, debería poder consultar los datos de HDFS y ejecutar trabajos de Spark en él. Aparecerá en HDFS para el clúster de Big Data en la ubicación especificada por `--mount-path`.
 
-## <a id="status"></a> Obtener el estado de montajes
+## <a id="status"></a>Obtención del estado de montajes
 
-Para mostrar el estado de todos los montajes en el clúster de macrodatos, utilice el siguiente comando:
+Para mostrar el estado de todos los montajes en el clúster de Big Data, use el siguiente comando:
 
 ```bash
-mssqlctl bdc storage-pool mount status
+azdata bdc storage-pool mount status
 ```
 
-Para mostrar el estado de un montaje en una ruta específica en HDFS, use el siguiente comando:
+Para mostrar el estado de un montaje en una ruta de acceso específica en HDFS, use el siguiente comando:
 
 ```bash
-mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Eliminar el montaje
+## <a name="refresh-a-mount"></a>Actualización de un montaje
 
-Para eliminar el montaje, use el **delete de montaje de bloque de almacenamiento de bdc mssqlctl** comando y especifique la ruta de acceso de montaje en HDFS:
+En el ejemplo siguiente se actualiza el montaje.
 
 ```bash
-mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
+```
+
+## <a id="delete"></a>Eliminar el montaje
+
+Para eliminar el montaje, use el comando **azdata BDC Storage-Pool Mount Delete** y especifique la ruta de acceso de montaje en HDFS:
+
+```bash
+azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de los clústeres de macrodatos de 2019 de SQL Server, vea [¿cuáles son los clústeres de SQL Server 2019 macrodatos?](big-data-cluster-overview.md).
+Para obtener más información sobre los clústeres de macrodatos de SQL Server 2019, consulte [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md).

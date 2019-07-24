@@ -21,17 +21,17 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb65ba60dc99be491cffcd70a0eb442bfe61d580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c87dc88db41e6699e1ce39e924b017c11bf5621e
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896404"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418910"
 ---
 # <a name="spquerystoreremovequery-transact-sql"></a>sp_query_store_remove_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Quita el almacén de consultas en la consulta, así como asociados todos los planes y estadísticas en tiempo de ejecución.  
+  Quita la consulta, así como todos los planes asociados y estadísticas en tiempo de ejecución del almacén de consultas.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @query_id = ] query_id` Es el identificador de la consulta va a quitar del almacén de consultas. *query_id* es un **bigint**, no tiene ningún valor predeterminado.  
+`[ @query_id = ] query_id`Es el identificador de la consulta que se va a quitar del almacén de consultas. *query_id* es de tipo **BIGINT**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -51,10 +51,10 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el **EXECUTE** permiso en la base de datos y **eliminar** permiso en las vistas de catálogo del almacén de consultas.  
+ Requiere el permiso **ALTER** en la base de datos.
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente devuelve información acerca de las consultas en el almacén de consultas.  
+ En el ejemplo siguiente se devuelve información sobre las consultas en el almacén de consultas.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  

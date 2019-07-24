@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c27dc3cddc8dac57edc4afdcc2f4191934e243f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27290272b72b27d3bb051da4e7d9a8df202461c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993458"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Recuperación de parámetros de entrada y salida con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -123,10 +122,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Al enlazar un parámetro de entrada y salida a un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), deberá especificar su tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. En caso contrario, se podrían producir una excepción de "valor fuera del intervalo".
+> Al enlazar un parámetro de entrada/salida a un tipo bigint, si el valor puede acabar fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), tendrá que especificar su tipo de campo SQL como SQLSRV_SQLTYPE_BIGINT. De lo contrario, puede dar como resultado una excepción "valor fuera de intervalo".
 
 ## <a name="example-2"></a>Ejemplo 2
-Este ejemplo de código muestra cómo enlazar un valor bigint grandes como un parámetro de entrada/salida.  
+En este ejemplo de código se muestra cómo enlazar un valor BIGINT grande como parámetro de entrada/salida.  
 
 ```
 <?php

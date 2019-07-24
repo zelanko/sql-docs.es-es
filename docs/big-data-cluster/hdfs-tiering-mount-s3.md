@@ -1,39 +1,39 @@
 ---
 title: Montaje de S3 para los niveles de HDFS
 titleSuffix: SQL Server big data clusters
-description: Este artículo explica cómo configurar HDFS niveles para montar un sistema de archivos externo de S3 en HDFS en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos S3 externo en HDFS en un clúster de macrodatos SQL Server 2019 (versión preliminar).
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba4d488c411d51b3aa55ec8aba424f4763f0fd98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28c80d6076f07c8a4f1605149f4b5c730c8349a1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958307"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419339"
 ---
-# <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Cómo S3 de montaje para los niveles en un clúster de macrodatos HDFS
+# <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Cómo montar S3 para la organización en niveles de HDFS en un clúster de Big Data
 
-Las secciones siguientes proporcionan un ejemplo de cómo configurar la organización en niveles con un origen de datos de almacenamiento de S3 HDFS.
+En las secciones siguientes se proporciona un ejemplo de cómo configurar la organización en niveles de HDFS con un origen de datos de almacenamiento S3.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Clúster de macrodatos implementada](deployment-guidance.md)
-- [Herramientas de datos de gran tamaño](deploy-big-data-tools.md)
-  - **mssqlctl**
+- [Clúster de Big Data implementado](deployment-guidance.md)
+- [Herramientas de macrodatos](deploy-big-data-tools.md)
+  - **azdata**
   - **kubectl**
-- Crear y cargar datos en un cubo de S3 
-  - Cargar CSV o archivos en el cubo de S3 de Parquet. Se trata de los datos HDFS externos que se montará en HDFS en el clúster de macrodatos.
+- Crear y cargar datos en un cubo S3 
+  - Cargue los archivos CSV o parquet en el cubo S3. Estos son los datos de HDFS externos que se montarán en HDFS en el clúster de Big Data.
 
 ## <a name="access-keys"></a>Claves de acceso
 
-### <a name="set-environment-variable-for-access-key-credentials"></a>Establezca la variable de entorno para las credenciales de clave de acceso
+### <a name="set-environment-variable-for-access-key-credentials"></a>Establecer la variable de entorno para las credenciales de clave de acceso
 
-Abra un símbolo en un equipo cliente que puede tener acceso al clúster de macrodatos. Establezca una variable de entorno con el formato siguiente. Lista separada por tenga en cuenta que las credenciales deben estar en una coma. El comando 'set' se usa en Windows. Si usa Linux, use 'export' en su lugar.
+Abra un símbolo del sistema en un equipo cliente que pueda tener acceso al clúster de Big Data. Establezca una variable de entorno con el siguiente formato. Tenga en cuenta que las credenciales deben estar en una lista separada por comas. El comando "SET" se usa en Windows. Si usa Linux, use "Export" en su lugar.
 
    ```text
     set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
@@ -41,59 +41,67 @@ Abra un símbolo en un equipo cliente que puede tener acceso al clúster de macr
    ```
 
    > [!TIP]
-   > Para obtener más información sobre cómo crear claves de acceso de S3, consulte [claves de acceso de S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
+   > Para obtener más información sobre cómo crear teclas de acceso S3, consulte [S3 Access Keys](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
-## <a id="mount"></a> Montar el almacenamiento HDFS remoto
+## <a id="mount"></a>Montaje del almacenamiento de HDFS remoto
 
-Ahora que ha preparado un archivo de credenciales con las teclas de acceso, puede iniciar el montaje. Los pasos siguientes montar el almacenamiento remoto de HDFS en S3 en el almacenamiento HDFS local de su clúster de macrodatos.
+Ahora que ha preparado un archivo de credenciales con claves de acceso, puede iniciar el montaje. En los pasos siguientes se monta el almacenamiento de HDFS remoto en S3 en el almacenamiento de HDFS local del clúster de Big Data.
 
-1. Use **kubectl** para buscar la dirección IP para el punto de conexión **controlador-svc-external** servicio en el clúster de macrodatos. Busque el **External-IP**.
+1. Use **kubectl** para buscar la dirección IP del **controlador de punto de conexión: servicio SVC-external** en el clúster de Big Data. Busque **external-IP**.
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
-1. Inicie sesión con **mssqlctl** utilizando la dirección IP externa del punto de conexión de controlador con el nombre de usuario del clúster y la contraseña:
+1. Inicie sesión con **azdata** mediante la dirección IP externa del punto de conexión del controlador con el nombre de usuario y la contraseña del clúster:
 
    ```bash
-   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
+   azdata login -e https://<IP-of-controller-svc-external>:30080/
    ```
    
-1. Establezca la variable de entorno MOUNT_CREDENTIALS siguiendo las instrucciones anteriores
+1. Establezca la variable de entorno MOUNT_CREDENTIALS según las instrucciones anteriores.
 
-1. Montar el almacenamiento HDFS remoto en Azure mediante **crear montaje de bloque de almacenamiento de bdc mssqlctl**. Reemplace los valores de marcador de posición antes de ejecutar el comando siguiente:
+1. Monte el almacenamiento de HDFS remoto en Azure mediante el **almacenamiento de BDC de azdata creación del grupo de montaje**. Reemplace los valores de marcador de posición antes de ejecutar el siguiente comando:
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
+   azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
-   > El montaje crear comando es asincrónica. En este momento, no hay ningún mensaje que indica si el montaje se realizó correctamente. Consulte la [estado](#status) sección para comprobar el estado de sus montajes.
+   > El comando mount Create es asincrónico. En este momento, no hay ningún mensaje que indique si el montaje tuvo éxito. Consulte la sección [Estado](#status) para comprobar el estado de los montajes.
 
-Si ha montado correctamente, podrá consultar los datos HDFS y ejecutar trabajos de Spark en él. Aparecerá en el HDFS del clúster de macrodatos en la ubicación especificada por `--mount-path`.
+Si se monta correctamente, debería poder consultar los datos de HDFS y ejecutar trabajos de Spark en él. Aparecerá en HDFS para el clúster de Big Data en la ubicación especificada por `--mount-path`.
 
-## <a id="status"></a> Obtener el estado de montajes
+## <a id="status"></a>Obtención del estado de montajes
 
-Para mostrar el estado de todos los montajes en el clúster de macrodatos, utilice el siguiente comando:
+Para mostrar el estado de todos los montajes en el clúster de Big Data, use el siguiente comando:
 
 ```bash
-mssqlctl bdc storage-pool mount status
+azdata bdc storage-pool mount status
 ```
 
-Para mostrar el estado de un montaje en una ruta específica en HDFS, use el siguiente comando:
+Para mostrar el estado de un montaje en una ruta de acceso específica en HDFS, use el siguiente comando:
 
 ```bash
-mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a> Eliminar el montaje
+## <a name="refresh-a-mount"></a>Actualización de un montaje
 
-Para eliminar el montaje, use el **delete de montaje de bloque de almacenamiento de bdc mssqlctl** comando y especifique la ruta de acceso de montaje en HDFS:
+En el ejemplo siguiente se actualiza el montaje.
 
 ```bash
-mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
+```
+
+## <a id="delete"></a>Eliminar el montaje
+
+Para eliminar el montaje, use el comando **azdata BDC Storage-Pool Mount Delete** y especifique la ruta de acceso de montaje en HDFS:
+
+```bash
+azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de los clústeres de macrodatos de 2019 de SQL Server, vea [¿cuáles son los clústeres de SQL Server 2019 macrodatos?](big-data-cluster-overview.md).
+Para obtener más información sobre los clústeres de macrodatos de SQL Server 2019, consulte [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md).

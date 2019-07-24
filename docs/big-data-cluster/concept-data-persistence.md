@@ -1,34 +1,34 @@
 ---
 title: Persistencia de los datos en Kubernetes
 titleSuffix: SQL Server big data clusters
-description: Obtenga información sobre cómo funciona la persistencia de los datos en un clúster de macrodatos de SQL Server 2019.
+description: Obtenga información sobre cómo funciona la persistencia de datos en un clúster de macrodatos SQL Server 2019.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 754477bc8e88bb5c687fe2b15d23460fea7ee23f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9142836032acc5e302c947e1619d17b07faff683
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958750"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419469"
 ---
-# <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistencia de datos con el clúster de macrodatos de SQL Server en Kubernetes
+# <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistencia de datos con SQL Server clúster de macrodatos en Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[Volúmenes persistentes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) proporcionan un modelo de complemento para el almacenamiento en Kubernetes. Cómo se proporciona el almacenamiento de información se extrae del modo de utilización. Por lo tanto, puede traer su propio almacenamiento de alta disponibilidad y conectarlo al clúster de macrodatos de SQL Server. Esto le ofrece control completo sobre el tipo de almacenamiento, disponibilidad y rendimiento que necesite. Kubernetes admite diversos tipos de soluciones de almacenamiento como discos y archivos de Azure, NFS, almacenamiento local y mucho más.
+Los [volúmenes persistentes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) proporcionan un modelo de complemento para el almacenamiento en Kubernetes. La forma en que se proporciona el almacenamiento se abstrae del modo en que se consume. Por lo tanto, puede traer su propio almacenamiento de alta disponibilidad y conectarlo al SQL Server clúster de Big Data. Esto le proporciona un control total sobre el tipo de almacenamiento, la disponibilidad y el rendimiento que necesita. Kubernetes admite varios tipos de soluciones de almacenamiento, como discos y archivos de Azure, NFS, almacenamiento local, etc.
 
-## <a name="configure-persistent-volumes"></a>Configurar los volúmenes persistentes
+## <a name="configure-persistent-volumes"></a>Configurar volúmenes persistentes
 
-Es la forma en un clúster de macrodatos de SQL Server consume estos volúmenes persistentes mediante [clases de almacenamiento](https://kubernetes.io/docs/concepts/storage/storage-classes/). Puede crear clases de almacenamiento diferentes para diferentes tipos de almacenamiento y especificarlos en el momento de implementación del clúster de macrodatos. Puede configurar qué clase de almacenamiento y el tamaño de la notificación de volumen persistente para utilizar con qué propósito en el nivel de grupo. Crea un clúster de SQL Server macrodatos [notificaciones de volumen persistente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) con el nombre de clase de almacenamiento especificada para cada componente que requiere volúmenes persistentes. A continuación, monte los volúmenes persistentes correspondientes en el pod. 
+La forma en que un clúster de macrodatos de SQL Server consume estos volúmenes persistentes es mediante el uso de [clases de almacenamiento](https://kubernetes.io/docs/concepts/storage/storage-classes/). Puede crear diferentes clases de almacenamiento para diferentes tipos de almacenamiento y especificarlas en el momento de la implementación del clúster de Big Data. Puede configurar la clase de almacenamiento y el tamaño de la demanda de volumen persistente que se usará para cada propósito en el nivel de grupo. Un clúster de macrodatos SQL Server crea notificaciones de [volumen persistentes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) con el nombre de clase de almacenamiento especificado para cada componente que requiere volúmenes persistentes. A continuación, monta los volúmenes persistentes correspondientes en el POD. 
 
-## <a name="configure-big-data-cluster-storage-settings"></a>Configurar opciones de almacenamiento de clúster de macrodatos
+## <a name="configure-big-data-cluster-storage-settings"></a>Configurar las opciones de almacenamiento del clúster de Big Data
 
-Al igual que otras personalizaciones, puede especificar la configuración de almacenamiento en los archivos de configuración de clúster en tiempo de implementación para cada grupo y el plano de control. Si no hay ninguna configuración de almacenamiento en las especificaciones de grupo, se usará la configuración de almacenamiento del plano de control. Este es un ejemplo de la sección de configuración de almacenamiento que se puede incluir en las especificaciones:
+Al igual que otras personalizaciones, puede especificar la configuración de almacenamiento en los archivos de configuración del clúster en el momento de la implementación para cada grupo y el plano de control. Si no hay ninguna opción de configuración de almacenamiento en las especificaciones del grupo, se usará la configuración de almacenamiento del plano de control. Este es un ejemplo de la sección de configuración de almacenamiento que puede incluir en las especificaciones:
 
 ```json
     "storage": 
@@ -45,79 +45,74 @@ Al igual que otras personalizaciones, puede especificar la configuración de alm
     }
 ```
 
-Implementación de clúster de macrodatos usarán almacenamiento persistente para almacenar datos, metadatos y los registros para los distintos componentes. Puede personalizar el tamaño de las notificaciones de volumen persistente creado como parte de la implementación. Como práctica recomendada, se recomienda para usar clases de almacenamiento con un *conservar* [reclamar directiva](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
+La implementación del clúster de Big Data usará el almacenamiento persistente para almacenar datos, metadatos y registros para varios componentes. Puede personalizar el tamaño de las notificaciones de volumen persistentes creadas como parte de la implementación. Como práctica recomendada, se recomienda usar las clases de almacenamiento con una  [Directiva](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)de retención retenida.
 
 > [!NOTE]
-> En CTP 3.1, no se puede modificar el almacenamiento configuración configuración posterior a la implementación. Además, solo `ReadWriteOnce` se admite el modo de acceso para todo el clúster.
+> En CTP 3,2, no se puede modificar la configuración de almacenamiento después de la implementación. Además, solo `ReadWriteOnce` se admite el modo de acceso para todo el clúster.
 
 > [!WARNING]
-> Se ejecute sin almacenamiento persistente puede funcionar en un entorno de prueba, pero podría dar como resultado en un clúster que no son funcionales. Tras el reinicio de pod, datos de metadatos o el usuario del clúster se perderán permanentemente. No se recomienda para ejecutar en esta configuración. 
+> La ejecución sin almacenamiento persistente puede funcionar en un entorno de prueba, pero podría dar lugar a un clúster no funcional. Tras reiniciarse Pod, los metadatos de clúster o los datos de usuario se perderán de forma permanente. No se recomienda ejecutar en esta configuración. 
 
-[Configurar el almacenamiento](#config-samples) sección proporciona más ejemplos sobre cómo configurar opciones de almacenamiento para la implementación de clúster de macrodatos de SQL Server.
+En la sección [configuración de almacenamiento](#config-samples) se proporcionan más ejemplos sobre cómo configurar las opciones de almacenamiento para la implementación de SQL Server Big Data cluster.
 
 ## <a name="aks-storage-classes"></a>Clases de almacenamiento AKS
 
-AKS viene con [dos clases de almacenamiento integradas](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **predeterminada** y **premium managed** junto con aprovisionador dinámica para ellos. Puede especificar cualquiera de ellos o crear su propia clase de almacenamiento para la implementación de clúster de macrodatos con habilitado el almacenamiento persistente. De forma predeterminada, la compilación en el archivo de configuración de clúster de aks *aks-dev-test* viene con configuraciones de almacenamiento persistente para usar **predeterminada** clase de almacenamiento.
+AKS incluye [dos clases de almacenamiento integradas](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)  predeterminadas y **Managed-Premium** junto con el aprovisionamiento dinámico para ellas. Puede especificar cualquiera de esos o crear su propia clase de almacenamiento para implementar un clúster de Big Data con almacenamiento persistente habilitado. De forma predeterminada, el archivo de configuración de clúster integrado para AKS *AKS-dev-test* incluye configuraciones de almacenamiento persistentes para usar la clase de almacenamiento **predeterminada** .
 
 > [!WARNING]
-> Volúmenes persistentes creados con las clases de almacenamiento integrada **predeterminada** y **premium managed** tienen una directiva de recuperación de *eliminar*. Por lo que en el momento en el se elimina el clúster de macrodatos de SQL Server, las notificaciones de volumen persistente obtención también los volúmenes eliminados y, a continuación, persistentes. Puede crear clases de almacenamiento personalizado mediante **azure disco** privioner con un *conservar* reclamar directiva como se muestra en [esto](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) artículo.
+> Los volúmenes persistentes creados con las clases de almacenamiento integradas **default** y **Managed-Premium** tienen una directiva de recuperación de *eliminación*. Por lo tanto, en el momento en que se elimina el clúster de macrodatos SQL Server, las notificaciones de volumen persistentes se eliminan y, luego, los volúmenes persistentes. Puede crear clases de almacenamiento personalizadas mediante **Azure-Disk** privioner con una  Directiva retain retain, tal como se muestra en [este](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) artículo.
 
 
-## <a name="minikube-storage-class"></a>Clase de almacenamiento de Minikube
+## <a name="minikube-storage-class"></a>Clase de almacenamiento Minikube
 
-Minikube viene con una clase de almacenamiento integrada llamada **estándar** junto con una dinámica aprovisionador para él. La configuración generada en el archivo de minikube *minikube-dev-test* tiene las opciones de configuración de almacenamiento en la especificación de plano de control. La misma configuración se aplicará a todas las especificaciones de los grupos. También puede personalizar una copia de este archivo y usarlo para implementar el clúster de macrodatos en minikube. Puede editar el archivo personalizado manualmente y cambiar el tamaño de las notificaciones de los volúmenes persistentes para los grupos específicos dar cabida a las cargas de trabajo que desea ejecutar. O bien, consulte [configurar almacenamiento](#config-samples) sección para obtener ejemplos sobre cómo hacerlo edita utilizando *mssqlctl* comandos.
+Minikube incluye una clase de almacenamiento integrada denominada **Standard** junto con un aprovisionamiento dinámico para ella. El archivo de configuración integrado para minikube *minikube-dev-test* tiene las opciones de configuración de almacenamiento en la especificación del plano de control. Se aplicará la misma configuración a todas las especificaciones de grupos. También puede personalizar una copia de este archivo y usarlo para la implementación del clúster de Big Data en minikube. Puede editar manualmente el archivo personalizado y cambiar el tamaño de las notificaciones de volúmenes persistentes para grupos específicos para acomodar las cargas de trabajo que desea ejecutar. O bien, consulte Configuración de la sección de [almacenamiento](#config-samples) para ver ejemplos de cómo realizar modificaciones con comandos de *azdata* .
 
 ## <a name="kubeadm-storage-classes"></a>Clases de almacenamiento Kubeadm
 
-Kubeadm no viene con una clase de almacenamiento integrada. Debe crear sus propias clases de almacenamiento y los volúmenes persistentes con almacenamiento local o el aprovisionador preferido, como [torre](https://github.com/rook/rook). En ese caso, establecería el **className** a la clase de almacenamiento que configuró. 
+Kubeadm no se incluye con una clase de almacenamiento integrada. Debe crear sus propias clases de almacenamiento y volúmenes persistentes mediante el almacenamiento local o el aprovisionamiento preferido, como [torre](https://github.com/rook/rook). En ese caso, debe establecer el valor de **className** en la clase de almacenamiento que configuró. 
 
 > [!NOTE]
->  En la compilación en el archivo de configuración de implementación para *kubeadm kubeadm-dev-test* hay ningún nombre de clase de almacenamiento especificada para el almacenamiento de datos y de registro. Antes de la implementación, debe personalizar el archivo de configuración y establezca el valor de className en caso contrario, que se producirá un error en las validaciones previas a la implementación. La implementación también tiene un paso de validación que comprueba la existencia de la clase de almacenamiento, pero no para los volúmenes persistentes necesarios. Debe asegurarse de que crear suficiente volúmenes según la escala del clúster. En CTP 3.1, para el tamaño predeterminado del clúster debe crear al menos 23 volúmenes. [Aquí](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) es un ejemplo sobre cómo crear los volúmenes persistentes con aprovisionador local.
+>  En el archivo de configuración de implementación integrado para *kubeadm kubeadm-dev-test* no hay ningún nombre de clase de almacenamiento especificado para el almacenamiento de datos y de registros. Antes de la implementación, debe personalizar el archivo de configuración y establecer el valor de className; de lo contrario, se producirá un error en las validaciones anteriores a la implementación. La implementación también tiene un paso de validación que comprueba la existencia de la clase de almacenamiento, pero no los volúmenes persistentes necesarios. Debe asegurarse de que crea volúmenes suficientes en función de la escala del clúster. En CTP 3,1, para el tamaño de clúster predeterminado, debe crear al menos 23 volúmenes. [Este](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) es un ejemplo de cómo crear volúmenes persistentes con el aprovisionamiento local.
 
 
-## <a name="customize-storage-configurations-for-each-pool"></a>Personalizar las configuraciones de almacenamiento para cada grupo
+## <a name="customize-storage-configurations-for-each-pool"></a>Personalización de las configuraciones de almacenamiento para cada grupo
 
-Para todas las personalizaciones, primero debe crear una copia de la compilación en el archivo de configuración que desea usar. Por ejemplo, el siguiente comando crea una copia de la *aks-dev-test* archivo de configuración de implementación en un subdirectorio denominado `custom`:
-
-```bash
-mssqlctl bdc config init --source aks-dev-test --target custom
-```
-
-A continuación, puede personalizar el archivo de configuración mediante la edición de forma manual, o puede usar **mssqlctl bdc config sección conjunto** comando. Este comando usa una combinación de bibliotecas jsonpath y jsonpatch para proporcionar maneras de modificar el archivo de configuración.
-
-### <a name="configure-size"></a>Configurar el tamaño
-
-De forma predeterminada, el tamaño de las notificaciones de volumen persistente aprovisionados para cada uno de los pods aprovisionados en el clúster es 10 GB. Puede actualizar este valor para dar cabida a las cargas de trabajo que se ejecuta en un archivo de configuración personalizado antes de la implementación de clúster.
-
-El ejemplo siguiente actualiza solo el tamaño de volumen persistente notificaciones para los datos almacenados en el grupo de almacenamiento para 100Gi. Tenga en cuenta que la sección de almacenamiento debe existir en el archivo de configuración del grupo de almacenamiento antes de ejecutar este comando:
+Para todas las personalizaciones, debe crear primero una copia del archivo de configuración integrado que desee usar. Por ejemplo, el siguiente comando crea una copia de los archivos de configuración de implementación de *AKS-dev-test* en un subdirectorio denominado `custom`:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
+azdata bdc config init --source aks-dev-test --target custom
 ```
 
-El ejemplo siguiente actualiza el tamaño de volumen persistente notificaciones para todos los grupos a 32Gi:
+Esto crea dos archivos, **cluster. JSON** y **control. JSON** que se pueden personalizar editando manualmente, o bien se puede usar el comando **azdata de configuración de BDC** . Puede usar una combinación de las bibliotecas jsonpath y jsonpatch para proporcionar maneras de editar los archivos de configuración.
+
+
+### <a id="config-samples"></a>Configuración del nombre de clase de almacenamiento y/o el tamaño de las notificaciones
+
+De forma predeterminada, el tamaño de las notificaciones de volumen persistente aprovisionadas para cada Pod aprovisionado en el clúster es de 10 GB. Puede actualizar este valor para acomodar las cargas de trabajo que se ejecutan en un archivo de configuración personalizado antes de la implementación del clúster.
+
+En el ejemplo siguiente se actualiza el tamaño del tamaño de las notificaciones de volumen persistentes a 32Gi en el **control. jsaon**. Si no se invalida en el nivel de grupo, esta configuración se aplicará a todos los grupos:
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.size=100Gi"
 ```
 
-### <a id="config-samples"></a> Configurar clase de almacenamiento
-
-El ejemplo siguiente muestra cómo modificar la clase de almacenamiento para el plano de control:
+En el ejemplo siguiente se muestra cómo modificar la clase de almacenamiento para el archivo **control. JSON** :
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.className=<yourStorageClassName>"
 ```
 
-Otra opción es modificar manualmente el archivo de configuración personalizado o utilizar jsonpatch como en el ejemplo siguiente que cambia la clase de almacenamiento para el grupo de almacenamiento. Crear un *patch.json* archivo con este contenido:
+Otra opción consiste en editar manualmente el archivo de configuración personalizado o usar el parche JSON como en el ejemplo siguiente, que cambia la clase de almacenamiento para el bloque de almacenamiento. Cree un archivo *patch. JSON* con este contenido:
 
 ```json
 {
   "patch": [
     {
-      "op": "add",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage"
       "value": {
+          "type":"Storage",
+          "replicas":2,
           "data": {
             "className": "default",
             "accessMode": "ReadWriteOnce",
@@ -134,15 +129,15 @@ Otra opción es modificar manualmente el archivo de configuración personalizado
 }
 ```
 
-Aplicar el archivo de revisión. Use **mssqlctl bdc config sección conjunto** comando para aplicar los cambios en el archivo de revisión JSON. El ejemplo siguiente aplica el archivo patch.json a un custom.json de archivo de configuración de implementación de destino.
+Aplique el archivo de revisión. Use el comando **azdata de configuración de BDC** para aplicar los cambios en el archivo de revisión de JSON. En el ejemplo siguiente se aplica el archivo patch. JSON a un archivo de configuración de implementación de destino Custom. JSON.
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener documentación completa sobre los volúmenes de Kubernetes, consulte el [documentación de Kubernetes en volúmenes](https://kubernetes.io/docs/concepts/storage/volumes/).
+Para obtener documentación completa sobre los volúmenes de Kubernetes, consulte la [documentación de Kubernetes sobre volúmenes](https://kubernetes.io/docs/concepts/storage/volumes/).
 
-Para obtener más información sobre cómo implementar un clúster de macrodatos de SQL Server, vea [cómo implementar SQL Server al clúster de macrodatos en Kubernetes](deployment-guidance.md).
+Para obtener más información sobre la implementación de un clúster de macrodatos SQL Server, consulte [How to deploy SQL Server Big Data Cluster in Kubernetes](deployment-guidance.md).
 

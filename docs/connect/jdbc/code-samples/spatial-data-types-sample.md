@@ -9,19 +9,18 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 81c61834b69062875e4b2df733213883cdff4be6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aeefc0c8dec0e05402fa6143e11213e069e4f1eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957060"
 ---
 # <a name="spatial-data-types-sample"></a>Ejemplo de tipos de datos espaciales
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Esto [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] aplicación de ejemplo muestra cómo crear, insertar y recuperar tipos de datos espaciales (geometría y geografía).
+En [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] esta aplicación de ejemplo se muestra cómo crear, insertar y recuperar tipos de datos espaciales (Geometry y Geography).
   
 El archivo de código de este ejemplo se denomina SpatialDataTypes.java y se encuentra en la siguiente ubicación:  
 
@@ -31,18 +30,18 @@ El archivo de código de este ejemplo se denomina SpatialDataTypes.java y se enc
 
 ## <a name="requirements"></a>Requisitos  
 
-Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Para obtener más información sobre cómo establecer la ruta de clase, vea [con el controlador JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Para obtener más información sobre cómo establecer la ruta de clases, vea [usar el controlador JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca del archivo JAR que se debe seleccionar, consulte [Requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente, el código de ejemplo crea una tabla denominada SpatialDataTypesTable_JDBC_Sample que contiene las columnas 'Geometría' y 'Geography'.
+En el ejemplo siguiente, el código de ejemplo crea una tabla denominada SpatialDataTypesTable_JDBC_Sample que contiene las columnas ' Geometry ' y ' Geography '.
 
-El ejemplo crea primero objetos 'Geometría' y 'Geography' desde un Well-Known-Text (WKT) que representa un punto. SQLServerPreparedStatement usa con una consulta parametrizada para asignar los datos para cada columna en consecuencia.
+En primer lugar, el ejemplo crea objetos ' Geometry ' y ' Geography ' a partir de un Well-Known Text (WKT) que representa un punto. Usa un SQLServerPreparedStatement con una consulta con parámetros para asignar los datos a cada columna en consecuencia.
 
-Por último, el ejemplo inserta los datos en la tabla y lo recupera. Los datos se muestran en forma de WKT.
+Por último, en el ejemplo se insertan los datos en la tabla y se recuperan. Los datos se muestran en forma de WKT.
 
 ```java
 import java.sql.Connection;

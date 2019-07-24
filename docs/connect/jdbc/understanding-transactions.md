@@ -1,5 +1,5 @@
 ---
-title: Información general sobre transacciones | Microsoft Docs
+title: Descripción de las transacciones | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad6ccc7f65d6d4c65fb1bb63b58e0b13269ea351
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 090597e3afcf335aba674cd11e603067892819b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916587"
 ---
 # <a name="understanding-transactions"></a>Descripción de transacciones
 

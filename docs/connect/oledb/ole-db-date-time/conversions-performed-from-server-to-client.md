@@ -1,5 +1,5 @@
 ---
-title: Las conversiones realizan de servidor a cliente | Microsoft Docs
+title: Conversiones realizadas de servidor a cliente | Microsoft Docs
 description: Conversiones realizadas de servidor a cliente
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ff9bc3f85340eb86aa0fa21820977e70ab51c5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22f3b681f9c4256087c17bd1e74011c2ba0916fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015810"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversiones realizadas de servidor a cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66769366"
   En este artículo se describen las conversiones de fecha y hora realizadas entre [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (o posterior) y una aplicación cliente escrita con el controlador OLE DB para SQL Server.  
   
 ## <a name="conversions"></a>Conversiones  
- En la tabla siguiente se describen las conversiones entre el tipo devuelto al cliente y el tipo del enlace. Para los parámetros de salida, si se ha llamado a ICommandWithParameters:: SetParameterInfo y el tipo especificado en *pwszDataSourceType* no coincide con el tipo real en el servidor, una conversión implícita se realizará por el servidor , y el tipo devuelto al cliente coincidirá con el tipo especificado a través de ICommandWithParameters:: SetParameterInfo. Esto puede conducir a resultados de conversión inesperados cuando las reglas de conversión del servidor son distintas de las descritas en este artículo. Por ejemplo, cuando se debe proporcionar una fecha predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliza 1900-1-1 en lugar de 1899-12-30.  
+ En la tabla siguiente se describen las conversiones entre el tipo devuelto al cliente y el tipo del enlace. En el caso de los parámetros de salida, si se ha llamado a ICommandWithParameters:: SetParameterInfo y el tipo especificado en *pwszDataSourceType* no coincide con el tipo real del servidor, el servidor realizará una conversión implícita y el tipo devuelto al cliente coincidirá con el tipo especificado a través de ICommandWithParameters:: SetParameterInfo. Esto puede conducir a resultados de conversión inesperados cuando las reglas de conversión del servidor son distintas de las descritas en este artículo. Por ejemplo, cuando se debe proporcionar una fecha predeterminada, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliza 1900-1-1 en lugar de 1899-12-30.  
   
 |A -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -52,7 +51,7 @@ ms.locfileid: "66769366"
 |------------|-------------|  
 |Aceptar|No es necesaria la conversión.|  
 |-|No se admite la conversión. Si el enlace se valida cuando se llama a IAccessor:: CreateAccessor, se devuelve DBBINDSTATUS_UPSUPPORTEDCONVERSION en *rgStatus*. Cuando se aplaza la comprobación de descriptor de acceso, se establece DBSTATUS_E_BADACCESSOR.|  
-|1|Los campos de tiempo se establecen en cero.|  
+|1|Los campos de hora se establecen en cero.|  
 |2|Se establece DBSTATUS_E_CANTCONVERTVALUE.|  
 |3|La zona horaria se establece en cero.|  
 |4|Si el búfer del cliente no es bastante grande, se establece DBSTATUS_S_TRUNCATED. Cuando el tipo de servidor incluye fracciones de segundo, el número de dígitos de la cadena de resultado coincide exactamente con la escala del tipo de servidor.|  

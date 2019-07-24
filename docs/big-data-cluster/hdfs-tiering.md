@@ -1,75 +1,79 @@
 ---
-title: Configurar los niveles de HDFS
+title: Configuración de la organización en niveles de HDFS
 titleSuffix: SQL Server big data clusters
-description: Este artículo explica cómo configurar HDFS niveles para montar un sistema de archivos externo de Azure Data Lake Storage en HDFS en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos de Azure Data Lake Storage externo en HDFS en un clúster de macrodatos de SQL Server 2019 (versión preliminar).
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 04/23/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0397b0a27b98bb43a7513e0552124bba0972dfdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958316"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419378"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurar HDFS niveles en clústeres de macrodatos de SQL Server
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configuración de la organización en niveles de HDFS en clústeres de macrodatos SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Los niveles de HDFS proporciona la capacidad de montar externo, sistema de archivos compatible con HDFS en HDFS. Este artículo explica cómo configurar los niveles para los clústeres de macrodatos de 2019 de SQL Server (versión preliminar) de HDFS. En este momento, se admite la conexión a Azure Data Lake Storage Gen2 y Amazon S3. 
+La organización en niveles de HDFS proporciona la capacidad de montar el sistema de archivos externo compatible con HDFS en HDFS. En este artículo se explica cómo configurar la organización en niveles de HDFS para clústeres de macrodatos de SQL Server 2019 (versión preliminar). En este momento, se admite la conexión a Azure Data Lake Storage Gen2 y Amazon S3. 
 
-## <a name="hdfs-tiering-overview"></a>Información general sobre los niveles de HDFS
+## <a name="hdfs-tiering-overview"></a>Información general sobre la organización en niveles de HDFS
 
-Con los niveles, las aplicaciones pueden acceder sin problemas a datos en una variedad de almacenes externos como si los datos residen en el HDFS local. Montaje de archivos es una operación de metadatos, donde se copiarán los metadatos que describen el espacio de nombres del sistema de archivos externos a su instancia de HDFS local. Estos metadatos incluyen información sobre los archivos junto con sus permisos y las ACL y directorios externos. Los datos correspondientes son solo copiado y a petición, cuando se tiene acceso a los propios datos a través de una consulta de ejemplo por. Ahora se pueden acceder a los datos del sistema de archivos externo desde el clúster de macrodatos de SQL Server. Puede ejecutar Spark trabajos y consultas SQL en estos datos de la misma manera que debiera ejecutar en todos los datos locales almacenados en HDFS en el clúster.
+Con los niveles, las aplicaciones pueden acceder sin problemas a los datos de una variedad de almacenes externos como si los datos residan en el HDFS local. El montaje es una operación de metadatos, donde los metadatos que describen el espacio de nombres en el sistema de archivos externo se copian en el HDFS local. Estos metadatos incluyen información acerca de los directorios y archivos externos junto con sus permisos y ACL. Los datos correspondientes solo se copian a petición, cuando se tiene acceso a los propios datos a través de, por ejemplo, una consulta. Ahora se puede acceder a los datos externos del sistema de archivos desde el SQL Server clúster de Big Data. Puede ejecutar trabajos de Spark y consultas SQL en estos datos de la misma manera en que se ejecutan en los datos locales almacenados en HDFS en el clúster.
 
 ### <a name="caching"></a>Almacenamiento en memoria caché
-Hoy en día, de forma predeterminada, 1% del almacenamiento HDFS total se reservará para el almacenamiento en caché de datos montados. Almacenamiento en caché es una configuración global en montajes.
+En la actualidad, de forma predeterminada, el 1% del almacenamiento HDFS total se reservará para el almacenamiento en caché de los datos montados. El almacenamiento en caché es una configuración global entre los montajes.
 
 > [!NOTE]
-> Los niveles de HDFS es una característica desarrollada por Microsoft, y se ha publicado una versión anterior del mismo como parte de la distribución de Apache Hadoop 3.1. Para obtener más información, consulte [ https://issues.apache.org/jira/browse/HDFS-9806 ](https://issues.apache.org/jira/browse/HDFS-9806) para obtener más información.
+> La organización en niveles de HDFS es una característica desarrollada por Microsoft y se ha publicado una versión anterior de, como parte de Apache Hadoop distribución 3,1. Para obtener más información, [https://issues.apache.org/jira/browse/HDFS-9806](https://issues.apache.org/jira/browse/HDFS-9806) vea para obtener más información.
 
-Las secciones siguientes proporcionan un ejemplo de cómo configurar la organización en niveles con un origen de datos de Azure Data Lake Storage Gen2 HDFS.
+En las secciones siguientes se proporciona un ejemplo de cómo configurar la organización en niveles de HDFS con un origen de datos de Azure Data Lake Storage Gen2.
+
+## <a name="refresh"></a>Actualizar
+
+La organización en niveles de HDFS admite la actualización. Actualice un montaje existente para la instantánea más reciente de los datos remotos.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- [Clúster de macrodatos implementada](deployment-guidance.md)
-- [Herramientas de datos de gran tamaño](deploy-big-data-tools.md)
-  - **mssqlctl**
+- [Clúster de Big Data implementado](deployment-guidance.md)
+- [Herramientas de macrodatos](deploy-big-data-tools.md)
+  - **azdata**
   - **kubectl**
 
 ## <a name="mounting-instructions"></a>Instrucciones de montaje
 
-Se admite la conexión a Azure Data Lake Storage Gen2 y Amazon S3. Puede encontrar instrucciones sobre cómo montar frente a estos tipos de almacenamiento en los siguientes artículos:
+Se admite la conexión a Azure Data Lake Storage Gen2 y Amazon S3. Puede encontrar instrucciones sobre cómo montar en estos tipos de almacenamiento en los siguientes artículos:
 
-- [Cómo Gen2 de ADLS de montaje para los niveles en un clúster de macrodatos HDFS](hdfs-tiering-mount-adlsgen2.md)
-- [Cómo S3 de montaje para los niveles en un clúster de macrodatos HDFS](hdfs-tiering-mount-s3.md)
+- [Cómo montar ADLS Gen2 para la organización en niveles de HDFS en un clúster de Big Data](hdfs-tiering-mount-adlsgen2.md)
+- [Cómo montar S3 para la organización en niveles de HDFS en un clúster de Big Data](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> Limitaciones y problemas conocidos
+## <a id="issues"></a>Problemas conocidos y limitaciones
 
-En la lista siguiente proporciona los problemas conocidos y limitaciones actuales cuando se usa HDFS en clústeres de macrodatos de SQL Server:
+En la lista siguiente se proporcionan los problemas conocidos y las limitaciones actuales al usar los niveles de HDFS en los clústeres de macrodatos de SQL Server:
 
-- Si el montaje está atascado en un `CREATING` estado durante mucho tiempo, lo más probable es que ha fallado. En esta situación, cancelar el comando y elimine el montaje si es necesario. Compruebe que los parámetros y las credenciales son correctas antes de Reintentar.
+- Si el montaje está atascado en `CREATING` un estado durante mucho tiempo, lo más probable es que se haya producido un error. En esta situación, cancele el comando y elimine el montaje si es necesario. Compruebe que los parámetros y las credenciales sean correctos antes de volver a intentarlo.
 
-- No se puede crear montajes en directorios existentes.
+- No se pueden crear montajes en directorios existentes.
 
-- No se puede crear montajes dentro de montajes existentes.
+- Los montajes no se pueden crear en montajes existentes.
 
-- Si alguno de los antecesores del punto de montaje no existe, se crearán con los permisos r xr xr-x (555) de forma predeterminada.
+- Si alguno de los antecesores del punto de montaje no existe, se creará con los permisos predeterminados para r-XR-XR-x (555).
 
-- Creación de montaje puede tardar algún tiempo dependiendo del número y tamaño de los archivos que se va a montar. Durante este proceso, los archivos en el montaje no son visibles para los usuarios. Mientras se crea el montaje, todos los archivos se agregarán a una ruta de acceso temporal, cuyo valor predeterminado es `/_temporary/_mounts/<mount-location>`.
+- La creación de montajes puede tardar algún tiempo según el número y el tamaño de los archivos que se montan. Durante este proceso, los archivos del montaje no son visibles para los usuarios. Mientras se crea el montaje, todos los archivos se agregarán a una ruta de acceso temporal, cuyo `/_temporary/_mounts/<mount-location>`valor predeterminado es.
 
-- El comando de creación de montaje es asincrónico. Después de ejecuta el comando, se puede comprobar el estado de montaje para comprender el estado del montaje.
+- El comando de creación de montaje es asincrónico. Después de ejecutar el comando, se puede comprobar el estado de montaje para conocer el estado del montaje.
 
-- Al crear el montaje, se usa para el argumento **: ruta de acceso de montaje** es esencialmente un identificador único del montaje. Debe usarse la misma cadena (incluido "/" al final, si está presente) en los siguientes comandos.
+- Al crear el montaje, el argumento que se usa para **--Mount-path** es esencialmente un identificador único del montaje. La misma cadena (incluida la "/" al final si está presente) debe usarse en los siguientes comandos.
 
-- Los montajes son de solo lectura. No se puede crear todos los directorios o archivos de un montaje.
+- Los montajes son de solo lectura. No puede crear directorios ni archivos en un montaje.
 
-- No se recomienda directorios de montaje y los archivos que se pueden cambiar. Una vez creado el montaje, los cambios o actualizaciones a la ubicación remota no se reflejarán en el montaje en HDFS. Si se producen cambios en la ubicación remota, puede elegir eliminar y volver a crear el montaje para reflejar el estado actualizado.
+- No se recomienda el montaje de directorios y archivos que puedan cambiar. Una vez creado el montaje, los cambios o actualizaciones de la ubicación remota no se reflejarán en el montaje en HDFS. Si se producen cambios en la ubicación remota, puede optar por eliminar y volver a crear el montaje para reflejar el estado actualizado.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de los clústeres de macrodatos de 2019 de SQL Server, vea [¿cuáles son los clústeres de SQL Server 2019 macrodatos?](big-data-cluster-overview.md).
+Para obtener más información sobre los clústeres de macrodatos de SQL Server 2019, consulte [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md).

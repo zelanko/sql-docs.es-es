@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 911cb0643318e98b46746c7cd11ef2ebbfcaca2b
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 8653b197e0fa16b4e939ab94865395d68bf1f852
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102120"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ Si se especifica *table_name* o *table_id* y está habilitado para el control de
   
 |Comprobación|Información adicional en la salida si se ha producido un error en la comprobación|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (actual)| [sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (actual)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (actual, historial)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
 |PeriodStartColumn < current_utc_time (actual)|[sys_start] = '{0}' AND SYSUTCTIME|  
 |PeriodEndColumn < current_utc_time (historial)|[sys_end] = '{0}' AND SYSUTCTIME|  
@@ -133,7 +132,7 @@ DBCC CHECKCONSTRAINTS(Table1);
 GO  
 ```  
   
-### <a name="b-checking-a-specific-constraint"></a>b. Comprobar una restricción específica  
+### <a name="b-checking-a-specific-constraint"></a>B. Comprobar una restricción específica  
 El ejemplo siguiente comprueba la integridad de la restricción `CK_ProductCostHistory_EndDate`.
   
 ```sql  

@@ -1,67 +1,67 @@
 ---
 title: ¿Qué es el controlador?
 titleSuffix: SQL Server big data clusters
-description: En este artículo se describe el controlador de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+description: En este artículo se describe el controlador de un clúster de macrodatos SQL Server 2019 (versión preliminar).
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ef2424ae5a1c41821d47f033329c0c53121b59b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e984c3dced4bde713ac98d67c22481e54491cd68
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958747"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419537"
 ---
-# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>¿Qué es el controlador en un clúster de macrodatos de SQL Server?
+# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>¿Cuál es el controlador de un clúster de macrodatos SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-El controlador hospeda la lógica básica para implementar y administrar un clúster de macrodatos. Se encarga de todas las interacciones con Kubernetes, las instancias de SQL Server que forman parte del clúster y otros componentes, como HDFS y Spark.
+El controlador hospeda la lógica básica para implementar y administrar un clúster de Big Data. Se encarga de todas las interacciones con Kubernetes, SQL Server instancias que forman parte del clúster y otros componentes como HDFS y Spark.
 
-El servicio del controlador proporciona la funcionalidad siguiente:
+El servicio de controlador proporciona la siguiente funcionalidad básica:
 
-- Administrar el ciclo de vida del clúster: arranque del clúster y eliminar, actualizar las configuraciones
-- Administrar instancias de SQL Server principales
-- Administración de grupos de proceso, datos y almacenamiento
-- Exponer las herramientas de supervisión para observar el estado del clúster
+- Administrar el ciclo de vida del clúster: bootstrap de clúster & eliminar, configuraciones de actualización
+- Administrar instancias de SQL Server maestras
+- Administración de procesos, datos y grupos de almacenamiento
+- Exponer herramientas de supervisión para observar el estado del clúster
 - Exponer las herramientas de solución de problemas para detectar y reparar problemas inesperados
-- Administrar seguridad del clúster:
-  - Asegúrese de puntos de conexión del clúster seguro
+- Administrar la seguridad del clúster:
+  - Garantizar puntos de conexión de clúster seguros
   - Administrar usuarios y roles
-  - Configurar las credenciales para la comunicación dentro del clúster
+  - Configurar credenciales para la comunicación dentro del clúster
 
-## <a name="deploying-the-controller-service"></a>Implementar el servicio de controlador
+## <a name="deploying-the-controller-service"></a>Implementación del servicio de controlador
 
-El controlador está implementado y hospedado en el mismo espacio de nombres de Kubernetes donde el cliente desea crear un clúster de macrodatos. Este servicio se instala un administrador de Kubernetes durante clúster bootstrap, utilizando el **mssqlctl** utilidad de línea de comandos. Para obtener más información, consulte [empezar a trabajar con clústeres grandes de datos de SQL Server](deploy-get-started.md).
+El controlador se implementa y se hospeda en el mismo espacio de nombres de Kubernetes donde el cliente desea crear un clúster de Big Data. Un administrador de Kubernetes instala este servicio durante el arranque del clúster mediante la utilidad de línea de comandos **azdata** . Para obtener más información, consulte Introducción a los clústeres de macrodatos de [SQL Server](deploy-get-started.md).
 
-El flujo de trabajo buildout preparará sobre Kubernetes un clúster de macrodatos totalmente funcional de SQL Server que incluye todos los componentes descritos en la [Introducción](big-data-cluster-overview.md) artículo. El flujo de trabajo de bootstrap crea primero el servicio de controlador y una vez implementado, el servicio de controlador coordinará la instalación y configuración del resto de la parte de los servicios de grupos de almacenamiento, proceso, datos y master.
+El flujo de trabajo de buildout se presentará por encima de Kubernetes un clúster de macrodatos SQL Server totalmente funcional que incluye todos los componentes descritos en el artículo de [información general](big-data-cluster-overview.md) . El flujo de trabajo de bootstrap crea primero el servicio de controlador y, una vez implementado, el servicio de controlador coordinará la instalación y la configuración del resto de los servicios que forman parte de los grupos Master, compute, data y Storage.
 
-## <a name="managing-the-cluster-through-the-controller-service"></a>Administración del clúster a través del servicio de controlador
+## <a name="managing-the-cluster-through-the-controller-service"></a>Administrar el clúster a través del servicio de controlador
 
-Puede administrar el clúster a través del servicio de controlador mediante **mssqlctl** comandos. Si implementa objetos adicionales de Kubernetes como pods en el mismo espacio de nombres, no están administrados ni supervisados por el servicio del controlador. También puede usar **kubectl** comandos para administrar el clúster en el nivel de Kubernetes. Para obtener más información, consulte [supervisión y solución de problemas de clústeres de SQL Server macrodatos](cluster-troubleshooting-commands.md).
+Puede administrar el clúster a través del servicio de controlador mediante los comandos **azdata** . Si implementa objetos Kubernetes adicionales como pods en el mismo espacio de nombres, el servicio del controlador no los administra ni los supervisa. También puede usar los comandos **kubectl** para administrar el clúster en el nivel de Kubernetes. Para obtener más información, consulte [supervisión y solución de problemas](cluster-troubleshooting-commands.md)de clústeres de macrodatos SQL Server.
 
-El controlador y los objetos de Kubernetes (conjuntos con estado, pods, secretos, etc.) creados para un clúster de macrodatos residen en un espacio de nombres de Kubernetes dedicado. El servicio del controlador se concederá permiso por el Administrador de clústeres de Kubernetes para administrar todos los recursos dentro de ese espacio de nombres.  La directiva de RBAC para este escenario se configura automáticamente como parte de la implementación de clúster inicial con **mssqlctl**.
+El controlador y los objetos Kubernetes (conjuntos con estado, pods, secretos, etc.) creados para un clúster de Big Data residen en un espacio de nombres de Kubernetes dedicado. El administrador de clústeres de Kubernetes concederá permiso al servicio de controlador para administrar todos los recursos de ese espacio de nombres.  La Directiva RBAC para este escenario se configura automáticamente como parte de la implementación inicial del clúster mediante **azdata**.
 
-### <a name="mssqlctl"></a>mssqlctl
+### <a name="azdata"></a>azdata
 
-**mssqlctl** es una utilidad de línea de comandos escrita en Python que habilita los administradores para arrancar y administrar clústeres de macrodatos a través de las API de REST expuestas por el servicio del controlador de clúster.
+**azdata** es una utilidad de línea de comandos escrita en Python que permite a los administradores de clústeres arrancar y administrar clústeres de Big Data a través de las API de REST expuestas por el servicio del controlador.
 
-## <a name="controller-service-security"></a>Seguridad de servicio de controlador
+## <a name="controller-service-security"></a>Seguridad del servicio del controlador
 
-Todas las comunicaciones con el servicio del controlador se lleva a cabo a través de una API de REST a través de HTTPS. Un certificado autofirmado se generará automáticamente para usted en tiempo de arranque. 
+Toda la comunicación con el servicio del controlador se realiza a través de una API de REST a través de HTTPS. Se generará automáticamente un certificado autofirmado en el momento del arranque. 
 
-Autenticación en el punto de conexión de servicio de controlador se basa en el nombre de usuario y contraseña. Estas credenciales se aprovisionan en el momento de bootstrap del clúster mediante la entrada para las variables de entorno `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD`.
+La autenticación en el extremo del servicio del controlador se basa en el nombre de usuario y la contraseña. Estas credenciales se aprovisionan en el momento de arranque del clúster mediante la entrada `CONTROLLER_USERNAME` para `CONTROLLER_PASSWORD`las variables de entorno y.
 
 > [!NOTE]
-> Debe proporcionar una contraseña que está en conformidad con [los requisitos de complejidad de contraseña de SQL Server](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).
+> Debe proporcionar una contraseña que cumpla [los requisitos de SQL Server la complejidad de la contraseña](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte los siguientes recursos:
+Para obtener más información acerca de los clústeres de macrodatos SQL Server, consulte los siguientes recursos:
 
-- [¿Qué son los clústeres de macrodatos de 2019 de SQL Server?](big-data-cluster-overview.md)
-- [Taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [¿Qué son los clústeres de macrodatos SQL Server 2019?](big-data-cluster-overview.md)
+- [Taller Arquitectura de clústeres de macrodatos Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

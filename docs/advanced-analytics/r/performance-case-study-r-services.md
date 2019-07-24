@@ -1,42 +1,42 @@
 ---
-title: 'Rendimiento de SQL Server R Services: resultados y los recursos: SQL Server Machine Learning Services'
+title: 'Rendimiento de SQL Server R Services: resultados y recursos'
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ce4bb94efa8c8ffb1b0a3b0c52c29de74a2b966e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08d1fd367572561aaa7235fd037371e30f5b270e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962558"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345292"
 ---
-# <a name="performance-for-r-services-results-and-resources"></a>Rendimiento de R Services: los resultados y los recursos
+# <a name="performance-for-r-services-results-and-resources"></a>Rendimiento de R Services: resultados y recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo es el cuarto y final de una serie que describe la optimización del rendimiento para R Services. En este artículo se resume los métodos, las conclusiones y las conclusiones de dos casos prácticos que probar distintos métodos de optimización.
+Este artículo es el cuarto y el final de una serie que describe la optimización del rendimiento de R Services. En este artículo se resumen los métodos, los hallazgos y las conclusiones de dos casos prácticos que probaron varios métodos de optimización.
 
-Los dos casos prácticos tenía objetivos distintos:
+Los dos casos prácticos tenían objetivos diferentes:
 
-+ El primer caso práctico, por el equipo de desarrollo de R Services, busca medir el impacto de técnicas de optimización específicas
-+ El segundo caso práctico, por un equipo de científicos de datos experimentó con varios métodos para determinar las mejores optimizaciones para un escenario concreto de puntuación de gran volumen.
++ El primer caso práctico, por parte del equipo de desarrollo de R Services, buscaba medir el impacto de las técnicas de optimización específicas
++ El segundo caso práctico, por parte de un equipo de científico de datos, experimentaba varios métodos para determinar las mejores optimizaciones para un escenario específico de puntuación de gran volumen.
 
-En este tema se enumera los resultados detallados del primer caso práctico. Para el segundo caso práctico, un resumen describe las conclusiones generales. Al final de este tema son vínculos a todos los recursos utilizados por los autores originales y datos de ejemplo y scripts.
+En este tema se enumeran los resultados detallados del primer caso práctico. En el segundo caso práctico, un resumen describe las conclusiones generales. Al final de este tema se incluyen vínculos a todos los scripts y datos de ejemplo, así como a los recursos utilizados por los autores originales.
 
-## <a name="performance-case-study-airline-dataset"></a>Caso práctico de rendimiento: Conjunto de datos Airline
+## <a name="performance-case-study-airline-dataset"></a>Caso práctico de rendimiento: Conjunto de una línea aérea
 
-En este caso práctico por el equipo de desarrollo de SQL Server R Services probar los efectos de varias optimizaciones. Se creó un modelo único rxLogit y puntuación realizadas en el conjunto de datos de la compañía aérea. Las optimizaciones se aplicaron durante el entrenamiento y puntuación de procesos para valorar impactos individuales.
+Este caso práctico del equipo de desarrollo de SQL Server R Services probó los efectos de varias optimizaciones. Se ha creado un único modelo rxLogit y se ha realizado la puntuación en el conjunto de datos de la línea aérea. Las optimizaciones se aplicaron durante los procesos de entrenamiento y puntuación para evaluar los impactos individuales.
 
-- Github: [Los scripts y datos de ejemplo](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) de estudio de las optimizaciones de SQL Server
+- Github [Datos de ejemplo y scripts](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning) para el estudio de SQL Server optimizaciones
 
 ### <a name="test-methods"></a>Métodos de prueba
 
-1. El conjunto de datos Airline consiste en una única tabla de 10 millones de filas. Se ha descargado y la carga masiva en SQL Server.
+1. El conjunto de filas de línea aérea consta de una sola tabla de 10 millones de filas. Se descargó y cargó de forma masiva en SQL Server.
 2. Se realizaron seis copias de la tabla.
-3. Varias modificaciones se aplicaron a las copias de la tabla para probar las características de SQL Server como la compresión de página, la compresión row, indización, el almacén de datos en columnas, etcetera.
-4. Se midió el rendimiento antes y después de que se aplicó la optimización de cada.
+3. Se aplicaron varias modificaciones a las copias de la tabla para probar SQL Server características como la compresión de página, la compresión de filas, la indexación, el almacén de datos en columnas, etc.
+4. El rendimiento se midió antes y después de aplicar cada optimización.
 
 | Nombre de tabla| Descripción|
 |------|------|
@@ -47,19 +47,19 @@ En este caso práctico por el equipo de desarrollo de SQL Server R Services prob
 | *airlineWithRowComp*  | Los mismos datos que la tabla *airlineWithIndex*, pero con la compresión de fila habilitada. También se agregan dos columnas, *CRSDepHour* y *Late*, que se calculan a partir de *CRSDepTime* y *ArrDelay*. |
 | *airlineColumnar*     | Almacén de columnas con un único índice agrupado. Esta tabla se rellena con datos de un archivo csv limpio.|
 
-Cada prueba estaba formada por estos pasos:
+Cada prueba consta de estos pasos:
 
 1. Antes de cada prueba, se indujo a la recolección de elementos no utilizados de R.
-2. Un modelo de regresión logística se creó basado en la tabla de datos. El valor de *rowsPerRead* en cada prueba estaba establecido en 500 000.
-3. Las puntuaciones se generaron mediante el modelo entrenado
-4. Cada prueba se ejecutó seis veces. Se eliminó el tiempo de la primera ejecución (la "ejecución en frío"). Para permitir que el valor atípico ocasional, el **máximo** también se eliminó el tiempo entre las cinco ejecuciones restantes. La media de las cuatro ejecuciones restantes se usó para calcular la media de tiempo de ejecución transcurrido de cada prueba.
-5. Las pruebas se ejecutaron mediante el *reportProgress* parámetro con el valor 3 (= los intervalos de informes y el progreso). Cada archivo de salida contiene información sobre el tiempo invertido en E/S, tiempo de transición y tiempo de proceso. Estos valores de tiempo son útiles a la hora de solucionar problemas y realizar diagnósticos.
-6. La salida de la consola también se dirige a un archivo en el directorio de salida.
-7. Los scripts de prueba procesan las horas en estos archivos para calcular el promedio de tiempo a través de ejecuciones.
+2. Se creó un modelo de regresión logística basado en los datos de la tabla. El valor de *rowsPerRead* en cada prueba estaba establecido en 500 000.
+3. Las puntuaciones se generaron con el modelo entrenado
+4. Cada prueba se ejecutó seis veces. La hora de la primera ejecución (la "ejecución en frío") se ha quitado. Para permitir el valor atípico ocasional, el tiempo **máximo** entre las cinco ejecuciones restantes también se ha quitado. La media de las cuatro ejecuciones restantes se usó para calcular la media de tiempo de ejecución transcurrido de cada prueba.
+5. Las pruebas se ejecutaron con el parámetro *reportProgress* con el valor 3 (= intervalos y progreso de los informes). Cada archivo de salida contiene información sobre el tiempo invertido en e/s, el tiempo de transición y el tiempo de proceso. Estos valores de tiempo son útiles a la hora de solucionar problemas y realizar diagnósticos.
+6. La salida de la consola también se dirigió a un archivo en el directorio de salida.
+7. Los scripts de prueba procesaron las horas en estos archivos para calcular el tiempo medio de las ejecuciones.
 
-Por ejemplo, los resultados siguientes son las horas de una única prueba. Los principales intervalos de interés son **Total read time** (tiempo de E/S) y **Transition time** (sobrecarga al configurar procesos de cálculo).
+Por ejemplo, los siguientes resultados son las horas de una sola prueba. Los principales intervalos de interés son **Total read time** (tiempo de E/S) y **Transition time** (sobrecarga al configurar procesos de cálculo).
 
-**Intervalos de ejemplo**
+**Intervalos de muestra**
 
 ```text
 Running IntCol Test. Using airlineWithIntCol table.
@@ -79,15 +79,15 @@ metric time pct
 5 Total non IO time 0.3134 9.10
 ```
 
-Se recomienda que descargue y modifique los scripts de prueba para ayudarle a solucionar problemas con R Services o con funciones de RevoScaleR.
+Se recomienda que descargue y modifique los scripts de prueba para ayudarle a solucionar problemas con R Services o con las funciones de RevoScaleR.
 
-### <a name="test-results-all"></a>Probar los resultados (todos)
+### <a name="test-results-all"></a>Resultados de pruebas (todos)
 
-Esta sección se comparan antes y después los resultados para cada una de las pruebas.
+En esta sección se comparan los resultados de antes y después de cada una de las pruebas.
 
-#### <a name="data-size-with-compression-and-a-columnar-table-store"></a>Tamaño de los datos con la compresión y un almacén de columnas de tabla
+#### <a name="data-size-with-compression-and-a-columnar-table-store"></a>Tamaño de los datos con compresión y un almacén de tablas en columnas
 
-La primera prueba compara el uso de la compresión y una tabla en columnas para reducir el tamaño de los datos.
+En la primera prueba se comparaba el uso de la compresión y una tabla en columnas para reducir el tamaño de los datos.
 
 | Nombre de tabla            | Filas     | Reservado   | Datos       | index_size | No utilizado  | % Saving (reserved) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
@@ -96,36 +96,36 @@ La primera prueba compara el uso de la compresión y una tabla en columnas para 
 | *airlineWithRowComp*  | 10 000 000 | 1 262 520 KB | 1 258 880 KB | 2552 KB    | 1088 KB | 58 %                 |
 | *airlineColumnar*     | 9 999 999  | 201 992 KB  | 201 624 KB  | N/D        | 368 KB  | 93 %                 |
 
-**Conclusiones**
+**Sacar**
 
-La mayor reducción de tamaño de los datos se logra aplicando un índice de almacén de columnas, seguido de compresión de página.
+La mayor reducción del tamaño de los datos se logra mediante la aplicación de un índice de almacén de columnas, seguido de la compresión de página.
 
 #### <a name="effects-of-compression"></a>Efectos de la compresión
 
-Esta prueba compara las ventajas de la compresión de fila, compresión de página y no hay compresión. Un modelo se entrenó con `rxLinMod` en los datos de tres tablas de datos diferentes. Se usó la misma fórmula y la misma consulta en todas las tablas.
+En esta prueba se comparan las ventajas de la compresión de filas, la compresión de página y ninguna compresión. Un modelo se ha entrenado `rxLinMod` con datos de tres tablas de datos diferentes. Se usó la misma fórmula y la misma consulta en todas las tablas.
 
 | Nombre de tabla            | Nombre de la prueba       | numTasks | Promedio de tiempo |
 |-----------------------|-----------------|----------|--------------|
 | *airlineWithIndex*    | NoCompression   | 1        | 5,6775       |
-|                       | NoCompression - paralelo| 4        | 5,1775       |
+|                       | NoCompression-Parallel| 4        | 5,1775       |
 | *airlineWithPageComp* | NoCompression | 1        | 6,7875       |
-|                       | PageCompression - paralelo | 4        | 5,3225       |
+|                       | PageCompression: paralelo | 4        | 5,3225       |
 | *airlineWithRowComp*  | RowCompression  | 1        | 6,1325       |
-|                       | RowCompression - paralelo  | 4        | 5,2375       |
+|                       | RowCompression: paralelo  | 4        | 5,2375       |
 
-**Conclusiones**
+**Sacar**
 
-La compresión a secas no parece ayudar. En este ejemplo, el aumento de la CPU para controlar la compresión compensa la disminución del tiempo de E/S.
+La compresión por sí sola no parece servir de ayuda. En este ejemplo, el aumento de la CPU para controlar la compresión compensa la disminución del tiempo de e/s.
 
 Con todo, cuando la prueba se ejecuta en paralelo estableciendo *numTasks* en 4, el promedio de tiempo disminuye.
 
 En los conjuntos de datos grandes, es posible que el efecto de la compresión sea más evidente. La compresión depende del conjunto de datos y de los valores, por lo que puede que sea necesario experimentar para averiguar el efecto que la compresión tiene en el conjunto de datos.
 
-### <a name="effect-of-windows-power-plan-options"></a>Efecto de las opciones de plan de energía de Windows
+### <a name="effect-of-windows-power-plan-options"></a>Efecto de las opciones del plan de energía de Windows
 
-En este experimento, `rxLinMod` se usó con la tabla *airlineWithIntCol*. El Plan de energía de Windows se ha establecido en **equilibrado** o **de alto rendimiento**. En todas las pruebas, *numTasks* se estableció en 1. La prueba se ejecutó seis veces y se realiza dos veces en ambas opciones de energía para investigar la variabilidad de los resultados.
+En este experimento, `rxLinMod` se usó con la tabla *airlineWithIntCol*. El plan de energía de Windows se estableció  en equilibrado o **alto rendimiento**. En todas las pruebas, *numTasks* se estableció en 1. La prueba se ejecutó seis veces y se realizó dos veces en ambas opciones de energía para investigar la variabilidad de los resultados.
 
-**Alto rendimiento** opción de energía:
+Opción de potencia de **alto rendimiento** :
 
 | Nombre de la prueba | Ejecute \#: | Tiempo transcurrido | Promedio de tiempo |
 |-----------|--------|--------------|--------------|
@@ -163,52 +163,52 @@ Opción de energía **Equilibrado**:
 |           | 6      | 3,75 segundos |              |
 |           |        |              | 3,88         |
 
-**Conclusiones**
+**Sacar**
 
-El tiempo de ejecución es más coherente y más rápido cuando se usa el Windows **de alto rendimiento** plan de energía.
+El tiempo de ejecución es más coherente y más rápido cuando se usa el plan de energía de **alto rendimiento** de Windows.
 
-#### <a name="using-integer-vs-strings-in-formulas"></a>Uso de entero frente a las cadenas en fórmulas
+#### <a name="using-integer-vs-strings-in-formulas"></a>Usar cadenas de tipo entero frente a cadenas en fórmulas
 
-Esta prueba evalúa el impacto de la modificación del código de R para evitar un problema común con factores de cadena. En concreto, un modelo se entrenó con `rxLinMod` con dos tablas: la primera, factores se almacenan como cadenas; la segunda tabla, factores se almacenan como enteros.
+Esta prueba evaluó el impacto de la modificación del código R para evitar un problema común con factores de cadena. En concreto, se ha entrenado un `rxLinMod` modelo mediante el uso de dos tablas: en el primero, los factores se almacenan como cadenas; en la segunda tabla, los factores se almacenan como enteros.
 
-+ Para el *airline* tabla, la columna [DayOfWeek] contiene cadenas. El _colInfo_ parámetro se usa para especificar los niveles de factor (lunes, el martes,...)
++ En la tabla de *líneas aéreas* , la columna [DayOfWeek] contiene cadenas. El parámetro _colInfo_ se usó para especificar los niveles de factor (lunes, martes,...)
 
-+  Para el *airlineWithIndex* tabla, [DayOfWeek] es un entero. El _colInfo_ no se especificó el parámetro.
++  En el caso de la tabla *airlineWithIndex* , [DayOfWeek] es un entero. No se especificó el parámetro _colInfo_ .
 
 + En ambos casos, se usó la misma fórmula: `ArrDelay ~ CRSDepTime + DayOfWeek`.
 
 | Nombre de tabla          | Nombre de la prueba   | Promedio de tiempo |
 |---------------------|-------------|--------------|
-| *Compañía aérea*           | *FactorCol* | 10,72        |
+| *Vuelta*           | *FactorCol* | 10,72        |
 | *airlineWithIntCol* | *IntCol*    | 3,4475       |
 
-**Conclusiones**
+**Sacar**
 
-Hay una ventaja evidente al usar enteros en lugar de cadenas de factores.
+El uso de enteros en lugar de cadenas para factores no supone una ventaja clara.
 
-### <a name="avoiding-transformation-functions"></a>Evitar funciones de transformación
+### <a name="avoiding-transformation-functions"></a>Evitar las funciones de transformación
 
-En esta prueba, se entrena un modelo con `rxLinMod`, pero se cambió el código entre las dos ejecuciones:
+En esta prueba, se ha entrenado un modelo `rxLinMod`mediante, pero se ha cambiado el código entre las dos ejecuciones:
 
-+ En la primera ejecución, se aplica una función de transformación como parte de la creación del modelo. 
-+ En la segunda ejecución, los valores de las características eran precalculadas y está disponible, por lo que no se necesitaba ninguna función de transformación.
++ En la primera ejecución, se aplicó una función de transformación como parte de la creación del modelo. 
++ En la segunda ejecución, los valores de las características se han calculado previamente y están disponibles, por lo que no se requiere ninguna función de transformación.
 
 | Nombre de la prueba             | Promedio de tiempo |
 |-----------------------|--------------|
 | WithTransformation    | 5,1675       |
 | WithoutTransformation | 4,7          |
 
-**Conclusiones**
+**Sacar**
 
-Tiempo de entrenamiento fue más corto cuando **no** mediante una función de transformación. En otras palabras, el modelo se entrenó con mayor rapidez cuando se usan columnas que se han calculado previamente y que se conservan en la tabla.
+El tiempo de entrenamiento era más corto cuando **no** se usa una función de transformación. En otras palabras, el modelo se entrenó más rápidamente al usar columnas que se han calculado previamente y se han guardado en la tabla.
 
-El ahorro se espera que sea mayor si se han producido muchas más transformaciones y el conjunto de datos eran más grandes (\> 100 M).
+Se espera que el ahorro sea mayor si hay muchas transformaciones más y el conjunto de datos era mayor (\> 100M).
 
-### <a name="using-columnar-store"></a>Uso de almacén de columnas
+### <a name="using-columnar-store"></a>Usar el almacén de columnas
 
-Esta prueba evalúa las ventajas de rendimiento de usar un almacén de datos en columnas y un índice. El mismo modelo se entrenó con `rxLinMod` y ninguna transformación de datos.
+Esta prueba evaluó las ventajas de rendimiento que supone el uso de un almacén de datos y un índice de columnas. El mismo modelo se ha entrenado `rxLinMod` con y sin transformaciones de datos.
 
-+ En la primera ejecución, la tabla de datos utiliza un almacén de filas estándar.
++ En la primera ejecución, la tabla de datos usaba un almacén de filas estándar.
 + En la segunda ejecución, se usó un almacén de columnas.
 
 | Nombre de tabla         | Nombre de la prueba | Promedio de tiempo |
@@ -216,34 +216,34 @@ Esta prueba evalúa las ventajas de rendimiento de usar un almacén de datos en 
 | *airlineWithIndex* | RowStore  | 4,67         |
 | *airlineColumnar*  | ColStore  | 4,555        |
 
-**Conclusiones**
+**Sacar**
 
-Rendimiento es mejor con el almacén de columnas que con el almacén de filas estándar. Una diferencia significativa en el rendimiento se puede esperar en grandes conjuntos de datos (\> 100 M).
+El rendimiento es mejor con el almacén de columnas que con el almacén de filas estándar. Se puede esperar una diferencia significativa en el rendimiento en conjuntos de datos\> más grandes (100 M).
 
-### <a name="effect-of-using-the-cube-parameter"></a>Efecto de usar el parámetro de cubo
+### <a name="effect-of-using-the-cube-parameter"></a>Efecto de usar el parámetro Cube
 
-El objetivo de esta prueba era determinar si la opción de RevoScaleR para usar el precalculadas **cubo** parámetro puede mejorar el rendimiento. Un modelo se entrenó con `rxLinMod`, utilizando esta fórmula:
+La finalidad de esta prueba era determinar si la opción de RevoScaleR para usar el parámetro de **cubo** precalculado puede mejorar el rendimiento. Un modelo se entrenó mediante `rxLinMod`usando esta fórmula:
 
 ```R
 ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 ```
 
-En la tabla, los factores *DayOfWeek* se almacena como una cadena.
+En la tabla, los factores *DayOfWeek* se almacenan como una cadena.
 
-| Nombre de la prueba     | Parámetro Cube | numTasks | Promedio de tiempo | Única fila (arrdelay_pred) |
+| Nombre de la prueba     | Parámetro Cube | numTasks | Promedio de tiempo | Predicción de fila única (ArrDelay_Pred) |
 |---------------|----------------|----------|--------------|---------------------------------|
 | CubeArgEffect | `cube = F`     | 1        | 91,0725      | 9,959204                        |
 |               |                | 4        | 44,09        | 9,959204                        |
 |               | `cube = T`     | 1        | 21,1125      | 9,959204                        |
 |               |                | 4        | 8,08         | 9,959204                        |
 
-**Conclusiones**
+**Sacar**
 
-El uso del argumento del parámetro de cubo claramente mejora el rendimiento.
+El uso del argumento de parámetro Cube mejora claramente el rendimiento.
 
-### <a name="effect-of-changing-maxdepth-for-rxdtree-models"></a>Efecto del cambio maxDepth para los modelos rxDTree
+### <a name="effect-of-changing-maxdepth-for-rxdtree-models"></a>Efecto de cambiar maxDepth para los modelos rxDTree
 
-En este experimento, el `rxDTree` algoritmo se usó para crear un modelo en el *airlineColumnar* tabla. En esta prueba *numTasks* se estableció en 4. Varios valores diferentes para *maxDepth* se usaron para demostrar cómo modificar la profundidad del árbol afecta al tiempo de ejecución.
+En este experimento, el `rxDTree` algoritmo se usó para crear un modelo en la tabla *airlineColumnar* . En esta prueba *numTasks* se estableció en 4. Se usaron varios valores diferentes para *maxDepth* para demostrar cómo afecta la profundidad del árbol al tiempo de ejecución.
 
 | Nombre de la prueba       | maxDepth | Promedio de tiempo |
 |-----------------|----------|--------------|
@@ -253,118 +253,118 @@ En este experimento, el `rxDTree` algoritmo se usó para crear un modelo en el *
 |                 | 8        | 45,5775      |
 |                 | 16       | 339,54       |
 
-**Conclusiones**
+**Sacar**
 
-A medida que aumenta la profundidad del árbol, el número total de nodos aumenta exponencialmente. El tiempo transcurrido para crear el modelo también aumenta significativamente.
+A medida que aumenta la profundidad del árbol, aumenta exponencialmente el número total de nodos. El tiempo transcurrido para crear el modelo también aumentó significativamente.
 
 ### <a name="prediction-on-a-stored-model"></a>Predicción en un modelo almacenado
 
-El objetivo de esta prueba era determinar el impacto de rendimiento en la puntuación cuando el modelo entrenado se guarda en una tabla de SQL Server en lugar de generados como parte del código en ejecución actualmente. Para puntuar, el modelo almacenado se carga desde la base de datos y las predicciones se crean mediante una trama de datos de una fila en la memoria (contexto de cálculo local).
+La finalidad de esta prueba era determinar el impacto en el rendimiento de la puntuación cuando el modelo entrenado se guarda en una tabla de SQL Server en lugar de generarse como parte del código que se está ejecutando actualmente. Para puntuar, el modelo almacenado se carga desde la base de datos y las predicciones se crean mediante una trama de datos de una fila en la memoria (contexto de proceso local).
 
-Los resultados de pruebas muestran el tiempo para guardar el modelo y el tiempo necesario para cargar el modelo y predicción.
+Los resultados de la prueba muestran el tiempo necesario para guardar el modelo y el tiempo que se tarda en cargar el modelo y predecir.
 
 | Nombre de tabla | Nombre de la prueba | Promedio de tiempo (en entrenar el modelo) | Tiempo en guardar/cargar el modelo|
 |------------|------------|------------|------------|
 | airline    | SaveModel| 21,59| 2,08|
 | airline    | LoadModelAndPredict | | 2,09 (tiempo de la predicción incluido) |
 
-**Conclusiones**
+**Sacar**
 
-Al cargar un modelo entrenado de una tabla es claramente una manera más rápida para hacer la predicción. Se recomienda que evite crear un modelo y realizar todo en el mismo script de puntuación.
+Cargar un modelo entrenado a partir de una tabla es claramente una manera más rápida de realizar la predicción. Se recomienda evitar crear el modelo y realizar la puntuación en el mismo script.
 
-## <a name="case-study-optimization-for-the-resume-matching-task"></a>Caso práctico: Optimización de la tarea de coincidencia de reanudación
+## <a name="case-study-optimization-for-the-resume-matching-task"></a>Caso práctico: Optimización de la tarea para reanudar la búsqueda de coincidencias
 
-El modelo de coincidencia de reanudación fue desarrollado por científicos de datos de Microsoft Ke Huang para probar el rendimiento del código de R en SQL Server y realizando en ese datos de ayuda creación escalables, los científicos de soluciones de nivel empresarial.
+El modelo resume-matching fue desarrollado por Microsoft Data científico ke Huang para probar el rendimiento del código R en SQL Server y, al hacerlo, ayuda a los científicos de datos a crear soluciones escalables y empresariales.
 
 ### <a name="methods"></a>Métodos
 
-Los paquetes RevoScaleR y de MicrosoftML se usaron para entrenar un modelo predictivo en una solución de R complejo que implican grandes conjuntos de datos. Consultas SQL y el código de R fueran idénticos en todas las pruebas. Las pruebas se realizaron en una sola máquina virtual de Azure con SQL Server instalado. El autor, a continuación, en comparación con los tiempos de puntuación con y sin las siguientes optimizaciones de SQL Server:
+Los paquetes RevoScaleR y MicrosoftML se usaron para entrenar un modelo predictivo en una solución de R compleja que implica grandes conjuntos de valores. Las consultas SQL y el código R eran idénticos en todas las pruebas. Las pruebas se realizaron en una sola máquina virtual de Azure con SQL Server instalado. Después, el autor compararía la puntuación con y sin las siguientes optimizaciones proporcionadas por SQL Server:
 
 - Tablas en memoria
 - Soft-NUMA
 - regulador de recursos
 
-Para evaluar el efecto de soft-NUMA en ejecución de scripts de R, el equipo de ciencia de datos probado la solución en una máquina virtual de Azure con 20 núcleos físicos. En estos núcleos físicos, cuatro nodos soft-NUMA se crearon automáticamente, tal que cada nodo contiene cinco núcleos.
+Para evaluar el efecto de Soft-NUMA en la ejecución del script de R, el equipo de ciencia de datos probó la solución en una máquina virtual de Azure con 20 núcleos físicos. En estos núcleos físicos, se crearon automáticamente cuatro nodos NUMA de software, de modo que cada nodo contenía cinco núcleos.
 
-Se aplicó afinamiento de CPU en el escenario de coincidencia de reanudación, para evaluar el impacto en los trabajos de R. Cuatro **grupos de recursos SQL** y cuatro **grupos de recursos externos** fueron creadas, y no se especificó la afinidad de CPU para asegurarse de que se usaría el mismo conjunto de CPU en cada nodo.
+La CPU affinitization se aplicó en el escenario de búsqueda de coincidencias, para evaluar el impacto en los trabajos de R. Se crearon cuatro **grupos de recursos de SQL** y cuatro grupos de **recursos externos** , y se especificó la afinidad de CPU para asegurarse de que se utilizaría el mismo conjunto de CPU en cada nodo.
 
-Cada uno de los grupos de recursos se asignó a un grupo de cargas de trabajo diferente, para optimizar la utilización del hardware. El motivo es que Soft-NUMA y afinidad de CPU no puede dividir la memoria física en los nodos NUMA físicos; por lo tanto, por definición, todos los nodos NUMA temporales que se basan en el mismo nodo NUMA físico deben usar memoria en el mismo bloque de memoria del sistema operativo. En otras palabras, no hay ninguna afinidad de procesador de memoria.
+Cada uno de los grupos de recursos se asignó a un grupo de cargas de trabajo diferente para optimizar el uso del hardware. La razón es que soft-NUMA y la afinidad de la CPU no pueden dividir la memoria física en los nodos NUMA físicos. por lo tanto, por definición, todos los nodos NUMA de software que se basan en el mismo nodo físico NUMA deben usar memoria en el mismo bloque de memoria del sistema operativo. En otras palabras, no hay afinidad entre la memoria y el procesador.
 
-El siguiente proceso se usó para crear esta configuración:
+Se usó el siguiente proceso para crear esta configuración:
 
-1. Reducir la cantidad de memoria asignada de forma predeterminada en SQL Server.
+1. Reduzca la cantidad de memoria asignada de forma predeterminada a SQL Server.
 
 2. Cree cuatro grupos nuevos para ejecutar los trabajos de R en paralelo.
 
-3. Crear cuatro grupos de cargas de trabajo de forma que cada grupo de cargas de trabajo está asociado a un grupo de recursos.
+3. Cree cuatro grupos de cargas de trabajo de modo que cada grupo de cargas de trabajo esté asociado a un grupo de recursos.
 
-4. Reinicie el regulador de recursos con los nuevos grupos de cargas de trabajo y las asignaciones.
+4. Reinicie Resource Governor con los nuevos grupos de cargas de trabajo y las asignaciones.
 
-5. Crear una función clasificadora definida por el usuario (UDF) para asignar diferentes tareas en grupos de cargas de trabajo diferente.
+5. Cree una función clasificadora definida por el usuario (UDF) para asignar distintas tareas en grupos de cargas de trabajo diferentes.
 
-6. Actualice la configuración del regulador de recursos para usar la función para los grupos de cargas de trabajo adecuado.
+6. Actualice la configuración de Resource Governor para usar la función para los grupos de cargas de trabajo adecuados.
 
 ### <a name="results"></a>Resultados
 
-La configuración que tenía el mejor rendimiento en la coincidencia de reanudación de estudio fue el siguiente:
+La configuración que tenía el mejor rendimiento en el estudio de la búsqueda de coincidencias es la siguiente:
 
--   Cuatro grupos de recursos internos (para SQL Server)
+-   Cuatro grupos de recursos internos (por SQL Server)
 
--   Cuatro grupos de recursos externos (para los trabajos de script externo)
+-   Cuatro grupos de recursos externos (para trabajos de script externo)
 
--   Cada grupo de recursos está asociado a un grupo de cargas de trabajo concreto
+-   Cada grupo de recursos está asociado a un grupo de cargas de trabajo específico
 
--   Se asigna cada grupo de recursos para diferentes CPU
+-   Cada grupo de recursos se asigna a diferentes CPU
 
--   Uso máximo de memoria interna (para SQL Server) = 30%
+-   Uso máximo de memoria interna (por SQL Server) = 30%
 
--   Cantidad máxima de memoria para su uso en las sesiones de R = 70%
+-   Memoria máxima para el uso de las sesiones de R = 70%
 
-Para el modelo de coincidencia de reanudar el uso de scripts externos estaba pesado y no había ninguna base de datos de otro servicios de motor de ejecución. Por lo tanto, los recursos asignados a los scripts externos se han aumentado al 70%, lo que resultó ser la mejor configuración para el rendimiento de la secuencia de comandos.
+Para el modelo de búsqueda de coincidencias, el uso de scripts externos era pesado y no había otros servicios de motor de base de datos en ejecución. Por lo tanto, los recursos asignados a los scripts externos se aumentaron al 70%, lo que demostró la mejor configuración para el rendimiento del script.
 
-Esta configuración se ha llegado al experimentar con diferentes valores. Si usas un hardware diferente o una solución diferente, la configuración óptima puede ser diferente. Siempre experimentar para encontrar la mejor configuración para su caso.
+Esta configuración se llegó a experimentando con valores diferentes. Si utiliza un hardware diferente o una solución diferente, la configuración óptima podría ser diferente. Experimente siempre para encontrar la mejor configuración para su caso.
 
-En la solución optimizada, se puntúan 1.1 millón de filas de datos (con 100 características) en menos de 8,5 segundos en un equipo de 20 núcleos. Las optimizaciones mejoraron considerablemente el rendimiento en términos de tiempo de puntuación.
+En la solución optimizada, se puntuaron 1,1 millones filas de datos (con características 100) en menos de 8,5 segundos en un equipo de 20 núcleos. Las optimizaciones mejoraron considerablemente el rendimiento en términos de tiempo de puntuación.
 
-Los resultados también sugieren que el **número de características** tenía un impacto significativo en el momento de puntuación. La mejora era incluso más destacada más características que se usaron en el modelo de predicción.
+Los resultados también sugieren que el **número de características** tenía un impacto significativo en el tiempo de puntuación. La mejora era aún más destacada cuando se usaban más características en el modelo de predicción.
 
-Se recomienda que lea este artículo de blog y el tutorial que lo acompaña para obtener información detallada.
+Le recomendamos que lea este artículo del blog y el tutorial que lo acompaña para obtener una explicación detallada.
 
--   [Optimización sugerencias y trucos para el aprendizaje automático en SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+-   [Sugerencias y trucos para la optimización de machine learning en SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-Muchos usuarios han indican que hay una pausa pequeña como el tiempo de ejecución de R (o Python) se carga por primera vez. Por este motivo, como se describe en estas pruebas, la hora de la primera ejecución se suele medirse pero más adelante se descartan. Posterior almacenamiento en caché puede dar lugar a diferencias de rendimiento notable entre el primer y segundo se ejecuta. También hay cierta sobrecarga cuando se mueven datos entre SQL Server y el tiempo de ejecución externo, especialmente si los datos se pasan a través de la red en lugar de cargarse directamente desde SQL Server.
+Muchos usuarios han observado que hay una pequeña pausa, ya que el tiempo de ejecución de R (o Python) se carga por primera vez. Por esta razón, como se describe en estas pruebas, la hora de la primera ejecución se mide a menudo, pero después se descarta. El almacenamiento en caché subsiguiente podría producir diferencias de rendimiento significativas entre la primera y la segunda ejecución. También hay cierta sobrecarga cuando los datos se mueven entre SQL Server y el tiempo de ejecución externo, especialmente si los datos se pasan a través de la red en lugar de cargarse directamente desde SQL Server.
 
-Por todas estas razones, no hay ninguna solución única para mitigar este tiempo de carga inicial, como el impacto de rendimiento varía considerablemente dependiendo de la tarea. Por ejemplo, se realiza el almacenamiento en caché para puntuar en lotes; de fila única por lo tanto, las operaciones sucesivas de puntuación son mucho más rápidas y se vuelve a cargar el modelo ni el tiempo de ejecución de R. También puede usar [puntuación nativa](../sql-native-scoring.md) para evitar cargar el runtime de R por completo.
+Por todas estas razones, no hay ninguna solución única para mitigar este tiempo de carga inicial, ya que el impacto en el rendimiento varía significativamente en función de la tarea. Por ejemplo, el almacenamiento en caché se realiza para la puntuación de fila única en lotes. por lo tanto, las operaciones de puntuación sucesivas son mucho más rápidas y ni el modelo ni el Runtime de R se recargan. También puede usar la [puntuación nativa](../sql-native-scoring.md) para evitar cargar el tiempo de ejecución de R por completo.
 
-Para entrenar modelos grandes o de puntuación por lotes grande, la sobrecarga puede ser mínima en comparación con las mejoras de evitar el movimiento de datos o de procesamiento paralelo y streaming. Consulte este blog para la Guía de rendimiento adicionales:
+Para entrenar modelos grandes o puntuaciones en lotes grandes, la sobrecarga puede ser mínima en comparación con las ventajas de evitar el movimiento de datos o el procesamiento paralelo y el streaming. Vea esta entrada de blog para obtener más información sobre el rendimiento:
 
-+ [Uso de R para detectar el fraude en 1 millón de transacciones por segundo](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
++ [Uso de R para detectar fraudes en 1 millón transacciones por segundo](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Recursos
 
-Los siguientes son vínculos a información, herramientas y scripts que se usan en el desarrollo de estas pruebas.
+A continuación se incluyen vínculos a información, herramientas y scripts que se usan en el desarrollo de estas pruebas.
 
-+ Pruebas de secuencias de comandos y vínculos a los datos de rendimiento: [Datos de ejemplo y scripts para el estudio de las optimizaciones de SQL Server](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
++ Scripts de prueba de rendimiento y vínculos a los datos: [Datos de ejemplo y scripts para el estudio de SQL Server optimizaciones](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
-+ Artículo que describe la solución de coincidencia de reanudación: [Sugerencia para la optimización y trucos para SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
++ Artículo que describe la solución de búsqueda de coincidencias: [Sugerencias y trucos de optimización para SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ Scripts usados en la optimización de SQL para la solución de coincidencia de reanudación: [Repositorio de GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ Scripts usados en la optimización de SQL para la solución de búsqueda de coincidencias: [Repositorio de GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
 
-### <a name="learn-about-windows-server-management"></a>Obtenga información acerca de la administración de Windows server
+### <a name="learn-about-windows-server-management"></a>Más información acerca de la administración de Windows Server
 
 + [Determinar el tamaño apropiado del archivo de paginación para las versiones de 64 bits de Windows](https://support.microsoft.com/kb/2860880)
 
 + [Descripción de NUMA](https://technet.microsoft.com/library/ms178144.aspx)
 
-+ [Cómo SQL Server es compatible con NUMA](https://technet.microsoft.com/library/ms180954.aspx)
++ [Cómo SQL Server admite NUMA](https://technet.microsoft.com/library/ms180954.aspx)
 
 + [NUMA de software](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
-### <a name="learn-about-sql-server-optimizations"></a>Obtenga información sobre las optimizaciones de SQL Server
+### <a name="learn-about-sql-server-optimizations"></a>Más información sobre las optimizaciones de SQL Server
 
 + [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
-+ [Introducción a las tablas optimizadas para memoria](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
++ [Introducción a las tablas con optimización para memoria](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
 + [Demostración: Mejora del rendimiento de OLTP en memoria](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
@@ -374,19 +374,19 @@ Los siguientes son vínculos a información, herramientas y scripts que se usan 
 
 + [Deshabilitar compresión de una tabla o un índice](../../relational-databases/data-compression/disable-compression-on-a-table-or-index.md)
 
-### <a name="learn-about-managing-sql-server"></a>Obtenga información sobre la administración de SQL Server
+### <a name="learn-about-managing-sql-server"></a>Más información sobre la administración de SQL Server
 
 + [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 
 + [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)
 
-+ [Presentación del regulador de recursos](https://technet.microsoft.com/library/bb895232.aspx)
++ [Presentación de Resource Governor](https://technet.microsoft.com/library/bb895232.aspx)
 
 + [Regulación de recursos para R Services](resource-governance-for-r-services.md)
 
 + [Cómo crear un grupo de recursos para R](how-to-create-a-resource-pool-for-r.md)
 
-+ [Un ejemplo de configuración del regulador de recursos](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
++ [Un ejemplo de configuración de Resource Governor](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/)
 
 ### <a name="tools"></a>Herramientas
 
@@ -397,10 +397,10 @@ Los siguientes son vínculos a información, herramientas y scripts que se usan 
 
 ## <a name="other-articles-in-this-series"></a>Otros artículos de esta serie
 
-[Performance tuning para R - Introducción](sql-server-r-services-performance-tuning.md)
+[Optimización del rendimiento para R: introducción](sql-server-r-services-performance-tuning.md)
 
-[Optimización del rendimiento de R - configuración de SQL Server](sql-server-configuration-r-services.md)
+[Ajuste del rendimiento para la configuración de R-SQL Server](sql-server-configuration-r-services.md)
 
-[Optimización del rendimiento de R: R optimización de código y los datos](r-and-data-optimization-r-services.md)
+[Optimización del rendimiento de código R-R y optimización de datos](r-and-data-optimization-r-services.md)
 
-[Los resultados del caso práctico: optimización del rendimiento](performance-case-study-r-services.md)
+[Optimización del rendimiento: resultados de los casos prácticos](performance-case-study-r-services.md)

@@ -1,64 +1,64 @@
 ---
-title: 'Instalar el lenguaje R y componentes de Python sin acceso a internet: SQL Server Machine Learning'
-description: Sin conexión o desconectada R de Machine Learning y Python el programa de instalación en una instancia de SQL Server aislado detrás de un firewall de red.
+title: Instalación de componentes de idioma y Python de R sin acceso a Internet
+description: Sin conexión o desconectado Machine Learning el programa de instalación de R y Python en una instancia aislada de SQL Server detrás de un firewall de red.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 09934e01d6118bfa48a7c3f62e8086763ebf44c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c68ce075c34c6475828e81a66121e21afcf2482
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962916"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345023"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar SQL Server de aprendizaje automático R y Python en equipos sin acceso a internet
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalación de SQL Server machine learning R y Python en equipos sin acceso a Internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-De forma predeterminada, los instaladores de conecten a sitios de descarga de Microsoft para obtener necesarios y los componentes actualizados para aprendizaje automático en SQL Server. Si las restricciones de firewall impide que el instalador de llegar a estos sitios, puede usar un dispositivo conectado a internet para descargar archivos, transferir archivos a un servidor sin conexión y, a continuación, ejecute el programa de instalación.
+De forma predeterminada, los instaladores se conectan a sitios de descarga de Microsoft para obtener los componentes necesarios y actualizados del aprendizaje automático en SQL Server. Si las restricciones de Firewall impiden que el instalador alcance estos sitios, puede usar un dispositivo conectado a Internet para descargar archivos, transferir archivos a un servidor sin conexión y, a continuación, ejecutar el programa de instalación.
 
-Análisis en bases de datos constan de instancia del motor de base de datos, además de otros componentes de integración de R y Python, según la versión de SQL Server. 
+El análisis en base de datos consta de una instancia del motor de base de datos, además de componentes adicionales para la integración de R y Python, dependiendo de la versión de SQL Server. 
 
 + SQL Server 2017 incluye R y Python 
-+ SQL Server 2016 es solo para R.
++ SQL Server 2016 es de solo lectura.
 
-En un servidor aislado, aprendizaje automático y las características específicas del lenguaje de R o Python se agregan a través de los archivos CAB. 
+En un servidor aislado, las características específicas del lenguaje de R/Python y aprendizaje automático se agregan a través de archivos. CAB. 
 
 ## <a name="sql-server-2017-offline-install"></a>Instalación sin conexión de SQL Server 2017
 
-Para instalar SQL Server 2017 Machine Learning Services (R y Python) en un servidor aislado, comience por descargar la versión inicial de SQL Server y compatibilidad con los correspondientes archivos CAB de R y Python. Incluso si tiene previsto actualizar inmediatamente el servidor para usar la actualización acumulativa más reciente, primero debe instalarse una versión inicial.
+Para instalar SQL Server 2017 Machine Learning Services (R y Python) en un servidor aislado, empiece por descargar la versión inicial de SQL Server y los archivos. CAB correspondientes para la compatibilidad con R y Python. Incluso si planea actualizar inmediatamente el servidor para que use la actualización acumulativa más reciente, primero se debe instalar una versión inicial.
 
 > [!Note]
-> SQL Server 2017 no tiene los service packs. Es la primera versión de SQL Server para usar la versión inicial como la única línea de base, con el mantenimiento de las actualizaciones acumulativas solo. 
+> SQL Server 2017 no tiene Service Packs. Es la primera versión de SQL Server de usar la versión inicial como única línea base, con mantenimiento solo a través de las actualizaciones acumulativas. 
 
-### <a name="1---download-2017-cabs"></a>1: descargar archivos CAB de 2017
+### <a name="1---download-2017-cabs"></a>1-Descargar 2017 CAB
 
-En un equipo que tiene una conexión a internet, descargue los archivos CAB que proporciona funciones de R y Python para la versión inicial y los medios de instalación de SQL Server 2017. 
+En un equipo que tenga una conexión a Internet, descargue los archivos. CAB que proporcionan las características de R y Python para la versión inicial y los medios de instalación de SQL Server 2017. 
 
 Release  |Vínculo de descarga  |
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Apertura de Python de Microsoft     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Microsoft Python abierto     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
-###  <a name="2---get-sql-server-2017-installation-media"></a>2 - obtener medios de instalación de SQL Server 2017
+###  <a name="2---get-sql-server-2017-installation-media"></a>2-obtener medios de instalación de SQL Server 2017
 
-1. En un equipo que tiene una conexión a internet, descargue el [programa de instalación de SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-downloads). 
+1. En un equipo que tenga una conexión a Internet, descargue el [programa de instalación de SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-downloads). 
 
-2. Haga doble clic en el programa de instalación y elija el **descargar medios** tipo de instalación. Con esta opción, el programa de instalación crea un archivo .iso (o .cab) local que contiene el medio de instalación.
+2. Haga doble clic en configuración y elija el tipo de instalación **Descargar medios** . Con esta opción, el programa de instalación crea un archivo local. ISO (o. cab) que contiene el medio de instalación.
 
-   ![Elegir tipo de instalación de los medios de descarga](media/offline-download-tile.png "descargar archivos multimedia")
+   ![Elija el tipo de instalación descargar medio](media/offline-download-tile.png "Descargar medios")
 
 ## <a name="sql-server-2016-offline-install"></a>Instalación sin conexión de SQL Server 2016
 
-Análisis en bases de datos de SQL Server 2016 es sólo R, con sólo dos CAB los archivos de paquetes de productos y la distribución de Microsoft de R de código abierto, respectivamente. Comience por instalar cualquiera de estas versiones: RTM, SERVICE PACK 1, SERVICE PACK 2. Una vez que una instalación básica está en su lugar, se pueden aplicar las actualizaciones acumulativas como paso siguiente.
+SQL Server 2016 análisis en base de datos es de solo lectura, con solo dos archivos CAB para paquetes de productos y la distribución de Microsoft de código abierto, respectivamente. Empiece por instalar cualquiera de estas versiones: RTM, SP 1, SP 2. Una vez que se realiza una instalación base, las actualizaciones acumulativas se pueden aplicar como paso siguiente.
 
-En un equipo que tiene una conexión a internet, descargue los archivos CAB que se usa el programa de instalación para instalar el análisis en bases de datos en SQL Server 2016. 
+En un equipo que tenga una conexión a Internet, descargue los archivos. CAB utilizados por el programa de instalación para instalar el análisis de base de datos en SQL Server 2016. 
 
-### <a name="1---download-2016-cabs"></a>1: descargar archivos CAB de 2016
+### <a name="1---download-2016-cabs"></a>1-Descargar 2016 CAB
 
 Release  | Microsoft R Open | Microsoft R Server |
 ---------|-----------------|---------------------|
@@ -66,78 +66,78 @@ Release  | Microsoft R Open | Microsoft R Server |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
 **SQL Server 2016 SP 2**  |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317) |
 
-### <a name="2---get-sql-server-2016-installation-media"></a>2 - obtener medios de instalación de SQL Server 2016
+### <a name="2---get-sql-server-2016-installation-media"></a>2-obtener medios de instalación de SQL Server 2016
 
-Puede instalar SQL Server 2016 RTM, Service Pack 1 o Service Pack 2 como la primera instalación en el equipo de destino. Cualquiera de estas versiones puede aceptar una actualización acumulativa.
+Puede instalar SQL Server 2016 RTM, SP 1 o SP 2 como primera instalación en el equipo de destino. Cualquiera de estas versiones puede aceptar una actualización acumulativa.
 
-Es una manera de obtener un archivo .iso que contiene el medio de instalación a través de [Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/). Inicie sesión y, a continuación, utilice el **descargas** vínculo para buscar la versión de SQL Server 2016 que desea instalar. La descarga está en forma de un archivo .iso, que puede copiar en el equipo de destino para una instalación sin conexión.
+Una manera de obtener un archivo. ISO que contiene el medio de instalación se realiza a través de [Visual Studio dev Essentials](https://visualstudio.microsoft.com/dev-essentials/). Inicie sesión y, a continuación,  use el vínculo downloads para encontrar la versión SQL Server 2016 que desea instalar. La descarga está en forma de un archivo. ISO, que puede copiar en el equipo de destino para una instalación sin conexión.
 
-## <a name="transfer-files"></a>Transferencia de archivos
+## <a name="transfer-files"></a>Transferir archivos
 
-Copie los medios de instalación de SQL Server (.iso o .cab) y los archivos de análisis en bases de datos CAB en el equipo de destino. Coloque los archivos CAB y el archivo de medios de instalación en la misma carpeta en el equipo de destino, como la carpeta TEMP * % del usuario del programa de instalación.
+Copie el disco de instalación de SQL Server (. ISO o. cab) y los archivos. CAB de análisis en la base de datos en el equipo de destino. Coloque los archivos. CAB y el archivo de medios de instalación en la misma carpeta del equipo de destino, como la carpeta% TEMP * del usuario de la instalación.
 
-Falta la carpeta % TEMP % para los archivos CAB de Python. Para R, puede usar % TEMP % o establezca el parámetro de myrcachedirectory en la ruta de acceso del archivo CAB.
+La carpeta% TEMP% es necesaria para los archivos. CAB de Python. Para R, puede usar% TEMP% o establecer el parámetro myrcachedirectory en la ruta de acceso del archivo. CAB.
 
-Captura de pantalla siguiente muestra los archivos CAB de SQL Server 2017 e ISO. Descargas de SQL Server 2016 tienen un aspecto distintas: es el nombre de archivo menos archivos (sin Python) y los medios de instalación para 2016.
+En la captura de pantalla siguiente se muestra SQL Server archivos CAB e ISO de 2017. Las descargas de SQL Server 2016 parecen diferentes: menos archivos (sin Python) y el nombre de archivo del medio de instalación es de 2016.
 
-![Lista de archivos que se transferirá](media/offline-file-list.png "lista de archivos")
+![Lista de archivos que se van a transferir](media/offline-file-list.png "Lista de archivos")
 
-## <a name="run-setup"></a>Ejecute el programa de instalación
+## <a name="run-setup"></a>Ejecutar el programa de instalación
 
-Al ejecutar el programa de instalación de SQL Server en un equipo conectado a internet, el programa de instalación agrega un **instalación sin conexión** paginar en el Asistente para que pueda especificar la ubicación de los archivos .cab que copió en el paso anterior.
+Al ejecutar el programa de instalación de SQL Server en un equipo desconectado de Internet, el programa de instalación agrega una página de **instalación sin conexión** al Asistente para que pueda especificar la ubicación de los archivos. cab que copió en el paso anterior.
 
-1. Para comenzar la instalación, haga doble clic en el archivo .iso o .cab para tener acceso a los medios de instalación. Debería ver el **setup.exe** archivo.
+1. Para comenzar la instalación, haga doble clic en el archivo. ISO o. cab para tener acceso a los medios de instalación. Debería ver el archivo **setup. exe** .
 
-2. Haga clic en **setup.exe** y ejecutar como administrador.
+2. Haga clic con el botón secundario en **setup. exe** y ejecute como administrador.
 
-3. Cuando el Asistente para la instalación muestra la página de licencia para componentes de R o Python de código abierto, haga clic en **Accept**. Aceptación de términos de licencia le permite continuar con el paso siguiente.
+3. Cuando el Asistente para la instalación muestre la página de licencias de componentes de R o Python de código abierto, haga clic en **Aceptar**. La aceptación de los términos de licencia le permite continuar con el siguiente paso.
 
-4. Cuando llegue a la **instalación sin conexión** página **ruta de instalación**, especifique la carpeta que contiene los archivos CAB que copió anteriormente.
+4. Cuando llegue a la página de **instalación sin conexión** , en **ruta de acceso de instalación**, especifique la carpeta que contiene los archivos. cab que copió anteriormente.
 
-   ![Página del Asistente para la selección de carpeta cab](media/screenshot-sql-offline-cab-page.png "carpeta CAB")
+   ![Página del Asistente para la selección de la carpeta CAB](media/screenshot-sql-offline-cab-page.png "Carpeta CAB")
 
-5. Continuar siguientes las indicaciones en pantalla para completar la instalación.
+5. Siga las indicaciones en pantalla para completar la instalación.
 
 <a name="apply-cu"></a>
 
 ## <a name="apply-cumulative-updates"></a>Aplicar actualizaciones acumulativas
 
-Se recomienda que aplique la actualización acumulativa más reciente para el motor de base de datos y los componentes de aprendizaje automático. Las actualizaciones acumulativas se instalan a través del programa de instalación. 
+Se recomienda aplicar la última actualización acumulativa al motor de base de datos y a los componentes de aprendizaje automático. Las actualizaciones acumulativas se instalan a través del programa de instalación. 
 
-1. Comience con una instancia de la línea base. Solo se pueden aplicar las actualizaciones acumulativas para las instalaciones existentes de SQL Server:
+1. Comience con una instancia de línea de base. Solo puede aplicar las actualizaciones acumulativas a las instalaciones existentes de SQL Server:
 
-  + Versión inicial de SQL Server 2017
-  + Versión inicial de SQL Server 2016, SQL Server 2016 Service Pack 1 o SQL Server 2016 Service Pack 2
+  + SQL Server versión inicial 2017
+  + SQL Server versión inicial 2016, SQL Server 2016 SP 1 o SQL Server 2016 SP 2
 
-2. En un dispositivo conectado a internet, vaya a la lista de actualizaciones acumulativas para su versión de SQL Server:
+2. En un dispositivo conectado a Internet, vaya a la lista de actualizaciones acumulativas correspondiente a su versión de SQL Server:
 
-  + [Actualizaciones de SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [Actualizaciones de SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+  + [SQL Server 2017 actualizaciones](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [SQL Server 2016 actualizaciones](https://sqlserverupdates.com/sql-server-2016-updates/)
 
 3. Seleccione la actualización acumulativa más reciente para descargar el archivo ejecutable.
 
-4. Obtener archivos CAB correspondientes para R y Python. Para obtener vínculos de descarga, vea [CAB descargas para las actualizaciones acumulativas en el análisis en bases de datos de SQL Server en instancias](sql-ml-cab-downloads.md).
+4. Obtiene los archivos. CAB correspondientes para R y Python. Para obtener vínculos de descarga, consulte [descargas de CAB para actualizaciones acumulativas en SQL Server instancias de análisis en base de datos](sql-ml-cab-downloads.md).
 
-5. Transferir todos los archivos, archivos ejecutables y CAB, en la misma carpeta en el equipo sin conexión.
+5. Transfiera todos los archivos, archivos ejecutables y archivos. CAB a la misma carpeta del equipo sin conexión.
 
-6. Ejecute el programa de instalación. Acepte los términos de licencia y, en la página de selección de características, revise las características para el que se aplican las actualizaciones acumulativas. Debería ver todas las características instaladas para la instancia actual, incluidas características de aprendizaje automático.
+6. Ejecute el programa de instalación. Acepte los términos de licencia y, en la página selección de características, revise las características para las que se aplican las actualizaciones acumulativas. Debería ver todas las características instaladas para la instancia actual, incluidas las características de aprendizaje automático.
 
-  ![Seleccione las características en el árbol de características](media/cumulative-update-feature-selection.png "lista de características")
+  ![Seleccionar características en el árbol de características](media/cumulative-update-feature-selection.png "lista de características")
 
-5. Continúe con el asistente, acepte los términos de licencia para las distribuciones de R y Python. Durante la instalación, deberá elegir la ubicación de la carpeta que contiene los archivos CAB actualizados.
+5. Continúe con el asistente y acepte los términos de licencia para las distribuciones de R y Python. Durante la instalación, se le pedirá que elija la ubicación de la carpeta que contiene los archivos. CAB actualizados.
 
-## <a name="set-environment-variables"></a>Establezca variables de entorno
+## <a name="set-environment-variables"></a>Establecer variables de entorno
 
-Para solo integración de características de R, se debe establecer el **MKL_CBWR** variable de entorno [garantizar resultados coherentes](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) de cálculos de Intel Math Kernel Library (MKL).
+Solo para la integración de características de R, debe establecer la variable de entorno **MKL_CBWR** para [garantizar una salida coherente](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) de los cálculos de la biblioteca de kernels matemáticos (MKL) de Intel.
 
-1. En el Panel de Control, haga clic en **sistema y seguridad** > **sistema** > **configuración avanzada del sistema**  >   **Las Variables de entorno**.
+1. En el panel de control, haga clic en sistema **y seguridad** >  > **configuración** > avanzada del sistema**variables de entorno**.
 
-2. Crear una nueva variable de usuario o del sistema. 
+2. Cree una nueva variable de usuario o del sistema. 
 
-  + Establezca el nombre de variable en `MKL_CBWR`
-  + Establece el valor de la variable en `AUTO`
+  + Establezca el nombre de la variable en`MKL_CBWR`
+  + Establezca el valor de la variable en`AUTO`
 
-Este paso requiere un reinicio del servidor. Si va a habilitar la ejecución del script, puede contener en el reinicio hasta que se hace todo el trabajo de configuración.
+Este paso requiere un reinicio del servidor. Si va a habilitar la ejecución de scripts, puede mantener el reinicio hasta que se realice todo el trabajo de configuración.
 
 ## <a name="post-install-configuration"></a>Configuración posterior a la instalación
 
@@ -148,12 +148,12 @@ Una vez finalizada la instalación, reinicie el servicio y, a continuación, con
 
 Una instalación sin conexión inicial de SQL Server 2017 Machine Learning Services o SQL Server 2016 R Services requiere la misma configuración que una instalación en línea:
 
-+ [Comprobar la instalación](sql-machine-learning-services-windows-install.md#verify-installation) (para SQL Server 2016, haga clic en [aquí](sql-r-services-windows-install.md#verify-installation)).
-+ [Configuración adicional según sea necesario](sql-machine-learning-services-windows-install.md#additional-configuration) (para SQL Server 2016, haga clic en [aquí](sql-r-services-windows-install.md#bkmk_FollowUp)).
++ [Comprobar la instalación](sql-machine-learning-services-windows-install.md#verify-installation)  (por SQL Server 2016, haga clic [aquí](sql-r-services-windows-install.md#verify-installation)).
++ [Configuración adicional según sea necesario](sql-machine-learning-services-windows-install.md#additional-configuration)  (por SQL Server 2016, haga clic [aquí](sql-r-services-windows-install.md#bkmk_FollowUp)).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para comprobar el estado de instalación de la instancia y corregir los problemas comunes, consulte [informes personalizados para SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
+Para comprobar el estado de la instalación de la instancia y corregir los problemas comunes, vea [informes personalizados para SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md).
 
-Para obtener ayuda con todos los mensajes no conocidos o las entradas del registro, consulte [actualización e instalación preguntas más frecuentes - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+Para obtener ayuda con mensajes o entradas de registro desconocidos, consulte [preguntas más frecuentes Machine Learning Services sobre actualización e instalación](../r/upgrade-and-installation-faq-sql-server-r-services.md).
 

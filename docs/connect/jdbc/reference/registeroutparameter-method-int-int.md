@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 169229c7-b75d-498b-a5ac-df300424c909
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4ca7d6f7c664bb175c63c667626f87d67233efb0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 44c9ab796c6ac0bf0d3cd48429a22d9275c01bfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975995"
 ---
 # <a name="registeroutparameter-method-int-int"></a>Método registerOutParameter (int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,9 +48,9 @@ public void registerOutParameter(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método registerOutParameter especificado por el método registerOutParameter de la interfaz java.sql.CallableStatement.  
+ Este método registerOutParameter se especifica mediante el método registerOutParameter de la interfaz java. SQL. CallableStatement.  
   
- A partir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador JDBC 3.0, cuando *sqlType* es de tipo java.sql.Types.TIME, se modifica el comportamiento de este método mediante el **sendTimeAsDatetime** propiedad de conexión ([Estableciendo las propiedades de conexión](../../../connect/jdbc/setting-the-connection-properties.md)) y [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ Desde el controlador JDBC de 3,0, cuando *sqlType* es de tipo Java. SQL. types. Time, el comportamiento de este método se modifica mediante la propiedad de conexión **sendTimeAsDatetime** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Establecer las propiedades](../../../connect/jdbc/setting-the-connection-properties.md)de conexión) [y SQLServerDataSource.](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)setSendTimeAsDatetime.  
   
  Para más información, vea [Configurar el modo en que los valores java.sql.Time se envían al servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   

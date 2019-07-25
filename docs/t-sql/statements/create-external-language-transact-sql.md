@@ -10,12 +10,12 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2185c40562e6ad7102ebde10cacb34c56d36f714
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5a3d66d95907c8ddbc4efd33fe58ee4ddbbb9423
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399969"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476001"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "67399969"
 Registra las extensiones de lenguaje externo en la base de datos desde la secuencia de bytes o la ruta de acceso de archivo especificada. Esta instrucción actúa como un mecanismo genérico para que el administrador de base de datos pueda registrar las extensiones del lenguaje externo nuevo en cualquier plataforma de sistema operativo compatible con SQL Server. Para obtener más información, consulte las [extensiones de lenguaje](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> Actualmente, solo se admite **Java** como lenguaje externo. **R** y **Python** son nombres reservados y no se puede crear ningún lenguaje externo con esos nombres. Para obtener más información sobre cómo usar **R** y **Python**, consulte [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services).
+> Actualmente, solo se admite **Java** como lenguaje externo. **R** y **Python** son nombres reservados y no se puede crear ningún lenguaje externo con esos nombres. Para obtener más información sobre cómo usar **R** y **Python**, consulte [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/).
 
 ## <a name="syntax"></a>Sintaxis
 

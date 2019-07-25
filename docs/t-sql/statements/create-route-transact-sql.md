@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006509"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -67,10 +66,10 @@ WITH
  por  
  Presenta las cláusulas que definen la ruta creada.  
   
- SERVICE_NAME = **'**_service\_name_**'**  
+ SERVICE_NAME = **'** _service\_name_ **'**  
  Especifica el nombre del servicio remoto señalado por esta ruta. El *service_name* debe coincidir exactamente con el nombre que usa el servicio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con *service_name*. En otras palabras, en la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. Si se omite SERVICE_NAME, esta ruta coincide con todos los nombres de servicio, pero tiene una prioridad inferior de coincidencia con respecto a una ruta que especifique SERVICE_NAME. Una ruta con el nombre de servicio **'SQL/ServiceBroker/BrokerConfiguration'** es una ruta a un servicio de notificación de configuración del agente. Es posible que una ruta a este servicio no especifique una instancia de agente.  
   
- BROKER_INSTANCE = **'**_broker\_instance\_identifier_**'**  
+ BROKER_INSTANCE = **'** _broker\_instance\_identifier_ **'**  
  Especifica la base de datos que hospeda el servicio de destino. El parámetro *broker_instance_identifier* debe ser el identificador de la instancia de agente de la base de datos remota, que se puede obtener al ejecutar la siguiente consulta en la base de datos seleccionada:  
   
 ```  
@@ -81,15 +80,15 @@ WHERE database_id = DB_ID()
   
  Si se omite la cláusula BROKER_INSTANCE, esta ruta coincide con todas las instancias de agente. Una ruta que coincida con todas las instancias de agente tiene una prioridad superior de coincidencia con respecto a las rutas con una instancia de agente explícita si la conversación no especifica una instancia de broker. Para las conversaciones que especifican una instancia de agente, una ruta con una instancia de agente tiene una prioridad superior a la de una ruta que coincida con todas las instancias de agente.  
   
- LIFETIME **=**_route\_lifetime_  
+ LIFETIME **=** _route\_lifetime_  
  Especifica el tiempo, en segundos, durante el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retiene la ruta en la tabla de enrutamiento. Transcurrido este tiempo, la ruta expira y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ya no la tiene en cuenta al elegir una ruta para una conversación nueva. Si esta cláusula se omite, *route_lifetime* es NULL y la ruta no expira nunca.  
   
- ADDRESS **='**_next\_hop\_address_**'**  
+ ADDRESS **='** _next\_hop\_address_ **'**  
 Para Instancia administrada de SQL Database, `ADDRESS` debe ser local. 
 
 Especifica la dirección de red para esta ruta. En *dirección_de_próximo_salto* se especifica una dirección TCP/IP en el formato siguiente:  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:**_port\_number_  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** _port\_number_  
   
  El *port_number* especificado debe coincidir con el número de puerto del extremo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Se puede obtener ejecutando la consulta siguiente en la base de datos seleccionada:  
   
@@ -107,10 +106,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Si una ruta especifica **'TRANSPORT'** para *next_hop_address*, la dirección de red se determina en función de la dirección de red del nombre del servicio. Una ruta que especifica **'TRANSPORT'** podría no especificar un nombre de servicio o instancia de agente.  
   
- MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
+ MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  Especifica la dirección de red de una base de datos reflejada con una base de datos reflejada hospedada en *next_hop_address*. *next_hop_mirror_address* especifica una dirección TCP/IP en el siguiente formato:  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  El *port_number* especificado debe coincidir con el número de puerto del extremo de [!INCLUDE[ssSB](../../includes/sssb-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. Se puede obtener ejecutando la consulta siguiente en la base de datos seleccionada:  
   
@@ -135,7 +134,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] no quita las rutas expiradas de la tabla de enrutamiento. Se puede activar una ruta expirada mediante la instrucción ALTER ROUTE.  
   
- Una ruta no puede ser un objeto temporal. Se permiten los nombres de ruta que empiezan por **#**, pero se trata de objetos permanentes.  
+ Una ruta no puede ser un objeto temporal. Se permiten los nombres de ruta que empiezan por **#** , pero se trata de objetos permanentes.  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, tienen permiso para crear una ruta los miembros de los roles fijos de base de datos **db_ddladmin** o **db_owner** y el rol fijo de servidor **sysadmin**.  
@@ -153,7 +152,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://www.Adventure-Works.com:1234' ;  
 ```  
   
-### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>b. Crear una ruta TCP/IP con un nombre NetBIOS  
+### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. Crear una ruta TCP/IP con un nombre NetBIOS  
  En el ejemplo siguiente se crea una ruta al servicio `//Adventure-Works.com/Expenses`. La ruta especifica que los mensajes para este servicio se desplazan por TCP hasta el puerto `1234` del host identificado mediante el nombre NetBIOS `SERVER02`. Cuando llega el mensaje, la sesión de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo entrega a la instancia de base de datos indicada por el identificador único `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
 ```  

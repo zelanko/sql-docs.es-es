@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a30db8e163fcae15ac74af4d447a958182a88f5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9422e6c8b406258210e03262014d04abc1a4d3ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136729"
 ---
 # <a name="parameters"></a>Parámetros
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,7 +81,7 @@ GO
 
 Una aplicación puede usar marcadores de parámetro enlazados a variables de programa para intercambiar datos entre variables de aplicación, parámetros y códigos de retorno.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   

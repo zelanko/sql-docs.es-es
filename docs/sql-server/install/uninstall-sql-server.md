@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c0fd90c6aaa278a1dc96b50d6d36601652d4894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a47a4d6efa06e94f62c572eed562f96ba1f2102a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045759"
 ---
 # <a name="uninstall-sql-server"></a>Desinstalar SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47708573"
   
 -   [Reparar una instalación de SQL Server 2016 con errores](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Instalar SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)   
  [Actualizar a SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  

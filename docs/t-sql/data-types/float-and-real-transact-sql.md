@@ -22,24 +22,23 @@ helpviewer_keywords:
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf461a516371b78a74989ac26f6b79ebbe4853b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086750"
 ---
 # <a name="float-and-real-transact-sql"></a>float y real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Tipos de datos numéricos y aproximados que se utilizan con datos numéricos de coma flotante. Los datos de coma flotante son aproximados; por tanto, no todos los valores del rango del tipo de datos se pueden representar con exactitud. El sinónimo ISO para **real** es **float(24)**.
+Tipos de datos numéricos y aproximados que se utilizan con datos numéricos de coma flotante. Los datos de coma flotante son aproximados; por tanto, no todos los valores del rango del tipo de datos se pueden representar con exactitud. El sinónimo ISO para **real** es **float(24)** .
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
-**float** [ **(**_n_**)** ]Donde *n* es el número de bits que se usan para almacenar la mantisa del número de **float** en notación científica y, por tanto, dicta su precisión y el tamaño de almacenamiento. Si se especifica *n*, debe ser un valor entre **1** y **53**. El valor predeterminado de *n* es **53**.
+**float** [ **(** _n_ **)** ]Donde *n* es el número de bits que se usan para almacenar la mantisa del número de **float** en notación científica y, por tanto, dicta su precisión y el tamaño de almacenamiento. Si se especifica *n*, debe ser un valor entre **1** y **53**. El valor predeterminado de *n* es **53**.
   
 |Valor *n*|Precisión|Tamaño de almacenamiento|  
 |---|---|---|
@@ -49,7 +48,7 @@ Tipos de datos numéricos y aproximados que se utilizan con datos numéricos de 
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata *n* como uno de dos valores posibles. Si **1**<=n<=**24**, *n* se trata como **24**. Si **25**<=n<=**53**, *n* se trata como **53**.  
   
-El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[**(n)**] cumple con el estándar ISO para todos los valores de *n* desde **1** hasta **53**. El sinónimo de **double precision** es **float(53)**.
+El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] cumple con el estándar ISO para todos los valores de *n* desde **1** hasta **53**. El sinónimo de **double precision** es **float(53)** .
   
 ## <a name="remarks"></a>Notas  
   

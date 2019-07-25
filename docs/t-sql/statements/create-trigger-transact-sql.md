@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 900d91223aea28d0809c3d3aab9acd574c3d2df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130128"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -220,7 +219,7 @@ Como máximo, puede definir un desencadenador INSTEAD OF por cada instrucción I
   
 No puede definir desencadenadores INSTEAD OF en vistas actualizables que usan WITH CHECK OPTION. Al hacerlo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un error cuando se agrega un desencadenador INSTEAD OF a una vista actualizable para la que se especificó WITH CHECK OPTION. Puede quitar esta opción mediante ALTER VIEW antes de definir el desencadenador INSTEAD OF.  
   
-{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }   
+{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 Especifica las instrucciones de modificación de datos que activan el desencadenador DML cuando se intenta en esta tabla o vista. Especifique al menos una opción. Use cualquier combinación de estas opciones en cualquier orden en la definición del desencadenador.  
   
 Para los desencadenadores INSTEAD OF, no puede utilizar la opción DELETE en tablas que tengan una relación referencial que especifica una acción ON DELETE en cascada. Tampoco se permite la opción UPDATE en tablas que tengan una relación referencial que especifica una acción ON UPDATE en cascada.  
@@ -263,7 +262,7 @@ Los desencadenadores DDL y logon capturan información acerca del evento desenca
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite actualizar las columnas **text**, **ntext** o **image** mediante el uso del desencadenador INSTEAD OF en tablas o vistas.  
   
 > [!IMPORTANT]
->  Los tipos de datos **ntext**, **text** e **image** se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)y [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) en su lugar. Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos **varchar(MAX)**, **nvarchar(MAX)** y **varbinary(MAX)** en las tablas insertadas y eliminadas.  
+>  Los tipos de datos **ntext**, **text** e **image** se quitarán en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. Use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)y [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) en su lugar. Tanto los desencadenadores AFTER como INSTEAD OF admiten los datos **varchar(MAX)** , **nvarchar(MAX)** y **varbinary(MAX)** en las tablas insertadas y eliminadas.  
   
 Para los desencadenadores en tablas optimizadas para memoria, el único *sql_statement* permitido en el nivel superior es un bloque ATOMIC. El código T-SQL permitido dentro del bloque ATOMIC está limitado por el código T-SQL permitido dentro de los procedimientos nativos.  
   
@@ -427,7 +426,7 @@ AS RAISERROR ('Notify Customer Relations', 16, 10);
 GO  
 ```  
   
-### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>b. Usar un desencadenador DML con un mensaje de correo electrónico de aviso  
+### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. Usar un desencadenador DML con un mensaje de correo electrónico de aviso  
 Este ejemplo envía un mensaje de correo electrónico a una persona especificada (`MaryM`) cuando cambia la tabla `Customer`.  
   
 ```sql  

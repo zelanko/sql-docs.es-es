@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a7790e54a3418a7771f2355a071db9b8aab7a1d9
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071254"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -130,7 +129,7 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 SPLIT RANGE (500);  
 ```  
   
-### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>b. Mezclar dos particiones de una tabla con particiones en una partición  
+### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>B. Mezclar dos particiones de una tabla con particiones en una partición  
 En el ejemplo siguiente se crea la misma función de partición que antes y después se mezclan dos de las particiones en una partición para conseguir un total de tres particiones.  
   
 ```sql  

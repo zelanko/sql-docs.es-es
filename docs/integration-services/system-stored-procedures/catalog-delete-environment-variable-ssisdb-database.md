@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ba323521f67bf7d7bc92e9387bc8758606a0e202
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d047bd8af1ed8a30daa9dc1d550029a7a62279ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112256"
 ---
 # <a name="catalogdeleteenvironmentvariable-ssisdb-database"></a>catalog.delete_environment_variable (base de datos de SSISDB)
 
@@ -37,13 +36,13 @@ delete_environment_variable [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nombre del entorno que contiene la variable. *environment_name* es **nvarchar(128)**.  
+ Nombre del entorno que contiene la variable. *environment_name* es **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Nombre de la variable que se va a eliminar. El parámetro *variable_name* es de tipo **nvarchar(128)**.  
+ Nombre de la variable que se va a eliminar. El parámetro *variable_name* es de tipo **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  

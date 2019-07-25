@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 81523c69052a89b5a94c170c65be077ba17e56c6
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: da8c23819a2f47caf087ab44cd654b795a9a044d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039115"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *dbcc_statement* | *@dbcc_statement_var*  
+ *dbcc_statement* |  *@dbcc_statement_var*  
  Es el nombre del comando DBCC cuya información de sintaxis se desea recibir. Proporcione únicamente la parte del comando DBCC que sigue a DBCC, por ejemplo CHECKDB en lugar de DBCC CHECKDB.  
   
  ?  
@@ -67,7 +66,7 @@ DBCC HELP (@dbcc_stmt);
 GO  
 ```  
   
-### <a name="b-using-dbcc-help-with-the--option"></a>b. Usar DBCC HELP con ? Opción  
+### <a name="b-using-dbcc-help-with-the--option"></a>B. Usar DBCC HELP con ? Opción  
 En este ejemplo se devuelven todas las instrucciones DBCC para las que hay ayuda disponible.
   
 ```sql  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9aa0b901424df92a5e223855f066a65c2fcb2234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01cf9fcf7795e8f353565b767bbf79b1da43f4de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121697"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   Con el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Mediante la ejecución de **net stop mssqlserver** desde un símbolo del sistema para una instancia predeterminada, o la ejecución de **net stop mssql$**_nombre_de_instancia_ desde un símbolo del sistema para una instancia con nombre.  
+-   Mediante la ejecución de **net stop mssqlserver** desde un símbolo del sistema para una instancia predeterminada, o la ejecución de **net stop mssql$** _nombre_de_instancia_ desde un símbolo del sistema para una instancia con nombre.  
   
 -   Con Servicios del Panel de control.  
   

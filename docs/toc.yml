@@ -61,8 +61,8 @@
           items:
             - name: Instalación de herramientas de macrodatos
               href: big-data-cluster/deploy-big-data-tools.md
-            - name: Instalación de mssqlctl
-              href: big-data-cluster/deploy-install-mssqlctl.md
+            - name: Instalación de azdata
+              href: big-data-cluster/deploy-install-azdata.md
         - name: Implementar
           items:
             - name: Guía para la implementación
@@ -87,6 +87,8 @@
               items:
                 - name: Azure Kubernetes Service
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+                - name: Implementación con Azure Data Studio Notebooks
+                  href: big-data-cluster/deploy-notebooks.md
     - name: Conceptos
       items:
         - name: Implementación de la aplicación
@@ -137,7 +139,7 @@
               href: big-data-cluster/data-ingestion-restore-database.md
         - name: Implementación y consumo de aplicaciones
           items:
-            - name: Implementación con mssqlctl
+            - name: Implementación con azdata
               href: big-data-cluster/big-data-cluster-create-apps.md
             - name: Implementación con VS Code
               href: big-data-cluster/app-deployment-extension.md
@@ -161,6 +163,8 @@
               href: big-data-cluster/view-cluster-status.md
             - name: Solución de problemas de Kubernetes
               href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: Administración con cuadernos
+              href: big-data-cluster/manage-notebooks.md
         - name: PC de bolsillo
           items:
             - name: Información general de PC de bolsillo
@@ -175,6 +179,8 @@
               href: big-data-cluster/spark-submit-job.md
             - name: Enviar trabajos de Spark en IntelliJ
               href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+            - name: Envío de trabajos de Spark en Visual Studio Code
+              href: big-data-cluster/spark-hive-tools-vscode.md
             - name: Usar el servidor de historial de Spark extendido
               href: big-data-cluster/spark-history-server.md
     - name: Referencia
@@ -183,50 +189,56 @@
           items:
             - name: Archivo de configuración de implementación
               href: big-data-cluster/reference-deployment-config.md
-        - name: Referencia de mssqlctl
+        - name: referencia de azdata
           items:
-            - name: mssqlctl
-              href: big-data-cluster/reference-mssqlctl.md
+            - name: azdata
+              href: big-data-cluster/reference-azdata.md
             - name: Implementación de la aplicación
               items:
                 - name: Aplicación
-                  href: big-data-cluster/reference-mssqlctl-app.md
+                  href: big-data-cluster/reference-azdata-app.md
                 - name: Plantilla de aplicación
-                  href: big-data-cluster/reference-mssqlctl-app-template.md
+                  href: big-data-cluster/reference-azdata-app-template.md
             - name: Clúster
               items:
                 - name: bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc.md
+                  href: big-data-cluster/reference-azdata-bdc.md
                 - name: Configuración de bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc-config.md
-                - name: Sección de configuración de bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc-config-section.md
+                  href: big-data-cluster/reference-azdata-bdc-config.md
                 - name: Control de bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc-control.md
+                  href: big-data-cluster/reference-azdata-bdc-control.md
                 - name: Estado de control de bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc-control-status.md
+                  href: big-data-cluster/reference-azdata-bdc-control-status.md
                 - name: Depuración de bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc-debug.md
+                  href: big-data-cluster/reference-azdata-bdc-debug.md
                 - name: Punto de conexión de bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+                  href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                - name: hdfs de bdc
+                  href: big-data-cluster/reference-azdata-bdc-hdfs.md
+                - name: montaje de hdfs de bdc
+                  href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
                 - name: Grupo de bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc-pool.md
+                  href: big-data-cluster/reference-azdata-bdc-pool.md
                 - name: Estado del grupo de bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc-pool-status.md
+                  href: big-data-cluster/reference-azdata-bdc-pool-status.md
+                - name: spark de bdc
+                  href: big-data-cluster/reference-azdata-bdc-spark.md
+                - name: lote de spark de bdc
+                  href: big-data-cluster/reference-azdata-bdc-spark-batch.md
+                - name: sesión de spark de bdc
+                  href: big-data-cluster/reference-azdata-bdc-spark-session.md
+                - name: instrucción de spark de bdc
+                  href: big-data-cluster/reference-azdata-bdc-spark-statement.md
                 - name: Estado de bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc-status.md
-            - name: Storage
+                  href: big-data-cluster/reference-azdata-bdc-status.md
+            - name: Notebook
               items:
-                - name: Almacenamiento de bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc-storage-pool.md
-                - name: Montaje de almacenamiento de bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount.md
-                - name: hdfs
-                  href: big-data-cluster/reference-mssqlctl-hdfs.md
+                - name: notebook
+                  href: big-data-cluster/reference-azdata-notebook.md
             - name: SQL
               items:
                 - name: sql
-                  href: big-data-cluster/reference-mssqlctl-sql.md
+                  href: big-data-cluster/reference-azdata-sql.md
 - name: Continuidad empresarial
   items:
     - name: Información general
@@ -15964,6 +15976,8 @@
                   href: t-sql/functions/filegroupproperty-transact-sql.md
                 - name: FILEPROPERTY
                   href: t-sql/functions/fileproperty-transact-sql.md
+                - name: FILEPROPERTYEX
+                  href: t-sql/functions/filepropertyex-transact-sql.md
                 - name: FULLTEXTCATALOGPROPERTY
                   href: t-sql/functions/fulltextcatalogproperty-transact-sql.md
                 - name: FULLTEXTSERVICEPROPERTY

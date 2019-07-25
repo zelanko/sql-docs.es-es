@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d1c06397b74ecab0f29cb293d7efa591b36fa1ac
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073145"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -217,7 +216,7 @@ WITH (
 ) AS SELECT * FROM dimCustomer;  
 ```  
   
-### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>b. Usar una sugerencia de consulta con CREATE EXTERNAL TABLE AS SELECT  
+### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>B. Usar una sugerencia de consulta con CREATE EXTERNAL TABLE AS SELECT  
  Esta consulta muestra la sintaxis básica para usar una sugerencia de combinación de consulta con la instrucción CREATE EXTERNAL TABLE AS SELECT. Después de enviar la consulta, la base de datos usa la estrategia de combinación hash para generar el plan de consulta. Para más información sobre las sugerencias de combinación y cómo usar la cláusula OPTION, vea [OPTION &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 > [!NOTE]  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e8a6d88387fb0674cd8d39f44a30358009e44f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 84dfb4e9f5027650ae3a35146b13f70fd0f84a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076165"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Conectar con Azure Storage (Restauración)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +30,10 @@ ms.locfileid: "52503976"
  **Clave de cuenta**  
  Especifique la tecla de acceso de la cuenta de Almacenamiento de Windows Azure.  
   
- Casilla**Usar puntos de conexión seguros (HTTPS)**   
+ Casilla**Usar puntos de conexión seguros (HTTPS)**  
  Seleccione esta opción para establecer una conexión segura con Almacenamiento de Windows Azure (recomendado).  
   
- Casilla**Guardar clave de cuenta**   
+ Casilla**Guardar clave de cuenta**  
  Active esta casilla si desea que SQL Server recuerde la tecla de acceso para esta cuenta de almacenamiento.  
   
 ### <a name="sql-credential"></a>Credencial SQL  

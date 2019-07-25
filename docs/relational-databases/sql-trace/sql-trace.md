@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c9d9f975bcc18341c3f0465e92523815083e2de
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133242"
 ---
 # <a name="sql-trace"></a>Seguimiento de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +140,7 @@ Seguimiento de SQL utiliza columnas de datos en la salida del seguimiento para d
 |**Writes**|17|Número de operaciones de escritura en el disco físico que realiza el servidor en nombre del evento.|  
 |**XactSequence**|50|Token que describe la transacción actual.|  
   
- * Estas columnas de datos se rellenan de forma predeterminada para todos los eventos.  
+ \* Estas columnas de datos se rellenan de forma predeterminada para todos los eventos.  
   
  \*\*Para más información sobre la columna de datos **ObjectType**, vea [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).  
   

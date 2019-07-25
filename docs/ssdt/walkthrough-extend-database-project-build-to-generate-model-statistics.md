@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069009"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo
 Puede crear un colaborador de compilación para realizar acciones personalizadas al compilar un proyecto de base de datos. En este tutorial, se crea un colaborador de compilación llamado ModelStatistics que genera estadísticas del modelo de base de datos SQL al compilar un proyecto de base de datos. Dado que este colaborador de compilación acepta parámetros cuando se compila, son necesarios algunos pasos adicionales.  

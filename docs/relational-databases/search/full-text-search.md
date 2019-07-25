@@ -11,14 +11,13 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b769bf2bff3c9958bc4a4fd9bedafe140e96c67f
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d17a2d0f2abb6324d1cb990dcf673458fb5205dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082763"
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -124,7 +123,7 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
   
 -   **Controlador de protocolo.** Este componente extrae los datos de la memoria para su posterior procesamiento y tiene acceso a los datos de una tabla de usuario de una base de datos especificada. Una de sus responsabilidades es recopilar los datos de las columnas con indización de texto completo y pasarlos al host de demonio de filtro, que aplicará el filtrado y la separación de palabras cuando sea necesario.  
   
--   **Filtros.** Algunos tipos de datos requieren un filtrado para que los datos de un documento puedan indexarse con texto completo, incluso los datos de las columnas **varbinary**, **varbinary(max)**, **image**o **xml** columns. El filtro utilizado para un documento determinado depende de su tipo de documento. Por ejemplo, se utilizan filtros diferentes para los documentos de Microsoft Word (.doc), de Microsoft Excel (.xls) y XML (.xml). A continuación, el filtro extrae fragmentos de texto del documento, mientras quita el formato incrustado y conserva el texto y, potencialmente, la información sobre la posición del mismo. El resultado es un flujo de información de texto. Para obtener más información, vea [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
+-   **Filtros.** Algunos tipos de datos requieren un filtrado para que los datos de un documento puedan indexarse con texto completo, incluso los datos de las columnas **varbinary**, **varbinary(max)** , **image**o **xml** columns. El filtro utilizado para un documento determinado depende de su tipo de documento. Por ejemplo, se utilizan filtros diferentes para los documentos de Microsoft Word (.doc), de Microsoft Excel (.xls) y XML (.xml). A continuación, el filtro extrae fragmentos de texto del documento, mientras quita el formato incrustado y conserva el texto y, potencialmente, la información sobre la posición del mismo. El resultado es un flujo de información de texto. Para obtener más información, vea [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
 -   **Separadores de palabras y lematizadores.** Un separador de palabras es un componente específico del idioma que busca los límites de palabras según las reglas léxicas de un idioma determinado (*separación de palabras*). Cada separador de palabras está asociado a un componente de lematizador específico del idioma que conjuga los verbos y realiza las expansiones flexionales. Al realizar la indización, el host de demonio de filtro utiliza un separador de palabras y un lematizador para realizar el análisis lingüístico de los datos de texto de una columna de la tabla determinada. El lenguaje asociado a una columna de la tabla en el índice de texto completo determina qué separador de palabras y lematizador se utilizan para indizar la columna. Para obtener más información, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -136,7 +135,7 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
   
  Al indexar datos almacenados en una columna **varbinary(max)** o **image** , el filtro, que implementa la interfaz **IFilter** , extrae texto basándose en el formato de archivo especificado para los datos (por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). En algunos casos, los componentes de filtro requieren que los datos de tipo **varbinary(max)** o **image** se escriban en la carpeta de filtro de datos, en lugar de insertarse en la memoria.  
   
- Como parte del procesamiento, los datos de texto recopilados se pasan a través de un separador de palabras para dividir el texto en tokens o palabras clave individuales. El idioma que se usa para la tokenización se especifica en el nivel de columna o bien se identifica en los datos **varbinary(max)**, **image**o **xml** por medio del componente de filtro.  
+ Como parte del procesamiento, los datos de texto recopilados se pasan a través de un separador de palabras para dividir el texto en tokens o palabras clave individuales. El idioma que se usa para la tokenización se especifica en el nivel de columna o bien se identifica en los datos **varbinary(max)** , **image**o **xml** por medio del componente de filtro.  
   
  Puede llevarse a cabo un procesamiento adicional para quitar las palabras irrelevantes y normalizar los tokens antes de que se almacenen en el índice de texto completo o en un fragmento de índice.  
   
@@ -150,7 +149,7 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
   
  A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], los índices de texto completo se integran con el motor de base de datos, en lugar de residir en el sistema de archivos como en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para una base de datos nueva, el catálogo de texto completo es ahora un objeto virtual que no pertenece a ningún grupo de archivos; es simplemente un concepto lógico que hace referencia al grupo de índices de texto completo. Debe tener en cuenta que, durante la actualización de una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , para cualquier catálogo de texto completo que contenga archivos de datos, se crea un nuevo grupo de archivos. Para obtener más información, vea [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md).  
   
-Solo se permite un índice de texto completo por cada tabla. Para crear un índice de texto completo en una tabla, ésta debe tener una única columna que no contenga valores NULL. Puede crear un índice de texto completo en columnas de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**y **varbinary(max)** , que se pueden indexar para efectuar una búsqueda de texto completo. Si se crea un índice de texto completo en una columna cuyo tipo de datos es  **varbinary**, **varbinary(max)**, **image**o **xml** , deberá especificar una columna de tipo. Una *columna de tipo* es una columna de tabla en la que se almacena la extensión de archivo (.doc, .pdf, .xls, etc.) del documento en cada fila.  
+Solo se permite un índice de texto completo por cada tabla. Para crear un índice de texto completo en una tabla, ésta debe tener una única columna que no contenga valores NULL. Puede crear un índice de texto completo en columnas de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**y **varbinary(max)** , que se pueden indexar para efectuar una búsqueda de texto completo. Si se crea un índice de texto completo en una columna cuyo tipo de datos es  **varbinary**, **varbinary(max)** , **image**o **xml** , deberá especificar una columna de tipo. Una *columna de tipo* es una columna de tabla en la que se almacena la extensión de archivo (.doc, .pdf, .xls, etc.) del documento en cada fila.  
 
 ###  <a name="structure"></a> Estructura de los índices de texto completo  
  Para comprender el funcionamiento del motor de texto completo, es necesario entender la estructura de un índice de texto completo. En este tema se utiliza el extracto siguiente de la tabla **Document** de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] como tabla de ejemplo. Este extracto muestra solo dos columnas, **DocumentID** y **Title** , y tres filas de la tabla.  
@@ -250,7 +249,7 @@ Solo se permite un índice de texto completo por cada tabla. Para crear un índi
   
 -   **Archivos de sinónimos.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala también un archivo de diccionario de sinónimos para cada idioma de texto completo, además de un archivo de diccionario de sinónimos global. Los archivos de diccionario de sinónimos instalados son básicamente archivos vacíos, pero puede modificarlos para definir los sinónimos de un determinado idioma o escenario empresarial. Al desarrollar un diccionario de sinónimos personalizado para los datos de texto completo, puede ampliar de forma eficaz el ámbito de las consultas de texto completo en esos datos. Para obtener más información, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
--   **Filtros (iFilters).**  La indexación de un documento en una columna de tipo de datos **varbinary(max)**, **image**o **xml** requiere un filtro que realice el procesamiento adicional. El filtro debe ser específico del tipo de documento (.doc, .pdf, .xls, .xml, etc.). Para obtener más información, vea [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
+-   **Filtros (iFilters).**  La indexación de un documento en una columna de tipo de datos **varbinary(max)** , **image**o **xml** requiere un filtro que realice el procesamiento adicional. El filtro debe ser específico del tipo de documento (.doc, .pdf, .xls, .xml, etc.). Para obtener más información, vea [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
  Los separadores de palabras (y lematizadores) y los filtros se ejecutan en el proceso de host de demonio de filtro (fdhost.exe).  
 

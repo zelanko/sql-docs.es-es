@@ -1,10 +1,11 @@
 ---
-ms.openlocfilehash: 90efdf00d205cc5dedd7c6645d3c818ed324f147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63b66f13f6a0143368ee5c9df6b598aa74b2287d
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68161567"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419312"
 ---
 > [!NOTE]
-> Clústeres de macrodatos de SQL Server en primer lugar está disponible como una versión preliminar pública limitada a través del programa de adopción temprana de SQL Server de 2019. Para solicitar acceso, registrar [aquí](https://aka.ms/eapsignup)y especifique su interés para probar los clústeres grandes de datos de SQL Server. Microsoft todas las solicitudes de evaluación de prioridades y responder tan pronto como sea posible.
+> A partir de SQL Server 2019 CTP 3.2, los clústeres de macrodatos de SQL Server están disponibles en versión preliminar pública.
+> Antes de SQL Server 2019 CTP 3.2, los clústeres de macrodatos de SQL Server estaban disponibles en versión preliminar pública limitada a través del Programa de adopción anticipada de SQL Server 2019.

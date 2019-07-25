@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136484"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de la versión de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ En este artículo se describen las limitaciones y los problemas de SQL Server 20
     3. Seleccione **Habilitar FILESTREAM para el acceso de transmisión por secuencias de E/S de archivos** de nuevo con el nombre del recurso compartido original y haga clic en **Aplicar**.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **Problema e impacto en el cliente:**  en la página de permisos de usuario, al conceder permisos al nivel raíz de la vista de árbol de entidades, verá el siguiente error: `"The model permission cannot be saved. The object guid is not valid"`
+- **Problema e impacto en el cliente:**   en la página de permisos de usuario, al conceder permisos al nivel raíz de la vista de árbol de entidades, verá el siguiente error: `"The model permission cannot be saved. The object guid is not valid"`
 
 - **Solución alternativa:** 
   - Conceda permisos a los subnodos en la vista de árbol en lugar de a nivel de raíz.
@@ -74,7 +73,7 @@ No hay notas de la versión de SQL Server en Windows relacionadas con esta versi
 - **Problema e impacto en el cliente:** Se cambió el nombre del parámetro *runincluster* del procedimiento almacenado **[catálogo].[create_execution]** a *runinscaleout* para mejorar la coherencia y la legibilidad.
 - **Solución alternativa:** Si tiene scripts existentes para ejecutar paquetes en Escalabilidad horizontal, debe cambiar el nombre del parámetro de *runincluster* a *runinscaleout* para que los scripts funcionen en RC1.
 
-- **Problema e impacto en el cliente:** SQL Server Management Studio (SSMS) 17.1 y versiones anteriores no pueden desencadenar la ejecución de paquetes en Escalabilidad horizontal en RC1. El mensaje de error es este: "*@runincluster* no es un parámetro para el procedimiento **create_execution**". Este problema se corrige en la versión siguiente de SSMS, la versión 17.2. La versión 17.2 y versiones posteriores de SSMS admiten el nuevo nombre de parámetro y la ejecución de paquetes en Escalabilidad horizontal. 
+- **Problema e impacto en el cliente:** SQL Server Management Studio (SSMS) 17.1 y versiones anteriores no pueden desencadenar la ejecución de paquetes en Escalabilidad horizontal en RC1. El mensaje de error es este: " *@runincluster* no es un parámetro para el procedimiento **create_execution**". Este problema se corrige en la versión siguiente de SSMS, la versión 17.2. La versión 17.2 y versiones posteriores de SSMS admiten el nuevo nombre de parámetro y la ejecución de paquetes en Escalabilidad horizontal. 
 - **Solución alternativa:** hasta que esté disponible la versión 17.2 de SSMS, siga estos pasos:
   1. Utilice la versión existente de SSMS para generar el script de ejecución de paquetes.
   2. En el script, cambie el nombre del parámetro *runincluster* a *runinscaleout*.

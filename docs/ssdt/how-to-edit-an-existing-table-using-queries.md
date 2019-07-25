@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c988efd63982b2dc5ebd8e73f2291a19b3b9b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69a3486c837959cf4a92a7ee663225df16918928
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929607"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>Procedimientos: Edición de una tabla existente mediante consultas
 Puede editar la definición de una tabla o sus datos escribiendo una consulta de Transact\-SQL. Para ver o escribir datos en una tabla visualmente, use el Editor de datos como se describe en [Desarrollo de bases de datos conectadas](../ssdt/connected-database-development.md).  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a53c0ac886185e2d6723a5a01c055c1c828fe51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121256"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Artículos transaccionales: especificar cómo se propagan los cambios
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "47683053"
 ## <a name="default-and-custom-stored-procedures"></a>Procedimientos almacenados predeterminados y personalizados  
  Los tres procedimientos que crea la replicación de forma predeterminada en cada artículo de la tabla son:  
   
--   **sp_MSins_\<** *nombreDeTabla* **>**, que controla las inserciones.  
+-   **sp_MSins_\<** *nombreDeTabla* **>** , que controla las inserciones.  
   
--   **sp_MSupd_\<** *nombreDeTabla* **>**, que controla las actualizaciones.  
+-   **sp_MSupd_\<** *nombreDeTabla* **>** , que controla las actualizaciones.  
   
--   **sp_MSdel_\<** *nombreDeTabla* **>**, que controla las eliminaciones.  
+-   **sp_MSdel_\<** *nombreDeTabla* **>** , que controla las eliminaciones.  
   
- El **\<**_nombreDeTabla_**>** utilizado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario distinto.  
+ El **\<** _nombreDeTabla_ **>** utilizado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario distinto.  
   
  Cualquiera de estos procedimientos se puede sustituir por un procedimiento personalizado que se especifica al agregar un artículo a una publicación. Los procedimientos personalizados se utilizan si una aplicación requiere lógica personalizada, por ejemplo al insertar datos en una tabla de auditoría cuando se actualiza una fila en el suscriptor. Para obtener más información acerca de cómo especificar procedimientos almacenados personalizados, vea los temas de procedimientos indicados anteriormente.  
   
@@ -118,7 +117,7 @@ pkc1, pkc2, pkc3,... pkcn
   
 #### <a name="scall-syntax"></a>Sintaxis SCALL  
  Procedimientos almacenados UPDATE  
- Los procedimientos almacenados que controlan instrucciones UPDATE solo recibirán los valores actualizados de las columnas que hayan cambiado, seguidos de los valores originales de las columnas de clave principal y de un parámetro de máscara de bits (**binary(n)**) que indica las columnas que han cambiado: En el siguiente ejemplo, la columna 2 (c2) no ha cambiado:  
+ Los procedimientos almacenados que controlan instrucciones UPDATE solo recibirán los valores actualizados de las columnas que hayan cambiado, seguidos de los valores originales de las columnas de clave principal y de un parámetro de máscara de bits (**binary(n)** ) que indica las columnas que han cambiado: En el siguiente ejemplo, la columna 2 (c2) no ha cambiado:  
   
 ```  
 c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -126,7 +125,7 @@ c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask
   
 #### <a name="mcall-syntax"></a>Sintaxis MCALL  
  Procedimientos almacenados UPDATE  
- Los procedimientos almacenados que controlan instrucciones UPDATE recibirán los valores actualizados de todas las columnas definidas en el artículo, seguidos de los valores originales de las columnas de clave principal y de un parámetro de máscara de bits (**binary(n)**) que indica las columnas que han cambiado:  
+ Los procedimientos almacenados que controlan instrucciones UPDATE recibirán los valores actualizados de todas las columnas definidas en el artículo, seguidos de los valores originales de las columnas de clave principal y de un parámetro de máscara de bits (**binary(n)** ) que indica las columnas que han cambiado:  
   
 ```  
 c1, c2, c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -215,7 +214,7 @@ end
 go  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

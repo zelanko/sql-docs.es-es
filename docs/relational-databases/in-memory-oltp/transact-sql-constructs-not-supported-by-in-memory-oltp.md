@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e39f991982fbde13259039e8794218819f366b89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081833"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "53590769"
 |Característica|ON|Las tablas con optimización para memoria no se pueden colocar en un grupo de archivos ni en un esquema de partición. Quite la cláusula ON de la instrucción **CREATE TABLE** .<br /><br /> Todas las tablas optimizadas para memoria se asignan al grupo de archivos optimizados para memoria.|  
 |Tipo de datos|*Nombre del tipo de datos*|No se admite el tipo de datos indicado. Reemplace el tipo por uno de los tipos de datos admitidos. Para obtener más información, vea [Tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
 |Característica|Columnas calculadas|**Se aplica a:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] y [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Las tablas optimizadas para memoria no admiten columnas calculadas. Quite las columnas calculadas de la instrucción **CREATE TABLE** .<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] y SQL Server a partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] admiten columnas calculadas en las tablas e índices optimizados para memoria.|  
-|Característica|REPLICATION|La replicación no es compatible con las tablas optimizadas para memoria.|  
+|Característica|Replicación|La replicación no es compatible con las tablas optimizadas para memoria.|  
 |Característica|FILESTREAM|Las columnas de las tablas optimizadas para memoria no admiten el almacenamiento FILESTREAM. Quite la palabra clave **FILESTREAM** de la definición de columna.|  
 |Característica|SPARSE|Las columnas de las tablas optimizadas para memoria no se pueden definir como columnas SPARSE. Quite la palabra clave **SPARSE** de la definición de columna.|  
 |Característica|ROWGUIDCOL|Las columnas de las tablas optimizadas para memoria no admiten la opción ROWGUIDCOL. Quite la palabra clave **ROWGUIDCOL** de la definición de columna.|  
@@ -104,7 +103,7 @@ ms.locfileid: "53590769"
 |Característica|Cursores|Los procedimientos almacenados compilados de forma nativa no admiten cursores.<br /><br /> Cuando ejecute el procedimiento desde el cliente, utilice RPC en lugar de la API de cursores. Con ODBC, evite la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] . **EXECUTE**; en su lugar, especifique el nombre del procedimiento directamente.<br /><br /> Cuando ejecute el procedimiento desde un lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] o desde otro procedimiento almacenado, evite usar un cursor con el procedimiento almacenado compilado de forma nativa.<br /><br /> Cuando cree un procedimiento almacenado compilado de forma nativa, en lugar de un cursor, use la lógica basada en conjunto o un bucle **WHILE** .|  
 |Característica|Valores predeterminados de parámetros no constantes|Cuando se usan los valores predeterminados de los parámetros en procedimientos almacenados compilados de forma nativa, dichos valores deben ser constantes. Quite los caracteres comodín de las declaraciones de parámetro.|  
 |Característica|EXTERNAL|Los procedimientos almacenados CLR no se pueden compilar de forma nativa. Quite la cláusula AS EXTERNAL o la opción de NATIVE_COMPILATION de la instrucción CREATE PROCEDURE.|  
-|Característica|Procedimientos almacenados numerados|Los procedimientos almacenados compilados de forma nativa no se pueden numerar. Quite **;**_number_ de la instrucción **CREATE PROCEDURE** .|  
+|Característica|Procedimientos almacenados numerados|Los procedimientos almacenados compilados de forma nativa no se pueden numerar. Quite **;** _number_ de la instrucción **CREATE PROCEDURE** .|  
 |Característica|Instrucciones INSERT ... VALUES de varias filas|En un procedimiento almacenado compilado de forma nativa no se pueden insertar varias filas usando la misma instrucción **INSERT** . Cree instrucciones **INSERT** para cada fila.|  
 |Característica|Expresiones de tabla común (CTE)|Los procedimientos almacenados compilados de forma nativa no admiten expresiones de tabla común (CTE). Vuelva a escribir la consulta.|  
 |Característica|COMPUTE|No se admite la cláusula **COMPUTE** . Quítela de la consulta.|  

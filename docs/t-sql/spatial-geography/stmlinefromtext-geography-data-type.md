@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 111703695a1ed2452456125ccf872bf31a12d968
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57d0edaed1d26de79813939c9606b9934646e5f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223652"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *texto_etiquetado_de_cadena_de_varias_líneas*  
- Es la representación WKT de la instancia de **geographyMultiLineString** que se quiere devolver. *texto_etiquetado_de_cadena_de_varias_líneas* es una expresión **nvarchar(max)**.  
+ Es la representación WKT de la instancia de **geographyMultiLineString** que se quiere devolver. *texto_etiquetado_de_cadena_de_varias_líneas* es una expresión **nvarchar(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geographyMultiLineString** que se quiere devolver.  

@@ -7,12 +7,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6e4d1eace0be8d00d536d1ab3782685da9512ab5
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344173"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470450"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Instalación de Machine Learning Services de SQL Server en Windows
 
@@ -196,21 +196,13 @@ Siga los pasos que se indican a continuación para comprobar que se están ejecu
     GO
     ```
 
- **Resultado**
+    **Resultado**
 
     El script puede tardar un poco en ejecutarse, la primera vez que se carga el tiempo de ejecución del script externo. Los resultados deben ser similares a los siguientes:
 
     | hello |
     |----|
     | 1|
-
-
-<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
-Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
-due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
-I will inform HeidiSteen  [GeneMi, 2019/01/17]
--->
-
 
 > [!NOTE]
 > Las columnas o los encabezados usados en el script de Python no se devuelven, por diseño. Para agregar nombres de columna para la salida, debe especificar el esquema para el conjunto de datos devuelto. Para ello, use el parámetro WITH RESULTs del procedimiento almacenado, asigne un nombre a las columnas y especifique el tipo de datos SQL.

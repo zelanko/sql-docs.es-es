@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 45a1352b60574304a124af88226cc2a9d7f1a804
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 072d2c2e8843b17b3a4ccfeed16bd0916ce501e7
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345793"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468639"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: Desarrollo de SQL para científicos de datos de R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En este tutorial para científicos de datos, aprenderá a crear una solución de un extremo a otro para el modelado predictivo basado en la compatibilidad con las características de R en SQL Server 2016 o SQL Server 2017. En este tutorial se usa una base de datos de [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) en SQL Server. 
 

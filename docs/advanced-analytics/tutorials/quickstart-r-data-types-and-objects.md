@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e8c8ccd60417d4c1d492d53041280ab0c8e318af
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 686ba69425dc9bc6554b369be3d5fadd24b5a234
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345426"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469394"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Inicio rápido: Administrar tipos de datos y objetos mediante R en SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En esta guía de inicio rápido, se ofrece una introducción práctica a los problemas comunes que se producen al mover datos entre R y SQL Server. La experiencia que se obtiene en este ejercicio proporciona información básica sobre el uso de datos en su propio script.
 

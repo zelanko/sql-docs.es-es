@@ -7,15 +7,15 @@ ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7aee673eb548531798f98a5a49266a2cd7211b63
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 39edb40da1ebbddfff805aca321b99ea766f085c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345557"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470114"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Cómo generar previsiones y predicciones mediante modelos de aprendizaje automático en SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 El uso de un modelo existente para pronosticar o predecir los resultados de nuevas entradas de datos es una tarea principal del aprendizaje automático. En este artículo se enumeran los métodos para generar predicciones en SQL Server. Entre los enfoques se encuentran las metodologías de procesamiento interno para las predicciones de alta velocidad, donde la velocidad se basa en las reducciones incrementales de las dependencias de tiempo de ejecución. Menos dependencias significan predicciones más rápidas.
 

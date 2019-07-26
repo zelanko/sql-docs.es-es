@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8de02f679af1bbeed8f65f4e4dc5456cd414e75e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345545"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470111"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Instalar nuevos paquetes de R en SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En este artículo se describe cómo instalar nuevos paquetes de R en una instancia de SQL Server en la que está habilitado el aprendizaje automático. Hay varios métodos para instalar nuevos paquetes de R, en función de la versión de SQL Server que tenga y de si el servidor tiene una conexión a Internet. Se pueden realizar los siguientes enfoques para la instalación de nuevos paquetes.
 

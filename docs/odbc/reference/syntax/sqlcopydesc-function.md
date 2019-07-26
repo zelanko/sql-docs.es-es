@@ -1,7 +1,7 @@
 ---
 title: Función SQLCopyDesc | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLCopyDesc
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLCopyDesc
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bacf438180dd6fe2823660e8275e48a2316e9efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8aec6dc776f5fdd84932be089e9503f0083a49c2
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121441"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345490"
 ---
 # <a name="sqlcopydesc-function"></a>Función SQLCopyDesc
 **Conformidad**  
- Versión de introducción: Compatibilidad de ODBC 3.0 estándares: ISO 92  
+ Versión introducida: Compatibilidad con los estándares de ODBC 3,0: ISO 92  
   
  **Resumen**  
- **SQLCopyDesc** copia información del descriptor de identificador de descriptor de una a otra.  
+ **SQLCopyDesc** copia la información del descriptor de un identificador de descriptor a otro.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,66 +45,66 @@ SQLRETURN SQLCopyDesc(
   
 ## <a name="arguments"></a>Argumentos  
  *SourceDescHandle*  
- [Entrada] Identificador de descriptor de origen.  
+ Entradas Identificador del descriptor de origen.  
   
  *TargetDescHandle*  
- [Entrada] Identificador de descriptor de destino. El *TargetDescHandle* argumento puede ser un identificador de un descriptor de aplicación o un IPD. *TargetDescHandle* no se puede establecer en un identificador para un IRD o **SQLCopyDesc** devolverá HY016 SQLSTATE (no se puede modificar un descriptor de fila de implementación).  
+ Entradas Identificador del descriptor de destino. El argumento *TargetDescHandle* puede ser un identificador de un descriptor de aplicación o un IPD. *TargetDescHandle* no se puede establecer en un identificador de IRD o **SQLCopyDesc** devolverá SQLSTATE HY016 (no se puede modificar un descriptor de fila de implementación).  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLCopyDesc** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL_ HANDLE_DESC y un *controlar* de *TargetDescHandle*. Si no es válido *SourceDescHandle* se pasó en la llamada, se devolverá SQL_INVALID_HANDLE, pero no se devolverá ningún SQLSTATE. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLCopyDesc** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
+ Cuando **SQLCopyDesc** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, se puede obtener un valor SQLSTATE asociado llamando a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_DESC y un *identificador* de *TargetDescHandle*. Si se pasó un *SourceDescHandle* no válido en la llamada, se devolverá SQL_INVALID_HANDLE pero no se devolverá ningún SQLSTATE. En la tabla siguiente se enumeran los valores de SQLSTATE que devuelve normalmente **SQLCopyDesc** y se explica cada uno de ellos en el contexto de esta función. la notación "(DM)" precede a las descripciones de SQLSTATEs devueltas por el administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
- Cuando se devuelve un error, la llamada a **SQLCopyDesc** se anula inmediatamente y el contenido de los campos de la *TargetDescHandle* descriptor son indefinidos.  
+ Cuando se devuelve un error, la llamada a **SQLCopyDesc** se anula inmediatamente y el contenido de los campos del descriptor *TargetDescHandle* es indefinido.  
   
- Dado que **SQLCopyDesc** puede implementarse mediante una llamada a **SQLGetDescField** y **SQLSetDescField**, **SQLCopyDesc** puede devolver SQLSTATE devuelto por **SQLGetDescField** o **SQLSetDescField**.  
+ Dado **que SQLCopyDesc** se puede implementar llamando a **SQLGetDescField** y **SQLSetDescField**, **SQLCopyDesc** puede devolver SQLSTATEs devuelto por **SQLGetDescField** o **SQLSetDescField**.  
   
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
-|01000|Advertencia general|Específico del controlador de mensaje informativo. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|08S01|Error de vínculo de comunicación|Error en el vínculo de comunicación entre el controlador y el origen de datos a la que se ha conectado el controlador antes del procesamiento de la función se ha completado.|  
-|HY000|Error general|Se produjo un error para que se ha producido ningún SQLSTATE específico y para los que se ha definido ningún SQLSTATE específicos de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
+|01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|08S01|Error de vínculo de comunicación|Se produjo un error en el vínculo de comunicación entre el controlador y el origen de datos al que se conectó el controlador antes de que la función finalizara el procesamiento.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*búfer MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
-|HY007|La instrucción asociada no está preparada|*SourceDescHandle* estaba asociado con un IRD, y el identificador de instrucción asociado no estaba en estado preparado o ejecutado.|  
-|HY010|Error de secuencia de función|(DM) el descriptor de controlar en *SourceDescHandle* o *TargetDescHandle* asoció un *StatementHandle* para el que una función que se ejecuta asincrónicamente (not Este uno) se llamó y aún se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) el descriptor de administrar en *SourceDescHandle* o *TargetDescHandle* asoció un *StatementHandle* que **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** se llamó y devuelve SQL_NEED_DATA. Esta función se invoca antes de que se enviaron datos para todas las columnas o parámetros de datos en ejecución.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado el *SourceDescHandle* o *TargetDescHandle*. Aún estaba ejecutando esta función asincrónica cuando el **SQLCopyDesc** se llamó a la función.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** se llamó para uno de los identificadores de instrucción asociados con el *SourceDescHandle* o *TargetDescHandle* y devuelve SQL_PARAM_DATA_AVAILABLE. Esta función se invoca antes de que se recuperan los datos para todos los parámetros transmitidos.|  
-|HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque los objetos de memoria subyacente no se podrían tener acceso, posiblemente debido a memoria insuficiente.|  
-|HY016|No se puede modificar un descriptor de fila de implementación|*TargetDescHandle* estaba asociado con un IRD.|  
-|HY021|Información de descriptor incoherente|La información del descriptor comprobar durante una comprobación de coherencia no era coherente. Para obtener más información, vea "Comprobaciones de coherencia" en **SQLSetDescField**.|  
-|HY092|Identificador de opción o atributo no válido|La llamada a **SQLCopyDesc** se le solicite una llamada a **SQLSetDescField**, pero  *\*ValuePtr* no era válido para el *FieldIdentifier* argumento en *TargetDescHandle*.|  
-|HY117|Conexión está suspendida debido al estado de transacción desconocido. Solo se desconecte y se permiten funciones de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Tiempo de espera de conexión agotado|Ha expirado el período de tiempo de espera de conexión antes de que el origen de datos que respondió a la solicitud. El período de tiempo de espera de conexión se establece a través de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Controlador no admite esta función|(DM) el controlador asociado con el *SourceDescHandle* o *TargetDescHandle* no admite la función.|  
+|HY007|La instrucción asociada no está preparada|*SourceDescHandle* se asoció con un IRD y el identificador de instrucción asociado no estaba en el estado preparado o ejecutado.|  
+|HY010|Error de secuencia de función|(DM) el identificador de descriptor de *SourceDescHandle* o *TargetDescHandle* estaba asociado a un *StatementHandle* para el que se llamó a una función que se ejecuta de forma asincrónica (no a este) y que todavía se estaba ejecutando cuando esta función era voque.<br /><br /> (DM) el identificador de descriptor de *SourceDescHandle* o *TargetDescHandle* se asoció con un *StatementHandle* para el que se ha asociado **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** se llama y se devuelve SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *SourceDescHandle* o *TargetDescHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLCopyDesc** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para uno de los identificadores de instrucciones asociados a *SourceDescHandle* o *TargetDescHandle* y devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.|  
+|HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
+|HY016|No se puede modificar un descriptor de fila de implementación|*TargetDescHandle* se asoció con IRD.|  
+|HY021|Información de descriptor incoherente|La información del descriptor comprobada durante una comprobación de coherencia no era coherente. Para obtener más información, vea "comprobaciones de coherencia" en **SQLSetDescField**.|  
+|HY092|Identificador de opción/atributo no válido|La llamada a **SQLCopyDesc** solicitó una llamada a **SQLSetDescField**, pero  *\*ValuePtr* no era válido para el argumento *FieldIdentifier* en *TargetDescHandle*.|  
+|HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|El controlador no admite esta función|(DM) el controlador asociado a *SourceDescHandle* o *TargetDescHandle* no admite la función.|  
   
 ## <a name="comments"></a>Comentarios  
- Una llamada a **SQLCopyDesc** copias controlan los campos del descriptor de origen para el identificador de descriptor de destino. Los campos se pueden copiar solo a un descriptor de aplicación o un IPD, pero no a un IRD. Los campos se pueden copiar desde una aplicación o un descriptor de implementación.  
+ Una llamada a **SQLCopyDesc** copia los campos del identificador del descriptor de origen en el identificador del descriptor de destino. Los campos solo se pueden copiar en un descriptor de aplicación o en IPD, pero no en IRD. Los campos se pueden copiar desde una aplicación o un descriptor de implementación.  
   
- Los campos se pueden copiar desde un IRD sólo si el identificador de instrucción está en el estado de preparadas o ejecutado. en caso contrario, la función devuelve SQLSTATE HY007 (la instrucción asociada no está preparada).  
+ Los campos se pueden copiar de un IRD solo si el identificador de instrucción está en el estado preparado o ejecutado; de lo contrario, la función devuelve SQLSTATE HY007 (la instrucción asociada no está preparada).  
   
- Los campos se pueden copiar desde un IPD si se ha preparado una instrucción. Si se ha preparado una instrucción SQL con parámetros dinámicos y rellenado automático de la IPD es compatible y habilitado, se rellena la IPD por el controlador. Cuando **SQLCopyDesc** se llama con la IPD como el *SourceDescHandle*, se copian los campos rellenos. Si no se rellena la IPD por el controlador, se copia el contenido de los campos originalmente de la IPD.  
+ Los campos se pueden copiar desde un IPD independientemente de si se ha preparado o no una instrucción. Si se ha preparado una instrucción SQL con parámetros dinámicos y se admite el rellenado automático de IPD y está habilitado, el controlador rellenará el IPD. Cuando se llama a **SQLCopyDesc** con IPD como *SourceDescHandle*, se copian los campos rellenos. Si el controlador no rellena el IPD, se copia el contenido de los campos originalmente en IPD.  
   
- Todos los campos del descriptor, excepto SQL_DESC_ALLOC_TYPE (que especifica si el identificador de descriptor de se ha asignado de forma explícita o automáticamente), se copian, si el campo está definido para el descriptor de destino. Campos copiados sobrescriben los campos existentes.  
+ Todos los campos del descriptor, excepto SQL_DESC_ALLOC_TYPE (que especifica si el identificador del descriptor se asignó de forma automática o explícita), se copian, independientemente de si el campo está definido para el descriptor de destino. Los campos copiados sobrescriben los campos existentes.  
   
- El controlador copia todos los campos de descriptor si la *SourceDescHandle* y *TargetDescHandle* argumentos están asociados con el controlador del mismo, incluso si los controladores están en dos conexiones diferentes o entornos. Si el *SourceDescHandle* y *TargetDescHandle* argumentos están asociados con distintos controladores, el Administrador de controladores copia campos definidos por ODBC, pero no copia los campos definidos por el controlador o campos que no están definidos por ODBC para el tipo de descriptor.  
+ El controlador copia todos los campos de descriptor si los argumentos *SourceDescHandle* y *TargetDescHandle* están asociados al mismo controlador, aunque los controladores estén en dos conexiones o entornos diferentes. Si los argumentos *SourceDescHandle* y *TargetDescHandle* están asociados a controladores diferentes, el administrador de controladores copia los campos definidos por ODBC, pero no copia los campos definidos por el controlador o los campos que no están definidos por ODBC para el tipo de scripto.  
   
  La llamada a **SQLCopyDesc** se anula inmediatamente si se produce un error.  
   
- Cuando se copia el campo SQL_DESC_DATA_PTR, se realiza una comprobación de coherencia en el descriptor de destino. Si se produce un error en la comprobación de coherencia, SQLSTATE HY021 (información de descriptor incoherente) se devuelve y la llamada a **SQLCopyDesc** se anula inmediatamente. Para obtener más información sobre las comprobaciones de coherencia, consulte "Comprobaciones de coherencia" en [función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
+ Cuando se copia el campo SQL_DESC_DATA_PTR, se realiza una comprobación de coherencia en el descriptor de destino. Si se produce un error en la comprobación de coherencia, se devuelve SQLSTATE HY021 (información del descriptor incoherente) y la llamada a **SQLCopyDesc** se anula inmediatamente. Para obtener más información sobre las comprobaciones de coherencia, consulte "comprobaciones de coherencia" en la [función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md).  
   
- Identificadores de descriptor se pueden copiar a través de conexiones, incluso si las conexiones están en distintos entornos. Si el Administrador de controladores detecta que pertenecen el origen y el descriptor de destino identificadores no pertenecen a la misma conexión y las dos conexiones para separar los controladores, implementa **SQLCopyDesc** mediante la realización de un campo por campo copiar con **SQLGetDescField** y **SQLSetDescField**.  
+ Los identificadores de descriptor se pueden copiar entre conexiones incluso si las conexiones están en entornos diferentes. Si el administrador de controladores detecta que los identificadores de descriptor de origen y de destino no pertenecen a la misma conexión y que las dos conexiones pertenecen a controladores independientes, implementa **SQLCopyDesc** realizando una copia campo por campo mediante  **SQLGetDescField** y **SQLSetDescField**.  
   
- Cuando **SQLCopyDesc** se denomina con un *SourceDescHandle* en un controlador y un *TargetDescHandle* en otro controlador, la cola de errores de la  *SourceDescHandle* está desactivada. Esto ocurre porque **SQLCopyDesc** en este caso, se implementa mediante llamadas a **SQLGetDescField** y **SQLSetDescField**.  
+ Cuando se llama a **SQLCopyDesc** con *SourceDescHandle* en un controlador y un *TargetDescHandle* en otro controlador, se borra la cola de errores de *SourceDescHandle* . Esto se debe a que, en este caso, **SQLCopyDesc** se implementa mediante llamadas a **SQLGetDescField** y **SQLSetDescField**.  
   
 > [!NOTE]  
->  Es posible que una aplicación pueda asociar con un identificador de descriptor asignado explícitamente una *StatementHandle*, en lugar de llamar a **SQLCopyDesc** para copiar los campos del descriptor de una a otra. Un descriptor asignado explícitamente se puede asociar con otra *StatementHandle* en el mismo *ConnectionHandle* estableciendo la instrucción SQL_ATTR_APP_ROW_DESC o SQL_ATTR_APP_PARAM_DESC atributo para el identificador del descriptor asignado explícitamente. Cuando esto sucede, **SQLCopyDesc** no tiene que llamar para copiar los valores de campo de descriptor de un descriptor a otro. Un identificador de descriptor no se asociará con un *StatementHandle* en otro *ConnectionHandle*, sin embargo, para usar los mismos valores de campo de descriptor en *StatementHandles*en diferentes *ConnectionHandles*, **SQLCopyDesc** debe llamarse.  
+>  Es posible que una aplicación pueda asociar un identificador de descriptor asignado explícitamente a un *StatementHandle*, en lugar de llamar a **SQLCopyDesc** para copiar los campos de un descriptor a otro. Un descriptor asignado explícitamente se puede asociar a otro *StatementHandle* en el mismo *ConnectionHandle* estableciendo el atributo de instrucción SQL_ATTR_APP_ROW_DESC o SQL_ATTR_APP_PARAM_DESC en el identificador de explícitamente. descriptor asignado. Cuando se hace esto, no es necesario llamar a **SQLCopyDesc** para copiar los valores de campo de descriptor de un descriptor a otro. Sin embargo, un identificador de descriptor no se puede asociar a un *StatementHandle* en otro *ConnectionHandle*. para usar los mismos valores de campo de descriptor en *StatementHandles* en diferentes *ConnectionHandles*, se debe llamar a **SQLCopyDesc** .  
   
- Para obtener una descripción de los campos de un encabezado de descriptor o el registro, consulte [sqlsetdescfield, función](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Para obtener más información sobre los descriptores de, consulte [descriptores](../../../odbc/reference/develop-app/descriptors.md).  
+ Para obtener una descripción de los campos de un encabezado o un registro de descriptores, consulte [función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Para obtener más información acerca de los descriptores, consulte descriptores. [](../../../odbc/reference/develop-app/descriptors.md)  
   
-## <a name="copying-rows-between-tables"></a>Copiar filas entre las tablas  
- Una aplicación puede copiar datos de una tabla a otra sin copiar los datos en el nivel de aplicación. Para ello, la aplicación enlaza el mismo búferes de datos y la información de descriptor para una instrucción que captura los datos y la instrucción que inserta los datos en una copia. Esto puede realizarse mediante el uso compartido de un descriptor de aplicación (enlace un descriptor asignado explícitamente como el descartar a una instrucción y el APD en otro) o mediante el uso de **SQLCopyDesc** para copiar los enlaces entre la descartar y APD de las dos instrucciones. Si las instrucciones se encuentran en diferentes conexiones **SQLCopyDesc** debe usarse. Además, **SQLCopyDesc** debe llamarse para copiar los enlaces entre IRD y la IPD de las dos instrucciones. Cuando se copian en las instrucciones en la misma conexión, el tipo de información de SQL_ACTIVE_STATEMENTS devuelto por el controlador para una llamada a **SQLGetInfo** debe ser mayor que 1 para esta operación se realice correctamente. (Esto no es el caso cuando se copian a través de conexiones.)  
+## <a name="copying-rows-between-tables"></a>Copiar filas entre tablas  
+ Una aplicación puede copiar datos de una tabla a otra sin copiar los datos en el nivel de la aplicación. Para ello, la aplicación enlaza los mismos búferes de datos e información de descriptor a una instrucción que captura los datos y la instrucción que inserta los datos en una copia. Esto puede realizarse mediante el uso compartido de un descriptor de aplicación (enlazar un descriptor asignado explícitamente como ARD a una instrucción y el APD en otro) o mediante **SQLCopyDesc** para copiar los enlaces entre ARD y APD de los dos afirma. Si las instrucciones están en conexiones diferentes, se debe usar **SQLCopyDesc** . Además, se debe llamar a **SQLCopyDesc** para copiar los enlaces entre el IRD y el IPD de las dos instrucciones. Al copiar instrucciones en la misma conexión, el tipo de información SQL_ACTIVE_STATEMENTS devuelto por el controlador para una llamada a **SQLGetInfo** debe ser mayor que 1 para que esta operación se realice correctamente. (Este no es el caso cuando se copia entre conexiones).  
   
 ### <a name="code-example"></a>Ejemplo de código  
- En el ejemplo siguiente, se usan operaciones de descriptor para copiar los campos de la tabla PartsSource en la tabla PartsCopy. El contenido de la tabla PartsSource se captura en los búferes de conjunto de filas de *hstmt0*. Estos valores se usan como parámetros de una instrucción INSERT en *hstmt1* para rellenar las columnas de la tabla PartsCopy. Para ello, los campos de IRD de *hstmt0* se copian en los campos de la IPD de *hstmt1*y los campos de la descartar de *hstmt0* se copian en los campos de la APD de *hstmt1*. Use **SQLSetDescField** para establecer el atributo SQL_DESC_PARAMETER_TYPE de IPD en SQL_PARAM_INPUT al copiar los campos IRD de una instrucción con parámetros de salida a los campos IPD que deben ser parámetros de entrada.  
+ En el ejemplo siguiente, se utilizan las operaciones de descriptor para copiar los campos de la tabla PartsSource en la tabla PartsCopy. El contenido de la tabla PartsSource se captura en los búferes del conjunto de filas de *hstmt0*. Estos valores se usan como parámetros de una instrucción INSERT en *hstmt1* para rellenar las columnas de la tabla PartsCopy. Para ello, los campos del IRD de *hstmt0* se copian en los campos de la IPD de *hstmt1*y los campos del ARD de *hstmt0* se copian en los campos del APD de *hstmt1*. Use **SQLSetDescField** para establecer el atributo SQL_DESC_PARAMETER_TYPE de IPD en SQL_PARAM_INPUT Cuando copie campos IRD de una instrucción con parámetros de salida a campos de IPD que deben ser parámetros de entrada.  
   
 ```cpp  
 #define ROWS 100  
@@ -190,9 +191,9 @@ while (SQL_SUCCEEDED(rc)) {
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Introducción a varios campos de descriptor|[Función SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Configuración de un campo único descriptor|[Función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|Configuración de varios campos de descriptor|[Función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|Obtener varios campos de descriptor|[Función SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|Establecer un solo campo de descriptor|[Función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Establecer varios campos de descriptor|[Función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

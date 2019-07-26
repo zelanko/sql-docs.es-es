@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0d841314bd2bf167c4c40f5786a116b7bc8f73c0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 17b2c150368b32960907d6fdd2e31b109f51d771
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344563"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469636"
 ---
 # <a name="quickstart-python-data-structures-in-sql-server"></a>Inicio rápido: Estructuras de datos de Python en SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En esta guía de inicio rápido se muestra cómo usar las estructuras de datos al usar Python en SQL Server Machine Learning Services.
 

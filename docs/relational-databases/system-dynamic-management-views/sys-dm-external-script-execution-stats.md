@@ -1,10 +1,10 @@
 ---
-title: Sys.dm_external_script_execution_stats | Microsoft Docs
+title: Sys. DM _ _external_script_execution_stats | Microsoft Docs
 ms.custom: ''
-ms.date: 10/28/2018
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_external_script_execution_stats
@@ -16,23 +16,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_external_script_execution_stats dynamic management view
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 06b8e29e9aaf02c8e82f541a9113d5943b829b3b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 314318f2292a8d929a5d0eeaf68f01910f6de45f
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68262156"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476287"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Devuelve una fila por cada tipo de solicitud de script externo. Las solicitudes de script externo se agrupan según el lenguaje compatible del script externo. Se genera una fila para cada función registrada de script externo. Las funciones de script externo arbitrarias no se registran a menos que las envíe un proceso principal, como `rxExec`.
   
 > [!NOTE]  
-> Esta vista de administración dinámica (DMV) solo está disponible si ha instalado y habilitado la característica que admite la ejecución de scripts externos. Para obtener más información, consulte [R Services en SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) y [Machine Learning Services (R, Python) en SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
+> Esta vista de administración dinámica (DMV) solo está disponible si ha instalado y habilitado la característica que admite la ejecución de scripts externos. Para obtener más información, consulte [r Services en SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) y [Machine Learning Services (R, Python) en SQL Server 2017 y versiones posteriores](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -50,26 +51,26 @@ Devuelve una fila por cada tipo de solicitud de script externo. Las solicitudes 
 ## <a name="remarks"></a>Comentarios  
   Esta DMV se proporciona para la telemetría interna, a fin de supervisar el uso general de la nueva característica de ejecución de scripts externos que se proporciona en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. El servicio de telemetría comienza cuando LaunchPad comienza e incrementa un contador basado en disco cada vez que se llama una función registrada de script externo.
 
-Por lo general, los contadores de rendimiento solo son válidos siempre que el proceso que los genera esté activo. Por lo tanto, una consulta en una DMV no puede mostrar datos detallados para servicios que ya no están en ejecución. Por ejemplo, si un iniciador ejecuta scripts externos y los completa muy rápidamente, una DMV convencional podría no mostrar los datos.
+Por lo general, los contadores de rendimiento solo son válidos siempre que el proceso que los genera esté activo. Por lo tanto, una consulta en una DMV no puede mostrar datos detallados para servicios que ya no están en ejecución. Por ejemplo, si un iniciador ejecuta un script externo y aún lo completa muy rápidamente, es posible que una DMV convencional no muestre ningún dato.
 
 Por lo tanto, los contadores a los que esta DMV hace seguimiento siguen en ejecución y se mantiene el estado de sys.dm_external_script_requests mediante escrituras en disco, incluso si la instancia está apagada.
 
    
   
 ### <a name="counter-values"></a>Valores de contador
-En SQL Server 2016, el único lenguaje externo admitido es R y se controlan las solicitudes de script externo mediante [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]. En SQL Server 2017, R y Python es idiomas externos y se controlan las solicitudes de script externo mediante [!INCLUDE[rsql_productname_md](../../includes/rsql-productnamenew-md.md)].
+En SQL Server 2016 el único lenguaje externo compatible es R y administra [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]las solicitudes de script externo. En SQL Server 2017, R y Python son lenguajes externos compatibles y administra [!INCLUDE[rsql_productname_md](../../includes/rsql-productnamenew-md.md)]las solicitudes de script externo.
 
-Para R, esta DMV supervisa el número de llamadas de R que se realizan en una instancia. Por ejemplo, si se llama a `rxLinMod` y se ejecuta de manera simultánea, el contador aumenta en 1.
+Para R, esta DMV realiza un seguimiento del número de llamadas de R que se realizan en una instancia. Por ejemplo, si se llama a `rxLinMod` y se ejecuta de manera simultánea, el contador aumenta en 1.
  
 En el caso del lenguaje R, los valores del contador que aparecen en el campo *counter_name* representan los nombres de las funciones registradas de ScaleR. Los valores del campo *counter_value* representan los números acumulados de instancias de la función específica de ScaleR. 
 
-Para Python, esta DMV supervisa el número de llamadas de Python que se realizan en una instancia.
+En el caso de Python, esta DMV realiza un seguimiento del número de llamadas de Python realizadas en una instancia.
 
 La cuenta comienza cuando se instala la característica y se habilita en la instancia, y se acumula hasta que un administrador sobrescribe o elimina el archivo que mantiene el estado. Por lo tanto, generalmente no es posible restablecer los valores en *counter_value*. Si desea supervisar el uso por sesión, tiempos calendario u otros intervalos, le recomendamos registrar los conteos en una tabla.
 
-### <a name="registration-of-external-script-functions-in-r"></a>Registro de las funciones de script externo de R
+### <a name="registration-of-external-script-functions-in-r"></a>Registro de funciones de script externo en R
 
-R admite scripts arbitrarios y la Comunidad de R proporciona muchos miles de paquetes, cada uno con sus propias funciones y métodos. Sin embargo, esta DMV supervisa únicamente las funciones de ScaleR que se instalan con SQL Server R Services.
+R admite scripts arbitrarios y la comunidad de R proporciona muchos miles de paquetes, cada uno con sus propias funciones y métodos. Sin embargo, esta DMV supervisa únicamente las funciones de ScaleR que se instalan con SQL Server R Services.
 
 El registro de estas funciones se realiza cuando se instala la característica; además, no se pueden agregar ni borrar funciones registradas.
 
@@ -84,8 +85,8 @@ FROM sys.dm_external_script_execution_stats
 WHERE language = 'R';
 ```  
 
-### <a name="viewing-the-number-of-python-scripts-run-on-the-server"></a>Visualización del número de Python ejecutan scripts en el servidor  
- El ejemplo siguiente muestra el número acumulado de ejecuciones de scripts externos para el lenguaje Python.  
+### <a name="viewing-the-number-of-python-scripts-run-on-the-server"></a>Ver el número de scripts de Python que se ejecutan en el servidor  
+ En el ejemplo siguiente se muestra el número acumulativo de ejecuciones de scripts externos para el lenguaje Python.  
   
 ```  
 SELECT counter_name, counter_value   

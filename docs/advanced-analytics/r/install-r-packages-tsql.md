@@ -7,15 +7,15 @@ ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f681634b9f57a5fd459e3f6452c04aba024bd297
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 80af3f93eb84c7b78c5cb1e5395175501931e24c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345307"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470088"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Usar T-SQL (crear biblioteca externa) para instalar paquetes de R en SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En este artículo se explica cómo instalar nuevos paquetes de R en una instancia de SQL Server en la que el aprendizaje automático está habilitado. Hay varios enfoques entre los que elegir. El uso de T-SQL funciona mejor para los administradores de servidores que no están familiarizados con R.
 

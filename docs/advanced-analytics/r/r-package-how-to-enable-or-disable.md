@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 245358dcdc6bb166e49f963f67754f864e1a96b6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 9cc08b1227751559ea509838fe8fc3a446296770
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344919"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470025"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Habilitar o deshabilitar la administración remota de paquetes para SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En este artículo se describe cómo habilitar la administración remota de paquetes de R desde una estación de trabajo cliente o una Machine Learning Server diferente. Una vez habilitada la característica de administración de paquetes en SQL Server, puede usar comandos de RevoScaleR en un cliente para instalar paquetes en SQL Server.
 

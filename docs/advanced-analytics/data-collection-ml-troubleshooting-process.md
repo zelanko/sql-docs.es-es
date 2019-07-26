@@ -6,16 +6,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f7d5e39d0ca0a89312a6fefd261eff950859d0a2
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 3dbca20d974570d04d65fba30110049efad4e90d
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343389"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470432"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Solución de problemas de recopilación de datos para machine learning
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En este artículo se describen los métodos de recopilación de datos que debe usar al intentar resolver problemas por su cuenta o con la ayuda del servicio de soporte al cliente de Microsoft.
 

@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: aa3a65020f2900bc4d9e0b5c5fd5a200f3334435
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345408"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469336"
 ---
 # <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Inicio rápido: Predicción del modelo mediante R en SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En esta guía de inicio rápido, use el modelo que ha creado en la guía de inicio rápido anterior para puntuar las predicciones con datos nuevos. Para realizar la _puntuación_ con datos nuevos, obtenga uno de los modelos entrenados de la tabla y, a continuación, llame a un nuevo conjunto de datos en el que basar las predicciones. La puntuación es un término que a veces se usa en la ciencia de datos para hacer referencia a la generación de predicciones, probabilidades u otros valores basados en nuevos datos que se introducen en un modelo entrenado.
 

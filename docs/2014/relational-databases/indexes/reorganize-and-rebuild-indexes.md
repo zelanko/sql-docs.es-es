@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2de93079289ffda8ff6287ad09aa4dea150932d7
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63036239"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475956"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar y volver a generar índices
   En este tema se describe cómo reorganizar o volver a generar un índice fragmentado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mantiene los índices automáticamente cada vez que se realizan operaciones de inserción, actualización o eliminación en los datos subyacentes. Con el tiempo, estas modificaciones pueden hacer que la información del índice se disperse por la base de datos (se fragmente). La fragmentación ocurre cuando los índices tienen páginas en las que la ordenación lógica, basada en el valor de clave, no coincide con la ordenación física dentro del archivo de datos. Los índices muy fragmentados pueden reducir el rendimiento de la consulta y ralentizar la respuesta de la aplicación.  
@@ -82,25 +82,47 @@ ms.locfileid: "63036239"
 |Valor de**avg_fragmentation_in_percent**|Instrucción correctiva|  
 |-----------------------------------------------|--------------------------|  
 |> 5% y \< = 30%|ALTER INDEX REORGANIZE|  
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
+|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+
+<sup>1</sup> La regeneración de un índice se puede ejecutar en línea o sin conexión. La reorganización de un índice siempre se ejecuta en línea. Para lograr una disponibilidad similar a la opción de reorganización, debe volver a generar los índices en línea.  
   
- \* La regeneración de un índice se puede ejecutar en línea o sin conexión. La reorganización de un índice siempre se ejecuta en línea. Para lograr una disponibilidad similar a la opción de reorganización, debe volver a generar los índices en línea.  
-  
- Estos valores proporcionan directrices generales para la determinación del punto en el que debe cambiar entre ALTER INDEX REORGANIZE y ALTER INDEX REBUILD. No obstante, los valores reales pueden variar de un caso a otro. Es importante que experimente la determinación del mejor umbral para su entorno. Los niveles de fragmentación muy bajos (inferiores al 5 por ciento) no deben tratarse con ninguno de estos comandos, dado que el beneficio de quitar una cantidad de fragmentación tan pequeña es casi siempre ampliamente superado por el costo de reorganizar o volver a generar el índice.  
-  
-> [!NOTE]  
->  En general, la fragmentación en índices pequeños normalmente no se puede controlar. Las páginas de índices pequeños se almacenan en extensiones mixtas. Las extensiones mixtas pueden estar compartidas por hasta ocho objetos, de modo que es posible que no se pueda reducir la fragmentación en un índice pequeño después de reorganizar o volver a generar dicho índice.  
+> [!TIP]
+> Estos valores proporcionan directrices generales para la determinación del punto en el que debe cambiar entre `ALTER INDEX REORGANIZE` y `ALTER INDEX REBUILD`. No obstante, los valores reales pueden variar de un caso a otro. Es importante que experimente la determinación del mejor umbral para su entorno. Por ejemplo, si se usa un índice determinado principalmente para las operaciones de examen, la eliminación de la fragmentación puede mejorar el rendimiento de estas operaciones. Las ventajas de rendimiento son menos evidentes para los índices que se usan principalmente para las operaciones de búsqueda. Del mismo modo, la eliminación de la fragmentación en un montón (una tabla sin índice clúster) es especialmente útil para las operaciones de examen de índices no clúster, pero tiene poco efecto en las operaciones de búsqueda.
+
+Los niveles de fragmentación muy bajos (inferiores al 5 por ciento) normalmente no deben tratarse con ninguno de estos comandos, dado que el beneficio de quitar una cantidad de fragmentación tan pequeña es casi siempre ampliamente superado por el costo de reorganizar o volver a generar el índice. 
+
+> [!NOTE]
+> Con frecuencia, cuando se vuelven a generar o se reorganizan los índices pequeños no se reduce la fragmentación. Las páginas de índices pequeños a veces se almacenan en extensiones mixtas. Las extensiones mixtas pueden estar compartidas por hasta ocho objetos, de modo que es posible que no se pueda reducir la fragmentación en un índice pequeño después de reorganizar o volver a generar dicho índice.
+
+### <a name="index-defragmentation-considerations"></a>Consideraciones sobre la desfragmentación de índices
+En determinadas condiciones, al volver a generar un índice clúster, se volverán a generar automáticamente los índices no agrupados que hagan referencia a la clave de agrupación en clústeres, si es necesario cambiar los identificadores físicos o lógicos contenidos en los registros de índice no clúster.
+
+Escenarios que obligan a que todos los índices no clúster se vuelvan a generar automáticamente en una tabla:
+
+-  Crear un índice clúster en una tabla
+-  Quitar un índice clúster, lo que hace que la tabla se almacene como un montón
+-  Cambiar la clave de agrupación en clústeres para incluir o excluir columnas
+
+Los escenarios que no requieren que todos los índices no clúster se vuelvan a generar automáticamente en una tabla:
+
+-  Volver a generar un índice clúster único
+-  Volver a generar un índice clúster no único
+-  Cambiar el esquema de índice, como aplicar un esquema de partición a un índice clúster o mover el índice clúster a un grupo de archivos diferente
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Los índices que tienen más de 128 extensiones se vuelven a generar en dos fases independientes: lógica y física. En la fase lógica, las unidades de asignación existentes que utiliza el índice están señaladas para cancelación de asignación las filas de datos se copian y ordenan y luego se mueven a las nuevas unidades de asignación creadas para almacenar el índice recompilado. En la fase física, las unidades de asignación previamente señaladas para cancelación de asignación se quitan físicamente de las transacciones breves que se realizan en segundo plano y no requieren demasiados bloqueos.  
-  
--   Las opciones del índice no se pueden especificar al reorganizar un índice.  
+Los índices que tienen más de 128 extensiones se vuelven a generar en dos fases independientes: lógica y física. En la fase lógica, las unidades de asignación existentes que utiliza el índice están señaladas para cancelación de asignación las filas de datos se copian y ordenan y luego se mueven a las nuevas unidades de asignación creadas para almacenar el índice recompilado. En la fase física, las unidades de asignación previamente señaladas para cancelación de asignación se quitan físicamente de las transacciones breves que se realizan en segundo plano y no requieren demasiados bloqueos. Para obtener más información acerca de las extensiones, consulte la [Guía de arquitectura de páginas y extensiones](https://docs.microsoft.com/sql/relational-databases/pages-and-extents-architecture-guide).
+
+La instrucción `ALTER INDEX REORGANIZE` requiere que el archivo de datos que contiene el índice tenga espacio disponible, ya que la operación solo puede asignar páginas de trabajo temporales en el mismo archivo, no en otro archivo del grupo de archivos. Debido a esto, aunque el grupo de archivos tenga páginas libres disponibles, puede que al usuario le siga apareciendo el error 1105: `Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
+
+Se pueden crear y regenerar índices no alineados en una tabla con más de 1000 particiones, pero no se recomienda. Si se hace, se puede degradar el rendimiento o consumir excesiva memoria durante estas operaciones.
+
+No es posible volver a organizar o generar un índice si el grupo de archivos en el que se encuentra está sin conexión o está definido como de solo lectura. Cuando se especifica la palabra clave `ALL` y hay uno o más índices en un grupo de archivos sin conexión o de solo lectura, se produce un error en la instrucción.
   
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
+ Debe tener un permiso de `ALTER` sobre la tabla o vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedureFrag"></a> Usar SQL Server Management Studio  
   

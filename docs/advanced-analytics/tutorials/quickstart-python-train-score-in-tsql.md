@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345764"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469508"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Inicio rápido: Crear, entrenar y usar un modelo de Python con procedimientos almacenados en SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En esta guía de inicio rápido con Python, creará y ejecutará dos procedimientos almacenados. El primero usa el conjunto de datos de flores de iris clásico y genera un modelo Bayes Naive para predecir una especie de iris basada en las características de la flor. El segundo procedimiento es para la puntuación. Llama al modelo generado en el primer procedimiento para generar un conjunto de predicciones. Al colocar el código en un procedimiento almacenado, otros procedimientos almacenados y aplicaciones cliente pueden volver a usar las operaciones, volver a utilizarlas y llamarlas. 
 

@@ -10,12 +10,12 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ee47da3e97240ec4573303700e9793ee482821c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513074"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475983"
 ---
 # <a name="sql-server-index-design-guide"></a>Guía de diseño de índices de SQL Server
 
@@ -25,11 +25,11 @@ ms.locfileid: "62513074"
   
  En esta guía se da por supuesto que el lector tiene información general sobre los tipos de índice disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una descripción general de los tipos de índice, vea [Tipos de índice](../relational-databases/indexes/indexes.md).  
   
-##  <a name="Top"></a> En esta guía  
+##  <a name="Top"></a>En esta guía  
 
  [Conceptos básicos del diseño de índices](#Basics)  
   
- [Directrices para diseñar índices de general](#General_Design)  
+ [Instrucciones generales de diseño de índices](#General_Design)  
   
  [Directrices para diseñar índices agrupados](#Clustered)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62513074"
 
  Las siguientes tareas componen la estrategia recomendada para el diseño de índices:  
   
-1.  Comprender las características de la propia base de datos. Por ejemplo, se trata de una base de datos de procesamiento de transacciones en línea (OLTP) con modificaciones frecuentes de datos, o de una base de datos de sistema de ayuda a la toma de decisiones (DSS) o de almacenamiento de datos (OLAP) que contiene principalmente datos de solo lectura y debe procesar rápidamente conjuntos de datos muy grandes. En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], el índice de *almacén de columnas optimizado para memoria xVelocity* resulta especialmente indicado para los conjuntos de datos típicos de almacenamiento de datos. Los índices de almacén de columnas pueden transformar la experiencia de almacenamiento de datos de los usuarios, ya que permite un rendimiento más rápido en las consultas habituales de almacenamiento de datos, como el filtrado, la agregación, la agrupación y la combinación en estrella de consultas. Para obtener más información, consulte [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
+1.  Comprender las características de la propia base de datos. Por ejemplo, se trata de una base de datos de procesamiento de transacciones en línea (OLTP) con modificaciones frecuentes de datos, o de una base de datos de sistema de ayuda a la toma de decisiones (DSS) o de almacenamiento de datos (OLAP) que contiene principalmente datos de solo lectura y debe procesar rápidamente conjuntos de datos muy grandes. En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], el índice de *almacén de columnas optimizado para memoria xVelocity* resulta especialmente indicado para los conjuntos de datos típicos de almacenamiento de datos. Los índices de almacén de columnas pueden transformar la experiencia de almacenamiento de datos de los usuarios, ya que permite un rendimiento más rápido en las consultas habituales de almacenamiento de datos, como el filtrado, la agregación, la agrupación y la combinación en estrella de consultas. Para obtener más información, consulte los [índices de almacén de columnas descritos](../relational-databases/indexes/columnstore-indexes-described.md).  
   
 2.  Comprender las características de las consultas utilizadas con frecuencia. Por ejemplo, saber que una consulta utilizada con frecuencia une dos o más tablas facilitará la determinación del mejor tipo de índices que se puede utilizar.  
   
@@ -180,7 +180,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  El siguiente plan de ejecución para esta consulta muestra que el optimizador de consultas utilizó un operador SORT para devolver el conjunto de resultados en el orden especificado mediante la cláusula ORDER BY.  
   
- ![Plan de ejecución muestra un criterio de ordenación que se utiliza el operador. ](media/indexsort1.gif "Plan de ejecución muestra un criterio de ordenación se utiliza el operador.")  
+ ![Plan de ejecución muestra que se usa un operador Sort.](media/indexsort1.gif "Plan de ejecución muestra que se usa un operador Sort.")  
   
  Si se crea un índice con columnas de clave que coincidan con las de la cláusula ORDER BY de la consulta, se puede eliminar el operador SORT del plan de consultas y éste resulta más eficaz.  
   
@@ -192,13 +192,13 @@ ON Purchasing.PurchaseOrderDetail
   
  Cuando se ejecuta de nuevo la consulta, el plan de consultas siguiente muestra que se ha eliminado el operador SORT y se utiliza el índice no clúster que se acaba de crear.  
   
- ![Plan de ejecución muestra un criterio de ordenación no se usa el operador](media/insertsort2.gif "plan de ejecución muestra un criterio de ordenación no se usa el operador")  
+ ![El plan de ejecución muestra que no se usa un operador Sort](media/insertsort2.gif "El plan de ejecución muestra que no se usa un operador Sort")  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] puede moverse con la misma eficacia en cualquier dirección. Un índice definido como `(RejectedQty DESC, ProductID ASC)` se puede seguir utilizando para una consulta en la que se invierte la dirección de ordenación de las columnas en la cláusula ORDER BY. Por ejemplo, una consulta con la cláusula ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` puede utilizar el índice.  
   
  Solo se pueden especificar criterios de ordenación para columnas de clave. La vista de catálogo [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) y la función INDEXKEY_PROPERTY informan de si una columna de índice está almacenada en orden ascendente o descendente.  
   
- ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "icono de flecha usado con el vínculo volver al principio") [en esta guía](#Top)  
+ ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "Icono de flecha usado con el vínculo volver al principio") [En esta guía](#Top)  
   
 ##  <a name="Clustered"></a> Directrices para diseñar índices clúster  
 
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Se pueden utilizar en consultas por rango.  
   
- Si el índice clúster no se crea con la propiedad UNIQUE, el [!INCLUDE[ssDE](../includes/ssde-md.md)] agrega automáticamente una columna de valor de unicidad de 4 bytes a la tabla. Cuando es necesario, el [!INCLUDE[ssDE](../includes/ssde-md.md)] agrega automáticamente un valor de unicidad a una fila para hacer que cada clave sea única. Esta columna y sus valores se utilizan de forma interna; los usuarios no pueden verlos ni tener acceso a ellos.  
+ Si el índice clúster no se crea con la propiedad Unique, el [!INCLUDE[ssDE](../includes/ssde-md.md)] agrega automáticamente una columna uniquifier de 4 bytes a la tabla. Cuando es necesario, el [!INCLUDE[ssDE](../includes/ssde-md.md)] agrega automáticamente un valor de uniquifier a una fila para que cada clave sea única. Esta columna y sus valores se utilizan de forma interna; los usuarios no pueden verlos ni tener acceso a ellos.  
   
 ### <a name="clustered-index-architecture"></a>Arquitectura de los índices clúster  
 
@@ -227,7 +227,7 @@ ON Purchasing.PurchaseOrderDetail
   
  En esta ilustración se muestra la estructura de un índice clúster en una sola partición.  
   
- ![Niveles de un índice agrupado](media/bokind2.gif "niveles de un índice agrupado")  
+ ![Niveles de un índice clúster](media/bokind2.gif "Niveles de un índice clúster")  
   
 ### <a name="query-considerations"></a>Consideraciones sobre consultas  
 
@@ -273,7 +273,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Las claves amplias se componen de varias columnas o varias columnas de gran tamaño. Los valores clave del índice clúster se utilizan en todos los índices no clúster como claves de búsqueda. Los índices no clúster definidos en la misma tabla serán bastante más grandes, ya que sus entradas contienen la clave de agrupación en clústeres y las columnas de clave definidas para dicho índice no clúster.  
   
- ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "icono de flecha usado con el vínculo volver al principio") [en esta guía](#Top)  
+ ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "Icono de flecha usado con el vínculo volver al principio") [En esta guía](#Top)  
   
 ##  <a name="Nonclustered"></a> Directrices para diseñar índices no clúster  
 
@@ -301,7 +301,7 @@ ON Purchasing.PurchaseOrderDetail
   
  En la siguiente ilustración se muestra la estructura de un índice no clúster en una sola partición.  
   
- ![Niveles de un índice no agrupado](media/bokind1.gif "niveles de un índice no agrupado")  
+ ![Niveles de un índice no clúster](media/bokind1.gif "Niveles de un índice no clúster")  
   
 ### <a name="database-considerations"></a>Consideraciones acerca de la base de datos  
 
@@ -453,7 +453,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Debe determinar si la mejora del rendimiento de las consultas compensa el efecto en el rendimiento durante la modificación de datos y en los requisitos de espacio en disco adicionales.  
   
- ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "icono de flecha usado con el vínculo volver al principio") [en esta guía](#Top)  
+ ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "Icono de flecha usado con el vínculo volver al principio") [En esta guía](#Top)  
   
 ##  <a name="Unique"></a> Directrices para diseñar índices únicos  
 
@@ -479,7 +479,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Un índice no clúster único puede incluir columnas sin clave. Para obtener más información, vea [Índice con columnas incluidas](#Included_Columns).  
   
- ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "icono de flecha usado con el vínculo volver al principio") [en esta guía](#Top)  
+ ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "Icono de flecha usado con el vínculo volver al principio") [En esta guía](#Top)  
   
 ##  <a name="Filtered"></a> Directrices generales para diseñar índices filtrados  
 
@@ -626,7 +626,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  Cuando se mueve la conversión de datos del lado izquierdo al lado derecho de un operador de comparación, es posible que cambie el significado de la conversión. En el ejemplo anterior, cuando se agregó el operador CONVERT en el lado derecho, la comparación cambió de una comparación de enteros a una comparación `varbinary`.  
   
- ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "icono de flecha usado con el vínculo volver al principio") [en esta guía](#Top)  
+ ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "Icono de flecha usado con el vínculo volver al principio") [En esta guía](#Top)  
   
 ##  <a name="Additional_Reading"></a> Lecturas adicionales  
 

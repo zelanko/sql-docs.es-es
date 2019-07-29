@@ -1,5 +1,5 @@
 ---
-title: Comparación de las funciones de ejecución | Microsoft Docs
+title: Comparar funciones de ejecución | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82a5b96d25ed608ad9e44dec6a937527055c65e3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f2b4d6c85c399589aae4eedbaade4bbdc4f70609
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993743"
 ---
 # <a name="comparing-execution-functions"></a>Comparación de las funciones de ejecución
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +27,7 @@ Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] ofrecen varias opc
 ## <a name="sqlsrv-execution-functions"></a>Funciones de ejecución de SQLSRV  
 Si está utilizando el controlador SQLSRV, use [sqlsrv_query](../../connect/php/sqlsrv-query.md) para ejecutar una consulta única y [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) con [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) para ejecutar varias veces una instrucción preparada con distintos valores de parámetros en cada ejecución.  
 
-## <a name="pdosqlsrv-execution-functions"></a>Funciones de ejecución PDO_SQLSRV 
+## <a name="pdosqlsrv-execution-functions"></a>Funciones de ejecución de PDO_SQLSRV 
 Si está utilizando el controlador PDO_SQLSRV, puede ejecutar una consulta con una de las siguientes instrucciones:  
   
 -   [PDO::exec](../../connect/php/pdo-exec.md)  
@@ -42,5 +41,5 @@ Si está utilizando el controlador PDO_SQLSRV, puede ejecutar una consulta con u
 
 [Referencia del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
-[Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guía de programación para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

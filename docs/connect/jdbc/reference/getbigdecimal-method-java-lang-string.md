@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d0b29b48-9663-4de4-9fc2-82bc30e44aed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 07c806f69c6b1469d3312c796023139b5bde1baa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a85bbb7b5e7e14a7af8acb927a8f1abe9e681cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953830"
 ---
 # <a name="getbigdecimal-method-javalangstring"></a>Método getBigDecimal (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.math.BigDecimal getBigDecimal(java.lang.String sCol)
  Objeto **String** que contiene el nombre del parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un objeto BigDecimal.  
+ Objeto BigDecimal.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getBigDecimal especificado por el método getBigDecimal en la interfaz java.sql.CallableStatement.  
+ Este método getBigDecimal se especifica mediante el método getBigDecimal de la interfaz java. SQL. CallableStatement.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getBigDecimal &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

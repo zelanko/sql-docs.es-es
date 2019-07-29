@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22414058b0763f32c2b991487e006b8de8e50611
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982792"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Método getIndexInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,11 +53,11 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- **True** si solo se devuelven los índices para valores únicos. **false** si se devuelven todos los índices.  
+ **true** si solo se devuelven los índices de valores únicos. **false** si se devuelven todos los índices.  
   
  *approximate*  
   
- **True** si los resultados reflejan valores aproximados o no actualizados. **false** si los resultados son precisos.  
+ **true** si los resultados reflejan valores aproximados o desactualizados. **false** si los resultados son precisos.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
@@ -67,7 +66,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getIndexInfo especificado por el método getIndexInfo en la interfaz java.sql.DatabaseMetaData.  
+ El método getIndexInfo especifica este método getIndexInfo en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getIndexInfo contendrá la siguiente información:  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8612874b351af1cfd9370b8ef29dae4a0c4235e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993328"
 ---
 # <a name="logging-activity"></a>Actividad de registro
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,9 +40,9 @@ pdo_sqlsrv.log_severity = <number>
 |---------|---------------|  
 |0|El registro está deshabilitado (se trata del valor predeterminado si no se define ninguno).|  
 |-1|Especifica que se registran errores, advertencias y avisos.|  
-|1|Especifica que se registran errores.|  
-|2|Especifica que las advertencias se registran.|  
-|4|Especifica que se registran los avisos.|  
+|1|Especifica que se registran los errores.|  
+|2|Especifica que se registran las advertencias.|  
+|4|Especifica que los avisos se registran.|  
   
 La información de registro se agrega al archivo phperrors.log.  
   
@@ -96,9 +95,9 @@ En la tabla siguiente se describen las constantes que se pueden utilizar como el
 |Valor (equivalente entero entre paréntesis)|Descripción|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Especifica que se registran errores, advertencias y avisos.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que se registran errores. Ésta es la opción predeterminada.|  
-|SQLSRV_LOG_SEVERITY_WARNING (2)|Especifica que las advertencias se registran.|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|Especifica que se registran los avisos.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Especifica que se registran los errores. Ésta es la opción predeterminada.|  
+|SQLSRV_LOG_SEVERITY_WARNING (2)|Especifica que se registran las advertencias.|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|Especifica que los avisos se registran.|  
   
 Puede establecer más de un valor a la vez para la configuración **LogSeverity** con el operador lógico OR (|). Por ejemplo, la siguiente línea de código especifica que se deben registrar errores y advertencias:  
   
@@ -116,7 +115,7 @@ Puede especificar más de una opción a la vez agregando valores enteros juntos.
 `sqlsrv.LogSeverity = 3`  
   
 ## <a name="see-also"></a>Consulte también  
-[Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guía de programación para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 

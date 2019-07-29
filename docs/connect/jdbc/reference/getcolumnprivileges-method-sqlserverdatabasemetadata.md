@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 934a230e295532231f52ac3ed787b6a4de366d54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae80a8c33f68ad2f3d2c85b1343a5cc0f2b423c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66763377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952875"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>Método getColumnPrivileges (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getColumnPrivileges especificado por el método getColumnPrivileges en la interfaz java.sql.DatabaseMetaData.  
+ El método getColumnPrivileges especifica este método getColumnPrivileges en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getColumnPrivileges contendrá la siguiente información:  
   

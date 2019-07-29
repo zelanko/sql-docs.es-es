@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fb034f63-2532-4da8-a1b0-bc125734585a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f9a4a93ccd16fccd90db0a5bb5e4e234ea3a939a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1d05b367901aae7a37e10b0a2091a268c3a78a7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954834"
 ---
 # <a name="executebatch-method-sqlserverstatement"></a>Método executeBatch (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public int[] executeBatch()
  java.sql.BatchUpdateException  
   
 ## <a name="remarks"></a>Notas  
- Este método executeBatch especificado por el método executeBatch en la interfaz java.sql.Statement.  
+ El método executeBatch especifica este método executeBatch en la interfaz java.sql.Statement.  
   
  Después de enviar los comandos a la base de datos, este método borra cualquier comando del lote.  
   

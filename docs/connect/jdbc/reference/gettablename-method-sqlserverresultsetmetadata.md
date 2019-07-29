@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9a077b50-cc5a-4301-9398-49ea68544e89
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 427d181f1b95bc60f61bc5d29a2e1880fb02aad9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6b57f01670b52eaa17102001411458153be481f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979244"
 ---
 # <a name="gettablename-method-sqlserverresultsetmetadata"></a>Método getTableName (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getTableName(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getTableName especificado por el método getTableName en la interfaz java.sql.ResultSetMetaData.  
+ Este método getTableName se especifica mediante el método getTableName de la interfaz java. SQL. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

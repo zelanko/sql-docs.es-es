@@ -1,5 +1,5 @@
 ---
-title: Método updateNString (int, java.lang.String) | Microsoft Docs
+title: Método updateNString (int, Java. lang. String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c00621a2fedce7d9fba4d65f248b412627ee6233
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90aa44eda2af60ffdc73a65e01b3ae12b949d79f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998797"
 ---
 # <a name="updatenstring-method-int-javalangstring"></a>Método updateNString (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,15 +37,15 @@ public void updateNString(int columnIndex,
   
  *nString*  
   
- Un **cadena** objeto.  
+ Objeto de **cadena** .  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método updateNString especificado por el método updateNString en la interfaz java.sql.ResultSet.  
+ El método updateNString especifica este método updateNString en la interfaz java.sql.ResultSet.  
   
- Este método pasa Java **cadena** a activado **nchar**, **nvarchar (max)** , **ntext**, y **xml** columnas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
+ Este método pasa la **cadena** de Java a las columnas **nchar**, **nvarchar (Max)** , **ntext**y **XML** seleccionadas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
   
 ## <a name="see-also"></a>Consulte también  
  [updateNString (método) &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

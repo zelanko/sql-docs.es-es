@@ -7,14 +7,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: jroth
 author: MightyPen
-ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
+ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680081"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68231853"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,12 +57,12 @@ Tenga en cuenta que habilitar Always Encrypted no es suficiente para que el cifr
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recuperar y modificar los datos de las columnas cifradas
 
-Una vez que habilite Always Encrypted en una conexión, puede usar las API de ODBC estándar. Las API de ODBC puede recuperar o modificar datos en columnas de la base de datos cifrada. Los siguientes elementos de la documentación pueden ayudarle con esto:
+Una vez que habilite Always Encrypted en una conexión, puede usar las API ODBC estándar. Las API de ODBC pueden recuperar o modificar datos en columnas de base de datos cifradas. Los siguientes elementos de documentación pueden resultar de ayuda con esto:
 
-- [Código de ejemplo ODBC](cpp-code-example-app-connect-access-sql-db.md)
+- [Código de ejemplo de ODBC](cpp-code-example-app-connect-access-sql-db.md)
 - [Referencia del programador de ODBC](../../odbc/reference/odbc-programmer-s-reference.md)
 
-La aplicación debe tener los permisos de base de datos necesaria y debe ser capaz de obtener acceso a la clave maestra de columna. A continuación, el controlador cifra los parámetros de consulta que tienen como destino las columnas cifradas. El controlador también descifra los datos recuperados de columnas cifradas. El controlador realiza todo este cifrar y descifrar sin ayuda del código fuente. En el programa, es como si las columnas no están cifradas.
+La aplicación debe tener los permisos de base de datos necesarios y debe poder tener acceso a la clave maestra de columna. A continuación, el controlador cifra los parámetros de consulta que tienen como destino las columnas cifradas. El controlador también descifra los datos recuperados de las columnas cifradas. El controlador realiza todo este cifrado y descifrado sin ayuda del código fuente. Para el programa, es como si las columnas no estuvieran cifradas.
 
 Si Always Encrypted no está habilitado, se producirá un error en las consultas con parámetros que tengan como destino las columnas cifradas. Las datos todavía se pueden recuperar de las columnas cifradas, siempre y cuando la consulta no tenga parámetros que tengan como destino las columnas cifradas. Sin embargo, el controlador no intentará descifrar nada, y la aplicación recibirá los datos binarios cifrados (como matrices de bytes).
 
@@ -363,9 +362,10 @@ El controlador ODBC para SQL Server incluye los siguientes proveedores de almac�
 
 ### <a name="using-the-azure-key-vault-provider"></a>Usar el proveedor de Azure Key Vault
 
-El Almacén de claves de Azure es una opción adecuada para almacenar y administrar claves maestras de columna para Always Encrypted (especialmente si sus aplicaciones se hospedan en Azure). El controlador ODBC para SQL Server en Linux, macOS y Windows incluye un proveedor de almacén de claves maestras de columna integrado para Azure Key Vault. Vea la [guía detallada sobre Azure Key Vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), la [introducción a Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) y el artículo sobre cómo [crear claves maestras de columna en Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) para obtener más información sobre cómo configurar una instancia de Azure Key Vault para Always Encrypted.
+Azure Key Vault (AKV) es una opción adecuada para almacenar y administrar claves maestras de columna para Always Encrypted (especialmente si sus aplicaciones se hospedan en Azure). El controlador ODBC para SQL Server en Linux, macOS y Windows incluye un proveedor de almacén de claves maestras de columna integrado para Azure Key Vault. Vea la [guía detallada sobre Azure Key Vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), la [introducción a Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) y el artículo sobre cómo [crear claves maestras de columna en Azure Key Vault](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2) para obtener más información sobre cómo configurar una instancia de Azure Key Vault para Always Encrypted.
 
 > [!NOTE]
+> El controlador ODBC no admite Servicios de federación de Active Directory (AD FS) para la autenticación de AKV. Si usa la autenticación de Azure Active Directory a AKV y la configuración de Active Directory incluye servicios federados, puede producirse un error en la autenticación.
 > En Linux y macOS, para la versión 17.2 y versiones posteriores, `libcurl` debe utilizar este proveedor, pero no es una dependencia explícita, ya que otras operaciones con el controlador no la necesitan. Si detecta un error con respecto a `libcurl`, asegúrese de que está instalado.
 
 El controlador admite la autenticación en Azure Key Vault mediante los siguientes tipos de credencial:

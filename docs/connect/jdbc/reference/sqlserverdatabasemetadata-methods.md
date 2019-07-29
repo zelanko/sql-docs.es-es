@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 772de447-c922-4b85-8e10-5f0d9277966c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c92f2f3ceacef60abceac5500d22b0f32b8d607
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1d9f41ca22902607daf7ef1962382cbb6daee27a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971534"
 ---
 # <a name="sqlserverdatabasemetadata-methods"></a>Métodos SQLServerDatabaseMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Para obtener información sobre los miembros de [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md), consulte [miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md).  
+  Para obtener información sobre los miembros de [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md), consulte [miembros de SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md).  
   
   

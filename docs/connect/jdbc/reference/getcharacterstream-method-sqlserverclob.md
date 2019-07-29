@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 3d9bb5b0-f943-4463-99e3-cc7178a2fb1e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2baeb3fcebeac4f95a1c3d63ca8752275b2ac0e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7c521ac453cc0f82577c1d87a78e68d8ddf9cb78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66775679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953224"
 ---
 # <a name="getcharacterstream-method-sqlserverclob"></a>Método getCharacterStream (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera el **Clob** valor designado por el objeto java.sql.Clob como un objeto java.io.Reader.  
+  Recupera el valor **CLOB** designado por el objeto Java. SQL. CLOB como un objeto Java. IO. Reader.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   

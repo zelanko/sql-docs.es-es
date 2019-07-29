@@ -1,5 +1,5 @@
 ---
-title: Método Disautoincrement (SQLServerResultSetMetaData) | Microsoft Docs
+title: Método isAutoIncrement (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 028b8d61-9557-4c9f-b732-29e87a962de8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f7862151667bd94eba7cbc97301416d05270d1d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 27238772e437bc6bd5f8b33bed7e89dd0c294a3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977824"
 ---
 # <a name="isautoincrement-method-sqlserverresultsetmetadata"></a>Método disAutoIncrement (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isAutoIncrement(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método Disautoincrement especificado por el método Disautoincrement en la interfaz java.sql.ResultSetMetaData.  
+ Este método Disautoincrement se especifica mediante el método Disautoincrement de la interfaz java. SQL. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

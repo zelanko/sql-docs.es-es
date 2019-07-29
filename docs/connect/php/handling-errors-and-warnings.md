@@ -1,5 +1,5 @@
 ---
-title: Controlar errores y advertencias | Microsoft Docs
+title: Control de errores y advertencias | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50b431ed5b3f02f1032d4176c129d3b6599b4b9e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2765df415cd4e45469f48c30dc2c0937361ce3aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015067"
 ---
 # <a name="handling-errors-and-warnings"></a>Controlar errores y advertencias
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,5 +39,5 @@ En los temas de esta sección se proporciona información sobre el control de er
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
 ## <a name="see-also"></a>Consulte también  
-[Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guía de programación para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

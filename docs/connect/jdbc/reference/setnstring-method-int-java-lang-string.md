@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b7da6d44-f5b1-44f8-95f5-40179968b1b0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56e07aec8b54eac95340c6997bdaa676e7cf0219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 835cbbfe7e4d117957eaa811c40c98d9481066ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973649"
 ---
 # <a name="setnstring-method-int-javalangstring"></a>Método setNString (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setNString(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método se debe usar para **NCHAR**, **NVARCHAR**, **NTEXT**, y **XML** tipos de datos.  
+ Este método se debe usar para los tipos de datos **nchar**, **nvarchar**, **ntext**y **XML** .  
   
  El método setNString especifica este método setNString en la interfaz java.sql.PreparedStatement.  
   

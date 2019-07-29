@@ -75,7 +75,7 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: Implementaciones sin conexión
               href: big-data-cluster/deploy-offline.md
-            - name: Destinos de implementación
+            - name: Clústeres de Kubernetes
               items:
                 - name: Azure Kubernetes Service
                   href: big-data-cluster/deploy-on-aks.md
@@ -85,9 +85,11 @@
                   href: big-data-cluster/deploy-on-minikube.md
             - name: Scripts de implementación
               items:
-                - name: Azure Kubernetes Service
+                - name: Script de Python de AKS
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-                - name: Implementación con Azure Data Studio Notebooks
+                - name: Script de kubeadm de nodo único
+                  href: big-data-cluster/deployment-script-single-node-kubeadm.md
+                - name: Implementación con cuadernos
                   href: big-data-cluster/deploy-notebooks.md
     - name: Conceptos
       items:
@@ -165,13 +167,13 @@
               href: big-data-cluster/cluster-troubleshooting-commands.md
             - name: Administración con cuadernos
               href: big-data-cluster/manage-notebooks.md
-        - name: PC de bolsillo
+        - name: Cuaderno
           items:
-            - name: Información general de PC de bolsillo
+            - name: Información general de cuaderno
               href: big-data-cluster/notebooks-guidance.md
-            - name: Tutorial de PC de bolsillo
+            - name: Tutorial de cuaderno
               href: big-data-cluster/tutorial-notebook-spark.md
-            - name: Administrar los PC de bolsillo existentes
+            - name: Administrar los cuaderno existentes
               href: big-data-cluster/notebooks-how-to-manage.md
         - name: Trabajos de Spark
           items:
@@ -6670,6 +6672,8 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: Utilidad de SQL Server
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
+        - name: API de SQL Assessment
+          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: Consideraciones para ejecutar conjuntos de recopilación de la utilidad y que no sean de la utilidad en la misma instancia de SQL Server
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -7500,7 +7504,7 @@
 - name: Informes y análisis
   items:
     - name: Advanced Analytics y Machine Learning >>
-      href: advanced-analytics/index.md
+      href: advanced-analytics/
     - name: Sistema de la plataforma de análisis >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md

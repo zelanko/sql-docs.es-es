@@ -10,12 +10,12 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 625e090ab65eff7a912785e3ddef2de3e7d83b0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061265"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670506"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Copia de seguridad, restauración y traslado del catálogo de SSIS
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] incluye la base de datos de SSISDB. En la base de datos de SSISDB, se consultan vistas para inspeccionar objetos, valores y los datos operativos que se almacenan en el catálogo de **SSISDB** , consultando las vistas de la base de datos de SSISDB. Este tema proporciona instrucciones para hacer una copia de seguridad de la base de datos y restaurarla.  
@@ -48,7 +48,7 @@ ms.locfileid: "66061265"
   
 5.  Si restaura la base de datos de SSISDB a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en la que nunca se ha creado el catálogo de SSISDB, genere el script CREATE PROCEDURE para sp_ssis_startup como se indica aquí. Para obtener más información, vea [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
-    1.  En el Explorador de objetos, expanda el nodo **Bases de datos** y el nodo **maestro** > **Programación** > **Procedimientos almacenados**.  
+    1.  En explorador de objetos, expanda el nodo **bases de datos** y, a continuación, expanda el > nodo >  **bases de datos del sistema**y**procedimientos almacenados** de**programación** > **maestra**.  
   
     2.  Haga clic con el botón derecho en **dbo.sp_ssis_startup**y, después, haga clic en **Incluir procedimiento almacenado como** > **CREATE To** > **Nueva ventana del Editor de consultas**.  
   

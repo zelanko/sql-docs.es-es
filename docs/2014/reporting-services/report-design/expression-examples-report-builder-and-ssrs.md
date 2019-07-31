@@ -9,16 +9,16 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413001"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661282"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Ejemplos de expresiones (Generador de informes y SSRS)
 
-Las expresiones se usan con frecuencia en los informes para controlar el contenido y la apariencia de los mismos. Las expresiones se escriben [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]y puede usar código personalizado de las funciones integradas, informe y variables de grupo y las variables definidas por el usuario. Las expresiones comienzan con un signo igual (=). Para más información sobre el editor de expresiones y los tipos de referencias que se pueden incluir, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) y [Agregar una expresión &#40;Generador de informes y SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
+Las expresiones se usan con frecuencia en los informes para controlar el contenido y la apariencia de los mismos. Las expresiones se escriben en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]y pueden usar funciones integradas de código personalizado, variables de informe y de grupo, y variables definidas por el usuario. Las expresiones comienzan con un signo igual (=). Para más información sobre el editor de expresiones y los tipos de referencias que se pueden incluir, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) y [Agregar una expresión &#40;Generador de informes y SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
 
 > [!IMPORTANT]  
 >  Cuando se habilita el espacio seguro para RDL, solo se pueden usar algunos tipos y miembros en el texto de la expresión en el tiempo de publicación del informe. Para más información, consulte [Enable and Disable RDL Sandboxing](../enable-and-disable-rdl-sandboxing.md).  
@@ -51,7 +51,7 @@ Para más información sobre las expresiones simples y complejas, dónde se pued
 
 Para aprender a escribir expresiones que usan muchas de las funciones y operadores que también se usan en los ejemplos de expresiones de este tema, pero en el contexto de la escritura de un informe, consulte el [Tutorial: Introducción a las expresiones](../tutorial-introducing-expressions.md).  
 
-El editor de expresiones incluye también una vista jerárquica de funciones integradas. Cuando se selecciona una función, aparece un ejemplo de código en el panel de valores. Para obtener más información, consulte el [cuadro de diálogo expresión](../expression-dialog-box.md) o [cuadro de diálogo expresión &#40;Report Builder&#41;](../expression-dialog-box-report-builder.md).  
+El editor de expresiones incluye también una vista jerárquica de funciones integradas. Cuando se selecciona una función, aparece un ejemplo de código en el panel de valores. Para obtener más información, vea el cuadro de [diálogo expresión](../expression-dialog-box.md) o el [ &#40;cuadro&#41;de diálogo expresión generador de informes](../expression-dialog-box-report-builder.md).  
 
 ## <a name="functions"></a>Funciones  
 
@@ -176,9 +176,9 @@ El ejemplo siguiente muestra la fecha de inicio del año en curso
 =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
 ```  
 
-Si el cuadro de texto contiene solo una fecha o un número, debe usar la propiedad Format del cuadro de texto para aplicar formato en lugar de la `Format` función en el cuadro de texto.  
+Si el cuadro de texto solo contiene una fecha o un número, debe utilizar la propiedad formato del cuadro de texto para aplicar formato en lugar de `Format` la función dentro del cuadro de texto.  
 
--   El `Right`, `Len`, y `InStr` funciones son útiles para devolver una subcadena; por ejemplo, reducir *dominio*\\*username* para el nombre de usuario. La siguiente expresión devuelve la parte de la cadena situada a la derecha de un carácter de barra diagonal inversa (\\) de un parámetro denominado *User*:  
+-   Las `Right`funciones `Len`,\\y `InStr` son útiles para devolver una subcadena; por ejemplo, recortar el nombre de usuario del *dominio* *solo en el* nombre de usuario. La siguiente expresión devuelve la parte de la cadena situada a la derecha de un carácter de barra diagonal inversa (\\) de un parámetro denominado *User*:  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -190,7 +190,7 @@ Con la expresión siguiente se obtiene el mismo valor que con la anterior, pero 
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   Muestre los valores seleccionados en un parámetro de varios valores. En el ejemplo siguiente se usa el `Join` función para concatenar los valores seleccionados del parámetro *MySelection* en una sola cadena que se puede establecer como una expresión para el valor de un cuadro de texto en un elemento de informe:  
+-   Muestre los valores seleccionados en un parámetro de varios valores. En el ejemplo siguiente se `Join` usa la función para concatenar los valores seleccionados del parámetro alseleccionar en una sola cadena que se puede establecer como una expresión para el valor de un cuadro de texto en un elemento de informe:  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +203,7 @@ El ejemplo siguiente hace lo mismo que el ejemplo anterior, además de mostrar u
 
 ```  
 
--   El `Regex` funciones desde la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> son útiles para cambiar el formato de cadenas existentes, por ejemplo, dar formato a un número de teléfono. La siguiente expresión utiliza el `Replace` función para cambiar el formato de un número de teléfono de diez dígitos de un campo de "*nnn*-*nnn*-*nnnn* "a" (*nnn*) *nnn*-*nnnn*":  
+-   Las `Regex` funciones [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] desonútilesparacambiarelformatodelascadenasexistentes,porejemplo,paradarformatoaun<xref:System.Text.RegularExpressions> número de teléfono. La expresión siguiente usa la `Replace` función para cambiar el formato de un número de teléfono de diez dígitos de un campo de "*nnn*-*nnn*-*nnnn*" a "(*nnn*) *nnn* - *nnnn*":  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -217,7 +217,7 @@ El ejemplo siguiente hace lo mismo que el ejemplo anterior, además de mostrar u
 -   Al especificar un campo clave, puede usar la función `Lookup` para recuperar un valor de un conjunto de datos para una relación uno a uno, por ejemplo, un par clave-valor. En la expresión siguiente se muestra el nombre de producto de un conjunto de datos ("Producto"), según el identificador de producto con el que se va a realizar la coincidencia:  
 
 ```  
-=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
 ```  
 
 #### <a name="lookupset"></a>LookupSet  
@@ -433,7 +433,7 @@ Es posible mostrar y ocultar los elementos de un informe mediante las propiedade
 =IIF(CountRows()>12,false,true)  
 ```  
 
--   La siguiente expresión, cuando se establece el `Hidden` propiedad de una columna, muestra la columna solo si el campo existe en el conjunto de datos de informe después de que los datos se recuperan del origen de datos:  
+-   La siguiente expresión, cuando se establece en `Hidden` la propiedad de una columna, muestra la columna solo si el campo existe en el conjunto de datos de informe después de que se recuperen los datos del origen de datos:  
 
 ```  
 =IIF(Fields!Column_1.IsMissing, true, false)  

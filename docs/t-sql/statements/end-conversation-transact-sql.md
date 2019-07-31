@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5bd9dd2e967c1ce6551dbc3b952a8bf8baa09585
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084492"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ END CONVERSATION conversation_handle
  Es el código de error. El *failure_code* es de tipo **int**. El código de error es un código definido por el usuario que se incluye en el mensaje de error enviado al otro extremo de la conversación. El código de error debe ser mayor que 0.  
   
  DESCRIPTION =*failure_text*  
- Es el mensaje de error. El *failure_text* es de tipo **nvarchar (3000)**. El texto del error es texto definido por el usuario que se incluye en el mensaje de error enviado al otro extremo de la conversación.  
+ Es el mensaje de error. El *failure_text* es de tipo **nvarchar (3000)** . El texto del error es texto definido por el usuario que se incluye en el mensaje de error enviado al otro extremo de la conversación.  
   
  WITH CLEANUP  
  Quita todos los mensajes y todas las entradas de la vista de catálogo para un lado de una conversación que no se puede completar con normalidad. No se le informa de la limpieza al otro lado de la conversación. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quita el extremo de conversación, todos los mensajes de la conversación que estén en la cola de transmisión y todos los mensajes de la conversación que estén en la cola de servicio. Los administradores pueden utilizar esta opción para quitar las conversaciones que no se completan con normalidad. Por ejemplo, si el servicio remoto se ha quitado de manera permanente, un administrador puede utilizar WITH CLEANUP para quitar las conversaciones con ese servicio. No use WITH CLEANUP en el código de una aplicación de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Si se ejecuta END CONVERSATION WITH CLEANUP antes de que el extremo receptor confirme la recepción de un mensaje, el extremo de envío enviará el mensaje de nuevo. Esto podría volver a ejecutar el cuadro de diálogo.  
@@ -130,7 +129,7 @@ COMMIT TRANSACTION ;
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  

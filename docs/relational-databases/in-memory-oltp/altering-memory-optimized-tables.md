@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 698272ee29fe7828f9298d534476db7948b2bde7
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 3d65b6931053c7eccbb96093fb2cd840f8277cb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951293"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
 
@@ -136,6 +135,6 @@ GO
 
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 
 [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

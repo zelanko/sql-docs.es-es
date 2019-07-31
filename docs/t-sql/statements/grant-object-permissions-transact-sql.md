@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed580cb28c65eab7f0abd7702cab623bcf9fcd2e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a90add62cdda0e127d84a60fadf7f1f1578c7a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050819"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT (permisos de objeto de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +78,7 @@ PRIVILEGES
 >  Un permiso DENY de nivel de tabla no tiene prioridad sobre uno GRANT de nivel de columna. Se ha conservado esta incoherencia en la jerarquía de permisos para mantener la compatibilidad con versiones anteriores.  
   
  ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
- Especifica el objeto en el que se va a conceder el permiso. La frase OBJECT es opcional si se especifica *schema_name*. Si se utiliza la frase OBJECT, se requiere el calificador de ámbito (::).  Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema (.).  
+ Especifica el objeto en el que se va a conceder el permiso. La frase OBJECT es opcional si se especifica *schema_name*. Si se utiliza la frase OBJECT, se requiere el calificador de ámbito (::). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema (.).  
   
  TO \<database_principal>  
  Especifica la entidad de seguridad para la que se concede el permiso.  
@@ -163,7 +162,7 @@ GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>b. Conceder el permiso EXECUTE para un procedimiento almacenado  
+### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>B. Conceder el permiso EXECUTE para un procedimiento almacenado  
  En el siguiente ejemplo, se concede el permiso `EXECUTE` para el procedimiento almacenado `HumanResources.uspUpdateEmployeeHireInfo` a un rol de aplicación denominado `Recruiting11`.  
   
 ```  

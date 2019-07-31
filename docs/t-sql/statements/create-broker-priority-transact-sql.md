@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6029f21d65c3732f7aa1aec2ec6a330c8642c991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061152"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Especifica el nombre de un servicio que se va a usar como criterio para determinar si la prioridad de conversación se aplica a un extremo de una conversación.  
   
- *RemoteServiceName* es un literal de tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con la cadena *RemoteServiceName*. En la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. El servicio de destino puede estar en la instancia actual de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en una instancia remota de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* es un literal de tipo **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con la cadena *RemoteServiceName*. En la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. El servicio de destino puede estar en la instancia actual de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en una instancia remota de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  "*RemoteServiceName*"  
  Especifica que la prioridad de conversación se puede aplicar a lo siguiente:  
@@ -284,7 +283,7 @@ CREATE BROKER PRIORITY BronzePriority
          PRIORITY_LEVEL = 2);  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/create-contract-transact-sql.md)   

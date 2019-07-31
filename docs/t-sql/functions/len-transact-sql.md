@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b7c9685b11517ce97ebcce64d25f069f1a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6194b035ae28a1c70dbba2f2b72050fb87a76328
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948663"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329319"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve el número de caracteres de la expresión de cadena especificada, excluidos los espacios en blanco finales.  
+  Devuelve el número de caracteres de la expresión de cadena especificada, excluidos los espacios finales.  
   
 > [!NOTE]  
 >  Para devolver el número de bytes usado para representar una expresión, use la función [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md).  
@@ -54,7 +53,7 @@ LEN ( string_expression )
  Si utiliza intercalaciones de SC, el valor entero devuelto cuenta los pares suplentes UTF-16 como un solo carácter. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="remarks"></a>Notas  
- LEN no incluye espacios en blanco finales. Si esto supone un problema, considere la opción de usar la función [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md), que no recorta la cadena. Si se procesa una cadena unicode, DATALENGTH devolverá dos veces el número de caracteres. En este ejemplo se muestra LEN y DATALENGTH con un espacio final.  
+ LEN no incluye espacios finales. Si esto supone un problema, considere la opción de usar la función [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md), que no recorta la cadena. Si se procesa una cadena unicode, DATALENGTH devolverá dos veces el número de caracteres. En este ejemplo se muestra LEN y DATALENGTH con un espacio final.  
   
 ```  
 DECLARE @v1 varchar(40),  

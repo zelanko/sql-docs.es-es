@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: cc09ccfbf23e200f8771b84d40fb5a1dd3d1dc9c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 1198933f5dd996b2cf050ea0fbb7960410095869
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136516"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de la versión de SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,17 +76,17 @@ Use la tabla siguiente para determinar la ubicación y el nombre del archivo que
 |Si la versión que tiene instalada actualmente es...|Y desea...|Descargue e instale...|  
 |---|---|---|   
 |Instalaciones de 32 bits:|||  
-|Una versión de 32 bits de cualquier edición de SQL Server 2012|Actualizar a la versión de 32 bits de SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-**<arch>**-**<lang id>**.exe** desde la página de descarga de [SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
-|Una versión de 32 bits de SQL Server 2012 RTM Express|Actualizar a la versión de 32 bits de SQL Server 2012 Express SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Una versión de 32 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 32 bits de SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Una versión de 32 bits de SQL Server 2012 Management Studio Express|Actualizar a la versión de 32 bits de SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Una versión de 32 bits de cualquier edición de SQL Server 2012 y una versión de 32 bits de las herramientas de cliente y de administración (incluido SQL Server 2012 RTM Management Studio)|Actualizar todos los productos a la versión de 32 bits de SQL Server 2012 SP2|**SQLEXPRADV_**<arch>**_**<lang>**.msi** desde la [página de descarga de SQL Server 2012 SP2 Express.](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Una versión de 32 bits de cualquier edición de SQL Server 2012|Actualizar a la versión de 32 bits de SQL Server 2012 SP2|**SQLServer2012SP2-KB2958429-** <arch> **-** <lang id> **.exe** desde la página de descarga de [SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|Una versión de 32 bits de SQL Server 2012 RTM Express|Actualizar a la versión de 32 bits de SQL Server 2012 Express SP2|**SQLEXPR_** <arch> **_** <lang> **.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Una versión de 32 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 32 bits de SQL Server 2012 SP2|**SQLEXPRWT_** <arch> **_** <lang> **.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Una versión de 32 bits de SQL Server 2012 Management Studio Express|Actualizar a la versión de 32 bits de SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_** <arch> **_** <lang> **.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Una versión de 32 bits de cualquier edición de SQL Server 2012 y una versión de 32 bits de las herramientas de cliente y de administración (incluido SQL Server 2012 RTM Management Studio)|Actualizar todos los productos a la versión de 32 bits de SQL Server 2012 SP2|**SQLEXPRADV_** <arch> **_** <lang> **.msi** desde la [página de descarga de SQL Server 2012 SP2 Express.](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |Una versión de 32 bits de una o más herramientas del [Feature Pack de Microsoft SQL Server 2012 RTM](https://www.microsoft.com/download/details.aspx?id=29065) o el [Feature Pack de Microsoft SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Actualizar las herramientas a la versión de 32 bits del Feature Pack de Microsoft SQL Server 2012 S2|Una o varias herramientas de [la página de descarga del Feature Pack de SQL Server 2012 SP2 de Microsoft](https://go.microsoft.com/fwlink/?LinkID=401008)|  
 |Instalaciones de 64 bits:|||  
 |Una versión de 64 bits de cualquier edición de SQL Server 2012|Actualizar a la versión de 64 bits de SQL Server 2012 SP2|SQLServer2012SP2-KB2958429-<arch>-<langid>.exe desde la [página de descarga de SQL Server 2012 SP2](https://go.microsoft.com/fwlink/?LinkID=401006)|  
-|Una versión de 64 bits de SQL Server 2012 RTM Express|Actualizar a la versión de 64 bits de SQL Server 2012 SP2|**SQLEXPR_**<arch>**_**<lang>**.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Una versión de 64 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 64 bits de SQL Server 2012 SP2|**SQLEXPRWT_**<arch>**_**<lang>**.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|Una versión de 64 bits de SQL Server 2012 Management Studio Express|Actualizar a la versión de 64 bits de SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_**<arch>**_**<lang>**.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Una versión de 64 bits de SQL Server 2012 RTM Express|Actualizar a la versión de 64 bits de SQL Server 2012 SP2|**SQLEXPR_** <arch> **_** <lang> **.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Una versión de 64 bits únicamente las herramientas de cliente y de administración para SQL Server 2012 (incluido SQL Server 2012 Management Studio)|Actualizar las herramientas de cliente y de administración a la versión de 64 bits de SQL Server 2012 SP2|**SQLEXPRWT_** <arch> **_** <lang> **.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|Una versión de 64 bits de SQL Server 2012 Management Studio Express|Actualizar a la versión de 64 bits de SQL Server 2012 SP2 Management Studio Express|**SQLManagementStudio_** <arch> **_** <lang> **.msi** desde la [página de descarga de SQL Server 2012 SP2 Express](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |Una versión de 64 bits de una o más herramientas del [Feature Pack de Microsoft SQL Server 2012 RTM](https://www.microsoft.com/download/details.aspx?id=29065) o el [Feature Pack de Microsoft SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268266)|Actualizar las herramientas a la versión de 64 bits del Feature Pack de Microsoft SQL Server 2012 S2|Una o varias herramientas de [la página de descarga del Feature Pack de SQL Server 2012 SP2 de Microsoft](https://go.microsoft.com/fwlink/?LinkID=401008)|   
 
 
@@ -131,7 +130,7 @@ Para obtener una lista completa de errores y de problemas conocidos corregidos e
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>La reinstalación de instancias de un clúster de conmutación por error de SQL Server produce un error si usa la misma dirección IP  
 **Problema:** Si especifica una dirección IP incorrecta durante la instalación de una instancia de clúster de conmutación por error de SQL Server, la instalación produce errores. Después de desinstalar la instancia con errores, y si intenta reinstalar la instancia de clúster de conmutación por error de SQL Server con el mismo nombre de instancia, y la dirección IP correcta, la instalación produce errores. El error se debe al grupo de recursos duplicados que deja atrás la instalación anterior.  
   
-**Solución alternativa:** Para resolver este problema, utilice un nombre de instancia diferente durante la reinstalación, o elimine manualmente el grupo de recursos antes de reinstalar. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
+**Solución alternativa:** para resolver este problema, use otro nombre de instancia durante la reinstalación, o bien elimine manualmente el grupo de recursos antes de reinstalar. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services y PowerPivot  
   
@@ -165,7 +164,7 @@ Para obtener una lista completa de errores y de problemas conocidos corregidos e
 **Solución alternativa:**  Si instaló el modo SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] antes de configurar la granja de SharePoint, la solución alternativa necesaria depende de los otros componentes que están instalados.  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>Power View en SharePoint Server 2013 requiere Microsoft.AnalysisServices.SPClient.dll  
-**Problema:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no instala un componente requerido, **Microsoft.AnalysisServices.SPClient.dll**. Si instala Vista previa de SharePoint Server 2013 y [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo SharePoint, pero no descarga e instala el paquete del instalador de PowerPivot para SharePoint 2013, **spPowerPivot.msi** , Power View no funcionará y Power View presentará los siguientes síntomas.  
+**Problema:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no instala un componente requerido, **Microsoft.AnalysisServices.SPClient.dll**. Si instala Vista previa de SharePoint Server 2013 y [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo SharePoint, pero no descarga e instala el paquete del instalador de PowerPivot para SharePoint 2013, **spPowerPivot.msi** , Power View no funcionará y Power View presentará los siguientes síntomas.  
   
 **Síntomas:** Cuando intenta crear un informe de Power View, ve un mensaje de error similar al siguiente:  
   
@@ -185,7 +184,7 @@ Los detalles del error interno contendrán un mensaje similar al siguiente:
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS disponible en la edición incorrecta de SQL Server 2012  
-**Problema:** En la versión [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM, la característica Data Quality Services (DQS) está disponible en ediciones de SQL Server distintas de Enterprise, Business Intelligence y Developer. Después de instalar SQL Server 2012 SP1, DQS no estará disponible en todas las ediciones salvo en Enterprise, Business Intelligence y Developer.  
+**Problema:** en la versión [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM, la característica Data Quality Services (DQS) está disponible en ediciones de SQL Server distintas de Enterprise, Business Intelligence y Developer. Después de instalar SQL Server 2012 SP1, DQS no estará disponible en todas las ediciones salvo en Enterprise, Business Intelligence y Developer.  
   
 **Solución**: si usa DQS en una edición no admitida, actualice a una edición admitida o desinstale la dependencia de esta característica de sus aplicaciones.  
   

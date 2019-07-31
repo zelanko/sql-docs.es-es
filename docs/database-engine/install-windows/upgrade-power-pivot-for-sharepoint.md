@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 99e6a0b600dfe7adfe173176b69cd2b45ffdd223
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8afd4b49a5dddd4ea9806dddd9c1cf30cd04e603
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209214"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265658"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Actualización de PowerPivot para SharePoint
 
@@ -84,7 +84,7 @@ ms.locfileid: "53209214"
   
     1.  En el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Instalación**.  
   
-    2.  Haga clic en **Actualizar desde SQL Server.....**.  
+    2.  Haga clic en **Actualizar desde SQL Server.....** .  
   
     3.  En la página **Seleccionar instancia** , seleccione el nombre de instancia **POWERPIVOT** y, a continuación, haga clic en **Siguiente**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "53209214"
         > [!IMPORTANT]  
         >  La primera acción, **Actualizar solución de granja**, siempre se debe procesar primero. Registra los cmdlets de PowerShell que se utilizan para configurar el servidor. Si obtiene un error en esta acción, no debe continuar. En su lugar, utilice la información proporcionada por el error para diagnosticar y resolver el problema antes de procesar acciones adicionales en la lista de tareas.  
   
-    7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "**Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?**".  
+    7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "**Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?** ".  
   
     8.  Haga clic en **Sí** para continuar.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "53209214"
   
 7.  **Ejecute la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** en el primer servidor de aplicaciones de SharePoint que ejecuta el servicio SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) para actualizar las soluciones y los servicios web de SharePoint. No puede utilizar Administración Central para este paso.  
   
-    1.  En el menú **Inicio**, elija **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], en **Herramientas de configuración** y, después, en **Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Observe que esta herramienta solo se enumera cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado en el servidor local.  
+    1.  En el menú **Inicio**, elija **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], en **Herramientas de configuración** y, después, en **Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** . Observe que esta herramienta solo se enumera cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado en el servidor local.  
   
     2.  Al iniciarse, la herramienta de configuración comprueba el estado de actualización de la solución de granja de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y las soluciones de aplicación web de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Si se detectan versiones anteriores de estas soluciones, verá el mensaje "Se han detectado versiones más recientes de los archivos de solución de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Seleccione la opción de actualización para actualizar la granja". Haga clic en **Aceptar** para cerrar el mensaje.  
   

@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901872"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT (cláusula de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ ms.locfileid: "57334742"
   
  DELETED no se puede utilizar con la cláusula OUTPUT en la instrucción INSERT.  
   
- INSERTED   
+ INSERTED  
  Es un prefijo de columna que especifica el valor agregado en la operación de inserción o actualización. Las columnas con prefijo INSERTED reflejan el valor después de que se complete la instrucción UPDATE, INSERT o MERGE, pero antes de que se ejecuten los desencadenadores.  
   
  INSERTED no se puede utilizar con la cláusula OUTPUT en la instrucción DELETE.  
@@ -134,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Es una referencia explícita a una columna. Cualquier referencia a la tabla que se va a modificar debe certificarse correctamente mediante el prefijo INSERTED o DELETED, según corresponda; por ejemplo: INSERTED **.**_nombre\_columna_.  
+ Es una referencia explícita a una columna. Cualquier referencia a la tabla que se va a modificar debe certificarse correctamente mediante el prefijo INSERTED o DELETED, según corresponda; por ejemplo: INSERTED **.** _nombre\_columna_.  
   
  $action  
  Solo está disponible para la instrucción MERGE. Especifica una columna de tipo **nvarchar(10)** en la cláusula OUTPUT de una instrucción MERGE que devuelve uno de los tres valores para cada fila: 'INSERT', 'UPDATE' o 'DELETE', según la acción realizada en esa fila.  
   
 ## <a name="remarks"></a>Notas  
- Las cláusulas OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } se pueden definir en una única instrucción INSERT, UPDATE, DELETE o MERGE.  
+ Las cláusulas OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } se pueden definir en una única instrucción INSERT, UPDATE, DELETE o MERGE.  
   
 > [!NOTE]  
 >  A menos que se indique lo contrario, las referencias a la cláusula OUTPUT se refieren tanto a la cláusula OUTPUT como a la cláusula OUTPUT INTO.  
@@ -227,7 +226,7 @@ En el contexto de una base de datos configurada en el nivel de compatibilidad 13
  Si se establece la opción disallow results from triggers de sp_configure, una cláusula OUTPUT sin una cláusula INTO hará que la instrucción genere un error cuando se llame desde un desencadenador.  
   
 ## <a name="data-types"></a>Tipos de datos  
- La cláusula OUTPUT admite los tipos de datos de objetos grandes: **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, **text**, **ntext**, **image** y **xml**. Cuando se usa la cláusula .WRITE en la instrucción UPDATE para modificar una columna de tipo **nvarchar(max)**, **varchar(max)** o **varbinary(max)**, se devuelven las imágenes anterior y posterior completas de los valores si se hace referencia a ellas. La función TEXTPTR() no puede aparecer como parte de una expresión en una columna de tipo **text**, **ntext** o **image** en la cláusula OUTPUT.  
+ La cláusula OUTPUT admite los tipos de datos de objetos grandes: **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , **text**, **ntext**, **image** y **xml**. Cuando se usa la cláusula .WRITE en la instrucción UPDATE para modificar una columna de tipo **nvarchar(max)** , **varchar(max)** o **varbinary(max)** , se devuelven las imágenes anterior y posterior completas de los valores si se hace referencia a ellas. La función TEXTPTR() no puede aparecer como parte de una expresión en una columna de tipo **text**, **ntext** o **image** en la cláusula OUTPUT.  
   
 ## <a name="queues"></a>Colas  
  OUTPUT se puede utilizar en aplicaciones que utilizan tablas como colas, o para contener conjuntos de resultados intermedios. Dicho de otro modo, la aplicación agrega o quita filas de la tabla constantemente. En el ejemplo siguiente se utiliza la cláusula OUTPUT en una instrucción DELETE para devolver la fila eliminada a la aplicación que realiza la llamada.  
@@ -337,7 +336,7 @@ GO
   
 ```  
   
-### <a name="b-using-output-with-a-delete-statement"></a>b. Usar OUTPUT con una instrucción DELETE  
+### <a name="b-using-output-with-a-delete-statement"></a>B. Usar OUTPUT con una instrucción DELETE  
  En el ejemplo siguiente se eliminan todas las filas de la tabla `ShoppingCartItem`. La cláusula `OUTPUT deleted.*` especifica que se devuelvan a la aplicación que realiza la llamada los resultados de la instrucción `DELETE`, es decir, todas las columnas de las filas eliminadas. La instrucción `SELECT` posterior comprueba los resultados de la operación de eliminación en la tabla `ShoppingCartItem`.  
   
 ```  

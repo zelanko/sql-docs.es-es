@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: edd8ea9a11a06182dced486ed1b03f1b916e15e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903119"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Configurar topología (replicación punto a punto)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "47793263"
   
 ### <a name="options-for-each-node"></a>Opciones para cada nodo  
  **Agregar una nueva conexión del mismo nivel**  
- Agrega una conexión entre dos nodos. Por ejemplo, si agrega una conexión entre el Nodo A y el Nodo B, la replicación agrega dos suscripciones: la primera habilita el Nodo A para recibir los cambios de la publicación en el Nodo B y la segunda permite al Nodo B recibir cambios de la publicación en el Nodo A.  
+ Agrega una conexión entre dos nodos. Por ejemplo, si agrega una conexión entre el nodo A y el nodo B, la replicación agrega dos suscripciones: la primera habilita el Nodo A para recibir los cambios de la publicación en el Nodo B y la segunda permite al Nodo B recibir cambios de la publicación en el Nodo A.  
   
  **Eliminar nodo del mismo nivel**  
  Quita un nodo de la topología. Por ejemplo, si quita el Nodo C, se quita la publicación en ese nodo. También se quitan las suscripciones entre el Nodo A y el Nodo C, y el Nodo B y el Nodo C. No se elimina la base de datos del Nodo C y no se deshabilitan la publicación y la distribución.  
@@ -82,7 +81,7 @@ ms.locfileid: "47793263"
  **Quitar conexión del mismo nivel**  
  Quita una conexión entre dos nodos. Por ejemplo, si quita una conexión entre el Nodo A y el Nodo B, la replicación elimina dos suscripciones: la que habilita el Nodo A para recibir los cambios de la publicación en el Nodo B y la que permite al Nodo B recibir cambios de la publicación en el Nodo A.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08185a514dbba480aaef760532430ff7c1f53bf9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115320"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Utilizar el explorador de Utilidad para administrar la utilidad de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51663011"
 ### <a name="sql-server-utility-navigation-pane"></a>Panel de navegación de la utilidad de SQL Server  
  El panel de navegación del explorador de la utilidad proporciona una vista de árbol de objetos de la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , agrupada por punto de control de la utilidad. Para expandir las carpetas, haga clic en el signo más (+) o en el nombre de UCP en el panel de navegación del explorador de la utilidad. Haga clic con el botón secundario en las carpetas o en los objetos para realizar tareas comunes. Los nodos de la vista de árbol son como sigue:  
   
--   El nodo superior de la vista de árbol es el punto de control de la utilidad (UCP). El nombre de nodo se crea como se indica a continuación: "Nombre_Utilidad (NombreEquipo\nombre_instancia_UCP)." Si no tiene un UCP, debe crear uno. Si no está conectado a una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe conectarse a una. Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Haga clic en el nombre de UCP en la vista de árbol para rellenar el panel de contenido del explorador de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con datos en la vista de panel. Para obtener más información, vea [Panel de la utilidad &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
+-   El nodo superior de la vista de árbol es el punto de control de la utilidad (UCP). El nombre del nodo se construye como: "Utility_Name" (ComputerName\UCP_instance_name). Si no tiene un UCP, debe crear uno. Si no está conectado a una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe conectarse a una. Para obtener más información, vea [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Haga clic en el nombre de UCP en la vista de árbol para rellenar el panel de contenido del explorador de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con datos en la vista de panel. Para obtener más información, vea [Panel de la utilidad &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
   
      Haga clic con el botón secundario en el nodo UCP para actualizar los datos en el panel.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "51663011"
   
  PowerShell no tiene ayuda F1, pero incluye un cmdlet **Get-Help** que proporciona información sobre el uso de PowerShell. Para obtener más información sobre el uso de Get-Help, vea [Obtener ayuda de SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Configurar las directivas de mantenimiento &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)   
  [Explorador de objetos](../../ssms/object/object-explorer.md)  

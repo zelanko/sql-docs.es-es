@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd3e274f1a8616c0d0aa9d54bcdd84a35d6936ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d24cc29fd35694ab69ad006498d3456d3ade68e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111007"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47777875"
 |Identificador del evento|2601|  
 |Origen del evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
-|Nombre simbólico|N/A|  
+|Nombre simbólico|N/D|  
 |Texto del mensaje|No se puede insertar una fila de clave duplicada en el objeto '%.*ls' con índice único '%.\*ls'.|  
   
 ## <a name="explanation"></a>Explicación  
@@ -43,7 +42,7 @@ ms.locfileid: "47777875"
   
 -   Se está utilizando una tabla con una columna de identidad, pero la columna no está correctamente administrada.  
   
--   En la replicación de mezcla, este error puede producirse también durante una inserción en la tabla del sistema **MSmerge_contents**; el error que se produce es similar al siguiente: No se puede insertar una fila de clave duplicada en el objeto 'MSmerge_contents' con índice único 'ucl1SycContents'.  
+-   En la replicación de mezcla, este error también puede producirse durante una inserción en la tabla del sistema **MSmerge_contents**; el error que se produce es similar al siguiente: No se puede insertar una fila de clave duplicada en el objeto "MSmerge_contents" con índice único "ucl1SycContents".  
   
 ## <a name="user-action"></a>Acción del usuario  
  La acción que debe llevarse a cabo depende del motivo por el que se produjo el error:  
@@ -64,7 +63,7 @@ ms.locfileid: "47777875"
   
      Este error se puede producir debido a un valor incorrecto de la propiedad del filtro de combinación **join_unique_key**. Esta propiedad debe definirse como TRUE solo si la columna combinada de la tabla primaria es única. El error se produce si la propiedad se define como TRUE pero la columna no es única. Para obtener más información acerca de cómo configurar esta propiedad, vea [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y eventos &#40;replicación&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

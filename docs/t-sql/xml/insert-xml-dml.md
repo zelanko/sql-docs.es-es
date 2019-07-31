@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4cedc8dee9040e198ffc5f229453a10d54065257
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051290"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ insert
   
 ## <a name="arguments"></a>Argumentos  
  *Expression1*  
- Identifica uno o varios nodos que se van a insertar. Puede ser una instancia XML constante; una referencia a una instancia del tipo de datos XML con tipo de la misma colección de esquemas XML en la que se aplica el método modify; una instancia del tipo de datos XML sin tipo que usa una función **sql:column()**/**sql:variable()** independiente; o una expresión XQuery. La expresión puede proporcionar un nodo, y también un nodo de texto, o una secuencia ordenada de nodos. No se puede resolver en el nodo raíz (/). Si la expresión da como resultado un valor o una secuencia de valores, los valores se insertan como un solo nodo de texto y cada valor de la secuencia se separa con un espacio. Si se especifican varios nodos como constante, los nodos se incluyen entre paréntesis y se separan mediante comas. No es posible insertar secuencias heterogéneas, como una secuencia de elementos, atributos o valores. Si *Expression1* se resuelve en una secuencia vacía, no se produce ninguna inserción ni se devuelven errores.  
+ Identifica uno o varios nodos que se van a insertar. Puede ser una instancia XML constante; una referencia a una instancia del tipo de datos XML con tipo de la misma colección de esquemas XML en la que se aplica el método modify; una instancia del tipo de datos XML sin tipo que usa una función **sql:column()** /**sql:variable()** independiente; o una expresión XQuery. La expresión puede proporcionar un nodo, y también un nodo de texto, o una secuencia ordenada de nodos. No se puede resolver en el nodo raíz (/). Si la expresión da como resultado un valor o una secuencia de valores, los valores se insertan como un solo nodo de texto y cada valor de la secuencia se separa con un espacio. Si se especifican varios nodos como constante, los nodos se incluyen entre paréntesis y se separan mediante comas. No es posible insertar secuencias heterogéneas, como una secuencia de elementos, atributos o valores. Si *Expression1* se resuelve en una secuencia vacía, no se produce ninguna inserción ni se devuelven errores.  
   
  into  
  Los nodos identificados por *Expression1* se insertan como descendientes directos (nodos secundarios) del nodo identificado por *Expression2*. Si el nodo de *Expression2* ya tiene uno o más nodos secundarios, se debe usar **as first** o **as last** para especificar dónde se quiere agregar el nuevo nodo. Se agregaría al principio o al final de la lista de nodos secundarios respectivamente. Las palabras clave **as first** y **as last** se omiten cuando se insertan atributos.  
@@ -105,7 +104,7 @@ GO
   
  Tenga en cuenta que diversas expresiones de ruta de acceso de este ejemplo especifican "[1]" como requisito para los tipos estáticos. De esta manera se garantiza que hay un único nodo de destino.  
   
-### <a name="b-inserting-multiple-elements-into-the-document"></a>b. Insertar varios elementos en el documento  
+### <a name="b-inserting-multiple-elements-into-the-document"></a>B. Insertar varios elementos en el documento  
  En el ejemplo siguiente, primero se asigna un documento a una variable de tipo **xml**. Luego se asigna una secuencia de dos elementos que representan las características del producto a una segunda variable de tipo **xml**. Después, esta secuencia se inserta en la primera variable.  
   
 ```  

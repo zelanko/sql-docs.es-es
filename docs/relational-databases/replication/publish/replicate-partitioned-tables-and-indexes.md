@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: aface984e9cc370ed906ab5abef65ac6f4bb6bd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1962546b83926f1ff189ece6757ebbf3659976ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073578"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replicar tablas e índices con particiones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47787263"
   
  La replicación copia los objetos en el suscriptor durante la sincronización inicial. Si el esquema de partición utiliza grupos de archivos distintos del archivo de grupos PRIMARY, esos grupos de archivos deben existir en el suscriptor antes de la sincronización inicial.  
   
- Una vez inicializado el suscriptor, los cambios de los datos se propagan al suscriptor y se aplican a las particiones adecuadas. Sin embargo, no se admiten cambios en el esquema de partición. Las replicaciones transaccional y de mezcla no admiten la replicación de los comandos siguientes: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, ni la instrucción REBUILD WITH PARTITION de ALTER INDEX. Los cambios asociados a ellos no se replicarán automáticamente al suscriptor. Es responsabilidad del usuario realizar modificaciones similares en el suscriptor de forma manual.  
+ Una vez inicializado el suscriptor, los cambios de los datos se propagan al suscriptor y se aplican a las particiones adecuadas. Sin embargo, no se admiten cambios en el esquema de partición. La replicación transaccional y de mezcla no son compatibles con la replicación de los siguientes comandos: ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME, o la instrucción REBUILD WITH PARTITION de ALTER INDEX. Los cambios asociados a ellos no se replicarán automáticamente al suscriptor. Es responsabilidad del usuario realizar modificaciones similares en el suscriptor de forma manual.  
   
 ## <a name="replication-support-for-partition-switching"></a>Compatibilidad de la replicación con la modificación de particiones  
  Una de las ventajas principales de crear particiones en una tabla es la posibilidad de mover rápida y eficazmente subconjuntos de datos entre particiones. Los datos se mueven utilizando el comando SWITCH PARTITION. De forma predeterminada, cuando en una tabla se habilita la replicación, las operaciones SWITCH PARTITION se bloquean por las razones siguientes:  
@@ -72,13 +71,13 @@ ms.locfileid: "47787263"
 ### <a name="enabling-partition-switching"></a>Habilitar la modificación de particiones  
  Las propiedades siguientes de las publicaciones transaccionales permiten a los usuarios controlar el comportamiento de la modificación de particiones en un entorno replicado:  
   
--   **@allow_partition_switch**; cuando se establece en **true**, SWITCH PARTITION se puede ejecutar en la base de datos de publicación.  
+-   **@allow_partition_switch** ; cuando se establece en **true**, SWITCH PARTITION se puede ejecutar en la base de datos de publicación.  
   
 -   **@replicate_partition_switch** determina si la instrucción SWITCH PARTITION de DDL se debe replicar en los suscriptores. Esta opción solo es válida cuando **@allow_partition_switch** se establece en **true**.  
   
  Puede establecer estas propiedades utilizando [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) cuando se crea la publicación, o usando [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) después de crearla. Según se indicaba anteriormente, la replicación de mezcla no admite la modificación de particiones. Para ejecutar SWITCH PARTITION en una tabla en la que está habilitada la replicación de mezcla, quite la tabla de la publicación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

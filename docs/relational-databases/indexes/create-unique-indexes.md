@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898596"
 ---
 # <a name="create-unique-indexes"></a>Crear índices únicos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,10 +94,10 @@ ms.locfileid: "52515082"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>Para crear un índice único mediante el Diseñador de tablas  
   
@@ -114,15 +113,15 @@ ms.locfileid: "52515082"
   
 6.  Seleccione el nuevo índice en el cuadro de texto **Clave principal o única, o índice seleccionado** .  
   
-7.  En la cuadrícula principal, en **(General)**, seleccione **Tipo** y luego **Índice** en la lista.  
+7.  En la cuadrícula principal, en **(General)** , seleccione **Tipo** y luego **Índice** en la lista.  
   
-8.  Seleccione **Columnas** y luego haga clic en el botón de puntos suspensivos **(...)**.  
+8.  Seleccione **Columnas** y luego haga clic en el botón de puntos suspensivos **(...)** .  
   
 9. En el cuadro de diálogo **Columnas de índice** , debajo de **Nombre de columna**, seleccione las columnas que desea indizar. Puede seleccionar hasta 16 columnas. Para obtener un rendimiento óptimo, no seleccione más de una o dos columnas por cada índice. Para cada columna que seleccione, puede indicar si el índice organiza los valores de esta columna en orden ascendente o descendente.  
   
 10. Cuando haya seleccionado todas las columnas del índice, haga clic en **Aceptar**.  
   
-11. En la cuadrícula, en **(General)**, seleccione **Es Unique** y luego **Sí** en la lista.  
+11. En la cuadrícula, en **(General)** , seleccione **Es Unique** y luego **Sí** en la lista.  
   
 12. Opcional: en la cuadrícula principal, debajo de **Diseñador de tablas**, seleccione **Omitir claves duplicadas** y elija **Sí** en la lista. Haga esto si desea omitir los intentos de agregar datos que crearían una clave duplicada en el índice único.  
   
@@ -138,13 +137,13 @@ ms.locfileid: "52515082"
   
 3.  Expanda la tabla en la que desea crear un índice único.  
   
-4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
+4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...** .  
   
 5.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
 6.  Active la casilla **Único** .  
   
-7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
+7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...** .  
   
 8.  En el cuadro de diálogo **Seleccionar columnas de**_nombre\_tabla_, active las casillas de las columnas de tabla que se van a agregar al índice único.  
   

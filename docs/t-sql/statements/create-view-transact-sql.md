@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f0e93aaff4ed0f8eb02de0acb3e9362c1a390a1
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938882"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +147,7 @@ OR ALTER
  Cifra las entradas de [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contienen el texto de la instrucción CREATE VIEW. El uso de WITH ENCRYPTION evita que la vista se publique como parte de la replicación de SQL Server.  
   
  SCHEMABINDING  
- Enlaza la vista al esquema de las tablas subyacentes. Cuando se especifica SCHEMABINDING, las tablas base no se pueden modificar de una forma que afecte a la definición de la vista. En primer lugar, se debe modificar o quitar la propia definición de la vista para quitar las dependencias en la tabla que se va a modificar. Cuando se usa SCHEMABINDING, *select_statement* debe incluir los nombres en dos partes (_schema_**.**_object_) de las tablas, las vistas o las funciones definidas por el usuario a las que se hace referencia. Todos los objetos a los que se hace referencia se deben encontrar en la misma base de datos.  
+ Enlaza la vista al esquema de las tablas subyacentes. Cuando se especifica SCHEMABINDING, las tablas base no se pueden modificar de una forma que afecte a la definición de la vista. En primer lugar, se debe modificar o quitar la propia definición de la vista para quitar las dependencias en la tabla que se va a modificar. Cuando se usa SCHEMABINDING, *select_statement* debe incluir los nombres en dos partes (_schema_ **.** _object_) de las tablas, las vistas o las funciones definidas por el usuario a las que se hace referencia. Todos los objetos a los que se hace referencia se deben encontrar en la misma base de datos.  
   
  Las vistas o las tablas que participan en una vista creada con la cláusula SCHEMABINDING no se pueden quitar a menos que se quite o cambie esa vista de forma que deje de tener un enlace de esquema. En caso contrario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error. Además, la ejecución de las instrucciones ALTER TABLE en tablas que participan en vistas que tienen enlaces de esquema provoca un error si estas instrucciones afectan a la definición de la vista.  
   
@@ -367,7 +366,7 @@ GO
   
 ```  
   
-### <a name="b-using-with-encryption"></a>b. Usar WITH ENCRYPTION  
+### <a name="b-using-with-encryption"></a>B. Usar WITH ENCRYPTION  
  En el siguiente ejemplo se utiliza la opción `WITH ENCRYPTION` y se muestran columnas calculadas, columnas con el nombre cambiado y varias columnas.  
   
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

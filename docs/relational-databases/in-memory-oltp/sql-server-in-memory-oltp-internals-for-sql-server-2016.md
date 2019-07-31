@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
-ms.openlocfilehash: 3feb7a2f177369a4b11ddbcd55c94c48e9808bd8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ca36f8c9716b9160b4d6eaeee26201bf03b42927
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111742"
 ---
 # <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>Parámetros internos de OLTP en memoria de SQL Server para SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ Esta eficaz tecnología permite sacar partido de grandes cantidades de memoria y
   
 **Revisores técnicos:** Sunil Agarwal y Jos de Bruijn  
   
-**Publicado:** junio de 2016  
+**Fecha de publicación:** Junio de 2016  
   
 **Se aplica a:** SQL Server 2016  
   

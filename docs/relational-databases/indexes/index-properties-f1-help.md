@@ -18,14 +18,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909713"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47846379"
  Muestra el nombre del índice. Este campo es de solo lectura para un índice existente. Si está creando un nuevo índice, escriba el nombre del índice.  
   
  **Tipo de índice**  
- Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **Clúster**, **No agrupado**, **XML principal**, **XML secundario**, **Espacial**o **Almacén de columnas en clúster**o **Almacén de columnas no clúster**.  
+ Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **En clúster**, **No clúster**, **XML primario**, **XML secundario**, **Espacial**, **Almacén de columnas en clúster** o **Almacén de columnas no clúster**.  
   
  **Nota** : solo se permite un índice clúster por tabla. Solo se permite un índice de almacén de columnas optimizado de memoria one xVelocity por tabla.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "47846379"
 ### <a name="bounding-box"></a>Cuadro de límite  
  El *cuadro de límite* es el perímetro de la cuadrícula de nivel superior de un plano geométrico. Los parámetros de cuadro de límite solo existen en la teselación de cuadrícula de geometría. Estos parámetros no están disponibles si **Esquema de teselación** es **Cuadrícula de geografía**.  
   
- El panel muestra las coordenadas **(**_X-min_**,**_Y-min_**)** y **(**_X-max_**,**_Y-max_**)** del cuadro de límite. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo **geometry** , deberá especificar los valores de las coordenadas.  
+ El panel muestra las coordenadas **(** _X-min_ **,** _Y-min_ **)** y **(** _X-max_ **,** _Y-max_ **)** del cuadro de límite. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo **geometry** , deberá especificar los valores de las coordenadas.  
   
  **X-min**  
  La coordenada x de la esquina inferior izquierda del cuadro de límite.  
@@ -242,7 +241,7 @@ ms.locfileid: "47846379"
  **Expresión de filtro**  
  Define qué filas de datos para incluir en el índice filtrado. Por ejemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

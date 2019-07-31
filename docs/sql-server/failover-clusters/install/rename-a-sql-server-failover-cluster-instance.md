@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 690015c15b49023eba770c917dd02c984b2654f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 612f0171cbb7786374923dc5ed8c257224474a21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063878"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Cambiar el nombre de una instancia de clúster de conmutación por error de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "52543942"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Consideraciones adicionales después de la operación de cambio de nombre  
  Después de cambiar el nombre de red en clúster del clúster de conmutación por error, hay que comprobar y seguir las siguientes instrucciones para conseguir que todos los escenarios del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]funcionen.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :** compruebe y realice las acciones adicionales siguientes para el Servicio Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+ **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servicio del Agente:** compruebe y realice las acciones adicionales siguientes para el Servicio Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   Corrija la configuración del Registro si el Agente SQL se configura para el reenvío de eventos. Para obtener más información, vea [Designar un servidor de reenvío de eventos &#40;SQL Server Management Studio&#41;](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   
@@ -82,7 +81,7 @@ ms.locfileid: "52543942"
   
 -   Actualizar los pasos de trabajo que dependen del nombre de servidor. Para más información, consulte [Manage Job Steps](../../../ssms/agent/manage-job-steps.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

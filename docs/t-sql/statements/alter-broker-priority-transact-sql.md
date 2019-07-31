@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cff00447a3a3bb76c5766fc8799a9f85c3d23144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065998"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR CONVERSATION
  Especifica el nombre de la prioridad de conversación que se va a modificar. El nombre debe hacer referencia a una prioridad de conversación de la base de datos actual.  
   
  SET  
- Especifica los criterios para determinar si la prioridad de conversación se aplica a una conversación. SET es necesario y debe incluir al menos un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL.  
+ Especifica los criterios para determinar si la prioridad de conversación se aplica a una conversación. SET es necesario y debe contener al menos un criterio: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME o PRIORITY_LEVEL.  
   
  CONTRACT_NAM = {*ContractName* | **ANY**}  
  Especifica el nombre de un contrato que se va a usar como criterio para determinar si la prioridad de conversación se aplica a una conversación. *ContractName* es un identificador de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y debe especificar el nombre de un contrato en la base de datos actual.  
@@ -89,7 +88,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Especifica el nombre de un servicio que se va a usar como criterio para determinar si la prioridad de conversación se aplica a un extremo de una conversación.  
   
- *RemoteServiceName* es un literal de tipo **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con la cadena *RemoteServiceName*. En la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. El servicio de destino puede estar en la instancia actual de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en una instancia remota de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* es un literal de tipo **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa una comparación byte a byte para buscar una coincidencia con la cadena *RemoteServiceName*. En la comparación se distinguen mayúsculas y minúsculas, y no se considera la intercalación actual. El servicio de destino puede estar en la instancia actual de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en una instancia remota de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  "*RemoteServiceName*"  
  Especifica la prioridad de conversación que se va a asignar a:  
@@ -139,7 +138,7 @@ ALTER BROKER PRIORITY SimpleContractPriority
          PRIORITY_LEVEL = 8);  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  

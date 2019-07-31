@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d861c45f8f91a9026285552f30434250bb89d515
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115827"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Opciones de la tarea Realizar copia de seguridad de la base de datos para el plan de mantenimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51216533"
  Cree una nueva conexión de servidor que utilizará al realizar esta tarea. El cuadro de diálogo **Nueva conexión** se describe a continuación.  
   
  **Bases de datos**  
- Especifique las bases de datos a las que afecta esta tarea. Cuando se selecciona, la lista desplegable proporciona las opciones siguientes: **Todas las bases de datos**, **Todas las bases de datos del sistema**, **Todas las bases de datos de usuario**, **Bases de datos específicas**.  
+ Especifique las bases de datos a las que afecta esta tarea. Cuando se selecciona, la lista desplegable proporciona las siguientes opciones: **Todas las bases de datos**, **Todas las bases de datos del sistema**, **Todas las bases de datos de usuario**, **Estas bases de datos**.  
   
  **Todas las bases de datos**  
  Genera un plan de mantenimiento que ejecuta tareas de mantenimiento en todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -135,7 +134,7 @@ ms.locfileid: "51216533"
  **Contraseña**  
  Proporcione una contraseña para que se utilice en la autenticación. Esta opción no está disponible.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
   

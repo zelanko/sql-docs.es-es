@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067573"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Límites de la capacidad de cálculo de cada edición de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ Estos límites se aplican a una sola instancia de [!INCLUDE[ssNoVersion](../incl
   
 En la siguiente tabla se especifican los límites de la capacidad de cálculo para una sola instancia de cada edición de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]:  
   
-|Edición de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Capacidad máxima de cálculo para una sola instancia ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidad máxima de cálculo para una sola instancia (AS, RS)|  
+|Edición de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Capacidad máxima de cálculo para una sola instancia ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Capacidad máxima de cálculo para una sola instancia (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: licencia basada en núcleo\*|Sistema operativo máximo|Sistema operativo máximo|  
 |Desarrollador|Sistema operativo máximo|Sistema operativo máximo|  

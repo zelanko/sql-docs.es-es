@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: df99a74b9c26e13c9fc2037c9d540ee844bfebfb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136489"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -215,7 +214,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 **Solución alternativa:** Ninguno. No se fie del valor de worker_time notificado en las DMV de estadísticas de ejecución para las consultas de ejecución breve en procedimientos almacenados compilados de forma nativa.  
   
 #### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Error con SHOWPLAN_XML para los procedimientos almacenados compilados de forma nativa que contienen expresiones largas  
-**Problema:** si un procedimiento almacenado compilado de forma nativa contiene una expresión larga, al obtener SHOWPLAN_XML para el procedimiento, ya sea con la opción T-SQL establecida en SHOWPLAN_XML ON o mediante la opción "Mostrar plan de ejecución estimado" de Management Studio, puede aparecer el error siguiente:  
+**Problema:** si un procedimiento almacenado compilado de forma nativa contiene una expresión larga, al obtener SHOWPLAN_XML para el procedimiento, ya sea con la opción T-SQL establecida en SET SHOWPLAN_XML ON o mediante la opción "Mostrar plan de ejecución estimado" de Management Studio, puede aparecer el error siguiente:  
   
 ```  
 Msg 41322. MAT/PIT export/import encountered a failure for memory  
@@ -301,7 +300,7 @@ Si ya tiene el problema con valores no coincidentes de instance_id, la única ma
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo nativo no se puede ejecutar en paralelo bajo ninguna de las siguientes condiciones:  
   
 -   Complemento de[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint    
--   Servicio compartido de SharePoint de[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]   
+-   Servicio compartido de SharePoint de[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]  
   
 La instalación en paralelo impide el inicio del servicio de Windows en modo nativo [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Aparecerán mensajes de error, similares a los que se muestran aquí, en el registro de eventos de Windows:  
   

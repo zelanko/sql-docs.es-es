@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34f30a8eb8a2d894b1de0a62f5151956c80f5653
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 3e2b32c6804de71d9af074de15b8506c493dfa99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030484"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Compatibilidad de DAC con las versiones y objetos de SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,8 +59,8 @@ ms.locfileid: "53588729"
 |TABLE: Restricción, predeterminada|TABLE: Restricción, clave externa|  
 |TABLE: Restricción, índice|TABLE: Restricción, clave principal|  
 |TABLE: Restricción, única|TRIGGER: DML|  
-|TIPO: HIERARCHYID, GEOMETRY, GEOGRAPHY|TIPO: Tipo de datos definido por el usuario|  
-|TIPO: Tipo de tabla definida por el usuario|User|  
+|TYPE: HIERARCHYID, GEOMETRY, GEOGRAPHY|TYPE: Tipo de datos definido por el usuario|  
+|TYPE: Tipo de tabla definida por el usuario|User|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> Compatibilidad de aplicaciones de la capa de datos con versiones de SQL Server  

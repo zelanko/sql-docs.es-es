@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87bd6d36f7a17f3a5d8e1f9ff26de645353b3fdc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1b602c83e87c10a1f7ceca9bd874adbfd441370b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904910"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Clústeres de conmutación por error de Windows Server con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "51699656"
   
 -   **Coordinación de conmutación por error.** Cada uno de los recursos se configura para ser hospedado en un nodo principal y se pueden transferir automática o manualmente a uno o varios nodos secundarios. Una directiva de conmutación por error basada en el estado controla la transferencia automática de la propiedad de recursos entre los nodos. Los nodos y las aplicaciones hospedadas son informadas cuando se produce la conmutación por error para puedan reaccionar correctamente.  
   
- Para más información, consulte: [Failover Clustering Overview - Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)(Introducción a los clústeres de conmutación por error - Windows Server).  
+ Para obtener más información, vea: [Información general de clústeres de conmutación por error: Windows Server](https://technet.microsoft.com/library/hh831579(v=ws.11).aspx)  
   
 ##  <a name="AlwaysOnWsfcTech"></a> Tecnologías de SQL Server AlwaysOn y WSFC  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* es una solución de alta disponibilidad y recuperación ante desastres que aprovecha las ventajas de WSFC. Las características de Always On proporcionan soluciones integradas y flexibles que aumentan la disponibilidad de las aplicaciones, proporcionan mejores réditos en inversiones de hardware y simplifican la implementación y administración de alta disponibilidad.  
@@ -82,16 +81,16 @@ ms.locfileid: "51699656"
   
 > **IMPORTANTE:** Para aprovechar las tecnologías de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn, se deben aplicar varios requisitos previos relacionados con WSFC.  
 >   
->  Para más información, consulte: [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+>  Para obtener más información, vea: [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
 ### <a name="instance-level-high-availability-with-always-on-failover-cluster-instances"></a>Alta disponibilidad en el nivel de instancia con instancias de clúster de conmutación por error AlwaysOn  
  Una *instancia de clúster de conmutación por error* (FCI) de Always On es una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está instalada en los nodos de un WSFC. Este tipo de instancia depende de los recursos de almacenamiento y el nombre de red virtual. El almacenamiento puede usar Canal de fibra, iSCSI, FCoE o SAS para almacenamiento en disco compartido o usar almacenamiento conectado localmente con [Espacios de almacenamiento directo (S2D)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview). El recurso de nombre de red virtual depende de una o más direcciones IP virtuales, cada una en una subred diferente. El servicio SQL Server y el servicio del Agente SQL Server también son recursos, y ambos dependen de los recursos de nombre de red virtual y almacenamiento.  
   
  En caso de conmutación por error, el servicio de WSFC transfiere la propiedad de los recursos de la instancia a un nodo de conmutación por error designado. La instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vuelve a iniciarse en el nodo de conmutación por error y las bases de datos se recuperan de la forma habitual. En cualquier momento determinado, solo un nodo del clúster puede hospedar la FCI y los recursos subyacentes.  
   
-> **NOTA:**  Una instancia de clúster de conmutación por error AlwaysOn requiere almacenamiento en disco compartido simétrico como una red de área de almacenamiento (SAN) o un recurso compartido de archivos SMB.  Los volúmenes de almacenamiento en disco compartido deben estar disponible para todos los nodos potenciales de conmutación por error en el clúster de WSFC.  
+> **NOTA:**  Una instancia de clúster de conmutación por error Always On requiere almacenamiento en disco compartido simétrico como una red de área de almacenamiento (SAN) o un recurso compartido de archivos SMB.  Los volúmenes de almacenamiento en disco compartido deben estar disponible para todos los nodos potenciales de conmutación por error en el clúster de WSFC.  
   
- Para más información, consulte: [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
+ Para obtener más información, vea: [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
   
 ### <a name="database-level-high-availability-with-includesshadrincludessshadr-mdmd"></a>Alta disponibilidad en el nivel de base de datos con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]  
  Un *grupo de disponibilidad* Always On (AG) es un conjunto de bases de datos de uno o más usuarios que se conmutan por error conjuntamente. Un grupo de disponibilidad consta de una *réplica de disponibilidad* principal y de una a cuatro réplicas secundarias que se mantienen mediante el movimiento de datos basado en registros de SQL Server para la protección de datos sin necesidad de almacenamiento compartido. Cada réplica está hospedada en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en otro nodo del WSFC. El grupo de disponibilidad y un nombre de red virtual correspondiente se registran como recursos del clúster de WSFC.  
@@ -106,7 +105,7 @@ ms.locfileid: "51699656"
 >   
 >  Una instancia de clúster de conmutación por error (FCI) se puede usar junto con un grupo de disponibilidad para mejorar la disponibilidad de una réplica de disponibilidad. Sin embargo, para evitar posibles condiciones de carrera en el clúster de WSFC, la conmutación automática por error del grupo de disponibilidad no se admite en o desde una réplica de disponibilidad hospedada en una FCI.  
   
- Para más información, consulte: [Información general de los grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
+ Para obtener más información, vea: [Información general de los grupos de disponibilidad Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcHealth"></a> Seguimiento de estado y conmutación por error de WSFC  
  La alta disponibilidad para una solución de AlwaysOn se consigue mediante la supervisión de estado proactiva de los recursos de clúster de WSFC físicos y lógicos, junto con la conmutación por error automática y la reconfiguración de hardware redundante.  Un administrador del sistema también puede iniciar una *conmutación por error manual* de un grupo de disponibilidad o una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entre nodos.  
@@ -116,7 +115,7 @@ ms.locfileid: "51699656"
   
  La conmutación por error de la réplica de un grupo de disponibilidad no afecta a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] subyacente.  La conmutación por error de una FCI mueve las réplicas hospedadas de grupo de disponibilidad con la instancia.  
   
- Para obtener más información, vea: [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
+ Para obtener más información, vea: [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
 ### <a name="wsfc-resource-health-detection"></a>Detección del estado de los recursos de WSFC  
  Cada recurso de un WSFC puede notificar su condición y estado periódicamente o a petición. Una variedad de circunstancias puede indicar el error de recursos. Por ejemplo, una interrupción del suministro eléctrico, errores de disco o de memoria, errores de la comunicación de red o servicios que no responden.  
@@ -132,7 +131,7 @@ ms.locfileid: "51699656"
   
 > **SUGERENCIA** Se recomienda tener siempre un número impar de votos de cuórum en un WSFC.  A efectos de los votos de quórum, no es necesario que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esté instalado en todos los nodos del clúster. Un servidor adicional puede actuar como miembro de quórum, o el modelo de quórum de WSFC se puede configurar para que se use un recurso compartido de archivos remoto como factor de desempate.  
 >   
->  Para más información, consulte [Configuración de los votos y modos de cuórum WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
+>  Para obtener más información, vea: [Configuración de los votos y modos de cuórum WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
   
 ### <a name="disaster-recovery-through-forcing-quorum"></a>Recuperación ante desastres mediante cuórum forzado  
  Según las prácticas operativas y la configuración del WSFC, se puede incurrir en conmutaciones por error automáticas y manuales manteniendo al mismo tiempo una solución sólida y con tolerancia a errores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On. Pero si un cuórum de los nodos con derecho a voto del clúster de WSFC no puede comunicarse con otro, o si el WSFC tiene un error en la validación del estado, el WSFC puede pasar a estar sin conexión.  
@@ -141,7 +140,7 @@ ms.locfileid: "51699656"
   
  Posteriormente, también debe realizarse una serie de pasos para volver a configurar el WSFC, recuperar las réplicas de base de datos afectadas y restablecer un nuevo cuórum.  
   
- Para más información, consulte: [Recuperación ante desastres del clúster WSFC mediante cuórum forzado (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
+ Para obtener más información, vea: [Recuperación ante desastres del clúster WSFC mediante cuórum forzado (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 ##  <a name="AlwaysOnWsfcRelationship"></a> Relación de los componentes de SQL Server AlwaysOn con WSFC  
  Existen varios niveles de relaciones entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn y las características y los componentes de WSFC.  
@@ -173,7 +172,7 @@ ms.locfileid: "51699656"
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Tecnologías de Windows Server: clústeres de conmutación por error](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
+-   [Tecnologías de Windows Server:  Clústeres de conmutación por error](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
 
 -   [Información general de los Espacios de almacenamiento directo \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
 
@@ -183,7 +182,7 @@ ms.locfileid: "51699656"
   
 -   [Cmdlet de clúster de conmutación por error Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Instancias de clúster de conmutación por error de AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Configuración de los votos y modos de cuórum WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   

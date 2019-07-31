@@ -1,5 +1,5 @@
 ---
-title: 'Copias de seguridad y restauración: interoperabilidad y coexistencia (SQL Server) | Microsoft Docs'
+title: 'Copia de seguridad y restauración: interoperabilidad y coexistencia (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0ba345be62ae0efdcb13fe35103c472a17bef952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940878"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copias de seguridad y restauración: interoperabilidad y coexistencia (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copia de seguridad y restauración: interoperabilidad y coexistencia (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describen las consideraciones de copias de seguridad y restauración para varias características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Entre estas características se incluyen restauración de archivos e inicio de bases de datos, restauración en línea e índices deshabilitados, creación de reflejo de la base de datos, y restauración por etapas e índices de texto completo.  
@@ -51,7 +50,7 @@ ms.locfileid: "47723793"
   
  Si se detecta algún problema durante el inicio de la base de datos, no se puede llevar a cabo la restauración y la base de datos se marca como SUSPECT. Si es posible aislar el problema en un archivo o una serie de archivos, el administrador de la base de datos puede dejar sin conexión los archivos en cuestión e intentar reiniciar la base de datos. Para dejar sin conexión un archivo se puede utilizar la siguiente instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) :  
   
- ALTER DATABASE *nombre_base_de_datos* MODIFY FILE (NAME **='***nombredearchivo***'**, OFFLINE)  
+ ALTER DATABASE *nombre_base_de_datos* MODIFY FILE (NAME **='***nombredearchivo***'** , OFFLINE)  
   
  En caso de iniciarse correctamente, los grupos de archivos que contengan algún archivo sin conexión seguirán sin conexión.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "47723793"
 ##  <a name="FileBnRandCompression"></a> Copias de seguridad y restauración, y compresión de archivos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la compresión de datos del sistema de archivos NTFS de grupos de archivos y bases de datos de solo lectura.  
   
- Los archivos NTFS comprimidos admiten la restauración de archivos en un grupo de archivos de solo lectura. Las copias de seguridad y restauración de estos grupos de archivos funciona esencialmente de la misma manera que con cualquier grupo de archivos de solo lectura, con las siguientes excepciones:   
+ Los archivos NTFS comprimidos admiten la restauración de archivos en un grupo de archivos de solo lectura. Las copias de seguridad y restauración de estos grupos de archivos funciona esencialmente de la misma manera que con cualquier grupo de archivos de solo lectura, con las siguientes excepciones:  
   
 -   La restauración de un archivo de lectura y escritura (incluido el principal o los archivos de registro de una base de datos de lectura/escritura) en un volumen comprimido genera y muestra un error.  
   
@@ -132,9 +131,9 @@ ms.locfileid: "47723793"
   
 -   [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[Secundarias activas: copia de seguridad en las réplicas secundarias \(Grupos de disponibilidad AlwaysOn\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[Secundarias activas: copia de seguridad en réplicas secundarias \(grupos de disponibilidad Always On\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

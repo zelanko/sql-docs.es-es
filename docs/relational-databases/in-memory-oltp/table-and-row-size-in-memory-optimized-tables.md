@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94ac3917539515020ea9ecad1ab196cdcd017acc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063144"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,7 +136,7 @@ En la tabla siguiente se describe el cálculo del tamaño del cuerpo de fila, in
 |Columnas de tipo profundo de longitud variable *tamaño calculado*|SUM(*tamaño calculado de columnas de tipo profundo de longitud variable*)<br /><br /> El tamaño calculado de cada columna es el siguiente:<br /><br /> i para varchar(i) y varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Esta fila solo se aplica al *tamaño del texto calculado de la fila*.<br /><br /> Las columnas de tipo profundo de longitud variable son de tipo varchar(i), nvarchar(i) o varbinary(i). El tamaño calculado se determina mediante la longitud máxima (i) de la columna.|  
 |Columnas de tipo profundo de longitud variable *tamaño real*|SUM(*tamaño real de columnas de tipo profundo de longitud variable*)<br /><br /> El tamaño real de cada columna es el siguiente:<br /><br /> n, donde n es el número de caracteres almacenados en la columna, para varchar(i).<br /><br /> 2 * n, donde n es el número de caracteres almacenados en la columna, para nvarchar(i).<br /><br /> n, donde n es el número de bytes almacenados en la columna, para varbinary(i).|Esta fila solo se aplica al *tamaño del texto real de la fila*.<br /><br /> El tamaño real se determina con los datos almacenados en las columnas de la fila.|   
   
-##  <a name="bkmk_ExampleComputation"></a> Ejemplo: Cálculo del tamaño de fila y tabla  
+##  <a name="bkmk_ExampleComputation"></a> Ejemplo: cálculo del tamaño de fila y tabla  
  Para los índices hash, el número de cubos real se redondea a la potencia más cercana de 2. Por ejemplo, si el valor `bucket_count` especificado es 100 000, el número real de cubos para el índice es 131 072.  
   
 Considere una tabla Orders con la definición siguiente:  
@@ -205,7 +204,7 @@ A continuación, vamos a calcular [tamaño del cuerpo real de la fila]:
   
     -   El relleno total es 24 - 22 = 2 bytes.  
   
--   No hay columnas de tipo profundo de longitud fija (columnas de tipo profundo de longitud fija: 0).  
+-   No hay columnas de tipo profundo de longitud fija (columnas de tipo profundo de longitud fija: 0.).  
   
 -   El tamaño real de la columna de tipo profundo es 2 * 78 = 156. La columna de tipo profundo único `OrderDescription` tiene el tipo `nvarchar`.  
   
@@ -240,7 +239,7 @@ where object_id = object_id('dbo.Orders')
 
 La entrada de blog [What's new for In-Memory OLTP in SQL Server 2016 since CTP3 (Novedades de OLTP en memoria en SQL Server 2016 desde CTP3)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) detalla algunas de estas particularidades.   
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

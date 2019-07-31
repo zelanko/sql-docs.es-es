@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03acf5db82c21a66e2fbd8337713b6989ce36a31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a115dafb386323bc1f4738720e7576657d22543
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403070"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316688"
 ---
 # <a name="azure-storage-connection-manager"></a>Administrador de conexiones de Almacenamiento de Azure
 
@@ -38,6 +37,6 @@ Están disponibles las propiedades siguientes.
 - **Autenticación:** especifica el método de autenticación que se va a utilizar. Se admite la autenticación **AccessKey** y **ServicePrincipal**.
     - **AccessKey:** con este método de autenticación, especifique el valor de **Clave de cuenta**.
     - **ServicePrincipal:** con este método de autenticación, especifique los valores de **Id. de la aplicación**, **Clave de aplicación** e **Id. de inquilino** de la entidad de servicio.
-      Se debe asignar el rol **Colaborador de datos de Storage Blob** a la entidad de servicio en la cuenta de almacenamiento.
+      Para que la **conexión de prueba** funcione, se debe asignar al menos el rol **Lector de datos de Storage Blob** a la entidad de servicio en la cuenta de almacenamiento.
       Consulte [esta](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) página para obtener más información.
 - **Entorno:** especifica el entorno de nube que hospeda la cuenta de almacenamiento.

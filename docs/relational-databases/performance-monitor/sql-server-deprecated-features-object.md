@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 0f0dec8faf609eeef7d82e2d746a0f84aec6a6de
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093592"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ En la tabla siguiente se describe el objeto de rendimiento **Características de
 |Instancias del contador Características desusadas de SQL Server|Descripción|  
 |------------------------------------------------------|-----------------|  
 |'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|Se encontró un identificador que no contenía ningún carácter a parte de #. Utilice al menos un carácter adicional. Se produce una vez por cada compilación.|  
-|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplace por `SELECT column_list FROM` *< nombre_función>*`()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
+|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplace por `SELECT column_list FROM` *< nombre_función>* `()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)` con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
 |"\@" y nombres que empiezan por "\@\@" como identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Se encontró un identificador que comenzaba por \@ o \@\@. No use \@, \@v@ ni ningún nombre que comience por \@\@ como identificadores. Se produce una vez por cada compilación.|  
 |ADDING TAPE DEVICE|Se encontró la característica en desuso sp_addumpdevice'**tape**'. Use sp_addumpdevice'**disk**' en su lugar. Se produce una vez en cada uso.|  
 |ALL Permission|Número total de veces que se encontró la sintaxis GRANT ALL, DENY ALL o REVOKE ALL. Modifique la sintaxis para denegar permisos concretos. Se produce una vez por cada consulta.|  

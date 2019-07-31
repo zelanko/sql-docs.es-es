@@ -1,5 +1,5 @@
 ---
-title: 'TM: Rollback Tran Completed, clase de eventos | Microsoft Docs'
+title: 'TM: Rollback Tran Completed (clase de eventos) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72f4b3ce6e4e10964c6f3a31fb532dc4805641ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c56cc6335bfb30d6edd82c2d4456603df1bab9a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125145"
 ---
-# <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed, clase de eventos
+# <a name="tm-rollback-tran-completed-event-class"></a>TM: Clase de eventos Rollback Tran Completed
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La clase de eventos TM: Rollback Tran Completed indica que ha finalizado una solicitud ROLLBACK TRANSACTION. La solicitud fue enviada desde el cliente mediante la interfaz de administración de transacciones. En la columna EventSubClass se indica si se iniciará una nueva transacción tras revertir la transacción actual.  
   
-## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>Columnas de datos de la clase de evento TM: Rollback Tran Completed  
+## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM: Rollback Tran Completed (columnas de datos de la clase de eventos)  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -33,8 +32,8 @@ ms.locfileid: "47748573"
 |DatabaseID|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |Error|**int**|Número de error de un evento dado. Con frecuencia, es el número de error almacenado en la tabla sys.messages.|31|Sí|  
-|EventClass|**int**|Tipo de evento = 188.|27|no|  
-|EventSequence|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|no|  
+|EventClass|**int**|Tipo de evento = 188.|27|No|  
+|EventSequence|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
 |EventSubClass|**int**|Tipo de la subclase de eventos.<br /><br /> 1=Revertir<br /><br /> 2=Revertir y comenzar|21|Sí|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -44,7 +43,7 @@ ms.locfileid: "47748573"
 |NTDomainName|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |IdSolicitud|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
+|ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
@@ -53,7 +52,7 @@ ms.locfileid: "47748573"
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  

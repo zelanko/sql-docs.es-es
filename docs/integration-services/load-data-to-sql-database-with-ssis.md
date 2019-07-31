@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57c9f725ec8f7c2a26a110a6d317bd5ec1de118
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054512"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Carga de datos en SQL Server o Azure SQL Database con SQL Server Integration Services (SSIS)
 
@@ -64,7 +63,7 @@ Para realizar este tutorial, necesita lo siguiente:
       o Administrador de configuración de
    - **Una instancia de SQL Server**. SQL Server se ejecuta en local o en una máquina virtual de Azure. Para descargar una edición gratuita de evaluación o desarrollador de SQL Server, vea [Descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).
 
-5. **Datos de ejemplo**. En este tutorial se usan datos de ejemplo almacenados en SQL Server en la base de datos de ejemplo AdventureWorks como los datos de origen. Para obtener la base de datos de ejemplo AdventureWorks, vea [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases] (Bases de datos de ejemplo de AdventureWorks).
+5. **Datos de ejemplo**. En este tutorial se usan datos de ejemplo almacenados en SQL Server en la base de datos de ejemplo AdventureWorks como los datos de origen. Para obtener la base de datos de ejemplo AdventureWorks, vea [Bases de datos de ejemplo de AdventureWorks][AdventureWorks 2014 Sample Databases].
 6. **Una regla de firewall** si se van a cargar datos en SQL Database. Tiene que crear una regla de firewall en SQL Database con la dirección IP del equipo local para cargar datos en SQL Database.
 
 ## <a name="create-a-new-integration-services-project"></a>Crear un proyecto de Integration Services

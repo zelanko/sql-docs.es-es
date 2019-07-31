@@ -8,13 +8,12 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
-ms.openlocfilehash: b1814c42d2177d3f030e172dea1d9d64a9ca8ecd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc04c25496b10e76eed70f11a37499d4d2395bf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049753"
 ---
 # <a name="sql-server-monitoring-partners"></a>Asociados de supervisión de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,16 +29,16 @@ Para supervisar los servicios de SQL Server, elija entre una amplia variedad de 
 
 | Asociado | Descripción | Vínculos |
 | --- | --- | --- | --- |
-|[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager es una solución de diagnóstico y supervisión de rendimiento eficaz que alerta de forma proactiva a los administradores de problemas de mantenimiento, rendimiento y disponibilidad en entornos de SQL Server desde una consola central.<br><br>[Requisitos del sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sitio web][idera_website]<br>[Twitter][idera_twitter]<br>[Vídeo][idera_youtube] | |
-|[![quest][3]][quest_website] |**Quest**<br>Spotlight on SQL Server Enterprise: garantice un rendimiento máximo en todo momento con una supervisión, un diagnóstico y una optimización sin parangón de entornos de SQL Server. Spotlight proporciona acceso a los detalles que necesita para un ajuste óptimo de las bases de datos de SQL Server. Obtenga información general intuitiva de mantenimiento y rendimiento, alertas y acciones automatizadas y compatibilidad con dispositivos móviles.|[Marketplace][quest_marketplace]<br>[Sitio web][quest_website]<br>[Vídeo][quest_video] | |
+|[![idera][1]][idera_website] |**IDERA**<br>SQL Diagnostic Manager es una solución de diagnóstico y supervisión de rendimiento eficaz que alerta de forma proactiva a los administradores de problemas de mantenimiento, rendimiento y disponibilidad en entornos de SQL Server desde una consola central.<br><br>[Requisitos del sistema][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[Sitio web][idera_website]<br>[Twitter][idera_twitter]<br>[Vídeo]idera_youtube[] | |
+|[![quest][3]][quest_website] |**Quest**<br>Spotlight on SQL Server Enterprise: garantice un rendimiento máximo en todo momento con una supervisión, un diagnóstico y una optimización sin parangón de entornos de SQL Server. Spotlight proporciona acceso a los detalles que necesita para un ajuste óptimo de las bases de datos de SQL Server. Obtenga información general intuitiva de mantenimiento y rendimiento, alertas y acciones automatizadas y compatibilidad con dispositivos móviles.|[Marketplace][quest_marketplace]<br>[Sitio web][quest_website]<br>[Video][quest_video] | |
 |[![redgate][4]][redgate_website]| **Redgate**<br>SQL Monitor de Redgate es una herramienta de supervisión de SQL Server que ayuda a los equipos a conseguir que SQL Server sea más proactivo. No solo alerta de problemas actuales, sino que ofrece la información necesaria para evitar que ocurran en el futuro. Es idóneo para entornos de gran tamaño de SQL Server y garantiza que siempre tenga respuesta para preguntas sobre rendimiento. |[Sitio web][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[Vídeo][redgate_video]| |
-|[![sentryone][2]][sentryone_website] |**SentryOne**<br>Las soluciones de SentryOne permiten a los profesionales de datos de Microsoft lograr un rendimiento excepcional en entornos físicos, virtuales y en la nube. Con SentryOne, los profesionales de datos pueden consolidar sus conjuntos de herramientas, reducir los costos de infraestructura y aumentar la velocidad y la eficacia de la base de datos para conseguir un rendimiento máximo en sus entornos de plataforma de datos de Microsoft, independientemente del tamaño o la complejidad.|<!--[Marketplace][idera_marketplace]<br>-->[Sitio web][sentryone_website]<br>[Hoja de datos][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
-|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>Database Performance Analyzer proporciona visibilidad en varias solicitudes de aplicaciones, instrucciones SQL, recursos de bases de datos, hosts o SO, redes, virtualizaciones y rendimientos de almacenamiento. DPA incorpora el análisis de tiempo de espera para no centrarse solo en el estado y analizar también la velocidad a la que la base de datos responde a solicitudes de aplicaciones. DPA proporciona una cobertura completa para bases de datos independientemente de su implementación, ya sea física, virtual, en la nube o de tipo DBaaS.|[Marketplace][solarwinds_marketplace]<br>[Sitio web][solarwinds_website]<br>[Hoja de datos][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[Vídeo][solarwinds_video]| |
+|[![sentryone][2]][sentryone_website] |**SentryOne**<br>Las soluciones de SentryOne permiten a los profesionales de datos de Microsoft lograr un rendimiento excepcional en entornos físicos, virtuales y en la nube. Con SentryOne, los profesionales de datos pueden consolidar sus conjuntos de herramientas, reducir los costos de infraestructura y aumentar la velocidad y la eficacia de la base de datos para conseguir un rendimiento máximo en sus entornos de plataforma de datos de Microsoft, independientemente del tamaño o la complejidad.|<!--[Marketplace][idera_marketplace]<br>-->[Sitio web][sentryone_website]<br>[Datasheet][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
+|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>Database Performance Analyzer proporciona visibilidad en varias solicitudes de aplicaciones, instrucciones SQL, recursos de bases de datos, hosts o SO, redes, virtualizaciones y rendimientos de almacenamiento. DPA incorpora el análisis de tiempo de espera para no centrarse solo en el estado y analizar también la velocidad a la que la base de datos responde a solicitudes de aplicaciones. DPA proporciona una cobertura completa para bases de datos independientemente de su implementación, ya sea física, virtual, en la nube o de tipo DBaaS.|[Marketplace][solarwinds_marketplace]<br>[Sitio web][solarwinds_website]<br>[Datasheet][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[Vídeo][solarwinds_video]| |
 
 
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información sobre otros asociados, vea los artículos sobre [asociados de alta disponibilidad y recuperación ante desastres][hadr_partners], [asociados de administración][management_partners] y [asociados de desarrollo][dev_partners].
+Para obtener más información sobre otros asociados, vea los artículos sobre [asociados de alta disponibilidad y recuperación ante desastres][hadr_partners], [management partners][management_partners] y [asociados de desarrollo][dev_partners].
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png

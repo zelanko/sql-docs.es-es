@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a682f0d3c8373ea7fc96dd82796108d5d71f26ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a31f23d4de02bd4554d997364a3a5aa26b3d4ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134491"
 ---
 # <a name="create-a-database-mail-account"></a>Crear una nueva cuenta de Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +26,9 @@ ms.locfileid: "51558292"
   
 -   **Antes de empezar:**  [Requisitos previos](#Prerequisites)  
   
--   **Para crear una cuenta de correo electrónico de base de datos con:**  [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para crear una cuenta de Correo electrónico de base de datos, mediante:**  [Asistente para configuración de Correo electrónico de base de datos](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Pasos para configurar el Correo electrónico de base de datos](#FollowUp)  
+-   **Seguimiento:**  [pasos siguientes para configurar el Correo electrónico de base de datos](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -86,8 +85,8 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Pasos para configurar el Correo electrónico de base de datos  
+##  <a name="FollowUp"></a> Seguimiento: pasos siguientes para configurar el Correo electrónico de base de datos  
   
--   [Crear un perfil de correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-profile.md)  
+-   [Crear un perfil de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-profile.md)  
   
   

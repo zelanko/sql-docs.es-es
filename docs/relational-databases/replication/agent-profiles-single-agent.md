@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2eea554acc0276821c31296c91a77ed1987ef72c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69358e8163fffb0cc09e7e910a24ebc47d92a3de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027861"
 ---
 # <a name="agent-profiles-single-agent"></a>Perfiles de agente (un solo agente)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47598515"
  El nombre del perfil.  
   
  **Tipo**  
- Indica el tipo de perfil: **Usuario** (definido por el usuario) o **Sistema** (predefinido).  
+ Tipo de perfil: **Usuario** (definido por el usuario) o **Sistema** (predefinido).  
   
  **Propiedades (...)**  
  Haga clic para ver los valores utilizados por cada parámetro en el perfil del agente.  
@@ -48,7 +47,7 @@ ms.locfileid: "47598515"
  **Cambiar agentes existentes**  
  Seleccione un perfil y, a continuación, haga clic en **Cambiar agentes existentes** para especificar que todos los trabajos existentes de un determinado tipo de agente deben utilizar el perfil seleccionado. Por ejemplo, si ha creado varias suscripciones para una publicación de combinación y desea cambiar el perfil para especificar que el trabajo del Agente de mezcla de cada una de esas suscripciones debe utilizar el **Perfil de agente de conexión lenta**, seleccione ese perfil y, a continuación, haga clic en **Cambiar agentes existentes**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con perfiles del Agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  (Información general sobre los agentes de replicación)  
  [Perfiles del Agente de replicación](../../relational-databases/replication/agents/replication-agent-profiles.md)  

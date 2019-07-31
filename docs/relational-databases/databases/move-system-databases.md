@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100461"
 ---
 # <a name="move-system-databases"></a>Mover bases de datos del sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,9 +146,9 @@ ms.locfileid: "54136125"
   
 1.  Desde el menú **Inicio** , seleccione **Todos los programas**, **Microsoft SQL Server 2005**, **Herramientas de configuración**y, finalmente, haga clic en **Administrador de configuración de SQL Server**.  
   
-2.  En el nodo **Servicios de SQL Server** , haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, **SQL Server (MSSQLSERVER)**) y elija **Propiedades**.  
+2.  En el nodo **Servicios de SQL Server** , haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, **SQL Server (MSSQLSERVER)** ) y elija **Propiedades**.  
   
-3.  En el cuadro de diálogo **Propiedades de (**_nombre_de_instancia_**) de SQL Server** , haga clic en la pestaña **Parámetros de inicio** .  
+3.  En el cuadro de diálogo **Propiedades de (** _nombre_de_instancia_ **) de SQL Server** , haga clic en la pestaña **Parámetros de inicio** .  
   
 4.  En el cuadro **Parámetros existentes**, seleccione el parámetro -d para mover el archivo de datos maestros. Haga clic en **Actualizar** para guardar el cambio.  
   
@@ -192,7 +191,7 @@ ms.locfileid: "54136125"
 ##  <a name="Resource"></a> Mover la base de datos Resource  
  La ubicación de la base de datos Resource es \<*unidad*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.\<*nombreDeInstancia*>\MSSQL\Binn\\. No se puede mover la base de datos.  
   
-##  <a name="Follow"></a> Seguimiento: Después de mover todas las bases de datos del sistema  
+##  <a name="Follow"></a> Seguimiento: después de mover todas las bases de datos del sistema  
  Si ha movido todas las bases de datos del sistema a una nueva unidad o volumen o a otro servidor con una letra de unidad diferente, realice las actualizaciones siguientes.  
   
 -   Cambie la ruta de acceso del registro del Agente SQL Server. Si no actualiza esta ruta de acceso, el Agente SQL Server no se podrá iniciar.  

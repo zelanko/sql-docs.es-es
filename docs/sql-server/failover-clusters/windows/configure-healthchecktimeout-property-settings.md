@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bdb182e2861675cd42d295bd9004cd62198f7687
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cfcb5d25b207af35e9a26b95b86997c803828f3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002473"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Configurar los valores de la propiedad HealthCheckTimeout
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "51702383"
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Limits), [Seguridad](#Security)  
   
--   **Para configurar el valor de HeathCheckTimeout, mediante:**  [PowerShell](#PowerShellProcedure), [Administrador de clústeres de conmutación por error](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **Para configurar el valor de HeathCheckTimeout con:**  [PowerShell](#PowerShellProcedure), [Administrador de clúster de conmutación por error](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -32,7 +31,7 @@ ms.locfileid: "51702383"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se necesitan los permisos ALTER SETTINGS y VIEW SERVER STATE.  
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
@@ -89,7 +88,7 @@ ALTER SERVER CONFIGURATION
 SET FAILOVER CLUSTER PROPERTY HealthCheckTimeout = 15000;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

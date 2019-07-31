@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2c9c2cbb9799447ad3e12cab311a5153d6341045
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902813"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,13 +62,13 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  DATABASE  
  Aplica el ámbito de la notificación de eventos a la base de datos actual. Si se especifica, la notificación se activa cada vez que el evento especificado en la cláusula FOR se produce en la base de datos actual.  
   
- QUEUE   
+ QUEUE  
  Aplica el ámbito de la notificación a la cola especificada en la base de datos actual. Se puede especificar QUEUE solo si también se especifica FOR QUEUE_ACTIVATION o FOR BROKER_QUEUE_DISABLED.  
   
  *queue_name*  
  Es el nombre de la cola a la que se aplica la notificación de eventos. Solo se puede especificar *queue_name* si se ha establecido QUEUE.  
   
- WITH FAN_IN   
+ WITH FAN_IN  
  Indica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que solo envíe un mensaje por evento a un servicio especificado para todas las notificaciones de eventos que:  
   
 -   Se crean en el mismo evento.  
@@ -95,7 +94,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Las conversaciones permanecen abiertas hasta que se quita la notificación de eventos. Algunos errores pueden hacer que las conversaciones se cierren antes. Es posible que la finalización de algunas o todas las conversaciones explícitamente evite que el servicio de destino reciba más mensajes.  
   
- { **'**_broker\_instance\_specifier_**'** | **'current database'** }  
+ { **'** _broker\_instance\_specifier_ **'**  |  **'current database'** }  
  Especifica una instancia de Service Broker en la que se resuelve *broker_service*. Se puede adquirir el valor de un Service Broker específico al realizar una consulta en la columna **service_broker_guid** de la vista de catálogo **sys.databases**. Utilice **'current database'** para especificar la instancia de Service Broker en la base de datos actual. **'current database'** es un literal de cadena que no distingue mayúsculas de minúsculas.  
   
 > [!NOTE]  
@@ -131,7 +130,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  En los ejemplos A y B siguientes, el GUID de la cláusula `TO SERVICE 'NotifyService'` (8140a771-3c4b-4479-8ac0-81008ab17984') es específico para el equipo en el que se configuró el ejemplo. Para esa instancia, ese era el GUID para la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
 >   
->  Para copiar y ejecutar estos ejemplos, necesita reemplazar este GUID por uno de su equipo y su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tal como se ha explicado en la sección Argumentos anterior, puede adquirir el **'**_broker\_instance\_specifier_**'** consultando la columna de service_broker_guid de la vista de catálogo sys.databases.  
+>  Para copiar y ejecutar estos ejemplos, necesita reemplazar este GUID por uno de su equipo y su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tal como se ha explicado en la sección Argumentos anterior, puede adquirir el **'** _broker\_instance\_specifier_ **'** consultando la columna de service_broker_guid de la vista de catálogo sys.databases.  
   
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Crear una notificación de eventos en el ámbito de un servidor  
  En el ejemplo siguiente se crean los objetos necesarios para configurar un servicio de destino utilizando [!INCLUDE[ssSB](../../includes/sssb-md.md)]. El servicio de destino hace referencia al contrato y tipo de mensaje del servicio de inicio específicamente para notificaciones de eventos. Después, se crea una notificación de eventos en el servicio de destino que envía una notificación cada vez que tiene lugar un evento de seguimiento `Object_Created` en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -187,7 +186,7 @@ SELECT * FROM sys.event_notifications
 WHERE name = 'Notify_ALTER_T1';  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Notificaciones de eventos](../../relational-databases/service-broker/event-notifications.md)   
  [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

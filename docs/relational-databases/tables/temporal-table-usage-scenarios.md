@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 621387ca62340818cbe8d5529de17bcdf7e96884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999365"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Escenarios de uso de tablas temporales
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ FROM Employee
 > Si aplica AT TIME ZONE a columnas de período, SQL Server realizará un examen de tabla o índice, lo cual puede resultar muy caro. Evite este tipo de condición en las consultas:  
 > \<columna de periodo>  AT TIME ZONE "\<su zona horaria>"  >  {< | > | =, ...} condición_fecha.  
   
- Vea también: [Querying Data in a System-Versioned Temporal Table (Consulta de los datos de una tabla temporal con control de versiones del sistema)](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
+ Vea también: [Consulta de los datos de una tabla temporal con control de versiones del sistema](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).  
   
 ## <a name="point-in-time-analysis-time-travel"></a>Análisis a un momento dado (viaje en el tiempo)  
  A diferencia de la auditoría de datos, donde el foco está normalmente en los cambios que se produjeron en registros individuales, en escenarios de viaje en el tiempo los usuarios desean ver cómo cambiaron los conjuntos de datos completos a lo largo del tiempo. A veces, el viaje en el tiempo incluye varias tablas temporales relacionadas, cada una de ellas cambiando a un ritmo independiente, para las que desea analizar:  
@@ -427,11 +426,11 @@ FROM CTE
   
  Existen varias categorías de dimensiones de variación lenta basadas en la forma de conservar el historial de cambios:  
   
--   Tipo 0: No se conserva el historial. Los atributos de dimensión reflejan los valores originales.  
+-   Tipo 0:  No se conserva el historial. Los atributos de dimensión reflejan los valores originales.  
   
--   Tipo 1: Los atributos de dimensión reflejan los valores más recientes (los valores anteriores se sobrescriben).  
+-   Tipo 1:  Los atributos de dimensión reflejan los valores más recientes (los valores anteriores se sobrescriben).  
   
--   Tipo 2: Cada versión de miembro de dimensión se representa con una fila independiente en la tabla normalmente con columnas que representan el período de validez.  
+-   Tipo 2:  Cada versión de miembro de dimensión se representa con una fila independiente en la tabla normalmente con columnas que representan el período de validez.  
   
 -   Tipo 3: Mantener el historial limitado para los atributos seleccionados usando columnas adicionales en la misma fila.  
   
@@ -580,7 +579,7 @@ Si un valor recién actualizado no es correcto entonces, en muchos escenarios, l
   
  ![ReparaciónDeUsoTemporal4](../../relational-databases/tables/media/temporalusagerepair4.png "ReparaciónDeUsoTemporal4")  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)   
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Comprobaciones de coherencia del sistema de la tabla temporal](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

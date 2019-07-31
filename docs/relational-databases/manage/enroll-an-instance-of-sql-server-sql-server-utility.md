@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f928fcfc873e1a5e6209338b075a9df0ff543691
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115416"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscribir una instancia de SQL Server (Utilidad de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,12 +88,12 @@ ms.locfileid: "52509793"
 -   [Inscripción de la instancia de SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introducción al Asistente Inscribir instancia  
- Para iniciar el asistente, expanda el árbol explorador de la utilidad en un punto de control de la utilidad, haga clic con el botón derecho en **Instancias administradas** y seleccione **Agregar instancia administrada...**.  
+ Para iniciar el asistente, expanda el árbol explorador de la utilidad en un punto de control de la utilidad, haga clic con el botón derecho en **Instancias administradas** y seleccione **Agregar instancia administrada...** .  
   
  Para continuar, haga clic en **Siguiente**.  
   
 ##  <a name="Instance_name"></a> Especificar la instancia de SQL Server  
- Para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el diálogo de conexión, haga clic en **Conectar...**. Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia. Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el diálogo de conexión, haga clic en **Conectar...** . Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia. Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
   
  Para continuar, haga clic en **Siguiente**.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "52509793"
 > [!NOTE]  
 >  Si la conexión está cifrada, se usará la conexión cifrada. Si la conexión no está cifrada, la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volverá a conectarse mediante una conexión cifrada.  
   
- Para continuar, haga clic en **Conectar...**.  
+ Para continuar, haga clic en **Conectar...** .  
   
 ##  <a name="Proxy_configuration"></a> Conjunto de recopilación de datos Información de la utilidad  
  Especifique una cuenta de dominio de Windows para ejecutar el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta cuenta se utiliza como la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De forma alternativa, puede utilizar la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente. Para pasar los requisitos de validación, utilice las siguientes instrucciones con el fin de especificar la cuenta.  
@@ -147,9 +146,9 @@ ms.locfileid: "52509793"
   
  Configuración de la instancia administrada:  
   
--   Nombre de instancia de SQL Server: NombreEquipo\NombreInstancia  
+-   Nombre de instancia de SQL Server: ComputerName\InstanceName  
   
--   Cuenta del conjunto de recopilación de la utilidad: NombreDominio\NombreUsuario  
+-   Cuenta del conjunto de recopilación de la utilidad: DomainName\UserName  
   
  Para continuar, haga clic en **Siguiente**.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "52509793"
 >   
 >  Se ha producido una excepción al ejecutar una instrucción o lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Información adicional: no se ha podido obtener información sobre el grupo o usuario '\<nombreDeDominio\nombreDeCuenta>' de Windows NT, código de error 0x5. (Microsoft SQL Server, Error: 15404)  
+>  Información adicional:  No se pudo obtener información acerca del grupo o usuario de Windows NT "\<nombre_dominio\nombre_cuenta>", código de error 0x5. (Microsoft SQL Server, Error: 15404)  
 >   
 >  Para obtener más información sobre cómo solucionar este error, vea [Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   
@@ -196,7 +195,7 @@ ms.locfileid: "52509793"
 > $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Supervisar instancias de SQL Server en la utilidad de SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8744c1ff2980db897606dfc11ab6ba7085da93f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901120"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,30 +34,30 @@ ms.locfileid: "47739193"
 |CHAR([1-2000])|CHAR([1-2000])|Sí|  
 |CLOB|VARCHAR(MAX)|Sí|  
 |DATE|DATETIME|Sí|  
-|FLOAT|FLOAT|no|  
-|FLOAT([1-53])|FLOAT([1-53])|no|  
-|FLOAT([54-126])|FLOAT|no|  
+|FLOAT|FLOAT|No|  
+|FLOAT([1-53])|FLOAT([1-53])|No|  
+|FLOAT([54-126])|FLOAT|No|  
 |INT|NUMERIC(38)|Sí|  
 |INTERVAL|DATETIME|Sí|  
 |LONG|VARCHAR(MAX)|Sí|  
 |LONG RAW|IMAGE|Sí|  
-|NCHAR([1-1000])|NCHAR([1-1000])|no|  
+|NCHAR([1-1000])|NCHAR([1-1000])|No|  
 |NCLOB|NVARCHAR(MAX)|Sí|  
 |NUMBER|FLOAT|Sí|  
-|NUMBER([1-38])|NUMERIC([1-38])|no|  
+|NUMBER([1-38])|NUMERIC([1-38])|No|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Sí|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|no|  
-|RAW([1-2000])|VARBINARY([1-2000])|no|  
-|real|FLOAT|no|  
-|ROWID|CHAR(18)|no|  
-|TIMESTAMP|DATETIME|Sí|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
+|RAW([1-2000])|VARBINARY([1-2000])|No|  
+|real|FLOAT|No|  
+|ROWID|CHAR(18)|No|  
+|timestamp|DATETIME|Sí|  
 |MARCA DE TIEMPO(0-7)|DATETIME|Sí|  
 |TIMESTAMP(8-9)|DATETIME|Sí|  
 |MARCA DE TIEMPO (0-7) CON ZONA HORARIA|VARCHAR(37)|Sí|  
-|MARCA DE TIEMPO (8-9) CON ZONA HORARIA|VARCHAR(37)|no|  
+|MARCA DE TIEMPO (8-9) CON ZONA HORARIA|VARCHAR(37)|No|  
 |MARCA DE TIEMPO (0-7) CON ZONA HORARIA LOCAL|VARCHAR(37)|Sí|  
-|MARCA DE TIEMPO (8-9) CON ZONA HORARIA LOCAL|VARCHAR(37)|no|  
-|UROWID|CHAR(18)|no|  
+|MARCA DE TIEMPO (8-9) CON ZONA HORARIA LOCAL|VARCHAR(37)|No|  
+|UROWID|CHAR(18)|No|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Sí|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Consideraciones para la asignación de tipos de datos  
@@ -106,7 +105,7 @@ ms.locfileid: "47739193"
   
  Para especificar asignaciones de datos alternativas, vea [Especificar asignaciones de tipos de datos para un publicador de Oracle](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Consideraciones y limitaciones de diseño de los publicadores de Oracle](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
  [Información general de la publicación de Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  

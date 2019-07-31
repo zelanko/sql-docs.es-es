@@ -7,14 +7,13 @@ ms.topic: conceptual
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: c42ff3c215d3f252a61371ea560c2ecac7c3cf62
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5b75a57e233882540208a428e94f6aca139cd946
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730337"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307620"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurar PolyBase para acceder a datos externos en SQL Server
 
@@ -24,7 +23,7 @@ En este artículo se explica cómo usar PolyBase en una instancia de SQL Server 
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Si no ha instalado PolyBase, consulte [Instalación de PolyBase](polybase-installation.md). En el artículo de instalación se explican los requisitos previos.
+Si no ha instalado PolyBase, consulte [Instalación de PolyBase](polybase-installation.md). En el artículo de instalación se explican los requisitos previos. Una vez instalado, asegúrese también de [habilitar PolyBase.](polybase-installation.md#enable)
 
 Se debe crear una [Clave maestra](../../t-sql/statements/create-master-key-transact-sql.md) antes de crear una credencial de ámbito de base de datos. 
 

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5335124-1625-47ce-b4ac-36078967158c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 398820f012e60181ec6327a67fd5e1abb7adc407
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b342e77c542cd9f3357bccd4b97f3a876d1f5f1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115692"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Crear un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52503591"
   
  El UCP recopila información de configuración y rendimiento de las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada 15 minutos. Esta información se almacena en el almacén de administración de datos de la utilidad (UMDW) en el UCP; el nombre del archivo UMDW es sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comparan con directivas para ayudar a identificar cuellos de botella en el uso de recursos y oportunidades de consolidación.  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Antes de crear un UCP, revise los siguientes requisitos y recomendaciones.  
   
  En esta versión, el UCP y todas las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben satisfacer los requisitos siguientes:  
@@ -78,7 +77,7 @@ ms.locfileid: "52503591"
   
 -   Para ejecutar este procedimiento, el usuario debe tener los permisos sysadmin, los mismos que se necesitan para crear un UCP.  
   
--   Todas las instancias administradas de SQL Server se deben quitar del UCP. Tenga en cuenta que el UCP es una instancia administrada de SQL Server. Para obtener más información, consulte [cómo quitar una instancia de SQL Server de la utilidad de SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Todas las instancias administradas de SQL Server se deben quitar del UCP. Tenga en cuenta que el UCP es una instancia administrada de SQL Server. Para más información, vea: [Cómo: quitar una instancia de SQL Server de la utilidad de SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Use este procedimiento para quitar una UCP de SQL Server de la utilidad de SQL Server. Cuando haya terminado la operación, se puede volver a crear un UCP en la instancia de SQL Server.  
   
@@ -133,7 +132,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Especificar la instancia  
  Especifique la siguiente información sobre el UCP que está creando:  
   
--   **Nombre de la instancia**: para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el cuadro de diálogo de conexión, haga clic en **Conectar...**. Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia.  
+-   **Nombre de la instancia**: para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el cuadro de diálogo de conexión, haga clic en **Conectar...** . Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia.  
   
 -   **Nombre de la utilidad** - Especifique un nombre que se utilizará para identificar la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la red.  
   
@@ -145,7 +144,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  Si la conexión está cifrada, se utilizará la conexión cifrada. Si la conexión no está cifrada, la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volverá a conectarse mediante una conexión cifrada.  
   
- Para continuar, haga clic en **Conectar...**.  
+ Para continuar, haga clic en **Conectar...** .  
   
 ##  <a name="Agent_configuration"></a> Conjunto de recopilación de datos Información de la utilidad  
  Especifique una cuenta de dominio de Windows para ejecutar el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta cuenta se utiliza como la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De forma alternativa, puede utilizar la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente. Para pasar los requisitos de validación, utilice las siguientes instrucciones con el fin de especificar la cuenta.  
@@ -227,7 +226,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > $Utility = [Microsoft.SqlServer.Management.Utility.Utility]::CreateUtility("Utility", $SqlStoreConnection, "ProxyAccount", "ProxyAccountPassword");  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   

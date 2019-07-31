@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 773d7d8b513d0f93d00782d130c796d2b04cea83
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f7e07e59c7ebf85ff3af03f7c30dfa56670148a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085959"
 ---
 # <a name="replication-log-reader-agent"></a>Agente de registro del LOG de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +69,8 @@ logread [-?]
  **-?**  
  Muestra información de uso.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_**\\**_instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-PublisherDB** _publisher_database_  
  Es el nombre de la base de datos del publicador.  
@@ -82,8 +81,8 @@ logread [-?]
  **-DefinitionFile** _def_path_and_file_name_  
  Es la ruta de acceso del archivo de definición de agente. Un archivo de definición de agente contiene los argumentos de línea de comandos para el agente. El contenido del archivo se analiza como un archivo ejecutable. Utilice las comillas tipográficas (") para especificar valores de argumento que contienen caracteres arbitrarios.  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- Es el nombre del distribuidor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_**\\**_instance_name_ para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ Es el nombre del distribuidor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-DistributorLogin** _distributor_login_  
  Es el nombre de inicio de sesión del distribuidor.  
@@ -165,7 +164,7 @@ logread [-?]
  **-ProfileName** _profile_name_  
  Especifica un perfil de agente para utilizar para los parámetros del agente. Si **ProfileName** es NULL, el perfil de agente se deshabilita. Si no se especifica **ProfileName** , se utiliza el perfil predeterminado para el tipo de agente. Para obtener información, vea [Perfiles del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  Especifica la instancia del asociado de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que participa en una sesión de creación de reflejo de la base de datos con la base de datos de publicación. Para obtener más información, vea [Replicación y creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherSecurityMode** [ **0**| **1**]  
@@ -181,7 +180,7 @@ logread [-?]
  Es el número de segundos antes de que la consulta exceda el tiempo de espera. El valor predeterminado es 1800 segundos.  
   
  **-ReadBatchSize** _number_of_transactions_  
- Es el número máximo de transacciones leídas del registro de transacciones de la base de datos de publicación por ciclo de procesamiento, con un valor predeterminado de 500. El agente continuará leyendo las transacciones en lotes hasta que se lean todas las transacciones del registro. Este parámetro no se admite en publicadores de Oracle.  
+ Es el número máximo de transacciones leídas del registro de transacciones de la base de datos de publicación por ciclo de procesamiento, con un valor predeterminado de 500 y un máximo de 10000. El agente continuará leyendo las transacciones en lotes hasta que se lean todas las transacciones del registro. Este parámetro no se admite en publicadores de Oracle.  
   
  **-ReadBatchThreshold** _number_of_commands_  
  Es el número de comandos de replicación que se deben leer del registro de transacciones antes de que el Agente de distribución las envíe al Suscriptor. El valor predeterminado es 0. Si no se especifica este parámetro, el Agente de registro del LOG leerá al final del registro o al número especificado en **-ReadBatchSize** (número de transacciones).  

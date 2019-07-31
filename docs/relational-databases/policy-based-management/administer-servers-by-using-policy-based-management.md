@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f984cd0e2c01e9a4913387b8266ddc40202e0b13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c62c2372b0a61d0a09a0e15998f2340b995fc919
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109941"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrar servidores mediante administración basada en directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,8 +117,8 @@ Por ejemplo, como el administrador de la base de datos, puede que desee asegurar
 
 ## <a name="see-also"></a>Vea también  
  
- - [Tutorial: Crear y aplicar una directiva Desactivado de forma predeterminada](lesson-1-create-and-apply-an-off-by-default-policy.md)
- - [Tutorial: Crear y aplicar una directiva de normas de denominación](lesson-2-create-and-apply-a-naming-standards-policy.md)
+ - [Tutorial: Creación y aplicación de una directiva Desactivado de forma predeterminada](lesson-1-create-and-apply-an-off-by-default-policy.md)
+ - [Tutorial: Creación y aplicación de una directiva de normas de denominación](lesson-2-create-and-apply-a-naming-standards-policy.md)
  - [Vistas de administración basada en directivas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
  
 

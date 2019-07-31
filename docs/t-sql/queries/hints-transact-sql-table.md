@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: be67801f6f386bd4d63a5edc3459820075628864
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901963"
 ---
 # <a name="hints-transact-sql---table"></a>Sugerencias (Tabla de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,7 +121,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
+WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 Con algunas excepciones, las sugerencias de tabla se admiten en la cláusula FROM únicamente cuando las sugerencias se especifican con la palabra clave WITH. Las sugerencias de tabla deben especificarse también con paréntesis.  
   
 > [!IMPORTANT]  
@@ -148,7 +147,7 @@ Recomendamos utilizar comas entre las sugerencias de tabla.
 NOEXPAND  
 Especifica que las vistas indizadas no se expandan para obtener acceso a las tablas subyacentes cuando el optimizador de consultas procesa la consulta. El optimizador de consultas trata la vista como una tabla con un índice clúster. NOEXPAND solo se aplica a las vistas indizadas. Para más información, vea, [Uso de NOEXPAND](#using-noexpand).  
   
-INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
+INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
 La sintaxis de INDEX() especifica los nombres o los identificadores de los índices que el optimizador de consultas va a utilizar al procesar la instrucción. La sintaxis alternativa INDEX = especifica un valor de índice único. Solamente se puede especificar una sugerencia de índice por cada tabla.  
   
 Si existe un índice agrupado, INDEX(0) exige un recorrido del índice agrupado e INDEX(1) exige un recorrido o una búsqueda del índice agrupado. Si no existe un índice clúster, INDEX(0) exige un recorrido de tabla e INDEX(1) se interpreta como error.  
@@ -179,7 +178,7 @@ Especifica la inserción del valor predeterminado de la columna de una tabla, si
   
 Para obtener un ejemplo que utiliza esta sugerencia en una instrucción INSERT... SELECT * FROM OPENROWSET(BULK...), vea [Mantener valores NULL o usar valores predeterminados durante la importación masiva &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
+FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
 Especifica que el optimizador de consultas use solamente una operación de búsqueda de índice como ruta de acceso a los datos de la tabla o la vista. 
 
 > [!NOTE]
@@ -428,7 +427,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>b. Usar la sugerencia FORCESEEK para especificar una operación de búsqueda de índice  
+### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. Usar la sugerencia FORCESEEK para especificar una operación de búsqueda de índice  
  En el ejemplo siguiente se usa la sugerencia FORCESEEK sin especificar un índice para obligar a que el optimizador de consultas realice una operación de búsqueda de índice en la tabla `Sales.SalesOrderDetail` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```sql

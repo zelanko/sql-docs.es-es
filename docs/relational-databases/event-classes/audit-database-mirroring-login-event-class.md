@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66da3f496c244a63055020d02a41560279712099
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb9c8b9774be0daa74b30bfd51ee97bf1e2271c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903455"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,29 +32,29 @@ ms.locfileid: "47679863"
 |**ApplicationName**|**nvarchar**|No se utiliza en esta clase de evento.|10|Sí|  
 |**ClientProcessID**|**int**|No se utiliza en esta clase de evento.|9|Sí|  
 |**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
-|**EventClass**|**int**|Tipo de clase de eventos capturado. Siempre **154** para **Audit Database Mirroring Login**.|27|no|  
-|**EventSequence**|**int**|Número de secuencia de este evento.|51|no|  
+|**EventClass**|**int**|Tipo de clase de eventos capturado. Siempre **154** para **Audit Database Mirroring Login**.|27|No|  
+|**EventSequence**|**int**|Número de secuencia de este evento.|51|No|  
 |**EventSubClass**|**int**|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. En la tabla siguiente se enumeran los valores de subclase de este evento.|21|Sí|  
-|**FileName**|**nvarchar**|Método de autenticación admitido configurado en el extremo remoto de creación de reflejo de bases de datos. Cuando hay más de un método disponible, el extremo que acepte (el destino) determina el método que se intentará primero. Los valores posibles son:<br /><br /> <br /><br /> **Ninguna**. No hay ningún método de autenticación configurado.<br /><br /> **NTLM**. Requiere autenticación NTLM.<br /><br /> **KERBEROS**. Requiere autenticación Kerberos.<br /><br /> **NEGOTIATE**. Windows negocia el método de autenticación.<br /><br /> **CERTIFICATE**. Requiere el certificado configurado para el extremo, que se almacena en la base de datos **maestra** .<br /><br /> **NTLM, CERTIFICATE**. Acepta NTLM o el certificado del extremo para la autenticación.<br /><br /> **KERBEROS, CERTIFICATE**. Acepta Kerberos o el certificado del extremo para la autenticación.<br /><br /> **NEGOTIATE, CERTIFICATE**. Windows negocia el método de autenticación, o se puede utilizar un certificado del extremo para la autenticación.<br /><br /> **CERTIFICATE, NTLM**. Acepta un certificado del extremo o NTLM para la autenticación.<br /><br /> **CERTIFICATE, KERBEROS**. Acepta un certificado de extremo o Kerberos para la autenticación.<br /><br /> **CERTIFICATE, NEGOTIATE**. Acepta un certificado del extremo para la autenticación o Windows negocia el método de autenticación.|36|no|  
+|**FileName**|**nvarchar**|Método de autenticación admitido configurado en el extremo remoto de creación de reflejo de bases de datos. Cuando hay más de un método disponible, el extremo que acepte (el destino) determina el método que se intentará primero. Los valores posibles son:<br /><br /> <br /><br /> **Ninguna**. No hay ningún método de autenticación configurado.<br /><br /> **NTLM**. Requiere autenticación NTLM.<br /><br /> **KERBEROS**. Requiere autenticación Kerberos.<br /><br /> **NEGOTIATE**. Windows negocia el método de autenticación.<br /><br /> **CERTIFICATE**. Requiere el certificado configurado para el extremo, que se almacena en la base de datos **maestra** .<br /><br /> **NTLM, CERTIFICATE**. Acepta NTLM o el certificado del extremo para la autenticación.<br /><br /> **KERBEROS, CERTIFICATE**. Acepta Kerberos o el certificado del extremo para la autenticación.<br /><br /> **NEGOTIATE, CERTIFICATE**. Windows negocia el método de autenticación, o se puede utilizar un certificado del extremo para la autenticación.<br /><br /> **CERTIFICATE, NTLM**. Acepta un certificado del extremo o NTLM para la autenticación.<br /><br /> **CERTIFICATE, KERBEROS**. Acepta un certificado de extremo o Kerberos para la autenticación.<br /><br /> **CERTIFICATE, NEGOTIATE**. Acepta un certificado del extremo para la autenticación o Windows negocia el método de autenticación.|36|No|  
 |**HostName**|**nvarchar**|No se utiliza en esta clase de evento.|8|Sí|  
-|**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|no|  
+|**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|No|  
 |**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
-|**ObjectName**|**nvarchar**|Cadena de conexión utilizada para esta conexión.|34|no|  
-|**OwnerName**|**nvarchar**|Método de autenticación admitido configurado en el extremo local de creación de reflejo de bases de datos. Cuando hay más de un método disponible, el extremo que acepte (el destino) determina el método que se intentará primero. Los valores posibles son:<br /><br /> <br /><br /> **Ninguna**. No hay ningún método de autenticación configurado.<br /><br /> **NTLM**. Requiere autenticación NTLM.<br /><br /> **KERBEROS**. Requiere autenticación Kerberos.<br /><br /> **NEGOTIATE**. Windows negocia el método de autenticación.<br /><br /> **CERTIFICATE**. Requiere el certificado configurado para el extremo, que se almacena en la base de datos **maestra** .<br /><br /> **NTLM, CERTIFICATE**. Acepta NTLM o el certificado del extremo para la autenticación.<br /><br /> **KERBEROS, CERTIFICATE**. Acepta Kerberos o el certificado del extremo para la autenticación.<br /><br /> **NEGOTIATE, CERTIFICATE**. Windows negocia el método de autenticación o se puede utilizar un certificado del extremo para la autenticación.<br /><br /> **CERTIFICATE, NTLM**. Acepta un certificado del extremo o NTLM para la autenticación.<br /><br /> **CERTIFICATE, KERBEROS**. Acepta un certificado de extremo o Kerberos para la autenticación.<br /><br /> **CERTIFICATE, NEGOTIATE**. Acepta un certificado del extremo para la autenticación o Windows negocia el método de autenticación.|37|no|  
-|**ProviderName**|**nvarchar**|Método de autenticación utilizado para esta conexión.|46|no|  
-|**RoleName**|**nvarchar**|Rol de la conexión. Es **initiator** o **target**.|38|no|  
-|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
+|**ObjectName**|**nvarchar**|Cadena de conexión utilizada para esta conexión.|34|No|  
+|**OwnerName**|**nvarchar**|Método de autenticación admitido configurado en el extremo local de creación de reflejo de bases de datos. Cuando hay más de un método disponible, el extremo que acepte (el destino) determina el método que se intentará primero. Los valores posibles son:<br /><br /> <br /><br /> **Ninguna**. No hay ningún método de autenticación configurado.<br /><br /> **NTLM**. Requiere autenticación NTLM.<br /><br /> **KERBEROS**. Requiere autenticación Kerberos.<br /><br /> **NEGOTIATE**. Windows negocia el método de autenticación.<br /><br /> **CERTIFICATE**. Requiere el certificado configurado para el extremo, que se almacena en la base de datos **maestra** .<br /><br /> **NTLM, CERTIFICATE**. Acepta NTLM o el certificado del extremo para la autenticación.<br /><br /> **KERBEROS, CERTIFICATE**. Acepta Kerberos o el certificado del extremo para la autenticación.<br /><br /> **NEGOTIATE, CERTIFICATE**. Windows negocia el método de autenticación o se puede utilizar un certificado del extremo para la autenticación.<br /><br /> **CERTIFICATE, NTLM**. Acepta un certificado del extremo o NTLM para la autenticación.<br /><br /> **CERTIFICATE, KERBEROS**. Acepta un certificado de extremo o Kerberos para la autenticación.<br /><br /> **CERTIFICATE, NEGOTIATE**. Acepta un certificado del extremo para la autenticación o Windows negocia el método de autenticación.|37|No|  
+|**ProviderName**|**nvarchar**|Método de autenticación utilizado para esta conexión.|46|No|  
+|**RoleName**|**nvarchar**|Rol de la conexión. Es **initiator** o **target**.|38|No|  
+|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |**SPID**|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
-|**State**|**int**|Indica la ubicación en el código fuente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|no|  
-|**TargetUserName**|**nvarchar**|Estado del inicio de sesión. Una de las siguientes opciones:<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **WAIT ISC Confirm**<br /><br /> **WAIT ASC Confirm**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> Nota: ISC = Iniciar contexto de seguridad. ASC = Accept Security Context (Aceptar contexto de seguridad).|39|no|  
-|**TransactionID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|no|  
+|**State**|**int**|Indica la ubicación en el código fuente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|No|  
+|**TargetUserName**|**nvarchar**|Estado del inicio de sesión. Una de las siguientes opciones:<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **WAIT ISC Confirm**<br /><br /> **WAIT ASC Confirm**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> Nota: ISC = Initiate Security Context (Iniciar contexto de seguridad). ASC = Accept Security Context (Aceptar contexto de seguridad).|39|No|  
+|**TransactionID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
   
  En la tabla siguiente se presentan los valores de subclase de esta clase de evento.  
   
-|ID|Subclase|Descripción|  
+|Id.|Subclase|Descripción|  
 |--------|--------------|-----------------|  
 |1|Login Success|Un evento Login Success informa de que el proceso de inicio de sesión de creación de reflejo de bases de datos adyacente ha finalizado correctamente.|  
 |2|Login Protocol Error|Un evento Login Protocol Error informa de que el inicio de sesión de creación de reflejo de bases de datos recibe un mensaje que está bien estructurado pero que no es válido para el estado actual del proceso de inicio de sesión. Es posible que el mensaje se haya perdido o se haya enviado fuera de secuencia.|  
@@ -64,7 +63,7 @@ ms.locfileid: "47679863"
 |5|Authentication Failure|Un evento Authentication Failure informa de que un extremo de creación de reflejo de bases de datos no puede realizar la autenticación para la conexión debido a un error. Para la autenticación de Windows, este evento informa de que el extremo de creación de reflejo de bases de datos no puede utilizar la autenticación de Windows. Para la autenticación basada en certificados, este evento informa de que el extremo de creación de reflejo de bases de datos no puede obtener acceso al certificado.|  
 |6|Authorization Failure|Un evento Authorization Failure informa de que un extremo de creación de reflejo de bases de datos denegó la autorización para la conexión. Para la autenticación de Windows, este evento informa de que el identificador de seguridad de la conexión no coincide con uno de los usuarios de la base de datos. Para la autenticación basada en certificados, este evento informa de que la clave pública entregada en el mensaje no se corresponde con ningún certificado de la base de datos **maestra** .|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

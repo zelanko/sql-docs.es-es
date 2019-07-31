@@ -32,14 +32,13 @@ helpviewer_keywords:
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bf37beac7838f3dcb1e111e3632952864b8d7bd
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116477"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +86,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Suprime todos los mensajes informativos con niveles de gravedad entre 0 y 10.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
  La especificación de una o varias de estas opciones limita los conjuntos de resultados devueltos por la instrucción a la opción u opciones especificadas. Si no se especifican opciones, se devuelve información de todas las estadísticas.  
   
  STATS_STREAM es [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -104,7 +103,7 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
 |Pasos|Número de pasos del histograma. Cada paso abarca un intervalo de valores de columna seguido de un valor de columna límite superior. Los pasos del histograma se definen en la primera columna de clave de las estadísticas. El número máximo de pasos es 200.|  
 |Densidad|Se calcula como 1 / *valores distintos* en todos los valores de la primera columna de clave del objeto de estadísticas, excepto en los valores límite del histograma. El optimizador de consultas no usa este valor de densidad y solo se muestra por motivos de compatibilidad con versiones anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |Promedio de longitud de clave|Número promedio de bytes por cada uno de los valores de las columnas de clave del objeto de estadísticas.|  
-|String Index|Sí indica que el objeto de estadísticas contiene estadísticas de resumen de las cadenas para mejorar los cálculos de cardinalidad de los predicados de consulta que utilizan el operador LIKE; por ejemplo, `WHERE ProductName LIKE '%Bike'`. Las estadísticas de resumen de cadenas se almacenan de forma independiente del histograma y se crean en la primera columna de clave del objeto de estadísticas cuando es de tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text** o **ntext**.|  
+|String Index|Sí indica que el objeto de estadísticas contiene estadísticas de resumen de las cadenas para mejorar los cálculos de cardinalidad de los predicados de consulta que utilizan el operador LIKE; por ejemplo, `WHERE ProductName LIKE '%Bike'`. Las estadísticas de resumen de cadenas se almacenan de forma independiente del histograma y se crean en la primera columna de clave del objeto de estadísticas cuando es de tipo **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text** o **ntext**.|  
 |Expresión de filtro|Predicado del subconjunto de filas de la tabla incluido en el objeto de estadísticas. NULL = Estadísticas no filtradas. Para más información sobre los predicados filtrados, vea [Crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md). Para más información sobre las estadísticas filtradas, vea [Estadísticas](../../relational-databases/statistics/statistics.md).|  
 |Filas sin filtrar|Número total de filas de la tabla antes de aplicar la expresión de filtro. Si Expresión de filtro es NULL, las Filas sin filtrar son iguales a Filas.|  
 |Persisted Sample Percent|Porcentaje de ejemplo persistente empleado en las actualizaciones de estadísticas en las que no se especifica explícitamente un porcentaje de muestreo. Si el valor es cero, significa que no hay establecido ningún porcentaje de ejemplo persistente para esta estadística.<br /><br /> **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
@@ -113,7 +112,7 @@ En la tabla siguiente se describen las columnas devueltas en el conjunto de resu
   
 |Nombre de columna|Descripción|  
 |-----------------|-----------------|  
-|Toda la densidad|La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Si se usa el prefijo (B, B, C), cada una de estas listas será una lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Si se usa el prefino (A, B) los valores de la misma columna tendrán estas listas de valores distintos: (3, 5), (4, 4) y (4, 5)|  
+|Toda la densidad|La densidad es 1 / *valores distintos*. Los resultados muestran la densidad de cada prefijo de columnas del objeto de estadísticas (una fila por cada densidad). Un valor distinto es una lista Distinct de los valores de columna de cada fila y prefijo de columna. Por ejemplo, si el objeto de estadísticas contiene las columnas de clave (A, B, C), los resultados indican la densidad de las listas de valores distintos de cada uno de estos prefijos de columna: (A), (A,B) y (A, B, C). Si se usa el prefijo (A, B, C), cada una de estas listas es una lista de valores distintos: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Si se usa el prefijo (A, B) los valores de la misma columna tendrán estas listas de valores distintos: (3, 5), (4, 4) y (4, 5)|  
 |Promedio de longitud|Promedio de longitud, en bytes, para almacenar una lista de los valores de columna del prefijo de columna. Por ejemplo, si cada valor de la lista (3, 5, 6) necesita 4 bytes, la longitud es 12 bytes.|  
 |Columnas|Nombres de las columnas en el prefijo para las que se muestran Toda la densidad y Promedio de longitud.|  
   
@@ -189,7 +188,7 @@ DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);
 GO  
 ```  
   
-### <a name="b-specifying-the-histogram-option"></a>b. Especificar la opción HISTOGRAM  
+### <a name="b-specifying-the-histogram-option"></a>B. Especificar la opción HISTOGRAM  
 Esto limita la información de estadísticas mostrada en relación con el índice Customer_LastName a únicamente los datos de HISTOGRAM.
   
 ```sql

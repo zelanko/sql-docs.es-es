@@ -28,19 +28,18 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf4ae1f391a982294a14cb38bcdce879d0b2253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632707"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344598"
 ---
 # <a name="principals-database-engine"></a>Entidades de seguridad (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Las*entidades de seguridad* son entidades que pueden solicitar recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de su definición: Windows, servidor o base de datos; y de si la entidad de seguridad es indivisible o es una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID). Este tema se aplica a todas las versiones de SQL Server, pero hay algunas restricciones en las entidades de seguridad de nivel de servidor de SQL Database o SQL Data Warehouse. 
+  Las*entidades de seguridad* son entidades que pueden solicitar recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Igual que otros componentes del modelo de autorización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , las entidades de seguridad se pueden organizar en jerarquías. El ámbito de influencia de una entidad de seguridad depende del ámbito de la definición de la entidad de seguridad: Windows, servidor, base de datos; y si la entidad de seguridad es indivisible o es una colección. Un Inicio de sesión de Windows es un ejemplo de entidad de seguridad indivisible y un Grupo de Windows es un ejemplo de una del tipo colección. Toda entidad de seguridad tiene un identificador de seguridad (SID). Este tema se aplica a todas las versiones de SQL Server, pero hay algunas restricciones en las entidades de seguridad de nivel de servidor de SQL Database o SQL Data Warehouse. 
   
 ## <a name="sql-server-level-principals"></a>Entidades de seguridad de nivel de SQL Server  
   
@@ -53,12 +52,12 @@ ms.locfileid: "47632707"
   
 ## <a name="database-level-principals"></a>Entidades de seguridad de nivel de bases de datos
   
-- Usuario de base de datos (hay 11 tipos de usuarios. Para obtener más información, vea [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)).
+- Usuario de base de datos (hay 12 tipos de usuarios. Para obtener más información, vea [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)).
 - Rol de base de datos
 - Rol de aplicación
   
 ## <a name="sa-login"></a>Inicio de sesión sa  
- El inicio de sesión `sa` de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una entidad de seguridad a nivel de servidor. Se crea de forma predeterminada cuando se instala una instancia. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la base de datos predeterminada de sa es master. Es un cambio de comportamiento con respecto a versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El inicio de sesión `sa` es miembro del rol fijo de base de datos `sysadmin`. Este inicio de sesión `sa` tiene todos los permisos en el servidor y no puede limitarse. Además, `sa` no se puede quitar, pero puede deshabilitarse para que nadie lo emplee.
+ El inicio de sesión `sa` de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una entidad de seguridad a nivel de servidor. Se crea de forma predeterminada cuando se instala una instancia. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], la base de datos predeterminada de sa es master. Es un cambio de comportamiento con respecto a versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El inicio de sesión `sa` es miembro del rol fijo de nivel de servidor`sysadmin`. Este inicio de sesión `sa` tiene todos los permisos en el servidor y no puede limitarse. Además, `sa` no se puede quitar, pero puede deshabilitarse para que nadie lo emplee.
 
 ## <a name="dbo-user-and-dbo-schema"></a>Usuario y esquema dbo
 
@@ -101,7 +100,7 @@ Cada inicio de sesión pertenece al rol fijo de servidor `public` y cada usuario
   
 -   [Roles de aplicación](../../../relational-databases/security/authentication-access/application-roles.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Proteger SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

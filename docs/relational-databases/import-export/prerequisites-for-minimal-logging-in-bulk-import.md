@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48d62232c5d481ccbb6204f5ba14465dea75ca30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946573"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307634"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Requisitos previos para el registro mínimo durante la importación masiva
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64946573"
   
 -   La tabla no se está replicando.  
   
--   Se ha especificado el bloqueo de tabla (mediante TABLOCK). Para la tabla con índice de almacén de columnas en clúster, no necesita TABLOCK para el registro mínimo.  Además, solo se crean registros mínimos de los datos cargados en grupos de filas comprimidos, para lo que se requiere un tamaño de lote de 102 400 o más.  
+-   Se ha especificado el bloqueo de tabla (mediante TABLOCK). Para la tabla con índice de almacén de columnas en clúster, no necesita TABLOCK para el registro mínimo.  Además, solo se crean registros mínimos de los datos cargados en grupos de filas comprimidos, para lo que se requiere un tamaño de lote de 102400 o más.  
   
     > [!NOTE]  
     >  Aunque no se registren las inserciones de datos en el registro de transacciones cuando se realiza una importación masiva de registro mínimo, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] seguirá registrando las asignaciones de extensiones cada vez que se asigne una nueva a la tabla.  
@@ -50,17 +49,15 @@ ms.locfileid: "64946573"
   
 -   Si la tabla no tiene índice clúster sino uno o más índices no clúster, el registro de las páginas de datos siempre será mínimo. Sin embargo, el modo en que se registran las páginas de índice depende de si la tabla está vacía:  
   
-    -   Si la tabla está vacía, el registro de las páginas de índice será mínimo.  
+    -   Si la tabla está vacía, el registro de las páginas de índice será mínimo.  Si empieza con una tabla vacía y realiza una importación masiva de datos mediante varios lotes, el registro de las páginas de índice y de datos será mínimo para el primer lote pero, a partir del segundo lote, solo las páginas de datos se registrarán de forma mínima. 
   
-    -   Si la tabla no está vacía, el registro de las páginas de índice será completo.  
+    -   Si la tabla no está vacía, el registro de las páginas de índice será completo.    
+
+-   Si la tabla tiene un índice clúster y está vacía, tanto las páginas de datos como de índice se registrarán de forma mínima. En cambio, si la tabla tiene un índice en clúster basado en btree pero no está vacía, tanto las páginas de datos como las de índice se registrarán de forma completa, independientemente del modelo de recuperación utilizado. Si empieza con una tabla de almacén de filas vacía y realiza una importación masiva de datos mediante varios lotes, el registro de las páginas de índice y de datos será mínimo para el primer lote pero, a partir del segundo lote, solo las páginas de datos se registrarán de forma mínima.
+
+- Para obtener información sobre el registro de un índice de almacén de columnas agrupado (CCI), consulte la [guía de carga de datos de índice de almacén de columnas](../indexes/columnstore-indexes-data-loading-guidance.md#plan-bulk-load-sizes-to-minimize-delta-rowgroups).
   
-        > [!NOTE]  
-        >  Si empieza con una tabla vacía y realiza una importación masiva de datos mediante varios lotes, el registro de las páginas de índice y de datos será mínimo para el primer lote pero, a partir del segundo lote, solo las páginas de datos se registrarán de forma mínima.  
-  
--   Si la tabla tiene un índice clúster y está vacía, tanto las páginas de datos como de índice se registrarán de forma mínima. En cambio, si la tabla tiene un índice en clúster basado en btree pero no está vacía, tanto las páginas de datos como las de índice se registrarán de forma completa, independientemente del modelo de recuperación utilizado. Para las tablas con índices de almacén de columnas en clúster, los registros mínimos de los datos cargados en grupos de filas comprimidos siempre se realizan con independencia de que la tabla esté vacía o no cuando el tamaño es igual o superior a 102 400.  
-  
-    > [!NOTE]  
-    >  Si empieza con una tabla de almacén de filas vacía y realiza una importación masiva de datos mediante varios lotes, el registro de las páginas de índice y de datos será mínimo para el primer lote pero, a partir del segundo lote, solo las páginas de datos se registrarán de forma mínima.  
+
   
 > [!NOTE]  
 >  Cuando la replicación transaccional está habilitada, las operaciones BULK INSERT se registran por completo en el modelo de recuperación optimizado para cargas masivas de registros.  

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37c2ec562f0207edcf67cb8ef9a59c2710c921b8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 48080db61a91a13cd04d436784ce74a7e45e3135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086740"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal y numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,8 +36,8 @@ ms.locfileid: "56802029"
 Tipos de datos numéricos que tienen precisión y escala fijas. Los tipos decimal y numeric son sinónimos y se pueden usar indistintamente.
   
 ## <a name="arguments"></a>Argumentos  
-**decimal**[ **(**_p_[ **,**_s_] **)**] y **numeric**[ **(**_p_[ **,**_s_] **)**]  
-Números de precisión y escala fijas. Cuando se utiliza la precisión máxima, los valores válidos se sitúan entre - 10^38 +1 y 10^38 - 1. Los sinónimos ISO para **decimal** son **dec** y **dec(**_p_, _s_**)**. **numeric** es funcionalmente idéntico a **decimal**.
+**decimal**[ **(** _p_[ **,** _s_] **)** ] y **numeric**[ **(** _p_[ **,** _s_] **)** ]  
+Números de precisión y escala fijas. Cuando se utiliza la precisión máxima, los valores válidos se sitúan entre - 10^38 +1 y 10^38 - 1. Los sinónimos ISO para **decimal** son **dec** y **dec(** _p_, _s_ **)** . **numeric** es funcionalmente idéntico a **decimal**.
   
 p (precisión)  
 El número total máximo de dígitos decimales que se almacenarán. Este número incluye los lados derecho e izquierdo del separador decimal. La precisión debe ser un valor comprendido entre 1 y la precisión máxima de 38. La precisión predeterminada es 18.

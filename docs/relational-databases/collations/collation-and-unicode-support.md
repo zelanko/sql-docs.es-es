@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118490"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -271,10 +270,14 @@ En la tabla siguiente se describen los bytes de almacenamiento de la codificaci�
 
 <sup>2</sup> Intervalo de puntos de código para [caracteres adicionales](#Supplementary_Characters).
 
-Como hemos visto anteriormente, elegir la codificación Unicode y el tipo de datos adecuado puede proporcionar ahorros significativos de almacenamiento, según el juego de caracteres en uso. Por ejemplo, si se cambia un tipo de datos de columna existente con caracteres ASCII de `NCHAR(10)` a `CHAR(10)` mediante una intercalación habilitada para UTF-8, se reducen a la mitad los requisitos de almacenamiento. Esta reducción se debe a que `NCHAR(10)` requiere 20 bytes para el almacenamiento, mientras que `CHAR(10)` necesita 10 bytes para la misma cadena Unicode.
+> [!TIP]   
+> Una idea habitual es pensar que en [CHAR(*n*) y VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), o en [NCHAR(*n*) y NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), la *n* define el número de caracteres. Esto se debe a que en el ejemplo de una columna CHAR(10), se pueden almacenar 10 caracteres ASCII en el intervalo 0-127 mediante una intercalación como Latin1_General_100_CI_AI, porque cada carácter de este intervalo solo usa 1 byte.    
+> Sin embargo, en [CHAR(*n*) y VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), la *n* define la longitud de la cadena en **bytes** (0-8000), mientras que en [NCHAR(*n*) y NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) la *n* define la longitud de la cadena en **pares de bytes** (0-4000). *n* nunca define números de caracteres que se pueden almacenar.
+
+Como hemos visto anteriormente, elegir la codificación Unicode y el tipo de datos adecuado puede proporcionar ahorros significativos de almacenamiento o aumentar la superficie de memoria, según el juego de caracteres en uso. Por ejemplo, al usar una intercalación Latina habilitada para UTF-8, como Latin1_General_100_CI_AI_SC_UTF8, una columna `CHAR(10)` almacena 10 bytes y puede contener 10 caracteres ASCII en el intervalo 0-127, pero solo 5 caracteres en el intervalo 128-2047 y solo 3 caracteres en el intervalo 2048-65535. Por comparación, dado que una columna `NCHAR(10)` almacena 10 pares de bytes (20 bytes), puede contener 10 caracteres en el intervalo 0-65535.  
 
 Antes de decidir si utilizar la codificación UTF-8 o UTF-16 para una base de datos o una columna, tenga en cuenta la distribución de datos de cadena que se almacenarán:
--  Si se encuentra principalmente en el intervalo ASCII (por ejemplo, inglés), cada carácter requiere 1 byte con UTF-8 y 2 bytes con UTF-16. El uso de UTF-8 ofrece ventajas de almacenamiento. 
+-  Si se encuentra principalmente en el intervalo ASCII 0-127 (por ejemplo, inglés), cada carácter requiere 1 byte con UTF-8 y 2 bytes con UTF-16. El uso de UTF-8 ofrece ventajas de almacenamiento. Si se cambia un tipo de datos de columna existente con caracteres ASCII en el intervalo 0-127 de `NCHAR(10)` a `CHAR(10)` mediante una intercalación habilitada para UTF-8, esto se traduce en una reducción a la mitad de los requisitos de almacenamiento. Esta reducción se debe a que `NCHAR(10)` requiere 20 bytes para el almacenamiento, mientras que `CHAR(10)` necesita 10 bytes para la misma cadena Unicode.    
 -  Por encima del intervalo ASCII, casi todos los scripts basados en el alfabeto latino y también griego, cirílico, copto, armenio, hebreo, árabe, sitio, Tāna y n'ko requerirán 2 bytes por carácter tanto en UTF-8 como en UTF-16. En estos casos no existen diferencias de almacenamiento importantes con tipos de datos comparables (por ejemplo, entre el uso de **char** o **nchar**).
 -  Si los scripts son principalmente de idiomas asiáticos (por ejemplo, coreano, chino y japonés), cada carácter requiere 3 bytes con UTF-8 y 2 con UTF-16. El uso de UTF-16 ofrece ventajas de almacenamiento. 
 -  Los caracteres del intervalo comprendido entre 010000 y 10FFFF requieren 4 bytes en UTF-8 y UTF-16. En estos casos, no existen diferencias en el almacenamiento con tipos de datos comparables (por ejemplo, entre usar **char** o **nchar**).

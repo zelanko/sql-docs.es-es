@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39eac1be5a9e6479a7607364bb194b5aa5b8716f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895432"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Preparación de SQL Server para la replicación (publicador, distribuidor, suscriptor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ Para completar este tutorial, necesita tener SQL Server, SQL Server Management S
     
 >[!NOTE]
 > - La replicación no se admite entre instancias de SQL Server que estén separadas por más de dos versiones entre sí. Para más información, vea la entrada de blog [Supported SQL Server versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versiones de SQL Server admitidas en la topología de replicación).
-> - En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], debe conectarse al publicador y al suscriptor con un inicio de sesión que sea miembro del rol fijo de servidor **sysadmin**. Para más información sobre este rol, consulte [Roles de nivel de servidor](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], debe conectarse al publicador y al suscriptor con un inicio de sesión que sea miembro del rol fijo de servidor **sysadmin**. Para más información sobre este rol, vea [Roles de nivel de servidor](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
 
 
 **Tiempo estimado para completar este tutorial: 30 minutos**
@@ -123,11 +122,11 @@ En esta sección va a configurar la carpeta de instantáneas que se utiliza para
 
    ![Selecciones para compartir la carpeta repldata](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6. En el cuadro de diálogo **Permisos de repldata**, seleccione **Agregar**. En el cuadro de texto **Seleccionar usuarios, equipos, cuentas de servicio o grupos**, escriba el nombre de la cuenta del Agente de instantáneas creado anteriormente, como <*Nombre_De_Equipo_Publicador*>**\repl_snapshot**. Seleccione **Comprobar nombres** y, después, **Aceptar**.  
+6. En el cuadro de diálogo **Permisos de repldata**, seleccione **Agregar**. En el cuadro de texto **Seleccionar usuarios, equipos, cuentas de servicio o grupos**, escriba el nombre de la cuenta del Agente de instantáneas creado anteriormente, como <*Nombre_De_Equipo_Publicador*> **\repl_snapshot**. Seleccione **Comprobar nombres** y, después, **Aceptar**.  
 
    ![Selecciones para agregar permisos de uso compartido](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
-7. Repita el paso 6 para agregar las otras dos cuentas que se crearon previamente: <*Nombre_De_Equipo_Publicador*>**\repl_merge** y <*Nombre_De_Equipo_Publicador*>**\repl_distribution**.
+7. Repita el paso 6 para agregar las otras dos cuentas que se crearon previamente: <*Nombre_De_Equipo_Publicador*> **\repl_merge** y <*Nombre_De_Equipo_Publicador*> **\repl_distribution**.
 
 8. Después de agregar las tres cuentas, asigne los permisos siguientes:      
    - repl_distribution: **Lectura**  
@@ -142,12 +141,12 @@ En esta sección va a configurar la carpeta de instantáneas que se utiliza para
 
     ![Botón Editar en la pestaña Seguridad](media/tutorial-preparing-the-server-for-replication/editsecurity.png)   
 
-11. En el cuadro de diálogo **Permisos de repldata**, seleccione **Agregar**. En el cuadro de texto **Seleccionar usuarios, equipos, cuentas de servicio o grupos**, escriba el nombre de la cuenta del Agente de instantáneas creado anteriormente, como <*Nombre_De_Equipo_Publicador*>**\repl_snapshot**. Seleccione **Comprobar nombres** y, después, **Aceptar**.  
+11. En el cuadro de diálogo **Permisos de repldata**, seleccione **Agregar**. En el cuadro de texto **Seleccionar usuarios, equipos, cuentas de servicio o grupos**, escriba el nombre de la cuenta del Agente de instantáneas creado anteriormente, como <*Nombre_De_Equipo_Publicador*> **\repl_snapshot**. Seleccione **Comprobar nombres** y, después, **Aceptar**.  
 
     ![Selecciones para agregar permisos de seguridad](media/tutorial-preparing-the-server-for-replication/addsecuritypermissions.png)
 
   
-12. Repita el paso anterior para agregar permisos para el Agente de distribución, por ejemplo <*Nombre_De_Equipo_Publicador*>**\repl_distribution** y, para el Agente de mezcla, <*Nombre_De_Equipo_Publicador*>**\repl_merge**.  
+12. Repita el paso anterior para agregar permisos para el Agente de distribución, por ejemplo <*Nombre_De_Equipo_Publicador*> **\repl_distribution** y, para el Agente de mezcla, <*Nombre_De_Equipo_Publicador*> **\repl_merge**.  
     
   
 13. Compruebe que se admiten los siguientes permisos:  
@@ -185,14 +184,14 @@ En este tutorial no se contempla la configuración de un publicador con un distr
   
    Se inicia el Asistente para configurar la distribución.  
   
-3. En la página **Distribuidor**, seleccione <*'NombreServidor'*>  **actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución**. Luego, seleccione **Siguiente**.  
+3. En la página **Distribuidor**, seleccione < *'NombreServidor'* >  **actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución**. Luego, seleccione **Siguiente**.  
 
    ![Opción para que el servidor actúe como su propio distribuidor](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
 4. Si el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Inicio del Agente**, seleccione **Sí[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y configure el servicio del Agente**  para que se inicie automáticamente. Seleccione **Siguiente**.  
 
      
-5. Escriba la ruta de acceso \\\\<*Nombre_De_Equipo_Publicador*>**\repldata** en el cuadro de texto **Carpeta de instantáneas** y, después, seleccione **Siguiente**. Esta ruta de acceso debe coincidir con lo que vimos anteriormente en **Ruta de acceso a la red** de la carpeta de propiedades de repldata después de configurar las propiedades del recurso compartido. 
+5. Escriba la ruta de acceso \\\\<*Nombre_De_Equipo_Publicador*> **\repldata** en el cuadro de texto **Carpeta de instantáneas** y, después, seleccione **Siguiente**. Esta ruta de acceso debe coincidir con lo que vimos anteriormente en **Ruta de acceso a la red** de la carpeta de propiedades de repldata después de configurar las propiedades del recurso compartido. 
 
    ![Comparación de las rutas de acceso de red en el cuadro de diálogo "Propiedades de repldata" y en el Asistente para configurar la distribución](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   
@@ -219,7 +218,7 @@ Si su instancia de SQL Server Management Studio se ejecuta con derechos administ
 
    ![Comando Nuevo inicio de sesión en el menú contextual](media/tutorial-preparing-the-server-for-replication/newlogin.png)
   
-2. En la página **General**, seleccione **Buscar**. Escriba <*Nombre_De_Equipo_Publicador*>**\repl_snapshot** en el cuadro **Escriba el nombre de objeto a seleccionar**, seleccione **Comprobar nombres** y, después, seleccione **Aceptar**.  
+2. En la página **General**, seleccione **Buscar**. Escriba <*Nombre_De_Equipo_Publicador*> **\repl_snapshot** en el cuadro **Escriba el nombre de objeto a seleccionar**, seleccione **Comprobar nombres** y, después, seleccione **Aceptar**.  
 
    ![Selecciones para escribir el nombre del objeto](media/tutorial-preparing-the-server-for-replication/addsnapshotlogin.png)
   
@@ -244,7 +243,7 @@ Para obtener más información, vea:
 Ya ha preparado correctamente el servidor para la replicación. El artículo siguiente le enseñará a configurar la replicación transaccional: 
 
 > [!div class="nextstepaction"]
-> [Tutorial: Configuración de la replicación entre dos servidores conectados de forma continua (transaccional)](tutorial-replicating-data-between-continuously-connected-servers.md)
+> [Tutorial: Configuración de la replicación entre dos servidores conectados completamente (transaccional)](tutorial-replicating-data-between-continuously-connected-servers.md)
 
   
   

@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d1d5b272edba906e829b44ae4e23e9ddd8d4eaa0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904953"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Recuperación ante desastres del clúster WSFC mediante quórum forzado (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   El error de quórum se produce normalmente por un desastre sistémico, un error de comunicaciones persistente o una configuración incorrecta que afecta a varios nodos del clúster WSFC.  Es necesaria la intervención manual para la recuperación de un error de quórum.  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **Antes de empezar:**  [Requisitos previos](#Prerequisites), [Seguridad](#Security)  
   
 -   **Recuperación ante desastres de WSFC con el procedimiento de quórum forzado** [Recuperación ante desastres de WSFC con el procedimiento de quórum forzado](#Main)  
   
@@ -122,7 +121,7 @@ ms.locfileid: "51699733"
   
 -   [Cmdlet de clúster de conmutación por error Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

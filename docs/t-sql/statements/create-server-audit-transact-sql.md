@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e48239d521ed82c5bcfe2920c36b89e82cc1e193
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117143"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ CREATE SERVER AUDIT audit_name
  MAXSIZE = { *max_size }*  
  Especifica el tamaño máximo que puede alcanzar el archivo de auditoría. El valor de *max_size* debe ser un entero seguido de MB, GB, TB o UNLIMITED. El tamaño mínimo que se puede especificar para *max_size* es 2 MB y el máximo, 2.147.483.647 TB. Si se especifica UNLIMITED, el archivo crecerá hasta que se llene el disco. (0 también indica UNLIMITED). Si se especifica un valor inferior a 2 MB, se produce el error MSG_MAXSIZE_TOO_SMALL. El valor predeterminado es UNLIMITED.  
   
- MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ MAX_ROLLOVER_FILES = *{ integer* | UNLIMITED }  
  Especifica el número máximo de archivos que se deben conservar en el sistema de archivos además del archivo actual. El valor de *MAX_ROLLOVER_FILES* debe ser un entero o UNLIMITED. El valor predeterminado es UNLIMITED. Este parámetro se evalúa siempre que se reinicia la auditoría (lo que puede suceder cuando se reinicia la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o cuando se desactiva la auditoría y, a continuación, se activa de nuevo) o cuando se necesita un nuevo archivo porque se ha alcanzado el MAXSIZE. Cuando se evalúa *MAX_ROLLOVER_FILES*, si el número de archivos supera la configuración de *MAX_ROLLOVER_FILES*, se elimina el archivo más antiguo. Como resultado, cuando la configuración de *MAX_ROLLOVER_FILES* es 0, se crea un archivo cada vez que se evalúa la configuración de *MAX_ROLLOVER_FILES*. Se elimina solo un archivo automáticamente cuando se evalúa la configuración de *MAX_ROLLOVER_FILES*, de modo que cuando se disminuye el valor de *MAX_ROLLOVER_FILES*, el número de archivos no se reduce a menos que se eliminen manualmente los archivos antiguos. El número máximo de archivos que se pueden especificar es 2.147.483.647.  
   
  MAX_FILES =*integer*  
@@ -166,7 +165,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
 ```  
   
-### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>b. Crear una auditoría de servidor con destino al registro de la aplicación Windows y con opciones  
+### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>B. Crear una auditoría de servidor con destino al registro de la aplicación Windows y con opciones  
  En el ejemplo siguiente se crea una auditoría de servidor denominada `HIPAA_Audit` con destino al registro de la aplicación Windows. La cola se escribe cada segundo y apaga el motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si se produce un error.  
   
 ```sql  

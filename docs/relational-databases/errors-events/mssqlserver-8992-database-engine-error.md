@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68467e6a-09d8-478f-8bd9-3bb09453ada3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3159cc63badeeec786caaf0c50ac383af029dd6b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 149e83acd2a8e0e6d3022d74f929584190c91374
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118471"
 ---
 # <a name="mssqlserver8992"></a>MSSQLSERVER_8992
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51674014"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC3_CHECK_CATALOG|  
-|Texto del mensaje|Mensaje de comprobación del catálogo ERROR nivel LEVEL estado STATE: MESSAGE.|  
+|Texto del mensaje|Mensaje de comprobación del catálogo ERROR, nivel LEVEL, estado STATE: MESSAGE.|  
   
 ## <a name="explanation"></a>Explicación  
 DBCC CHECKCATALOG o DBCC CHECKDB encontró una incoherencia en las tablas de metadatos de sistema para el objeto especificado. Es decir, hay una incoherencia entre el identificador de objeto registrado y el objeto especificado en el mensaje de error.  
@@ -75,6 +74,6 @@ Este error no se puede reparar.  Si no puede restaurar la base de datos a partir
 ### <a name="do-not-manually-update-system-tables"></a>No actualice manualmente las tablas del sistema  
 No realice actualizaciones manuales de las tablas del sistema. SQL Server no admite los cambios manuales en las bases de datos del sistema. Si actualiza una tabla del sistema de una base de datos de SQL Server, se registran dos eventos (identificadores de evento 17659 y 3859). Para obtener más información, vea el artículo 2688307 de KB, "Se registran los identificadores de evento 17659 y 3859 al actualizar tablas del sistema en una base de datos de SQL Server".  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Se registran los identificadores de evento 17659 y 3859 al actualizar tablas del sistema en una base de datos de SQL Server](https://support.microsoft.com/kb/2688307/EN-US)  
   

@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffc25fcdd81c647dcff73c047924f3fbec13b6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107143"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deshabilitar índices y restricciones
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47740103"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -91,10 +90,10 @@ ms.locfileid: "47740103"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para ejecutar ALTER INDEX, se necesita, como mínimo, el permiso ALTER en la tabla o en la vista.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>Para deshabilitar un índice  
   
@@ -131,7 +130,7 @@ ms.locfileid: "47740103"
  Muestra el nombre de la tabla o vista en la que se ha creado el índice.  
   
  **Tipo de índice**  
- Muestra el tipo de índice: **Agrupado**, **No agrupado**, **Espacial**o **XML**.  
+ Muestra el tipo de índice: **agrupado**, **no agrupado**, **espacial** o **XML**.  
   
  **Estado**  
  Muestra el estado de la operación de deshabilitación. Los valores posibles tras la ejecución son:  

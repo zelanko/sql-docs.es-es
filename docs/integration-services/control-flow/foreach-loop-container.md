@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 504e17e0cb7d377f4b5567d705b9efb4647091aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403050"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316656"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
 
@@ -508,7 +507,19 @@ Especifica un administrador de conexiones de Azure Storage existente o crea uno
 Especifica la ruta de acceso de la carpeta en la que se van a enumerar los archivos.
 
 **SearchRecursively**  
-Especifica si se debe buscar de forma recursiva en la carpeta especificada.  
+Especifica si se debe buscar de forma recursiva en la carpeta especificada.
+
+***Notas sobre la configuración de permisos de la entidad de servicio***
+
+El permiso Data Lake Storage Gen2 está determinado por [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) y las [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Preste atención a que las ACL estén configuradas mediante el identificador de objeto (OID) de la entidad de servicio para el registro de la aplicación como se detalla [aquí](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Esto es diferente del identificador de la aplicación (cliente) que se usa con la configuración de RBAC.
+Cuando a una entidad de seguridad se le conceden permisos de datos RBAC a través de un rol integrado, o a través de un rol personalizado, estos permisos se evalúan primero tras la autorización de una solicitud.
+Si la operación solicitada está autorizada por las asignaciones RBAC de la entidad de seguridad, la autorización se resuelve inmediatamente y no se realiza ninguna comprobación adicional de la ACL.
+Como alternativa, si la entidad de seguridad no tiene una asignación RBAC o la operación de la solicitud no coincide con el permiso asignado, se realizan comprobaciones de ACL para determinar si la entidad de seguridad está autorizada para realizar la operación solicitada.
+Para que el enumerador funcione, conceda al menos el permiso **Execute** a partir del sistema de archivos raíz, junto con el permiso **Read** para la carpeta de destino.
+Como alternativa, conceda al menos el rol de **lector de datos de Storage Blob** con RBAC.
+Consulte [este](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) artículo para obtener más información.
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Página Asignaciones de variables: Editor de bucles Para cada uno
  Use la página **Asignaciones de variables** del cuadro de diálogo **Editor de bucles Foreach** para asignar variables al valor de la colección. El valor de la variable se actualiza con los valores de la colección en cada iteración del bucle.  

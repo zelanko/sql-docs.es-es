@@ -397,7 +397,7 @@ El cargador inserta filas al final de las filas existentes en la tabla de destin
 fastappend  
 El cargador inserta filas directamente, sin usar una tabla temporal, al final de las filas existentes en la tabla de destino. fastappend requiere la transacción múltiple (-m) opción. No se puede especificar una base de datos provisional al usar fastappend. No hay ninguna reversión con fastappend, lo que significa que la recuperación a partir de una carga con errores o anuló deberá controlarse mediante su propio proceso de carga.  
   
-Upsert **-K***merge_column* [,...*n* ]  
+Upsert **-K** *merge_column* [,...*n* ]  
 El cargador usa la instrucción Merge de SQL Server para actualizar las filas existentes e insertar filas nuevas.  
   
 La opción -K especifica la columna o columnas para basar la combinación. Estas columnas forman una clave de combinación, que debe representar una única fila. Si la clave de combinación existe en la tabla de destino, se actualiza la fila. Si no existe la clave de combinación en la tabla de destino, se anexa la fila.  

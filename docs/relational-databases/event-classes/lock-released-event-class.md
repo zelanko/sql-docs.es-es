@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 042aec23fa24244a5407041dd26946724fffa6c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4baedd8ebfa5fecc5ed93414a96f76a2312411a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118290"
 ---
 # <a name="lockreleased-event-class"></a>Lock:Released (clase de eventos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47597803"
   
  Las clases de eventos Lock:Acquired y Lock:Released se pueden utilizar para supervisar cuándo se bloquean objetos, el tipo de bloqueos obtenidos y cuánto tiempo se han mantenido éstos. Los bloqueos mantenidos durante largos períodos pueden causar problemas de contención y se deben investigar. Por ejemplo, una aplicación puede estar adquiriendo bloqueos en filas de una tabla y esperar después a que se produzca una entrada del usuario. Puesto que la introducción de datos puede tardar bastante tiempo, los bloqueos pueden bloquear a otros usuarios. En tal caso, es necesario volver a diseñar la aplicación para que realice solicitudes de bloqueo solo cuando sea preciso y no solicite que el una entrada del usuario cuando se han adquirido bloqueos.  
   
-## <a name="lock-released-event-class-data-columns"></a>Columnas de datos de la clase de evento Lock:Released  
+## <a name="lock-released-event-class-data-columns"></a>Columnas de datos de la clase de evento Lock: Released  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -34,8 +33,8 @@ ms.locfileid: "47597803"
 |BinaryData|**imagen**|Identificador del recurso de bloqueo.|2|Sí|  
 |ClientProcessID|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |DatabaseID|**int**|Identificador de la base de datos en la que se ha liberado el bloqueo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
-|EventClass|**int**|Tipo de evento = 23.|27|no|  
-|EventSequence|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
+|EventClass|**int**|Tipo de evento = 23.|27|No|  
+|EventSequence|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IntegerData2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Sí|  
@@ -49,7 +48,7 @@ ms.locfileid: "47597803"
 |ObjectID2|**bigint**|Id. del objeto o entidad relacionado, si está disponible y es aplicable.|56|Sí|  
 |OwnerID|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Sí|  
 |IdSolicitud|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
+|ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |SessionLoginName|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
@@ -57,7 +56,7 @@ ms.locfileid: "47597803"
 |TransactionID|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |Tipo|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Sí|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Lock:Acquired (clase de eventos)](../../relational-databases/event-classes/lock-acquired-event-class.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  

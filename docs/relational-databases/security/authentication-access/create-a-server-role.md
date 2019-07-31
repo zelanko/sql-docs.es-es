@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1467b692a574d7f3497d5f0426a841543cdeee76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094954"
 ---
 # <a name="create-a-server-role"></a>Crear un rol de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "52520900"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
   
 -   Se debe disponer del permiso CREATE SERVER CONTROL o pertenecer al rol fijo de servidor sysadmin.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "52520900"
   
     -   La asignación de la propiedad de un rol de servidor a otro rol de servidor requiere la pertenencia al rol de servidor receptor o el permiso ALTER para ese rol de servidor.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-new-server-role"></a>Para crear un nuevo rol de servidor  
   
@@ -70,15 +69,15 @@ ms.locfileid: "52520900"
   
 2.  Expanda la carpeta **Seguridad** .  
   
-3.  Haga clic con el botón derecho en la carpeta **Roles del servidor** y seleccione **Nuevo rol de servidor...**.  
+3.  Haga clic con el botón derecho en la carpeta **Roles del servidor** y seleccione **Nuevo rol de servidor...** .  
   
-4.  En el cuadro de diálogo **Nuevo rol de servidor -**_nombre\_rol\_servidor_, en la página **General**, escriba un nombre para el nuevo rol de servidor en el cuadro **Nombre del rol de servidor**.  
+4.  En el cuadro de diálogo **Nuevo rol de servidor -** _nombre\_rol\_servidor_, en la página **General**, escriba un nombre para el nuevo rol de servidor en el cuadro **Nombre del rol de servidor**.  
   
 5.  En el cuadro **Propietario** , escriba el nombre de la entidad de seguridad del servidor que poseerá el nuevo rol. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor**.  
   
 6.  En **Elementos protegibles**, seleccione uno o más elementos protegibles de nivel de servidor. Cuando se selecciona un elemento protegible, se pueden permitir o denegar permisos a este rol de servidor en dicho elemento protegible.  
   
-7.  En el cuadro **Permisos: Explícito** , active la casilla para conceder, conceder por concesión o denegar el permiso a este rol de servidor para los elementos protegibles seleccionados. Si un permiso no se puede conceder o denegar a todos los elementos protegibles seleccionados, el permiso se representará como una selección parcial.  
+7.  En el cuadro **Permisos: Explícitos**, active la casilla para conceder, conceder por concesión o denegar el permiso a este rol de servidor para los elementos protegibles seleccionados. Si un permiso no se puede conceder o denegar a todos los elementos protegibles seleccionados, el permiso se representará como una selección parcial.  
   
 8.  En la página **Miembros** , utilice el botón **Agregar** para agregar inicio de sesión que representan individuos o grupos al nuevo rol de servidor.  
   

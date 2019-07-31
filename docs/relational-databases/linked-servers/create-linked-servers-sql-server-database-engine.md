@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3112a23426054740a0c716648c94d83d4c39925a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073669"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Crear servidores vinculados (motor de base de datos de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "52391249"
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>Para crear un servidor vinculado a otra instancia de SQL Server utilizando SQL Server Management Studio  
   
@@ -249,7 +248,7 @@ ms.locfileid: "52391249"
   
      Cuando se devuelve NULL para el inicio de sesión del servidor vinculado, se indica que el inicio de sesión no existe en el servidor vinculado. Estos inicios de sesión no podrán usar el servidor vinculado a menos que este se configure para pasar un contexto de seguridad distinto o el servidor vinculado acepte conexiones anónimas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)  

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506502"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307631"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Índices de almacén de columnas: Guía de carga de datos
 
@@ -44,11 +43,15 @@ Tal y como se recomienda en el diagrama, una carga masiva:
 > En una tabla de almacén de filas con datos de índices de almacén de columnas no agrupados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre inserta los datos en la tabla base. Nunca se insertan directamente en el índice de almacén de columnas.  
 
 La carga masiva tiene estas optimizaciones de rendimiento integradas:
--   **Cargas en paralelo:** Puede realizar varias importaciones simultáneas masivas (bcp o inserción masiva) cargando un archivo de datos independiente. A diferencia de las cargas masivas del almacén de filas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no hay que especificar `TABLOCK`, ya que cada subproceso de importación en bloque cargará los datos solamente en grupos de filas independientes (grupos de filas delta o comprimidos) aplicando un bloqueo exclusivo. Al usar `TABLOCK`, se forzará un bloqueo exclusivo en la tabla y no podrá importar los datos en paralelo.  
--   **Registro mínimo:** Una carga masiva utiliza un registro mínimo en los datos que pasan directamente a los grupos de filas comprimidos. Los datos que van a un grupo de filas delta se registran por completo, incluidos los tamaños de lote con menos de 102 400 filas. Sin embargo, el objetivo de la carga masiva es omitir la mayoría de los grupos de filas delta.  
--   **Optimization de bloqueo:** Cuando se cargan datos en un grupo de filas comprimido, se obtiene el bloqueo X en el grupo de filas. Sin embargo, cuando la carga masiva se realiza en el grupo de filas delta, se obtiene un bloqueo X en el grupo de filas, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continúa bloqueando los bloqueos de página y extensión, ya que el bloqueo de grupos de filas X no forma parte de la jerarquía de bloqueo.  
+-   **Cargas en paralelo:** Puede realizar varias importaciones simultáneas masivas (bcp o inserción masiva) cargando un archivo de datos independiente. A diferencia de las cargas masivas del almacén de filas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no hay que especificar `TABLOCK`, ya que cada subproceso de importación en bloque cargará los datos solamente en grupos de filas independientes (grupos de filas delta o comprimidos) aplicando un bloqueo exclusivo. 
+
+-   **Registro reducido:** Los datos que se cargan directamente en grupos de filas comprimidos conducen a una reducción significativa del tamaño del registro. Por ejemplo, si los datos se han comprimido 10 veces, el registro de transacciones correspondiente será aproximadamente 10 veces más pequeño sin necesidad de TABLOCK o de un modelo de recuperación simple u optimizado para cargas masivas de registros. Los datos que van a un grupo de filas delta se registran por completo, incluidos los tamaños de lote con menos de 102 400 filas.  El procedimiento recomendado es usar batchsize >= 102400. Dado que no se requiere TABLOCK, puede cargar los datos en paralelo. 
+
+-   **Registro mínimo:** Puede obtener una mayor reducción del registro si sigue los requisitos previos para [el registro mínimo](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Sin embargo, a diferencia de la carga de datos en un almacén de filas, TABLOCK conduce a un bloqueo X en la tabla en lugar de un bloqueo BU (actualización masiva) y, por lo tanto, no se puede realizar la carga de datos paralela. Para obtener más información acerca del bloqueo [Versiones de fila y bloqueo[(../sql-server-transaction-locking-and-row-versioning-guide.md).
+
+-   **Optimization de bloqueo:** El bloqueo X de un grupo de filas se adquiere automáticamente al cargar los datos en un grupo de filas comprimido. Sin embargo, cuando la carga masiva se realiza en un grupo de filas delta, se obtiene un bloqueo X en el grupo de filas, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continúa bloqueando los bloqueos de página y extensión, ya que el bloqueo de grupos de filas X no forma parte de la jerarquía de bloqueo.  
   
-Si tiene un índice no agrupado de árbol B en un índice de almacén de columnas, no habrá ninguna optimización de registro ni de bloqueo para el propio índice. Sin embargo, las optimizaciones del índice agrupado de almacén de columnas seguirán estando disponibles, tal como se ha descrito anteriormente.  
+Si tiene un índice no agrupado de árbol B en un índice de almacén de columnas, no habrá ninguna optimización de registro ni de bloqueo para el propio índice. Sin embargo, las optimizaciones del índice agrupado de almacén de columnas se seguirán aplicando, tal como se ha descrito anteriormente.  
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>Planeación de los tamaños de carga masiva para minimizar los grupos de filas delta
 Los índices de almacén de columnas funcionan mejor cuando la mayoría de las filas se comprimen en el almacén de columnas y no se ubican en grupos de filas delta. Se recomienda cambiar el tamaño de las cargas para que las filas pasen directamente al almacén de columnas y omitan lo máximo posible el almacén delta.
@@ -83,7 +86,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- Este comando carga los datos en el índice de almacén de columnas de una forma similar a bcp o la tarea de inserción masiva, solo que en un único lote. Si el número de filas de la tabla de almacenamiento provisional es menor que 102400, las filas se cargarán en un grupo de filas delta; en caso contrario, se cargarán directamente en un grupo de filas comprimido. Antes existía una limitación importante: esta operación `INSERT` era de un solo subproceso. Para cargar los datos en paralelo, podía crear varias tablas de almacenamiento provisional o ejecutar `INSERT`/`SELECT` con intervalos no superpuestos de filas desde la tabla de almacenamiento provisional. Esta limitación desaparece en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. El siguiente comando carga los datos en paralelo de la tabla de almacenamiento provisional, pero tendrá que especificar `TABLOCK`.  
+ Este comando carga los datos en el índice de almacén de columnas de una forma similar a bcp o la tarea de inserción masiva, solo que en un único lote. Si el número de filas de la tabla de almacenamiento provisional es menor que 102400, las filas se cargarán en un grupo de filas delta; en caso contrario, se cargarán directamente en un grupo de filas comprimido. Antes existía una limitación importante: esta operación `INSERT` era de un solo subproceso. Para cargar los datos en paralelo, podía crear varias tablas de almacenamiento provisional o ejecutar `INSERT`/`SELECT` con intervalos no superpuestos de filas desde la tabla de almacenamiento provisional. Esta limitación desaparece en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. El siguiente comando carga los datos en paralelo de la tabla de almacenamiento provisional, pero tendrá que especificar `TABLOCK`. Puede que le resulte contradictorio con respecto a lo que se dijo anteriormente de la carga masiva, pero la principal diferencia es que la carga de datos en paralelo desde la tabla de almacenamiento provisional se ejecuta en la misma transacción.
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 
@@ -91,7 +94,7 @@ SELECT <list of columns> FROM <Staging Table>
 ```  
   
  Las siguientes optimizaciones están disponibles cuando se cargan datos en índices de almacén de columnas agrupados desde tablas de almacenamiento provisional:
--   **Optimización del registro:** se registra mínimamente cuando los datos se cargan en el grupo de filas comprimido. No existe ningún registro mínimo cuando se cargan datos en el grupo de filas delta.  
+-   **Optimización del registro:** Registro reducido cuando los datos se cargan en el grupo de filas comprimido.   
 -   **Optimization de bloqueo:** Cuando se cargan datos en un grupo de filas comprimido, se obtiene el bloqueo X en el grupo de filas. Sin embargo, con el grupo de filas delta, se obtiene un bloqueo X en el grupo de filas, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continúa bloqueando los bloqueos de página y extensión, ya que el bloqueo de grupos de filas X no forma parte de la jerarquía de bloqueo.  
   
  Si tiene uno o varios índices no agrupados, no habrá ninguna optimización de registro o bloqueo para el propio índice; sin embargo, las optimizaciones en el índice de almacén de columnas agrupado siguen estando disponibles, tal y como se describió anteriormente.  

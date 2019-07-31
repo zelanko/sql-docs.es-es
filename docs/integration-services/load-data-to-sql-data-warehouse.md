@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29668550dc64d4c782101f2690058bb465764c90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908631"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Cargar datos en Azure SQL Data Warehouse con SQL Server Integration Services (SSIS)
 
@@ -79,7 +78,7 @@ El primer enfoque es un paquete que usa la tarea de carga de SQL DW. Esta tarea 
 
 Para seguir el tutorial con esta opción, necesitará lo siguiente:
 
-- El [Feature Pack de Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. La tarea de carga de SQL DW es un componente del Feature Pack.
+- [Feature Pack de Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]. La tarea de carga de SQL DW es un componente del Feature Pack.
 
 - Una cuenta de [Azure Blob Storage](https://docs.microsoft.com/azure/storage/). La tarea de carga de SQL DW carga datos desde Azure Blob Storage en Azure SQL Data Warehouse. Puede cargar los archivos que ya están en el Blob Storage, o bien puede cargar los archivos de su equipo. Si selecciona los archivos en el equipo, la tarea de carga de SQL DW los carga en Blob Storage en primer lugar para el almacenamiento provisional y, después, los carga en SQL Data Warehouse.
 
@@ -97,7 +96,7 @@ Para seguir el tutorial con esta opción, necesitará lo siguiente:
 
 Para obtener más control, puede crear manualmente un paquete que emule el trabajo realizado por la tarea de carga de SQL DW. 
 
-1. Use la tarea de carga en el blob de Azure para cargar los datos en Azure Blob Storage. Para obtener la tarea de carga en el blob de Azure, descargue [el Feature pack de Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
+1. Use la tarea de carga en el blob de Azure para cargar los datos en Azure Blob Storage. Para obtener la tarea de carga en el blob de Azure, descargue [Feature pack de Microsoft SQL Server Integration Services para Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure].
 
 2. Después, use la tarea Ejecutar SQL de SSIS para iniciar un script de PolyBase que cargue los datos en SQL Data Warehouse. Para obtener un ejemplo que cargue datos desde Azure Blob Storage en SQL Data Warehouse (pero no con SSIS), vea [Tutorial: Carga de datos en Azure SQL Data Warehouse](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw).
 
@@ -115,7 +114,7 @@ Como método abreviado, puede usar el Asistente para importación y exportación
 
 Para seguir el tutorial con esta opción, necesitará lo siguiente:
 
-1. **Datos de ejemplo**. En este tutorial se usan datos de ejemplo almacenados en SQL Server en la base de datos de ejemplo AdventureWorks como datos de origen para cargar en SQL Data Warehouse. Para obtener la base de datos de ejemplo AdventureWorks, vea [AdventureWorks Sample Databases][AdventureWorks 2014 Sample Databases] (Bases de datos de ejemplo de AdventureWorks).
+1. **Datos de ejemplo**. En este tutorial se usan datos de ejemplo almacenados en SQL Server en la base de datos de ejemplo AdventureWorks como datos de origen para cargar en SQL Data Warehouse. Para obtener la base de datos de ejemplo AdventureWorks, vea [Bases de datos de ejemplo de AdventureWorks][AdventureWorks 2014 Sample Databases].
 
 2. **Una regla de firewall**. Tiene que crear una regla de firewall en SQL Data Warehouse con la dirección IP del equipo local para cargar datos en SQL Data Warehouse.
 

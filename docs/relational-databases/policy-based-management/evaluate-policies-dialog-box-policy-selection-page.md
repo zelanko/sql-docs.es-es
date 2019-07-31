@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a4972e42798e1cfeb46b77fb414fa77cd4b6b86a
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: cbcedf14cc2046314c28972c3332df42d70c4539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901140"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Cuadro de diálogo Evaluar directivas, página Selección de directiva
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,10 +25,10 @@ ms.locfileid: "51512410"
   
 ## <a name="options"></a>Opciones  
  **Source**  
- Especifica el origen de las directivas. Para cambiar el origen, haga clic en el botón Examinar (**...**) para abrir el cuadro de diálogo **Seleccionar origen** .  
+ Especifica el origen de las directivas. Para cambiar el origen, haga clic en el botón Examinar ( **...** ) para abrir el cuadro de diálogo **Seleccionar origen** .  
   
  **Archivos**  
- Escriba la ruta de acceso de un archivo que contenga una directiva de administración basada en directivas, o use el botón Examinar (**...**) para seleccionar el archivo.  
+ Escriba la ruta de acceso de un archivo que contenga una directiva de administración basada en directivas, o use el botón Examinar ( **...** ) para seleccionar el archivo.  
   
  **Server**  
  Seleccione esta opción para conectarse a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que contenga la directiva que desea.  
@@ -62,7 +61,7 @@ ms.locfileid: "51512410"
   
     -   El tipo de servidor de destino es diferente del tipo de servidor en el que se evalúa la directiva. Por ejemplo, en [!INCLUDE[ssDE](../../includes/ssde-md.md)], si intenta evaluar una directiva creada para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], recibirá un conjunto de destinos vacío.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Cuadro de diálogo Evaluar directivas, página Resultados de la evaluación](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-evaluation-results-page.md)  
   

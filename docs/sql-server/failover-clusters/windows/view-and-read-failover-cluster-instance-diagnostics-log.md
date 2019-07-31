@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8979e3457250cbce7fe3dbe5992c84e786d3f7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904992"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,11 +22,11 @@ ms.locfileid: "47709703"
   
 -   **Antes de empezar:**  [Recomendaciones](#Recommendations), [Seguridad](#Security)  
   
--   **Para ver el registro de diagnóstico, mediante:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para ver el registro de diagnósticos mediante:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Para configurar los valores del registro de diagnóstico, mediante:** [Transact-SQL](#TsqlConfigure)  
+-   **Para configurar el registro de diagnósticos mediante:** [Transact-SQL](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
  De forma predeterminada, los SQLDIAG se almacenan en una carpeta LOG local del directorio de la instancia de SQL Server, por ejemplo, "C\Archivos de programa\Microsoft SQL Server\MSSQL13.\<nombre de instancia>\MSSQL\LOG" del nodo propietario de la instancia de clúster de conmutación por error (FCI) AlwaysOn. El tamaño de cada archivo de registro de SQLDIAG se fija en 100 MB. Diez archivos de registro se almacenan en el equipo antes de que se reciclen para los nuevos registros.  
@@ -36,12 +35,12 @@ ms.locfileid: "47709703"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  El permiso VIEW SERVER STATE es necesario para ejecutar **fn_xe_file_target_read_file**.  
   
  Abra SQL Server Management Studio como administrador.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para ver los archivos de registro de diagnóstico:**  
   
 1.  En el menú **Archivo** , seleccione **Abrir**, **Archivo**y elija el archivo de registro de diagnóstico que desea ver.  
@@ -131,7 +130,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

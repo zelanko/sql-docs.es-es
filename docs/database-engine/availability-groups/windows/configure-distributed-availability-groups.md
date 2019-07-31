@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 2963dd3f867b4080d383f51dc9f41baf0a1733ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793741"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354604"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>Configuración de un grupo de disponibilidad Always On distribuido  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,10 +81,10 @@ GO
 ```  
   
 >[!NOTE]
->En este ejemplo se emplea la propagación directa, donde el valor **SEEDING_MODE** se establece en **AUTOMATIC** para las réplicas y el grupo de disponibilidad distribuido. En esta configuración, las réplicas secundarias y el grupo de disponibilidad secundario se rellenarán automáticamente sin requerir una copia de seguridad manual y la restauración de la base de datos principal.  
+>En este ejemplo se emplea la propagación automática, donde el valor **SEEDING_MODE** se establece en **AUTOMATIC** para las réplicas y el grupo de disponibilidad distribuido. En esta configuración, las réplicas secundarias y el grupo de disponibilidad secundario se rellenarán automáticamente sin requerir una copia de seguridad manual y la restauración de la base de datos principal.  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>Unión de las réplicas secundarias al grupo de disponibilidad principal  
-Cualquier réplica secundaria debe estar unida al grupo de disponibilidad mediante **ALTER AVAILABILITY GROUP** con la opción **JOIN** . Como en este ejemplo se utiliza la propagación directa, también se debe llamar a  **ALTER AVAILABILITY GROUP** con la opción **GRANT CREATE ANY DATABASE** . De esta forma, el grupo de disponibilidad puede crear la base de datos y comenzar la propagación automáticamente a partir de la réplica principal.  
+Cualquier réplica secundaria debe estar unida al grupo de disponibilidad mediante **ALTER AVAILABILITY GROUP** con la opción **JOIN** . Como en este ejemplo se utiliza la propagación automática, también se debe llamar a  **ALTER AVAILABILITY GROUP** con la opción **GRANT CREATE ANY DATABASE**. De esta forma, el grupo de disponibilidad puede crear la base de datos y comenzar la propagación automáticamente a partir de la réplica principal.  
   
 En este ejemplo, se ejecutan los comandos siguientes en la réplica secundaria, `server2`, para unir el grupo de disponibilidad `ag1` . Después, el grupo de disponibilidad puede crear bases de datos en la secundaria.  
   
@@ -136,7 +135,7 @@ GO
 > El grupo de disponibilidad secundario debe usar el mismo punto de conexión de creación de reflejo de la base de datos (en este ejemplo, el puerto 5022). En caso contrario, se detendrá la replicación después de una conmutación por error local.  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>Unión de las réplicas secundarias al grupo de disponibilidad secundario  
- En este ejemplo, se ejecutan los comandos siguientes en la réplica secundaria, `server4`, para unir el grupo de disponibilidad `ag2` . Después, el grupo de disponibilidad puede crear bases de datos en la secundaria con el fin de admitir la propagación directa.  
+ En este ejemplo, se ejecutan los comandos siguientes en la réplica secundaria, `server4`, para unir el grupo de disponibilidad `ag2` . Después, el grupo de disponibilidad puede crear bases de datos en la secundaria con el fin de admitir la propagación automática.  
   
 ```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   

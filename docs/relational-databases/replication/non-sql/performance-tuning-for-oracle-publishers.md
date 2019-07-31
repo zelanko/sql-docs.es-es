@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a5ae003e6d8a9d13ac9b0d6b9dfa99a497a26c23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31ee9136f4c2b0f0864db0ecd3931e2e45ea4fdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942742"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Optimizar el rendimiento de publicadores de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47595516"
   
  Además, existen dos opciones para publicadores de Oracle que están relacionadas con el rendimiento:  
   
--   Especificar la opción de publicación adecuada: Oracle o Puerta de enlace de Oracle.  
+-   Especificar la opción de publicación adecuada: Oracle o puerta de enlace de Oracle.  
   
 -   Configurar el trabajo del conjunto de transacciones para procesar cambios en el publicador en un intervalo adecuado.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "47595516"
   
  Para configurar el trabajo del conjunto de transacciones, consulte [Configuración del trabajo del conjunto de transacciones para un publicador de Oracle &#40;programa de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Información general de la publicación de Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

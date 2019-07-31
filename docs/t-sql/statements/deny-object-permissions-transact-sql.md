@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114800"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY (permisos de objeto de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ PRIVILEGES
 >  Un permiso DENY de nivel de tabla no tiene prioridad sobre uno GRANT de nivel de columna. Se ha conservado esta incoherencia en la jerarquía de permisos para mantener la compatibilidad con versiones anteriores.  
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
- Especifica el objeto en el que se va a denegar el permiso. La frase OBJECT es opcional si especifica *schema_name*. Si se utiliza la frase OBJECT, se requiere el calificador de ámbito (**::**). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se requiere el calificador de ámbito de esquema (**.**).  
+ Especifica el objeto en el que se va a denegar el permiso. La frase OBJECT es opcional si especifica *schema_name*. Si se utiliza la frase OBJECT, se requiere el calificador de ámbito ( **::** ). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se requiere el calificador de ámbito de esquema ( **.** ).  
   
  TO \<database_principal>  
  Especifica la entidad de seguridad a la que se deniega el permiso.  
@@ -148,7 +147,7 @@ DENY SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>b. Denegar el permiso EXECUTE en un procedimiento almacenado  
+### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>B. Denegar el permiso EXECUTE en un procedimiento almacenado  
  En el siguiente ejemplo se deniega el permiso `EXECUTE` para el procedimiento almacenado `HumanResources.uspUpdateEmployeeHireInfo` a un rol de aplicación denominado `Recruiting11`.  
   
 ```  

@@ -12,13 +12,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3e396e40f30571969b347c464687321b3b038212
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 277c688b77e74d1dad35b19c279a648e56b8f396
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462537"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316676"
 ---
 # <a name="flexible-file-source"></a>Origen de archivo flexible
 
@@ -51,11 +50,28 @@ Las propiedades siguientes están disponibles en el **Editor avanzado**.
 - **escapeChar:** carácter especial utilizado para aplicar una secuencia de escape a un delimitador de columna en el contenido de un archivo de entrada. No puede especificar ambos valores escapeChar y quoteChar para una tabla. Solo se permite un carácter. No hay ningún valor predeterminado.
 - **quoteChar:** carácter utilizado para citar el valor de una cadena. Los delimitadores de columna y fila de dentro de las comillas se tratan como parte del valor de la cadena. Esta propiedad es aplicable tanto al conjunto de datos de entrada como al de salida. No puede especificar ambos valores escapeChar y quoteChar para una tabla. Solo se permite un carácter. No hay ningún valor predeterminado.
 - **nullValue:** uno o varios caracteres empleados para representar un valor nulo. El valor **predeterminado** es \N.
-- **encodingName:** permite especificar el nombre de la codificación. Consulte la propiedad [Encoding.EncodingName](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8).
+- **encodingName:** permite especificar el nombre de la codificación. Consulte la propiedad [Encoding.EncodingName](https://docs.microsoft.com/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8).
 - **skipLineCount:**  permite indicar el número de filas no vacías que hay que omitir al leer datos de archivos de entrada. Si se especifican ambos valores skipLineCount y firstRowAsHeader, las líneas se omiten primero y, luego, la información del encabezado se lee a partir del archivo de entrada.
 - **treatEmptyAsNull:** permite especificar si hay que tratar una cadena nula o vacía como un valor nulo al leer datos de un archivo de entrada. El valor **predeterminado** es true.
 
 Después de especificar la información de conexión, cambie a la página **Columnas** para asignar columnas de origen a columnas de destino para el flujo de datos SSIS.
+
+**Notas sobre la configuración de permisos de la entidad de servicio**
+
+Para que la **conexión de prueba** funcione (ya sea Blob Storage o Data Lake Storage Gen2), se debe asignar al menos el rol **Lector de datos de Storage Blob** a la entidad de servicio en la cuenta de almacenamiento.
+Esto se hace con [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+
+En el caso del almacenamiento de blobs, el permiso de lectura se concede mediante la asignación de al menos el rol **Lector de datos de Storage Blob**.
+
+Para Data Lake Storage Gen2, el permiso lo determina RBAC y las [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Preste atención a que las ACL se configuran mediante el identificador de objeto (OID) de la entidad de servicio para el registro de la aplicación como se detalla [aquí](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Esto es diferente del identificador de aplicación (cliente) que se usa con la configuración de RBAC.
+Cuando a una entidad de seguridad se le conceden permisos de datos RBAC a través de un rol integrado, o bien a través de un rol personalizado, estos permisos se evalúan primero tras la autorización de una solicitud.
+Si la operación solicitada está autorizada por las asignaciones RBAC de la entidad de seguridad, la autorización se resuelve inmediatamente y no se realiza ninguna comprobación adicional de la ACL.
+Como alternativa, si la entidad de seguridad no tiene una asignación RBAC, o la operación de la solicitud no coincide con el permiso asignado, se realizan comprobaciones de ACL para determinar si la entidad de seguridad está autorizada para realizar la operación solicitada.
+Para el permiso de lectura, conceda al menos el permiso **Execute** a partir del sistema de archivos de origen, junto con el permiso **Read** para los archivos que se van a leer.
+Como alternativa, conceda al menos el rol **Lector de datos de Storage Blob** con RBAC.
+Vea [este](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) artículo para obtener más información.
 
 **Requisito previo para el formato de archivo ORC/Parquet**
 

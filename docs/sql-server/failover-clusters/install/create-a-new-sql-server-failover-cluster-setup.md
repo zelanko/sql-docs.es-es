@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c93844267fd91f248c073b00b12c4a07d16d7da5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063974"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "52525290"
   
     -   Si el nodo que agrega tiene subredes adicionales o diferentes, el programa de instalación le permite especificar más direcciones IP. Si el nodo que va a agregar está en una subred diferente, también debe confirmar el cambio de dependencias de recursos de dirección IP a OR. Para obtener más información sobre los posibles escenarios durante las operaciones de adición de un nodo, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación)&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
- **Opción 2: instalación de Advanced/Enterprise**  
+ **Opción 2: Instalación de Advanced/Enterprise**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La instalación de clústeres de conmutación por error de Advanced/Enterprise consta de los pasos siguientes:  
   
@@ -262,7 +261,7 @@ ms.locfileid: "52525290"
      Si desea especificar un directorio personalizado para los componentes compartidos, use el campo situado en la parte inferior de esta página. Para cambiar la ruta de instalación de los componentes compartidos, actualícela en el campo que se proporciona en la parte inferior del cuadro de diálogo o haga clic en el botón de puntos suspensivos para desplazarse a un directorio de instalación. La ruta de instalación predeterminada es C:\Archivos de programa\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\.  
   
     > [!NOTE]  
-    >  Si selecciona la característica Servicios de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , se seleccionan automáticamente la replicación y la búsqueda de texto completo. Si anula la selección de cualquiera de estas subcaracterísticas, también se anula la selección de la característica Servicios de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+    >  Si selecciona la característica Servicios de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , se seleccionan automáticamente la replicación y la búsqueda de texto completo. Si anula la selección de cualquiera de estas subcaracterísticas, también se anula la selección de la característica Servicios de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] .  
   
 11. En la página Configuración de instancia, especifique si desea instalar una instancia predeterminada o una instancia con nombre.
   
@@ -322,7 +321,7 @@ ms.locfileid: "52525290"
   
 ## <a name="complete"></a>Operación completada  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Paso 2 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Completar  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Paso 2 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Operación completada  
   
 1.  Después de preparar todos los nodos como se describe en el [paso de preparación](#prepare), ejecute el programa de instalación en uno de los nodos preparados, preferiblemente el que posee el disco compartido. En la página **Opciones avanzadas** del Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Finalización avanzada de clúster**.  
   
@@ -343,7 +342,7 @@ ms.locfileid: "52525290"
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ejecuta uno o varios conjuntos de reglas que se basan en las características que seleccionó para validar la configuración.  
   
-8.  Use la página Grupo de recursos de clúster para especificar el nombre del grupo de recursos de clúster donde se ubicarán los recursos de servidor virtual de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para especificar el nombre del grupo de recursos de clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Tiene dos opciones:  
+8.  Use la página Grupo de recursos de clúster para especificar el nombre del grupo de recursos de clúster donde se ubicarán los recursos de servidor virtual de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para especificar el nombre del grupo de recursos de clúster de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Tiene dos opciones:  
   
     -   Usar la lista para especificar un grupo existente.  
   
@@ -397,11 +396,11 @@ ms.locfileid: "52525290"
 19. Después de la instalación, en la página **Operación completada** se proporciona un vínculo al archivo de registro de resumen de la instalación y a otras notas importantes. Para completar el proceso de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Cerrar**. Con este paso, todos los nodos preparados para el mismo clústeres de conmutación por error forman parte de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completado.  
   
 ## <a name="next-steps"></a>Next Steps  
- **Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**: para reducir el área expuesta del sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala y habilita los servicios y características clave de forma selectiva. Para obtener más información, vea [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
+ **Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** : para reducir el área expuesta del sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala y habilita los servicios y características clave de forma selectiva. Para obtener más información, vea [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Para obtener más información sobre las ubicaciones de los archivos de registro, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Instalar SQL Server 2016 desde el símbolo del sistema](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   

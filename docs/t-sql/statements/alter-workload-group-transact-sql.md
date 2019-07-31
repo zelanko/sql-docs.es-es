@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bac81675ce0469fe39d11745462f2a3376aed73f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6563abe72382cb912e3d71851398e5d778b47a19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091752"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Especifica el grado máximo de paralelismo (DOP) para las solicitudes paralelas. *value* debe ser 0 o un entero positivo entre 1 y 255. Cuando *value* es 0, el servidor elige el grado máximo de paralelismo. Esta es la configuración predeterminada y recomendada.  
   
 > [!NOTE]  
-> El valor real que [!INCLUDE[ssDE](../../includes/ssde-md.md)] establece para MAX_DOP puede ser menor que el valor especificado. El valor final se determinada mediante la fórmula min(255, *número de CPU)*.  
+> El valor real que [!INCLUDE[ssDE](../../includes/ssde-md.md)] establece para MAX_DOP puede ser menor que el valor especificado. El valor final se determinada mediante la fórmula min(255, *número de CPU)* .  
   
 > [!CAUTION]  
 > El cambio de MAX_DOP puede afectar negativamente al rendimiento de un servidor. Si debe cambiar MAX_DOP, se recomienda que se establezca en un valor menor o igual que el número máximo de programadores de hardware que hay en un solo nodo NUMA. Se recomienda no establecer MAX_DOP en un valor mayor que 8.  
@@ -158,7 +157,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados del regulador de recursos. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
- REQUEST_MEMORY_GRANT_PERCENT: en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se permite que la creación de índices use más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos admite este tratamiento especial en versiones posteriores; sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y del grupo de recursos de servidor.  
+ REQUEST_MEMORY_GRANT_PERCENT: En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se permite que la creación de índices use más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos admite este tratamiento especial en versiones posteriores; sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y del grupo de recursos de servidor.  
   
  **Creación de índices en una tabla con particiones**  
   
@@ -188,7 +187,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   

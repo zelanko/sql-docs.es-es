@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf856f9ae013dd2f19cb72b04c0c2296d0185511
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d49dbce19b0d2c7ce1fa1337eb6cbdc58da08f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140861"
 ---
 # <a name="set-or-change-the-column-collation"></a>Establecer o cambiar la intercalación de columnas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47661913"
     GO  
     ```  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información, vea [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+-   Columnas en la tabla de origen capturadas[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Para obtener más información, vea [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 -   Usar la propiedad **Column.Collation** de Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO).  
   
@@ -89,7 +88,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- Dado que **tempdb** usa la intercalación de servidor predeterminada y `TestPermTab.Col1` usa una intercalación diferente, SQL Server devuelve este error: "No se puede resolver el conflicto de intercalación entre 'Latin1_General_CI_AS_KS_WS' y 'Estonian_CS_AS' en la operación Igual a".  
+ Dado que **tempdb** utiliza la intercalación de servidor predeterminada y `TestPermTab.Col1` utiliza una intercalación diferente, SQL Server devuelve este error: "No se puede resolver el conflicto de intercalación entre 'Latin1_General_CI_AS_KS_WS' y 'Estonian_CS_AS' en la operación de igual a".  
   
  Para evitar el error, puede utilizar cualquiera de las alternativas siguientes:  
   
@@ -111,7 +110,7 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
        );  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md)   
  [Establecer o cambiar la intercalación de base de datos](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  

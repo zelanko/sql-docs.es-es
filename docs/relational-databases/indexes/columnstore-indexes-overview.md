@@ -1,5 +1,5 @@
 ---
-title: Introducción a los índices de almacén de columnas | Microsoft Docs
+title: 'Índices de almacén de columnas: Introducción | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebf4644c17f9fdbb02c89edec72abd39bdd9c42e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912094"
 ---
-# <a name="columnstore-indexes-overview"></a>Introducción a los índices de almacén de columnas
+# <a name="columnstore-indexes-overview"></a>Índices de almacén de columnas: Información general
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Los índices de almacén de columnas son el estándar para almacenar y consultar las tablas de hechos de almacenamiento de datos de gran tamaño. Este índice usa el almacenamiento de datos basado en columnas y el procesamiento de consultas para lograr ganancias de hasta **10 veces el rendimiento de las consultas** en el almacenamiento de datos sobre el almacenamiento tradicional orientado a filas. También puede conseguir ganancias de hasta **10 veces la compresión de datos** sobre el tamaño de los datos sin comprimir. Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], los índices de almacén de columnas permiten los análisis operativos, es decir, ejecutar análisis de rendimiento en tiempo real en una carga de trabajo transaccional.  

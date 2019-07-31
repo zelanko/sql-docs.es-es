@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0cc1e8e4405c6900860d8323d31d52e4a320639d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acdbd90268b1282bd6011ac7816157c70f66bb71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048829"
 ---
 # <a name="implement-event-notifications"></a>Implementar notificaciones de eventos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  En este caso, el evento se notifica dos veces: una vez cuando se produce el evento CREATE_SCHEMA y otra vez cuando ocurre el evento CREATE_TABLE. Es recomendable que no cree notificaciones de eventos en los eventos CREATE_SCHEMA ni en los textos <schema_element> de las definiciones CREATE SCHEMA correspondientes, y que no genere lógica en la aplicación para evitar capturar datos de eventos no deseados.  
+>  En este caso, la notificación de eventos se genera dos veces: una vez cuando se produce el evento CREATE_SCHEMA y otra vez cuando ocurre el evento CREATE_TABLE. Es recomendable que no cree notificaciones de eventos en los eventos CREATE_SCHEMA ni en los textos <schema_element> de las definiciones CREATE SCHEMA correspondientes, y que no genere lógica en la aplicación para evitar capturar datos de eventos no deseados.  
   
  **Para crear una notificación de eventos**  
   
@@ -98,7 +97,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
 -   [DROP EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Obtener información sobre notificaciones de eventos](../../relational-databases/service-broker/get-information-about-event-notifications.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

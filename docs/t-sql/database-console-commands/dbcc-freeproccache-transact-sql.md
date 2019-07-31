@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3302577e705bf563ad54037437213a4088407f0
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101902"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -113,7 +112,7 @@ Las siguientes operaciones de reconfiguración también borran la caché de proc
 -   user options  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
-Si no se especifica la cláusula WITH NO_INFOMSGS, se devuelve DBCC FREEPROCCACHE: "La ejecución de DBCC se ha completado. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."
+Si no se especifica la cláusula WITH NO_INFOMSGS, se devuelve DBCC FREEPROCCACHE: "Ejecución de DBCC completada. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."
   
 ## <a name="permissions"></a>Permisos  
 Se aplica a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -171,7 +170,7 @@ DBCC FREEPROCCACHE (0x060006001ECA270EC0215D05000000000000000000000000);
 GO  
 ```  
   
-### <a name="b-clearing-all-plans-from-the-plan-cache"></a>b. Borrar todos los planes de la memoria caché del plan  
+### <a name="b-clearing-all-plans-from-the-plan-cache"></a>B. Borrar todos los planes de la memoria caché del plan  
 En el ejemplo siguiente se borran todos los elementos de la memoria caché del plan. La cláusula WITH `NO_INFOMSGS` se especifica para que no se muestre el mensaje informativo.
   
 ```sql  

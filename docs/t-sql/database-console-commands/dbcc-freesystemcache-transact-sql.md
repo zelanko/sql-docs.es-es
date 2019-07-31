@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 00b6ddce8d5c69e16913290b0300fc6828352147
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039130"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ Suprime todos los mensajes de información.
 Al ejecutar DBCC FREESYSTEMCACHE se borra la caché de planes para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la caché de planes, se provoca una nueva compilación de todos los planes de ejecución próximos, lo que puede dar lugar a una reducción repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la caché del plan) debidas a operaciones "DBCC FREEPROCCACHE" o "DBCC FREESYSTEMCACHE". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
 
 ## <a name="result-sets"></a>Conjuntos de resultados  
-DBCC FREESYSTEMCACHE devuelve: "La ejecución de DBCC se ha completado. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."
+DBCC FREESYSTEMCACHE devuelve: "Ejecución de DBCC completada. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."
   
 ## <a name="permissions"></a>Permisos  
 Requiere el permiso ALTER SERVER STATE en el servidor.
@@ -78,7 +77,7 @@ En el ejemplo siguiente se muestra cómo limpiar memorias caché que están dedi
 DBCC FREESYSTEMCACHE ('ALL', default);  
 ```  
   
-### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>b. Liberar las entradas de sus memorias caché respectivas una vez que dejan de ser utilizadas  
+### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>B. Liberar las entradas de sus memorias caché respectivas una vez que dejan de ser utilizadas  
 En el ejemplo siguiente se utiliza la cláusula MARK_IN_USE_FOR_REMOVAL para liberar las entradas de todas las memorias caché actuales una vez que las entradas dejan de ser utilizadas.
   
 ```sql

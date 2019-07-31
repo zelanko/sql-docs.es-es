@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 90437ce089bba33e5282ca01e907dfac7afe77ab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 23949aec32acce44cd139ab8505cd1ffc743e64d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912702"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -154,7 +153,7 @@ RETURNS return_data_type
 ## <a name="metadata"></a>Metadatos  
  En esta sección se enumeran las vistas de catálogo del sistema que se pueden usar para devolver metadatos sobre funciones definidas por el usuario.  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): muestra la definición de funciones definidas por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por ejemplo:  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): Muestra la definición de funciones definidas por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por ejemplo:  
   
 ```  
 SELECT definition, type   
@@ -166,9 +165,9 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): muestra información sobre los parámetros definidos en funciones definidas por el usuario.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): Muestra información sobre los parámetros definidos en funciones definidas por el usuario.  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): muestra los objetos subyacentes a los que hace referencia una función.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Muestra los objetos subyacentes a los que hace referencia una función.  
   
 ## <a name="permissions"></a>Permisos  
  Se requiere el permiso CREATE FUNCTION en la base de datos y el permiso ALTER en el esquema en el que se va a crear la función.  
@@ -192,7 +191,7 @@ GO
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   
  [DROP FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   

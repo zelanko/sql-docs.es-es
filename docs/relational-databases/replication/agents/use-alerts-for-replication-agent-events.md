@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e63d7e75b0025fb5e23f2d9bc1120d77ff7faa2f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 84b1656e15f37dd0c1491d9eb8e385813f579fca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085898"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar alertas para eventos del Agente de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "51659414"
 |14150|**Replicación: éxito de agente**|Un agente termina correctamente.|Sí|  
 |14151|**Replicación: error de agente**|Un agente termina con un error.|Sí|  
 |14152|**Replicación: reintento de agente**|El agente termina después de volver a intentar sin éxito una operación (el agente encuentra un error, por ejemplo que el servidor no está disponible, interbloqueo, error en la conexión o error de tiempo de espera).|Sí|  
-|14157|**Replicación: suscripción expirada quitada**|Se quitó la suscripción expirada.|no|  
-|20572|**Replicación: Suscripción reinicializada por no pasar la validación**|El trabajo de respuesta "Reinicializar suscripciones con errores de validación de datos" reinicializa correctamente una suscripción.|no|  
+|14157|**Replicación: suscripción expirada quitada**|Se quitó la suscripción expirada.|No|  
+|20572|**Replicación: suscripción reinicializada por no pasar la validación**|El trabajo de respuesta "Reinicializar suscripciones con errores de validación de datos" reinicializa correctamente una suscripción.|No|  
 |20574|**Replicación: el suscriptor no ha superado la validación de datos**|Un agente de distribución o de mezcla no puede validar los datos.|Sí|  
-|20575|**Replicación: El suscriptor ha pasado la validación de datos**|Un agente de distribución o de mezcla pasa la validación de los datos.|Sí|  
+|20575|**Replicación: el suscriptor ha superado la validación de datos**|Un agente de distribución o de mezcla pasa la validación de los datos.|Sí|  
 |20578|**Replicación: cierre personalizado del agente**|||  
 |22815|**Alerta de detección de conflictos punto a punto**|El Agente de distribución detecta un conflicto cuando intenta aplicar un cambio en un nodo punto a punto.|Sí|  
   
@@ -88,7 +87,7 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)   
  [Monitoring &#40;Replication&#41;](../../../relational-databases/replication/monitor/monitoring-replication.md) (Monitorización [replicación])  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0468195ebe718db73dfa4a302185b677f76c6896
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024479"
 ---
 # <a name="utility-explorer-f1-help"></a>Explorador de Utilidad (Ayuda F1)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "52413172"
   
  Para crear una vista filtrada de una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una aplicación de nivel de datos, haga clic en el vínculo de una categoría de utilización al lado de su indicador deslizante en el panel de la utilidad. Por ejemplo, si hace clic en **CPU de instancia sobreutilizada** en el panel **Contenido del explorador de la utilidad** , SSMS crea una vista de lista filtrada de instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuya CPU está sobreutilizada en función de los valores de directiva actuales.  
   
- Observe que, al hacer clic en un vínculo de una categoría de utilización, se agrega **(filtrado)** al nodo correspondiente en el panel de navegación del explorador de la utilidad; es decir, **Instancias administradas** se etiqueta **Instancias administradas (filtrado)**. Para ver la configuración del filtro, haga clic con el botón derecho en el nodo en el panel de navegación y seleccione **Filtro**y, después, haga clic en **Configuración del filtro**. Para borrar la configuración del filtro, haga clic con el botón derecho en el nodo en el panel de navegación, seleccione **Filtro** y, después, haga clic en **Quitar filtro**.  
+ Observe que, al hacer clic en un vínculo de una categoría de utilización, se agrega **(filtrado)** al nodo correspondiente en el panel de navegación del explorador de la utilidad; es decir, **Instancias administradas** se etiqueta **Instancias administradas (filtrado)** . Para ver la configuración del filtro, haga clic con el botón derecho en el nodo en el panel de navegación y seleccione **Filtro**y, después, haga clic en **Configuración del filtro**. Para borrar la configuración del filtro, haga clic con el botón derecho en el nodo en el panel de navegación, seleccione **Filtro** y, después, haga clic en **Quitar filtro**.  
   
  Para obtener más información sobre cómo ver el estado de mantenimiento de instancias individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para ver o cambiar la configuración de la directiva, vea [Detalles de las instancias administradas &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2).  
   
@@ -132,7 +131,7 @@ ms.locfileid: "52413172"
   
  La secuencia de columnas en la vista de lista se puede cambiar, para ello arrastre las columnas hacia la izquierda o la derecha. En la vista de lista, se pueden agregar o eliminar columnas, para ello haga clic en los encabezados de columna y seleccione columnas o anule su selección. El menú contextual también proporciona opciones de ordenación. La capacidad de ordenación también se puede activar si hace clic en la parte superior del nombre de una columna.  
   
- Para tener acceso a las opciones de filtro para la vista de lista de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic con el botón derecho en el nodo **Aplicaciones de capa de datos implementadas** en el panel de navegación del Explorador de Utilidad y seleccione **Filtro**. Una vez implementada la configuración del filtro, el nodo **Aplicaciones de capa de datos implementadas** en el Explorador de Utilidad se etiquetará con **Aplicaciones de capa de datos implementadas (filtradas)**. Para más información, consulte [Configuración del filtro &#40;Explorador de objetos y Explorador de Utilidad&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
+ Para tener acceso a las opciones de filtro para la vista de lista de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic con el botón derecho en el nodo **Aplicaciones de capa de datos implementadas** en el panel de navegación del Explorador de Utilidad y seleccione **Filtro**. Una vez implementada la configuración del filtro, el nodo **Aplicaciones de capa de datos implementadas** en el Explorador de Utilidad se etiquetará con **Aplicaciones de capa de datos implementadas (filtradas)** . Para más información, consulte [Configuración del filtro &#40;Explorador de objetos y Explorador de Utilidad&#41;](https://msdn.microsoft.com/library/4aab04bc-e1ab-4d4b-ab74-b287fc805bc2).  
   
  De forma predeterminada, las siguientes columnas muestran información sobre el estado de mantenimiento de cada aplicación de capa de datos.  
   
@@ -178,7 +177,7 @@ ms.locfileid: "52413172"
   
 -   Modelo de recuperación: (simple, completo u optimizado para cargas masivas)  
   
--   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Pestaña Uso de la CPU  
  La pestaña Uso de la CPU muestra gráficos en paralelo de datos históricos para la aplicación de capa de datos y la utilización de la CPU del sistema informático.  
@@ -255,7 +254,7 @@ ms.locfileid: "52413172"
   
 -   Modelo de recuperación: (simple, completo u optimizado para cargas masivas)  
   
--   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
+-   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .
 
 ## <a name="managed-instance-details-sql-server-utility"></a>Detalles de las instancias administradas (Utilidad de SQL Server)
  La información de la vista Instancias administradas del Explorador de Utilidad proporciona los detalles de utilización para las instancias individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el historial de uso de la CPU, los detalles de utilización del almacenamiento en el nivel de archivo y la capacidad de ver y actualizar los umbrales de la directiva. Los umbrales de la directiva se pueden controlar en el nivel de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , para un equipo, para los archivos de base de datos y los archivos de registro, y en el nivel de volúmenes de almacenamiento. También se pueden ver los detalles sobre las propiedades correspondientes a las instancias administradas individuales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -314,11 +313,11 @@ ms.locfileid: "52413172"
   
 -   Intercalación:  
   
--   Distinción de mayúsculas y minúsculas: (True o False)  
+-   Distinguir mayúsculas de minúsculas: (True o False)  
   
 -   Idioma:  
   
--   Último momento notificado: esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
+-   Última hora notificada: Esta columna muestra la fecha y hora local del UCP mediante el tipo de datos datetime. Para más información, consulte el tema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) . Al utilizar el modelo de objetos de la utilidad, observe que SSMS utiliza el tipo de datos datetimeoffset. Para más información, consulte el tema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) .  
   
  Pestaña Uso de la CPU  
  La pestaña Uso de CPU muestra gráficos en paralelo de datos históricos para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el uso de la CPU del sistema informático.  
@@ -411,7 +410,7 @@ ms.locfileid: "52413172"
   
 -   Intercalación:  
   
--   Distinción de mayúsculas y minúsculas: (True o False)  
+-   Distinguir mayúsculas de minúsculas: (True o False)  
   
 -   Idioma:  
 
@@ -493,7 +492,7 @@ Pestaña **Almacenamiento de datos**: muestra los detalles de configuración par
   
  El directorio de UMDW se puede configurar: \<Unidad del sistema:>:Archivos de programa\Microsoft SQL Server\MSSQL10_50.<Nombre_UCP\MSSQL\Data\\,donde \<Unidad del sistema> normalmente es la unidad C:\. El archivo de registro, UMDW_\<GUID>_LOG, se encuentra en el mismo directorio.  
   
-> **NOTA:** La ubicación del archivo UMDW (sysutility_mdw) se puede cambiar mediante detach/attach o ALTER DATABASE. Recomendamos el uso de ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+> **NOTA:** La ubicación del archivo del almacén de administración de datos de utilidad se puede cambiar mediante detach/attach o ALTER DATABASE. Recomendamos el uso de ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  Restablecer los valores originales  
  Para restablecer los valores de esta pestaña a los valores predeterminados, haga clic en el botón **Restaurar valores predeterminados** y, luego, en **Aplicar**.  
@@ -510,7 +509,7 @@ Pestaña **Almacenamiento de datos**: muestra los detalles de configuración par
   
  [Supervisar instancias de SQL Server en la utilidad de SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas de la Utilidad de SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   

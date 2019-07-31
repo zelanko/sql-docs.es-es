@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948428"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT: GROUP BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -345,7 +344,7 @@ La cláusula GROUP BY admite todas las características GROUP BY incluidas en el
 |Característica|SQL Server Integration Services|Nivel de compatibilidad 100 o superior con SQL Server|SQL Server 2008 o posterior con el nivel de compatibilidad 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Agregados DISTINCT|No se admite en WITH CUBE ni en WITH ROLLUP.|Se admite en WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE o ROLLUP.|Igual que el nivel de compatibilidad 100.|  
-|Función definida por el usuario con un nombre CUBE o ROLLUP en la cláusula GROUP BY|Se admite la función definida por el usuario **dbo.cube(**_arg1_**,**_...argN_**)** o **dbo.rollup(**_arg1_**,**..._argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|No se admite la función definida por el usuario **dbo.cube (**_arg1_**,**...argN **)** o **dbo.rollup(** arg1 **,**_...argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Se devuelve un mensaje de error que indica lo siguiente: "Sintaxis incorrecta cerca de la palabra clave "cube"&#124;"rollup"."<br /><br /> Para evitar este problema, reemplace `dbo.cube` por `[dbo].[cube]` o `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> Se admite el siguiente ejemplo: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Se admite la función definida por el usuario **dbo.cube (**_arg1_**,**_...argN_) o **dbo.rollup(**_arg1_**,**_...argN_**)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|Función definida por el usuario con un nombre CUBE o ROLLUP en la cláusula GROUP BY|Se admite la función definida por el usuario **dbo.cube(** _arg1_ **,** _...argN_ **)** o **dbo.rollup(** _arg1_ **,** ..._argN_ **)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|No se admite la función definida por el usuario **dbo.cube (** _arg1_ **,** ...argN **)** o **dbo.rollup(** arg1 **,** _...argN_ **)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Se devuelve un mensaje de error que indica lo siguiente: "Sintaxis incorrecta cerca de la palabra clave "cube"&#124;"rollup"."<br /><br /> Para evitar este problema, reemplace `dbo.cube` por `[dbo].[cube]` o `dbo.rollup` por `[dbo].[rollup]`.<br /><br /> Se admite el siguiente ejemplo: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`.|Se admite la función definida por el usuario **dbo.cube (** _arg1_ **,** _...argN_) o **dbo.rollup(** _arg1_ **,** _...argN_ **)** en la cláusula GROUP BY.<br /><br /> Por ejemplo, `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|No compatible|Admitida|Admitida|  
 |CUBE|No compatible|Admitida|No compatible|  
 |ROLLUP|No compatible|Admitida|No compatible|  
@@ -369,7 +368,7 @@ GROUP BY SalesOrderID
 ORDER BY SalesOrderID;  
 ```  
   
-### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>b. Usar una cláusula GROUP BY con varias tablas  
+### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. Usar una cláusula GROUP BY con varias tablas  
  En el ejemplo siguiente se recupera el número de empleados de cada `City` de la tabla `Address` combinada con la tabla `EmployeeAddress`. En este ejemplo se usa AdventureWorks. 
   
 ```sql  

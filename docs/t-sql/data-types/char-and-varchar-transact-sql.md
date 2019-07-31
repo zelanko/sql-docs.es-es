@@ -1,7 +1,7 @@
 ---
 title: char y varchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,26 +23,29 @@ helpviewer_keywords:
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60bec45b4feacff0390bfb359010767dc3bcd2af
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a7e625e1d532f42f2e72e57590943de7e5834dbf
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801409"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354613"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char y varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Los tipos de datos de caracteres son de longitud fija, **char**, o de longitud variable, **varchar**. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], cuando se usa una intercalación con UTF-8 habilitado, estos tipos de datos almacenan el intervalo completo de datos de caracteres [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) y usan la codificación de caracteres [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Si se especifica una intercalación cuyo formato no es UTF-8, estos tipos de datos solo almacenan un subconjunto de caracteres admitidos por la página de códigos correspondiente de esa intercalación.
+Los tipos de datos de caracteres son de tamaño fijo, **char**, o de tamaño variable, **varchar**. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], cuando se usa una intercalación con UTF-8 habilitado, estos tipos de datos almacenan el intervalo completo de datos de caracteres [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) y usan la codificación de caracteres [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Si se especifica una intercalación cuyo formato no es UTF-8, estos tipos de datos solo almacenan un subconjunto de caracteres admitidos por la página de códigos correspondiente de esa intercalación.
   
 ## <a name="arguments"></a>Argumentos  
-**char** [ ( *n* ) ] Datos de cadena de longitud fija. *n* define la longitud de la cadena en bytes y debe ser un valor entre 1 y 8000. Para juegos de caracteres de codificación de byte único, como el *latino*, el tamaño de almacenamiento es *n* bytes y el número de caracteres que se pueden almacenar también es *n*. Para los juegos de caracteres de codificación multibyte, el tamaño de almacenamiento sigue siendo *n* bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n*. El sinónimo ISO para **char** es **character**. Para más información sobre los juegos de caracteres, vea [Juegos de caracteres de un solo byte y de varios bytes](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+**char** [ ( *n* ) ] Datos de cadena de tamaño fijo. *n* define el tamaño de la cadena en bytes y debe ser un valor entre 1 y 8000. Para juegos de caracteres de codificación de byte único, como el *latino*, el tamaño de almacenamiento es *n* bytes y el número de caracteres que se pueden almacenar también es *n*. Para los juegos de caracteres de codificación multibyte, el tamaño de almacenamiento sigue siendo *n* bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n*. El sinónimo ISO para **char** es **character**. Para más información sobre los juegos de caracteres, vea [Juegos de caracteres de un solo byte y de varios bytes](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
-**varchar** [ ( *n* | **max** ) ] Datos de cadena de longitud variable. *n* define la longitud de la cadena en bytes y puede ser un valor entre 1 y 8000. **max** indica que el tamaño máximo de almacenamiento es de 2^31-1 bytes (2 GB). Para juegos de caracteres de codificación de byte único, como el *latino*, el tamaño de almacenamiento es *n* bytes + 2 bytes y el número de caracteres que se pueden almacenar también es *n*. Para los juegos de caracteres de codificación multibyte, el tamaño de almacenamiento sigue siendo *n* bytes + 2 bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n*. Los sinónimos ISO para **varchar** son **charvarying** o **charactervarying**. Para más información sobre los juegos de caracteres, vea [Juegos de caracteres de un solo byte y de varios bytes](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+**varchar** [ ( *n* | **max** ) ] Datos de cadena de tamaño variable. *n* define el tamaño de la cadena en bytes y puede ser un valor entre 1 y 8000. **max** indica que el tamaño máximo de almacenamiento es de 2^31-1 bytes (2 GB). Para juegos de caracteres de codificación de byte único, como el *latino*, el tamaño de almacenamiento es *n* bytes + 2 bytes y el número de caracteres que se pueden almacenar también es *n*. Para los juegos de caracteres de codificación multibyte, el tamaño de almacenamiento sigue siendo *n* bytes + 2 bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n*. Los sinónimos ISO para **varchar** son **charvarying** o **charactervarying**. Para más información sobre los juegos de caracteres, vea [Juegos de caracteres de un solo byte y de varios bytes](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## <a name="remarks"></a>Notas  
+Una idea equivocada habitual es pensar que en [CHAR(*n*) y VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), la *n* define el número de caracteres. Pero en [CHAR(*n*) y VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) la *n* define la longitud de la cadena en **bytes** (0-8.000). *n* nunca define números de caracteres que se pueden almacenar. Esto es similar a la definición de [NCHAR(*n*) y NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md).    
+La idea equivocada se produce porque cuando se usa la codificación de un solo byte, el tamaño de almacenamiento de CHAR y VARCHAR es de *n* bytes y el número de caracteres también es *n*. Sin embargo, para la codificación de varios bytes como [UTF-8](https://www.wikipedia.org/wiki/UTF-8), los intervalos Unicode más altos (128-1.114.111) dan como resultado un carácter que usa dos o más bytes. Por ejemplo, en una columna definida como CHAR(10), [!INCLUDE[ssde_md](../../includes/ssde_md.md)] puede almacenar 10 caracteres que usan la codificación de un solo byte (intervalo de Unicode 0-127), pero menos de 10 caracteres cuando se usa la codificación de varios bytes (intervalo de Unicode 128-1.114.111). Para obtener más información sobre el almacenamiento Unicode y los intervalos de caracteres, vea [Diferencias de almacenamiento entre UTF-8 y UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).      
+
+
 Cuando no se especifica *n* en una instrucción de definición de datos o de declaración de variable, la longitud predeterminada es 1. Cuando no se especifica *n* al usar las funciones CAST y CONVERT, la longitud predeterminada es 30.
   
 Los objetos que utilizan **char** o **varchar** se asignan a la intercalación predeterminada de la base de datos, a menos que se asigne una intercalación específica por medio de la cláusula COLLATE. La intercalación controla la página de códigos utilizada para almacenar los datos de caracteres.
@@ -69,7 +72,7 @@ No se produce ningún error especial cuando se crea la tabla (más allá de la a
 ##  <a name="_character"></a> Convertir datos de caracteres  
 Cuando se convierten expresiones de caracteres a un tipo de datos de caracteres de un tamaño distinto, se truncan los valores que son demasiado grandes para el nuevo tipo de datos. El tipo **uniqueidentifier** se considera un tipo de carácter para la conversión de una expresión de caracteres y, por tanto, está sujeto a las reglas de truncamiento de la conversión a un tipo de carácter. Vea la sección Ejemplos que aparece más adelante.
   
-Cuando una expresión de caracteres se convierte a una expresión de caracteres de un tipo de datos o tamaño distinto (como de **char(5)** a **varchar(5)** o de **char(20)** a **char(15)**), se asigna la intercalación del valor de entrada al valor convertido. Si una expresión que no es de carácter se convierte a un tipo de datos de carácter, se asigna al valor convertido la intercalación predeterminada de la base de datos actual. En cualquiera de los casos, puede asignar una intercalación específica mediante la cláusula [COLLATE](../../t-sql/statements/collations.md).
+Cuando una expresión de caracteres se convierte a una expresión de caracteres de un tipo de datos o tamaño distinto (como de **char(5)** a **varchar(5)** o de **char(20)** a **char(15)** ), se asigna la intercalación del valor de entrada al valor convertido. Si una expresión que no es de carácter se convierte a un tipo de datos de carácter, se asigna al valor convertido la intercalación predeterminada de la base de datos actual. En cualquiera de los casos, puede asignar una intercalación específica mediante la cláusula [COLLATE](../../t-sql/statements/collations.md).
   
 > [!NOTE]  
 > Las traducciones de páginas de códigos se admiten para los tipos de datos **char** y **varchar**, pero no para el tipo de datos **text**. Al igual que en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las pérdidas de datos durante las conversiones de páginas de códigos no se notifican.  
@@ -93,7 +96,7 @@ SELECT DATALENGTH(@myVariable), DATALENGTH(@myNextVariable);
 GO  
 ```  
   
-### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>b. Mostrar el valor predeterminado de n cuando varchar se usa con CAST y CONVERT.  
+### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>B. Mostrar el valor predeterminado de n cuando varchar se usa con CAST y CONVERT.  
 En el ejemplo siguiente se muestra que el valor predeterminado de *n* es 30 cuando se usa el tipo de datos `char` o `varchar` con las funciones `CAST` y `CONVERT`.
   
 ```sql

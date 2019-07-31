@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b18f044dbeb09e70b017afa6f78efb84b527336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068489"
 ---
 # <a name="device-contents-sql-server"></a>Contenido del dispositivo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "47686533"
 |------------|------------|  
 |**Nombre**|Nombre del conjunto de copia de seguridad.|  
 |**Tipo**|Tipo de copia de seguridad realizada: Completa, Diferencial o Registro de transacciones.|  
-|**Componente**|Componente del que se realizó una copia de seguridad: Base de datos, Archivo o *\<en blanco>* (para registros de transacciones).|  
+|**Componente**|Componente del que se ha realizado una copia de seguridad: Base de datos, Archivo o en *\<blanco>* (para registros de transacciones).|  
 |**Server**|Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
 |**Base de datos**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
 |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  
@@ -68,7 +67,7 @@ ms.locfileid: "47686533"
 |**Nombre de usuario**|Nombre del usuario que realizó la operación de copia de seguridad.|  
 |**Expiración**|Fecha y hora de expiración del conjunto de copias de seguridad.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

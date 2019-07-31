@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85643186d92e2033fc909ae166533cac0e18f44d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fbe9c2805a6e8b5354207534b5758c28081011e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121283"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicar la ejecución de procedimientos almacenados en la replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Publicar la ejecución de un procedimiento almacenado en una publicación transaccional &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programación de la replicación con Transact-SQL: ejecute [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) y especifique un valor "serializable proc exec" (recomendado) o "proc exec" para el parámetro **@type**. Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md).  
+-   Programación de la replicación con Transact-SQL: ejecute [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) y especifique un valor "serializable proc exec" (recomendado) o "proc exec" para el parámetro **@type** . Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Modificar el procedimiento en el suscriptor  
  De forma predeterminada, la definición del procedimiento almacenado del publicador se propaga a todos los suscriptores. No obstante, también puede modificar el procedimiento almacenado en el suscriptor. Esto es útil si desea ejecutar una lógica diferente en el publicador y en el suscriptor. Por ejemplo, observe **sp_big_delete**, un procedimiento almacenado en el publicador que tiene dos funciones: elimina 1.000.000 de filas de la tabla replicada **big_table1** y actualiza la tabla no replicada **big_table2**. Para reducir la demanda de recursos de red, debe propagar la eliminación del millón de filas como un procedimiento almacenado mediante la publicación de **sp_big_delete**. En el suscriptor, puede modificar **sp_big_delete** de forma que solamente elimine el millón de filas y no haga la posterior actualización de la tabla **big_table2**.  
@@ -95,7 +94,7 @@ COMMIT TRANSACTION T2
   
  Si necesita una configuración de XACT_ABORT OFF, especifique el parámetro **-SkipErrors** para el Agente de distribución. De esta forma permitirá que el agente continúe aplicando cambios en el suscriptor incluso si se produce un error.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

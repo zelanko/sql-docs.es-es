@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 117250d3-9982-47fe-94fd-6f29f6159940
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea10ab18048ed4c9482874db26b4f981e66e2cc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 769948242c747abdfb1fd6e32606df6a5800a9bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054445"
 ---
 # <a name="powershell-cmdlet-for-migration-evaluation"></a>Cmdlet de PowerShell para la evaluación de la migración
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,6 +41,6 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
 |FolderPath|La carpeta en la que el cmdlet debe depositar los informes generados. Requerido.|  
   
 ## <a name="results"></a>Resultado  
- En la carpeta especificada en el parámetro -FolderPath, habrá dos nombres de carpeta: Tablas y Procedimientos almacenados. Si el objeto de destino es una tabla, su informe estará dentro de la carpeta Tablas. De lo contrario, estará dentro de la carpeta Procedimientos almacenados.  
+ En la carpeta especificada en el parámetro -FolderPath, habrá dos nombres de carpeta: Tablas y procedimientos almacenados. Si el objeto de destino es una tabla, su informe estará dentro de la carpeta Tablas. De lo contrario, estará dentro de la carpeta Procedimientos almacenados.  
   
   

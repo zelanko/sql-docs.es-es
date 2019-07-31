@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1273f4fc87728aa30cec9bc51cb119fc2c51551
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 3fb9ce4696ffea2c345eeaeca769dda6548a9ebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071311"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 
@@ -46,7 +45,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
+|**\* _SQL Server \*_** &nbsp;|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](alter-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -97,22 +96,22 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE Habilita o deshabilita este inicio de sesión. Deshabilitar un inicio de sesión no afecta al comportamiento de los inicios de sesión que ya están conectados. (Use la instrucción `KILL` para finalizar las conexiones existentes). Los inicios de sesión deshabilitados conservan sus permisos y pueden seguir siendo suplantados.
 
-PASSWORD **='**_password_**'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.
+PASSWORD **='** _password_ **'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
-PASSWORD **=**_hashed\_password_ Se aplica solo a la palabra clave HASHED. Especifica el valor con hash de la contraseña para el inicio de sesión que se está creando.
+PASSWORD **=** _hashed\_password_ Se aplica solo a la palabra clave HASHED. Especifica el valor con hash de la contraseña para el inicio de sesión que se está creando.
 
 > [!IMPORTANT]
 > Cuando un inicio de sesión (o un usuario de base de datos independiente) se conecta y se autentica, la conexión almacena en memoria caché información de identidad del inicio de sesión. Para un inicio de sesión con autenticación de Windows, esto incluye la información sobre la pertenencia a grupos de Windows. La identidad del inicio de sesión permanecerá autenticada mientras dure la conexión. Para aplicar cambios en la identidad, como un cambio o restablecimiento de contraseña de la pertenencia al grupo de Windows, el inicio de sesión debe cerrar sesión en la entidad de autenticación (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) y volver a iniciar sesión. Los miembros del rol fijo de servidor **sysadmin** o cualquier inicio de sesión con el permiso **ALTER ANY CONNECTION** puede usar el comando **KILL** para finalizar una conexión y hacer que el inicio de sesión se vuelva a conectar. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede reutilizar la información de conexión al abrir varias conexiones en las ventanas del Explorador de objetos y del Editor de consultas. Cierre todas las conexiones para forzar una reconexión.
 
 HASHED Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica que la contraseña especificada después del argumento PASSWORD ya tiene aplicado el algoritmo hash. Si no se selecciona esta opción, se aplica un algoritmo hash a la contraseña antes de almacenarla en la base de datos. Esta opción solo se debería utilizar para la sincronización del inicio de sesión entre dos servidores. No utilice la opción HASHED para cambiar las contraseñas de forma habitual.
 
-OLD_PASSWORD **='**_oldpassword_**'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La contraseña actual del inicio de sesión al que se va a asignar una contraseña nueva. En las contraseñas se distingue entre mayúsculas y minúsculas.
+OLD_PASSWORD **='** _oldpassword_ **'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La contraseña actual del inicio de sesión al que se va a asignar una contraseña nueva. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
 MUST_CHANGE Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se incluye esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pedirá la contraseña actualizada la primera vez que se utilice el inicio de sesión modificado.
 
-DEFAULT_DATABASE **=**_database_ Especifica una base de datos predeterminada que debe asignarse al inicio de sesión.
+DEFAULT_DATABASE **=** _database_ Especifica una base de datos predeterminada que debe asignarse al inicio de sesión.
 
-DEFAULT_LANGUAGE **=**_language_ Especifica el idioma predeterminado que debe asignarse al inicio de sesión. El idioma predeterminado para todos los inicios de sesión de SQL Database es el inglés y no se puede cambiar. El idioma predeterminado del inicio de sesión de `sa` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Linux es el inglés, pero se puede cambiar.
+DEFAULT_LANGUAGE **=** _language_ Especifica el idioma predeterminado que debe asignarse al inicio de sesión. El idioma predeterminado para todos los inicios de sesión de SQL Database es el inglés y no se puede cambiar. El idioma predeterminado del inicio de sesión de `sa` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Linux es el inglés, pero se puede cambiar.
 
 NAME = *login_name* El nombre nuevo del inicio de sesión al que se está cambiando el nombre. Si se trata de un inicio de sesión de Windows, el SID de la entidad de seguridad de Windows correspondiente al nombre nuevo debe coincidir con el SID asociado al inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El nombre nuevo de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede contener un carácter de barra diagonal inversa (\\).
 
@@ -183,7 +182,7 @@ En el ejemplo siguiente se habilita el inicio de sesión `Mary5`.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>b. Cambiar la contraseña de un inicio de sesión
+### <a name="b-changing-the-password-of-a-login"></a>B. Cambiar la contraseña de un inicio de sesión
 
 En el ejemplo siguiente se cambia la contraseña del inicio de sesión `Mary5` a una contraseña segura.
 
@@ -304,14 +303,14 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE Habilita o deshabilita este inicio de sesión. Deshabilitar un inicio de sesión no afecta al comportamiento de los inicios de sesión que ya están conectados. (Use la instrucción `KILL` para finalizar las conexiones existentes). Los inicios de sesión deshabilitados conservan sus permisos y pueden seguir siendo suplantados.
 
-PASSWORD **='**_password_**'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.
+PASSWORD **='** _password_ **'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
 Las conexiones continuamente activas a SQL Database requieren una reautorización (realizada por el Motor de base de datos) como mínimo cada 10 horas. El Motor de base de datos intenta la reautorización con la contraseña enviada originalmente y no se requiere la intervención del usuario. Por motivos de rendimiento, cuando una contraseña se restablece en SQL Database, la conexión no se volverá a autenticar, incluso si se restablece la conexión debido a la agrupación de conexiones. Esto es diferente del comportamiento de SQL Database local. Si la contraseña se ha cambiado desde que se autorizó inicialmente la conexión, es necesario terminar la conexión y establecer una nueva conexión con la nueva contraseña. Un usuario con el permiso KILL DATABASE CONNECTION puede terminar explícitamente una conexión con SQL Database mediante el comando KILL. Para obtener más información, vea [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
 > [!IMPORTANT]
 > Cuando un inicio de sesión (o un usuario de base de datos independiente) se conecta y se autentica, la conexión almacena en memoria caché información de identidad del inicio de sesión. Para un inicio de sesión con autenticación de Windows, esto incluye la información sobre la pertenencia a grupos de Windows. La identidad del inicio de sesión permanecerá autenticada mientras dure la conexión. Para aplicar cambios en la identidad, como un cambio o restablecimiento de contraseña de la pertenencia al grupo de Windows, el inicio de sesión debe cerrar sesión en la entidad de autenticación (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) y volver a iniciar sesión. Los miembros del rol fijo de servidor **sysadmin** o cualquier inicio de sesión con el permiso **ALTER ANY CONNECTION** puede usar el comando **KILL** para finalizar una conexión y hacer que el inicio de sesión se vuelva a conectar. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede reutilizar la información de conexión al abrir varias conexiones en las ventanas del Explorador de objetos y del Editor de consultas. Cierre todas las conexiones para forzar una reconexión.
 
-OLD_PASSWORD **='**_oldpassword_**'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La contraseña actual del inicio de sesión al que se va a asignar una contraseña nueva. En las contraseñas se distingue entre mayúsculas y minúsculas.
+OLD_PASSWORD **='** _oldpassword_ **'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La contraseña actual del inicio de sesión al que se va a asignar una contraseña nueva. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
 NAME = *login_name* El nombre nuevo del inicio de sesión al que se está cambiando el nombre. Si se trata de un inicio de sesión de Windows, el SID de la entidad de seguridad de Windows correspondiente al nombre nuevo debe coincidir con el SID asociado al inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El nombre nuevo de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede contener un carácter de barra diagonal inversa (\\).
 
@@ -344,7 +343,7 @@ En el ejemplo siguiente se habilita el inicio de sesión `Mary5`.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>b. Cambiar la contraseña de un inicio de sesión
+### <a name="b-changing-the-password-of-a-login"></a>B. Cambiar la contraseña de un inicio de sesión
 
 En el ejemplo siguiente se cambia la contraseña del inicio de sesión `Mary5` a una contraseña segura.
 
@@ -498,21 +497,21 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE Habilita o deshabilita este inicio de sesión. Deshabilitar un inicio de sesión no afecta al comportamiento de los inicios de sesión que ya están conectados. (Use la instrucción `KILL` para finalizar una conexión existente). Los inicios de sesión deshabilitados conservan sus permisos y pueden seguir siendo suplantados.
 
-DEFAULT_DATABASE **=**_database_ Especifica una base de datos predeterminada que debe asignarse al inicio de sesión.
+DEFAULT_DATABASE **=** _database_ Especifica una base de datos predeterminada que debe asignarse al inicio de sesión.
 
-DEFAULT_LANGUAGE **=**_language_ Especifica el idioma predeterminado que debe asignarse al inicio de sesión. El idioma predeterminado para todos los inicios de sesión de SQL Database es el inglés y no se puede cambiar. El idioma predeterminado del inicio de sesión de `sa` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Linux es el inglés, pero se puede cambiar.
+DEFAULT_LANGUAGE **=** _language_ Especifica el idioma predeterminado que debe asignarse al inicio de sesión. El idioma predeterminado para todos los inicios de sesión de SQL Database es el inglés y no se puede cambiar. El idioma predeterminado del inicio de sesión de `sa` en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Linux es el inglés, pero se puede cambiar.
 
 ### <a name="arguments-applicable-only-to-sql-logins"></a>Argumentos que solo se aplican a los inicios de sesión SQL
 
-PASSWORD **='**_password_**'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas. Las contraseñas tampoco se aplican cuando se usan con inicios de sesión externos, como los de Azure AD.
+PASSWORD **='** _password_ **'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas. Las contraseñas tampoco se aplican cuando se usan con inicios de sesión externos, como los de Azure AD.
 
 Las conexiones continuamente activas a SQL Database requieren una reautorización (realizada por el Motor de base de datos) como mínimo cada 10 horas. El Motor de base de datos intenta la reautorización con la contraseña enviada originalmente y no se requiere la intervención del usuario. Por motivos de rendimiento, cuando una contraseña se restablece en SQL Database, la conexión no se volverá a autenticar, incluso si se restablece la conexión debido a la agrupación de conexiones. Esto es diferente del comportamiento de SQL Database local. Si la contraseña se ha cambiado desde que se autorizó inicialmente la conexión, es necesario terminar la conexión y establecer una nueva conexión con la nueva contraseña. Un usuario con el permiso KILL DATABASE CONNECTION puede terminar explícitamente una conexión con SQL Database mediante el comando KILL. Para obtener más información, vea [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
-PASSWORD **=**_hashed\_password_ Se aplica solo a la palabra clave HASHED. Especifica el valor con hash de la contraseña para el inicio de sesión que se está creando.
+PASSWORD **=** _hashed\_password_ Se aplica solo a la palabra clave HASHED. Especifica el valor con hash de la contraseña para el inicio de sesión que se está creando.
 
 HASHED Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica que la contraseña especificada después del argumento PASSWORD ya tiene aplicado el algoritmo hash. Si no se selecciona esta opción, se aplica un algoritmo hash a la contraseña antes de almacenarla en la base de datos. Esta opción solo se debería utilizar para la sincronización del inicio de sesión entre dos servidores. No utilice la opción HASHED para cambiar las contraseñas de forma habitual.
 
-OLD_PASSWORD **='**_oldpassword_**'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La contraseña actual del inicio de sesión al que se va a asignar una contraseña nueva. En las contraseñas se distingue entre mayúsculas y minúsculas.
+OLD_PASSWORD **='** _oldpassword_ **'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La contraseña actual del inicio de sesión al que se va a asignar una contraseña nueva. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
 MUST_CHANGE<br>
 Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se incluye esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pedirá la contraseña actualizada la primera vez que se utilice el inicio de sesión modificado.
@@ -588,7 +587,7 @@ En el ejemplo siguiente se habilita el inicio de sesión `Mary5`.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>b. Cambiar la contraseña de un inicio de sesión
+### <a name="b-changing-the-password-of-a-login"></a>B. Cambiar la contraseña de un inicio de sesión
 
 En el ejemplo siguiente se cambia la contraseña del inicio de sesión `Mary5` a una contraseña segura.
 
@@ -711,14 +710,14 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE Habilita o deshabilita este inicio de sesión. Deshabilitar un inicio de sesión no afecta al comportamiento de los inicios de sesión que ya están conectados. (Use la instrucción `KILL` para finalizar las conexiones existentes). Los inicios de sesión deshabilitados conservan sus permisos y pueden seguir siendo suplantados.
 
-PASSWORD **='**_password_**'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.
+PASSWORD **='** _password_ **'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
 Las conexiones continuamente activas a SQL Database requieren una reautorización (realizada por el Motor de base de datos) como mínimo cada 10 horas. El Motor de base de datos intenta la reautorización con la contraseña enviada originalmente y no se requiere la intervención del usuario. Por motivos de rendimiento, cuando una contraseña se restablece en SQL Database, la conexión no se volverá a autenticar, incluso si se restablece la conexión debido a la agrupación de conexiones. Esto es diferente del comportamiento de SQL Database local. Si la contraseña se ha cambiado desde que se autorizó inicialmente la conexión, es necesario terminar la conexión y establecer una nueva conexión con la nueva contraseña. Un usuario con el permiso KILL DATABASE CONNECTION puede terminar explícitamente una conexión con SQL Database mediante el comando KILL. Para obtener más información, vea [KILL](../../t-sql/language-elements/kill-transact-sql.md).
 
 > [!IMPORTANT]
 > Cuando un inicio de sesión (o un usuario de base de datos independiente) se conecta y se autentica, la conexión almacena en memoria caché información de identidad del inicio de sesión. Para un inicio de sesión con autenticación de Windows, esto incluye la información sobre la pertenencia a grupos de Windows. La identidad del inicio de sesión permanecerá autenticada mientras dure la conexión. Para aplicar cambios en la identidad, como un cambio o restablecimiento de contraseña de la pertenencia al grupo de Windows, el inicio de sesión debe cerrar sesión en la entidad de autenticación (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) y volver a iniciar sesión. Los miembros del rol fijo de servidor **sysadmin** o cualquier inicio de sesión con el permiso **ALTER ANY CONNECTION** puede usar el comando **KILL** para finalizar una conexión y hacer que el inicio de sesión se vuelva a conectar. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede reutilizar la información de conexión al abrir varias conexiones en las ventanas del Explorador de objetos y del Editor de consultas. Cierre todas las conexiones para forzar una reconexión.
 
-OLD_PASSWORD **='**_oldpassword_**'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La contraseña actual del inicio de sesión al que se va a asignar una contraseña nueva. En las contraseñas se distingue entre mayúsculas y minúsculas.
+OLD_PASSWORD **='** _oldpassword_ **'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La contraseña actual del inicio de sesión al que se va a asignar una contraseña nueva. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
 NAME = *login_name* El nombre nuevo del inicio de sesión al que se está cambiando el nombre. Si se trata de un inicio de sesión de Windows, el SID de la entidad de seguridad de Windows correspondiente al nombre nuevo debe coincidir con el SID asociado al inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El nombre nuevo de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede contener un carácter de barra diagonal inversa (\\).
 
@@ -751,7 +750,7 @@ En el ejemplo siguiente se habilita el inicio de sesión `Mary5`.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>b. Cambiar la contraseña de un inicio de sesión
+### <a name="b-changing-the-password-of-a-login"></a>B. Cambiar la contraseña de un inicio de sesión
 
 En el ejemplo siguiente se cambia la contraseña del inicio de sesión `Mary5` a una contraseña segura.
 
@@ -870,12 +869,12 @@ ALTER LOGIN login_name
 
 ENABLE | DISABLE Habilita o deshabilita este inicio de sesión. Deshabilitar un inicio de sesión no afecta al comportamiento de los inicios de sesión que ya están conectados. (Use la instrucción `KILL` para finalizar una conexión existente). Los inicios de sesión deshabilitados conservan sus permisos y pueden seguir siendo suplantados.
 
-PASSWORD **='**_password_**'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.
+PASSWORD **='** _password_ **'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica la contraseña del inicio de sesión que se está cambiando. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
 > [!IMPORTANT]
 > Cuando un inicio de sesión (o un usuario de base de datos independiente) se conecta y se autentica, la conexión almacena en memoria caché información de identidad del inicio de sesión. Para un inicio de sesión con autenticación de Windows, esto incluye la información sobre la pertenencia a grupos de Windows. La identidad del inicio de sesión permanecerá autenticada mientras dure la conexión. Para aplicar cambios en la identidad, como un cambio o restablecimiento de contraseña de la pertenencia al grupo de Windows, el inicio de sesión debe cerrar sesión en la entidad de autenticación (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) y volver a iniciar sesión. Los miembros del rol fijo de servidor **sysadmin** o cualquier inicio de sesión con el permiso **ALTER ANY CONNECTION** puede usar el comando **KILL** para finalizar una conexión y hacer que el inicio de sesión se vuelva a conectar. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede reutilizar la información de conexión al abrir varias conexiones en las ventanas del Explorador de objetos y del Editor de consultas. Cierre todas las conexiones para forzar una reconexión.
 
-OLD_PASSWORD **='**_oldpassword_**'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La contraseña actual del inicio de sesión al que se va a asignar una contraseña nueva. En las contraseñas se distingue entre mayúsculas y minúsculas.
+OLD_PASSWORD **='** _oldpassword_ **'** Se aplica solo a los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La contraseña actual del inicio de sesión al que se va a asignar una contraseña nueva. En las contraseñas se distingue entre mayúsculas y minúsculas.
 
 MUST_CHANGE Solo se aplica a inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si se incluye esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pedirá la contraseña actualizada la primera vez que se utilice el inicio de sesión modificado.
 
@@ -940,7 +939,7 @@ En el ejemplo siguiente se habilita el inicio de sesión `Mary5`.
 ALTER LOGIN Mary5 ENABLE;
 ```
 
-### <a name="b-changing-the-password-of-a-login"></a>b. Cambiar la contraseña de un inicio de sesión
+### <a name="b-changing-the-password-of-a-login"></a>B. Cambiar la contraseña de un inicio de sesión
 
 En el ejemplo siguiente se cambia la contraseña del inicio de sesión `Mary5` a una contraseña segura.
 

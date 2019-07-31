@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070336"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
  Para ver ejemplos de cómo crear secuencias y cómo usar la función **NEXT VALUE FOR** para generar números de secuencia, vea [Números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
 ### <a name="a-altering-a-sequence"></a>A. Modificar una secuencia  
- En el siguiente ejemplo se crea un esquema denominado Test y una secuencia denominada TestSeq usando el tipo de datos **int**, con un rango de 0 a 255. La secuencia se inicia con 125 y se incrementa en 25 cada vez que se genera un número. Dado que la secuencia está configurada para recorrerla en ciclo, cuando el valor supera el valor máximo de 200, se reinicia en el valor mínimo de 100.  
+ En el siguiente ejemplo se crea un esquema denominado Test y una secuencia denominada TestSeq usando el tipo de datos **int**, con un rango de 100 a 200. La secuencia se inicia con 125 y se incrementa en 25 cada vez que se genera un número. Dado que la secuencia está configurada para recorrerla en ciclo, cuando el valor supera el valor máximo de 200, se reinicia en el valor mínimo de 100.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -122,7 +121,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- En el siguiente ejemplo se modifica la secuencia TestSeq para que tenga un rango de 0 a 255. La secuencia reinicia la serie de la numeración con 100 y se incrementa en 50 cada vez que se genera un número.  
+ En el siguiente ejemplo se modifica la secuencia TestSeq para que tenga un rango de 50 a 200. La secuencia reinicia la serie de la numeración con 100 y se incrementa en 50 cada vez que se genera un número.  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  
@@ -178,7 +177,7 @@ ALTER SEQUENCE Test.CountBy1
   
  El propietario se da cuenta de que el tipo de datos **bigint** usa 8 bytes cada vez que se utiliza. El tipo de datos **int** que usa 4 bytes es suficiente. Sin embargo, no se puede modificar el tipo de datos de un objeto de secuencia. Para cambiar a un tipo de datos **int**, el propietario debe quitar el objeto de secuencia y volver a crear el objeto con el tipo de datos correcto.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
  [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   

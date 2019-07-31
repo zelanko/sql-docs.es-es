@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9bd4b93d90bc75e7dfc97a526cee544cb71b69a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006528"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,7 +156,7 @@ OR ALTER
   
  Evite el uso del prefijo **sp_** cuando asigne nombre a los procedimientos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa este prefijo para designar los procedimientos del sistema. Si usa el prefijo, puede provocar la ruptura del código de la aplicación si existe un procedimiento del sistema con el mismo nombre.  
   
- Los procedimientos temporales locales o globales se pueden crear anteponiendo un signo de número (#) al parámetro *procedure_name* (*#procedure_name*) para los procedimientos temporales locales y dos signos de número (*##procedure_name*) para los procedimientos temporales globales. Solo la conexión que creó un procedimiento temporal local lo ve y se quita cuando se cierra esa conexión. Un procedimiento temporal global está disponible para todas las conexiones y se quita al final de la última sesión que lo use. No se pueden especificar nombres temporales para los procedimientos CLR.  
+ Los procedimientos temporales locales o globales se pueden crear anteponiendo un signo de número (#) al parámetro *procedure_name* ( *#procedure_name*) para los procedimientos temporales locales y dos signos de número ( *##procedure_name*) para los procedimientos temporales globales. Solo la conexión que creó un procedimiento temporal local lo ve y se quita cuando se cierra esa conexión. Un procedimiento temporal global está disponible para todas las conexiones y se quita al final de la última sesión que lo use. No se pueden especificar nombres temporales para los procedimientos CLR.  
   
  El nombre completo de un procedimiento o un procedimiento temporal global, incluidos los signos de número ##, no puede superar los 128 caracteres. El nombre completo de un procedimiento temporal local, incluido el signo de número #, no puede superar los 116 caracteres.  
   
@@ -172,16 +171,16 @@ OR ALTER
  Los procedimientos numerados no pueden usar **xml** ni los tipos definidos por el usuario CLR. Tampoco se pueden usar en una guía de plan.  
   
  **@** *parameter*  
- Parámetro declarado en el procedimiento. Especifique un nombre de parámetro usando una arroba (**@**) como el primer carácter. El nombre del parámetro debe cumplir las mismas reglas para [identifiers](../../relational-databases/databases/database-identifiers.md). Los parámetros son locales respecto al procedimiento; los mismos nombres de parámetro se pueden usar en otros procedimientos.  
+ Parámetro declarado en el procedimiento. Especifique un nombre de parámetro usando una arroba ( **@** ) como el primer carácter. El nombre del parámetro debe cumplir las mismas reglas para [identifiers](../../relational-databases/databases/database-identifiers.md). Los parámetros son locales respecto al procedimiento; los mismos nombres de parámetro se pueden usar en otros procedimientos.  
   
  Se pueden declarar uno o varios parámetros; el valor máximo es 2.100. El usuario debe proporcionar el valor de cada parámetro declarado cuando se llame al procedimiento, a menos que se haya definido un valor predeterminado para el parámetro o se haya establecido en el mismo valor que el de otro parámetro. Si un procedimiento contiene [parámetros con valores de tabla](../../relational-databases/tables/use-table-valued-parameters-database-engine.md) y el parámetro no está en la llamada, se pasa una tabla vacía. Los parámetros solo pueden ocupar el lugar de expresiones constantes; no se pueden usar en lugar de nombres de tablas, nombres de columnas o nombres de otros objetos de base de datos. Para obtener más información, vea [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
  No se pueden declarar los parámetros si se especifica FOR REPLICATION.  
   
- [ _type\_schema\_name_**.** ] *data_type*  
+ [ _type\_schema\_name_ **.** ] *data_type*  
  El tipo de datos del parámetro y el esquema al que pertenece el tipo de datos.  
   
-**Directrices para procedimientos de [!INCLUDE[tsql](../../includes/tsql-md.md)]**:  
+**Directrices para procedimientos de [!INCLUDE[tsql](../../includes/tsql-md.md)]** :  
   
 -   Todos los tipos de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)] se pueden usar como parámetros.  
   
@@ -242,10 +241,10 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  Una o más instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden el cuerpo del procedimiento. Puede usar las palabras clave BEGIN y END opcionales para incluir las instrucciones. Para obtener información, vea las secciones Prácticas recomendadas, Comentarios generales, así como Limitaciones y restricciones que aparecen más adelante.  
   
-EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
+EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Especifica el método de un ensamblado de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para un procedimiento CLR al que se va a hacer referencia. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre completo de espacio de nombres que usa un punto (**.**) para separar las partes del espacio de nombres, el nombre de la clase debe delimitarse mediante paréntesis (**[]**) o comillas (**""**). El método especificado debe ser un método estático de la clase.  
+ Especifica el método de un ensamblado de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para un procedimiento CLR al que se va a hacer referencia. *class_name* debe ser un identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe existir como clase en el ensamblado. Si la clase tiene un nombre completo de espacio de nombres que usa un punto ( **.** ) para separar las partes del espacio de nombres, el nombre de la clase debe delimitarse mediante paréntesis ( **[]** ) o comillas ( **""** ). El método especificado debe ser un método estático de la clase.  
   
  De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede ejecutar código CLR. Se pueden crear, modificar y quitar objetos de base de datos que hagan referencia a módulos de Common Language Runtime, pero estas referencias no se pueden ejecutar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que se habilite la [opción clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Para habilitar esta opción, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
@@ -452,11 +451,11 @@ GO
   
 |Nombre del objeto del Monitor de rendimiento|Nombre del contador del Monitor de rendimiento|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer: objeto Plan Cache|Frecuencia de aciertos de caché|  
+|SQLServer: Objeto Plan Cache|Frecuencia de aciertos de caché|  
 ||Páginas de caché|  
 ||Recuentos de objetos de caché*|  
   
- * Estos contadores están disponibles para varias categorías de objetos de caché, incluidos [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, [!INCLUDE[tsql](../../includes/tsql-md.md)] preparados, procedimientos, desencadenadores, etc. Para más información, vea [Plan Cache (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md).  
+ \* Estos contadores están disponibles para varias categorías de objetos de caché, incluidos [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, [!INCLUDE[tsql](../../includes/tsql-md.md)] preparados, procedimientos, desencadenadores, etc. Para más información, vea [Plan Cache (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md).  
   
 ## <a name="security"></a>Seguridad  
   
@@ -529,7 +528,7 @@ GO
 HumanResources.uspGetAllEmployees;  
 ```  
   
-#### <a name="b-returning-more-than-one-result-set"></a>b. Devolver más de un conjunto de resultados  
+#### <a name="b-returning-more-than-one-result-set"></a>B. Devolver más de un conjunto de resultados  
  El procedimiento siguiente devuelve dos conjuntos de resultados.  
   
 ```sql  

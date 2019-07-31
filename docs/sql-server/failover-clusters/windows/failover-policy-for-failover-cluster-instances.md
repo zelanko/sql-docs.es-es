@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce8b626c33bfb5a75fe7614ddb5c55d80d1d906
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044752"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Directiva de conmutación por error para instancias de clústeres de conmutación por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,11 +104,11 @@ ms.locfileid: "52398664"
  *Valor predeterminado  
   
 ####  <a name="respond"></a> Responder a los errores  
- Una vez que se detectan una o varias condiciones de error, el modo en que responda el servicio de WSFC a los errores dependerá del estado de quórum de WSFC y de la configuración de reinicio y conmutación por error del grupo de recursos de la FCI. Si la FCI ha perdido el quórum de WSFC, toda la FCI se queda sin conexión y deja de tener una disponibilidad elevada. Si la FCI todavía mantiene el quórum de WSFC, el servicio de WSFC puede responder primero intentando reiniciar el nodo con errores y, si el intento de reinicio no tiene éxito, intentando la conmutación por error. La configuración de reinicio y conmutación por error se establece en el complemento Administrador de clústeres de conmutación por error. Para más información sobre esta configuración, vea [Propiedades de \<recurso>: pestaña Directivas](https://technet.microsoft.com/library/cc725685.aspx).  
+ Una vez que se detectan una o varias condiciones de error, el modo en que responda el servicio de WSFC a los errores dependerá del estado de quórum de WSFC y de la configuración de reinicio y conmutación por error del grupo de recursos de la FCI. Si la FCI ha perdido el quórum de WSFC, toda la FCI se queda sin conexión y deja de tener una disponibilidad elevada. Si la FCI todavía mantiene el quórum de WSFC, el servicio de WSFC puede responder primero intentando reiniciar el nodo con errores y, si el intento de reinicio no tiene éxito, intentando la conmutación por error. La configuración de reinicio y conmutación por error se establece en el complemento Administrador de clústeres de conmutación por error. Para obtener más información sobre esta configuración, vea [Propiedades de \<recurso>: ficha Directivas](https://technet.microsoft.com/library/cc725685.aspx).  
   
  Para obtener más información sobre el mantenimiento del cuórum, vea [Configuración de los votos y modos de cuórum WSFC &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

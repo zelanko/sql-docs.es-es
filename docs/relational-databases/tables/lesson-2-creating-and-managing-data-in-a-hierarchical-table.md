@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54a3323e550ba3534fdc491e42c70c43ba686dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031645"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Lección 2: Creación y administración de los datos de una tabla jerárquica
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -293,7 +292,7 @@ Ahora que está totalmente rellena la tabla HumanResources.EmployeeOrg, esta tar
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Reorganizar una jerarquía es una tarea de mantenimiento común. En esta tarea, usaremos una instrucción UPDATE con el método [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) para mover primero una única fila a una nueva ubicación en la jerarquía. A continuación, moveremos un subárbol completo a una nueva ubicación.  
   
-El método `GetReparentedValue` tiene dos argumentos. El primer argumento describe la parte de la jerarquía que se va a modificar. Por ejemplo, si una jerarquía es **/1/4/2/3/** y quiere cambiar la sección **/1/4/** , la jerarquía se vuelve **/2/1/2/3/**, dejando los dos últimos nodos (**2/3/**) sin modificar. Debe proporcionar los nodos que cambian (**/1/4/**) como el primer argumento. El segundo argumento proporciona el nuevo nivel de jerarquía; en nuestro ejemplo, **/2/1/**. No es necesario que los dos argumentos tengan el mismo número de niveles.  
+El método `GetReparentedValue` tiene dos argumentos. El primer argumento describe la parte de la jerarquía que se va a modificar. Por ejemplo, si una jerarquía es **/1/4/2/3/** y quiere cambiar la sección **/1/4/** , la jerarquía se vuelve **/2/1/2/3/** , dejando los dos últimos nodos (**2/3/** ) sin modificar. Debe proporcionar los nodos que cambian ( **/1/4/** ) como el primer argumento. El segundo argumento proporciona el nuevo nivel de jerarquía; en nuestro ejemplo, **/2/1/** . No es necesario que los dos argumentos tengan el mismo número de niveles.  
   
 ### <a name="move-a-single-row-to-a-new-location-in-the-hierarchy"></a>Desplazamiento de una fila a una ubicación nueva en la jerarquía  
   
@@ -323,7 +322,7 @@ El método `GetReparentedValue` tiene dos argumentos. El primer argumento descri
     GO  
     ```  
   
-    Wanida está ahora en el nodo **/3/1/**.  
+    Wanida está ahora en el nodo **/3/1/** .  
   
 ### <a name="reorganize-a-section-of-a-hierarchy"></a>Reorganización de una sección de una jerarquía  
   
@@ -334,7 +333,7 @@ El método `GetReparentedValue` tiene dos argumentos. El primer argumento descri
     GO  
     ```  
   
-2.  Ahora Kevin notifica a Wanida, quien notifica a Jill, quien, a su vez, notifica a David. Eso quiere decir que Kevin está en el nivel **/3/1/1/**. Para mover todos los subordinados de Jill a un nuevo administrador, vamos a actualizar a un nuevo valor todos los nodos que tienen **/3/** como **OrgNode** . Ejecute el código siguiente para actualizar a Wanida de manera que dependa de Sariya, pero dejando que Kevin dependa de Wanida:  
+2.  Ahora Kevin notifica a Wanida, quien notifica a Jill, quien, a su vez, notifica a David. Eso quiere decir que Kevin está en el nivel **/3/1/1/** . Para mover todos los subordinados de Jill a un nuevo administrador, vamos a actualizar a un nuevo valor todos los nodos que tienen **/3/** como **OrgNode** . Ejecute el código siguiente para actualizar a Wanida de manera que dependa de Sariya, pero dejando que Kevin dependa de Wanida:  
   
     ```sql  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

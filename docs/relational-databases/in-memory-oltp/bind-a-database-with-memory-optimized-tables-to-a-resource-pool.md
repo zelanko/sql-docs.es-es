@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e176906e41e815733ac50f2e1b9e0db90a8d3a5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a0a0eec6d8a700fe35df358b35ce756dc700a2f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951142"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ GO
 ###  <a name="bkmk_DeterminePercent"></a> Determinar el valor mínimo de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT  
  Una vez que determine las necesidades de memoria para las tablas optimizadas para memoria, debe determinar qué porcentaje de memoria disponible se necesita y establecer los porcentajes de memoria en ese valor o uno superior.  
   
- **Ejemplo:**   
+ **Ejemplo:**    
 En este ejemplo supondremos que en sus cálculos ha determinado que las tablas y los índices optimizados para memoria necesitan 16 GB de memoria. Suponga que tiene 32 GB de memoria asignada para su uso.  
   
  A primera vista, podría parecer que necesita establecer MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en 50 (16 es el 50 % de 32).  Sin embargo, ese valor no proporcionaría suficiente memoria a las tablas optimizadas para memoria. Si miramos la tabla siguiente ([Porcentaje de memoria disponible para tablas e índices optimizados para memoria](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)), vemos que si hay 32 GB de memoria asignada, solo el 80 % está disponible para tablas e índices optimizados para memoria.  Por tanto, calculamos los porcentajes mínimo y máximo en función de la memoria disponible, no de la memoria asignada.  
@@ -208,7 +207,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  Si no enlaza la base de datos a un grupo de recursos de servidor con nombre, se enlaza al grupo "default". Puesto que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el grupo de recursos de servidor predeterminado para la mayoría de las demás asignaciones, no podrá supervisar con precisión la memoria usada por las tablas optimizadas para memoria mediante la DMV sys.dm_resource_governor_resource_pools para la base de datos de interés.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   

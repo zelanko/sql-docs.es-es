@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4569b23fa2335fb3f057ed9242304df498b0f200
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: be85bc9434e5a64c1aa4e5e28f6b0a4a772d9690
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134586"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Comprobar el estado de los mensajes de correo electrónico enviados con Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "51558602"
   
 -   **Antes de empezar:**  
   
--   **Para ver el estado del correo electrónico enviado a través de Correo electrónico de base de datos con:**  [Transact-SQL](#TsqlProcedure)  
+-   **Para ver el estado del correo electrónico enviado con Correo electrónico de base de datos, mediante:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Correo electrónico de base de datos conserva copias de los mensajes de correo electrónico salientes y las muestra en las vistas **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems**y **sysmail_faileditems** de la base de datos **msdb** . El programa externo de Correo electrónico de base de datos registra la actividad y muestra ese registro por medio del registro de eventos de aplicación Windows y la vista **sysmail_event_log** de la base de datos **msdb** . Para comprobar el estado de un mensaje de correo electrónico, ejecute una consulta en esta vista. Los mensajes de correo electrónico tienen cuatro posibles estados: **enviado**, **no enviado**, **reintentando**y **error**.  
@@ -70,7 +69,7 @@ WHERE items.recipients LIKE '%danw%'
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Registro y auditorías del Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
   

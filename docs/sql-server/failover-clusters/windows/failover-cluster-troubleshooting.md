@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f6c458d34a5d42d0300441ee85c03a3bf4a04c3
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: e1cf8ea99cac00670bd96437e0a5484d2888cbe9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044789"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Solucionar problemas de clústeres de conmutación por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52302818"
 -   Usar procedimientos almacenados extendidos y objetos COM.  
   
 ## <a name="basic-troubleshooting-steps"></a>Pasos básicos en la solución de problemas  
- El primer paso de diagnóstico consiste en ejecutar una comprobación de validación de clúster nueva. Para obtener información más detallada sobre la validación, vea [Failover Cluster Step-by-Step Guide: Validating Hardware for a Failover Cluster (Guía paso a paso de clústeres de conmutación por error: validación de hardware para un clúster de conmutación por error)](https://technet.microsoft.com/library/cc732035.aspx).  Esto se puede completar sin ninguna interrupción del servicio, ya que no afecta a ningún recurso de clúster en línea. La validación se puede llevar a cabo en cualquier momento una vez instalada la característica Clúster de conmutación por error; por ejemplo, antes de implementar el clúster, durante su creación y mientras se esté ejecutando. De hecho, existen pruebas adicionales que se ejecutan cuando el clúster se encuentra en funcionamiento, que comprueban el cumplimiento de las prácticas recomendadas para cargas de trabajo de alta disponibilidad. Entre estas decenas de pruebas, solo unas pocas afectarán a las cargas de trabajo del clúster en ejecución y estas se engloban todas en la categoría de almacenamiento, por lo que la omisión de esta categoría por completo constituye una forma sencilla de evitar pruebas que interrumpan la actividad.  
+ El primer paso de diagnóstico consiste en ejecutar una comprobación de validación de clúster nueva. Para obtener detalles acerca de la validación, consulte [Guía paso a paso de clústeres de conmutación por error: Validación de hardware para un clúster de conmutación por error](https://technet.microsoft.com/library/cc732035.aspx).  Esto se puede completar sin ninguna interrupción del servicio, ya que no afecta a ningún recurso de clúster en línea. La validación se puede llevar a cabo en cualquier momento una vez instalada la característica Clúster de conmutación por error; por ejemplo, antes de implementar el clúster, durante su creación y mientras se esté ejecutando. De hecho, existen pruebas adicionales que se ejecutan cuando el clúster se encuentra en funcionamiento, que comprueban el cumplimiento de las prácticas recomendadas para cargas de trabajo de alta disponibilidad. Entre estas decenas de pruebas, solo unas pocas afectarán a las cargas de trabajo del clúster en ejecución y estas se engloban todas en la categoría de almacenamiento, por lo que la omisión de esta categoría por completo constituye una forma sencilla de evitar pruebas que interrumpan la actividad.  
 Clúster de conmutación por error incorpora una medida de seguridad integrada para evitar que el tiempo de inactividad accidental cuando se ejecuten pruebas de almacenamiento durante la validación. Si el clúster tiene algún grupo en línea cuando se inicia la validación, y las pruebas de almacenamiento permanecen seleccionadas, se mostrará un mensaje donde el usuario tendrá que confirmar si desea ejecutar todas las pruebas (y ocasionar tiempo de inactividad) u omitir la comprobación de los discos de los grupos en línea a fin de evitar dicho perjuicio. Si se ha excluido la categoría de almacenamiento en su totalidad de las pruebas, no se mostrará este mensaje. De este modo, se habilitará la validación del clúster sin conllevar tiempo de inactividad.  
   
 #### <a name="how-to-revalidate-your-cluster"></a>Cómo volver a validar el clúster  
@@ -49,7 +48,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
 4.  Para ver temas de ayuda que le ayudarán a interpretar los resultados, haga clic en **Más información acerca de las pruebas de validación de clústeres**.  
   
- Para ver los temas de ayuda sobre la validación de clústeres después de cerrar el asistente, en el complemento de clústeres de conmutación por error, haga clic en **Ayuda**, en **Temas de Ayuda**y en la pestaña **Contenido** . Expanda el contenido de la ayuda de clústeres de conmutación por error y haga clic en **Validating a Failover Cluster Configuration (Validar una configuración de clúster de conmutación por error)**.  Una vez que el Asistente para validación haya finalizado, los resultados se mostrarán en **Informe de resumen** . Se deben superar todas las pruebas con una marca de verificación verde o, en algunos casos, un triángulo amarillo (advertencia). Cuando busque áreas con problemas (X de color rojo o signos de interrogación amarillos), en la parte del informe donde se resumen los resultados de las pruebas, haga clic en una prueba individual para revisar los detalles. Todos los problemas indicados con una X de color rojo se tendrán que resolver antes de solucionar los problemas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Para ver los temas de ayuda sobre la validación de clústeres después de cerrar el asistente, en el complemento de clústeres de conmutación por error, haga clic en **Ayuda**, en **Temas de Ayuda**y en la pestaña **Contenido** . Expanda el contenido de la ayuda de clústeres de conmutación por error y haga clic en **Validating a Failover Cluster Configuration (Validar una configuración de clúster de conmutación por error)** .  Una vez que el Asistente para validación haya finalizado, los resultados se mostrarán en **Informe de resumen** . Se deben superar todas las pruebas con una marca de verificación verde o, en algunos casos, un triángulo amarillo (advertencia). Cuando busque áreas con problemas (X de color rojo o signos de interrogación amarillos), en la parte del informe donde se resumen los resultados de las pruebas, haga clic en una prueba individual para revisar los detalles. Todos los problemas indicados con una X de color rojo se tendrán que resolver antes de solucionar los problemas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  **Instalación de actualizaciones**  
   
@@ -78,7 +77,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
      La recuperación de un error del sistema operativo de esta forma puede llevar algún tiempo. Si el error del sistema operativo se puede recuperar fácilmente, evite el uso de esta técnica.  
   
-     Para más información, consulte [Crear un nuevo clúster de conmutación por error de SQL Server &#40;Programa de instalación&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) y [Cómo recuperarse de un error en un clúster de conmutación por error en el escenario 2](recover-from-failover-cluster-instance-failure.md).  
+     Para obtener más información, vea [Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) y [Procedimiento para: recuperarse de un error en un clúster de conmutación por error en el escenario 2](recover-from-failover-cluster-instance-failure.md).  
   
 ## <a name="resolving-common-problems"></a>Resolver problemas habituales  
  En la siguiente lista se describen los problemas de uso más comunes y se explica cómo resolverlos.  
@@ -86,7 +85,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
 ### <a name="problem-incorrect-use-of-command-prompt-syntax-to-install-sql-server"></a>Problema: uso incorrecto de la sintaxis del símbolo del sistema para instalar SQL Server  
  **Problema 1:** es difícil diagnosticar los problemas del programa de instalación cuando se usa el modificador **/qn** en el símbolo del sistema, ya que el modificador **/qn** quita todos los cuadros de diálogo y los mensajes de error de dicho programa. Si se especifica el modificador **/qn** , todos los mensajes del programa de instalación, incluidos los mensajes de error, quedarán registrados en los archivos de registro de dicho programa. Para más información sobre los archivos de registro, consulte [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
- **Solución 1**: use el modificador **/qb** en lugar del **/qn** . Si usa el modificador **/qb** , se mostrará la interfaz de usuario básica en cada paso, incluidos los mensajes de error.  
+ **Solución 1**: use el modificador **/qb** en lugar del **/qn**. Si usa el modificador **/qb** , se mostrará la interfaz de usuario básica en cada paso, incluidos los mensajes de error.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>Problema: SQL Server no puede iniciar una sesión en la red después de migrar a otro nodo  
  **Problema 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no pueden ponerse en contacto con un controlador de dominio.  
@@ -95,7 +94,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
  **Problema 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no son idénticas en todos los nodos de clúster o el nodo no reinicia un servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se ha migrado desde un nodo con error.  
   
- **Solución 2:** cambie las contraseñas de las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si no lo hace y cambia las contraseñas de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un nodo, debe cambiar también las contraseñas de los demás nodos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lo hace automáticamente.  
+ **Solución 2:** cambie las contraseñas de las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no lo hace y cambia las contraseñas de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un nodo, debe cambiar también las contraseñas de los demás nodos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lo hace automáticamente.  
   
 ### <a name="problem-sql-server-cannot-access-the-cluster-disks"></a>Problema: SQL Server no tiene acceso a los discos del clúster  
  **Problema 1:** el firmware o los controladores no están actualizados en todos los nodos.  
@@ -139,7 +138,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
 6.  Conéctese a esta instancia utilizando el alias SQLTEST1 como nombre de servidor.  
   
-### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>Problema: el programa de instalación de SQL Server genera el error 11001 en un clúster.  
+### <a name="problem-sql-server-setup-fails-on-a-cluster-with-error-11001"></a>Problema: el programa de instalación de SQL Server genera el error 11001 en un clúster  
  **Problema:** hay una clave del Registro huérfana en [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.X\Cluster]  
   
  **Solución:** asegúrese de que el subárbol del Registro de MSSQL.X no se está utilizando y, a continuación, elimine la clave del clúster.  
@@ -161,7 +160,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
 6.  Ejecute el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>Problema: las aplicaciones no consiguen dar de alta los recursos de SQL Server en una transacción distribuida.  
+### <a name="problem-applications-fail-to-enlist-sql-server-resources-in-a-distributed-transaction"></a>Problema: las aplicaciones no consiguen dar de alta los recursos de SQL Server en una transacción distribuida  
  **Problema:** como el Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MS DTC) no está completamente configurado en Windows, las aplicaciones puede que no consigan dar de alta los recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en una transacción distribuida. Este problema puede afectar a servidores vinculados, consultas distribuidas y procedimientos almacenados remotos que utilicen transacciones distribuidas. Para más configuración sobre cómo configurar MS DTC, consulte [Antes de instalar los clústeres de conmutación por error](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
  **Solución:** para evitar este tipo de problemas, deberá habilitar totalmente los servicios MS DTC en los servidores en que esté instalado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y esté configurado MS DTC.  
@@ -185,7 +184,7 @@ Clúster de conmutación por error incorpora una medida de seguridad integrada p
   
  Si los procedimientos almacenados extendidos utilizan componentes COM, el administrador debe registrarlos en cada nodo del clúster. La información para cargar y ejecutar los componentes COM debe estar en el Registro del nodo activo para que los componentes se puedan crear. En caso contrario, la información permanece en el Registro del equipo donde se registraron por primera vez los componentes COM.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Cómo funcionan los procedimientos almacenados extendidos](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [Características de ejecución de los procedimientos almacenados extendidos](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  

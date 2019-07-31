@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 0cc3055f6d6d6f293500cdd6aabca5c0e51df11a
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039061"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -151,7 +150,7 @@ DBCC SHOWCONTIG no muestra los datos con los tipos de datos **ntext**, **text** 
   
 Además, DBCC SHOWCONTIG no admite algunas características nuevas. Por ejemplo:
 -   Si la tabla o el índice especificados tienen particiones, DBCC SHOWCONTIG solo muestra la primera partición de la tabla o el índice especificados.  
--   DBCC SHOWCONTIG no muestra la información de almacenamiento de desbordamiento de fila y otros tipos de datos no consecutivos nuevos como **nvarchar(max)**, **varchar(max)**, **varbinary(max)** y **xml**.  
+-   DBCC SHOWCONTIG no muestra la información de almacenamiento de desbordamiento de fila y otros tipos de datos no consecutivos nuevos como **nvarchar(max)** , **varchar(max)** , **varbinary(max)** y **xml**.  
 -   DBCC SHOWCONTIG no admite los índices espaciales.  
   
 Todas las características nuevas son totalmente compatibles con la vista de administración dinámica [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
@@ -199,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>b. Usar OBJECT_ID para obtener el Id. de la tabla y sys.indexes para obtener el Id. del índice  
+### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>B. Usar OBJECT_ID para obtener el Id. de la tabla y sys.indexes para obtener el Id. del índice  
 En el siguiente ejemplo se usa `OBJECT_ID` y la vista de catálogo `sys.indexes` para obtener el id. de tabla y el id. de índice para el índice `AK_Product_Name` de la tabla `Production.Product` de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql  

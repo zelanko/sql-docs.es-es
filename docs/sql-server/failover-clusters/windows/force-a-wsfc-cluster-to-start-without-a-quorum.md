@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 068d92c4913a59e9c18c601d2c21b8b3c80a0a19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ac6464cb5bab7e16cb6ee0282f402c1416ec47cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044737"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzar el inicio de un clúster WSFC sin un quórum
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "52520233"
   
 -   **Para forzar que un clúster se inicie sin un quórum con:**  [Usar el Administrador de clústeres de conmutación por error](#FailoverClusterManagerProcedure), [Usar PowerShell](#PowerShellProcedure), [Usar Net.exe](#CommandPromptProcedure)  
   
--   **Seguimiento:**  [Seguimiento: Después de forzar que el clúster se inicie sin un quórum](#FollowUp)  
+-   **Seguimiento:**  [Seguimiento: después de forzar que el clúster se inicie sin un cuórum](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
@@ -48,7 +47,7 @@ ms.locfileid: "52520233"
   
 3.  En el panel izquierda, en el árbol **Administrador de clústeres de conmutación por error** , haga clic en el nombre del clúster.  
   
-4.  En el panel de resumen, configure que el valor de **Configuración de quórum** actual es:  **Advertencia: el clúster se está ejecutando en el estado ForceQuorum**.  
+4.  En el panel de resumen, confirme que el valor actual de **Configuración de cuórum** es:  **Advertencia: el clúster se ejecuta en estado ForceQuorum**.  
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
   
@@ -103,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de forzar que el clúster se inicie sin un quórum  
+##  <a name="FollowUp"></a> Seguimiento: Después de forzar que el clúster se inicie sin un cuórum  
   
 -   Debe evaluar y configurar de nuevo los valores de NodeWeight para construir correctamente un nuevo quórum antes de volver a poner otros nodos en línea. De lo contrario, el clúster puede volver a estar sin conexión.  
   
@@ -127,7 +126,7 @@ net.exe start clussvc /forcequorum
   
 -   [Cmdlet de clúster de conmutación por error Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Configurar los valores de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [Cmdlets de clúster de conmutación por error en Windows PowerShell enumerados por tarea](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

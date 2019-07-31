@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e83c617-4aa2-4755-bcc5-a798c46b97e4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43e1eac679271e3f12d60d310724a8ff025933cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b64b067889582949b42a7d5ffeeca1b1e119b6e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123026"
 ---
 # <a name="mssqlserver5228"></a>MSSQLSERVER_5228
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,6 +58,6 @@ Si ejecuta DBCC CHECKDB con una de las cláusulas REPAIR y no se soluciona el pr
 ### <a name="results-of-running-repair-options"></a>Resultados de ejecutar opciones REPAIR  
 Al ejecutar REPAIR, volverá generarse el índice especificado y todas sus dependencias.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   

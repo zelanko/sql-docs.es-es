@@ -53,7 +53,7 @@ sp_monitor
 |**Inactivo**|Número de segundos durante los que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha estado inactivo.|  
 |**packets_received**|Número de paquetes de entrada que ha leído [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**packets_sent**|Número de paquetes de salida escritos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**@packet_errors**|Número de errores que ha encontrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al leer y escribir paquetes.|  
+|**packet_errors**|Número de errores que ha encontrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al leer y escribir paquetes.|  
 |**total_read**|Número de lecturas que ha realizado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**total_write**|Número de escrituras que ha realizado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**total_errors**|Número de errores que ha encontrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al leer y escribir.|  
@@ -89,7 +89,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**packets_received**|**packets_sent**|**@packet_errors**|  
+|**packets_received**|**packets_sent**|**packet_errors**|  
 |16(1)|20(2)|0(0)|  
   
 |||||  

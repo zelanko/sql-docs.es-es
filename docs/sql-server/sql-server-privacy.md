@@ -2,33 +2,32 @@
 title: Complemento de privacidad de SQL Server | Microsoft Docs
 ms.date: 01/19/2019
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06116a52b35acb2ffef584e751e2c7285ce99551
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+author: aliceku
+ms.author: aliceku
+ms.openlocfilehash: 40057200c5b8241849f4030e6c418cf080d149f2
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420030"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329343"
 ---
 # <a name="sql-server-privacy-supplement"></a>Complemento de privacidad de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se resume el comportamiento de diferentes objetos de datos usados en SQL Server y cómo se usan dichos objetos para pasar información de manera personal o confidencial. Este artículo es un anexo a la [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) general. La clasificación de datos de este artículo solo se aplica a versiones del producto local de SQL Server. No se aplica a los elementos:
+En este artículo se resumen las características habilitadas para Internet que pueden recopilar y enviar datos anónimos sobre el uso de características a Microsoft. SQL Server puede recopilar información estándar del equipo y datos sobre el uso y el rendimiento que se podría transmitir a Microsoft y analizarse a fin de mejorar la calidad, la seguridad y la confiabilidad del producto. Este artículo es un anexo a la [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) general. La clasificación de datos de este artículo solo se aplica a versiones del producto local de SQL Server. No se aplica a los elementos:
 
 - Base de datos SQL de Azure
-- SQL Server Management Studio (SSMS)
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Database Migration Assistant
-- Asistente para migración de SQL Server
+- SQL Server Migration Assistant
 - Extensión MS-SQL
 
 Definición de *escenarios de uso permitidos*. En el contexto de este artículo, Microsoft define los "escenarios de uso permitidos" como las acciones o las actividades que se inician a través de Microsoft.
@@ -44,9 +43,9 @@ Información relacionada con las credenciales que se usa para proteger inicios d
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario |Restricciones de acceso              |Requisitos de retención |
+|Escenario |Restricciones de acceso |Requisitos de retención |
 |---------|---------|---------|
-|Estas credenciales nunca salen del equipo del usuario con los comentarios de uso. |- |- |
+|Estas credenciales nunca salen del equipo del usuario con los datos de diagnóstico y uso. |- |- |
 |Los volcados de memoria pueden contener datos de control de acceso. |- |Volcados de memoria: 30 días como máximo |
 |Estas credenciales nunca salen del equipo del usuario con los comentarios del usuario, a menos que el cliente las inserte manualmente. |Limitado al uso interno de Microsoft sin acceso de terceros. |Comentarios del usuario: 1 año como máximo|
 |&nbsp;|&nbsp;|&nbsp;|
@@ -63,9 +62,9 @@ El contenido de cliente se define como los datos almacenados en tablas de usuari
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario  |Restricciones de acceso               |Requisitos de retención |
+|Escenario  |Restricciones de acceso  |Requisitos de retención |
 |---------|---------|---------|
-|Estos dato no salen del equipo del usuario con los comentarios de uso. |- |- |
+|Estos datos no salen del equipo del usuario con los datos de uso y diagnóstico. |- |- |
 |Los volcados de memoria pueden incluir contenido de cliente y pueden emitirse para Microsoft. |- |Volcados de memoria: 30 días como máximo |
 |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: 1 año como máximo |
 
@@ -86,9 +85,9 @@ Datos recibidos de un usuario o generados a partir de su uso del producto.
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario  |Restricciones de acceso               |Requisitos de retención|
+|Escenario  |Restricciones de acceso  |Requisitos de retención|
 |---------|---------|---------|
-|Estos dato no salen del equipo del usuario con los comentarios de uso. |- |- |
+|Estos datos no salen del equipo del usuario con los datos de uso y diagnóstico. |- |- |
 |Los volcados de memoria pueden incluir EUII y pueden emitirse para Microsoft. |- |Volcados de memoria: 30 días como máximo |
 |Puede emitirse para Microsoft un identificador de cliente con el fin de ofrecer nuevas características híbridas y en la nube a las que se han suscrito los usuarios. |- |Actualmente no existe ninguna característica híbrida o en la nube de este tipo.|
 |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente.|Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: 1 año como máximo |
@@ -108,7 +107,7 @@ Datos necesarios para ofrecer servicios basados en Internet, según los término
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario  |Restricciones de acceso               |Requisitos de retención|
+|Escenario  |Restricciones de acceso  |Requisitos de retención|
 |---------|---------|---------| 
 |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original.  Por ejemplo, a través de paneles. |Mínimo 90 días, máximo 3 años. |
 |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |
@@ -120,7 +119,7 @@ Datos generados durante el proceso de ejecución del servidor.  Los datos no inc
 
 ### <a name="examples-of-system-metadata"></a>Ejemplos de metadatos del sistema
 
-La información siguiente se considera metadatos del sistema cuando no incluye contenido de cliente, control de acceso de cliente o EUII:
+La información siguiente se considera metadatos del sistema cuando no incluye contenido de cliente, metadatos del objeto, datos de control de acceso de cliente o EUII:
 
 - GUID de base de datos
 - Hash de nombre de equipo
@@ -142,7 +141,7 @@ Microsoft examina los valores de nombre de aplicación establecidos por otros pr
 |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales.|Limitado al uso interno de Microsoft sin acceso de terceros. |Mínimo 90 días, máximo 3 años. |
 |Pueden usarse para realizar sugerencias para el cliente.  Por ejemplo, "En función de su uso del producto, considere la posibilidad de usar la característica *X*, ya que obtendría mejores resultados". |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Registros de seguridad de datos de cliente: 3 años como mínimo, 6 años como máximo. |
 |Microsoft podría usarlos para la planeación de productos en el futuro. |Microsoft puede compartir esta información con otros proveedores de hardware y software para mejorar el funcionamiento de sus productos con software de Microsoft. |Mínimo 90 días, máximo 3 años.|
-|Microsoft podría usarlos para proporcionar servicios en la nube basados en los comentarios de uso emitidos. Por ejemplo, a través de un panel de cliente en el que se muestra el uso de características en todas las instalaciones de SQL Server de una organización. |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Mínimo 90 días, máximo 3 años. |
+|Microsoft podría usarlos para proporcionar servicios en la nube basados en los datos de uso y diagnóstico emitidos. Por ejemplo, a través de un panel de cliente en el que se muestra el uso de características en todas las instalaciones de SQL Server de una organización. |Microsoft puede exponer los datos al cliente original, por ejemplo, a través de paneles. |Mínimo 90 días, máximo 3 años. |
 |Los clientes pueden enviar a Microsoft comentarios del usuario (con su consentimiento) que incluyan contenido de cliente. |Limitado al uso interno de Microsoft sin acceso de terceros. Microsoft puede exponer los datos al cliente original. |Comentarios del usuario: 1 año como máximo |
 |Puede usar el nombre de la base de datos y el de la aplicación para asignar categorías conocidas a las bases de datos y aplicaciones, por ejemplo, para las que pueden estar ejecutando software proporcionado por Microsoft u otras empresas.|Limitado al uso interno de Microsoft sin acceso de terceros.|Mínimo 90 días, máximo 3 años. |
 
@@ -158,7 +157,11 @@ Datos que describen servidores, bases de datos, tablas y otros recursos o que se
 
 ### <a name="permitted-usage-scenarios"></a>Escenarios de uso permitidos
 
-|Escenario  |Restricciones de acceso               |Requisitos de retención|
+> [!NOTE]
+> Se aplica el algoritmo hash a todos los valores de metadatos del objeto antes de la colección.
+>
+
+|Escenario  |Restricciones de acceso  |Requisitos de retención|
 |---------|---------|---------|
 |Microsoft podría usarlos para mejorar las características y corregir errores de las características actuales. |Limitado al uso interno de Microsoft sin acceso de terceros. |Mínimo 90 días, máximo 3 años.|
 

@@ -1,7 +1,7 @@
 ---
 title: nchar y nvarchar (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,28 +15,30 @@ helpviewer_keywords:
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee44e6c7a4ff8befc21b461feab44a07a8658a2f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8a8baa16e2b2d7e22bfd3d4045ff77483e198aec
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696734"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354588"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar y nvarchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Los tipos de datos de caracteres son de longitud fija, **nchar**, o de longitud variable, **nvarchar**. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cuando se usa una intercalación con [carácter complementario (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) habilitado, estos tipos de datos almacenan el intervalo completo de datos de caracteres [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) y usan la codificación de caracteres [UTF-16](https://www.wikipedia.org/wiki/UTF-16). Si se especifica una intercalación que no es de tipo SC, estos tipos de datos almacenan solo el subconjunto de datos de caracteres admitidos por la codificación de caracteres [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
+Los tipos de datos de caracteres son de tamaño fijo, **nchar**, o de tamaño variable, **nvarchar**. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cuando se usa una intercalación con [carácter complementario (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) habilitado, estos tipos de datos almacenan el intervalo completo de datos de caracteres [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) y usan la codificación de caracteres [UTF-16](https://www.wikipedia.org/wiki/UTF-16). Si se especifica una intercalación que no es de tipo SC, estos tipos de datos almacenan solo el subconjunto de datos de caracteres admitidos por la codificación de caracteres [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
   
 ## <a name="arguments"></a>Argumentos  
 **nchar** [ ( n ) ]  
-Datos de cadena de longitud fija. *n* define la longitud de la cadena en pares de bytes y debe ser un valor entre 1 y 4000. El tamaño de almacenamiento es dos veces *n* bytes. Para la codificación [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), el tamaño de almacenamiento es el doble de *n* bytes y el número de caracteres que se pueden almacenar también en *n*. Para la codificación UTF-16, el tamaño de almacenamiento sigue siendo el doble de *n* bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n* porque los caracteres complementarios usan dos pares de bytes (también denominados [par suplente](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Los sinónimos ISO de **nchar** son **national char** y **national character**.
+Datos de cadena de tamaño fijo. *n* define el tamaño de la cadena en pares de bytes y debe ser un valor entre 1 y 4000. El tamaño de almacenamiento es dos veces *n* bytes. Para la codificación [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), el tamaño de almacenamiento es el doble de *n* bytes y el número de caracteres que se pueden almacenar también en *n*. Para la codificación UTF-16, el tamaño de almacenamiento sigue siendo el doble de *n* bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n* porque los caracteres complementarios usan dos pares de bytes (también denominados [par suplente](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Los sinónimos ISO de **nchar** son **national char** y **national character**.
   
 **nvarchar** [ ( n | **max** ) ]  
-Datos de cadena de longitud variable. *n* define la longitud de la cadena en pares de bytes y puede ser un valor entre 1 y 4000. **max** indica que el tamaño máximo de almacenamiento es de 2^30-1 caracteres (2 GB). El tamaño de almacenamiento es el doble de *n* bytes + 2 bytes. Para la codificación [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), el tamaño de almacenamiento es el doble de *n* bytes + 2 bytes y el número de caracteres que se pueden almacenar también en *n*. Para la codificación UTF-16, el tamaño de almacenamiento sigue siendo el doble de *n* bytes + 2 bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n* porque los caracteres complementarios usan dos pares de bytes (también denominados [par suplente](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Los sinónimos ISO de **nvarchar** son **national char varying** y **national character varying**.
+Datos de cadena de tamaño variable. *n* define el tamaño de la cadena en pares de bytes y puede ser un valor entre 1 y 4000. **max** indica que el tamaño máximo de almacenamiento es de 2^30-1 caracteres (2 GB). El tamaño de almacenamiento es el doble de *n* bytes + 2 bytes. Para la codificación [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF), el tamaño de almacenamiento es el doble de *n* bytes + 2 bytes y el número de caracteres que se pueden almacenar también en *n*. Para la codificación UTF-16, el tamaño de almacenamiento sigue siendo el doble de *n* bytes + 2 bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n* porque los caracteres complementarios usan dos pares de bytes (también denominados [par suplente](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Los sinónimos ISO de **nvarchar** son **national char varying** y **national character varying**.
   
 ## <a name="remarks"></a>Notas  
+Una idea equivocada habitual es pensar que en [NCHAR(*n*) y NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), la *n* define el número de caracteres. Pero en [NCHAR(*n*) y NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) la *n* define la longitud de la cadena en **pares de bytes** (0-4000). *n* nunca define números de caracteres que se pueden almacenar. Esto es similar a la definición de [CHAR(*n*) y VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md).   
+La idea equivocada se produce porque cuando se usan caracteres definidos en el intervalo de Unicode 0-65.535, se puede almacenar un carácter por cada par de bytes. Sin embargo, en intervalos de Unicode más altos (65.536-1.114.111), un carácter puede usar dos pares de bytes. Por ejemplo, en una columna definida como NCHAR(10), [!INCLUDE[ssde_md](../../includes/ssde_md.md)] puede almacenar 10 caracteres que usan la codificación de un par de bytes (intervalo de Unicode 0-65,535), pero menos de 10 caracteres cuando se usan dos pares de bytes (intervalo de Unicode 65.536-1.114.111). Para obtener más información sobre el almacenamiento Unicode y los intervalos de caracteres, vea [Diferencias de almacenamiento entre UTF-8 y UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).     
+
 Cuando no se especifica el argumento *n* en una instrucción de definición de datos o de declaración de variable, la longitud predeterminada es 1. Cuando no se especifica *n* con la función CAST, la longitud predeterminada es 30.
 
 Si usa **nchar** o **nvarchar**, se recomienda:
@@ -44,7 +46,7 @@ Si usa **nchar** o **nvarchar**, se recomienda:
 - Use **nvarchar** cuando los tamaños de las entradas de datos de columna varíen considerablemente.  
 - Utilice **nvarchar(max)** cuando los tamaños de las entradas de datos de columna varíen de forma considerable y la longitud de la cadena pueda superar los 4000 pares de bytes.  
   
-**sysname** es un tipo de datos definido por el usuario y suministrado por el sistema que es funcionalmente equivalente a **nvarchar(128)**, excepto que no acepta valores NULL. **sysname** se usa para hacer referencia a nombres de objetos de base de datos.
+**sysname** es un tipo de datos definido por el usuario y suministrado por el sistema que es funcionalmente equivalente a **nvarchar(128)** , excepto que no acepta valores NULL. **sysname** se usa para hacer referencia a nombres de objetos de base de datos.
   
 Los objetos que usan **nchar** o **nvarchar** se asignan a la intercalación predeterminada de la base de datos, a menos que se asigne una intercalación específica por medio de la cláusula COLLATE.
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8e7c288fb10eb1473835f29fa538c49d2fe47585
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140899"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE (permisos de objeto de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  Especifica el nombre de una columna en una tabla, vista o función con valores de tabla en la que se revoca el permiso. Los paréntesis ( ) son obligatorios. Solo es posible denegar los permisos SELECT, REFERENCES y UPDATE para una columna. Se puede especificar *column* en la cláusula de permisos o después del nombre del elemento protegible.  
   
  ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
- Especifica el objeto en el que se va a revocar el permiso. La frase OBJECT es opcional si se especifica *schema_name*. Si se utiliza la frase OBJECT, se requiere el calificador de ámbito (::).  Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema (.).  
+ Especifica el objeto en el que se va a revocar el permiso. La frase OBJECT es opcional si se especifica *schema_name*. Si se utiliza la frase OBJECT, se requiere el calificador de ámbito (::). Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema (.).  
   
  { FROM | TO } \<database_principal> especifica la entidad de seguridad a la que se revoca el permiso.  
   
@@ -158,7 +157,7 @@ REVOKE SELECT ON OBJECT::Person.Address FROM RosaQdM;
 GO  
 ```  
   
-### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>b. Revocar el permiso EXECUTE en un procedimiento almacenado  
+### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>B. Revocar el permiso EXECUTE en un procedimiento almacenado  
  En el siguiente ejemplo se revoca el permiso `EXECUTE` para el procedimiento almacenado `HumanResources.uspUpdateEmployeeHireInfo` a un rol de aplicación denominado `Recruiting11`.  
   
 ```  

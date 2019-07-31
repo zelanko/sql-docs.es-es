@@ -1,5 +1,5 @@
 ---
-title: 'Reparación de página automática (grupos de disponibilidad: creación de reflejo de la base de datos) | Microsoft Docs'
+title: 'Reparación de página automática (grupos de disponibilidad: creación de reflejo de base de datos) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8fa157929e6936ed80ab8ca895b89309d68b960d
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 9e445d15401b747be6bd690e4ae6884a831e66de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035275"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Reparación de página automática (grupos de disponibilidad: creación de reflejo de base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ ms.locfileid: "49383570"
  La reparación de página automática es un proceso asincrónico que se ejecuta en segundo plano. Por consiguiente, una operación de base de datos que solicite una página ilegible producirá errores y devolverá el código de error acerca de las condiciones que han provocado el error. Al desarrollar una aplicación para una base de datos reflejada o una base de datos de disponibilidad, debería interceptar las excepciones relativas a las operaciones con errores. Si el código de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es 823, 824 u 829, debería volver a intentar dicha operación más adelante.  
   
 
-##  <a name="ViewAPRattempts"></a> Procedimiento: ver los intentos de reparación de página automática  
+##  <a name="ViewAPRattempts"></a> Procedimientos para: ver los intentos de reparación de página automática  
  Las siguientes vistas de administración dinámica devuelven filas para los últimos intentos de reparación de página automática en una base de datos de disponibilidad o base de datos reflejada determinada, con un máximo de 100 filas por base de datos.  
   
 -   **Grupos de disponibilidad AlwaysOn:**  
@@ -112,7 +111,7 @@ ms.locfileid: "49383570"
      Devuelve una fila para cada intento de reparación de página automática en cualquier base de datos reflejada en la instancia del servidor.  
   
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

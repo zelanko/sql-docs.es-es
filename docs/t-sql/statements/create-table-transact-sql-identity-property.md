@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af536ef3867d3f74ce04a8a8fef8b93e224f09c0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8cf672f9aefc4b9fa0444c73596d2fac67089474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938934"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (propiedad)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ IDENTITY [ (seed , increment) ]
 ## <a name="remarks"></a>Notas  
  Las columnas de identidad pueden usarse para generar valores de clave. La propiedad de identidad de una columna garantiza lo siguiente:  
   
--   Cada nuevo valor se genera basándose en el valor de inicialización y el incremento actual.  
+-   Cada nuevo valor se genera basándose en el valor actual de inicialización e incremento.  
   
 -   Cada nuevo valor de una transacción determinada es diferente de otras transacciones simultáneas de la tabla.  
   
@@ -68,7 +67,7 @@ IDENTITY [ (seed , increment) ]
   
 -   **Consecutive values within a transaction** (Valores consecutivos en una transacción): No se garantiza que una transacción que inserta varias filas obtenga valores consecutivos para las filas porque podrían producirse otras inserciones simultáneas en la tabla. Si los valores deben ser consecutivos, la transacción debe usar un bloqueo exclusivo en la tabla o usar el nivel de aislamiento **SERIALIZABLE**.  
   
--   **Consecutive values after server restart or other failures** (Valores consecutivos después de un reinicio del servidor u otros errores): [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría almacenar en memoria caché los valores de identidad por motivos de rendimiento y algunos de los valores asignados podrían perderse durante un error de la base de datos o un reinicio del servidor. Esto puede tener como resultado espacios en el valor de identidad al insertarlo. Si no es aceptable que haya espacios, la aplicación debe usar mecanismos propios para generar valores de clave. El uso de un generador de secuencias con la opción **NOCACHE** puede limitar los espacios a transacciones que nunca se llevan a cabo.  
+-   **Consecutive values after server restart or other failures** (Valores consecutivos después de un reinicio del servidor u otros errores) - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría almacenar en memoria caché los valores de identidad por motivos de rendimiento y algunos de los valores asignados podrían perderse durante un error de la base de datos o un reinicio del servidor. Esto puede tener como resultado espacios en el valor de identidad al insertarlo. Si no es aceptable que haya espacios, la aplicación debe usar mecanismos propios para generar valores de clave. El uso de un generador de secuencias con la opción **NOCACHE** puede limitar los espacios a transacciones que nunca se llevan a cabo.  
   
 -   **Reuse of values** (Reutilización de valores): Para una propiedad de identidad determinada, con un valor de inicialización e incremento específico, el motor no reutiliza los valores de identidad. Si una instrucción de inserción concreta produce un error o si la instrucción de inserción se revierte, los valores de identidad utilizados se pierden y no volverán a generarse. Esto puede tener como resultado espacios cuando se generan los valores de identidad siguientes.  
   
@@ -110,7 +109,7 @@ VALUES
    ('Pirkko', 'O', 'Koskitalo');  
 ```  
   
-### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>b. Utilizar la sintaxis genérica para buscar espacios en los valores de identidad  
+### <a name="b-using-generic-syntax-for-finding-gaps-in-identity-values"></a>B. Utilizar la sintaxis genérica para buscar espacios en los valores de identidad  
  En este ejemplo se muestra la sintaxis genérica utilizada para buscar espacios en valores de identidad cuando se quitan datos.  
   
 > [!NOTE]  

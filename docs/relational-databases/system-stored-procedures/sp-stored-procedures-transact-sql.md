@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9d670c1dbfc94e80394cf34733b8a91aeb6cb056
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032706"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702781"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve una lista de los procedimientos almacenados del entorno actual.  
   
@@ -42,9 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sp_name = ] 'name'` Es el nombre del procedimiento utilizado para devolver información del catálogo. *nombre* es **nvarchar(390)** , su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín.  
+`[ @sp_name = ] 'name'`Es el nombre del procedimiento utilizado para devolver información del catálogo. *Name* es de tipo **nvarchar (390)** y su valor predeterminado es NULL. Se admite la coincidencia de patrón de caracteres comodín.  
   
-`[ @sp_owner = ] 'schema'` Es el nombre del esquema al que pertenece el procedimiento. *esquema* es **nvarchar (384)** , su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de procedimiento del DBMS subyacente.  
+`[ @sp_owner = ] 'schema'`Es el nombre del esquema al que pertenece el procedimiento. *Schema* es de tipo **nvarchar (384)** y su valor predeterminado es NULL. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *Owner* , se aplican las reglas predeterminadas de visibilidad de procedimientos del DBMS subyacente.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el esquema actual contiene un procedimiento con el nombre especificado, se devuelve ese procedimiento. Si se especifica un procedimiento almacenado no calificado, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] busca el procedimiento siguiendo este orden:  
   
@@ -54,13 +55,13 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   El esquema **dbo** de la base de datos actual.  
   
-`[ @qualifier = ] 'qualifier'` Es el nombre del calificador del procedimiento. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_ **.** _esquema_ **.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @qualifier = ] 'qualifier'`Es el nombre del calificador del procedimiento. el calificador es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_ **.** _esquema_ de **.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el calificador representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
-`[ @fUsePattern = ] 'fUsePattern'` Determina si el carácter de subrayado (_), porcentaje (%) o corchetes []) se interpretan como caracteres comodín. *fUsePattern* es **bit**, su valor predeterminado es 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Determina si el carácter de subrayado (_), porcentaje (%) o corchetes []) se interpreta como caracteres comodín. *fUsePattern* es de **bit**y su valor predeterminado es 1.  
   
- **0** = patrón coincidente está desactivada.  
+ **0** = la coincidencia de patrones está desactivada.  
   
- **1** = patrón coincidente se encuentra en.  
+ **1** = la coincidencia de patrones está activada.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -75,15 +76,15 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**NUM_INPUT_PARAMS**|**int**|Reservado para uso futuro.|  
 |**NUM_OUTPUT_PARAMS**|**int**|Reservado para uso futuro.|  
 |**NUM_RESULT_SETS**|**int**|Reservado para uso futuro.|  
-|**COMENTARIOS**|**varchar(254)**|Descripción del procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
+|**SECCIÓN**|**varchar(254)**|Descripción del procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
 |**PROCEDURE_TYPE**|**smallint**|Tipo de procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve 2.0. Este valor puede ser uno de los siguientes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener la máxima interoperatividad, el cliente de la puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL (los caracteres de comodín % y _).  
   
- La información de permisos acerca del acceso de ejecución del usuario actual para un procedimiento almacenado específico no se comprueba necesariamente, por lo tanto, el acceso no está garantizado. Observe que solo se utilizan los nombres en tres partes. Esto significa que solo se devolverán los procedimientos almacenados locales, y no los remotos (que precisan nombres de cuatro partes), cuando se ejecuten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el atributo de servidor ACCESSIBLE_SPROC es Y en el conjunto de resultados **sp_server_info**, se devuelven solo los procedimientos almacenados que pueden ser ejecutados por el usuario actual.  
+ La información de permisos acerca del acceso de ejecución del usuario actual para un procedimiento almacenado específico no se comprueba necesariamente, por lo tanto, el acceso no está garantizado. Observe que solo se utilizan los nombres en tres partes. Esto significa que solo se devolverán los procedimientos almacenados locales, y no los remotos (que precisan nombres de cuatro partes), cuando se ejecuten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si el atributo de servidor ACCESSIBLE_SPROC es Y en el conjunto de resultados de **sp_server_info**, solo se devuelven los procedimientos almacenados que puede ejecutar el usuario actual.  
   
- **sp_stored_procedures** es equivalente a **SQLProcedures** en ODBC. Los resultados devueltos se ordenan por **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, y **nombre_procedimiento**.  
+ **sp_stored_procedures** es equivalente a **SQLProcedures** en ODBC. Los resultados devueltos se ordenan por **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**y **procedure_name**.  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  
@@ -109,7 +110,7 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procedimientos &#40;almacenados de catálogo de TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

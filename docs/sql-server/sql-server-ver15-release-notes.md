@@ -1,6 +1,6 @@
 ---
 title: Notas de la versión de SQL Server 2019 | Microsoft Docs
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7394fcf4d3a6fcc282e7ea0c09af01aada643954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8e06fd47a8922e1b0ed494ce8ae47fc334ff8e6
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136319"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495485"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notas de la versión preliminar de SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "68136319"
 En este artículo se describen las limitaciones y los problemas conocidos de las versiones de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP). Para obtener información relacionada, consulte estos artículos:
 - [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## <a name="ctp-31"></a>CTP 3.1
+## <a name="ctp-32"></a>CTP 3.2
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 es la versión pública más reciente de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2 es la versión pública más reciente de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1 está disponible únicamente como edición de evaluación. No hay más ediciones disponibles.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2 está disponible únicamente como edición de evaluación. No hay más ediciones disponibles.
 
 Encontrará información completa sobre la compatibilidad y la administración de licencias de versiones de CTP en `license_Eval.rtf` con sus soportes de instalación.
 
@@ -55,23 +55,22 @@ Encontrará información completa sobre la compatibilidad y la administración d
 ## <a name = "release-notes"></a>Características que se excluyen del soporte técnico
 
 - **Problema e impacto en el cliente:** [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] no ofrece soporte técnico para los componentes, las características y los escenarios siguientes:
-  - SQL Sever Analysis Services
+  - SQL Server Analysis Services
   - SQL Server Reporting Services
   - Grupos de disponibilidad AlwaysOn en Kubernetes
   - Recuperación acelerada de bases de datos.
-  - Metadatos tempdb optimizados para memoria
 
 - **Solución**: Ninguno. La exclusión se aplica a todos los clientes, incluidos los participantes en el programa de adopción temprana de SQL.
 
-- **Se aplica a**: CTP 3.0
+- **Se aplica a**: todas las versiones de CTP
 
 ## <a name="updated-compiler"></a>Compilador actualizado
 
-- **Problema e impacto en el cliente**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] incorpora un compilador actualizado. CTP 2.1 tenía un problema conocido por el que los resultados de un número de punto flotante y otros escenarios de conversión podían devolver un valor distinto al devuelto en versiones anteriores debido al compilador actualizado. CTP 2.2 incluye recursos para asegurarse de que los escenarios afectados devuelvan los mismos resultados que las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No se ha detectado ningún otro error en CTP 3.1. Notifique cualquier anomalía en los resultados en comparación con [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] al equipo de [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ](http://aka.ms/sqlfeedback) inmediatamente.
+- **Problema e impacto en el cliente**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] incorpora un compilador actualizado. CTP 2.1 tenía un problema conocido por el que los resultados de un número de punto flotante y otros escenarios de conversión podían devolver un valor distinto al devuelto en versiones anteriores debido al compilador actualizado. CTP 2.2 incluye recursos para asegurarse de que los escenarios afectados devuelvan los mismos resultados que las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No se ha detectado ninguna otra incidencia en CTP 3.2. Notifique cualquier anomalía en los resultados en comparación con [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] al equipo de [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ](http://aka.ms/sqlfeedback) inmediatamente.
 
 - **Solución**: N/D
 
-- **Se aplica a**: SQL Server 2019 CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
+- **Se aplica a**: todas las versiones de CTP
 
 ## <a name="installation-wizard-may-wait-between-eula-pages"></a>El asistente para la instalación puede esperar entre las páginas de CLUF
 
@@ -94,7 +93,7 @@ Encontrará información completa sobre la compatibilidad y la administración d
  
 - **Solución**: No hay ninguna solución alternativa para [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP.
 
-- **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+- **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2, CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
 
@@ -102,7 +101,7 @@ Encontrará información completa sobre la compatibilidad y la administración d
 
 - **Solución**: Para habilitar los cálculos completos, ejecute `DBCC traceon(127,-1)`. Para obtener más información, consulte [Habilitar cálculos completos](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1
+- **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2, CTP 3.1
 
 ## <a name="sql-server-configuration-manager-may-not-start"></a>Administrador de configuración de SQL Server puede no iniciarse
 

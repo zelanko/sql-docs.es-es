@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4b6b05436f85fa96a164f6e86733c5bc4bf95f0d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 21c43f2780f555b9cabd0ec84b47f80ff0284764
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345468"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388443"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON: marcas de seguimiento (Transact-SQL)
 
@@ -138,7 +138,7 @@ En la siguiente tabla se enumeran y se describen las marcas de seguimiento dispo
 |**7412**|Habilita la infraestructura ligera de generación de perfiles de estadísticas de ejecución de consultas. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/3170113).<br /><br />**Nota:** Esta marca de seguimiento se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 y a compilaciones posteriores. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], esta marca de seguimiento no tiene ningún efecto, ya que la generación de perfiles ligera está habilitada de forma predeterminada.<br /><br />**Ámbito**: solo global|
 |**7471**|Permite ejecutar varias [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) para estadísticas diferentes en una sola tabla al mismo tiempo. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/3156157).<br /><br />**Nota:** Esta marca de seguimiento se aplica a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 y a compilaciones posteriores.<br /><br />**Ámbito**: solo global|
 |**7745**|Fuerza el Almacén de consultas para que no vacíe datos en el disco al cerrarse la base de datos.<br /><br />**Nota:** El uso de esta marca de seguimiento puede hacer que, en caso de cierre, se pierdan los datos del Almacén de consultas que no se han vaciado previamente en el disco. Para el cierre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede usarse el comando SHUTDOWN WITH NOWAIT en lugar de esta marca de seguimiento para forzar un cierre inmediato.<br /><br />**Ámbito**: solo global|
-|**7752**|Permite la carga asincrónica del Almacén de consultas.<br /><br />**Nota:** Use esta marca de seguimiento si [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] está experimentando un número elevado de esperas QDS_LOADDB relacionadas con la carga sincrónica del Almacén de consultas (comportamiento predeterminado durante la recuperación de la base de datos).<br /><br />**Ámbito**: solo global|
+|**7752**|Permite la carga asincrónica del Almacén de consultas.<br /><br />**Nota:** Use esta marca de seguimiento si [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] está experimentando un número elevado de esperas QDS_LOADDB relacionadas con la carga sincrónica del Almacén de consultas (comportamiento predeterminado durante la recuperación de la base de datos).<br /><br />**Nota:** A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], este comportamiento se controla mediante el motor y la marca de seguimiento 7752 no tiene ningún efecto.<br /><br />**Ámbito**: solo global|
 |**7806**|Habilita una conexión de administrador dedicada (DAC) en [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. De manera predeterminada, no se reservan recursos DAC en [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Para obtener más información, vea [Conexión de diagnóstico para administradores de bases de datos](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<br /><br />**Ámbito**: solo global|  
 |**8011**|Deshabilita el búfer en anillo para el Monitor de recursos. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/920093).<br /><br />**Ámbito**: global y sesión|
 |**8012**|Deshabilita el búfer en anillo para los programadores. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/920093).<br /><br />**Ámbito**: solo global|

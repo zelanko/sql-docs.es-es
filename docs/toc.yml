@@ -9987,22 +9987,8 @@
           items:
             - name: Directiva de compatibilidad de SSMS
               href: ssms/support-policy.md
-            - name: Opciones de soporte técnico para usuarios profesionales
-              href: 'https://support.microsoft.com/gp/support-options-for-business'
-            - name: Contacto con Microsoft
-              href: 'https://support.microsoft.com/gp/contactus81?Audience=Commercial'
-            - name: Todas las formas de obtener ayuda
+            - name: Comentarios y ayuda
               href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
-            - name: UserVoice - ¿Alguna sugerencia para mejorar SQL Server?
-              href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: Instalación y actualización - Foro de MSDN
-              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc'
-            - name: Transact-SQL - Foro de MSDN
-              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql'
-            - name: Stack Overflow
-              href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: Información y términos de licencia de Microsoft SQL Server
-              href: 'https://www.microsoft.com/download/details.aspx?id=39299'
             - name: Asistencia al usuario en SSMS
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: Datos de uso anónimos
@@ -10444,28 +10430,12 @@
           href: 'https://mva.microsoft.com/product-training/sql-server'
         - name: SQL en Channel 9 >
           href: 'https://channel9.msdn.com/Search'
-    - name: Blogs
-      items:
-        - name: SQL Server >
-          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: Motor de base de datos de SQL Server >
-          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: Seguridad de SQL Server >
-          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools >
-          href: 'https://blogs.msdn.microsoft.com/ssdt/'
-    - name: Comentarios y ayuda
+    - name: Ayuda
       items:
         - name: Obtener ayuda
           href: sql-server/sql-server-get-help.md
-        - name: Comentarios de la documentación de SQL >
-          href: 'https://aka.ms/sqldocsfeedback'
-        - name: Comentarios de SQL Server (UserVoice) >
-          href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: SQL Docs Survey >
-          href: 'https://aka.ms/sqldocsurvey'
-        - name: ¡Contribuya a la documentación de SQL!
-          href: sql-server/sql-server-docs-contribute.md
+        - name: Sugerencias de navegación por la documentación de SQL
+          href: sql-server/sql-docs-navigation-guide.md
         - name: Cambio de la pila DBA >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >
@@ -10474,6 +10444,24 @@
           href: 'https://social.msdn.microsoft.com/Forums/home'
         - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
+    - name: Blogs
+      items:
+        - name: SQL Server >
+          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
+        - name: Motor de base de datos >
+          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
+        - name: Seguridad >
+          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
+        - name: Herramientas de datos >
+          href: 'https://blogs.msdn.microsoft.com/ssdt/'
+    - name: Comentarios
+      items:
+        - name: Documentación de SQL >
+          href: 'https://aka.ms/sqldocsfeedback'
+        - name: SQL Server >
+          href: 'https://feedback.azure.com/forums/908035-sql-server'
+        - name: Edite la documentación de SQL
+          href: sql-server/sql-server-docs-contribute.md
     - name: Asociados
       items:
         - name: Supervisión
@@ -10488,8 +10476,6 @@
       href: sql-server/sql-server-help-installation.md
 - name: Referencia
   items:
-    - name: Archivos de inclusión de SQl Docs
-      href: sql-server/applies-to-includes.md
     - name: Contenido archivado (SQL 2005 - 2012) >
       displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'

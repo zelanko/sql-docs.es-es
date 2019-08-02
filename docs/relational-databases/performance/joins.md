@@ -1,7 +1,7 @@
 ---
 title: Combinaciones (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/18/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -10,31 +10,33 @@ helpviewer_keywords:
 - HASH join
 - NESTED LOOPS join
 - MERGE join
+- ADAPTIVE join
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29fa0dcc89cd8e1ad88abcf9974884b723b7a64e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051947"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419588"
 ---
 # <a name="joins-sql-server"></a>Combinaciones (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza operaciones de ordenación, intersección, unión y diferencia mediante una tecnología de ordenación en memoria y combinación hash. Con este tipo de plan de consulta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acepta la partición vertical de tablas, a veces llamada almacenamiento en columnas.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea tres tipos de operaciones de combinación:    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea cuatro tipos de operaciones de combinación:    
 -   Combinaciones de bucles anidados     
 -   Combinaciones de mezcla   
 -   Combinaciones hash   
+-   Combinaciones adaptables (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
 
 ## <a name="fundamentals"></a> Aspectos básicos de las combinaciones
-Las combinaciones permiten recuperar datos de dos o más tablas según las relaciones lógicas entre ellas. Las combinaciones indican cómo debe usar Microsoft SQL Server los datos de una tabla para seleccionar las filas de otra tabla.    
+Las combinaciones permiten recuperar datos de dos o más tablas según las relaciones lógicas entre ellas. Las combinaciones indican cómo debe usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los datos de una tabla para seleccionar las filas de otra tabla.    
 
 Una condición de combinación define la forma en la que dos tablas se relacionan en una consulta al:    
 -   Especificar la columna de cada tabla que debe usarse para la combinación. Una condición de combinación típica especifica una clave externa de una tabla y su clave asociada en otra tabla.    
@@ -115,6 +117,8 @@ En el caso más sencillo, la búsqueda recorre una tabla o índice completo, lo 
 
 Una combinación de bucles anidados resulta particularmente eficaz si la entrada externa es pequeña y la entrada interna está indizada previamente y es grande. En muchas transacciones pequeñas, como las que afectan solo a un pequeño conjunto de filas, las combinaciones de bucles anidados de índice son superiores a las combinaciones de mezcla y a las combinaciones hash. Sin embargo, en las consultas grandes, las combinaciones de bucles anidados a menudo no son la opción óptima.    
 
+Cuando el atributo OPTIMIZED de un operador de combinación de bucles anidados está establecido en **True**, significa que un bucle anidado optimizado (u ordenación por lotes) se usa para minimizar la E/S cuando la tabla interna es grande, independientemente de si está paralelizada o no. Es posible que la presencia de esta optimización en un plan determinado no sea demasiado obvia al analizar un plan de ejecución, debido a que la propia ordenación es una operación oculta. Pero si se mira el XML del plan correspondiente al atributo OPTIMIZED, indica que la combinación de bucles anidados podría intentar reordenar las filas de entrada para mejorar el rendimiento de E/S.
+
 ## <a name="merge"></a> Comprender las combinaciones de mezcla
 Si las dos entradas de la combinación no son pequeñas pero están ordenadas por la columna de combinación (por ejemplo, si se obtuvieron al recorrer índices ordenados), una combinación de mezcla es la operación de combinación más rápida. Si ambas entradas de combinación son grandes y tienen tamaños similares, una combinación de mezcla con una ordenación previa y una combinación hash ofrecen un rendimiento similar. Sin embargo, las operaciones de combinación hash a menudo son más rápidas si los tamaños de las dos entradas difieren significativamente entre sí.       
 
@@ -142,15 +146,12 @@ Las combinaciones hash se utilizan para muchos tipos de operaciones de coinciden
 En las secciones siguientes se describen los distintos tipos de combinaciones hash: combinación hash en memoria, combinación hash aplazada y combinación hash recursiva.    
 
 ### <a name="inmem_hash"></a> Combinación hash en memoria
-
 La combinación hash primero recorre o calcula la entrada de generación completa y, a continuación, genera una tabla hash en memoria. Cada fila se inserta en un cubo hash según el valor hash calculado para la clave hash. Si la entrada de generación completa es menor que la memoria disponible, se pueden insertar todas las filas en la tabla hash. Después de la fase de generación se produce la fase de sondeo. La entrada de sondeo completa se recorre o se calcula fila a fila y, por cada fila de sondeo, se calcula el valor de la clave hash, se recorre el cubo hash correspondiente y se obtienen las coincidencias.    
 
 ### <a name="grace_hash"></a> Combinación hash aplazada
-
 Si la entrada de generación no cabe en la memoria, la combinación hash se realiza en varios pasos. Esto se denomina combinación hash aplazada. Cada paso contiene una fase de generación y una fase de sondeo. Inicialmente, se procesan todas las entradas de generación y sondeo, y se crean particiones (con una función hash sobre las claves hash) en varios archivos. La utilización de la función hash sobre las claves hash garantiza que todos los pares de registros combinados estén en la misma pareja de archivos. Por tanto, la tarea de combinar dos grandes entradas se ha reducido a varias instancias más pequeñas de las mismas tareas. A continuación se aplica la combinación hash a cada pareja de archivos de la partición.    
 
 ### <a name="recursive_hash"></a> Combinación hash recursiva
-
 Si la entrada de generación es tan grande que las entradas para una mezcla externa estándar requerirían varios niveles de mezcla, son necesarios varios pasos de particiones y varios niveles de particiones. Si solo algunas de las particiones son grandes, los pasos de particiones adicionales solo se utilizan para estas particiones específicas. Para que todos los pasos de las particiones sean lo más rápidos posible, se utilizan grandes operaciones asincrónicas de E/S de forma que un solo subproceso pueda mantener ocupadas varias unidades de disco.    
 
 > [!NOTE]
@@ -164,14 +165,132 @@ Si el optimizador de consultas prevé erróneamente cuál de las dos entradas se
 > La inversión de roles funciona independientemente de cualquier estructura o sugerencia de consulta. La inversión de roles no se muestra en el plan de consulta; cuando se lleva a cabo, resulta transparente para el usuario.
 
 ### <a name="hash_bailout"></a> Salida hash
-
 El término salida hash algunas veces se utiliza para describir combinaciones hash aplazadas o recursivas.    
 
 > [!NOTE]
 > Las combinaciones hash recursivas o las salidas hash reducen el rendimiento del servidor. Si ve muchos eventos Hash Warning en un seguimiento, actualice las estadísticas en las columnas que se están combinando.    
 
 Para obtener más información sobre el salida hash, vea [Hash Warning [clase de eventos]](../../relational-databases/event-classes/hash-warning-event-class.md).    
-  
+
+## <a name="adaptive"></a> Descripción de las combinaciones adaptables
+Las combinaciones adaptables en [modo por lotes](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) permiten elegir un método [Combinación hash](#hash) o [Combinación de bucles anidados](#nested_loops) que se aplace hasta **después** de que se haya examinado la primera entrada. El operador de combinaciones adaptables define un umbral que se usa para decidir cuándo cambiar a un plan de bucles anidados. Por lo tanto, un plan de consulta puede cambiar dinámicamente a una mejor estrategia de combinación durante la ejecución sin tener que sea necesaria una nueva compilación. 
+
+> [!TIP]
+> La cargas de trabajo con oscilaciones frecuentes entre análisis de entrada de combinación pequeños y grandes son las que más se benefician de esta característica.
+
+La decisión de runtime se basa en estos pasos:
+-  Si el recuento de filas de la entrada de combinación de compilación es lo suficientemente pequeño como para que una combinación de bucles anidados sea una opción más óptima que una combinación hash, el plan cambia a un algoritmo de bucles anidados.
+-  Si la entrada de combinación de compilación supera un umbral de recuento de filas determinado, no se produce ningún cambio y el plan continúa con una combinación hash.
+
+La siguiente consulta se usa para mostrar un ejemplo de combinación adaptable:
+
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 360;
+```
+
+La consulta devuelve 336 filas. Al habilitar las [estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md) se ve el siguiente plan:
+
+![La consulta da lugar a 336 filas](../../relational-databases/performance/media/4_AQPStats336Rows.png)
+
+En el plan, tenga en cuenta lo siguiente:
+1. Una exploración de índice de almacén de columnas que se usa para proporcionar filas para la fase de compilación de combinación hash.
+2. El nuevo operador de combinación adaptable. Este operador define un umbral que se usa para decidir cuándo cambiar a un plan de bucle anidado. En este ejemplo, el umbral es 78 filas. Todo lo que tenga &gt; = 78 filas usará una combinación hash. Si es inferior al umbral, se usará una combinación de bucles anidados.
+3. Puesto que la consulta devuelve 336 filas, se supera el umbral y la segunda rama representa la fase de sondeo de una operación de combinación hash estándar. Observe que las estadísticas de consultas dinámicas muestran las filas que pasan por los operadores, en este caso "672 de 672".
+4. La última rama es la búsqueda en índice agrupado que usa la combinación de bucles anidados si no se ha superado el umbral. Observe que se ve "0 de 336" filas mostradas (la rama no se usa).
+
+Ahora vamos a comparar el plan con la misma consulta, pero cuando el valor *Cantidad* solo tiene una fila en la tabla:
+ 
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 361;
+```
+La consulta devuelve una fila. Al habilitar las estadísticas de consultas activas se ve el siguiente plan:
+
+![La consulta da lugar a una fila](../../relational-databases/performance/media/5_AQPStatsOneRow.png)
+
+En el plan, tenga en cuenta lo siguiente:
+- Con una fila devuelta, ahora pasan filas por la búsqueda en índice clúster.
+- Y puesto que no se ha continuado con la fase de compilación de combinación hash, no pasan filas por la segunda rama.
+
+### <a name="adaptive-join-remarks"></a>Comentarios sobre las combinaciones adaptables
+Las combinaciones adaptables tienen unos requisitos de memoria superiores a un plan equivalente de combinación de bucle anidado de índice. La memoria adicional se solicita como si los bucles anidados fuesen una combinación hash. También hay sobrecarga para la fase de compilación como una operación de detención e inicio frente a una combinación equivalente de transmisión de bucle anidado. Ese costo adicional va acompañado de flexibilidad en escenarios donde los recuentos de filas pueden fluctuar en la entrada de compilación.
+
+Las combinaciones adaptables en modo por lotes funcionan para la ejecución inicial de una instrucción y, una vez compiladas, las ejecuciones consecutivas seguirán siendo adaptables según el umbral de combinación adaptable compilado y las filas de runtime que fluyen a través de la fase de compilación de la entrada externa.
+
+Si una combinación adaptable cambia a una operación de bucles anidados, usa las filas ya leídas por la compilación de combinación hash. El operador **no** vuelve a leer las filas de la referencia externa.
+
+### <a name="tracking-adaptive-join-activity"></a>Seguimiento de la actividad de combinación adaptable
+El operador de combinación adaptable tiene los siguientes atributos de operador de plan:
+
+|Atributo de plan|Descripción|
+|---|---|
+|AdaptiveThresholdRows|Muestra el uso de umbral para cambiar de una combinación hash a una combinación de bucle anidado.|
+|EstimatedJoinType|El tipo de combinación probable.|
+|ActualJoinType|En un plan real, se muestra qué algoritmo de combinación se ha elegido finalmente según el umbral.|
+
+El plan estimado muestra la forma del plan de combinación adaptable, junto con un umbral de combinación adaptable definido y un tipo de combinación estimado.
+
+> [!TIP]
+> El Almacén de consultas captura y puede aplicar un plan de combinación adaptable de modo de proceso por lotes.
+
+### <a name="adaptive-join-eligible-statements"></a>Instrucciones aptas de combinación adaptable
+Algunas condiciones convierten a una combinación lógica en apta como combinación adaptable de modo de proceso por lotes:
+- El nivel de compatibilidad de la base de datos es 140 o superior.
+- La consulta es una instrucción `SELECT` (las instrucciones de modificación de datos no son aptas actualmente).
+- La combinación puede ser ejecutada tanto por una combinación de bucles anidados indexada como por un algoritmo físico de combinación hash.
+- La combinación hash usa el [modo por lotes](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution), ya sea mediante la presencia de un índice de almacén de columnas en la consulta global o una referencia directa a la tabla con índice de almacén de columnas por parte de la combinación.
+- Las soluciones alternativas generadas de la combinación de bucles anidados y la combinación hash deben tener el mismo primer elemento secundario (referencia externa).
+
+### <a name="adaptive-threshold-rows"></a>Filas de umbral adaptable
+El gráfico siguiente muestra una intersección de ejemplo entre el costo de una combinación hash y el de una alternativa de combinación de bucles anidados. En este punto de intersección, se determina el umbral que a su vez determina el algoritmo real usado para la operación de combinación.
+
+![Umbral de combinación](../../relational-databases/performance/media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Deshabilitar las combinaciones adaptables sin cambiar el nivel de compatibilidad
+Las combinaciones adaptables se pueden deshabilitar en el ámbito de base de datos o de instrucción mientras se mantiene el nivel de compatibilidad de base de datos 140 o posterior.  
+Para deshabilitar las combinaciones adaptables para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+Cuando se habilita, esta opción aparecerá como habilitada en [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
+Para volver a habilitar las combinaciones adaptables para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+Las combinaciones adaptables también se pueden deshabilitar para una consulta específica si se designa `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` como una [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por ejemplo:
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+> [!NOTE]
+> Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de ámbito de base de datos o una opción de marca de seguimiento. 
+
 ## <a name="nulls_joins"></a> Combinaciones y valores NULL
 Cuando hay valores NULL en las columnas de las tablas que se están combinando, los valores NULL no coinciden unos con otros. La presencia de valores NULL en una columna de una de las tablas que se está combinando solo se puede indicar si se usa una combinación externa (a menos que la cláusula `WHERE` excluya los valores NULL).     
 
@@ -236,7 +355,3 @@ Los resultados no facilitan la distinción de NULL en los datos de NULL que repr
 [Conversión de tipo de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subqueries](../../relational-databases/performance/subqueries.md)     (Subconsultas)  
 [Combinaciones adaptables](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
-
-
-  
-  

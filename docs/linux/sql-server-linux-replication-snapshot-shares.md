@@ -1,6 +1,6 @@
 ---
-title: Configurar recursos compartidos de instantáneas carpeta replicación de SQL Server en Linux
-description: En este artículo se describe cómo configurar la replicación de SQL Server de los recursos compartidos de carpeta de instantáneas en Linux.
+title: Configuración de la replicación de SQL Server de recursos compartidos de carpetas de instantáneas en Linux
+description: En este artículo se describe cómo configurar una replicación de SQL Server de recursos compartidos de carpetas de instantáneas en Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,40 +10,40 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2513511889c4bc22757f0970269fa9ee7b51857d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68093124"
 ---
-# <a name="configure-replication-snapshot-folder-with-shares"></a>Configurar la carpeta de instantáneas de replicación con recursos compartidos
+# <a name="configure-replication-snapshot-folder-with-shares"></a>Configuración de la carpeta de instantáneas de replicación con recursos compartidos
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-La carpeta de instantáneas es un directorio que ha designado como un recurso compartido; los agentes que leen y escriben en esta carpeta deben tener los permisos suficientes para tener acceso a él.
+La carpeta de instantáneas es un directorio designado como recurso compartido; los agentes que leen y escriben en esta carpeta deben tener permisos suficientes para acceder a ella.
 
 ![diagrama de replicación][1]
 
-### <a name="replication-snapshot-folder-share-explained"></a>Se explica recurso compartido de carpeta de instantáneas de replicación
+### <a name="replication-snapshot-folder-share-explained"></a>Explicación del recurso compartido de instantáneas de replicación
 
-Antes de los ejemplos, veamos cómo SQL Server usa los recursos compartidos de samba en la replicación. A continuación es un ejemplo básico de cómo funciona esto.
+Antes de los ejemplos, echemos un vistazo al uso que hace SQL Server de los recursos compartidos de Samba en la replicación. A continuación se muestra un ejemplo básico de su funcionamiento.
 
-1. Recursos compartidos de Samba se configuran que los archivos escritos en `/local/path1` la replicación, agentes en el publicador pueden verse el suscriptor
-2. SQL Server está configurado para usar las rutas de acceso del recurso compartido al configurar el publicador en el servidor de distribución de modo que todas las instancias se parecería a la `//share/path`
-3. SQL Server busca la ruta de acceso local desde el `//share/path` saber dónde buscar los archivos
-4. Lecturas y escrituras de SQL Server en rutas de acceso locales, respaldado por un recurso compartido de archivos
+1. Los recursos compartidos de Samba se configuran de manera que los archivos que los agentes de replicación escriben en `/local/path1` puedan ser vistos por el suscriptor.
+2. SQL Server está configurado para usar rutas de acceso de recursos compartidos al establecer el publicador en el servidor de distribución, de modo que todas las instancias mirarían a `//share/path`.
+3. SQL Server encuentra la ruta de acceso local de `//share/path` para saber dónde tiene que buscar los archivos.
+4. SQL Server lee y escribe en las rutas de acceso locales respaldadas por un recurso compartido de Samba.
 
 
-## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>Configurar un recurso compartido de archivos para la carpeta de instantáneas 
+## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>Configuración de un recurso compartido de Samba para la carpeta de instantáneas 
 
-Los agentes de replicación será necesario un directorio compartido entre los hosts de replicación para tener acceso a las carpetas de instantáneas en otros equipos. Por ejemplo, en la replicación transaccional de extracción, el agente de distribución se encuentra en el suscriptor, lo que requiere acceso al distribuidor y los artículos. En esta sección, analizaremos un ejemplo de cómo configurar un recurso compartido de archivos en dos hosts de replicación.
+Los agentes de replicación necesitarán un directorio compartido entre los hosts de replicación para tener acceso a las carpetas de instantáneas de otras máquinas. Por ejemplo, en la replicación de extracción transaccional, el agente de distribución reside en el suscriptor, que requiere acceso al distribuidor para obtener artículos. En esta sección, veremos un ejemplo de cómo configurar un recurso compartido de Samba en dos hosts de replicación.
 
 
 ## <a name="steps"></a>Pasos
 
-Por ejemplo, configuraremos una carpeta de instantáneas en el Host 1 (el distribuidor) se comparta con el Host 2 (el suscriptor) mediante Samba. 
+Por ejemplo, configuraremos una carpeta de instantáneas en el host 1 (el distribuidor) que se compartirá con el host 2 (el suscriptor) mediante Samba. 
 
-### <a name="install-and-start-samba-on-both-machines"></a>Instale e inicie Samba en ambas máquinas 
+### <a name="install-and-start-samba-on-both-machines"></a>Instalación e inicio de Samba en ambos equipos 
 
 En Ubuntu:
 
@@ -60,15 +60,15 @@ sudo service smb start
 sudo service smb status
 ```
 
-### <a name="on-host-1-distributor-set-up-the-samba-share"></a>En el recurso compartido de archivos de configuración de Host 1 (distribuidor) 
+### <a name="on-host-1-distributor-set-up-the-samba-share"></a>Configurar en el host 1 (distribuidor) el recurso compartido de Samba 
 
-1. Usuario de instalación y la contraseña de samba:
+1. Configure el usuario y la contraseña para Samba:
 
   ```bash
   sudo smbpasswd -a mssql 
   ```
 
-1. Editar el `/etc/samba/smb.conf` para incluir la siguiente entrada y rellene el *nombre_recurso_compartido* y *ruta* campos
+1. Edite `/etc/samba/smb.conf` para incluir la entrada siguiente y rellene los campos *share_name* y *path*.
  ```bash
   <[share_name]>
   path = </local/path/on/host/1>
@@ -89,9 +89,9 @@ sudo service smb status
   valid users = mssql   <- list of users who can login to this share
   ```
 
-### <a name="on-host-2-subscriber--mount-the-samba-share"></a>En el Host 2 (suscriptor), monte el recurso compartido de archivos
+### <a name="on-host-2-subscriber--mount-the-samba-share"></a>Montar en el host 2 (suscriptor) el recurso compartido de Samba
 
-Edite el comando con las rutas de acceso correctos y ejecute el siguiente comando en MÁQUINA2:
+Edite el comando con las rutas de acceso correctas y ejecute el siguiente comando en el equipo 2:
 
   ```bash
   sudo mount //<name_of_host_1>/<share_name> </local/path/on/host/2> -o user=mssql,uid=mssql,gid=mssql
@@ -107,9 +107,9 @@ Edite el comando con las rutas de acceso correctos y ejecute el siguiente comand
   gid=mssql   <- sets the mssql group as the owner of the mounted directory
   ```
 
-### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>En ambos Hosts configurar SQL Server en instancias de Linux para usar el recurso compartido de instantáneas
+### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>Configurar en ambos hosts las instancias de SQL Server en Linux para que usen el recurso compartido de instantáneas
 
-Agregue la siguiente sección para `mssql.conf` en ambos equipos. Usar siempre que el recurso compartido de archivos para la / / / ruta de acceso. En este ejemplo, sería: `//host1/mssql_data`
+Agregue la sección siguiente a `mssql.conf` en ambos equipos. Use la ubicación del recurso compartido de Samba para //share/path. En este ejemplo, sería `//host1/mssql_data`
 
   ```bash
   [uncmapping]
@@ -118,29 +118,29 @@ Agregue la siguiente sección para `mssql.conf` en ambos equipos. Usar siempre q
 
   **Ejemplo**
 
-  En host1:
+  En el host 1:
 
   ```bash
   [uncmapping]
   //host1/mssql_data = /local/path/on/hosts/1
   ```
 
-  En host2:
+  En el host 2:
   
   ```bash
   [uncmapping]
   //host1/mssql_data = /local/path/on/hosts/2
   ```
 
-### <a name="configuring-publisher-with-shared-paths"></a>Configurar publicador con las rutas de acceso compartido
+### <a name="configuring-publisher-with-shared-paths"></a>Configuración del publicador con rutas de acceso compartidas
 
-* Al configurar la replicación, use la ruta de acceso de los recursos compartidos (ejemplo `//host1/mssql_data`
-* Mapa `//host1/mssql_data` a un directorio local y la asignación agregada a `mssql.conf`.
+* Al configurar la replicación, use la ruta de acceso de los recursos compartidos (por ejemplo, `//host1/mssql_data`).
+* Asigne `//host1/mssql_data` a un directorio local y la asignación agregada a `mssql.conf`.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Conceptos: Replicación de SQL Server en Linux](sql-server-linux-replication.md)
+[Conceptos: Replicación de SQL Server en Linux](sql-server-linux-replication.md)
 
-[Procedimientos almacenados de replicación](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+[Procedimientos almacenados de replicación](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)
 
 [1]: ./media/sql-server-linux-replication-snapshot-shares/image1.png

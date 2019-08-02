@@ -1,18 +1,19 @@
 ---
 title: Descargas de CAB para actualizaciones acumulativas de SQL Server
-description: Descargas de paquetes y CAB de r y Python para SQL Server 2017 Machine Learning Services y SQL Server 2016 R Services.
+description: Descargas de paquetes y CAB de r y Python para SQL Server Machine Learning Services y SQL Server R Services de 2016.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ab87112d20d2571936fa7d61c34c5910859f2642
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7b77a1fd3a0d2575f0add7badb1c5bf632d29d70
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470314"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715831"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>Descargas de CAB para actualizaciones acumulativas de SQL Server instancias de análisis en base de datos
 
@@ -20,16 +21,18 @@ ms.locfileid: "68470314"
 
 Las instancias de SQL Server que están configuradas para análisis en base de datos incluyen características de R y Python. Estas características se incluyen en archivos CAB, se instalan y se prestan servicio a través de SQL Server instalación. En los dispositivos conectados a Internet, las actualizaciones de CAB se aplican normalmente a través de Windows Update. En los servidores desconectados, los archivos. CAB deben descargarse y aplicarse manualmente. 
 
-En este artículo se proporcionan vínculos de descarga a archivos. CAB para cada actualización acumulativa. Se proporcionan vínculos para SQL Server 2017 Machine Learning Services (R y Python), así como para los servicios de SQL Server 2016 R. Para obtener más información acerca de las instalaciones sin conexión, consulte [instalación de SQL Server componentes de machine learning sin acceso a Internet](sql-ml-component-install-without-internet-access.md#apply-cu).
+En este artículo se proporcionan vínculos de descarga a archivos. CAB para cada actualización acumulativa. Para obtener más información acerca de las instalaciones sin conexión, consulte [instalación de SQL Server componentes de machine learning sin acceso a Internet](sql-ml-component-install-without-internet-access.md#apply-cu).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 Comience con una instalación de línea de base.
 
-+ En SQL Server Machine Learning Services 2017, la versión inicial es la instalación de línea base. 
++ En SQL Server Machine Learning Services, la versión inicial es la instalación de línea base. 
 + En SQL Server servicios de R 2016, puede comenzar con la versión inicial, SP1 o SP2. 
 
 También puede aplicar las actualizaciones acumulativas a un servidor independiente.
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server de los contenedores 2017
 
@@ -88,6 +91,9 @@ Los archivos. CAB se enumeran en orden cronológico inverso. Cuando descargue lo
 | | Microsoft Python abierto     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 | | Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
+::: moniker-end
+
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -134,7 +140,9 @@ Para los servicios de SQL Server 2016 R, las versiones de línea base son la ver
 
 Si desea ver el código fuente de Microsoft R, puede descargarlo como archivo en formato. tar: [Descargar R Server instaladores](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-## <a name="see-also"></a>Vea también
+::: moniker-end
+
+## <a name="next-steps"></a>Pasos siguientes
 
 [Aplicar actualizaciones acumulativas en equipos sin acceso a Internet](sql-ml-component-install-without-internet-access.md#apply-cu)
 

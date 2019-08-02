@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f14005b8ba9d6f05d2b69deba29d83af5695f657
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3e8293fecf351176ac2b1e88176395f6c2b34d20
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470509"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715312"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Crear gráficos y trazados mediante SQL y R (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ En este paso se supone que hay una sesión de R en curso basada en los pasos ant
     > [!NOTE]
     > ¿El gráfico tiene un aspecto diferente?
     >  
-    > Esto se debe  a que indatasource solo usa las primeras 1000 filas. El orden de las filas utilizando TOP no es determinista en ausencia de una cláusula ORDER BY, por lo que se espera que los datos y el gráfico resultante varíen.
+    > Esto se debe a que indatasource solo usa las primeras 1000 filas. El orden de las filas utilizando TOP no es determinista en ausencia de una cláusula ORDER BY, por lo que se espera que los datos y el gráfico resultante varíen.
     > Esta imagen en particular se generó con alrededor de 10 000 filas de datos. Se recomienda experimentar con distintos números de filas para obtener distintos gráficos y observar cuánto tiempo se tarda en devolver los resultados en su entorno.
 
 ## <a name="create-a-map-plot"></a>Crear un trazado de mapa

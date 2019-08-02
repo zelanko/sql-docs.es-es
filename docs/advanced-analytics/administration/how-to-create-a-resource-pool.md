@@ -1,20 +1,21 @@
 ---
 title: Creación de un grupo de recursos para R y Python
-description: Defina un grupo de recursos de SQL Server para los procesos de R o Python en una instancia del motor de base de datos de SQL Server 2016 o SQL Server 2017.
+description: Defina un grupo de recursos de SQL Server para los procesos de R o Python en una instancia del motor de base de datos de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5b58c2a42334352d64aa2cea61a75585f29996c3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 882b9b15fbba567f30172d625af3867b27ae387e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344068"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715904"
 ---
-# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>Creación de un grupo de recursos para machine learning en SQL Server
+# <a name="how-to-create-a-resource-pool-for-sql-server-machine-learning-services"></a>Cómo crear un grupo de recursos para SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este artículo se describe cómo puede crear y usar un grupo de recursos específicamente para administrar cargas de trabajo de aprendizaje automático de R y Python en SQL Server. Se supone que ya ha instalado y habilitado las características de aprendizaje automático y desea volver a configurar la instancia para admitir una administración más específica de los recursos usados por procesos externos, como R o Python.
@@ -188,7 +189,7 @@ Para comprobar que se han realizado los cambios, debe comprobar la configuració
   
      En este caso, dado que los grupos se crearon con la afinidad AUTO, no se muestra ninguna información. Para más información, vea [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
 
-## <a name="see-also"></a>Vea también
+## <a name="next-steps"></a>Pasos siguientes
 
 Para obtener más información acerca de la administración de recursos del servidor, consulte:
 

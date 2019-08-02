@@ -1,29 +1,30 @@
 ---
 title: Instalar nuevos paquetes de idioma de Python
-description: Agregue nuevos paquetes de Python a SQL Server 2017 Machine Learning Services (in-Database) y Machine Learning Server (independiente).
+description: Agregue nuevos paquetes de Python a SQL Server Machine Learning Services (en bases de datos) y Machine Learning Server (independiente).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fc8c7148369ec1a501106e573e195a8f0b7f060a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e107622655d5f00d27de6abcea46a92526f47ada
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470256"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715803"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Instalar nuevos paquetes de Python en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se describe cómo instalar nuevos paquetes de Python en una instancia de SQL Server 2017 Machine Learning Services. En general, el proceso de instalación de nuevos paquetes es similar al de un entorno estándar de Python. Sin embargo, se requieren algunos pasos adicionales si el servidor no tiene conexión a Internet.
+En este artículo se describe cómo instalar nuevos paquetes de Python en una instancia de SQL Server Machine Learning Services. En general, el proceso de instalación de nuevos paquetes es similar al de un entorno estándar de Python. Sin embargo, se requieren algunos pasos adicionales si el servidor no tiene conexión a Internet.
 
 Para obtener más información sobre la ubicación del paquete y las rutas de instalación, vea [obtener información de paquetes de R o Python](../package-management/installed-package-information.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-+ [SQL Server 2017 Machine Learning Services (in-Database)](../install/sql-machine-learning-services-windows-install.md) con la opción del lenguaje Python. 
++ [SQL Server Machine Learning Services (in-Database)](../install/sql-machine-learning-services-windows-install.md) con la opción del lenguaje Python. 
 
 + Los paquetes deben ser compatibles con Python 3,5 y ejecutarse en Windows. 
 
@@ -77,7 +78,7 @@ Abra el símbolo del sistema de Python asociado a la instancia.
 
   SQL Server el programa de instalación no agrega scripts a la ruta de acceso del sistema. Si recibe un error que `pip` no se reconoce como un comando interno o externo, puede Agregar la carpeta scripts a la variable PATH en Windows.
 
-  La ruta de acceso completa  de la carpeta de scripts en una instalación predeterminada es la siguiente:
+  La ruta de acceso completa de la carpeta de scripts en una instalación predeterminada es la siguiente:
 
     C:\Archivos de Programa\microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Scripts
 
@@ -122,7 +123,7 @@ cntk._version_
 
 Hay diferentes maneras de obtener una lista de los paquetes instalados. Por ejemplo, puede ver los paquetes instalados en las ventanas **entornos de Python** de Visual Studio.
 
-Si usa la línea de comandos de Python, puede usar **PIP** o el administrador de  paquetes Conda, incluido en el entorno anaconda de Python agregado por SQL Server configuración.
+Si usa la línea de comandos de Python, puede usar **PIP** o el administrador de paquetes Conda, incluido en el entorno anaconda de Python agregado por SQL Server configuración.
 
 1. Vaya a C:\Archivos de Programa\microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Scripts
 

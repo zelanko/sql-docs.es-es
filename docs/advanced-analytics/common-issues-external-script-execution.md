@@ -2,21 +2,22 @@
 title: Problemas comunes con el servicio Launchpad y la ejecución de scripts externos
 ms.prod: sql
 ms.technology: ''
-ms.date: 06/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 84c7c8f10c6a5b0da69d24389e12633df3774ffb
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c90c59f3b59850bb0e2d1cf4cf40eb569e965eba
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470491"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715282"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problemas comunes con el servicio Launchpad y la ejecución de scripts externos en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- SQL Server servicio Launchpad de confianza admite la ejecución de scripts externos para R y Python. En SQL Server servicios de R 2016, SP1 proporciona el servicio. SQL Server 2017 incluye el servicio Launchpad como parte de la instalación inicial.
+SQL Server servicio Launchpad de confianza admite la ejecución de scripts externos para R y Python. 
 
 Varios problemas pueden impedir que Launchpad se inicie, incluidos los problemas de configuración o los cambios, o los protocolos de red que faltan. En este artículo se proporcionan instrucciones para la solución de problemas. En caso de que no se haya perdido, puede publicar preguntas en el [Foro de machine learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR).
 
@@ -76,6 +77,7 @@ Para obtener más información, vea [Grant (Transact-SQL](../t-sql/statements/gr
 
 En esta sección se enumeran los mensajes de error más comunes que Launchpad devuelve.
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="unable-to-launch-runtime-for-r-script"></a>"No se puede iniciar el tiempo de ejecución para script R"
 
 Si el grupo de Windows para los usuarios de R (también usados para Python) no puede iniciar sesión en la instancia que está ejecutando R Services, podrían aparecer los siguientes errores:
@@ -94,10 +96,11 @@ Si el grupo de Windows para los usuarios de R (también usados para Python) no p
 
     * *Los registros de seguridad indican que el servicio NT de la cuenta no pudo iniciar sesión*
 
-Para obtener información acerca de cómo conceder a este grupo de usuarios los permisos necesarios, consulte [instalación de SQL Server 2016 R Services](install/sql-r-services-windows-install.md).
+Para obtener información acerca de cómo conceder a este grupo de usuarios los permisos necesarios, vea [instalar SQL Server R Services](install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > Esta limitación no se aplica si usa inicios de sesión de SQL para ejecutar scripts de R desde una estación de trabajo remota.
+::: moniker-end
 
 ## <a name="logon-failure-the-user-has-not-been-granted-the-requested-logon-type"></a>"Error de inicio de sesión: no se ha concedido al usuario el tipo de inicio de sesión solicitado"
 
@@ -183,9 +186,12 @@ EXEC sp_execute_external_script @language = N'R',
 
 Para resolver el problema, debe volver a instalar el paquete en la biblioteca de instancias de SQL Server.
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 >[!NOTE]
 >Si ha actualizado una instancia de SQL Server 2016 para usar la versión más reciente de Microsoft R, la ubicación predeterminada de la biblioteca es diferente. Para obtener más información, consulte [uso de SqlBindR para actualizar una instancia de R Services](install/upgrade-r-and-python.md).
+::: moniker-end
 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>Launchpad se cierra debido a archivos dll no coincidentes
 
 Si instala el motor de base de datos con otras características, aplique una revisión al servidor y, después, agregue la característica Machine Learning con el medio original, se puede instalar la versión incorrecta de los componentes Machine Learning. Cuando Launchpad detecta una discrepancia de versiones, se apaga y crea un archivo de volcado de memoria.
@@ -224,7 +230,7 @@ Como solución alternativa, puede habilitar la notación 8.3 en el volumen en el
 3. Use la utilidad fsutil con el argumento *File* para especificar una ruta de acceso de archivo corta para la carpeta especificada en WORKING_DIRECTORY.
 
 4. Edite el archivo de configuración para especificar el mismo directorio de trabajo que especificó en la propiedad WORKING_DIRECTORY. También puede especificar un directorio de trabajo diferente y elegir una ruta de acceso existente que ya sea compatible con la notación 8.3.
-
+::: moniker-end
 
 ## <a name="next-steps"></a>Pasos siguientes
 

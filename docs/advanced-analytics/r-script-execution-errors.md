@@ -6,20 +6,18 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 268b3df72d468170fbefae2557892c49fd15515c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 10ec78bf8627bfef3232dfc72d7ef7f638604b15
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470293"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715755"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Errores de scripting de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se documentan varios scripts gerrors cuando se ejecuta código R en SQL Server. La lista no es completa. Hay muchos paquetes y los errores pueden variar entre las distintas versiones del mismo paquete. Se recomienda publicar los errores de script en el [Foro de machine learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), que admite los componentes de aprendizaje automático que se usan en R Services (en bases de datos), Microsoft R Client y Microsoft R Server.
-
-**Se aplica a:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
-
+En este artículo se documentan varios errores de scripting cuando se ejecuta código R en SQL Server. La lista no es completa. Hay muchos paquetes y los errores pueden variar entre las distintas versiones del mismo paquete. Se recomienda publicar los errores de script en el [Foro de machine learning Server](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR), que admite los componentes de aprendizaje automático que se usan en R Services (en bases de datos), Microsoft R Client y Microsoft R Server.
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>Error de script válido en T-SQL o en procedimientos almacenados
 

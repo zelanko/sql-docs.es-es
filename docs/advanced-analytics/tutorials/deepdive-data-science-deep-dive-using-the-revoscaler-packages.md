@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c326d51e9b3ac4edac61f97bf5f7fa3143d8d350
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4db5debf4ba71f29a8870c8674a5422e9ffd334a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470630"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714885"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: Uso de funciones de RevoScaleR R con datos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ En este tutorial de varias partes, se presenta una serie de funciones de **RevoS
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con la característica de R o [SQL Server 2016 R Services (en base de datos)](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con la característica de R o [SQL Server R Services (in-Database)](../install/sql-r-services-windows-install.md)
   
 + [Permisos de base de datos](../security/user-permission.md) y un inicio de sesión de usuario de SQL Server Database
 
@@ -31,7 +32,7 @@ En este tutorial de varias partes, se presenta una serie de funciones de **RevoS
 
 + Un IDE como RStudio o la herramienta de RGUI integrada incluida con R
 
-Para alternar entre los contextos de cálculo locales y remotos, se necesitan dos sistemas. Local suele ser una estación de trabajo de desarrollo con una capacidad suficiente para cargas de trabajo de ciencia de datos. En este caso, remoto es SQL Server 2017 o SQL Server 2016 con la característica de R habilitada. 
+Para alternar entre los contextos de cálculo locales y remotos, se necesitan dos sistemas. Local suele ser una estación de trabajo de desarrollo con una capacidad suficiente para cargas de trabajo de ciencia de datos. En este caso, Remote es SQL Server con la característica de R habilitada. 
 
 El cambio de los contextos de cálculo se basa en tener la misma versión de **RevoScaleR** en sistemas locales y remotos. En una estación de trabajo local, puede obtener los paquetes de **RevoScaleR** y los proveedores relacionados mediante la instalación de Microsoft R Client.
 

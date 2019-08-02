@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ecff1f32d129b71a014038fa681e76b9a2f44554
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: af2b1bf8f619800737863ff955011b011f4819d0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470528"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715391"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Crear un modelo de R y guardarlo en SQL Server (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,7 +154,7 @@ En esta sección, experimentará con ambas técnicas.
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    Esta llamada devuelve los valores utilizados para calcular el gráfico ROC. La columna de etiqueta _se incluye_en el marcador, que tiene los resultados reales que está intentando predecir, mientras que la columna _puntuación_ tiene la predicción.
+    Esta llamada devuelve los valores utilizados para calcular el gráfico ROC. La columna de etiquetase incluye en el marcador, que tiene los resultados reales que está intentando predecir, mientras que la columna _puntuación_ tiene la predicción.
 
 2. Para trazar realmente el gráfico, puede guardar el objeto ROC y, a continuación, dibujarlo con la función de trazado. El gráfico se crea en el contexto de proceso remoto y se devuelve al entorno de R.
 
@@ -201,7 +202,7 @@ Para comprobar que el contexto de cálculo es local, ejecute `rxGetComputeContex
 
 ## <a name="deploy-the-model"></a>Implementar el modelo
 
-Después de haber creado un modelo y de asegurarse de que funciona bien, es probable que desee implementarlo en un sitio en el que los usuarios o las personas de la organización puedan usar el modelo, o quizás volver a crear el entrenamiento y la calibración del modelo de forma periódica. Este proceso a veces se  denomina operacionalización de un modelo. En SQL Server, la operacionalización se logra mediante la incrustación del código de R en un procedimiento almacenado. Dado que el código reside en el procedimiento, se puede llamar desde cualquier aplicación que pueda conectarse a SQL Server.
+Después de haber creado un modelo y de asegurarse de que funciona bien, es probable que desee implementarlo en un sitio en el que los usuarios o las personas de la organización puedan usar el modelo, o quizás volver a crear el entrenamiento y la calibración del modelo de forma periódica. Este proceso a veces se denomina operacionalización de un modelo. En SQL Server, la operacionalización se logra mediante la incrustación del código de R en un procedimiento almacenado. Dado que el código reside en el procedimiento, se puede llamar desde cualquier aplicación que pueda conectarse a SQL Server.
 
 Antes de poder llamar al modelo desde una aplicación externa, debe guardar el modelo en la base de datos que se usa para producción. Los modelos entrenados se almacenan en formato binario, en una sola columna de tipo **varbinary (Max)** .
 

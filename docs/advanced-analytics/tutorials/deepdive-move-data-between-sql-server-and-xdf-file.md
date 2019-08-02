@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4109399386f119123591bb917f81290eebe7476e
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7eb32a6ba915328a7f6a6baccdc948f534da1a09
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469720"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715550"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>Movimiento de datos entre SQL Server y el archivo XDF (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ Para este ejercicio, volverá a usar los datos de fraude de la tarjeta de crédi
     ----|----|----
     5|38|48
     
-2. Defina los datos que desea traer de SQL Server, mediante una [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta.  Más adelante usará esta variable como el  argumento indata para **rxImport**.
+2. Defina los datos que desea traer de SQL Server, mediante una [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta.  Más adelante usará esta variable como el argumento indata para **rxImport**.
   
     ```R
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")

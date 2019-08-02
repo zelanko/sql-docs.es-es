@@ -7,12 +7,13 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b148bd1ca51a7121ae043e2b616100e295c008aa
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f84b799fa901f7461f448683cceffe78e1dddfd3
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344761"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714948"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Puntuación nativa mediante la función de T-SQL de predicción
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ La función devuelve las predicciones para los datos de entrada, junto con las c
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-PREDICT está disponible en todas las ediciones de SQL Server motor de base de datos 2017 y está habilitada de forma predeterminada, incluido SQL Server 2017 Machine Learning Services en Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) o Azure SQL Database. No es necesario instalar R, Python ni habilitar características adicionales.
+PREDICT está disponible en todas las ediciones de SQL Server motor de base de datos 2017 y está habilitada de forma predeterminada, incluidas SQL Server Machine Learning Services en Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) o Azure SQL Database. No es necesario instalar R, Python ni habilitar características adicionales.
 
 + El modelo se debe entrenar de antemano con uno de los algoritmos **RX** admitidos que se enumeran a continuación.
 
@@ -161,7 +162,7 @@ go
 Si aparece el error "error durante la ejecución de la función PREDICT. El modelo está dañado o no es válido ", normalmente significa que la consulta no devolvió un modelo. Compruebe si escribió correctamente el nombre del modelo, o si la tabla de modelos está vacía.
 
 > [!NOTE]
-> Dado que las columnas y los valores  devueltos por predicción pueden variar según el tipo de modelo, debe definir el esquema de los datos devueltos mediante una cláusula **with** .
+> Dado que las columnas y los valores devueltos por predicción pueden variar según el tipo de modelo, debe definir el esquema de los datos devueltos mediante una cláusula **with** .
 
 ## <a name="next-steps"></a>Pasos siguientes
 

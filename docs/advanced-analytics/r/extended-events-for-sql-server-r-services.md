@@ -6,19 +6,20 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e0e685543fe1e99f7adbfeb69567c366b0714ef7
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8dc99a6f5ac1ff660f34f2248c844e5386bea5f0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470166"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715132"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>Eventos extendidos para SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server proporciona un conjunto de eventos extendidos para usar en las operaciones de solución de [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]problemas relacionadas con, así como los trabajos de Python [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o R enviados a.
 
-**Se aplica a:**  SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+**Se aplica a:**  SQL Server 2016 R Services, SQL Server Machine Learning Services
 
 ## <a name="sql-server-events-for-machine-learning"></a>Eventos de SQL Server para machine learning
 
@@ -87,7 +88,7 @@ SQL Server Machine Learning Services inicia algunos servicios que se ejecutan fu
   
     Para capturar los eventos relacionados con Launchpad, coloque el archivo *.config* en el directorio Binn de la instancia de SQL Server.  En una instalación predeterminada, esto sería:
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`  
   
 + **BXLServer** es el proceso satélite que admite la extensibilidad de SQL con lenguajes de script externos, como R o Python. Se inicia una instancia independiente de BxlServer para cada instancia de lenguaje externo.
   

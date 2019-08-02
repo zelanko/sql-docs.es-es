@@ -8,12 +8,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cec029f4ffb047a49ff9902c430c4bd98aa03850
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ff4d0839cfdf24b1b43fe9d5a371092713bc63cf
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470287"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715794"
 ---
 #  <a name="get-r-and-python-package-information"></a>Obtener información de paquetes de R y Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Opcionalmente, puede usar [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) en las versiones más recientes de RevoScaleR en SQL Server 2017 Machine Learning Services o [r Services actualizó r al menos RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). Este procedimiento almacenado devuelve la ruta de acceso de la biblioteca de instancias y la versión de RevoScaleR que usa SQL Server:
+Opcionalmente, puede usar [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) en las versiones más recientes de RevoScaleR en SQL Server Machine Learning Services o [R Services actualizado r al menos RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). Este procedimiento almacenado devuelve la ruta de acceso de la biblioteca de instancias y la versión de RevoScaleR que usa SQL Server:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -59,7 +60,7 @@ STDOUT message(s) from external script:
 
 ## <a name="get-the-python-library-location"></a>Obtener la ubicación de la biblioteca de Python
 
-Para **Python** en SQL Server 2017, ejecute la siguiente instrucción para comprobar la biblioteca predeterminada de la instancia actual. En este ejemplo se devuelve la lista de carpetas incluida en `sys.path` la variable de Python. La lista incluye el directorio actual y la ruta de acceso de la biblioteca estándar.
+Para **Python**, ejecute la siguiente instrucción para comprobar la biblioteca predeterminada de la instancia actual. En este ejemplo se devuelve la lista de carpetas incluida en `sys.path` la variable de Python. La lista incluye el directorio actual y la ruta de acceso de la biblioteca estándar.
 
 ```sql
 EXECUTE sp_execute_external_script

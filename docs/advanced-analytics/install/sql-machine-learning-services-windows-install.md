@@ -1,30 +1,29 @@
 ---
 title: Instalación de SQL Server Machine Learning Services (en bases de datos) en Windows
-description: R en SQL Server o Python en SQL Server pasos de instalación de SQL Server 2017 Machine Learning Services en Windows.
+description: R en SQL Server o Python en SQL Server pasos de instalación para SQL Server Machine Learning Services en Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470450"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715226"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Instalación de Machine Learning Services de SQL Server en Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-A partir de SQL Server 2017, la compatibilidad con R y Python para el análisis en base de datos se proporciona en **SQL Server Machine Learning Services**, el sucesor de [SQL Server R Services](../r/sql-server-r-services.md) introducido en SQL Server 2016. Las bibliotecas de funciones están disponibles en R y Python y se ejecutan como scripts externos en una instancia del motor de base de datos. 
-
 En este artículo se explica cómo instalar el componente de machine learning mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la ejecución del Asistente para la instalación de y después de los mensajes en pantalla.
 
 ## <a name="bkmk_prereqs"></a> Lista de comprobación previa a la instalación
 
-+ Se requiere SQL Server el programa de instalación 2017 (o superior) Si desea instalar Machine Learning Services con compatibilidad con el lenguaje R o Python. Si en su lugar tiene SQL Server medio de instalación 2016, puede instalar [SQL Server 2016 R Services (en base de datos)](sql-r-services-windows-install.md) para obtener compatibilidad con el lenguaje r.
++ Se requiere SQL Server el programa de instalación 2017 (o superior) Si desea instalar Machine Learning Services con compatibilidad con el lenguaje R o Python. Si en su lugar tiene SQL Server medio de instalación 2016, puede instalar [SQL Server R Services (en base de datos)](sql-r-services-windows-install.md) para obtener compatibilidad con el lenguaje R.
 
 + Se requiere una instancia del motor de base de datos. No se pueden instalar solo las características de R o Python, aunque se pueden agregar incrementalmente a una instancia existente.
 
@@ -150,7 +149,7 @@ Una vez completada la instalación, reinicie el motor de base de datos antes de 
 
 Al reiniciar el servicio, también se reinicia automáticamente el servicio relacionado [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] .
 
-Puede reiniciar el servicio mediante el comando de reinicio  con el botón secundario para la instancia en SSMS, o mediante el panel **servicios** del panel de Control, o mediante [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md).
+Puede reiniciar el servicio mediante el comando de reinicio con el botón secundario para la instancia en SSMS, o mediante el panel **servicios** del panel de Control, o mediante [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>Comprobar la instalación
 
@@ -170,7 +169,7 @@ Siga los pasos que se indican a continuación para comprobar que se están ejecu
    
 3. Si Launchpad se está ejecutando, debería poder ejecutar scripts sencillos de R y Python para comprobar que los tiempos de ejecución de scripting externos pueden comunicarse con SQL Server.
 
-   Abra una nueva  ventana de consulta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en y, a continuación, ejecute un script como el siguiente:
+   Abra una nueva ventana de consulta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en y, a continuación, ejecute un script como el siguiente:
     
     + Para R
     
@@ -283,8 +282,7 @@ Las soluciones de R que cree para SQL Server pueden llamar a funciones básicas 
 
 Los paquetes que quiera usar de SQL Server deben estar instalados en la biblioteca predeterminada que la instancia usa. Si tiene una instalación independiente de R en el equipo, o si instaló paquetes en bibliotecas de usuario, no podrá usar esos paquetes desde T-SQL.
 
-El proceso de instalación y administración de paquetes de R es diferente en SQL Server 2016 y SQL Server 2017. En SQL Server 2016, un administrador de bases de datos debe instalar los paquetes de R que necesitan los usuarios. En SQL Server 2017, puede configurar grupos de usuarios para compartir paquetes en cada nivel de base de datos o configurar roles de base de datos para permitir que los usuarios instalen sus propios paquetes. Para obtener más información, vea [instalar nuevos paquetes de R en SQL Server](../r/install-additional-r-packages-on-sql-server.md).
-
+Para instalar y administrar paquetes de R, puede configurar grupos de usuarios para compartir paquetes en cada nivel de base de datos o configurar roles de base de datos para permitir que los usuarios instalen sus propios paquetes. Para obtener más información, vea [instalar nuevos paquetes de R en SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

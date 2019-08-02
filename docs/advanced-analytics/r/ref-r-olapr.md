@@ -1,18 +1,19 @@
 ---
 title: Biblioteca de funciones de R de OLAP
-description: Introducción a la biblioteca de funciones de olapr en SQL Server 2016 R Services y SQL Server 2017 Machine Learning Services con R.
+description: Introducción a la biblioteca de funciones de olapr en SQL Server 2016 R Services y SQL Server Machine Learning Services con R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 674e4ed4d1967452093e81e7bb4f5518d9237cf6
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 507bd04140880a3c15f1e72eed49c29ade56769c
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469976"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715004"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapr (biblioteca de R en SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ La versión actual es 1.0.0 en todos los productos solo de Windows y descargas q
 
 ## <a name="full-reference-documentation"></a>Documentación de referencia completa
 
-La  biblioteca de olapr se distribuye en varios productos de Microsoft, pero el uso es el mismo si se obtiene la biblioteca en SQL Server u otro producto. Dado que las funciones son iguales, la [documentación de las funciones individuales de sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) se publica en una sola ubicación en la [referencia de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft machine learning Server. Si hay algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
+La biblioteca de olapr se distribuye en varios productos de Microsoft, pero el uso es el mismo si se obtiene la biblioteca en SQL Server u otro producto. Dado que las funciones son iguales, la [documentación de las funciones individuales de sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) se publica en una sola ubicación en la [referencia de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft machine learning Server. Si hay algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
 
 ## <a name="availability-and-location"></a>Disponibilidad y ubicación
 
@@ -41,7 +42,7 @@ Este paquete se proporciona en los siguientes productos, así como en varias im�
 
 Producto | Location |
 --------|----------|
-SQL Server 2017 Machine Learning Services (con la integración de R) | C:\Archivos de Programa\microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library | 
+SQL Server Machine Learning Services (con la integración de R) | C:\Archivos de Programa\microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R Services | C:\Archivos de Programa\microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library
 Microsoft Machine Learning Server (R Server) | C:\Archivos de Files\Microsoft\R_SERVER\library |
 Cliente de Microsoft R | C:\Archivos de Files\Microsoft\R Client\R_SERVER\library |

@@ -1,18 +1,19 @@
 ---
 title: Uso de administradores de paquetes de R
-description: Use comandos de R estándar como install. Packages para agregar nuevos paquetes de R a SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (in-Database).
+description: Use comandos de R estándar como install. Packages para agregar nuevos paquetes de R a SQL Server 2016 R Services o SQL Server Machine Learning Services (in-Database).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1977e616b8f5ac41f533d49fab684db146cdb204
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469877"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715022"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Usar administradores de paquetes de R para instalar paquetes de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ Este procedimiento usa RGui, pero puede usar RTerm o cualquier otra herramienta 
 
 Si el paquete de destino depende de paquetes adicionales, el instalador de R descarga automáticamente las dependencias y las instala.
 
-Si tiene varias instancias de SQL Server, como instancias en paralelo de SQL Server 2016 R Services y SQL Server 2017 Machine Learning Services, ejecute la instalación por separado para cada instancia si desea utilizar el paquete en ambos contextos. Los paquetes no se pueden compartir entre instancias.
+Si tiene varias instancias de SQL Server, como instancias en paralelo de SQL Server 2016 R Services y SQL Server Machine Learning Services, ejecute la instalación por separado para cada instancia si desea utilizar el paquete en ambos contextos. Los paquetes no se pueden compartir entre instancias.
 
 ## <a name = "bkmk_offlineInstall"></a>Instalación sin conexión mediante herramientas de R
 

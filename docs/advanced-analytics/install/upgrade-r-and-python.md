@@ -1,25 +1,26 @@
 ---
 title: Actualización de componentes de R y Python
-description: Actualice R y Python en SQL Server 2016 Services o SQL Server 2017 Machine Learning Services con sqlbindr. exe para enlazar con Machine Learning Server.
+description: Actualice R y Python en SQL Server Machine Learning Services o SQL Server R Services con sqlbindr. exe para enlazar con Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: def007433075920e419f0bf77be5977d1145f793
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 948ce20bf32aaa2051c4a805a3ca2f131a7c0c8f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344960"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715212"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Actualización de los componentes de machine learning (R y Python) en instancias de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 La integración de R y Python en SQL Server incluye paquetes de código abierto y de propiedad de Microsoft. En el servicio de SQL Server estándar, los paquetes se actualizan según el ciclo de versión SQL Server, con correcciones de errores en los paquetes existentes en la versión actual, pero sin actualizaciones de versiones principales. 
 
-Sin embargo, muchos científicos de datos están acostumbrados a trabajar con paquetes más recientes a medida que estén disponibles. En el caso de SQL Server 2017 Machine Learning Services (in-Database) y SQL Server 2016 R Services (en base de datos), puede obtener [las versiones más recientes de r y Python](#version-map) *enlazando* a **Microsoft machine learning Server**. 
+Sin embargo, muchos científicos de datos están acostumbrados a trabajar con paquetes más recientes a medida que estén disponibles. En el caso de SQL Server Machine Learning Services (en base de datos) y SQL Server R Services (en base de datos), puede obtener [las versiones más recientes de R y Python](#version-map) *enlazando* a **Microsoft machine learning Server**. 
 
 ## <a name="what-is-binding"></a>¿Qué es el enlace?
 
@@ -32,13 +33,17 @@ A excepción de las versiones de los componentes y las actualizaciones del servi
 > [!NOTE]
 > El enlace se aplica a instancias de (en base de datos) que están enlazadas a instancias de SQL Server. El enlace no es relevante para una instalación (independiente).
 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 **Consideraciones sobre el enlace de SQL Server 2017**
 
-Por SQL Server 2017 Machine Learning Services, considere la posibilidad de enlazar solo cuando Microsoft Machine Learning Server empiece a ofrecer paquetes adicionales o versiones más recientes sobre lo que ya tiene.
+Por SQL Server Machine Learning Services, considere la posibilidad de enlazar solo cuando Microsoft Machine Learning Server comienza a ofrecer paquetes adicionales o versiones más recientes sobre lo que ya tiene.
+::: moniker-end
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 **Consideraciones sobre el enlace de SQL Server 2016**
 
-En el caso de los clientes de SQL Server 2016 R Services, el enlace proporciona paquetes de R actualizados, paquetes nuevos que no forman parte de la instalación original ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)) y [modelos](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)previamente entrenados, que se pueden actualizar en cada nueva versión principal y secundaria de [Microsoft machine learning Server](https://docs.microsoft.com/machine-learning-server/index). El enlace no proporciona compatibilidad con Python, que es una característica SQL Server 2017. 
+En el caso de los clientes de SQL Server 2016 R Services, el enlace proporciona paquetes de R actualizados, paquetes nuevos que no forman parte de la instalación original ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)) y [modelos](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)previamente entrenados, que se pueden actualizar en cada nueva versión principal y secundaria de [Microsoft machine learning Server](https://docs.microsoft.com/machine-learning-server/index). El enlace no proporciona compatibilidad con Python, que es una característica SQL Server 2017.
+::: moniker-end
 
 <a name="version-map"></a>
 
@@ -48,6 +53,7 @@ La tabla siguiente es un mapa de versión que muestra las versiones de paquete e
 
 Tenga en cuenta que el enlace no garantiza la versión más reciente de R o Anaconda. Al enlazar a Microsoft Machine Learning Server (MLS), obtiene la versión de R o Python que se instala a través del programa de instalación, que puede que no sea la versión más reciente disponible en la Web.
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 [**SQL Server 2016 R Services**](../install/sql-r-services-windows-install.md)
 
 Componente |Versión inicial | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9,1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9,3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
@@ -58,9 +64,10 @@ Microsoft R Open (MRO) sobre R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  |
 [modelos previamente entrenados](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9,1 |  9.2.1 |  9,3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
+::: moniker-end
 
-
-[**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+[**SQL Server Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
 
 Componente |Versión inicial | MLS 9.3 | | | |
 ----------|----------------|---------|-|-|-|-|
@@ -71,14 +78,15 @@ Microsoft R Open (MRO) sobre R | R 3.3.3 | 3\.4.3 R | | | |
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
 Anaconda 4,2 sobre Python 3,5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9,2  | 9,3| | | |
- [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9,2  | 9,3| | | |
+[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9,2  | 9,3| | | |
 [modelos previamente entrenados](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9,2 | 9,3| | | |
+::: moniker-end
 
 ## <a name="how-component-upgrade-works"></a>Cómo funciona la actualización de componentes 
 
-Las bibliotecas y los ejecutables de r y Python se actualizan al enlazar una instalación existente de R y Python a Machine Learning Server. El [instalador Microsoft machine learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) ejecuta el enlace cuando se ejecuta el programa de instalación en una instancia existente del motor de base de datos de SQL Server, ya sea 2016 o 2017, con la integración de R o Python. El programa de instalación detecta las características existentes y le pide que vuelva a enlazar a Machine Learning Server. 
+Las bibliotecas y los ejecutables de r y Python se actualizan al enlazar una instalación existente de R y Python a Machine Learning Server. El [instalador de Microsoft machine learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) ejecuta el enlace al ejecutar el programa de instalación en una instancia existente del motor de base de datos de SQL Server que tiene integración de R o Python. El programa de instalación detecta las características existentes y le pide que vuelva a enlazar a Machine Learning Server. 
 
-Durante el enlace, el contenido de C:\Archivos de Programa\microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES y \PYTHON_SERVICES se sobrescriben con los archivos ejecutables y las bibliotecas más recientes de C:\Archivos de Programa\microsoft\ml Server\R_SERVER y \PYTHON_SERVER.
+Durante el enlace, el contenido `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES` de `\PYTHON_SERVICES` y se sobrescribe con los archivos ejecutables y las `C:\Program Files\Microsoft\ML Server\R_SERVER` bibliotecas `\PYTHON_SERVER`más recientes de y.
 
 Al mismo tiempo, el modelo de mantenimiento también se voltea desde SQL Server mecanismos de actualización hasta el ciclo de versión principal y secundario más frecuente de Microsoft Machine Learning Server. Cambiar las directivas de soporte técnico es una opción atractiva para los equipos de ciencia de datos que requieren módulos de R y Python de nueva generación para sus soluciones. 
 
@@ -91,12 +99,12 @@ El enlace es reversible. Puede revertir a SQL Server el mantenimiento desenlazan
 
 Resumen, los pasos para el enlace son los siguientes:
 
-+ Comience con una instalación existente configurada de SQL Server 2016 R Services (o SQL Server 2017 Machine Learning Services).
++ Comenzar con una instalación existente, configurada de SQL Server R Services o SQL Server Machine Learning Services.
 + Determine qué versión de Microsoft Machine Learning Server tiene los componentes actualizados que quiere usar.
 + Descargue y ejecute el programa de instalación de esa versión. El programa de instalación detecta la instancia existente, agrega una opción de enlace y devuelve una lista de instancias compatibles.
 + Elija la instancia que desea enlazar y, a continuación, finalice el programa de instalación para ejecutar el enlace.
 
-En cuanto a la experiencia del usuario, la tecnología y la forma de trabajar con ella no cambian. La única diferencia es la presencia de paquetes de versiones más recientes y posiblemente paquetes adicionales no disponibles originalmente a través de SQL Server (como MicrosoftML para los clientes de SQL Server 2016 R Services).
+En cuanto a la experiencia del usuario, la tecnología y la forma de trabajar con ella no cambian. La única diferencia es la presencia de paquetes de versiones más recientes y posiblemente paquetes adicionales no disponibles originalmente a través de SQL Server.
 
 ## <a name="bkmk_BindWizard"></a>Enlazar a MLS mediante el programa de instalación
 
@@ -106,7 +114,7 @@ El programa de instalación de Microsoft Machine Learning detecta las caracterí
 
    En el caso de los servicios de SQL Server 2016 R, el mínimo es [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) y [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1).
 
-1. Compruebe la versión de los paquetes base de R y RevoScaleR para confirmar que las versiones existentes son inferiores a lo que tiene previsto reemplazar. Para los servicios de SQL Server 2016 R, el paquete base de R es 3.2.2 y RevoScaleR es 8.0.3.
+1. Compruebe la versión de los paquetes base de R y RevoScaleR para confirmar que las versiones existentes son inferiores a lo que tiene previsto reemplazar. 
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -184,7 +192,7 @@ Las instrucciones siguientes explican cómo colocar los archivos para una instal
 
 1. Descargue el instalador de MLS. Se descarga como un solo archivo comprimido. Se recomienda la [versión más reciente](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer), pero también puede instalar [las versiones anteriores](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components).
 
-1. Descargue los archivos. cab. Los vínculos siguientes son para la versión 9,3. Si necesita versiones anteriores, puede encontrar más vínculos en [R Server 9,1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Recuerde que Python/Anaconda solo se puede Agregar a una instancia SQL Server 2017 Machine Learning Services. Existen modelos previamente entrenados para R y Python; el archivo. cab proporciona modelos en los lenguajes que está utilizando.
+1. Descargue los archivos. cab. Los vínculos siguientes son para la versión 9,3. Si necesita versiones anteriores, puede encontrar más vínculos en [R Server 9,1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Recuerde que Python/Anaconda solo se puede Agregar a una instancia de Machine Learning Services de SQL Server. Existen modelos previamente entrenados para R y Python; el archivo. cab proporciona modelos en los lenguajes que está utilizando.
 
     | Característica | Descargar |
     |---------|----------|
@@ -276,7 +284,7 @@ Es posible que haya agregado otros paquetes de código abierto o de terceros a l
 
 ### <a name="parameters"></a>Parámetros
 
-|NOMBRE|Descripción|
+|Name|Descripción|
 |------|------|
 |*list*| Muestra una lista de todos los identificadores de instancia de SQL Database en el equipo actual.|
 |*bind*| Actualiza la instancia de SQL Database especificada a la versión más reciente de R Server y garantiza que la instancia obtenga automáticamente las actualizaciones futuras de R Server.|

@@ -7,17 +7,18 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d901d11b11019a19d5e26e12956e9ba520e33e8f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 5e05a62be604b9d1a3feeaea1ed4f05dc3538493
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469625"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715472"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>SQL Server Machine Learning tutoriales en R y Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se proporciona una lista completa de los tutoriales y ejemplos de código que muestran las características de aprendizaje automático de [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) o [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
+En este artículo se proporciona una lista completa de los tutoriales y ejemplos de código que muestran las características de aprendizaje automático de [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) o [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
 
 + Los inicios rápidos usan datos integrados o no tienen datos para una exploración rápida con menos esfuerzo.
 + Los tutoriales profundizan más en las tareas, los conjuntos de valores más grandes y las explicaciones más largas.

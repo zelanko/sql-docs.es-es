@@ -1,25 +1,26 @@
 ---
 title: Extensión del lenguaje de programación R
-description: Obtenga información sobre la ejecución de código R y las bibliotecas de R integradas en SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services.
+description: Obtenga información sobre la ejecución de código de R y las bibliotecas de R integradas en SQL Server R Services o SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fa39240da51d0b7a9269777f751944104d703d59
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470501"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715243"
 ---
 # <a name="r-language-extension-in-sql-server"></a>Extensión de lenguaje R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 La extensión de R forma parte del complemento de SQL Server Machine Learning Services al motor de base de datos relacional. Agrega un entorno de ejecución de R, una distribución de R base con herramientas y bibliotecas estándar, y las bibliotecas de Microsoft R: [RevoScaleR](../r/ref-r-revoscaler.md) para análisis a escala, [MicrosoftML](../r/ref-r-microsoftml.md) para algoritmos de aprendizaje automático y otras bibliotecas para el acceso a datos o código R en SQL Server.
 
-La integración de r está disponible en SQL Server a partir de SQL Server 2016, con [R Services](../r/sql-server-r-services.md)y continuar adelante como parte del [Machine Learning Services de SQL Server](../what-is-sql-server-machine-learning.md).
+La integración de R está disponible en [SQL Server R Services](../r/sql-server-r-services.md) y [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
 ## <a name="r-components"></a>Componentes de R
 
@@ -27,7 +28,7 @@ SQL Server incluye los paquetes de código abierto y propietario. Las biblioteca
 
 SQL Server no modifica los ejecutables de R base, pero debe usar la versión de R instalada por el programa de instalación de, ya que esa versión es aquella en la que se compilan y prueban los paquetes de propiedad. Para obtener más información sobre cómo MRO difiere de una distribución base de R que puede obtener de CRAN, consulte [interoperabilidad con el lenguaje r y productos y características de Microsoft r](https://docs.microsoft.com/r-server/what-is-r-server-interoperability).
 
-La distribución de paquetes base de R instalada por el programa de instalación de se puede encontrar en la carpeta asociada a la instancia de. Por ejemplo, si instaló R Services en una instancia predeterminada de SQL Server 2016, las bibliotecas de R se encuentran en esta carpeta de forma `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`predeterminada:. De forma similar, las herramientas de R asociadas a la instancia predeterminada se ubicarían en esta carpeta `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`de forma predeterminada:.
+La distribución de paquetes base de R instalada por el programa de instalación de se puede encontrar en la carpeta asociada a la instancia de. Por ejemplo, si instaló R Services en una SQL Server instancia predeterminada, las bibliotecas de R se encuentran en esta carpeta de forma predeterminada `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`:. De forma similar, las herramientas de R asociadas a la instancia predeterminada se ubicarían en esta carpeta `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`de forma predeterminada:.
 
 Los paquetes de R agregados por Microsoft para cargas de trabajo paralelas y distribuidas incluyen las siguientes bibliotecas.
 

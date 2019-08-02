@@ -7,14 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a224bed65cd7d3fd1b6dda4ed10d56f79ecc12ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 22faeb2ea9f3e2104c2c1921b91a26ec5068079e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470149"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715705"
 ---
-# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Creación de un pProcedure almacenado mediante sqlrutils
+# <a name="create-a-stored-procedure-using-sqlrutils"></a>Crear un procedimiento almacenado mediante sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En este artículo se describen los pasos necesarios para convertir el código de R para que se ejecute como un procedimiento almacenado de T-SQL. Para obtener el mejor resultado posible, es posible que sea necesario modificar ligeramente el código a fin de garantizar que todas las entradas se puedan parametrizar.
@@ -29,7 +30,7 @@ Además, dado que los parámetros de entrada de la función de R se convertirán
 
 ### <a name="inputs"></a>Entradas
 
-Entre los parámetros de entrada puede haber como mucho una trama de datos.
+Entre los parámetros de entrada, puede haber como máximo una trama de datos.
 
 Los objetos de dentro de la trama de datos, así como todos los demás parámetros de entrada de la función, deben ser de los siguientes tipos de datos de R:
 - POSIXct
@@ -116,7 +117,7 @@ Ambos métodos requieren que el procedimiento almacenado se registre en la base 
 
 Puede registrar el procedimiento almacenado mediante R o puede ejecutar la instrucción CREATE PROCEDURE en T-SQL.
 
-- Mediante T-SQL.  Si está más familiarizado con T-SQL, abra el Management Studio de SQL Server (o cualquier otro cliente que pueda ejecutar comandos DDL de SQL) y ejecute la instrucción CREATE PROCEDURE con el código `StoredProcedure` preparado por la función.
+- Mediante T-SQL.  Si está más familiarizado con T-SQL, abra SQL Server Management Studio (o cualquier otro cliente que pueda ejecutar comandos DDL de SQL) y ejecute la instrucción CREATE PROCEDURE con el código preparado por `StoredProcedure` la función.
 - Usar R. Mientras sigue en el entorno de R, puede usar la `registerStoredProcedure` función de **sqlrutils** para registrar el procedimiento almacenado en la base de datos.
 
   Por ejemplo, podría registrar el procedimiento almacenado **sp_rsample** en la instancia y la base de datos definidas en *sqlConnStr*, mediante esta llamada de R:

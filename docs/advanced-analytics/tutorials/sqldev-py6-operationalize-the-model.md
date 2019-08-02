@@ -7,12 +7,13 @@ ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b04e57c45c6113d4a0404a3a338e6beba4cda813
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: be80892db818bafdb45da974a064a0c5cf1fdc3f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468595"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715348"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Ejecutar predicciones con Python incrustado en un procedimiento almacenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ Los dos primeros procedimientos almacenados muestran la sintaxis básica para en
 - El nombre del modelo exacto que se va a utilizar se proporciona como parámetro de entrada para el procedimiento almacenado. El procedimiento almacenado carga el modelo serializado de la tabla `nyc_taxi_models`de base de datos. Table, utilizando la instrucción SELECT en el procedimiento almacenado.
 - El modelo serializado se almacena en la variable `mod` de Python para su posterior procesamiento mediante python.
 - Los nuevos casos que deben puntuarse se obtienen a partir de la [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta especificada en `@input_data_1`. Cuando se leen los datos de la consulta, las filas se guardan en la trama de datos predeterminada, `InputDataSet`.
-- Ambos procedimientos almacenados usan funciones de `sklearn` para calcular una métrica de precisión, AUC (área en curva). Solo se pueden generar métricas de precisión, como AUC, si también proporciona la etiqueta de destino ( _la columna marcada_ ). Las predicciones no necesitan la etiqueta de destino ( `y`variable), pero sí el cálculo de la métrica de precisión.
+- Ambos procedimientos almacenados usan funciones de `sklearn` para calcular una métrica de precisión, AUC (área en curva). Solo se pueden generar métricas de precisión, como AUC, si también proporciona la etiqueta de destino (la columna marcada). Las predicciones no necesitan la etiqueta de destino ( `y`variable), pero sí el cálculo de la métrica de precisión.
 
     Por lo tanto, si no tiene etiquetas de destino para los datos que se van a puntuar, puede modificar el procedimiento almacenado para quitar los cálculos de AUC y devolver solo las probabilidades de propinas `X` de las características (variable en el procedimiento almacenado).
 

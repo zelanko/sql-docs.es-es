@@ -7,12 +7,13 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1ac89b23d9b027c8f5fd02daa28a4246cddf48f1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470132"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715683"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Funcionamiento del código R con procedimientos almacenados en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ Dado que puede ejecutar R o Python desde un procedimiento almacenado, puede ejec
 
 La puntuación es una tarea importante que se puede automatizar fácilmente o iniciar desde aplicaciones externas. Entrenar el modelo de antemano, mediante R o Python o un procedimiento almacenado, y [guardar el modelo en formato binario](../tutorials/walkthrough-build-and-save-the-model.md) en una tabla. A continuación, el modelo se puede cargar en una variable como parte de una llamada a un procedimiento almacenado, usando una de estas opciones para la puntuación de T-SQL:
 
-+ Puntuación en [tiempo real](../real-time-scoring.md) , optimizada para lotes pequeños
++ [Puntuación en tiempo real, optimizada para lotes pequeños
 + Puntuación de fila única, para llamar desde una aplicación
 + [Puntuación nativa](../sql-native-scoring.md), para predicción rápida por lotes desde SQL Server sin llamar a R
 

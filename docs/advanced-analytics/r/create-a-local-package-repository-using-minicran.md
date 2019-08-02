@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 34b7fee6b5eef1503f56dd72c6d8ff10911bbdc1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a2324ad662cad2c91bc6e002fd652fed73d8ab3d
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470220"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715762"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Creación de un repositorio de paquetes de R local mediante miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +25,7 @@ Como entrada, especifique uno o varios paquetes. **miniCRAN** Lee de forma recur
 Como salida, **miniCRAN** crea un repositorio interno coherente que consta de los paquetes seleccionados y de todas las dependencias necesarias. Después, puede trasladar este repositorio local al servidor y continuar con la instalación de los paquetes sin conexión a Internet.
 
 > [!NOTE]
-> Los usuarios con experiencia en R suelen buscar la lista de paquetes dependientes en el archivo de Descripción del paquete descargado. Sin embargo, los paquetes  enumerados en las importaciones pueden tener dependencias de segundo nivel. Por esta razón, se recomienda **miniCRAN** para ensamblar la colección completa de paquetes necesarios.
+> Los usuarios con experiencia en R suelen buscar la lista de paquetes dependientes en el archivo de Descripción del paquete descargado. Sin embargo, los paquetes enumerados en las importaciones pueden tener dependencias de segundo nivel. Por esta razón, se recomienda **miniCRAN** para ensamblar la colección completa de paquetes necesarios.
 
 ## <a name="why-create-a-local-repository"></a>Por qué crear un repositorio local
 

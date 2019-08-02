@@ -1,18 +1,19 @@
 ---
 title: funciones auxiliares de sqlrutils
-description: Use la biblioteca de funciones sqlrutils en SQL Server 2016 R Services y SQL Server 2017 Machine Learning Services con R para generar procedimientos almacenados que contengan scripts de R.
+description: Use la biblioteca de funciones sqlrutils en SQL Server 2016 R Services y SQL Server Machine Learning Services con R para generar procedimientos almacenados que contengan scripts de R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b4218a1b30aedacdab73d08c7b76e3e19d17511c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469945"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715030"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (biblioteca de R en SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

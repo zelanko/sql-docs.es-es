@@ -3,24 +3,22 @@ title: Información general sobre Machine Learning Services de SQL Server (R, Py
 description: Información general de la característica Machine Learning Services en SQL Server, donde puede integrar Python y R con datos relacionales para la ciencia de datos y el modelado estadístico, modelos de aprendizaje automático, análisis predictivo, visualización de datos, etc.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 07/24/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ead0dd3d9ba69a4bf0079fe8065a2d5aa7a11d3e
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4ab4cd7c93cfd1a98a819a849e643d590450cd28
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495398"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714670"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Machine Learning Services es una característica de SQL Server, que se usa para ejecutar scripts de R y Python en la base de datos. La característica incluye los [paquetes de Microsoft R y Python](#components) para el análisis predictivo y el aprendizaje automático de alto rendimiento. Los datos relacionales se pueden usar en scripts de R y Python a través de procedimientos almacenados, script T-SQL que contiene instrucciones de R y Python, o código R y Python que contiene T-SQL.
-
-Si anteriormente usó [SQL Server r Services de 2016](r/sql-server-r-services.md), Machine Learning Services en SQL Server 2017 y versiones posteriores es la próxima generación de compatibilidad con r, con las versiones actualizadas de r, RevoScaleR, MicrosoftML y otras bibliotecas introducidas en 2016.
 
 En Azure SQL Database, [Machine Learning Services (con R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) se encuentra actualmente en versión preliminar pública.
 
@@ -39,7 +37,7 @@ Si usan la combinación adecuada de SQL y R para distintas tareas de procesamien
 
 ## <a name="components"></a>Componentes
 
-SQL Server 2017 admite R y Python. En la tabla siguiente se describen los componentes de.
+SQL Server admite R y Python. En la tabla siguiente se describen los componentes de.
 
 | Componente | Descripción |
 |-----------|-------------|
@@ -128,19 +126,6 @@ Para aprovechar las ventajas de la administración de recursos y las caracterís
 + Habilitar la regulación de recursos (requiere la edición Enterprise)
 
 Para obtener más información, consulte [regulación de recursos para r](r/resource-governance-for-r-services.md) y [r administración de paquetes para SQL Server](r/install-additional-r-packages-on-sql-server.md).
-
-## <a name="version-history"></a>Historial de versiones
-
-SQL Server 2017 Machine Learning Services es la próxima generación de servicios de SQL Server 2016 R, que se ha mejorado para incluir Python. En la tabla siguiente se muestra una lista completa de todas las versiones del producto, desde el inicio hasta la versión actual. 
-
-| Nombre del producto | Versión del motor | Fecha de la versión |
-|--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (in-Database) | R Server 9.2.1 <br/> Python Server 9.2 | Octubre de 2017 |
-| SQL Server 2017 Machine Learning Server (independiente) | R Server 9.2.1 <br/> Python Server 9.2 | Octubre de 2017 |
-| SQL Server 2016 R Services (in-Database) | R Server 9,1  | 2017 de julio  |
-| SQL Server 2016 R Server (independiente)  |  R Server 9,1 | 2017 de julio |
-
-Para las versiones de paquete por versión, consulte el mapa de versiones en [Actualizar componentes de R y Python](install/upgrade-r-and-python.md#version-map).
 
 ## <a name="portability-and-related-products"></a>Portabilidad y productos relacionados
 

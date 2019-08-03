@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 29974fc7a60f675dc9921f527fd8348beb4f2134
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3715bfacd1a94f588992d7e6832814f50c076d1c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120083"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768900"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Cambia la contraseña de un distribuidor. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -37,7 +37,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @password = ] 'password'` Es la nueva contraseña. *contraseña* es **sysname**, no tiene ningún valor predeterminado. Si el distribuidor es local, la contraseña de la **distributor_admin** se cambia el inicio de sesión del sistema.  
+`[ @password = ] 'password'`Es la nueva contraseña. *password* es de **tipo sysname**y no tiene ningún valor predeterminado. Si el distribuidor es local, se cambia la contraseña del inicio de sesión del sistema **distributor_admin** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -49,7 +49,7 @@ sp_changedistributor_password [ @password= ] 'password'
  [!code-sql[HowTo#sp_changedistributor_password](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pas_1.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_changedistributor_password**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_changedistributor_password**.  
   
 ## <a name="see-also"></a>Vea también  
  [View and Modify Replication Security Settings](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  (Ver y modificar la configuración de seguridad de la replicación)  

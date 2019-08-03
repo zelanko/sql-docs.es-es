@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2c97fec403da1913f7f39f1da706d107cd964aa4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902917"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770928"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Devuelve las propiedades de la base datos de distribución especificada. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
   
@@ -37,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database_name'` Es el nombre de la base de datos para el que se devuelven las propiedades. *database_name* es **sysname**, su valor predeterminado es **%** para todas las bases de datos asociados con el distribuidor y en el que el usuario tiene permisos.  
+`[ @database = ] 'database_name'`Es el nombre de la base de datos cuyas propiedades se devuelven. *database_name* es de **tipo sysname y su**valor **%** predeterminado es para todas las bases de datos asociadas al distribuidor y en el que el usuario tiene permisos.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -46,7 +46,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**name**|**sysname**|Nombre de la base de datos de distribución.|  
 |**min_distretention**|**int**|Período mínimo de retención, en horas, antes de que se eliminen las transacciones.|  
 |**max_distretention**|**int**|Período máximo de retención, en horas, antes de que se eliminen las transacciones.|  
-|**retención de historial**|**int**|Número de horas que se conserva el historial.|  
+|**retención del historial**|**int**|Número de horas que se conserva el historial.|  
 |**history_cleanup_agent**|**sysname**|Nombre del Agente de limpieza del historial.|  
 |**distribution_cleanup_agent**|**sysname**|Nombre del Agente de limpieza de distribución.|  
 |**status**|**int**|Exclusivamente para uso interno.|  
@@ -64,7 +64,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
  **sp_helpdistributiondb** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
- Los miembros de la **db_owner** rol fijo de base de datos o el **replmonitor** rol en una base de datos de distribución y los usuarios en la lista de acceso de publicación de una publicación con la base de datos de distribución pueden ejecutar **sp_helpdistributiondb** para devolver información relacionada con el archivo. Los miembros de la **pública** pueden ejecutar **sp_helpdistributiondb** para devolver información no relacionada con el archivo para las bases de datos de distribución a las que tengan acceso.  
+ Los miembros del rol fijo de base de datos **db_owner** o del rol **replmonitor** en una base de datos de distribución y los usuarios de la lista de acceso a la publicación de una publicación que usa la base de datos de distribución pueden ejecutar **sp_helpdistributiondb** para devolver información relacionada con archivos. Los miembros del rol **Public** pueden ejecutar **sp_helpdistributiondb** para devolver información relacionada con archivos de las bases de datos de distribución a las que tienen acceso.  
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

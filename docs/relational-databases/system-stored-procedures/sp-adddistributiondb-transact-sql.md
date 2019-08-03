@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d48a41218a35e072e374e3cf99bf362397fbad23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072793"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771351"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crea una nueva base de datos de distribución e instala el esquema del distribuidor. La base de datos de distribución almacena los procedimientos, esquema y metadatos utilizados en la replicación. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos maestra con el fin de crear la base de datos de distribución e instalar las tablas y procedimientos almacenados necesarios para habilitar la distribución de replicación.  
   
@@ -53,45 +53,45 @@ sp_adddistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] database'` Es el nombre de la base de datos de distribución que se va a crear. *base de datos* es **sysname**, no tiene ningún valor predeterminado. Si la base de datos especificada ya existe y no está ya marcada como base de datos de distribución, entonces los objetos necesarios para habilitar la distribución están instalados y la base de datos está marcada como base de datos de distribución. Si la base de datos especificada ya está habilitada como base de datos de distribución, se obtiene un error.  
+`[ @database = ] database'`Es el nombre de la base de datos de distribución que se va a crear. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado. Si la base de datos especificada ya existe y no está ya marcada como base de datos de distribución, entonces los objetos necesarios para habilitar la distribución están instalados y la base de datos está marcada como base de datos de distribución. Si la base de datos especificada ya está habilitada como base de datos de distribución, se obtiene un error.  
   
-`[ @data_folder = ] 'data_folder'_` Es el nombre del directorio utilizado para almacenar el archivo de datos de la base de datos de distribución. *data_folder* es **nvarchar (255)** , su valor predeterminado es null. Si es NULL, se utiliza el directorio de datos para esa instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
+`[ @data_folder = ] 'data_folder'_`Es el nombre del directorio que se utiliza para almacenar el archivo de datos de la base de datos de distribución. *data_folder* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Si es NULL, se utiliza el directorio de datos para esa instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
-`[ @data_file = ] 'data_file'` Es el nombre del archivo de base de datos. *data_file* es **nvarchar (255)** , su valor predeterminado es **base de datos**. Si es NULL, el procedimiento almacenado crea un nombre de archivo que utiliza el nombre de la base de datos.  
+`[ @data_file = ] 'data_file'`Es el nombre del archivo de base de datos. *data_file* es de tipo **nvarchar (255)** y su valor predeterminado es **Database**. Si es NULL, el procedimiento almacenado crea un nombre de archivo que utiliza el nombre de la base de datos.  
   
-`[ @data_file_size = ] data_file_size` Es el tamaño de archivo inicial de los datos en megabytes (MB). *data_file_size*s **int**, su valor predeterminado es 5 MB.  
+`[ @data_file_size = ] data_file_size`Es el tamaño inicial del archivo de datos en megabytes (MB). *data_file_size i*s **int**, con un valor predeterminado de 5 MB.  
   
-`[ @log_folder = ] 'log_folder'` Es el nombre del directorio para el archivo de registro de base de datos. *log_folder* es **nvarchar (255)** , su valor predeterminado es null. Si es NULL, se utiliza el directorio de datos para esa instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
+`[ @log_folder = ] 'log_folder'`Es el nombre del directorio del archivo de registro de la base de datos. *log_folder* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Si es NULL, se utiliza el directorio de datos para esa instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`).  
   
-`[ @log_file = ] 'log_file'` Es el nombre del archivo de registro. *ArchivoDeRegistro* es **nvarchar (255)** , su valor predeterminado es null. Si es NULL, el procedimiento almacenado crea un nombre de archivo que utiliza el nombre de la base de datos.  
+`[ @log_file = ] 'log_file'`Es el nombre del archivo de registro. *log_file* es de tipo **nvarchar (255)** y su valor predeterminado es NULL. Si es NULL, el procedimiento almacenado crea un nombre de archivo que utiliza el nombre de la base de datos.  
   
-`[ @log_file_size = ] log_file_size` Es el tamaño de archivo de registro inicial en megabytes (MB). *log_file_size* es **int**, su valor predeterminado es 0 MB, lo que significa que el tamaño del archivo se crea mediante el registro más pequeño archivo tamaño permitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @log_file_size = ] log_file_size`Es el tamaño inicial del archivo de registro en megabytes (MB). *log_file_size* es de **tipo int**y su valor predeterminado es 0 MB, lo que significa que el tamaño del archivo se crea con el tamaño de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]archivo de registro más pequeño permitido por.  
   
-`[ @min_distretention = ] min_distretention` Es el período de retención mínimo, en horas, antes de que se eliminen las transacciones de la base de datos de distribución. *min_distretention* es **int**, su valor predeterminado de 0 horas.  
+`[ @min_distretention = ] min_distretention`Es el período de retención mínimo, en horas, antes de que se eliminen las transacciones de la base de datos de distribución. *min_distretention* es de **tipo int**y su valor predeterminado es 0 horas.  
   
-`[ @max_distretention = ] max_distretention` Es el período de retención máximo, en horas, antes de que se eliminen las transacciones. *max_distretention* es **int**, su valor predeterminado de 72 horas. Las suscripciones que no han recibido comandos replicados más antiguos que el período máximo de retención de la distribución se marcarán como inactivas y tendrán que reinicializarse. Se emite RAISERROR 21011 por cada suscripción inactiva. Un valor de **0** significa que las transacciones replicadas no se almacena en la base de datos de distribución.  
+`[ @max_distretention = ] max_distretention`Es el período de retención máximo, en horas, antes de que se eliminen las transacciones. *max_distretention* es de **tipo int**y su valor predeterminado es de 72 horas. Las suscripciones que no han recibido comandos replicados más antiguos que el período máximo de retención de la distribución se marcarán como inactivas y tendrán que reinicializarse. Se emite RAISERROR 21011 por cada suscripción inactiva. Un valor de **0** significa que las transacciones replicadas no se almacenan en la base de datos de distribución.  
   
-`[ @history_retention = ] history_retention` Es el número de horas que se mantiene el historial. *history_retention* es **int**, su valor predeterminado es de 48 horas.  
+`[ @history_retention = ] history_retention`Es el número de horas que se va a conservar el historial. *history_retention* es de **tipo int**y su valor predeterminado es de 48 horas.  
   
-`[ @security_mode = ] security_mode` Es el modo de seguridad que se usará al conectarse al distribuidor. *security_mode* es **int**, su valor predeterminado es 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación; **1** especifica la autenticación integrada de Windows.  
+`[ @security_mode = ] security_mode`Es el modo de seguridad que se va a utilizar al conectarse al distribuidor. *security_mode* es de **tipo int**y su valor predeterminado es 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación; **1** especifica la autenticación integrada de Windows.  
   
-`[ @login = ] 'login'` Es el nombre de inicio de sesión utilizado al conectarse al distribuidor para crear la base de datos de distribución. Esto es necesario si *security_mode* está establecido en **0**. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
+`[ @login = ] 'login'`Es el nombre de inicio de sesión que se usa al conectarse al distribuidor para crear la base de datos de distribución. Esto es necesario si *security_mode* está establecido en **0**. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
-`[ @password = ] 'password'` Es la contraseña utilizada al conectarse al distribuidor. Esto es necesario si *security_mode* está establecido en **0**. *contraseña* es **sysname**, su valor predeterminado es null.  
+`[ @password = ] 'password'`Es la contraseña utilizada para conectarse al distribuidor. Esto es necesario si *security_mode* está establecido en **0**. *password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @createmode = ] createmode` *createmode* es **int**, su valor predeterminado es 1, y puede tener uno de los siguientes valores.  
+`[ @createmode = ] createmode`*createmode* es de **tipo int**, su valor predeterminado es 1 y puede tener uno de los valores siguientes.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**1** (predeterminado)|CREATE DATABASE o usar existente de base de datos y, a continuación, aplicar **instdist.sql** archivo para crear objetos de replicación de la base de datos de distribución.|  
+|**1** (predeterminado)|CREAR base de datos o usar base de datos existente y, a continuación, aplicar el archivo **instdist. SQL** para crear objetos de replicación en la base de datos de distribución.|  
 |**2**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
-`[ @deletebatchsize_xact = ] deletebatchsize_xact` Especifica el tamaño del lote que se usará durante la limpieza de transacciones expiradas de las tablas MSRepl_Transactions. *deletebatchsize_xact* es **int**, su valor predeterminado es 5000. Este parámetro se introdujo por primera vez en SQL Server 2017, seguido de las versiones de SQL Server 2012 SP4 y SQL Server 2016 SP2.  
+`[ @deletebatchsize_xact = ] deletebatchsize_xact`Especifica el tamaño del lote que se va a usar durante la limpieza de transacciones expiradas de las tablas MSRepl_Transactions. *deletebatchsize_xact* es de **tipo int**y su valor predeterminado es 5000. Este parámetro se presentó por primera vez en SQL Server 2017, seguido de las versiones en SQL Server 2012 SP4 y SQL Server 2016 SP2.  
 
-`[ @deletebatchsize_cmd = ] deletebatchsize_cmd` Especifica el tamaño del lote que se usará durante la limpieza de los comandos expiradas de las tablas MSRepl_Commands. *deletebatchsize_cmd* es **int**, su valor predeterminado es 2000. Este parámetro se introdujo por primera vez en SQL Server 2017, seguido de las versiones de SQL Server 2012 SP4 y SQL Server 2016 SP2. 
+`[ @deletebatchsize_cmd = ] deletebatchsize_cmd`Especifica el tamaño del lote que se va a usar durante la limpieza de los comandos expirados de las tablas MSRepl_Commands. *deletebatchsize_cmd* es de **tipo int**y su valor predeterminado es 2000. Este parámetro se presentó por primera vez en SQL Server 2017, seguido de las versiones en SQL Server 2012 SP4 y SQL Server 2016 SP2. 
  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -161,7 +161,7 @@ GO
 ```  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_adddistributiondb**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_adddistributiondb**.  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   

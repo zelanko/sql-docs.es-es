@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ea4590e129812dd0acc68b6353fc4f379bb0b8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18921fa57cfa203b0d8e5274caeb1e17c385405c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110886"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771300"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Cambia las propiedades del distribuidor. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -38,14 +38,14 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @property = ] 'property'` Es la propiedad de un distribuidor determinado. *propiedad* es **sysname**, y puede tener uno de estos valores.  
+`[ @property = ] 'property'`Es la propiedad de un distribuidor determinado. *Property* es de **tipo sysname**y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Número máximo de minutos que un agente puede ejecutarse sin registrar un mensaje de progreso.|  
-|NULL (predeterminado)|Todos los disponibles *propiedad* valores se imprimen.|  
+|NULL (predeterminado)|Se imprimen todos los valores de *propiedad* disponibles.|  
   
-`[ @value = ] 'value'` Es el valor de la propiedad del distribuidor especificado. *valor* es **varchar (255)** , su valor predeterminado es null.  
+`[ @value = ] 'value'`Es el valor de la propiedad del distribuidor especificado. *Value* es de tipo **VARCHAR (255)** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -57,7 +57,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_changedistributor_property**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_changedistributor_property**.  
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

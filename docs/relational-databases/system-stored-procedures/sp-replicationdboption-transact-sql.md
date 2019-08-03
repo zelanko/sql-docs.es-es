@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac51409db23f4b8eefb3616d5daf5ca43b3ab0f6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950661"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771253"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Establece una opción de base de datos de replicación para la base de datos especificada. Este procedimiento almacenado se ejecuta en el publicador o el suscriptor de cualquier base de datos.  
   
@@ -41,22 +41,22 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@dbname=** ] **'***dbname***'**  
- Es la base de datos para la que se establece la opción de base de datos de replicación. *db_name* es **sysname**, no tiene ningún valor predeterminado.  
+ **[@dbname=** ] **'***dbname***'**  
+ Es la base de datos para la que se establece la opción de base de datos de replicación. *db_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ **@optname=** ] **'***optname***'**  
- Es la opción de base de datos de replicación que se puede habilitar o deshabilitar. *optname* es **sysname**, y puede tener uno de estos valores.  
+ **[@optname=** ] **'***optname***'**  
+ Es la opción de base de datos de replicación que se puede habilitar o deshabilitar. *optname* es de **tipo sysname**y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**publicación de mezcla**|Se puede utilizar la base de datos para publicaciones de combinación.|  
+|**publicación de combinación**|Se puede utilizar la base de datos para publicaciones de combinación.|  
 |**publish**|Se puede utilizar la base de datos para otros tipos de publicaciones.|  
-|**suscribirse**|La base de datos es una base de datos de suscripciones.|  
-|**sincronizar con la copia de seguridad**|La base de datos está habilitada para una copia de seguridad coordinada. Para obtener más información, consulte [habilitar copias de seguridad coordinadas para la replicación transaccional &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
+|**ID**|La base de datos es una base de datos de suscripciones.|  
+|**sincronizar con copia de seguridad**|La base de datos está habilitada para una copia de seguridad coordinada. Para obtener más información, vea [Habilitar copias de seguridad coordinadas para la &#40;replicación transaccional programación&#41;de Transact-SQL](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'` Es si desea habilitar o deshabilitar la opción de base de datos de replicación determinado. *valor* es **sysname**y puede ser **true** o **false**. Cuando este valor es **false** y *optname* es **publicación de mezcla**, también se quitan las suscripciones a la base de datos publicada de mezcla.  
+`[ @value = ] 'value'`Indica si se debe habilitar o deshabilitar la opción de base de datos de replicación dada. *Value* es de **tipo sysname**y puede ser **true** o **false**. Cuando este valor es **false** y *optname* es **Merge Publish**, también se quitan las suscripciones a la base de datos publicada de mezcla.  
   
-`[ @ignore_distributor = ] ignore_distributor` Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**, lo que significa que el distribuidor debe se conectará y se actualiza con el nuevo estado de la base de datos de publicación. El valor **1** solamente se debe especificar si el distribuidor es inaccesible y **sp_replicationdboption** se usa para deshabilitar la publicación.  
+`[ @ignore_distributor = ] ignore_distributor`Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es de **bit**, con un valor predeterminado de **0**, lo que significa que el distribuidor debe estar conectado y actualizado con el nuevo estado de la base de datos de publicación. Solo se debe especificar el valor **1** si no se puede obtener acceso al distribuidor y se utiliza **sp_replicationdboption** para deshabilitar la publicación.  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -64,14 +64,14 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_replicationdboption** se utiliza en la replicación de instantáneas, transaccional y de mezcla.  
+ **sp_replicationdboption** se utiliza en la replicación de instantáneas, la replicación transaccional y la replicación de mezcla.  
   
- Este procedimiento crea o quita tablas específicas del sistema de replicación, cuentas de seguridad, etc., según las opciones proporcionadas. Conjuntos de bits de la categoría correspondiente en el **master.sysdatabases** tabla del sistema y crea las tablas del sistema necesarias.  
+ Este procedimiento crea o quita tablas específicas del sistema de replicación, cuentas de seguridad, etc., según las opciones proporcionadas. Establece el bit de categoría correspondiente en la tabla del sistema **Master. sysdatabases** y crea las tablas del sistema necesarias.  
   
  Para deshabilitar la publicación, la base de datos de publicaciones debe estar en línea. Si existe una instantánea de base de datos para la base de datos de publicaciones, se debe quitar la instantánea antes de deshabilitar la publicación. Las instantáneas de base de datos son copias de solo lectura y sin conexión de bases de datos, y no están relacionadas con una instantánea de replicación. Para más información, vea [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_replicationdboption**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_replicationdboption**.  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md)   

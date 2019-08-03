@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3a043c3cb8087ef7515860adec34044da89997f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055283"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762764"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Devuelve el Id. de la configuración predeterminada del tipo de agente que se pasa como parámetro. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -38,14 +38,14 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] _profile_idOUTPUT` Es el identificador de la configuración predeterminada para el tipo de agente. *profile_id* es **int**, no tiene ningún valor predeterminado. *profile_id* también es un parámetro OUTPUT y devuelve el identificador de la configuración predeterminada para el tipo de agente.  
+`[ @profile_id = ] _profile_idOUTPUT`Es el identificador de la configuración predeterminada para el tipo de agente. *profile_id* es de **tipo int**y no tiene ningún valor predeterminado. *profile_id* también es un parámetro de salida y devuelve el identificador de la configuración predeterminada para el tipo de agente.  
   
-`[ @agent_type = ] 'agent_type'` Es el tipo de agente. *agent_type* es **int**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
+`[ @agent_type = ] 'agent_type'`Es el tipo de agente. *agent_type* es de **tipo int**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Agente de instantáneas.|  
-|**2**|Agente de lector del registro.|  
+|**2**|Agente de registro del LOG.|  
 |**3**|Agente de distribución.|  
 |**4**|Agente de mezcla.|  
 |**9**|Agente de lectura de cola|  
@@ -57,7 +57,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
  **sp_help_agent_default** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **replmonitor** rol fijo de base de datos se puede ejecutar **sp_help_agent_default**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **replmonitor** pueden ejecutar **sp_help_agent_default**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

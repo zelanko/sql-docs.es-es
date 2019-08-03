@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 95d45e34c5e32e2ace95c2f0e86684aa0e5b575c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950626"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771238"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Devuelve información acerca de sesiones pasadas de un Agente de mezcla de replicación concreto, con una fila por cada sesión que coincida con el criterio de filtrado. Este procedimiento almacenado, que se utiliza para supervisar la replicación de mezcla, se ejecuta en el distribuidor de la base de datos de distribución o en el suscriptor de la base de datos de suscripciones.  
   
@@ -42,35 +42,35 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @agent_name = ] 'agent_name'` Es el nombre del agente. *agent_name* es **nvarchar (100)** no tiene ningún valor predeterminado.  
+`[ @agent_name = ] 'agent_name'`Es el nombre del agente. *agent_name* es de tipo **nvarchar (100)** y no tiene ningún valor predeterminado.  
   
-`[ @hours = ] hours` Es el intervalo de tiempo, en horas, para el que se devuelve información de sesión de agente históricos. *horas* es **int**, que puede ser uno de los siguientes intervalos.  
+`[ @hours = ] hours`Es el intervalo de tiempo, en horas, para el que se devuelve información histórica de la sesión del agente. *hours* es **int**, que puede ser uno de los siguientes intervalos.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |< **0**|Devuelve información sobre las ejecuciones pasadas del agente, hasta un máximo de 100.|  
 |**0** (valor predeterminado)|Devuelve información sobre todas las ejecuciones pasadas del agente.|  
-|> **0**|Devuelve información de agente de ejecuciones que se ha producido en los últimos *horas* número de horas.|  
+|> **0**|Devuelve información sobre las ejecuciones del agente que se produjeron en el último número de horas.|  
   
-`[ @session_type = ] session_type` Filtra el conjunto de resultados en función del resultado final de sesión. *session_type* es **int**, y puede tener uno de estos valores.  
+`[ @session_type = ] session_type`Filtra el conjunto de resultados según el resultado final de la sesión. *session_type* es de **tipo int**y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Sesiones del agente con un reintento o un resultado correcto.|  
 |**0**|Sesiones del agente con un resultado erróneo.|  
   
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
+`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro se utiliza al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
+`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro se utiliza al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Este parámetro se utiliza al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|Identificador de la sesión de trabajo del agente.|  
-|**Estado**|**int**|Estado de la ejecución del agente:<br /><br /> **1** = inicio<br /><br /> **2** = correctamente<br /><br /> **3** = en curso<br /><br /> **4** = inactivo<br /><br /> **5** = reintento<br /><br /> **6** = error|  
+|**Estado**|**int**|Estado de la ejecución del agente:<br /><br /> **1** = Inicio<br /><br /> **2** = correcto<br /><br /> **3** = en curso<br /><br /> **4** = inactivo<br /><br /> **5** = reintento<br /><br /> **6** = error|  
 |**StartTime**|**datetime**|Hora en que se inició la sesión de trabajo de agente.|  
 |**EndTime**|**datetime**|Hora en que finalizó la sesión de trabajo de agente.|  
 |**Duración**|**int**|Duración acumulada, en segundos, de esta sesión de trabajo.|  
@@ -80,19 +80,19 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**ErrorID**|**int**|Id. del error producido.|  
 |**PercentageDone**|**decimal**|Porcentaje estimado de los cambios totales que ya se han entregado en una sesión activa.|  
 |**TimeRemaining**|**int**|Número estimado de segundos que restan en una sesión activa.|  
-|**CurrentPhase**|**int**|Es la fase actual de una sesión activa y puede ser una de las siguientes.<br /><br /> **1** = carga<br /><br /> **2** = descarga|  
+|**CurrentPhase**|**int**|Es la fase actual de una sesión activa y puede ser una de las siguientes.<br /><br /> **1** = carga<br /><br /> **2** = descargar|  
 |**LastMessage**|**nvarchar(500)**|Es el último mensaje registrado por el Agente de mezcla durante la sesión.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_replmonitorhelpmergesession** se usa para supervisar la replicación de mezcla.  
+ **sp_replmonitorhelpmergesession** se utiliza para supervisar la replicación de mezcla.  
   
- Cuando se ejecuta en el suscriptor, **sp_replmonitorhelpmergesession** solamente devuelve información sobre las últimas cinco sesiones del agente de mezcla.  
+ Cuando se ejecuta en el suscriptor, **sp_replmonitorhelpmergesession** solo devuelve información sobre las últimas cinco sesiones agente de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **db_owner** o **replmonitor** fijo de base de datos en la base de datos de distribución en el distribuidor o en la base de datos de suscripción en el suscriptor pueden ejecutar **sp_ replmonitorhelpmergesession**.  
+ Solo los miembros del rol fijo de base de datos **db_owner** o **replmonitor** de la base de datos de distribución en el distribuidor o en la base de datos de suscripciones del suscriptor pueden ejecutar **sp_replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar la replicación mediante programación](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

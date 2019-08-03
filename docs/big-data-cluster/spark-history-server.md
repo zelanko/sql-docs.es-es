@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bfdace3eae4b8da1584c529121953cbe2b884e7f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: aabf68c2f1294dfb3873fdfcbec41827e4f80fec
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470708"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731080"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones Spark en clústeres de macrodatos de SQL Server con el servidor de historial de Spark
 
@@ -91,7 +91,7 @@ Seleccione el id. de trabajo y haga clic en **Gráfico** en el menú de herramie
 
     ![id. de trabajo del gráfico](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ Se deja **Progreso** como valor predeterminado. El usuario puede comprobar el flujo de datos seleccionando **Leer** o **Escrito**** en la lista desplegable **Visualización**.
++ Se deja **Progreso** como valor predeterminado. El usuario puede comprobar el flujo de datos mediante la selección de **lectura** o **escritura** en la lista desplegable de **visualización**.
 
     ![presentación de gráfico](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 

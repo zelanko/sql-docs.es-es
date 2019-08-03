@@ -18,15 +18,15 @@ ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd443a8e03663eb3fb46e75e09d852c797f6d427
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d722d3b54c2f0b6d73660e2195aed4039e1eda2c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101384"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771084"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Devuelve la lista de todos los tipos de restricciones, el nombre definido por el usuario o proporcionado por el sistema, las columnas en que se han definido y la expresión que define la restricción (solo para las restricciones DEFAULT y CHECK).  
   
@@ -41,18 +41,18 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'table'` Es la tabla sobre qué restricciones se devuelve información. La tabla especificada debe encontrarse en la base de datos actual. *tabla* es **nvarchar(776)** , no tiene ningún valor predeterminado.  
+`[ @objname = ] 'table'`Es la tabla sobre la que se devuelve información de restricciones. La tabla especificada debe encontrarse en la base de datos actual. *TABLE* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado.  
   
-`[ @nomsg = ] 'no_message'` Es un parámetro opcional que imprime el nombre de tabla. *no_message* es **varchar (5)** , su valor predeterminado es **msg**. **nomsg** suprime la impresión.  
+`[ @nomsg = ] 'no_message'`Es un parámetro opcional que imprime el nombre de la tabla. *no_message* es de tipo **VARCHAR (5)** y su valor predeterminado es **MSG**. **nomsg** suprime la impresión.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- **sp_helpconstraint** muestra una columna de índice descendente si forma parte de las claves principales. El nombre de la columna indizada en orden descendente irá seguido de un signo menos (-) en el conjunto de resultados. La columna predeterminada, indizada en orden ascendente, aparecerá solo por su nombre.  
+ **sp_helpconstraint** muestra una columna indizada descendente si participó en las claves principales. El nombre de la columna indizada en orden descendente irá seguido de un signo menos (-) en el conjunto de resultados. La columna predeterminada, indizada en orden ascendente, aparecerá solo por su nombre.  
   
 ## <a name="remarks"></a>Comentarios  
- Ejecutar **sp_help**_tabla_ presenta toda la información acerca de la tabla especificada. Para ver sólo la información de restricción, use **sp_helpconstraint**.  
+ La ejecución de la_tabla_ **sp_help**informa de toda la información acerca de la tabla especificada. Para ver solo la información de restricción, use **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
@@ -67,7 +67,7 @@ EXEC sp_helpconstraint 'Production.Product';
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Procedimientos &#40;almacenados de motor de base de datos TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

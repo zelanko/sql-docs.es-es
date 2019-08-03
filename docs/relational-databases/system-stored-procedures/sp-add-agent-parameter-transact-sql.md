@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: a61b85090dc88dddbb28c923f4acdc6e8fa07cb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941808"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770963"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Agrega un nuevo parámetro y su valor al perfil de un agente. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -39,9 +39,9 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @profile_id = ] profile_id` Es el identificador del perfil de la **MSagent_profiles** de tabla en la **msdb** base de datos. *profile_id* es **int**, no tiene ningún valor predeterminado.  
+`[ @profile_id = ] profile_id`Es el identificador del perfil de la tabla **MSagent_profiles** en la base de datos **msdb** . *profile_id* es de **tipo int**y no tiene ningún valor predeterminado.  
   
- Para averiguar qué tipo de agente esto *profile_id* representa, busque el *profile_id* en el [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) de tabla y tenga en cuenta el *agent_type* valor del campo. Éstos son sus valores:  
+ Para averiguar qué tipo de agente representa este *profile_id* , busque *profile_id* en la tabla [de &#40;Transact-SQL&#41; MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) y anote el valor del campo *agent_type* . Éstos son sus valores:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|Agente de mezcla|  
 |**9**|Agente de lectura de cola|  
   
-`[ @parameter_name = ] 'parameter_name'` Es el nombre del parámetro. *parameter_name* es **sysname**, no tiene ningún valor predeterminado. Para obtener una lista de parámetros ya definidos en los perfiles del sistema, consulte [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md). Para obtener una lista completa de parámetros válidos para cada agente, vea los siguientes temas:  
+`[ @parameter_name = ] 'parameter_name'`Es el nombre del parámetro. *parameter_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Para obtener una lista de parámetros ya definidos en los perfiles del sistema, vea [Replication Agent](../../relational-databases/replication/agents/replication-agent-profiles.md)profiles. Para obtener una lista completa de parámetros válidos para cada agente, vea los siguientes temas:  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -63,16 +63,16 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [Agente de lectura de cola de replicación](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-`[ @parameter_value = ] 'parameter_value'` Es el valor que se asigna al parámetro. *parameter_value* es **nvarchar (255)** , no tiene ningún valor predeterminado.  
+`[ @parameter_value = ] 'parameter_value'`Es el valor que se va a asignar al parámetro. *parameter_value* es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_add_agent_parameter** se utiliza en la replicación de instantáneas, transaccional y de mezcla.  
+ **sp_add_agent_parameter** se utiliza en la replicación de instantáneas, la replicación transaccional y la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_add_agent_parameter**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_add_agent_parameter**.  
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con perfiles del Agente de replicación](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

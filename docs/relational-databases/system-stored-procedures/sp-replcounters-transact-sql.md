@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 62f4cf0f471a17c927d1eb8ad2801a378657b0cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12ddbfe11a2b1a29dadaacde845f96e70959bebb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006908"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771000"
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Devuelve las estadísticas de replicación relativas a la latencia, el rendimiento y el recuento de transacciones de cada base de datos publicada. Este procedimiento almacenado se ejecuta en el publicador de cualquier base de datos.  
   
@@ -43,7 +43,7 @@ sp_replcounters
 |-----------------|---------------|-----------------|  
 |**Base de datos**|**sysname**|Nombre de la base de datos.|  
 |**Transacciones replicadas**|**int**|Número de transacciones del registro en espera de su entrega a la base de datos de distribución.|  
-|**Frecuencia de replicación trans/s**|**float**|Numero promedio de transacciones por segundo entregadas en la base de datos de distribución.|  
+|**Tasa de replicación trans/s**|**float**|Numero promedio de transacciones por segundo entregadas en la base de datos de distribución.|  
 |**Latencia de replicación**|**float**|Tiempo promedio, en segundos, que las transacciones permanecieron en el registro antes de ser distribuidas.|  
 |**Replbeginlsn**|**binary(10)**|Número de flujo de registro (LSN) del punto de truncamiento actual del registro.|  
 |**Replnextlsn**|**binary(10)**|Número de secuencia del siguiente registro de confirmación que está en espera de su entrega a la base de datos de distribución.|  
@@ -52,7 +52,7 @@ sp_replcounters
  **sp_replcounters** se utiliza en la replicación transaccional.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **db_owner** rol fijo de base de datos o **sysadmin** rol fijo de servidor.  
+ Requiere la pertenencia al rol fijo de base de datos **db_owner** o al rol fijo de servidor **sysadmin** .  
   
 ## <a name="see-also"></a>Vea también  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

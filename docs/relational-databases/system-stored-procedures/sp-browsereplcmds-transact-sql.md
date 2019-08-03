@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b29ee604f1b584fcbdcd0ef91e32c84d89cc5f96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045991"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768996"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Devuelve un conjunto de resultados en una versión legible de los comandos replicados almacenados en la base de datos de distribución y se utiliza como herramienta de diagnóstico. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
   
@@ -44,21 +44,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` Especifica el número de secuencia exacta menor valor para devolver. *xact_seqno_start* es **nchar (22)** , su valor predeterminado es 0 x 00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'`Especifica el número de secuencia exacto de menor valor que se va a devolver. *xact_seqno_start* es **NCHAR (22)** y su valor predeterminado es es 0x00000000000000000000.  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` Especifica el número de secuencia exacta de mayor a devolver. *xact_seqno_end* es **nchar (22)** , su valor predeterminado es 0xFFFFFFFFFFFFFFFFFFFF.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'`Especifica el número de secuencia exacto más alto que se va a devolver. *xact_seqno_end* es **NCHAR (22)** y su valor predeterminado es es 0xffffffffffffffffffff.  
   
-`[ @originator_id = ] 'originator_id'` Especifica si los comandos con los valores especificados *originator_id* se devuelven. *originator_id* es **int**, su valor predeterminado es null.  
+`[ @originator_id = ] 'originator_id'`Especifica si se devuelven los comandos con el *originator_id* especificado. *originator_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @publisher_database_id = ] 'publisher_database_id'` Especifica si los comandos con los valores especificados *publisher_database_id* se devuelven. *publisher_database_id* es **int**, su valor predeterminado es null.  
+`[ @publisher_database_id = ] 'publisher_database_id'`Especifica si se devuelven los comandos con el *publisher_database_id* especificado. *publisher_database_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @article_id = ] 'article_id'` Especifica si los comandos con los valores especificados *article_id* se devuelven. *article_id* es **int**, su valor predeterminado es null.  
+`[ @article_id = ] 'article_id'`Especifica si se devuelven los comandos con el *article_id* especificado. *article_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @command_id = ] command_id` Es la ubicación del comando en [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) descodificarse. *$command_id* es **int**, su valor predeterminado es null. Si se especifica, se deben especificar además, todos los demás parámetros y *xact_seqno_start*debe ser idéntica a *xact_seqno_end*.  
+`[ @command_id = ] command_id`Es la ubicación del comando en [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) que se va a descodificar. *command_id* es de **tipo int**y su valor predeterminado es NULL. Si se especifica, también se deben especificar todos los demás parámetros y *xact_seqno_start*debe ser idéntico a *xact_seqno_end*.  
   
-`[ @agent_id = ] agent_id` Especifica que se devuelven únicamente los comandos de un agente de replicación específico. *valor de agent_id* es **int**, su valor predeterminado es null.  
+`[ @agent_id = ] agent_id`Especifica que solo se devuelvan comandos para un agente de replicación específico. *agent_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @compatibility_level = ] compatibility_level` Es la versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que el *compatibility_level* es **int**, su valor predeterminado de 9000000.  
+`[ @compatibility_level = ] compatibility_level`Es la versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en la que *COMPATIBILITY_LEVEL* es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **tipo int**y su valor predeterminado es 9 millones.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -70,15 +70,15 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**xact_seqno**|**varbinary (16)**|Número de secuencia del comando.|  
 |**originator_srvname**|**sysname**|Servidor en el que se originó la transacción.|  
 |**originator_db**|**sysname**|Base de datos en la que se originó la transacción.|  
-|**article_id**|**int**|ID. del artículo.|  
+|**article_id**|**int**|IDENTIFICADOR del artículo.|  
 |**type**|**int**|Tipo de comando.|  
 |**partial_command**|**bit**|Indica si se trata de un comando parcial.|  
 |**hashkey**|**int**|Exclusivamente para uso interno.|  
 |**originator_publication_id**|**int**|Id. de la publicación en la que se originó la transacción.|  
 |**originator_db_version**|**int**|Versión de la base de datos en la que se originó la transacción.|  
-|**originator_lsn**|**varbinary (16)**|Identifica el número de flujo de registro (LSN) para el comando de la publicación en la que se origina. Se utiliza en la replicación transaccional punto a punto.|  
+|**originator_lsn**|**varbinary (16)**|Identifica el número de flujo de registro (LSN) para el comando de la publicación en la que se origina. Se usa en la replicación transaccional punto a punto.|  
 |**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|**command_id**|**int**|Identificador del comando en [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
+|**command_id**|**int**|IDENTIFICADOR del comando en [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  Los comandos largos se pueden dividir en varias filas en el conjunto de resultados.  
   
@@ -86,7 +86,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  **sp_browsereplcmds** se utiliza en la replicación transaccional.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o los miembros de la **db_owner** o **replmonitor** roles fijos de base de datos en la base de datos de distribución pueden ejecutar **sp_browsereplcmds**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o los miembros de los roles fijos de base de datos **db_owner** o **replmonitor** de la base de datos de distribución pueden ejecutar **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

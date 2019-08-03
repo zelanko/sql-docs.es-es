@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3acf4ee5515bad2db88e2d928ca897ba9e04a085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 960da4d98ea33ceb3ecdb48e36d565854484feb9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927811"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768857"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Quita una base de datos de distribución. Quita los archivos físicos que utiliza la base de datos si no son usados por ninguna otra base de datos. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -37,7 +37,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'` Es la base de datos que va a quitar. *base de datos* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @database = ] 'database'`Es la base de datos que se va a quitar. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -45,9 +45,9 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="remarks"></a>Comentarios  
  **sp_dropdistributiondb** se utiliza en todos los tipos de replicación.  
   
- Este procedimiento almacenado se debe ejecutar antes de quitar el distribuidor mediante la ejecución de **sp_dropdistributor**.  
+ Este procedimiento almacenado debe ejecutarse antes de quitar el distribuidor ejecutando **sp_dropdistributor**.  
   
- **sp_dropdistributiondb** también quita un trabajo del agente de lector de cola para la base de datos de distribución, si existe uno.  
+ **sp_dropdistributiondb** también quita un trabajo agente de lectura de cola para la base de datos de distribución, si existe.  
   
  Para deshabilitar la distribución, la base de datos de distribución debe estar en línea. Si hay una instantánea de base de datos para la base de datos de distribución, debe quitarse antes de deshabilitar la distribución. Las instantáneas de base de datos son copias de solo lectura y sin conexión de bases de datos, y no están relacionadas con una instantánea de replicación. Para más información, vea [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
@@ -55,7 +55,7 @@ sp_dropdistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_dropdistributiondb**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_dropdistributiondb**.  
   
 ## <a name="see-also"></a>Vea también  
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Deshabilitar la publicación y la distribución)  

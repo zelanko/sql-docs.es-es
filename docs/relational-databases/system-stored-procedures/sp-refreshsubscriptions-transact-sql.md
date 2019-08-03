@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9de03f10d16e81f97bd155212c8e2dafbd81216b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 548285b08ceedab49674b35128216bed320c3e7c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075758"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771184"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Agregar suscripciones a nuevos artículos para todos los suscriptores existentes a una publicación de actualización inmediata. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
+  Agregue suscripciones a nuevos artículos para todos los suscriptores existentes a una publicación de actualización inmediata. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +37,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es la publicación para que se va a actualizar las suscripciones. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es la publicación para la que se van a actualizar las suscripciones. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -46,12 +46,12 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
  None  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_refreshsubscriptions** se utiliza en instantáneas, transaccional y replicación de mezcla.  
+ **sp_refreshsubscriptions** se utiliza en la replicación de instantáneas, transaccional y de mezcla.  
   
- **sp_refreshsubscriptions** llama a **sp_addarticle** para una publicación de actualización inmediata.  
+ **sp_addarticle** llama a **sp_refreshsubscriptions** para una publicación de actualización inmediata.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_refreshsubscriptions**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_refreshsubscriptions**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

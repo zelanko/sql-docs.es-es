@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7b2f098fab2856b51b389e2161fdbe3281e1e3cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9db4f3a40311e94d94d8910f4d1625f89f29926a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120170"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768960"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Cambia las propiedades de la base de datos de distribución. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -39,18 +39,18 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database'` Es el nombre de la base de datos de distribución. *base de datos* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @database = ] 'database'`Es el nombre de la base de datos de distribución. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @property = ] 'property'` Es la propiedad para cambiar la base de datos dada. *propiedad* es **sysname**, y puede tener uno de estos valores.  
+`[ @property = ] 'property'`Es la propiedad que se va a cambiar para la base de datos dada. *Property* es de **tipo sysname**y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**history_retention**|Período de retención de la tabla de historial.|  
 |**max_distretention**|Período máximo de retención de la distribución.|  
 |**min_distretention**|Período mínimo de retención de la distribución.|  
-|NULL (predeterminado)|Todos los disponibles *propiedad* valores se imprimen.|  
+|NULL (predeterminado)|Se imprimen todos los valores de *propiedad* disponibles.|  
   
-`[ @value = ] 'value'` Es el nuevo valor para la propiedad especificada. *valor* es **nvarchar (255)** , su valor predeterminado es null.  
+`[ @value = ] 'value'`Es el nuevo valor de la propiedad especificada. el *valor* es **nvarchar (255)** y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -62,7 +62,7 @@ sp_changedistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_changedistributiondb**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_changedistributiondb**.  
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

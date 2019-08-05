@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 626b5442596c5a0f9beedef779937cf875efff00
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 178eceaf99d1f8c2b51f7079d0bdd406c2cb5eef
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957798"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670519"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: ingerir datos en un grupo de datos de SQL Server con Transact-SQL
 
@@ -89,7 +89,7 @@ En los pasos siguientes, se ingieren datos de secuencias de clics web de ejemplo
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool
    SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-     FROM sales.dbo.web_clickstreams_hdfs_parquet
+     FROM sales.dbo.web_clickstreams_hdfs
    INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
                            AND wcs_user_sk IS NOT NULL)
    GROUP BY wcs_user_sk, i_category_id

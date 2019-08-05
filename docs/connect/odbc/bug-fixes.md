@@ -13,16 +13,28 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 096c11c018294cbc92b2be13801d6cd953548fff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9aba2495e5f4661c7c042125608f34d577cddfe3
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264011"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702809"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de errores corregidos
 
 Esta página contiene una lista de errores corregidos en cada versión, a [!INCLUDE[msCoName](../../includes/msconame_md.md)] partir de ODBC driver 17 for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores [!INCLUDE[msCoName](../../includes/msconame_md.md)] en el controlador ODBC 17,4 para[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Corrección de bloqueo intermitente cuando se habilitan conjuntos de resultados activos múltiples (MARS)
+- Corrección de la resistencia de conexión bloqueada cuando está habilitada la notificación asincrónica
+- Corregir el bloqueo al recuperar registros de diagnóstico para intentos de conexión multiproceso
+- Corrección de ' cifrado no admitido ' tras la reconexión después de llamar a SQLGetInfo () con SQL_USER_NAME y SQL_DATA_SOURCE_READ_ONLY
+- Corregir el error de inicialización COM durante la autenticación interactiva de Azure Active Directory
+- Corrección de SQLGetData () para datos UTF8 de varios bytes
+- Corregir la recuperación de la longitud de las columnas sql_variant mediante SQLGetData ()
+- Corregir la importación de columnas sql_variant que contienen más de 7992 bytes mediante BCP
+- Corregir el envío de la codificación correcta al servidor para datos de caracteres estrechos
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>Correcciones de errores [!INCLUDE[msCoName](../../includes/msconame_md.md)] en el controlador ODBC 17,3 para[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

@@ -18,12 +18,12 @@ author: aliceku
 ms.author: aliceku
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b01b076e696b5c607b6c9257e309f74c6d53ef55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef9e0378d3a7ca0b5749788471b4ef97832d179d
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111862"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670595"
 ---
 # <a name="transparent-data-encryption-tde"></a>Cifrado de datos transparente (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -241,7 +241,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
 De forma similar, la siguiente sintaxis reanuda el análisis de cifrado TDE:
 
 ```sql
-ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
 ```
 
 Para mostrar el estado actual del análisis de cifrado, `encryption_scan_state` se ha agregado a la vista de administración dinámica `sys.dm_database_encryption_keys`. También hay una nueva columna denominada `encryption_scan_modify_date` que contendrá la fecha y la hora del último cambio de estado de análisis de cifrado. Observe también que, si la instancia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se reinicia mientras el análisis de cifrado se encuentra en un estado suspendido, se registrará un mensaje en el registro de errores durante el inicio que indicará que hay un análisis existente que se ha puesto en pausa.

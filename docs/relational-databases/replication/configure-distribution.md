@@ -20,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 59bbe9c7cef9ad40277b4e6abc7d11b684f8ecd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 36e89b7092ea497f3ad2ca0267e7f5dab99056e7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903221"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768668"
 ---
 # <a name="configure-distribution"></a>Configurar la distribución
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El distribuidor es un servidor que contiene la base de datos de distribución, que almacena metadatos y datos del historial de todos los tipos de replicación y transacciones para la replicación transaccional. Para configurar la replicación, debe configurar un distribuidor. Un publicador solamente se puede asignar a una instancia del distribuidor, aunque varios publicadores pueden compartir un distribuidor. El distribuidor utiliza estos recursos adicionales en el servidor en el que se encuentra:  
   
 -   Espacio de disco adicional, si los archivos de instantáneas de la publicación se almacenan en el distribuidor (la situación habitual)  

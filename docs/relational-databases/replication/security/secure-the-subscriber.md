@@ -14,16 +14,19 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9914246135350540b0155e61905d1e548a033fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f07a80d5667a91376c9e5936be2474c826d6569a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051869"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769611"
 ---
 # <a name="secure-the-subscriber"></a>Proteger el suscriptor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Los agentes de mezcla y de distribución se conectan al suscriptor. Estas conexiones pueden realizarse en el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Windows. Es importante proporcionar un inicio de sesión apropiado para estos agentes, al mismo tiempo que se sigue el principio de conceder los derechos mínimos necesarios y proteger el almacenamiento de todas las contraseñas. Para obtener información acerca de los permisos necesarios para cada agente, vea [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="distribution-agent"></a>Agente de distribución  
  Hay un Agente de distribución por suscripción (un agente independiente, predeterminado para las publicaciones creadas en el Asistente para nueva publicación), o un Agente de distribución por par de base de datos de publicaciones y base de datos de suscripciones (un agente compartido). T  

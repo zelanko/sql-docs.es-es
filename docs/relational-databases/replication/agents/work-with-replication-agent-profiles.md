@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ecfdf9a30cd4252eecc74aefa8eb3065708f132f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 80d8d7d5f4a02c119a1b038023505d60eddec6ab
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085895"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768164"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Trabajar con perfiles del Agente de replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   En este tema, se describe cómo trabajar con perfiles de agente de replicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). El comportamiento de cada agente de replicación está controlado por un conjunto de parámetros que se pueden establecer a través de perfiles de agente. Cada agente tiene un perfil predeterminado y algunos tienen perfiles adicionales predefinidos; solo hay un perfil activo para un agente en cada momento.  
   
  **En este tema**  

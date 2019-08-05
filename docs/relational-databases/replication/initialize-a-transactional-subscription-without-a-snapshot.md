@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe907a62279c819c227772d70008ee96d172e229
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: aeee5d947a2af0f58030ce6ba94091df10d56c49
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127889"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767772"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Inicializar una suscripción transaccional sin una instantánea
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   De forma predeterminada, una suscripción a una publicación transaccional se inicializa con una instantánea generada por el Agente de instantáneas y aplicada por el Agente de distribución. En algunos escenarios, como aquellos en los que intervienen grandes conjuntos de datos iniciales, es preferible inicializar una suscripción mediante otro método. Otros métodos para inicializar un suscriptor incluyen:  
   
 -   Especificar una copia de seguridad. Se restaura la copia de seguridad en el suscriptor y, a continuación, el Agente de distribución copia los metadatos de replicación y los procedimientos del sistema necesarios. La inicialización con una copia de seguridad es la forma más rápida de entregar datos al suscriptor, además de resultar cómoda, ya que se puede utilizar cualquier copia de seguridad reciente si se ha realizado después de que se habilitara la publicación para inicialización mediante una copia de seguridad.  

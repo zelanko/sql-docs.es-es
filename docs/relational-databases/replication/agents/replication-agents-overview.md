@@ -24,15 +24,16 @@ helpviewer_keywords:
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e56b5a2e81532e6b7a26711977ec6ae9db5d7f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 050197c7ce5a6098397b6ad3db13a933983270d6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027753"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770741"
 ---
 # <a name="replication-agents-overview"></a>Información general sobre los agentes de replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La replicación utiliza varios programas independientes, llamados agentes, para realizar las tareas asociadas con el seguimiento de los cambios y la distribución de los datos. De forma predeterminada, los agentes de replicación se ejecutan como trabajos programados en el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es necesario que se esté ejecutando el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que puedan ejecutarse los trabajos. Los agentes de replicación también se pueden ejecutar desde la línea de comandos y en aplicaciones que utilizan Replication Management Objects (RMO). Los agentes de replicación se pueden administrar desde el Monitor de replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="sql-server-agent"></a>Agente SQL Server  

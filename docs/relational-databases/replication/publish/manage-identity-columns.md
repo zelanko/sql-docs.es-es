@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ffc0c7c54ea8cdcd83f78334d3748892cef07fe4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 635cdf4b698659ca85c343331425500c88c74759
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67905288"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769847"
 ---
 # <a name="manage-identity-columns"></a>Administrar columnas de identidad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   En este tema se describe cómo administrar columnas de identidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Cuando las inserciones del Suscriptor se replican de nuevo al Publicador, se deben administrar las columnas de identidad para evitar la asignación del mismo valor de identidad en el Suscriptor y el Publicador. La replicación puede administrar automáticamente intervalos de identidad o puede elegir procesar manualmente la administración de intervalos de identidad.  Para obtener información sobre las opciones de administración de intervalos de identidad proporcionadas por la replicación, vea [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
  **En este tema**  

@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54ea1c6f261a8ca6d7b68f4b9751338e6baf10db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b3c7d1474164741ef8380ce1904f99a05e833456
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121243"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769312"
 ---
 # <a name="transactional-replication"></a>replicación transaccional
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Normalmente, la replicación transaccional se inicia con una instantánea de los datos y los objetos de la base de datos de publicaciones. En cuanto se obtiene la instantánea inicial, los posteriores cambios de datos y modificaciones del esquema realizados en el publicador habitualmente se entregan en el suscriptor cuando se producen (casi en tiempo real). Los cambios de datos se aplican al suscriptor en el mismo orden y dentro de los mismos límites de la transacción que cuando se produjeron en el publicador. Por tanto, en una publicación, se garantiza la coherencia transaccional.  
   
  La replicación transaccional se utiliza normalmente en entornos entre servidores y es la adecuada en los siguientes casos:  

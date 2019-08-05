@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b704dc1d4e9f85d436304950d373c287b105df37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 30e5a68dcd22b0f73f88ce6151ef46e02bbf81f1
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129820"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768312"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Suscripción, Historial de Publicador a distribuidor (suscripción transaccional)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La pestaña **Historial de Publicador a distribuidor** muestra información detallada en el Agente de registro del LOG, incluidos el estado, el historial y los mensajes informativos, así como cualquier mensaje de error.  
   
 ## <a name="options"></a>Opciones  

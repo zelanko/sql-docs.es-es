@@ -20,24 +20,25 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948681"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768728"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Hay tres áreas que hay que considerar al diseñar una estrategia de copias de seguridad y restauración para la replicación de instantáneas o transaccional:  
   
--   Qué bases de datos se incluirán en la copia de seguridad.  
-  
--   Configuración de la copia de seguridad para la replicación transaccional  
-  
+-   Qué bases de datos se incluirán en la copia de seguridad.
+-   Configuración de la copia de seguridad para la replicación transaccional
 -   Los pasos necesarios para restaurar una base de datos. Éstos dependen del tipo de replicación y de las opciones elegidas.  
   
  En este tema se tratan cada una de estas áreas en las tres secciones siguientes. Para información sobre las copias de seguridad y restauración para la publicación de Oracle, vea [Backup and Restore for Oracle Publishers](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md) (Copias de seguridad y restauración de publicadores de Oracle).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="backing-up-databases"></a>Realizar copias de seguridad de bases de datos  
  Para la replicación de instantáneas y la replicación transaccional, debe crear de forma periódica una copia de seguridad de las siguientes bases de datos:  

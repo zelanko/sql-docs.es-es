@@ -10,14 +10,17 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 03ffb9e8259e463c261838ffc79cf0b9c5908b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895540"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769349"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solucionador de problemas: Búsqueda de errores con la replicación transaccional de SQL Server 
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
 La solución de problemas de errores de replicación puede resultar frustrante sin un conocimiento básico de cómo funciona la replicación transaccional. El primer paso para crear una publicación es hacer que el Agente de instantáneas cree la instantánea y la guarde en la carpeta de instantáneas. Después, el Agente de distribución aplica la instantánea al suscriptor. 
 
 Este proceso crea la publicación y la coloca en el estado de *sincronización*. La sincronización funciona en tres fases:

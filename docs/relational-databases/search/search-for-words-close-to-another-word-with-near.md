@@ -20,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bc8f21427d5b104ef663d266b4a6b7eb281b8b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912962"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702832"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Buscar palabras cerca de otra palabra con NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
      Todas las búsquedas de proximidad siempre buscan únicamente apariciones no superpuestas. Las apariciones superpuestas de términos de búsqueda nunca se consideran coincidencias. Por ejemplo, considere el siguiente término de proximidad, que busca "`A`" y "`AA`" en este orden con una distancia máxima de dos términos:  
   
     ```  
-    CONTAINS(column_name, 'NEAR((A,AA),2, TRUE')  
+    CONTAINS(column_name, 'NEAR((A,AA), 2, TRUE)')
     ```  
   
      Las posibles coincidencias son "`AAA`", "`A.AA`" y "`A..AA`". Las filas que simplemente contienen "`AA`" no coincidirían.  

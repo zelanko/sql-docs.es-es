@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 33e9af6e246d2fe48f93c452a7ae143ce40d96fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f909e2ffc6f0af693325ae40cb50e92d465fc82c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027818"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768702"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Ubicación del agente &lt;NombreAgente&gt;
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El Agente de mezcla (para las suscripciones de mezcla) y el Agente de distribución (para las suscripciones transaccionales y de instantáneas) se ejecutan en el distribuidor o en el suscriptor. Si el agente se ejecuta en el distribuidor, la suscripción se denomina suscripción de inserción; si el agente se ejecuta en el suscriptor, se denomina suscripción de extracción. Para más información sobre las suscripciones de inserción y de extracción, vea [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md). Todas las suscripciones creadas en este paso a través del asistente serán del tipo seleccionado. Para crear suscripciones de ambos tipos es preciso ejecutar el asistente dos veces.  
   
 > [!NOTE]  

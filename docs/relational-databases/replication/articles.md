@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 7c743dc6-6c6d-4c92-b711-842e1b0b273e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24bb3bc28929921c7a6aae5c19b990a8d931fc5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b70f8c24ed54a6f36a2c224a0fb3ea5182bf3c30
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085863"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770662"
 ---
 # <a name="articles"></a>Artículos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   En la página **Artículos** , puede especificar qué objetos de bases de datos desea incluir como artículos en la publicación. Para publicar un objeto de base de datos que depende de uno o más objetos de base de datos, debe publicar todos los objetos a los que se hace referencia. Por ejemplo, si publica una vista que depende de una tabla, también debe publicar la tabla.  
   
  Los objetos que no se pueden publicar presentan un icono rojo al lado, con una explicación en el panel de información en la parte inferior de la página del asistente. No es posible publicar los siguientes objetos:  

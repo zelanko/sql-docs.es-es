@@ -10,15 +10,16 @@ ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e0e6a119325bd4567aa37fc66f9946b037fad324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 5f932a5729b039436f952aeab8ad78f8d220d22e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912100"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768341"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Cuadros de diálogo de replicación de SQL Server Management Studio
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Esta sección incluye información acerca de diversos cuadros de diálogo de replicación disponibles en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Seguridad del Agente de instantáneas](../../relational-databases/replication/snapshot-agent-security.md)  

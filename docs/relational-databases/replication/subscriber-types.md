@@ -12,19 +12,21 @@ f1_keywords:
 ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c84391d24a25ae8c7fdd8f6d3b6ec38736300255
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 1958e6f85dfe6451cca24926a4c0ea8afedfe3a5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129896"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768394"
 ---
 # <a name="subscriber-types"></a>Tipos de suscriptor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La replicación de mezcla le permite especificar los tipos de suscriptor compatibles con una publicación. Si selecciona Tipos de suscriptor, podrá establecer el *nivel de compatibilidad de la publicación*, que determina las características que puede usar una publicación.  
   
  Una vez creada una instantánea de publicación, se puede aumentar (restringir) el nivel de compatibilidad de la publicación en la página **General** del cuadro de diálogo **Propiedades de la publicación** ; no se puede reducir el nivel de compatibilidad.  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="options"></a>Opciones  
  Seleccione los tipos de suscriptor compatibles con la publicación.  

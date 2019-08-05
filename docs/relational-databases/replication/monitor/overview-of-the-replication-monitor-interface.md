@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3681d88f0cd91ce955919ad24f0e95b0600c5e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e293625ab72ba1b94b32a1e6c1ada853b88509f4
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061452"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770605"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Información general de la interfaz del Monitor de replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenta una vista centrada en el publicador o una vista centrada en el distribuidor de toda la actividad de replicación en un formato de dos paneles. Se agrega un publicador al monitor en el panel izquierdo y, en el panel derecho, el monitor muestra información sobre el publicador, sus publicaciones, las suscripciones a esas publicaciones y los diversos agentes de replicación. Además de presentar información de la topología de replicación, el Monitor de replicación permite realizar varias tareas, como iniciar y detener agentes y validar datos.  
   
 ## <a name="viewing-information-for-the-entire-topology"></a>Ver información de toda la topología  

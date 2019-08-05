@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 38ef2f54-53bb-4053-876d-86f8f06a4519
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 409b13e2d9409e6e642b4203c3330ba214fd3999
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 36c0233d5ba6f51f0cc7cd354bd810a08b2d3b72
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120426"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770031"
 ---
 # <a name="publication-information-agents-transactional-publication"></a>Información de publicación, Agentes (Publicación transaccional)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La pestaña **Agentes** muestra información resumida de los agentes para la publicación seleccionada. La información del Agente de instantáneas y el Agente de registro del LOG se muestra para todas las publicaciones transaccionales. La información del Agente de lectura de cola se muestra para las publicaciones transaccionales que están habilitadas para las suscripciones de actualización en cola.  
   
 ## <a name="options"></a>Opciones  

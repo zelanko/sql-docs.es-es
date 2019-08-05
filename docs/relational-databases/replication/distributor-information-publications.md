@@ -16,15 +16,16 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 90459364211bef6714ba3af63cdc4669e0190049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128297"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768590"
 ---
 # <a name="distributor-information-publications"></a>Información de distribuidor, Publicaciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La pestaña **Publicaciones** proporciona información de resumen para todas las publicaciones del distribuidor seleccionado en el recuadro izquierdo.  
   
 La información que se muestra sobre las publicaciones admitidas por el distribuidor incluye una columna que contiene la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del publicador. De lo contrario, la información de publicación será la misma que la información de publicación que se proporciona cuando se ven publicaciones en la vista Publicador del Monitor de replicación. Para obtener más información sobre las columnas en la pestaña **Publicaciones** , vea [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md).  

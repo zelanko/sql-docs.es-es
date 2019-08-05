@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 72b077424512e2e7e75cf653c0ca2010f9316c55
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 8877af08b093b81a875b59fc11f4497b5089f680
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943715"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767642"
 ---
 # <a name="log-reader-agent"></a>Agente de registro del LOG
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El cuadro de diálogo **Agente de registro del LOG** muestra información detallada del Agente de registro del LOG, incluido el estado, el historial, los mensajes informativos y los mensajes de error.  
   
 ## <a name="options"></a>Opciones  

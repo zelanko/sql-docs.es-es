@@ -19,15 +19,16 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 784bfc96edf7e3ed589dbafe6359529214a0c6c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 3c20631f9a24ddf3950a14897bca8934f6794045
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111684"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770595"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Supervisar el rendimiento con el Monitor de replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le ofrece las siguientes posibilidades para supervisar el rendimiento de la replicación transaccional y de la replicación de mezcla:  
   
 -   Establecer advertencias y umbrales  

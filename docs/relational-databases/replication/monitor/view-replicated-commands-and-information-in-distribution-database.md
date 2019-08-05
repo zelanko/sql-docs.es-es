@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 9c20acec-8fab-4483-b9c1-dfe3768f85dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e4fc71168a424fa31675e616846f24f6f4af616
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 1d1e0171082811e8f3f049b66b78da02bd12b601
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111032"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68766952"
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>Ver comandos replicados e información en una base de datos de distribución
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Al utilizar la replicación transaccional, los comandos de transacción están almacenados en la base de datos de distribución hasta que el Agente de distribución los propaga a todos los suscriptores o un Agente de distribución del suscriptor extrae los cambios. Estos comandos pendientes en la base de datos de distribución se pueden ver utilizando mediante programación los procedimientos almacenados de replicación. Para obtener más información, consulte [Replication Stored Procedures &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md) (Procedimientos almacenados de replicación [Transact-SQL]).  
   
 ### <a name="to-view-replicated-commands-from-all-transactional-publications-in-the-distribution-database"></a>Para ver los comandos replicados de todas las publicaciones transaccionales en la base de datos de distribución  

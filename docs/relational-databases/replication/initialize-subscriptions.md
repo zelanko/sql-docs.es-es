@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d7bf65224506e820ad6c486f3bb0e78d002cc793
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: a205577bb53e7b0aa690dbb8cf77e7bb7d01590e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127905"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768494"
 ---
 # <a name="initialize-subscriptions"></a>Inicializar suscripciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Deberá inicializar los suscriptores antes de que puedan comenzar a recibir datos replicados. No se requiere un conjunto de datos inicial, pero el suscriptor deberá poseer al menos el esquema de cada objeto replicado y todas las tablas de metadatos y los procedimientos necesarios para la replicación.  
   
 ## <a name="options"></a>Opciones  

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d742339e597ad64b351514c7a5a335897717ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 3fdf09887875407cc98127c3afdaa96d97402fcb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129853"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768331"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Suscripción, Historial de Distribuidor a suscriptor (suscripción de instantánea)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La pestaña **Historial de Distribuidor a suscriptor** muestra información detallada sobre el Agente de distribución, incluidos el estado, el historial, los mensajes informativos y cualquier mensaje de error.  
   
 ## <a name="options"></a>Opciones  

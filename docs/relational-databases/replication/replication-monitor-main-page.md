@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 923841cc1dd7e0f2be7366b4dbc5a41cf874ac48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7cc6c6ec614acb33938433f081dfcafc2cc5fb25
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005451"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769673"
 ---
 # <a name="replication-monitor-main-page"></a>Monitor de replicación, página Principal
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El Monitor de replicación permite realizar un seguimiento del estado y del rendimiento de las publicaciones y las suscripciones en una topología de replicación. Los siguientes temas proporcionan más información:  
   
 -   Para obtener información general sobre el Monitor de replicación, vea [Monitoring Replication](../../relational-databases/replication/monitor/monitoring-replication.md) (Supervisar la replicación).  

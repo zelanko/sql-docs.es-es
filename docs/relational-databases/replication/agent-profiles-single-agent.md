@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 69358e8163fffb0cc09e7e910a24ebc47d92a3de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 08a8362ab1cdf55af1c3735ee9ab27fb9991b07e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027861"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770832"
 ---
 # <a name="agent-profiles-single-agent"></a>Perfiles de agente (un solo agente)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Use el cuadro de diálogo **Perfiles de agente** para administrar los perfiles de un agente. Los perfiles de agente proporcionan una manera cómoda de administrar los parámetros en tiempo de ejecución para cada agente. Cada agente tiene un perfil predeterminado y algunos tienen perfiles adicionales predefinidos. Por ejemplo, el Agente de mezcla tiene un perfil de "vínculo lento" diseñado para conexiones de banda ancha lentas. Los perfiles predefinidos son suficientes para la mayoría de las aplicaciones, pero también pueden crearse perfiles definidos por el usuario, que permiten personalizar el comportamiento del agente.  
   
 ## <a name="options"></a>Opciones  

@@ -25,15 +25,16 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53691231f08e9ac9fe97807d062c7fed39746a7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 101c272e51a4a4fdab4456f87aac297c2ac56476
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939421"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768820"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Hacer copias de seguridad y restaurar bases de datos replicadas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Las bases de datos replicadas requieren una atención especial en relación con la copia de seguridad y restauración de los datos. En este tema se proporciona información preliminar y vínculos a información adicional sobre las estrategias para realizar copias de seguridad y restauración de cada tipo de replicación.  
   

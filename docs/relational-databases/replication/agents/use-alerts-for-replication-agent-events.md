@@ -21,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84b1656e15f37dd0c1491d9eb8e385813f579fca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f0aa79ac22011a480ae60fe3002e0ac5bf896525
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085898"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768238"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Usar alertas para eventos del Agente de replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y el Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporcionan un modo de supervisar eventos, tales como eventos de Agente de replicación, mediante alertas. El Agente[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supervisa el registro de aplicación de Windows en busca de eventos que se asocian con alertas. Si se produce uno de esos eventos, el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] responde automáticamente, mediante la ejecución de una tarea que haya sido definida y/o el envío de un mensaje de correo electrónico o de buscapersonas a un operador especificado. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye un conjunto de alertas predefinidas para los agentes de replicación que puede configurar para ejecutar una tarea y/o notificar a un operador. Para obtener más información sobre cómo definir la ejecución de una tarea, vea la sección "Automatizar la respuesta a una alerta" en este tema.  
   
  Las siguientes alertas se instalan cuando un equipo se configura como distribuidor:  

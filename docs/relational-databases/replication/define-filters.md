@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ae37ea5fd27ae6309eaa5cf879b562e254c1786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1837e3b57548ec0d4324a408f8f43201ccc3ca6b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063072"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768169"
 ---
 # <a name="define-filters"></a>Definir filtros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68063072"
   
 ## <a name="options"></a>Opciones  
  **Operador**  
- Seleccione un operador para el filtro, como por ejemplo **Menor o igual que**.  
+ Seleccione un operador para el filtro, como por ejemplo **Menor o igual que**.
   
  **Value**  
  Escriba un valor para el filtro. La mayoría de los operadores solo requiere un valor en la primera columna **Valor** ; sin embargo, los operadores **Entre** y **No entre** requieren un valor en las dos columnas **Valor** .  

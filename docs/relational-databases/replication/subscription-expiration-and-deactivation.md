@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90163caba595936f5c9ef9854b8e1f0af2890673
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b3d561e331cae739514b2e38c5c885653c44ce46
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129840"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768354"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Desactivación y expiración de las suscripciones
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Las suscripciones se pueden desactivar o pueden expirar si no se sincronizan en un *período de retención*especificado. La acción que se produce depende del tipo de replicación y del período de retención que se supere.  
   
  Para establecer períodos de retención, vea [Establecer el período de expiración para las suscripciones](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Establecer el período de retención de distribución para las publicaciones transaccionales &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) y [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md).  

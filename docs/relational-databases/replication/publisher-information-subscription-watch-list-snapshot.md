@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7e4ce6300fdd99b3f19c2337e5420cc28ad065a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: bc62259db10a92350aeb24f51b38072339b34921
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021418"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769718"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot"></a>Información del publicador, Lista de supervisión de suscripciones (Instantánea)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La pestaña **Lista de supervisión de suscripciones** está disponible para distribuidores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores; está pensada para mostrar información sobre las suscripciones de todas las publicaciones disponibles en el publicador seleccionado. Puede filtrar la lista de suscripciones para ver errores, advertencias y las suscripciones que tienen un rendimiento bajo. En esta pestaña se proporciona una ubicación única para que un administrador supervise toda la actividad de replicación en un publicador: en el Monitor de replicación se muestran todas las suscripciones que necesitan atención, en función del tipo de replicación seleccionado y de la opción elegida en el cuadro de lista desplegable **Mostrar**. Puesto que los elementos mostrados en esta pestaña se basan en el rendimiento y el estado actual, las suscripciones se muestran en esta página solo si coinciden con la opción del cuadro de lista **Mostrar** en el momento actual.  
   
 ## <a name="options"></a>Opciones  

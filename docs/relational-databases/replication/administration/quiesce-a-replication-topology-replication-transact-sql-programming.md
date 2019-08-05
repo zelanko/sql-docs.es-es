@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4a6b8521564d6b085a4cab0102a5138682077b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b226bb096a532aaeec77cc38bcecd0ef805c9d2f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939083"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768742"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>Poner en modo inactivo una topología de replicación (programación de la replicación con Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   *Detener* un sistema implica detener la actividad de las tablas publicadas en todos los nodos y asegurarse de que cada nodo ha recibido todos los cambios de los demás nodos. Este tema explica cómo detener una topología de replicación, una operación necesaria para varias tareas administrativas, y cómo asegurarse que un nodo ha recibido todos los cambios de otros nodos.  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>Para detener una topología de replicación transaccional con suscripciones de solo lectura  

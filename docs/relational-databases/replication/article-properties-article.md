@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77aa27a444437a9d1fb887fe01e4cff64051f524
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 081802afb9f66380da93f46bf75011b0f4ddb811
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085867"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768201"
 ---
 # <a name="article-properties---ltarticlegt"></a>Article Properties - &lt;Article&gt; (Propiedades del artículo: &lt;Artículo&gt;)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El cuadro de diálogo **Propiedades del artículo** está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación** . Le permite ver y establecer propiedades para todos los tipos de artículo. Algunas propiedades solo se pueden establecer cuando se crea la publicación, mientras que otras se pueden establecer únicamente si la publicación no tiene suscripciones activas. Las propiedades que no se pueden establecer se muestran como de solo lectura.  
   
 > [!NOTE]  

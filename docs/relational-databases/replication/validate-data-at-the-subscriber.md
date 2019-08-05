@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e750743eb98307433d8ad6878cec12ea4e43ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895232"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769288"
 ---
 # <a name="validate-replicated-data"></a>Validar datos replicados
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   En este tema se describe cómo validar datos en el suscriptor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
 La replicación transaccional y la replicación de mezcla le permiten validar que los datos del suscriptor coinciden con los del publicador. Es posible realizar la validación de determinadas suscripciones o de todas las suscripciones a una publicación. Especifique uno de los siguientes tipos de validación y el Agente de distribución o el Agente de mezcla validarán los datos la próxima vez que se ejecuten:  
@@ -34,6 +34,8 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
 -   **Recuento de filas y suma de comprobación binaria**. Además de llevar a cabo un recuento de filas en el publicador y en el suscriptor, se calcula una suma de comprobación de todos los datos utilizando el algoritmo de suma de comprobación. Si el número de filas da un error, no se lleva a cabo la suma de comprobación.  
   
  Además de validar que los datos en el suscriptor y en el publicador coincidan, la replicación de mezcla ofrece la posibilidad de validar que los datos presenten las particiones correctas para cada suscriptor. Para más información, vea [VValidar la información de particiones para un suscriptor de mezcla](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md).  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>Cómo funciona la validación de datos  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida los datos calculando un recuento de filas o una suma de comprobación en el Publicador y, a continuación, compara estos valores con el recuento de filas o suma de comprobación calculado en el suscriptor. Se calcula un valor para toda la tabla de publicación y otro valor para toda la tabla de suscripción, pero en los cálculos no se incluyen los datos de las columnas **text**, **ntext**ni **image** .  

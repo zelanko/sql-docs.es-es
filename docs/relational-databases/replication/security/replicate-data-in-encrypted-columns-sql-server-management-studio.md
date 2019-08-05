@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 48f74ae1c857e8142be25b4d9e63d47e5f3c47a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e311043882f88f7063a5709c761a88f84cb76066
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046590"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769591"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicar datos en columnas cifradas (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La replicación le permite publicar datos de columna cifrados. Para descifrar y usar estos datos en el suscriptor, la clave usada para cifrar los datos en el publicador también debe estar presente en el suscriptor. La replicación no ofrece un mecanismo de seguridad para transportar las claves de cifrado. Debe volver a crear manualmente la clave de cifrado en el suscriptor. En este tema se muestra cómo cifrar una columna en el publicador y asegurarse de que la clave de cifrado esté disponible en el suscriptor.  
   
  Los pasos básicos son los siguientes:  

@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24cc3942c0b4df2f49ec4f40a394f07e60b1efd7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 28d0a979e6cf4d76dd338f139f5c48887aed988e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018627"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770687"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Agregar y quitar publicadores del Monitor de replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El servidor desde el que inicia el Monitor de replicación se agrega automáticamente al monitor si es un publicador. Se pueden agregar más publicadores mediante el cuadro de diálogo **Agregar publicador** . Una vez agregado un publicador, se muestra en un grupo en el panel izquierdo del monitor. El grupo **Mis publicadores** se incluye de manera predeterminada, pero puede crear grupos nuevos para administrar una o más topologías de replicación. Para obtener información sobre cómo iniciar el Monitor de replicación, consulte [Iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 ### <a name="to-add-a-sql-server-publisher"></a>Para agregar un publicador de SQL Server  

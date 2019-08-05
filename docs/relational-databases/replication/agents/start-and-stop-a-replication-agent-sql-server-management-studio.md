@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 67261d22212a2c3c865e44b0160830e2d11cf5f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 339da4b5d9112aa10aa52e12c8a39f6a2adaa30b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085922"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770700"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Iniciar y detener un agente de replicación (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Puede iniciar y detener agentes desde las carpetas **Trabajos** y **Replicación** de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from Replicación Monitor. Inicie y detenga los siguientes agentes y trabajos:  
   
 -   El Agente de instantáneas, utilizado por todas las publicaciones.  

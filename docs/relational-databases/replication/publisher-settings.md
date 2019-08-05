@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 43854349eb57332eeeddd4b69c911c449a602e1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 79685cf22fc0adda979611c23111ab28074de386
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021272"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763958"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>Cuadro de diálogo "Configuración del publicador" de Replicación de SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El cuadro de diálogo **Configuración del publicador** permite cambiar la configuración de los publicadores que se han agregado al panel izquierdo del Monitor de replicación.  
   
 ## <a name="options"></a>Opciones  

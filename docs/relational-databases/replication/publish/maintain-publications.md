@@ -14,13 +14,14 @@ helpviewer_keywords:
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b81e4bb78ff017b12eb68f9aaf694f799678658b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d05dfb3e00dfdd473cc120496825c246fda75428
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002717"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769844"
 ---
 # <a name="maintain-publications"></a>Mantener publicaciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Una vez creada una publicación, puede ser necesario agregar o quitar artículos, o cambiar las propiedades de la publicación o de un artículo. Es posible realizar la mayoría de los cambios una vez creada la publicación. Sin embargo, en algunos casos, es necesario generar una nueva instantánea de la publicación o reinicializar las suscripciones de la misma.

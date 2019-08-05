@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 72cd7983be16e77bb4273e0380c026f8b07c3f7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7143f28436de8aed4f6b0298d04a57237d88c03e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046721"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769701"
 ---
 # <a name="reinitialize-subscriptions"></a>Reinicializar suscripciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Reinicializar una suscripción implica aplicar una nueva instantánea de uno o más artículos a uno o más suscriptores: las replicaciones transaccionales y de instantáneas permiten la reinicialización de los artículos individuales. La replicación de mezcla requiere que todos los artículos se reinicialicen. Los nodos de una topología de replicación transaccional punto a punto no se pueden reinicializar. Si necesita asegurarse de que un nodo tiene una copia nueva de los datos, restaure una copia de seguridad en el nodo. La reinicialización se produce por dos motivos:  
   
 -   Se marca una suscripción explícitamente para reinicializarla.  

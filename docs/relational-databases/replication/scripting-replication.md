@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: e50fac44-54c0-470c-a4ea-9c111fa4322b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9de11f0fcb73eda1b00d7b956e55995d13cd40f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 62816ac084a565f75d50f5f1f8b2b23467158242
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104624"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768430"
 ---
 # <a name="scripting-replication"></a>Crear script para la replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Todos los componentes de replicación de una topología deben convertirse en script como parte de un plan de recuperación de desastres y, además, los scripts también pueden utilizarse para automatizar tareas repetitivas. Un script  contiene los procedimientos almacenados del sistema Transact-SQL necesarios para implementar los componentes de replicación a los que se refieren los scripts, como una publicación o una suscripción. Los scripts se pueden crear en un asistente (como el Asistente para nueva publicación) o en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] después de crear un componente. Puede ver, modificar y ejecutar el script mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o **sqlcmd**. Los scripts se pueden almacenar con los archivos de copia de seguridad para utilizarlas en el caso de que se deba volver a configurar una topología de replicación.  
   
  Si se producen cambios en alguna propiedad, es necesario volver a generar el script de un componente. Si utiliza procedimientos almacenados personalizados con la replicación transaccional, debe guardar una copia de cada procedimiento con los scripts; la copia se debe actualizar si el procedimiento cambia (los procedimientos se actualizan normalmente como consecuencia de cambios de esquema o cambios en los requisitos de la aplicación. Para más información acerca de los procedimientos personalizados, vea [Specify How Changes Are Propagated for Transactional Articles](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md) (Especificar cómo se propagan los cambios para los artículos transaccionales).  

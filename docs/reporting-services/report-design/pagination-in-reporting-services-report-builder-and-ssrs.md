@@ -1,6 +1,6 @@
 ---
 title: Paginación en Reporting Services (Generador de informes y SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 07/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 93ba4ad975c940979cd1e5604de51e92f2c441cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 507aeab666f1849b9216b22e90dfee3d21f92694
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582209"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632029"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginación en Reporting Services (Generador de informes y SSRS)
   La paginación hace referencia al número de páginas de un informe y al modo en que los elementos de informe se organizan en dichas páginas. La paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] varía en función de la extensión de representación usada para ver y entregar el informe. Cuando se ejecuta un informe en el servidor de informes, el informe usa el representador de HTML. HTML sigue un conjunto concreto de reglas de paginación. Si, por ejemplo, exporta el mismo informe a PDF, se usará el representador de PDF y se aplicará otro conjunto de reglas; por consiguiente, el informe se paginará de manera diferente. Para diseñar correctamente un informe que resulte fácil de leer y que esté optimizado para el representador que va a usar para su entrega, es preciso que comprenda las reglas que se usan para controlar la paginación en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "65582209"
   
  De manera predeterminada, el tamaño de página es de 8,5 x 11 pulgadas, pero puede cambiarlo en el panel **Propiedades del informe** , en el cuadro de diálogo **Configurar página** o mediante las propiedades PageHeight y PageWidth del panel **Propiedades** . El tamaño de página no aumenta ni se reduce para adaptarse al contenido del cuerpo del informe. Si desea que el informe aparezca en una única página, todo el contenido del cuerpo del informe debe ajustarse a la página física. Si no se ajusta y usa el formato de salto de página duro, el informe requerirá páginas adicionales. Si el cuerpo del informe aumenta más allá del borde derecho de la página física, se inserta un salto de página horizontal. Si el cuerpo del informe aumenta más allá del borde inferior de la página física, se inserta un salto de página vertical.  
   
- Si desea invalidar el tamaño físico de la página definido en el informe, puede especificar otro tamaño físico usando la configuración de la información del dispositivo para el representador específico que está usando para exportar el informe. Para obtener más información, vea [Reporting Services Device Information Settings](https://go.microsoft.com/fwlink/?LinkId=102515).  
+ Si desea invalidar el tamaño físico de la página definido en el informe, puede especificar otro tamaño físico usando la configuración de la información del dispositivo para el representador específico que está usando para exportar el informe. Para obtener más información, vea [Reporting Services Device Information Settings](../device-information-settings-for-rendering-extensions-reporting-services.md).  
   
 ### <a name="margins"></a>Márgenes  
  Los márgenes se trazan a partir del borde físico de la página hasta la configuración de márgenes especificada. Si un elemento de informe se extiende dentro del área de márgenes, se recorta para que el área superpuesta no se represente. Si especifica tamaños de márgenes que provocan que el ancho horizontal o vertical de la página sea cero, la configuración de los márgenes se establece en cero de forma predeterminada. Los márgenes se especifican en el panel **Propiedades del informe** , el cuadro de diálogo **Configurar página** o si cambia las propiedades TopMargin, BottomMargin, LeftMargin y RightMargin en el panel **Propiedades** . Si desea invalidar el tamaño de margen definido en el informe, puede especificar otro tamaño de margen usando la configuración de la información del dispositivo para el representador específico que está usando para exportar el informe.  

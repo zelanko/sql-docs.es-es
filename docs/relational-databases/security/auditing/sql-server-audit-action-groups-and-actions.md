@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f8d355b8dff8c7da098ff1b6671a169445e7379a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b15e8f19e189dcf3363b90464ab76f482de1753
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095171"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742862"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Grupos de acciones y acciones de SQL Server Audit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -182,7 +182,7 @@ ms.locfileid: "68095171"
   
 |Nombre del grupo de acciones|Descripción|  
 |-----------------------|-----------------|  
-|AUDIT_ CHANGE_GROUP|Este evento se desencadena al emitir uno de los comandos siguientes:<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
+|AUDIT_CHANGE_GROUP|Este evento se desencadena al emitir uno de los comandos siguientes:<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Crear una auditoría de servidor y una especificación de auditoría de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  

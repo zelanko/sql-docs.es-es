@@ -22,15 +22,16 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5bbb131ef95949d2739c859ecd24b32c4ef25397
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990559"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768223"
 ---
 # <a name="replication-agent-administration"></a>Administración del Agente de replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Los agentes de replicación realizan muchas tareas asociadas con la replicación, lo que incluye la creación de copias de esquema y datos, detección de actualizaciones en el publicador o el suscriptor, y propagación de cambios entre servidores. De manera predeterminada, los agentes de replicación se ejecutan en los pasos de trabajo del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los agentes son simples ejecutables, por lo que se les puede llamar directamente desde la línea de comandos o desde scripts de proceso por lotes. Cada agente de replicación admite un conjunto de parámetros en tiempo de ejecución que se utilizan para controlar cómo se ejecuta; estos parámetros se especifican en un perfil de agente o en la línea de comandos.  
   
 > [!IMPORTANT]  

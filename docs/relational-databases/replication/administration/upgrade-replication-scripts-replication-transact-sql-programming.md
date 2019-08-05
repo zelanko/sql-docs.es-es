@@ -19,15 +19,16 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7f5416534c7e8ef1b787f046a27310abcad93ade
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 244f612db66ec9d0cad62daf81c6e5c3de042538
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948662"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768750"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Actualizar scripts de replicación (programación de la replicación con Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Los archivos de script[!INCLUDE[tsql](../../../includes/tsql-md.md)] se pueden utilizar para configurar mediante programación una topología de replicación. Para obtener más información, consulte [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md) (Conceptos sobre los procedimientos almacenados del sistema de replicación).  
   
 > [!IMPORTANT]  

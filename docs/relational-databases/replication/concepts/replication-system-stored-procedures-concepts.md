@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 344b2abfafe5f2e69c6e758744e2cd63fa663603
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f887fdf9aaddf49e5dc2c9f79ed43299f572eb13
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903288"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768140"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el acceso mediante programación a toda la funcionalidad configurable por el usuario en una topología de replicación se proporciona mediante procedimientos almacenados del sistema. Aunque los procedimientos almacenados se pueden ejecutar individualmente utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o el programa de línea de comandos sqlcmd, puede ser beneficioso escribir archivos de script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] que se pueden ejecutar para realizar una secuencia lógica de tareas de replicación.  
   

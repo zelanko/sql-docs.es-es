@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 30e0f800477af8305f64b617aa3af543e789bdc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 68f87d4707f17eab8a37332b6db2baff5ed5a42f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051894"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768461"
 ---
 # <a name="secure-the-snapshot-folder"></a>Proteger la carpeta de instantáneas
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La carpeta de instantáneas es un directorio que almacena archivos de instantáneas. Se recomienda que sea un directorio dedicado para el almacenamiento de instantáneas. Conceda al Agente de instantáneas permiso de escritura en la carpeta y asegúrese de que el permiso de lectura se concede solamente a la cuenta de Windows que utiliza el Agente de mezcla o el Agente de distribución cuando tiene acceso a la carpeta. Para tener acceso a una carpeta de instantáneas que se encuentra en un equipo remoto, la cuenta de Windows asociada con el agente debe ser una cuenta de dominio.  
   
 > [!NOTE]  

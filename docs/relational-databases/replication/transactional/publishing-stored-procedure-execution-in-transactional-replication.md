@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fbe9c2805a6e8b5354207534b5758c28081011e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 25aa20472daec1e20113627b4cbd778dfa142002
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121283"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769329"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicar la ejecución de procedimientos almacenados en la replicación transaccional
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Si tiene uno o más procedimientos almacenados que se ejecutan en el publicador y afectan a las tablas publicadas, considere la posibilidad de incluir esos procedimientos en la publicación como artículos de ejecución de procedimientos almacenados. La definición del procedimiento (la instrucción CREATE PROCEDURE) se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede proporcionar un rendimiento significativamente mejor en los casos en los que se llevan a cabo grandes operaciones por lotes, debido a que únicamente se replica la ejecución del procedimiento, evitando la necesidad de replicar los cambios individuales de cada fila. Por ejemplo, supongamos que crea el siguiente procedimiento almacenado en la base de datos de publicaciones:  
   
 ```  

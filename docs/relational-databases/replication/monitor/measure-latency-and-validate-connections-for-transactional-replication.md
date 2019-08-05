@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e8593dc13115815792bb7912a220e2ad88c15fa3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 31e5f5e89a6421c72ecb381685f9450ac9ba9331
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083054"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770558"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir la latencia y validar las conexiones de la replicación transaccional
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   En este tema se describe cómo medir la latencia y validar conexiones para la replicación transaccional en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante el Monitor de replicación, [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). La replicación transaccional proporciona la característica de testigo de seguimiento, que ofrece una forma cómoda de medir la latencia en topologías de replicación transaccional y validar las conexiones entre el publicador, el distribuidor y los suscriptores. Se escribe un token (una pequeña cantidad de datos) en el registro de transacción de la base de datos de publicaciones, marcado como si fuese una transacción replicada, y se envía a través del sistema, de forma que permite calcular:  
   
 -   Cuánto tiempo transcurre desde que se confirma una transacción en el publicador hasta que se inserta el comando correspondiente en la base de datos de distribución del distribuidor.  

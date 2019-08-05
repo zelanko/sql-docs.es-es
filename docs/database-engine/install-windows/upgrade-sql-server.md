@@ -12,12 +12,12 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c213b95258b30a8d910c7d96d7598ddd930c9687
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ea3d65d8ceaf06fc04efea138b3133fdeb0f335
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934683"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714652"
 ---
 # <a name="upgrade-sql-server"></a>Actualizar SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,6 +54,6 @@ Esta sección contiene los siguientes artículos:
  [Actualizar bases de datos replicadas](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Actualizar Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [Best Practices Analyzer para SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=197135)   
- [Compatibilidad con versiones anteriores](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [Compatibilidad con versiones anteriores](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

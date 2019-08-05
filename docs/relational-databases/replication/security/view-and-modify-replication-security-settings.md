@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55b838b7fb324cf15b3bf4967d1de68706a337d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 904ca2ccc3992ae6c4f03f03da8c70761ec5e907
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051741"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768398"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Ver y modificar la configuración de seguridad de la replicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   En este tema se describe cómo ver y modificar la configuración de seguridad de la replicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). Por ejemplo, puede que desee cambiar la conexión del Agente de registro del LOG al publicador de la autenticación de SQL Server a la autenticación de Windows integrada, o puede que necesite cambiar las credenciales utilizadas para ejecutar un trabajo de agente cuando la contraseña de la cuenta de Windows ha cambiado. Para obtener información sobre los permisos que necesita cada agente, vea [Modelo de seguridad del agente de replicación](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  **En este tema**  

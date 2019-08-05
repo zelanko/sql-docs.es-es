@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d244fe868045f27feb9189d9ae579376c195b113
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ccf53893db8de9e80a1c8545dfe7a5af1819a6a7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128161"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768529"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Habilitar un publicador remoto en un distribuidor (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Habilite un publicador para utilizar un distribuidor remoto en la página **Publicadores** . Esta página está disponible en el Asistente para configurar la distribución y en el cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md) y [Ver y modificar propiedades del distribuidor y el publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 ### <a name="to-enable-a-publisher-in-the-configure-distribution-wizard"></a>Para habilitar un publicador en el Asistente para configurar la distribución  

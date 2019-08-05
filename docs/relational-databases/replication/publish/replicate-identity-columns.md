@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95a088d78fd3fedfd4e1303808860e8d3e4b9486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 3429a9c1e99277c9113e1773e99c8bd58a1cc01a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073591"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769826"
 ---
 # <a name="replicate-identity-columns"></a>Replicar columnas de identidad
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Cuando asigna una propiedad IDENTITY a una columna, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera automáticamente números que se incrementan secuencialmente para las nuevas filas insertadas en la tabla que contiene la columna de identidad. Para obtener más información, vea [IDENTITY &#40;propiedad &#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Debido a que las columnas de identidad pueden estar incluidas como parte de la clave principal, resulta importante evitar los valores duplicados en las columnas de identidad. Para utilizar columnas de identidad en una topología de replicación que tenga actualizaciones en más de un nodo, cada nodo de la topología de replicación debe usar diferentes valores en el intervalo de identidad con el fin de que no se produzcan duplicados.  
   
  Por ejemplo, podría asignarse el rango 1-100 al Publicador, el rango 101-200 al Suscriptor A y el rango 201-300 al Suscriptor B. Si se inserta una fila en el Publicador y el valor de identidad es, por ejemplo, 65, ese valor se replica en cada Suscriptor. Cuando la replicación inserta datos en cada suscriptor, no incrementa el valor de la columna de identidad en la tabla del suscriptor; en su lugar, se inserta el valor literal 65. Son solo las inserciones del usuario y no las del agente de replicación las que hacen que se incremente el valor de la columna de identidad.  

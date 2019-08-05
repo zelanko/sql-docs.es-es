@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e5d686d0028b871fa163b3e1e4a1c71647ede60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 81899227c470ece81f01338e4e873e2f40cd015c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129799"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768300"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Sincronizar una suscripción mediante el Administrador de sincronización de Windows
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El Administrador de sincronización de[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows solo se puede usar para sincronizar suscripciones con publicaciones de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo que el Administrador de sincronización (también se puede usar para sincronizar archivos y páginas web sin conexión). Para utilizar el Administrador de sincronización:  
   
 1.  Habilite la sincronización de suscripciones de extracción con el Administrador de sincronización de Windows en el cuadro de diálogo **Propiedades de suscripción - \<Suscriptor>: \<BaseDeDatosDeSuscripción>** . Para más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md) (Ver y modificar las propiedades de una suscripción de extracción).  

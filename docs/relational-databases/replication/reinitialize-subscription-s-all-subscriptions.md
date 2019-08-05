@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 014f8f62d29c149474e68c70efcc4c3c2a80355c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 622aa1feaf1b3cd926fafea970d2dc50ab43034e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021244"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769710"
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>Reinicializar suscripciones: Todas las suscripciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   El cuadro de diálogo **Reinicializar suscripciones** permite marcar todas las suscripciones a una publicación para reiniciarlas. La reinicialización implica aplicar una instantánea a cada suscriptor; la realiza el Agente de distribución para las suscripciones a publicaciones transaccionales y el Agente de mezcla para las suscripciones a publicaciones de combinación.  
   
 ## <a name="options"></a>Opciones  

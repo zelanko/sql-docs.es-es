@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b536a359ad566e022ef0c69f00f12dd2a178fb4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 1b713b0615ae13fc898567307f945176db8908d7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907993"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769906"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication"></a>Agregar y quitar artículos de una publicación
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Agregue artículos a una publicación al principio, cuando la cree en el Asistente para nueva publicación. Para obtener más información sobre cómo usar este asistente, vea [Crear una publicación](../../../relational-databases/replication/publish/create-a-publication.md).  
   
  Después de crear una publicación, agregue y elimine artículos en la página **Artículos** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md). Para obtener información sobre las consideraciones para agregar y quitar artículos, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  

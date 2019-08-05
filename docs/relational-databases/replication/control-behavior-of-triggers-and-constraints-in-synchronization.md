@@ -20,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a77f0405c9e5df1e1e49f426f065df4c7c1619c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 076a28e4fac4c8c64c44e0df3c10fbc8e075eafb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903068"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768599"
 ---
 # <a name="control-behavior-of-triggers-and-constraints-in-synchronization"></a>Control del comportamiento de los desencadenadores y las restricciones en la sincronización
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Durante la sincronización, los agentes de replicación ejecutan las instrucciones [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) y [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) en las tablas replicadas, que pueden provocar que se ejecuten los desencadenadores del lenguaje de manipulación de datos (DML) en estas tablas. Hay casos en los que quizá necesite evitar que se activen estos desencadenadores o que se apliquen restricciones durante la sincronización. Este comportamiento depende de cómo se cree el desencadenador o la restricción.  
   
 ### <a name="to-prevent-triggers-from-executing-during-synchronization"></a>Para evitar que los desencadenadores se ejecuten durante la sincronización  

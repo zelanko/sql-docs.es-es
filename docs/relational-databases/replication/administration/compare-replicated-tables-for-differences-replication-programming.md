@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6df93be45d9e914d97e9fd8f0c2f712f3935ea8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: a36c825a01d9c205732636bbd91e40dc322e546d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939334"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770811"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>Comparar tablas replicadas para buscar diferencias (programación de la replicación)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   Para determinar si los datos publicados en los artículos de tabla del publicador y el suscriptor no son idénticos, lo que puede indicar una falta de convergencia, se usa la validación de artículos. Para más información, vea [Validar datos replicados](../../../relational-databases/replication/validate-data-at-the-subscriber.md). La validación, sin embargo, solo devuelve información sobre la existencia o no de diferencias, pero no indica las diferencias concretas entre las tablas de origen y destino. La utilidad de símbolo del sistema **tablediff** devuelve información detallada sobre las diferencias entre dos tablas y puede generar un script [!INCLUDE[tsql](../../../includes/tsql-md.md)] para establecer la convergencia de la suscripción con los datos del publicador.  
   
 > [!NOTE]  

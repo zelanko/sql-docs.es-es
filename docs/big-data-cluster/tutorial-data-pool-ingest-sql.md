@@ -1,7 +1,7 @@
 ---
-title: Introducir datos en un grupo de datos de SQL Server
+title: Ingerir datos en un grupo de datos de SQL Server
 titleSuffix: SQL Server big data clusters
-description: Este tutorial muestra cómo introducir datos en el grupo de datos de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+description: En este tutorial, se muestra cómo ingerir datos en el grupo de datos de un clúster de macrodatos de SQL Server 2019 (versión preliminar).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,54 +10,54 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 626b5442596c5a0f9beedef779937cf875efff00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957798"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: ingerir datos en un grupo de datos de SQL Server con Transact-SQL
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este tutorial muestra cómo utilizar Transact-SQL para cargar datos en el [grupo datos](concept-data-pool.md) de un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Con los clústeres de macrodatos de SQL Server, pueden ingeridos datos desde una variedad de orígenes y distribuirse entre las instancias del grupo de datos.
+En este tutorial, se muestra cómo usar Transact-SQL para cargar datos en el [grupo de datos](concept-data-pool.md) de un clúster de macrodatos de SQL Server 2019 (versión preliminar). Con los clústeres de macrodatos de SQL Server, se pueden ingerir y distribuir datos de una amplia variedad de orígenes en varias instancias de grupos de datos.
 
 En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
 > * Crear una tabla externa en el grupo de datos.
-> * Insertar datos de secuencia de clics de web de ejemplo en la tabla de grupo de datos.
-> * Combinar datos en la tabla de grupo de datos con tablas locales.
+> * Insertar datos de secuencias de clics web de ejemplo en la tabla del grupo de datos.
+> * Combinar datos de la tabla del grupo de datos con tablas locales.
 
 > [!TIP]
-> Si lo prefiere, puede descargar y ejecutar un script para los comandos en este tutorial. Para obtener instrucciones, consulte el [ejemplos de grupos de datos](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) en GitHub.
+> Si lo prefiere, puede descargar y ejecutar un script con los comandos de este tutorial. Para obtener instrucciones, vea los [Ejemplos de grupos de datos](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) en GitHub.
 
 ## <a id="prereqs"></a> Requisitos previos
 
-- [Herramientas de datos de gran tamaño](deploy-big-data-tools.md)
+- [Herramientas de macrodatos](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **Extensión de SQL Server 2019**
-- [Cargar datos de ejemplo en el clúster de macrodatos](tutorial-load-sample-data.md)
+- [Cargar datos de ejemplo en un clúster de macrodatos](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Crear una tabla externa en el grupo de datos
 
-Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_clickstream_clicks_data_pool**. Esta tabla, a continuación, se utiliza como una ubicación para la ingesta de datos en el clúster de macrodatos.
+En los pasos siguientes, crearemos una tabla externa en el grupo de datos llamado **web_clickstream_clicks_data_pool**. Después, esta tabla se puede usar como una ubicación para ingerir datos en el clúster de macrodatos.
 
-1. En Azure Data Studio, conéctese a la instancia principal de SQL Server del clúster de macrodatos. Para obtener más información, consulte [conectar a la instancia principal de SQL Server](connect-to-big-data-cluster.md#master).
+1. En Azure Data Studio, conéctese a la instancia maestra de SQL Server del clúster de macrodatos. Para obtener más información, vea [Conectarse a una instancia maestra de SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Haga doble clic en la conexión en el **servidores** ventana para mostrar el panel del servidor para la instancia principal de SQL Server. Seleccione **nueva consulta**.
+1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta**.
 
-   ![Consulta de la instancia principal de SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
+   ![Consulta de la instancia maestra de SQL Server](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
-1. Ejecute el siguiente comando de Transact-SQL para cambiar el contexto para el **ventas** base de datos en la instancia maestra.
+1. Ejecute el siguiente comando de Transact-SQL para cambiar el contexto de la base de datos **Ventas** de la instancia maestra.
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Crear un origen de datos externo para el grupo de datos si aún no existe.
+1. Cree un origen de datos externo al grupo de datos (si aún no existe).
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
@@ -65,7 +65,7 @@ Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_
      WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
-1. Crear una tabla externa denominada **web_clickstream_clicks_data_pool** en el grupo de datos.
+1. Cree una tabla externa llamada **web_clickstream_clicks_data_pool** en el grupo de datos.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -78,13 +78,13 @@ Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_
       );
    ```
   
-1. En CTP 3.1, la creación del grupo de datos es asincrónica, pero no hay ninguna manera de determinar si aún termina. Espere dos minutos para asegurarse de que se crea el grupo de datos antes de continuar.
+1. En CTP 3.1, la creación del grupo de datos es asincrónica, pero aún no se puede determinar cuándo se ha completado. Espere dos minutos para asegurarse de que se haya creado el grupo de datos antes de continuar.
 
-## <a name="load-data"></a>Carga de datos
+## <a name="load-data"></a>Cargar datos
 
-Los pasos siguientes ingieren datos de secuencia de clics de web de ejemplo en el grupo de datos utilizando la tabla externa creada en los pasos anteriores.
+En los pasos siguientes, se ingieren datos de secuencias de clics web de ejemplo en el grupo de datos mediante la tabla externa creada en los pasos anteriores.
 
-1. Use un `INSERT INTO` instrucción para insertar los resultados de la consulta en el grupo de datos (el **web_clickstream_clicks_data_pool** tabla externa).
+1. Use una instrucción `INSERT INTO` para insertar los resultados de la consulta en el grupo de datos (la tabla externa **web_clickstream_clicks_data_pool**).
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool
@@ -105,7 +105,7 @@ Los pasos siguientes ingieren datos de secuencia de clics de web de ejemplo en e
 
 ## <a name="query-the-data"></a>Consultar los datos
 
-Únase a los resultados almacenados en la consulta en el grupo de datos con datos locales en el **ventas** tabla.
+Combine los resultados de la consulta almacenados en el grupo de datos con los datos locales de la tabla **Ventas**.
 
 ```sql
 SELECT TOP (100)
@@ -128,7 +128,7 @@ GROUP BY w.wcs_user_sk;
 
 ## <a name="clean-up"></a>Limpieza
 
-Use el siguiente comando para quitar los objetos de base de datos creados en este tutorial.
+Use este comando para quitar los objetos de la base de datos creados en este tutorial.
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
@@ -136,6 +136,6 @@ DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Obtenga información sobre cómo introducir datos en el grupo de datos con los trabajos de Spark:
+Obtenga información sobre cómo ingerir datos en el grupo de datos con trabajos de Spark:
 > [!div class="nextstepaction"]
-> [Ingesta de datos con los trabajos de Spark](tutorial-data-pool-ingest-spark.md)
+> [Ingerir datos con trabajos de Spark](tutorial-data-pool-ingest-spark.md)

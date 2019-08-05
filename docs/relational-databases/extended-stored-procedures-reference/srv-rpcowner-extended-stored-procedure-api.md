@@ -26,7 +26,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68119685"
 ---
-# <a name="srvrpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API de procedimiento almacenado extendido)
+# <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -61,6 +61,6 @@ len
  Esta función únicamente devuelve el componente de propietario del procedimiento almacenado remoto. No incluye los especificadores opcionales para el nombre, nombre de procedimiento almacenado remoto, y número de procedimiento almacenado remoto.  
   
 > [!IMPORTANT]  
->  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

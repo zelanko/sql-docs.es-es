@@ -27,7 +27,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126953"
 ---
-# <a name="srvpfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API de procedimiento almacenado extendido)
+# <a name="srv_pfieldex-extended-stored-procedure-api"></a>srv_pfieldex (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  

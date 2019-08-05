@@ -26,7 +26,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68036033"
 ---
-# <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow (API de procedimiento almacenado extendido)
+# <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  

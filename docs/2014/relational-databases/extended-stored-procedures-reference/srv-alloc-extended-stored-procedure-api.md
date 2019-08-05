@@ -27,7 +27,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138912"
 ---
-# <a name="srvalloc-extended-stored-procedure-api"></a>srv_alloc (API de procedimiento almacenado extendido)
+# <a name="srv_alloc-extended-stored-procedure-api"></a>srv_alloc (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
@@ -55,6 +55,6 @@ size
  La función **srv_alloc** es equivalente a la función **GlobalAlloc** de la API de [!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows. Las funciones normales de administración de memoria en tiempo de ejecución de la API de Windows C, se pueden usar en una aplicación API de procedimiento almacenado extendido.  
   
 > [!IMPORTANT]  
->  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

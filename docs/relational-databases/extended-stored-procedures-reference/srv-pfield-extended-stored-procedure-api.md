@@ -26,7 +26,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68131580"
 ---
-# <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API de procedimiento almacenado extendido)
+# <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -86,6 +86,6 @@ len
  Un puntero a una cadena terminada en NULL que contiene el valor actual del campo especificado en la estructura de SRV_PROC. Si el campo está vacío, se devuelve un puntero válido a una cadena vacía y *len* contiene 0. Si el campo es desconocido, se devuelve NULL y *len* contiene el valor -1.  
   
 > [!IMPORTANT]  
->  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para más información sobre la revisión y las pruebas de seguridad, vea [Security Developer Center](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para más información sobre la revisión y las pruebas de seguridad, vea [Security Developer Center](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

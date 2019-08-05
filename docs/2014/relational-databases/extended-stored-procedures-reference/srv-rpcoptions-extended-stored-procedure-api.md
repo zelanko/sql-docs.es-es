@@ -27,7 +27,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745824"
 ---
-# <a name="srvrpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API de procedimiento almacenado extendido)
+# <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  

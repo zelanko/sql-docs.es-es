@@ -9,27 +9,27 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 19acc92475716b219485b9366e6facbc89268909
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8713f0728f7afb8e86b693fe5f1e50652bbddf43
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059452"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811428"
 ---
-# <a name="syspdwmaterializedviewcolumndistributionproperties-transact-sql-preview"></a>sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) (preview)
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql-preview"></a>sys.pdw_materialized_view_column_distribution_properties (Transact-SQL) (preview)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Muestra información de distribución de columnas en una vista materializada.  
+Muestra información de distribución para las columnas de una vista materializada.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|Identificador del objeto al que pertenece la columna. |  
-|column_id|**int**|El identificador de la columna.|  
-|distribution_ordinal|**tinyint**|0 = no es una columna de distribución.</br> 1 = SQL Data Warehouse usa esta columna para distribuir la vista materializada.|
+|object_id|**int**|IDENTIFICADOR del objeto al que pertenece la columna. |  
+|column_id|**int**|IDENTIFICADOR de la columna.|  
+|distribution_ordinal|**tinyint**|0 = no es una columna de distribución.</br> 1 = SQL Data Warehouse USA esta columna para distribuir la vista materializada.|
  
 ## <a name="permissions"></a>Permisos 
 

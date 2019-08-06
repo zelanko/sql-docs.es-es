@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 163bbe741b09ffe9163b124c4223a845b8b8cd8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056361"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794717"
 ---
-# <a name="spprepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
+# <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Prepara y ejecuta un parametrizada [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción. sp_prepexec combina las funciones de sp_prepare y sp_execute. Se invoca mediante el identificador 13 en un paquete de flujo TDS.  
+  Prepara y ejecuta una [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción con parámetros. sp_prepexec combina las funciones de sp_prepare y sp_execute. Esta acción se invoca mediante el identificador 13 en un paquete de flujo TDS.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,34 +41,33 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>Argumentos  
  *handle*  
- Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-genera *controlar* identificador. *controlar* es un parámetro necesario con un **int** valor devuelto.  
+ Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]identificador de *identificador* generado por. *Handle* es un parámetro necesario con un valor devuelto **int** .  
   
  *params*  
- Identifica instrucciones con parámetros. El *params* definición de las variables se sustituye por marcadores de parámetros en la instrucción. *params* es un parámetro necesario que requiere un **ntext**, **nchar**, o **nvarchar** valor de entrada. Escriba un valor NULL si la instrucción no tiene parámetros.  
+ Identifica instrucciones con parámetros. La definición de params de variables se sustituye por los marcadores de parámetros de la instrucción. *params* es un parámetro necesario que requiere un valor de entrada **ntext**, **nchar**o **nvarchar** . Escriba un valor NULL si la instrucción no tiene parámetros.  
   
  *stmt*  
- Define el conjunto de resultados del cursor. El *stmt* parámetro es necesario y requiere un **ntext**, **nchar** o **nvarchar** valor de entrada.  
+ Define el conjunto de resultados del cursor. El parámetro *stmt* es obligatorio y llama a para un valor de entrada **ntext**, **nchar**o **nvarchar** .  
   
  *bound_param*  
- Indica el uso opcional de parámetros adicionales. *bound_param* requiere un valor de entrada de cualquier tipo de datos para designar los parámetros adicionales en uso.  
+ Indica el uso opcional de parámetros adicionales. *bound_param* llama a un valor de entrada de cualquier tipo de datos para designar los parámetros adicionales que se usan.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se prepara y se ejecuta una instrucción sencilla.  
+ En el ejemplo siguiente se prepara y se ejecuta una instrucción simple:  
   
 ```  
-Declare @P1 int;  
-EXEC sp_prepexec @P1 output,   
+Declare @Out int;  
+EXEC sp_prepexec @Out output,   
     N'@P1 nvarchar(128), @P2 nvarchar(100)',  
     N'SELECT database_id, name  
       FROM sys.databases  
       WHERE name=@P1 AND state_desc = @P2',   
-@P1 = 'tempdb', @P2 = 'ONLINE';   
-EXEC sp_unprepare @P1;  
+          @P1 = 'tempdb', @P2 = 'ONLINE';   
+EXEC sp_unprepare @Out;  
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
- [sp_execute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
+ [Transact &#40;-SQL de sp_prepare&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
+ [Transact &#40;-SQL de sp_execute&#41;](../../relational-databases/system-stored-procedures/sp-execute-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   

@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 546e04385490e725adfa0bb2f256109da7a0d55d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88b94a0c476921d501bd4f456fa2d7e9077dee36
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094431"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810946"
 ---
 # <a name="custom-index-master-data-services"></a>Índice personalizado (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Los índices personalizados crean un índice no agrupado en un atributo (índice único) o en una lista de atributos (índice compuesto) de una entidad. Normalmente los índices mejoran el rendimiento del proceso de consulta. Para obtener más información sobre los índices de SQL Server, consulte [Índices](../relational-databases/indexes/indexes.md).  
+  Los índices personalizados crean un índice no clúster en un atributo (índice único) o en una lista de atributos (índice compuesto) en una entidad. Normalmente los índices mejoran el rendimiento del proceso de consulta. Para obtener más información sobre los índices de SQL Server, consulte [Índices](../relational-databases/indexes/indexes.md).  
   
 ## <a name="type-of-indexes"></a>Tipo de índices  
  Puede crear los siguientes tipos de índices personalizados para cada entidad.  

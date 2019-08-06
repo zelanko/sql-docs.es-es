@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab70f8c3f7bd788214ce6ed27f2e02ea6a0b43ac
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68164970"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811304"
 ---
 # <a name="understanding-the-database-schemas"></a>Descripción de esquemas de base de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68164970"
  Relaciones  
  El asistente genera una relación por relación de dimensión normal de la tabla de hechos con el atributo de granularidad de la tabla de dimensión. Si la granularidad se basa en el atributo clave de la tabla de dimensión, la relación se crea en la base de datos y en la vista del origen de datos. Si la granularidad se basa en otro atributo, la relación solo se crea en la vista del origen de datos.  
   
- Si decide generar índices en el asistente, se generará un índice no clúster para cada una de las columnas de la relación.  
+ Si decide generar índices en el asistente, se genera un índice no clúster para cada una de estas columnas de relación.  
   
  Restricciones  
  Las claves principales no se generan en las tablas de hechos.  

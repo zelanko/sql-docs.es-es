@@ -13,12 +13,12 @@ ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c3cda314aacc2cc1f589fc762a21be411e16016
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b528a7a9efb91bb99cb7c2b0a32c71dc0de7785b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918472"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811272"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Compatibilidad de DAC con las versiones y objetos de SQL Server
   Una aplicación de capa de datos (DAC) admite los objetos [!INCLUDE[ssDE](../../includes/ssde-md.md)] más comúnmente utilizados.  
@@ -39,8 +39,8 @@ ms.locfileid: "62918472"
 |||  
 |-|-|  
 |ROL DE BASE DE DATOS|FUNCTION: Insertada con valores de tabla|  
-|FUNCTION: Con valores de tabla de múltiples instrucciones|FUNCTION: escalar|  
-|INDEX: Clúster|INDEX: No en clúster|  
+|FUNCTION: Con valores de tabla de múltiples instrucciones|FUNCTION: Escalar|  
+|INDEX: Clúster|INDEX: No agrupado|  
 |INDEX: Espacial|INDEX: Único|  
 |Login|Permisos|  
 |Pertenencias al rol|SCHEMA|  
@@ -50,8 +50,8 @@ ms.locfileid: "62918472"
 |TABLE: Restricción, predeterminada|TABLE: Restricción, clave externa|  
 |TABLE: Restricción, índice|TABLE: Restricción, clave principal|  
 |TABLE: Restricción, única|TRIGGER: DML|  
-|TIPO: HIERARCHYID, GEOMETRY, GEOGRAPHY|TIPO: Tipo de datos definido por el usuario|  
-|TIPO: Tipo de tabla definida por el usuario|User|  
+|TYPE: HIERARCHYID, GEOMETRY, GEOGRAPHY|TYPE: Tipo de datos definido por el usuario|  
+|TYPE: Tipo de tabla definida por el usuario|User|  
 |VIEW||  
   
 ##  <a name="SupportByVersion"></a> Compatibilidad de aplicaciones de la capa de datos con versiones de SQL Server  
@@ -107,7 +107,7 @@ ms.locfileid: "62918472"
 ##  <a name="Considerations"></a> Consideraciones adicionales para las acciones de implementación  
  Tenga en cuenta las siguientes consideraciones en acciones de implementación de datos de DAC Framework:  
   
--   **Extraer, exportar**: estas limitaciones no se aplican en acciones que usan DAC Framework para crear un paquete a partir de una base de datos como, por ejemplo, extraer un archivo .dacpac o exportar un archivo .bacpac. Los datos del paquete son una representación totalmente exacta de los datos en la base de datos de origen. Si el paquete incorpora alguna de estas condiciones, el registro de extracciones y exportaciones incluirá un resumen de los problemas que se enviaron en los mensajes indicados anteriormente. Con esto, se pretende advertir a los usuario de los potenciales problemas en la implementación de datos con el paquete que han creado. El usuario también verá el siguiente mensaje de resumen en el registro:  **Estas limitaciones no afectan a la fidelidad de los tipos y valores de datos almacenados en el paquete DAC creado por DAC Framework; solo se aplican a los tipos y valores de datos resultantes de implementar un paquete DAC en una base de datos. Para obtener más información sobre los datos que se ven afectados y cómo evitar esta limitación, consulte** [en este tema](https://go.microsoft.com/fwlink/?LinkId=267086).  
+-   **Extraer, exportar**: estas limitaciones no se aplican en acciones que usan DAC Framework para crear un paquete a partir de una base de datos como, por ejemplo, extraer un archivo .dacpac o exportar un archivo .bacpac. Los datos del paquete son una representación totalmente exacta de los datos en la base de datos de origen. Si el paquete incorpora alguna de estas condiciones, el registro de extracciones y exportaciones incluirá un resumen de los problemas que se enviaron en los mensajes indicados anteriormente. Con esto, se pretende advertir a los usuario de los potenciales problemas en la implementación de datos con el paquete que han creado. El usuario también verá el siguiente mensaje de resumen en el registro:  **Estas limitaciones no afectan a la fidelidad de los tipos y valores de datos almacenados en el paquete DAC creado por DAC Framework; solo se aplican a los tipos y valores de datos resultantes de implementar un paquete DAC en una base de datos. Para obtener más información sobre los datos que se ven afectados y cómo evitar esta limitación, vea** [este tema](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
 -   **Implementar, publicar, importar:** estas limitaciones se aplican en acciones que usan DAC Framework para implementar un paquete en una base de datos como, por ejemplo, implementar o publicar un archivo .dacpac e importar un archivo .bacpac. Es posible que los datos que se obtienen en la base de datos de destino no contengan una representación totalmente exacta de los datos del paquete. El registro de implementaciones e importaciones contendrá un mensaje (arriba indicado) para cada instancia donde se produzca el problema. Si hay errores, estos bloquearán la operación (vea la categoría 3 anterior), pero seguirá con las otras advertencias.  
   

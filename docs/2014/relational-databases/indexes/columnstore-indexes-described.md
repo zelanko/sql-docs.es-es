@@ -16,15 +16,15 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 58bf23c84914d7df4b9f2637cc7682de2021bf08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63155500"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811040"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *índice columnstore en memoria* almacena y administra datos mediante el uso de almacenamiento de datos basado en columnas y el procesamiento de consultas basado en columnas. Los índices de almacén de columnas funcionan correctamente para las cargas de trabajo de almacenamiento de datos que ejecutan principalmente cargas masivas y consultas de solo lectura. Use el índice de almacén de columnas para aumentar **hasta en diez veces el rendimiento de las consultas** en relación con el almacenamiento tradicional orientado a filas, y hasta **en siete veces la compresión de datos** en relación con el tamaño de los datos sin comprimir.  
+  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *Índice de almacén de columnas en memoria* almacena y administra los datos mediante el almacenamiento de datos basado en columnas y el procesamiento de consultas basado en columnas. Los índices de almacén de columnas funcionan correctamente para las cargas de trabajo de almacenamiento de datos que ejecutan principalmente cargas masivas y consultas de solo lectura. Use el índice de almacén de columnas para aumentar **hasta en diez veces el rendimiento de las consultas** en relación con el almacenamiento tradicional orientado a filas, y hasta **en siete veces la compresión de datos** en relación con el tamaño de los datos sin comprimir.  
   
 > [!NOTE]  
 >  Consideramos que el índice clúster de almacén de columnas es el estándar para el almacenamiento de grandes tablas de hechos de almacenamiento de datos, y esperamos que se use en la mayoría de los escenarios de almacenamiento de datos. Puesto que el índice de almacén de columnas clúster es actualizable, la carga de trabajo puede realizar un gran número operaciones de inserción, actualización y eliminación.  
@@ -37,7 +37,7 @@ ms.locfileid: "63155500"
   
 -   [Sugerencias de rendimiento](#performance)  
   
--   [Los temas y las tareas relacionadas](#related)  
+-   [Temas y tareas relacionados](#related)  
   
 ##  <a name="basics"></a> Conceptos básicos  
  Un *columnstore index* es una tecnología de almacenamiento, recuperación y administración de datos que emplea un formato de datos en columnas denominado almacén de columnas. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite índices clúster y no clúster de almacén de columnas. Ambos usan la misma tecnología de almacén de columnas en memoria, pero tienen algunas diferencias en cuanto a su propósito y las funciones que admiten.  
@@ -98,7 +98,7 @@ ms.locfileid: "63155500"
   
 -   No almacena físicamente las columnas de forma ordenada. En su lugar, almacena los datos para mejorar la compresión y el rendimiento. No es necesario ordenar los datos antes de crear el índice de almacén de columnas, pero si se hace puede mejorar la compresión de almacén de columnas.  
   
-###  <a name="Concepts"></a> Términos y conceptos clave  
+###  <a name="Concepts"></a>Conceptos y términos clave  
  Los términos y conceptos clave siguientes están asociados a los índices de almacén de columnas.  
   
  columnstore index  
@@ -132,7 +132,7 @@ ms.locfileid: "63155500"
   
  Un índice no clúster de almacén de columnas proporciona una manera de tener un índice de almacén de columnas para ejecutar consultas de análisis al tiempo que se realizan operaciones de solo lectura en la tabla original.  
   
- ![Índice de almacén](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "índice de almacén")  
+ ![Índice de almacén de columnas] no agrupado (../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Índice de almacén de columnas") no agrupado  
   
  Índice clúster de almacén de columnas  
  Un *clustered columnstore index* es el almacenamiento físico para toda la tabla y es el único índice de la tabla. El índice clúster se puede actualizar. Puede realizar operaciones de inserción, eliminación y actualización del índice y puede cargar datos de forma masiva en el índice.  
@@ -148,18 +148,18 @@ ms.locfileid: "63155500"
   
  Cuando el almacén delta alcanza el número máximo de filas, se cierra. Un proceso de tupla motriz comprueba si hay grupos de filas cerrados. Cuando encuentra el grupo de filas cerrado, lo comprime y lo almacena en el almacén de columnas.  
   
-##  <a name="dataload"></a> Carga de datos  
+##  <a name="dataload"></a>Cargar datos  
   
-###  <a name="dataload_nci"></a> Cargar datos en un índice no agrupado de almacén de columnas  
- Para cargar datos en un índice de almacén, cargue primero los datos en una tabla tradicional de almacén de filas almacenada como un montón o agrupado de índice y, a continuación, cree el índice de almacén de columnas no agrupado con [CREATE COLUMNSTORE INDEX &#40;&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
+###  <a name="dataload_nci"></a>Cargar datos en un índice de almacén de columnas no agrupado  
+ Para cargar datos en un índice de almacén de columnas no agrupado, cargue primero los datos en una tabla almacén tradicional almacenada como un montón o un índice clúster y, a continuación, cree el índice de almacén de columnas no agrupado con [Transact-SQL &#40;&#41; de creación de índice de almacén de columnas](/sql/t-sql/statements/create-columnstore-index-transact-sql) . .  
   
- ![Cargar datos en un índice de almacén de columnas](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "cargar datos en un índice de almacén de columnas")  
+ ![Cargar datos en un índice de almacén de columnas](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Cargar datos en un índice de almacén de columnas")  
   
  Una tabla con un índice no clúster de almacén de columnas es de solo lectura hasta que se quita o se deshabilita el índice. Para actualizar la tabla y el índice no clúster de almacén de columnas puede intercambiar las particiones. También puede deshabilitar el índice, actualizar la tabla y regenerar el índice.  
   
  Para obtener más información, vea [Using Nonclustered Columnstore Indexes](indexes.md)  
   
-###  <a name="dataload_cci"></a> Cargar datos en un índice agrupado de almacén de columnas  
+###  <a name="dataload_cci"></a>Cargar datos en un índice de almacén de columnas agrupado  
  ![Carga en un índice agrupado de almacén de columnas](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Carga en un índice agrupado de almacén de columnas")  
   
  Como se muestra en el diagrama, para cargar datos en un índice clúster de almacén de columnas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -184,7 +184,7 @@ ms.locfileid: "63155500"
   
  Para obtener más información acerca de las tareas y los procesos de almacén delta, vea [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
   
-##  <a name="performance"></a> Sugerencias de rendimiento  
+##  <a name="performance"></a>Sugerencias de rendimiento  
   
 ### <a name="plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>Planear para que haya suficiente memoria para crear índices de almacén de columnas en paralelo  
  La creación un índice de almacén de columnas es de forma predeterminada una operación paralela a menos que se restrinja la memoria. Crear el índice en paralelo requiere más memoria que crear el índice en serie. Cuando hay suficiente memoria, la creación de un índice de almacén de columnas tarda aproximadamente 1,5 más que generar un árbol B en las mismas columnas.  
@@ -193,23 +193,23 @@ ms.locfileid: "63155500"
   
  Si la tabla tiene más de un millón de filas pero SQL Server no puede obtener una concesión de memoria suficiente para crear el índice mediante MAXDOP, SQL Server reducirá automáticamente el valor de MAXDOP según sea necesario para ajustarse a la concesión de memoria disponible.  En algunos casos, se debe reducir a uno el DOP para generar el índice cuando la memoria está restringida.  
   
-##  <a name="related"></a> Los temas y las tareas relacionadas  
+##  <a name="related"></a>Temas y tareas relacionados  
   
 ### <a name="nonclustered-columnstore-indexes"></a>Índices no clúster de almacén de columnas  
  Para las tareas comunes, vea [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md).  
   
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) con REBUILD.  
+-   [ALTER index &#40;de Transact-&#41; SQL](/sql/t-sql/statements/alter-index-transact-sql) con recompilación.  
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>Índices clúster de almacén de columnas  
  Para las tareas comunes, vea [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
   
--   [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [CREAR un índice &#40;clúster de almacén de columnas TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
--   [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) con REBUILD o REORGANIZE.  
+-   [ALTER index &#40;de Transact-&#41; SQL](/sql/t-sql/statements/alter-index-transact-sql) con Rebuild o reorganize.  
   
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   

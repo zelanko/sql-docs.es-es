@@ -17,12 +17,12 @@ ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3439fff5e3bba68f01c24a0979434e21a01ded6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072705"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811049"
 ---
 # <a name="understanding-the-database-schemas"></a>Descripción de esquemas de base de datos
   El Asistente para generar esquemas genera un esquema relacional sin normalizar para la base de datos del área de asunto basado en las dimensiones y grupos de medida de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El asistente genera una tabla relacional por dimensión para almacenar los datos de dimensión que se denomina tabla de dimensión y una tabla relacional por grupo de medida para almacenar los datos de hechos que se denomina tabla de hechos. Al generar las tablas relacionales, el asistente omite las dimensiones vinculadas, los grupos de medida vinculados y las dimensiones de tiempo de servidor.  
@@ -71,7 +71,7 @@ ms.locfileid: "66072705"
  Relaciones  
  El asistente genera una relación por relación de dimensión normal de la tabla de hechos con el atributo de granularidad de la tabla de dimensión. Si la granularidad se basa en el atributo clave de la tabla de dimensión, la relación se crea en la base de datos y en la vista del origen de datos. Si la granularidad se basa en otro atributo, la relación solo se crea en la vista del origen de datos.  
   
- Si decide generar índices en el asistente, se generará un índice no clúster para cada una de las columnas de la relación.  
+ Si decide generar índices en el asistente, se genera un índice no clúster para cada una de estas columnas de relación.  
   
  Restricciones  
  Las claves principales no se generan en las tablas de hechos.  
@@ -82,7 +82,7 @@ ms.locfileid: "66072705"
  El asistente genera una tabla independiente para contener los valores traducidos de las propiedades en el grupo de medida que requieran una columna de traducción. El asistente también crea una columna independiente para cada idioma necesario.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversión de tipo de datos y longitudes predeterminadas  
- Asistente para generar esquemas omite los tipos de datos en todos los casos excepto las columnas que usan el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo de datos. El tamaño de datos `wchar` traduce directamente al tipo de datos `nvarchar`. Sin embargo, si la longitud especificada de una columna que utiliza el tamaño `wchar` es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
+ El Asistente para generar esquemas omite los tipos de datos en todos los casos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] excepto para las columnas que usan el tipo de `wchar` datos. El tamaño de datos `wchar` traduce directamente al tipo de datos `nvarchar`. Sin embargo, si la longitud especificada de una columna que utiliza el tamaño `wchar` es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
   
  Si un elemento de datos, como el enlace de un atributo, no posee una longitud especificada, se utilizará en la columna la longitud predeterminada que se muestra en la siguiente tabla.  
   

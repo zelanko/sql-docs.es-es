@@ -2,19 +2,19 @@
 title: Creación y exportación de modelos de aprendizaje automático de Spark con MLeap
 titleSuffix: SQL Server big data clusters
 description: Use PySpark para entrenar y crear modelos de aprendizaje automático con Spark en clústeres de macrodatos de SQL Server (versión preliminar). Exportar con MLeap y puntuar el modelo con Java en SQL Server.
-author: lgongmsft
-ms.author: lgong
+author: RogPodge
+ms.author: roliu
 ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 9e139e76e5f5f756b57a9366cc896716cda58959
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67727376"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811209"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Creación, exportación y puntuación de modelos de aprendizaje automático de Spark en clústeres de macrodatos de SQL Server
 

@@ -1,5 +1,5 @@
 ---
-title: La validación cruzada (Analysis Services - minería de datos) | Microsoft Docs
+title: Validación cruzada (Analysis Services-minería de datos) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf8960fb659611003325275b2cf86d9325351c29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b207ce822fbe83d4a388ecf9da52b7c6cfa020a1
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68183819"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811369"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validación cruzada (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68183819"
   
  El ejemplo del diagrama muestra el uso de los datos si se especifican tres plegamientos.  
   
- ![Cómo los segmentos de datos de validación cruzada](../../analysis-services/data-mining/media/xvoverviewmain.gif "cómo los segmentos de datos de validación cruzada")  
+ ![Cómo segmenta los datos los segmentos de validación cruzada](../../analysis-services/data-mining/media/xvoverviewmain.gif "Cómo segmenta los datos los segmentos de validación cruzada")  
   
  En el escenario del diagrama, la estructura de minería de datos contiene un conjunto de datos de exclusión que se usa para pruebas, pero el conjunto de datos de pruebas no se ha incluido para la validación cruzada. Como resultado, todos los datos del conjunto de datos de aprendizaje, el 70 por ciento de los datos de la estructura de minería de datos, se usan para validación cruzada. El informe de validación cruzada muestra el número total de casos usados en cada partición.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "68183819"
 ### <a name="choosing-models-and-columns-to-validate"></a>Elegir los modelos y columnas para la validación  
  Al utilizar la pestaña **Validación cruzada** del Diseñador de minería de datos, debe seleccionar primero la columna de predicción de la lista. Normalmente, una estructura de minería de datos puede admitir muchos modelos de minería, de los cuales no todos utilizan la misma columna de predicción. Al ejecutar una validación cruzada, solo se podrán incluir en el informe aquellos modelos que utilicen la misma columna de predicción.  
   
- Para elegir un atributo de predicción, haga clic en **Atributo de destino** y seleccione la columna de la lista. Si el atributo de destino es una columna anidada o una columna en una tabla anidada, debe escribir el nombre de la columna anidada con el formato \<nombre de tabla anidada > (clave).\< Anidar columnas >. Si la única columna utilizada de la tabla anidada es la columna de clave, puede usar \<nombre de tabla anidada > (clave).  
+ Para elegir un atributo de predicción, haga clic en **Atributo de destino** y seleccione la columna de la lista. Si el atributo de destino es una columna anidada o una columna de una tabla anidada, debe escribir el nombre de la columna anidada mediante el formato \<de nombre de tabla anidada > (clave).\< > De columna anidada. Si la única columna utilizada de la tabla anidada es la columna de clave, puede usar \<el nombre de tabla anidado > (clave).  
   
  Después de seleccionar el atributo de predicción, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prueba todos los modelos que utilizan el mismo atributo de predicción automáticamente. Si el atributo de destino contiene valores discretos, después de haber seleccionado la columna de predicción, puede escribir un estado de destino, en caso de que haya un valor concreto que desee predecir.  
   
- La selección del estado de destino afectará a las medidas que se devuelvan. Si especifica un atributo de destino: es decir, un nombre de columna: Obtiene un valor específico que desea que el modelo para predecir de forma predeterminada, el modelo se va a evaluar su predicción del estado más probable.  
+ La selección del estado de destino afectará a las medidas que se devuelvan. Si especifica un atributo de destino (es decir, un nombre de columna) y no selecciona un valor específico que desea que el modelo prediga, el modelo se evaluará de forma predeterminada en su predicción del estado más probable.  
   
  Cuando use una validación cruzada con modelos de agrupación en clústeres, no habrá ninguna columna de predicción; en su lugar, debe seleccionar **Nº de clústeres** en el cuadro de lista **Atributo de destino** . Cuando haya seleccionado esta opción, otras opciones que no son relevantes para los modelos de agrupación en clústeres, como **Estado del destino**, se deshabilitarán. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] probará a continuación todos los modelos de agrupación en clústeres que estén asociados a la estructura de minería de datos.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "68183819"
  Para obtener un ejemplo de cómo crear un informe de validación cruzada mediante la interfaz de usuario, vea [Crear un informe de validación cruzada](../../analysis-services/data-mining/create-a-cross-validation-report.md).  
   
 ### <a name="cross-validation-stored-procedures"></a>Procedimientos almacenados de validación cruzada  
- Para los usuarios avanzados, la validación cruzada también está disponible en forma de procedimientos almacenados del sistema totalmente parametrizados. Puede ejecutar los procedimientos almacenados si se conecta a una instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o desde cualquier aplicación de código administrado.  
+ Para los usuarios avanzados, la validación cruzada también está disponible en forma de procedimientos almacenados del sistema totalmente parametrizados. Puede ejecutar los procedimientos almacenados conectándose a una instancia de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]o desde cualquier aplicación de código administrado.  
   
  Los procedimientos almacenados se agrupan por tipo de modelo de minería de datos. Un conjunto de procedimientos funciona solo con modelos de agrupación en clústeres. El otro conjunto de procedimientos funciona con otros modelos de minería de datos.  
   
- Para cada tipo de modelo de minería de datos, en clúster o sin clúster, los procedimientos almacenados realizan la validación cruzada en dos fases independientes.  
+ Para cada tipo de modelo de minería de datos, agrupado o no agrupado, los procedimientos almacenados realizan la validación cruzada en dos fases independientes.  
   
  **Realizar particiones de datos y generar métricas para particiones**  
   

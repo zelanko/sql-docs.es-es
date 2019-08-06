@@ -9,28 +9,28 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f4e286a335ca6668c81e6b959bd61605c0ea398a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 919b55fe869a77bf27acd8a14820c63dd82eb968
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059392"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811504"
 ---
-# <a name="syspdwmaterializedviewmappings-transact-sql-preview"></a>sys.pdw_materialized_view_mappings (Transact-SQL) (preview)
+# <a name="syspdw_materialized_view_mappings-transact-sql-preview"></a>sys.pdw_materialized_view_mappings (Transact-SQL) (preview)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Está relacionado con la vista materializada para nombres de objeto interno por object_id.
+Une la vista materializada a los nombres de objeto interno por object_id.
 
-Las columnas physical_name y object_id forman la clave para esta vista de catálogo.
+Las columnas physical_name y object_id forman la clave de esta vista de catálogo.
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|physical_name |**nvarchar(36)**|El nombre físico de la vista materializada.|  
-|object_id  |**int**|El identificador de objeto para la vista materializada. Consulte [sys.objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
+|physical_name |**nvarchar(36)**|Nombre físico de la vista materializada.|  
+|object_id  |**int**|IDENTIFICADOR de objeto de la vista materializada. Vea [Sys. Objects (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest).| 
 
 ## <a name="permissions"></a>Permisos
 

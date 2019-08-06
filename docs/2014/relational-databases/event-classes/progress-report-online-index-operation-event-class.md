@@ -14,17 +14,17 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d0efc3d22fcba588c1104d716cbab0f26eff374
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520413"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811264"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Informe de progreso: Clase de eventos Online Index Operation
-  El informe de progreso: Clase de evento de operación de índice en línea indica el progreso de una operación de generación de índice en línea mientras se está ejecutando el proceso de compilación.  
+  El Informe de progreso: La clase de eventos Online Index Operation indica el progreso de una operación de generación de índice en línea mientras el proceso de generación está en ejecución.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Informe de progreso: Columnas de datos de clase de evento de operación de índice en línea  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Informe de progreso: Online Index Operation (columnas de datos de la clase de eventos)  
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "62520413"
 |EndTime|`datetime`|Hora a la que se completó la operación de índice en línea.|15|Sí|  
 |EventClass|`int`|Tipo de evento = 190.|27|Sin|  
 |EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|Sin|  
-|EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 1=Inicio<br /><br /> 2=Empieza la ejecución de la fase 1<br /><br /> 3=Finaliza la ejecución de la fase 1<br /><br /> 4=Empieza la ejecución de la fase 2<br /><br /> 5=Finaliza la ejecución de la fase 2<br /><br /> 6=Recuento de filas insertadas<br /><br /> 7=Listo<br /><br /> La fase 1 hace referencia al objeto base (índice clúster o montón) o si la operación del índice solo implica a un índice no clúster. La fase 2 se usa cuando una operación de compilación de índice implica tanto al índice original recompilado como a índices no clúster adicionales.  Por ejemplo, si un objeto tiene un índice clúster y varios índices no clúster, 'rebuild all' recompilaría todos los índices. El objeto base (el índice clúster) se recompila en la fase 1 y, a continuación, todos los índices no clúster se recompilan en la fase 2.|21|Sí|  
+|EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 1=Inicio<br /><br /> 2=Empieza la ejecución de la fase 1<br /><br /> 3=Finaliza la ejecución de la fase 1<br /><br /> 4=Empieza la ejecución de la fase 2<br /><br /> 5=Finaliza la ejecución de la fase 2<br /><br /> 6=Recuento de filas insertadas<br /><br /> 7=Listo<br /><br /> La fase 1 hace referencia al objeto base (índice clúster o montón) o si la operación de índice implica solo un índice no clúster. La fase 2 se usa cuando una operación de generación de índice implica tanto la regeneración original como los índices no clúster adicionales.  Por ejemplo, si un objeto tiene un índice clúster y varios índices no clúster, ' Rebuild All ' recompilaría todos los índices. El objeto base (el índice clúster) se recompila en la fase 1 y, a continuación, todos los índices no clúster se recompilan en la fase 2.|21|Sí|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IndexID|`int`|Id. del índice del objeto afectado por el evento.|24|Sí|  

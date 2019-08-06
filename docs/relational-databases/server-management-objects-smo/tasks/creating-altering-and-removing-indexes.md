@@ -1,5 +1,5 @@
 ---
-title: Crear, modificar y eliminar índices | Documentos de Microsoft
+title: Crear, modificar y quitar índices | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22af830a8dda47bfe4533668d90f1cac473d4bfa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 404bd1d31a910f0fd2d181ab4198ffab065ffd4f
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002706"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811512"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Crear, modificar y eliminar índices
 
@@ -29,10 +29,10 @@ ms.locfileid: "68002706"
  Puede crear un índice en una columna XML especificando la propiedad <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Crear un índice compuesto no clúster en Visual Basic  
- En este ejemplo de código se muestra cómo crear un índice compuesto no clúster. Para un índice compuesto, agregue más de una columna al índice. Establecer el <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propiedad **False** para un índice no agrupado.  
+ En este ejemplo de código se muestra cómo crear un índice no clúster compuesto. Para un índice compuesto, agregue más de una columna al índice. Establezca la <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propiedad en **false** para un índice no clúster.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Crear un índice compuesto no clúster en Visual C#  
- En este ejemplo de código se muestra cómo crear un índice compuesto no clúster. Para un índice compuesto, agregue más de una columna al índice. Establecer el <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propiedad **False** para un índice no agrupado.  
+ En este ejemplo de código se muestra cómo crear un índice no clúster compuesto. Para un índice compuesto, agregue más de una columna al índice. Establezca la <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propiedad en **false** para un índice no clúster.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Crear un índice compuesto no clúster en PowerShell  
- En este ejemplo de código se muestra cómo crear un índice compuesto no clúster. Para un índice compuesto, agregue más de una columna al índice. Establecer el <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propiedad **False** para un índice no agrupado.  
+ En este ejemplo de código se muestra cómo crear un índice no clúster compuesto. Para un índice compuesto, agregue más de una columna al índice. Establezca la <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> propiedad en **false** para un índice no clúster.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  

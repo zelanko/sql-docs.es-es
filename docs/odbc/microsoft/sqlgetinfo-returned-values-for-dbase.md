@@ -16,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dd6b25ebc06df82fa9974b3274ae527e6f6fa347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003162"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794687"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>SQLGetInfo devuelve valores para dBASE
-La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento y los correspondientes valores devueltos por **SQLGetInfo**. Esta información puede recuperarse transfiriendo el lenguaje C enumerado #defines a **SQLGetInfo** en el *fInfoType* argumento. Para obtener más información acerca de los valores devueltos por **SQLGetInfo**, consulte el *referencia del programador de ODBC*.  
+En la tabla siguiente se enumeran los #defines del lenguaje C para el argumento *fInfoType* y los valores correspondientes devueltos por **SQLGetInfo**. Esta información se puede recuperar pasando el #defines del lenguaje C indicado a **SQLGetInfo** en el argumento *fInfoType* . Para obtener más información sobre los valores devueltos por **SQLGetInfo**, vea la *Referencia del programador de ODBC*.  
   
 > [!NOTE]  
->  Donde **SQLGetInfo** devuelve una máscara de bits de 32 bits, una barra vertical (&#124;) representa una operación OR bit a bit.  
+>  Donde **SQLGetInfo** devuelve una máscara de bits de 32 bits, una barra&#124;vertical () representa una operación OR bit a bit.  
   
-|tipo de información|Valor devuelto|  
+|InfoType|Valor devuelto|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|Todo listo|  
+|SQL_AGGREGATE_FUNCTIONS|Todo establecido|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|Varios valores|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|"Directory"|  
+|SQL_CATALOG_TERM|Active|  
 |SQL_CATALOG_USAGE|Varios valores|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,22 +81,22 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|El DSN de archivo Odbc.ini, o "" si se usa la palabra clave DRIVER en Odbc.ini|  
-|SQL_DATA_SOURCE_READ_ONLY|"N" (Esto depende del origen de datos).|  
+|SQL_DATA_SOURCE_NAME|El DSN de ODBC. ini o "" si se usa la palabra clave DRIVER en ODBC. ini|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" (depende del origen de datos).|  
 |SQL_DATABASE_NAME|Directorio de base de datos actual|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"DBASE"|  
+|SQL_DBMS_NAME|DBASE|  
 |SQL_DBMS_VER|Varios valores|  
 |SQL_DDL_INDEX|Varios valores|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_HENV|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_HLIB|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_HSTMT|Controlado por el Administrador de controladores.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HENV|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HLIB|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_HSTMT|Controlado por el administrador de controladores.|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* especifica la fecha de compilación)|  
+|SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* especifica la fecha de compilación)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -110,8 +110,8 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|Varios valores|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (el calificador se devuelve en mayúsculas y minúsculas mezcladas para que Windows NT pueden encontrar el directorio.)|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'" (comilla inversa)|  
+|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (el calificador se devuelve en mayúsculas y minúsculas mezcladas para que Windows NT pueda localizar el directorio).|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (comilla inversa)|  
 |SQL_KEYWORDS|Varios valores|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -119,7 +119,7 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_MAX_CHAR_LITERAL_LEN|254|  
 |SQL_MAX_COLUMN_NAME_LEN|10|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (limitar desconocido o no es aplicable)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 (límite desconocido o no aplicable)|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  
@@ -141,9 +141,9 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Varios valores|  
-|SQL_ODBC_SAG_CLI_ CONFORMIDAD|SQL_OSCC_COMPLIANT|  
+|CONFORMIDAD CON SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|Desde el Administrador de controladores|  
+|SQL_ODBC_VER|Desde el administrador de controladores|  
 |SQL_OJ_CAPABILITIES|Varios valores|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -155,12 +155,12 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Varios valores|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"DBASE"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SERVER_NAME|DBASE|  
+|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?" ';:/<,.!\>'#$%^&\*\_-+=\\ \[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Varios valores|  
 |SQL_SUBQUERIES|Varios valores|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABLE"|  
+|SQL_TABLE_TERM|CUADRO|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Varios valores|  

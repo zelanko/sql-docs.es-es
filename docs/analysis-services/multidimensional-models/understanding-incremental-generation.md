@@ -1,5 +1,5 @@
 ---
-title: Descripción de la generación Incremental | Microsoft Docs
+title: Descripción de la generación incremental | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71355cfe5341af74083e21cb786b441c71c48c80
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62802705"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811312"
 ---
 # <a name="understanding-incremental-generation"></a>Descripción de la generación incremental
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "62802705"
  Agregar un nuevo objeto, como una dimensión, un cubo o un atributo  
  El Asistente para generar esquemas agrega los objetos subyacentes a los que se asigna el nuevo objeto.  
   
- Si el Asistente para generar esquemas no puede realizar el cambio requerido debido a la presencia de un objeto de usuario en la base de datos del área de asunto (ya que el motor de base de datos devolvería un error), el Asistente para generar esquemas experimentará un error y se mostrará el error que devuelve el motor de base de datos. Por ejemplo, si se crea una restricción de clave principal o un índice no clúster en una tabla una vez que el asistente haya generado la tabla, el Asistente para generar esquemas no quitará la tabla dado que no creó la restricción ni el índice.  
+ Si el Asistente para generar esquemas no puede realizar el cambio requerido debido a la presencia de un objeto de usuario en la base de datos del área de asunto (ya que el motor de base de datos devolvería un error), el Asistente para generar esquemas experimentará un error y se mostrará el error que devuelve el motor de base de datos. Por ejemplo, si crea una restricción de clave principal o un índice no clúster en una tabla después de que el asistente haya generado la tabla, el Asistente para generar esquemas no quita esa tabla porque no creó la restricción ni el índice.  
   
 ## <a name="supporting-schema-changes"></a>Admitir cambios de esquema  
  Si se cambian las propiedades de las tablas y columnas de la base de datos del área de asunto o de la vista de origen de datos asociada, el Asistente para generar esquemas trata los cambios tal como se describe en la siguiente tabla.  

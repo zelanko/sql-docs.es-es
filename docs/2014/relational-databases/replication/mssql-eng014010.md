@@ -12,14 +12,14 @@ ms.assetid: 6ea84f2f-e7a2-4028-9ea9-af0d2eba660e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb0387cebdda52817143e0e3da98c20f4c49da50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8af9ae77562cb8ece9cb23e32c4e4ce216987715
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667092"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811117"
 ---
-# <a name="mssqleng014010"></a>MSSQL_ENG014010
+# <a name="mssql_eng014010"></a>MSSQL_ENG014010
     
 ## <a name="message-details"></a>Detalles del mensaje  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62667092"
   
      10.193.17.129 inst1  
   
--   Quite la replicación, registre cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, a continuación, vuelva a restablecer la replicación. Si el valor de @@SERVERNAME no es correcto en una instancia que no esté en clúster, siga estos pasos:  
+-   Quite la replicación, registre cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, a continuación, vuelva a restablecer la replicación. Si el valor de @@SERVERNAME no es correcto para una instancia no agrupada, siga estos pasos:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468129"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811071"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
   OLTP en memoria incluye en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los procedimientos almacenados compilados de forma nativa y las tablas optimizadas para memoria. Este artículo proporciona información general del procesamiento de consultas tanto para las tablas optimizadas para memoria como para los procedimientos almacenados compilados de forma nativa.  
@@ -114,7 +114,7 @@ Canalización de procesamiento de consultas de SQL Server
   
 6.  Access Methods recupera las filas de las páginas de datos e índices del grupo de búferes y carga las páginas del disco al grupo de búferes según sea necesario.  
   
- Para la primera consulta del ejemplo, el motor de ejecución solicita filas del índice clúster en la tabla Customer y el índice no clúster en la tabla Order de Access Methods. Access Methods atraviesa las estructuras de índice del árbol B para recuperar las filas solicitadas. En este caso, todas las filas se recuperan como las llamadas de plan para los recorridos de índice completos.  
+ En la primera consulta de ejemplo, el motor de ejecución solicita filas en el índice clúster en el cliente y en el índice no clúster en el orden de los métodos de acceso. Access Methods atraviesa las estructuras de índice del árbol B para recuperar las filas solicitadas. En este caso, todas las filas se recuperan como las llamadas de plan para los recorridos de índice completos.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Acceso de [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado a las tablas con optimización para memoria  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] también se denominan [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Interpretado hace referencia al hecho de que el plan de consulta es interpretado por el motor de ejecución de consulta para cada operador del plan de consultas. El motor de ejecución lee el operador y sus parámetros y realiza la operación.  
@@ -222,7 +222,7 @@ Ejecución de los procedimientos almacenados compilados de forma nativa.
   
  La invocación de un procedimiento almacenado compilado de forma nativa se describe como sigue:  
   
-1.  El usuario emite una `EXEC` *usp_myproc* instrucción.  
+1.  El usuario emite una `EXEC`instrucción *usp_myproc* .  
   
 2.  El analizador extrae los parámetros del nombre y del procedimiento almacenado.  
   

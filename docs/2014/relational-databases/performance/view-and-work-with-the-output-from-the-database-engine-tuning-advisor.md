@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151457"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811021"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos
   Cuando el Asistente para la optimización de motor de base de datos optimiza bases de datos, crea resúmenes, recomendaciones, informes y registros de optimización. Puede utilizar la salida de registro de optimización para solucionar problemas de las sesiones de optimización del Asistente para la optimización de motor de base de datos. Puede usar los resúmenes, recomendaciones e informes para determinar si desea implementar las recomendaciones de optimización o continuar con la optimización hasta alcanzar las mejoras de rendimiento de consultas que necesita para la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener información acerca de cómo usar el Asistente para la optimización de bases de datos para crear cargas de trabajo y optimizar una base de datos, vea [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md).  
@@ -163,7 +163,7 @@ ms.locfileid: "63151457"
   
 2.  Copie y pegue el [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) en el editor XML o en un editor de texto. Use este ejemplo para crear un archivo de entrada XML para su sesión de optimización. Para obtener información sobre la realización de esta tarea, vea la sección "Crear archivos de entrada XML" en [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md).  
   
-3.  Edite los elementos `TuningOptions` y `Configuration` en el archivo de entrada XML de ejemplo. En el elemento `TuningOptions`, especifique las estructuras de diseño físico que desea que el Asistente para la optimización de motor de base de datos tenga en cuenta durante la sesión de optimización. En el elemento `Configuration`, especifique las estructuras de diseño físico que coincidan con la configuración hipotética de las estructuras de diseño físico de la base de datos que desea que analice el Asistente para la optimización de motor de base de datos. Para obtener información sobre los atributos y elementos secundarios puede usar con el `TuningOptions` y `Configuration` elementos primarios, consulte [referencia del archivo de entrada XML &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  Edite los elementos `TuningOptions` y `Configuration` en el archivo de entrada XML de ejemplo. En el elemento `TuningOptions`, especifique las estructuras de diseño físico que desea que el Asistente para la optimización de motor de base de datos tenga en cuenta durante la sesión de optimización. En el elemento `Configuration`, especifique las estructuras de diseño físico que coincidan con la configuración hipotética de las estructuras de diseño físico de la base de datos que desea que analice el Asistente para la optimización de motor de base de datos. Para obtener información acerca de los atributos y elementos secundarios que se pueden `TuningOptions` usar con `Configuration` los elementos primarios y, vea [referencia &#40;del&#41;archivo de entrada XML Asistente para la optimización de motor de base de datos](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
   
 4.  Guarde el archivo de entrada con la extensión **.xml** .  
   
@@ -282,7 +282,7 @@ ms.locfileid: "63151457"
  Índice o vista que se ven afectados por la recomendación. El icono de esta columna refleja las recomendaciones que deben quitarse o agregarse en el **Destino de la recomendación**.  
   
  **Detalles**  
- Descripción del **Destino de la recomendación**. Entre los posibles valores, se encuentran agrupado, vista indizada o en blanco, que indica un índice no clúster. También indica si el índice es único.  
+ Descripción del **Destino de la recomendación**. Entre los valores posibles se incluyen clúster, vista indizada o en blanco, que indica un índice no clúster. También indica si el índice es único.  
   
  **Esquema de partición**  
  El esquema de partición se proporcionará en esta columna si es recomendable realizar particiones.  

@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666802"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811084"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Seleccionar una cuenta para el servicio Agente SQL Server
   La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus permisos de red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como una cuenta de usuario especificada. Se puede seleccionar una cuenta para el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , donde se pueden elegir las opciones siguientes:  
@@ -74,22 +74,22 @@ ms.locfileid: "62666802"
 ## <a name="supported-service-account-types"></a>Tipos de cuenta de servicio compatibles  
  En la tabla siguiente se muestran los tipos de cuenta de Windows que se pueden usar para el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Tipo de cuenta de servicio|Servidor no en clúster|Servidor en clúster|Controlador de dominio (no agrupado)|  
+|Tipo de cuenta de servicio|Servidor no agrupado|Servidor en clúster|Controlador de dominio (no agrupado)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Cuenta de dominio de Windows (miembro del grupo de administradores de Windows)|Admitida|Admitida|Admitida|  
-|Cuenta de dominio de Windows (no administrativa)|Admite<sup>1</sup>|Admite<sup>1</sup>|Admite<sup>1</sup>|  
-|Cuenta de servicio de red (NT AUTHORITY\NetworkService)|Admite<sup>1, 3, 4</sup>|No compatible|No compatible|  
-|Cuenta de usuario local (no administrativa)|Admite<sup>1</sup>|No compatible|No aplicable|  
-|Cuenta del sistema local (NT AUTHORITY\System)|Admite<sup>2</sup>|No compatible|Admite<sup>2</sup>|  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Cuenta de dominio de Windows (miembro del grupo de administradores de Windows)|Compatible|Compatible|Compatible|  
+|Cuenta de dominio de Windows (no administrativa)|Compatible<sup>1</sup>|Compatible<sup>1</sup>|Compatible<sup>1</sup>|  
+|Cuenta de servicio de red (NT AUTHORITY\NetworkService)|Compatible<sup>1, 3, 4</sup>|No compatible|No compatible|  
+|Cuenta de usuario local (no administrativa)|Compatible<sup>1</sup>|No compatible|No aplicable|  
+|Cuenta del sistema local (NT AUTHORITY\System)|Compatible<sup>2</sup>|No compatible|Compatible<sup>2</sup>|  
 |Cuenta del servicio local (NT AUTHORITY\LocalService)|No compatible|No compatible|No compatible|  
   
- <sup>1</sup> vea la limitación 1 a continuación.  
+ <sup>1</sup> consulte la limitación 1 a continuación.  
   
- <sup>2</sup> vea la limitación 2 a continuación.  
+ <sup>2</sup> consulte la limitación 2 a continuación.  
   
- <sup>3</sup> vea la limitación 3 siguiente.  
+ <sup>3</sup> consulte la limitación 3 a continuación.  
   
- <sup>4</sup> vea la limitación 4.  
+ <sup>4</sup> consulte la limitación 4 a continuación.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Limitación 1: utilizar cuentas no administrativas para la administración multiservidor  
  Dar de alta servidores de destino en el servidor maestro puede producir un error acompañado del siguiente mensaje: "Error en la operación de alta."  

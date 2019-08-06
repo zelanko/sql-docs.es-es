@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 27e1e0ee06f343c63240c1155601b2eab5e8c6cc
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: da0a047b0ae20fbc191a61e1c9eb96660eac035e
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631997"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811451"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novedades de SSMA para Oracle (OracleToSQL)
 En este artículo se enumeran los cambios SQL Server Migration Assistant (SSMA) para Oracle en cada versión.

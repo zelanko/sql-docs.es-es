@@ -1,6 +1,6 @@
 ---
-title: Tipo de conexión de Oracle (SSRS) | Microsoft Docs
-ms.date: 01/11/2017
+title: Tipo de conexión de Oracle (SSRS, Power BI Report Server y Generador de informes) | Microsoft Docs
+ms.date: 07/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,26 +8,36 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67cb43743f8153a39d28af26807ddea98955674e
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 2942ad1432b2674ab0b9906b5ab6e2f07be83ae7
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66499548"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632076"
 ---
-# <a name="oracle-connection-type-ssrs"></a>Tipo de conexión de Oracle (SSRS)
-Para utilizar en el informe los datos de una base de datos de Oracle, debe tener un conjunto de datos basado en un origen de datos de informe de tipo Oracle. Este tipo de origen de datos integrado usa el proveedor de datos de Oracle directamente y requiere un componente de software del cliente Oracle.
+# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Tipo de conexión de Oracle (SSRS, Power BI Report Server y Generador de informes)
 
-Para instalar las herramientas de cliente de Oracle, puede hacer lo siguiente.
- 
-1.  Ir al [sitio de descarga de Oracle](https://www.oracle.com/downloads/)
-2.  Descargar ODAC 12c versión 4 (12.1.0.2.4) para Windows (64 bits para el servidor, 32 bits para las herramientas)
-3.  Instalar el proveedor de datos para .NET 4
-  
+Para utilizar en el informe los datos de una base de datos de Oracle, debe tener un conjunto de datos basado en un origen de datos de informe de tipo Oracle. Este tipo de origen de datos integrado usa el proveedor de datos de Oracle directamente y requiere un componente de software del cliente Oracle. En este artículo se explica cómo descargar e instalar controladores para Reporting Services, Power BI Report Server y Generador de informes.
+
+## <a name="64-bit-drivers-for-the-report-servers"></a>Controladores de 64 bits para los servidores de informes
+
+Power BI Report Server y SQL Server Reporting Services 2016 y 2017 utilizan ODP.NET administrados. Los pasos siguientes solo son necesarios para cuando se usan los controladores de 18x más recientes. Se supone que ha instalado los archivos en c:\oracle64.
+
+1. En el sitio de descarga de Oracle, instale el [instalador universal de Oracle (OUI) de oracle 64-bit ODAC](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html). 
+2. Registrar el cliente administrado de ODP.NET en GAC: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: GAC/ProviderPath: C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. Agregue las entradas de cliente administradas ODP.NET a Machine. config: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: config/Force: odpm/frameworkVersion: v 4.0.30319/ProductVersion: 4.122.18.3
+
+## <a name="32-bit-drivers-for-report-builder"></a>Controladores de 32 bits para Generador de informes
+Los pasos siguientes solo son necesarios para cuando se usan los controladores de 18x más recientes. Se supone que ha instalado los archivos en c:\oracle32.
+
+1. En el sitio de descarga de Oracle, instale el [instalador universal de Oracle (OUI) de oracle 32-bit ODAC](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html).
+2. Registrar el cliente administrado de ODP.NET en GAC: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: GAC/ProviderPath: C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. Agregue las entradas de cliente administradas ODP.NET a Machine. config: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/Action: config/Force: odpm/frameworkVersion: v 4.0.30319/ProductVersion: 4.122.18.3
+
  Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="Connection"></a> Cadena de conexión  
- Póngase en contacto con el administrador de bases de datos y solicite la información de conexión y las credenciales que debe usar para conectar con el origen de datos. En el siguiente ejemplo de cadena de conexión, se especifica una base de datos de Oracle en el servidor denominado "Oracle9" mediante Unicode. El nombre del servidor debe coincidir con el nombre de instancia del servidor de Oracle definido en el archivo de configuración Tnsnames.ora.  
+ Póngase en contacto con el administrador de bases de datos y solicite la información de conexión y las credenciales que debe usar para conectar con el origen de datos. En el siguiente ejemplo de cadena de conexión, se especifica una base de datos de Oracle en el servidor denominado "Oracle18" mediante Unicode. El nombre del servidor debe coincidir con el nombre de instancia del servidor de Oracle definido en el archivo de configuración Tnsnames.ora.  
   
 ```  
 Data Source="Oracle"; Unicode="True"  
@@ -40,7 +50,7 @@ Data Source="Oracle"; Unicode="True"
   
  Después de publicar el informe, es posible que necesite cambiar las credenciales para el origen de datos de tal forma que, cuando el informe se ejecute en el servidor de informes, los permisos para recuperar los datos sean válidos.  
   
- Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión &#40;generador de informes y SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [especificar credenciales y la información de conexión de orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Consultas  
@@ -59,52 +69,26 @@ Data Source="Oracle"; Unicode="True"
   
  Para obtener más información, vea:  
   
--   Para obtener más información, vea[Uso del proveedor de datos de .NET Framework para Oracle](https://go.microsoft.com/fwlink/?LinkId=112314) en msdn.microsoft.com  
-  
 -   [Cómo usar Reporting Services para tener acceso a un origen de datos de Oracle y configurarlo](https://support.microsoft.com/kb/834305)  
-  
 -   [Cómo agregar permisos para la entidad de seguridad NETWORK SERVICE](https://support.microsoft.com/kb/870668)  
   
-###### <a name="alternate-data-extensions"></a>Extensiones de datos alternativas  
+### <a name="alternate-data-extensions"></a>Extensiones de datos alternativas 
+ 
  También puede recuperar los datos de una base de datos de Oracle utilizando un tipo de origen de datos OLE DB. Para obtener más información, vea [Tipo de conexión OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
-  
-###### <a name="report-models"></a>Modelos de informe  
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions" 
+### <a name="report-models"></a>Modelos de informe  
+
  También se pueden crear modelos basados en una base de datos de Oracle.  
+::: moniker-end
+   
+### <a name="platform-and-version-information"></a>Información de plataforma y de versión  
+
+ Para más información sobre la compatibilidad con plataformas y versiones, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+
   
-###### <a name="platform-and-version-information"></a>Información de plataforma y de versión  
- Para obtener más información sobre la compatibilidad de plataformas y de versiones, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-  
-##  <a name="HowTo"></a> Temas de procedimientos  
- Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
-  
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
- [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
-  
- [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
-  
-##  <a name="Related"></a> Secciones relacionadas  
- Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar las partes de un informe que están relacionadas con datos.  
-  
- [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
- Proporciona información general sobre cómo obtener acceso a los datos del informe.  
-  
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
- Proporciona información sobre las conexiones de datos y los orígenes de datos.  
-  
- [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
- Proporciona información sobre conjuntos de datos compartidos e incrustados.  
-  
- [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
- Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.  
-  
- [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
- Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
-  
-  
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Consulte también
+
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

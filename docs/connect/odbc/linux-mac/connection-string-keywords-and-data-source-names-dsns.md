@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f1bbdb044afd8fb4a5ff55d1a9d5fea2b3f14da1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 486d26dd3afeb91cb43181875e22592fb482af5f
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008829"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702802"
 ---
 # <a name="connecting-to-sql-server"></a>Conectarse a SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -54,7 +54,7 @@ Server = [protocol:]server[,port]
 
 También puede especificar el protocolo y el puerto para conectarse al servidor. Por ejemplo, **Server = TCP:** _ServerName_ **, 12345**. Tenga en cuenta que el único protocolo compatible con los controladores de Linux `tcp`y MacOS es.
 
-Para conectarse a una instancia con nombre en un puerto estático, use <b>Server=</b>*servername*,**port_number**. No se admite la conexión a un puerto dinámico.  
+Para conectarse a una instancia con nombre en un puerto estático, use <b>Server=</b>*servername*,**port_number**. No se admite la conexión a un puerto dinámico antes de la versión 17.4.
 
 De forma alternativa, puede agregar la información de DSN a un archivo de plantilla y ejecutar el siguiente comando para agregarlo a `~/.odbc.ini`:
  - **odbcinst -i -s -f** _template_file_  
@@ -86,20 +86,31 @@ SSL utiliza la biblioteca OpenSSL. En la siguiente tabla se muestran las version
 
 |Plataforma|Versión mínima de OpenSSL|Ubicación del almacén de confianza de certificados predeterminada|  
 |------------|---------------------------|--------------------------------------------|
+|Debian 10|1.1.1|/etc/ssl/certs|
 |Debian 9|1.1.0|/etc/ssl/certs|
-|Debian 8.71 |1.0.1|/etc/ssl/certs|
-|macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
-|macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
-|OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|
+|Debian 8.71|1.0.1|/etc/ssl/certs|
+|OS X 10,11, macOS 10,12, 10,13, 10,14|1.0.2|/usr/local/etc/openssl/certs|
+|Red Hat Enterprise Linux 8|1.1.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 7|1.0.1|/etc/pki/tls/cert.pem|
 |Red Hat Enterprise Linux 6|1.0.0-10|/etc/pki/tls/cert.pem|
-|SuSE Linux Enterprise 12 |1.0.1|/etc/ssl/certs|
-|SuSE Linux Enterprise 11 |0.9.8|/etc/ssl/certs|
-|Ubuntu 17.10 |1.0.2|/etc/ssl/certs|
-|Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
-|Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
-  
+|SuSE Linux Enterprise 15|1.1.0|/etc/ssl/certs|
+|SuSE Linux Enterprise 11, 12|1.0.1|/etc/ssl/certs|
+|Ubuntu 18.10, 19.04|1.1.1|/etc/ssl/certs|
+|Ubuntu 18.04|1.1.0|/etc/ssl/certs|
+|Ubuntu 16.04, 16.10, 17.10|1.0.2|/etc/ssl/certs|
+|Ubuntu 14.04|1.0.1|/etc/ssl/certs|
+
 También puede especificar el cifrado en la cadena de conexión `Encrypt` mediante la opción al usar **SQLDriverConnect** para conectarse.
+
+## <a name="adjusting-the-tcp-keep-alive-settings"></a>Ajuste de la configuración Keep-Alive de TCP
+
+A partir del controlador ODBC 17,4, la frecuencia con la que el controlador envía paquetes Keep-Alive y los retransmite cuando no se recibe una respuesta es configurable.
+Para configurar, agregue la siguiente configuración a la sección del controlador en `odbcinst.ini`, o la sección del DSN en. `odbc.ini` Al conectarse con un DSN, el controlador usará la configuración de la sección del DSN, si está presente; de lo contrario, o si solo se conecta con una cadena de conexión, usará la configuración de la sección del `odbcinst.ini`controlador en. Si el valor no está presente en ninguna ubicación, el controlador utiliza el valor predeterminado.
+
+- `KeepAlive=<integer>`controla la frecuencia con la que TCP intenta comprobar que una conexión inactiva sigue intacta mediante el envío de un paquete Keep-Alive. El valor predeterminado es **treinta** segundos.
+
+- `KeepAliveInterval=<integer>`determina el intervalo que separa las retransmisiones Keep-Alive hasta que se reciba una respuesta.  El valor predeterminado es **1** segundo.
+
 
 ## <a name="see-also"></a>Consulte también  
 [Instalación de Microsoft ODBC Driver for SQL Server en Linux y macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  

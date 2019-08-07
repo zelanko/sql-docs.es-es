@@ -1,7 +1,7 @@
 ---
-title: Usuario y la configuración de área de trabajo
+title: Configuración del usuario y el área de trabajo
 titleSuffix: Azure Data Studio
-description: Cómo personalizar Azure Data Studio mediante la modificación de usuario y la configuración de área de trabajo.
+description: Procedimiento para personalizar Azure Data Studio al modificar la configuración del usuario y el área de trabajo.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,56 +11,56 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959272"
 ---
-# <a name="modify-user-and-workspace-settings"></a>Modificar la configuración de área de trabajo y usuario
+# <a name="modify-user-and-workspace-settings"></a>Modificación de la configuración del usuario y el área de trabajo
 
-Es fácil de configurar [!INCLUDE[name-sos](../includes/name-sos-short.md)] a su gusto a través de configuración. Casi todas las partes de [!INCLUDE[name-sos](../includes/name-sos-short.md)]del editor, la interfaz de usuario y comportamiento funcional tiene opciones puede modificar.
+Es fácil configurar [!INCLUDE[name-sos](../includes/name-sos-short.md)] a su gusto mediante la configuración. Casi todas las partes del editor, la interfaz de usuario y el comportamiento funcional de [!INCLUDE[name-sos](../includes/name-sos-short.md)] tienen opciones que puede modificar.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] proporciona dos ámbitos diferentes para la configuración:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] proporciona dos ámbitos distintos para la configuración:
 
-* **Usuario** esta configuración se aplica globalmente a cualquier instancia de [!INCLUDE[name-sos](../includes/name-sos-short.md)] abrir.
-* **Área de trabajo** configuración de área de trabajo son valores específicos de una carpeta en el equipo y solo están disponibles cuando la carpeta se abre en la barra lateral de explorador. Configuración definida en este ámbito invalida el ámbito del usuario.
+* **Usuario**: esta configuración se aplica globalmente a cualquier instancia de [!INCLUDE[name-sos](../includes/name-sos-short.md)] que abra.
+* **Área de trabajo**: esta configuración es específica de una carpeta del equipo y solo está disponible cuando la carpeta está abierta en la barra lateral del explorador. La configuración que se define en este ámbito invalida el ámbito de usuario.
 
-## <a name="creating-user-and-workspace-settings"></a>Creación de usuario y la configuración de área de trabajo
+## <a name="creating-user-and-workspace-settings"></a>Creación de la configuración del usuario y el área de trabajo
 
-El comando de menú **archivo** > **preferencias** > **configuración** (**código**  >  **Preferencias** > **configuración** en Mac) proporciona el punto de entrada para configurar la configuración de usuario y el área de trabajo. Se proporcionan con una lista de la configuración predeterminada. Copiar cualquier configuración que desea cambiar a la correspondiente `settings.json` archivo. Las pestañas de la derecha le permite alternar rápidamente entre los archivos de configuración de usuario y el área de trabajo.
+El comando de menú **Archivo** > **Preferencias** > **Configuración** (**Código** > **Preferencias** > **Configuración** en Mac) proporciona el punto de entrada para configurar las opciones del usuario y el área de trabajo. Se le proporciona una lista de opciones de configuración predeterminadas. Copie cualquier configuración que quiera cambiar en el archivo `settings.json` adecuado. Mediante las pestañas de la derecha puede cambiar rápidamente entre los archivos de configuración del usuario y el área de trabajo.
 
-También puede abrir la configuración de usuario y del área de trabajo desde el **paleta de comandos** (**Ctrl + Mayús + P**) con **preferencias: Abrir configuración de usuario** y **preferencias: Abrir configuración de área de trabajo** o use el método abreviado de teclado (**Ctrl +,** ).
+También puede abrir la configuración del usuario y el área de trabajo desde la **paleta de comandos** (**Ctrl+Mayús+P**) con **Preferencias: Abrir configuración del usuario** y **Preferencias: Abrir configuración del área de trabajo** o si usa el método abreviado de teclado (**Ctrl+,** ).
 
-El siguiente ejemplo deshabilita los números de línea en el editor y configura las líneas de código que se les aplica sangría automáticamente.
+En el siguiente ejemplo se deshabilitan los números de línea en el editor y se configuran las líneas de código para que se les aplique la sangría automáticamente.
 
 ![Configuración de ejemplo](media/settings/sample-settings.png)
 
-Se vuelven a cargar los cambios de configuración por [!INCLUDE[name-sos](../includes/name-sos-short.md)] después modificado `settings.json` se guarda el archivo.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] recarga los cambios realizados en la configuración después de guardar el archivo `settings.json` modificado.
 
->**Nota:** Configuración de área de trabajo es útiles para compartir la configuración específica del proyecto a través de un equipo.
+>**Nota:** La configuración del área de trabajo resulta útil para compartir la configuración específica del proyecto en un equipo.
 
-## <a name="settings-file-locations"></a>Ubicaciones de archivo de configuración
+## <a name="settings-file-locations"></a>Ubicaciones del archivo de configuración
 
-Dependiendo de la plataforma, el archivo de configuración de usuario se encuentra aquí:
+En función de la plataforma, el archivo de configuración del usuario se encuentra aquí:
 
-* **Windows** `%APPDATA%\azuredatastudio\User\settings.json`
-* **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
-* **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
+* **Windows**: `%APPDATA%\azuredatastudio\User\settings.json`
+* **Mac**: `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
+* **Linux**: `$HOME/.config/azuredatastudio/User/settings.json`
 
-El archivo de configuración de área de trabajo se encuentra en la `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` carpeta del proyecto.
+El archivo de configuración del área de trabajo se encuentra en la carpeta `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` del proyecto.
 
-## <a name="hot-exit"></a>Salida de acceso frecuente
+## <a name="hot-exit"></a>Salida rápida
 
-Azure Data Studio recuerda los cambios no guardados en archivos cuando se cierra de forma predeterminada. Esto es lo mismo que la característica hot salir en Visual Studio Code.
+De forma predeterminada, Azure Data Studio recuerda los cambios no guardados en los archivos al salir. Este comportamiento es igual que la característica de salida rápida en Visual Studio Code.
 
-De forma predeterminada, la salida activo está desactivada. Habilitar salida hot editando el `files.hotExit` configuración. Para obtener más información, consulte [activo de salida (en la documentación de Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+De forma predeterminada, la salida rápida está desactivada. Para habilitar la salida rápida, edite la configuración `files.hotExit`. Para obtener más información, consulte [Salida rápida (en la documentación de Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
 
-## <a name="tab-color"></a>Color de etiqueta
+## <a name="tab-color"></a>Color de las pestañas
 
-Para simplificar la identificación de las conexiones que se trabaja con, las pestañas abiertas en el editor pueden tener sus colores establecidos para que coincida con el color del grupo de servidores al que pertenece la conexión. De forma predeterminada, los colores de pestaña están desactivados de forma predeterminada. Habilitar los colores de pestaña editando el `sql.tabColorMode` configuración.
+Para simplificar la identificación de las conexiones con las que está trabajando, las pestañas abiertas en el editor pueden establecer sus colores para que coincidan con el color del grupo de servidores al que pertenece la conexión. De forma predeterminada, los colores de las pestañas están desactivados. Para habilitar los colores de las pestañas, edite la configuración `sql.tabColorMode`.
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-Dado que [!INCLUDE[name-sos](../includes/name-sos-short.md)] hereda su configuración de usuario y el área de trabajo en la funcionalidad de Visual Studio Code, información detallada acerca de la configuración es la [valores para Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings) artículo.
+Dado que [!INCLUDE[name-sos](../includes/name-sos-short.md)] hereda su funcionalidad de configuración de usuario y área de trabajo de Visual Studio Code, la información detallada sobre la configuración se encuentra en el artículo [Configuración de Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).

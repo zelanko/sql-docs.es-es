@@ -1,5 +1,5 @@
 ---
-title: Configurar el almacenamiento de instancia failover cluster SMB - SQL Server en Linux
+title: 'Configuración del SMB de almacenamiento de la instancia de clúster de conmutación por error: SQL Server en Linux'
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,86 +9,86 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: e93b7fac2f75758a0a95a4053ee0a989e410c70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032324"
 ---
-# <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error: SMB: SQL Server en Linux
+# <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configuración de la instancia de clúster de conmutación por error: SMB; SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se explica cómo configurar el almacenamiento SMB para una instancia de clúster de conmutación por error (FCI) en Linux. 
+En este artículo se explica cómo configurar el almacenamiento SMB de una instancia de clúster de conmutación por error (FCI) en Linux. 
  
-En el mundo que no sean Windows, SMB a menudo se conoce para compartir como un sistema de archivos de Internet común (CIFS) y se implementa a través de Samba. En el mundo de Windows, el acceso a un recurso compartido SMB se realiza de este modo: \\NOMBRESERVIDOR\NOMBRERECURSOCOMPARTIDO. Para las instalaciones de SQL Server basada en Linux, se debe montar el recurso compartido SMB como una carpeta.
+Fuera de Windows, se suele aludir a SMB como un recurso compartido del Sistema de archivos de Internet común (CIFS) y se implementa mediante Samba. En Windows, se accede a un recurso compartido de SMB de esta manera: \\NOMBRESERVIDOR\NOMBRERECURSOCOMPARTIDO. En el caso de las instalaciones de SQL Server basadas en Linux, el recurso compartido de SMB debe montarse como una carpeta.
 
-## <a name="important-source-and-server-information"></a>Información importante de origen y el servidor
+## <a name="important-source-and-server-information"></a>Información importante sobre el código fuente y el servidor
 
-Estas son algunas sugerencias y notas para utilizar correctamente SMB:
-- Puede ser el recurso compartido SMB en Windows, Linux, o incluso desde un dispositivo como siempre y cuando usa SMB 3.0 o superior. Para obtener más información sobre Samba y SMB 3.0, consulte [SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) para ver si su implementación de Samba es compatible con SMB 3.0.
-- El recurso compartido SMB debe tener alta disponibilidad.
-- Se debe establecer la seguridad correctamente en el recurso compartido SMB. A continuación es un ejemplo de /etc/samba/smb.conf, donde SQLData1 es el nombre del recurso compartido.
+Aquí tiene algunas sugerencias y notas para usar SMB correctamente:
+- El recurso compartido de SMB puede estar en Windows, Linux o incluso en un dispositivo siempre que use SMB 3.0 o una versión superior. Para obtener más información sobre Samba y SMB 3.0, consulte [SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) para ver si su implementación de samba es compatible con SMB 3.0.
+- El recurso compartido de SMB debe tener alta disponibilidad.
+- La seguridad debe establecerse correctamente en el recurso compartido de SMB. A continuación se muestra un ejemplo de /etc/samba/smb.conf, donde SQLData1 es el nombre del recurso compartido.
 
 ![05-smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 
-1. Elija uno de los servidores que participarán en la configuración de FCI. No importa cuál de ellos.
+1. Elija uno de los servidores que participarán en la configuración de la FCI. No importa el que elija.
    
-1. Obtenga información sobre el usuario de mssql.
+1. Obtenga información sobre el usuario mssql.
    
    ```bash
     sudo id mssql
    ```
    
-   Tenga en cuenta el uid, gid y grupos. 
+   Anote el UID, el GID y los grupos. 
    
 1. Ejecute `sudo smbclient -L //NameOrIP/ShareName -U User`.
    
-   \<NameOrIP > es el nombre DNS o dirección IP del servidor que hospeda el recurso compartido SMB.
+   \<NameOrIP> es el nombre DNS o la dirección IP del servidor que hospeda el recurso compartido de SMB.
    
-   \<Nombre de recurso compartido > es el nombre del recurso compartido SMB. 
+   \<ShareName> es el nombre del recurso compartido de SMB. 
    
-1. Para el sistema de bases de datos o cualquier elemento almacenado en la ubicación de datos predeterminada siga estos pasos. En caso contrario, vaya al paso 5. 
+1. En el caso de las bases de datos del sistema o cualquier elemento almacenado en la ubicación de datos predeterminada, siga estos pasos. De lo contrario, vaya al paso 5. 
    
-   1. Asegúrese de que SQL Server se ha detenido en el servidor que está trabajando.
+   1. Asegúrese de que SQL Server está detenido en el servidor en el que está trabajando.
       ```bash
       sudo systemctl stop mssql-server
       sudo systemctl status mssql-server
       ```
       
-   1. Conmutador totalmente que será el superusuario. No recibirá ninguna confirmación si se realiza correctamente.
+   1. Cambie por completo para ser el superusuario. No recibirá ninguna confirmación si se realiza correctamente.
       
       ```bash
       sudo -i
       ```
       
-   1. Cambiar a ser el usuario de mssql. No recibirá ninguna confirmación si se realiza correctamente.
+   1. Cambie para ser el usuario de mssql. No recibirá ninguna confirmación si se realiza correctamente.
       
       ```bash
       su mssql
       ```
       
-   1. Cree un directorio temporal para almacenar los datos de SQL Server y los archivos de registro. No recibirá ninguna confirmación si se realiza correctamente.
+   1. Cree un directorio temporal para almacenar los archivos de registro y los datos de SQL Server. No recibirá ninguna confirmación si se realiza correctamente.
       
       ```bash
       mkdir <TempDir>
       ```
       
-      \<TempDir > es el nombre de la carpeta. El ejemplo siguiente crea una carpeta denominada /var/opt/mssql/tmp.
+      \<TempDir> es el nombre de la carpeta. En el ejemplo siguiente se crea una carpeta denominada /var/opt/mssql/tmp.
       
       ```bash
       mkdir /var/opt/mssql/tmp
       ```
       
-   1. Copie los archivos de registro y datos de SQL Server en el directorio temporal. No recibirá ninguna confirmación si se realiza correctamente.
+   1. Copie los archivos de registro y los datos de SQL Server en el directorio temporal. No recibirá ninguna confirmación si se realiza correctamente.
       
       ```bash
       cp /var/opt/mssql/data/* <TempDir>
       ```
       
-      \<TempDir > es el nombre de la carpeta en el paso anterior.
+      \<TempDir> es el nombre de la carpeta del paso anterior.
       
    1. Compruebe que los archivos están en el directorio.
       
@@ -96,9 +96,9 @@ Estas son algunas sugerencias y notas para utilizar correctamente SMB:
       ls <TempDir>
       ```
       
-      \<TempDir > es el nombre de la carpeta del paso d.
+      \<TempDir> es el nombre de la carpeta del paso d.
       
-   1. Elimine los archivos del directorio de datos de SQL Server existente. No recibirá ninguna confirmación si se realiza correctamente.
+   1. Elimine los archivos del directorio de datos de SQL Server existente. No recibirá ninguna confirmación si se realiza correctamente.
       
       ```bash
       rm - f /var/opt/mssql/data/*
@@ -112,149 +112,149 @@ Estas son algunas sugerencias y notas para utilizar correctamente SMB:
       
    1. Escriba exit para volver al usuario raíz.
       
-   1. Monte el recurso compartido SMB en la carpeta de datos de SQL Server. No recibirá ninguna confirmación si se realiza correctamente. En este ejemplo se muestra la sintaxis para conectarse a un recurso compartido de SMB 3.0 de basado en Windows Server.
+   1. Monte el recurso compartido de SMB en la carpeta de datos de SQL Server. No recibirá ninguna confirmación si se realiza correctamente. En este ejemplo se muestra la sintaxis para conectarse a un recurso compartido de SMB 3.0 basado en Windows Server.
       
       ```bash
       Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
       ```
       
-      \<ServerName > es el nombre del servidor con el recurso compartido SMB
+      \<ServerName> es el nombre del servidor con el recurso compartido de SMB.
       
-      \<Nombre de recurso compartido > es el nombre del recurso compartido
+      \<ShareName> es el nombre del recurso compartido.
       
-      \<Nombre de usuario > es el nombre del usuario para acceder al recurso compartido
+      \<UserName> es el nombre del usuario para acceder al recurso compartido.
       
-      \<Contraseña > es la contraseña del usuario
+      \<Password> es la contraseña del usuario.
       
-      \<dominio > es el nombre de Active Directory
+      \<domain> es el nombre de Active Directory.
       
-      \<mssqlUID > es el identificador exclusivo del usuario de mssql 
+      \<mssqlUID> es el UID del usuario de mssql. 
       
-      \<mssqlGID > es el GID del usuario de mssql
+      \<mssqlGID> es el GID del usuario de mssql.
       
-   1. Compruebe que el montaje fue correcto mediante la emisión de montaje sin los modificadores.
+   1. Para comprobar que el montaje se ha realizado correctamente, envíe mount sin modificadores.
       
       ```bash
       mount
       ```
       
-   1. Cambie al usuario mssql. No recibirá ninguna confirmación si se realiza correctamente.
+   1. Cambie al usuario de mssql. No recibirá ninguna confirmación si se realiza correctamente.
       
       ```bash
       su mssql
       ```
       
-   1. Copie los archivos desde el directorio temporal de /var/opt/mssql/data. No recibirá ninguna confirmación si se realiza correctamente.
+   1. Copie los archivos del directorio temporal /var/opt/mssql/data. No recibirá ninguna confirmación si se realiza correctamente.
       
       ```bash
       cp /var/opt/mssql/tmp/* /var/opt/mssql/data
       ```
       
-   1. Compruebe que existen los archivos.
+   1. Compruebe que los archivos están allí.
       
       ```bash
       ls /var/opt/mssql/data
       ```
       
-   1. Escriba la salida para que no sea mssql 
+   1. Escriba exit para no ser mssql. 
       
-   1. Escriba la salida para que no sea raíz
+   1. Escriba exit para no ser el usuario raíz.
    
-   1. Inicie SQL Server. Si todo lo que se copió correctamente y seguridad aplicada correctamente, SQL Server debe aparecer como iniciado.
+   1. Inicie SQL Server. Si todo se ha copiado correctamente y la seguridad se ha aplicado correctamente, SQL Server debería mostrarse como iniciado.
       
       ```bash
       sudo systemctl start mssql-server
       sudo systemctl status mssql-server
       ```
       
-   1. Para realizar más pruebas, cree una base de datos para asegurarse de que los permisos están bien. En el ejemplo siguiente se utiliza Transact-SQL; Puede usar SSMS.
+   1. Para seguir probando, cree una base de datos para asegurarse de que los permisos sean correctos. En el ejemplo siguiente se usa Transact-SQL; puede usar SSMS.
       
       ![10_testcreatedb][2] 
       
-   1. Detener SQL Server y comprobar que es apagar. Si va a agregar o probar otros discos, no apague SQL Server hasta que los que se agregan y probados.
+   1. Detenga SQL Server y compruebe que se ha apagado. Si va a agregar o probar otros discos, no apague SQL Server hasta que se agreguen y prueben.
       
       ```bash
       sudo systemctl stop mssql-server
       sudo systemctl status mssql-server
       ```
       
-   1. Solo si terminado, desmonte el recurso compartido. Si no es así, desmontar después de finalizar las pruebas y agregar discos adicionales.
+   1. Solo si ha finalizado, desmonte el recurso compartido. En caso contrario, desmóntelo después de terminar de probar o agregar los discos adicionales.
       
       ```bash
       sudo umount //<IPAddressorServerName>/<ShareName /<FolderMountedIn>
       ```
       
-      \<IPAddressOrServerName > es la dirección IP o nombre del host SMB
+      \<IPAddressOrServerName> es la dirección IP o el nombre del host de SMB.
       
-      \<Nombre de recurso compartido > es el nombre del recurso compartido
+      \<ShareName> es el nombre del recurso compartido.
       
-      \<FolderMountedIn > es el nombre de la carpeta donde se monta SMB
+      \<FolderMountedIn> es el nombre de la carpeta donde se ha montado SMB.
       
-5. Para elementos distintos de las bases de datos del sistema, como las bases de datos de usuario o las copias de seguridad, siga estos pasos. Si solo usa la ubicación predeterminada, vaya al paso 14.
+5. Para comprobar otros aspectos que no sean las bases de datos del sistema (por ejemplo, las bases de datos de usuario o las copias de seguridad), siga estos pasos. Si solo usa la ubicación predeterminada, vaya al paso 14.
    
-   1. Conmutador que será el superusuario. No recibirá ninguna confirmación si se realiza correctamente.
+   1. Cambie para ser el superusuario. No recibirá ninguna confirmación si se realiza correctamente.
       
       ```bash
       sudo -i
       ```
       
-   1. Cree una carpeta que se usará en SQL Server. 
+   1. Cree una carpeta que usará SQL Server. 
       
       ```bash
       mkdir <FolderName>
       ```
       
-      \<Nombre de carpeta > es el nombre de la carpeta. Ruta de acceso completa de la carpeta debe especificarse si no están en la ubicación correcta. El ejemplo siguiente crea una carpeta denominada /var/opt/mssql/userdata.
+      \<FolderName> es el nombre de la carpeta. Es necesario especificar la ruta de acceso completa de la carpeta si no está en la ubicación correcta. En el ejemplo siguiente se crea una carpeta denominada /var/opt/mssql/userdata.
       
       ```bash
       mkdir /var/opt/mssql/userdata
       ```
       
-   1. Monte el recurso compartido SMB en la carpeta de datos de SQL Server. No recibirá ninguna confirmación si se realiza correctamente. En este ejemplo se muestra la sintaxis para conectarse a un recurso compartido basado en Samba SMB 3.0.
+   1. Monte el recurso compartido de SMB en la carpeta de datos de SQL Server. No recibirá ninguna confirmación si se realiza correctamente. En este ejemplo se muestra la sintaxis para conectarse a un recurso compartido de SMB 3.0 basado en Samba.
       
       ```bash
       Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
       ```
       
-      \<ServerName > es el nombre del servidor con el recurso compartido SMB
+      \<ServerName> es el nombre del servidor con el recurso compartido de SMB.
       
-      \<Nombre de recurso compartido > es el nombre del recurso compartido
+      \<ShareName> es el nombre del recurso compartido.
       
-      \<Nombre de carpeta > es el nombre de la carpeta creada en el último paso  
+      \<FolderName> es el nombre de la carpeta creada en el último paso.  
       
-      \<Nombre de usuario > es el nombre del usuario para acceder al recurso compartido
+      \<UserName> es el nombre del usuario para acceder al recurso compartido.
       
-      \<Contraseña > es la contraseña del usuario
+      \<Password> es la contraseña del usuario.
       
-      \<mssqlUID > es el identificador exclusivo del usuario de mssql
+      \<mssqlUID> es el UID del usuario de mssql.
       
-      \<mssqlGID > es el GID del usuario de mssql.
+      \<mssqlGID> es el GID del usuario de mssql.
       
-   1. Compruebe que el montaje fue correcto mediante la emisión de montaje sin los modificadores.
+   1. Para comprobar que el montaje se ha realizado correctamente, envíe mount sin modificadores.
    
-   1. Tipo de salida ya no sea el superusuario.
+   1. Escriba exit para dejar de ser el superusuario.
    
-   1. Para probar, cree una base de datos en esa carpeta. El ejemplo siguiente usa sqlcmd para crear una base de datos, cambiar el contexto a ella, compruebe los archivos existen en el nivel de sistema operativo y, a continuación, elimina la ubicación temporal. Puede usar SSMS.
+   1. Para probar, cree una base de datos en esa carpeta. En el ejemplo siguiente se usa sqlcmd para crear una base de datos, cambiar el contexto a ella y comprobar que los archivos existen en el nivel del sistema operativo; después, se elimina la ubicación temporal. Puede usar SSMS.
    
-   1. Desmontar el recurso compartido 
+   1. Desmontaje del recurso compartido 
       
       ```bash
       sudo umount //<IPAddressorServerName>/<ShareName> /<FolderMountedIn>
       ```
       
-      \<IPAddressOrServerName > es la dirección IP o nombre del host SMB
+      \<IPAddressOrServerName> es la dirección IP o el nombre del host de SMB.
       
-      \<Nombre de recurso compartido > es el nombre del recurso compartido
+      \<ShareName> es el nombre del recurso compartido.
       
-      \<FolderMountedIn > es el nombre de la carpeta donde se monta SMB.
+      \<FolderMountedIn> es el nombre de la carpeta donde se ha montado SMB.
    
 1. Repita los pasos en los demás nodos.
 
-Ahora está listo para configurar la FCI.
+Ya puede configurar la FCI.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Configurar la instancia de clúster de conmutación por error: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure.md)
+[Configurar la instancia de clúster de conmutación por error: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-smb/05-smbsource.png 

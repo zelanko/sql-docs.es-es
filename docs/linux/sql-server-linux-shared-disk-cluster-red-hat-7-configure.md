@@ -1,6 +1,6 @@
 ---
-title: Configuración de clúster compartido de Red Hat Enterprise Linux para SQL Server
-description: Implementar la alta disponibilidad mediante la configuración de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server.
+title: Configuración del clúster compartido de Red Hat Enterprise Linux para SQL Server
+description: Implemente la alta disponibilidad al configurar el clúster de disco compartido de Red Hat Enterprise Linux para SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,66 +10,66 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032281"
 ---
-# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración de clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
+# <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración del clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Esta guía proporciona instrucciones para crear un clúster de disco compartido de dos nodos para SQL Server en Red Hat Enterprise Linux. El nivel de agrupación en clústeres se basa en Red Hat Enterprise Linux (RHEL) [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) construidos sobre [Pacemaker](https://clusterlabs.org/). La instancia de SQL Server está activa en un nodo o la otra.
+En esta guía se proporcionan instrucciones para crear un clúster de disco compartido de dos nodos para SQL Server en Red Hat Enterprise Linux. La capa de agrupación en clústeres se basa en el [complemento HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) de Red Hat Enterprise Linux (RHEL) sobre [Pacemaker](https://clusterlabs.org/). La instancia de SQL Server está activa en un nodo o en el otro.
 
 > [!NOTE] 
-> Acceso a Red Hat alta disponibilidad de complementos y documentación requiere una suscripción. 
+> El acceso al complemento de alta disponibilidad y la documentación de Red Hat exige una suscripción. 
 
-Como se muestra en el siguiente diagrama, almacenamiento se presenta en dos servidores. Componentes de agrupación en clústeres, Corosync y Pacemaker, coordinan las comunicaciones y administración de recursos. Uno de los servidores tiene la conexión activa a los recursos de almacenamiento y el servidor SQL Server. Cuando Pacemaker detecta un error de los componentes de agrupación en clústeres administran mover los recursos a otro nodo.  
+Como se muestra en el diagrama siguiente, el almacenamiento se presenta en dos servidores. Los componentes de agrupación en clústeres (Corosync y Pacemaker) coordinan las comunicaciones y la administración de recursos. Uno de los servidores tiene la conexión activa a los recursos de almacenamiento y SQL Server. Cuando Pacemaker detecta un error, los componentes de agrupación en clústeres administran el traslado de los recursos al otro nodo.  
 
-![Red Hat Enterprise Linux 7 compartidos de clúster de disco de SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+![Clúster de SQL de disco compartido de Red Hat Enterprise Linux 7](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
-Para obtener más información sobre la configuración del clúster, las opciones de los agentes de recursos y administración, visite [documentación de referencia RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
+Para obtener más información sobre la configuración del clúster, las opciones de los agentes de recursos y la administración, vaya a la [documentación de referencia de RHEL](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/High_Availability_Add-On_Reference/index.html).
 
 
 > [!NOTE] 
-> En este momento, integración de SQL Server con Pacemaker no es tan acoplamiento como con WSFC en Windows. Desde dentro de SQL, no hay ningún conocimiento sobre la presencia del clúster, todas las orquestaciones está fuera de y Pacemaker controla el servicio como una instancia independiente. También, por ejemplo, sys.dm_os_cluster_properties y clúster DMV sys.dm_os_cluster_nodes no realizará ningún registro.
-Para usar una cadena de conexión que apunta a un nombre de servidor de la cadena y no usar la dirección IP, tendrá que registrar la dirección IP usada para crear el recurso IP virtual (como se explica en las secciones siguientes) en su servidor DNS con el nombre de servidor elegido.
+> En este momento, la integración de SQL Server con Pacemaker no es tan perfecta como con WSFC en Windows. Desde dentro de SQL no hay conocimiento sobre la presencia del clúster, toda la orquestación está fuera y Pacemaker controla el servicio como una instancia independiente. Además, por ejemplo, las DMV de clúster sys.dm_os_cluster_nodes y sys.dm_os_cluster_properties no crearán ningún registro.
+Para usar una cadena de conexión que apunte al nombre de servidor de una cadena y no use la dirección IP, se tiene que registrar en su servidor DNS la dirección IP usada para crear el recurso de IP virtual (como se explica en las secciones siguientes) con el nombre de servidor elegido.
 
-Las siguientes secciones se guiarán por los pasos para configurar una solución de clúster de conmutación por error. 
+En las siguientes secciones se describen los pasos necesarios para configurar una solución de clúster de conmutación por error. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Para completar el siguiente escenario de extremo a otro, debe tener dos máquinas para implementar el clúster de dos nodos y otro servidor para configurar el servidor NFS. Los pasos siguientes describen cómo se configurará estos servidores.
+Para completar el siguiente escenario de un extremo a otro, necesita dos máquinas para implementar el clúster de dos nodos y otro servidor para configurar el servidor de NFS. En los pasos siguientes se describe cómo se configurarán estos servidores.
 
-## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Instalar y configurar el sistema operativo en cada nodo del clúster
+## <a name="setup-and-configure-the-operating-system-on-each-cluster-node"></a>Instalación y configuración del sistema operativo en cada nodo del clúster
 
-El primer paso es configurar el sistema operativo en los nodos del clúster. Para este tutorial, use RHEL con una suscripción válida para el complemento de alta disponibilidad. 
+El primer paso es configurar el sistema operativo en los nodos del clúster. A efectos de este tutorial, use RHEL con una suscripción válida para el complemento de alta disponibilidad. 
 
-## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Instalar y configurar SQL Server en cada nodo del clúster
+## <a name="install-and-configure-sql-server-on-each-cluster-node"></a>Instalación y configuración de SQL Server en cada nodo de clúster
 
-1. Instalar y configurar SQL Server en ambos nodos.  Para obtener instrucciones detalladas, consulte [instalar SQL Server en Linux](sql-server-linux-setup.md).
+1. Instale y configure SQL Server en ambos nodos.  Para obtener instrucciones detalladas, vea [Instalación de SQL Server en Linux](sql-server-linux-setup.md).
 
-1. Designar un nodo como principal y el otro como secundario para fines de configuración. Usar estos términos para los siguientes elementos en esta guía.  
+1. Para configurarlos, designe un nodo como principal y el otro como secundario. Use estos términos durante esta guía.  
 
-1. En el nodo secundario, detenga y deshabilite a SQL Server.
+1. En el nodo secundario, detenga y deshabilite SQL Server.
 
-   El ejemplo siguiente se detiene y deshabilita el SQL Server: 
+   En el siguiente ejemplo se detiene y se deshabilita SQL Server: 
 
    ```bash
    sudo systemctl stop mssql-server
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> Durante la instalación, se genera para la instancia de SQL Server y se coloca en una clave maestra del servidor `/var/opt/mssql/secrets/machine-key`. En Linux, SQL Server siempre se ejecuta como una cuenta local denominada mssql. Dado que es una cuenta local, su identidad no se comparte entre los nodos. Por lo tanto, deberá copiar la clave de cifrado del nodo principal en cada nodo secundario para cada cuenta local mssql pueda acceder a él para descifrar la clave maestra del servidor. 
+> En el momento de la instalación, se genera una clave maestra del servidor para la instancia de SQL Server y se coloca en `/var/opt/mssql/secrets/machine-key`. En Linux, SQL Server siempre se ejecuta como una cuenta local denominada mssql. Dado que se trata de una cuenta local, su identidad no se comparte entre los nodos. Por lo tanto, debe copiar la clave de cifrado del nodo principal en cada nodo secundario para que cada cuenta local de mssql pueda acceder a ella y así descifrar la clave maestra del servidor. 
 
-1. En el nodo principal, cree un inicio de sesión SQL server para Pacemaker y conceda el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Pacemaker usa esta cuenta para comprobar qué nodo se está ejecutando SQL Server. 
+1. En el nodo principal, cree un inicio de sesión de SQL Server para Pacemaker y conceda el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Pacemaker usa esta cuenta para comprobar qué nodo ejecuta SQL Server. 
 
    ```bash
    sudo systemctl start mssql-server
    ```
 
-   Conectarse a SQL Server `master` de base de datos con la cuenta de administrador y ejecute lo siguiente:
+   Conéctese a la base de datos `master` de SQL Server con la cuenta "sa" y ejecute lo siguiente:
 
    ```bashsql
    USE [master]
@@ -78,24 +78,24 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. Par
 
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
-   Como alternativa, puede establecer los permisos con más detalle. El inicio de sesión de Pacemaker requiere `VIEW SERVER STATE` para consultar el estado de mantenimiento con sp_server_diagnostics, `setupadmin` y `ALTER ANY LINKED SERVER` para actualizar el nombre de instancia FCI con el nombre del recurso mediante la ejecución sp_dropserver y sp_addserver. 
+   Como alternativa, puede establecer los permisos con más detalle. El inicio de sesión de Pacemaker requiere `VIEW SERVER STATE` para consultar el estado de mantenimiento con sp_server_diagnostics `setupadmin` y `ALTER ANY LINKED SERVER` para actualizar el nombre de instancia de FCI con el nombre de recurso mediante la ejecución de sp_dropserver y sp_addserver. 
 
-1. En el nodo principal, detenga y deshabilite a SQL Server. 
+1. En el nodo principal, detenga y deshabilite SQL Server. 
 
-1. Configurar el archivo de hosts para cada nodo del clúster. El archivo de host debe incluir la dirección IP y el nombre de cada nodo del clúster. 
+1. Configure el archivo de hosts para cada nodo de clúster. El archivo de host debe incluir la dirección IP y el nombre de cada nodo de clúster. 
 
-    Compruebe la dirección IP para cada nodo. El siguiente script muestra la dirección IP del nodo actual. 
+    Compruebe la dirección IP de cada nodo. En el siguiente script se muestra la dirección IP del nodo actual. 
 
    ```bash
    sudo ip addr show
    ```
 
-   Establezca el nombre del equipo en cada nodo. Asigne a cada nodo un nombre único que es de 15 caracteres o menos. Establece el nombre del equipo mediante la adición a `/etc/hosts`. El siguiente script le permite editar `/etc/hosts` con `vi`. 
+   Establezca el nombre de equipo en cada nodo. Asigne a cada nodo un nombre único que tenga 15 caracteres o menos. Para establecer el nombre de equipo, agréguelo a `/etc/hosts`. El siguiente script le permite editar `/etc/hosts` con `vi`. 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   El ejemplo siguiente muestra `/etc/hosts` con adiciones de dos nodos denominados `sqlfcivm1` y `sqlfcivm2`.
+   En el ejemplo siguiente se muestra `/etc/hosts` con adiciones para dos nodos denominados `sqlfcivm1` y `sqlfcivm2`.
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -104,65 +104,65 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. Par
    10.128.16.77 sqlfcivm2
    ```
 
-En la siguiente sección configurará el almacenamiento compartido y mover los archivos de base de datos a la que el almacenamiento. 
+En la siguiente sección, configurará el almacenamiento compartido y moverá los archivos de base de datos a ese almacenamiento. 
 
-## <a name="configure-shared-storage-and-move-database-files"></a>Configurar el almacenamiento compartido y mover archivos de base de datos 
+## <a name="configure-shared-storage-and-move-database-files"></a>Configuración del almacenamiento compartido y movimiento de los archivos de base de datos 
 
-Hay una variedad de soluciones para proporcionar almacenamiento compartido. Este tutorial muestra cómo configurar el almacenamiento compartido NFS. Se recomienda seguir los procedimientos recomendados y utilizar Kerberos para proteger NFS (puede encontrar un ejemplo aquí: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+Hay varias soluciones para proporcionar almacenamiento compartido. En este tutorial se muestra cómo configurar el almacenamiento compartido con NFS. Le recomendamos que siga los procedimientos recomendados y use Kerberos para proteger NFS (encontrará un ejemplo aquí: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
 
 >[!Warning]
->Si no lo protegen NFS, a continuación, cualquier persona que puede tener acceso a la red y suplantar la identidad de la dirección IP de un nodo de SQL podrán acceder a los archivos de datos. Como siempre, asegúrese de modelamos amenazas de su sistema antes de usarlo en producción. Otra opción de almacenamiento es usar el recurso compartido de archivos SMB.
+>Si no protege NFS, cualquier persona que pueda acceder a la red y suplantar la dirección IP de un nodo SQL podrá acceder a los archivos de datos. Como siempre, asegúrese de llevar a cabo un análisis del modelo de amenazas de su sistema antes de usarlo en producción. Otra opción de almacenamiento es usar el recurso compartido de archivos SMB.
 
-### <a name="configure-shared-storage-with-nfs"></a>Configurar el almacenamiento compartido NFS
+### <a name="configure-shared-storage-with-nfs"></a>Configuración del almacenamiento compartido con NFS
 
 > [!IMPORTANT] 
-> Hospedaje de archivos de base de datos en un servidor NFS con la versión < 4 no se admite en esta versión. Esto incluye el uso de NFS para agrupación en clústeres, así como las bases de datos en instancias no clúster de conmutación por error de disco compartido. Estamos trabajando para habilitar otras versiones de servidor NFS en las próximas versiones. 
+> En esta versión no se admite el hospedaje de archivos de base de datos en un servidor NFS con una versión anterior a la v4. Esto incluye el uso de NFS para la agrupación en clústeres de conmutación por error de discos compartidos, así como las bases de datos en instancias que no están en clúster. Estamos trabajando para habilitar otras versiones del servidor NFS en las próximas versiones. 
 
-En el servidor NFS, realice lo siguiente:
+En el servidor NFS, haga lo siguiente:
 
-1. Instalar `nfs-utils`
+1. Instale `nfs-utils`.
 
    ```bash
    sudo yum -y install nfs-utils
    ```
 
-1. Habilitar e iniciar `rpcbind`
+1. Habilite e inicie `rpcbind`.
 
    ```bash
    sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
-1. Habilitar e iniciar `nfs-server`
+1. Habilite e inicie `nfs-server`.
  
    ```bash
    sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Editar `/etc/exports` para exportar el directorio que desea compartir. Necesita 1 línea para cada recurso compartido que desee. Por ejemplo: 
+1.  Edite `/etc/exports` para exportar el directorio que quiere compartir. Necesita 1 línea para cada recurso compartido que quiera. Por ejemplo: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)
    ```
 
-1. Exportar los recursos compartidos
+1. Exporte los recursos compartidos.
 
    ```bash
    sudo exportfs -rav
    ```
 
-1. Compruebe que las rutas de acceso compartido o exportar, ejecutar desde el servidor NFS
+1. Compruebe que las rutas de acceso se han compartido o exportado, ejecute desde el servidor NFS.
 
    ```bash
    sudo showmount -e
    ```
 
-1. Agregar excepción de SELinux
+1. Agregue una excepción en SELinux.
 
    ```bash
    sudo setsebool -P nfs_export_all_rw 1
    ```
    
-1. Abra el firewall del servidor.
+1. Abra el firewall en el servidor.
 
    ```bash 
    sudo firewall-cmd --permanent --add-service=nfs
@@ -171,17 +171,17 @@ En el servidor NFS, realice lo siguiente:
    sudo firewall-cmd --reload
    ```
 
-### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Configurar todos los nodos del clúster para conectarse al almacenamiento compartido NFS
+### <a name="configure-all-cluster-nodes-to-connect-to-the-nfs-shared-storage"></a>Configuración de todos los nodos de clúster para conectarse al almacenamiento compartido de NFS
 
-Siga estos pasos en todos los nodos del clúster.
+Realice los pasos siguientes en todos los nodos del clúster:
 
-1.  Instalar `nfs-utils`
+1.  Instale `nfs-utils`.
 
    ```bash
    sudo yum -y install nfs-utils
    ```
 
-1. Abra el firewall de los clientes y el servidor NFS
+1. Abra el firewall en los clientes y el servidor NFS.
 
    ```bash
    sudo firewall-cmd --permanent --add-service=nfs
@@ -190,7 +190,7 @@ Siga estos pasos en todos los nodos del clúster.
    sudo firewall-cmd --reload
    ```
 
-1. Compruebe que puede ver los recursos compartidos de NFS en los equipos cliente
+1. Compruebe que puede ver los recursos compartidos de NFS en los equipos cliente.
 
    ```bash
    sudo showmount -e <IP OF NFS SERVER>
@@ -200,13 +200,13 @@ Siga estos pasos en todos los nodos del clúster.
 
 Para obtener más información sobre el uso de NFS, consulte los siguientes recursos:
 
-* [NFS servidores y firewalld | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
+* [Servidores NFS y firewalls | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Montaje de un volumen NFS | Guía de administradores de red de Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [Configuración del servidor NFS | Red Hat Customer Portal](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [Configuración del servidor NFS | Portal del cliente de Red Hat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
-### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montar el directorio de archivos de base de datos para que apunte al almacenamiento compartido
+### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montaje del directorio de archivos de base de datos para que apunte al almacenamiento compartido
 
-1.  **En el nodo principal solo**, guardar los archivos de base de datos en una ubicación temporal. El siguiente script, crea un nuevo directorio temporal, copia los archivos de base de datos en el nuevo directorio y quita los archivos de base de datos antiguos. Como SQL Server se ejecuta como usuario local mssql, deberá asegurarse de que después de transferencia de datos para el recurso compartido montado, usuario local tiene acceso de lectura y escritura al recurso compartido. 
+1.  **Solo en el nodo principal**, guarde los archivos de base de datos en una ubicación temporal. El siguiente script crea un directorio temporal, copia los archivos de base de datos en el nuevo directorio y quita los archivos antiguos de base de datos. Como SQL Server se ejecuta como el usuario local mssql, debe asegurarse de que, después de transferir los datos al recurso compartido montado, el usuario local tiene acceso de lectura y escritura al recurso compartido. 
 
    ``` 
    $ sudo su mssql
@@ -216,23 +216,23 @@ Para obtener más información sobre el uso de NFS, consulte los siguientes recu
    $ exit
    ``` 
 
-1.  En todos los nodos del clúster editar `/etc/fstab` archivo para incluir el comando de montaje.  
+1.  En todos los nodos del clúster, edite el archivo `/etc/fstab` para que incluya el comando mount.  
 
    ```bash
    <IP OF NFS SERVER>:<shared_storage_path> <database_files_directory_path> nfs timeo=14,intr 
    ```
    
-   El siguiente script muestra un ejemplo de la edición.  
+   El script siguiente muestra un ejemplo de la edición:  
 
    ``` 
    10.8.8.0:/mnt/nfs /var/opt/mssql/data nfs timeo=14,intr 
    ``` 
 > [!NOTE] 
->Si usa un recurso de sistema de archivos (FS) como se recomienda aquí, no hay ninguna necesidad de conservar el comando de montaje en/etc/fstab. Pacemaker se encargará de la carpeta de montaje cuando se inicia el recurso de clúster de FS. Con la Ayuda de la barrera, se asegurará que la FS nunca se monta dos veces. 
+>Si usa un recurso del sistema de archivos (FS) como se recomienda aquí, no es necesario conservar el comando de montaje en /etc/fstab. Pacemaker se encargará de montar la carpeta cuando inicie el recurso en clúster del FS. Con la ayuda de las barreras, se asegurará de que el FS nunca se monta dos veces. 
 
-1.  Ejecute `mount -a` comando del sistema actualizar las rutas de acceso montados.  
+1.  Ejecute el comando `mount -a` para que el sistema actualice las rutas de acceso montadas.  
 
-1.  Copie los archivos de base de datos y registro que guardó en `/var/opt/mssql/tmp` para el recurso compartido montado recién `/var/opt/mssql/data`. Esto solo debe hacerse **en el nodo principal**. Asegúrese de conceder permisos de lectura y escritura al usuario local 'mssql'.
+1.  Copie los archivos de base de datos y de registro que guardó en `/var/opt/mssql/tmp` en el recurso compartido `/var/opt/mssql/data` recién montado. Solo es necesario hacerlo **en el nodo principal**. Asegúrese de conceder permisos de lectura y escritura al usuario local "MSSQL".
 
    ``` 
    $ sudo chown mssql /var/opt/mssql/data
@@ -243,7 +243,7 @@ Para obtener más información sobre el uso de NFS, consulte los siguientes recu
    $ exit
    ``` 
  
-1.  Compruebe que SQL Server se inicia correctamente con la nueva ruta de acceso. Hacer esto en cada nodo. En este momento sólo un nodo debe ejecutar SQL Server a la vez. No pueden ambos ejecutar al mismo tiempo ya que ambos intentará tener acceso a los archivos de datos al mismo tiempo (para evitar accidentalmente iniciar SQL Server en ambos nodos, use un recurso de clúster del sistema de archivos para asegurarse de que no se monta el recurso compartido de dos veces por los diferentes nodos). Los siguientes comandos iniciar SQL Server, comprueban el estado y, a continuación, detener SQL Server.
+1.  Compruebe que SQL Server se inicia correctamente con la nueva ruta de acceso del archivo. Haga esto en cada nodo. En este momento, solo un nodo debe ejecutar SQL Server a la vez. No se pueden ejecutar ambos al mismo tiempo, ya que intentarán acceder a los archivos de datos simultáneamente (para evitar iniciar por error SQL Server en ambos nodos, use un recurso de clúster del sistema de archivos para asegurarse de que el recurso compartido no se monta dos veces en diferentes nodos). Los siguientes comandos inician SQL Server, comprueban el estado y después detienen SQL Server.
  
    ```bash
    sudo systemctl start mssql-server
@@ -251,7 +251,7 @@ Para obtener más información sobre el uso de NFS, consulte los siguientes recu
    sudo systemctl stop mssql-server
    ```
  
-En este punto, ambas instancias de SQL Server configuradas para ejecutarse con los archivos de base de datos en el almacenamiento compartido. El siguiente paso es configurar SQL Server para Pacemaker. 
+En este momento, ambas instancias de SQL Server están configuradas para ejecutarse con los archivos de base de datos en el almacenamiento compartido. El siguiente paso consiste en configurar SQL Server para Pacemaker. 
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Instalación y configuración de Pacemaker en cada nodo del clúster
 
@@ -273,10 +273,10 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
    sudo firewall-cmd --reload
    ```
 
-   > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, los puertos siguientes es necesario abrir para que Pacemaker pueda comunicarse con otros nodos del clúster
+   > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, deberán abrirse los puertos siguientes para que Pacemaker pueda comunicarse con otros nodos del clúster.
    >
-   > * TCP: Puertos 2224, 3121, 21064
-   > * UDP: Puerto 5405
+   > * TCP: puertos 2224, 3121 y 21064
+   > * UDP: puerto 5405
 
 1. Instale paquetes de Pacemaker en cada nodo.
 
@@ -308,7 +308,7 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
    sudo yum install mssql-server-ha
    ```
 
-## <a name="create-the-cluster"></a>Crear el clúster 
+## <a name="create-the-cluster"></a>Creación del clúster 
 
 1. En uno de los nodos, cree el clúster.
 
@@ -318,26 +318,26 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
    sudo pcs cluster start --all
    ```
 
-   > Complemento de alta disponibilidad de RHEL tiene agentes de vallado de KVM y VMWare. Vallado debe deshabilitarse en todos los demás hipervisores. No se recomienda deshabilitar agentes de barrera en entornos de producción. A partir de período de tiempo, no hay ningún agente de barrera para entornos Hyper-v o en la nube. Si está ejecutando una de estas configuraciones, deberá deshabilitar la barrera. \**NO se recomienda en un sistema de producción.* *
+   > El complemento de alta disponibilidad de RHEL incluye agentes de barrera para VMWare y KVM. Las barreras deben deshabilitarse en los demás hipervisores. No se recomienda deshabilitar los agentes de barrera en entornos de producción. A partir del período de tiempo, no hay ningún agente de barrera para los entornos de nube o de Hyper-V. Si está ejecutando una de estas configuraciones, debe deshabilitar las barreras. \**No se recomienda hacerlo en un sistema de producción.* *
 
-   El siguiente comando deshabilita a los agentes de barrera.
+   El siguiente comando deshabilita los agentes de barrera.
 
    ```bash
    sudo pcs property set stonith-enabled=false
    sudo pcs property set start-failure-is-fatal=false
    ```
 
-2. Configurar los recursos de clúster de SQL Server, el sistema de archivos y recursos IP virtuales e inserte la configuración en el clúster. Necesita la siguiente información:
+2. Configure los recursos de clúster para SQL Server, el sistema de archivos y los recursos de IP virtual e inserte la configuración en el clúster. Necesita la siguiente información:
 
-   - **Nombre del recurso SQL Server**: Un nombre para el recurso de SQL Server en clúster. 
-   - **Nombre del recurso IP de flotante**: Un nombre para el recurso de dirección IP virtual.
-   - **Dirección IP**: La dirección IP que los clientes usarán para conectarse a la instancia en clúster de SQL Server. 
-   - **Nombre del recurso del sistema de archivos**: Un nombre para el recurso de sistema de archivos.
-   - **device**: El recurso compartido NFS ruta de acceso
-   - **device**: La ruta de acceso local que está montado en el recurso compartido
-   - **fstype**: Tipo de recurso compartido de archivo (es decir, nfs)
+   - **Nombre del recurso de SQL Server**: nombre de recurso de SQL Server en clúster. 
+   - **Nombre de recurso de IP flotante**: nombre de recurso de la dirección IP virtual.
+   - **Dirección IP**: dirección IP que los clientes usarán para conectarse a la instancia en clúster de SQL Server. 
+   - **Nombre de recurso del sistema de archivos**: nombre de recurso del sistema de archivos.
+   - **dispositivo**: ruta de acceso del recurso compartido de NFS.
+   - **dispositivo**: ruta de acceso local que se monta en el recurso compartido.
+   - **fstype**: tipo de recurso compartido de archivos (p. ej. nfs).
 
-   Actualice los valores de la siguiente secuencia de comandos para su entorno. Ejecutar en un nodo para configurar e iniciar el servicio en clúster.  
+   Actualice los valores del siguiente script para su entorno. Ejecute en un nodo para configurar e iniciar el servicio en clúster.  
 
    ```bash
    sudo pcs cluster cib cfg 
@@ -349,7 +349,7 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
    sudo pcs cluster cib-push cfg
    ```
 
-   Por ejemplo, el script siguiente crea un recurso de SQL Server en clúster denominado `mssqlha`y un recurso IP flotante con dirección IP `10.0.0.99`. También crea un recurso del sistema de archivos y agrega restricciones, por lo que todos los recursos se colocarán en el mismo nodo que el recurso de SQL. 
+   Por ejemplo, el siguiente script crea un recurso en clúster de SQL Server denominado `mssqlha` y recursos con una dirección IP flotante `10.0.0.99`. También crea un recurso de sistema de archivos y agrega restricciones para que todos los recursos se coloquen en el mismo nodo que el recurso de SQL. 
 
    ```bash
    sudo pcs cluster cib cfg
@@ -361,15 +361,15 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
    sudo pcs cluster cib-push cfg
    ```
 
-   Una vez que se inserta la configuración, se iniciará SQL Server en un nodo. 
+   Una vez insertada la configuración, SQL Server se iniciará en un nodo. 
 
-3. Compruebe que se inició SQL Server. 
+3. Confirme que se ha iniciado SQL Server. 
 
    ```bash
    sudo pcs status 
    ```
 
-   Los ejemplos siguientes muestran los resultados cuando Pacemaker se ha iniciado correctamente una instancia agrupada de SQL Server. 
+   En los siguientes ejemplos se muestran los resultados si Pacemaker ha iniciado correctamente una instancia en clúster de SQL Server. 
 
    ```
    fs     (ocf::heartbeat:Filesystem):    Started sqlfcivm1
@@ -388,8 +388,8 @@ En este punto, ambas instancias de SQL Server configuradas para ejecutarse con l
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-* [Desde el principio del clúster](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) Guía de Pacemaker
+* Guía [Clústeres partiendo de cero](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) de Pacemaker
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Usar SQL Server en clúster de disco compartido de Red Hat Enterprise Linux](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+[Operación de SQL Server en el clúster de disco compartido de Red Hat Enterprise Linux](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

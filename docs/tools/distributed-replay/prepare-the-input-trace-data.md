@@ -21,7 +21,7 @@ ms.locfileid: "67949993"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Para poder iniciar una repetición distribuida con la característica Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe preparar la información de seguimiento de entrada iniciando la fase de preprocesamiento desde la herramienta de administración de reproducción distribuida. En la fase de preprocesamiento, el controlador de reproducción distribuida procesa la información de seguimiento y genera un archivo intermedio:  
   
- ![Fase] de preprocesamiento de Distributed Replay (../../tools/distributed-replay/media/preprocess.gif "Fase") de preprocesamiento de Distributed Replay  
+ ![Fase de preprocesamiento de Distributed Replay ](../../tools/distributed-replay/media/preprocess.gif "Fase de preprocesamiento de Distributed Replay")  
   
  Para obtener más información sobre la fase de preprocesamiento, vea [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   

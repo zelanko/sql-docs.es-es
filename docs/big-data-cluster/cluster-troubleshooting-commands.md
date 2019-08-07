@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 272249b7bd6c22895b7d10e7fbce4a20cb647a49
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c02acd7d881ce4237468b70e140084847fcbdead
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419483"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794973"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Supervisión y solución de problemas de clústeres de macrodatos de SQL Server
 
@@ -92,7 +92,7 @@ Si se ha producido algún error, a veces puede verlo en los eventos recientes de
 Puede recuperar los registros de los contenedores que se ejecutan en un pod. El siguiente comando recupera los registros de todos los contenedores que se ejecutan en el pod denominado `master-0` y los envía a un archivo denominado `master-0-pod-logs.txt`:
 
 ```bash
-kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
 ## <a id="services"></a> Obtención del estado de los servicios
@@ -111,7 +111,7 @@ kubectl get svc -n mssql-cluster
 
 Los siguientes servicios admiten conexiones externas al clúster de macrodatos:
 
-| ssNoVersion | Descripción |
+| Servicio | Descripción |
 |---|---|
 | **master-svc-external** | Proporciona acceso a la instancia maestra.<br/>(**EXTERNAL-IP,31433** y el usuario de **SA**) |
 | **controller-svc-external** | Admite herramientas y clientes que administran el clúster. |

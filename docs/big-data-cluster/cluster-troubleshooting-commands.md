@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c02acd7d881ce4237468b70e140084847fcbdead
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
-ms.translationtype: HT
+ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794973"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841559"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Supervisión y solución de problemas de clústeres de macrodatos de SQL Server
 
@@ -133,36 +133,6 @@ En el ejemplo siguiente se recuperan los detalles del servicio **master-svc-exte
 
 ```bash
 kubectl describe service master-svc-external -n mssql-cluster
-```
-
-## <a name="run-commands-in-a-container"></a>Ejecución de comandos en un contenedor
-
-Si las herramientas o la infraestructura existentes no le permiten realizar una tarea determinada sin estar realmente en el contexto del contenedor, puede iniciar sesión en el contenedor mediante el comando `kubectl exec`. Por ejemplo, puede que tenga que comprobar si existe un archivo específico o puede que necesite reiniciar los servicios del contenedor. 
-
-Para usar el comando `kubectl exec`, utilice la siguiente sintaxis:
-
-```bash
-kubectl exec -it <pod_name>  -c <container_name> -n <namespace_name> -- /bin/bash <command name> 
-```
-
-En las dos secciones siguientes se proporcionan dos ejemplos de ejecución de un comando en un contenedor específico.
-
-### <a id="restartsql"></a> Inicio de sesión en un contenedor específico y reinicio del proceso de SQL Server
-
-En el ejemplo siguiente se muestra cómo reiniciar el proceso de SQL Server en el contenedor `mssql-server` del pod `master-0`:
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl restart mssql
-```
-
-### <a id="restartservices"></a> Inicio de sesión en un contenedor específico y reinicio de los servicios de un contenedor
- 
-En el ejemplo siguiente se muestra cómo reiniciar todos los servicios que administra **supervisord**: 
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
 ## <a id="copy"></a> Copia de archivos

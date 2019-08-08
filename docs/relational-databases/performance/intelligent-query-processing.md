@@ -2,7 +2,7 @@
 title: Procesamiento de consultas inteligente en bases de datos de Microsoft SQL | Microsoft Docs
 description: Características de procesamiento de consultas inteligente para mejorar el rendimiento de las consultas en SQL Server y Azure SQL Database.
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,22 +12,22 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354626"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388366"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-La familia de características de procesamiento de consultas inteligentes incluye características con un gran impacto que mejoran el rendimiento de las cargas de trabajo existentes con un esfuerzo de implementación mínimo para adoptar. 
+La familia de características de procesamiento de consultas inteligentes incluye características con un gran impacto que mejoran el rendimiento de las cargas de trabajo existentes con un esfuerzo de implementación mínimo. 
 
 ![Procesamiento de consultas inteligentes](./media/iqp-feature-family.png)
 
-Puede hacer que las cargas de trabajo sean aptas automáticamente para el procesamiento de consultas inteligentes si habilita el nivel de compatibilidad de base de datos pertinente en la base de datos. Puede establecerlo con Transact-SQL. Por ejemplo:  
+Puede hacer que las cargas de trabajo sean aptas automáticamente para el procesamiento de consultas inteligentes si habilita el nivel de compatibilidad de base de datos pertinente en la base de datos. Puede establecerlo con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por ejemplo:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -37,139 +37,19 @@ En la siguiente tabla se detallan todas las características de procesamiento de
 
 | **Característica de procesamiento de consultas inteligentes** | **Compatible con Azure SQL Database** | **Compatible con SQL Server** |**Descripción** |
 | --- | --- | --- |--- |
-| [Combinaciones adaptables (modo por lotes)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Sí, en el nivel de compatibilidad 140| Sí, a partir de SQL Server 2017 en el nivel de compatibilidad 140|Las combinaciones adaptables seleccionan dinámicamente un tipo de combinación en tiempo de ejecución según las filas de entrada reales.|
-| [Count Distinct aproximada](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Sí, versión preliminar pública| Sí, a partir de SQL Server 2019 CTP 2.0, versión preliminar pública|Proporcione un valor de COUNT DISTINCT aproximado en escenarios de macrodatos, con la ventaja de un alto rendimiento y una baja superficie de memoria. |
-| [Modo por lotes en el almacén de filas](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de SQL Server 2019 CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|Proporcione el modo por lotes en las cargas de trabajo de almacenamiento de datos relacionales enlazadas a la CPU, sin necesidad de índices de almacén de columnas.  | 
-| [Ejecución intercalada](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Sí, en el nivel de compatibilidad 140| Sí, a partir de SQL Server 2017 en el nivel de compatibilidad 140|Use la cardinalidad real de la función con valores de tabla y múltiples instrucciones detectada en la primera compilación en lugar de una estimación fija.|
-| [Comentarios de concesión de memoria (modo por lotes)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Sí, en el nivel de compatibilidad 140| Sí, a partir de SQL Server 2017 en el nivel de compatibilidad 140|Si una consulta de modo por lotes tiene operaciones que escriben en disco, agregue más memoria para las ejecuciones consecutivas. Si una consulta desperdicia más del 50 % de memoria que tiene asignada, reduzca el lado de concesión de memoria en las ejecuciones consecutivas.|
-| [Comentarios de concesión de memoria (modo de fila)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de SQL Server 2019 CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|Si una consulta de modo de fila tiene operaciones que escriben en disco, agregue más memoria para las ejecuciones consecutivas. Si una consulta desperdicia más del 50 % de memoria que tiene asignada, reduzca el lado de concesión de memoria en las ejecuciones consecutivas.|
-| [Inserción de UDF escalar](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | No | Sí, a partir de SQL Server 2019 CTP 2.1 en el nivel de compatibilidad 150, versión preliminar pública|Los UDF escalares se transforman en expresiones relacionales equivalentes que se "insertan" en la consulta que realiza la llamada, lo que a menudo supone una notable mejora del rendimiento.|
-| [Compilación diferida de variables de tabla](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de SQL Server 2019 CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|Use la cardinalidad real de la variable de tabla detectada en la primera compilación en lugar de una estimación fija.|
+| [Combinaciones adaptables (modo por lotes)](#batch-mode-adaptive-joins) | Sí, en el nivel de compatibilidad 140| Sí, a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] en el nivel de compatibilidad 140|Las combinaciones adaptables seleccionan dinámicamente un tipo de combinación en tiempo de ejecución según las filas de entrada reales.|
+| [Count Distinct aproximada](#approximate-query-processing) | Sí, versión preliminar pública| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0|Proporcione un valor de COUNT DISTINCT aproximado en escenarios de macrodatos, con la ventaja de un alto rendimiento y una baja superficie de memoria. |
+| [Modo por lotes en el almacén de filas](#batch-mode-on-rowstore) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|Proporcione el modo por lotes en las cargas de trabajo de almacenamiento de datos relacionales enlazadas a la CPU, sin necesidad de índices de almacén de columnas.  | 
+| [Ejecución intercalada](#interleaved-execution-for-mstvfs) | Sí, en el nivel de compatibilidad 140| Sí, a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] en el nivel de compatibilidad 140|Use la cardinalidad real de la función con valores de tabla y múltiples instrucciones detectada en la primera compilación en lugar de una estimación fija.|
+| [Comentarios de concesión de memoria (modo por lotes)](#batch-mode-memory-grant-feedback) | Sí, en el nivel de compatibilidad 140| Sí, a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] en el nivel de compatibilidad 140|Si una consulta de modo por lotes tiene operaciones que escriben en disco, agregue más memoria para las ejecuciones consecutivas. Si una consulta desperdicia más del 50 % de memoria que tiene asignada, reduzca el lado de concesión de memoria en las ejecuciones consecutivas.|
+| [Comentarios de concesión de memoria (modo de fila)](#row-mode-memory-grant-feedback) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|Si una consulta de modo de fila tiene operaciones que escriben en disco, agregue más memoria para las ejecuciones consecutivas. Si una consulta desperdicia más del 50 % de memoria que tiene asignada, reduzca el lado de concesión de memoria en las ejecuciones consecutivas.|
+| [Inserción de UDF escalar](#scalar-udf-inlining) | No | Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 en el nivel de compatibilidad 150, versión preliminar pública|Los UDF escalares se transforman en expresiones relacionales equivalentes que se "insertan" en la consulta que realiza la llamada, lo que a menudo supone una notable mejora del rendimiento.|
+| [Compilación diferida de variables de tabla](#table-variable-deferred-compilation) | Sí, en el nivel de compatibilidad 150, versión preliminar pública| Sí, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 en el nivel de compatibilidad 150, versión preliminar pública|Use la cardinalidad real de la variable de tabla detectada en la primera compilación en lugar de una estimación fija.|
 
-## <a name="batch-mode-adaptive-joins"></a>Combinaciones adaptables de modo de proceso por lotes
+## <a name="batch-mode-adaptive-joins"></a>Combinaciones adaptables del modo por lotes
+La característica de combinaciones adaptables del modo por lotes permite elegir un método de [combinación hash o combinación de bucles anidados](../../relational-databases/performance/joins.md) que se aplace hasta **después** de que se haya examinado la primera entrada, mediante un único plan en caché. El operador de combinaciones adaptables define un umbral que se usa para decidir cuándo cambiar a un plan de bucles anidados. El plan, por tanto, puede cambiar de forma dinámica para una mejor estrategia de combinación durante la ejecución.
 
-Con esta característica, su plan puede cambiar de forma dinámica a una mejor estrategia de combinación durante la ejecución mediante un único plan almacenado en caché.
-
-La característica de combinaciones adaptables del modo por lotes permite elegir un método [Combinación hash o combinación de bucles anidados](../../relational-databases/performance/joins.md) que se aplace hasta **después** de que se haya examinado la primera entrada. El operador de combinaciones adaptables define un umbral que se usa para decidir cuándo cambiar a un plan de bucles anidados. El plan, por tanto, puede cambiar de forma dinámica para una mejor estrategia de combinación durante la ejecución.
-Funcionamiento:
--  Si el recuento de filas de la entrada de combinación de compilación es lo suficientemente pequeño como para que una combinación de bucles anidados sea una opción más óptima que una combinación hash, el plan cambia a un algoritmo de bucles anidados.
--  Si la entrada de combinación de compilación supera un umbral de recuento de filas determinado, no se produce ningún cambio y el plan continúa con una combinación hash.
-
-La siguiente consulta se usa para mostrar un ejemplo de combinación adaptable:
-
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 360;
-```
-
-La consulta devuelve 336 filas. Al habilitar las [estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md) se ve el siguiente plan:
-
-![La consulta da lugar a 336 filas](./media/4_AQPStats336Rows.png)
-
-En el plan se ve lo siguiente:
-1. Hay una exploración de índice de almacén de columnas que se usa para proporcionar filas para la fase de compilación de combinación hash.
-1. Hay un nuevo operador de combinación adaptable. Este operador define un umbral que se usa para decidir cuándo cambiar a un plan de bucle anidado. En el ejemplo, el umbral es 78 filas. Todo lo que tenga &gt; = 78 filas usará una combinación hash. Si es inferior al umbral, se usará una combinación de bucle anidado.
-1. Puesto que se devuelven 336 filas, se supera el umbral y la segunda rama representa la fase de sondeo de una operación de combinación hash estándar. Observe que las estadísticas de consultas dinámicas muestran las filas que pasan por los operadores, en este caso "672 de 672".
-1. La última rama es la búsqueda en índice clúster que usa la combinación de bucle anidado si no se ha superado el umbral. Observe que se ve "0 de 336" filas mostradas (la rama no se usa).
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- Ahora vamos a comparar el plan con la misma consulta, pero esta vez para un valor *Cantidad* que solo tiene una fila en la tabla:
- 
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 361;
-```
-La consulta devuelve una fila. Al habilitar las estadísticas de consultas activas se ve el siguiente plan:
-
-![La consulta da lugar a una fila](./media/5_AQPStatsOneRow.png)
-
-En el plan se ve lo siguiente:
-- Con una fila devuelta, ahora pasan filas por la búsqueda en índice clúster.
-- Y puesto que no se ha continuado con la fase de compilación de combinación hash, no pasan filas por la segunda rama.
-
-### <a name="adaptive-join-benefits"></a>Ventajas de la combinación adaptable
-La cargas de trabajo con oscilaciones frecuentes entre análisis de entrada de combinación pequeños y grandes son las que más se benefician de esta característica.
-
-### <a name="adaptive-join-overhead"></a>Sobrecarga de la combinación adaptable
-Las combinaciones adaptables tienen unos requisitos de memoria superiores a un plan equivalente de combinación de bucle anidado de índice. La memoria adicional se solicita como si el bucle anidado fuera una combinación hash. También hay sobrecarga para la fase de compilación como una operación de detención e inicio frente a una combinación equivalente de transmisión de bucle anidado. Ese costo adicional va acompañado de flexibilidad en escenarios donde los recuentos de filas pueden fluctuar en la entrada de compilación.
-
-### <a name="adaptive-join-caching-and-re-use"></a>Almacenamiento en caché y reutilización de combinación adaptable
-Las combinaciones adaptables de modo de proceso por lotes funcionan para la ejecución inicial de una instrucción y, una vez compiladas, las ejecuciones consecutivas seguirán siendo adaptables según el umbral de combinación adaptable compilado y las filas de runtime que pasan a través de la fase de compilación de la entrada externa.
-
-### <a name="tracking-adaptive-join-activity"></a>Seguimiento de la actividad de combinación adaptable
-El operador de combinación adaptable tiene los siguientes atributos de operador de plan:
-
-| Atributo de plan | Descripción |
-|--- |--- |
-| AdaptiveThresholdRows | Muestra el uso de umbral para cambiar de una combinación hash a una combinación de bucle anidado. |
-| EstimatedJoinType | El tipo de combinación probable. |
-| ActualJoinType | En un plan real, se muestra qué algoritmo de combinación se ha elegido finalmente según el umbral. |
-
-El plan estimado muestra la forma del plan de combinación adaptable, junto con un umbral de combinación adaptable definido y un tipo de combinación estimado.
-
-### <a name="adaptive-join-and-query-store-interoperability"></a>Combinación adaptable e interoperabilidad del Almacén de consultas
-El Almacén de consultas captura y puede aplicar un plan de combinación adaptable de modo de proceso por lotes.
-
-### <a name="adaptive-join-eligible-statements"></a>Instrucciones aptas de combinación adaptable
-Algunas condiciones convierten a una combinación lógica en apta como combinación adaptable de modo de proceso por lotes:
-- El nivel de compatibilidad de la base de datos es 140.
-- La consulta es una instrucción SELECT (las instrucciones de modificación de datos no son aptas actualmente).
-- La combinación es apta para ejecutarla tanto con una combinación de bucles anidados indexada como con un algoritmo físico de combinación hash.
-- La combinación hash usa el modo por lotes, ya sea mediante la presencia de un índice de almacén de columnas en la consulta global o una referencia directa a la tabla con índice de almacén de columnas por parte de la combinación.
-- Las soluciones alternativas generadas de la combinación de bucles anidados y la combinación hash deben tener el mismo primer elemento secundario (referencia externa).
-
-### <a name="adaptive-joins-and-nested-loop-efficiency"></a>Combinaciones adaptables y eficacia del bucle anidado
-Si una combinación adaptable cambia a una operación de bucles anidados, usa las filas ya leídas por la compilación de combinación hash. El operador **no** vuelve a leer las filas de la referencia externa.
-
-### <a name="adaptive-threshold-rows"></a>Filas de umbral adaptable
-El gráfico siguiente muestra una intersección de ejemplo entre el costo de una combinación hash y el de una alternativa de combinación de bucles anidados. En este punto de intersección, se determina el umbral que a su vez determina el algoritmo real usado para la operación de combinación.
-
-![Umbral de combinación](./media/6_AQPJoinThreshold.png)
-
-### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Deshabilitar las combinaciones adaptables sin cambiar el nivel de compatibilidad
-
-Las combinaciones adaptables se pueden deshabilitar en el ámbito de base de datos o de instrucción mientras se mantiene el nivel de compatibilidad de base de datos 140 o posterior.  
-Para deshabilitar las combinaciones adaptables para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
-```
-
-Cuando se habilita, esta opción aparecerá como habilitada en [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
-Para volver a habilitar las combinaciones adaptables para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
-```
-
-También puede deshabilitar las combinaciones adaptables para una consulta específica si designa `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` como una [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por ejemplo:
-
-```sql
-SELECT s.CustomerID,
-       s.CustomerName,
-       sc.CustomerCategoryName
-FROM Sales.Customers AS s
-LEFT OUTER JOIN Sales.CustomerCategories AS sc
-       ON s.CustomerCategoryID = sc.CustomerCategoryID
-OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
-```
-
-Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de ámbito de base de datos o una opción de marca de seguimiento.
+Para obtener más información, vea [Comprender las combinaciones de mezcla](../../relational-databases/performance/joins.md#adaptive).
 
 ## <a name="batch-mode-memory-grant-feedback"></a>Comentarios de concesión de memoria de modo de proceso por lotes
 El plan posterior a la ejecución de una consulta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye la memoria mínima necesaria para la ejecución y el tamaño de concesión de memoria ideal para que todas las filas quepan en la memoria. El rendimiento se ve afectado si los tamaños de concesión de memoria son incorrectos. A su vez, unas concesiones excesivas se traducen en memoria desperdiciada y en simultaneidad reducida. Las concesiones de memoria insuficientes provocan un costoso desbordamiento en disco. Al ocuparse de las cargas de trabajo repetidas, los comentarios de concesión de memoria de modo de proceso por lotes vuelven a calcular la memoria real necesaria para una consulta y luego actualizan el valor de la concesión del plan almacenado en caché. Cuando se ejecuta una instrucción de consulta idéntica, la consulta usa el tamaño de concesión de memoria revisado, con lo que se reducen las concesiones de memoria excesivas que afectan a la simultaneidad y se solucionan las concesiones de memoria subestimadas que provocan costosos desbordamientos en disco.
@@ -212,7 +92,11 @@ La memoria real concedida respeta el límite de memoria de consulta determinado 
 Los comentarios de concesión de memoria se pueden deshabilitar en el ámbito de base de datos o de instrucción mientras se mantiene el nivel de compatibilidad de base de datos 140 o posterior. Para deshabilitar los comentarios de concesión de memoria en modo por lotes para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
 Cuando se habilita, esta opción aparecerá como habilitada en [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
@@ -220,7 +104,11 @@ Cuando se habilita, esta opción aparecerá como habilitada en [sys.database_sco
 Para volver a habilitar los comentarios de concesión de memoria en modo por lotes para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
 También puede deshabilitar los comentarios de concesión de memoria en modo por lotes para una consulta específica si designa `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` como [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por ejemplo:
@@ -354,14 +242,22 @@ Los planes con ejecución intercalada se pueden aplicar. El plan es la versión 
 La ejecución intercalada se puede deshabilitar en el ámbito de base de datos o de instrucción mientras se mantiene el nivel de compatibilidad de base de datos 140 o posterior.  Para deshabilitar la ejecución intercalada para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
 Cuando se habilita, esta opción aparecerá como habilitada en [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md).
 Para volver a habilitar la ejecución intercalada para todas las ejecuciones de consultas que se originan en la base de datos, ejecute lo siguiente en el contexto de la base de datos aplicable:
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
 También puede deshabilitar la ejecución intercalada para una consulta específica si designa `DISABLE_INTERLEAVED_EXECUTION_TVF` como una [sugerencia de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Por ejemplo:

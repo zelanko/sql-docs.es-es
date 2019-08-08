@@ -1,6 +1,6 @@
 ---
-title: Restaurar una base de datos de SQL Server en Docker
-description: Este tutorial se muestra cómo restaura una copia de seguridad de base de datos de SQL Server en un nuevo contenedor de Docker de Linux.
+title: Restauración de una base de datos de SQL Server en Docker
+description: En este tutorial se muestra cómo restaurar una copia de seguridad de base de datos de SQL Server en un nuevo contenedor de Docker para Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,38 +8,38 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 31018f8285bd5f7609aada56b16ca9178b8d0860
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 0a91e3fd121cf5e49aca3bbe079d41416aca805a
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032119"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476208"
 ---
-# <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restaurar una base de datos de SQL Server en un contenedor de Linux Docker
+# <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Restauración de una base de datos de SQL Server en un contenedor de Docker para Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad de SQL Server en una imagen de contenedor de SQL Server 2017 para Linux que se ejecutan en Docker.
+En este tutorial se muestra cómo mover y restaurar un archivo de copia de seguridad de SQL Server en una imagen de contenedor de Linux de SQL Server 2017 que se ejecuta en Docker.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad de SQL Server en una imagen de contenedor de Linux de 2019 preview SQL Server que se ejecutan en Docker.
+En este tutorial se muestra cómo mover y restaurar un archivo de copia de seguridad de SQL Server en una imagen de contenedor de Linux de la versión preliminar de SQL Server 2019 que se ejecuta en Docker.
 
 ::: moniker-end
 
 > [!div class="checklist"]
-> * Extraer y ejecutar la imagen de contenedor más reciente de SQL Server para Linux.
+> * Extraiga y ejecute la imagen de contenedor de Linux de SQL Server más reciente.
 > * Copie el archivo de base de datos de Wide World Importers en el contenedor.
 > * Restaure la base de datos en el contenedor.
-> * Ejecutar instrucciones Transact-SQL para ver y modificar la base de datos.
-> * Copia de seguridad de la base de datos modificado.
+> * Ejecute instrucciones de Transact-SQL para ver y modificar la base de datos.
+> * Realice una copia de seguridad de la base de datos modificada.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 * Motor de Docker 1.8 o versiones posteriores en cualquier distribución de Linux admitida o Docker para Mac y Windows. Para obtener más información, consulte [Instalar Docker](https://docs.docker.com/engine/installation/).
 * Un mínimo de 2 GB de espacio en disco.
@@ -51,7 +51,7 @@ Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad d
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. Abra un terminal de bash en Linux o Mac o en una sesión de PowerShell con privilegios elevados en Windows.
+1. Abra un terminal de Bash en Linux/Mac o una sesión de PowerShell con privilegios elevados en Windows.
 
 1. Extraiga la imagen de contenedor de SQL Server 2017 para Linux de Docker Hub.
 
@@ -64,9 +64,9 @@ Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad d
    ```
 
    > [!TIP]
-   > A lo largo de este tutorial, se proporcionan ejemplos de comandos de docker para el shell de bash (Linux/Mac) y PowerShell (Windows).
+   > En este tutorial se proporcionan ejemplos de comandos de Docker para el shell de Bash (Linux/Mac) y PowerShell (Windows).
 
-1. Para ejecutar la imagen de contenedor con Docker, puede usar el comando siguiente:
+1. Para ejecutar la imagen de contenedor con Docker, puede usar el siguiente comando:
 
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -82,10 +82,10 @@ Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad d
       -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
-   Este comando crea un contenedor de SQL Server 2017 con la edición Developer (valor predeterminado). Puerto de SQL Server **1433** se expone en el host como puerto **1401**. El elemento opcional `-v sql1data:/var/opt/mssql` parámetro crea un contenedor de volumen de datos denominado **sql1ddata**. Esto se usa para conservar los datos creados por SQL Server.
+   Este comando crea un contenedor de SQL Server 2017 con la edición Developer (valor predeterminado). El puerto **1433** de SQL Server se expone en el host como puerto **1401**. El parámetro `-v sql1data:/var/opt/mssql` opcional crea un contenedor de volúmenes de datos denominado **sql1ddata**. Se usa para almacenar los datos creados por SQL Server.
 
    > [!NOTE]
-   > El proceso para ejecutar las ediciones de SQL Server de producción en contenedores es ligeramente diferente. Para obtener más información, vea [Run production container image](sql-server-linux-configure-docker.md#production) (Ejecutar imágenes de contenedor de producción). Si usa los mismos nombres de contenedor y los puertos, el resto de este tutorial sigue funcionando con contenedores de producción.
+   > El proceso para ejecutar ediciones de producción de SQL Server en contenedores es ligeramente diferente. Para obtener más información, vea [Run production container image](sql-server-linux-configure-docker.md#production) (Ejecutar imágenes de contenedor de producción). Si usa los mismos nombres y puertos de contenedor, el resto de este tutorial funciona con los contenedores de producción.
 
 1. Para ver los contenedores de Docker, use el comando `docker ps`.
 
@@ -110,38 +110,38 @@ Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad d
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. Abra un terminal de bash en Linux o Mac o en una sesión de PowerShell con privilegios elevados en Windows.
+1. Abra un terminal de Bash en Linux/Mac o una sesión de PowerShell con privilegios elevados en Windows.
 
-1. Extraer la versión preliminar de SQL Server 2019 imagen de contenedor de Linux de Docker Hub.
+1. Extraiga la imagen de contenedor de Linux de la versión preliminar de SQL Server 2019 de Docker Hub.
 
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
    > [!TIP]
-   > A lo largo de este tutorial, se proporcionan ejemplos de comandos de docker para el shell de bash (Linux/Mac) y PowerShell (Windows).
+   > En este tutorial se proporcionan ejemplos de comandos de Docker para el shell de Bash (Linux/Mac) y PowerShell (Windows).
 
-1. Para ejecutar la imagen de contenedor con Docker, puede usar el comando siguiente:
+1. Para ejecutar la imagen de contenedor con Docker, puede usar el siguiente comando:
 
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       --name 'sql1' -p 1401:1433 \
       -v sql1data:/var/opt/mssql \
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       --name "sql1" -p 1401:1433 `
       -v sql1data:/var/opt/mssql `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
-   Este comando crea un contenedor de vista previa de SQL Server 2019 con la edición Developer (valor predeterminado). Puerto de SQL Server **1433** se expone en el host como puerto **1401**. El elemento opcional `-v sql1data:/var/opt/mssql` parámetro crea un contenedor de volumen de datos denominado **sql1ddata**. Esto se usa para conservar los datos creados por SQL Server.
+   Este comando crea un contenedor de la versión preliminar de SQL Server 2019 con la edición Developer (valor predeterminado). El puerto **1433** de SQL Server se expone en el host como puerto **1401**. El parámetro `-v sql1data:/var/opt/mssql` opcional crea un contenedor de volúmenes de datos denominado **sql1ddata**. Se usa para almacenar los datos creados por SQL Server.
 
 1. Para ver los contenedores de Docker, use el comando `docker ps`.
 
@@ -168,11 +168,11 @@ Este tutorial muestra cómo mover y restaurar un archivo de copia de seguridad d
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 
-## <a name="copy-a-backup-file-into-the-container"></a>Copiar un archivo de copia de seguridad en el contenedor
+## <a name="copy-a-backup-file-into-the-container"></a>Copia de un archivo de copia de seguridad en el contenedor
 
-Este tutorial se usa el [base de datos de ejemplo de Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Siga estos pasos para descargar y copiar el archivo de copia de seguridad de base de datos de Wide World Importers en el contenedor de SQL Server.
+En este tutorial se usa la [base de datos de ejemplo Wide World Importers](../sample/world-wide-importers/wide-world-importers-documentation.md). Siga estos pasos para descargar y copiar el archivo de copia de seguridad de base de datos de Wide World Importers en el contenedor de SQL Server.
 
-1. En primer lugar, use **la ejecución de docker** para crear una carpeta de copia de seguridad. El siguiente comando crea un **/var/opt/mssql/backup** directorio dentro del contenedor de SQL Server.
+1. En primer lugar, use **docker exec** para crear una carpeta de copia de seguridad. El siguiente comando crea un directorio **/var/opt/mssql/backup** dentro del contenedor de SQL Server.
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup
@@ -182,7 +182,7 @@ Este tutorial se usa el [base de datos de ejemplo de Wide World Importers](../sa
    docker exec -it sql1 mkdir /var/opt/mssql/backup
    ```
 
-1. A continuación, descargue el [WideWorldImporters-Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) archivo en el equipo host. Los siguientes comandos navegue hasta el directorio principal o de usuario y se descarga el archivo de copia de seguridad como **wwi.bak**.
+1. Luego, descargue el archivo [WideWorldImporters-Full.bak](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0) en el equipo host. Los siguientes comandos llevan al directorio home/user y descargan el archivo de copia de seguridad como **wwi.bak**.
 
    ```bash
    cd ~
@@ -193,7 +193,7 @@ Este tutorial se usa el [base de datos de ejemplo de Wide World Importers](../sa
    curl -OutFile "wwi.bak" "https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImporters-Full.bak"
    ```
 
-1. Use **docker cp** para copiar el archivo de copia de seguridad en el contenedor en el **/var/opt/mssql/backup** directory.
+1. Use **docker cp** para copiar el archivo de copia de seguridad en el contenedor, en el directorio **/var/opt/mssql/backup**.
 
    ```bash
    sudo docker cp wwi.bak sql1:/var/opt/mssql/backup
@@ -205,12 +205,12 @@ Este tutorial se usa el [base de datos de ejemplo de Wide World Importers](../sa
 
 ## <a name="restore-the-database"></a>Restaurar la base de datos
 
-El archivo de copia de seguridad ahora se encuentra dentro del contenedor. Antes de restaurar la copia de seguridad, es importante conocer los nombres de archivo lógico y los tipos de archivo dentro de la copia de seguridad. Los siguientes comandos de Transact-SQL inspeccionar la copia de seguridad y realizar la restauración con **sqlcmd** en el contenedor.
+El archivo de copia de seguridad ahora se encuentra dentro del contenedor. Antes de restaurar la copia de seguridad, es importante conocer los nombres de archivo lógicos y los tipos de archivo que hay dentro de la copia de seguridad. Los siguientes comandos de Transact-SQL examinan la copia de seguridad y realizan la restauración con **sqlcmd** en el contenedor.
 
 > [!TIP]
-> Este tutorial se usa **sqlcmd** dentro del contenedor, dado que el contenedor viene con esta herramienta preinstalada. Sin embargo, también puede ejecutar instrucciones Transact-SQL con otro cliente herramientas fuera del contenedor, como [Visual Studio Code](sql-server-linux-develop-use-vscode.md) o [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Para conectarse, use el puerto de host que se ha asignado al puerto 1433 en el contenedor. En este ejemplo, que es **localhost, 1401** en el equipo host y **Host_IP_Address, 1401** remotamente.
+> En este tutorial se usa **sqlcmd** dentro del contenedor, ya que este incluye esta herramienta preinstalada. Pero también puede ejecutar instrucciones de Transact-SQL con otras herramientas de cliente fuera del contenedor, como [Visual Studio Code](sql-server-linux-develop-use-vscode.md) o [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Para conectarse, use el puerto de host que se ha asignado al puerto 1433 en el contenedor. En este ejemplo es **localhost,1401** en el equipo host y **Host_IP_Address,1401** de forma remota.
 
-1. Ejecute **sqlcmd** dentro del contenedor a la lista de nombres de archivo lógico y rutas de acceso dentro de la copia de seguridad. Esto se realiza con el **RESTORE FILELISTONLY** instrucción Transact-SQL.
+1. Ejecute **sqlcmd** dentro del contenedor para enumerar los nombres de archivo lógicos y las rutas de acceso que hay dentro de la copia de seguridad. Esto se hace con la instrucción de Transact-SQL **RESTORE FILELISTONLY**.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost \
@@ -225,7 +225,7 @@ El archivo de copia de seguridad ahora se encuentra dentro del contenedor. Antes
       -Q "RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/wwi.bak'"
    ```
 
-   Debería ver resultados similares al siguiente:
+   Debería ver un resultado similar al siguiente:
 
    ```
    LogicalName   PhysicalName
@@ -236,7 +236,7 @@ El archivo de copia de seguridad ahora se encuentra dentro del contenedor. Antes
    WWI_InMemory_Data_1   D:\Data\WideWorldImporters_InMemory_Data_1
    ```
 
-1. Llame a la **RESTORE DATABASE** comando para restaurar la base de datos dentro del contenedor. Especifique las rutas de acceso nuevo para cada uno de los archivos en el paso anterior.
+1. Llame al comando **RESTORE DATABASE** para restaurar la base de datos dentro del contenedor. Especifique nuevas rutas de acceso para cada uno de los archivos del paso anterior.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -250,7 +250,7 @@ El archivo de copia de seguridad ahora se encuentra dentro del contenedor. Antes
       -Q "RESTORE DATABASE WideWorldImporters FROM DISK = '/var/opt/mssql/backup/wwi.bak' WITH MOVE 'WWI_Primary' TO '/var/opt/mssql/data/WideWorldImporters.mdf', MOVE 'WWI_UserData' TO '/var/opt/mssql/data/WideWorldImporters_userdata.ndf', MOVE 'WWI_Log' TO '/var/opt/mssql/data/WideWorldImporters.ldf', MOVE 'WWI_InMemory_Data_1' TO '/var/opt/mssql/data/WideWorldImporters_InMemory_Data_1'"
    ```
 
-   Debería ver resultados similares al siguiente:
+   Debería ver un resultado similar al siguiente:
 
    ```
    Processed 1464 pages for database 'WideWorldImporters', file 'WWI_Primary' on file 1.
@@ -278,9 +278,9 @@ El archivo de copia de seguridad ahora se encuentra dentro del contenedor. Antes
    RESTORE DATABASE successfully processed 58455 pages in 18.069 seconds (25.273 MB/sec).
    ```
 
-## <a name="verify-the-restored-database"></a>Compruebe la base de datos restaurada
+## <a name="verify-the-restored-database"></a>Comprobar la base de datos restaurada
 
-Ejecute la siguiente consulta para mostrar una lista de nombres de base de datos en el contenedor:
+Ejecute la consulta siguiente para mostrar una lista de nombres de bases de datos del contenedor:
 
 ```bash
 sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -296,11 +296,11 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
 
 Debería ver **WideWorldImporters** en la lista de bases de datos.
 
-## <a name="make-a-change"></a>Realice un cambio
+## <a name="make-a-change"></a>Realización de cambios
 
-Los pasos siguientes realizan un cambio en la base de datos.
+Con los pasos siguientes se realiza un cambio en la base de datos.
 
-1. Ejecutar una consulta para ver los elementos de la parte superior a 10 en el **Warehouse.StockItems** tabla.
+1. Ejecute una consulta para ver los diez elementos principales de la tabla **Warehouse.StockItems**.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -314,7 +314,7 @@ Los pasos siguientes realizan un cambio en la base de datos.
       -Q "SELECT TOP 10 StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems ORDER BY StockItemID"
    ```
 
-   Debería ver una lista de nombres y los identificadores de elementos:
+   Debería ver una lista de identificadores y nombres de elemento:
 
    ```
    StockItemID StockItemName
@@ -331,7 +331,7 @@ Los pasos siguientes realizan un cambio en la base de datos.
             10 USB food flash drive - chocolate bar
    ```
 
-1. Actualizar la descripción del primer elemento con el siguiente **actualización** instrucción:
+1. Actualice la descripción del primer elemento con la siguiente instrucción **UPDATE**:
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -345,7 +345,7 @@ Los pasos siguientes realizan un cambio en la base de datos.
       -Q "UPDATE WideWorldImporters.Warehouse.StockItems SET StockItemName='USB missile launcher (Dark Green)' WHERE StockItemID=1; SELECT StockItemID, StockItemName FROM WideWorldImporters.Warehouse.StockItems WHERE StockItemID=1"
    ```
 
-   Debería ver resultados similares al siguiente texto:
+   Debería ver un resultado similar al texto siguiente:
 
    ```
    (1 rows affected)
@@ -356,9 +356,9 @@ Los pasos siguientes realizan un cambio en la base de datos.
 
 ## <a name="create-a-new-backup"></a>Crear una nueva copia de seguridad
 
-Una vez se haya restaurado la base de datos en un contenedor, también puede crear periódicamente copias de seguridad de base de datos dentro del contenedor en ejecución. Los pasos siguen un patrón similar a los pasos anteriores, pero en orden inverso.
+Después de haber restaurado la base de datos en un contenedor, puede que también quiera crear periódicamente copias de seguridad de base de datos dentro del contenedor en ejecución. Los pasos siguen un patrón similar a los pasos anteriores, pero en orden inverso.
 
-1. Use la **BACKUP DATABASE** comando de Transact-SQL para crear una copia de seguridad de base de datos en el contenedor. Este tutorial crea un nuevo archivo de copia de seguridad, **wwi_2.bak**, en el que se han creado anteriormente **/var/opt/mssql/backup** directory.
+1. Use el comando de Transact-SQL **BACKUP DATABASE** para crear una copia de seguridad de base de datos en el contenedor. En este tutorial se crea un nuevo archivo de copia de seguridad **wwi_2.bak** en el directorio **/var/opt/mssql/backup** creado previamente.
 
    ```bash
    sudo docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd \
@@ -372,7 +372,7 @@ Una vez se haya restaurado la base de datos en un contenedor, también puede cre
       -Q "BACKUP DATABASE [WideWorldImporters] TO DISK = N'/var/opt/mssql/backup/wwi_2.bak' WITH NOFORMAT, NOINIT, NAME = 'WideWorldImporters-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
    ```
 
-   Debería ver resultados similares al siguiente:
+   Debería ver un resultado similar al siguiente:
 
    ```
    10 percent processed.
@@ -391,7 +391,7 @@ Una vez se haya restaurado la base de datos en un contenedor, también puede cre
    BACKUP DATABASE successfully processed 59099 pages in 25.056 seconds (18.427 MB/sec).
    ```
 
-1. A continuación, copie el archivo de copia de seguridad fuera del contenedor y en el equipo host.
+1. Luego, copie el archivo de copia de seguridad del contenedor en el equipo host.
 
    ```bash
    cd ~
@@ -405,14 +405,14 @@ Una vez se haya restaurado la base de datos en un contenedor, también puede cre
    ls -l wwi*
    ```
 
-## <a name="use-the-persisted-data"></a>Use los datos persistentes
+## <a name="use-the-persisted-data"></a>Uso de los datos almacenados
 
-Además de realizar copias de seguridad de base de datos para proteger los datos, también puede usar contenedores de volúmenes de datos. El principio de este tutorial crea el **sql1** contenedor con el `-v sql1data:/var/opt/mssql` parámetro. El **sql1data** contenedor de volúmenes de datos conserva la **/var/opt/mssql** incluso después de quita el contenedor de datos. Los pasos siguientes se quitan completamente el **sql1** contenedor y, a continuación, cree un nuevo contenedor, **sql2**, con los datos persistentes.
+Además de realizar copias de seguridad de las bases de datos para proteger los datos, puede usar contenedores de volúmenes de datos. Al principio de este tutorial se ha creado el contenedor **sql1** con el parámetro `-v sql1data:/var/opt/mssql`. El contenedor de volúmenes de datos **sql1data** almacena los datos de **/var/opt/mssql** incluso después de quitar el contenedor. En los pasos siguientes se quita por completo el contenedor **sql1** y, luego, se crea un nuevo contenedor, **sql2**, con los datos almacenados.
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. Detener el **sql1** contenedor.
+1. Detenga el contenedor **sql1**.
 
    ```bash
    sudo docker stop sql1
@@ -422,7 +422,7 @@ Además de realizar copias de seguridad de base de datos para proteger los datos
    docker stop sql1
    ```
 
-1. Quitar el contenedor. Esto no elimina creado previamente **sql1data** contenedor de volúmenes de datos y los datos persistentes en él.
+1. Quite el contenedor. Esto no elimina el contenedor de volúmenes de datos **sql1data** creado previamente ni los datos almacenados en él.
 
    ```bash
    sudo docker rm sql1
@@ -432,7 +432,7 @@ Además de realizar copias de seguridad de base de datos para proteger los datos
    docker rm sql1
    ```
 
-1. Crear un nuevo contenedor, **sql2**y volver a usar el **sql1data** contenedor de volúmenes de datos.
+1. Cree un nuevo contenedor, **sql2**, y vuelva a usar el contenedor de volúmenes de datos **sql1data**.
 
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
@@ -446,7 +446,7 @@ Además de realizar copias de seguridad de base de datos para proteger los datos
       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
    ```
 
-1. La base de datos de Wide World Importers está ahora en el nuevo contenedor. Ejecutar una consulta para comprobar los cambios realizados en el anterior.
+1. La base de datos Wide World Importers está ahora en el nuevo contenedor. Ejecute una consulta para comprobar el cambio anterior que ha realizado.
 
    ```bash
    sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
@@ -461,13 +461,13 @@ Además de realizar copias de seguridad de base de datos para proteger los datos
    ```
 
    > [!NOTE]
-   > La contraseña de SA no es la contraseña que especificó para el **sql2** contenedor, `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Todos los datos de SQL Server se restauró desde **sql1**, incluidas la contraseña cambiada de anteriormente en el tutorial. De hecho, algunas opciones como este se omiten debido a la restauración de los datos en /var/opt/mssql. Por este motivo, la contraseña es `<YourNewStrong!Passw0rd>` como se muestra aquí.
+   > La contraseña de administrador del sistema no es la que ha especificado para el contenedor **sql2**, `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Todos los datos de SQL Server se han restaurado desde **sql1**, incluida la contraseña modificada anteriormente en el tutorial. En efecto, algunas opciones como esta se omiten debido a la restauración de los datos de /var/opt/mssql. Por esta razón, la contraseña es `<YourNewStrong!Passw0rd>`, como se muestra aquí.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. Detener el **sql1** contenedor.
+1. Detenga el contenedor **sql1**.
 
    ```bash
    sudo docker stop sql1
@@ -477,7 +477,7 @@ Además de realizar copias de seguridad de base de datos para proteger los datos
    docker stop sql1
    ```
 
-1. Quitar el contenedor. Esto no elimina creado previamente **sql1data** contenedor de volúmenes de datos y los datos persistentes en él.
+1. Quite el contenedor. Esto no elimina el contenedor de volúmenes de datos **sql1data** creado previamente ni los datos almacenados en él.
 
    ```bash
    sudo docker rm sql1
@@ -487,21 +487,21 @@ Además de realizar copias de seguridad de base de datos para proteger los datos
    docker rm sql1
    ```
 
-1. Crear un nuevo contenedor, **sql2**y volver a usar el **sql1data** contenedor de volúmenes de datos.
+1. Cree un nuevo contenedor, **sql2**, y vuelva a usar el contenedor de volúmenes de datos **sql1data**.
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
        --name 'sql2' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
        --name "sql2" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+       -v sql1data:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
     ```
 
-1. La base de datos de Wide World Importers está ahora en el nuevo contenedor. Ejecutar una consulta para comprobar los cambios realizados en el anterior.
+1. La base de datos Wide World Importers está ahora en el nuevo contenedor. Ejecute una consulta para comprobar el cambio anterior que ha realizado.
 
    ```bash
    sudo docker exec -it sql2 /opt/mssql-tools/bin/sqlcmd \
@@ -516,7 +516,7 @@ Además de realizar copias de seguridad de base de datos para proteger los datos
    ```
 
    > [!NOTE]
-   > La contraseña de SA no es la contraseña que especificó para el **sql2** contenedor, `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Todos los datos de SQL Server se restauró desde **sql1**, incluidas la contraseña cambiada de anteriormente en el tutorial. De hecho, algunas opciones como este se omiten debido a la restauración de los datos en /var/opt/mssql. Por este motivo, la contraseña es `<YourNewStrong!Passw0rd>` como se muestra aquí.
+   > La contraseña de administrador del sistema no es la que ha especificado para el contenedor **sql2**, `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`. Todos los datos de SQL Server se han restaurado desde **sql1**, incluida la contraseña modificada anteriormente en el tutorial. En efecto, algunas opciones como esta se omiten debido a la restauración de los datos de /var/opt/mssql. Por esta razón, la contraseña es `<YourNewStrong!Passw0rd>`, como se muestra aquí.
 
 ::: moniker-end
 
@@ -525,24 +525,24 @@ Además de realizar copias de seguridad de base de datos para proteger los datos
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-En este tutorial, aprendió a realizar una copia de seguridad de una base de datos en Windows y moverlo a un servidor de Linux que ejecuta SQL Server 2017. Ha aprendido a:
+En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con SQL Server 2017. Ha aprendido a:
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-En este tutorial, aprendió a realizar una copia de seguridad de una base de datos en Windows y moverlo a un servidor de Linux que ejecuta vista previa de SQL Server 2019. Ha aprendido a:
+En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con la versión preliminar de SQL Server 2019. Ha aprendido a:
 
 ::: moniker-end
 
 > [!div class="checklist"]
 > * Crear imágenes de contenedor de Linux de SQL Server.
-> * Copie las copias de seguridad de base de datos de SQL Server en un contenedor.
-> * Ejecutar instrucciones Transact-SQL dentro del contenedor con **sqlcmd**.
-> * Crear y extraer los archivos de copia de seguridad de un contenedor.
-> * Usar contenedores de volúmenes de datos en Docker para conservar los datos de SQL Server.
+> * Copiar copias de seguridad de base de datos de SQL Server en un contenedor.
+> * Ejecutar instrucciones de Transact-SQL dentro del contenedor con **sqlcmd**.
+> * Crear y extraer archivos de copia de seguridad desde un contenedor.
+> * Usar contenedores de volúmenes de datos en Docker para almacenar datos de SQL Server.
 
-A continuación, revisar otra configuración de Docker y escenarios de solución de problemas:
+A continuación revise otros escenarios de configuración y solución de problemas de Docker:
 
 > [!div class="nextstepaction"]
 >[Guía de configuración de SQL Server 2017 en Docker](sql-server-linux-configure-docker.md)

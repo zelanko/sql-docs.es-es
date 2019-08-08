@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bfc0e6a64c9895b4b118ec5c6c27a66657b0829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 750679a41b3178dd587ddbdee2fb33ee491a41b5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065804"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471162"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)
 
@@ -76,7 +76,7 @@ Se prevén los siguientes comportamientos para [!INCLUDE[ssSQL17](../../includes
 
 - Si el nivel de compatibilidad de una base de datos de usuario era 100 o superior antes de la actualización, permanece igual después de la misma.
 - Si el nivel de compatibilidad de una base de datos de usuario era 90 antes de la actualización, en la base de datos actualizada el nivel de compatibilidad se establece en 100, que es el nivel de compatibilidad mínimo admitido en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-- Los niveles de compatibilidad de las bases de datos tempdb, model, msdb y Resource quedan establecidos en el nivel de compatibilidad actual después de la actualización.
+- Los niveles de compatibilidad de las bases de datos tempdb, model, msdb y Resource se establecen en el nivel de compatibilidad predeterminado de una versión de [!INCLUDE[ssDE](../../includes/ssde-md.md)] determinada. 
 - La base de datos del sistema maestra conserva el nivel de compatibilidad que tenía antes de la actualización.
 
 Use `ALTER DATABASE` para cambiar el nivel de compatibilidad de la base de datos. El nuevo nivel de compatibilidad de una base de datos se hace efectivo cuando se emite un comando `USE <database>` o se procesa un nuevo inicio de sesión con esa base de datos como contexto de base de datos predeterminada.

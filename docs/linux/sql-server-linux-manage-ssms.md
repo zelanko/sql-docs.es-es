@@ -1,5 +1,5 @@
 ---
-title: Usar SSMS para administrar SQL Server en Linux
+title: Empleo de SSMS para administrar SQL Server en Linux
 description: ''
 author: VanMSFT
 ms.author: vanto
@@ -9,140 +9,140 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.openlocfilehash: 753845d41c946d955b80a927901f827ee4643567
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68000094"
 ---
-# <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usar SQL Server Management Studio en Windows para administrar SQL Server en Linux
+# <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Empleo de SQL Server Management Studio en Windows para administrar SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artículo se presentan [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) y le guía a través de un par de tareas comunes. SSMS es una aplicación de Windows, así que use SSMS cuando haya una máquina de Windows que se puede conectar a una instancia remota de SQL Server en Linux.
+En este artículo se presenta [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) y se realizan un par de tareas comunes. SSMS es una aplicación Windows, así que use SSMS cuando tenga un equipo Windows que pueda conectarse a una instancia remota de SQL Server en Linux.
 
 > [!TIP]
-> Si no tiene un equipo de Windows para ejecutar SSMS en, considere la posibilidad de la nueva [Azure Data Studio](../azure-data-studio/index.md). Proporciona una herramienta gráfica para administrar SQL Server y se ejecuta en Linux y Windows.
+> Si no tiene un equipo Windows en el que ejecutar SSMS, tenga en cuenta el nuevo [Azure Data Studio](../azure-data-studio/index.md). Proporciona una herramienta gráfica para administrar SQL Server y se ejecuta tanto en Linux como en Windows.
 
-[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) forma parte de un conjunto de herramientas SQL que ofrece Microsoft de forma gratuita para sus necesidades de desarrollo y administración. SSMS es un entorno integrado para tener acceso, configurar, administrar, administrar y desarrollar todos los componentes de SQL Server. Se puede conectar a SQL Server que se ejecutan en cualquier plataforma tanto en el entorno local, en contenedores de Docker y en la nube. También se conecta a Azure SQL Database y Azure SQL Data Warehouse. SSMS combina un amplio grupo de herramientas gráficas con una serie de editores de script enriquecidos para proporcionar acceso a SQL Server a desarrolladores y administradores de todos los niveles.
+[SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) forma parte de un conjunto de herramientas de SQL que Microsoft ofrece de forma gratuita para las necesidades de desarrollo y administración. SSMS es un entorno integrado que permite acceder a todos los componentes de SQL Server, configurarlos, administrarlos y desarrollarlos. Puede conectarse a una instancia de SQL Server que se ejecute en cualquier plataforma, tanto en entornos locales como en contenedores de Docker y en la nube. También se conecta a Azure SQL Database y Azure SQL Data Warehouse. SSMS combina un amplio grupo de herramientas gráficas con una serie de editores de scripts enriquecidos que permiten a los desarrolladores y administradores de cualquier nivel de conocimientos acceder a SQL Server.
 
-SSMS ofrece un amplio conjunto de capacidades de administración y desarrollo para SQL Server, incluidas herramientas para:
+SSMS ofrece un amplio conjunto de capacidades de desarrollo y administración para SQL Server, incluidas herramientas para:
 
 - Configurar, supervisar y administrar una o varias instancias de SQL Server
-- Implementar, supervisar y actualizar los componentes de capa de datos, como las bases de datos y almacenamientos de datos
-- Copia de seguridad y restauración de bases de datos
-- Compilar y ejecutar secuencias de comandos y consultas de T-SQL y ver resultados
-- Generar scripts de Transact-SQL para objetos de base de datos
-- Ver y editar datos en bases de datos
-- Diseñe visualmente consultas de Transact-SQL y objetos de base de datos, como vistas, tablas y procedimientos almacenados
+- Implementar, supervisar y actualizar componentes de capa de datos como bases de datos y almacenes de datos
+- Realizar copias de seguridad de bases de datos y restaurarlas
+- Compilar y ejecutar consultas y scripts de T-SQL y ver los resultados
+- Generar scripts de T-SQL para objetos de base de datos
+- Ver y editar datos de bases de datos
+- Diseñar visualmente consultas de T-SQL y objetos de base de datos como vistas, tablas y procedimientos almacenados
 
-Consulte [¿qué es SSMS?](../ssms/sql-server-management-studio-ssms.md) para obtener más información en SSMS.
+Vea [¿Qué es SQL Server Management Studio (SSMS)?](../ssms/sql-server-management-studio-ssms.md) para obtener más información sobre SSMS.
 
-## <a name="install-the-newest-version-of-sql-server-management-studio-ssms"></a>Instale la versión más reciente de SQL Server Management Studio (SSMS)
+## <a name="install-the-newest-version-of-sql-server-management-studio-ssms"></a>Instalar la última versión de SQL Server Management Studio (SSMS)
 
-Cuando se trabaja con SQL Server, debe usar siempre la versión más reciente de SQL Server Management Studio (SSMS). La versión más reciente de SSMS está continuamente actualizada y optimizada y actualmente trabaja con SQL Server en Linux. Para descargar e instalar la versión más reciente, consulte [descargar SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Para mantenerse al día, la versión más reciente de SSMS le avisará cuando hay una nueva versión disponible para su descarga.
+Cuando trabaje con SQL Server, siempre debe usar la versión más reciente de SQL Server Management Studio (SSMS). La versión más reciente de SSMS se actualiza y optimiza continuamente y, en la actualidad, funciona con SQL Server en Linux. Para descargar e instalar la versión más reciente, vea [Descarga de SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). Para que se mantenga actualizado, la versión más reciente de SSMS le indica cuándo hay una nueva versión disponible para descargar.
 
 > [!NOTE]
-> Antes de usar SSMS para administrar Linux, revise el [problemas conocidos](sql-server-linux-release-notes.md) para SSMS en Linux.
+> Antes de usar SSMS para administrar Linux, vea los [problemas conocidos](sql-server-linux-release-notes.md) de SSMS en Linux.
 
 ## <a name="connect-to-sql-server-on-linux"></a>Conectarse a SQL Server en Linux
 
-Use los siguientes pasos básicos para conectarse:
+Siga los pasos básicos siguientes para conectarse:
 
-1. Inicie SSMS escribiendo **Microsoft SQL Server Management Studio** cuadro de búsqueda en el Windows y, a continuación, haga clic en la aplicación de escritorio.
+1. Para iniciar SSMS, escriba **Microsoft SQL Server Management Studio** en el cuadro de búsqueda de Windows y, luego, haga clic en la aplicación de escritorio.
 
     ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png)
 
-1. En el **conectar al servidor** ventana, escriba la información siguiente (si SSMS ya se está ejecutando, haga clic en **conectar > motor de base de datos** para abrir el **conectar al servidor** ventana):
+1. En la ventana **Conectar al servidor**, escriba la información siguiente (si SSMS ya se está ejecutando, haga clic en **Conectar > Motor de base de datos** para abrir la ventana **Conectar al servidor**):
 
-   | Parámetro | Descripción |
+   | Configuración | Descripción |
    |-----|-----|
-   | **Tipo de servidor** | El valor predeterminado es el motor de base de datos; No cambie este valor. |
-   | **Nombre del servidor** | Escriba el nombre de la máquina de Linux con SQL Server de destino o su dirección IP. |
-   | **Autenticación** | SQL Server en Linux, utilice **autenticación de SQL Server**. |
-   | **Inicio de sesión** | Escriba el nombre de un usuario con acceso a una base de datos en el servidor (por ejemplo, el valor predeterminado **SA** cuenta creada durante la instalación). |
-   | **Contraseña** | Escriba la contraseña para el usuario especificado (para el **SA** cuenta, creó esto durante la instalación). |
+   | **Tipo de servidor** | El valor predeterminado es motor de base de datos; no cambie este valor. |
+   | **Nombre del servidor** | Escriba el nombre del equipo de SQL Server para Linux de destino o su dirección IP. |
+   | **Autenticación** | En SQL Server en Linux, use **Autenticación de SQL Server**. |
+   | **Inicio de sesión** | Escriba el nombre de un usuario con acceso a una base de datos en el servidor (por ejemplo, la cuenta de **SA** predeterminada creada durante la instalación). |
+   | **Contraseña** | Escriba la contraseña del usuario especificado (para la cuenta de **SA** creada durante la instalación). |
 
-    ![SQL Server Management Studio: Conectarse al servidor de base de datos SQL](./media/sql-server-linux-manage-ssms/connect.png)
+    ![SQL Server Management Studio: Conexión con el servidor de SQL Database](./media/sql-server-linux-manage-ssms/connect.png)
 
 1. Haga clic en **Conectar**.
 
     > [!TIP]
     > Si recibe un error de conexión, intente primero diagnosticar el problema a partir del mensaje de error. Luego revise las [recomendaciones para solucionar problemas de conexión](sql-server-linux-troubleshooting-guide.md#connection).
  
-1. Después de conectarse correctamente a SQL Server, **Explorador de objetos** se abre y ahora puede acceder a la base de datos para realizar tareas administrativas o consultar los datos.
+1. Después de conectarse correctamente a SQL Server, se abre el **Explorador de objetos** y ya puede acceder a la base de datos para realizar tareas administrativas o consultar datos.
 
-## <a name="run-transact-sql-queries"></a>Ejecutar consultas Transact-SQL
+## <a name="run-transact-sql-queries"></a>Ejecutar consultas de Transact-SQL
 
-Después de conectarse a su servidor, puede conectarse a una base de datos y ejecutar consultas Transact-SQL. Consultas de Transact-SQL pueden usarse para casi cualquier tarea de la base de datos.
+Después de conectarse al servidor, puede conectarse a una base de datos y ejecutar consultas de Transact-SQL. Las consultas de Transact-SQL se pueden usar para prácticamente cualquier tarea de base de datos.
 
-1. En **Explorador de objetos**, vaya a la base de datos de destino en el servidor. Por ejemplo, expanda **las bases de datos del sistema** para trabajar con el **maestro** base de datos.
+1. En el **Explorador de objetos**, vaya a la base de datos de destino en el servidor. Por ejemplo, expanda **Bases de datos del sistema** para trabajar con la base de datos **maestra**.
 
-1. Haga clic en la base de datos y, a continuación, seleccione **nueva consulta**.
+1. Haga clic con el botón derecho en la base de datos y, luego, seleccione **Nueva consulta**.
 
-1. En la ventana de consulta, escribir una consulta de Transact-SQL para seleccionar el valor devuelto los nombres de todas las bases de datos en el servidor.
+1. En la ventana de consulta, escriba una consulta de Transact-SQL para devolver los nombres de todas las bases de datos del servidor.
 
    ```sql
    SELECT [Name]
    FROM sys.Databases
    ```
 
-   Si está familiarizado con la escritura de consultas, vea [escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+   Si no está familiarizado con la escritura de consultas, vea [Escritura de instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-1. Haga clic en el **Execute** botón para ejecutar la consulta y ver los resultados.
+1. Haga clic en el botón **Ejecutar** para ejecutar la consulta y ver los resultados.
 
-   ![Correcto. Conéctese al servidor de base de datos SQL: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![Correcto. Conexión al servidor de SQL Database: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
-Aunque es posible realizar casi cualquier tarea de administración con consultas Transact-SQL, SSMS es una herramienta gráfica que facilita es más fácil de administrar SQL Server. Las secciones siguientes proporcionan algunos ejemplos del uso de la interfaz gráfica de usuario.
+Aunque con las consultas de Transact-SQL es posible realizar prácticamente cualquier tarea de administración, SSMS es una herramienta gráfica que facilita la administración de SQL Server. En las secciones siguientes se proporcionan algunos ejemplos del uso de la interfaz gráfica de usuario.
 
 ## <a name="create-and-manage-databases"></a>Crear y administrar bases de datos
 
-Mientras está conectado a la *maestro* base de datos, puede crear bases de datos en el servidor y modificar o quitar bases de datos existentes. Los pasos siguientes describen cómo realizar varias tareas de administración de base de datos comunes a través de Management Studio. Para llevar a cabo estas tareas, asegúrese de que está conectado a la *maestro* base de datos con el inicio de sesión de la entidad de seguridad de nivel de servidor que creó al configurar SQL Server en Linux.
+Mientras está conectado a la base de datos *maestra*, puede crear bases de datos en el servidor y modificar o quitar bases de datos existentes. En los pasos siguientes se explica cómo realizar varias tareas comunes de administración de bases de datos mediante Management Studio. Para realizar estas tareas, asegúrese de que está conectado a la base de datos *maestra* con el inicio de sesión de entidad de seguridad a nivel de servidor creado al configurar SQL Server en Linux.
 
 ### <a name="create-a-new-database"></a>Creación de una base de datos
 
-1. Inicie SSMS y conéctese a su servidor en SQL Server en Linux
+1. Inicie SSMS y conéctese al servidor en SQL Server en Linux.
 
-2. En el Explorador de objetos, haga doble clic en el *bases de datos* carpeta y, a continuación, haga clic en * nueva base de datos... "
+2. En el Explorador de objetos, haga clic con el botón derecho en la carpeta *Bases de datos* y, luego, haga clic en *Nueva base de datos...".
 
-3. En el *nueva base de datos* cuadro de diálogo, escriba un nombre para la nueva base de datos y, a continuación, haga clic en *Aceptar*
+3. En el cuadro de diálogo *Nueva base de datos*, escriba un nombre para la nueva base de datos y haga clic en *Aceptar*.
 
-La nueva base de datos se creó correctamente en el servidor. Si prefiere crear una nueva base de datos mediante T-SQL, consulte [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md).
+La nueva base de datos se crea correctamente en el servidor. Si prefiere crear una nueva base de datos mediante T-SQL, vea [CREATE DATABASE (SQL Server Transact-SQL)](../t-sql/statements/create-database-sql-server-transact-sql.md).
 
 ### <a name="drop-a-database"></a>Quitar una base de datos
 
-1. Inicie SSMS y conéctese a su servidor en SQL Server en Linux
+1. Inicie SSMS y conéctese al servidor en SQL Server en Linux.
 
-2. En el Explorador de objetos, expanda el *bases de datos* carpeta para ver una lista de la base de datos en el servidor.
+2. En el Explorador de objetos, expanda la carpeta *Bases de datos* para ver una lista de todas las bases de datos del servidor.
 
-3. En el Explorador de objetos, haga doble clic en la base de datos que desea quitar y, a continuación, haga clic en *eliminar*
+3. En el Explorador de objetos, haga clic con el botón derecho en la base de datos que quiere quitar y, luego, haga clic en *Eliminar*.
 
-4. En el *Eliminar objeto* cuadro de diálogo, verificación *cerrar conexiones existentes* y, a continuación, haga clic en *Aceptar*
+4. En el cuadro de diálogo *Eliminar objeto*, active *Cerrar conexiones existentes* y haga clic en *Aceptar*.
 
-La base de datos se quita correctamente desde el servidor. Si desea quitar una base de datos mediante T-SQL, consulte [DROP DATABASE (SQL Server Transact-SQL)](../t-sql/statements/drop-database-transact-sql.md).
+La base de datos se quita correctamente del servidor. Si prefiere quitar una base de datos mediante T-SQL, vea [DROP DATABASE (SQL Server Transact-SQL)](../t-sql/statements/drop-database-transact-sql.md).
 
-## <a name="use-activity-monitor-to-see-information-about-sql-server-activity"></a>Utilice el Monitor de actividad para ver información acerca de la actividad de SQL Server
+## <a name="use-activity-monitor-to-see-information-about-sql-server-activity"></a>Uso de Monitor de actividad para ver información sobre la actividad de SQL Server
 
-El [Monitor de actividad](../relational-databases/performance-monitor/activity-monitor.md) herramienta está integrada en SQL Server Management Studio (SSMS) y muestra información acerca de los procesos de SQL Server y cómo estos procesos afectan a la instancia actual de SQL Server.
+La herramienta [Monitor de actividad](../relational-databases/performance-monitor/activity-monitor.md) está integrada en SQL Server Management Studio (SSMS) y muestra información sobre los procesos de SQL Server y cómo afectan a la instancia actual de SQL Server.
 
-1. Inicie SSMS y conéctese a su servidor en SQL Server en Linux
+1. Inicie SSMS y conéctese al servidor en SQL Server en Linux.
 
-1. En el Explorador de objetos, haga clic en el *server* nodo y, a continuación, haga clic en *Monitor de actividad*
+1. En el Explorador de objetos, haga clic con el botón derecho en el nodo *servidor* y, luego, haga clic en *Monitor de actividad*.
 
-Monitor de actividad muestra los paneles pueden expandibles y contraer con la siguiente información:
+Monitor de actividad muestra paneles que se pueden expandir y contraer con la siguiente información:
 
 - Información general
 - Procesos
 - Esperas de recursos
-- E/S de archivos de datos
+- E/S de archivo de datos
 - Consultas costosas recientes
 - Consultas costosas activas
 
-Cuando se expande un panel, Monitor de actividad consulta la instancia para obtener información. Si el panel está contraído, cualquier actividad de consulta se detiene en ese panel. Puede expandir uno o varios paneles al mismo tiempo para ver diferentes tipos de actividad en la instancia.
+Cuando un panel está expandido, Monitor de actividad consulta información a la instancia. Si el panel está contraído, cualquier actividad de consulta se detiene en ese panel. Se pueden expandir uno o varios paneles al mismo tiempo para ver diferentes tipos de actividad en la instancia.
 
 ## <a name="see-also"></a>Vea también
 - [¿Qué es SSMS?](../ssms/sql-server-management-studio-ssms.md)
-- [Exportar e importar una base de datos con SSMS](sql-server-linux-migrate-ssms.md)
+- [Exportación e importación de una base de datos con SSMS](sql-server-linux-migrate-ssms.md)
 - [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 - [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Supervisión de la actividad y rendimiento del servidor](../relational-databases/performance/server-performance-and-activity-monitoring.md)

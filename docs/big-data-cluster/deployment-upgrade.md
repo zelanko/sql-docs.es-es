@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7bdb1eb59fd36d065df9dba0f6d6879c1a294914
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419386"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731089"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Cómo actualizar clústeres de macrodatos de SQL Server
 
@@ -42,7 +42,7 @@ Actualmente, la única manera de actualizar un clúster de macrodatos a una nuev
    En CTP 2.3 o superior, ejecute el siguiente comando. Reemplace `ctp3.1` en el comando por la versión de **mssqlctl** que está desinstalando. Si la versión es anterior a CTP 3.1, agregue un guión antes del número de versión (por ejemplo, `ctp-2.5`).
 
    ```powershell
-   pip3 uninstall -r https://mcr.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
+   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
 1. Instale la última versión de **azdata**. Los siguientes comandos instalan **azdata** para CTP 3.2:
@@ -76,4 +76,4 @@ Después de quitar el clúster de macrodatos anterior e instalar la versión de 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos, vea [¿Qué son los clústeres de macrodatos de SQL Server?](big-data-cluster-overview.md)
+Para obtener más información sobre los clústeres de macrodatos, vea [¿Qué son los clústeres de macrodatos de SQL Server?](big-data-cluster-overview.md)

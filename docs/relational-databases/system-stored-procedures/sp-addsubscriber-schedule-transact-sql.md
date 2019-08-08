@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 49bf433969d72e253afed2a87837ad2ca03fb94a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7baa7419620fd25be06a731894432862bfba2b96
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022412"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769052"
 ---
-# <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Agrega una programación para el Agente de distribución y el Agente de mezcla. Este procedimiento almacenado se ejecuta en el publicador de cualquier base de datos.  
   
@@ -49,16 +49,16 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**. El nombre del suscriptor tiene que ser único en la base de datos, no puede existir previamente y no puede ser NULL.  
+`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. el suscriptor es de **tipo sysname**. El nombre del suscriptor tiene que ser único en la base de datos, no puede existir previamente y no puede ser NULL.  
   
-`[ @agent_type = ] agent_type` Es el tipo de agente. *agent_type* es **smallint**, y puede tener uno de estos valores.  
+`[ @agent_type = ] agent_type`Es el tipo de agente. *agent_type* es **smallint**y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Agente de distribución|  
 |**1**|Agente de mezcla|  
   
-`[ @frequency_type = ] frequency_type` Es la frecuencia con que se programa al agente de distribución. *frequency_type* es **int**, y puede tener uno de estos valores.  
+`[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el Agente de distribución. *frequency_type* es de **tipo int**y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -71,9 +71,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**64** (valor predeterminado)|Iniciar automáticamente|  
 |**128**|Periódica|  
   
-`[ @frequency_interval = ] frequency_interval` Es el valor que se aplican a la frecuencia establecida por *frequency_type*. *frequency_interval* es **int**, su valor predeterminado es **1**.  
+`[ @frequency_interval = ] frequency_interval`Es el valor que se va a aplicar a la frecuencia establecida por *frequency_type*. *frequency_interval* es de **tipo int**y su valor predeterminado es **1**.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha del agente de distribución. Este parámetro se utiliza cuando *frequency_type* está establecido en **32** (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de estos valores.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha del Agente de distribución. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -83,9 +83,9 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**8**|Cuarto|  
 |**16**|Último|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, su valor predeterminado es **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @frequency_subday = ] frequency_subday` Es la frecuencia con la que volver a programar durante el período definido. *frequency_subday* es **int**, y puede tener uno de estos valores.  
+`[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -94,29 +94,29 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**4** (valor predeterminado)|Minute|  
 |**8**|Hour|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Es el intervalo de *frequency_subday*. *frequency_subday_interval* es **int**, su valor predeterminado es **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es **5**.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día, cuando el agente de distribución es el primero programada, con el formato HHMMSS. *active_start_time_of_day* es **int**, su valor predeterminado es **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Es la hora del día a la que se programa el Agente de distribución por primera vez, con el formato HHMMSS. *active_start_time_of_day* es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día en que el agente de distribución deja de estar programado, con el formato HHMMSS. *active_end_time_of_day*es **int**, su valor predeterminado es 235959, lo que significa 11:59:59 P.M. como en un reloj de 24 horas.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Es la hora del día en que el Agente de distribución deja de estar programado, con el formato HHMMSS. *active_end_time_of_day*es de **tipo int**y su valor predeterminado es 235959, lo que significa 11:59:59 P.M. tal y como se mide en un reloj de 24 horas.  
   
-`[ @active_start_date = ] active_start_date` Es la fecha en el agente de distribución programada, con el formato AAAAMMDD. *active_start_date* es **int**, su valor predeterminado es **0**.  
+`[ @active_start_date = ] active_start_date`Es la fecha en la que se programa el Agente de distribución por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @active_end_date = ] active_end_date` Es la fecha en el agente de distribución deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es 99991231, que significa 31 de diciembre de 9999.  
+`[ @active_end_date = ] active_end_date`Es la fecha en la que el Agente de distribución deja de estar programado, con el formato AAAAMMDD. *active_end_date* es de **tipo int**y su valor predeterminado es 99991231, que significa el 31 de diciembre de 9999.  
   
-`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  *publicador* no se debe especificar para una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  no se debe especificar el publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para un publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_addsubscriber_schedule** se utiliza en la replicación de instantáneas, transaccional y de mezcla.  
+ **sp_addsubscriber_schedule** se utiliza en la replicación de instantáneas, la replicación transaccional y la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_addsubscriber_schedule**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_addsubscriber_schedule**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_changesubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   

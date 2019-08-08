@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a61dfd60dbde554ba3db24a4740b6220f9d68a99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22ecb1601108562607d1fdc550daaa945fe72910
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091332"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770734"
 ---
-# <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_changesubscriber_schedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Cambia la programación del Agente de distribución o del Agente de mezcla para un suscriptor. Este procedimiento almacenado se ejecuta en el publicador de cualquier base de datos.  
   
@@ -48,34 +48,34 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**. El nombre del suscriptor tiene que ser único en la base de datos, no puede existir previamente y no puede ser NULL.  
+`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. el suscriptor es de **tipo sysname**. El nombre del suscriptor tiene que ser único en la base de datos, no puede existir previamente y no puede ser NULL.  
   
-`[ @agent_type = ] type` Es el tipo de agente. *tipo* es **smallint**, su valor predeterminado es **0**. **0** indica un agente de distribución. **1** indica un agente de mezcla.  
+`[ @agent_type = ] type`Es el tipo de agente. el *tipo* es **smallint**y su valor predeterminado es **0**. **0** indica un agente de distribución. **1** indica un agente de mezcla.  
   
-`[ @frequency_type = ] frequency_type` Es la frecuencia con que se programa la tarea de distribución. *frequency_type* es **int**, su valor predeterminado es **64**. Hay 10 columnas de programación.  
+`[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa la tarea de distribución. *frequency_type* es de **tipo int**y su valor predeterminado es **64**. Hay 10 columnas de programación.  
   
-`[ @frequency_interval = ] frequency_interval` Es el valor que se aplica a la frecuencia establecida por *frequency_type*. *frequency_interval* es **int**, su valor predeterminado es **1**.  
+`[ @frequency_interval = ] frequency_interval`Es el valor que se aplica a la frecuencia establecida por *frequency_type*. *frequency_interval* es de **tipo int**y su valor predeterminado es **1**.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha de la tarea de distribución. *frequency_relative_interval* es **int**, su valor predeterminado es **1**.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha de la tarea de distribución. *frequency_relative_interval* es de **tipo int**y su valor predeterminado es **1**.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, su valor predeterminado es **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @frequency_subday = ] frequency_subday` Es la frecuencia, en minutos, para volver a programar durante el período definido. *frequency_subday* es **int**, su valor predeterminado es **4**.  
+`[ @frequency_subday = ] frequency_subday`Es la frecuencia, en minutos, con la que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y su valor predeterminado es **4**.  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Es el intervalo de *frequency_subday*. *frequency_subday_interval* es **int**, su valor predeterminado es **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es **5**.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día cuando la tarea de distribución se programa por primera vez. *active_start_time_of_day* es **int**, su valor predeterminado es **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`Es la hora del día en la que la tarea de distribución se programa por primera vez. *active_start_time_of_day* es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día en que la tarea de distribución deja de estar programado. *active_end_time_of_day* es **int**, su valor predeterminado es **235959**, lo que significa 11:59:59 P.M. en un reloj de 24 horas.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`Es la hora del día a la que la tarea de distribución deja de estar programada. *active_end_time_of_day* es de **tipo int**y su valor predeterminado es **235959**, lo que significa 11:59:59 P.M. en un reloj de 24 horas.  
   
-`[ @active_start_date = ] active_start_date` Es la fecha en la tarea de distribución programada, con el formato AAAAMMDD. *active_start_date* es **int**, su valor predeterminado es **0**.  
+`[ @active_start_date = ] active_start_date`Es la fecha en la que la tarea de distribución se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @active_end_date = ] active_end_date` Es la fecha en la tarea de distribución deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es **99991231**, lo que significa 31 de diciembre de 9999.  
+`[ @active_end_date = ] active_end_date`Es la fecha en la que la tarea de distribución deja de estar programada, con el formato AAAAMMDD. *active_end_date* es de **tipo int**y su valor predeterminado es **99991231**, que significa el 31 de diciembre de 9999.  
   
-`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  *publicador* no debe usarse cuando se cambia las propiedades del artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  no se debe usar el publicador al cambiar las propiedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un artículo en un publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -84,7 +84,7 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
  **sp_changesubscriber_schedule** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_changesubscriber_schedule**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_changesubscriber_schedule**.  
   
 ## <a name="see-also"></a>Vea también  
  [sp_addsubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   

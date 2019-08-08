@@ -6,17 +6,18 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c8ac0827ba6bfbb2c35e594967925d16d4730915
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ec50ee1b10a51e16b72d7ffc110448dcf016a13f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469865"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714972"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Usar datos de cubos OLAP en R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-El  paquete olapr es un paquete de R, proporcionado por Microsoft para su uso con Machine Learning Server y SQL Server, que le permite ejecutar consultas MDX para obtener datos de cubos OLAP. Con este paquete, no es necesario crear servidores vinculados ni limpiar conjuntos de filas planas. puede obtener datos OLAP directamente desde R.
+El paquete olapr es un paquete de R, proporcionado por Microsoft para su uso con Machine Learning Server y SQL Server, que le permite ejecutar consultas MDX para obtener datos de cubos OLAP. Con este paquete, no es necesario crear servidores vinculados ni limpiar conjuntos de filas planas. puede obtener datos OLAP directamente desde R.
 
 En este artículo se describe la API, junto con una introducción a OLAP y MDX para los usuarios de R que podrían ser nuevos en las bases de datos de cubo multidimensionales.
 
@@ -27,9 +28,9 @@ En este artículo se describe la API, junto con una introducción a OLAP y MDX p
 
 OLAP es breve para el procesamiento analítico en línea. Las soluciones OLAP se usan ampliamente para capturar y almacenar datos empresariales críticos a lo largo del tiempo. Hay una serie de herramientas, paneles y visualizaciones que usan datos OLAP para el análisis empresarial. Para obtener más información, vea [procesamiento analítico en línea](https://en.wikipedia.org/wiki/Online_analytical_processing).
 
-Microsoft proporciona [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), que permite diseñar, implementar y consultar datos OLAP en forma de cubos o  _modelos tabulares_. Un cubo es una base de datos multidimensional. Las _dimensiones_ son similares a las de los datos, o factores en R: las dimensiones se utilizan para identificar un subconjunto determinado de datos que se desea resumir o analizar. Por ejemplo, la hora es una dimensión importante, tanto para que muchas soluciones OLAP incluyan varios calendarios definidos de forma predeterminada, para usarlos al segmentar y resumir los datos. 
+Microsoft proporciona [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), que permite diseñar, implementar y consultar datos OLAP en forma de cubos o _modelos tabulares_. Un cubo es una base de datos multidimensional. Las _dimensiones_ son similares a las de los datos, o factores en R: las dimensiones se utilizan para identificar un subconjunto determinado de datos que se desea resumir o analizar. Por ejemplo, la hora es una dimensión importante, tanto para que muchas soluciones OLAP incluyan varios calendarios definidos de forma predeterminada, para usarlos al segmentar y resumir los datos. 
 
-Por motivos de rendimiento, una base de datos OLAP calcula a menudo resúmenes (o agregaciones) de antemano y, a continuación, los almacena para una recuperación más rápida. Los resúmenes se basan en *medidas*, que representan fórmulas que se pueden aplicar a datos numéricos. Las dimensiones se utilizan para definir un subconjunto de datos y, a continuación, se calcula la medida sobre esos datos. Por ejemplo, se usaría una medida para calcular el total de ventas de una determinada línea de producto en varios trimestres menos impuestos, para informar de los costos de envío promedio de un proveedor determinado, los salarios acumulados anuales hasta la fecha pagados, etc.
+Por motivos de rendimiento, una base de datos OLAP calcula a menudo resúmenes(o agregaciones) de antemano y, a continuación, los almacena para una recuperación más rápida. Los resúmenes se basan en *medidas*, que representan fórmulas que se pueden aplicar a datos numéricos. Las dimensiones se utilizan para definir un subconjunto de datos y, a continuación, se calcula la medida sobre esos datos. Por ejemplo, se usaría una medida para calcular el total de ventas de una determinada línea de producto en varios trimestres menos impuestos, para informar de los costos de envío promedio de un proveedor determinado, los salarios acumulados anuales hasta la fecha pagados, etc.
 
 MDX, Short para las expresiones multidimensionales, es el lenguaje que se usa para consultar los cubos. Una consulta MDX contiene normalmente una definición de datos que incluye una o más dimensiones, y al menos una medida, aunque las consultas MDX pueden ser considerablemente más complejas e incluir ventanas graduales, promedios acumulados, sumas, rangos o percentiles. 
 
@@ -69,7 +70,7 @@ Para obtener ejemplos de cómo crear una consulta MDX o ejecutar una consulta MD
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-En esta sección se enumeran algunos problemas conocidos y preguntas  comunes sobre el paquete olapr.
+En esta sección se enumeran algunos problemas conocidos y preguntas comunes sobre el paquete olapr.
 
 ### <a name="tabular-model-support"></a>Compatibilidad con modelos tabulares
 
@@ -110,7 +111,7 @@ En general, incluso cuando un cubo está habilitado para la reescritura, solo se
 
 ### <a name="long-running-mdx-queries-block-cube-processing"></a>Las consultas MDX de ejecución prolongada bloquean el procesamiento de cubos
 
-Aunque el  paquete olapr solo realiza operaciones de lectura, las consultas MDX de ejecución prolongada pueden crear bloqueos que impiden que se procese el cubo. Pruebe siempre las consultas MDX de antemano para saber cuántos datos deben devolverse.
+Aunque el paquete olapr solo realiza operaciones de lectura, las consultas MDX de ejecución prolongada pueden crear bloqueos que impiden que se procese el cubo. Pruebe siempre las consultas MDX de antemano para saber cuántos datos deben devolverse.
 
 Si intenta conectarse a un cubo que está bloqueado, es posible que reciba un error que le informará de que no se puede alcanzar el almacenamiento de datos de SQL Server. Las resoluciones sugeridas incluyen habilitar conexiones remotas, comprobar el nombre del servidor o de la instancia, etc. sin embargo, tenga en cuenta la posibilidad de una conexión abierta anterior.
 

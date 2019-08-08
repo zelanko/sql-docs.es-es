@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c7e6323c8a20aec7d464f7aa6f11a27fc24728d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b1522a64d43256660966341ebe43f8d4ac4e0be
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896620"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771161"
 ---
-# <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Inicia una solicitud de validación de cada uno de los artículos de la publicación especificada. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -41,33 +41,33 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication=** ] **'** _publicación '_  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+ **[@publication=** ] **'** _publicación '_  
+ Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
  [ **@rowcount_only=** ] *rowcount_only*  
- Indica si se devuelve solo el recuento de filas de la tabla. *rowcount_only* es **smallint** y puede tener uno de los siguientes valores.  
+ Indica si se devuelve solo el recuento de filas de la tabla. *rowcount_only* es **smallint** y puede tener uno de los valores siguientes.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Realiza una suma de comprobación compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: Cuando un artículo se filtra horizontalmente, se realiza una operación de recuento de filas en lugar de una operación de suma de comprobación.|  
 |**1** (predeterminado)|Realiza solamente un recuento de filas.|  
-|**2**|Realiza un recuento de filas y una suma de comprobación binaria.<br /><br /> Nota: Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se lleva a cabo los suscriptores de la versión 7.0, solo una validación del recuento de filas.|  
+|**2**|Realiza un recuento de filas y una suma de comprobación binaria.<br /><br /> Nota: En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el caso de los suscriptores de la versión 7,0, solo se realiza una validación del recuento de filas.|  
   
- [ **@full_or_fast=** ] *full_or_fast*  
- Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint** y puede tener uno de los siguientes valores.  
+ **[@full_or_fast=** ] *full_or_fast*  
+ Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint** y puede tener uno de los valores siguientes.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Realiza un recuento completo mediante COUNT(*).|  
-|**1**|Un recuento rápido desde **sysindexes.rows**. Recuento de filas en [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) es mucho más rápido que el recuento de filas en la tabla real. Sin embargo, dado que [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) constantemente actualizado, el recuento de filas puede no ser exacto.|  
-|**2** (predeterminado)|Realiza un recuento rápido condicional intentando primero el método rápido. Si el método rápido muestra diferencias, se utiliza el método completo. Si *expected_rowcount* es NULL y el procedimiento almacenado que se usa para obtener el valor, una completa COUNT(*) siempre se utiliza.|  
+|**1**|Realiza un recuento rápido de **sysindexes. Rows**. Contar las filas en [Sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) es mucho más rápido que contar las filas de la tabla real. Sin embargo, dado que [Sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) se actualiza de forma diferida, es posible que el recuento de filas no sea preciso.|  
+|**2** (predeterminado)|Realiza un recuento rápido condicional intentando primero el método rápido. Si el método rápido muestra diferencias, se utiliza el método completo. Si *expected_rowcount* es NULL y se usa el procedimiento almacenado para obtener el valor, siempre se usa un recuento completo (*).|  
   
-`[ @shutdown_agent = ] shutdown_agent` Indica si el agente de distribución debe cerrar inmediatamente tras la finalización de la validación. *shutdown_agent* es **bit**, su valor predeterminado es **0**. Si **0**, el agente de replicación no se cierra. Si **1**, el agente de replicación se cierra después de valida el último artículo.  
+`[ @shutdown_agent = ] shutdown_agent`Indica si el Agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit**y su valor predeterminado es **0**. Si es **0**, el agente de replicación no se cierra. Si es **1**, el agente de replicación se cierra después de validar el último artículo.  
   
-`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  *publicador* no debe usarse al solicitar la validación en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  no se debe usar el publicador al solicitar la validación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -75,12 +75,12 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="remarks"></a>Comentarios  
  **sp_publication_validation** se utiliza en la replicación transaccional.  
   
- **sp_publication_validation** puede llamarse en cualquier momento después de que se han activado los artículos asociados con la publicación. Se puede ejecutar el procedimiento una vez de forma manual, o bien como parte de un trabajo programado de forma regular que valide los datos.  
+ se puede llamar a **sp_publication_validation** en cualquier momento después de activar los artículos asociados a la publicación. Se puede ejecutar el procedimiento una vez de forma manual, o bien como parte de un trabajo programado de forma regular que valide los datos.  
   
- Si la aplicación tiene suscriptores de actualización inmediata **sp_publication_validation** puede detectar falsos errores. **sp_publication_validation** calcula primero el recuento de filas o suma de comprobación en el publicador y, a continuación, en el suscriptor. Debido a que el desencadenador de actualización inmediata puede propagar una actualización al publicador desde el suscriptor, tras completar el recuento de filas o la suma de comprobación en el publicador pero antes de completarlas en el suscriptor, los valores podrían cambiar. Para asegurarse de que los valores del suscriptor y del publicador no cambian mientras se valida una publicación, detenga el servicio Microsoft DTC (Coordinador de transacciones distribuidas) en el publicador durante la validación.  
+ Si la aplicación tiene suscriptores de actualización inmediata, **sp_publication_validation** puede detectar falsos errores. **sp_publication_validation** calcula primero el recuento de filas o la suma de comprobación en el publicador y, a continuación, en el suscriptor. Debido a que el desencadenador de actualización inmediata puede propagar una actualización al publicador desde el suscriptor, tras completar el recuento de filas o la suma de comprobación en el publicador pero antes de completarlas en el suscriptor, los valores podrían cambiar. Para asegurarse de que los valores del suscriptor y del publicador no cambian mientras se valida una publicación, detenga el servicio Microsoft DTC (Coordinador de transacciones distribuidas) en el publicador durante la validación.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_publication_validation**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_publication_validation**.  
   
 ## <a name="see-also"></a>Vea también  
  [Validar datos en el suscriptor](../../relational-databases/replication/validate-data-at-the-subscriber.md)   

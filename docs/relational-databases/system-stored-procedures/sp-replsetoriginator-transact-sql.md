@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dd3e27e935d7774c3882e8cc46430542351dd87c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ca3487a22989261f0d6039f065ae0c102e534a1
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113150"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770874"
 ---
-# <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Se utiliza para invocar la detección y control de bucles invertidos en la replicación transaccional bidireccional. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -38,18 +38,18 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server_name'` Es el nombre del servidor donde se aplica la transacción. *originating_server* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @server_name = ] 'server_name'`Es el nombre del servidor donde se aplica la transacción. el valor de no es **sysname**y no tiene ningún valor predeterminado.  
   
-`[ @database_name = ] 'database_name'` Es el nombre de la base de datos donde se aplica la transacción. *originating_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @database_name = ] 'database_name'`Es el nombre de la base de datos donde se aplica la transacción. *originating_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_replsetoriginator** se ejecuta el agente de distribución para registrar el origen de las transacciones aplicadas mediante replicación. Esta información se utiliza para invocar la detección de bucles invertidos en suscripciones transaccionales bidireccionales que tienen establecida la propiedad de bucles invertidos.  
+ la Agente de distribución ejecuta **sp_replsetoriginator** para registrar el origen de las transacciones aplicadas por la replicación. Esta información se utiliza para invocar la detección de bucles invertidos en suscripciones transaccionales bidireccionales que tienen establecida la propiedad de bucles invertidos.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor en el publicador, los miembros de la **db_owner** rol fijo de base de datos en la base de datos de publicación, o los usuarios en la lista de acceso de publicación (PAL) puede ejecutar **sp_replsetoriginator**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** en el publicador, los miembros del rol fijo de base de datos **db_owner** en la base de datos de publicación o los usuarios de la lista de acceso a la publicación (PAL) pueden ejecutar **sp_replsetoriginator**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

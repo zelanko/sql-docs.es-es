@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: de035b4c8835b9de9ae81e8bd474c0cad6d100f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cc40187ccafebee672214a0926a3ca0d0bc4176
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105018"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768990"
 ---
-# <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crea la vista que define el artículo publicado cuando una tabla se filtra horizontal o verticalmente. Esta vista se utiliza como el origen filtrado del esquema y los datos de las tablas de destino. Con este procedimiento almacenado solamente pueden modificarse artículos sin suscripciones. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -46,38 +46,38 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación que contiene el artículo. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación que contiene el artículo. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @view_name = ] 'view_name'` Es el nombre de la vista que define el artículo publicado. *view_name* es **nvarchar (386)** , su valor predeterminado es null.  
+`[ @view_name = ] 'view_name'`Es el nombre de la vista que define el artículo publicado. *view_name* es de tipo **nvarchar (386)** y su valor predeterminado es NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` Es una restricción cláusula (WHERE) que define un filtro horizontal. Cuando escriba la cláusula de restricción, omita la palabra clave WHERE. *filter_clause* es **ntext**, su valor predeterminado es null.  
+`[ @filter_clause = ] 'filter_clause'`Es una cláusula de restricción (WHERE) que define un filtro horizontal. Cuando escriba la cláusula de restricción, omita la palabra clave WHERE. *filter_clause* es **ntext**y su valor predeterminado es NULL.  
   
-`[ @change_active = ] change_active` Permite modificar las columnas en las publicaciones que tienen suscripciones. *change_active* es un **int**, su valor predeterminado es **0**. Si **0**, no se cambian las columnas. Si **1**, las vistas se pueden crear o volver a crear en los artículos activos que tienen suscripciones.  
+`[ @change_active = ] change_active`Permite modificar las columnas de las publicaciones que tienen suscripciones. *change_active* es de **tipo int**y su valor predeterminado es **0**. Si es **0**, no se cambian las columnas. Si es **1**, las vistas se pueden crear o volver a crear en artículos activos que tienen suscripciones.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit**y su valor predeterminado es **0**.  
   
- **0** especifica que los cambios en el artículo no invalidarán la instantánea no es válido. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
+ **0** especifica que los cambios en el artículo no hacen que la instantánea no sea válida. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
- **1** especifica que los cambios en el artículo pueden invalidar la instantánea no es válido y si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para marcar como obsoleta la instantánea existente y una nueva instantánea generada.  
+ **1** especifica que los cambios en el artículo pueden hacer que la instantánea no sea válida y, si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para que la instantánea existente se marque como obsoleta y se genere una nueva instantánea.  
   
-`[ @force_reinit_subscription = ] _force_reinit_subscription_` Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
+`[ @force_reinit_subscription = ] _force_reinit_subscription_`Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
   
- **0** especifica que los cambios en el artículo no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de suscripciones, se producirá un error y no se realizarán cambios.  
+ **0** especifica que los cambios en el artículo no harán que se reinicialice la suscripción. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de suscripciones, se producirá un error y no se realizarán cambios.  
   
- **1** especifica que los cambios en el artículo hace que la suscripción existente para reinicializarla y concede permiso para que se produzca la reinicialización de suscripción.  
+ **1** especifica que los cambios en el artículo hacen que se reinicialice la suscripción existente y concede permiso para que se produzca la reinicialización de la suscripción.  
   
-`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  *publicador* no se debe usar al publicar desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  no se debe usar el publicador al publicar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un publicador.  
   
-`[ @refreshsynctranprocs = ] refreshsynctranprocs` Es si automáticamente se vuelven a crear los procedimientos almacenados utilizados para sincronizar la replicación. *refreshsynctranprocs* es **bit**, su valor predeterminado es 1.  
+`[ @refreshsynctranprocs = ] refreshsynctranprocs`Indica si los procedimientos almacenados utilizados para sincronizar la replicación se vuelven a crear automáticamente. *refreshsynctranprocs* es de **bit**y su valor predeterminado es 1.  
   
- **1** significa que los procedimientos almacenados se vuelven a creados.  
+ **1** significa que los procedimientos almacenados se vuelven a crear.  
   
- **0** significa que los procedimientos almacenados no se vuelven a creados.  
+ **0** significa que los procedimientos almacenados no se vuelven a crear.  
   
 `[ @internal = ] internal` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -85,23 +85,23 @@ sp_articleview [ @publication = ] 'publication'
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_articleview** crea la vista que define el artículo publicado e inserta el Id. de esta vista en el **sync_objid** columna de la [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabla e inserta el texto de la cláusula de restricción en la **filter_clause** columna. Si se replican todas las columnas y no hay ningún **filter_clause**, el **sync_objid** en el [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabla está establecida en el identificador de la tabla base y el uso de **sp_articleview** no es necesario.  
+ **sp_articleview** crea la vista que define el artículo publicado e inserta el ID. de esta vista en la columna **sync_objid** de la tabla [sysarticles &#40;de Transact&#41; -SQL](../../relational-databases/system-tables/sysarticles-transact-sql.md) e inserta el texto de la cláusula Restriction en columna **filter_clause** . Si se replican todas las columnas y no hay **filter_clause**, el valor de **sync_objid** de la tabla de [Transact- &#40;SQL&#41; sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) se establece en el identificador de la tabla base y no es necesario el uso de **sp_articleview** .  
   
- Para publicar una tabla filtrada verticalmente (es decir, para filtrar columnas) ejecuta por primera vez **sp_addarticle** no *sync_object* parámetro, ejecute [sp_articlecolumn &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) una vez para cada columna replicar (definiendo el filtro vertical) y, a continuación, ejecute **sp_articleview** para crear la vista que define el artículo publicado.  
+ Para publicar una tabla filtrada verticalmente (es decir, para filtrar columnas), primero ejecute **sp_addarticle** sin ningún parámetro *sync_object* , ejecute [sp_articlecolumn &#40;de&#41; Transact-SQL](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) una vez para cada columna que se va a replicar (que define el filtro vertical) y, a continuación, ejecute **sp_articleview** para crear la vista que define el artículo publicado.  
   
- Para publicar una tabla filtrada horizontalmente (es decir, para filtrar filas), ejecute [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) no *filtro* parámetro. Ejecute [sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md), con todos los parámetros, incluido *filter_clause*. A continuación, ejecute **sp_articleview**, con todos los parámetros, incluido el idénticos *filter_clause*.  
+ Para publicar una tabla filtrada horizontalmente (es decir, para filtrar filas), [ejecute &#40;sp_addarticle Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sin ningún parámetro de *filtro* . Ejecute [Transact &#40;-SQL&#41;de sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md), proporcionando todos los parámetros, incluido *filter_clause*. A continuación, ejecute **sp_articleview**y proporcione todos los parámetros, incluido el idéntico.  
   
- Para publicar una tabla filtrada vertical y horizontalmente, ejecute [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) no *sync_object* o *filtro* parámetros. Ejecute [sp_articlecolumn &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) una vez para cada columna que se va a replicarse y luego ejecute [sp_articlefilter &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) y **sp_ articleview**.  
+ Para publicar una tabla filtrada vertical y horizontalmente, ejecute [sp_addarticle &#40;Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sin parámetros de *filtro* o *sync_object* . Ejecute [en &#40;Transact-SQL&#41; de sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) una vez para cada columna que se va a replicar y, a continuación, ejecute [ &#40;sp_articlefilter Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) y **sp_articleview**.  
   
- Si el artículo ya tiene una vista que define el artículo publicado, **sp_articleview** quita la vista existente y crea automáticamente una nueva. Si la vista se creó manualmente (**tipo** en [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) es **5**), no se quita la vista existente.  
+ Si el artículo ya tiene una vista que define el artículo publicado, **sp_articleview** quita la vista existente y crea una nueva automáticamente. Si la vista se creó manualmente (**Escriba** [sysarticles &#40;Transact&#41; -SQL](../../relational-databases/system-tables/sysarticles-transact-sql.md) es **5**), no se quita la vista existente.  
   
- Si crea un procedimiento almacenado de filtro personalizado y una vista que define el artículo publicado de forma manual, no ejecute **sp_articleview**. En su lugar, proporciónelos como el *filtro* y *sync_object* parámetros [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), junto con el adecuado*tipo* valor.  
+ Si crea un procedimiento almacenado de filtro personalizado y una vista que define el artículo publicado manualmente, no ejecute **sp_articleview**. En su lugar, proporcione los parámetros *Filter* y *sync_object* a [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), junto con el valor de *tipo* adecuado.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_articleview**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_articleview**.  
   
 ## <a name="see-also"></a>Vea también  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   

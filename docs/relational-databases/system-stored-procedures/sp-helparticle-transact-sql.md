@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cffdecba62283e3fc404c3630866467bc3a2b1c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084992"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771102"
 ---
-# <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Muestra información acerca de un artículo. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación. En los publicadores de Oracle, este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -41,40 +41,40 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre de un artículo de la publicación. *artículo* es **sysname**, su valor predeterminado es **%** . Si *artículo* no es se proporciona, se devuelve información sobre todos los artículos de la publicación especificada.  
+`[ @article = ] 'article'`Es el nombre de un artículo de la publicación. *article* es de **%** **tipo sysname y su**valor predeterminado es. Si no se proporciona el *artículo* , se devuelve información sobre todos los artículos de la publicación especificada.  
   
-`[ @returnfilter = ] returnfilter` Especifica si se debe devolver la cláusula de filtro. *returnfilter* es **bit**, su valor predeterminado es **1**, que devuelve la cláusula de filtro.  
+`[ @returnfilter = ] returnfilter`Especifica si se debe devolver la cláusula de filtro. *returnfilter* es de **bit**y su valor predeterminado es **1**, que devuelve la cláusula de filtro.  
   
-`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  *publicador* no se debe especificar al solicitar información sobre un artículo publicado por un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+>  no se debe especificar el publicador al solicitar información sobre un artículo publicado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un publicador.  
   
-`[ @found = ] found OUTPUT` Solo para uso interno.  
+`[ @found = ] found OUTPUT`Solo para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Id. de artículo**|**int**|ID. del artículo.|  
-|**nombre de artículo**|**sysname**|Nombre del artículo.|  
+|**identificador de artículo**|**int**|IDENTIFICADOR del artículo.|  
+|**nombre del artículo**|**sysname**|Nombre del artículo.|  
 |**objeto base**|**nvarchar(257)**|Nombre de la tabla subyacente representada por el artículo o el procedimiento almacenado.|  
 |**objeto de destino**|**sysname**|Nombre de la tabla de destino (suscripción).|  
-|**objeto de sincronización**|**nvarchar(257)**|Nombre de la vista que define el artículo publicado.|  
-|**type**|**smallint**|Tipo de artículo:<br /><br /> **1** = basado en registro.<br /><br /> **3** = basado en registro con filtro manual.<br /><br /> **5** = basado en registro con vista manual.<br /><br /> **7** = basado en registro con filtro manual y vista manual.<br /><br /> **8** = ejecución de procedimiento almacenado.<br /><br /> **24** = la ejecución del procedimiento almacenado serializable.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista (solo esquema).<br /><br /> **96** = función de agregado (solo esquema).<br /><br /> **128** = function (solo esquema).<br /><br /> **257** = vista indizada basado en registro.<br /><br /> **259** = vista indizada basado en registro con filtro manual.<br /><br /> **261** = vista indizada basado en registro con vista manual.<br /><br /> **263** = vista indizada basado en registro con filtro manual y vista manual.<br /><br /> **320** = vista indizada (solo esquema).<br /><br />|  
-|**status**|**tinyint**|Puede ser el [& (AND bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) resultado de una o más estas propiedades del artículo:<br /><br /> **0 x 00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0 x 01** = artículo está activo.<br /><br /> **0 x 08** = incluir el nombre de columna en las instrucciones insert.<br /><br /> **0 x 16** = usar instrucciones con parámetros.<br /><br /> **0 x 32** = usar instrucciones con parámetros e incluir el nombre de columna en las instrucciones insert.|  
+|**Synchronization (objeto)**|**nvarchar(257)**|Nombre de la vista que define el artículo publicado.|  
+|**type**|**smallint**|Tipo de artículo:<br /><br /> **1** = basado en el registro.<br /><br /> **3** = basado en registro con filtro manual.<br /><br /> **5** = basado en registro con vista manual.<br /><br /> **7** = basado en registro con filtro manual y vista manual.<br /><br /> **8** = ejecución de procedimiento almacenado.<br /><br /> **24** = ejecución de procedimiento almacenado serializable.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista (solo esquema).<br /><br /> **96** = función de agregado (solo esquema).<br /><br /> **128** = función (solo esquema).<br /><br /> **257** = vista indizada basada en registro.<br /><br /> **259** = vista indizada basada en registro con filtro manual.<br /><br /> **261** = vista indizada basada en registro con vista manual.<br /><br /> **263** = vista indizada basada en registro con filtro manual y vista manual.<br /><br /> **320** = vista indizada (solo esquema).<br /><br />|  
+|**status**|**tinyint**|Puede ser el resultado [& (and bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) de una o más de estas propiedades de artículo:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = el artículo está activo.<br /><br /> **0x08** = incluir el nombre de la columna en las instrucciones INSERT.<br /><br /> **0x16** = usar instrucciones con parámetros.<br /><br /> debajo = usar instrucciones con parámetros e incluir el nombre de la columna en las instrucciones INSERT.|  
 |**filter**|**nvarchar(257)**|Procedimiento almacenado utilizado para filtrar la tabla horizontalmente. Este procedimiento almacenado debe haber sido creado mediante la cláusula FOR REPLICATION.|  
 |**description**|**nvarchar(255)**|Entrada descriptiva del artículo.|  
 |**insert_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar inserciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar actualizaciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**delete_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar eliminaciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**ruta de acceso de script de creación**|**nvarchar(255)**|Ruta de acceso y nombre de un script de esquema del artículo que se utiliza para crear tablas de destino.|  
-|**Particionamiento vertical**|**bit**|Es si está habilitado el particionamiento vertical para el artículo; el valor **1** significa que está habilitado el particionamiento vertical.|  
+|**Ruta de acceso del script de creación**|**nvarchar(255)**|Ruta de acceso y nombre de un script de esquema del artículo que se utiliza para crear tablas de destino.|  
+|**partición vertical**|**bit**|Indica si la creación de particiones verticales está habilitada para el artículo; donde un valor de **1** significa que está habilitada la creación de particiones verticales.|  
 |**pre_creation_cmd**|**tinyint**|Comando anterior a la creación para DROP TABLE, DELETE TABLE o TRUNCATE TABLE.|  
 |**filter_clause**|**ntext**|Cláusula WHERE que especifica el filtrado horizontal.|  
-|**schema_option**|**binary (8)**|Mapa de bits de la opción de generación del esquema para el artículo dado. Para obtener una lista completa de **schema_option** valores, vea [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
+|**schema_option**|**Binary(8**|Mapa de bits de la opción de generación del esquema para el artículo dado. Para obtener una lista completa de los valores de **schema_option** , consulte [ &#40;sp_addarticle&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**sysname**|Nombre del propietario del objeto de destino.|  
 |**source_owner**|**sysname**|Propietario del objeto de origen.|  
 |**unqua_source_object**|**sysname**|Nombre del objeto de origen, sin el nombre del propietario.|  
@@ -83,20 +83,20 @@ sp_helparticle [ @publication = ] 'publication'
 |**filter_owner**|**sysname**|Propietario del filtro.|  
 |**unqua_filter**|**sysname**|Nombre del filtro, sin el nombre del propietario.|  
 |**auto_identity_range**|**int**|Marca que establece si se activó el control automático del intervalo de identidad en la publicación en el momento en que se creó. **1** significa que el intervalo de identidad automático está habilitado; **0** significa que está deshabilitado.|  
-|**publisher_identity_range**|**int**|Rango de tamaño del intervalo de identidad en el publicador si el artículo tiene *identityrangemanagementoption* establecido en **automática** o **auto_identity_range** establecido en  **True**.|  
-|**identity_range**|**bigint**|Rango de tamaño del intervalo de identidad en el suscriptor si el artículo tiene *identityrangemanagementoption* establecido en **automática** o **auto_identity_range** establecido en  **True**.|  
+|**publisher_identity_range**|**int**|Tamaño del intervalo del intervalo de identidad en el publicador si el artículo tiene *identityrangemanagementoption* establecido en **auto** o **auto_identity_range** establecido en **true**.|  
+|**identity_range**|**bigint**|Tamaño del intervalo del intervalo de identidad en el suscriptor si el artículo tiene el valor *identityrangemanagementoption* establecido en **auto** o **auto_identity_range** establecido en **true**.|  
 |**threshold**|**bigint**|Valor de porcentaje que indica cuándo asigna el Agente de distribución un nuevo intervalo de identidad.|  
 |**identityrangemanagementoption**|**int**|Indica la administración de intervalos de identidad controlada del artículo.|  
-|**fire_triggers_on_snapshot**|**bit**|Indica si se ejecutan desencadenadores de usuario replicados al aplicar la instantánea inicial.<br /><br /> **1** = se ejecutan desencadenadores de usuario.<br /><br /> **0** = no se ejecutan desencadenadores de usuario.|  
+|**fire_triggers_on_snapshot**|**bit**|Indica si se ejecutan desencadenadores de usuario replicados al aplicar la instantánea inicial.<br /><br /> **1** = se ejecutan desencadenadores de usuario.<br /><br /> **0** = no se ejecutan los desencadenadores de usuario.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_helparticle** se utiliza en la replicación de instantáneas y transaccional.  
+ **sp_helparticle** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor, el **db_owner** rol fijo de base de datos o la lista de acceso de publicación para la publicación actual puede ejecutar **sp_helparticle**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** , del rol fijo de base de datos **db_owner** o de la lista de acceso a la publicación para la publicación actual pueden ejecutar **sp_helparticle**.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_helptranarticle](../../relational-databases/replication/codesnippet/tsql/sp-helparticle-transact-_1.sql)]  

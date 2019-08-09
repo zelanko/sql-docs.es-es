@@ -1,7 +1,7 @@
 ---
-title: Extensión de SQL Server 2019 (versión preliminar)
+title: Extensión de SQL Server 2019 (versión preliminar)
 titleSuffix: Azure Data Studio
-description: Extensión de la versión preliminar de SQL Server de 2019 para Azure Data Studio
+description: Extensión de SQL Server 2019 (versión preliminar) para Azure Data Studio
 ms.custom: seodec18
 ms.date: 06/25/2019
 ms.reviewer: alayu; sstein
@@ -11,21 +11,21 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959215"
 ---
-# <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
+# <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
 
-La extensión de SQL Server 2019 (versión preliminar) proporciona compatibilidad de versión preliminar para las nuevas características y herramientas de apoyo de envío [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esto incluye compatibilidad con la versión preliminar [clústeres de SQL Server 2019 macrodatos](../big-data-cluster/big-data-cluster-overview.md), un enfoque integrado [experiencia de cuaderno](../big-data-cluster/notebooks-guidance.md)y un PolyBase [asistente Create External Table](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
+La extensión de SQL Server 2019 (versión preliminar) proporciona compatibilidad en versión preliminar con las nuevas características y herramientas que se distribuyen para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esto incluye compatibilidad en versión preliminar con [clústeres de macrodatos de SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), una [experiencia de cuadernos](../big-data-cluster/notebooks-guidance.md) integrada y un [Asistente para crear tablas externas](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json) de PolyBase.
 
-## <a name="install-the-sql-server-2019-extension-preview"></a>Instalar la extensión de SQL Server 2019 (versión preliminar)
+## <a name="install-the-sql-server-2019-extension-preview"></a>Instalación de la extensión de SQL Server 2019 (versión preliminar)
 
-Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue e instale el archivo .vsix asociado.
+Para instalar la extensión de SQL Server 2019 (versión preliminar) descargue e instale el archivo .vsix asociado.
 
-1. Descargue el archivo .vsix de extensión (versión preliminar) de SQL Server 2019 en un directorio local:
+1. Descargue el archivo .vsix de la extensión de SQL Server 2019 (versión preliminar) en un directorio local:
 
    |Plataforma|Descargar|Fecha de la versión|Versión
    |:---|:---|:---|:---|
@@ -33,157 +33,157 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|25 de junio de 2019 |0.14.1
    |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|25 de junio de 2019 |0.14.1
 
-1. En Azure Data Studio elija **la extensión de instalación de paquete VSIX** desde el **archivo** menú y seleccione el archivo .vsix descargado.
+1. En Azure Data Studio, elija **Install Extension from VSIX Package** (Instalar extensión desde el paquete VSIX) en el menú **Archivo** y seleccione el archivo .vsix descargado.
 
-1. Elija **Sí** cuando le pida que confirme la instalación y espere a que la notificación de que la instalación se realizó correctamente.
+1. Elija **Sí** cuando se le pida que confirme la instalación y espere a que aparezca la notificación que le indique que la instalación se ha realizado correctamente.
 
-1. Seleccione **recarga** para habilitar la extensión (solo es necesario instalar una extensión por primera vez).
+1. Seleccione **Recargar** para habilitar la extensión (solo es necesario la primera vez que se instala una extensión).
 
-1. Después de volver a cargar, la extensión instalará las dependencias. Puede ver el progreso en la ventana de salida, y puede tardar varios minutos.
+1. Después de recargar, la extensión instalará las dependencias. El progreso, que podría tardar varios minutos, puede verse en la ventana Salida.
 
-1. Las dependencias después de finalizar la instalación, cierre y vuelva a abrir Azure Data Studio. El **clúster de SQL Server macrodatos** tipo de conexión no está disponible hasta que reinicie Azure Data Studio.
+1. Una vez finalizada la instalación de las dependencias, cierre y vuelva a abrir Azure Data Studio. El tipo de conexión **SQL Server big data cluster** (Clúster de macrodatos de SQL Server) no estará disponible mientras no reinicie Azure Data Studio.
 
 ## <a name="changes-in-release-0141"></a>Cambios en la versión 0.14.1
-* Compatibilidad con el soporte técnico de origen de datos de CTP 3.1
+* Compatibilidad con el origen de datos CTP 3.1.
 
-## <a name="changes-in-release-0121"></a>Cambios de versión de la 0.12.1
+## <a name="changes-in-release-0121"></a>Cambios en la versión 0.12.1
 
-* El **clúster de SQL Server macrodatos** tipo de conexión se ha quitado en esta versión. Toda la funcionalidad disponible anteriormente desde la conexión del clúster de macrodatos de SQL Server ahora está disponible en la conexión de SQL Server.
-* Exploración de HDFS se puede encontrar en el **Data Services** carpeta
-* Para equipos portátiles el PySpark y kernels macrodatos funcionan cuando se conecta a la instancia principal de SQL Server en el clúster de macrodatos de SQL Server.
-* Crear a Asistente para la tabla externa:
-  * Compatibilidad para crear la tabla externa mediante el origen de datos externo existente.
+* En esta versión, se ha quitado el tipo de conexión del **clúster de macrodatos de SQL Server**. Todas las funcionalidades que antes estaban disponibles en la conexión del clúster de macrodatos de SQL Server ahora están disponibles en la conexión de SQL Server.
+* La exploración de HDFS se encuentra en la carpeta **Data Services**.
+* En el caso de los cuadernos, PySpark y otros kernels de macrodatos funcionan cuando se conectan a la instancia maestra de SQL Server en el clúster de macrodatos de SQL Server.
+* Asistente para crear tablas externas:
+  * Compatibilidad con la creación de una tabla externa mediante el origen de datos externos existente.
   * Mejoras de rendimiento en el asistente.
-  * Mejora del tratamiento de nombres de objeto con caracteres especiales. En algunos casos ocasionados producirá un error en el Asistente
-  * Mejoras de confiabilidad de la página de asignación de objeto.
-  * Sistema quita las bases de datos - ': DWConfiguration', 'DWDiagnostics', 'DWQueue' - en la lista desplegable de bases de datos.
-  * Soporte técnico para establecer el nombre del objeto de formato de archivo externo el **Create External Table desde archivos CSV** asistente.
-  * Agrega un botón de actualización a la primera página de la **Create External Table desde archivos CSV** asistente.
+  * Control mejorado de los nombres de objeto con caracteres especiales (en algunos casos, provocaban errores en el asistente).
+  * Mejoras de confiabilidad para la página de asignación de objetos.
+  * Se han quitado las bases de datos del sistema ("DWConfiguration", "DWDiagnostics", "DWQueue") de la lista desplegable de bases de datos.
+  * Compatibilidad para establecer el nombre del objeto con formato de archivo externo en el Asistente para **crear tablas externas a partir de archivos CSV**.
+  * Se ha agregado un botón de actualización a la primera página del Asistente para **crear tablas externas a partir de archivos CSV**.
 
 ## <a name="release-notes-v0110"></a>Notas de la versión (v0.11.0)
 
-* Compatibilidad con Jupyter Notebook, específicamente el soporte técnico para los kernels de Python3 y Spark, se ha movido a Azure Data Studio. Esta extensión ya no es necesaria para poder usar los blocs de notas.
+* La compatibilidad con Jupyter Notebook (en concreto, con los kernels de Python3 y Spark) se ha pasado a Azure Data Studio. Esta extensión ya no es necesaria para poder usar cuadernos.
 * Varias correcciones de errores en los asistentes para datos externos:
-  * Se actualizaron las asignaciones de tipos de Oracle para que coincida con los cambios que se incluye en SQL Server 2019 CTP 2.3.
-  * Se corrigió un problema donde estaban que se pierdan nuevos esquemas escritos en los controles de la asignación de tabla.
-  * Se ha corregido un problema donde la comprobación de un nodo de base de datos en las asignaciones de tabla no se ha producido en todas las tablas y vistas que se está comprueba.
+  * Las asignaciones de tipo Oracle se han actualizado para que coincidan con los cambios incluidos en SQL Server 2019 CTP 2.3.
+  * Se ha corregido un problema que hacía que se perdiesen los nuevos esquemas introducidos en los controles de asignación de tablas.
+  * Se ha corregido un problema que hacía que la comprobación de un nodo de base de datos en las asignaciones de tabla no verificara todas las tablas y vistas.
 
 
 ## <a name="release-notes-v0102"></a>Notas de la versión (v0.10.2)
-### <a name="sql-server-2019-support"></a>Compatibilidad con SQL Server 2019
-Se ha actualizado la compatibilidad con SQL Server 2019. Acerca de cómo conectarse a un clúster grande de datos de SQL Server, instancia de un nuevo _Data Services_ carpeta aparecerá en el árbol del explorador. Esto tiene puntos de inicio para acciones como abrir un nuevo cuaderno en la conexión, envío de trabajos de Spark y trabajar con HDFS. Tenga en cuenta que para algunas acciones como _Create External Data_ a través de un archivo o carpeta HDFS, el _versión preliminar de SQL Server de 2019_ debe instalarse la extensión.
+### <a name="sql-server-2019-support"></a>Compatibilidad con SQL Server 2019
+Se ha actualizado la compatibilidad con SQL Server 2019. Al conectarse a una instancia de clúster de macrodatos de SQL Server, aparecerá una nueva carpeta _Data Services_ en el árbol del explorador. Dispone de puntos de inicio para acciones como abrir un nuevo cuaderno en la conexión, enviar trabajos de Spark y trabajar con HDFS. Tenga en cuenta que, para algunas acciones como _crear datos externos_ en un archivo o carpeta de HDFS, se debe instalar la extensión de _SQL Server 2019 (versión preliminar)_ .
 
-### <a name="notebook-support"></a>Soporte técnico de Bloc de notas
-Se han realizado actualizaciones importantes para la interfaz de usuario de Bloc de notas en esta versión. Nuestro objetivo era lo que facilita leer blocs de notas que se comparten con usted. Esto significaba quitando todos los cuadros de las celdas de esquema a menos que o mantuve el mouse, adición de soporte técnico al mantener el mouse para acciones de nivel de celda fácil sin necesitan seleccionar una celda y aclarar el estado de ejecución mediante la adición de recuento de ejecuciones, un elemento animado _Detener ejecución_ botón y mucho más. También agregamos métodos abreviados de teclado para _nuevo cuaderno_ (`Ctrl+Shift+N`), _ejecutar celda_ (`F5`), _nueva celda de código_ (`Ctrl+Shift+C`),  _Nueva celda de texto_ (`Ctrl+Shift+T`). Queremos tener todas las acciones claves que se puede iniciar mediante acceso directo nos sabe lo que se encuentra en adelante!
+### <a name="notebook-support"></a>Compatibilidad con Notebook
+En esta versión hemos realizado actualizaciones considerables en la interfaz de usuario de Notebook. Nuestro objetivo consistía en facilitar la lectura de los cuadernos que se comparten con usted. Esto conllevaba, entre otras cosas, quitar todos los cuadros de contorno alrededor de las celdas (a menos que se seleccionen o que se mueva el puntero por encima), agregar compatibilidad con el desplazamiento del puntero para facilitar las acciones de nivel de celda sin necesidad de seleccionar una celda y aclarar el estado de ejecución mediante la adición de un recuento de ejecuciones, y un botón animado para _detener la ejecución_. También hemos agregado métodos abreviados de teclado para _nuevo cuaderno_ (`Ctrl+Shift+N`), _ejecutar celda_ (`F5`), _nueva celda de código_ (`Ctrl+Shift+C`) y _nueva celda de texto_ (`Ctrl+Shift+T`). En un futuro intentaremos que todas las acciones clave se puedan iniciar mediante métodos abreviados, por lo que no dude en comentarnos qué echa en falta.
 
-Otras mejoras y correcciones se incluyen:
-* El _versión preliminar de SQL Server de 2019_ extensión ahora usa indicaciones para elegir un directorio de instalación de dependencias de Python. También incluye Python en ya no la `.vsix file`, lo que reduce el tamaño general de la extensión. Las dependencias de Python son necesarios para admitir los kernels de Spark y Python3, para instalar esta extensión es necesaria para usar estos.
-* Se agregó compatibilidad para iniciar un nuevo cuaderno desde la línea de comandos. Iniciar con los argumentos `--command=notebook.command.new --server=myservername` debería abrir un nuevo cuaderno y conectarse a este servidor.
-* Revisiones de rendimiento para equipos portátiles con una longitud de código de gran tamaño en las celdas. Si las celdas de código son más de 250 líneas tendrán un agregado de la barra de desplazamiento.
-* Compatibilidad de archivo .ipynb mejorada. Ahora se admite la versión 3 o posterior. Tenga en cuenta que al guardar los archivos se actualizarán a la versión 4 o superior.
-* El `notebook.enabled` configuración de usuario ha sido quitado ahora que la compilación en el Bloc de notas es estable Visor
-* El tema de contraste alto ahora es compatible con una serie de correcciones a disposición de los objetos en este caso.
-* Se ha corregido 3680 # donde salidas a veces se ha mostrado un número de `,,,` caracteres incorrectamente
-* Editor de #3602 fijo desaparece para celdas después de salir de studio datos de azure
-* Se agregó compatibilidad para utilizar las vistas de cuadrícula para el `application/vnd.dataresource+json` tipo MIME de salida. Esto significa que muchos portátiles que usan este (por ejemplo, configurando `pd.options.display.html.table_schema` en un cuaderno de Python) tendrá resultados tabulares más bonito fijo #3959 Azure Data Studio intenta apagar el servidor de Bloc de notas dos veces después de cerrar el Bloc de notas
+Entre otras mejoras y correcciones se incluyen las siguientes:
+* La extensión de _SQL Server 2019 (versión preliminar)_ ahora solicita que se seleccione un directorio de instalación para las dependencias de Python. Además, ya no incluye Python en `.vsix file`, lo que reduce el tamaño total de la extensión. Las dependencias de Python son necesarias para admitir los kernels de Spark y Python3, por lo que es necesario instalar esta extensión para usarlos.
+* Se ha agregado compatibilidad con el inicio de un nuevo cuaderno desde la línea de comandos. Si se inicia con los argumentos `--command=notebook.command.new --server=myservername`, debería abrirse un nuevo cuaderno y conectarse a este servidor.
+* Se han realizado correcciones en el rendimiento de los cuadernos con gran longitud de código en las celdas. Si las celdas de código superan las 250 líneas, se les agregará una barra de desplazamiento.
+* Se ha mejorado la compatibilidad con el archivo .ipynb. Ahora se admite la versión 3 o posterior. Tenga en cuenta que, al guardar los archivos, se actualizará a la versión 4 o superior.
+* Ahora que el visor de Notebook integrado es estable, se ha quitado la configuración de usuario `notebook.enabled`.
+* Ahora se admite el tema de contraste alto con una serie de correcciones en el diseño de objetos en este caso.
+* Se ha corregido el error 3680, que hacía que a veces las salidas mostraran una serie de caracteres `,,,` incorrectamente.
+* Se ha corregido el error 3602, que hacía que el editor desapareciera para las celdas después de salir de Azure Data Studio.
+* Se ha agregado compatibilidad con el uso de vistas de cuadrícula para el tipo MIME de salida `application/vnd.dataresource+json`. Esto significa que muchos cuadernos que lo usan (por ejemplo, mediante el establecimiento de `pd.options.display.html.table_schema` en un cuaderno de Python) tendrán salidas tabulares más atractivas. Se ha corregido el error 3959, que hacía que Azure Data Studio intentase apagar el servidor de cuadernos dos veces después de cerrar el cuaderno.
 
 #### <a name="known-issues"></a>Problemas conocidos
-* Al abrir un cuaderno aparecerá el cuadro de diálogo de instalación de python. Cancelar la instalación dará como resultado los Kernels y adjuntar a las listas desplegables no se muestran los valores esperados. La solución consiste en completar la instalación de Python.
-* Cuando se abre un bloc de notas con un kernel que no es compatible, los kernels y _adjuntar a_ listas desplegables hará que Azure Data Studio deje de responder. Deberá cerrar Data Studio de Azure y asegúrese de usar un kernel compatible (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
-* Se produce un error en el vínculo de la interfaz de usuario de Spark al usar PySpark3 o kernels Spark en el punto de conexión de SQL Server. Como alternativa, haga clic en la interfaz de usuario de Spark desde el panel, o conectarse con el tipo de conexión del clúster de macrodatos de SQL Server, ya que esto tendrá el hipervínculo correcto de la interfaz de usuario de Spark
+* Al abrir un cuaderno, aparece el cuadro de diálogo para instalar Python. Si se cancela esta instalación, las listas desplegables Kernels y Adjuntar a no mostrarán los valores esperados. La solución consiste en completar la instalación de Python.
+* Cuando se abre un cuaderno con un kernel que no es compatible, las listas desplegables Kernels y _Adjuntar a_ harán que Azure Data Studio se bloquee. Tendrá que cerrar Azure Data Studio y asegurarse de usar un kernel compatible (Python3, Spark | R, Spark | Scala, PySpark, PySpark3).
+* Se produce un error en el vínculo de la interfaz de usuario de Spark al usar PySpark3 u otros kernels de Spark en el punto de conexión de SQL Server. Como solución alternativa, haga clic en la interfaz de usuario de Spark en el panel, o bien conéctese mediante el tipo de conexión del clúster de macrodatos de SQL Server, ya que tendrá el hipervínculo correcto de la interfaz de usuario de Spark.
 
-### <a name="extensibility-improvements"></a>Mejoras de extensibilidad
-En esta versión se ha agregado una serie de mejoras que ayudan a los extensores
-* Un nuevo `ObjectExplorerNodeProvider` API permite que las extensiones contribuir a las carpetas en SQL Server o en otros nodos de conexión. Se trata cómo el `Data Services` nodo se agrega debajo de las instancias de SQL Server 2019 pero se puede usar para agregar supervisión u otras carpetas fácilmente a la interfaz de usuario.
-* Dos nuevos valores clave de contexto están disponibles para ayudar a las contribuciones de mostrar u ocultar en el panel.
-  * `mssql:iscluster` indica si se trata de un clúster grande de datos de SQL Server de 2019
-  * `mssql:servermajorversion` tiene la versión del servidor (15 para SQL Server 2019, 14 para SQL Server 2017 y así sucesivamente). Esto puede ayudar si características solo se deben mostrar para SQL Server 2017 o superior, por ejemplo.
+### <a name="extensibility-improvements"></a>Mejoras en la extensibilidad
+Se han agregado a esta versión varias mejoras de ayuda a los extensores.
+* Una nueva API `ObjectExplorerNodeProvider` permite que las extensiones contribuyan con carpetas en SQL Server u otros nodos de conexión. Así es como se agrega el nodo `Data Services` en instancias de SQL Server 2019, pero se podía usar para agregar Supervisión u otras carpetas fácilmente a la interfaz de usuario.
+* Hay disponibles dos nuevos valores de clave de contexto para ayudar a mostrar u ocultar las contribuciones al panel.
+  * `mssql:iscluster` indica si se trata de un clúster de macrodatos de SQL Server 2019.
+  * `mssql:servermajorversion` tiene la versión del servidor (15 para SQL Server 2019, 14 para SQL Server 2017, etc.). Por ejemplo, esto puede resultar de ayuda si las características solo deben mostrarse para SQL Server 2017 o versiones superiores.
 
 
 ## <a name="release-notes-v080"></a>Notas de la versión (v0.8.0)
-*Blocs de notas*:
-* Agregar celdas antes y después existente ahora se admite celdas, haga clic en el botón de celda "Más acciones"
-* **Agregar nueva conexión** ha agregado la opción para las conexiones en la lista desplegable "Conectar a"
-* Un **volver a instalar las dependencias de Bloc de notas** comando se ha agregado a ayudar con las actualizaciones de paquetes de Python y resolver casos donde se detuvo la instalación cuelga a medio camino cerrando la aplicación. Esto se puede ejecutar desde la paleta de comandos (use `Ctrl/Cmd+Shift+P` y tipo `Reinstall Notebook Dependencies`)
-* El paquete de python PROSE se ha actualizado a la versión 1.1.0 e incluye una serie de correcciones de errores. Use la **volver a instalar las dependencias de Bloc de notas** comando para actualizar este paquete
-* Un **borrar resultado** ahora se admite el comando, haga clic en el **más acciones** botón de celda
-* Se ha corregido los siguientes problemas notificados por los clientes:
-  * No se pudo iniciar sesión de Bloc de notas en Windows debido a problemas de la ruta de acceso
-  * No se pudo iniciar el Bloc de notas de la carpeta raíz de una unidad, como C:\ o D:\
-  * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) no se puede modificar los blocs de notas creados a partir de anuncios en VS Code
-  * Vínculo de la interfaz de usuario de Spark ahora funciona cuando se ejecuta un kernel de Spark
-  * Cambiar el nombre "Administrados paquetes" a "Instalar los paquetes"
+*Cuadernos*:
+* Ahora se admite la adición de celdas antes o después de celdas existentes si se hace clic en el botón de celda "Más acciones".
+* Se ha agregado la opción **Agregar nueva conexión** a las conexiones en la lista desplegable "Adjuntar a".
+* Se ha agregado el comando **Reinstall Notebook Dependencies** (Reinstalar dependencias de Notebook) a fin de ayudar en las actualizaciones de paquetes de Python y en la resolución de los casos en los que la instalación se interrumpe a mitad de proceso mediante el cierre de la aplicación. Se puede ejecutar desde la paleta de comandos (use `Ctrl/Cmd+Shift+P` y escriba `Reinstall Notebook Dependencies`).
+* El paquete de Python de PROSE se ha actualizado a 1.1.0 e incluye una serie de correcciones de errores. Use el comando **Reinstall Notebook Dependencies** (Reinstalar dependencias de Notebook) para actualizar este paquete.
+* Ahora se admite un comando **Clear Output** (Borrar salida) si se hace clic en el botón de celda **Más acciones**.
+* Se han corregido los siguientes problemas detectados por los clientes:
+  * No se podía iniciar la sesión de Notebook en Windows debido a problemas con la ruta de acceso.
+  * No se podía iniciar Notebook desde la carpeta raíz de una unidad, como C:\ o D:\.
+  * [Error 2820](https://github.com/Microsoft/azuredatastudio/issues/2820): No se pueden editar los cuadernos creados desde ADS en VS Code.
+  * Ahora, el vínculo de la interfaz de usuario de Spark funciona cuando se ejecuta un kernel de Spark.
+  * Se ha cambiado el nombre de "Paquetes administrados" a "Instalación de paquetes".
 
-*Crear datos externos*:
+*Creación de datos externos*:
 
-* Los mensajes de error son que se puede copiar y se han dividido en una vista resumida y detallada para sea más fácil
-* Diseño de interfaz de usuario mejorada y mejorar significativamente la confiabilidad y control de errores
-* Se ha corregido los siguientes problemas notificados por los clientes:
-  * Las tablas con asignaciones de columnas no válido se muestran como deshabilitado y una advertencia, explica el error
+* Los mensajes de error se pueden copiar y se han separado en una vista de resumen y de detalles por motivos de comodidad.
+* Se ha mejorado el diseño de la interfaz de usuario y se han optimizado considerablemente el control de errores y la confiabilidad.
+* Se han corregido los siguientes problemas detectados por los clientes:
+  * Las tablas con asignaciones de columnas no válidas se muestran como deshabilitadas y una advertencia explica el error.
 
 ## <a name="release-notes-v072"></a>Notas de la versión (v0.7.2)
-* Explorador de recursos de Azure ahora está integrado en Azure Data Studio y se ha quitado de esta extensión. Le agradecemos sus comentarios sobre este.
-* Rendimiento mejorado de blocs de notas con muchas de las celdas de Markdown.
-* Celdas de código de ajuste de tamaño automático en el Bloc de notas. Esto todavía tiene un tamaño mínimo basado en la barra de herramientas de la celda.
-* Notifique al usuario al instalar las dependencias del Bloc de notas. En Windows en particular Esto puede tardar mucho tiempo, por lo que las notificaciones se muestran ahora en la vista de tareas.
-* Compatibilidad con volver a instalar las dependencias del Bloc de notas. Esto es útil si el usuario cerró anteriormente Azure Data Studio mitad a través de la instalación.
-* Compatibilidad con cancelar la ejecución de la celda en el Bloc de notas.
-* Confiabilidad mejorada cuando se usa el Asistente para crear datos externos, específicamente cuando conexión se producen errores.
-* Bloquea el uso del Asistente para crear datos externos si PolyBase no está habilitada o se ejecutan en el servidor de destino.
-* Corrector ortográfico y correcciones relacionados con SQL Server 2019 y crear datos externos de nomenclatura.
-* Quita un gran número de errores de la consola de depuración de Azure Data Studio.
+* Azure Resource Explorer ahora está integrado en Azure Data Studio y se ha quitado de esta extensión. Gracias por sus comentarios al respecto.
+* Se ha mejorado el rendimiento de los cuadernos con muchas celdas de Markdown.
+* Las celdas de código ajustan el tamaño automáticamente en Notebook, pero siguen teniendo un tamaño mínimo basado en la barra de herramientas de la celda.
+* Se notifica al usuario cuando se instalan las dependencias de Notebook. Sobre todo en Windows, esto puede tardar mucho tiempo, por lo que las notificaciones se muestran ahora en la vista de tareas.
+* Se admite la reinstalación de las dependencias de Notebook. Esto resulta útil si el usuario cerró Azure Data Studio a mitad de la instalación.
+* Se permite cancelar la ejecución de celdas en Notebook.
+* Se ha mejorado la confiabilidad al usar el Asistente para crear datos externos, sobre todo cuando se producen errores de conexión.
+* Se ha bloqueado el uso del Asistente para crear datos externos si PolyBase no está habilitado o no se ejecuta en el servidor de destino.
+* Se han realizado correcciones ortográficas y de nomenclatura relacionadas con SQL Server 2019 y la creación de datos externos.
+* Se ha eliminado un gran número de errores de la consola de depuración de Azure Data Studio.
 
-##  <a name="sql-server-2019-big-data-cluster-support"></a>Compatibilidad con clúster grande de datos de SQL Server de 2019
+##  <a name="sql-server-2019-big-data-cluster-support"></a>Compatibilidad con clústeres de macrodatos de SQL Server 2019
 
-* Haga clic en **Agregar conexión** en *Explorador de objetos* y elija **clúster de SQL Server macrodatos** como el tipo de conexión.
+* Haga clic en **Agregar conexión** en el *Explorador de objetos* y elija **SQL Server big data cluster** (Clúster de macrodatos de SQL Server) como tipo de conexión.
 
    > [!TIP]
-   > Si no ve el **clúster de SQL Server macrodatos** tipo de conexión, reinicie Azure Studio datos.
+   > Si no ve el tipo de conexión **SQL Server big data cluster** (Clúster de macrodatos de SQL Server), reinicie Azure Data Studio.
 
-* Escriba el nombre de host o dirección IP del punto de conexión de clúster plus el nombre de usuario y contraseña usada para conectarse.
-* Opcionalmente, puede incluir un nombre para mostrar descriptivo en el **nombre** campo.
-* Haga clic en **Connect** y, a continuación, se pueden iniciar las tareas comunes en el panel, examinar **HDFS** en el Explorador de objetos y tareas de ejecución en el contexto a partir de ahí.
-* Para enviar un trabajo de Spark en el clúster, haga doble clic en el nodo del servidor en *Explorador de objetos* y elija **Submit Spark Job** para que aparezca el cuadro de diálogo de envío.
+* Escriba el nombre de host o la dirección IP del punto de conexión del clúster, más el nombre de usuario y la contraseña que use para conectarse.
+* Opcionalmente, incluya un nombre para mostrar que sea descriptivo en el campo **Nombre**.
+* Después de hacer clic en **Conectar**, ya puede iniciar tareas comunes desde el panel, examinar **HDFS** en el Explorador de objetos y ejecutar tareas en contexto desde allí.
+* Para enviar un trabajo de Spark al clúster, haga clic con el botón derecho en el nodo de servidor en el *Explorador de objetos* y elija **Submit Spark Job** (Enviar trabajo de Spark) para que aparezca el cuadro de diálogo de envío.
 * Para abrir un cuaderno, consulte la sección siguiente.
 
-Para obtener más información, consulte [clústeres grandes de datos](../big-data-cluster/big-data-cluster-overview.md).
+Para obtener más información, consulte [Clústeres de macrodatos](../big-data-cluster/big-data-cluster-overview.md).
 
 
-## <a name="azure-data-studio-notebooks"></a>Datos de Azure Notebooks de Studio
+## <a name="azure-data-studio-notebooks"></a>Cuadernos de Azure Data Studio
 
-* Abrir un cuaderno en una de las maneras siguientes:
-  * Abra un nuevo bloc de notas de la *paleta de comandos*.
-  * Abra el árbol del explorador de objetos de HDFS para un clúster de macrodatos de 2019 de SQL Server y, o bien:
-    * Haga clic con el botón derecho en el nodo del servidor y elija **nuevo cuaderno de Jupyter**.
-    * Haga clic con el botón derecho en un archivo CSV y elija **analizar en el Bloc de notas**.
-  * Abrir un archivo .ipynb existente desde el **archivo** explorer menú o archivo *(archivos .ipynb deben actualizarse a la versión 4 o posterior para cargar correctamente)*
-* Elija un núcleo. Para la ejecución local de Bloc de notas, elija Python 3. Para la ejecución remota, elija PySpark o Spark | Scala.
-* Elija un punto de conexión de clúster de macrodatos de SQL Server para conectarse a si la ejecución de forma remota (Esto no es necesario para el desarrollo local con Python 3).
-* Las celdas de código o marcado mediante los botones se agregan en el encabezado del cuaderno. Eliminación de las celdas con el icono de Papelera a la izquierda de cada celda.
-* Ejecutar las celdas con el botón Reproducir para las celdas de código y activar o desactivar la edición de markdown y obtener una vista previa con el icono de ojo
+* Abra un cuaderno de una de las siguientes maneras:
+  * Abra un nuevo cuaderno desde la *paleta de comandos*.
+  * Abra el árbol del Explorador de objetos de HDFS para un clúster de macrodatos de SQL Server 2019 y después:
+    * Haga clic con el botón derecho en el nodo del servidor y seleccione **New Jupyter Notebook** (Nuevo cuaderno de Jupyter).
+    * Haga clic con el botón derecho en un archivo CSV y elija **Analyze in Notebook** (Analizar en Notebook).
+  * Abra un archivo .ipynb existente desde el menú **Archivo** o el explorador de archivos *(los archivos .ipynb deben actualizarse a la versión 4 o posterior para que se carguen correctamente)* .
+* Seleccione un kernel. Para la ejecución de un cuaderno local, elija Python 3. Para la ejecución remota, seleccione PySpark o Spark | Scala.
+* Elija un punto de conexión de clúster de macrodatos de SQL Server al que conectarse si se ejecuta de forma remota (esto no es necesario para el desarrollo local con Python 3).
+* Agregue código o celdas de Markdown con los botones del encabezado del cuaderno. Elimine celdas con el icono de papelera situado a la izquierda de cada celda.
+* Ejecute celdas con el botón de reproducción para las celdas de código y alterne la edición y la vista previa de Markdown con el icono de ojo.
 
-## <a name="polybase-create-external-table-wizard"></a>Asistente para la tabla externa de la creación de PolyBase
+## <a name="polybase-create-external-table-wizard"></a>Asistente para crear tablas externas de PolyBase
 
-* Desde una instancia de SQL Server 2019 el *crear Asistente para la tabla externa* se puede abrir de tres maneras:
-  * Haga clic con el botón derecho en un servidor, elija **administrar**, haga clic en la pestaña para SQL Server 2019 (versión preliminar) y elija **Create External Table**.
-  * Con una instancia de SQL Server 2019 seleccionada en *Explorador de objetos*, aparezca *crear Asistente externo* a través de la *paleta de comandos*.
-  * Haga clic con el botón derecho en una base de datos SQL Server 2019 *Explorador de objetos* y elija **Create External Table**.
-* En esta versión de la extensión, se pueden crear tablas externas para tener acceso a tablas remotas de SQL Server y Oracle.
+* En una instancia de SQL Server 2019, puede abrir el *Asistente para crear tablas externas* de tres maneras:
+  * Haga clic con el botón derecho en un servidor, seleccione **Administrar**, haga clic en la pestaña de SQL Server 2019 (versión preliminar) y elija **Create External Table** (Crear una tabla externa).
+  * Con una instancia de SQL Server 2019 seleccionada en el *Explorador de objetos*, abra el *Asistente para crear tablas externas* con la *paleta de comandos*.
+  * Haga clic con el botón derecho en una base de datos de SQL Server 2019 en el *Explorador de objetos* y elija **Create External Table** (Crear una tabla externa).
+* En esta versión de la extensión, se pueden crear tablas externas para acceder a tablas remotas de SQL Server y Oracle.
 
   > [!NOTE]
-  > Aunque la funcionalidad de la tabla externa es una característica de 2019 SQL, SQL Server remoto puede ejecutar una versión anterior de SQL Server.
+  > Aunque la funcionalidad de tabla externa es una característica de SQL 2019, puede que la instancia remota de SQL Server ejecute una versión anterior de SQL Server.
 
-* Elija si tienen acceso a SQL Server u Oracle en la primera página del asistente y continuar.
-* Se le pedirá que cree una clave maestra de base de datos si no se ha creado uno ya (se bloquearán las contraseñas de complejidad insuficiente).
-* Crear una conexión de origen de datos y con el nombre de credencial para el servidor remoto.
-* Elija los objetos que desea asignar a la nueva tabla externa.
-* Elija **generar Script** o **crear** para finalizar el asistente.
-* Después de la creación de la tabla externa, lo aparece inmediatamente en el árbol de objetos de la base de datos donde se creó.
+* Elija si va a acceder a SQL Server o a Oracle en la primera página del asistente y continúe.
+* Se le pedirá que cree una clave maestra de base de datos si todavía no se ha creado una (se bloquearán las contraseñas con una complejidad insuficiente).
+* Cree una conexión de origen de datos y una credencial con nombre para el servidor remoto.
+* Elija los objetos que se van a asignar a la nueva tabla externa.
+* Elija **Generar script** o **Crear** para finalizar el asistente.
+* Después de crear la tabla externa, aparece inmediatamente en el árbol de objetos de la base de datos donde se creó.
 
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-* Si no se guarda la contraseña al crear una conexión, algunas acciones como enviar trabajo de Spark pueden no realizarse correctamente.
-* Blocs de notas .ipynb existentes deben actualizarse a la versión 4 o posterior para cargar contenido en el Visor.
-* Ejecuta el **volver a instalar las dependencias de Bloc de notas** comando puede mostrar 2 tareas en la vista de tareas, uno de los cuales se produce un error. Esto hace que no se instale correctamente
-* Elegir **agregar nueva conexión** en un bloc de notas y haga clic en Cancelar, se producirán **Seleccionar conexión** van a mostrar, incluso si ya se han conectado.
+* Si no se guarda la contraseña al crear una conexión, es posible que algunas acciones como enviar un trabajo de Spark no se realicen correctamente.
+* Los cuadernos .ipynb existentes deben actualizarse a la versión 4 o superior para que se cargue el contenido en el visor.
+* La ejecución del comando **Reinstall Notebook Dependencies** (Reinstalar dependencias de Notebook) puede mostrar dos tareas en la vista tareas, una de las cuales produce un error. Esto no hace que se produzca un error en la instalación.
+* Si selecciona **Agregar nueva conexión** en un cuaderno y hace clic en cancelar, se mostrará la opción **Seleccionar conexión**, incluso si ya estaba conectado.

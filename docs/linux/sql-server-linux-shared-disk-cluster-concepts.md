@@ -9,80 +9,80 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 81d283ba02ec62a2de8d3c8f0e56be8c55d58190
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032391"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>Instancias de clúster de conmutación por error: SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se explica los conceptos relacionados con instancias de clúster de conmutación por error (FCI) de SQL Server en Linux. 
+En este artículo se explican los conceptos relacionados con las instancias de clúster de conmutación por error (FCI) de SQL Server en Linux. 
 
-Para crear una FCI de SQL Server en Linux, consulte [configurar FCI de SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure.md)
+Para crear una FCI de SQL Server en Linux, vea [Configurar la instancia de clúster de conmutación por error: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure.md).
 
-## <a name="the-clustering-layer"></a>El nivel de agrupación en clústeres
+## <a name="the-clustering-layer"></a>La capa de agrupación en clústeres
 
-* En RHEL, el nivel de agrupación en clústeres se basa en Red Hat Enterprise Linux (RHEL) [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf). 
+* En RHEL, la capa de agrupación en clústeres se basa en el [complemento HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) de Red Hat Enterprise Linux (RHEL). 
 
     > [!NOTE] 
-    > Acceso a Red Hat alta disponibilidad de complementos y documentación requiere una suscripción. 
+    > El acceso al complemento HA y la documentación de Red Hat exige una suscripción. 
 
-* En SLES, el nivel de agrupación en clústeres se basa en SUSE Linux Enterprise [extensión de alta disponibilidad (HAE)](https://www.suse.com/products/highavailability).
+* En SLES, la capa de agrupación en clústeres se basa en [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) de SUSE Linux Enterprise.
 
-    Para obtener más información sobre la configuración del clúster, las opciones del agente de recursos, administración, procedimientos recomendados y recomendaciones, consulte [SUSE Linux Enterprise alta disponibilidad extensión 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
+    Para obtener más información sobre la configuración del clúster, las opciones del agente de recursos y la administración, así como para obtener recomendaciones y ver los procedimientos recomendados, vea [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html).
 
-El complemento de alta disponibilidad de RHEL y el HAE SUSE se basan en [Pacemaker](https://clusterlabs.org/).
+Tanto el complemento HA de RHEL como la extensión HAE de SUSE se basan en [Pacemaker](https://clusterlabs.org/).
 
-Como se muestra en el siguiente diagrama, almacenamiento se presenta en dos servidores. Componentes de agrupación en clústeres, Corosync y Pacemaker, coordinan las comunicaciones y administración de recursos. Uno de los servidores tiene la conexión activa a los recursos de almacenamiento y el servidor SQL Server. Cuando Pacemaker detecta un error de los componentes de agrupación en clústeres administran mover los recursos a otro nodo.  
+Como se muestra en el diagrama siguiente, el almacenamiento se presenta en dos servidores. Los componentes de agrupación en clústeres (Corosync y Pacemaker) coordinan las comunicaciones y la administración de recursos. Uno de los servidores tiene la conexión activa a los recursos de almacenamiento y SQL Server. Cuando Pacemaker detecta un error, los componentes de agrupación en clústeres administran el traslado de los recursos al otro nodo.  
 
-![Red Hat Enterprise Linux 7 compartidos de clúster de disco de SQL](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
+![Clúster de SQL de disco compartido de Red Hat Enterprise Linux 7](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> En este momento, integración de SQL Server con Pacemaker en Linux no es tan acoplamiento como con WSFC en Windows. Desde dentro de SQL, no hay ningún conocimiento sobre la presencia del clúster, todas las orquestaciones está fuera de y Pacemaker controla el servicio como una instancia independiente. Además, nombre de red virtual es WSFC específico, no hay ningún equivalente de la misma en Pacemaker. Se espera que @@servername y sys.servers para devolver el nombre de nodo, mientras que el clúster DMV sys.dm_os_cluster_nodes y sys.dm_os_cluster_properties no hará ningún registro. Para usar una cadena de conexión que apunta a un nombre de servidor de la cadena y no usar la dirección IP, tendrá que registrar la dirección IP usada para crear el recurso IP virtual (como se explica en las secciones siguientes) en su servidor DNS con el nombre de servidor elegido.
+> En este momento, la integración de SQL Server con Pacemaker en Linux no es tan perfecta como con WSFC en Windows. Desde dentro de SQL no hay conocimiento sobre la presencia del clúster, toda la orquestación está fuera y Pacemaker controla el servicio como una instancia independiente. Además, el nombre de red virtual es específico de WSFC y no hay ningún equivalente en Pacemaker. Se espera que @@servername y sys.servers devuelvan el nombre del nodo, mientras que dmvs sys.dm_os_cluster_nodes y sys.dm_os_cluster_properties no devuelven registros. Para usar una cadena de conexión que apunte al nombre de servidor de una cadena y no use la dirección IP, se tiene que registrar en su servidor DNS la dirección IP usada para crear el recurso de IP virtual (como se explica en las secciones siguientes) con el nombre de servidor elegido.
 
 ## <a name="number-of-instances-and-nodes"></a>Número de instancias y nodos
 
-Una diferencia clave con SQL Server en Linux es que sólo puede haber una instalación de SQL Server por cada servidor Linux. Dicha instalación se llama a una instancia. Esto significa que, a diferencia de Windows Server que admite hasta 25 fci por clúster de conmutación por error de Windows Server (WSFC), una FCI basado en Linux solo tendrá una sola instancia. Una instancia de este también es una instancia predeterminada; No hay ningún concepto de una instancia con nombre en Linux. 
+Una diferencia clave con SQL Server en Linux es que solo puede haber una instalación de SQL Server por servidor de Linux. Esa instalación se denomina instancia. Esto significa que, a diferencia de Windows Server, que admite hasta 25 FCI por clúster de conmutación por error de Windows Server (WSFC), una FCI basada en Linux solo tiene una instancia. Esta única instancia también es una instancia predeterminada; no hay ningún concepto de instancia con nombre en Linux. 
 
-Un clúster de Pacemaker solo puede tener hasta 16 nodos cuando está implicada en Corosync, por lo que un FCI solo puede abarcar hasta 16 servidores. Una FCI implementada con Standard Edition de SQL Server admite hasta dos nodos de un clúster, incluso si el clúster de Pacemaker tiene el máximo de 16 nodos.
+Un clúster de Pacemaker solo puede tener un máximo de 16 nodos cuando Corosync está implicado, por lo que una FCI única puede abarcar hasta 16 servidores. Una FCI implementada con la edición Standard de SQL Server admite hasta dos nodos de un clúster, aunque el clúster de Pacemaker tenga el máximo de 16 nodos.
 
-En una FCI de SQL Server, la instancia de SQL Server está activa en un nodo o la otra.
+En una FCI de SQL Server, la instancia de SQL Server está activa en un nodo o en el otro.
 
-## <a name="ip-address-and-name"></a>Nombre y dirección IP
-En un clúster de Linux Pacemaker, cada FCI de SQL Server necesita su propia dirección IP única y el nombre. Si la configuración de FCI abarca varias subredes, se solicitará una dirección IP por subred. El nombre único y las direcciones IP se usan para tener acceso a la FCI para que las aplicaciones y los usuarios finales no es necesario saber qué servidor subyacente del clúster de Pacemaker.
+## <a name="ip-address-and-name"></a>Dirección IP y nombre
+En un clúster de Pacemaker de Linux, cada FCI de SQL Server necesita su propia dirección IP y nombre únicos. Si la configuración de FCI abarca varias subredes, se necesita una dirección IP por subred. El nombre único y las direcciones IP se usan para acceder a la FCI, de modo que las aplicaciones y los usuarios finales no necesitan saber el servidor subyacente del clúster de Pacemaker.
 
-El nombre de la FCI en DNS debe ser el mismo que el nombre del recurso FCI que se crea en el clúster de Pacemaker.
-El nombre y la dirección IP deben estar registrados en DNS.
+El nombre de la FCI en DNS debe ser el mismo que el nombre del recurso de FCI que se crea en el clúster de Pacemaker.
+Tanto el nombre como la dirección IP deben estar registrados en DNS.
 
 ## <a name="shared-storage"></a>Almacenamiento compartido
-Todas las fci, ya sean Linux o Windows Server, requieren algún tipo de almacenamiento compartido. Este almacenamiento se presenta a todos los servidores que posiblemente se pueden hospedar la FCI, pero solo un único servidor puede usar el almacenamiento para la FCI en un momento dado. Las opciones disponibles para el almacenamiento compartido en Linux son:
+Todas las FCI, tanto si están en Linux como en Windows Server, requieren algún tipo de almacenamiento compartido. Este almacenamiento se presenta a todos los servidores que pueden hospedar la FCI, pero solo un servidor puede usar el almacenamiento de la FCI en un momento dado. Las opciones disponibles para el almacenamiento compartido en Linux son:
 
 - iSCSI
 - Network File System (NFS)
-- Server Message Block (SMB) en Windows Server, hay opciones ligeramente diferentes. Una opción que no se admite actualmente para fci basado en Linux es la capacidad de usar un disco local en el nodo para TempDB, que es el área de trabajo temporal de SQL Server.
+- Bloque de mensajes del servidor (SMB) en Windows Server, hay opciones ligeramente diferentes. Una opción que no se admite actualmente para FCI basadas en Linux es la posibilidad de usar un disco que sea local en el nodo de TempDB, que es el área de trabajo temporal de SQL Server.
 
-En una configuración que abarca varias ubicaciones, lo que se almacena en un centro de datos debe estar sincronizada con la otra. Si se produce una conmutación por error, la FCI podrán ponerse en línea y el almacenamiento suele ser el mismo. Para lograr esto requerirá algún método externo para la replicación de almacenamiento, si esto se ejecuta mediante el hardware de almacenamiento subyacente o alguna utilidad basada en software. 
+En una configuración que abarca varias ubicaciones, lo que se almacena en un centro de datos se debe sincronizar con el otro. En el caso de una conmutación por error, la FCI puede conectarse y se ve que el almacenamiento es el mismo. Para lograrlo, se necesita algún método externo para la replicación de almacenamiento, ya sea a través del hardware de almacenamiento subyacente o de alguna utilidad basada en software. 
 
 >[!NOTE]
->Para SQL Server, deben tener el formato implementaciones basadas en Linux mediante discos presentados directamente a un servidor con XFS o EXT4. Actualmente no se admiten otros sistemas de archivos. Aquí se reflejarán los cambios.
+>En SQL Server, las implementaciones basadas en Linux que usan discos presentados directamente a un servidor deben tener el formato XFS o EXT4. Actualmente no se admiten otros sistemas de archivos. Los cambios se reflejan aquí.
 
-El proceso para presentar el almacenamiento compartido es el mismo para los diferentes métodos admitidos:
+El proceso para presentar el almacenamiento compartido es el mismo para los distintos métodos admitidos:
 
 - Configurar el almacenamiento compartido
-- Montar el almacenamiento como una carpeta a los servidores que servirán como nodos del clúster de Pacemaker para la FCI
-- Si es necesario, mover las bases de datos del sistema de SQL Server en el almacenamiento compartido
-- Prueba de SQL Server trabaja desde cada servidor conectado al almacenamiento compartido
+- Montar el almacenamiento como una carpeta en los servidores que actúan como nodos del clúster de Pacemaker para la FCI
+- Si es necesario, mover las bases de datos del sistema de SQL Server al almacenamiento compartido
+- Probar que SQL Server funciona desde cada servidor conectado al almacenamiento compartido
 
-Una gran diferencia con SQL Server en Linux es que aunque puede configurar la ubicación del archivo de registro y datos de usuario de la predeterminada, las bases de datos del sistema siempre deben existir en `/var/opt/mssql/data`. En Windows Server, hay la capacidad para mover las bases de datos del sistema incluido TempDB. Este hecho se reproduce en almacenamiento compartido cómo está configurado para una FCI.
+Una diferencia importante con SQL Server en Linux es que, aunque puede configurar la ubicación predeterminada del archivo de registro y datos de usuario, las bases de datos del sistema deben existir siempre en `/var/opt/mssql/data`. En Windows Server, existe la posibilidad de mover las bases de datos del sistema, incluida TempDB. Este hecho influye en el modo en que se configura el almacenamiento compartido de una FCI.
 
-Las rutas de acceso predeterminada para bases de datos del sistema no se pueden cambiar mediante la `mssql-conf` utilidad. Para obtener información sobre cómo cambiar los valores predeterminados, [cambiar la ubicación del directorio de datos o de registro de forma predeterminada](sql-server-linux-configure-mssql-conf.md#datadir). También puede almacenar datos de SQL Server y la transacción en otras ubicaciones, siempre y cuando tengan la seguridad apropiada incluso si no es una ubicación predeterminada; la ubicación tendría que indicarse.
+Las rutas de acceso predeterminadas de las bases de datos que no son del sistema se pueden cambiar mediante la utilidad `mssql-conf`. Para obtener información sobre cómo cambiar los valores predeterminados, [cambie la ubicación predeterminada del directorio de datos o de registro](sql-server-linux-configure-mssql-conf.md#datadir). También puede almacenar datos y transacciones de SQL Server en otras ubicaciones siempre y cuando tengan la seguridad adecuada, aunque no sea una ubicación predeterminada; es necesario indicar la ubicación.
 
-Los siguientes temas explican cómo configurar tipos de almacenamiento admitidos para una Linux basadas en la FCI de SQL Server:
+En los temas siguientes se explica cómo configurar los tipos de almacenamiento admitidos para una FCI de SQL Server basada en Linux:
 
-- [Configurar la instancia de clúster de conmutación por error - iSCSI: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [Configurar la instancia de clúster de conmutación por error: NFS: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [Configurar la instancia de clúster de conmutación por error: SMB: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [Configuración de la instancia de clúster de conmutación por error: iSCSI: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [Configuración de la instancia de clúster de conmutación por error: NFS: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [Configuración de la instancia de clúster de conmutación por error: SMB: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)

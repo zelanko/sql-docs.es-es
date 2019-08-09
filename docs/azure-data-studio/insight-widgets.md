@@ -1,7 +1,7 @@
 ---
-title: Usar los widgets de datos en Azure Data Studio para supervisar los servidores y bases de datos
+title: Empleo de widgets de información en Azure Data Studio para supervisar servidores y bases de datos
 titleSuffix: Azure Data Studio
-description: Obtenga información acerca de los widgets de datos en Azure Data Studio
+description: Obtenga información sobre los widgets de información en Azure Data Studio.
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,48 +11,48 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959524"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Administrar servidores y bases de datos con los widgets de datos en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Administración de servidores y bases de datos con widgets de información en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Widgets de datos realizar las consultas de Transact-SQL (T-SQL) que se utiliza para supervisar los servidores y bases de datos y convertirlos en visualizaciones muy precisos.
+Los widgets de información toman las consultas de Transact-SQL (T-SQL) que se usan para supervisar los servidores y las bases de datos y las convierten en visualizaciones llenas de información.
 
-Insights son personalizables diagramas y gráficos que agrega al servidor y los paneles de supervisión de la base de datos. Ver información de un vistazo de los servidores y bases de datos, a continuación, profundizar en más detalles e iniciar acciones de administración que defina.
+La información adopta la forma de gráficos personalizables que se agregan a los paneles de supervisión de servidores y bases de datos. Vea información rápida de los servidores y las bases de datos, profundice en más detalles e inicie las acciones de administración que defina.
 
-Puede crear increíbles servidor y base de datos de administración paneles similares al ejemplo siguiente:
+Puede compilar espectaculares paneles de administración de servidores y bases de datos de forma similar al ejemplo siguiente:
 
-![panel de la base de datos](media/insight-widgets/database-dashboard.png)
+![Panel de base de datos](media/insight-widgets/database-dashboard.png)
 
 
-Para dar el salto y empezar a crear diferentes tipos de widgets de datos, consulte los siguientes tutoriales:
+Para lanzarse y comenzar a crear distintos tipos de widgets de información, vea los siguientes tutoriales:
 
-- [Crear un widget de datos personalizados](tutorial-build-custom-insight-sql-server.md)
-- *Habilitar los widgets de datos integrados*
-  - [Habilitar la información de supervisión de rendimiento](tutorial-qds-sql-server.md)
-  - [Habilitar la información de uso del espacio de tabla](tutorial-table-space-sql-server.md)
+- [Compilación de un widget de información personalizada](tutorial-build-custom-insight-sql-server.md)
+- *Habilitación de widgets de información integrados*
+  - [Habilitación de la información de supervisión de rendimiento](tutorial-qds-sql-server.md)
+  - [Habilitación de la información de uso de espacio de tabla](tutorial-table-space-sql-server.md)
 
 
 ## <a name="sql-queries"></a>Consultas SQL
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] intenta evitar introducir aún otro lenguaje o con mucha actividad de usuario de la interfaz por lo que intenta usar T-SQL tanto como sea posible con muy poca configuración de JSON. Configuración de widgets de datos con Transact-SQL aprovecha el número de orígenes existentes de las consultas de Transact-SQL útiles que pueden convertirse en widgets perspicaces innumerables.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] intenta evitar la incorporación de otro lenguaje u otra interfaz de usuario pesada, así que intenta usar T-SQL lo máximo posible con una configuración de JSON mínima. La configuración de widgets de información con T-SQL aprovecha el incontable número de orígenes existentes de consultas de T-SQL útiles que se pueden convertir en widgets llenos de información.
 
-Widgets de datos se componen de uno o dos consultas de T-SQL:
-* *Consulta de widget Insight* es obligatorio, y es la consulta que devuelve los datos que aparecen en el widget.
-* *Consulta de detalles de Insight* es necesario sólo si va a crear una página de detalles de la información.
+Los widgets de información se componen de una o dos consultas de T-SQL:
+* La *consulta de widget de información* es obligatoria y es la que devuelve los datos que aparecen en el widget.
+* La *consulta de detalles de información* solo es necesaria si se va a crear una página de detalles de información.
 
-Una consulta de widget de una perspectiva define un conjunto de datos que representa un recuento o un gráfico. Consulta de detalles de la información se usa para mostrar información de detalle de información relevante en formato tabular en el panel de detalles de la información. 
+Una consulta de widget de información define un conjunto de datos que representa un recuento o un gráfico. La consulta de detalles de información se usa para presentar información de detalles relevante en formato tabular en el panel de detalles de información. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] ejecuta consultas de widget de insight y asigna el conjunto de resultados de consulta al conjunto de datos de un gráfico, a continuación, lo representa. Cuando los usuarios abren los detalles de una recomendación, ejecuta la consulta de detalles de insight e imprime el resultado en una vista de cuadrícula en el cuadro de diálogo.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] ejecuta consultas de widget de información y asigna el conjunto de resultados de la consulta al conjunto de datos de un gráfico que luego representa. Cuando los usuarios abren los detalles de la información, se ejecuta la consulta de detalles de información y se imprime el resultado en una vista de cuadrícula en el cuadro de diálogo.
 
-La idea básica consiste en escribir una consulta de Transact-SQL en una forma por lo que puede usarse como un conjunto de datos de un número y gráfico widget de gráfico. 
+La idea básica es escribir una consulta de T-SQL de forma que se pueda usar como conjunto de datos de un recuento, un gráfico y un widget gráfico. 
 
 ## <a name="summary"></a>Resumen
 
-La consulta de Transact-SQL y su conjunto de resultados determinan el comportamiento del widget de información. Escribir una consulta para un tipo de gráfico o la asignación de un tipo de gráfico adecuado para la consulta existente es el aspecto clave para crear un widget de información eficaces.
+La consulta de T-SQL y su conjunto de resultados determinan el comportamiento del widget de información. La escritura de una consulta para un tipo de gráfico o la asignación de un tipo de gráfico adecuado para una consulta existente es la consideración clave para compilar un widget de información eficaz.
 
 
 

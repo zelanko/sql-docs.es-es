@@ -1,6 +1,6 @@
 ---
-title: Migrar una base de datos de SQL Server de Windows para Linux
-description: Este tutorial muestra cómo realizar la copia de seguridad de una base de datos de SQL Server en Windows y restaurarla en una máquina Linux que ejecuta SQL Server.
+title: Migración de una base de datos SQL Server de Windows a Linux
+description: En este tutorial se muestra cómo realizar una copia de seguridad de base de datos SQL Server en Windows y restaurarla en una máquina Linux que ejecute SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,56 +10,56 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.openlocfilehash: f5eebdbedb548c28db6a83038a6f6b84c5bad336
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68025934"
 ---
-# <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrar una base de datos de SQL Server de Windows para Linux mediante la copia de seguridad y restauración
+# <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migración de una base de datos SQL Server de Windows a Linux mediante Copia de seguridad y restauración
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Copia de seguridad de SQL Server y la característica de restauración es la manera recomendada para migrar una base de datos de SQL Server en Windows para SQL Server en Linux. En este tutorial, guiará por los pasos necesarios para mover una base de datos para Linux con la copia de seguridad y restaurar técnicas.
+La característica Copia de seguridad y restauración de SQL Server es el método recomendado para migrar una base de datos de SQL Server en Windows a SQL Server en Linux. Este tutorial le guiará por los pasos necesarios para mover una base de datos a Linux con técnicas de copia de seguridad y restauración.
 
 > [!div class="checklist"]
-> * Cree un archivo de copia de seguridad en Windows con SSMS
-> * Instalar un shell de Bash en Windows
-> * Mover el archivo de copia de seguridad para Linux desde el shell de Bash
-> * Restaurar el archivo de copia de seguridad en Linux con Transact-SQL
-> * Ejecutar una consulta para comprobar la migración
+> * Creación de un archivo de copia de seguridad en Windows con SSMS
+> * Instalación de un shell de Bash en Windows
+> * Traslado del archivo de copia de seguridad a Linux desde el shell de Bash
+> * Restauración del archivo de copia de seguridad en Linux con Transact-SQL
+> * Ejecución de una consulta para comprobar la migración
 
-También puede crear un SQL Server grupo de disponibilidad AlwaysOn para migrar una base de datos de SQL Server de Windows a Linux. Consulte [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md).
+También puede crear un Grupo de disponibilidad Always On de SQL Server para migrar una base de datos de SQL Server de Windows a Linux. Consulte [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Los siguientes requisitos previos son necesarios para completar este tutorial:
+Debe disponer de lo siguiente para poder completar este tutorial:
 
-* Máquina de Windows con lo siguiente:
+* Un equipo Windows con lo siguiente:
   * [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions) instalado.
   * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) instalado.
-  * Base de datos de destino para migrar.
+  * Una base de datos de destino para migrar.
 
-* Máquina de Linux con el software siguiente instalado:
-  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), o [Ubuntu](quickstart-install-connect-ubuntu.md)) con las herramientas de línea de comandos.
+* Un equipo Linux con lo siguiente instalado:
+  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md) o [Ubuntu](quickstart-install-connect-ubuntu.md)) con herramientas de línea de comandos.
 
-## <a name="create-a-backup-on-windows"></a>Crear una copia de seguridad en Windows
+## <a name="create-a-backup-on-windows"></a>Creación de una copia de seguridad en Windows
 
-Hay varias maneras de crear un archivo de copia de seguridad de una base de datos en Windows. Los pasos siguientes usan SQL Server Management Studio (SSMS).
+Hay varias maneras de crear un archivo de copia de seguridad de una base de datos en Windows. Para los pasos siguientes, se usa SQL Server Management Studio (SSMS).
 
-1. Iniciar **SQL Server Management Studio** en el equipo de Windows.
+1. Inicie **SQL Server Management Studio** en el equipo Windows.
 
 1. En el cuadro de diálogo de conexión, escriba **localhost**.
 
-1. En el Explorador de objetos, expanda **bases de datos**.
+1. En el Explorador de objetos, expanda **Bases de datos**.
 
-1. Haga clic en la base de datos de destino, seleccione **tareas**y, a continuación, haga clic en **copia de seguridad...** .
+1. Haga clic con el botón derecho en la base de datos de destino, seleccione **Tareas** y, luego, haga clic en **Hacer copia de seguridad…**
 
-   ![Usar SSMS para crear un archivo de copia de seguridad](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
+   ![Uso de SSMS para crear un archivo de copia de seguridad](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
 
-1. En el **copia de seguridad de base de datos** cuadro de diálogo, compruebe que **tipo de copia de seguridad** es **completa** y **copia de seguridad en** es **disco**. Tenga en cuenta el nombre y la ubicación del archivo. Por ejemplo, una base de datos denominada **YourDB** en SQL Server 2016 tiene una ruta de acceso de copia de seguridad predeterminada de `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak`.
+1. En el cuadro de diálogo **Copia de seguridad de la base de datos**, compruebe que **Tipo de copia de seguridad** es **Completo** y que **Copia de seguridad en** es **Disco**. Tome nota del nombre y la ubicación del archivo. Por ejemplo, una base de datos denominada **YourDB** en SQL Server 2016 tiene una ruta de acceso de copia de seguridad predeterminada de `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak`.
 
-1. Haga clic en **Aceptar** realizar copias de seguridad de la base de datos.
+1. Haga clic en **Aceptar** para realizar una copia de seguridad de la base de datos.
 
 > [!NOTE]
 > Otra opción consiste en ejecutar una consulta de Transact-SQL para crear el archivo de copia de seguridad. El siguiente comando de Transact-SQL realiza las mismas acciones que los pasos anteriores para una base de datos denominada **YourDB**:
@@ -72,85 +72,85 @@ Hay varias maneras de crear un archivo de copia de seguridad de una base de dato
 > GO
 > ```
 
-## <a name="install-a-bash-shell-on-windows"></a>Instalar un shell de Bash en Windows
+## <a name="install-a-bash-shell-on-windows"></a>Instalación de un shell de Bash en Windows
 
-Para restaurar la base de datos, primero debe transferir el archivo de copia de seguridad de la máquina de Windows a la máquina de Linux de destino. En este tutorial, se mueva el archivo a Linux desde un shell de Bash (ventana de terminal) que se ejecutan en Windows.
+Para restaurar la base de datos, primero debe transferir el archivo de copia de seguridad del equipo Windows al equipo Linux de destino. En este tutorial, moveremos el archivo a Linux desde un shell de Bash (ventana de terminal) que se ejecuta en Windows.
 
-1. Instalar un shell de Bash en la máquina de Windows que admita la **scp** (secure copy) y **ssh** comandos (inicio de sesión remoto). Se incluyen dos ejemplos:
+1. Instale un shell de Bash en un equipo Windows que admita los comandos **scp** (copia segura) y **ssh** (inicio de sesión remoto). Dos ejemplos incluyen:
 
-   * El [subsistema Windows para Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
-   * El Shell de Bash de Git ([https://git-scm.com/downloads](https://git-scm.com/downloads))
+   * El [subsistema de Windows para Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
+   * El shell de Bash de Git ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
 1. Abra una sesión de Bash en Windows.
 
-## <a id="scp"></a> Copie el archivo de copia de seguridad en Linux
+## <a id="scp"></a> Copia del archivo de copia de seguridad en Linux
 
-1. En la sesión de Bash, navegue hasta el directorio que contiene el archivo de copia de seguridad. Por ejemplo:
+1. En la sesión de Bash, vaya al directorio que contiene el archivo de copia de seguridad. Por ejemplo:
 
    ```bash
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
    ```
 
-1. Use la **scp** comando para transferir el archivo a la máquina de Linux de destino. Las siguientes transferencias de ejemplo **YourDB.bak** en el directorio principal de *user1* en el servidor Linux con la dirección IP *192.0.2.9*:
+1. Use el comando **scp** para transferir el archivo al equipo Linux de destino. En el ejemplo siguiente se transfiere **YourDB.bak** al directorio particular de *user1* en el servidor Linux con una dirección IP de *192.0.2.9*:
 
    ```bash
    scp YourDB.bak user1@192.0.2.9:./
    ```
-   ![comando de SCP](./media/sql-server-linux-migrate-restore-database/scp-command.png)
+   ![Comando scp](./media/sql-server-linux-migrate-restore-database/scp-command.png)
 
 > [!TIP]
-> Hay alternativas al uso de scp para transferir archivos. Una consiste en usar [Samba](https://help.ubuntu.com/community/Samba) para configurar un recurso compartido de red SMB entre Windows y Linux. Para ver un tutorial en Ubuntu, consulte [cómo crear un recurso compartido de red a través de Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). Una vez establecida, puede acceder a él como un archivo de red comparten desde Windows, como  **\\ \\machinenameorip\\compartir**.
+> Hay alternativas al uso de scp para la transferencia de archivos. Una consiste en usar [Samba](https://help.ubuntu.com/community/Samba) para configurar un recurso compartido de red de SMB entre Windows y Linux. Para ver un tutorial sobre Ubuntu, consulte [Cómo crear un recurso compartido de red a través de Samba](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!). Una vez establecido, puede acceder a él como un recurso compartido de archivos de red desde Windows, como **\\\\machinenameorip\\share**.
 
-## <a name="move-the-backup-file-before-restoring"></a>Mueva el archivo de copia de seguridad antes de restaurar
+## <a name="move-the-backup-file-before-restoring"></a>Traslado del archivo de copia de seguridad antes de la restauración
 
-En este momento, el archivo de copia de seguridad está en el servidor de Linux en su directorio particular de usuario. Antes de restaurar la base de datos a SQL Server, debe colocar la copia de seguridad en un subdirectorio de **/var/opt/mssql**.
+En este momento, el archivo de copia de seguridad se encuentra en el servidor Linux en el directorio particular del usuario. Antes de restaurar la base de datos a SQL Server, debe colocar la copia de seguridad en un subdirectorio de **/var/opt/mssql**.
 
-1. En la misma sesión de Bash Windows conectarse remotamente a la máquina de destino de Linux con **ssh**. En el siguiente ejemplo se conecta a la máquina Linux **192.0.2.9** como usuario **user1**.
+1. En la misma sesión de Bash de Windows, conéctese de forma remota al equipo Linux de destino con **ssh**. En el ejemplo siguiente, se realiza la conexión al equipo Linux **192.0.2.9** como usuario **user1**.
 
    ```bash
    ssh user1@192.0.2.9
    ```
 
-   Ahora se ejecutan comandos en el servidor remoto de Linux.
+   Ahora está ejecutando comandos en el servidor Linux remoto.
 
-1. ENTRAR en modo de superusuario.
+1. Acceda al modo de superusuario.
 
    ```bash
    sudo su
    ```
 
-1. Cree un nuevo directorio de copia de seguridad. El parámetro -p no hace nada si el directorio ya existe.
+1. Cree un directorio de copia de seguridad. El parámetro -p no hace nada si el directorio ya existe.
 
    ```bash
    mkdir -p /var/opt/mssql/backup
    ```
 
-1. Mueva el archivo de copia de seguridad a ese directorio. En el ejemplo siguiente, el archivo de copia de seguridad reside en el directorio principal de *user1*. Cambiar el comando para que coincida con el nombre de archivo y la ubicación del archivo de copia de seguridad.
+1. Mueva el archivo de copia de seguridad a ese directorio. En el ejemplo siguiente, el archivo de copia de seguridad reside en el directorio particular de *user1*. Cambie el comando para que coincida con la ubicación y el nombre del archivo de copia de seguridad.
 
    ```bash
    mv /home/user1/YourDB.bak /var/opt/mssql/backup/
    ```
 
-1. Salir del modo de superusuario.
+1. Salga del modo de superusuario.
 
    ```bash
    exit
    ```
 
-## <a name="restore-your-database-on-linux"></a>Restaurar la base de datos en Linux
+## <a name="restore-your-database-on-linux"></a>Restauración de la base de datos en Linux
 
-Para restaurar la copia de seguridad de base de datos, puede usar el **RESTORE DATABASE** comando Transact-SQL (TQL).
+Para restaurar la copia de seguridad de base de datos, puede usar el comando **RESTORE DATABASE** de Transact-SQL (TQL).
 
 > [!NOTE]
-> Los pasos siguientes usan la **sqlcmd** herramienta. Si no lo ha hecho instalar herramientas de SQL Server, vea [herramientas de línea de comandos de instalación de SQL Server en Linux](sql-server-linux-setup-tools.md).
+> En los pasos siguientes se usa la herramienta **sqlcmd**. Si no ha instalado las Herramientas de SQL Server, consulte [Instalación de las herramientas de línea de comandos de SQL Server en Linux](sql-server-linux-setup-tools.md).
 
-1. En el mismo terminal, inicie **sqlcmd**. En el siguiente ejemplo se conecta a la instancia de SQL Server local con el **SA** usuario. Escriba la contraseña cuando se le solicite, o especifique la contraseña mediante la adición de la **-P** parámetro.
+1. En el mismo terminal, inicie **sqlcmd**. En el ejemplo siguiente se conecta a la instancia de SQL Server local con el usuario **SA**. Escriba la contraseña cuando se le solicite o especifíquela mediante la adición del parámetro **-P**.
 
    ```bash
    sqlcmd -S localhost -U SA
    ```
 
-1. En el `>1` símbolo del sistema, escriba lo siguiente **RESTORE DATABASE** comando, presione ENTRAR después de cada línea (no se puede copiar y pegar todo el comando de varias líneas a la vez). Reemplace todas las apariciones de `YourDB` con el nombre de la base de datos.
+1. En el símbolo del sistema `>1`, escriba el siguiente comando **RESTORE DATABASE**. Para ello, presione ENTRAR después de cada línea, ya que no puede copiar y pegar a la vez este comando de varias líneas al completo. Reemplace todas las apariciones de `YourDB` por el nombre de la base de datos.
 
    ```sql
    RESTORE DATABASE YourDB
@@ -160,9 +160,9 @@ Para restaurar la copia de seguridad de base de datos, puede usar el **RESTORE D
    GO
    ```
 
-   Obtendrá un mensaje de que la base de datos se restauraron correctamente.
+   Debería obtener un mensaje que indica que la base de datos se ha restaurado correctamente.
 
-   `RESTORE DATABASE` puede devolver un error similar al ejemplo siguiente:
+   `RESTORE DATABASE` puede devolver un error como el del ejemplo siguiente:
 
    ```bash
    File 'YourDB_Product' cannot be restored to 'Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf'. Use WITH MOVE to identify a valid location for the file.
@@ -170,14 +170,14 @@ Para restaurar la copia de seguridad de base de datos, puede usar el **RESTORE D
    Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
    ```
    
-   En este caso, la base de datos contiene archivos secundarios. Si estos archivos no se especifican en el `MOVE` cláusula de `RESTORE DATABASE`, el procedimiento de restauración intentará crearlos en la misma ruta que el servidor original. 
+   En este caso, la base de datos contiene archivos secundarios. Si estos archivos no se especifican en la cláusula `MOVE` de `RESTORE DATABASE`, el procedimiento de restauración intentará crearlos en la misma ruta de acceso que el servidor original. 
 
    Puede enumerar todos los archivos incluidos en la copia de seguridad:
    ```sql
    RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
    GO
    ```
-   Debería obtener una lista como la siguiente (enumerar solo las primeras dos columnas):
+   Debería obtener una lista como la que aparece a continuación (solo se muestran las dos primeras columnas):
    ```sql
    LogicalName         PhysicalName                                                                 ..............
    ----------------------------------------------------------------------------------------------------------------------
@@ -187,7 +187,7 @@ Para restaurar la copia de seguridad de base de datos, puede usar el **RESTORE D
    YourDB_log          Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Log.ldf      ..............
    ```
    
-   Puede usar esta lista para crear `MOVE` cláusulas para los archivos adicionales. En este ejemplo, el `RESTORE DATABASE` es:
+   Puede usar esta lista para crear cláusulas `MOVE` para los archivos adicionales. En este ejemplo, `RESTORE DATABASE` es:
 
    ```sql
    RESTORE DATABASE YourDB
@@ -200,14 +200,14 @@ Para restaurar la copia de seguridad de base de datos, puede usar el **RESTORE D
    ```
 
 
-1. Compruebe la restauración con una lista de todas las bases de datos en el servidor. Debe aparecer la base de datos restaurada.
+1. Compruebe la restauración mediante la enumeración de todas las bases de datos del servidor. La base de datos restaurada debería aparecer en la lista.
 
    ```sql
    SELECT Name FROM sys.Databases
    GO
    ```
 
-1. Ejecutar otras consultas en la base de datos migrada. El siguiente comando cambia el contexto para el **YourDB** selecciona las filas de una de sus tablas y base de datos.
+1. Ejecute otras consultas en la base de datos migrada. El comando siguiente cambia el contexto a la base de datos **YourDB** y selecciona las filas de una de sus tablas.
 
    ```sql
    USE YourDB
@@ -215,24 +215,24 @@ Para restaurar la copia de seguridad de base de datos, puede usar el **RESTORE D
    GO
    ```
 
-1. Cuando haya terminado con **sqlcmd**, tipo `exit`.
+1. Cuando haya terminado de usar **sqlcmd**, escriba `exit`.
 
-1. Cuando haya terminado trabajando en el servidor remoto **ssh** sesión, escriba `exit` nuevo.
+1. Cuando haya terminado de trabajar en la sesión remota de **ssh**, vuelva a escribir `exit`.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial, aprendió a realizar una copia de seguridad de una base de datos en Windows y moverlo a un servidor de Linux que ejecuta SQL Server. Ha aprendido a:
+En este tutorial ha aprendido a realizar una copia de seguridad de una base de datos en Windows y a moverla a un servidor de Linux con SQL Server. Ha aprendido los siguientes procedimientos:
 > [!div class="checklist"]
-> * Usar SSMS y Transact-SQL para crear un archivo de copia de seguridad en Windows
-> * Instalar un shell de Bash en Windows
-> * Use **scp** para mover los archivos de copia de seguridad de Windows para Linux
-> * Use **ssh** conectarse remotamente a la máquina Linux
-> * Reubicar el archivo de copia de seguridad para preparar la restauración
-> * Use **sqlcmd** para ejecutar comandos de Transact-SQL
-> * Restaurar la copia de seguridad de base de datos con el **RESTORE DATABASE** comando 
-> * Ejecute la consulta para comprobar la migración
+> * Uso de SSMS y Transact-SQL para crear un archivo de copia de seguridad en Windows
+> * Instalación de un shell de Bash en Windows
+> * Uso de **scp** para mover archivos de copia de seguridad de Windows a Linux
+> * Uso de **ssh** para conectarse de forma remota al equipo Linux
+> * Reubicación del archivo de copia de seguridad a fin de prepararlo para la restauración
+> * Uso de **sqlcmd** para ejecutar comandos Transact-SQL
+> * Restauración de la copia de seguridad de base de datos con el comando **RESTORE DATABASE** 
+> * Ejecución de la consulta para comprobar la migración
 
-A continuación, explorar otros escenarios de migración de SQL Server en Linux. 
+Explore ahora otros escenarios de migración para SQL Server en Linux. 
 
 > [!div class="nextstepaction"]
->[Migrar bases de datos a SQL Server en Linux](sql-server-linux-migrate-overview.md)
+>[Migración de bases de datos a SQL Server en Linux](sql-server-linux-migrate-overview.md)

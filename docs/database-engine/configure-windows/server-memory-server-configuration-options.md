@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 384647c51e738bf96335ac481fcc250476748ae2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f631c7c0d4e1674e5982f0650989583910388e6
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025601"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476267"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opciones de configuración de memoria del servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Las opciones de servidor **memoria de servidor mínima** y **memoria de servidor
 
 <sup>2</sup> Consulte la página de documentación sobre cómo [Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) para obtener información sobre los subprocesos de trabajo predeterminados calculados para un determinado número de CPU con afinidad en el host actual.
 
-<sup>3</sup> Consulte la página de documentación sobre [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) para obtener información sobre el parámetro de inicio *-g*.
+<sup>3</sup> Consulte la página de documentación sobre [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) para obtener información sobre el parámetro de inicio *-g*. Solo aplicable a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits (de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Cómo configurar las opciones de memoria con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
 Use las dos opciones de memoria de servidor **memoria de servidor mínima** y **memoria de servidor máxima**para reconfigurar la cantidad de memoria (en megabytes) administrada por el Administrador de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede cambiar sus requisitos de memoria de manera dinámica basándose en los recursos del sistema disponibles.  

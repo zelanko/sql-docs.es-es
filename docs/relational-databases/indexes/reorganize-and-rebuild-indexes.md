@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b02d7c93ad2858c1463e3283135f1a3e2cc841b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18aa4d46a82121d2522260f146315f89b36a1803
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909580"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476258"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar y volver a generar índices
 
@@ -71,11 +71,28 @@ Una vez determinada la magnitud de la fragmentación, utilice la siguiente tabla
 
 <sup>1</sup> La regeneración de un índice se puede ejecutar en línea o sin conexión. La reorganización de un índice siempre se ejecuta en línea. Para lograr una disponibilidad similar a la opción de reorganización, debe volver a generar los índices en línea.
 
-Estos valores proporcionan directrices generales para la determinación del punto en el que debe cambiar entre `ALTER INDEX REORGANIZE` y `ALTER INDEX REBUILD`. No obstante, los valores reales pueden variar de un caso a otro. Es importante que experimente la determinación del mejor umbral para su entorno.
+> [!TIP]
+> Estos valores proporcionan directrices generales para la determinación del punto en el que debe cambiar entre `ALTER INDEX REORGANIZE` y `ALTER INDEX REBUILD`. No obstante, los valores reales pueden variar de un caso a otro. Es importante que experimente la determinación del mejor umbral para su entorno. Por ejemplo, si se usa un índice determinado principalmente para operaciones de examen, la eliminación de la fragmentación puede mejorar el rendimiento de estas operaciones. Las ventajas de rendimiento son menos evidentes para los índices que se usan principalmente para las operaciones de búsqueda. Del mismo modo, la eliminación de la fragmentación en un montón (una tabla sin índice agrupado) es especialmente útil para las operaciones de examen de índices no agrupados, pero tiene poco efecto en las operaciones de búsqueda.
+
 Los niveles de fragmentación muy bajos (inferiores al 5 por ciento) normalmente no deben tratarse con ninguno de estos comandos, dado que el beneficio de quitar una cantidad de fragmentación tan pequeña es casi siempre ampliamente superado por el costo de reorganizar o volver a generar el índice. Para obtener más información acerca de `ALTER INDEX REORGANIZE` y `ALTER INDEX REBUILD`, consulte [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).
 
 > [!NOTE]
 > Con frecuencia, cuando se vuelven a generar o se reorganizan los índices pequeños no se reduce la fragmentación. Las páginas de índices pequeños a veces se almacenan en extensiones mixtas. Las extensiones mixtas pueden estar compartidas por hasta ocho objetos, de modo que es posible que no se pueda reducir la fragmentación en un índice pequeño después de reorganizar o volver a generar dicho índice.
+
+### <a name="index-defragmentation-considerations"></a>Consideraciones sobre la desfragmentación de índices
+En determinadas circunstancias, al recompilar un índice agrupado, se recompilarán automáticamente los índices no agrupados que hagan referencia a la clave de agrupación en clústeres, si es necesario cambiar los identificadores físicos o lógicos contenidos en los registros de índices no agrupados.
+
+Escenarios que obligan a que todos los índices no agrupados se recompilen automáticamente en una tabla:
+
+-  Creación de un índice agrupado en una tabla
+-  Eliminación de un índice agrupado, lo que hace que la tabla se almacene como un montón
+-  Cambio de la clave de agrupación en clústeres para incluir o excluir columnas
+
+Escenarios que no requieren recompilar automáticamente en una tabla todos los índices no agrupados:
+
+-  Recompilación de un índice agrupado único
+-  Recompilación de un índice agrupado que no es único
+-  Cambio del esquema de índice, como al aplicar un esquema de partición a un índice agrupado o al mover el índice agrupado a un grupo de archivos diferente
 
 ### <a name="Restrictions"></a> Limitaciones y restricciones
 
@@ -96,7 +113,7 @@ No es posible volver a organizar o generar un índice si el grupo de archivos en
 
 #### <a name="Permissions"></a> Permisos
 
-Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro de al menos uno de los siguientes roles:
+Debe tener un permiso de `ALTER` sobre la tabla o vista. El usuario debe ser miembro de al menos uno de los siguientes roles:
 
 - Rol de base de datos **db_ddladmin**<sup>1</sup>
 - Rol de base de datos **db_owner**

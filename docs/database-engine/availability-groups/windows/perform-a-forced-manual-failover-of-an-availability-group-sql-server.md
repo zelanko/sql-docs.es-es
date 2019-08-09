@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3c6ba5932e440373ae9e08afc1c8483e25ceebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 167070809d552a40d57761b533fc7954fec76dc1
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014607"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388360"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Realización de una conmutación por error manual forzada de un grupo de disponibilidad Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

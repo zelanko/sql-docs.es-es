@@ -1,75 +1,80 @@
 ---
-title: Ejecutar trabajos de Spark en Azure Data Studio
+title: Envío de trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio
 titleSuffix: SQL Server big data clusters
-description: Enviar trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio.
+description: Envíe trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db92ab03380bab1d6465fb53821ee6afbb345c54
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6731a753c643512cd05dbc9d7b7de2c9a064576f
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727371"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68470668"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Envío de trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Uno de los escenarios claves para los clústeres de datos de gran tamaño es la capacidad para enviar trabajos de Spark para la versión preliminar de SQL Server 2019. La característica de envío de trabajos de Spark permite enviar archivos Jar o Py locales con las referencias al clúster de macrodatos de SQL Server 2019. También permite ejecutar archivos Jar o Py, ya se encuentran en el sistema de archivos HDFS. 
+Uno de los escenarios clave para clústeres de macrodatos es la capacidad de enviar trabajos de Spark para la versión preliminar de SQL Server 2019. La característica de envío de trabajos de Spark permite enviar archivos Jar o Py locales con referencias a clústeres de macrodatos de SQL Server 2019. También permite ejecutar archivos Jar o Py, que ya se encuentran en el sistema de archivos HDFS. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-- [Herramientas de SQL Server 2019 macrodatos](deploy-big-data-tools.md):
+- [Herramientas de macrodatos de SQL Server 2019](deploy-big-data-tools.md):
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
    - **kubectl**
 
-- [Conectarse a Azure Data Studio a la puerta de enlace de Spark o HDFS del clúster de macrodatos](connect-to-big-data-cluster.md).
+- [Conexión de Azure Data Studio a la puerta de enlace de HDFS/Spark del clúster de macrodatos](connect-to-big-data-cluster.md).
 
-## <a name="open-spark-job-submission-dialog"></a>Abrir cuadro de diálogo de envío de trabajos de Spark
-Hay varias maneras de abrir el cuadro de diálogo de envío de trabajos de Spark. Las formas de incluyen el panel, menú contextual en el Explorador de objetos y la paleta de comandos.
+## <a name="open-spark-job-submission-dialog"></a>Apertura del cuadro de diálogo de envío de trabajos de Spark
 
-+ Haga clic en **nuevo trabajo de Spark** en el panel para abrir el cuadro de diálogo de envío de trabajos de Spark.
+Hay varias maneras de abrir el cuadro de diálogo de envío de trabajos de Spark. Las distintas formas incluyen el panel, el menú contextual del Explorador de objetos y la paleta de comandos.
 
-    ![Envío de menú, haga clic en el panel](./media/submit-spark-job/new-spark-job.png)
- 
-+ Haga doble clic en el clúster en el Explorador de objetos y seleccione **Submit Spark Job** en el menú contextual. Se abrirá el cuadro de diálogo de envío de trabajos de Spark.  
- 
-    ![Enviar el menú contextual clúster](./media/submit-spark-job/submit-spark-job.png)
+- Para abrir el cuadro de diálogo de envío de trabajos de Spark, haga clic en **New Spark Job** (Nuevo trabajo de Spark) en el panel.
 
-+ Haga doble clic en un archivo Jar/Py en el Explorador de objetos y seleccione **Submit Spark Job** en el menú contextual. Se abrirá el cuadro de diálogo del envío de trabajo de Spark con el campo Jar/Py se rellene previamente. 
- 
-    ![Menú contextual archivo de envío](./media/submit-spark-job/submit-spark-job-2.png)
+    ![Menú de envío al hacer clic en el panel](./media/submit-spark-job/new-spark-job.png)
 
-+ Use el comando **Submit Spark Job** desde la paleta de comandos escribiendo Ctrl + Mayús + P (en Windows) y Cmd + Mayús + P (en Mac).
+- O bien, haga clic con el botón derecho en el Explorador de objetos y seleccione **Submit Spark Job** (Enviar trabajo de Spark) en el menú contextual.
 
-    ![Enviar la paleta de comandos de menú en windows](./media/submit-spark-job/submit-spark-job-3.png)
+    ![Menú de envío al hacer clic con el botón derecho en el archivo](./media/submit-spark-job/submit-spark-job-1.png)
 
-    ![Enviar la paleta de comandos de menú en mac](./media/submit-spark-job/submit-spark-job-4.png)
+
+- Para abrir el cuadro de diálogo de envío de trabajos de Spark con los campos Jar o Py rellenados previamente, haga clic con el botón derecho en un archivo Jar o Py en el Explorador de objetos y seleccione **Submit Spark Job** (Enviar trabajo de Spark) en el menú contextual.  
+
+    ![Menú de envío al hacer clic con el botón derecho en el clúster](./media/submit-spark-job/submit-spark-job.png)
+
+- Use **Submit Spark Job** (Enviar trabajo de Spark) en la paleta de comandos al escribir **Ctrl + Mayús + P** (en Windows) y **Cmd + Mayús + P** (en Mac).
+
+    ![Paleta de comandos del menú de envío en Windows](./media/submit-spark-job/submit-spark-job-3.png)
+
+    ![Paleta de comandos del menú de envío en Mac](./media/submit-spark-job/submit-spark-job-4.png)
   
  
-## <a name="submit-spark-job"></a>Enviar trabajo de Spark 
-Se muestra el cuadro de diálogo de envío de trabajos de Spark como la siguiente. Escriba el nombre del trabajo, ruta del archivo JAR/Py, clase principal y otros campos. El archivo Jar / Py origen de archivo podría ser local o de HDFS. Si el trabajo tiene de Spark hacen referencia a archivos JAR, Py archivos o archivos adicionales, haga clic en **avanzadas** pestaña y escriba las rutas de acceso de archivo correspondiente. Haga clic en **enviar** al enviar el trabajo de Spark.
- 
-![Nuevo cuadro de diálogo de trabajo de spark](./media/submit-spark-job/submit-spark-job-section.png)
+## <a name="submit-spark-job"></a>Envío de trabajo de Spark 
 
-![Cuadro de diálogo Opciones avanzada](./media/submit-spark-job/submit-spark-job-section-1.png)
+El cuadro de diálogo de envío de trabajos de Spark se muestra así. Escriba el nombre del trabajo, la ruta de acceso del archivo JAR o Py, la clase principal y otros campos. El origen del archivo Jar o Py puede ser Local o HDFS. Si el trabajo de Spark tiene archivos de referencia Jar, Py u otros, haga clic en la pestaña **OPCIONES AVANZADAS** y escriba las rutas de acceso de archivo correspondientes. Haga clic en **Enviar** para enviar el trabajo de Spark.
+
+![Cuadro de diálogo Nuevo trabajo de Spark](./media/submit-spark-job/submit-spark-job-section.png)
+
+![Cuadro de diálogo Opciones avanzadas](./media/submit-spark-job/submit-spark-job-section-1.png)
 
 ## <a name="monitor-spark-job-submission"></a>Supervisar el envío de trabajos de Spark
-Después de enviar el trabajo de Spark, la información de estado de envío y la ejecución de trabajos de Spark se muestran en el historial de tareas de la izquierda. Y obtener más información sobre el progreso y los registros también se muestra en el **salida** ventana en la parte inferior.
-+ Cuando el trabajo de Spark está en curso, el **historial de tareas** panel y **salida** están actualizando con el progreso de la ventana.
 
-![Trabajo del Monitor de spark en curso](./media/submit-spark-job/monitor-spark-job-submission.png)
+Una vez enviado el trabajo de Spark, la información de estado del envío y la ejecución de Spark se muestra en el historial de tareas de la izquierda. Los detalles sobre el progreso y los registros también se muestran en la ventana **SALIDA** de la parte inferior.
 
-+ Cuando se encuentra el trabajo de Spark en completa con éxito, puede ver vínculos de la interfaz de usuario de Spark y la interfaz de usuario de Yarn en el **salida** ventana. Puede hacer clic en los vínculos para obtener más información.
+- Cuando el trabajo de Spark está en curso, el panel **Historial de tareas** y la ventana **SALIDA** se actualizan con el progreso.
 
-![Vínculo de salida del trabajo de Spark](./media/submit-spark-job/monitor-spark-job-submission-2.png)
+    ![Supervisión del trabajo de Spark en curso](./media/submit-spark-job/monitor-spark-job-submission.png)
+
+- Cuando el trabajo de Spark se completa correctamente, los vínculos de la interfaz de usuario de Spark y de Yarn aparecen en la ventana **SALIDA**. Haga clic en los vínculos para obtener más información.
+
+    ![Vínculo del trabajo de Spark en la salida](./media/submit-spark-job/monitor-spark-job-submission-2.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información sobre los escenarios relacionados y clúster de macrodatos de SQL Server, vea [¿qué es el clúster de SQL Server macrodatos](big-data-cluster-overview.md)?
 
+Vea [¿Qué son los clústeres de macrodatos de SQL Server?](big-data-cluster-overview.md) para obtener más información sobre el clúster de macrodatos de SQL Server y los escenarios relacionados.

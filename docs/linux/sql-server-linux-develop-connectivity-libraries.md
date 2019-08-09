@@ -1,6 +1,6 @@
 ---
-title: Marcos y bibliotecas de conectividad
-description: Enumera los controladores de conectividad que las aplicaciones cliente pueden utilizar desde diversos lenguajes para conectarse a Microsoft SQL Server que se ejecutan en local o en la nube, en Docker, Windows o Linux y también a Azure SQL Database y Azure SQL Data Warehouse.
+title: Bibliotecas de conectividad y marcos
+description: En este artículo se enumeran los controladores de conectividad que las aplicaciones cliente pueden usar desde distintos lenguajes para conectarse a la instancia de Microsoft SQL Server que se ejecuta de forma local o en la nube, en Linux, en Windows o en Docker, y también en Azure SQL Database y Azure SQL Data Warehouse.
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/17/2017
@@ -9,37 +9,37 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.openlocfilehash: dd2a70cefd0e094b53656dde99af81afca2894c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077458"
 ---
-# <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Las bibliotecas de conectividad y marcos de trabajo para Microsoft SQL Server
+# <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Bibliotecas de conectividad y marcos para Microsoft SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Consulte la [tutoriales de introducción](https://aka.ms/sqldev) rápidamente empezar a trabajar con lenguajes de programación como C#, Java, Node.js, PHP y Python y compilar una aplicación mediante SQL Server en Linux o Windows o Docker en macOS.
+Consulte los [tutoriales de introducción](https://aka.ms/sqldev) para empezar a trabajar rápidamente con lenguajes de programación como C#, Java, Node.js, PHP y Python y compilar una aplicación con SQL Server en Linux o Windows, o bien en Docker en macOS.
 
-En la tabla siguiente se enumera las bibliotecas de conectividad o *controladores* que las aplicaciones cliente pueden utilizar desde una variedad de lenguajes para conectarse a y usar Microsoft SQL Server que se ejecutan en local o en la nube, en Docker, Windows o Linux y también a Azure SQL Database y Azure SQL Data Warehouse. 
+En la tabla siguiente se enumeran las bibliotecas o *controladores* de conectividad que las aplicaciones cliente pueden usar desde distintos lenguajes para la conexión y el uso de la instancia de Microsoft SQL Server que se ejecuta de forma local o en la nube, en Linux, en Windows o en Docker, y también en Azure SQL Database y Azure SQL Data Warehouse. 
 
-| Lenguaje | Plataforma | Recursos adicionales | Descargar | Introducción |
+| Idioma | Plataforma | Recursos adicionales | Descargar | Introducción |
 | :-- | :-- | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Microsoft ADO.NET para SQL Server](https://msdn.microsoft.com/library/mt657768.aspx) | [Descargar](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [Introducción](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
 | Java | Windows, Linux, macOS | [Microsoft JDBC Driver para SQL Server](https://msdn.microsoft.com/library/mt484311.aspx) | [Descargar](https://go.microsoft.com/fwlink/?LinkId=245496) |  [Introducción](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)
-| PHP | Windows, Linux, macOS| [Controlador SQL para PHP para SQL Server](../connect/php/microsoft-php-driver-for-sql-server.md) | Sistema operativo: <br/> \* [Windows](https://www.microsoft.com/download/details.aspx?id=20098) <br/> \* [Linux](https://github.com/Microsoft/msphpsql/tree/dev#install-unix) <br/> \* [macOS](https://github.com/Microsoft/msphpsql/tree/dev#install-unix) |  [Introducción](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu)
+| PHP | Windows, Linux, macOS| [Controlador de SQL para PHP para SQL Server](../connect/php/microsoft-php-driver-for-sql-server.md) | Sistema operativo: <br/> \* [Windows](https://www.microsoft.com/download/details.aspx?id=20098) <br/> \* [Linux](https://github.com/Microsoft/msphpsql/tree/dev#install-unix) <br/> \* [macOS](https://github.com/Microsoft/msphpsql/tree/dev#install-unix) |  [Introducción](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu)
 | Node.js | Windows, Linux, macOS | [Controlador Node.js de SQL Server](../connect/node-js/node-js-driver-for-sql-server.md) |  [Introducción](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu)
-| Python | Windows, Linux, macOS | [Controlador Python para SQL](../connect/python/python-driver-for-sql-server.md) <br/> \* [pyodbc](https://msdn.microsoft.com/library/mt763257.aspx) |  [Introducción](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu)
+| Python | Windows, Linux, macOS | [Controlador de SQL para Python](../connect/python/python-driver-for-sql-server.md) <br/> \* [pyodbc](https://msdn.microsoft.com/library/mt763257.aspx) |  [Introducción](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu)
 | Ruby | Windows, Linux, macOS | [Controlador Ruby para SQL Server](../connect/ruby/ruby-driver-for-sql-server.md) | [Introducción](https://www.microsoft.com/sql-server/developer-get-started/ruby/ubuntu)
 | C++ | Windows, Linux, macOS | [Controlador ODBC de Microsoft para SQL Server](https://msdn.microsoft.com/library/mt654048(v=sql.1).aspx) | [Descargar](https://msdn.microsoft.com/library/mt654048(v=sql.1).aspx) |  
 
-En la tabla siguiente se enumera algunos ejemplos de marcos de asignación relacional de objetos (ORM) y los marcos web que las aplicaciones cliente pueden utilizar con Microsoft SQL Server que se ejecutan en local o en la nube, en Docker, Windows o Linux y también a Azure SQL Database y Azure SQL Data Warehouse. 
+En la tabla siguiente se enumeran algunos ejemplos de marcos de Asignación relacional de objetos (ORM) y marcos web que las aplicaciones cliente pueden usar con la instancia de Microsoft SQL Server que se ejecuta de forma local o en la nube, en Linux, en Windows o en Docker, y también en Azure SQL Database y Azure SQL Data Warehouse. 
 
-| Lenguaje | Plataforma | ORM(s) |
+| Idioma | Plataforma | ORM |
 | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Entity Framework](https://docs.microsoft.com/ef)<br>[Entity Framework Core](https://docs.microsoft.com/ef/core/index) |
-| Java | Windows, Linux, macOS |[Hibernar ORM](https://hibernate.org/orm)|
-| PHP | Windows, Linux | [Laravel (elocuente)](https://laravel.com/docs/5.0/eloquent) |
+| Java | Windows, Linux, macOS |[Hibernate ORM](https://hibernate.org/orm)|
+| PHP | Windows, Linux | [Laravel (Eloquent)](https://laravel.com/docs/5.0/eloquent) |
 | Node.js | Windows, Linux, macOS | [Sequelize ORM](https://docs.sequelizejs.com) |
 | Python | Windows, Linux, macOS |[Django](https://www.djangoproject.com/) |
 | Ruby | Windows, Linux, macOS | [Ruby on Rails](https://rubyonrails.org/) |

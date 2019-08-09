@@ -1,5 +1,5 @@
 ---
-title: 'Configurar la instancia de clúster de conmutación por error: SQL Server en Linux (RHEL)'
+title: 'Configuración de la instancia de clúster de conmutación por error: SQL Server en Linux (RHEL)'
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,61 +10,61 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032298"
 ---
-# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurar la instancia de clúster de conmutación por error: SQL Server en Linux (RHEL)
+# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configuración de la instancia de clúster de conmutación por error: SQL Server en Linux (RHEL)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Una instancia de clúster de conmutación por error de disco compartido de dos nodos de SQL Server proporciona redundancia de nivel de servidor para lograr alta disponibilidad. En este tutorial, obtendrá información sobre cómo crear una instancia de clúster de conmutación por error de dos nodos de SQL Server en Linux. Los pasos específicos que completará incluyen:
+Una instancia de clúster de conmutación por error de disco compartido de dos nodos de SQL Server proporciona redundancia de nivel de servidor para alta disponibilidad. En este tutorial, aprenderá a crear una instancia de clúster de conmutación por error de dos nodos de SQL Server en Linux. Entre los pasos específicos que completará se incluyen los siguientes:
 
 > [!div class="checklist"]
-> * Instalación y configuración de Linux
-> * Instalar y configurar SQL Server
-> * Configurar el archivo de hosts
-> * Configurar el almacenamiento compartido y mover los archivos de base de datos
+> * Configuración de Linux
+> * Instalación y configuración de SQL Server
+> * Configuración del archivo de hosts
+> * Configuración del almacenamiento compartido y movimiento de los archivos de base de datos
 > * Instalación y configuración de Pacemaker en cada nodo del clúster
-> * Configurar la instancia de clúster de conmutación por error
+> * Configuración de la instancia de clúster de conmutación por error
 
-En este artículo se explica cómo crear una instancia de clúster de conmutación por error (FCI) de disco compartido de dos nodos para SQL Server. El artículo incluye instrucciones y ejemplos de script para Red Hat Enterprise Linux (RHEL). Distribuciones de Ubuntu son similares a RHEL de manera que los ejemplos de script hará normalmente también funcionan en Ubuntu. 
+En este artículo se explica cómo crear una instancia de clúster de conmutación por error (FCI) de disco compartido de dos nodos para SQL Server. El artículo incluye instrucciones y ejemplos de scripts para Red Hat Enterprise Linux (RHEL). Las distribuciones de Ubuntu son similares a RHEL, por lo que los ejemplos de script también funcionarán en Ubuntu. 
 
-Para obtener información conceptual, consulte [conmutación por error de clúster de instancia (FCI de SQL Server) en Linux](sql-server-linux-shared-disk-cluster-concepts.md).
+Para obtener información conceptual, consulte [Instancias de clúster de conmutación por error: SQL Server en Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Para completar el siguiente escenario de extremo a otro, debe tener dos máquinas para implementar el clúster de dos nodos y otro servidor para el almacenamiento. Los pasos siguientes describen cómo se configurará estos servidores.
+Para completar el siguiente escenario de un extremo a otro, necesita dos máquinas para implementar el clúster de dos nodos y otro servidor para el almacenamiento. En los pasos siguientes se describe cómo se configurarán estos servidores.
 
-## <a name="set-up-and-configure-linux"></a>Instalación y configuración de Linux
+## <a name="set-up-and-configure-linux"></a>Configuración de Linux
 
-El primer paso es configurar el sistema operativo en los nodos del clúster. En cada nodo del clúster, configure una distribución de linux. Utilice la misma distribución y versión en ambos nodos. Usar una u otra de las distribuciones siguientes:
+El primer paso es configurar el sistema operativo en los nodos del clúster. En cada nodo de clúster, configure una distribución de Linux. Use la misma distribución y versión en ambos nodos. Use una de las siguientes distribuciones:
     
 * RHEL con una suscripción válida para el complemento de alta disponibilidad
 
-## <a name="install-and-configure-sql-server"></a>Instalar y configurar SQL Server
+## <a name="install-and-configure-sql-server"></a>Instalación y configuración de SQL Server
 
-1. Instalar y configurar SQL Server en ambos nodos.  Para obtener instrucciones detalladas, consulte [instalar SQL Server en Linux](sql-server-linux-setup.md).
-1. Designar un nodo como principal y el otro como secundario para fines de configuración. Usar estos términos para los siguientes elementos en esta guía.  
-1. En el nodo secundario, detenga y deshabilite a SQL Server.
-    El ejemplo siguiente se detiene y deshabilita el SQL Server: 
+1. Instale y configure SQL Server en ambos nodos.  Para obtener instrucciones detalladas, vea [Instalación de SQL Server en Linux](sql-server-linux-setup.md).
+1. Para configurarlos, designe un nodo como principal y el otro como secundario. Use estos términos durante esta guía.  
+1. En el nodo secundario, detenga y deshabilite SQL Server.
+    En el siguiente ejemplo se detiene y se deshabilita SQL Server: 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl disable mssql-server
     ```
 
     > [!NOTE] 
-    > En el conjunto de tiempo de actividad, se genera para la instancia de SQL Server y se coloca en una clave maestra del servidor `var/opt/mssql/secrets/machine-key`. En Linux, SQL Server siempre se ejecuta como una cuenta local denominada mssql. Dado que es una cuenta local, su identidad no se comparte entre los nodos. Por lo tanto, deberá copiar la clave de cifrado del nodo principal en cada nodo secundario para cada cuenta local mssql pueda acceder a él para descifrar la clave maestra del servidor. 
+    > En el momento de la instalación, se genera una clave maestra del servidor para la instancia de SQL Server y se coloca en `var/opt/mssql/secrets/machine-key`. En Linux, SQL Server siempre se ejecuta como una cuenta local denominada mssql. Dado que se trata de una cuenta local, su identidad no se comparte entre los nodos. Por lo tanto, debe copiar la clave de cifrado del nodo principal a cada nodo secundario para que cada cuenta local de mssq pueda acceder a ella para descifrar la clave maestra del servidor. 
 
-1.  En el nodo principal, cree un inicio de sesión SQL server para Pacemaker y conceda el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Pacemaker usa esta cuenta para comprobar qué nodo se está ejecutando SQL Server. 
+1.  En el nodo principal, cree un inicio de sesión de SQL Server para Pacemaker y conceda el permiso de inicio de sesión para ejecutar `sp_server_diagnostics`. Pacemaker usa esta cuenta para comprobar qué nodo ejecuta SQL Server. 
 
     ```bash
     sudo systemctl start mssql-server
     ```
    
-   Conectarse a SQL Server `master` de base de datos con la cuenta de administrador y ejecute lo siguiente:
+   Conéctese a la base de datos `master` de SQL Server con la cuenta "sa" y ejecute lo siguiente:
 
    ```sql
    USE [master]
@@ -73,26 +73,26 @@ El primer paso es configurar el sistema operativo en los nodos del clúster. En 
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
 
-   Como alternativa, puede establecer los permisos con más detalle. El inicio de sesión de Pacemaker requiere `VIEW SERVER STATE` para consultar el estado de mantenimiento con sp_server_diagnostics, `setupadmin` y `ALTER ANY LINKED SERVER` para actualizar el nombre de instancia FCI con el nombre del recurso mediante la ejecución sp_dropserver y sp_addserver. 
+   Como alternativa, puede establecer los permisos con más detalle. El inicio de sesión de Pacemaker requiere `VIEW SERVER STATE` para consultar el estado de mantenimiento con sp_server_diagnostics, `setupadmin` y `ALTER ANY LINKED SERVER` para actualizar el nombre de instancia de FCI con el nombre de recurso mediante la ejecución de sp_dropserver y sp_addserver. 
 
-1. En el nodo principal, detenga y deshabilite a SQL Server. 
+1. En el nodo principal, detenga y deshabilite SQL Server. 
 
-## <a name="configure-the-hosts-file"></a>Configurar el archivo de hosts
+## <a name="configure-the-hosts-file"></a>Configuración del archivo de hosts
 
-En cada nodo del clúster, configure el archivo de hosts. El archivo de hosts debe incluir la dirección IP y el nombre de cada nodo del clúster.
+En cada nodo de clúster, configure el archivo de hosts. El archivo de hosts debe incluir la dirección IP y el nombre de cada nodo de clúster.
 
-1. Compruebe la dirección IP para cada nodo. El siguiente script muestra la dirección IP del nodo actual. 
+1. Compruebe la dirección IP de cada nodo. En el siguiente script se muestra la dirección IP del nodo actual. 
 
     ```bash
     sudo ip addr show
     ```
 
-1. Establezca el nombre del equipo en cada nodo. Asigne a cada nodo un nombre único que es de 15 caracteres o menos. Establece el nombre del equipo mediante la adición a `/etc/hosts`. El siguiente script le permite editar `/etc/hosts` con `vi`. 
+1. Establezca el nombre de equipo en cada nodo. Asigne a cada nodo un nombre único que tenga 15 caracteres o menos. Para establecer el nombre de equipo, agréguelo a `/etc/hosts`. El siguiente script le permite editar `/etc/hosts` con `vi`. 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   El ejemplo siguiente muestra `/etc/hosts` con adiciones de dos nodos denominados `sqlfcivm1` y `sqlfcivm2`.
+   En el ejemplo siguiente se muestra `/etc/hosts` con adiciones para dos nodos denominados `sqlfcivm1` y `sqlfcivm2`.
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -101,13 +101,13 @@ En cada nodo del clúster, configure el archivo de hosts. El archivo de hosts de
    10.128.16.77 sqlfcivm2
    ```
 
-## <a name="configure-storage--move-database-files"></a>Configurar el almacenamiento y movimiento de archivos de base de datos  
+## <a name="configure-storage--move-database-files"></a>Configurar el almacenamiento y mover archivos de base de datos  
 
-Deberá proporcionar el almacenamiento que pueden tener acceso ambos nodos. Puede usar SMB, NFS o iSCSI. Configurar el almacenamiento, presentar el almacenamiento a los nodos del clúster y, a continuación, mueva los archivos de base de datos al nuevo almacenamiento. Los siguientes artículos explican los pasos para cada tipo de almacenamiento:
+Debe proporcionar almacenamiento al que puedan acceder ambos nodos. Puede usar iSCSI, NFS o SMB. Configure el almacenamiento, preséntelo a los nodos del clúster y, luego, mueva los archivos de base de datos al nuevo almacenamiento. En los siguientes artículos se explican los pasos para cada tipo de almacenamiento:
 
-- [Configurar la instancia de clúster de conmutación por error - iSCSI: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [Configurar la instancia de clúster de conmutación por error: NFS: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [Configurar la instancia de clúster de conmutación por error: SMB: SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [Configurar la instancia de clúster de conmutación por error - iSCSI - SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [Configurar la instancia de clúster de conmutación por error - NFS - SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [Configurar la instancia de clúster de conmutación por error - SMB - SQL Server en Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Instalación y configuración de Pacemaker en cada nodo del clúster
 
@@ -130,10 +130,10 @@ Deberá proporcionar el almacenamiento que pueden tener acceso ambos nodos. Pued
    sudo firewall-cmd --reload
    ```
 
-   > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, los puertos siguientes es necesario abrir para que Pacemaker pueda comunicarse con otros nodos del clúster
+   > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, deberán abrirse los puertos siguientes para que Pacemaker pueda comunicarse con otros nodos del clúster.
    >
-   > * TCP: Puertos 2224, 3121, 21064
-   > * UDP: Puerto 5405
+   > * TCP: puertos 2224, 3121 y 21064
+   > * UDP: puerto 5405
 
 1. Instale paquetes de Pacemaker en cada nodo.
 
@@ -159,17 +159,17 @@ Deberá proporcionar el almacenamiento que pueden tener acceso ambos nodos. Pued
    sudo yum install mssql-server-ha
    ```
 
-## <a name="configure-the-failover-cluster-instance"></a>Configurar la instancia de clúster de conmutación por error
+## <a name="configure-the-failover-cluster-instance"></a>Configuración de la instancia de clúster de conmutación por error
 
-Se creará la FCI en un grupo de recursos. Esto es un poco más fácil porque el grupo de recursos alivia la necesidad de restricciones. Sin embargo, puede agregar los recursos en el grupo de recursos en el orden en que deben iniciarse. El orden en que deben iniciarse es: 
+La FCI se creará en un grupo de recursos. Esto es un poco más fácil, ya que el grupo de recursos reduce la necesidad de restricciones. Aun así, agregue los recursos al grupo de recursos en el orden en el que deben iniciarse, que es el siguiente: 
 
 1. Recurso de almacenamiento
-2. Recursos de red
+2. Recurso de red
 3. Recurso de aplicación
 
-Este ejemplo creará una FCI en el grupo NewLinFCIGrp. El nombre del grupo de recursos debe ser único de cualquier recurso que creó en Pacemaker.
+En este ejemplo se creará una FCI en el grupo NewLinFCIGrp. El nombre del grupo de recursos debe ser distinto del de cualquier recurso creado en Pacemaker.
 
-1.  Crear el recurso de disco. Si no hay un problema, obtendrá ninguna respuesta. La forma de crear el recurso de disco depende del tipo de almacenamiento. El siguiente es un ejemplo para cada tipo de almacenamiento. Use el ejemplo que se aplica al tipo de almacenamiento para su almacenamiento en clúster.
+1.  Cree el recurso de disco. Si no se produce ningún problema, no recibirá ninguna respuesta. La forma de crear el recurso de disco depende del tipo de almacenamiento. A continuación se incluye un ejemplo para cada tipo de almacenamiento. Use el ejemplo que se aplique a su tipo de almacenamiento de clúster.
 
     **iSCSI**
 
@@ -177,15 +177,15 @@ Este ejemplo creará una FCI en el grupo NewLinFCIGrp. El nombre del grupo de re
     sudo pcs resource create <iSCSIDiskResourceName> Filesystem device="/dev/<VolumeGroupName>/<LogicalVolumeName>" directory="<FolderToMountiSCSIDisk>" fstype="<FileSystemType>" --group RGName
     ```
 
-    \<iSCSIDIskResourceName > es el nombre del recurso asociado con el disco iSCSI
+    \<iSCSIDIskResourceName> es el nombre del recurso asociado al disco iSCSI.
 
-    \<VolumeGroupName > es el nombre del grupo de volúmenes  
+    \<VolumeGroupName> es el nombre del grupo de volúmenes.  
 
-    \<LogicalVolumeName > es el nombre del volumen lógico que se creó  
+    \<LogicalVolumeName> es el nombre del volumen lógico que se ha creado.  
 
-    \<FolderToMountiSCSIDIsk > es la carpeta para montar el disco (para las bases de datos del sistema y la ubicación predeterminada, estaría /var/opt/mssql/data)
+    \<FolderToMountiSCSIDIsk> es la carpeta para montar el disco (para las bases de datos del sistema y la ubicación predeterminada, sería /var/opt/mssql/data).
 
-    \<FileSystemType > sería EXT4 o XFS dependiendo de cómo se da formato a las cosas y es compatible con lo que la distribución. 
+    \<FileSystemType> sería EXT4 o XFS en función de cómo se han formateado los elementos y qué es lo que admite la distribución. 
 
     **NFS**
 
@@ -194,15 +194,15 @@ Este ejemplo creará una FCI en el grupo NewLinFCIGrp. El nombre del grupo de re
     mount -t nfs4 IPAddressOfNFSServer:FolderOnNFSServer /var/opt/mssql/data -o 
     ```
 
-    \<NFSDIskResourceName > es el nombre del recurso asociado con el recurso compartido NFS
+    \<NFSDIskResourceName> es el nombre del recurso asociado al recurso compartido de NFS.
 
-    \<IPAddressOfNFSServer > es la dirección IP del servidor NFS que va a usar
+    \<IPAddressOfNFSServer> es la dirección IP del servidor NFS que se va a usar.
 
-    \<FolderOnNFSServer > es el nombre del recurso compartido NFS
+    \<FolderOnNFSServer> es el nombre del recurso compartido de NFS.
 
-    \<FolderToMountNFSShare > es la carpeta para montar el disco (para las bases de datos del sistema y la ubicación predeterminada, estaría /var/opt/mssql/data)
+    \<FolderToMountNFSShare> es la carpeta para montar el disco (para las bases de datos del sistema y la ubicación predeterminada, sería /var/opt/mssql/data).
 
-    A continuación se muestra un ejemplo:
+    A continuación, se muestra un ejemplo:
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -214,61 +214,61 @@ Este ejemplo creará una FCI en el grupo NewLinFCIGrp. El nombre del grupo de re
     sudo pcs resource create SMBDiskResourceName Filesystem device="//<ServerName>/<ShareName>" directory="<FolderName>" fstype=cifs options="vers=3.0,username=<UserName>,password=<Password>,domain=<ADDomain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777" --group <RGName>
     ```
 
-    \<ServerName > es el nombre del servidor con el recurso compartido SMB
+    \<ServerName> es el nombre del servidor con el recurso compartido de SMB.
 
-    \<Nombre de recurso compartido > es el nombre del recurso compartido
+    \<ShareName> es el nombre del recurso compartido.
 
-    \<Nombre de carpeta > es el nombre de la carpeta creada en el último paso
+    \<FolderName> es el nombre de la carpeta creada en el último paso.
     
-    \<Nombre de usuario > es el nombre del usuario para acceder al recurso compartido
+    \<UserName> es el nombre del usuario para acceder al recurso compartido.
 
-    \<Contraseña > es la contraseña del usuario
+    \<Password> es la contraseña del usuario.
 
-    \<ADDomain > es el dominio de AD DS (si es aplicable cuando se usa un recurso compartido SMB basado en Windows Server)
+    \<ADDomain> es el dominio de AD DS (si es aplicable cuando se usa un recurso compartido de SMB basado en Windows Server).
 
-    \<mssqlUID > es el identificador exclusivo del usuario de mssql
+    \<mssqlUID> es el UID del usuario de mssql.
 
-    \<mssqlGID > es el GID del usuario de mssql
+    \<mssqlGID> es el GID del usuario de mssql.
 
-    \<RGName > es el nombre del grupo de recursos
+    \<RGName> es el nombre del grupo de recursos.
  
-2.  Cree la dirección IP que se usará en la FCI. Si no hay un problema, obtendrá ninguna respuesta.
+2.  Cree la dirección IP que usará la FCI. Si no se produce ningún problema, no recibirá ninguna respuesta.
 
     ```bash
     sudo pcs resource create <IPResourceName> ocf:heartbeat:IPaddr2 ip=<IPAddress> nic=<NetworkCard> cidr_netmask=<NetMask> --group <RGName>
     ```
 
-    \<IPResourceName > es el nombre del recurso asociado con la dirección IP
+    \<IPResourceName> es el nombre del recurso asociado a la dirección IP.
 
-    \<Dirección IP > es la dirección IP para la FCI
+    \<IPAddress> es la dirección IP para la FCI.
 
-    \<NetworkCard > es la tarjeta de red asociada con la subred (es decir, eth0)
+    \<NetworkCard> es la tarjeta de red asociada a la subred (es decir, eth0).
 
-    \<Máscara de red > es la máscara de red de la subred (es decir, 24)
+    \<NetMask> es la máscara de red de la subred (es decir, 24).
 
-    \<RGName > es el nombre del grupo de recursos
+    \<RGName> es el nombre del grupo de recursos.
  
-3.  Cree el recurso FCI. Si no hay un problema, obtendrá ninguna respuesta.
+3.  Cree el grupo de FCI. Si no se produce ningún problema, no recibirá ninguna respuesta.
 
     ```bash
     sudo pcs resource create FCIResourceName ocf:mssql:fci op defaults timeout=60s --group RGName
     ```
 
-    \<FCIResourceName > es el nombre del recurso, pero no solo el nombre descriptivo que está asociado a la FCI. Esto es lo que los usuarios y aplicaciones a usar para conectarse. 
+    \<FCIResourceName> no es solo el nombre del recurso, sino el nombre descriptivo asociado a la FCI. Esto es lo que los usuarios y las aplicaciones usarán para conectarse. 
 
-    \<RGName > es el nombre del grupo de recursos.
+    \<RGName> es el nombre del grupo de recursos.
  
 4.  Ejecute el comando `sudo pcs resource`. La FCI debe estar en línea.
  
-5.  Conéctese a la FCI con SSMS o con el nombre DNS o recursos de la FCI de sqlcmd.
+5.  Conéctese a la FCI con SSMS o sqlcmd mediante el nombre DNS o de recurso de la FCI.
 
-6.  Emita la instrucción `SELECT @@SERVERNAME`. Debe devolver el nombre de la FCI.
+6.  Emita la instrucción `SELECT @@SERVERNAME`. Debería devolver el nombre de la FCI.
 
-7.  Emita la instrucción `SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')`. Debe devolver el nombre del nodo que se está ejecutando la FCI.
+7.  Emita la instrucción `SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')`. Debería devolver el nombre del nodo en el que se ejecuta la FCI.
 
-8.  Se producirá un error manualmente en la FCI para los demás nodos. Consulte las instrucciones en [instancia de clúster de conmutación por error Operate: SQL Server en Linux](sql-server-linux-shared-disk-cluster-operate.md).
+8.  Conmute por error manualmente la FCI a los otros nodos. Consulte las instrucciones indicadas en [Operación de la instancia de clúster de conmutación por error: SQL Server en Linux](sql-server-linux-shared-disk-cluster-operate.md).
 
-9.  Por último, producirá un error en la FCI en el nodo original y quite la restricción de colocación.
+9.  Por último, vuelva a conmutar por error la FCI al nodo original y quite la restricción de ubicación.
 
 <!---
 
@@ -280,18 +280,18 @@ Este ejemplo creará una FCI en el grupo NewLinFCIGrp. El nombre del grupo de re
 -->
 ## <a name="summary"></a>Resumen
 
-En este tutorial se completó las tareas siguientes.
+En este tutorial, ha completado las tareas siguientes.
 
 > [!div class="checklist"]
-> * Instalación y configuración de Linux
-> * Instalar y configurar SQL Server
-> * Configurar el archivo de hosts
-> * Configurar el almacenamiento compartido y mover los archivos de base de datos
+> * Configuración de Linux
+> * Instalación y configuración de SQL Server
+> * Configuración del archivo de hosts
+> * Configuración del almacenamiento compartido y movimiento de los archivos de base de datos
 > * Instalación y configuración de Pacemaker en cada nodo del clúster
-> * Configurar la instancia de clúster de conmutación por error
+> * Configuración de la instancia de clúster de conmutación por error
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Operar la instancia de clúster de conmutación por error: SQL Server en Linux](sql-server-linux-shared-disk-cluster-operate.md)
+- [Operación de la instancia de clúster de conmutación por error: SQL Server en Linux](sql-server-linux-shared-disk-cluster-operate.md)
 
 <!--Image references-->

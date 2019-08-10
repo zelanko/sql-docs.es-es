@@ -1,5 +1,5 @@
 ---
-title: Definición y uso de una acción de obtención de detalles | Microsoft Docs
+title: Definir y utilizar una acción de obtención de detalles | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4b503c63706135b326490ccefc3f0d8ca6ceccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078267"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888104"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definir y utilizar una acción de obtención de detalles
   El dimensionamiento de datos de hecho mediante una dimensión de hecho sin filtrar correctamente los datos devueltos por la consulta puede producir un rendimiento lento de las consultas. Para evitarlo, puede definir una acción de obtención de detalles que restrinja el número total de filas que se devuelven. Esto mejorará significativamente el rendimiento de las consultas.  
@@ -30,15 +30,15 @@ ms.locfileid: "66078267"
   
      La siguiente imagen muestra la pestaña **Acciones** del Diseñador de cubos.  
   
-     ![Pestaña acciones del Diseñador de cubos](../../2014/tutorials/media/l8-action1.gif "pestaña acciones del Diseñador de cubos")  
+     ![Pestaña acciones del diseñador de cubos](../../2014/tutorials/media/l8-action1.gif "Pestaña acciones del diseñador de cubos")  
   
 2.  En la barra de herramientas de la pestaña **Acciones** , haga clic en el botón **Nueva acción de obtención de detalles** .  
   
      Aparecerá una plantilla de Acción en blanco en el panel de información.  
   
-     ![Plantilla de acción en blanco en el panel de información](../../2014/tutorials/media/l8-action2.gif "plantilla de acción en blanco en el panel de información")  
+     ![Plantilla de acción en blanco en el panel de información](../../2014/tutorials/media/l8-action2.gif "Plantilla de acción en blanco en el panel de información")  
   
-3.  En el **nombre** , cambie el nombre de esta acción para `Internet Sales Details Drillthrough Action`.  
+3.  En el cuadro **nombre** , cambie el nombre de esta acción a `Internet Sales Details Drillthrough Action`.  
   
 4.  En la lista **Miembros de grupo de medida** , seleccione **Internet Sales**.  
   
@@ -46,19 +46,19 @@ ms.locfileid: "66078267"
   
 6.  En la lista **Columnas devueltas** , active las casillas **Item Description** y **Order Number** y, después, haga clic en **Aceptar**. La siguiente imagen muestra la plantilla de Acción con el aspecto que debería tener en este punto del procedimiento.  
   
-     ![Cuadro columnas de obtención de detalles](../../2014/tutorials/media/l8-action3.gif "cuadro columnas de obtención de detalles")  
+     ![Cuadro columnas de obtención de detalles](../../2014/tutorials/media/l8-action3.gif "Cuadro columnas de obtención de detalles")  
   
 7.  Expanda el cuadro **Propiedades adicionales** , como en la siguiente imagen.  
   
-     ![Cuadro propiedades adicionales](../../2014/tutorials/media/l8-action4.gif "cuadro propiedades adicionales")  
+     ![Cuadro propiedades adicionales](../../2014/tutorials/media/l8-action4.gif "Cuadro propiedades adicionales")  
   
-8.  En el **número máximo de filas** , escriba `10`.  
+8.  En el cuadro **número máximo** de filas `10`, escriba.  
   
-9. En el **título** , escriba `Drillthrough to Order Details...`.  
+9. En el cuadro **título** , escriba `Drillthrough to Order Details...`.  
   
      Esta configuración limita el número de filas devueltas y especifica el título que aparece en el menú de la aplicación cliente. En la ilustración siguiente se muestra esta configuración en el cuadro **Propiedades adicionales** .  
   
-     ![Cuadro propiedades adicionales](../../2014/tutorials/media/l8-action5.gif "cuadro propiedades adicionales")  
+     ![Cuadro propiedades adicionales](../../2014/tutorials/media/l8-action5.gif "Cuadro propiedades adicionales")  
   
 ## <a name="using-the-drillthrough-action"></a>Usar la acción de obtención de detalles  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66078267"
   
      La información detallada de los pedidos enviados a Adam Powell aparecerá en el **Visor de muestras de datos**, como se muestra en la ilustración siguiente. Sin embargo, algunos detalles adicionales podrían ser igualmente útiles, caso de la fecha del pedido, la fecha de vencimiento y la fecha de envío. En el siguiente procedimiento, agregará estos detalles adicionales.  
   
-     ![Pedidos envían a Adam Powell](../../2014/tutorials/media/l8-action6.gif "pedidos envían a Adam Powell")  
+     ![Pedidos enviados a Adam Powell](../../2014/tutorials/media/l8-action6.gif "Pedidos enviados a Adam Powell")  
   
 8.  Cerrar Excel/  
   
@@ -104,11 +104,11 @@ ms.locfileid: "66078267"
   
     -   ShipDateKey  
   
-6.  Cambio la **nombre** propiedad para el **Order Date Key** atributo `Order Date` , a continuación, haga clic en el botón Examinar para el **nombre de columna** propiedad y en el **Columna nombre** cuadro de diálogo, seleccione **fecha** como la tabla de origen y SimpleDate como la columna de origen. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Cambie la **propiedad nombre** del atributo **Order Date Key** a `Order Date` then, haga clic en el botón examinar de la propiedad **columna Name** y, en el cuadro de diálogo **columna de nombre** , seleccione **Date** como tabla de origen y seleccione SimpleDate como la columna de origen. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Cambiar el **nombre** propiedad para el **Due Date Key** atributo `Due Date`y, después, usando el mismo método que el **Order Date Key** atributo, cambie el  **Columna de nombre** propiedad de este atributo por **Date.SimpleDate (WChar)** .  
+7.  Cambie la propiedad **nombre** del atributo de clave de fecha de `Due Date` **vencimiento** a y, a continuación, use el mismo método que el atributo de clave de **fecha de pedido** , cambie la propiedad de la **columna Nombre** para este atributo por **Date. SimpleDate (WCHAR).** .  
   
-8.  Cambiar el **nombre** propiedad para el **Ship Date Key** atributo `Ship Date`y, a continuación, cambie el **nombre de columna** propiedad de este atributo por  **Date.SimpleDate (WChar)** .  
+8.  Cambie la propiedad **nombre** del atributo **Ship Date Key** a `Ship Date`y, a continuación, cambie la propiedad **columna Name** de este atributo por **Date. SimpleDate (WCHAR)** .  
   
 9. Cambie a la pestaña **Acciones** del Diseñador de cubos para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66078267"
   
      La siguiente imagen muestra estas columnas seleccionadas.  
   
-     ![Cuadro columnas de obtención de detalles](../../2014/tutorials/media/l8-action7.gif "cuadro columnas de obtención de detalles")  
+     ![Cuadro columnas de obtención de detalles](../../2014/tutorials/media/l8-action7.gif "Cuadro columnas de obtención de detalles")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Revisar la acción de obtención de detalles modificada  
   
@@ -140,16 +140,16 @@ ms.locfileid: "66078267"
   
      La información detallada de estos pedidos enviados a Adam Powell aparecerá en una hoja de cálculo temporal. Dicha información incluye la descripción de los artículos, el número y la fecha de pedido, la fecha de vencimiento y la fecha de envío, como se muestra en la ilustración siguiente.  
   
-     ![Pedidos envían a Adam Powell](../../2014/tutorials/media/l8-action8.gif "pedidos envían a Adam Powell")  
+     ![Pedidos enviados a Adam Powell](../../2014/tutorials/media/l8-action8.gif "Pedidos enviados a Adam Powell")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 9: Definir perspectivas y traducciones](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+ [Lección 9: Definir perspectivas y traducciones](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
   
 ## <a name="see-also"></a>Vea también  
- [Acciones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+ [Acciones &#40;Analysis Services-datos multidimensionales&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Acciones en modelos multidimensionales](multidimensional-models/actions-in-multidimensional-models.md)   
  [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Definir una relación de hechos](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
+ [Definir una relación de hechos](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
  [Definir relaciones de hechos y propiedades de las relaciones de hechos](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

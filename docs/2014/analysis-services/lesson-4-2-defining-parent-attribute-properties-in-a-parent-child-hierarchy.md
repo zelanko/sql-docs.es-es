@@ -10,17 +10,17 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 613156430d7c85977aee2e147c5b158124316a94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078666"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888390"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definir propiedades de atributo primario en una jerarquía de elementos primarios y secundarios
   Una jerarquía de elementos primarios y secundarios es una jerarquía de una dimensión que está basada en dos columnas de tabla. La combinación de estas columnas define las relaciones jerárquicas entre los miembros de dimensión. La primera columna, denominada *columna de claves de miembro*, identifica a cada miembro de dimensión. La otra columna, denominada *columna principal*, identifica al elemento principal de cada miembro de dimensión. La propiedad **NamingTemplate** de un atributo primario determina el nombre de cada nivel en la jerarquía de elementos primarios y secundarios, y la propiedad **MembersWithData** determina si deben mostrarse los datos de los miembros primarios.  
   
- Para obtener más información, consulte [jerarquía de elementos primarios y secundarios](multidimensional-models/parent-child-dimension.md), [atributos en jerarquías de elementos primarios y secundarios](multidimensional-models/parent-child-dimension-attributes.md)  
+ Para obtener más información, vea jerarquía de elementos [primarios y secundarios](multidimensional-models/parent-child-dimension.md), [atributos en jerarquías de elementos primarios y secundarios](multidimensional-models/parent-child-dimension-attributes.md) .  
   
 > [!NOTE]  
 >  Cuando se utiliza el Asistente para dimensiones con objeto de crear una dimensión, el asistente reconoce las tablas que incluyen relaciones de elementos primarios y secundarios, y define automáticamente la jerarquía de elementos primarios y secundarios.  
@@ -57,7 +57,7 @@ ms.locfileid: "66078666"
   
      En la ilustración siguiente se muestra expandida la jerarquía Employees.  
   
-10. ![Tabla dinámica que muestra la jerarquía Employees](../../2014/tutorials/media/l4-employee-1.gif "tabla dinámica que muestra la jerarquía Employees")  
+10. ![Tabla dinámica que muestra la jerarquía de empleados](../../2014/tutorials/media/l4-employee-1.gif "Tabla dinámica que muestra la jerarquía de empleados")  
   
      Observe que las ventas realizadas por cada director del nivel 03 también se muestran en el nivel 04. Esto es así porque cada director también es un empleado de otro director. En la tarea siguiente, ocultará estos importes de ventas.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66078666"
   
      En la imagen siguiente se muestran los cambios realizados en el cuadro de diálogo **Plantilla de asignación de nombres de nivel** .  
   
-     ![Cuadro de diálogo plantilla de nomenclatura nivel](../../2014/tutorials/media/l4-namingtemplate.gif "cuadro de diálogo plantilla de nivel de nomenclatura")  
+     ![Cuadro de diálogo plantilla de asignación de nombres de nivel](../../2014/tutorials/media/l4-namingtemplate.gif "Cuadro de diálogo plantilla de asignación de nombres de nivel")  
   
 5.  Haga clic en **Aceptar**.  
   
@@ -101,10 +101,10 @@ ms.locfileid: "66078666"
   
      En la imagen siguiente se muestran los cambios realizados en la jerarquía Employees. Observe que Stephen Y. Jiang ya no aparece como empleado de sí mismo.  
   
-     ![Puede modificar la jerarquía Employees](../../2014/tutorials/media/l4-employee-2.png "jerarquía Employees modificado")  
+     ![Jerarquía de empleados modificada](../../2014/tutorials/media/l4-employee-2.png "Jerarquía de empleados modificada")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Agrupar miembros de atributo automáticamente](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
+ [Agrupar miembros de atributo automáticamente](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
   
 ## <a name="see-also"></a>Vea también  
  [Jerarquía de elementos primarios y secundarios](multidimensional-models/parent-child-dimension.md)   

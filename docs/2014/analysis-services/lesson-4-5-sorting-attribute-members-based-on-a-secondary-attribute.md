@@ -1,5 +1,5 @@
 ---
-title: Ordenar los miembros de atributo basado en un atributo secundario | Microsoft Docs
+title: Ordenar los miembros de atributo en función de un atributo secundario | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7424a92ce4d8e4f6b0ca4c55238ede33d982933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db52caa0670af868cd5986c85890c291e5f6aac7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078697"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888303"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Ordenar los miembros de atributo en función de un atributo secundario
-  En la lección 3, aprendió a ordenar los miembros de atributo en función de su nombre o valor de clave. También aprendió a utilizar una clave de miembro compuesta que afectaba a todos los miembros de atributo y al criterio de ordenación. Para obtener más información, consulte [Modificar la dimensión Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Sin embargo, si ni el nombre ni la clave del atributo ofrecen el orden que desea, puede usar un atributo secundario para conseguir el criterio de ordenación deseado. Definir una relación entre los atributos, puede usar el segundo atributo para ordenar los miembros del primer atributo.  
+  En la lección 3, aprendió a ordenar los miembros de atributo en función de su nombre o valor de clave. También aprendió a utilizar una clave de miembro compuesta que afectaba a todos los miembros de atributo y al criterio de ordenación. Para obtener más información, consulte [Modificar la dimensión Date](https://docs.microsoft.com/analysis-services/lesson-3-4-modifying-the-date-dimension). Sin embargo, si ni el nombre ni la clave del atributo ofrecen el orden que desea, puede usar un atributo secundario para conseguir el criterio de ordenación deseado. Definir una relación entre los atributos, puede usar el segundo atributo para ordenar los miembros del primer atributo.  
   
  Las relaciones de atributo definen las relaciones o dependencias que existen entre los atributos. En una dimensión que se basa en una única tabla relacional, todos los atributos están generalmente relacionados entre sí a través del atributo de clave. Esto es así porque todos los atributos de una dimensión proporcionan información sobre los miembros vinculados por el atributo de clave de la dimensión a los hechos de la tabla de hechos de cada grupo de medida relacionado. En una dimensión que se basa en varias tablas, los atributos generalmente están vinculados en función de la clave de combinación entre las tablas. Si los datos subyacentes lo permiten, los atributos relacionados se pueden utilizar para especificar un criterio de ordenación. Por ejemplo, puede crear un nuevo atributo que proporciona la lógica de ordenación para un atributo relacionado.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078697"
   
      Observe que los meses ahora aparecen en orden cronológico, como se muestra en la imagen siguiente.  
   
-     ![Modificar la jerarquía de usuario en orden cronológico](../../2014/tutorials/media/l4-memberproperties-3.gif "modificar la jerarquía de usuario en orden cronológico")  
+     ![Jerarquía de usuarios modificada en orden cronológico](../../2014/tutorials/media/l4-memberproperties-3.gif "Jerarquía de usuarios modificada en orden cronológico")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Definir las relaciones de atributo y el criterio de ordenación en la dimensión Customer  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66078697"
   
      En la imagen siguiente se muestran los miembros de la jerarquía de atributo **Commute Distance** , ordenados según los valores ASCII de la clave de miembro.  
   
-     ![Jerarquía de atributo de distancia de viaje al trabajo](../../2014/tutorials/media/l4-memberproperties-4.gif "jerarquía de atributo Commute Distance")  
+     ![Jerarquía de atributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-4.gif "Jerarquía de atributo Commute Distance")  
   
 2.  Cambie a la pestaña **Estructura de dimensión** del Diseñador de dimensiones de la dimensión Customer, haga clic con el botón secundario en **CommuteDistanceSort** en la tabla **Customer** del panel **Vista del origen de datos** y, después, haga clic en **Nuevo atributo de columna**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66078697"
   
      Observe que los miembros de la jerarquía de atributo ahora están clasificados en un orden lógico en función de una distancia cada vez mayor, como es muestra en la imagen siguiente.  
   
-     ![Volver a ordenar la jerarquía de atributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-5.gif "jerarquía de atributo Re-sorted Commute Distance")  
+     ![Jerarquía de atributo Commute Distance](../../2014/tutorials/media/l4-memberproperties-5.gif "Jerarquía de atributo Commute Distance")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

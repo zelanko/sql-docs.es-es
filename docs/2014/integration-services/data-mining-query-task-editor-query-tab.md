@@ -1,5 +1,5 @@
 ---
-title: Editor de tareas de consulta de minería de datos (pestaña consulta) | Microsoft Docs
+title: Editor de la tarea consulta de minería de datos (pestaña consulta) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec0c3e2187bc0fb97af733021e39b405470fc373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059852"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890721"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor de la tarea Consulta de minería de datos (pestaña Consulta)
   Use la pestaña **Consulta** del cuadro de diálogo **Tarea Consulta de minería de datos** para crear consultas de predicción según un modelo de minería de datos. En este cuadro de diálogo también puede enlazar parámetros y conjuntos de resultados con variables.  
   
- Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](../analysis-services/data-mining/data-mining-solutions.md).  
+ Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Opciones generales  
  **Name**  
@@ -82,6 +82,6 @@ ms.locfileid: "66059852"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de la tarea Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Editor de la tarea Consulta de minería de datos &#40;pestaña Salida&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Diseñador de minería de datos](../analysis-services/data-mining/data-mining-designer.md)  
+ [Diseñador de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

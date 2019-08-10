@@ -1,5 +1,5 @@
 ---
-title: Este (MDX) | Microsoft Docs
+title: This (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a2486f23170ec19f16dca31672696c09815a2e83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12455c82fe7a885a3530b6c0db216b9996a5eda6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68036640"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893560"
 ---
 # <a name="this-mdx"></a>This (MDX)
 
@@ -28,7 +28,7 @@ This
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El **esto** función puede utilizarse en lugar de cualquier expresión de subcubo para proporcionar el subcubo actual en el ámbito actual dentro del script de cálculo MDX. El **esto** función debe usarse en el lado izquierdo de una asignación.  
+ **Esta** función se puede usar en lugar de cualquier expresión de subcubo para proporcionar el subcubo actual dentro del ámbito actual dentro del script de cálculo MDX. **Esta** función debe usarse en el lado izquierdo de una asignación.  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente fragmento de script MDX muestra el modo de usar la palabra clave This con instrucciones SCOPE para realizar asignaciones a subcubos:  
@@ -75,6 +75,6 @@ This
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Cálculos](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [Cálculos](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/calculations)  
   
   

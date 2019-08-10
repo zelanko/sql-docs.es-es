@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;modelo&gt;. CONTENIDO (DMX) | Microsoft Docs
+title: Seleccione del &lt;modelo&gt;. CONTENIDO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906736"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892828"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modelo&gt;. CONTENIDO (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>Seleccione del &lt;modelo&gt;. CONTENIDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Devuelve el conjunto de filas de esquema del modelo de minería de datos para el modelo de minería de datos especificado.  
@@ -46,18 +46,18 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Comentarios  
- El **SELECT FROM**  _\<modelo >_ **. CONTENIDO** instrucción devuelve contenido específico para cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar un **SELECT FROM \<modelo >. CONTENIDO** instrucción para devolver valores en la columna NODE_RULE del modelo.  
+ > **Seleccionar del**  _\<modelo_ **.** La instrucción de contenido devuelve contenido específico de cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar una **> seleccionar del \<modelo.** Instrucción de contenido para devolver valores en la columna NODE_RULE del modelo.  
   
  En la tabla siguiente se enumeran las columnas que están incluidas en el contenido del modelo de minería de datos.  
   
 > [!NOTE]  
->  Los algoritmos podrían interpretar las columnas de forma distinta para poder representar el contenido correctamente. Para obtener una descripción del contenido para cada algoritmo y sugerencias sobre cómo interpretar y consultar el contenido para cada tipo de modelo del modelo de minería de datos del modelo de minería de datos, vea [contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+>  Los algoritmos podrían interpretar las columnas de forma distinta para poder representar el contenido correctamente. Para obtener una descripción del contenido del modelo de minería de datos para cada algoritmo y sugerencias sobre cómo interpretar y consultar el contenido del modelo de minería de datos para cada tipo de modelo, vea [contenido &#40;del modelo de minería de datos Analysis Services-minería&#41;de datos](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |Columna de conjunto de filas CONTENT|Descripción|  
 |---------------------------|-----------------|  
-|MODEL_CATALOG|Un nombre de catálogo. Su valor es NULL si el proveedor no admite catálogos.|  
+|MODEL_CATALOG|Nombre del catálogo. Su valor es NULL si el proveedor no admite catálogos.|  
 |MODEL_SCHEMA|Nombre del esquema no completo. Su valor es NULL si el proveedor no admite esquemas.|  
-|MODEL_NAME|Un nombre de modelo. Esta columna no puede contener valores NULL.|  
+|MODEL_NAME|Nombre del modelo. Esta columna no puede contener valores NULL.|  
 |ATTRIBUTE_NAME|Nombre del atributo que corresponde al nodo.|  
 |NODE_NAME|El nombre del nodo.|  
 |NODE_UNIQUE_NAME|Nombre único del nodo dentro del modelo.|  
@@ -72,7 +72,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |NODE_PROBABILITY|Probabilidad de la ruta de acceso que finaliza en el nodo.|  
 |MARGINAL_PROBABILITY|Probabilidad de alcanzar el nodo desde el nodo primario.|  
 |NODE_DISTRIBUTION|Tabla que contiene estadísticas que describen la distribución de los valores del nodo.|  
-|NODE_SUPPORT|El número de casos de compatibilidad de este nodo.|  
+|NODE_SUPPORT|Número de casos de compatibilidad de este nodo.|  
   
 ## <a name="examples"></a>Ejemplos  
  El código siguiente devuelve el identificador del nodo primario para el modelo de árboles de decisión que se agregó a la estructura de minería de datos de Targeted Mailing.  
@@ -88,10 +88,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- La consulta siguiente utiliza el **IsDescendant** función para devolver los elementos secundarios inmediatos del nodo que se devolvió en la consulta anterior.  
+ La consulta de siguiente usa la función **IsDescendant** para devolver los elementos secundarios inmediatos del nodo que se devolvió en la consulta anterior.  
   
 > [!NOTE]  
->  Dado que el valor de NODE_NAME es una cadena, no puede usar una instrucción Sub-select para devolver NODE_ID como argumento a la **IsDescendant** función.  
+>  Dado que el valor de NODE_NAME es una cadena, no puede usar una instrucción Sub-SELECT para devolver NODE_ID como argumento a la función **IsDescendant** .  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -101,7 +101,7 @@ WHERE ISDESCENDANT('0')
   
  Resultados esperados:  
   
- Dado que el modelo es de árboles de decisión, los descendientes del nodo primario del modelo incluyen un único nodo de estadísticas marginal, un nodo que representa el atributo de predicción y varios nodos que contienen los atributos de entrada y los valores. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de árboles de decisión &#40;Analysis Services - Minería de datos&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Dado que el modelo es de árboles de decisión, los descendientes del nodo primario del modelo incluyen un único nodo de estadísticas marginal, un nodo que representa el atributo de predicción y varios nodos que contienen los atributos de entrada y los valores. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de árboles de decisión &#40;Analysis Services - Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## <a name="using-the-flattened-keyword"></a>Usar la palabra clave FLATTENED  
  El contenido del modelo de minería de datos suele contener información interesante sobre el modelo en columnas de tablas anidadas. La palabra clave FLATTENED le permite recuperar los datos de una columna de tabla anidada sin utilizar un proveedor que admita conjuntos de filas jerárquicos.  
@@ -144,7 +144,7 @@ WHERE NODE_TYPE = 26
   
 ## <a name="see-also"></a>Vea también  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Instrucciones de manipulación &#40;de&#41; datos DMX de extensiones de minería de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

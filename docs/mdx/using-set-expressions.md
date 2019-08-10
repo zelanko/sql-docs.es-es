@@ -1,5 +1,5 @@
 ---
-title: Usar expresiones de conjunto | Microsoft Docs
+title: Usar expresiones de conjuntos | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622458f3ea3f8baf74b3aaa4aa9c46f94972f490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038012"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893502"
 ---
 # <a name="using-set-expressions"></a>Usar expresiones de conjunto
 
@@ -22,7 +22,7 @@ ms.locfileid: "68038012"
   
  La expresión completa de un conjunto consta de cero o más tuplas especificadas explícitamente entre corchetes:  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* } ] ... ] }  
+ {[{ *Tuple_expression* | *expresión_miembro* } [, { *Tuple_expression* | *expresión_miembro* }]...]}  
   
  Las expresiones de miembro especificadas en expresiones de conjunto se convierten en expresiones de tupla de un miembro.  
   
@@ -49,17 +49,17 @@ ms.locfileid: "68038012"
   
  está compuesto de dos miembros de dimensión Measures. En el eje de filas, el conjunto  
   
- {([Product]. [Categorías de producto]. [Categoría]. & [4], [fecha]. [Calendar]. [Año natural]. & [2004]),  
+ {([Product]. [Categorías de producto]. [Category]. & [4], [Date]. [Calendar]. [Año natural]. & [2004])  
   
- ([Product]. [Categorías de producto]. [Categoría]. & [1], [fecha]. [Calendar]. [Año natural]. & [2003]),  
+ ([Product]. [Categorías de producto]. [Category]. & [1], [Date]. [Calendar]. [Año natural]. & [2003]),  
   
- ([Product]. [Categorías de producto]. [Categoría]. & [3], [fecha]. [Calendar]. [Calendar Year]. & [2004])}  
+ ([Product]. [Categorías de producto]. [Category]. & [3], [Date]. [Calendar]. [Año natural]. & [2004])}  
   
  está compuesto de tres tuplas, cada una de las cuales contiene dos referencias explícitas a miembros de la jerarquía Product Categories de la dimensión Product y de la jerarquía Calendar de la dimensión Date.  
   
- Para obtener ejemplos de funciones que devuelven conjuntos, vea [trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
+ Para obtener ejemplos de funciones que devuelven conjuntos, vea [trabajar con miembros, tuplas &#40;y&#41;conjuntos MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Vea también  
- [Las expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [Expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

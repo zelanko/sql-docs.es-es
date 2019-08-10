@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3eac4057f8a4db818a02068f33cbc7b295353f0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23a7433ffb0f06330c948de0955193a885eec768
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68207901"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890182"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Anotaciones de CSDL para Business Intelligence (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "68207901"
   
  No puede modificar estos objetos directamente, sino que debe utilizar las herramientas del cliente y las interfaces de programación de aplicaciones (API) proporcionadas para trabajar con modelos tabulares.  
   
- Puede obtener el CSDL para un modelo enviando una solicitud DISCOVER al servidor que hospeda el modelo. La solicitud se debe calificar especificando el servidor y el modelo y, opcionalmente, una vista o una perspectiva. El mensaje devuelto es una cadena XML. Algunos elementos dependen del lenguaje y pueden devolver valores diferentes en función del lenguaje de la conexión actual. Para obtener más información, consulte [conjunto de filas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ Puede obtener el CSDL para un modelo enviando una solicitud DISCOVER al servidor que hospeda el modelo. La solicitud se debe calificar especificando el servidor y el modelo y, opcionalmente, una vista o una perspectiva. El mensaje devuelto es una cadena XML. Algunos elementos dependen del lenguaje y pueden devolver valores diferentes en función del lenguaje de la conexión actual. Para obtener más información, vea [conjunto de filas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
 ### <a name="csdlbi-versions"></a>Versiones de CSDLBI  
  La especificación CSDL original (de Entity Data Framework) es suficiente para la mayor parte de las entidades y propiedades necesarias para el modelado. Las anotaciones BI admiten requisitos especiales de modelos tabulares, propiedades de informes requeridas por clientes como [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] y metadatos adicionales requeridos por modelos multidimensionales. En esta sección se describen las actualizaciones de cada versión.  
   
- **1.0 DE CSDLBI**  
+ **CSDLBI 1,0**  
   
  El conjunto inicial de adiciones al esquema CSDL para admitir los modelos tabulares de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contenía anotaciones que permitían el uso del modelado de datos, los cálculos personalizados y las presentaciones mejoradas:  
   
@@ -63,11 +63,11 @@ ms.locfileid: "68207901"
   
 -   Compatibilidad con las perspectivas.  
   
- Para obtener información detallada acerca de los elementos individuales de las anotaciones CSDLBI, vea [referencia técnica para las anotaciones de Business Intelligence en CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Para obtener información acerca de la especificación de CSDL del núcleo, consulte el [especificación de CSDL](http://go.microsoft.com/fwlink/?LinkId=205855) en MSDN.  
+ Para obtener información detallada sobre los elementos individuales de las anotaciones CSDLBI, vea [referencia técnica para anotaciones de BI en CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl). Para obtener información sobre la especificación de CSDL principal, vea la [especificación de CSDL](http://go.microsoft.com/fwlink/?LinkId=205855) en MSDN.  
   
 ## <a name="see-also"></a>Vea también  
- [Descripción del modelo de objetos tabulares en la compatibilidad de los niveles de 1050 a 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   
+ [Descripción del modelo de objetos tabulares en los niveles de compatibilidad de 1050 a 1103](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103)   
  [Conceptos de CSDLBI](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)   
- [Descripción del modelo de objetos tabulares en la compatibilidad de los niveles de 1050 a 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
+ [Descripción del modelo de objetos tabulares en los niveles de compatibilidad de 1050 a 1103](https://docs.microsoft.com/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/understanding-tabular-object-model-at-levels-1050-through-1103)  
   
   

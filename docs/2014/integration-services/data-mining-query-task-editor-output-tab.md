@@ -1,5 +1,5 @@
 ---
-title: Editor de tareas de consulta de minería de datos (pestaña salida) | Microsoft Docs
+title: Editor de la tarea consulta de minería de datos (pestaña salida) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db02b92ffead56451e72c7a1d564c2c9956d2ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059776"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890466"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>Editor de la tarea Consulta de minería de datos (pestaña Salida)
   Use la pestaña **Salida** del cuadro de diálogo **Editor de la tarea Consulta de minería de datos** para especificar el destino de la consulta de predicción.  
   
- Para obtener información sobre cómo implementar minería de datos en paquetes, vea [Tarea Consulta de minería de datos](control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](../analysis-services/data-mining/data-mining-solutions.md).  
+ Para obtener información sobre cómo implementar minería de datos en paquetes, vea [Tarea Consulta de minería de datos](control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Opciones generales  
  **Name**  
@@ -40,7 +40,7 @@ ms.locfileid: "66059776"
  **Conexión**  
  Seleccione un administrador de conexiones de la lista o haga clic en **Nuevo** para crear uno.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones nuevo. Solo se pueden usar los tipos de administrador de conexiones ADO.NET y OLE DB.  
   
  **Tabla de salida**  
@@ -53,6 +53,6 @@ ms.locfileid: "66059776"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de la tarea Consulta de minería de datos &#40;pestaña Modelo de minería de datos&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Editor de la tarea Consulta de minería de datos &#40;pestaña Consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [Diseñador de minería de datos](../analysis-services/data-mining/data-mining-designer.md)  
+ [Diseñador de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

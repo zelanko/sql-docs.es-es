@@ -22,12 +22,12 @@ ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 586a1315c2d8e73d5010964864560db0fc0012fd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922946"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890817"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Realizar copias de seguridad y restaurar bases de datos de SQL Server
   Este tema describe las ventajas de realizar copias de seguridad de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los términos de copias de seguridad y restauración básicos, y presenta las estrategias de copias de seguridad y restauración para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como consideraciones de seguridad para las copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -101,7 +101,7 @@ ms.locfileid: "62922946"
   
 
   
-##  <a name="BnrStrategies"></a> Introducción a estrategias de restauración y copia de seguridad  
+##  <a name="BnrStrategies"></a>Introducción a las estrategias de copia de seguridad y restauración  
  Las operaciones de copia de seguridad y restauración deben personalizarse para un entorno concreto y funcionar con los recursos disponibles. Por tanto, un uso confiable del proceso de copia de seguridad y restauración para la recuperación de datos requiere una estrategia de copia de seguridad y restauración. Una estrategia bien diseñada maximiza la disponibilidad de los datos y minimiza la pérdida de los mismos, teniendo en cuenta los requisitos concretos de su empresa.  
   
 > [!IMPORTANT]  
@@ -150,7 +150,7 @@ ms.locfileid: "62922946"
   
      Para obtener más información, vea [Calcular el tamaño de una copia de seguridad completa de base de datos](#EstimateDbBuSize)más adelante en este tema.  
   
-####  <a name="EstimateDbBuSize"></a> Estimar el tamaño de una copia de seguridad de base de datos completa  
+####  <a name="EstimateDbBuSize"></a>Calcular el tamaño de una copia de seguridad completa de la base de datos  
  Antes de implementar una estrategia de copias de seguridad y restauración, es necesario calcular cuánto espacio en disco usará la copia de seguridad completa. La operación de copia de seguridad copia los datos de la base de datos a un archivo de copia de seguridad. La copia de seguridad contiene solo los datos reales de la base de datos y no el espacio no utilizado. Por tanto, la copia de seguridad es normalmente más pequeña que la propia base de datos. Para calcular el tamaño de la copia de seguridad completa de la base de datos, use el procedimiento almacenado del sistema **sp_spaceused**. Para obtener más información, vea [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Programar copias de seguridad  
@@ -211,7 +211,7 @@ ms.locfileid: "62922946"
   
 -   [Crear una copia de seguridad diferencial de una base de datos &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
- **Usar Transact-SQL**  
+ **Uso de Transact-SQL**  
   
 -   [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
@@ -226,7 +226,7 @@ ms.locfileid: "62922946"
 ### <a name="restoring-data-backups"></a>Restaurar copias de seguridad de datos  
  **Usar SQL Server Management Studio**  
   
--   [Restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Restaurar una copia de &#40;seguridad de base de datos SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurar una base de datos a una nueva ubicación &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)  
   
@@ -234,7 +234,7 @@ ms.locfileid: "62922946"
   
 -   [Restaurar archivos y grupos de archivos &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
- **Usar Transact-SQL**  
+ **Uso de Transact-SQL**  
   
 -   [Restaurar una copia de seguridad de base de datos en el modelo de recuperación simple &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
@@ -257,14 +257,14 @@ ms.locfileid: "62922946"
   
 -   [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
- **Usar Transact-SQL**  
+ **Uso de Transact-SQL**  
   
 -   [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   
 ### <a name="additional-restore-tasks"></a>Tareas adicionales de restauración  
- **Usar Transact-SQL**  
+ **Uso de Transact-SQL**  
   
 -   [Reiniciar una operación de restauración interrumpida &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
   
@@ -277,7 +277,7 @@ ms.locfileid: "62922946"
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
+ [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
  [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [El registro de transacciones &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

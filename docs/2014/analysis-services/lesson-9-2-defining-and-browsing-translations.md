@@ -10,15 +10,15 @@ ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a685158e83569cd7d53e4b7da9edf3fa38436109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b6212bc112768af510bdb4a9dcff25150aa9f5e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078209"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888028"
 ---
 # <a name="defining-and-browsing-translations"></a>Definir y examinar traducciones
-  Una traducción es una representación de los nombres de objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en un idioma específico. Entre estos objetos se incluyen grupos de medida, medidas, dimensiones, atributos, jerarquías, KPI, acciones y miembros calculados. Las traducciones ofrecen compatibilidad de servidor para aplicaciones cliente que admitan varios idiomas. Mediante el uso de dicho cliente, éste pasa el identificador local (LCID) a la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que utiliza el LCID para determinar el conjunto de traducciones que se va a utilizar al proporcionar metadatos para los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Si un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no contiene una traducción para ese idioma o no contiene una traducción para un objeto determinado, al devolver los metadatos de objeto al cliente se usa el idioma predeterminado. Por ejemplo, si un usuario corporativo de Francia tiene acceso a un cubo de una estación de trabajo con configuración regional francesa, el usuario corporativo verá los títulos y valores de propiedades de miembro en francés si existe una traducción al francés. Sin embargo, si un usuario corporativo de Alemania tiene acceso al mismo cubo desde una estación de trabajo con una configuración regional alemana, verá los títulos y los valores de propiedades de miembro en alemán. Para obtener más información, consulte [traducciones de dimensiones](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [traducciones de cubos](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traducciones &#40;Analysis Services&#41;](translations-analysis-services.md).  
+  Una traducción es una representación de los nombres de objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en un idioma específico. Entre estos objetos se incluyen grupos de medida, medidas, dimensiones, atributos, jerarquías, KPI, acciones y miembros calculados. Las traducciones ofrecen compatibilidad de servidor para aplicaciones cliente que admitan varios idiomas. Mediante el uso de dicho cliente, éste pasa el identificador local (LCID) a la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que utiliza el LCID para determinar el conjunto de traducciones que se va a utilizar al proporcionar metadatos para los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Si un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no contiene una traducción para ese idioma o no contiene una traducción para un objeto determinado, al devolver los metadatos de objeto al cliente se usa el idioma predeterminado. Por ejemplo, si un usuario corporativo de Francia tiene acceso a un cubo de una estación de trabajo con configuración regional francesa, el usuario corporativo verá los títulos y valores de propiedades de miembro en francés si existe una traducción al francés. Sin embargo, si un usuario corporativo de Alemania tiene acceso al mismo cubo desde una estación de trabajo con una configuración regional alemana, verá los títulos y los valores de propiedades de miembro en alemán. Para obtener más información, vea [traducciones de dimensiones](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), traducciones de [cubos](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [ &#40;traducciones Analysis Services&#41;](translations-analysis-services.md).  
   
  En las tareas de este tema, se definen las traducciones de metadatos de un conjunto limitado de objetos de dimensión de la dimensión Date y de objetos de cubo del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Entonces podrá buscar entre estos objetos de dimensión y de cubo para examinar las traducciones de metadatos.  
   
@@ -40,21 +40,21 @@ ms.locfileid: "66078209"
   
      Aparecerá otra columna de idioma en la que definirá las traducciones de francés.  
   
-5.  En la fila de la **título** de objeto para el **fecha** de dimensión, escriba `Fecha` en el **español (España)** columna de traducción y `Temps` en el  **Francés (Francia)** columna de traducción.  
+5.  En la fila del objeto **Caption** de la dimensión **Date** , escriba `Fecha` en la columna de traducción **Español (España)** y `Temps` en la columna de traducción **francés (Francia)** .  
   
-6.  En la fila de la **título** de objeto para el **Month Name** atributo, escriba `Mes del Año` en el **español (España)** columna de traducción y `Mois d'Année` en el **Francés (Francia)** columna de traducción.  
+6.  En la fila del objeto de **título** del atributo **Month Name** , `Mes del Año` escriba en la columna de traducción **Español (España)** y `Mois d'Année` en la columna de traducción **francés (Francia)** .  
   
-     Tenga en cuenta que al escribir estas traducciones, un botón de puntos suspensivos ( **...** ) aparece. Si hace clic en estos puntos suspensivos podrá especificar una columna en la tabla subyacente que proporciona traducciones para cada miembro de la jerarquía de atributo.  
+     Tenga en cuenta que al escribir estas traducciones, aparece un botón de puntos suspensivos ( **...** ). Si hace clic en estos puntos suspensivos podrá especificar una columna en la tabla subyacente que proporciona traducciones para cada miembro de la jerarquía de atributo.  
   
-7.  Haga clic en el botón de puntos suspensivos ( **...** ) para el **español (España)** traducción para el **Month Name** atributo.  
+7.  Haga clic en los puntos suspensivos ( **...** ) de la traducción **Español (España)** del atributo **Month Name** .  
   
      Aparecerá el cuadro de diálogo **Traducción de datos de atributos** .  
   
 8.  En la lista **Columnas de traducción** , seleccione **SpanishMonthName**, tal como se muestra en la siguiente imagen.  
   
-     ![Cuadro de diálogo traducción de datos de atributo](../../2014/tutorials/media/l9-translations-4.gif "cuadro de diálogo traducción de datos de atributo")  
+     ![Traducción de datos de atributos, cuadro de diálogo](../../2014/tutorials/media/l9-translations-4.gif "Traducción de datos de atributos, cuadro de diálogo")  
   
-9. Haga clic en **Aceptar**y, a continuación, haga clic en el botón de puntos suspensivos ( **...** ) para el **francés (Francia)** traducción para el **Month Name** atributo.  
+9. Haga clic en **Aceptar**y, a continuación, haga clic en los puntos suspensivos ( **...** ) de la traducción **francés (Francia)** del atributo **Month Name** .  
   
 10. En la lista **Columnas de traducción** , seleccione **FrenchMonthName**y, después, haga clic en **Aceptar**.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66078209"
   
      Los metadatos en el idioma predeterminado de dicho objeto de cubo aparecen tal como se muestran en la siguiente imagen. El idioma predeterminado en el cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial es el inglés.  
   
-     ![En la pestaña traducciones del idioma predeterminado](../../2014/tutorials/media/l9-translations-5.gif "en la pestaña traducciones del idioma predeterminado")  
+     ![Idioma predeterminado en la pestaña traducciones](../../2014/tutorials/media/l9-translations-5.gif "Idioma predeterminado en la pestaña traducciones")  
   
 2.  En la barra de herramientas de la pestaña **Traducciones** , haga clic en el botón **Nueva traducción** .  
   
@@ -80,11 +80,11 @@ ms.locfileid: "66078209"
   
      Aparecerá otra columna de idioma en la que definirá las traducciones de francés.  
   
-5.  En la fila de la **título** de objeto para el **fecha** de dimensión, escriba `Fecha` en el **español (España)** columna de traducción y `Temps` en el  **Francés (Francia)** columna de traducción.  
+5.  En la fila del objeto **Caption** de la dimensión **Date** , escriba `Fecha` en la columna de traducción **Español (España)** y `Temps` en la columna de traducción **francés (Francia)** .  
   
-6.  En la fila de la **título** de objeto para el **Internet Sales** grupo de medida, el tipo `Ventas del lnternet` en el **español (España)** columna de traducción y `Ventes D'Internet` en el **francés (Francia)** columna de traducción.  
+6.  En la fila del objeto **Caption** del grupo de **medida Internet sales** , `Ventas del lnternet` escriba en la columna de traducción **Español (España)** y `Ventes D'Internet` en la columna de traducción **francés (Francia)** .  
   
-7.  En la fila de la **título** objeto para la medida Internet Sales-Sales Amount, escriba `Cantidad de las Ventas del Internet` en el **español (España)** columna de traducción y `Quantité de Ventes d'Internet` en el **francés () Francia)** columna de traducción.  
+7.  En la fila del objeto **Caption** de la medida Internet sales-Sales amount, `Cantidad de las Ventas del Internet` escriba en la columna de traducción **Español (España)** y `Quantité de Ventes d'Internet` en la columna de traducción **francés (Francia)** .  
   
      Los pasos de este procedimiento ilustran el proceso de definición de traducciones de metadatos para objetos de cubos.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "66078209"
   
 5.  En la barra de herramientas, seleccione **Español (España)** en la lista **Idioma** .  
   
-     Observe que los elementos del panel de metadatos se vuelven a rellenar. Una vez que los elementos del panel de metadatos se vuelvan a rellenar, observe cómo la medida Internet Sales-Sales Amount ya no aparece en la carpeta para mostrar Venta por Internet. En su lugar, aparecerá en español en una nueva carpeta para mostrar denominada `Ventas del lnternet`, tal y como se muestra en la siguiente imagen.  
+     Observe que los elementos del panel de metadatos se vuelven a rellenar. Una vez que los elementos del panel de metadatos se vuelvan a rellenar, observe cómo la medida Internet Sales-Sales Amount ya no aparece en la carpeta para mostrar Venta por Internet. En su lugar, aparece en español en una nueva carpeta para mostrar `Ventas del lnternet`denominada, como se muestra en la siguiente imagen.  
   
-     ![Panel de metadatos Repopulated](../../2014/tutorials/media/l9-translations-6.gif "Repopulated el panel de metadatos")  
+     ![Panel] de metadatos rellenado (../../2014/tutorials/media/l9-translations-6.gif "Panel") de metadatos rellenado  
   
-6.  En el panel metadatos, haga clic en `Cantidad de las Ventas del Internet` y, a continuación, seleccione **agregar a consulta**.  
+6.  En el panel metadatos, haga clic `Cantidad de las Ventas del Internet` con el botón secundario y seleccione **Agregar a consulta**.  
   
-7.  En el panel metadatos, expanda `Fecha`, expanda **Fecha.Calendar Date**, haga clic en **Fecha.Calendar Date**y, a continuación, seleccione **agregar a filtro**.  
+7.  En el panel metadatos, `Fecha`expanda y fecha **. Calendar Date**, haga clic con el botón secundario en fecha **. Calendar Date**y, a continuación, seleccione **Agregar a filtro**.  
   
 8.  En el panel **Filtro** , seleccione **CY 2007** como expresión de filtro.  
   
@@ -116,14 +116,14 @@ ms.locfileid: "66078209"
   
      Observe que los nombres de los meses aparecen en español, tal como se muestra en la siguiente imagen.  
   
-     ![Nombres de los meses en español en el panel datos](../../2014/tutorials/media/l9-translations-7.gif "nombres de los meses en español en el panel de datos")  
+     ![Nombres de los meses en español en el panel datos](../../2014/tutorials/media/l9-translations-7.gif "Nombres de los meses en español en el panel datos")  
   
 10. En la barra de herramientas, seleccione **Francés (Francia)** en la lista **Idioma** .  
   
      Observe que los nombres de los meses aparecen ahora en francés y que el nombre de la medida aparece ahora también en francés.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 10: Definir Roles administrativos](../analysis-services/lesson-10-defining-administrative-roles.md)  
+ [Lección 10: Definir roles administrativos](https://docs.microsoft.com/analysis-services/lesson-10-defining-administrative-roles)  
   
 ## <a name="see-also"></a>Vea también  
  [Traducciones de dimensiones](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

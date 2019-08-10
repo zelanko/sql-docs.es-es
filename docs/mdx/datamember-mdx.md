@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6be7de10c10c39e5e53cbe43ca7be46219e7d4cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023398"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892912"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
 
@@ -28,17 +28,17 @@ Member_Expression.DataMember
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Member_Expression*  
+ *Expresión_miembro*  
  Expresión MDX válida que devuelve un miembro.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función funciona con miembros no hoja en cualquier jerarquía y puede usar el [UPDATE CUBE (instrucción, MDX)](../mdx/mdx-data-manipulation-update-cube.md) comando para reescribir datos a un miembro no hoja directamente, en lugar de a los descendientes del miembro hoja.  
+ Esta función funciona en miembros no hoja de cualquier jerarquía y puede ser utilizada por el comando [Update Cube Statement (MDX)](../mdx/mdx-data-manipulation-update-cube.md) para reescribir los datos en un miembro no hoja directamente, en lugar de en los descendientes del miembro hoja.  
   
 > [!NOTE]  
 >  Devuelve el miembro especificado si es un miembro hoja o si el miembro no hoja no dispone de un miembro de datos asociado.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el **DataMember** función en una medida calculada para mostrar la cuota de ventas para cada empleado:  
+ En el ejemplo siguiente se usa la función **DataMember** en una medida calculada para mostrar la cuota de ventas de cada empleado individual:  
   
 ```  
 WITH MEMBER measures.InvidualQuota AS   
@@ -51,6 +51,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Conceptos clave de MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Conceptos clave de MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   
   

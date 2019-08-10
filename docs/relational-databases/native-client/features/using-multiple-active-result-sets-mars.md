@@ -1,7 +1,7 @@
 ---
-title: Uso de conjuntos de resultados activos múltiples (MARS) | Microsoft Docs
+title: Usar conjuntos de resultados activos múltiples (MARS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 08/08/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: native-client
@@ -18,14 +18,15 @@ ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1248add51d33b46978230ffcb0467ec6ed25e976
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d98975e0c8d690224d9cd58c4154f0d6fbdb083
+ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076632"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68926871"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilizar conjuntos de resultados activos múltiples (MARS)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
@@ -48,17 +49,17 @@ ms.locfileid: "68076632"
 -   Siempre que sea posible, use llamadas a la API para cambiar las propiedades de conexión y administrar las transacciones con prioridad con respecto a las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 -   En MARS, está prohibida la suplantación de ámbito de sesión mientras se ejecutan lotes simultáneos.  
-  
-> [!NOTE]  
->  De forma predeterminada, no está habilitada la funcionalidad de MARS. Para usar MARS al conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, debe habilitarlo específicamente dentro de una cadena de conexión. Para obtener más información, vea las secciones sobre el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, más adelante en este tema.  
-  
+
+> [!NOTE]
+> De forma predeterminada, la funcionalidad de MARS no está habilitada por el controlador. Para usar Mars al conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, debe habilitar específicamente Mars dentro de una cadena de conexión. Sin embargo, algunas aplicaciones pueden habilitar MARS de forma predeterminada, si la aplicación detecta que el controlador es compatible con MARS. Para estas aplicaciones, puede deshabilitar MARS en la cadena de conexión según sea necesario. Para obtener más información, vea las secciones sobre el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, más adelante en este tema.
+
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no limita el número de instrucciones activas en una conexión.  
   
- Las aplicaciones típicas que no necesitan tener más de un único lote de varias instrucciones o un único procedimiento almacenado que se ejecute al mismo tiempo podrán beneficiarse de MARS sin necesidad de entender cómo se implementa MARS. No obstante, las aplicaciones con requisitos más complejos necesitan tener estas consideraciones en cuenta.  
+ Las aplicaciones típicas que no necesitan tener más de un único procedimiento almacenado o lote de múltiples instrucciones que se ejecute al mismo tiempo se beneficiarán de MARS sin tener que entender cómo se implementa MARS. No obstante, las aplicaciones con requisitos más complejos necesitan tener estas consideraciones en cuenta.  
   
  MARS habilita la ejecución intercalada de varias solicitudes dentro de una única conexión. Es decir, permite la ejecución de un lote y, dentro de su ejecución, permite que se ejecuten otras solicitudes. Tenga en cuenta, no obstante, que MARS se define en términos de intercalación, no de ejecución en paralelo.  
   
- La infraestructura de MARS permite la ejecución de varios lotes en modo intercalado, aunque la ejecución solo puede intercambiarse en puntos bien definidos. Además, la mayoría de las instrucciones deben ejecutarse de forma atómica dentro de un lote. Las instrucciones que devuelven las filas al cliente, que a veces se conocen como *puntos de rendimiento*, se pueden intercalar la ejecución antes de completarse mientras se envían filas al cliente, por ejemplo:  
+ La infraestructura de MARS permite la ejecución de varios lotes en modo intercalado, aunque la ejecución solo puede intercambiarse en puntos bien definidos. Además, la mayoría de las instrucciones deben ejecutarse de forma atómica dentro de un lote. Las instrucciones que devuelven filas al cliente, que a veces se denominan *puntos de rendimiento*, pueden intercalar la ejecución antes de la finalización mientras se envían filas al cliente, por ejemplo:  
   
 -   SELECT  
   
@@ -73,56 +74,56 @@ ms.locfileid: "68076632"
  Evite problemas utilizando llamadas a la API en lugar de instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] para administrar el estado de conexión (SET, USE) y las transacciones (BEGIN TRAN, COMMIT, ROLLBACK) no incluyendo estas instrucciones en lotes de varias instrucciones que también contengan puntos de rendimiento y serializando la ejecución de dichos lotes mediante el consumo o la cancelación de todos los resultados.  
   
 > [!NOTE]  
->  Un lote o un procedimiento almacenado que inicie una transacción manual o implícita cuando MARS esté habilitado debe completar la transacción antes de salir del lote. Si no lo hace, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] revierte todos los cambios realizados por la transacción cuando finaliza el lote. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administra este tipo de transacción como una transacción de ámbito de lote. Se trata de un nuevo tipo de transacción que se introdujo en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] para permitir el uso de procedimientos almacenados con comportamiento correcto cuando MARS está habilitado. Para obtener más información acerca de las transacciones de lote, vea [instrucciones Transaction &#40;Transact-SQL&#41;](~/t-sql/statements/statements.md).  
+>  Un lote o un procedimiento almacenado que inicie una transacción manual o implícita cuando MARS esté habilitado debe completar la transacción antes de salir del lote. Si no lo hace, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] revierte todos los cambios realizados por la transacción cuando finaliza el lote. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administra este tipo de transacción como una transacción de ámbito de lote. Se trata de un nuevo tipo de transacción que se introdujo en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] para permitir el uso de procedimientos almacenados con comportamiento correcto cuando MARS está habilitado. Para obtener más información acerca de las transacciones de ámbito de lote, vea [instrucciones &#40;de&#41;transacción Transact-SQL](~/t-sql/statements/statements.md).  
   
- Para obtener un ejemplo del uso de MARS desde ADO, vea [utilizar ADO con SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
+ Para obtener un ejemplo del uso de MARS desde ADO, vea [usar ado con SQL Server Native Client](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md).  
   
 ## <a name="in-memory-oltp"></a>OLTP en memoria  
- OLTP en memoria admite MARS mediante consultas y procedimientos almacenados compilados de forma nativa. MARS permite solicitantes datos de varias consultas sin necesidad de recuperar completamente cada conjunto antes de enviar una solicitud para capturar las filas de un nuevo conjunto de resultados de resultados. Para leer correctamente de resultados abiertos varios conjuntos debe usar un MARS habilitado conexión.  
+ OLTP en memoria admite MARS mediante consultas y procedimientos almacenados compilados de forma nativa. MARS permite solicitar datos de varias consultas sin necesidad de recuperar por completo cada conjunto de resultados antes de enviar una solicitud para capturar filas de un nuevo conjunto de resultados. Para leer correctamente de varios conjuntos de resultados abiertos, debe utilizar una conexión habilitada para MARS.  
   
- MARS está deshabilitada de forma predeterminada, por lo que debe habilitar explícitamente mediante la adición de `MultipleActiveResultSets=True` en una cadena de conexión. El ejemplo siguiente muestra cómo conectarse a una instancia de SQL Server y especificar que MARS está habilitado:  
+ Mars está deshabilitado de forma predeterminada, por lo que debe `MultipleActiveResultSets=True` habilitarlo explícitamente agregando a una cadena de conexión. En el ejemplo siguiente se muestra cómo conectarse a una instancia de SQL Server y especificar que MARS está habilitado:  
   
 ```  
 Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; MultipleActiveResultSets=True  
 ```  
   
- MARS con OLTP en memoria es básicamente el mismo que MARS en el resto del motor de SQL. A continuación enumeran las diferencias al utilizar MARS en las tablas optimizadas para memoria y de forma nativa procedimientos almacenados compilados.  
+ MARS con OLTP en memoria es esencialmente igual que MARS en el resto del motor de SQL. A continuación se enumeran las diferencias que existen al usar MARS en las tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa.  
   
- **Las tablas optimizadas para memoria y MARS**  
+ **MARS y tablas con optimización para memoria**  
   
- Estas son las diferencias entre las tablas basadas en disco y optimizadas para memoria cuando el uso de un MARS habilitado conexión:  
+ A continuación se indican las diferencias entre las tablas optimizadas para memoria y las basadas en disco cuando se usa una conexión habilitada para MARS:  
   
--   Dos instrucciones pueden modificar los datos en el mismo objeto de destino, pero si intentan modificar el mismo registro un conflicto de escritura contra escritura hará que la operación de nuevo un error. Sin embargo, si ambas operaciones modifican distintos registros, las operaciones se realizará correctamente.  
+-   Dos instrucciones pueden modificar los datos en el mismo objeto de destino, pero si ambos intentan modificar el mismo registro, un conflicto de escritura de escritura hará que se produzca un error en la nueva operación. Sin embargo, si ambas operaciones modifican registros diferentes, las operaciones se realizarán correctamente.  
   
--   Cada instrucción se ejecuta con aislamiento de instantánea para que nuevas operaciones no pueden ver los cambios realizados por las instrucciones existentes. Incluso si se ejecutan las instrucciones simultáneas en la misma transacción el motor SQL crea transacciones de lote para cada instrucción que están aisladas entre sí. Sin embargo, las transacciones de lote todavía se enlazan juntos para la reversión de una transacción de lote afecta a otros registros en el mismo lote.  
+-   Cada instrucción se ejecuta con aislamiento de instantánea, por lo que las nuevas operaciones no pueden ver los cambios realizados por las instrucciones existentes. Aunque las instrucciones simultáneas se ejecuten en la misma transacción, el motor de SQL crea transacciones de ámbito de lote para cada instrucción que están aisladas entre sí. Sin embargo, las transacciones de ámbito de lote siguen enlazadas entre sí, por lo que la reversión de una transacción de ámbito de lote afecta a otros en el mismo lote.  
   
--   No se permiten operaciones de DDL en las transacciones de usuario inmediatamente generará un error.  
+-   No se permiten operaciones DDL en transacciones de usuario, por lo que se producirá un error inmediatamente.  
   
  **MARS y procedimientos almacenados compilados de forma nativa**  
   
- Procedimientos almacenados compilados de forma nativa se pueden ejecutar en las conexiones de MARS habilitado y pueden ceda la ejecución a otra instrucción solo cuando se encuentra un punto de rendimiento. Un punto de rendimiento requiere una instrucción SELECT, que es la única instrucción en un procedimiento almacenado compilado de forma nativa que puede ofrecer la ejecución a otra instrucción. Si una instrucción SELECT no está presente en el procedimiento no dará como resultado, se ejecutará hasta su finalización antes de comenzar otras instrucciones.  
+ Los procedimientos almacenados compilados de forma nativa se pueden ejecutar en conexiones habilitadas para MARS y pueden producir la ejecución en otra instrucción solo cuando se encuentra un punto yield. Un punto yield requiere una instrucción SELECT, que es la única instrucción dentro de un procedimiento almacenado compilado de forma nativa que puede producir la ejecución en otra instrucción. Si una instrucción SELECT no está presente en el procedimiento, se ejecutará hasta completarse antes de que comiencen otras instrucciones.  
   
- **Transacciones de MARS y OLTP en memoria**  
+ **MARS y transacciones de OLTP en memoria**  
   
- Los cambios realizados por instrucciones y bloques atomic que se intercalan están aislados entre sí. Por ejemplo, si una instrucción o bloque atomic realiza algunos cambios y, a continuación, proporciona una ejecución a otra instrucción, la nueva instrucción no verán los cambios realizados por la primera instrucción. Además, cuando la primera instrucción reanuda la ejecución, no verán los cambios realizados por cualquier otra instrucción. Las instrucciones solo verá los cambios que se finaliza y confirma antes de que se inicia la instrucción.  
+ Los cambios realizados por las instrucciones y los bloques atómicos intercalados están aislados entre sí. Por ejemplo, si una instrucción o un bloque atómico realiza algunos cambios y, a continuación, produce la ejecución en otra instrucción, la nueva instrucción no verá los cambios realizados por la primera instrucción. Además, cuando la primera instrucción reanude la ejecución, no verá ningún cambio realizado por otras instrucciones. Las instrucciones solo verán los cambios que hayan finalizado y confirmado antes de que se inicie la instrucción.  
   
- Se puede iniciar una nueva transacción de usuario dentro de la transacción de usuario actual mediante la instrucción BEGIN TRANSACTION: Esto se admite solo en modo de interoperabilidad, por lo que solo se puede llamar a BEGIN TRANSACTION de una instrucción de Transact-SQL y no desde dentro de compilado de forma nativa almacenan procedimiento. Puede crear una operación de guardar punto en una transacción utilizando SAVE TRANSACTION o una llamada de API a la transacción. Save(save_point_name) para revertir al punto de retorno. Esta característica también se habilita solo desde las instrucciones de T-SQL y no desde dentro de forma nativa procedimientos almacenados compilados.  
+ Se puede iniciar una nueva transacción de usuario dentro de la transacción de usuario actual mediante la instrucción BEGIN TRANSACTION; esto solo se admite en el modo de interoperabilidad, por lo que solo se puede llamar a la BEGIN TRANSACTION desde una instrucción T-SQL y no desde dentro de un almacenado compilado de forma nativa pasos. Puede crear un punto de retorno en una transacción mediante SAVE TRANSACTION o una llamada de API a Transaction. Guarde (save_point_name) para revertir al punto de retorno. Esta característica también se habilita únicamente desde instrucciones T-SQL y no desde los procedimientos almacenados compilados de forma nativa.  
   
- **MARS y los índices de almacén de columnas**  
+ **Los índices de almacén de columnas y MARS**  
   
- SQL Server (a partir de 2016) es compatible con MARS con índices de almacén de columnas. SQL Server 2014 usa MARS para las conexiones de solo lectura a las tablas con un índice de almacén de columnas.    Pero SQL Server 2014 no es compatible con MARS para operaciones simultáneas de lenguaje de manipulación de datos (DML) en una tabla con un índice de almacén de columnas. Cuando ocurre esto, SQL Server termina las conexiones y anula las transacciones.   SQL Server 2012 tiene índices de almacén de columnas de sólo lectura y MARS no se aplica a ellos.  
+ SQL Server (a partir de 2016) es compatible con MARS con índices de almacén de columnas. SQL Server 2014 usa MARS para las conexiones de solo lectura a las tablas con un índice de almacén de columnas.    Pero SQL Server 2014 no es compatible con MARS para operaciones simultáneas de lenguaje de manipulación de datos (DML) en una tabla con un índice de almacén de columnas. Cuando ocurre esto, SQL Server termina las conexiones y anula las transacciones.   SQL Server 2012 tiene índices de almacén de columnas de solo lectura y MARS no les aplica.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite MARS mediante la adición de la propiedad de inicialización de SSPROP_INIT_MARSCONNECTION data source, que se implementa en el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT. Además, se ha agregado una nueva palabra clave de cadena de conexión, **MarsConn**. Acepta **true** o **false** valores; **false** es el valor predeterminado.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite Mars a través de la adición de la propiedad de inicialización de origen de datos SSPROP_INIT_MARSCONNECTION, que se implementa en el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT. Además, se ha agregado una nueva palabra clave de cadena de conexión, **MarsConn**. Acepta valores **verdaderos** o **falsos** ; **false** es el valor predeterminado.  
   
- El valor predeterminado de la propiedad de origen de datos DBPROP_MULTIPLECONNECTIONS es VARIANT_TRUE. Esto significa que el proveedor generará varias conexiones para admitir varios comandos y objetos de conjunto de filas simultáneos. Cuando MARS está habilitado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client puede admitir varios objetos de comando y conjunto de filas en una sola conexión, por lo que MULTIPLE_CONNECTIONS se establece de forma predeterminada en VARIANT_FALSE.  
+ El valor predeterminado de la propiedad de origen de datos DBPROP_MULTIPLECONNECTIONS es VARIANT_TRUE. Esto significa que el proveedor generará varias conexiones para admitir varios comandos y objetos de conjunto de filas simultáneos. Cuando Mars está habilitado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Native Client puede admitir varios objetos de comando y conjunto de filas en una única conexión, por lo que MULTIPLE_CONNECTIONS se establece en VARIANT_FALSE de forma predeterminada.  
   
- Para obtener más información acerca de las mejoras realizadas en el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, vea [propiedades de inicialización y autorización](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para obtener más información sobre las mejoras realizadas en el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, consulte [propiedades de inicialización y autorización](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>Ejemplo del proveedor OLE DB de SQL Server Native Client  
- En este ejemplo, se crea un objeto de origen de datos mediante el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB nativo y MARS está habilitado el uso de propiedades DBPROPSET_SQLSERVERDBINIT antes de crea el objeto de sesión.  
+ En este ejemplo, se crea un objeto de origen de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el proveedor de OLE DB nativo y Mars se habilita mediante el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT antes de crear el objeto de sesión.  
   
-```  
+```cpp
 #include <sqlncli.h>  
   
 IDBInitialize *pIDBInitialize = NULL;  
@@ -206,12 +207,12 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Controlador ODBC de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite MARS mediante adiciones a la [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) funciones. SQL_COPT_SS_MARS_ENABLED se ha agregado para aceptar SQL_MARS_ENABLED_YES o SQL_MARS_ENABLED_NO, siendo SQL_MARS_ENABLED_NO el valor predeterminado. Además, una nueva cadena de conexión de palabra clave, **Mars_Connection**, tal y como se ha agregado. Acepta valores "yes" o "no"; "no" es el valor predeterminado.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite Mars a través de adiciones a las funciones [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . SQL_COPT_SS_MARS_ENABLED se ha agregado para aceptar SQL_MARS_ENABLED_YES o SQL_MARS_ENABLED_NO, siendo SQL_MARS_ENABLED_NO el valor predeterminado. Además, se ha agregado una nueva palabra clave de cadena de conexión, **Mars_Connection**. Acepta valores "yes" o "no"; "no" es el valor predeterminado.  
   
 ### <a name="sql-server-native-client-odbc-driver-example"></a>Ejemplo del controlador ODBC de SQL Server Native Client  
- En este ejemplo, el **SQLSetConnectAttr** función se utiliza para habilitar MARS antes de llamar a la **SQLDriverConnect** función para conectarse a la base de datos. Una vez realizada la conexión, dos **SQLExecDirect** se llama a funciones para crear dos conjuntos de resultados independientes en la misma conexión.  
+ En este ejemplo, la función **SQLSetConnectAttr** se usa para habilitar Mars antes de llamar a la función **SQLDriverConnect** para conectar la base de datos. Una vez realizada la conexión, se llama a dos funciones **SQLExecDirect** para crear dos conjuntos de resultados independientes en la misma conexión.  
   
-```  
+```cpp
 #include <sqlncli.h>  
   
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MARS_ENABLED, SQL_MARS_ENABLED_YES, SQL_IS_UINTEGER);  

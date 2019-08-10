@@ -1,5 +1,5 @@
 ---
-title: Tutoriales de SQL Server 2014 | Microsoft Docs
+title: Tutoriales para SQL Server 2014 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 05505b1b53605865bae6856acde8319745688376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21c94cbc7b5adc1e65cb21aa14d4ab2cec9122ce
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62956323"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892936"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Tutoriales de SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] introduce muchas tecnologías y características nuevas.  
@@ -29,7 +29,7 @@ ms.locfileid: "62956323"
 -   Para descargar un libro [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] e informes [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] para usar con los tutoriales [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] , vaya a [Archivos de imagen para el modelo de muestra HelloWorldPicnic en PowerPivot y Power View](https://www.microsoft.com/download/details.aspx?id=26719).  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] es una característica de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complemento para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]es una característica del [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complemento [!INCLUDE[msCoName](../includes/msconame-md.md)] para[!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
 -   Para descargar las versiones de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] de las bases de datos [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , vaya a [Bases de datos de muestra de Adventure Works 2014](http://msftdbprodsamples.codeplex.com/releases/view/125550) en CodePlex.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62956323"
   
 |Tecnología|Descripción|  
 |----------------|-----------------|  
-|[Tutoriales de Analysis Services &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Aprenda a desarrollar e implementar modelos multidimensionales o tabulares de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . También aprenderá a utilizar herramientas como PowerPivot para analizar los datos de los modelos.|  
+|[Tutoriales de Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Aprenda a desarrollar e implementar modelos multidimensionales o tabulares de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . También aprenderá a utilizar herramientas como PowerPivot para analizar los datos de los modelos.|  
 |[Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprenda a crear informes básicos y suscripciones.|  
 |[Tutoriales de Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a crear e implementar soluciones [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Tutoriales del motor de base de datos](../relational-databases/database-engine-tutorials.md)|Aprenda a conectarse a una instancia del motor de base de datos, así como a escribir y ejecutar instrucciones Transact-SQL.|  

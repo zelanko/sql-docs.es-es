@@ -1,5 +1,5 @@
 ---
-title: Editor de tareas de consulta de minería de datos (pestaña modelo de minería de datos) | Microsoft Docs
+title: Editor de la tarea consulta de minería de datos (pestaña modelo de minería de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7019fd6fd3d7f2bc763098d30abca9aee670e1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059931"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890775"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor de la tarea Consulta de minería de datos (pestaña Modelo de minería de datos)
   Utilice la pestaña **Modelo de minería de datos** del cuadro de diálogo **Tarea Consulta de minería de datos** para especificar la estructura y el modelo de minería de datos que se van a utilizar.  
   
- Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](../analysis-services/data-mining/data-mining-solutions.md).  
+ Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="general-options"></a>Opciones generales  
  **Name**  
@@ -42,7 +42,7 @@ ms.locfileid: "66059931"
   
  **Temas relacionados:**  [Administrador de conexiones de Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
- **Nueva**  
+ **Nuevo**  
  Permite crear un administrador de conexiones de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Temas relacionados:** [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -57,6 +57,6 @@ ms.locfileid: "66059931"
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de la tarea Consulta de minería de datos &#40;pestaña Consulta&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [Editor de la tarea Consulta de minería de datos &#40;pestaña Salida&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Diseñador de minería de datos](../analysis-services/data-mining/data-mining-designer.md)  
+ [Diseñador de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

@@ -19,12 +19,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c5a73be18977d78be89a45200f7f5ebe621bbf94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8147471dc662b651ac9c99cc9290a383cc235ee8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66109496"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891569"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   Para incluir datos en un informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , es preciso que antes cree *orígenes de datos* y *conjuntos de datos*. En este tema, se describe el tipo de orígenes de datos y cómo crear orígenes de datos, además se ofrece información importante relacionada con las credenciales de los orígenes de datos. Un origen de datos incluye el tipo de origen de datos, la información de conexión y el tipo de credenciales que se han de usar. Hay dos tipos de orígenes de datos: incrustados y compartidos. Un origen de datos incrustado se define en el informe y se usa solo en ese informe. Un origen de datos compartido se define independientemente de un informe y se puede usar en varios informes. Para obtener más información, vea [Conexiones de datos u orígenes de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) y [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -76,11 +76,11 @@ ms.locfileid: "66109496"
   
 -   ODBC  
   
--   Modelo semántico de BI de Microsoft para Power View: En un sitio de SharePoint que se ha configurado para una galería de PowerPivot y [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], este tipo de origen de datos está disponible. Este tipo de origen de datos solo se usa para presentaciones de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea [compilar el Perfect BI Semantic Tabular Models para Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Modelo semántico de Microsoft BI para Power View: En un sitio de SharePoint que se ha configurado para una galería de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]PowerPivot y, este tipo de origen de datos está disponible. Este tipo de origen de datos solo se usa para presentaciones de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea [compilar el Perfect BI Semantic Tabular Models para Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Para obtener una lista completa de los orígenes de datos y las versiones que admite [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
-##  <a name="bkmk_create_data_source"></a> Crear un origen de datos  
+##  <a name="bkmk_create_data_source"></a>Crear un origen de datos  
  Para crear un origen de datos, debe disponer de la información siguiente:  
   
 -   **Tipo de origen de datos** Tipo de conexión, por ejemplo, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Elija este valor en la lista desplegable de tipos de conexión.  
@@ -97,7 +97,7 @@ ms.locfileid: "66109496"
   
  El panel Datos de informe muestra los orígenes de datos incrustados y las referencias a los orígenes de datos compartidos que se han agregado al informe. En el Generador de informes, una referencia de origen de datos compartido señala un origen de datos compartido en un servidor de informes o un sitio de SharePoint. En el Diseñador de informes, la referencia a un origen de datos compartido señala un origen de datos compartido del Explorador de soluciones en la carpeta Origen de datos compartido.  
   
-##  <a name="bkmk_credentials"></a> Credenciales para orígenes de datos  
+##  <a name="bkmk_credentials"></a>Credenciales para orígenes de datos  
  Por diseño, las credenciales se pueden guardar y administrar independientemente de la información de conexión. Las credenciales se utilizan para crear un origen de datos, para ejecutar una consulta de conjunto de datos y para obtener la vista previa de un informe.  
   
 > [!NOTE]  
@@ -107,11 +107,11 @@ ms.locfileid: "66109496"
   
  Cuando se implementa un informe en el servidor de informes o un sitio de SharePoint, los orígenes de datos incrustados y compartidos correspondientes se administran independientemente. Las credenciales del origen de datos necesarias para tener acceso a los datos del equipo pueden diferir de las credenciales necesarias para que el servidor de informes tenga acceso a los datos.  
   
- ![Tenga en cuenta](media/rs-fyinote.png "Nota")una buena práctica consiste en comprobar que las conexiones de origen de datos siguen funcionando correctamente después de publicar un informe. Si necesita cambiar las credenciales, puede modificarlas directamente en el servidor de informes.  
+ ![Nota:](media/rs-fyinote.png "Nota:") Se recomienda comprobar que las conexiones de origen de datos continúan conectándose correctamente después de publicar un informe. Si necesita cambiar las credenciales, puede modificarlas directamente en el servidor de informes.  
   
- Para cambiar los orígenes de datos que utiliza un informe, puede modificar las propiedades del informe en el Administrador de informes de modo nativo o desde bibliotecas de documentos en modo de SharePoint. Para obtener más información, vea:  
+ Para cambiar los orígenes de datos que usa un informe, puede modificar las propiedades del informe en modo nativo Administrador de informes o desde bibliotecas de documentos en modo de SharePoint. Para obtener más información, vea lo siguiente:  
   
--   [Store credenciales en un origen de datos de Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md) [Store credenciales en un origen de datos de Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)  
+-   [Almacenar credenciales en un origen de datos de Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md) [Almacenar credenciales en un origen de datos de Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
 -   [Especificación de información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66109496"
   
 -   [Especificar credenciales en el Generador de informes](../../2014/reporting-services/specify-credentials-in-report-builder.md)  
   
--   [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+-   [Agregar y comprobar una conexión de datos o un &#40;origen de datos generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
 ##  <a name="bkmk_connection_examples"></a> Ejemplos de cadenas de conexión comunes  
  Las cadenas de conexión son la representación en texto de las propiedades de conexión para un proveedor de datos. En la tabla siguiente se muestran ejemplos de cadenas de conexión para diversos tipos de conexión.  
@@ -130,10 +130,10 @@ ms.locfileid: "66109496"
 |Base de datos de SQL Server en el servidor local|`data source="(local)";initial catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`.|  
 |Instancia de SQL Server<br /><br /> database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`.|  
 |Base de datos de SQL Server Express|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`.|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)] en la nube|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Establezca el tipo de origen de datos en `Windows Azure SQL Database`. Para obtener más información, vea [Tipo de conexión SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)]en la nube|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Establezca el tipo de origen de datos en `Windows Azure SQL Database`. Para obtener más información, vea [Tipo de conexión SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
 |Almacenamiento de datos paralelo de SQL Server|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Establezca el tipo de origen de datos en `Microsoft SQL Server Parallel Data Warehouse`. Para obtener más información, vea [Tipo de conexión Almacenamiento de datos paralelo de SQL Server &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Base de datos de Analysis Services en el servidor local|`data source=localhost;initial catalog=Adventure Works DW`|Establezca el tipo de origen de datos en `Microsoft SQL Server Analysis Services`. Para más información, vea [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) o [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Base de datos de modelo tabular de Analysis Services con una perspectiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Establezca el tipo de origen de datos en `Microsoft SQL Server Analysis Services`. Especifique el nombre de la perspectiva en la configuración cube=. Para más información, vea [Perspectivas &#40;SSAS tabular&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
+|Base de datos de modelo tabular de Analysis Services con una perspectiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Establezca el tipo de origen de datos en `Microsoft SQL Server Analysis Services`. Especifique el nombre de la perspectiva en la configuración cube=. Para más información, vea [Perspectivas &#40;SSAS tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
 |Origen de datos de modelo de informe en un servidor de informes configurado en modo nativo|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Especifique la dirección URL del servidor de informes o de la biblioteca de documentos, y la ruta de acceso al modelo publicado en el espacio de nombres de la carpeta del servidor de informes o de la carpeta de la biblioteca de documentos.
 |Origen de datos de modelo de informe en un servidor de informes configurado en el modo integrado de SharePoint|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Especifique la dirección URL del servidor de informes o de la biblioteca de documentos, y la ruta de acceso al modelo publicado en el espacio de nombres de la carpeta del servidor de informes o de la carpeta de la biblioteca de documentos.|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Configure el tipo de origen de datos en `OLE DB Provider for OLAP Services 8.0`.<br /><br /> Puede conseguir una conexión más rápida con orígenes de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] si establece la propiedad `ConnectTo` en `8.0`. Para establecer esta propiedad, use la pestaña **Propiedades avanzadas** del cuadro de diálogo **Propiedades de conexión** .|  
@@ -176,9 +176,9 @@ Si no puede conectar con un servidor de informes mediante `localhost`, compruebe
 ## <a name="see-also"></a>Vea también  
  [Conexiones de datos u orígenes de datos compartidos e incrustados &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Administrar orígenes de datos de informe](report-data/manage-report-data-sources.md)   
- [Cuadro de diálogo de propiedades de origen de datos, credenciales](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
- [Cuadro de diálogo de propiedades de origen datos compartidos, credenciales](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
+ [Propiedades del origen de datos (cuadro de diálogo), credenciales](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
+ [Propiedades del origen de datos compartido (cuadro de diálogo), credenciales](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
  [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [Establecer propiedades de implementación &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Agregar y comprobar una conexión de datos o un &#40;origen de datos generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  

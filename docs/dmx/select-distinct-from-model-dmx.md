@@ -1,5 +1,5 @@
 ---
-title: SELECT DISTINCT FROM &lt;modelo &gt; (DMX) | Microsoft Docs
+title: Seleccione DISTINCT &lt;from &gt; Model (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5906dc6d964603576831a5c7009cd0224f0ffb08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928444"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892529"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modelo &gt; (DMX)
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT &lt;from &gt; Model (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Devuelve todas los estados posibles para la columna seleccionada del modelo. Los valores devueltos varían dependiendo de si la columna especificada contiene valores discretos, valores numéricos de datos discretos o valores numéricos continuos.  
@@ -45,15 +45,15 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Comentarios  
- El **SELECT DISTINCT FROM** instrucción solo funciona con una sola columna o con un conjunto de columnas relacionadas. Esta cláusula no funciona con un conjunto de columnas no relacionadas.  
+ La instrucción **SELECT DISTINCT from** solo funciona con una sola columna o con un conjunto de columnas relacionadas. Esta cláusula no funciona con un conjunto de columnas no relacionadas.  
   
- El **SELECT DISTINCT FROM** instrucción le permite hacer referencia directamente a una columna dentro de una tabla anidada. Por ejemplo:  
+ La instrucción **SELECT DISTINCT from** permite hacer referencia directamente a una columna dentro de una tabla anidada. Por ejemplo:  
   
 ```  
 <model>.<table column reference>.<column reference>  
 ```  
   
- Los resultados de la **SELECT DISTINCT FROM \<modelo >** instrucción varían, dependiendo del tipo de columna. En la siguiente tabla se describen los tipos de columna admitidos y la salida de la instrucción.  
+ Los resultados de la instrucción **SELECT DISTINCT \<from Model >** varían según el tipo de columna. En la siguiente tabla se describen los tipos de columna admitidos y la salida de la instrucción.  
   
 |Tipo de columna|Salida|  
 |-----------------|------------|  
@@ -62,7 +62,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuous|Punto medio de los valores de la columna.|  
   
 ## <a name="discrete-column-example"></a>Ejemplo de columna discreta  
- Ejemplo de código siguiente se basa en el `[TM Decision Tree]` modelo creado en el [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve los valores únicos que existen en la columna discreta `Gender`.  
+ El siguiente ejemplo de código se basa en `[TM Decision Tree]` el modelo que se crea en el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve los valores únicos que existen en la columna discreta `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -99,10 +99,10 @@ FROM [TM Decision Tree]
  La consulta también devuelve una fila de valores nulos para representar los valores ausentes.  
   
 ## <a name="discretized-column-example"></a>Ejemplo de columnas de datos discretos  
- El ejemplo de código siguiente devuelve el punto medio y los valores máximo y mínimo de cada depósito creado por el algoritmo para la columna [`Yearly Income]`. Para reproducir los resultados de este ejemplo, debe crear una nueva estructura de minería de datos que sea igual que `[Targeted Mailing]`. En el asistente, cambie el tipo de contenido de la `Yearly Income` columna desde **Continuous** a **Discretized**.  
+ El ejemplo de código siguiente devuelve el punto medio y los valores máximo y mínimo de cada depósito creado por el algoritmo para la columna [`Yearly Income]`. Para reproducir los resultados de este ejemplo, debe crear una nueva estructura de minería de datos que sea igual que `[Targeted Mailing]`. En el asistente, cambie el tipo de contenido de `Yearly Income` la columna **continuo** a **discreto**.  
   
 > [!NOTE]  
->  También puede cambiar el modelo de minería datos creado en el Tutorial básico de minería de datos para discretizar la columna de estructura de minería de datos [`Yearly Income]`. Para obtener información acerca de cómo hacerlo, consulte [cambiar la discretización de una columna en un modelo de minería de datos](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md). Sin embargo, al cambiar la discretización de la columna, se volverá a procesar la estructura de minería de datos, lo que cambiará los resultados de otros modelos generados usando esa estructura.  
+>  También puede cambiar el modelo de minería datos creado en el Tutorial básico de minería de datos para discretizar la columna de estructura de minería de datos [`Yearly Income]`. Para obtener información sobre cómo hacerlo, vea [cambiar la discretización de una columna en un modelo de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model). Sin embargo, al cambiar la discretización de la columna, se volverá a procesar la estructura de minería de datos, lo que cambiará los resultados de otros modelos generados usando esa estructura.  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
@@ -128,14 +128,14 @@ FROM [TM Decision Tree]
   
  Por ejemplo, si examina el modelo usando el Visor de árbol de decisión y hace clic en un nodo que contiene clientes agrupados por ingresos, se muestran las propiedades de nodo siguientes en la información sobre herramientas:  
   
- Edad > = 69 y Yearly Income < 39221.41  
+ Age > = 69 e ingresos anuales < 39221,41  
   
 > [!NOTE]  
 >  El valor mínimo del depósito mínimo y el valor máximo del depósito máximo son los valores observados más altos y más bajos. Los valores que queden fuera de este intervalo observado se supone que pertenecen a los depósitos mínimo y máximo.  
   
 ## <a name="see-also"></a>Vea también  
  [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
+ [Instrucciones de manipulación &#40;de&#41; datos DMX de extensiones de minería de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -12,12 +12,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0a7498820bedf5d412fe227c268a6bef35d3d74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072522"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889331"
 ---
 # <a name="ragged-hierarchies"></a>Jerarquías desiguales
   Una jerarquía desigual es una jerarquía definida por el usuario que tiene un número impar de niveles. Por ejemplo, un organigrama donde un director de alto nivel tiene tanto directores de departamento como no directores a su cargo o jerarquías geográficas que constan de País-Región-Ciudad, donde algunas ciudades no tienen un Estado o Provincia primario, como Washington D.C., Ciudad del Vaticano o Nueva Delhi.  
@@ -41,9 +41,9 @@ ms.locfileid: "66072522"
   
 -   Use una jerarquía normal pero establezca la propiedad `HideMemberIf` en cada nivel para especificar si un nivel que falta se muestra al usuario. Al establecer `HideMemberIf`, debe establecer también `MDXCompatibility` en la cadena de conexión para reemplazar los comportamientos de navegación predeterminados. En este tema se ofrecen instrucciones para establecer estas propiedades.  
   
--   Cree una jerarquía de elementos primarios y secundarios que administre explícitamente los miembros del nivel. Para conocer esta técnica, vea la entrada de blog [Ragged Hierarchy in SSAS (Jerarquía desigual en SSAS)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). Para obtener más información en los libros en línea, consulte [jerarquía de elementos primarios y secundarios](parent-child-dimension.md). Las desventajas de crear una jerarquía de elementos primarios y secundarios son que solo puede tener una por dimensión y que normalmente disminuye el rendimiento cuando se calculan agregaciones para los miembros intermedios.  
+-   Cree una jerarquía de elementos primarios y secundarios que administre explícitamente los miembros del nivel. Para conocer esta técnica, vea la entrada de blog [Ragged Hierarchy in SSAS (Jerarquía desigual en SSAS)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/). Para obtener más información en los libros en pantalla, vea [jerarquía de elementos primarios y secundarios](parent-child-dimension.md). Las desventajas de crear una jerarquía de elementos primarios y secundarios son que solo puede tener una por dimensión y que normalmente disminuye el rendimiento cuando se calculan agregaciones para los miembros intermedios.  
   
- Si la dimensión contiene más de una jerarquía desigual, debe usar el primer enfoque y establecer `HideMemberIf`. Los desarrolladores de BI que tienen experiencia práctica en el trabajo con jerarquías desiguales van más allá y son partidarios de realizar cambios adicionales en las tablas de datos físicas, creando tablas diferentes para cada nivel. Consulte [Martin Mason de las jerarquías de SSAS Financial Cube-parte 1a-desiguales (blog)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) para obtener más información sobre esta técnica.  
+ Si la dimensión contiene más de una jerarquía desigual, debe usar el primer enfoque y establecer `HideMemberIf`. Los desarrolladores de BI que tienen experiencia práctica en el trabajo con jerarquías desiguales van más allá y son partidarios de realizar cambios adicionales en las tablas de datos físicas, creando tablas diferentes para cada nivel. Vea [las jerarquías desiguales (blog) de Martin Mason de la parte 1A del cubo financiero de SSAS](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) para más información sobre esta técnica.  
   
 ##  <a name="bkmk_Hide"></a> Establecer HideMemberIf para ocultar miembros en una jerarquía normal  
  En la tabla de una dimensión desigual, los miembros que faltan de manera lógica se pueden representar de distintos modos. Las celdas de la tabla pueden contener valores NULL o cadenas vacías o bien pueden contener el mismo valor que su elemento primario para servir de marcador de posición. La representación de los marcadores de posición está determinada por el estado de los marcadores de posición de los miembros secundarios, según determina la propiedad `HideMemberIf`, y la propiedad de cadena de conexión `MDX Compatibility` de la aplicación cliente.  
@@ -74,6 +74,6 @@ ms.locfileid: "66072522"
  [Crear jerarquías definidas por el usuario](user-defined-hierarchies-create.md)   
  [Jerarquías de usuario](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Jerarquía de elementos primarios y secundarios](parent-child-dimension.md)   
- [Propiedades de cadena de conexión &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Propiedades de cadena de conexión &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

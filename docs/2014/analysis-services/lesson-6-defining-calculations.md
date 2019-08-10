@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d8312019c5deeebb93185609433ae7e4925e3da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078388"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888045"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lección 6: Definición de cálculos
   En esta lección, aprenderá a definir cálculos, que son scripts o expresiones de Expresiones multidimensionales (MDX). Los cálculos le permiten definir miembros calculados, conjuntos con nombre y ejecutar otros comandos de script para ampliar las capacidades de un cubo de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Por ejemplo, puede ejecutar un comando de script para definir un subcubo y, a continuación, asignar un cálculo a las celdas del subcubo.  
@@ -45,18 +45,18 @@ ms.locfileid: "66078388"
   
  Esta lección contiene las siguientes tareas:  
   
- [Definir miembros calculados](../analysis-services/lesson-6-1-defining-calculated-members.md)  
+ [Definir miembros calculados](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
  En esta tarea, aprenderá a definir miembros calculados.  
   
- [Definir conjuntos con nombre](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [Definir conjuntos con nombre](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
  En esta tarea, aprenderá a definir conjuntos con nombre.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 7: Definir indicadores clave de rendimiento &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lección 7: Definición de KPI clave &#40;de indicadores de rendimiento&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
   
 ## <a name="see-also"></a>Vea también  
- [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   
- [Modelado multidimensional &#40;Tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
+ [Escenario de Analysis Services tutorial](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Tutorial de Adventure Works &#40;para el modelado multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
  [Crear conjuntos con nombre](multidimensional-models/create-named-sets.md)   
  [Crear miembros calculados](multidimensional-models/create-calculated-members.md)  
   

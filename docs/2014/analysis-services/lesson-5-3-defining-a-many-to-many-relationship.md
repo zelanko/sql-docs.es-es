@@ -1,5 +1,5 @@
 ---
-title: Definir una relación muchos a muchos | Microsoft Docs
+title: Definir una relación de varios a varios | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef5fd5e081804abf27ede8d0cd7ad65f888b870c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6e375c2f2931890228d0accc45b167cda609e53
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078469"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888163"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definir una relación de varios a varios
   Generalmente, cuando se define una dimensión cada hecho se combina con un único miembro de dimensión, mientras que un mismo miembro puede estar asociado a varios hechos distintos. Por ejemplo, cada cliente puede tener varios pedidos, pero cada pedido pertenece a un solo cliente. En terminología de bases de datos relacionales, esto se conoce como *relación uno a varios*. No obstante, algunas veces un único hecho puede combinarse con varios miembros de dimensión. En terminología de bases de datos relacionales, esto se conoce como *relación de varios a varios*. Por ejemplo, un cliente puede tener varios motivos para realizar una compra, y un motivo de compra puede estar asociado a varias compras. Para definir los motivos de venta que se relacionan con cada compra, se utiliza una tabla de combinación. Una dimensión de motivo de venta creada a partir de relaciones de este tipo tendría varios miembros que estarían relacionados a una única transacción de venta. Las dimensiones de varios a varios amplían el modelo dimensional más allá del esquema de estrella y admiten análisis complejos cuando las dimensiones no están directamente relacionadas con una tabla de hechos.  
@@ -25,7 +25,7 @@ ms.locfileid: "66078469"
  Con una dimensión de varios a varios, los valores distintos se suman, lo que significa que no se agregan más de una vez al miembro Todos.  
   
 > [!NOTE]  
->  Para admitir una relación de dimensión varios a varios, debe definirse una relación de clave externa para la clave principal en la vista del origen de datos entre todas las tablas que están implicados. De lo contrario, no podrá seleccionar el grupo de medida intermedio correcto cuando establezca la relación en la pestaña **Uso de dimensiones** del Diseñador de cubos.  
+>  Para admitir una relación de dimensión de varios a varios, se debe definir una relación de clave principal y clave externa en la vista del origen de datos entre todas las tablas implicadas. De lo contrario, no podrá seleccionar el grupo de medida intermedio correcto cuando establezca la relación en la pestaña **Uso de dimensiones** del Diseñador de cubos.  
   
  Para obtener más información, consulte [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)y [Definir una relación de varios a varios y las propiedades de las relaciones de varios a varios](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66078469"
   
 1.  Abra el Diseñador de vistas del origen de datos para la vista del origen de datos **Adventure Works DW 2012** .  
   
-2.  Haga clic en cualquier lugar en el **organizador** panel, haga clic en **nuevo diagrama**y especifique `Internet Sales Order Reasons` como el nombre de este nuevo diagrama.  
+2.  Haga clic con el botón secundario en cualquier lugar del panel **organizador** de diagramas, `Internet Sales Order Reasons` haga clic en **nuevo diagrama**y especifique como nombre de este nuevo diagrama.  
   
 3.  Arrastre la tabla **InternetSales** al panel **Diagrama** desde el panel **Tablas** .  
   
@@ -43,17 +43,17 @@ ms.locfileid: "66078469"
   
 5.  En el cuadro de diálogo **Agregar o quitar tablas** , agregue la tabla **DimSalesReason** y la tabla **FactInternetSalesReason** a la lista **Objetos incluidos** y haga clic en **Aceptar**.  
   
-     Tenga en cuenta que las relaciones de clave externa para la clave principales entre las tablas implicadas se establecen automáticamente porque esas relaciones se definen en la base de datos relacional subyacente. Si dichas relaciones no se hubiesen definido en la base de datos relacional subyacente, tendría que definirlas en la vista del origen de datos.  
+     Observe que las relaciones de clave principal y clave externa entre las tablas implicadas se establecen automáticamente porque dichas relaciones se definen en la base de datos relacional subyacente. Si dichas relaciones no se hubiesen definido en la base de datos relacional subyacente, tendría que definirlas en la vista del origen de datos.  
   
 6.  En el menú **Formato** , seleccione **Diseño automático**y haga clic en **Diagrama**.  
   
-7.  En la ventana Propiedades, cambie la **FriendlyName** propiedad de la **DimSalesReason** tabla `SalesReason`y, a continuación, cambie el **FriendlyName** propiedad de la **FactInternetSalesReason** tabla `InternetSalesReason`.  
+7.  En el ventana Propiedades, cambie la propiedad **FriendlyName** de la tabla **DimSalesReason** a `SalesReason`y, a continuación, cambie la propiedad **FriendlyName** de la tabla `InternetSalesReason` **FactInternetSalesReason** a.  
   
 8.  En el panel **Tablas** , expanda **InternetSalesReason (dbo.FactInternetSalesReason)** , haga clic en **SalesOrderNumber**y luego revise la propiedad **DataType** para esta columna de datos en la ventana Propiedades.  
   
      Observe que el tipo de datos para la columna **SalesOrderNumber** es un tipo de datos de cadena.  
   
-9. Revise los tipos de datos de las demás columnas de la `InternetSalesReason` tabla.  
+9. Revise los tipos de datos de las demás columnas de `InternetSalesReason` la tabla.  
   
      Observe que los datos de las otras dos columnas de esta tabla son de tipo numérico.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66078469"
   
      Observe que, para cada número de línea de cada pedido, un valor clave identifica el motivo de venta para la compra del artículo de la línea, como se muestra en la imagen siguiente.  
   
-     ![Valor para identificar el motivo de venta de las compras de la clave](../../2014/tutorials/media/l5-many-to-many-1.gif "clave, valor para identificar el motivo de venta para adquisiciones")  
+     ![Valor de clave para identificar el motivo de venta para las compras](../../2014/tutorials/media/l5-many-to-many-1.gif "Valor de clave para identificar el motivo de venta para las compras")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>Definir el grupo de medida intermedio  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078469"
   
 2.  Haga clic con el botón derecho en cualquier punto del panel **Medidas** y, después, haga clic en **Nuevo grupo de medida**. Para obtener más información, consulte [Crear medidas y grupos de medida en modelos multidimensionales](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
-3.  En el **nuevo grupo de medida** cuadro de diálogo, seleccione `InternetSalesReason` en el **seleccione una tabla en la vista del origen de datos** lista y, a continuación, haga clic en **Aceptar**.  
+3.  En el cuadro de diálogo **nuevo grupo** de medida `InternetSalesReason` , seleccione en la lista **Seleccione una tabla de la vista del origen de datos** y, a continuación, haga clic en **Aceptar**.  
   
      Observe que el grupo de medida **Internet Sales Reason** ahora aparece en el panel **Medidas** .  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66078469"
   
      En la ilustración siguiente se muestran las propiedades de la medida **Internet Sales Reason Count** .  
   
-     ![Las propiedades de la medida Internet Sales Reason Count](../../2014/tutorials/media/l5-many-to-many-2.gif "propiedades para la medida Internet Sales Reason Count")  
+     ![Propiedades de la medida Internet sales Reason Count](../../2014/tutorials/media/l5-many-to-many-2.gif "Propiedades de la medida Internet sales Reason Count")  
   
 ## <a name="defining-the-many-to-many-dimension"></a>Definir la dimensión de varios a varios  
   
@@ -99,27 +99,27 @@ ms.locfileid: "66078469"
   
 4.  En la página **Especificar información de origen** , compruebe que la vista del origen de datos [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 está seleccionada.  
   
-5.  En el **tabla principal** lista, seleccione `SalesReason`.  
+5.  En la lista **tabla principal** , seleccione `SalesReason`.  
   
 6.  En la lista **Columnas de clave** , compruebe que aparece **SalesReasonKey** .  
   
 7.  En la lista **Columna de nombre** , seleccione **SalesReasonName**.  
   
-8.  Haga clic en **Siguiente**.  
+8.  Haga clic en **Next**.  
   
-9. En la página **Seleccionar los atributos de la dimensión** , el atributo **Sales Reason Key** se selecciona automáticamente porque es el atributo clave. Active la casilla situada junto a la **Sales Reason Reason Type** atributo, cambie su nombre a `Sales Reason Type`y, a continuación, haga clic en **siguiente**.  
+9. En la página **Seleccionar los atributos de la dimensión** , el atributo **Sales Reason Key** se selecciona automáticamente porque es el atributo clave. Active la casilla situada junto al atributo **sales Reason Reason Type** , cambie su nombre a `Sales Reason Type`y, a continuación, haga clic en **siguiente**.  
   
 10. En la página **Finalización del asistente** , haga clic en **Finalizar** para crear la dimensión Sales Reason.  
   
 11. En el menú **Archivo** , haga clic en **Guardar todo**.  
   
-12. En el **atributos** panel del Diseñador de dimensiones para la **Sales Reason** dimensión, seleccione **Sales Reason Key**y, a continuación, cambie el **nombre**propiedad en la ventana Propiedades para `Sales Reason.`  
+12. En el panel **atributos** del diseñador de dimensiones para la dimensión **sales Reason** , seleccione **sales Reason Key**y, a continuación, cambie la propiedad **Name** en el ventana Propiedades a`Sales Reason.`  
   
-13. En el **jerarquías** panel del Diseñador de dimensiones, cree un **Sales Reasons** jerarquía de usuario que contiene el `Sales Reason Type` nivel y el **Sales Reason** nivel en ese orden.  
+13. En el panel jerarquías del diseñador de dimensiones, cree una jerarquía de usuario **sales reasons** que `Sales Reason Type` contenga el nivel y el nivel **sales Reason** , en ese orden.  
   
-14. En la ventana Propiedades, definir `All Sales Reasons` como el valor de la **AllMemberName** propiedad de la jerarquía Sales Reasons.  
+14. En el ventana Propiedades, defina `All Sales Reasons` como el valor de la propiedad **AllMemberName** de la jerarquía sales reasons.  
   
-15. Definir `All Sales Reasons` como el valor de **AttributeAllMemberName** propiedad de la dimensión Sales Reason.  
+15. Defina `All Sales Reasons` como el valor de la propiedad **AttributeAllMemberName** de la dimensión sales Reason.  
   
 16. Para agregar la dimensión que acaba de crear al cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] como una dimensión de cubo, cambie al **Diseñador de cubos**. En la pestaña **Estructura de cubo** , haga clic con el botón derecho en el panel **Dimensiones** y seleccione **Agregar dimensión de cubo**.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66078469"
   
      En la imagen siguiente se muestran los cambios realizados en el cuadro de diálogo **Definir relación** .  
   
-     ![Cuadro de diálogo Definir relación](../../2014/tutorials/media/l5-many-to-many-3.gif "cuadro de diálogo Definir relación")  
+     ![Definir relación (cuadro de diálogo)](../../2014/tutorials/media/l5-many-to-many-3.gif "Definir relación (cuadro de diálogo)")  
   
 5.  Haga clic en **Aceptar**.  
   
@@ -161,16 +161,16 @@ ms.locfileid: "66078469"
   
 5.  En el panel de metadatos, expanda sucesivamente **Customer**, **Location**, **Customer Geography**, **Members**, **All Customers**y **Australia**, haga clic con el botón derecho en **Queensland**y, después, haga clic en **Agregar a filtro**.  
   
-6.  Expanda cada miembro de la `Sales Reason Type` nivel para revisar los valores en dólares que están asociados a cada razón que un cliente de Queensland indicó para su compra de un [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] producto a través de Internet.  
+6.  Expanda cada miembro del `Sales Reason Type` nivel para revisar los valores en dólares que están asociados a cada razón que un cliente de Queensland dio por su compra [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] de un producto a través de Internet.  
   
      Observe que los totales que están asociados con cada motivo de ventas se suman y dan lugar a un valor superior a las ventas totales. Esto es así porque algunos clientes citaron varios motivos para su compra.  
   
      En la imagen siguiente se muestran los paneles **Filtro** y **Datos** del Diseñador de cubos.  
   
-     ![Paneles filtro y datos del Diseñador de cubos](../../2014/tutorials/media/l5-many-to-many-5.gif "paneles filtro y datos del Diseñador de cubos")  
+     ![Paneles de filtros y datos del diseñador de cubos](../../2014/tutorials/media/l5-many-to-many-5.gif "Paneles de filtros y datos del diseñador de cubos")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Definir la granularidad de las dimensiones en un grupo de medida](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+ [Definir la granularidad de las dimensiones en un grupo de medida](https://docs.microsoft.com/analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group)  
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con diagramas en el Diseñador de vistas del origen de datos &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   

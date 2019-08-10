@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a527f9fd3a1d41b0b41190952705a4066b402ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f5ad515251a783705e3f8e04c73674a8e978348
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63059444"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889988"
 ---
 # <a name="adomdnet-server-object-architecture"></a>Arquitectura de objetos de servidor ADOMD.NET
-  Los objetos de servidor ADOMD.NET son objetos auxiliares que pueden usarse para crear funciones definidas por el usuario (UDF) o procedimientos almacenados en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  Los objetos de servidor ADOMD.NET son objetos auxiliares que se pueden usar para crear funciones definidas por el usuario (UDF) o procedimientos [!INCLUDE[msCoName](../../includes/msconame-md.md)] almacenados en. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
 > [!NOTE]  
->  Para usar el **Microsoft.AnalysisServices.AdomdServer** espacio de nombres (y estos objetos), debe agregarse una referencia a msmgdsrv.dll en el proyecto de UDF o procedimiento almacenado.  
+>  Para usar el espacio de nombres **Microsoft. AnalysisServices. AdomdServer** (y estos objetos), se debe agregar una referencia a msmgdsrv. dll al proyecto o procedimiento almacenado de UDF.  
   
- ![Muestra las relaciones de objetos de servidor ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "muestra las relaciones de objetos de servidor ADOMD.NET")  
+ ![Muestra las relaciones de objeto en el servidor de ADOMD.net](https://docs.microsoft.com/analysis-services/analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "Muestra las relaciones de objeto en el servidor de ADOMD.net")  
 Modelo de objetos ADOMD.NET  
   
  La interacción con la jerarquía de objetos ADOMD.NET suele comenzar con uno o más de los objetos del nivel superior, como se describe en la tabla siguiente.  

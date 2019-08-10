@@ -12,43 +12,43 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81af61f5bc7af7b4b722067622918bd1c9cecd9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a18d9d54034ea98cf7a449c8f7147eaa54c65263
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62698954"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889446"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Descripción de la arquitectura OLAP de Microsoft
   Utilice estos temas para entender mejor las bases de datos multidimensionales de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y para planear su implementación en la solución de Business Intelligence.  
   
- ![Icono carpeta de archivos pequeños](../../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") **arquitectura lógica**  
- [Objetos de servidor &#40;Analysis Services - datos multidimensionales&#41;](../olap-logical/server-objects-analysis-services-multidimensional-data.md)  
+ ![Icono pequeño de carpeta de archivos](../../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Arquitectura lógica**  
+ [Objetos &#40;de servidor Analysis Services: datos multidimensionales&#41;](../olap-logical/server-objects-analysis-services-multidimensional-data.md)  
   
- [Objetos de dimensión &#40;Analysis Services - datos multidimensionales&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
+ [Objetos &#40;de dimensión Analysis Services: datos multidimensionales&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
   
- [Objetos de cubo &#40;Analysis Services - datos multidimensionales&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
+ [Objetos &#40;de cubo Analysis Services: datos multidimensionales&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
  [Más...](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
- ![Icono carpeta de archivos pequeños](../../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") **arquitectura física**  
+ ![Icono pequeño de carpeta de archivos](../../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Arquitectura física**  
  [Componentes de servidor del motor OLAP](olap-engine-server-components.md)  
   
- [Los cubos locales &#40;Analysis Services - datos multidimensionales&#41;](local-cubes-analysis-services-multidimensional-data.md)  
+ [Cubos locales &#40;Analysis Services-datos multidimensionales&#41;](local-cubes-analysis-services-multidimensional-data.md)  
   
  [Más...](understanding-microsoft-olap-physical-architecture.md)  
   
- ![Icono carpeta de archivos pequeños](../../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") **arquitectura de programación**  
+ ![Icono pequeño de carpeta de archivos](../../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Arquitectura de programación**  
  [Desarrollar con Objetos de administración de análisis &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  [Desarrollar aplicaciones con Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [Desarrollo con ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- ![Icono carpeta de archivos pequeños](../../../integration-services/media/filefolder-small.gif "archivo pequeño icono de carpeta") **consideraciones internacionales**  
- [Escenarios de globalización para Analysis Services multidimensional](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  
+ ![Icono pequeño de carpeta de archivos](../../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **Consideraciones internacionales**  
+ [Escenarios de globalización para Analysis Services multidimensional](https://docs.microsoft.com/analysis-services/globalization-scenarios-for-analysis-services-multiidimensional)  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia técnica &#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  
+ [Referencia &#40;técnica SSAS&#41;](../../powershell/technical-reference-ssas.md)  
   
   

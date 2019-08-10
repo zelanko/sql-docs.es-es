@@ -10,17 +10,17 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 726b5fa4295d68c5b74d4fb3cac711126a8e570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26f92fffadba9ceed03518d07fb3f27339ebff38
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078572"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888237"
 ---
 # <a name="defining-a-fact-relationship"></a>Definir una relación de hechos
   A veces, los usuarios desean poder dimensionar las medidas según los elementos de datos que se encuentran en la tabla de hechos o realizar consultas en la tabla de hechos sobre determinada información relacionada adicional, como números de factura o números de pedidos de compra relacionados con hechos de venta específicos. Cuando se define una dimensión basada en un elemento de tabla de hechos de este tipo, la dimensión se conoce como *dimensión de hechos*. Las dimensiones de hechos también se denominan dimensiones degeneradas. Las dimensiones de hechos son útiles para agrupar filas de tablas de hechos relacionadas, como todas las filas que están relacionadas con un número de factura determinado. Aunque esta información puede colocarse en una tabla de dimensiones independiente de la base de datos relacional, crear una tabla de dimensiones independiente para la información no supone ninguna ventaja, ya que la tabla de dimensiones crecerá al mismo ritmo que la tabla de hechos, y simplemente crearía datos duplicados y una complejidad innecesaria.  
   
- En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede determinar si los datos de las dimensiones de hechos deben duplicarse en una estructura de dimensiones MOLAP para incrementar el rendimiento de las consultas o si es necesario definir una dimensión de hechos como dimensión ROLAP para ahorrar espacio a costa del rendimiento de las consultas. Cuando se almacena una dimensión en modo de almacenamiento MOLAP, todos los miembros de la dimensión se almacenan en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en una estructura MOLAP muy comprimida, además de almacenarse en las particiones del grupo de medida. Al almacenar una dimensión con el modo de almacenamiento ROLAP, se almacena la definición de la dimensión en el MOLAP miembros de estructura de la dimensión propiamente dichos se consultan de la tabla de hechos relacionales subyacente en tiempo de consulta. El modo de almacenamiento adecuado se decide en función de la frecuencia con la que se consultan las dimensiones de hechos, el número de filas que devuelve una consulta típica, el rendimiento de la consulta y el costo de procesamiento. Para definir una dimensión como ROLAP, no es necesario almacenar todos los cubos que utilizan la dimensión con el mismo modo de almacenamiento ROLAP. El modo de almacenamiento de cada dimensión se puede configurar independientemente.  
+ En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede determinar si los datos de las dimensiones de hechos deben duplicarse en una estructura de dimensiones MOLAP para incrementar el rendimiento de las consultas o si es necesario definir una dimensión de hechos como dimensión ROLAP para ahorrar espacio a costa del rendimiento de las consultas. Cuando se almacena una dimensión en modo de almacenamiento MOLAP, todos los miembros de la dimensión se almacenan en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en una estructura MOLAP muy comprimida, además de almacenarse en las particiones del grupo de medida. Cuando se almacena una dimensión con el modo de almacenamiento ROLAP, solo se almacena la definición de la dimensión en la estructura MOLAP: los miembros de la dimensión se consultan desde la tabla de hechos relacional subyacente en el momento de la consulta. El modo de almacenamiento adecuado se decide en función de la frecuencia con la que se consultan las dimensiones de hechos, el número de filas que devuelve una consulta típica, el rendimiento de la consulta y el costo de procesamiento. Para definir una dimensión como ROLAP, no es necesario almacenar todos los cubos que utilizan la dimensión con el mismo modo de almacenamiento ROLAP. El modo de almacenamiento de cada dimensión se puede configurar independientemente.  
   
  Cuando define una dimensión de hechos, puede definir la relación entre la dimensión de hechos y el grupo de medida como relación de hechos. Las relaciones de hechos presentan estas limitaciones:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66078572"
   
 7.  En la lista **Columna de nombre** , seleccione **SalesOrderLineNumber**.  
   
-8.  Haga clic en **Siguiente**.  
+8.  Haga clic en **Next**.  
   
 9. En la página **Seleccionar tablas relacionadas** , desactive las casillas que aparecen al lado de todas las tablas y, después, haga clic en **Siguiente**.  
   
@@ -63,15 +63,15 @@ ms.locfileid: "66078572"
   
 13. En el menú **Archivo** , haga clic en **Guardar todo**.  
   
-14. En el **atributos** panel del Diseñador de dimensiones para la **Internet Sales Order Details** dimensión, seleccione **Sales Order Number**y, a continuación, cambie el  **Nombre** propiedad en la ventana Propiedades para `Item Description.`  
+14. En el panel **atributos** del diseñador de dimensiones para la dimensión **Internet sales Order** details, seleccione **sales Order Number**y, a continuación, cambie la propiedad **Name** en el ventana Propiedades a`Item Description.`  
   
-15. En el **NameColumn** propiedad de celda, haga clic en el botón Examinar **(...)** . En el cuadro de diálogo **Columna de nombre** , seleccione **Product** en la lista **Tabla de origen** , seleccione **EnglishProductName** en **Columna de origen**y, después, haga clic en **Aceptar**.  
+15. En la celda de la propiedad **NameColumn** , haga clic en el botón examinar **(...)** . En el cuadro de diálogo **Columna de nombre** , seleccione **Product** en la lista **Tabla de origen** , seleccione **EnglishProductName** en **Columna de origen**y, después, haga clic en **Aceptar**.  
   
 16. Agregue el atributo **Sales Order Number** a la dimensión arrastrando la columna **SalesOrderNumber** de la tabla **InternetSales** del panel **Vista del origen de datos** al panel **Atributos** .  
   
-17. Cambiar el **nombre** propiedad del nuevo **Sales Order Number** atribuir a `Order Number`y cambie el **OrderBy** propiedad **clave**.  
+17. Cambie la propiedad **nombre** del nuevo atributo **sales Order Number** por `Order Number`y cambie la propiedad **OrderBy** a **key**.  
   
-18. En el **jerarquías** panel, cree un **Internet Sales Orders** jerarquía de usuario que contiene el `Order Number` y **Item Description** niveles, en ese orden.  
+18. En el panel jerarquías, cree una jerarquía de usuarios de pedidos de ventas por `Order Number` **Internet** que contenga los niveles de **Descripción del elemento** y en ese orden.  
   
 19. En el panel **Atributos** , seleccione **Internet Sales Order Details**y luego revise el valor de la propiedad **StorageMode** en la ventana Propiedades.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "66078572"
   
      Observe que la dimensión de cubo **Internet Sales Order Details** está configurada automáticamente con una relación de hechos, como indica el icono único.  
   
-2.  Haga clic en el botón Examinar ( **...** ) en el **Item Description** celda en la intersección de la **Internet Sales** grupo de medida y la **Internet Sales Order Details** dimensión, Revise las propiedades de relación de hechos.  
+2.  Haga clic en el botón Examinar ( **...** ) de la celda **Descripción del elemento** , en la intersección del grupo de medida **Internet sales** y la dimensión **Internet sales Order** details, para revisar las propiedades de la relación de hechos.  
   
      Se abre el cuadro de diálogo **Definir relación** . Observe que no puede configurar ninguna de las propiedades.  
   
      En la imagen siguiente se muestran las propiedades de la relación de hechos en el cuadro de diálogo **Definir relación** .  
   
-     ![Cuadro de diálogo Definir relación](../../2014/tutorials/media/l5-factrelationship-2.gif "cuadro de diálogo Definir relación")  
+     ![Definir relación (cuadro de diálogo)](../../2014/tutorials/media/l5-factrelationship-2.gif "Definir relación (cuadro de diálogo)")  
   
 3.  Haga clic en **Cancelar**.  
   
@@ -115,10 +115,10 @@ ms.locfileid: "66078572"
   
      En la imagen siguiente se muestra el resultado de los pasos anteriores.  
   
-     ![El dimensionamiento de Internet Sales-Sales Amount](../../2014/tutorials/media/l5-factrelationship-3.gif "acotación de Internet Sales-Sales Amount")  
+     ![Dimensiones de ventas por Internet-importe de ventas](../../2014/tutorials/media/l5-factrelationship-3.gif "Dimensiones de ventas por Internet-importe de ventas")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Definir una relación de varios a varios](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [Definir una relación de varios a varios](https://docs.microsoft.com/analysis-services/lesson-5-3-defining-a-many-to-many-relationship)  
   
 ## <a name="see-also"></a>Vea también  
  [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

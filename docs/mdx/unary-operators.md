@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1bb0dcbd16fc96cb587718504de8fa43babd0db6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097364"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893553"
 ---
 # <a name="unary-operators"></a>Operadores unarios
 
@@ -40,9 +40,9 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- Además, MDX utiliza operadores unarios especiales para determinar la operación de agregación realizada por el [RollupChildren](../mdx/rollupchildren-mdx.md) función. Para obtener más información sobre estos operadores unarios especiales, consulte [agregar una agregación personalizada a una dimensión](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md).  
+ Además, MDX utiliza operadores unarios especiales para determinar la operación de agregación realizada por la función [RollupChildren](../mdx/rollupchildren-mdx.md) . Para obtener más información sobre estos operadores unarios especiales, vea [Agregar una agregación personalizada a una dimensión](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension).  
   
 ## <a name="see-also"></a>Vea también  
- [Operadores &#40;sintaxis de MDX&#41;](../mdx/operators-mdx-syntax.md)  
+ [Operadores &#40;sintaxis MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

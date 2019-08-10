@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Preparar el análisis de servicios de base de datos (Tutorial de minería de datos básicos) | Microsoft Docs'
+title: 'Lección 1: Preparar la base de datos de Analysis Services (tutorial básico de minería de datos) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,36 +10,36 @@ ms.assetid: 2a796977-6568-4705-9d27-86a9b36658c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15cd000f0bcf61743301d130709be29b327efcdc
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68185756"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892540"
 ---
-# <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Lección 1: Preparación de la base de datos de Analysis Services (Tutorial de minería de datos básicos)
-  Son un nuevo empleado de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] que se ha asignado la tarea con el diseño de una aplicación de business intelligence en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] espera aprovechar su [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] experiencia en minería de datos para detectar información interesante y procesable sobre las personas que han comprado bicicletas. Quieren que prevea qué clientes tienen más probabilidad de comprar una bicicleta en el futuro.  
+# <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Lección 1: Preparar la base de datos Analysis Services (tutorial básico de minería de datos)
+  Es un nuevo empleado de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] que se le ha encargado la tarea de diseñar una aplicación de Business Intelligence en. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]tiene la intención de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] aprovechar la experiencia de minería de datos para detectar información interesante y procesable sobre las personas que han comprado bicicletas. Quieren que prevea qué clientes tienen más probabilidad de comprar una bicicleta en el futuro.  
   
- Diseño de esta aplicación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comienza con la creación en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] de un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto según el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] plantilla de proyecto de modelado multidimensional y minería de datos. Después de crear un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tiene que definir uno o varios orígenes de datos. A continuación, definirá una vista de los metadatos, llama a un *vista del origen de datos*, desde tablas y vistas desde los orígenes de datos seleccionadas.  
+ El diseño de esta [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aplicación en comienza con la [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] creación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto basado [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la plantilla de proyecto para el modelado multidimensional y la minería de datos. Después de crear un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tiene que definir uno o varios orígenes de datos. A continuación, se define una vista de los metadatos, denominada *vista del origen de datos*, de las tablas y vistas seleccionadas de los orígenes de datos.  
   
  En esta lección, creará un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], definirá un solo origen de datos y agregará un subconjunto de tablas a una vista del origen de datos. Esta lección incluye las tareas siguientes:  
   
- [Creación de un análisis Services proyecto &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
+ [Creación de un tutorial &#40;básico de minería de datos de Analysis Services Project&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
- [Creación de un origen de datos &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [Tutorial de creación de &#40;un origen de datos básico de minería de datos&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
- [Creación de datos de una vista del origen &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
+ [Crear una vista &#40;del origen de datos tutorial básico de minería de datos&#41;](../../2014/tutorials/creating-a-data-source-view-basic-data-mining-tutorial.md)  
   
 ## <a name="first-task-in-lesson"></a>Primera tarea de la lección  
- [Creación de un análisis Services proyecto &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
+ [Creación de un tutorial &#40;básico de minería de datos de Analysis Services Project&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Creación de una estructura de distribución de correo directo &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Lección 2: Creación de una estructura &#40;de distribución de correo directo tutorial básico de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas del origen de datos en modelos multidimensionales](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Orígenes de datos admitidos &#40;SSAS Multidimensional&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
- [Generar proyectos de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Crear un proyecto de Analysis Services](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)  
+ [Vistas del origen de datos en modelos multidimensionales](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)   
+ [Orígenes de datos &#40;compatibles con SSAS multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)   
+ [Generar proyectos de Analysis Services &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [Crear un proyecto de Analysis Services](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)  
   
   

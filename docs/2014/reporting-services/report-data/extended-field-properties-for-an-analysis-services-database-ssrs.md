@@ -10,19 +10,19 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b601c08633ffe98d6b6005aa3dc34c773810ba3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107289"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892030"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS)
-  La extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo `Value` e `IsMissing` en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Puede incluir valores de propiedad de campo extendidas en el informe, escriba expresiones que especifiquen por su nombre usa el método integrado `Fields` colección.  
+  La extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo `Value` e `IsMissing` en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Puede incluir valores de propiedades de campo extendidas en el informe escribiendo expresiones que las especifiquen por su nombre mediante la `Fields` colección integrada.  
   
  Las propiedades extendidas incluyen propiedades predefinidas y propiedades personalizadas. Las propiedades predefinidas son propiedades comunes para varios orígenes de datos que se asignan a nombres de propiedades de campo específicos y a las que se tiene acceso por su nombre mediante la colección `Fields` integrada. Las propiedades personalizadas son específicas de cada proveedor de datos y se puede tener acceso a ellas mediante la colección `Fields` integrada, pero solo mediante la sintaxis que usa el nombre de la propiedad extendida como una cadena.  
   
- Al usar el diseñador de consultas MDX para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo gráfico para definir la consulta, se agrega automáticamente un conjunto predefinido de propiedades de celda y propiedades de dimensión a la consulta MDX. Solo puede usar las propiedades extendidas que se indican de forma específica en la consulta MDX del informe. En función del informe, puede que desee modificar el texto del comando MDX predeterminado para incluir otras propiedades de dimensión o personalizadas definidas en el cubo. Para más información sobre los campos extendidos disponibles en los orígenes de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Crear y usar los valores de propiedad &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md).  
+ Al usar el diseñador de consultas MDX para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo gráfico para definir la consulta, se agrega automáticamente un conjunto predefinido de propiedades de celda y propiedades de dimensión a la consulta MDX. Solo puede usar las propiedades extendidas que se indican de forma específica en la consulta MDX del informe. En función del informe, puede que desee modificar el texto del comando MDX predeterminado para incluir otras propiedades de dimensión o personalizadas definidas en el cubo. Para más información sobre los campos extendidos disponibles en los orígenes de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea [Crear y usar los valores de propiedad &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/creating-and-using-property-values-mdx).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Trabajar con propiedades de campo en un informe  
  Las propiedades de campo extendidas incluyen propiedades predefinidas y propiedades específicas del proveedor de datos. Las propiedades de campo no aparecen con la lista de campos del panel **Datos de informe** , aunque estén en la consulta creada para un conjunto de datos; por tanto, las propiedades de campo no se pueden arrastrar a la superficie de diseño del informe. En su lugar, debe arrastrar el campo al informe y, después, cambiar la propiedad `Value` del campo a la propiedad que se desee usar. Por ejemplo, si ya se ha dado formato a los datos de celda de un cubo, puede usar la propiedad de campo FormattedValue con la siguiente expresión: `=Fields!FieldName.FormattedValue`.  
@@ -46,7 +46,7 @@ ms.locfileid: "66107289"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Especifica el valor de los datos del campo.|  
 |`IsMissing`|`Boolean`|Indica si se ha encontrado el campo en el conjunto de datos resultante.|  
-|`UniqueName`|`String`|Devuelve el nombre completo de un nivel. Por ejemplo, el `UniqueName` el valor de un empleado podría ser *[Employee]. [ Departamento del empleado]. [Departamento]. & [ventas]. & [director de ventas de Norteamérica]. & [272]* .|  
+|`UniqueName`|`String`|Devuelve el nombre completo de un nivel. Por ejemplo, el `UniqueName` valor de un empleado podría ser *[empleado]. [ Departamento de empleados]. [Departamento]. & [sales]. & [Director de ventas de Norteamérica]. & [272]* .|  
 |`BackgroundColor`|`String`|Devuelve el color de fondo del campo, definido en la base de datos.|  
 |`Color`|`String`|Devuelve el color de primer plano del elemento, definido en la base de datos.|  
 |`FontFamily`|`String`|Devuelve el nombre de la fuente del elemento, definido en la base de datos.|  
@@ -54,7 +54,7 @@ ms.locfileid: "66107289"
 |`FontWeight`|`String`|Devuelve el peso de la fuente del elemento, definido en la base de datos.|  
 |`FontStyle`|`String`|Devuelve el estilo de la fuente del elemento, definido en la base de datos.|  
 |`TextDecoration`|`String`|Devuelve el formato de texto especial del elemento, definido en la base de datos.|  
-|`FormattedValue`|`String`|Devuelve un valor con formato para una medida o cifra clave. Por ejemplo, el `FormattedValue` propiedad **Sales Amount Quota** devuelve un formato de moneda similar a $1,124,400.00.|  
+|`FormattedValue`|`String`|Devuelve un valor con formato para una medida o cifra clave. Por ejemplo, la `FormattedValue` propiedad de la **cuota sales amount** devuelve un formato de moneda como $1.124.400,00.|  
 |`Key`|`Object`|Devuelve la clave de un nivel.|  
 |`LevelNumber`|`Integer`|En jerarquías de elementos primarios y secundarios, devuelve el número de nivel o dimensión.|  
 |`ParentUniqueName`|`String`|En jerarquías de elementos primarios y secundarios, devuelve el nombre completo del nivel primario.|  

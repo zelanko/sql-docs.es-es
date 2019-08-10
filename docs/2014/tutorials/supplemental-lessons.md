@@ -10,12 +10,12 @@ ms.assetid: 2018456f-b4a6-496c-89fb-043c62d8b82e
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 70640df678dcd6ee48145912504e542d62e2ae75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a6565fb4b9736fa710054582a2293d6b102a0da
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62717267"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891319"
 ---
 # <a name="supplemental-lessons"></a>Lecciones complementarias
   Esta sección proporciona información adicional y lecciones sobre cómo utilizar las características tabulares avanzadas del modelo.  
@@ -28,6 +28,6 @@ ms.locfileid: "62717267"
 |Lección|Tiempo para completar la lección|  
 |------------|----------------------|  
 |[Implementar seguridad dinámica utilizando filtros de filas](../../2014/tutorials/implement-dynamic-security-by-using-row-filters.md)|30|  
-|[Configurar las propiedades de notificación para informes de Power View](../analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)|30|  
+|[Configurar las propiedades de notificación para informes de Power View](https://docs.microsoft.com/analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports)|30|  
   
   

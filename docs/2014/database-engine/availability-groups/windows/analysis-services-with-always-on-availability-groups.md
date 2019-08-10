@@ -10,12 +10,12 @@ ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791886"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889224"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
   El grupo de disponibilidad AlwaysOn es una colección predefinida de bases de datos relacionales de SQL Server que conmuta por error conjuntamente cuando las condiciones desencadenan una conmutación por error en una base de datos, redirigiendo las solicitudes a una base de datos reflejada en otra instancia del mismo grupo de disponibilidad. Si utiliza grupos de disponibilidad como solución de alta disponibilidad, puede usar una base de datos de ese grupo como origen de datos en una solución tabular o multidimensional de Analysis Services. Todas las operaciones de Analysis Services siguientes funcionan de la manera esperada cuando se utiliza una base de datos de disponibilidad: procesando o importando datos, consultando datos relacionales directamente (utilizando el modo DirectQuery o almacenamiento ROLAP) y con reescritura.  
@@ -115,7 +115,7 @@ ms.locfileid: "62791886"
   
      Luego, cree un origen de datos en un modelo de Analysis Services que utilice una base de datos del grupo recién configurado.  
   
-##  <a name="bkmk_ssasAODB"></a> Crear un origen de datos de Analysis Services con una base de datos de disponibilidad AlwaysOn  
+##  <a name="bkmk_ssasAODB"></a>Creación de un origen de datos de Analysis Services mediante una base de datos de disponibilidad AlwaysOn  
  En esta sección se explica cómo crear un origen de datos de Analysis Services que se conecta a una base de datos en un grupo de disponibilidad. Puede utilizar estas instrucciones para configurar una conexión a una replicación primaria (valor predeterminado) o a una replicación secundaria legible que se configure en función de los pasos de la sección anterior. La configuración de AlwaysOn, más las propiedades de conexión establecidas en el cliente, determinarán si se usa una replicación primaria o secundaria.  
   
 1.  En [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)], en el proyecto Modelo de minería de datos y multidimensional de Analysis Services, haga clic con el botón derecho en **Orígenes de datos** y seleccione **Nuevo origen de datos**. haga clic en **Nuevo** para crear un origen de datos nuevo.  
@@ -130,7 +130,7 @@ ms.locfileid: "62791886"
   
      Para determinar el nombre del agente del grupo de disponibilidad, puede solicitarlo a un administrador de bases de datos o conectarse a una instancia del grupo de disponibilidad y ver su configuración de disponibilidad AlwaysOn. En la captura de pantalla siguiente, la escucha de grupo de disponibilidad es **AdventureWorks2**.  
   
-     ![Carpeta de disponibilidad AlwaysOn en Management Studio](../../media/ssas-alwaysoninfoinssms.png "carpeta de disponibilidad AlwaysOn en Management Studio")  
+     ![Carpeta de disponibilidad de AlwaysOn en Management Studio](../../media/ssas-alwaysoninfoinssms.png "Carpeta de disponibilidad de AlwaysOn en Management Studio")  
   
 4.  Aún en el Administrador de conexiones, haga clic en **todos** en el panel de navegación de la izquierda para ver la cuadrícula de propiedades del proveedor de datos.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "62791886"
   
  Los errores persistentes es más probable uqe se deban a un problema de configuración. Puede intentar volver a ejecutar el script T-SQL para solucionar los problemas de la lista de enrutamiento, las direcciones URL de enrutamiento de solo lectura y el intento de lectura en la réplica secundaria. También debe comprobar que la replicación primaria permite todas las conexiones.  
   
-##  <a name="bkmk_writeback"></a> Reescritura al usar una base de datos de disponibilidad AlwaysOn  
+##  <a name="bkmk_writeback"></a>Reescritura al usar una base de datos de disponibilidad AlwaysOn  
  La reescritura es una característica de Analysis Services que admite realizar análisis Y si en Excel. También es de utilidad para tareas de presupuesto y previsión en aplicaciones personalizadas.  
   
  La compatibilidad con la reescritura requiere una conexión de cliente READWRITE. En Excel, si intenta reescribir en una conexión de solo lectura, se producirá el error siguiente: "No se pudieron recuperar datos del origen de datos externo". "No se pudieron recuperar datos del origen de datos externo".  
@@ -218,9 +218,9 @@ ms.locfileid: "62791886"
   
 ## <a name="see-also"></a>Vea también  
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [Secundarias activas: Las réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [Crear un origen de datos &#40;SSAS multidimensional&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Habilitar reescritura en la dimensión](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [Secundarias activas: Réplicas secundarias &#40;legibles grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Directivas de AlwaysOn para problemas operativos con &#40;grupos de disponibilidad AlwaysOn SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Crear un origen de datos &#40;SSAS multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Habilitar reescritura en la dimensión](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

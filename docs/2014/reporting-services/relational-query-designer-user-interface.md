@@ -1,5 +1,5 @@
 ---
-title: Interfaz de usuario del Diseñador de consultas relacionales | Microsoft Docs
+title: Interfaz de usuario del diseñador de consultas relacionales | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b39d9d685b158b32dc504229221e6089e6b3e41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45f4b0b09c5f99a1dc561fdba40a659b7f0012d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107988"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891137"
 ---
 # <a name="relational-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas relacionales
   El Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] proporciona tanto un diseñador gráfico de consultas como un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos que deben recuperarse de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  
@@ -36,11 +36,11 @@ ms.locfileid: "66107988"
   
  La figura siguiente muestra el diseñador gráfico de consultas cuando se utiliza con tablas o vistas.  
   
- ![Diseñador gráfico de consultas](../analysis-services/media/rsqd-relational-graphical.gif "Diseñador gráfico de consultas")  
+ ![Diseñador gráfico de consultas](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "Diseñador gráfico de consultas")  
   
  La figura siguiente muestra el diseñador gráfico de consultas cuando se utiliza con funciones con valores de tabla o procedimientos almacenados.  
   
- ![Procedimiento almacenado en un diseñador gráfico de consultas](../analysis-services/media/rs-relational-graphical-sp.gif "Procedimiento almacenado en un diseñador gráfico de consultas")  
+ ![Procedimiento almacenado en un diseñador gráfico de consultas](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "Procedimiento almacenado en un diseñador gráfico de consultas")  
   
  En la siguiente tabla se describe la función de cada panel.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107988"
   
  Los agregados proporcionan resúmenes de datos y los datos se agrupan para admitir el agregado que ofrece los datos de resumen. Al utilizar un agregado en la consulta, los otros campos que devuelve se agrupan automáticamente y la consulta incluye la cláusula de SQL GROUP BY. Puede resumir los datos sin agregar un agregado utilizando solo la opción **Agrupar por** en la lista **Grupo y agregado** . Muchos de los agregados incluyen una versión que utiliza la palabra clave DISTINCT. Al incluir DISTINCT, se eliminan los valores duplicados.  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[tsql](../includes/tsql-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]usa [!INCLUDE[tsql](../includes/tsql-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] usa.[!INCLUDE[DWsql](../includes/dwsql-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
   
  Para obtener más información sobre [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "66107988"
 |Botón|Descripción|  
 |------------|-----------------|  
 |**Editar como texto**|Cambie al diseñador de consultas basado en texto para ver la consulta generada automáticamente o para modificar la consulta.|  
-|**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivo .sql y .rdl.|  
+|**Importaciónación**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivo .sql y .rdl.|  
 |**Ejecutar consulta**|Ejecuta la consulta. El panel Resultados de la consulta muestra el conjunto de resultados.|  
   
 ## <a name="understanding-automatically-generated-queries"></a>Descripción de las consultas generadas automáticamente  

@@ -5,16 +5,16 @@ description: Use PySpark para entrenar y crear modelos de aprendizaje automátic
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e139e76e5f5f756b57a9366cc896716cda58959
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 91c9dad3c87b9c43a611293a549f782b85beec5c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811209"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893966"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Creación, exportación y puntuación de modelos de aprendizaje automático de Spark en clústeres de macrodatos de SQL Server
 
@@ -41,7 +41,7 @@ Para ejecutar el ejemplo, también debe cumplir los siguientes requisitos previo
 
 En este ejemplo, los datos de censo (**AdultCensusIncome. csv**) se usan para crear un modelo de canalización de aprendizaje automático de Spark.
 
-1. Use el archivo [mleap_sql_test/Setup. sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh) para descargar el conjunto de datos de Internet y colocarlo en HDFS en el clúster de macrodatos de SQL Server. Esto permite que Spark tenga acceso a él.
+1. Use el archivo [mleap_sql_test/Setup. sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/setup.sh) para descargar el conjunto de datos de Internet y colocarlo en HDFS en el clúster de macrodatos de SQL Server. Esto permite que Spark tenga acceso a él.
 
 1. A continuación, descargue el Notebook de ejemplo [train_score_export_ml_models_with_spark. ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb). Desde una línea de comandos de PowerShell o Bash, ejecute el siguiente comando para descargar el cuaderno:
 
@@ -56,15 +56,15 @@ En este ejemplo, los datos de censo (**AdultCensusIncome. csv**) se usan para cr
 Los datos se leen primero en Spark y se dividen en conjuntos de datos de entrenamiento y de prueba. A continuación, el código entrena un modelo de canalización con los datos de entrenamiento. Por último, exporta el modelo a un conjunto de MLeap.
 
 > [!TIP]
-> También puede revisar o ejecutar el código de Python asociado a estos pasos fuera del cuaderno en el archivo [mleap_sql_test/mleap_pyspark. py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py) .
+> También puede revisar o ejecutar el código de Python asociado a estos pasos fuera del cuaderno en el archivo [mleap_sql_test/mleap_pyspark. py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_pyspark.py) .
 
 ## <a name="model-scoring-with-sql-server"></a>Puntuación del modelo con SQL Server
 
 Ahora que el modelo de canalización de aprendizaje automático de Spark se encuentra en un formato común de agrupación de [MLeap](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) de serialización, puede puntuar el modelo en Java sin la presencia de Spark. 
 
-En este ejemplo se utiliza la [extensión del lenguaje Java](../language-extensions/language-extensions-overview.md) en SQL Server. Para puntuar el modelo en SQL Server, primero debe compilar una aplicación Java que pueda cargar el modelo en Java y puntuarlo. Puede encontrar el código de ejemplo para esta aplicación de Java en la [carpeta MSSQL-mleap-App](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app).
+En este ejemplo se utiliza la [extensión del lenguaje Java](../language-extensions/language-extensions-overview.md) en SQL Server. Para puntuar el modelo en SQL Server, primero debe compilar una aplicación Java que pueda cargar el modelo en Java y puntuarlo. Puede encontrar el código de ejemplo para esta aplicación de Java en la [carpeta MSSQL-mleap-App](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app).
 
-Después de generar el ejemplo, puede usar Transact-SQL para llamar a la aplicación Java y puntuar el modelo con una tabla de base de datos. Esto puede verse en el archivo de código fuente [mleap_sql_test/mleap_sql_tests. py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py) .
+Después de generar el ejemplo, puede usar Transact-SQL para llamar a la aplicación Java y puntuar el modelo con una tabla de base de datos. Esto puede verse en el archivo de código fuente [mleap_sql_test/mleap_sql_tests. py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_sql_tests.py) .
 
 ## <a name="next-steps"></a>Pasos siguientes
 

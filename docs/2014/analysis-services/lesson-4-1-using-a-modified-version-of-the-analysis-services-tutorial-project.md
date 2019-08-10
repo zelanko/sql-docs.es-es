@@ -1,5 +1,5 @@
 ---
-title: Usar una versión modificada del análisis de proyecto del Tutorial de servicios | Microsoft Docs
+title: Usar una versión modificada del proyecto Analysis Services tutorial | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 43ec549444fd108dbee9e53518a4e996b281b46b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42116af318d6549b5b70b190aaf5f24b551c2069
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078813"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888392"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Usar una versión modificada del proyecto Tutorial de Analysis Services
   Las lecciones restantes de este tutorial se basan en una versión mejorada del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que completó en las tres primeras lecciones. Se han agregado tablas y cálculos con nombre adicionales a la vista del origen de datos **Adventure Works DW 2012** , se han agregado más dimensiones al proyecto y estas nuevas dimensiones se han agregado al cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Además, se ha agregado un segundo grupo de medidas, que contiene medidas de una segunda tabla de hechos. Este proyecto mejorado le permitirá continuar aprendiendo a agregar funciones adicionales a la aplicación de Business Intelligence sin necesidad de tener que repetir las técnicas ya aprendidas.  
@@ -40,7 +40,7 @@ ms.locfileid: "66078813"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>Cargar y procesar el proyecto mejorado  
   
-1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el **archivo** menú, haga clic en **Cerrar solución** para cerrar los archivos que no va a usar.  
+1.  En [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **archivo** , haga clic en **cerrar solución** para cerrar los archivos que no va a usar.  
   
 2.  En el menú **Archivo** , seleccione **Abrir**y haga clic en **Proyecto o solución**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66078813"
 ### <a name="data-source-view"></a>Vista del origen de datos  
  La vista del origen de datos del proyecto mejorado contiene una tabla de hechos adicional y cuatro tablas de dimensiones adicionales de la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
- Tenga en cuenta que con diez tablas en los datos de origen de la vista, el \<todas las tablas > se está convirtiendo en diagrama de gran volumen. Esto dificulta la comprensión de las relaciones entre las tablas y la localización de tablas específicas. Para resolver este problema, las tablas están organizadas en dos diagramas lógicos, el diagrama **Internet Sales** y el diagrama **Reseller Sales** . Estos diagramas están organizados cada uno en una única tabla de hechos. Crear diagramas lógicos permite ver y utilizar un subconjunto específico de tablas de la vista del origen de datos en lugar de ver siempre todas las tablas y sus relaciones en un único diagrama.  
+ Observe que, con diez tablas en la vista del origen de \<datos, el diagrama de todas las tablas > está llenando. Esto dificulta la comprensión de las relaciones entre las tablas y la localización de tablas específicas. Para resolver este problema, las tablas están organizadas en dos diagramas lógicos, el diagrama **Internet Sales** y el diagrama **Reseller Sales** . Estos diagramas están organizados cada uno en una única tabla de hechos. Crear diagramas lógicos permite ver y utilizar un subconjunto específico de tablas de la vista del origen de datos en lugar de ver siempre todas las tablas y sus relaciones en un único diagrama.  
   
 #### <a name="internet-sales-diagram"></a>Diagrama Internet Sales  
  El diagrama **Internet Sales** contiene las tablas que están relacionadas con la venta directa de productos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] a los clientes a través de Internet. Las tablas del diagrama son las cuatro tablas de dimensiones y la tabla de hechos que agregó a la vista del origen de datos **Adventure Works DW 2012** en la Lección 1. Estas tablas son las siguientes:  
@@ -117,6 +117,6 @@ ms.locfileid: "66078813"
  [Definir propiedades de atributo primario en una jerarquía de elementos primarios y secundarios](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
 ## <a name="see-also"></a>Vea también  
- [Implementar un proyecto de Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+ [Implementar un proyecto de Analysis Services](https://docs.microsoft.com/analysis-services/lesson-2-5-deploying-an-analysis-services-project)  
   
   

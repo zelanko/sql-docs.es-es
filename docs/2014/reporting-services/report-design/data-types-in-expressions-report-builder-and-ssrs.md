@@ -10,12 +10,12 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66106064"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891866"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de datos en expresiones (Generador de informes y SSRS)
   La finalidad de los tipos de datos es permitir el almacenamiento y el procesamiento de los datos de manera eficaz. Los tipos de datos más comunes incluyen texto (también conocido como cadenas), números (con y sin decimales), fechas y horas, e imágenes. Los valores de un informe deben ser del tipo de datos de lenguaje RDL (Report Definition Language). Puede dar formato a un valor según sus preferencias al mostrarlo en un informe. Por ejemplo, un campo que representa valores de moneda se almacena en la definición del como un número de punto flotante y mostrarse en uno y otro formato en función de la propiedad de formato elegida.  
@@ -30,12 +30,12 @@ ms.locfileid: "66106064"
   
 |Tipo RDL|Tipos de CLR|  
 |--------------|---------------|  
-|String|Predeterminado: String<br /><br /> Chart, GUID, Timespan|  
+|Cadena|Predeterminado: Cadena<br /><br /> Chart, GUID, Timespan|  
 |Boolean|Predeterminado: Boolean|  
-|Integer|Predeterminado: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|Entero|Predeterminado: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
 |DateTime|Predeterminado: DateTime<br /><br /> DateTimeOffset|  
-|float|Predeterminado: Double<br /><br /> Single, Decimal|  
-|Binario|Predeterminado: Byte[]|  
+|Float|Predeterminado: Double<br /><br /> Single, Decimal|  
+|Binary|Predeterminado: Byte[]|  
 |Variant|Cualquiera de los anteriores excepto Byte []|  
 |VariantArray|Matriz de Variant|  
 |Serializable|Variant o tipos marcados con Serializable o que implementan ISerializable.|  
@@ -118,7 +118,7 @@ ms.locfileid: "66106064"
   
          Si la cadena `MyDateTime.Value` tiene un ajuste UTC, la función `DateTime.Parse` primero ajusta de acuerdo con el ajuste UTC (7 a.m. - [`+08:00`] a la hora UTC de las 11 p.m. de la noche anterior). A continuación, la función `DateTime.Parse` aplica el ajuste UTC del servidor de informes local y, si fuera necesario, vuelve a ajustar la hora para adaptarla al horario de verano. Por ejemplo, en Redmond, Washington, el ajuste de la hora local adaptado al horario de verano es `[-07:00]`o 7 horas antes de las 11 p.m. El resultado es el siguiente `DateTime` valor: `2007-07-06 04:07:07 PM` (6 de julio de 2007 a las 4:07 p.m.).  
   
- Para obtener más información sobre cómo convertir cadenas a `DateTime` tipos de datos, vea [analizar cadenas de fecha y hora](https://go.microsoft.com/fwlink/?LinkId=89703), [aplicar formato de fecha y hora para una referencia cultural concreta](https://go.microsoft.com/fwlink/?LinkId=89704), y [elección Entre DateTime, DateTimeOffset y TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) en MSDN.  
+ Para obtener más información sobre cómo convertir `DateTime` cadenas en tipos de datos, vea [analizar cadenas de fecha y hora](https://go.microsoft.com/fwlink/?LinkId=89703), [aplicar formato de fecha y hora para una referencia cultural específica](https://go.microsoft.com/fwlink/?LinkId=89704)y [elegir entre DateTime, DateTimeOffset y TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) en Sólo.  
   
 -   Agregue un nuevo campo calculado al conjunto de datos de informe que use una expresión para extraer partes de la cadena. Para obtener más información, consulte [Agregar, editar y actualizar campos en el panel Datos de informe &#40;Generador de informes y SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66106064"
   
  Para obtener más información sobre los tipos de datos de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Tipos de datos &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) y [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql) en los [Libros en pantalla de SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
- Para obtener más en losformación sobre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vea [Tipos de datos en Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) en los [SQL Server Books Onlen lose](https://go.microsoft.com/fwlink/?linkid=120955).  
+ Para obtener más en losformación sobre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vea [Tipos de datos en Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) en los [SQL Server Books Onlen lose](https://go.microsoft.com/fwlink/?linkid=120955).  
   
 ## <a name="see-also"></a>Vea también  
  [Aplicar formato a los elementos de informe &#40;Generador de informes y SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  

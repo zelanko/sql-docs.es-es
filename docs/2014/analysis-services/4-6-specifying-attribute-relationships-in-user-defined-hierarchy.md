@@ -1,5 +1,5 @@
 ---
-title: Especificar relaciones de atributo entre atributos en una jerarquía definida por el usuario | Microsoft Docs
+title: Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 490d9f6e1cdaeab274290649d2bb7f5c691595ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe6b022300a873ab7e7e747265c96a3abf43ea59
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063030"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887469"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario
   Como ya ha visto en este tutorial, es posible organizar jerarquías de atributo en niveles dentro de jerarquías de usuario para proporcionar rutas de navegación a los usuarios de un cubo. Una jerarquía de usuario puede representar una jerarquía natural, como una ciudad, un estado o un país, o simplemente representar una ruta de navegación, como el nombre de un empleado, su cargo y el nombre de departamento. Para el usuario que navega por una jerarquía, estos dos tipos de jerarquía de usuario son el mismo.  
@@ -181,7 +181,7 @@ ms.locfileid: "66063030"
 14. En el menú **Generar** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic en **Implementar Tutorial de Analysis Services**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Definir las propiedades de miembro desconocido y de procesamiento de valores NULL](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Definir las propiedades de miembro desconocido y de procesamiento de valores NULL](https://docs.microsoft.com/analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties)  
   
 ## <a name="see-also"></a>Vea también  
  [Definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md)   

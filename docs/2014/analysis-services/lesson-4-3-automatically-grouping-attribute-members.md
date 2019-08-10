@@ -10,12 +10,12 @@ ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c521a3faf0c11cfab7bab337226de647e27cd060
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 568cb46a17ac29cabe45b79212400fd020be84c3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078650"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888415"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Agrupar miembros de atributo automáticamente
   Cuando se examina un cubo, generalmente se dimensionan los miembros de una jerarquía de atributo según los miembros de otra jerarquía de atributo. Por ejemplo, puede agrupar las ventas de cliente por ciudad, producto comprado o género. No obstante, con determinados tipos de atributo, resulta útil hacer que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree automáticamente grupos de miembros de atributos en función de la distribución de los miembros en una jerarquía de atributo. Por ejemplo, puede hacer que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree grupos de valores de ingresos anuales de los clientes. Al hacerlo, los usuarios que examinen la jerarquía de atributo verán los nombres y los valores de los grupos en lugar de los miembros propiamente dichos. Esto limita el número de niveles que se presentan a los usuarios, lo que puede resultar más útil para el análisis.  
@@ -44,11 +44,11 @@ ms.locfileid: "66078650"
   
 4.  En el panel **Atributos** , seleccione **Yearly Income**.  
   
-5.  En la ventana Propiedades, cambie el valor para el **DiscretizationMethod** propiedad **automática** y cambie el valor de la **DiscretizationBucketCount** propiedad para `5`.  
+5.  En el ventana Propiedades, cambie el valor de la propiedad **DiscretizationMethod** a **automático** y cambie el valor de la propiedad **DiscretizationBucketCount** a `5`.  
   
      En la imagen siguiente se muestran las propiedades modificadas para **Yearly Income**.  
   
-     ![Las propiedades modificadas de Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "propiedades modificadas de Yearly Income")  
+     ![Propiedades modificadas para ingresos anuales](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Propiedades modificadas para ingresos anuales")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Agrupar miembros de la jerarquía de atributo en la dimensión Employee  
   
@@ -62,11 +62,11 @@ ms.locfileid: "66078650"
   
 4.  En el panel **Atributos** , seleccione **Sick Leave Hours**.  
   
-5.  En la ventana Propiedades, cambie el valor de la **DiscretizationMethod** propiedad **clústeres** y cambie el valor de la **DiscretizationBucketCount** propiedad `5`.  
+5.  En el ventana Propiedades, cambie el valor de la propiedad **DiscretizationMethod** a **clusters** y cambie el valor de la propiedad **DiscretizationBucketCount** a `5`.  
   
 6.  En el panel **Atributos** , seleccione **Vacation Hours**.  
   
-7.  En la ventana Propiedades, cambie el valor para el **DiscretizationMethod** propiedad **Equalareas** y cambie el valor de la **DiscretizationBucketCount** propiedad para `5`.  
+7.  En el ventana Propiedades, cambie el valor de la propiedad **DiscretizationMethod** a **áreas iguales** y cambie el valor de la propiedad **DiscretizationBucketCount** a `5`.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Examinar las jerarquías de atributo modificadas  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66078650"
   
      En la imagen siguiente se muestran las ventas dimensionadas por horas de baja por enfermedad de los empleados.  
   
-     ![Horas de baja Sales con dimensión por baja por enfermedad del empleado](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Sales con dimensión por baja por enfermedad del empleado deje horas")  
+     ![Ventas con dimensiones por horas de baja por enfermedad del empleado](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Ventas con dimensiones por horas de baja por enfermedad del empleado")  
   
 10. Elimine la jerarquía de atributo **Sick Leave Hours** del área de columnas del panel **Datos** .  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66078650"
      Observe que ahora hay tres grupos de miembros del atributo **Vacation Hours** que tienen valores de ventas para productos. Los otros siete grupos contienen miembros sin datos de ventas.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Ocultar y deshabilitar jerarquías de atributo](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [Ocultar y deshabilitar jerarquías de atributo](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
   
 ## <a name="see-also"></a>Vea también  
  [Agrupar miembros de atributos &#40;discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  

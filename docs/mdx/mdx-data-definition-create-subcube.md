@@ -1,5 +1,5 @@
 ---
-title: Instrucción CREATE SUBCUBE (MDX) | Microsoft Docs
+title: CREATE subcube (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d9726d654427d394a5a43712ce70dc4c98a5548f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038267"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887439"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definición de datos de MDX: SUBCUBE
 
@@ -35,7 +35,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Expresión MDX (Expresiones multidimensionales) válida SELECT que no contiene cláusulas WITH, NON EMPTY o HAVING y no solicita propiedades de dimensión o celda.  
   
- Consulte [instrucción SELECT &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) para obtener una explicación detallada de sintaxis en instrucciones Select y **NON VISUAL** cláusula.  
+ Vea [instrucción &#40;Select de&#41; MDX](../mdx/mdx-data-manipulation-select.md) para obtener una explicación detallada de la sintaxis de las instrucciones SELECT y la cláusula Nonvisual.  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando se excluyen los miembros predeterminados de la definición de un subcubo, las coordenadas cambian a su vez. Para los atributos que pueden agregarse, el miembro predeterminado se mueve al miembro [Todos]. Para los atributos que no pueden agregarse, el miembro predeterminado se mueve a un miembro que existe en el subcubo. En la tabla siguiente se ofrece un ejemplo de subcubo y las combinaciones de miembros predeterminados.  
@@ -43,19 +43,19 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |Miembro predeterminado original|Puede agregarse|Subselección|Miembro predeterminado revisado|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|Sí|{Time.Year.2003}|Sin cambios|  
-|Time.Year. [1997]|Sí|{Time.Year.2003}|Time.Year.All|  
-|Time.Year. [1997]|Sin|{Time.Year.2003}|Time.Year. [2003]|  
-|Time.Year. [1997]|Sí|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|Time.Year. [1997]|Sin|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] o<br /><br /> Time.Year.[2004]|  
+|Time. Year. [1997]|Sí|{Time.Year.2003}|Time.Year.All|  
+|Time. Year. [1997]|Sin|{Time.Year.2003}|Time. Year. [2003]|  
+|Time. Year. [1997]|Sí|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Time. Year. [1997]|Sin|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] o<br /><br /> Time.Year.[2004]|  
   
  Los miembros [Todos] siempre existirán en un subcubo.  
   
  Los objetos de sesión creados en el contexto de un área de subcubo se quitan cuando se quita el subcubo.  
   
- Para obtener más información acerca de los subcubos, vea [generar subcubos en MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
+ Para obtener más información acerca de los subcubos, vea compilar subcubos [en &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)MDX.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente crea un subcubo que limita el espacio aparente del cubo a los miembros que existen con el país Canadá. A continuación, usa el **miembros** función para devolver todos los miembros del país de nivel de jerarquía definido por el usuario Geography: devolver solo el país Canadá.  
+ El ejemplo siguiente crea un subcubo que limita el espacio aparente del cubo a los miembros que existen con el país Canadá. A continuación, utiliza la función Members para devolver todos los miembros del nivel Country de la jerarquía definida por el usuario Geography, que devuelve solo el país de Canadá.  
   
 ```  
 CREATE SUBCUBE [Adventure Works] AS  
@@ -128,9 +128,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  La columna [All Products] y la fila [All Resellers] contienen los totales de todos los miembros y no solo de los que están visibles.  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos clave de MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [Las instrucciones de Scripting de MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [DROP SUBCUBE, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Conceptos clave de MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [Instrucciones &#40;de scripting de MDX MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [DROP subcube, &#40;instrucción MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT &#40;Instrucción, MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

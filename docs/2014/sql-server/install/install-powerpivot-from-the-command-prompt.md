@@ -1,5 +1,5 @@
 ---
-title: Instalar PowerPivot desde el símbolo | Microsoft Docs
+title: Instale PowerPivot desde el símbolo del sistema | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e6da1b23bd23634e3edb8d92093cab6ce71a2783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4677413e517812bf18bc41f59374367b6e27276a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094557"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890180"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Instalar PowerPivot desde el símbolo del sistema
   Puede ejecutar el programa de instalación desde la línea de comandos para instalar SQL Server PowerPivot para SharePoint. Debe incluir el parámetro `/ROLE` en el comando y excluir el parámetro `/FEATURES`.  
@@ -27,7 +27,7 @@ ms.locfileid: "66094557"
   
  El equipo debe estar unido al mismo dominio que la granja de servidores de SharePoint.  
   
-##  <a name="Commands"></a> Opciones de instalación basadas en /Role  
+##  <a name="Commands"></a>Opciones de instalación basadas en/ROLE  
  En las implementaciones de PowerPivot para SharePoint, se utiliza el parámetro `/ROLE` en lugar de `/FEATURES`. Los valores válidos incluyen:  
   
 -   `SPI_AS_ExistingFarm`  
@@ -36,12 +36,12 @@ ms.locfileid: "66094557"
   
  Ambos roles instalan los archivos de aplicación, configuración e implementación que permiten que PowerPivot para SharePoint se ejecute en una granja de SharePoint. Si se especifica uno de los dos roles, el programa de instalación comprobará los requisitos de hardware y software necesarios para la integración de SharePoint.  
   
- La opción de granja existente supone que ya hay una granja de servidores de SharePoint. La nueva opción de granja de servidores, se da por supuesto que va a crear una nueva granja; admite la adición de una instancia del motor de base de datos en la sintaxis de línea de comandos para que pueda usar la instancia del motor de base de datos como servidor de base de datos de la granja de servidores.  
+ La opción de granja existente supone que ya hay una granja de servidores de SharePoint. La nueva opción de granja supone que creará una nueva granja de servidores; admite la adición de una instancia de Motor de base de datos en la sintaxis de la línea de comandos para que pueda usar la instancia de Motor de base de datos como servidor de bases de datos de la granja.  
   
- A diferencia de las versiones anteriores, todas las tareas de configuración del servidor se realizan como tareas posteriores a la instalación. Si está automatizando los pasos de instalación y configuración, puede utilizar PowerShell para configurar el servidor. Para obtener más información, consulte [configuración de PowerPivot mediante Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md).  
+ A diferencia de las versiones anteriores, todas las tareas de configuración del servidor se realizan como tareas posteriores a la instalación. Si está automatizando los pasos de instalación y configuración, puede utilizar PowerShell para configurar el servidor. Para obtener más información, vea [configuración de PowerPivot mediante Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## <a name="example-commands"></a>Comandos de ejemplo  
- Los siguientes ejemplos ilustran el uso de cada opción. Se muestra en el ejemplo 1 `SPI_AS_ExistingFarm`.  
+ Los siguientes ejemplos ilustran el uso de cada opción. En el ejemplo `SPI_AS_ExistingFarm`1 se muestra.  
   
 ```  
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a> Modificar la sintaxis del comando  
+##  <a name="Join"></a>Modificar la sintaxis de los comandos  
  Utilice los siguientes pasos para modificar la sintaxis del comando del ejemplo.  
   
 1.  Copie el siguiente comando en el Bloc de notas:  
@@ -82,30 +82,30 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
     ```  
   
-3.  Reemplace los marcadores de posición para \<dominio\nombre de usuario > y \<contraseña segura > con cuentas de usuario válidas y las contraseñas.  
+3.  Reemplace los marcadores de posición \<de dominio\nombre de \<usuario > y StrongPassword > por contraseñas y cuentas de usuario válidas.  
   
-     El `/assvaccount` y **/assvcpassword** parámetros se usan para configurar el [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instancia del servidor de aplicaciones. Reemplace estos marcadores de posición con información de cuenta válida.  
+     Los `/assvaccount` parámetros y **/assvcpassword** se usan para configurar la [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instancia en el servidor de aplicaciones. Reemplace estos marcadores de posición con información de cuenta válida.  
   
-     El **/assysadminaccounts** parámetro debe establecerse en la identidad del usuario que se está ejecutando el programa de instalación de SQL Server. Debe especificar al menos un administrador del sistema. Tenga en cuenta que el programa de instalación de SQL Server no concede permisos de sysadmin automáticos a los miembros del grupo de administradores integrado.  
+     El parámetro **/assysadminaccounts** debe establecerse en la identidad del usuario que ejecuta SQL Server el programa de instalación. Debe especificar al menos un administrador del sistema. Tenga en cuenta que el programa de instalación de SQL Server no concede permisos de sysadmin automáticos a los miembros del grupo de administradores integrado.  
   
 4.  Quite los saltos de línea.  
   
-5.  Seleccione el comando completo y, a continuación, haga clic en **copia** en el menú Edición.  
+5.  Seleccione todo el comando y, a continuación, haga clic en **copiar** en el menú edición.  
   
-6.  Abra un símbolo del sistema de administrador. Para ello, haga clic en **iniciar**, haga clic en el símbolo del sistema y seleccione **ejecutar como administrador**.  
+6.  Abra un símbolo del sistema de administrador. Para ello, haga clic en **Inicio**, haga clic con el botón secundario en el símbolo del sistema y seleccione **Ejecutar como administrador**.  
   
 7.  Navegue hasta la unidad o carpeta compartida que contiene el disco de instalación de SQL Server.  
   
-8.  Pegue el comando revisado en la línea de comandos. Para ello, haga clic en el icono en la esquina superior izquierda de la ventana de símbolo del sistema, **editar**y, a continuación, haga clic en **pegar**.  
+8.  Pegue el comando revisado en la línea de comandos. Para ello, haga clic en el icono de la esquina superior izquierda de la ventana del símbolo del sistema, seleccione **Editar**y, a continuación, haga clic en **pegar**.  
   
-9. Presione **ENTRAR** para ejecutar el comando. Espere a que termine la instalación. Puede supervisar el progreso del programa de instalación en la ventana del símbolo del sistema.  
+9. Presione **entrar** para ejecutar el comando. Espere a que termine la instalación. Puede supervisar el progreso del programa de instalación en la ventana del símbolo del sistema.  
   
 10. Para comprobar la instalación, compruebe el archivo summary.txt en \Archivos de programa\SQL Server\120\Setup Bootstrap\Log. El resultado final debe decir "Passed" si el servidor se instaló sin errores.  
   
-11. Configure el servidor. Como mínimo, debe implementar soluciones, crear una aplicación de servicio y habilitar la característica para cada colección de sitios. Para obtener más información, consulte [configurar o reparar PowerPivot para SharePoint 2010 &#40;herramienta de configuración de PowerPivot&#41; ](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) o [administración de servidores de PowerPivot y la configuración en Administración Central ](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+11. Configure el servidor. Como mínimo, debe implementar soluciones, crear una aplicación de servicio y habilitar la característica para cada colección de sitios. Para obtener más información, vea [configurar o reparar PowerPivot para SharePoint &#40;herramienta&#41; de configuración de PowerPivot 2010](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) o la [Administración y configuración del servidor de PowerPivot en administración central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar cuentas de servicio PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
+ [Configurar cuentas de servicio PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
  [Instalación de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

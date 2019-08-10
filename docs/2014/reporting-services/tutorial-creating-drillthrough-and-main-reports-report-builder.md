@@ -10,74 +10,74 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff48bab49e2ef0889bda054d6a1ff656f0916585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b074195ecda842e0270f3cadce790be30fdce7cc
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66098875"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892382"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales (generador de informes) y obtención de detalles
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
   Este tutorial le enseña cómo crear dos tipos de informes: un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. En la siguiente ilustración se muestran los informes que creará.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- La siguiente ilustración muestra cómo el valor de campo, Games and Toys en el informe principal se muestra en el título del informe de obtención de detalles. Los datos de la obtención de detalles pertenecen a la categoría de producto de Games and Toys.  
+ En la ilustración siguiente se muestra cómo se muestra el valor del campo, juegos y juguetes, en el informe principal en el título del informe de obtención de detalles. Los datos de la obtención de detalles pertenecen a la categoría de producto de Games and Toys.  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
- **En el informe de obtención de detalles, aprenderá cómo:**  
+ **En el informe detallado aprenderá a:**  
   
-1.  [Crear un informe de matriz de obtención de detalles y un conjunto de datos de la tabla o el Asistente para matrices](#DMatrixAndDataset)  
+1.  [Crear un informe de matriz de obtención de detalles y un conjunto de informes desde el Asistente para tablas o matrices](#DMatrixAndDataset)  
   
     1.  [Especificar una conexión de datos](#DConnection)  
   
     2.  [Crear una consulta MDX](#DMDXQuery)  
   
-    3.  [Organizar los datos en el estilo de grupos](#DLayout)  
+    3.  [Organizar los datos en estilo de grupos](#DLayout)  
   
     4.  [Agregar subtotales y totales](#DTotals)  
   
     5.  [Elegir un estilo](#DStyle)  
   
-2.  [Formato de datos como moneda](#DFormat)  
+2.  [Dar formato a los datos como moneda](#DFormat)  
   
-3.  [Agregar columnas para mostrar valores de ventas en Minigráficos](#DSparkline)  
+3.  [Agregar columnas para mostrar valores de ventas en minigráficos](#DSparkline)  
   
-4.  [Agregar un título de informe con el nombre de categoría de producto](#DReportTitle)  
+4.  [Agregar título de informe con el nombre de categoría de producto](#DReportTitle)  
   
-5.  [Actualizar las propiedades de parámetro](#DParameter)  
+5.  [Actualizar propiedades de parámetros](#DParameter)  
   
 6.  [Guardar el informe en una biblioteca de SharePoint](#DSave)  
   
- **En el informe principal aprenderá cómo:**  
+ **En el informe principal aprenderá a:**  
   
-1.  [Crear el informe de matriz principal y el conjunto de datos de la tabla o el Asistente para matrices](#MMatrixAndDataset)  
+1.  [Crear el informe de matriz principal y el conjunto de DataSet desde el Asistente para tablas o matrices](#MMatrixAndDataset)  
   
     1.  [Especificar una conexión de datos](#MConnection)  
   
     2.  [Crear una consulta MDX](#MMDXQuery)  
   
-    3.  [Organizar datos en grupos](#MLayout)  
+    3.  [Organizar los datos en grupos](#MLayout)  
   
     4.  [Agregar subtotales y totales](#MTotals)  
   
     5.  [Elegir un estilo](#MStyle)  
   
-2.  [Quitar la fila Total general](#MGrandTotal)  
+2.  [Quitar la fila de total general](#MGrandTotal)  
   
-3.  [Configurar acción de obtención de detalles del cuadro de texto](#MDrillthrough)  
+3.  [Configurar la acción del cuadro de texto para la obtención de detalles](#MDrillthrough)  
   
-4.  [Reemplazar los valores numérico por indicadores](#MIndicators)  
+4.  [Reemplazar valores numéricos por indicadores](#MIndicators)  
   
-5.  [Actualizar las propiedades de parámetro](#MParameter)  
+5.  [Actualizar propiedades de parámetros](#MParameter)  
   
 6.  [Agregar un título de informe](#MTitle)  
   
 7.  [Guardar el informe en una biblioteca de SharePoint](#MSave)  
   
-8.  [Ejecute los informes principal y obtención de detalles](#MRunReports)  
+8.  [Ejecutar los informes principal y de obtención de detalles](#MRunReports)  
   
  Tiempo estimado para completar este tutorial: 30 minutos.  
   
@@ -89,9 +89,9 @@ ms.locfileid: "66098875"
   
 #### <a name="to-create-a-new-report"></a>Para crear un informe nuevo  
   
-1.  Haga clic en **iniciar**, apunte a **programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
+1.  Haga clic en **Inicio**, seleccione **programas** [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , **generador de informes**y, a continuación, haga clic en **generador de informes**.  
   
-     El **Introducción** abre el cuadro de diálogo. Si no aparece, desde el **Report Builder** botón, haga clic en **New**.  
+     Se abrirá el cuadro de diálogo **Introducción** . Si no aparece, en el botón **generador de informes** , haga clic en **nuevo**.  
   
 2.  En el panel de la izquierda, compruebe que está seleccionada la opción **Nuevo informe** .  
   
@@ -141,7 +141,7 @@ ms.locfileid: "66098875"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Haga clic en **Siguiente**.  
+14. Haga clic en **Next**.  
   
 ##  <a name="DMDXQuery"></a> 1b. Crear una consulta MDX  
  En un informe puede usar un conjunto de datos compartido que tenga una consulta predefinida o crear un conjunto de datos incrustado para usarlo exclusivamente en ese informe. En este tutorial, creará un conjunto de datos incrustado.  
@@ -153,7 +153,7 @@ ms.locfileid: "66098875"
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
     > [!TIP]  
-    >  Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar a Modo Diseño](../analysis-services/media/rsqdicon-designmode.gif "Cambiar a Modo Diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 6 de [Crear el conjunto de datos](#DSkip).  
+    >  Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar a Modo Diseño](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Cambiar a Modo Diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 6 de [Crear el conjunto de datos](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -196,7 +196,7 @@ ms.locfileid: "66098875"
     > [!NOTE]  
     >  El parámetro contiene los nombres de categorías de producto. Al hacer clic en el informe principal en un nombre de categoría de producto, su nombre se pasa al informe detallado utilizando este parámetro.  
   
-###  <a name="DSkip"></a> Para crear el conjunto de datos  
+###  <a name="DSkip"></a>Para crear el conjunto de  
   
 1.  Desde la dimensión Canal, arrastre Nombre de canal hasta el panel de datos.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "66098875"
   
 6.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar (!)** .  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 ##  <a name="DLayout"></a> 1c. Organizar los datos en grupos  
  Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
@@ -236,7 +236,7 @@ ms.locfileid: "66098875"
   
      Los pasos 4 y 5 especifican los datos que deben aparecer en la matriz.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 ##  <a name="DTotals"></a> 1d. Agregar subtotales y totales  
  Después de crear grupos, puede agregar filas y darles formato, donde se mostrarán los valores agregados para los campos. Puede decidir también si mostrar todos los datos o permitir que los usuarios expandan y contraigan de forma interactiva los datos agrupados.  
@@ -247,16 +247,16 @@ ms.locfileid: "66098875"
   
      El panel Vista previa del asistente muestra una matriz con cuatro filas.  
   
-2.  Haga clic en **Siguiente**.  
+2.  Haga clic en **Next**.  
   
-##  <a name="DStyle"></a> 1e. Elegir un estilo  
+##  <a name="DStyle"></a>1E. Elegir un estilo  
  Un estilo especifica un estilo de fuente, un conjunto de colores y un estilo de borde.  
   
 #### <a name="to-specify-a-style"></a>Para especificar un estilo  
   
-1.  En el **elegir un estilo** página, en el panel Estilos, seleccione Pizarra.  
+1.  En la página **elegir un estilo** , en el panel estilos, seleccione pizarra.  
   
-2.  Haga clic en **Finalizar**.  
+2.  Haga clic en **Finalizar**  
   
      La tabla se agrega a la superficie de diseño.  
   
@@ -389,12 +389,12 @@ ms.locfileid: "66098875"
   
 7.  Haga clic en **Guardar**.  
   
-##  <a name="MMatrixAndDataset"></a> 1. Crear un nuevo informe de la tabla o el Asistente para matrices  
+##  <a name="MMatrixAndDataset"></a> 1. Crear un nuevo informe a partir del Asistente para tabla o matriz  
  En el cuadro de diálogo **Introducción** , cree un informe de matriz usando el **Asistente para tabla o matriz**.  
   
 #### <a name="to-create-a-new-report"></a>Para crear un informe nuevo  
   
-1.  Haga clic en **iniciar**, apunte a **programas**, apunte a [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**y, a continuación, haga clic en **Report Builder**.  
+1.  Haga clic en **Inicio**, seleccione **programas** [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , **generador de informes**y, a continuación, haga clic en **generador de informes**.  
   
 2.  En el cuadro de diálogo **Introducción** , compruebe que está seleccionado **Nuevo informe** y, después, haga clic en **Asistente para tabla o matriz**.  
   
@@ -435,7 +435,7 @@ ms.locfileid: "66098875"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Haga clic en **Siguiente**.  
+14. Haga clic en **Next**.  
   
 ##  <a name="MMDXQuery"></a> 1b. Crear una consulta MDX  
  Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseñador de consultas para crear filtros, parámetros y miembros calculados, así como el propio conjunto de datos.  
@@ -447,7 +447,7 @@ ms.locfileid: "66098875"
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
     > [!TIP]  
-    >  Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar a Modo Diseño](../analysis-services/media/rsqdicon-designmode.gif "Cambiar a Modo Diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 5 de [Crear el conjunto de datos](#MSkip).  
+    >  Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar a Modo Diseño](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Cambiar a Modo Diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 5 de [Crear el conjunto de datos](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -519,7 +519,7 @@ ms.locfileid: "66098875"
   
 8.  En el cuadro **Nombre** , escriba  **Ventas netas**y, después, haga clic en **Aceptar**. En el panel Miembros calculados se muestra el miembro calculado **Ventas netas** .  
   
-###  <a name="MSkip"></a> Para crear el conjunto de datos  
+###  <a name="MSkip"></a>Para crear el conjunto de  
   
 1.  Desde la dimensión Canal, arrastre Nombre de canal hasta el panel de datos.  
   
@@ -533,7 +533,7 @@ ms.locfileid: "66098875"
   
      Revise el conjunto de resultados de la consulta.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 ##  <a name="MLayout"></a> 1c. Organizar los datos en grupos  
  Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
@@ -561,18 +561,18 @@ ms.locfileid: "66098875"
   
 1.  En la página **Elegir el diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
-     El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente forma: La primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`, y la cuarta fila contiene los totales.  
+     El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente forma: La primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de la`[Sum(Net_ QTY)]` categoría `[Sum(Net_Sales)]`de producto (y, y la cuarta fila contiene los totales.  
   
-2.  Haga clic en **Siguiente**.  
+2.  Haga clic en **Next**.  
   
-##  <a name="MStyle"></a> 1e. Elegir un estilo  
+##  <a name="MStyle"></a>1E. Elegir un estilo  
  Aplique el estilo Pizarra al informe. Es el mismo estilo que usa el informe detallado.  
   
 #### <a name="to-specify-a-style"></a>Para especificar un estilo  
   
-1.  En el **elegir un estilo** página, en el panel Estilos, seleccione Pizarra.  
+1.  En la página **elegir un estilo** , en el panel estilos, seleccione pizarra.  
   
-2.  Haga clic en **Finalizar**.  
+2.  Haga clic en **Finalizar**  
   
 3.  Haga clic en **Ejecutar**para obtener la vista previa del informe.  
   

@@ -1,5 +1,5 @@
 ---
-title: Editor de la tarea de procesamiento (página Analysis Services) de Analysis Services | Microsoft Docs
+title: Editor de la tarea de procesamiento de Analysis Services (página Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6a114cba7caa1fa223f21de2aa8cc4a85979fe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061469"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890366"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Editor de la tarea de procesamiento de Analysis Services (página Analysis Services)
   Utilice la página **Analysis Services** del cuadro de diálogo **Editor de la tarea de procesamiento de Analysis Services** para especificar un administrador de conexiones de Analysis Services, seleccionar los objetos analíticos que se deben procesar y establecer opciones de procesamiento y control de errores.  
@@ -40,7 +40,7 @@ ms.locfileid: "66061469"
  **administrador de conexiones de Analysis Services**  
  Seleccione un administrador de conexiones de Analysis Services de la lista o haga clic en **Nuevo** para crear uno.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones de Analysis Services nuevo.  
   
  **Temas relacionados:** [Administrador de conexiones de Analysis Services](connection-manager/analysis-services-connection-manager.md), [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones de Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "66061469"
 |--------------|-----------------|  
 |**Nombre de objeto**|Enumera los nombres de los objetos especificados.|  
 |**Tipo**|Enumera los tipos de los objetos especificados.|  
-|**Opciones de proceso**|Seleccione una opción de procesamiento de la lista.<br /><br /> **Temas relacionados**: [Procesamiento de objetos de modelo multidimensional](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Opciones de proceso**|Seleccione una opción de procesamiento de la lista.<br /><br /> **Temas relacionados**: [Procesamiento de objetos del modelo multidimensional](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Configuración**|Enumera los valores de configuración de procesamiento para los objetos especificados.|  
   
  **Agregar**  

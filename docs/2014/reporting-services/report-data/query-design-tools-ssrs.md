@@ -1,5 +1,5 @@
 ---
-title: Consultar las herramientas de diseño de informes, Diseñador de SQL Server Data Tools (SSRS) | Microsoft Docs
+title: Herramientas de diseño de consultas en Diseñador de informes SQL Server Data Tools (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,12 +20,12 @@ ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7b952414a86a647655a7a0c0dbc2754b352e671
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65294483b65b0df44e7a4b01899319697e441fa1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107182"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891008"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Herramientas de diseño de consultas en las herramientas de datos de SQL Server del Diseñador de informes (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ofrece varias herramientas de diseño de consultas que puede usar para crear consultas de conjuntos de datos en el Diseñador de consultas. El tipo de origen de datos con el que trabaje determinará la disponibilidad de un diseñador de consultas concreto. Además, algunos diseñadores de consultas ofrecen modos alternativos que le permiten elegir entre trabajar en modo visual o directamente en el idioma de la consulta. En este tema se presentan todas las herramientas y se describe el tipo de origen de datos que admite cada una de ellas. En esta sección se describen las siguientes herramientas:  
@@ -49,7 +49,7 @@ ms.locfileid: "66107182"
 ##  <a name="Textbased"></a> Diseñador de consultas basado en texto  
  El diseñador de consultas basado en texto es la herramienta predeterminada de creación de consultas para la mayoría de los orígenes de datos relacionales admitidos, incluidos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, Teradata, OLE DB, XML y ODBC. A diferencia del diseñador gráfico de consultas, esta herramienta de diseño de consultas no valida la sintaxis de las mismas durante su diseño. En la imagen siguiente se ilustra el diseñador de consultas basado en texto.  
   
- ![Diseñador de consultas genérico, para consultas de datos relacionales](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Diseñador de consultas genérico, para consultas de datos relacionales")  
+ ![Diseñador de consultas genérico, para consultas de datos relacionales](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Diseñador de consultas genérico, para consultas de datos relacionales")  
   
  El diseñador de consultas basado en texto se recomienda para crear consultas complejas, usar procedimientos almacenados, realizar consultas en datos XML y escribir consultas dinámicas. Según el origen de datos, es posible que pueda alternar el botón **Editar como texto** de la barra de herramientas para cambiar entre el diseñador gráfico de consultas y el diseñador de consultas basado en texto. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto](../text-based-query-designer-user-interface.md).  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66107182"
 ##  <a name="MDX"></a> Diseñador de consultas MDX  
  El diseñador de consultas de expresiones multidimensionales (MDX) se usa para crear o modificar las consultas que se ejecutan en un origen de datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] con cubos multidimensionales. En la imagen siguiente se muestra una ilustración del diseñador de consultas MDX después de haber definido la consulta y el filtro.  
   
- ![Diseñador de consultas MDX de Analysis Services, vista de diseño](../../analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Diseñador de consultas MDX de Analysis Services, vista de diseño")  
+ ![Diseñador de consultas MDX de Analysis Services, vista de diseño](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsawas-mdx-designmode.gif "Diseñador de consultas MDX de Analysis Services, vista de diseño")  
   
  Para utilizar el diseñador de consultas MDX, debe definir un origen de datos que tenga un cubo de Analysis Services disponible que sea válido y se haya procesado. Al definir un conjunto de datos para el origen de datos, puede abrir la consulta en el diseñador de consultas MDX. Si es necesario, utilice los botones MDX y DMX en la barra de herramientas para cambiar entre los modos MDX y DMX. Para más información, consulte [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66107182"
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de Reporting Services](../tools/reporting-services-tools.md)   
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)   
+ [Agregar datos a un Generador de informes &#40;de informes y SSRS&#41;](report-datasets-ssrs.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   

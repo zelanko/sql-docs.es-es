@@ -10,12 +10,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c13de7878753524986cd4574aa2e892b3367eb6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd42fdd888ca8d4b7fc72e20fb3c6a71b9e0170f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078405"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888137"
 ---
 # <a name="defining-named-sets"></a>Definir conjuntos con nombre
   Un conjunto con nombre es una expresión de Expresiones multidimensionales (MDX) que devuelve un conjunto de miembros de dimensión. Puede definir conjuntos con nombre y guardarlos como parte de la definición del cubo; también puede crear conjuntos con nombre en aplicaciones cliente. Puede crear conjuntos con nombre combinando datos del cubo, operadores aritméticos, números y funciones. Los usuarios pueden usar los conjuntos con nombre en consultas MDX en aplicaciones cliente y también pueden usarse para definir conjuntos en subcubos. Un subcubo es una colección de conjuntos unidos de forma cruzada que restringe el espacio del cubo al subespacio definido para instrucciones posteriores. La definición de un espacio del cubo restringido es un concepto fundamental para el scripting de MDX.  
@@ -32,11 +32,11 @@ ms.locfileid: "66078405"
   
      Al definir un nuevo cálculo en la pestaña **Cálculos** , recuerde que los cálculos se resuelven en el orden en el que aparecen en el panel **Organizador de script** . Su enfoque en dicho panel al crear un nuevo cálculo determinará el orden de la ejecución del cálculo; un nuevo cálculo se define inmediatamente después del cálculo especificado.  
   
-3.  En el **nombre** , cambie el nombre del nuevo conjunto con nombre por `[Core Products]`.  
+3.  En el cuadro **nombre** , cambie el nombre del nuevo conjunto con nombre a `[Core Products]`.  
   
      En el panel **Organizador de script** , observe el icono único que diferencia un conjunto con nombre de un comando de script o de un miembro calculado.  
   
-4.  En el **metadatos** pestaña en el **herramientas de cálculo** panel, expanda **producto**, expanda **categoría**, expanda `Members`y, a continuación, Expanda **todos los productos**.  
+4.  En la pestaña metadatos del **panel herramientas de cálculo** ,expanda producto `Members`, categoría, y, a continuación, expanda **todos los productos**.  
   
     > [!NOTE]  
     >  Si no puede ver los metadatos en el panel **Herramientas de cálculo** , haga clic en **Volver a conectar** en la barra de herramientas. Si esto no funciona, puede que tenga que procesar el cubo o iniciar la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -47,11 +47,11 @@ ms.locfileid: "66078405"
   
 ## <a name="defining-a-large-resellers-named-set"></a>Definir un conjunto con nombre Large Resellers  
   
-1.  Haga clic en `[Core Products]` en el **organizador de Script** panel y, a continuación, haga clic en **nuevo conjunto con nombre**.  
+1.  Haga clic `[Core Products]` con el botón secundario en el panel **organizador de script** y, a continuación, haga clic en **nuevo conjunto con nombre**.  
   
-2.  En el **nombre** , cambie el nombre de este conjunto con nombre por `[Large Resellers]`.  
+2.  En el cuadro **nombre** , cambie el nombre de este conjunto con nombre `[Large Resellers]`a.  
   
-3.  En el **expresión** , escriba `Exists()`.  
+3.  En el cuadro **expresión** , escriba `Exists()`.  
   
      Usará la función Exists para devolver el conjunto de miembros de la jerarquía de atributo Reseller Name que forma intersección con el conjunto de miembros de la jerarquía de atributo Number of Employees que tiene el mayor número de empleados.  
   
@@ -67,33 +67,33 @@ ms.locfileid: "66078405"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     Ahora que ha definido el primer conjunto para el método Exists expresión de conjunto, estará listo para agregar el segundo conjunto, el conjunto de miembros de dimensión Reseller que contiene el mayor número de empleados.  
+     Ahora que ha definido el primer conjunto para la expresión de conjunto EXISTS, está listo para agregar el segundo conjunto: el conjunto de miembros de la dimensión reseller que contiene el mayor número de empleados.  
   
-7.  En el **metadatos** pestaña en el **herramientas de cálculo** panel, expanda **Number of Employees** en la dimensión Reseller, expanda `Members`y, a continuación, expanda **Todos los distribuidores**.  
+7.  En la pestaña metadatos del panel **herramientas de cálculo** , expanda **número de empleados** en la dimensión reseller, expanda `Members`y, a continuación, expanda **todos los revendedores**.  
   
      Observe que los miembros de esta jerarquía de atributo no están agrupados.  
   
 8.  Abra el Diseñador de dimensiones para la dimensión **Reseller** y, a continuación, haga clic en **Number of Employees** en el panel **Atributos** .  
   
-9. En la ventana Propiedades, cambie la `DiscretizationMethod` propiedad **automática**y, a continuación, cambie el `DiscretizationBucketCount` propiedad `5`. Para más información, vea [Agrupar miembros de atributos &#40;Discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+9. En el ventana Propiedades, cambie la `DiscretizationMethod` propiedad a **automático**y, a continuación, `DiscretizationBucketCount` cambie la `5`propiedad a. Para más información, vea [Agrupar miembros de atributos &#40;Discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
 10. En el menú **Generar** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic en **Implementar Tutorial de Analysis Services**.  
   
 11. Cuando la implementación haya finalizado correctamente, vaya al Diseñador de cubos del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial y, a continuación, haga clic en **Volver a conectar** en la barra de herramientas de la pestaña **Cálculos** .  
   
-12. En el **metadatos** pestaña en el **herramientas de cálculo** panel, expanda **Number of Employees** en el **Reseller** dimensión, expanda `Members`y, a continuación, expanda **All Resellers**.  
+12. En la pestaña metadatos del **panel herramientas de cálculo** , expanda **número de empleados** en la dimensión **reseller** , expanda `Members`y, a continuación, expanda **todos los revendedores**.  
   
      Observe que los miembros de esta jerarquía de atributos están contenidos ahora en cinco grupos, numerados de 0 a 4. Para ver el número de un grupo, pause el puntero sobre ese grupo para ver un recuadro informativo. Para el intervalo `2 -17`, el recuadro informativo debe contener `[Reseller].[Number of Employees].&[0]`.  
   
-     Los miembros de esta jerarquía de atributo están agrupados porque la propiedad DiscretizationBucketCount está establecida en `5` y la propiedad DiscretizationMethod está establecida en **automática**.  
+     Los miembros de esta jerarquía de atributo están agrupados porque la propiedad DiscretizationBucketCount está establecida `5` en y la propiedad DiscretizationMethod está establecida en **Automatic**.  
   
 13. En el cuadro **Expresión** , agregue una coma a la expresión de conjunto Exists después de la función Members y antes del paréntesis de cierre y, luego, arrastre **83 - 100** desde el panel **Metadatos** y colóquelo detrás de la coma.  
   
      Ahora ha completado la expresión de conjunto Exists que devolverá el conjunto de miembros que forma intersección con estos dos conjuntos especificados, el conjunto de todos los distribuidores y el conjunto de los distribuidores que tengan de 83 a 100 empleados, cuando el conjunto con nombre Large Resellers se coloca en un eje.  
   
-     La siguiente imagen muestra la **expresiones de cálculo** panel para el `[Large Resellers]` conjunto con nombre.  
+     La siguiente imagen muestra el panel de las **expresiones** de `[Large Resellers]` cálculo para el conjunto con nombre.  
   
-     ![Panel de expresiones de cálculo para [Large Resellers]](../../2014/tutorials/media/l6-named-set-02.gif "panel de expresiones de cálculo para [Large Resellers]")  
+     ![Panel de expresiones de cálculo para [distribuidores grandes]](../../2014/tutorials/media/l6-named-set-02.gif "Panel de expresiones de cálculo para [distribuidores grandes]")  
   
 14. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Vista de script**y, a continuación, revise los dos conjuntos con nombre que acaba de agregar al script de cálculo.  
   
@@ -117,25 +117,25 @@ ms.locfileid: "66078405"
   
 5.  Expanda la dimensión Product y, a continuación, agregue Category y Subcategory al área de fila, como se muestra en la ilustración siguiente.  
   
-     ![Los miembros del atributo Subcategory](../../2014/tutorials/media/l6-named-set-03.gif "miembros del atributo Subcategory")  
+     ![Miembros del atributo Subcategoría](../../2014/tutorials/media/l6-named-set-03.gif "Miembros del atributo Subcategoría")  
   
 6.  En el panel **Metadatos** , en la dimensión **Product** , arrastre **Core Products** el área de filtro.  
   
      Observe que solo el miembro **Bike** del atributo **Category** y los miembros de las subcategorías **Bike** permanecen en el cubo. Esto se debe a que se usa el conjunto con nombre **Core Products** para definir un subcubo. Este subcubo limita los miembros del atributo **Category** en la dimensión **Product** del subcubo a los miembros del conjunto con nombre **Core Products** , tal como se muestra en la ilustración siguiente.  
   
-     ![Conjunto con nombre de los miembros del producto principal](../../2014/tutorials/media/l6-named-set-04.gif "conjunto con nombre de los miembros del producto principal")  
+     ![Miembros del conjunto con nombre Core Product](../../2014/tutorials/media/l6-named-set-04.gif "Miembros del conjunto con nombre Core Product")  
   
 7.  En el panel **Metadatos** , expanda **Distribuidor**y agregue **Grandes distribuidores** al área de filtro.  
   
      Observe que la medida Importe de datos del distribuidor del panel Datos solo muestra importes de venta para los grandes distribuidores de bicicletas. Observe también que el panel Filtro muestra ahora los dos conjuntos con nombre que se utilizan para definir este subcubo en particular, tal como muestra la siguiente imagen.  
   
-     ![Panel de filtro que contiene dos denominado establece](../../2014/tutorials/media/l6-named-set-05.gif "establece el panel de filtro que contiene dos con nombre")  
+     ![Panel de filtro que contiene dos conjuntos con nombre](../../2014/tutorials/media/l6-named-set-05.gif "Panel de filtro que contiene dos conjuntos con nombre")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Lección 7: Definir indicadores clave de rendimiento &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lección 7: Definición de KPI clave &#40;de indicadores de rendimiento&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
   
 ## <a name="see-also"></a>Vea también  
- [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Realizan](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Crear conjuntos con nombre](multidimensional-models/create-named-sets.md)  
   
   

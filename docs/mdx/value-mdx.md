@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 299004e869aeab826e5f1207a0ecc4d31639e2c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f373f626d778c4d77ec5843dca5bb11da728451d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68037941"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887442"
 ---
 # <a name="value-mdx"></a>Value (MDX)
 
@@ -28,11 +28,11 @@ Member_Expression[.Value]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Member_Expression*  
+ *Expresión_miembro*  
  Expresión MDX válida que devuelve un miembro.  
   
 ## <a name="remarks"></a>Comentarios  
- El **valor** función devuelve el valor del miembro especificado como una cadena. El **valor** argumento es opcional porque el valor de un miembro es la propiedad predeterminada de un miembro y es el valor devuelto para un miembro si no se especifica ningún otro valor. Para obtener más información acerca de las propiedades de miembros, vea [propiedades de miembro intrínsecas &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) y [las propiedades de miembro definidas por el usuario &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ La función **Value** devuelve el valor del miembro especificado como una cadena. El argumento de **valor** es opcional porque el valor de un miembro es la propiedad predeterminada de un miembro y es el valor que se devuelve para un miembro si no se especifica ningún otro valor. Para obtener más información sobre las propiedades de los miembros, vea [ &#40;propiedades&#41; de miembro intrínsecas MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) y [ &#40;propiedades&#41;de miembro definidas por el usuario MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties).  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve el valor de un miembro además de devolver explícitamente el nombre del miembro.  

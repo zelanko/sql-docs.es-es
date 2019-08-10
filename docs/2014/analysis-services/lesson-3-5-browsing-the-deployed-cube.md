@@ -10,12 +10,12 @@ ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c4b80f65b894ebe81ab440e4e7a8f2a7080d2e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9273f35ccca51d92461783f1110890b161a85059
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078908"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888469"
 ---
 # <a name="browsing-the-deployed-cube"></a>Examinar el cubo implementado
   En la tarea siguiente, examinará el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puesto que nuestro análisis compara las medidas en varias dimensiones, usará una tabla dinámica de Excel para examinar los datos. El uso de una tabla dinámica le permite colocar la información de clientes, fechas y productos en diferentes ejes de modo que pueda ver cómo cambian las ventas por Internet cuando se ven en determinados períodos de tiempo, datos demográficos de los clientes y líneas de productos.  
@@ -42,9 +42,9 @@ ms.locfileid: "66078908"
   
      De este modo, se muestran las ventas realizadas por Internet por región y por línea de productos en el mes de febrero de 2006, como se muestra en la imagen siguiente.  
   
-     ![Ventas por Internet mediante la línea de productos y región](../../2014/tutorials/media/l3-cube-browser-finish.gif "venta por Internet mediante la línea de productos y región")  
+     ![Ventas por Internet por región y por línea de producto](../../2014/tutorials/media/l3-cube-browser-finish.gif "Ventas por Internet por región y por línea de producto")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 4: Definir propiedades de dimensión y atributos avanzados](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Lección 4: Definir propiedades avanzadas de atributos y dimensiones](https://docs.microsoft.com/analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Obtención de detalles (instrucción, MDX) | Microsoft Docs
+title: Instrucción DRILLTHROUGH (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0149898e44476233eafcb226a221fc5cc48ae1d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006267"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891204"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Manipulación de datos de MDX: DRILLTHROUGH
 
@@ -42,16 +42,16 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  Lista separada por comas de atributos de dimensión y medidas.  
   
 ## <a name="remarks"></a>Comentarios  
- La obtención de detalles es una operación en la que un usuario final selecciona una única celda de un cubo y recupera un conjunto de resultados de los datos de origen de esa celda para obtener información más detallada. De forma predeterminada, un conjunto de resultados de obtención de detalles proviene de las filas de la tabla evaluadas para calcular el valor de la celda del cubo seleccionada. Para que los usuarios finales puedan obtener detalles, las aplicaciones cliente deben admitir esta función. En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], los resultados se recuperan directamente desde el almacenamiento MOLAP, a menos que se consultan las particiones o dimensiones ROLAP.  
+ La obtención de detalles es una operación en la que un usuario final selecciona una única celda de un cubo y recupera un conjunto de resultados de los datos de origen de esa celda para obtener información más detallada. De forma predeterminada, un conjunto de resultados de obtención de detalles proviene de las filas de la tabla evaluadas para calcular el valor de la celda del cubo seleccionada. Para que los usuarios finales puedan obtener detalles, las aplicaciones cliente deben admitir esta función. En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], los resultados se recuperan directamente desde el almacenamiento MOLAP, a menos que se consulten las particiones o dimensiones ROLAP.  
   
 > [!IMPORTANT]  
 >  La seguridad de obtención de detalles se basa en las opciones de seguridad generales definidas en el cubo. Si un usuario no puede obtener algunos detalles mediante MDX, la obtención de detalles también limitará al usuario exactamente de la misma manera.  
   
- Una instrucción MDX especifica la celda sujeto. El valor especificado por el **MAXROWS** argumento indica el número máximo de filas que se deben devolver el conjunto de filas resultante.  
+ Una instrucción MDX especifica la celda sujeto. El valor especificado por el argumento **MAXROWS** indica el número máximo de filas que debe devolver el conjunto de filas resultante.  
   
- De forma predeterminada, el número máximo de filas que se devuelven es 10.000 filas. Esto significa que si deja **MAXROWS** no se especifica, obtendrá 10.000 filas o menos. Si este valor es demasiado bajo para su escenario, puede establecer **MAXROWS** en un número mayor, como `MAXROWS 20000`. Si es demasiado bajo en general, puede aumentar el valor predeterminado cambiando el **OLAP\Query\DefaultDrillthroughMaxRows** propiedad del servidor. Para obtener más información acerca de cómo cambiar esta propiedad, vea [propiedades del servidor de Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+ De forma predeterminada, el número máximo de filas que se devuelven es 10.000 filas. Esto significa que si deja el **MAXROWS** sin especificar, obtendrá 10.000 filas o menos. Si este valor es demasiado bajo para su escenario, puede establecer **MAXROWS** en un número más alto, `MAXROWS 20000`como. Si es demasiado bajo en general, puede aumentar el valor predeterminado cambiando la propiedad del servidor **OLAP\Query\DefaultDrillthroughMaxRows** . Para obtener más información sobre cómo cambiar esta propiedad, vea [propiedades del servidor en Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
   
- A menos que se especifique lo contrario, las columnas devueltas incluyen todos los atributos de granularidad de todas las dimensiones relacionadas con el grupo de medida de la medida especificada, excepto las dimensiones de varios a varios. Las dimensiones de cubo van precedidas por $ para diferenciar entre dimensiones y grupos de medida. El **devolver** cláusula se usa para especificar las columnas devueltas por la consulta de obtención de detalles. Las siguientes funciones se pueden aplicar a un único atributo o medida mediante la **devolver** cláusula.  
+ A menos que se especifique lo contrario, las columnas devueltas incluyen todos los atributos de granularidad de todas las dimensiones relacionadas con el grupo de medida de la medida especificada, excepto las dimensiones de varios a varios. Las dimensiones de cubo van precedidas por $ para diferenciar entre dimensiones y grupos de medida. La cláusula Return se utiliza para especificar las columnas devueltas por la consulta de obtención de detalles. La cláusula Return puede aplicar las siguientes funciones a un solo atributo u medida.  
   
  Name(attribute_name)  
  Devuelve el nombre del miembro de atributo especificado.  
@@ -97,6 +97,6 @@ RETURN
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucciones de manipulación de datos MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Instrucciones &#40;de manipulación de datos MDX MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

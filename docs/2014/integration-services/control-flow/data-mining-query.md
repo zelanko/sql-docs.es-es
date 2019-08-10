@@ -12,12 +12,12 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf644d1ef54695a4c590a3a67e84da699f8f192b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832399"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890326"
 ---
 # <a name="data-mining-query"></a>Consulta de minería de datos
   El panel de diseño contiene el generador de consultas de predicción de minería de datos, que puede utilizar para generar consultas de predicción de minería de datos. Puede diseñar consultas de predicción basadas en tablas de entrada o consultas singleton de predicción. Cambie a la vista de resultado para ejecutar la consulta y ver los resultados. La vista de consulta muestra la consulta de Extensiones de minería de datos (DMX) creada mediante el generador de consultas de predicción.  
@@ -39,7 +39,7 @@ ms.locfileid: "62832399"
  **Columnas de entrada**  
  Muestra las columnas de entrada seleccionadas que se utilizan para generar las predicciones.  
   
- **Source**  
+ **Origen**  
  Seleccione el origen que contiene el campo que utilizará para la columna desde la lista desplegable. Puede usar el modelo de minería de datos seleccionado en la tabla **Modelo de minería de datos** , la tabla o las tablas de entrada seleccionadas en la tabla **Seleccionar tabla(s) de entrada** , una función de predicción o una expresión personalizada.  
   
  Las columnas pueden arrastrarse desde las tablas que contienen el modelo de minería de datos y las columnas de entrada a la celda.  
@@ -63,7 +63,7 @@ ms.locfileid: "62832399"
  Especifique una condición o una expresión de usuario que se aplica a la columna. Las columnas pueden arrastrarse desde las tablas que contienen el modelo de minería de datos y las columnas de entrada a la celda.  
   
 ## <a name="see-also"></a>Vea también  
- [Interfaces de consultas de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Interfaces de consulta de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

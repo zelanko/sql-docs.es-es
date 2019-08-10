@@ -1,5 +1,5 @@
 ---
-title: Instrucción CREATE CELL CALCULATION (MDX) | Microsoft Docs
+title: CREATE CELL CALCULAtion (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 411ae301c2f0ce858b7273c6bb721269f709b5c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7ba563c848179e8cf3dc12f64d2b3c4233955159
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098485"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892162"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>Definición de datos de MDX: CREATE CELL CALCULATION
 
@@ -55,7 +55,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *MDX_Expression*  
  Una expresión MDX válida.  
   
- *Filter*  
+ *Logical_Expression*  
  Una expresión lógica de MDX válida.  
   
  *Integer*  
@@ -74,12 +74,12 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
 >  La forma de Backus-Naur (BNF) de `{*(<comment> | <whitespace> | <newline>)}` se analizará como `{*}` para la compatibilidad con versiones anteriores.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear celdas calculadas de ámbito de sesión](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
- [Crear cálculos de celdas del ámbito de consulta &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [Creación de cálculos de celdas en MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   
- [Usar las propiedades de celda &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [FORMAT_STRING, contenido &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [Contenido de FORE_COLOR y Back_color &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)   
- [Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Crear celdas calculadas de ámbito de sesión](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells)   
+ [Crear cálculos de celdas del ámbito de consulta &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations)   
+ [Generar cálculos de celdas en &#40;MDX MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations)   
+ [Usar las propiedades de celda &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties)   
+ [FORMAT_STRING, contenido &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents)   
+ [MDX de contenido &#40;de FORE_COLOR y BACK_COLOR&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents)   
+ [Instrucciones &#40;de definición de datos MDX MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c5843ec42cf4ba712a2e55c9cc96dd6f482c0760
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047093"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892898"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
 
@@ -35,7 +35,7 @@ Hierarchy_Expression.DefaultMember
  El miembro predeterminado de un atributo se utiliza para evaluar expresiones cuando un atributo no está incluido en una consulta.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el **DefaultMember** función, junto con el **nombre** función para devolver el miembro predeterminado para la dimensión de moneda de destino en el cubo de Adventure Works. El ejemplo devuelve **dólar estadounidense**. El **nombre** función se utiliza para devolver el nombre de la medida en lugar de la propiedad predeterminada de la medida, que es **valor**.  
+ En el ejemplo siguiente se usa la función **DefaultMember** , junto con la función **Name** , para devolver el miembro predeterminado de la dimensión de moneda de destino en el cubo Adventure Works. El ejemplo devuelve **dólar estadounidense**. La función **Name** se usa para devolver el nombre de la medida en lugar de la propiedad predeterminada de la medida, que es **Value**.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -46,6 +46,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Definir un miembro predeterminado](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
+ [Definir un miembro predeterminado](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   
   

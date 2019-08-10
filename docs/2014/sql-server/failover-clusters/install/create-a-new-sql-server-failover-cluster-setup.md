@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03e62c5ca77a05ee8f8b1bbca13a57a71b37e2a5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740615"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893714"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)
   Para instalar o actualizar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe ejecutar el programa de instalación en cada nodo de los clústeres de conmutación por error. Para agregar un nodo a un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente, debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el nodo que se va a agregar a la instancia del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No ejecute el programa de instalación en el nodo activo para administrar los demás nodos.  
@@ -35,7 +35,7 @@ ms.locfileid: "62740615"
   
  Las opciones siguientes están disponibles para la instalación de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
- **Opción 1: Instalación integrada con agregar nodo**  
+ **Opción 1: instalación integrada con Agregar nodo**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consta de los pasos siguientes:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62740615"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La instalación de clústeres de conmutación por error de Advanced/Enterprise consta de los pasos siguientes:  
   
--   En cada nodo que es un posible propietario del nuevo clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , siga los pasos de instalación referidos a la preparación de clústeres de conmutación por error que se enumeran en la [sección Preparar](#prepare). Una vez ejecutada la preparación de clústeres de conmutación por error en un nodo, el programa de instalación crea el archivo Configuration.ini, que enumera todos los valores de configuración especificados. En los nodos adicionales que se van a preparar, en lugar de seguir estos pasos, puede proporcionar el archivo Configuration.ini autogenerado del primer nodo como entrada a la línea de comandos del programa de instalación. Para obtener más información, consulte [instalar SQL Server 2014 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md). En este paso se preparan los nodos para su agrupación en clústeres, pero al final de este paso no hay ninguna instancia operativa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   En cada nodo que es un posible propietario del nuevo clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , siga los pasos de instalación referidos a la preparación de clústeres de conmutación por error que se enumeran en la [sección Preparar](#prepare). Una vez ejecutada la preparación de clústeres de conmutación por error en un nodo, el programa de instalación crea el archivo Configuration.ini, que enumera todos los valores de configuración especificados. En los nodos adicionales que se van a preparar, en lugar de seguir estos pasos, puede proporcionar el archivo Configuration.ini autogenerado del primer nodo como entrada a la línea de comandos del programa de instalación. Para obtener más información, consulte [instalación de SQL Server 2014 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md). En este paso se preparan los nodos para su agrupación en clústeres, pero al final de este paso no hay ninguna instancia operativa de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Una vez preparados los nodos para la agrupación en clústeres, ejecute el programa de instalación en uno de los nodos preparados. En este paso se configura y se finaliza la instancia de los clústeres de conmutación por error. Al final de este paso, tendrá una instancia operativa de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y todos los nodos que se prepararon previamente para esa instancia serán los posibles propietarios de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se acaba de crear.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "62740615"
   
 6.  El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Cuando se haya completado la comprobación, haga clic en **Siguiente** para continuar. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**.  
   
-7.  En la página Clave del producto, indique si va a instalar una edición gratuita de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, consulte [ediciones y componentes de SQL Server 2014](../../editions-and-components-of-sql-server-2016.md).  
+7.  En la página Clave del producto, indique si va a instalar una edición gratuita de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, vea [ediciones y componentes de SQL Server 2014](../../editions-and-components-of-sql-server-2016.md).  
   
 8.  En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Para continuar, haga clic en **Siguiente** . Para salir del programa de instalación, haga clic en **Cancelar**.  
   
-9. En la página Selección de características, seleccione los componentes de la instalación. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Puede activar cualquier combinación de casillas, pero solo [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo tabular y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo multidimensional admiten los clústeres de conmutación por error. Los demás componentes seleccionados se ejecutarán como una característica independiente sin la funcionalidad de conmutación por error en el nodo actual en el que esté ejecutando el programa de instalación. Para obtener más información sobre modos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vea [Determinar el modo de servidor de una instancia de Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+9. En la página Selección de características, seleccione los componentes de la instalación. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Puede activar cualquier combinación de casillas, pero solo [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo tabular y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo multidimensional admiten los clústeres de conmutación por error. Los demás componentes seleccionados se ejecutarán como una característica independiente sin la funcionalidad de conmutación por error en el nodo actual en el que esté ejecutando el programa de instalación. Para obtener más información sobre modos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vea [Determinar el modo de servidor de una instancia de Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento.  
   
@@ -228,13 +228,13 @@ ms.locfileid: "62740615"
 30. Para agregar nodos a la conmutación por error de nodo único que acaba de crear, ejecute el programa de instalación en cada nodo adicional y siga los pasos para la operación AddNode. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
     > [!NOTE]  
-    >  Si va a agregar más de un nodo, puede utilizar el archivo de configuración para implementar las instalaciones. Para obtener más información, consulte [instalar SQL Server 2014 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
+    >  Si va a agregar más de un nodo, puede utilizar el archivo de configuración para implementar las instalaciones. Para obtener más información, consulte [instalación de SQL Server 2014 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
     >   
     >  La edición de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que va a instalar debe coincidir en todos los nodos de un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si agrega un nuevo nodo a un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente, asegúrese de especificar que la edición coincida con la edición de los clústeres de conmutación por error existente.  
   
 ##  <a name="prepare"></a> Preparar  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Paso de instalación de clústeres de conmutación por error de Advanced/Enterprise 1: Preparar  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Paso 1 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Preparación  
   
 1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, desplácese a la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe. Para obtener más información acerca de cómo instalar los requisitos previos, vea [Before Installing Failover Clustering](before-installing-failover-clustering.md). Puede que se le solicite que instale los requisitos previos si no se han instalado previamente.  
   
@@ -252,14 +252,14 @@ ms.locfileid: "62740615"
   
      Para continuar, haga clic en **Siguiente**.  
   
-8.  En la página Clave del producto, haga clic para indicar si va a instalar una edición gratuita de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, consulte [ediciones y componentes de SQL Server 2014](../../editions-and-components-of-sql-server-2016.md).  
+8.  En la página Clave del producto, haga clic para indicar si va a instalar una edición gratuita de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, vea [ediciones y componentes de SQL Server 2014](../../editions-and-components-of-sql-server-2016.md).  
   
     > [!NOTE]  
     >  Debe especificar la misma clave del producto en todos los nodos que va a preparar para el mismo clústeres de conmutación por error.  
   
 9. En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Para continuar, haga clic en **Siguiente** . Para salir del programa de instalación, haga clic en **Cancelar**.  
   
-10. En la página Selección de características, seleccione los componentes de la instalación. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Puede activar cualquier combinación de casillas, pero solo [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo tabular y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo multidimensional admiten los clústeres de conmutación por error. Los demás componentes seleccionados se ejecutarán como una característica independiente sin la funcionalidad de conmutación por error en el nodo actual en el que esté ejecutando el programa de instalación. Para obtener más información sobre modos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vea [Determinar el modo de servidor de una instancia de Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+10. En la página Selección de características, seleccione los componentes de la instalación. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Puede activar cualquier combinación de casillas, pero solo [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo tabular y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo multidimensional admiten los clústeres de conmutación por error. Los demás componentes seleccionados se ejecutarán como una característica independiente sin la funcionalidad de conmutación por error en el nodo actual en el que esté ejecutando el programa de instalación. Para obtener más información sobre modos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vea [Determinar el modo de servidor de una instancia de Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento.  
   
@@ -324,11 +324,11 @@ ms.locfileid: "62740615"
   
 23. Si el programa indica que se reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información sobre los archivos de registro de instalación, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-24. Repita los pasos anteriores para preparar los demás nodos para los clústeres de conmutación por error. También puede utilizar el archivo de configuración autogenerado para ejecutar la preparación en los demás nodos. Para obtener más información, consulte [instalar SQL Server 2014 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
+24. Repita los pasos anteriores para preparar los demás nodos para los clústeres de conmutación por error. También puede utilizar el archivo de configuración autogenerado para ejecutar la preparación en los demás nodos. Para obtener más información, consulte [instalación de SQL Server 2014 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
   
 ## <a name="complete"></a>Operación completada  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Paso de instalación de clústeres de conmutación por error de Advanced/Enterprise 2: Operación completada  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Paso 2 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Operación completada  
   
 1.  Después de preparar todos los nodos como se describe en el [paso de preparación](#prepare), ejecute el programa de instalación en uno de los nodos preparados, preferiblemente el que posee el disco compartido. En la página **Opciones avanzadas** del Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Finalización avanzada de clúster**.  
   

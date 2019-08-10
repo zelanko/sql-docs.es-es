@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 85e2c08e1ec9f860bc5d3630dcda8a2fbc72e235
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e29784a54a692c2463abc7ada688dbcb297ff7f8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992155"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890634"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Características y tareas de Data Quality Services
 
@@ -23,7 +23,7 @@ ms.locfileid: "67992155"
 
   Busque información que cualquier persona (el administrador de datos, el administrador de Data Quality Services o el administrador de SQL Server) puede necesitar para preparar y ejecutar un proyecto de calidad de datos.  
   
- ![Icono pequeño de carpeta de archivos](../analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") **Diseñar e implementar una solución de calidad de datos**  
+ ![Icono pequeño de carpeta de archivos](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") **Diseñar e implementar una solución de calidad de datos**  
  [Aplicación Data Quality Client](../data-quality-services/data-quality-client-application.md)  
   
  [Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "67992155"
   
  [Generación de perfiles de datos y notificaciones de DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![Icono pequeño de carpeta de archivos](../analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") **Administrar Data Quality Services**  
+ ![Icono pequeño de carpeta de archivos](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Icono pequeño de carpeta de archivos") **Administrar Data Quality Services**  
  [Administración de DQS](../data-quality-services/dqs-administration.md)  
   
  [Seguridad de DQS](../data-quality-services/dqs-security.md)  

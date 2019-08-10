@@ -1,5 +1,5 @@
 ---
-title: PowerPivot para SharePoint 2010 | Microsoft Docs
+title: Instalación de PowerPivot para SharePoint 2010 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 8d47dde7-c941-4280-a934-e2fe3f9a938f
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9fdf581ef443df97c26f927b5f66089efddbdfdb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6147458701fecedd234448eb5b767867f31e566c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66093522"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893786"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 Installation
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] es una recopilación de componentes de servidor que permiten controlar la administración y el procesamiento de consultas para libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se publican en SharePoint. Entre los servicios se incluyen el motor de Analysis Services y el Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -23,13 +23,13 @@ ms.locfileid: "66093522"
 > [!NOTE]  
 >  Para obtener información relacionada con [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] y la instalación con SharePoint Server 2013, vea lo siguiente:  
 >   
->  -   La sección "SQL Server 2012 SP1" de [información general de SQL Server Servicing Installation](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md).  
+>  -   La sección "SQL Server 2012 SP1" de [información general sobre la instalación de servicios de SQL Server](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md).  
   
- Analysis Services proporciona un procesamiento del lado servidor para los libros de Excel que contienen los datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] funciona junto a Analysis Services, permite la integración de SharePoint, aporta el equilibrio de carga y permite la administración de conexiones. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] extiende Excel Services al igualar su capacidad de procesamiento de datos de gran escala con los servicios de representación de datos que proporciona Excel.  
+ Analysis Services proporciona un procesamiento del lado servidor para los libros de Excel que contienen los datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] funciona junto a Analysis Services, permite la integración de SharePoint, aporta el equilibrio de carga y permite la administración de conexiones. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]extiende Excel Services emparejando su capacidad de procesamiento de datos a gran escala con los servicios de representación de datos que proporciona Excel.  
   
  Para instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], use el disco de instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Para obtener instrucciones sobre escenarios de implementación avanzada, consulte [lista de comprobación de implementación: Reporting Services, Power View y PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) y [lista de comprobación de implementación: Escalabilidad horizontal mediante la adición de servidores de PowerPivot a una granja de SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
+ Para obtener instrucciones sobre escenarios de implementación avanzada [, consulte lista de comprobación de implementación: Reporting Services, Power View, PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) y lista de comprobación de [la implementación: Escale horizontalmente agregando servidores de PowerPivot a una granja](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)de servidores de SharePoint 2010.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Instalar PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
@@ -46,9 +46,9 @@ ms.locfileid: "66093522"
   
  [Reparar PowerPivot para SharePoint](../../../2014/sql-server/install/repair-powerpivot-for-sharepoint.md)  
   
- [Configuración inicial &#40;PowerPivot para SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
+ [PowerPivot para SharePoint de &#40;configuración inicial&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Administración y configuración del servidor PowerPivot en Administración central](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [Administración y configuración del servidor PowerPivot en Administración central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)  
   
   

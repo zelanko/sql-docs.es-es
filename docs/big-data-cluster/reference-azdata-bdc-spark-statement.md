@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 778980ac6b93e7db79d59182fbd18ab4cfdb8b75
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 6e90887cf83d23dc80afa9e37b429ad958e841ad
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426095"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894018"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
@@ -22,7 +22,7 @@ ms.locfileid: "68426095"
 
 En el siguiente artículo se proporciona referencia sobre los comandos de **bdc spark statement** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata bdc spark statement list](#azdata-bdc-spark-statement-list) | Enumera todas las instrucciones de la sesión de Spark correspondiente.
@@ -45,15 +45,15 @@ azdata spark statement list --session-id 0
 Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Muestra este mensaje de ayuda y sale.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-statement-create"></a>azdata bdc spark statement create
 Crea y ejecuta una nueva instrucción en la sesión especificada.  Si la ejecución es rápida, el resultado contiene la salida de la ejecución.  De lo contrario, el resultado se puede recuperar mediante "spark session info" una vez completada la instrucción.
 ```bash
@@ -72,15 +72,15 @@ Número de identificador de sesión de Spark.
 Cadena que contiene el código que se va a ejecutar como parte de la instrucción.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Muestra este mensaje de ayuda y sale.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
 Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-statement-info"></a>azdata bdc spark statement info
 Obtiene el estado y los resultados de la ejecución si se ha completado la instrucción. Se devuelve el identificador de la instrucción desde "spark statement create".
 ```bash
@@ -99,15 +99,15 @@ Número de identificador de sesión de Spark.
 Número de identificador de la instrucción de Spark en el identificador de sesión especificado.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Muestra este mensaje de ayuda y sale.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
 Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-statement-cancel"></a>azdata bdc spark statement cancel
 Cancela una instrucción en la sesión de Spark correspondiente. Se devuelve el identificador de la instrucción desde "spark statement create".
 ```bash
@@ -126,16 +126,16 @@ Número de identificador de sesión de Spark.
 Número de identificador de la instrucción de Spark en el identificador de sesión especificado.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Muestra este mensaje de ayuda y sale.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
 Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos SQL Server 2019](deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).

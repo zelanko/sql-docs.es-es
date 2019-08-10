@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24a1f2b1cb49335ba529126005c41b062e7a9e60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105410"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891220"
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
 
@@ -32,19 +32,19 @@ ms.locfileid: "68105410"
   
 1.  El primer carácter debe ser alguno de los siguientes:  
   
-    -   Una letra, como se define en el estándar Unicode 2.0. Además de letras de otros idiomas, la definición Unicode de letras incluye caracteres latinos de la "a" a la "z" y de la "A" a la "Z".  
+    -   Una letra, tal como se define en el estándar Unicode 2,0. Además de letras de otros idiomas, la definición Unicode de letras incluye caracteres latinos de la "a" a la "z" y de la "A" a la "Z".  
   
     -   El carácter de subrayado (_).  
   
 2.  Los caracteres siguientes pueden ser:  
   
-    -   Letras, tal como se define en el estándar Unicode 2.0.  
+    -   Letras como se define en el estándar Unicode 2,0.  
   
     -   Números decimales del alfabeto Latín básico u otros alfabetos de otros idiomas.  
   
     -   El carácter de subrayado (_).  
   
-3.  El identificador no debe ser una palabra clave reservada de DMX. Las palabras clave reservadas de DMX no distinguen entre mayúsculas y minúsculas. Para obtener más información, consulte [palabras clave reservadas &#40;sintaxis MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  El identificador no debe ser una palabra clave reservada de DMX. Las palabras clave reservadas de DMX no distinguen entre mayúsculas y minúsculas. Para obtener más información, vea [sintaxis &#40;&#41;MDX de palabras clave reservadas](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  No se permiten los caracteres especiales o los espacios incrustados.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68105410"
   
 -   Cuando el nombre de un objeto o parte del nombre incluye palabras reservadas.  
   
-     Se recomienda no utilizar palabras clave reservadas como nombres de objeto. Las bases de datos actualizadas desde versiones anteriores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podrían contener identificadores que incluyen palabras reservadas no en la versión anterior, pero ahora están reservados. Hasta que pueda cambiar el identificador del objeto, puede hacer referencia al objeto mediante un identificador delimitado.  
+     Se recomienda no utilizar palabras clave reservadas como nombres de objeto. Las bases de datos actualizadas desde versiones anteriores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pueden contener identificadores que incluyen palabras no reservadas en la versión anterior, pero que ahora están reservadas. Hasta que pueda cambiar el identificador del objeto, puede hacer referencia al objeto mediante un identificador delimitado.  
   
 -   Cuando el nombre de un objeto contiene caracteres no incluidos en la lista de identificadores calificados.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "68105410"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia del lenguaje MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Los elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [MDX (elementos &#40;de sintaxis MDX)&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

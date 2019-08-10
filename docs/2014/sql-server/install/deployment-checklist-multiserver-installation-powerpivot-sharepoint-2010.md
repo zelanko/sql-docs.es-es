@@ -10,15 +10,15 @@ ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e738635465bf6e7af0b16913c4c1f91f719f6a35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33bbaf46bb4dee5e0e7b58f6dc179ae5647ee3e7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095702"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890740"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Lista de comprobación de implementación: Instalación en varios servidores de PowerPivot para SharePoint 2010
-  Esta lista de comprobación le guiará por los pasos para agregar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint a una granja de SharePoint 2010 de tres niveles que crea desde el principio. Una granja de tres niveles cuenta con los niveles de base de datos, de aplicación y de web. Agregar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para esta topología exige la ejecución del programa de instalación de SQL Server para instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] en la capa de aplicación. Archivos de programa de PowerPivot se agregan al nivel web, pero sólo como una tarea posterior a la instalación cuando se la implementar solución de aplicación web. Si bien existen pasos de implementación, no hay ningún paso de instalación independiente en los niveles web o de datos. El paso de instalación única que debe realizar es instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] en los servidores de aplicaciones.  
+  Esta lista de comprobación le guía por los pasos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] necesarios para agregar para SharePoint a una granja de servidores de SharePoint 2010 de tres niveles que se crea desde el principio. Una granja de tres niveles cuenta con los niveles de base de datos, de aplicación y de web. Para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] agregar a esta topología, es necesario ejecutar el programa de instalación [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de SQL Server para instalar en la capa de aplicación. Los archivos de programa de PowerPivot se agregan al nivel Web, pero solo como una tarea posterior a la instalación cuando se implementa la solución de aplicación Web. Si bien existen pasos de implementación, no hay ningún paso de instalación independiente en los niveles web o de datos. El único paso de instalación que debe realizar es instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] en los servidores de aplicaciones.  
   
 ||  
 |-|  
@@ -63,12 +63,12 @@ ms.locfileid: "66095702"
   
     9. Haga clic en Aceptar para cerrar el cuadro de diálogo Opciones de Internet.  
   
-##  <a name="installdb"></a> Instalar a un servidor de base de datos  
- En este tema se da por supuesto que la topología de granja de servidores se basa en la descrita en el artículo [varios servidores para una granja de tres niveles](https://go.microsoft.com/fwlink/?LinkId=182771). Si ya tiene una granja de servidores que está operativo, vaya a [instalar PowerPivot para SharePoint](#installppapp).  
+##  <a name="installdb"></a>Instalar un servidor de base de datos  
+ En este tema se supone que la topología de la granja de servidores se basa en la que se describe en el artículo [varios servidores para una granja de tres niveles](https://go.microsoft.com/fwlink/?LinkId=182771). Si ya tiene una granja de servidores operativa, vaya directamente a [instalar PowerPivot para SharePoint](#installppapp).  
   
  Si parte de la creación de la topología, comience instalando un motor de base de datos de SQL Server. Mediante estas instrucciones se crea un servidor de base de datos al que pueden tener acceso los servidores de SharePoint de la granja.  
   
-1.  En el equipo que está usando para el servidor de base de datos, ejecute el programa de instalación de SQL Server para instalar el motor de base de datos de SQL Server (consulte [instalar SQL Server 2014 desde el Asistente para instalación &#40;instalación&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)).  
+1.  En el equipo que usa para el servidor de base de datos, ejecute SQL Server instalación de para instalar SQL Server Motor de base de datos (consulte [instalación de SQL Server 2014 desde &#40;el&#41;Asistente para la instalación](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)).  
   
      Seleccione las siguientes características para que se instalen:  
   
@@ -86,45 +86,45 @@ ms.locfileid: "66095702"
   
     3.  Seleccione **Protocolos de MSSQLSERVER**.  
   
-    4.  Haga clic en **TCP/IP** y seleccione **habilitar**.  
+    4.  Haga clic con el botón derecho en **TCP/IP** y seleccione **Habilitar**.  
   
-    5.  Haga clic en **Services de SQL Server**.  
+    5.  Haga clic en **SQL Server Services**.  
   
-    6.  Haga clic en **SQL Server (MSSQLSERVER)** y haga clic en **reiniciar**.  
+    6.  Haga clic con el botón secundario en **SQL Server (MSSQLSERVER)** y haga clic en **reiniciar**.  
   
 3.  Habilite el acceso entrante al servidor de base de datos a través de Firewall de Windows. Así, los servidores de SharePoint de la granja se pueden conectar a las bases de datos SharePoint. Para obtener más información vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-    1.  En el Panel de Control de Windows, en Herramientas administrativas, haga clic en **Firewall de Windows con seguridad avanzada**.  
+    1.  En el panel de control de Windows, en herramientas administrativas, haga clic en **firewall de Windows con seguridad avanzada**.  
   
     2.  Haga clic en **reglas de entrada**.  
   
     3.  Haga clic en **nueva regla**.  
   
-    4.  En el tipo de regla, haga clic en **personalizado**.  
+    4.  En tipo de regla, haga clic en **personalizado**.  
   
-    5.  Haga clic en **Siguiente**.  
+    5.  Haga clic en **Next**.  
   
-    6.  En el programa, en la sección Servicios, haga clic en **personalizar**.  
+    6.  En programa, en la sección servicios, haga clic en **personalizar**.  
   
     7.  Haga clic en **aplicar a este servicio**.  
   
     8.  Seleccione **SQL Server (MSSQLSERVER)** si instaló SQL Server como instancia predeterminada y, a continuación, haga clic en **Aceptar**.  
   
-    9. Haga clic en **Siguiente**.  
+    9. Haga clic en **Next**.  
   
     10. En protocolo y puertos, acepte la configuración predeterminada y haga clic en **siguiente**.  
   
-    11. En el ámbito, acepte la configuración predeterminada y haga clic en **siguiente**.  
+    11. En ámbito, acepte la configuración predeterminada y haga clic en **siguiente**.  
   
     12. En acción, acepte la configuración predeterminada y haga clic en **siguiente**.  
   
-    13. En perfil, desactive las casillas de **privada** y **pública**y, a continuación, haga clic en **siguiente**.  
+    13. En perfil, desactive las casillas de **privado** y **público**y, a continuación, haga clic en **siguiente**.  
   
     14. En nombre, escriba un nombre descriptivo para la regla de entrada (por ejemplo, **SQL Server**).  
   
-    15. Haga clic en **Finalizar**.  
+    15. Haga clic en **Finalizar**  
   
-##  <a name="installsp"></a> Instalar y configurar una granja de SharePoint 2010 de tres niveles  
+##  <a name="installsp"></a>Instalación y configuración de una granja de SharePoint 2010 de tres niveles  
  En cada uno de los equipos que utilice como servidores de SharePoint, ejecute el programa de instalación de requisitos previos de SharePoint y, a continuación, el Programa de instalación de SharePoint Server.  
   
  Use las instrucciones siguientes de la documentación de SharePoint 2010 para instalar y configurar una granja de SharePoint 2010 con dos servidores web y un servidor de aplicaciones:  
@@ -143,59 +143,59 @@ ms.locfileid: "66095702"
   
 -   Registro de diagnóstico  
   
-##  <a name="installppapp"></a> Instalar PowerPivot para SharePoint en un servidor de aplicaciones  
+##  <a name="installppapp"></a>Instalación de PowerPivot para SharePoint en un servidor de aplicaciones  
  Ejecute el programa de instalación de SQL Server para agregar PowerPivot para SharePoint a una granja de servidores de SharePoint. Si la granja está compuesta por varios servidores de SharePoint, debe ejecutar el programa de instalación de SQL Server en un servidor de aplicaciones que ya forme parte de la granja.  
   
- Instale siempre PowerPivot para SharePoint en un servidor de aplicaciones. Aunque los servidores front-end web también ejecutarán los componentes de servidor de PowerPivot para SharePoint, los componentes que se ejecutan en el front-end web se instalan durante el paso de configuración de PowerPivot para SharePoint, al implementar las soluciones en la granja. Para obtener más información acerca de la instalación, consulte [instalar PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md).  
+ Instale siempre PowerPivot para SharePoint en un servidor de aplicaciones. Aunque los servidores front-end web también ejecutarán los componentes de servidor de PowerPivot para SharePoint, los componentes que se ejecutan en el front-end web se instalan durante el paso de configuración de PowerPivot para SharePoint, al implementar las soluciones en la granja. Para obtener más información acerca del programa de instalación, consulte [instalación de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md).  
   
- Si su topología de implementación reclama dos instancias de PowerPivot para SharePoint, ejecute el programa de instalación de SQL Server en cada servidor de aplicaciones. Solo puede tener una instancia de PowerPivot para SharePoint en un equipo. Si requiere varias instancias, debe utilizar servidores adicionales. Para obtener más información sobre cómo agregar varios servidores PowerPivot para SharePoint a la misma granja, vea [lista de comprobación de implementación: Escalabilidad horizontal mediante la adición de servidores de PowerPivot a una granja de SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
+ Si su topología de implementación reclama dos instancias de PowerPivot para SharePoint, ejecute el programa de instalación de SQL Server en cada servidor de aplicaciones. Solo puede tener una instancia de PowerPivot para SharePoint en un equipo. Si requiere varias instancias, debe utilizar servidores adicionales. Para obtener más información acerca de cómo agregar varios servidores PowerPivot para SharePoint a la misma [granja, consulte lista de comprobación de implementación: Escale horizontalmente agregando servidores de PowerPivot a una granja](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)de servidores de SharePoint 2010.  
   
-##  <a name="installclientlib"></a> Instalar las bibliotecas de cliente de Analysis Services en servidores de aplicaciones de SharePoint que no tienen una instalación de PowerPivot para SharePoint  
+##  <a name="installclientlib"></a>Instalar Analysis Services bibliotecas de cliente en servidores de aplicaciones de SharePoint que no tienen una instalación de PowerPivot para SharePoint  
  Una topología de granja que incluye un servidor de aplicaciones o web-front ejecutándose en las aplicaciones siguientes, sin una instalación de PowerPivot para SharePoint en el mismo equipo, requerirá software adicional para admitir las características y el acceso a datos PowerPivot:  
   
 -   Excel Services o PerformancePoint Services  
   
 -   Administración central, cuando se ejecuta como aplicación independiente en su propio servidor  
   
- Tanto Excel Services como PerformancePoint Services requieren una versión más reciente del proveedor OLE DB de Analysis Services para admitir el acceso a datos PowerPivot. Si ejecuta una aplicación en un equipo que no tiene el proveedor OLE DB más reciente, debe instalar el proveedor de modo manual. Para obtener más información, consulte [instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
+ Tanto Excel Services como PerformancePoint Services requieren una versión más reciente del proveedor OLE DB de Analysis Services para admitir el acceso a datos PowerPivot. Si ejecuta una aplicación en un equipo que no tiene el proveedor OLE DB más reciente, debe instalar el proveedor de modo manual. Para obtener más información, vea [instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) .  
   
  De igual modo, un equipo que tenga Administración central, sin PowerPivot para SharePoint en el mismo equipo, requerirá la biblioteca cliente ADOMD.NET. El panel de administración de PowerPivot usa esta biblioteca para tener acceso a los datos internos que se utilizan para rellenar el panel. Para obtener más información, vea [Instalar ADOMD.NET en servidores front-end web ejecutando Administración central](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).  
   
-##  <a name="configsrvr"></a> Configurar el servidor  
- Use la herramienta de configuración de PowerPivot para configurar PowerPivot para SharePoint. La herramienta examinará la configuración existente de la granja de servidores y proporcionan opciones para instalar o activar las características de SharePoint que son necesarios para PowerPivot para SharePoint. Durante este paso, se iniciarán las Notificaciones al servicio de token de Windows. Además, si otras características de SharePoint necesarias no están habilitadas todavía, la herramienta de configuración las agregará a la lista e incluirá acciones para habilitarlas.  
+##  <a name="configsrvr"></a>Configurar el servidor  
+ Use la herramienta de configuración de PowerPivot para configurar PowerPivot para SharePoint. La herramienta examinará la configuración existente de la granja y proporcionará opciones para instalar o activar las características de SharePoint necesarias para PowerPivot para SharePoint. Durante este paso, se iniciarán las Notificaciones al servicio de token de Windows. Además, si otras características de SharePoint necesarias no están habilitadas todavía, la herramienta de configuración las agregará a la lista e incluirá acciones para habilitarlas.  
   
- Para obtener más información, consulte [configurar o reparar PowerPivot para SharePoint 2010 &#40;herramienta de configuración de PowerPivot&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md).  
+ Para obtener más información, vea [configurar o reparar PowerPivot para SharePoint &#40;herramienta&#41;de configuración de PowerPivot 2010](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md).  
   
-##  <a name="AAM"></a> Configurar la asignación de acceso alternativo para los servidores front-end Web  
+##  <a name="AAM"></a>Configuración de la asignación de acceso alternativa para servidores front-end web  
  Para asegurarse de que cada servidor front-end web administra las solicitudes de acceso o actualización de datos PowerPivot, debe asignar las URL de cada servidor a la misma aplicación web.  
   
-1.  En Administración Central, en administración de aplicaciones, haga clic en **configurar asignaciones de acceso alternativas**.  
+1.  En administración central, en administración de aplicaciones, haga clic en **configurar asignaciones de acceso alternativas**.  
   
 2.  En la colección de asignaciones de acceso alternativas, seleccione su aplicación web.  
   
-3.  Haga clic en **agregar dirección URL interna**.  
+3.  Haga clic en **Agregar dirección URL interna**.  
   
 4.  Especifique la URL del primer servidor front-end web.  
   
 5.  Repita los pasos anteriores para agregar la dirección URL del segundo servidor front-end web.  
   
-##  <a name="activatePP"></a> Activar la integración de características de PowerPivot para colecciones de sitios  
+##  <a name="activatePP"></a>Activar la integración de características de PowerPivot para colecciones de sitios  
  La activación de características en el nivel de colección de sitios hace que las plantillas y las páginas de las aplicaciones estén disponibles para los sitios, incluidas las páginas de configuración para la actualización de datos programada y las páginas de aplicación para las bibliotecas de Galería de PowerPivot y de fuentes de distribución de datos.  
   
- La Herramienta de configuración de PowerPivot activará la integración de características para la colección de sitios que especifique. Puede ejecutar varias veces la herramienta para seleccionar colecciones de sitios adicionales. O bien, los administradores de sitio pueden configurar la activación de características desde dentro de SharePoint. Para obtener más información, consulte [activar la característica Integración de PowerPivot para colecciones de sitios en Administración Central](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ La Herramienta de configuración de PowerPivot activará la integración de características para la colección de sitios que especifique. Puede ejecutar varias veces la herramienta para seleccionar colecciones de sitios adicionales. O bien, los administradores de sitio pueden configurar la activación de características desde dentro de SharePoint. Para obtener más información, vea [activar la integración de características de PowerPivot para colecciones de sitios en administración central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca).  
   
-##  <a name="verify"></a> Comprobar la disponibilidad del servidor y de integración  
+##  <a name="verify"></a>Comprobar la integración y la disponibilidad del servidor  
  El procesamiento de consultas de PowerPivot en la granja tiene lugar cuando un usuario o una aplicación abren un libro de Excel que contiene datos PowerPivot. Como mínimo, puede consultar las páginas de sitios de SharePoint para comprobar que están disponibles las características de PowerPivot. Sin embargo, para comprobar una instalación por completo, debe tener un libro PowerPivot que pueda publicar en SharePoint y al que pueda tener acceso desde una biblioteca. Para realizar la prueba, puede publicar un libro de ejemplo que contenga datos PowerPivot y usarlo para confirmar que la integración de SharePoint está configurada correctamente.  
   
  Para comprobar la integración de PowerPivot con un sitio de SharePoint, haga lo siguiente:  
   
-1.  En un explorador, abra la aplicación web que ha creado. Si usa los valores predeterminados, puede especificar http://\<el nombre del equipo > en la dirección URL.  
+1.  En un explorador, abra la aplicación web que ha creado. Si ha usado los valores predeterminados, puede\<especificar http://el nombre del equipo > en la dirección URL.  
   
 2.  Compruebe que el acceso a datos y las características de procesamiento de PowerPivot están disponibles en la aplicación. Para ello, compruebe la presencia de plantillas de biblioteca proporcionadas por PowerPivot:  
   
-    1.  En acciones del sitio, haga clic en **más opciones...** .  
+    1.  En acciones del sitio, haga clic en **más opciones..** .  
   
-    2.  En las bibliotecas, debería ver **biblioteca de fuentes de datos** y **Galería de PowerPivot**. La característica PowerPivot proporciona estas plantillas de biblioteca, que estarán visibles en la lista Bibliotecas si la característica está integrada correctamente.  
+    2.  En bibliotecas, debería ver **biblioteca de fuentes** de distribución de datos y Galería de **PowerPivot**. La característica PowerPivot proporciona estas plantillas de biblioteca, que estarán visibles en la lista Bibliotecas si la característica está integrada correctamente.  
   
  Para comprobar el acceso a datos PowerPivot en el servidor, haga lo siguiente:  
   
@@ -211,31 +211,31 @@ ms.locfileid: "66095702"
   
 6.  En Tipo de servidor, seleccione **Analysis Services**.  
   
-7.  En el nombre del servidor, escriba  **\<nombre del servidor > \powerpivot**, donde  **\<server-name >** es el nombre del equipo que tiene la instalación de PowerPivot para SharePoint.  
+7.  En nombre del servidor, escriba  **\<el nombre del servidor > \powerpivot**, donde  **\<nombre** del servidor > es el nombre del equipo que tiene la PowerPivot para SharePoint instalación.  
   
 8.  Haga clic en **Conectar**.  
   
-9. En el Explorador de objetos, haga clic en **bases de datos** para ver la lista de archivos de datos de PowerPivot que se cargan.  
+9. En Explorador de objetos, haga clic en **bases** de datos para ver la lista de archivos de datos PowerPivot que se cargan.  
   
 10. En el sistema de archivos del equipo, compruebe la siguiente carpeta para determinar si hay archivos almacenados en la memoria caché del disco. La presencia de archivos almacenados en caché es una prueba más de que la implementación está operativa. Para ver la memoria caché de archivos, vaya a la carpeta \Archivos de programa\Microsoft SQL Server\MSAS10_50.POWERPIVOT\OLAP\Backup.  
   
-##  <a name="nextsteps"></a> Pasos posteriores a la instalación  
+##  <a name="nextsteps"></a>Pasos posteriores a la instalación  
  Después de comprobar la instalación, finalice la configuración del servicio creando una Galería de PowerPivot o ajustando la configuración individual. Para poder usar por completo los componentes del servidor recién instalados, puede descargar [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] para crear y, a continuación, publicar el primer libro PowerPivot.  
   
-####  <a name="bkmk_disk"></a> Establecer los límites superiores en el uso de espacio en disco  
- Puede establecer un límite máximo en cuanto al espacio en disco que se usa para los archivos de datos PowerPivot almacenados en memoria caché en el disco. El valor predeterminado es usar todo el espacio de disco disponible. Para obtener instrucciones sobre cómo limitar el uso de espacio en disco, consulte [configurar el uso de espacio de disco &#40;PowerPivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md).  
+####  <a name="bkmk_disk"></a>Establecer límites superiores en el uso del espacio en disco  
+ Puede establecer un límite máximo en cuanto al espacio en disco que se usa para los archivos de datos PowerPivot almacenados en memoria caché en el disco. El valor predeterminado es usar todo el espacio de disco disponible. Para obtener instrucciones sobre cómo limitar el uso del espacio en disco, vea [configurar &#40;el&#41;uso del espacio en disco PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint).  
   
-####  <a name="Upload"></a> Aumentar el tamaño máximo de carga de archivos para aplicaciones Web de SharePoint  
- Dado que los libros PowerPivot pueden ser grandes, quizá desee aumentar el tamaño de carga máxima de archivos. Hay dos opciones de tamaño de archivo para configurar: Tamaño máximo de carga para la aplicación web y el tamaño máximo del libro en Excel Services. El tamaño máximo de archivo debe estar establecido en el mismo valor en ambas aplicaciones. Para obtener instrucciones, consulte [configuración tamaño máximo de archivo de carga &#40;PowerPivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
+####  <a name="Upload"></a>Aumentar el tamaño máximo de carga de archivo para las aplicaciones Web de SharePoint  
+ Dado que los libros PowerPivot pueden ser grandes, quizá desee aumentar el tamaño de carga máxima de archivos. Hay dos opciones de configuración de tamaño de archivo para configurar: Tamaño máximo de carga para la aplicación web y tamaño máximo del libro en Excel Services. El tamaño máximo de archivo debe estar establecido en el mismo valor en ambas aplicaciones. Para obtener instrucciones, vea [configurar el tamaño &#40;máximo de&#41;carga de archivos PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint).  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>Conceder permisos de SharePoint a los usuarios del libro  
- Los usuarios necesitarán permisos de SharePoint para poder publicar o ver los libros. Asegúrese de conceder **vista** permisos a los usuarios que necesitan ver los libros publicados y **Contribute** permisos a los usuarios que publiquen o administren libros. Debe ser administrador de la colección de sitios para conceder permisos.  
+ Los usuarios necesitarán permisos de SharePoint para poder publicar o ver los libros. Asegúrese de conceder permisos de **vista** a los usuarios que necesiten ver los libros publicados y **contribuir** a los usuarios que publican o administran libros. Debe ser administrador de la colección de sitios para conceder permisos.  
   
 1.  En el sitio, haga clic en **acciones del sitio**.  
   
 2.  Haga clic en **permisos del sitio**.  
   
-3.  Seleccione la casilla de verificación de la colección de sitios **miembros** grupo.  
+3.  Active la casilla correspondiente al grupo **miembros** de la colección de sitios.  
   
 4.  En la cinta de opciones, haga clic en **conceder permisos**.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "66095702"
   
 6.  Haga clic en **Aceptar**.  
   
-7.  Seleccione la casilla de verificación de la colección de sitios **visitantes** grupo.  
+7.  Active la casilla correspondiente al grupo **visitantes** de la colección de sitios.  
   
 8.  En la cinta de opciones, haga clic en **conceder permisos**.  
   
@@ -252,20 +252,20 @@ ms.locfileid: "66095702"
 10. Haga clic en **Aceptar**.  
   
 #### <a name="install-adonet-data-services-35-sp1"></a>Instalar ADO.NET Data Services 3.5 SP1  
- ADO.NET Data Services se requiere para exportar fuentes de distribución de datos de las listas de SharePoint. SharePoint 2010 no incluye este componente en el programa PrerequisiteInstaller, de modo que debe instalarlo manualmente. Para obtener más información sobre cómo instalar ADO.NET Data Services, consulte [instalar ADO.NET Data Services para admitir datos fuente exportaciones de listas de SharePoint](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
+ ADO.NET Data Services se requiere para exportar fuentes de distribución de datos de las listas de SharePoint. SharePoint 2010 no incluye este componente en el programa PrerequisiteInstaller, de modo que debe instalarlo manualmente. Para obtener más información sobre cómo instalar ADO.NET Data Services, consulte [instalar ADO.NET Data Services para admitir las exportaciones de fuentes de distribución de datos de las listas de SharePoint](../../../2014/sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
 #### <a name="install-data-providers-used-in-data-refresh-and-check-user-permissions"></a>Proveedores de datos de configuración utilizados en los permisos de actualización de datos y comprobación de usuario  
- La actualización de datos del lado servidor permite a los usuarios reimportar los datos actualizados en sus libros en modo desatendido. Para que la actualización de datos se realice correctamente, el servidor debe tener el mismo proveedor de datos que se usó para importar originalmente los datos. Además, la cuenta de usuario en la que se ejecuta la actualización de datos requiere a menudo permisos de lectura en los orígenes de datos externos. Asegúrese de comprobar los requisitos para habilitar y configurar la actualización de datos a fin de garantizar que el resultado es correcto. Para obtener más información, consulte [actualización de datos de PowerPivot con SharePoint 2010](../../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md).  
+ La actualización de datos del lado servidor permite a los usuarios reimportar los datos actualizados en sus libros en modo desatendido. Para que la actualización de datos se realice correctamente, el servidor debe tener el mismo proveedor de datos que se usó para importar originalmente los datos. Además, la cuenta de usuario en la que se ejecuta la actualización de datos requiere a menudo permisos de lectura en los orígenes de datos externos. Asegúrese de comprobar los requisitos para habilitar y configurar la actualización de datos a fin de garantizar que el resultado es correcto. Para obtener más información, vea [actualización de datos PowerPivot con SharePoint 2010](../../../2014/analysis-services/powerpivot-data-refresh-with-sharepoint-2010.md).  
   
 #### <a name="create-a-powerpivot-gallery"></a>Crear una Galería de PowerPivot  
- La Galería de PowerPivot es una biblioteca de opciones de vista previa y de presentación para ver los libros PowerPivot de un sitio de SharePoint. Se recomienda usar la Galería de PowerPivot para publicar y ver libros PowerPivot, por sus capacidades de vista previa. Además, si también implementa Reporting Services en el mismo servidor de SharePoint, un Galería de PowerPivot simplifica el uso de la creación de informes. Puede iniciar el Generador de informes desde la Galería de PowerPivot para crear un informe nuevo a partir de un libro PowerPivot publicado. Para obtener más información sobre la creación y uso de la biblioteca, consulte [crear y personalizar la Galería de PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md) y [usar la Galería de PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md).  
+ La Galería de PowerPivot es una biblioteca de opciones de vista previa y de presentación para ver los libros PowerPivot de un sitio de SharePoint. Se recomienda usar la Galería de PowerPivot para publicar y ver libros PowerPivot, por sus capacidades de vista previa. Además, si también implementa Reporting Services en el mismo servidor de SharePoint, un Galería de PowerPivot simplifica el uso de la creación de informes. Puede iniciar el Generador de informes desde la Galería de PowerPivot para crear un informe nuevo a partir de un libro PowerPivot publicado. Para obtener más información acerca de la creación y el uso de la biblioteca, vea [crear y personalizar la galería de PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery) y [usar la galería de PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/use-power-pivot-gallery).  
   
 #### <a name="tune-configuration-settings"></a>Ajustar las opciones de configuración  
- Una aplicación de servicio PowerPivot se crea con propiedades y valores predeterminados. Las opciones de configuración de cada una de las aplicaciones de servicio se pueden modificar para cambiar la metodología mediante la que se asignan las solicitudes, establecer los tiempos de espera de servidor, cambiar los umbrales de los eventos de informe de respuesta de consulta, o especificar cuánto tiempo se conservan los datos de uso. Para obtener más información sobre la configuración en Administración Central o sobre cómo usar las características de PowerPivot en aplicaciones Web de SharePoint, vea [configuración en Administración Central y administración de servidores PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+ Una aplicación de servicio PowerPivot se crea con propiedades y valores predeterminados. Las opciones de configuración de cada una de las aplicaciones de servicio se pueden modificar para cambiar la metodología mediante la que se asignan las solicitudes, establecer los tiempos de espera de servidor, cambiar los umbrales de los eventos de informe de respuesta de consulta, o especificar cuánto tiempo se conservan los datos de uso. Para obtener más información acerca de la configuración en administración central o sobre el uso de las características de PowerPivot en aplicaciones Web de SharePoint, vea [Administración y configuración de servidores de PowerPivot en administración central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
 ## <a name="see-also"></a>Vea también  
- [Características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
- [Instalar PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
- [Lista de comprobación de implementación: Escalabilidad horizontal mediante la adición de servidores de PowerPivot a una granja de SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
+ [Características admitidas por las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
+ [Instalación de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
+ [Lista de comprobación de implementación: Escalar horizontalmente agregando servidores de PowerPivot a una granja de SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   
   

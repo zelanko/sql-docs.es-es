@@ -1,5 +1,5 @@
 ---
-title: Agregar tipos de contenido de servidor de informes a una biblioteca (Reporting Services en modo integrado de SharePoint) | Microsoft Docs
+title: Agregar tipos de contenido del servidor de informes a una biblioteca (Reporting Services en el modo integrado de SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ef4049f10363eca45615db234e3ed63687caf8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c9080f1ea9ac0d733a45718886e31ab52171c8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66110008"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891630"
 ---
 # <a name="add-report-server-content-types-to-a-library-reporting-services-in-sharepoint-integrated-mode"></a>Agregar tipos de contenido del servidor de informes a una biblioteca (Reporting Services en el modo integrado de SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona tipos de contenido de SharePoint predefinidos que se usan para administrar archivos de orígenes de datos compartidos (.rsds), modelos de informe (.smdl) y archivos de definición de informe (.rdl) del Generador de informes. Al agregar un tipo de contenido **Informe del Generador de informes**, **Modelo de informe**y **Origen de datos de informe** a una biblioteca se habilita el comando **Nuevo** para que pueda crear nuevos documentos de ese tipo.  
@@ -31,7 +31,7 @@ ms.locfileid: "66110008"
 > [!TIP]  
 >  Si **no** ha configurado previamente los tipos de contenido de una biblioteca, habilite primero la administración de tipos de contenido y, a continuación, habilite los tipos de contenido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Vea los procedimientos para habilitar la administración de tipos de contenido en una única biblioteca de documentos.  
   
- **Vídeo corto:** [(SSRS) Habilitación de Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Vídeo corto:** [(SSRs) Habilitar tipos de contenido en SharePoint2010. wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **En este tema:**  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66110008"
   
 2.  Vaya a **Configuración del sitio**.  
   
-    -   En SharePoint 2013, haga clic en el icono de **Configuración** . ![Configuración de SharePoint](../analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint")  
+    -   En SharePoint 2013, haga clic en el icono de **Configuración** . ![Configuración de SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint")  
   
     -   En SharePoint 2010, haga clic en **Acciones del sitio**y, a continuación, haga clic en **Configuración del sitio**.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66110008"
 9. > [!NOTE]  
     >  Si el grupo de tipos de contenido de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Tipos de contenido de SQL Server Reporting Services **de** no es visible en la página **Agregar tipos de contenido** , se cumple una de las condiciones siguientes:  
   
-    -   No se ha instalado el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint. Para obtener más información, consulte [instalar o desinstalar el complemento Reporting Services para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). El tema contiene información sobre la instalación del complemento y la ejecución paso a paso en una instalación solo de archivos del complemento para solucionar problemas.  
+    -   No se ha instalado el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint. Para obtener más información, vea [instalar o desinstalar el complemento de Reporting Services para SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). El tema contiene información sobre la instalación del complemento y la ejecución paso a paso en una instalación solo de archivos del complemento para solucionar problemas.  
   
     -   Se instala el complemento, pero la característica de colección de sitios **Característica de integración del servidor de informes** no está activa. Compruebe la característica de colección de sitios en **Configuración del sitio**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66110008"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> Para habilitar la administración de tipos de contenido para una sola biblioteca de documentos (SharePoint 2010)  
   
-1.  Abra la biblioteca para la que desee habilitar varios tipos de contenido. En la barra de menús de la biblioteca, debería ver los siguientes menús: **Nuevo**, **cargar**, **acciones**, y **configuración**. Si no ve **Configuración**, significa que no tiene permiso para agregar un tipo de contenido.  
+1.  Abra la biblioteca para la que desee habilitar varios tipos de contenido. En la barra de menús de la biblioteca, debería ver los siguientes menús: **Nuevo**, **cargar**, **acciones**y **configuración**. Si no ve **Configuración**, significa que no tiene permiso para agregar un tipo de contenido.  
   
 2.  En la cinta **Herramientas de bibliotecas** , haga clic en **Biblioteca**.  
   
@@ -164,6 +164,6 @@ ms.locfileid: "66110008"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
- [Iniciar el generador de informes &#40;generador de informes&#41;](report-builder/start-report-builder.md)  
+ [Inicio Generador de informes &#40;generador de informes&#41;](report-builder/start-report-builder.md)  
   
   

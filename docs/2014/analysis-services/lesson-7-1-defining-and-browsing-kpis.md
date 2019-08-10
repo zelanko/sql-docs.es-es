@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27508ec35e6d7d061a278859a0a9bf38e63a95e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078381"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888086"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definir y examinar KPI
   Para definir indicadores clave de rendimiento (KPI), deberá primero definir un nombre de KPI y el grupo de medida con el que desea asociar el KPI. Un KPI se puede asociar con todos los grupos de medida o con un solo grupo de medida. Se definirán entonces los siguientes elementos del KPI:  
@@ -59,15 +59,15 @@ ms.locfileid: "66078381"
   
      La siguiente imagen muestra la pestaña **KPI** del Diseñador de cubos.  
   
-     ![Pestaña KPI del Diseñador de cubos](../../2014/tutorials/media/l7-kpi-1.gif "pestaña KPI del Diseñador de cubos")  
+     ![Pestaña KPI del diseñador de cubos](../../2014/tutorials/media/l7-kpi-1.gif "Pestaña KPI del diseñador de cubos")  
   
 2.  En la barra de herramientas de la pestaña **KPI** , haga clic en el botón **Nuevo KPI** .  
   
      En el panel de información aparecerá una plantilla de KPI en blanco, como en la siguiente imagen.  
   
-     ![Plantilla KPI en blanco en el panel de información](../../2014/tutorials/media/l7-kpi-2.gif "plantilla KPI en blanco en el panel de información")  
+     ![Plantilla de KPI en blanco en el panel de información](../../2014/tutorials/media/l7-kpi-2.gif "Plantilla de KPI en blanco en el panel de información")  
   
-3.  En el **nombre** , escriba `Reseller Revenue`y, a continuación, seleccione **Reseller Sales** en el **grupo de medida asociado** lista.  
+3.  En el cuadro **nombre** , escriba `Reseller Revenue`y, a continuación, seleccione **reseller sales** en la lista **grupo de medida asociado** .  
   
 4.  En la pestaña **Metadatos** del panel **Herramientas de cálculo** , expanda **Medidas**, **Reseller Sales**y, después, arrastre la medida **Reseller Sales-Sales Amount** al cuadro **Expresión de valor** .  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66078381"
   
 1.  Haga clic en el botón **Vista de formulario** de la barra de herramientas de la pestaña **KPI** y, después, haga clic en el botón **Nuevo KPI** .  
   
-2.  En el **nombre** , escriba `Product Gross Profit Margin`y, a continuación, compruebe que  **\<todas >** aparece en el **grupo de medida asociado** lista.  
+2.  En el cuadro **nombre** , escriba `Product Gross Profit Margin`y, a continuación, compruebe que  **\<todos los >** aparecen en la lista **grupo de medida asociado** .  
   
 3.  En la pestaña **Metadatos** del panel **Herramientas de cálculo** , arrastre la medida **Total GPM** al cuadro **Expresión de valor** .  
   
@@ -261,13 +261,13 @@ ms.locfileid: "66078381"
   
 2.  Cuando la implementación se haya completado correctamente, haga clic en **Volver a conectar** en la barra de herramientas de la pestaña **KPI** y, después, haga clic en **Vista de explorador**.  
   
-     El `Product Gross Profit Margin` KPI aparece y muestra el valor KPI para **Q3 CY 2007** y **Norteamérica** territorio de ventas.  
+     Aparece `Product Gross Profit Margin` el KPI y muestra el valor de KPI del **tercer trimestre 2007** y el **Norteamérica** territorio de ventas.  
   
 3.  En el panel **Filtro** , seleccione **Product** en la lista **Dimensión** , seleccione **Category** en la lista **Jerarquía** , seleccione **Igual** en la lista **Operador** y **Bikes** en la lista **Expresión de filtro** y, después, haga clic en **Aceptar**.  
   
      Aparecerá el margen de beneficio bruto para la venta de bicicletas por distribuidor en Norteamérica en el tercer trimestre de 2007.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 8: Definir acciones](../analysis-services/lesson-8-defining-actions.md)  
+ [Lección 8: Definir acciones](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: sp_addpullsubscription_agent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 01f076673491978739ff96d791a41d0927c4ddb6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9ab0624abf7a0479ac12f1ab51efd00c7e45a82a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769116"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893814"
 ---
-# <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
+# <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
  
   Agrega un nuevo trabajo de agente programado utilizado para sincronizar una suscripción de extracción a una publicación transaccional. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
@@ -85,7 +85,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @subscriber = ] 'subscriber'`Es el nombre de la instancia del suscriptor o el nombre del agente de escucha del AG si la base de datos del suscriptor es un grupo de disponibilidad. *Subscriber* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores.  

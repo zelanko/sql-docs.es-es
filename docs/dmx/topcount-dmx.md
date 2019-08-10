@@ -1,5 +1,5 @@
 ---
-title: TopCount (DMX) | Microsoft Docs
+title: Topcount (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48621e242fae86b0b9fca689149ed1364cb7ff1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079845"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893105"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,22 +28,22 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Una expresión que devuelve una tabla, como un \<referencia de columna de tabla >, o una función que devuelve una tabla.  
+ Expresión que devuelve una tabla, como una referencia de \<columna de tabla >, o una función que devuelve una tabla.  
   
 ## <a name="return-type"></a>Tipo devuelto  
- \<expresión de tabla >  
+ \<> de expresión de tabla  
   
 ## <a name="remarks"></a>Comentarios  
- El valor proporcionado por el \<rank expression > argumento determina el orden decreciente de rango para las filas que se proporcionan en el \<expresión de tabla > argumento y el número de filas de nivel superior que se especifica en el \<recuento > se devuelve el argumento.  
+ El valor que proporciona la expresión de \<rango > argumento determina el orden decreciente de rango para las filas que se proporcionan en la \<expresión de tabla > argumento y el número de filas de nivel superior que se especifica en el \<se devuelve el argumento Count >.  
   
- La función TopCount se presentó originalmente para habilitar las predicciones asociativas y en general, genera los mismos resultados que una instrucción que incluye **SELECT TOP** y **ORDER BY** cláusulas. Obtendrá un mejor rendimiento para las predicciones asociativas si usa el **predecir (DMX)** función, que admite la especificación de un número de predicciones que devolver.  
+ La función Topcount se introdujo originalmente para habilitar las predicciones asociativas y, en general, genera los mismos resultados que una instrucción que incluye las cláusulas **Select Top** y **order by** . Obtendrá un mejor rendimiento para las predicciones asociativas si usa la función **PREDICT (DMX)** , que admite la especificación de un número de predicciones para devolver.  
   
- Sin embargo, existen situaciones donde es posible que todavía deberá usar TopCount. Por ejemplo, DMX no admite la **superior** calificador en una instrucción Sub-select. El [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) función también no admite la adición de **superior**.  
+ Sin embargo, hay situaciones en las que es posible que siga necesitando usar el número de recuentos. Por ejemplo, DMX no admite el calificador **Top** en una instrucción Sub-SELECT. La [función &#40;de&#41; DMX de PredictHistogram](../dmx/predicthistogram-dmx.md) tampoco admite la adición de **Top**.  
   
 ## <a name="examples"></a>Ejemplos  
- Los siguientes ejemplos son consultas de predicción en el modelo de asociación que se crea mediante el uso de la [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Las consultas devuelven los mismos resultados, pero el primer ejemplo utiliza TopCount y el segundo ejemplo usa la función Predict.  
+ Los ejemplos siguientes son consultas de predicción en el modelo de asociación que se genera mediante el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Las consultas devuelven los mismos resultados, pero en el primer ejemplo se usa Topcount y en el segundo ejemplo se usa la función PREDICT.  
   
- Para entender cómo funciona TopCount, puede ser útil ejecutar primero una consulta de predicción que devuelve solo la tabla anidada.  
+ Para entender cómo funciona el recuento, puede ser útil ejecutar primero una consulta de predicción que devuelva solo la tabla anidada.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -54,7 +54,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  En este ejemplo, el valor proporcionado como entrada contiene una comilla sencilla y, por consiguiente, se debe anteponer como carácter de escape otra comilla sencilla. Si duda de la sintaxis para insertar un carácter de escape, puede utilizar el generador de consultas de predicción para crear la consulta. Al seleccionar el valor en la lista desplegable, se inserta el carácter de escape necesario. Para obtener más información, consulte [crear una consulta Singleton en el Diseñador de minería de datos](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md).  
+>  En este ejemplo, el valor proporcionado como entrada contiene una comilla sencilla y, por consiguiente, se debe anteponer como carácter de escape otra comilla sencilla. Si duda de la sintaxis para insertar un carácter de escape, puede utilizar el generador de consultas de predicción para crear la consulta. Al seleccionar el valor en la lista desplegable, se inserta el carácter de escape necesario. Para obtener más información, vea [crear una consulta Singleton en el diseñador de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Resultados del ejemplo:  
   
@@ -71,7 +71,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- La función TopCount toma los resultados de esta consulta y devuelve el número especificado de las filas con los valores menores.  
+ La función Topcount toma los resultados de esta consulta y devuelve el número especificado de las filas con valores más pequeños.  
   
 ```  
 SELECT   
@@ -86,35 +86,35 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- El primer argumento a la función TopCount es el nombre de una columna de tabla. En este ejemplo, la tabla anidada se devuelve al llamar a la función Predict y con el argumento INCLUDE_STATISTICS.  
+ El primer argumento de la función Topcount es el nombre de una columna de la tabla. En este ejemplo, la tabla anidada se devuelve mediante una llamada a la función PREDICT y el uso del argumento INCLUDE_STATISTICS.  
   
- El segundo argumento a la función TopCount es la columna en la tabla anidada que se utiliza para ordenar los resultados. En este ejemplo, la opción INCLUDE_STATISTICS devuelve las columnas $SUPPORT, $PROBABILTY y $ADJUSTED PROBABILITY. En este ejemplo se utiliza $SUPPORT para clasificar los resultados.  
+ El segundo argumento de la función Topcount es la columna de la tabla anidada que se utiliza para ordenar los resultados. En este ejemplo, la opción INCLUDE_STATISTICS devuelve las columnas $SUPPORT, $PROBABILTY y $ADJUSTED PROBABILITY. En este ejemplo se utiliza $SUPPORT para clasificar los resultados.  
   
- El tercer argumento a la función TopCount especifica el número de filas que se devolverán como un entero. Para obtener los tres productos de la parte superior, ordenados por $SUPPORT, se escribe 3.  
+ El tercer argumento de la función Topcount especifica el número de filas que se van a devolver, como un entero. Para obtener los tres productos de la parte superior, ordenados por $SUPPORT, se escribe 3.  
   
  Resultados del ejemplo:  
   
 |Modelo|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Sport-100|4334|0.29...|0,25...|  
-|Water Bottle|2866|0.19...|0,17...|  
-|Patch kit|2113|0,14...|0.13...|  
+|Sport-100|4334|0,29...|0,25...|  
+|Water Bottle|2866|0,19...|0,17...|  
+|Patch kit|2113|0,14...|0,13...|  
   
  Sin embargo, este tipo de consulta podría afectar al rendimiento en una configuración de producción. Esto se debe a que la consulta devuelve un conjunto de todas las predicciones del algoritmo, ordena estas predicciones y devuelve las tres primeras.  
   
- En el ejemplo siguiente se proporciona una instrucción alternativa que devuelve los mismos resultados pero se ejecuta significativamente más rápido. Este ejemplo reemplaza TopCount con la función de predicción, que acepta un número de predicciones como argumento. En este ejemplo también usa el **$SUPPORT** palabra clave para recuperar directamente la columna de tabla anidada.  
+ En el ejemplo siguiente se proporciona una instrucción alternativa que devuelve los mismos resultados pero se ejecuta significativamente más rápido. En este ejemplo se reemplaza el valor de Topcount por la función PREDICT, que acepta un número de predicciones como argumento. En este ejemplo también se usa la palabra clave **$support** para recuperar directamente la columna de la tabla anidada.  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- Los resultados contienen las tres primeras predicciones ordenadas por el valor de compatibilidad. Puede reemplazar $SUPPORT con $PROBABILITY o $ADJUSTED_PROBABILITY para devolver predicciones clasificadas por probabilidad o ajustar la probabilidad. Para obtener más información, consulte **predecir (DMX)** .  
+ Los resultados contienen las tres primeras predicciones ordenadas por el valor de compatibilidad. Puede reemplazar $SUPPORT con $PROBABILITY o $ADJUSTED_PROBABILITY para devolver predicciones clasificadas por probabilidad o ajustar la probabilidad. Para obtener más información, vea **PREDICT (DMX)** .  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
- [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   
- [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
+ [DMX &#40;de funciones&#41;](../dmx/functions-dmx.md)   
+ [Funciones &#40;de predicción generales DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX &#40;BottomCount&#41;](../dmx/bottomcount-dmx.md)   
+ [DMX de &#40;porcentaje&#41;](../dmx/toppercent-dmx.md)   
+ [&#40;DMX de tops&#41;](../dmx/topsum-dmx.md)  
   
   

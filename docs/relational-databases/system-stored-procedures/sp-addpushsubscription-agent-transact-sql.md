@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 754180cfa1ff907e9590b70ba074cd28eaaa804e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769090"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894043"
 ---
-# <a name="spaddpushsubscriptionagent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
+# <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Agrega un nuevo trabajo del agente programado que se utiliza para sincronizar una suscripción de inserción con una publicación transaccional. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -71,7 +71,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @subscriber = ] 'subscriber'`Es el nombre de la instancia del suscriptor o el nombre del agente de escucha del AG si la base de datos del suscriptor es un grupo de disponibilidad. *Subscriber* es de **tipo sysname y su**valor predeterminado es NULL. 
   
 `[ @subscriber_db = ] 'subscriber_db'`Es el nombre de la base de datos de suscripciones. *subscriber_db* es de **tipo sysname y su**valor predeterminado es NULL. Para un suscriptor que no sea de SQL Server, especifique un valor de **(destino predeterminado)** para *subscriber_db*.  
   

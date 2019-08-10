@@ -10,12 +10,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a404c18f47fb13464d01f5be6af9869fd10292cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1d5afebb0f0bf69990a0e93bca49d95f7a4c6b5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078626"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888283"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definir una relación referenciada
   Hasta este punto del tutorial, cada dimensión de cubo que definió se basaba en una tabla que estaba directamente vinculada a la tabla de hechos para un grupo de medida a través de una relación de clave principal a clave externa. En las tareas de este tema, debe vincular la dimensión **Geography** a la tabla de hechos de ventas por distribuidor a través de la dimensión **Reseller** , denominada *dimensión de referencia*. Esto permite a los usuarios dimensionar las ventas de distribuidor por geografía. Para obtener más información, consulte [Definir relaciones referenciadas y propiedades de las relaciones referenciadas](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "66078626"
   
      Observe que la medida **Reseller Sales-Sales Amount** no está bien dimensionada por los miembros del atributo **Country-Region** de la jerarquía **Regions** . El valor de **Reseller Sales-Sales Amount** se repite para cada miembro de atributo **Country-Region** .  
   
-     ![Dimensionada medida Reseller Sales-Sales Amount](../../2014/tutorials/media/l5-referencedrelationship-1.gif "medida con dimensión Reseller Sales-Sales Amount")  
+     ![Dimensiond reseller sales-Sales amount Measure](../../2014/tutorials/media/l5-referencedrelationship-1.gif "Dimensiond reseller sales-Sales amount Measure")  
   
 4.  Abra el Diseñador de vistas del origen de datos para la vista del origen de datos **Adventure Works DW 2012** .  
   
@@ -46,17 +46,17 @@ ms.locfileid: "66078626"
   
      Observe que la dimensión del cubo **Geography** actualmente no tiene ninguna relación con el grupo de medida **Internet Sales** ni con el grupo de medida **Reseller Sales** .  
   
-8.  Haga clic en el botón de puntos suspensivos ( **...** ) en el **nombre completo** celda en la intersección de la **cliente** dimensión y el **Internet Sales** grupo de medida.  
+8.  Haga clic en el botón de puntos suspensivos ( **...** ) de la celda **nombre completo** en la intersección de la dimensión **Customer** y el grupo de medida **Internet sales** .  
   
      En el cuadro de diálogo **Definir relación** , observe que hay una relación **Regular** definida entre la tabla de la dimensión **DimCustomer** y la tabla del grupo de medida **FactInternetSales** basada en la columna **CustomerKey** de cada una de estas tablas. Todas las demás relaciones que ha definido en este tutorial hasta este punto han sido relaciones regulares.  
   
      En la imagen siguiente se muestra el cuadro de diálogo **Definir relación** con una relación regular entre la tabla de la dimensión **DimCustomer** y la tabla del grupo de medida **FactInternetSales** .  
   
-     ![Cuadro de diálogo Definir relación](../../2014/tutorials/media/l5-referencedrelationship-4.gif "cuadro de diálogo Definir relación")  
+     ![Definir relación (cuadro de diálogo)](../../2014/tutorials/media/l5-referencedrelationship-4.gif "Definir relación (cuadro de diálogo)")  
   
 9. Haga clic en **Cancelar**.  
   
-10. Haga clic en el botón de puntos suspensivos ( **...** ) en la celda sin nombre en la intersección de la **Geography** dimensión y el **Reseller Sales** grupo de medida.  
+10. Haga clic en el botón de puntos suspensivos ( **...** ) de la celda sin nombre en la intersección de la dimensión Geography y el grupo de medida **reseller sales** .  
   
      En el cuadro de diálogo **Definir relación** , observe que actualmente no hay ninguna relación definida entre la dimensión del cubo Geography y el grupo de medida Reseller Sales. No se puede definir una relación regular porque no existe ninguna relación directa entre la tabla de dimensiones de la dimensión Geography y la tabla de hechos del grupo de medida Reseller Sales.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66078626"
   
      El atributo Geography Key de la dimensión Reseller solamente se utilizará para vincular la dimensión Geography a la tabla de hechos Reseller Sales. Puesto que no se utilizará para examinar, definir esta jerarquía de atributo como visible no aporta ningún valor. Además, ordenar y optimizar la jerarquía de atributo solo afectaría negativamente al proceso. No obstante, el atributo debe estar habilitado para poder servir como vínculo entre las dos dimensiones.  
   
-4.  Cambie al diseñador de cubos para el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo del Tutorial, haga clic en el **uso de dimensiones** pestaña y, a continuación, haga clic en el botón de puntos suspensivos ( **...** ) en la intersección de la **Reseller Sales** grupo de medida y la **Geography** dimensión de cubo.  
+4.  Cambie al diseñador de cubos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para el cubo tutorial de, haga clic en la pestaña **uso de dimensiones** y, a continuación, haga clic en el botón de puntos suspensivos ( **...** ) en la intersección del grupo de medida **reseller sales** y la dimensión de cubo Geography.  
   
 5.  En la lista **Seleccionar tipo de relación** , seleccione **Referenciada**.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "66078626"
   
 9. En la lista **Dimensiones** de la pestaña **Uso de dimensiones** , haga clic con el botón secundario en **Geography**y, después, haga clic en **Rename**.  
   
-10. Cambiar el nombre de esta dimensión de cubo a `Reseller Geography`.  
+10. Cambie el nombre de esta dimensión de cubo `Reseller Geography`a.  
   
      Como esta dimensión de cubo ahora está vinculada al grupo de medida **Reseller Sales** , los usuarios se beneficiarán de definir explícitamente su uso en el cubo, con el fin de evitar una posible confusión de los usuarios.  
   
@@ -114,14 +114,14 @@ ms.locfileid: "66078626"
   
 2.  Cuando la implementación se haya completado correctamente, haga clic en la pestaña **Explorador** del Diseñador de cubos para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, a continuación, haga clic en el botón **Volver a conectar** .  
   
-3.  En el panel metadatos, expanda `Reseller Geography`, haga clic en **ubicaciones geográficas**y, a continuación, haga clic en **agregar a área de fila**.  
+3.  En el panel metadatos, `Reseller Geography`expanda, hagaclic con el botón secundario en Geographies y, a continuación, haga clic en **Agregar a área de fila**.  
   
      Observe que la medida **Reseller Sales-Sales Amount** no aparece bien dimensionada por el atributo **Country-Region** de la jerarquía definida por el usuario **Geographies** , como se muestra en la imagen siguiente.  
   
-     ![Cuadro de diálogo Definir relación](../../2014/tutorials/media/l5-referencedrelationship-5.gif "cuadro de diálogo Definir relación")  
+     ![Definir relación (cuadro de diálogo)](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Definir relación (cuadro de diálogo)")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Definir una relación de hechos](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
+ [Definir una relación de hechos](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)  
   
 ## <a name="see-also"></a>Vea también  
  [Relación de los atributos](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

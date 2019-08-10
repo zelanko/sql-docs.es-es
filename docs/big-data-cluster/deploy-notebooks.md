@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 18880c6cf0590c8a10c232cd2dd9d11e5279f918
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb1da50fb84cbfd44aeab50a00be1c8433b3041e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470788"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892456"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebooks"></a>Implementación de clústeres de macrodatos de SQL Server con cuadernos de Azure Data Studio
 
@@ -26,11 +26,11 @@ Los [cuadernos](notebooks-guidance.md), que originalmente se implementaban como 
 
 Puede usar cuadernos para implementar clústeres de macrodatos para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Los siguientes requisitos previos son necesarios para poder iniciar el cuaderno:
 
-* Versión más reciente de [Azure Data Studio](http://docs.microsoft.com/sql/azure-data-studio/download) instalada
+* Versión más reciente de la [compilación de Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master) Insider instalada
 * Extensión [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] instalada en Azure Data Studio
 
 Además de lo anterior, la implementación de clústeres de macrodatos de SQL Server 2019 también requiere:
@@ -41,7 +41,7 @@ Además de lo anterior, la implementación de clústeres de macrodatos de SQL S
 
 ## <a name="launch-the-notebook"></a>Inicio del cuaderno
 
-1. Instale e inicie la [compilación de Azure Data Studio Insiders](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master).
+1. Inicie el Azure Data Studio Insiders.
 
 1. En la pestaña **Conexiones**, haga clic en **...** y seleccione **Implementar el clúster de macrodatos de SQL Server...**
 
@@ -49,8 +49,11 @@ Además de lo anterior, la implementación de clústeres de macrodatos de SQL S
 
 1. En **Deployment Target** (Destino de implementación), en **Opciones**, seleccione **New Azure Kubernetes Cluster** (Nuevo clúster de Azure Kubernetes) o **Existing Azure Kubernetes Service cluster** (Clúster de Azure Kubernetes Service existente).
 
-1. Seleccione **Open Notebook** (Abrir cuaderno).
+1. Haga clic en el botón **seleccionar** .
 
+1. Esta acción inicia un cuadro de diálogo para recopilar la entrada del usuario, proporcionar la información necesaria y revisar los valores predeterminados.
+
+1. Haga clic en el botón **abrir Bloc de notas** .
 Esta acción inicia el cuaderno adecuado. Para completar la implementación, siga las instrucciones del cuaderno para implementar un clúster de macrodatos para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] en un clúster de Azure Kubernetes Service existente o nuevo.
 
 ## <a name="next-steps"></a>Pasos siguientes

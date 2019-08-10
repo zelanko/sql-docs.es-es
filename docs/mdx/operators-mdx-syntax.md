@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a1a03ecd9f41fe7d236f8c61f7059014a6ac07fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088208"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892112"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxis de MDX)
 
@@ -46,7 +46,7 @@ ms.locfileid: "68088208"
  Cuando se utilizan varios operadores, el orden en que MDX los evalúa es importante. Del mismo modo, es posible que el usuario de los operadores tenga que convertir un tipo de datos en otro para poder evaluar los operadores.  
   
 ## <a name="evaluating-complex-expressions"></a>Evaluar expresiones complejas  
- Puede generar una expresión mediante el uso de operadores que combinen varias expresiones más pequeñas. En estas expresiones complejas, MDX evalúa los operadores en orden según la definición de la precedencia de operadores utilizados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX ejecuta los operadores con mayor precedencia antes que los operadores con menor precedencia.  
+ Puede generar una expresión mediante el uso de operadores que combinen varias expresiones más pequeñas. En estas expresiones complejas, MDX evalúa los operadores en orden en función de la definición de la prioridad de los [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]operadores utilizada por. MDX ejecuta los operadores con mayor precedencia antes que los operadores con menor precedencia.  
   
 ### <a name="understanding-operator-precedence"></a>Descripción de la precedencia de los operadores  
  En la siguiente lista se muestra la precedencia de los operadores, de mayor a menor. Los operadores situados en la misma línea tienen el mismo nivel de precedencia y se evalúan de izquierda a derecha, salvo que el uso de un paréntesis obligue a hacerlo de otro modo:  
@@ -77,12 +77,12 @@ ms.locfileid: "68088208"
   
 -   OR  
   
- Para obtener más información acerca de los operadores en MDX, vea [referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
+ Para obtener más información sobre los operadores en MDX, vea MDX [ &#40;Operator&#41;Reference MDX](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>Determinar los resultados  
  Cuando se combinan expresiones simples para crear una más compleja, el tipo de datos del valor resultante viene determinado por la combinación de las reglas de los operadores con las reglas de precedencia para los tipos de datos.  
   
- Si el resultado es un carácter o un valor de Unicode, la intercalación del resultado viene determinada por la combinación de las reglas de los operadores con las reglas de precedencia de intercalación. Para obtener más información acerca de las intercalaciones, vea [idiomas e intercalaciones &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
+ Si el resultado es un carácter o un valor de Unicode, la intercalación del resultado viene determinada por la combinación de las reglas de los operadores con las reglas de precedencia de intercalación. Para obtener más información acerca de las intercalaciones, consulte [idiomas e Intercalaciones &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
   
  También hay reglas que determinan la precisión, escala y longitud del resultado basándose en la precisión, escala y longitud de las expresiones sencillas.  
   
@@ -91,14 +91,14 @@ ms.locfileid: "68088208"
   
 |Tipo original|Tipo necesario|Conversión|  
 |-------------------|-----------------|----------------|  
-|Nivel|Establecer|\<nivel > .members|  
-|Hierarchy|Member|\<jerarquía > .defaultmember|  
-|Member|Tuple|(\<Miembro >)|  
+|Nivel|Establecer|\<Level >. Members|  
+|Hierarchy|Member|\<> de jerarquía. DefaultMember|  
+|Member|Tuple|(\<> Miembro)|  
 |Tuple|Member|\<tuple>.item(0)|  
-|Tuple|escalar|\<tuple>.value|  
+|Tuple|Escalar|\<tuple>.value|  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Los elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX de referencia &#40;de operadores MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [MDX (elementos &#40;de sintaxis MDX)&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c449e323c87f55d1cbc334d41916a26863cfccd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078218"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888067"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definir y examinar perspectivas
   Una perspectiva puede simplificar la vista de un cubo para fines específicos. De manera predeterminada, los usuarios pueden ver todos los elementos de un cubo para los que tengan permisos. Lo que observan los usuarios cuando ven un cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entero es la perspectiva predeterminada del cubo. Una vista de todo el cubo puede resultar muy compleja para que los usuarios naveguen por ella, en especial aquellos usuarios que solo necesitan interactuar con una pequeña parte del cubo a fin de satisfacer sus requisitos de informes e inteligencia empresarial.  
@@ -33,15 +33,15 @@ ms.locfileid: "66078218"
   
      Todos los objetos y sus tipos de objeto aparecen en el panel **Perspectivas** , como se muestra en la siguiente imagen.  
   
-     ![Panel perspectivas del Diseñador de cubos](../../2014/tutorials/media/l9-perspectives-1.gif "panel perspectivas del Diseñador de cubos")  
+     ![Panel perspectivas del diseñador de cubos](../../2014/tutorials/media/l9-perspectives-1.gif "Panel perspectivas del diseñador de cubos")  
   
 2.  En la barra de herramientas de la pestaña **Perspectivas** , haga clic en el botón **Nueva perspectiva** .  
   
      Una nueva perspectiva aparece en la columna **Nombre de perspectiva** con el nombre predeterminado de **Perspectiva**, como se muestra en la siguiente imagen. Observe que la casilla de cada objeto está seleccionada; hasta que no desactive la casilla de un objeto, esta perspectiva será idéntica a la perspectiva predeterminada de este cubo.  
   
-     ![Nueva perspectiva en la columna de nombre de perspectiva](../../2014/tutorials/media/l9-perspectives-2.gif "nueva perspectiva en la columna de nombre de perspectiva")  
+     ![Nueva perspectiva en la columna Nombre de perspectiva](../../2014/tutorials/media/l9-perspectives-2.gif "Nueva perspectiva en la columna Nombre de perspectiva")  
   
-3.  Cambie el nombre de perspectiva a `Internet Sales`.  
+3.  Cambie el nombre de la `Internet Sales`perspectiva a.  
   
 4.  En la fila siguiente, establezca DefaultMeasure en **Internet Sales-Sales Amount**.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66078218"
   
 5.  Desactive la casilla de los siguientes objetos:  
   
-    -   `Reseller Sales` Grupo de medida  
+    -   `Reseller Sales`Grupo de medida  
   
     -   Grupo de medida**Sales Quotas**  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66078218"
   
 1.  En la barra de herramientas de la pestaña **Perspectivas** , haga clic en el botón **Nueva perspectiva** .  
   
-2.  Cambiar el nombre de la nueva perspectiva a `Reseller Sales`.  
+2.  Cambie el nombre de la nueva perspectiva a `Reseller Sales`.  
   
 3.  Establezca **Reseller Sales-Sales Amount** como medida predeterminada.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66078218"
   
 4.  Desactive la casilla de los siguientes objetos:  
   
-    -   `Internet Sales` Grupo de medida  
+    -   `Internet Sales`Grupo de medida  
   
     -   Grupo de medida**Internet Sales Reason**  
   
@@ -131,16 +131,16 @@ ms.locfileid: "66078218"
   
 1.  En la barra de herramientas de la pestaña **Perspectivas** , haga clic en el botón **Nueva perspectiva** .  
   
-2.  Cambiar el nombre de la nueva perspectiva a `Sales Summary`.  
+2.  Cambie el nombre de la nueva perspectiva a `Sales Summary`.  
   
     > [!NOTE]  
     >  No puede especificar una medida calculada como medida predeterminada.  
   
 3.  Desactive la casilla de los siguientes objetos:  
   
-    -   `Internet Sales` Grupo de medida  
+    -   `Internet Sales`Grupo de medida  
   
-    -   `Reseller Sales` Grupo de medida  
+    -   `Reseller Sales`Grupo de medida  
   
     -   Grupo de medida**Internet Sales Reason**  
   
@@ -170,31 +170,31 @@ ms.locfileid: "66078218"
   
 4.  Analizar en Excel le pedirá que elija qué perspectiva desea usar al examinar el modelo en Excel, como se muestra en la ilustración siguiente.  
   
-     ![Objetos de la perspectiva venta por Internet](../../2014/tutorials/media/l9-perspectives-3.gif "objetos para la perspectiva venta por Internet")  
+     ![Objetos para la perspectiva venta por Internet](../../2014/tutorials/media/l9-perspectives-3.gif "Objetos para la perspectiva venta por Internet")  
   
 5.  Como alternativa, puede iniciar Excel en el menú Inicio de Windows, definir una conexión a la base de datos Tutorial de Analysis Services en localhost y elegir una perspectiva en el Asistente para la conexión de datos, como se muestra en la ilustración siguiente.  
   
      ![Asistente para la conexión de datos en Excel](../../2014/tutorials/media/l9-perspectives-3b.gif "Asistente para la conexión de datos en Excel")  
   
-6.  Seleccione `Internet Sales` en el **perspectiva** lista y, a continuación, revise las medidas y dimensiones en el panel de metadatos.  
+6.  Seleccione `Internet Sales` en la lista **perspectiva** y, a continuación, revise las medidas y las dimensiones en el panel Metadatos.  
   
      Observe que solo aparecen aquellos objetos especificados para la perspectiva Internet Sales.  
   
 7.  En el panel de metadatos, expanda **Medidas**.  
   
-     Observe que solo el `Internet Sales` aparece el grupo de medida, juntos con el **Internet GPM** y **Internet Sales Ratio to All Products** miembros calculados.  
+     Observe que solo aparece `Internet Sales` el grupo de medida, junto con los miembros calculados **Internet GPM** e **Internet sales ratio to All Products** .  
   
 8.  En el modelo, seleccione Excel de nuevo. Seleccione `Sales Summary`.  
   
      Observe que en cada uno de estos grupos de medida, solo aparece una única medida, tal como se muestra en la siguiente imagen.  
   
-     ![Medidas Internet Sales y Reseller Sales](../../2014/tutorials/media/l9-perspectives-4.gif "medidas Internet Sales y Reseller Sales")  
+     ![Medidas Internet sales y reseller sales](../../2014/tutorials/media/l9-perspectives-4.gif "Medidas Internet sales y reseller sales")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Definir y examinar traducciones](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+ [Definir y examinar traducciones](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
   
 ## <a name="see-also"></a>Vea también  
- [Perspectivas](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [Distintas](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [Perspectivas de modelos multidimensionales](multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

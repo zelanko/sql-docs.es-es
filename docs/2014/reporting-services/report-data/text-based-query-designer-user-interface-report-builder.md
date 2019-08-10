@@ -14,12 +14,12 @@ ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdd12cf49c86cb9a622c1ac546fd755056b5e357
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a71c1781432ee4ca35c72beb8b091380f2e72513
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66106982"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891879"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
   Use el diseñador de consultas basado en texto para especificar una consulta mediante el lenguaje de consulta admitido por el origen de datos, para ejecutar la consulta y para ver los resultados en tiempo de diseño. Puede especificar varias sintaxis de consulta, comandos o instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] para extensiones de procesamiento de datos personalizadas, y consultas que se especifican como expresiones. Dado que el generador de consultas basado en texto no procesa previamente la consulta y puede acomodar todo tipo de sintaxis de consulta, es la herramienta de generación de consultas predeterminada para varios tipos de orígenes de datos.  
@@ -40,13 +40,13 @@ ms.locfileid: "66106982"
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas. No todos los tipos de orígenes de datos admiten diseñadores gráficos de consultas.|  
 |**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivo sql y rdl.|  
-|![Ejecutar la consulta](../../analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra el conjunto de resultados en el panel Resultado.|  
+|![Ejecutar la consulta](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra el conjunto de resultados en el panel Resultado.|  
 |**Tipo de comando**|Seleccione **Text**, **StoredProcedure**o **TableDirect**. Si un procedimiento almacenado tiene parámetros, el cuadro de diálogo **Definir parámetros de consulta** aparece al hacer clic en **Ejecutar** en la barra de herramientas; puede rellenar los valores según sea necesario.<br /><br /> Nota: Si un procedimiento almacenado devuelve más de un conjunto de resultados, solo se usa el primero para rellenar el conjunto de datos.|  
   
 ### <a name="command-type-text"></a>Tipo de comando Text  
  Al crear un conjunto de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el diseñador de consultas relacionales se abre de forma predeterminada. Para cambiar al diseñador de consultas basado en texto, haga clic en el botón de alternancia **Editar como texto** de la barra de herramientas. El diseñador de consultas basado en texto consta de dos paneles: el panel Consulta y el panel Resultado. En la siguiente ilustración se indica el nombre de cada panel.  
   
- ![Diseñador de consultas genérico, para consultas de datos relacionales](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Diseñador de consultas genérico, para consultas de datos relacionales")  
+ ![Diseñador de consultas genérico, para consultas de datos relacionales](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Diseñador de consultas genérico, para consultas de datos relacionales")  
   
  En la siguiente tabla se describe la función de cada panel.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66106982"
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  
- La consulta siguiente devuelve la lista de apellidos de la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** base de datos `ContactType` de tabla para el `Person` esquema.  
+ La siguiente consulta devuelve la lista de los apellidos de [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]la tabla `ContactType` de base de `Person` datos **2008** para el esquema.  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -69,7 +69,7 @@ SELECT Name FROM Person.ContactType
   
  La figura siguiente muestra los paneles Consulta y Resultado al ejecutar un procedimiento almacenado. En este caso, los parámetros de entrada son constantes.  
   
- ![Procedimiento almacenado en un diseñador de consultas basado en texto](../../analysis-services/media/rs-relational-text-sp.gif "Procedimiento almacenado en un diseñador de consultas basado en texto")  
+ ![Procedimiento almacenado en un diseñador de consultas basado en texto](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "Procedimiento almacenado en un diseñador de consultas basado en texto")  
   
  En la siguiente tabla se describe la función de cada panel.  
   
@@ -79,13 +79,13 @@ SELECT Name FROM Person.ContactType
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  
- La siguiente consulta llama a la [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** procedimiento almacenado `uspGetWhereUsedProductID`. Debe especificar un valor para el parámetro de número de identificación de producto al ejecutar la consulta.  
+ La consulta siguiente llama al [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]procedimiento `uspGetWhereUsedProductID`almacenado **2008** . Debe especificar un valor para el parámetro de número de identificación de producto al ejecutar la consulta.  
   
 ```  
 uspGetWhereUsedProductID  
 ```  
   
- Haga clic en el botón **Ejecutar** (**!**). Cuando se le soliciten los parámetros de consulta, use la tabla siguiente para escribir los valores.  
+ Haga clic en el botón **Ejecutar** ( **!** ). Cuando se le soliciten los parámetros de consulta, use la tabla siguiente para escribir los valores.  
   
 |||  
 |-|-|  
@@ -98,7 +98,7 @@ uspGetWhereUsedProductID
  Si selecciona **Tipo de comando TableDirect**, el diseñador de consultas basado en texto presenta dos paneles: el panel Consulta y el panel Resultado. Si selecciona una tabla y hace clic en el botón **Ejecutar** , se devolverán todas las columnas de dicha tabla.  
   
 #### <a name="example"></a>Ejemplo  
- Para un tipo de origen de datos OLE DB, la siguiente consulta de conjunto de datos devuelve un conjunto de resultados para todos los tipos en el [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** base de datos.  
+ En el caso de un tipo de origen de datos OLE DB, la siguiente consulta de conjunto de datos devuelve un [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]conjunto de resultados para todos los tipos de contacto de la base de datos **2008** .  
   
  `Person.ContactType`  
   

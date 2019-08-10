@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c8edd91ced01135d740fecdf6cf837df9cac6b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 1a6156dad127ea2a86e8a6f4dfbdd6f692fd8f6e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470732"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893650"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-with-azure-data-studio-notebooks"></a>Administración de clústeres de macrodatos de SQL Server con cuadernos de Azure Data Studio
 
@@ -26,16 +26,16 @@ Los [cuadernos](notebooks-guidance.md), que originalmente se implementaban como 
 
 Puede usar cuadernos para implementar clústeres de macrodatos para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-Además de los cuadernos, los usuarios pueden ver una colección de cuadernos que se denominan libros de Jupyter. Un libro de Jupyter proporciona una tabla de contenido que permite examinar una colección de cuadernos para que un usuario pueda encontrar fácilmente el cuaderno que necesita, tanto para solucionar problemas de SQL Server como para ver el estado del clúster.
+Además de los cuadernos, los usuarios pueden ver una colección de notebooks, que se denominan libros de Jupyter. Un libro de Jupyter proporciona una tabla de contenido que permite examinar una colección de cuadernos para que un usuario pueda encontrar fácilmente el cuaderno que necesita, tanto para solucionar problemas de SQL Server como para ver el estado del clúster.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 Los siguientes requisitos previos son necesarios para poder iniciar el cuaderno:
 
 * Versión más reciente de la [compilación Azure Data Studio Insiders](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
 * Extensión [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] instalada en Azure Data Studio
 
-Además de lo anterior, la implementación de clústeres de macrodatos de SQL Server 2019 también requiere:
+Además de lo anterior, la implementación de clústeres de macrodatos de SQL Server 2019 también requiere:
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
@@ -53,5 +53,5 @@ Además de lo anterior, la implementación de clústeres de macrodatos de SQL Se
 3. En la vista del explorador, debería ver una sección denominada **Libros**. Si no está expandida, haga clic en ella para ver los cuadernos.
 4. Haga clic en el cuaderno de la tarea que debe completar.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información sobre los cuadernos en Azure Data Studio, vea [Uso de los cuadernos en la versión preliminar de SQL Server 2019](notebooks-guidance.md).

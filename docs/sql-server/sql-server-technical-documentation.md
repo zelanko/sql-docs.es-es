@@ -1,6 +1,6 @@
 ---
 title: Documentación de SQL Server | Microsoft Docs
-ms.date: 08/12/2018
+ms.date: 08/02/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d925fcbdb80ada3426b42d4dcb413937f4d3953
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 824036a79897302411ec1a7026351832269511b3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136339"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771604"
 ---
 # <a name="sql-server-documentation"></a>Documentación de SQL Server
 
@@ -109,7 +109,7 @@ SQL Server 2014 y versiones anteriores, incluido SQL Server 2005, disponen de do
 |||
 |-|-|
 |![Motor de base de datos de SQL](../sql-server/media/sql-database-engine.png "Motor de base de datos de SQL")|**[Motor de base de datos](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> El Motor de base de datos es el servicio principal para almacenar, procesar y proteger datos. El Motor de base de datos proporciona acceso controlado y procesamiento rápido de transacciones para cumplir los requisitos de las aplicaciones consumidoras de datos más exigentes de su empresa. El Motor de base de datos también proporciona una completa compatibilidad para mantener una gran disponibilidad.|
-|![R Server](../sql-server/media/r-server.png "R Server")|**[Machine Learning Services](../advanced-analytics/r-services/r-services.md)**<br /><br /> A través de los lenguajes populares R y Python, Microsoft Machine Learning Services integra el aprendizaje automático con los flujos de trabajo empresariales.<br /><br /> Machine Learning Services (en base de datos) integra R y Python con SQL Server, lo que simplifica la compilación, el reciclaje y los modelos de puntuación al llamar a procedimientos almacenados.  Microsoft Machine Learning Server proporciona una compatibilidad de escala empresarial con R y Python sin necesidad de utilizar SQL Server.|
+|![Machine Learning Services](../sql-server/media/r-server.png "R Server")|**[Machine Learning Services](../advanced-analytics/index.yml)**<br /><br /> Machine Learning Services le proporciona la capacidad de ejecutar scripts de Python y R con datos relacionales. Puede usar paquetes de código abierto y de Microsoft para el análisis predictivo y el aprendizaje automático. Los scripts se ejecutan en la base de datos sin mover los datos fuera de SQL Server o a través de la red.|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es una plataforma para generar soluciones de integración de datos de alto rendimiento, lo que incluye paquetes que proporcionan procesamiento de extracción, transformación y carga (ETL) para almacenamiento de datos.|
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] es una plataforma y un conjunto de herramientas de datos analíticos para Business Intelligence en un entorno personal, de equipo o empresa. Los servidores y los diseñadores de cliente admiten soluciones OLAP tradicionales, nuevas soluciones de modelado tabular y análisis y colaboración de autoservicio mediante [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], Excel y un entorno de SharePoint Server. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] también incluye minería de datos para permitir descubrir las relaciones y los patrones ocultos en grandes volúmenes de datos.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services ofrece funcionalidad empresarial de informes habilitados para web.  Puede crear informes que extraigan contenido a partir de diversos orígenes de datos, publicar informes con distintos formatos y administrar la seguridad y las suscripciones de forma centralizada.|

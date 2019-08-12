@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13a883b6b36bfb2863caa5b066e58216cbad1549
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 259ff6d422788f302d05b435026839970b9f75db
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903063"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768658"
 ---
 # <a name="create-a-pull-subscription"></a>Crear una suscripción de extracción
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   En este tema se describe cómo crear una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
  Es posible configurar una suscripción de extracción para la replicación P2P mediante un script, pero no está disponible a través del asistente.  
@@ -91,24 +92,24 @@ ms.locfileid: "67903063"
   
     -   Si el valor de **allow_pull** del conjunto de resultados es **1**, la publicación admite las suscripciones de extracción.  
   
-    -   Si el valor de **allow_pull** es **0**, ejecute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) especificado **allow_pull** para **@property** y **true** para **@value** .  
+    -   Si el valor de **allow_pull** es **0**, ejecute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) especificado **allow_pull** para **\@property** y **true** para **\@value**.  
   
-2.  En el suscriptor, ejecute [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique **@publisher** y **@publication** . Para obtener información sobre cómo actualizar suscripciones, vea [Crear una suscripción actualizable en una publicación transacciona](publish/create-an-updatable-subscription-to-a-transactional-publication.md).   
+2.  En el suscriptor, ejecute [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Especifique **\@publisher** y **\@publication**. Para obtener información sobre cómo actualizar suscripciones, vea [Crear una suscripción actualizable en una publicación transacciona](publish/create-an-updatable-subscription-to-a-transactional-publication.md).   
   
 3.  En el suscriptor, ejecute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique lo siguiente:  
   
-    -   Los parámetros **@publisher** , **@publisher_db** y **@publication** .  
+    -   Los parámetros **\@publisher**, **\@publisher_db** y **\@publication**.  
   
-    -   Los parámetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con las que se ejecuta el Agente de distribución en el suscriptor para **@job_login** y **@job_password** .  
+    -   Las credenciales de Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] con las que se ejecuta el Agente de distribución en el suscriptor para **\@job_login** y **\@job_password**.  
   
         > [!NOTE]  
-        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por **@job_login** y **@job_password** . El Agente de distribución siempre realiza la conexión local con el suscriptor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el distribuidor mediante la autenticación de Windows integrada.  
+        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows que especifican **\@job_login** y **\@job_password**. El Agente de distribución siempre realiza la conexión local con el suscriptor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el distribuidor mediante la autenticación de Windows integrada.  
   
-    -   (Opcional) Un valor de **0** para **@distributor_security_mode** y la información de inicio de sesión de SQL Server para **@distributor_login** y **@distributor_password** , en caso de que necesite usar Autenticación de SQL Server cuando se conecte al distribuidor.  
+    -   (Opcional) El valor **0** de **\@distributor_security_mode** y la información de inicio de sesión de SQL Server del **\@distributor_login** y **\@distributor_password**, si necesita utilizar la autenticación de SQL Server al conectarse al distribuidor.  
   
     -   Una programación para el trabajo del Agente de distribución de esta suscripción. Para obtener más información, consulte [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
-4.  En la base de datos de publicación del publicador, ejecute [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) para registrar la suscripción de extracción. Especifique **@publication** , **@subscriber** y **@destination_db** . Especifique un valor **pull** para **@subscription_type** .  
+4.  En la base de datos de publicación del publicador, ejecute [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) para registrar la suscripción de extracción. Especifique **\@publication**, **\@subscriber** y **\@destination_db**. Especifique un valor **pull** para **\@subscription_type**.  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>Para crear una suscripción de extracción para una publicación de combinación  
   
@@ -116,32 +117,32 @@ ms.locfileid: "67903063"
   
     -   Si el valor de **allow_pull** del conjunto de resultados es **1**, la publicación admite las suscripciones de extracción.  
   
-    -   Si el valor de **allow_pull** es **0**, ejecute [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) especificando **allow_pull** para **@property** y **true** para **@value** .  
+    -   Si el valor de **allow_pull** es **0**, ejecute [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) especificado **allow_pull** para **\@property** y **true** para **\@value**.  
   
-2.  En el suscriptor, ejecute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Especifique **@publisher** , **@publisher_db** , **@publication** y los parámetros siguientes:  
+2.  En el suscriptor, ejecute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Especifique **\@publisher**, **\@publisher_db**, **\@publication** y los parámetros siguientes:  
   
-    -   **@subscriber_type** – especifique **local** para una suscripción de cliente y **global** para una suscripción de servidor.  
+    -   **\@subscriber_type** – especifique **local** para una suscripción de cliente y **global** para una suscripción de servidor.  
   
-    -   **@subscription_priority** – Especifique una prioridad para la suscripción (**0,00** a **99,99**). Solo es necesario para las suscripciones de servidor.  
+    -   **\@subscription_priority** – Especifique una prioridad para la suscripción (**0,00** a **99,99**). Solo es necesario para las suscripciones de servidor.  
   
          Para más información, consulte [Detección y resolución de conflictos de replicación de mezcla avanzada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  En el suscriptor, ejecute [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Especifique los parámetros siguientes:  
   
-    -   **@publisher** , **@publisher_db** y **@publication** .  
+    -   **\@publisher**, **\@publisher_db** y **\@publication**.  
   
-    -   Las credenciales de Windows con las que se ejecuta el Agente de mezcla en el suscriptor para **@job_login** y **@job_password** .  
+    -   Las credenciales de Windows con las que se ejecuta el Agente de mezcla en el suscriptor para **\@job_login** y **\@job_password**.  
   
         > [!NOTE]  
-        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por **@job_login** y **@job_password** . El Agente de mezcla siempre realiza la conexión local con el suscriptor mediante la autenticación de Windows integrada. De forma predeterminada, el agente se conectará con el distribuidor mediante la autenticación de Windows integrada.  
+        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows que especifican **\@job_login** y **\@job_password**. El Agente de mezcla siempre realiza la conexión local con el suscriptor mediante la autenticación de Windows integrada. De forma predeterminada, el agente se conectará con el distribuidor mediante la autenticación de Windows integrada.  
   
-    -   (Opcional) El valor **0** para **@distributor_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@distributor_login** y **@distributor_password** , si necesita utilizar la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al conectarse al distribuidor.  
+    -   (Opcional) El valor **0** para **\@distributor_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **\@distributor_login** y **\@distributor_password**, si necesita utilizar la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al conectarse al distribuidor.  
   
-    -   (Opcional) El valor **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password** , si necesita utilizar la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al conectarse al publicador.  
+    -   (Opcional) El valor **0** para **\@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **\@publisher_login** y **\@publisher_password**, si necesita utilizar autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al conectarse al publicador.  
   
     -   Una programación para el Agente de mezcla para la suscripción. Para más información, consulte [Crear una suscripción actualizable en una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
-4.  En el publicador, ejecute [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Especifique **@publication** , **@subscriber** , **@subscriber_db** y un valor de **pull** para **@subscription_type** . Esto registra la suscripción de extracción.  
+4.  En el publicador, ejecute [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md). Especifique **\@publication**, **\@subscriber**, **\@subscriber_db** y el valor **pull** para **\@subscription_type**. Esto registra la suscripción de extracción.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  El siguiente ejemplo crea una suscripción de extracción en una publicación transaccional. El primer lote se ejecuta en el suscriptor y el segundo lote se ejecuta en el publicador. Los valores de inicio de sesión y contraseña se proporcionan en tiempo de ejecución mediante variables de scripting de sqlcmd.  

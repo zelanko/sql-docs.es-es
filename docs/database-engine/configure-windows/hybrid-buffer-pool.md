@@ -10,21 +10,22 @@ ms.topic: conceptual
 ms.assetid: ''
 author: DBArgenis
 ms.author: argenisf
-ms.openlocfilehash: 471708dc2e6b6feb3f91bd831ff63fce1177c8d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4808c0895695eba562c25ea0ee412348dc148f5
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998056"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697557"
 ---
 # <a name="hybrid-buffer-pool"></a>Grupo de búferes híbrido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 El grupo de búferes híbrido permite al motor de base de datos acceder directamente a las páginas de datos de los archivos de base de datos almacenados en dispositivos de memoria persistente (PMEM). Esta característica se introdujo en [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
-En un sistema tradicional sin PMEM, SQL Server almacena en caché las páginas de datos en el grupo de búferes basado en DRAM. Con el grupo de búferes híbrido, SQL Server omite la realización de una copia de la página en la parte basada en DRAM del grupo de búferes y, en su lugar, accede a la página directamente en el archivo de base de datos que se encuentra en un dispositivo PMEM. El acceso a archivos de datos de dispositivos PMEM para el grupo de búferes híbrido se realiza mediante E/S (MMIO) asignadas a memoria. Esto también se conoce como *esclarecimiento* de los archivos de datos de SQL Server.
+En un sistema tradicional sin PMEM, SQL Server almacena en caché las páginas de datos en el grupo de búferes. Con el grupo de búferes híbrido, SQL Server omite la realización de una copia de la página en la parte basada en DRAM del grupo de búferes y, en su lugar, accede a la página directamente en el archivo de base de datos que se encuentra en un dispositivo PMEM. El acceso de lectura a los archivos de datos de los dispositivos PMEM para el grupo de búferes híbrido se realiza directamente siguiendo un puntero a las páginas de datos en el dispositivo PMEM.  
 
-En un dispositivo PMEM solo se puede acceder directamente a páginas limpias. Cuando una página se marca como con errores, se copia en el grupo de búferes basado en DRAM antes de escribirse definitivamente en el dispositivo PMEM y se vuelve a marcar como sin errores. Este proceso es algo que sucede durante las operaciones habituales de punto de control.
+En un dispositivo PMEM solo se puede acceder directamente a páginas limpias. Cuando una página se marca como con errores, se copia en el grupo de búferes DRAM antes de escribirse definitivamente en el dispositivo PMEM y se vuelve a marcar como sin errores. Esto ocurrirá durante las operaciones de punto de control regulares. El mecanismo para copiar el archivo del dispositivo PMEM en DRAM es E/S asignada a la memoria (MMIO) directa, y también se conoce como *aclaración* de los archivos de datos en SQL Server.
+
 
 La característica de grupo de búferes híbrido está disponible para Windows y Linux. El dispositivo PMEM debe formatearse con un sistema de archivos que admita DAX (DirectAccess). Los sistemas XFS, EXT4 y NTFS admiten DAX. SQL Server detectará automáticamente si los archivos de datos residen en un dispositivo PMEM con el formato apropiado, y realizará una asignación de memoria al espacio del usuario. Esta asignación sucede en el inicio, cuando se adjunta, restaura o crea una base de datos nueva, o cuando se habilita la característica de grupo de búferes híbrido en una base de datos.
 

@@ -21,12 +21,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c129998db40a64507b119b8392abcb56cc119a8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001690"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697491"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversión de tipos de datos (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,8 +57,44 @@ Utilice CAST en lugar de CONVERT si desea que el código de programa de [!INCLUD
 En la ilustración siguiente se muestran todas las conversiones de tipos de datos explícitas e implícitas permitidas para los tipos de datos proporcionados por el sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Algunas de ellas son **xml**, **bigint** y **sql_variant**. No existe una conversión implícita en la asignación del tipo de datos **sql_variant**, pero sí hay una conversión implícita en **sql_variant**.
   
 ![Tabla de conversión de tipos de datos](../../t-sql/data-types/media/lrdatahd.png "Tabla de conversión de tipos de datos")
-  
+
+Si bien en el gráfico anterior se muestran todas las conversiones explícitas e implícitas permitidas en SQL Server, no se indica el tipo de datos resultante de la conversión. Cuando SQL Server realiza una conversión explícita, la instrucción misma determina el tipo de datos resultante. En las conversiones implícitas, las instrucciones de asignación, como establecer el valor de una variable o insertar un valor en una columna, general el tipo de datos definido por la declaración de la variable o la definición de la columna. En el caso de los operadores de comparación u otras expresiones, el tipo de datos resultante depende de las reglas de prioridad de los tipos de datos.
+
+Como ejemplo, el siguiente script define una variable de tipo `varchar`, asigna un valor de tipo `int` a la variable y, luego, selecciona una concatenación de la variable con una cadena.
+
+```sql
+DECLARE @string varchar(10);
+SET @string = 1;
+SELECT @string + ' is a string.'
+```
+
+El valor `int` de `1` se convierte en `varchar`, por lo que la instrucción `SELECT` devuelve el valor `1 is a string.`.
+
+En el ejemplo siguiente, se muestra un script similar con una variable `int` en su lugar:
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + ' is not a string.'
+```
+
+En este caso, la instrucción `SELECT` produce el siguiente error:
+
+`Msg 245, Level 16, State 1, Line 3`
+`Conversion failed when converting the varchar value ' is not a string.' to data type int.`
+
+Para evaluar la expresión `@notastring + ' is not a string.'`, SQL Server sigue las reglas de prioridad del tipo de datos para completar la conversión implícita antes de que se pueda calcular el resultado de la expresión. Dado que `int` tiene una prioridad más alta que `varchar`, SQL Server intenta convertir la cadena en un entero y produce un error porque esta cadena no se puede convertir en un entero. Si la expresión proporciona una cadena que se puede convertir, la instrucción se ejecuta correctamente, como en el ejemplo siguiente:
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + '1'
+```
+
+En este caso, la cadena `1` se puede convertir al valor entero `1`, por lo que esta instrucción `SELECT` devuelve el valor `2`. Tenga en cuenta que el operador `+` se agrega en lugar de concatenar cuando los tipos de datos proporcionados son enteros.
+
 ## <a name="data-type-conversion-behaviors"></a>Comportamientos de la conversión de tipos de datos
+
 Algunas conversiones implícitas y explícitas de tipos de datos no se admiten cuando convierte el tipo de datos de un objeto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otro. Por ejemplo, un valor **nchar** no se puede convertir a un valor **image**. Un valor **nchar** solo se puede convertir a **binary** con una conversión explícita; la conversión implícita a **binary** no se admite. Sin embargo, un valor **nchar** se puede convertir implícita o explícitamente a **nvarchar**.
   
 En los temas siguientes se describen los comportamientos de conversión que presentan los tipos de datos correspondientes:
@@ -99,7 +135,7 @@ En la tabla siguiente se describen las conversiones de tipos de datos de [!INCLU
 |**datetime**, **smalldatetime**|**Date**|  
 |Cualquiera establecido en NULL|**Variant** establecido en NULL|  
   
-Los valores únicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierten a un valor único de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], con la excepción de los valores **binary**, **varbinary** e **image**. Estos valores se convierten a una matriz **Byte()** unidimensional en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Esta matriz tiene un intervalo de **Byte(** 0 a _length_1 **)** donde *length* es el número de bytes en los valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** o **image**.
+Los valores únicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se convierten a un valor único de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], con la excepción de los valores **binary**, **varbinary** e **image**. Estos valores se convierten a una matriz **Byte()** unidimensional en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Esta matriz tiene un intervalo de **Byte(** 0 a _length_ 1 **)** donde *length* es el número de bytes en los valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** o **image**.
   
 A continuación se indican las conversiones de tipos de datos de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] a tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

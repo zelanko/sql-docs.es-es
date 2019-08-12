@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 970e982ccc5e2d7f7af7643f08e90b2dc791f7e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 43b5d4f59ae68f52968fc4aaa10a400e0d8f8ff3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907585"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769538"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar programaciones de sincronización
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   En este tema se describe cómo especificar programaciones de sincronización en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Al crear una suscripción, puede definir una programación de sincronización que controla cuándo se ejecutará el agente de replicación para la suscripción. Si no especifica parámetros de programación, la suscripción usará la programación predeterminada.  
   
  El Agente de distribución (para las instantáneas y la replicación transaccional) o el Agente de mezcla (para la replicación de mezcla) sincronizan las suscripciones. Los agentes pueden ejecutarse continuamente, a petición o según una programación.  
@@ -146,49 +147,49 @@ ms.locfileid: "67907585"
   
  Los parámetros de programación siguientes definen una programación, los comportamientos de los que se heredan de [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md):  
   
--   **@frequency_type** : el tipo de frecuencia usado al programar el agente  
+-   **\@frequency_type**: el tipo de frecuencia usado al programar el agente.  
   
--   **@frequency_interval** : el día de la semana cuando se ejecuta un agente  
+-   **\@frequency_interval**: el día de la semana cuando se ejecuta un agente.  
   
--   **@frequency_relative_interval** - la semana de un mes determinado en la que se programa el agente para que se ejecute mensualmente.  
+-   **\@frequency_relative_interval**: la semana de un mes determinado en que el agente se programa para la ejecución mensual.  
   
--   **@frequency_recurrence_factor** - el número de unidades de tipo de frecuencia que se producen entre las sincronizaciones.  
+-   **\@frequency_recurrence_factor**: el número de unidades del tipo de frecuencia que se producen entre las sincronizaciones.  
   
--   **@frequency_subday** - la unidad de frecuencia cuando el agente se ejecuta más de una vez al día.  
+-   **\@frequency_subday**: la unidad de frecuencia cuando el agente se ejecuta más de una vez al día.  
   
--   **@frequency_subday_interval** - el número de unidades de frecuencia entre ejecuciones cuando el agente se ejecuta más de una vez al día.  
+-   **\@frequency_subday_interval**: el número de unidades de frecuencia entre ejecuciones cuando el agente se ejecuta más de una vez al día.  
   
--   **@active_start_time_of_day** : la primera hora de un día determinado cuando se va a iniciar la ejecución de un agente  
+-   **\@active_start_time_of_day**: la primera hora de un día determinado cuando se va a iniciar la ejecución de un agente.  
   
--   **@active_end_time_of_day** : la hora más reciente de un día determinado cuando se va a iniciar la ejecución de un agente  
+-   **\@active_end_time_of_day**: la hora más reciente de un día determinado cuando se va a iniciar la ejecución de un agente.  
   
--   **@active_start_date** : el primer día en que la programación del agente entrará en vigor  
+-   **\@active_start_date**: el primer día en que la programación del agente entrará en vigor.  
   
--   **@active_end_date** : el último día en que la programación del agente entrará en vigor  
+-   **\@active_end_date**: el último día en que la programación del agente entrará en vigor.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>Para definir la programación de sincronización para una suscripción de extracción a una publicación transaccional  
   
 1.  Cree una nueva suscripción de extracción para una publicación transaccional. Para obtener más información, consulte [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  En el suscriptor, ejecute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique **@publisher** , **@publisher_db** , **@publication** y las credenciales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con las que se ejecuta el Agente de distribución en el suscriptor para **@job_name** y **@password** . Especifique los parámetros de sincronización, detallados anteriormente, que definen la programación para el trabajo del Agente de distribución que sincroniza la suscripción.  
+2.  En el suscriptor, ejecute [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique **\@publisher**, **\@publisher_db**, **\@publication** y las credenciales de Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] con las que se ejecuta el Agente de distribución en el suscriptor para **\@job_name** y **\@password**. Especifique los parámetros de sincronización, detallados anteriormente, que definen la programación para el trabajo del Agente de distribución que sincroniza la suscripción.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>Para definir la programación de sincronización para una suscripción de inserción a una publicación transaccional  
   
 1.  Cree una nueva suscripción de inserción para una publicación transaccional. Para obtener más información, consulte [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  En el suscriptor, ejecute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Especifique **@subscriber** , **@subscriber_db** , **@publication** y las credenciales de Windows con las que se ejecuta el Agente de distribución en el suscriptor para **@job_name** y **@password** . Especifique los parámetros de sincronización, detallados anteriormente, que definen la programación para el trabajo del Agente de distribución que sincroniza la suscripción.  
+2.  En el suscriptor, ejecute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Especifique **\@subscriber**, **\@subscriber_db**, **\@publication** y las credenciales de Windows con las que se ejecuta el Agente de distribución en el suscriptor para **\@job_name** y **\@password**. Especifique los parámetros de sincronización, detallados anteriormente, que definen la programación para el trabajo del Agente de distribución que sincroniza la suscripción.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>Para definir la programación de sincronización para una suscripción de extracción a una publicación de combinación  
   
 1.  Cree una nueva suscripción de extracción para una publicación de combinación. Para obtener más información, consulte [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-2.  En el suscriptor, ejecute [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique **@publisher** , **@publisher_db** , **@publication** y las credenciales de Windows con las que se ejecuta el Agente de mezcla en el suscriptor para **@job_name** y **@password** . Especifique los parámetros de sincronización, detallados anteriormente, que definen la programación para el trabajo del Agente de distribución que sincroniza la suscripción.  
+2.  En el suscriptor, ejecute [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Especifique **\@publisher**, **\@publisher_db**, **\@publication** y las credenciales de Windows con las que se ejecuta el Agente de mezcla en el suscriptor para **\@job_name** y **\@password**. Especifique los parámetros de sincronización, detallados anteriormente, que definen la programación para el trabajo del Agente de distribución que sincroniza la suscripción.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>Para definir la programación de sincronización para una suscripción de inserción a una publicación de combinación  
   
 1.  Cree una nueva suscripción de inserción a una publicación de combinación. Para obtener más información, consulte [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
-2.  En el suscriptor, ejecute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Especifique **@subscriber** , **@subscriber_db** , **@publication** y las credenciales de Windows con las que se ejecuta el Agente de mezcla en el suscriptor para **@job_name** y **@password** . Especifique los parámetros de sincronización, detallados anteriormente, que definen la programación para el trabajo del Agente de distribución que sincroniza la suscripción.  
+2.  En el suscriptor, ejecute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md). Especifique **\@subscriber**, **\@subscriber_db**, **\@publication** y las credenciales de Windows con las que se ejecuta el Agente de mezcla en el suscriptor para **\@job_name** y **\@password**. Especifique los parámetros de sincronización, detallados anteriormente, que definen la programación para el trabajo del Agente de distribución que sincroniza la suscripción.  
   
 ##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  La replicación usa el Agente SQL Server para programar los trabajos de las actividades que se producen periódicamente, como la generación de instantáneas y la sincronización de suscripción. Puede usar Replication Management Objects (RMO) mediante programación para especificar las programaciones de los trabajos de agente de replicación.  

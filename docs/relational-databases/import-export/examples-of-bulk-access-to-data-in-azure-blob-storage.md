@@ -16,15 +16,15 @@ ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bbf0e39b5187f91495f36624ca133d02b87f764
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8ae6afaf55bbd146fc2fbd0984d5b430b1653f3
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035777"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742870"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Ejemplos de acceso masivo a datos en Azure Blob Storage
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Las instrucciones `BULK INSERT` y `OPENROWSET` pueden obtener acceso directamente a un archivo en Azure Blob Storage. En los ejemplos siguientes se usan datos de un archivo CSV (valores separados por comas) (denominado `inv-2017-01-19.csv`), almacenado en un contenedor (denominado `Week3`), almacenado en una cuenta de almacenamiento (denominada `newinvoices`). Se puede usar la ruta de acceso al archivo de formato, pero no se incluye en estos ejemplos. 
 
@@ -32,7 +32,6 @@ El acceso masivo a Azure Blob Storage desde SQL Server, necesita al menos [!INCL
 
 > [!IMPORTANT]
 >  Todas las rutas de acceso al contenedor y a los archivos de blob son `CASE SENSITIVE`. Si no es correcto, es posible que se devuelva el error "No se puede realizar la carga masiva. El archivo "file.csv" no existe o no tiene derechos de acceso al archivo."
-> "
 
 
 ## <a name="create-the-credential"></a>Crear la credencial   
@@ -42,23 +41,26 @@ Todos los ejemplos siguientes requieren una credencial con ámbito de base de da
 > [!IMPORTANT]
 >  El origen de datos externo debe crearse con una credencial con ámbito de base de datos que use la identidad `SHARED ACCESS SIGNATURE`. Para crear una firma de acceso compartido para la cuenta de almacenamiento, vea la propiedad **Firma de acceso compartido** en la página de propiedades de la cuenta de almacenamiento, en Azure Portal. Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Para más información sobre las credenciales, vea [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
  
-Cree una credencial con ámbito de base de datos mediante `IDENTITY` que debe ser `SHARED ACCESS SIGNATURE`. Use el secreto de Azure Portal. Por ejemplo:  
+Cree una credencial con ámbito de base de datos mediante `IDENTITY` que debe ser `SHARED ACCESS SIGNATURE`. Use el token de SAS creado para la cuenta de almacenamiento de blobs. Compruebe que el token de SAS no tenga un valor `?` inicial, que tenga al menos permiso de lectura sobre el objeto que debe cargarse y que el período de expiración sea válido (todas las fechas están en hora UTC). 
+
+Por ejemplo:  
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
+SECRET = 'sv=2018-03-28&ss=b&srt=sco&sp=rwdlac&se=2019-08-31T02:25:19Z&st=2019-07-30T18:25:19Z&spr=https&sig=KS51p%2BVnfUtLjMZtUTW1siyuyd2nlx294tL0mnmFsOk%3D';
 ```
 
 
 ## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>Acceso a datos en un archivo CSV que hace referencia a una ubicación de Azure Blob Storage   
-En el ejemplo siguiente se usa un origen de datos externo que apunta a una cuenta de almacenamiento de Azure, denominada `newinvoices`.   
+En el ejemplo siguiente se usa un origen de datos externo que apunta a una cuenta de almacenamiento de Azure, denominada `newinvoices`.  
+
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
         LOCATION = 'https://newinvoices.blob.core.windows.net', 
-        CREDENTIAL = UploadInvoices  
+        CREDENTIAL = 'UploadInvoices';
     );
 ```   
 
@@ -67,7 +69,7 @@ Después, la instrucción agrega `OPENROWSET` el nombre del contenedor (`week3`)
 SELECT * FROM OPENROWSET(
    BULK  'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
-   SINGLE_CLOB) AS DataFile;
+   FORMAT = 'CSV') AS DataFile;
 ```
 
 Con `BULK INSERT`, use el contenedor y la descripción del archivo:
@@ -96,7 +98,7 @@ Después, la instrucción `OPENROWSET` no incluye el nombre del contenedor en la
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
-   SINGLE_CLOB) AS DataFile;
+   FORMAT = 'CSV') AS DataFile;
 ```   
 
 Con `BULK INSERT`, no use el nombre del contenedor en la descripción del archivo: 

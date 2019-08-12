@@ -1,7 +1,7 @@
 ---
 title: Opciones de inicio del servicio de motor de base de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 53c7ea706f9e886f147532bfbd3dd148a6ca7d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011972"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763228"
 ---
 # <a name="database-engine-service-startup-options"></a>Opciones de inicio del servicio de motor de base de datos
 
@@ -82,8 +82,9 @@ Las opciones de inicio señalan ciertas ubicaciones de archivos necesarios duran
  Es posible que desee usar algunas opciones de inicio siempre que se inicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estas opciones, como iniciar con una marca de seguimiento, se llevan a cabo más fácilmente si se configuran los parámetros de inicio con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Esta herramienta guarda las opciones de inicio como claves del Registro, lo que habilita que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre se inicie con las opciones de inicio activadas.  
   
 ## <a name="compatibility-support"></a>Soporte de compatibilidad  
- El parámetro **-h**  no es compatible con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este parámetro se usaba en versiones anteriores de instancias de 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para reservar espacio de direcciones de memoria virtual para los metadatos de Agregar memoria sin interrupción cuando AWE está habilitado. Para obtener más información, vea [Características de SQL Server en desuso y descontinuadas en SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
-  
+
+Para ver las opciones que se han quitado de las versiones anteriores, consulte [Aplicación sqlservr](../../tools/sqlservr-application.md#compatibility-support).
+
 ## <a name="related-tasks"></a>Related Tasks  
 [Establecer la opción de configuración del servidor Buscar procedimientos de inicio](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)

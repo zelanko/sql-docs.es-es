@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895432"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742942"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>Tutorial: Preparación de SQL Server para la replicación (publicador, distribuidor, suscriptor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -212,7 +212,7 @@ Si su instancia de SQL Server Management Studio se ejecuta con derechos administ
 >[!NOTE]
 > Si no se inicia el Agente SQL de forma visible, haga clic con el botón derecho en el Agente SQL Server en SSMS y seleccione **Actualizar**. Si está todavía en estado detenido, inícielo manualmente desde el Administrador de configuración de SQL Server.    
   
-### <a name="set-database-permissions-at-the-publisher"></a>Establecimiento de permisos de base de datos en el publicador  
+## <a name="set-database-permissions"></a>Establecer los permisos para la base de datos  
   
 1. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión**y, después, seleccione **Nuevo inicio de sesión**:  
 
@@ -233,6 +233,8 @@ Si su instancia de SQL Server Management Studio se ejecuta con derechos administ
 5. Repita los pasos del 1 al 4 para crear un inicio de sesión para el resto de cuentas locales (repl_distribution, repl_logreader y repl_merge). Estos inicios de sesión también se deben asignar a usuarios que son miembros del rol fijo de base de datos **db_owner** en las bases de datos **distribution** y **AdventureWorks**.  
 
    ![Vista de las cuatro cuentas en el Explorador de objetos](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
+   
+ 6. Repita los pasos 1 al 4 en el suscriptor para el agente de distribución y el agente de combinación, cambiando el nombre de la máquina por el del suscriptor. 
   
   
 Para obtener más información, vea:

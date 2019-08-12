@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9296bd28852eda3abd29e8a54984ec37f726c8b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e957d0ae199375ffe13a756cc1a8b0872aa962e3
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006460"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661430"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Replicación y creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "68006460"
   
 3.  Configurar la distribución para la entidad reflejada. Indique el nombre de la entidad reflejada como el publicador y especifique el mismo distribuidor y la misma carpeta de instantáneas que se utilizan en la entidad de seguridad. Por ejemplo, si está configurando la replicación con procedimientos almacenados, ejecute [sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) en el distribuidor y, después, ejecute [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) en la entidad reflejada. Para **sp_adddistpublisher**:  
   
-    -   Establezca el valor del parámetro **@publisher** en el nombre de red de la entidad reflejada.  
+    -   Establezca el valor del parámetro **\@publisher** en el nombre de red de la entidad reflejada.  
   
-    -   Establezca el valor del parámetro **@working_directory** en la carpeta de instantáneas que se usa en la entidad de seguridad.  
+    -   Establezca el valor del parámetro **\@working_directory** en la carpeta de instantáneas que se usa en la entidad de seguridad.  
   
 4.  Especifique el nombre de la entidad reflejada para el parámetro de agente **- PublisherFailoverPartner**. Este parámetro es necesario para que los siguientes agentes identifiquen la entidad reflejada después de una conmutación por error:  
   
@@ -134,12 +134,12 @@ ms.locfileid: "68006460"
   
 -   Si se utilizan procedimientos almacenados o Replication Management Objects (RMO) para administrar la replicación en la entidad reflejada, en los casos en que se especifica el nombre del publicador, se debe especificar el nombre de la instancia en la que la base de datos se habilitó para la replicación. Para determinar el nombre correcto, use la función [publishingservername](../../t-sql/functions/replication-functions-publishingservername.md).  
   
-     Cuando se crea el reflejo de una base de datos de publicación, los metadatos de la replicación que se encuentran almacenados en la base de datos reflejada son idénticos a los que se encuentran almacenados en la base de datos de la entidad de seguridad. En consecuencia, para las bases de datos de publicación habilitadas para replicación en la entidad de seguridad, el nombre de la instancia del publicador que está almacenado en las tablas del sistema en la entidad reflejada es el nombre de la entidad de seguridad, en lugar del nombre de la entidad reflejada. Esto afecta a la configuración y al mantenimiento de la replicación si se produce la conmutación por error de la base de datos de publicación a la entidad reflejada. Por ejemplo, si se configura la replicación con procedimientos almacenados en la entidad reflejada después de una conmutación por error y se quiere agregar una suscripción de extracción a una base de datos de publicación que estaba habilitada en la entidad de seguridad, se debe especificar el nombre de la entidad de seguridad, en lugar del nombre de la entidad reflejada, para el parámetro **@publisher** de **sp_addpullsubscription** o **sp_addmergepullsubscription**.  
+     Cuando se crea el reflejo de una base de datos de publicación, los metadatos de la replicación que se encuentran almacenados en la base de datos reflejada son idénticos a los que se encuentran almacenados en la base de datos de la entidad de seguridad. En consecuencia, para las bases de datos de publicación habilitadas para replicación en la entidad de seguridad, el nombre de la instancia del publicador que está almacenado en las tablas del sistema en la entidad reflejada es el nombre de la entidad de seguridad, en lugar del nombre de la entidad reflejada. Esto afecta a la configuración y al mantenimiento de la replicación si se produce la conmutación por error de la base de datos de publicación a la entidad reflejada. Por ejemplo, si se configura la replicación con procedimientos almacenados en la entidad reflejada después de una conmutación por error y se quiere agregar una suscripción de extracción a una base de datos de publicación que estaba habilitada en la entidad de seguridad, se debe especificar el nombre de la entidad de seguridad, en lugar del nombre de la entidad reflejada, para el parámetro **\@publisher** de **sp_addpullsubscription** o **sp_addmergepullsubscription**.  
   
-     Si se habilita una base de datos de publicación en la entidad reflejada después de una conmutación por error a dicha entidad, el nombre de la instancia del publicador que está almacenado en las tablas del sistema es el nombre de la entidad reflejada. En este caso, se debe utilizar el nombre de la entidad reflejada para el parámetro **@publisher** .  
+     Si se habilita una base de datos de publicación en la entidad reflejada después de una conmutación por error a dicha entidad, el nombre de la instancia del publicador que está almacenado en las tablas del sistema es el nombre de la entidad reflejada. En este caso, se debe usar el nombre de la entidad reflejada para el parámetro **\@publisher**.  
   
     > [!NOTE]  
-    >  En algunos casos, por ejemplo **sp_addpublication**, el parámetro **@publisher** solo se admite para publicadores que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En estos casos, no es relevante para la creación de reflejo de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+    >  En algunos casos, por ejemplo **sp_addpublication**, el parámetro **\@publisher** solo se admite para publicadores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En estos casos, no es relevante para la creación de reflejo de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   Para sincronizar una suscripción en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] tras una conmutación por error: sincronice las suscripciones de extracción del suscriptor y sincronice las suscripciones de inserción del publicador activo.  
   

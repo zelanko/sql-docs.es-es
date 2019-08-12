@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: caf8b23b823d7863e1bd7c8abd01ef43b0b8ec20
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702892"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893989"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -46,7 +46,7 @@ Community Technology Preview (CTP) 3.2 es la versión pública más reciente de
 
 | Nueva característica o actualización | Detalles |
 |:---|:---| 
-| Configuración de gobernanza para las actualizaciones de la caché de Power BI.  | El servicio Power BI almacena en caché los datos del icono del panel y los datos del informe para la carga inicial del informe de Live Connect, lo que provoca un número excesivo de consultas de caché que se envían a SSAS y, en casos extremos, la sobrecarga del servidor. En esta versión se incluye la propiedad **ClientCacheRefreshPolicy**. Esta propiedad permite invalidar este comportamiento en el nivel de servidor. Para obtener más información, vea [Propiedades generales](../analysis-services/server-properties/general-properties.md). |
+| Configuración de gobernanza para las actualizaciones de la caché de Power BI.  | El servicio Power BI almacena en caché los datos del icono del panel y los datos del informe para la carga inicial del informe de Live Connect, lo que provoca un número excesivo de consultas de caché que se envían a SSAS y, en casos extremos, la sobrecarga del servidor. En esta versión se incluye la propiedad **ClientCacheRefreshPolicy**. Esta propiedad permite invalidar este comportamiento en el nivel de servidor. Para obtener más información, vea [Propiedades generales](https://docs.microsoft.com/analysis-services/server-properties/general-properties). |
 | Adjunto en línea  | Esta característica ofrece la posibilidad de adjuntar un modelo tabular como una operación en línea. Adjunto en línea se puede usar para la sincronización de réplicas de solo lectura en entornos locales de escalabilidad horizontal de consultas. Para obtener más información, en Detalles vea [Adjunto en línea](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32). |
 | &nbsp; | &nbsp; |
 

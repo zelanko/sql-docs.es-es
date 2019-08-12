@@ -10,12 +10,12 @@ ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 42b4f227270b201e40b22deb9e3d060407bc0bb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e3d415708689dd650c04a8eee8ec734498cbf0a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126014"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888946"
 ---
 # <a name="uninstall-reporting-services"></a>Desinstalar Reporting Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "68126014"
   
 ## <a name="see-also"></a>Consulte también  
  [Desinstalar una instancia existente de SQL Server &#40;programa de instalación&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
- [Instalar o desinstalar el complemento PowerPivot para SharePoint &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
+ [Instalar o desinstalar el complemento PowerPivot para SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
  [Instalar o desinstalar el complemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/20/2019
-ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343878"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893283"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Características de SQL Server Reporting Services admitidas en sus ediciones
 
@@ -24,9 +24,9 @@ En este tema se explican las características de SQL Server Reporting Services (
 
  ## <a name="try-sql-server-2017"></a>Probar SQL Server 2017
 
-> [![Descargar SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Descargar SQL Server 2017 desde el Centro de evaluación](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![Descargar SQL Server 2017](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Descargar SQL Server 2017 desde el Centro de evaluación](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Máquina virtual de Azure pequeña ](../analysis-services/media/azure-virtual-machine-small.png) **[Poner en marcha una máquina virtual con SQL Server 2017 ya instalado](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Máquina virtual de Azure pequeña ](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[Poner en marcha una máquina virtual con SQL Server 2017 ya instalado](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Para conocer las características admitidas en las ediciones Evaluation y Developer, vea la columna SQL Server Enterprise Edition de la tabla siguiente.
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: edd6d1ddb936571861260e7fafe6a3903e72b29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091820"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893081"
 ---
 # <a name="tutorials-for-sql-server"></a>Tutoriales de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68091820"
   
 |Tecnología|Descripción|  
 |--------------|---------------|  
-|[Tutoriales de Analysis Services &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Aprenda a desarrollar e implementar modelos multidimensionales o tabulares de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . También aprenderá a utilizar herramientas como PowerPivot para analizar los datos de los modelos.|  
+|[Tutoriales de Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Aprenda a desarrollar e implementar modelos multidimensionales o tabulares de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . También aprenderá a utilizar herramientas como PowerPivot para analizar los datos de los modelos.|  
 |[Tutoriales del motor de base de datos](../relational-databases/database-engine-tutorials.md)|Aprenda a conectarse a una instancia del motor de base de datos, así como a escribir y ejecutar instrucciones Transact-SQL.|  
 |[Tutoriales de Administración de información empresarial](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Aprenda a administrar información en una empresa con las tecnologías EIM de Microsoft.|  
 |[Tutoriales de Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a crear e implementar soluciones [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 87be157406b169a0978fd282c9ee40e4808c2599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d519d0c298e3a92506902bc42d3fdb4e8b1d2cc7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057846"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893749"
 ---
 # <a name="wmi-event-watcher-task"></a>Tarea Monitor de eventos WMI
 
@@ -111,7 +111,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="wmi-event-watcher-task-editor-general-page"></a>Editor de la tarea Monitor de eventos WMI (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Monitor de eventos WMI** para asignar un nombre a la tarea Monitor de eventos WMI y describirla.  
   
- Para más información sobre el lenguaje de consulta de WMI (WQL), vea el tema sobre Instrumental de administración de Windows, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Realizar consultas con WQL), en MSDN Library.  
+ Para más información sobre el lenguaje de consulta de WMI (WQL), vea el tema sobre Instrumental de administración de Windows, [Querying with WQL](/windows/win32/wmisdk/querying-with-wql)(Realizar consultas con WQL), en MSDN Library.  
   
 ### <a name="options"></a>Opciones  
  **Nombre**  
@@ -126,7 +126,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor de la tarea Monitor de eventos WMI (página Opciones WMI)
   Use la página **Opciones WMI** del cuadro de diálogo **Editor de la tarea Monitor de eventos WMI** para especificar el origen de la consulta WQL (Lenguaje de consulta de Instrumental de administración de Windows) y la manera en que la tarea Monitor de eventos WMI responde a los eventos WMI (Instrumentación de Microsoft Windows).  
   
- Para más información sobre el lenguaje de consulta de WMI (WQL), vea el tema sobre Instrumental de administración de Windows, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Realizar consultas con WQL), en MSDN Library.  
+ Para más información sobre el lenguaje de consulta de WMI (WQL), vea el tema sobre Instrumental de administración de Windows, [Querying with WQL](/windows/win32/wmisdk/querying-with-wql)(Realizar consultas con WQL), en MSDN Library.  
   
 ### <a name="static-options"></a>Opciones estáticas  
  **WMIConnectionName**  

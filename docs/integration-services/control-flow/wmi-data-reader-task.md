@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 9ef5288ea0ffef804aeb9c11aff51b0db6ef4093
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b7a527770e41870729c194bd9c7651b77cffd2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057872"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890848"
 ---
 # <a name="wmi-data-reader-task"></a>Tarea Lector de datos WMI
 
@@ -104,7 +104,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-general-page"></a>Editor de la tarea Lector de datos WMI (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de la tarea Lector de datos WMI** para asignar un nombre a la tarea Lector de datos WMI y describirla.  
   
-  Para más información sobre el lenguaje de consulta de WMI (WQL), vea el tema sobre Instrumental de administración de Windows, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Realizar consultas con WQL), en MSDN Library.  
+  Para más información sobre el lenguaje de consulta de WMI (WQL), vea el tema sobre Instrumental de administración de Windows, [Querying with WQL](/windows/win32/wmisdk/querying-with-wql)(Realizar consultas con WQL), en MSDN Library.  
   
 ### <a name="options"></a>Opciones  
  **Nombre**  
@@ -119,7 +119,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Editor de la tarea Lector de datos WMI (página Opciones WMI)
   Use la página **Opciones WMI** del cuadro de diálogo **Editor de la tarea Lector de datos WMI** para especificar el origen de la consulta WQL (Lenguaje de consulta de Instrumental de administración de Windows) y el destino del resultado de la consulta.  
   
- Para más información sobre el lenguaje de consulta de WMI (WQL), vea el tema sobre Instrumental de administración de Windows, [Querying with WQL](https://go.microsoft.com/fwlink/?LinkId=79045)(Realizar consultas con WQL), en MSDN Library.  
+ Para más información sobre el lenguaje de consulta de WMI (WQL), vea el tema sobre Instrumental de administración de Windows, [Querying with WQL](/windows/win32/wmisdk/querying-with-wql)(Realizar consultas con WQL), en MSDN Library.  
   
 ### <a name="static-options"></a>Opciones estáticas  
  **WMIConnectionName**  

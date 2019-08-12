@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: bf7fc37921ae37996b5d93b1ed1e913232a28b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a981ec4f29cd1fe5dd9629498799dd488f03e3f8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101570"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893234"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
 
@@ -43,9 +43,9 @@ ms.locfileid: "68101570"
 ## <a name="prediction-queries"></a>Consultas de predicción  
  La consulta es una instrucción de Extensiones de minería de datos (DMX). El lenguaje DMX es una extensión del lenguaje SQL que permite trabajar con modelos de minería de datos. Para más información sobre cómo usar el lenguaje DMX, vea [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
   
- La tarea puede consultar múltiples modelos de minería de datos generados a partir de la misma estructura de minería de datos. Un modelo de minería de datos se construye mediante uno de los algoritmos de minería de datos proporcionados por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La estructura de minería de datos a la que hace referencia la tarea Consulta de minería de datos puede incluir múltiples modelos de minería de datos generados con algoritmos diferentes. Para más información, vea [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) y [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ La tarea puede consultar múltiples modelos de minería de datos generados a partir de la misma estructura de minería de datos. Un modelo de minería de datos se construye mediante uno de los algoritmos de minería de datos proporcionados por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La estructura de minería de datos a la que hace referencia la tarea Consulta de minería de datos puede incluir múltiples modelos de minería de datos generados con algoritmos diferentes. Para más información, vea [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) y [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
- La consulta de predicción ejecutada por la tarea Consulta de minería de datos devuelve como resultado una única fila o un conjunto de datos. Una consulta que devuelve una sola fila se denomina consulta de singleton. Por ejemplo, la consulta que predice cuántos barcos de vela se venderán en los meses de verano produce como resultado un número. Para más información sobre las consultas de predicción que devuelven una única fila, vea [Herramientas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md).  
+ La consulta de predicción ejecutada por la tarea Consulta de minería de datos devuelve como resultado una única fila o un conjunto de datos. Una consulta que devuelve una sola fila se denomina consulta de singleton. Por ejemplo, la consulta que predice cuántos barcos de vela se venderán en los meses de verano produce como resultado un número. Para más información sobre las consultas de predicción que devuelven una única fila, vea [Herramientas de consulta de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools).  
   
  Los resultados de la consulta se almacenan en tablas. Si ya existe una tabla con el nombre especificado en la tarea Consulta de minería de datos, la tarea puede crear la nueva tabla anexando un número al nombre o sobrescribir el contenido de la tabla existente.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68101570"
 ## <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor de la tarea Consulta de minería de datos (pestaña Modelo de minería de datos)
   Utilice la pestaña **Modelo de minería de datos** del cuadro de diálogo **Tarea Consulta de minería de datos** para especificar la estructura y el modelo de minería de datos que se van a utilizar.  
   
- Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md).  
+ Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Opciones generales  
  **Nombre**  
@@ -103,7 +103,7 @@ ms.locfileid: "68101570"
 ## <a name="data-mining-query-task-editor-query-tab"></a>Editor de la tarea Consulta de minería de datos (pestaña Consulta)
   Use la pestaña **Consulta** del cuadro de diálogo **Tarea Consulta de minería de datos** para crear consultas de predicción según un modelo de minería de datos. En este cuadro de diálogo también puede enlazar parámetros y conjuntos de resultados con variables.  
   
- Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md).  
+ Para obtener información sobre cómo implementar la minería de datos en paquetes, vea [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Opciones generales  
  **Nombre**  
@@ -159,7 +159,7 @@ ms.locfileid: "68101570"
 ## <a name="data-mining-query-task-editor-output-tab"></a>Editor de la tarea Consulta de minería de datos (pestaña Salida)
   Use la pestaña **Salida** del cuadro de diálogo **Editor de la tarea Consulta de minería de datos** para especificar el destino de la consulta de predicción.  
   
- Para obtener información sobre cómo implementar minería de datos en paquetes, vea [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md).  
+ Para obtener información sobre cómo implementar minería de datos en paquetes, vea [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md) y [Soluciones de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Opciones generales  
  **Nombre**  

@@ -21,18 +21,18 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 6e7d840e2f2c6fd0ef9530dd696dcdf96aa72d44
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: dbf87499f1bc5c23ae272daa393ef981a97e66d5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264596"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892566"
 ---
 # <a name="upgrade-analysis-services"></a>Actualizar Analysis Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  Es posible actualizar las instancias de Analysis Services a una versión de SQL Server del mismo modo de servidor con el objetivo de aprovechar las características que incorpora la nueva versión, tal y como se describe en [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md) (Novedades de Analysis Services).  
+  Es posible actualizar las instancias de Analysis Services a una versión de SQL Server del mismo modo de servidor con el objetivo de aprovechar las características que incorpora la nueva versión, tal y como se describe en [What's New in Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services) (Novedades de Analysis Services).  
   
  Puede actualizar cada instancia de forma local, por separado de otras instancias que se ejecuten en el mismo hardware. Pero la mayoría de los administradores optan por instalar una nueva instancia de la versión más reciente para efectuar pruebas con aplicaciones antes de transferir las cargas de trabajo de producción al nuevo servidor. Pero, en el caso de los servidores de entornos de desarrollo o pruebas, una actualización local puede resultar más práctica.  
   
@@ -50,21 +50,21 @@ ms.locfileid: "68264596"
   
 ### <a name="side-by-side-upgrade"></a>Actualización en paralelo  
   
--   Realice copias de seguridad de todas las bases de datos y compruebe que se puedan restaurar. Para obtener más información, vea [Backup and Restore of Analysis Services Databases](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md) (Realizar copias de seguridad y restaurar bases de datos de Analysis Services).  
+-   Realice copias de seguridad de todas las bases de datos y compruebe que se puedan restaurar. Para obtener más información, vea [Backup and Restore of Analysis Services Databases](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases) (Realizar copias de seguridad y restaurar bases de datos de Analysis Services).  
   
 -   Identifique un subconjunto de informes, hojas de cálculo o instantáneas del panel a fin de utilizarlo más adelante como base para confirmar las operaciones del servidor posteriores a la actualización. Si fuera posible, recopile medidas de rendimiento para que pueda llevar a cabo comparaciones utilizando las mismas cargas de trabajo en un servidor actualizado.  
   
 -   Instale una nueva instancia de Analysis Services; para ello, elija el mismo modo de servidor (tabular o multidimensional) que tenga la instancia que pretende reemplazar. 
   
-     Realice las tareas posteriores a la instalación para configurar los puertos y agregar los administradores del servidor. Para obtener más información, vea [Configuración posterior a la instalación &#40;Analysis Services&#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md).  
+     Realice las tareas posteriores a la instalación para configurar los puertos y agregar los administradores del servidor. Para obtener más información, vea [Configuración posterior a la instalación &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/post-install-configuration-analysis-services).  
   
 -   Adjunte o restaure cada base de datos.  
   
--   Ejecute DBCC para comprobar la integridad de las bases de datos. Los modelos tabulares se someten a una comprobación más completa, en la que se incluyen pruebas de objetos huérfanos en toda la jerarquía del modelo. En lo que respecta a los modelos multidimensionales, solo se comprueban los índices de partición. Para obtener más información, vea [Comprobador de coherencia de base de datos &#40;DBCC&#41; para bases de datos multidimensionales y tabulares de Analysis Services](../../analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services.md).  
+-   Ejecute DBCC para comprobar la integridad de las bases de datos. Los modelos tabulares se someten a una comprobación más completa, en la que se incluyen pruebas de objetos huérfanos en toda la jerarquía del modelo. En lo que respecta a los modelos multidimensionales, solo se comprueban los índices de partición. Para obtener más información, vea [Comprobador de coherencia de base de datos &#40;DBCC&#41; para bases de datos multidimensionales y tabulares de Analysis Services](https://docs.microsoft.com/analysis-services/instances/database-consistency-checker-dbcc-for-analysis-services).  
   
 -   Pruebe los informes, las hojas de cálculo y los paneles para confirmar que no haya ningún cambio adverso en el comportamiento o los cálculos. Debería observar un funcionamiento más rápido tanto para cargas de trabajo multidimensionales como para las tabulares.  
   
--   Pruebe las operaciones de procesamiento y corrija cualquier problema de inicio de sesión o permisos. Si utiliza la cuenta de servicio predeterminada para las conexiones, el nuevo servicio se ejecuta en una cuenta diferente. Para obtener más información, vea [Configurar las cuentas de servicio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md).  
+-   Pruebe las operaciones de procesamiento y corrija cualquier problema de inicio de sesión o permisos. Si utiliza la cuenta de servicio predeterminada para las conexiones, el nuevo servicio se ejecuta en una cuenta diferente. Para obtener más información, vea [Configurar las cuentas de servicio &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services).  
   
 -   Pruebe las operaciones de copia de seguridad y restauración en el servidor actualizado ajustando los scripts para que utilicen el nuevo nombre del servidor.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "68264596"
 |Multidimensional|1100|SQL Server 2012 y posterior|  
 |Multidimensional|1050|SQL Server 2005, 2008 y 2008 R2|  
   
- Para obtener más información, vea [Nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md) y [Nivel de compatibilidad para modelos tabulares de Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).  
+ Para obtener más información, vea [Nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services) y [Nivel de compatibilidad para modelos tabulares de Analysis Services](https://docs.microsoft.com/analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services).  
   
 ## <a name="see-also"></a>Vea también  
  [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   

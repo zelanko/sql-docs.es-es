@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063974"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893184"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "68063974"
   
 8.  En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Para continuar, haga clic en **Siguiente** . Para salir del programa de instalación, haga clic en **Cancelar**.  
   
-9. En la página Selección de características, seleccione los componentes de la instalación. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Puede activar cualquier combinación de casillas, pero solo [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo tabular y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo multidimensional admiten los clústeres de conmutación por error. Los demás componentes seleccionados se ejecutarán como una característica independiente sin la funcionalidad de conmutación por error en el nodo actual en el que esté ejecutando el programa de instalación. Para obtener más información sobre modos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vea [Determinar el modo de servidor de una instancia de Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+9. En la página Selección de características, seleccione los componentes de la instalación. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Puede activar cualquier combinación de casillas, pero solo [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo tabular y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo multidimensional admiten los clústeres de conmutación por error. Los demás componentes seleccionados se ejecutarán como una característica independiente sin la funcionalidad de conmutación por error en el nodo actual en el que esté ejecutando el programa de instalación. Para obtener más información sobre modos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vea [Determinar el modo de servidor de una instancia de Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "68063974"
   
 9. En la página Términos de licencia, lea el contrato de licencia y active la casilla para aceptar los términos y condiciones de la licencia. Para ayudar a mejorar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], también puede habilitar la opción de uso de características y enviar informes a [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Para continuar, haga clic en **Siguiente** . Para salir del programa de instalación, haga clic en **Cancelar**.  
   
-10. En la página Selección de características, seleccione los componentes de la instalación. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Puede activar cualquier combinación de casillas, pero solo [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo tabular y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo multidimensional admiten los clústeres de conmutación por error. Los demás componentes seleccionados se ejecutarán como una característica independiente sin la funcionalidad de conmutación por error en el nodo actual en el que esté ejecutando el programa de instalación. Para obtener más información sobre modos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vea [Determinar el modo de servidor de una instancia de Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+10. En la página Selección de características, seleccione los componentes de la instalación. Después de seleccionar el nombre de la característica se muestra una descripción de cada grupo de componentes en el panel derecho. Puede activar cualquier combinación de casillas, pero solo [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo tabular y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo multidimensional admiten los clústeres de conmutación por error. Los demás componentes seleccionados se ejecutarán como una característica independiente sin la funcionalidad de conmutación por error en el nodo actual en el que esté ejecutando el programa de instalación. Para obtener más información sobre modos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vea [Determinar el modo de servidor de una instancia de Analysis Services](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento.  
   

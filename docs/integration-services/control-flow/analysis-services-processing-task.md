@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 617676bf00f5f91652719ca93ef614152523367a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bc0ae0b7a64f7f3d75d9ff67da0142682093da0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947934"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893051"
 ---
 # <a name="analysis-services-processing-task"></a>Procesamiento de Analysis Services, tarea
 
@@ -123,7 +123,7 @@ ms.locfileid: "67947934"
 |--------------|-----------------|  
 |**Nombre de objeto**|Enumera los nombres de los objetos especificados.|  
 |**Tipo**|Enumera los tipos de los objetos especificados.|  
-|**Opciones de proceso**|Seleccione una opción de procesamiento de la lista.<br /><br /> **Temas relacionados**: [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Opciones de proceso**|Seleccione una opción de procesamiento de la lista.<br /><br /> **Temas relacionados**: [Procesar un modelo multidimensional &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Configuración**|Enumera los valores de configuración de procesamiento para los objetos especificados.|  
   
  **Agregar**  

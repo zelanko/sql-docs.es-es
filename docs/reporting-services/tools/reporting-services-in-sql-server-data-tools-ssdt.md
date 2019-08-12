@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581347"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889841"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
 
@@ -39,7 +39,7 @@ ms.locfileid: "65581347"
   
 -   **Asistente de proyectos de servidor de informes.** Cuando se selecciona un proyecto de asistente de proyectos de servidor de informes, se crea automáticamente un proyecto de servidor de informes y se abre el Asistente para informes. En el asistente, puede crear un informe siguiendo las instrucciones de cada página para crear una cadena de conexión a un origen de datos, establecer las credenciales del origen de datos, diseñar una consulta, agregar una región de datos de tabla o matriz, especificar datos y grupos de informe, elegir un estilo de fuente y color, publicar el informe en un servidor de informes y obtener una vista previa del informe localmente. Después de crear un informe con el asistente, puede modificar los datos del informe y el diseñador de informes mediante el Diseñador de informes en el proyecto de servidor de informes.  
   
- ![Nuevas plantillas de proyecto de SSDT](../../analysis-services/media/ssdt-biprojects.png "Nuevas plantillas de proyecto de SSDT")  
+ ![Nuevas plantillas de proyecto de SSDT](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "Nuevas plantillas de proyecto de SSDT")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Ventanas y paneles del Diseñador de informes  

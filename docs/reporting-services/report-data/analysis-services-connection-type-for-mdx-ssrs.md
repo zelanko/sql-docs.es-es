@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84ca9bd1e9a197d518dafd5d33234ac4ffc3cb26
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: c108b2eaaf8aa0182b8192ab2d7868db84d531a6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500542"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892486"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Tipo de conexión de Analysis Services para MDX (SSRS)
   Para incluir en el informe datos de un cubo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Este tipo de origen de datos integrado está basado en la extensión de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede recuperar metadatos sobre dimensiones, jerarquías, niveles, indicadores clave de rendimiento (KPI), medidas y atributos desde un cubo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para usarlos como datos de informe.  
@@ -47,7 +47,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en msdn.microsoft.com.  
   
- Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión &#40;generador de informes y SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [especificar credenciales y la información de conexión de orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Para obtener más información, vea [conexiones de datos, orígenes de datos y &#40;cadenas de conexión&#41; generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [especificar información de credenciales y conexión para los orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Consultas  
@@ -77,7 +77,7 @@ data source=<server name>;initial catalog=<database name>
   
   
 ##  <a name="Remarks"></a> Comentarios  
- La extensión de datos de Analysis Services está basada en el protocolo XMLA (XML for Analysis). Los conjuntos de resultados de los cubos se recuperan mediante el protocolo XMLA como un conjunto de filas sin información de estructura jerárquica. No se admiten jerarquías desiguales. Para más información, vea [Jerarquías desiguales](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
+ La extensión de datos de Analysis Services está basada en el protocolo XMLA (XML for Analysis). Los conjuntos de resultados de los cubos se recuperan mediante el protocolo XMLA como un conjunto de filas sin información de estructura jerárquica. No se admiten jerarquías desiguales. Para más información, vea [Jerarquías desiguales](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  También puede recuperar datos de un cubo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del tipo de origen de datos OLE DB. Para obtener más información, vea [Tipo de conexión OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cfd79f0cd7470ea94be1c77e5bc27016531909ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265394"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893910"
 ---
 # <a name="sql-data-developer"></a>Desarrollador de datos SQL
 Utilice la plataforma de datos SQL de Microsoft para crear soluciones centradas en datos en dispositivos móviles y equipos de escritorio para servidores Web, servidores empresariales y la nube.  
@@ -40,7 +40,7 @@ Utilice la plataforma de datos SQL de Microsoft para crear soluciones centradas 
 * [Sqlxml 4,0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): usar SQLXML 4,0 para exportar datos relacionales a XML.
 
 ## <a name="data-collection-processing-and-visualization"></a>Recopilación, procesamiento y visualización de datos
-* [Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
+* [Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Servicios de replicación](../relational-databases/replication/concepts/replication-developer-documentation.md)

@@ -9,12 +9,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: adac7275de5663d8e30c2638c270c13b453aa0ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574574"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887750"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Agregar tipos de contenido de Reporting Services a una biblioteca de SharePoint
 
@@ -60,7 +60,7 @@ ms.locfileid: "65574574"
   
 2.  Vaya a **Configuración del sitio**.  
   
-    -   En SharePoint 2013, haga clic en el icono de **Configuración** . ![Configuración de SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint")  
+    -   En SharePoint 2013, haga clic en el icono de **Configuración** . ![Configuración de SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint")  
   
     -   En SharePoint 2010, haga clic en **Acciones del sitio**y, a continuación, haga clic en **Configuración del sitio**.  
   

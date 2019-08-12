@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500029"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892001"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Anclado de elementos de informe paginados de Reporting Services a paneles de Power BI
 
@@ -68,7 +68,7 @@ Puede anclar un elemento de informe paginado de [!INCLUDE[ssRSnoversion](../incl
   
 4. Haga clic en el elemento de informe que quiere anclar a [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Solo puede anclar un elemento cada vez.  El Visor de informes presenta una vista sombreada del informe. En ella, los elementos de informe que se pueden anclar aparecerán resaltados, mientras que los que no, tendrán un sombreado oscuro.  
   
-    **(1)** seleccione el grupo que contiene el panel que quiere anclar, **(2)** seleccione el panel donde también quiere anclar el elemento y **(3)** seleccione la frecuencia con la que quiere que se actualice el icono en el panel.   ![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") Las suscripciones de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administran la actualización y, después de anclar el elemento, se pueden modificar para configurar una programación de actualización distinta.  
+    **(1)** seleccione el grupo que contiene el panel que quiere anclar, **(2)** seleccione el panel donde también quiere anclar el elemento y **(3)** seleccione la frecuencia con la que quiere que se actualice el icono en el panel.   ![nota](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") Las suscripciones de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administran la actualización y, después de anclar el elemento, se pueden modificar para configurar una programación de actualización distinta.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   

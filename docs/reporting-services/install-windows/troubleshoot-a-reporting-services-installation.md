@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502673"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889695"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Solución de problemas en una instalación de Reporting Services
 
@@ -74,7 +74,7 @@ ms.locfileid: "65502673"
   
  **Solución alternativa:** use la Administración central de SharePoint para configurar un servidor de informes en modo de SharePoint. Para obtener más información, vea [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> No ve el servicio SQL Server Reporting Services en Administración central de SharePoint después de instalar SQL Server 2016 SSRS en modo de SharePoint  
  **Descripción:** si, después de haber instalado correctamente SQL Server 2016 Reporting Services en el modo de SharePoint y el complemento de SQL Server 2016 Reporting Services para SharePoint 2013/2016, no ve "SQL Server Reporting Services" en los dos menús siguientes, significa que el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se ha registrado:  
@@ -103,7 +103,7 @@ ms.locfileid: "65502673"
   
 2.  Compruebe que el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] muestra el estado como "**Iniciado**" en la página: Administración central de SharePoint 2013/2016 -> "**Administración de aplicaciones**" -> "**Administrar servicios en el servidor**".  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Los cmdlets de PowerShell de Reporting Services no están disponibles y no se reconocen los comandos  
  **Descripción:** al intentar ejecutar un cmdlet de PowerShell de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], aparece un mensaje de error similar al siguiente:  
@@ -124,7 +124,7 @@ ms.locfileid: "65502673"
   
 -   [Instalación del primer servidor de informes en modo de SharePoint](install-the-first-report-server-in-sharepoint-mode.md)  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_URL_not_configured"></a> Aparece un mensaje de error que indica que la dirección URL no está configurada  
  **Descripción:** verá un mensaje de error similar al siguiente:  
@@ -147,7 +147,7 @@ ms.locfileid: "65502673"
   
 -   Administrar una aplicación de servicio.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> El programa de instalación produce errores en un equipo con SharePoint instalado pero que no está configurado  
  **Descripción** : si selecciona instalar el modo SharePoint de Reporting Services en un equipo que tiene SharePoint instalado pero no configurado, verá un mensaje similar al siguiente y la instalación se detendrá:  
@@ -158,7 +158,7 @@ ms.locfileid: "65502673"
   
  **Más información:** al instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una instalación de SharePoint existente, el programa de instalación intenta instalar e iniciar el servicio de SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si SharePoint no está configurado, la instalación del servicio da error e impide que el programa de instalación se complete.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_central_admin_blank"></a> La página Administración central de SharePoint está en blanco  
  **Descripción:** pudo instalar SharePoint 2013/2016 correctamente, sin errores de instalación. Sin embargo, al ir a Administración Central, solo ve una página en blanco:  
@@ -171,7 +171,7 @@ ms.locfileid: "65502673"
   
 -   La cuenta de servicio que usa para los servicios de SharePoint, como el Servicio de Administración central de SharePoint 2013/2016, debería tener los privilegios de administrador en el sistema operativo local.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> Ve un mensaje de error al intentar crear un nuevo informe del Generador de informes  
  **Descripción:** ve un mensaje de error similar al siguiente al intentar crear un informe del Generador de informes dentro de una biblioteca de documentos:  
@@ -180,7 +180,7 @@ ms.locfileid: "65502673"
   
  **Solución alternativa:** compruebe que tiene una aplicación de servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y que está configurada correctamente. Para obtener más información, vea [Instalación del primer servidor de informes en modo de SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> Ve un mensaje de error que indica que RS_SHP no se admite con PREPAREIMAGE  
  **Descripción:** al intentar ejecutar PREPAREIMAGE para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], aparece un mensaje de error similar al siguiente:  
@@ -189,7 +189,7 @@ ms.locfileid: "65502673"
   
  **Solución alternativa:** no hay ninguna. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no admite SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no admite SYSPREP.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
+ ![Icono de flecha usado con el vínculo Volver al principio](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [Solucionar los problemas de las instalaciones en modo de SharePoint](#bkmk_tshoot_sharepoint)  
 
 ::: moniker-end
   

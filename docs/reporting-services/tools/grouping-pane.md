@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5352a4b71e485a58907d4702dd10929955f92500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65570976"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892551"
 ---
 # <a name="grouping-pane"></a>Panel de agrupación
 Cuando se diseñan informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el panel de agrupación muestra los grupos de filas y de columnas para la región de datos Tablix seleccionada actualmente. El panel de agrupación no está disponible para las regiones de datos Gráfico o Medidor. El panel Agrupación consta de los paneles Grupos de filas y Grupos de columnas. El panel en cuestión tiene dos modos: predeterminado y avanzado. El modo predeterminado muestra una vista jerárquica de los miembros dinámicos para los grupos de filas y de columnas. El modo avanzado muestra los miembros dinámicos y estáticos para los grupos de filas y de columnas. Un grupo es un conjunto de datos con nombre de un conjunto de datos de informe que se muestra en una región de datos. Los grupos se organizan en jerarquías que incluyen miembros estáticos y dinámicos. Para obtener más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
-  ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Si no ve el panel Agrupación, en el menú **Informe** , haga clic en **Agrupación**.
+  ![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Si no ve el panel Agrupación, en el menú **Informe** , haga clic en **Agrupación**.
   
  Las celdas de las áreas de grupos de filas y grupos de columnas pueden ser miembros estáticos o dinámicos de un grupo. Los miembros estáticos solo se repiten una vez para cada grupo y normalmente contienen etiquetas o totales. Los miembros dinámicos se repiten una vez para cada instancia de grupo y normalmente contienen los valores únicos de la expresión de grupo. A medida que se seleccionan celdas de Tablix en el área de grupos de filas o de grupos de columnas, se selecciona el miembro del grupo correspondiente en el panel Grupos de filas o Grupos de columnas. Y a la inversa, si se seleccionan grupos en el Panel de agrupación, se selecciona en la superficie de diseño la celda correspondiente asociada al miembro de grupo. Para más información sobre las áreas de grupos de filas y columnas de Tablix, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
@@ -49,7 +49,7 @@ Cuando se diseñan informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsno
 ## <a name="advanced-mode"></a>modo avanzado  
 En el modo avanzado, puede ver todos los miembros estáticos y dinámicos de un grupo. Al seleccionar un miembro, la ventana Propiedades muestra las propiedades para el **Miembro de Tablix**seleccionado actualmente.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Para activar el **Modo avanzado**, haga clic con el botón derecho en la flecha abajo situada junto al panel Grupos de columnas y, después, haga clic en **Modo avanzado**.  
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Para activar el **Modo avanzado**, haga clic con el botón derecho en la flecha abajo situada junto al panel Grupos de columnas y, después, haga clic en **Modo avanzado**.  
   
 En la mayoría de los casos, las propiedades que controlan la presentación de los grupos de columnas y de filas estáticas y dinámicas se establecen automáticamente al crear un grupo o agregar totales. 
 

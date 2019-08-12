@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7fc505731f0d0434ea4d8478b3569781b5173ce8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4835e110d0feace4abaec408351351d863da7588
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068345"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893150"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Referencia de errores y eventos del motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68068345"
 |Recurso|Descripción|  
 |--------------|-----------------|  
 |[Comunidad de SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Este sitio contiene vínculos a grupos de noticias y foros supervisados por la comunidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También muestra orígenes de información de las comunidades, como blogs y sitios web. La comunidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es de gran utilidad para obtener respuesta a algunas preguntas, aunque la respuesta no se puede garantizar.|  
-|[Comunidad del Centro para programadores de SQL Server](https://go.microsoft.com/fwlink/?LinkId=42456)|El sitio se centra en los grupos de noticias, foros y otros recursos de la comunidad útiles para los programadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Comunidad del Centro para programadores de SQL Server](/sql/sql-server/sql-server-technical-documentation)|El sitio se centra en los grupos de noticias, foros y otros recursos de la comunidad útiles para los programadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Ayuda y soporte técnico de Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|Puede utilizar este sitio web para abrir un caso con un profesional de soporte de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   

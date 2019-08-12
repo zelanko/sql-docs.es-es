@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de21c7d552e117dd14054cfb9f408a66ccf2ca0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2e8eb3d2f20392c1884c79455e8c3bdfdacd949
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573217"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891960"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Conexiones de datos, orígenes de datos y cadenas de conexión (Generador de informes y SSRS)
 
@@ -107,7 +107,7 @@ ms.locfileid: "65573217"
 |Base de datos SQL de Azure|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Establezca el tipo de origen de datos en **Microsoft Azure SQL Database**. Para obtener más información, vea [Tipo de conexión SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |Almacenamiento de datos paralelo de SQL Server|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Establezca el tipo de origen de datos en **Microsoft SQL Server Parallel Data Warehouse**. Para obtener más información, vea [Tipo de conexión Almacenamiento de datos paralelo de SQL Server &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Base de datos de Analysis Services en el servidor local|`data source=localhost;initial catalog=Adventure Works DW`|Establezca el tipo de origen de datos en **Microsoft SQL Server Analysis Services**. Para más información, vea [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) o [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Base de datos de modelo tabular de Analysis Services con una perspectiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Establezca el tipo de origen de datos en **Microsoft SQL Server Analysis Services**. Especifique el nombre de la perspectiva en la configuración cube=. Para más información, vea [Perspectivas &#40;SSAS tabular&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
+|Base de datos de modelo tabular de Analysis Services con una perspectiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Establezca el tipo de origen de datos en **Microsoft SQL Server Analysis Services**. Especifique el nombre de la perspectiva en la configuración cube=. Para más información, vea [Perspectivas &#40;SSAS tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
 |Origen de datos de modelo de informe en un servidor de informes configurado en modo nativo|`Server=https://myreportservername/reportserver; datasource=/models/Adventure Works`|Especifique la dirección URL del servidor de informes o de la biblioteca de documentos, y la ruta de acceso al modelo publicado en el espacio de nombres de la carpeta del servidor de informes o de la carpeta de la biblioteca de documentos.
 |Origen de datos de modelo de informe en un servidor de informes configurado en el modo integrado de SharePoint|`Server=https://server; datasource=https://server/site/documents/models/Adventure Works.smdl`|Especifique la dirección URL del servidor de informes o de la biblioteca de documentos, y la ruta de acceso al modelo publicado en el espacio de nombres de la carpeta del servidor de informes o de la carpeta de la biblioteca de documentos.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Configure el tipo de origen de datos en **OLE DB Provider for OLAP Services 8.0**.<br /><br /> Puede conseguir una conexión más rápida a orígenes de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si establece la propiedad **ConnectTo** en **8.0**. Para establecer esta propiedad, use la pestaña **Propiedades avanzadas** del cuadro de diálogo **Propiedades de conexión** .|  

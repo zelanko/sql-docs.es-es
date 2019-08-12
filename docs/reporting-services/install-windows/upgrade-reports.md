@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 04dacff6d9a7feed350c6f8e4417bbbd81b80b30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4516effe7308386def1aa7cca885f9fa48547ec5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502622"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889736"
 ---
 # <a name="upgrade-reports-ssrs"></a>Actualizar informes (SSRS)
 
@@ -136,8 +136,8 @@ Los archivos de definición de informe (.rdl) se actualizan automáticamente de 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Cambios substanciales de SQL Server Reporting Services en SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[Cambios substanciales de SQL Server Reporting Services en SQL Server 2016](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
+[Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
 [Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Elementos de informe personalizados](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Actualización de una base de datos del servidor de informes](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  

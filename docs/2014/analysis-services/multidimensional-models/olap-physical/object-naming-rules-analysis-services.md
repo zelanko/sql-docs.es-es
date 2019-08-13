@@ -12,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be8bec262afc67571c67ad6919ae9e9163a434be
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ba1b1b3b8d8fa3f26af84ef12f95858ac32cdeee
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889434"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957323"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Normas de nomenclatura de objetos (Analysis Services)
   En este tema se describen las convenciones de nomenclatura de los objetos, así como las palabras y los caracteres reservados que no se pueden usar en ningún nombre de objeto, código o script en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -69,10 +69,10 @@ ms.locfileid: "68889434"
 |Object|Caracteres no válidos|  
 |------------|------------------------|  
 |`Server`|Siga las convenciones de nomenclatura de servidores de Windows al asignar nombre a un objeto de servidor. Vea [Convenciones de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obtener más detalles.|  
-|`DataSource`|`: / \ * | ? " () [] {} <>`|  
-|`Level` o `Attribute`|````. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >````|  
-|`Dimension` o `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
-|Todos los demás objetos|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
+|`DataSource`| `: / \ * \| ? " () [] {} <>` |  
+|`Level` o `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension` o `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|Todos los demás objetos|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
  **Excepciones Cuando se permiten caracteres reservados**  
   

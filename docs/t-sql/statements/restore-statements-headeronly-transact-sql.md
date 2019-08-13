@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b0ee348ec2492ac54c1d8da57dfa95701dd42507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082523"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742970"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instrucciones RESTORE: HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -71,12 +71,14 @@ FROM <backup_device>
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
   
 ```  
-  
+> [!NOTE] 
+> URL es el formato que se usa para especificar la ubicación y el nombre del archivo para Microsoft Azure Blob Storage y se admite a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2. Aunque Microsoft Azure Storage es un servicio, la implementación es similar al disco y la cinta para permitir una experiencia de restauración coherente y sin problemas para los tres dispositivos.
+
 ## <a name="arguments"></a>Argumentos  
  Para obtener las descripciones de los argumentos RESTORE HEADERONLY, vea [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md) (Argumentos de RESTORE [Transact-SQL]).  
   
@@ -84,7 +86,7 @@ FROM <backup_device>
  Por cada copia de seguridad que hay en un dispositivo determinado, el servidor envía una fila de información de encabezado con las siguientes columnas:  
   
 > [!NOTE]
->  RESTORE HEADERONLY consulta todos los conjuntos de copia de seguridad en los medios. Por tanto, puede llevar algún tiempo generar este conjunto de resultados si se utilizan unidades de cinta de alta capacidad. Para tener una visión rápida de los medios sin obtener información sobre cada conjunto de copia de seguridad, use RESTORE LABELONLY o especifique FILE **=** _backup_set_file_number_.  
+>  RESTORE HEADERONLY consulta todos los conjuntos de copia de seguridad en los medios. Por tanto, puede llevar algún tiempo generar este conjunto de resultados si se utilizan unidades de cinta de alta capacidad. Para tener una visión rápida de los medios sin obtener información sobre cada conjunto de copia de seguridad, use RESTORE LABELONLY o especifique FILE **=** _backup_set_file_number_ .  
 > 
 > [!NOTE]
 >  Debido a la naturaleza del formato de cinta de [!INCLUDE[msCoName](../../includes/msconame-md.md)], es posible que los conjuntos de copia de seguridad de otros programas de software ocupen espacio en los mismos medios que los conjuntos de copia de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El conjunto de resultados que devuelve RESTORE HEADERONLY contiene una fila por cada uno de estos otros conjuntos de copia de seguridad.  
@@ -149,7 +151,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> Tipo de sistema de cifrado usado: certificado o clave asimétrica. Si la copia de seguridad no se cifró, este valor es NULL.|  
   
 > [!NOTE]  
->  Si se definen contraseñas para los conjuntos de copia de seguridad, RESTORE HEADERONLY solo muestra información completa para el conjunto de copia de seguridad cuya contraseña coincida con la opción PASSWORD especificada en el comando. RESTORE HEADERONLY también muestra información completa para los conjuntos de copia de seguridad no protegidos. La columna **BackupName** de los otros conjuntos de copia de seguridad protegidos con contraseña que hay en los medios se establece en **_Password Protected_** (Protegido con contraseña) y todas las demás columnas son NULL.  
+>  Si se definen contraseñas para los conjuntos de copia de seguridad, RESTORE HEADERONLY solo muestra información completa para el conjunto de copia de seguridad cuya contraseña coincida con la opción PASSWORD especificada en el comando. RESTORE HEADERONLY también muestra información completa para los conjuntos de copia de seguridad no protegidos. La columna **BackupName** de los otros conjuntos de copia de seguridad protegidos con contraseña que hay en los medios se establece en ** _** (Protegido con contraseña) y todas las demás columnas son NULL.  
   
 ## <a name="general-remarks"></a>Notas generales  
  Un cliente puede utilizar RESTORE HEADERONLY para obtener toda la información de encabezado de todas las copias de seguridad de un dispositivo determinado. Para cada copia de seguridad del dispositivo de copia de seguridad, el servidor envía la información del encabezado como una fila.  

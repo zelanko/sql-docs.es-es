@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4ee8a779ef486246d5f4dd927acf7c57a1261c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059035"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811282"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ En este tema, se describen las mejoras realizadas en el [!INCLUDE[ssdenoversion-
 - Los grupos de disponibilidad ahora pueden funcionar entre Windows y Linux para habilitar las migraciones y pruebas entre distintos sistemas operativos.
 - Se agregó compatibilidad con la directiva de retención de tablas temporales.
 - Nuevo DMV SYS.DM_DB_STATS_HISTOGRAM.
-- Se ha agregado compatibilidad con la compilación y la recompilación de índices de almacén de columnas no en clúster en línea
+- Se ha agregado compatibilidad con la compilación y la recompilación de índices de almacén de columnas no agrupadas en línea
 - [sys.dm_db_stats_histogram (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) se agregó para examinar las estadísticas.
 - El Asesor de optimización de base de datos (DTA) que se lanzó con SQL Server Management Studio versión 16.4, cuando se analiza SQL Server 2016 y versiones posteriores, tiene opciones adicionales.    
    - Rendimiento mejorado. Para más información, consulte [Mejoras de rendimiento mediante las recomendaciones del Asistente para la optimización de motor de base de datos (DTA)](../relational-databases/performance/performance-improvements-using-dta-recommendations.md).

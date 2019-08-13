@@ -12,14 +12,14 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d0dd253eb161c842a2edbdcad73edd41114d73cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fd267efe05da089cf72b1b9d1e4a04e6c18b83b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039073"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809842"
 ---
-# <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
+# <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Muestra el plan de ejecución de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para una consulta que se ejecuta en un nodo de ejecución o un nodo de control determinado de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Úselo para solucionar problemas de rendimiento de consultas mientras se ejecutan las consultas en los nodos de ejecución y de control.
@@ -59,7 +59,7 @@ Requiere el permiso VIEW-SERVER-STATE en el dispositivo.
   
 ## <a name="examples-includesssdwincludessssdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
-### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>A. Sintaxis básica de DBCC PDW_SHOWEXECUTIONPLAN  
+### <a name="a-dbcc-pdw_showexecutionplan-basic-syntax"></a>A. Sintaxis básica de DBCC PDW_SHOWEXECUTIONPLAN  
  Cuando se ejecuta en una instancia de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], modifique la consulta anterior para seleccionar también el valor de distribution_id.  
   
 ```sql
@@ -76,7 +76,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );
 ```  
 
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>B. Sintaxis básica de DBCC PDW_SHOWEXECUTIONPLAN  
+### <a name="b-dbcc-pdw_showexecutionplan-basic-syntax"></a>B. Sintaxis básica de DBCC PDW_SHOWEXECUTIONPLAN  
  Cuando una consulta se ejecuta durante mucho tiempo, significa que está ejecutando una operación de plan de consulta DMS o una operación de plan de consulta SQL.  
   
 Si la consulta está ejecutando una operación de plan de consulta DMS, puede usar la consulta siguiente para recuperar una lista de los identificadores de nodo y de sesión para conocer los pasos que no se han completado.

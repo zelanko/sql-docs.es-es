@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: bf9207498575a52c5d9c2c1a6076110260c1f588
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7352a7e2db64da959cbefaacee5c9f3d14a8a579
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102010"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809883"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ DBCC CHECKTABLE
  Es la tabla o la vista indizada para la que se ejecutan las comprobaciones de integridad. Los nombres de tablas y vistas deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
     
 NOINDEX  
- Especifica que no se deben realizar comprobaciones intensivas de índices no clúster para las tablas de usuario. Esto reduce el tiempo total de ejecución. NOINDEX no afecta a las tablas del sistema porque las comprobaciones de integridad siempre se ejecutan en todos los índices de las tablas del sistema.  
+ Especifica que no se deben realizar comprobaciones intensivas de índices no agrupado para las tablas de usuario. Esto reduce el tiempo total de ejecución. NOINDEX no afecta a las tablas del sistema porque las comprobaciones de integridad siempre se ejecutan en todos los índices de las tablas del sistema.  
     
  *id_de_índice*  
  Es el número de identificación (Id.) del índice para el que se van a ejecutar las comprobaciones de integridad. Si se especifica *id_de_índice*, DBCC CHECKTABLE ejecuta las comprobaciones de integridad solo en ese índice, junto con el índice de montón o el índice agrupado.  
@@ -82,7 +82,7 @@ REPAIR_FAST
  La sintaxis solo se mantiene por razones de compatibilidad con versiones anteriores. No se realizan acciones de reparación.  
     
 REPAIR_REBUILD  
- Realiza reparaciones que no tienen ninguna posibilidad de pérdida de datos. Pueden ser reparaciones rápidas, como la reparación de las filas que faltan en índices no clúster, y reparaciones que consumen más tiempo, como regenerar un índice.  
+ Realiza reparaciones que no tienen ninguna posibilidad de pérdida de datos. Pueden ser reparaciones rápidas, como la reparación de las filas que faltan en índices no agrupados, y reparaciones que consumen más tiempo, como regenerar un índice.  
  Este argumento no repara errores relacionados con datos de FILESTREAM.  
     
  > [!NOTE]  
@@ -141,14 +141,14 @@ En la tabla especificada, DBCC CHECKTABLE comprueba lo siguiente:
 -   Los punteros son coherentes.    
 -   Los datos de cada página son razonables, incluidas las columnas calculadas.    
 -   Los desplazamientos de página son razonables.    
--   Cada fila de la tabla base tiene una fila correspondiente en cada índice no clúster y viceversa.    
+-   Cada fila de la tabla base tiene una fila correspondiente en cada índice no agrupado y viceversa.    
 -   Todas las filas de un índice o tabla con particiones están en la partición correcta.    
 -   Coherencia de nivel de vínculo entre la tabla y el sistema de archivos cuando se almacenan datos **varbinary(max)** en el sistema de archivos mediante FILESTREAM.    
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>Realizar comprobaciones de coherencia lógica en índices    
 La comprobación de coherencia lógica en índices varía según el nivel de compatibilidad de la base de datos, tal como se indica a continuación:
 -   Si el nivel de compatibilidad es 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) o superior:    
-    -   A menos que se especifique NOINDEX, DBCC CHECKTABLE realiza comprobaciones de coherencia física y lógica en una sola tabla y en todos sus índices no clúster. Sin embargo, en los índices XML, índices espaciales y vistas indizadas solo se realizan comprobaciones de coherencia física de forma predeterminada.    
+    -   A menos que se especifique NOINDEX, DBCC CHECKTABLE realiza comprobaciones de coherencia física y lógica en una sola tabla y en todos sus índices no agrupado. Sin embargo, en los índices XML, índices espaciales y vistas indizadas solo se realizan comprobaciones de coherencia física de forma predeterminada.    
     -   Si se especifica WITH EXTENDED_LOGICAL_CHECKS, se realizarán comprobaciones lógicas en una vista indizada, en índices XML e índices espaciales, en caso de que los hubiese. De forma predeterminada, las comprobaciones de coherencia física se realizan antes que las comprobaciones de coherencia lógica. Si también se especifica NOINDEX, solamente se realizarán las comprobaciones lógicas.    
          Estas comprobaciones de coherencia lógica realizan una comprobación cruzada de la tabla de índices interna del objeto de índice con la tabla de usuario a la que hace referencia. Para buscar las filas periféricas, se crea una consulta interna que lleve a cabo una intersección completa de las tablas internas y del usuario. La ejecución de esta consulta puede afectar mucho al rendimiento y no se puede realizar el seguimiento de su progreso. Por consiguiente, se recomienda especificar únicamente WITH EXTENDED_LOGICAL_CHECKS si cree que existen problemas del índice que no estén relacionados con daños físicos, o si las sumas de comprobación del nivel de página se han desactivado y sospecha que puedan existir daños de hardware de nivel de columna.    
     -   Si el índice es un índice filtrado, DBCC CHECKDB realizará las comprobaciones de coherencia para comprobar que las entradas de índice satisfacen el predicado de filtro.   

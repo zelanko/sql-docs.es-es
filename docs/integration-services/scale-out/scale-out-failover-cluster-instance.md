@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1206d81fb146c851f11ececdcc7ae38fe20eb79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064604"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811200"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Scale Out support for high availability via SQL Server failover cluster instance (Compatibilidad con la escalabilidad horizontal para una alta disponibilidad mediante Instancia de clústeres de conmutación por error de SQL Server).
 
@@ -36,7 +36,7 @@ Instale un clúster de conmutación por error de SQL Server. Vea [Instalación d
 Agregue un nodo secundario al clúster de conmutación por error de SQL Server.
 
 ## <a name="3-install-scale-out-master-on-the-primary-node"></a>3. Instalación del Servicio principal de escalabilidad horizontal en el nodo principal
-Instale Integration Services y el Servicio principal de escalabilidad horizontal en el nodo principal con el asistente para la instalación de instalaciones que no son en clúster. 
+Instale Integration Services y el Servicio principal de escalabilidad horizontal en el nodo principal con el asistente para la instalación de instalaciones no agrupadas. 
 
 Durante la instalación, incluya el nombre de red de SQL Server en los nombres comunes del certificado del Servicio principal de escalabilidad horizontal.
 

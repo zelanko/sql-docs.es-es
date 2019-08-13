@@ -16,12 +16,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3ec5fed63d84ece9a3f54c5c2ae5304dcf8bd6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61747c9b7e445990bd285061f63c5497b0f51f85
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082619"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811326"
 ---
 # <a name="modify-unique-constraints"></a>Modificar restricciones UNIQUE
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

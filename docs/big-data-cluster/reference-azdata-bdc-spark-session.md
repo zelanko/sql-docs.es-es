@@ -1,7 +1,7 @@
 ---
-title: referencia de sesión de Spark de BDC de azdata
+title: Referencia de azdata bdc spark session
 titleSuffix: SQL Server big data clusters
-description: Artículo de referencia para los comandos de sesión Spark de BDC de azdata.
+description: Artículo de referencia sobre los comandos de azdata bdc spark session.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,29 +10,29 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 20b7ac3dcf72482e80278ce0f0df922026232a6d
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426105"
 ---
-# <a name="azdata-bdc-spark-session"></a>sesión de Spark de BDC de azdata
+# <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
 
-En el siguiente artículo se proporciona una referencia para los comandos de **sesión Spark de BDC** en la herramienta **azdata** . Para obtener más información sobre otros comandos de **azdata** , consulte [referencia de azdata](reference-azdata.md)
+En el siguiente artículo se proporciona una referencia sobre los comandos de **bdc spark session** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos:
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
-[creación de sesión Spark de BDC de azdata](#azdata-bdc-spark-session-create) | Cree una nueva sesión de Spark.
-[lista de sesiones de Spark de BDC de azdata](#azdata-bdc-spark-session-list) | Enumere todas las sesiones activas en Spark.
-[información de sesión de Spark de BDC de azdata](#azdata-bdc-spark-session-info) | Obtener información sobre una sesión de Spark activa.
-[registro de sesión Spark de BDC de azdata](#azdata-bdc-spark-session-log) | Obtiene los registros de ejecución de una sesión de Spark activa.
-[Estado de sesión de Spark de BDC de azdata](#azdata-bdc-spark-session-state) | Obtiene el estado de ejecución de una sesión de Spark activa.
-[azdata eliminación de sesión Spark de BDC](#azdata-bdc-spark-session-delete) | Elimine una sesión de Spark.
-## <a name="azdata-bdc-spark-session-create"></a>creación de sesión Spark de BDC de azdata
-Esto crea una nueva sesión interactiva de Spark. El autor de la llamada debe especificar el tipo de sesión de Spark. Esta sesión permanece más allá de la duración de una ejecución de azdata y debe eliminarse con "eliminación de sesión de Spark"
+[azdata bdc spark session create](#azdata-bdc-spark-session-create) | Cree una sesión de Spark.
+[azdata bdc spark session list](#azdata-bdc-spark-session-list) | Enumere todas las sesiones activas en Spark.
+[azdata bdc spark session info](#azdata-bdc-spark-session-info) | Obtenga información sobre una sesión de Spark activa.
+[azdata bdc spark session log](#azdata-bdc-spark-session-log) | Obtenga los registros de ejecución de una sesión de Spark activa.
+[azdata bdc spark session state](#azdata-bdc-spark-session-state) | Obtenga el estado de la ejecución de una sesión de Spark activa.
+[azdata bdc spark session delete](#azdata-bdc-spark-session-delete) | Elimine una sesión de Spark.
+## <a name="azdata-bdc-spark-session-create"></a>azdata bdc spark session create
+Este procedimiento crea una sesión interactiva de Spark. El autor de la llamada debe especificar el tipo de la sesión de Spark. Esta sesión permanece más allá de la duración de una ejecución de azdata y debe eliminarse con "spark session delete".
 ```bash
 azdata bdc spark session create [--session-kind -k] 
                                 [--jar-files -j]  
@@ -50,51 +50,51 @@ azdata bdc spark session create [--session-kind -k]
                                 [--timeout-seconds -t]
 ```
 ### <a name="examples"></a>Ejemplos
-Cree una sesión.
+Crear una sesión.
 ```bash
 azdata spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>Parámetros opcionales
 #### `--session-kind -k`
-Nombre del tipo de sesión que se va a crear.  Una de Spark, pyspark, sparkr o SQL.
+Nombre del tipo de sesión que se va a crear.  spark, pyspark, sparkr o sql.
 #### `--jar-files -j`
-Lista de rutas de acceso de archivo jar.  Para pasar un código JSON de lista, codifique los valores.  Ejemplo: "[" entry1 "," entry2 "]".
+Lista de rutas de acceso de archivo jar.  Para pasarlas en una lista, JSON codifica los valores.  Ejemplo: '["entry1", "entry2"]'.
 #### `--py-files -p`
-Lista de rutas de acceso de archivos de Python.  Para pasar un código JSON de lista, codifique los valores.  Ejemplo: "[" entry1 "," entry2 "]".
+Lista de rutas de acceso de archivo de Python.  Para pasarlas en una lista, JSON codifica los valores.  Ejemplo: '["entry1", "entry2"]'.
 #### `--files -f`
-Lista de rutas de acceso de archivo.  Para pasar un código JSON de lista, codifique los valores.  Ejemplo: "[" entry1 "," entry2 "]".
+Lista de rutas de acceso de archivo.  Para pasarlas en una lista, JSON codifica los valores.  Ejemplo: '["entry1", "entry2"]'.
 #### `--driver-memory`
-Cantidad de memoria que se va a asignar al controlador.  Especifique las unidades como parte del valor.  Ejemplo de 512M o 2G.
+Cantidad de memoria que se va a asignar al controlador.  Especifique las unidades como parte del valor.  Por ejemplo, 512M o 2G.
 #### `--driver-cores`
-Cantidad de núcleos de CPU que se asignan al controlador.
+Cantidad de núcleos de CPU que se van a asignar al controlador.
 #### `--executor-memory`
-Cantidad de memoria que se va a asignar al Ejecutor.  Especifique las unidades como parte del valor.  Ejemplo de 512M o 2G.
+Cantidad de memoria que se va a asignar al ejecutor.  Especifique las unidades como parte del valor.  Por ejemplo, 512M o 2G.
 #### `--executor-cores`
-Cantidad de núcleos de CPU que se van a asignar al Ejecutor.
+Cantidad de núcleos de CPU que se van a asignar al ejecutor.
 #### `--executor-count`
-Número de instancias del Ejecutor que se va a ejecutar.
+Número de instancias del ejecutor que se van a ejecutar.
 #### `--archives -a`
-Lista de rutas de acceso de los archivos.  Para pasar un código JSON de lista, codifique los valores.  Ejemplo: "[" entry1 "," entry2 "]".
+Lista de rutas de acceso de los archivos.  Para pasarlas en una lista, JSON codifica los valores.  Ejemplo: '["entry1", "entry2"]'.
 #### `--queue -q`
 Nombre de la cola de Spark en la que se va a ejecutar la sesión.
 #### `--name -n`
 Nombre de la sesión de Spark.
 #### `--config -c`
-Lista de pares nombre-valor que contienen los valores de configuración de Spark.  Codificado como diccionario JSON.  Ejemplo: "{" Name ":" Value "," nombre2 ":" value2 "}".
+Lista de pares nombre-valor que contienen los valores de configuración de Spark.  Cifrada como un diccionario JSON.  Ejemplo: '{"name":"value", "name2":"value2"}'.
 #### `--timeout-seconds -t`
-Tiempo de espera de inactividad de sesión en segundos.
+Tiempo de espera de sesión inactivo en segundos.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Muestra este mensaje de ayuda y sale.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
-Formato de salida.  Valores permitidos: JSON, jsonc, Table y TSV.  Valor predeterminado: JSON.
+Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Vea [http://jmespath.org/](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="azdata-bdc-spark-session-list"></a>lista de sesiones de Spark de BDC de azdata
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+## <a name="azdata-bdc-spark-session-list"></a>azdata bdc spark session list
 Enumere todas las sesiones activas en Spark.
 ```bash
 azdata bdc spark session list 
@@ -106,116 +106,116 @@ azdata spark session list
 ```
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Muestra este mensaje de ayuda y sale.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
-Formato de salida.  Valores permitidos: JSON, jsonc, Table y TSV.  Valor predeterminado: JSON.
+Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Vea [http://jmespath.org/](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="azdata-bdc-spark-session-info"></a>información de sesión de Spark de BDC de azdata
-Obtiene la información de sesión de una sesión de Spark activa con el identificador especificado.  El ID. de sesión se devuelve de ' Spark Session Create '.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+## <a name="azdata-bdc-spark-session-info"></a>azdata bdc spark session info
+Obtiene la información de una sesión de Spark activa con el identificador especificado.  El identificador de sesión se devuelve desde “spark session create”.
 ```bash
 azdata bdc spark session info --session-id -i 
                               
 ```
 ### <a name="examples"></a>Ejemplos
-Obtiene la información de la sesión de la sesión con el identificador 0.
+Obtener la información de la sesión con el identificador 0.
 ```bash
 azdata spark session info --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
-Número de ID. de sesión de Spark.
+Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Muestra este mensaje de ayuda y sale.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
-Formato de salida.  Valores permitidos: JSON, jsonc, Table y TSV.  Valor predeterminado: JSON.
+Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Vea [http://jmespath.org/](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="azdata-bdc-spark-session-log"></a>registro de sesión Spark de BDC de azdata
-Obtiene las entradas del registro de sesión para una sesión de Spark activa con el identificador especificado.  El ID. de sesión se devuelve de ' Spark Session Create '.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+## <a name="azdata-bdc-spark-session-log"></a>azdata bdc spark session log
+Obtiene las entradas del registro de una sesión de Spark activa con el identificador especificado.  El identificador de sesión se devuelve desde “spark session create”.
 ```bash
 azdata bdc spark session log --session-id -i 
                              
 ```
 ### <a name="examples"></a>Ejemplos
-Obtiene el registro de sesión para la sesión con el identificador 0.
+Obtener el registro de la sesión con el identificador 0.
 ```bash
 azdata spark session log --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
-Número de ID. de sesión de Spark.
+Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Muestra este mensaje de ayuda y sale.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
-Formato de salida.  Valores permitidos: JSON, jsonc, Table y TSV.  Valor predeterminado: JSON.
+Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Vea [http://jmespath.org/](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="azdata-bdc-spark-session-state"></a>Estado de sesión de Spark de BDC de azdata
-Esto obtiene el estado de sesión para una sesión de Spark activa con el identificador especificado.  El ID. de sesión se devuelve de ' Spark Session Create '.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+## <a name="azdata-bdc-spark-session-state"></a>azdata bdc spark session state
+Obtiene el estado de una sesión de Spark activa con el identificador especificado.  El identificador de sesión se devuelve desde “spark session create”.
 ```bash
 azdata bdc spark session state --session-id -i 
                                
 ```
 ### <a name="examples"></a>Ejemplos
-Obtiene el estado de sesión de la sesión con el identificador 0.
+Obtener el estado de la sesión con el identificador 0.
 ```bash
 azdata spark session state --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
-Número de ID. de sesión de Spark.
+Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Muestra este mensaje de ayuda y sale.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
-Formato de salida.  Valores permitidos: JSON, jsonc, Table y TSV.  Valor predeterminado: JSON.
+Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Vea [http://jmespath.org/](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="azdata-bdc-spark-session-delete"></a>azdata eliminación de sesión Spark de BDC
-Esto elimina una sesión de Spark interactiva. El ID. de sesión se devuelve de ' Spark Session Create '.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+## <a name="azdata-bdc-spark-session-delete"></a>azdata bdc spark session delete
+Este procedimiento elimina una sesión de Spark interactiva. El identificador de sesión se devuelve desde “spark session create”.
 ```bash
 azdata bdc spark session delete --session-id -i 
                                 
 ```
 ### <a name="examples"></a>Ejemplos
-Elimina una sesión.
+Eliminar una sesión.
 ```bash
 azdata spark session delete --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
-Número de ID. de sesión de Spark.
+Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Muestra este mensaje de ayuda y sale.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
-Formato de salida.  Valores permitidos: JSON, jsonc, Table y TSV.  Valor predeterminado: JSON.
+Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Vea [http://jmespath.org/](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de **azdata** , consulte [referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata** , consulte [instalación de azdata para administrar clústeres de macrodatos SQL Server 2019](deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).

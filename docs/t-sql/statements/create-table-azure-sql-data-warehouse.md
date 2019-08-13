@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 080037ec68169c08f7e543504c84118d0d01e4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116997"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419611"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -167,18 +167,7 @@ Crea una o varias particiones de tabla. Estas particiones son segmentos de tabla
 
 El índice de almacén de columnas agrupado es el valor predeterminado para crear tablas en Azure SQL Data Warehouse.  La especificación ORDER predeterminada es la de las claves COMPOUND.  La ordenación siempre será en orden ascendente. Si se especifica ninguna cláusula ORDER, el almacén de columnas no se ordenará. Debido al proceso de ordenación, una tabla con índice de almacén de columnas en clúster ordenado puede experimentar tiempos de carga de datos más largos que con índices de almacén de columnas en clúster no ordenados. Si necesita más espacio en tempdb al cargar datos, puede reducir la cantidad de datos por inserción.
 
-Durante la versión preliminar, puede ejecutar esta consulta para comprobar las columnas con la cláusula ORDER habilitada.
-
-```sql
-SELECT i.name AS index_name  
-    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
-    ,ic.index_column_id  
-    ,ic.key_ordinal  
-,ic.is_included_column  
-FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic
-    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
-```
+Los usuarios pueden consultar la columna column_store_order_ordinal en sys.index_columns para obtener las columnas en las que se ordena una tabla y la secuencia del orden.  
 
 ### <a name="DataTypes"></a> Tipo de datos
 

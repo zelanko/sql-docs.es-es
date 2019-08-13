@@ -11,12 +11,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aeb9fdd447b36a44803d711a80aa7f2714857d01
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2597aa470eea7e69c649b7ce207dffadab81edc3
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050403"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811175"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -143,22 +143,22 @@ Así, en nuestro ejemplo, la memoria necesaria para cada matriz hash es:
   
 Puesto que tenemos tres índices hash, la memoria necesaria para los índices hash es 3 * 64 MB = 192 MB.  
   
-#### <a name="memory-for-non-clustered-indexes"></a>Memoria para los índices no clúster  
+#### <a name="memory-for-nonclustered-indexes"></a>Memoria para los índices no agrupados  
   
-Los índices no clúster se implementan como árboles b donde los nodos internos contienen el valor de índice y punteros a los nodos posteriores.  Los nodos hoja contienen el valor de índice y un puntero a la fila de la tabla en memoria.  
+Los índices no agrupados se implementan como árboles b donde los nodos internos contienen el valor de índice y punteros a los nodos posteriores.  Los nodos hoja contienen el valor de índice y un puntero a la fila de la tabla en memoria.  
   
-A diferencia de los índices hash, los índices no clúster no tienen un tamaño de cubo fijo. El índice aumenta y disminuye dinámicamente con los datos.  
+A diferencia de los índices hash, los índices no agrupados no tienen un tamaño de cubo fijo. El índice aumenta y disminuye dinámicamente con los datos.  
   
-La memoria que necesitan los índices no clúster se puede calcular de la manera siguiente:  
+La memoria que necesitan los índices no agrupados se puede calcular de la manera siguiente:  
   
 - **Memoria asignada a los nodos no hoja**   
     Para una configuración típica, la memoria asignada a los nodos no hoja es un porcentaje muy pequeño de la memoria total usada por el índice. Es tan pequeña que se puede omitir de forma segura.  
   
 - **Memoria para los nodos hoja**   
-    Los nodos hoja tienen un fila por cada clave única de la tabla que apunta a las filas de datos con esa clave única.  Si tiene varias filas con la misma clave (es decir, tiene un índice no clúster que no es único), solo hay una fila en el nodo hoja del índice que apunta a una de las filas con las demás filas vinculadas entre sí.  Así, se puede calcular aproximadamente la memoria total necesaria de esta forma:
+    Los nodos hoja tienen un fila por cada clave única de la tabla que apunta a las filas de datos con esa clave única.  Si tiene varias filas con la misma clave (es decir, tiene un índice no agrupado que no es único), solo hay una fila en el nodo hoja del índice que apunta a una de las filas con las demás filas vinculadas entre sí.  Así, se puede calcular aproximadamente la memoria total necesaria de esta forma:
   - memoryForNonClusteredIndex = (pointerSize + sum (keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
- Los índices no clúster son los más adecuados cuando se emplean para búsquedas de intervalo, como se ilustra en la consulta siguiente:  
+ Los índices no agrupados son los más adecuados cuando se emplean para búsquedas de intervalo, como se ilustra en la consulta siguiente:  
   
 ```sql  
 SELECT * FRON t_hk  

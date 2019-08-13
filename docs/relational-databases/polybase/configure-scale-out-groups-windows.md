@@ -1,5 +1,5 @@
 ---
-title: Mejora de los grupos de escalado horizontal de PolyBase en Windows | Microsoft Docs
+title: Configuración de los grupos de escalado horizontal de PolyBase en Windows | Microsoft Docs
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -8,14 +8,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: eee05e9c9ba129b660048797dd8894c0d611449e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4f34532c2e2a54a457557410a4bc079c4cd4cbc0
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041156"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811324"
 ---
-# <a name="improve-polybase-scale-out-groups-on-windows"></a>Mejora de los grupos de escalado horizontal de PolyBase en Windows
+# <a name="configure-polybase-scale-out-groups-on-windows"></a>Configuración de los grupos de escalado horizontal de PolyBase en Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

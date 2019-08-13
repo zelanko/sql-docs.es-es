@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967517"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794992"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Grupos de disponibilidad AlwaysOn en Linux
 
@@ -24,8 +24,8 @@ En este artículo se describen las características de los grupos de disponibili
 
 Desde un punto de vista de alto nivel, los [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] grupos de disponibilidad bajo en Linux son los mismos que los de las implementaciones basadas en WSFC. Esto significa que todas las limitaciones y características son las mismas, con algunas excepciones. Las principales diferencias estriban en lo siguiente:
 
--   El Coordinador de transacciones distribuidas de Microsoft (DTC) no es compatible con Linux en [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Si las aplicaciones requieren el uso de transacciones distribuidas y necesitan un AG, implemente [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Windows.
--   Las implementaciones basadas en Linux usan Pacemaker en lugar de un WSFC.
+-   El Coordinador de transacciones distribuidas de Microsoft (DTC) es compatible con Linux a partir de SQL Server 2017 CU16. Pero el DTC todavía no es compatible con los grupos de disponibilidad en Linux. Si las aplicaciones requieren el uso de transacciones distribuidas y necesitan un AG, implemente [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Windows.
+-   Las implementaciones basadas en Linux que requieren alta disponibilidad usan Pacemaker para la agrupación en clústeres en lugar de un WSFC.
 -   A diferencia de la mayoría de las configuraciones de AG en Windows, excepto en el caso del escenario de clúster de grupo de trabajo, Pacemaker nunca necesita Active Directory Domain Services (AD DS).
 -   El modo en que se produce un error en un AG de un nodo a otro es diferente en Linux y Windows.
 -   Ciertas opciones de configuración, como `required_synchronized_secondaries_to_commit`, solo se pueden cambiar a través de Pacemaker en Linux, mientras que una instalación basada en WSFC utiliza Transact-SQL.
@@ -48,7 +48,7 @@ Un tipo de clúster None significa que no hay ningún requisito de Pacemaker y q
 
 El tipo de clúster se almacena en la vista de administración dinámica (DMV) de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] `sys.availability_groups`, en las columnas `cluster_type` y `cluster_type_desc`.
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
+## <a name="required_synchronized_secondaries_to_commit"></a>required\_synchronized\_secondaries\_to\_commit
 
 Una novedad en [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] es un valor que usan los AG denominado `required_synchronized_secondaries_to_commit`. Esto indica al AG el número de réplicas secundarias que deben estar en sincronía con la principal. Esto permite cosas como la conmutación automática por error (solo cuando se integra con Pacemaker con un tipo de clúster External) y controla el comportamiento de aspectos como la disponibilidad de la principal si el número adecuado de réplicas secundarias está en línea o sin conexión. Para comprender mejor el funcionamiento, vea [Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad](sql-server-linux-availability-group-ha.md). El valor `required_synchronized_secondaries_to_commit` se establece de forma predeterminada y se mantiene en Pacemaker/ [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Puede invalidar este valor manualmente.
 

@@ -17,12 +17,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba4f9d9eaff0571e3581468b19371a2f7716545e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 886afc267d38ec92a478fc40bcbde53e428950f0
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986578"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809948"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
 
@@ -171,7 +171,7 @@ Es posible perder información mediante el uso de consultas cuidadosamente dise�
   
 - **Búsqueda de texto completo:** se espera una disminución del rendimiento en las consultas que usan las siguientes funciones de búsqueda de texto completo y búsqueda semántica, debido a una combinación adicional introducida para aplicar seguridad de nivel de fila y evitar la pérdida de las claves principales de las filas que se deben filtrar: **CONTAINSTABLE**, **FREETEXTTABLE**, semantickeyphrasetable, semanticsimilaritydetailstable, semanticsimilaritytable.  
   
-- **Índices de almacén de columnas:** RLS no es compatible con los índices de almacén de columnas en clúster y no clúster. Pero como la seguridad de nivel de fila aplica una función, es posible que el optimizador pueda modificar el plan de consulta para que no use el modo por lotes.  
+- **Índices de almacén de columnas:** RLS no es compatible con los índices de almacén de columnas agrupados y no agrupados. Pero como la seguridad de nivel de fila aplica una función, es posible que el optimizador pueda modificar el plan de consulta para que no use el modo por lotes.  
   
 - **Vistas con particiones:** no se pueden definir predicados de bloqueo en vistas con particiones, y no se pueden crear vistas con particiones sobre tablas que usan predicados de bloqueo. Los predicados de filtro son compatibles con vistas con particiones.  
   

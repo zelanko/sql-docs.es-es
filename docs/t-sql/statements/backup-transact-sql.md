@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d3a49210575efac6f7d8b4190f96670d06c8824
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141219"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809733"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -178,7 +178,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 --Encryption Options
  ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## <a name="arguments"></a>Argumentos
@@ -305,8 +305,10 @@ ENCRYPTION Se utiliza para especificar el cifrado para una copia de seguridad. P
 
 Si elige cifrar, tendrá que especificar el sistema cifrado mediante las opciones de cifrado:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE` = Encryptor_Name
+- `SERVER ASYMMETRIC KEY` = Encryptor_Name
+
+`SERVER CERTIFICATE` y `SERVER ASYMMETRIC KEY` son un certificado y una clave asimétrica creados en la base de datos `master`. Para obtener más información, consulte [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) y [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md) respectivamente.
 
 > [!WARNING]
 > Cuando se usa cifrado junto con el argumento `FILE_SNAPSHOT`, el propio archivo de metadatos se cifra con el algoritmo de cifrado especificado, y el sistema comprueba si el [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) se ha completado en relación con la base de datos. No se aplica más cifrado a los datos. La copia de seguridad no se realiza si la base de datos no está cifrada o si el cifrado no se completa antes de que se emita la instrucción BACKUP.
@@ -1008,8 +1010,8 @@ ENCRYPTION Se utiliza para especificar el cifrado para una copia de seguridad. P
 
 Si elige cifrar, tendrá que especificar el sistema cifrado mediante las opciones de cifrado:
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE = <Encryptor_Name>`
+- `SERVER ASYMMETRIC KEY = <Encryptor_Name>`
 
 **Opciones de conjunto de copia de seguridad**
 

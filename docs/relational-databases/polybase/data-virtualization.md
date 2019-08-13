@@ -4,17 +4,17 @@ description: En esta página se detallan los pasos para usar al Asistente para c
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0e0c5ec609670e6ce1483a9bdbdf81f223b3481
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041107"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418767"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Uso del Asistente para tablas externas con orígenes de datos relacionales
 
@@ -22,7 +22,7 @@ Uno de los escenarios clave de SQL Server 2019 CTP 2.0 es la posibilidad de virt
 
 ## <a name="start-the-external-table-wizard"></a>Iniciar el Asistente para tablas externas
 
-Conéctese a la instancia maestra mediante el número de puerto o la dirección IP del punto de conexión **sql-server-master** obtenido mediante el comando [**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Expanda el nodo **Bases de datos** en el Explorador de objetos. Luego seleccione una de las bases de datos donde quiere virtualizar los datos de una instancia existente de SQL Server. Haga clic con el botón derecho en la base de datos y seleccione **Create External Table** (Crear tabla externa) para iniciar el asistente para virtualizar datos. También puede iniciar al asistente para virtualizar datos desde la paleta de comandos. Use Ctrl + Mayús + P en Windows o Cmd + Mayús + P en un equipo Mac.
+Conéctese a la instancia maestra mediante el número de puerto o la dirección IP del punto de conexión **sql-server-master** obtenido mediante el comando [**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Expanda el nodo **Bases de datos** en el Explorador de objetos. Luego seleccione una de las bases de datos donde quiere virtualizar los datos de una instancia existente de SQL Server. Haga clic con el botón derecho en la base de datos y seleccione **Create External Table** (Crear tabla externa) para iniciar el asistente para virtualizar datos. También puede iniciar al asistente para virtualizar datos desde la paleta de comandos. Use Ctrl + Mayús + P en Windows o Cmd + Mayús + P en un equipo Mac.
 
 ![Asistente para virtualizar datos](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Selección de un origen de datos

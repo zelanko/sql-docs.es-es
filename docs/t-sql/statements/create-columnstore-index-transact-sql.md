@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b56627ea415a67016b4009c44556019e6fc20d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52aeeca0dc61f36fbde2ad4a708d359f1dd19567
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061037"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809754"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -73,7 +73,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
     [ ON <on_option> ] 
 [ ; ]  
   
---Create a non-clustered columnstore index on a disk-based table.  
+--Create a nonclustered columnstore index on a disk-based table.  
 CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
         ( column  [ ,...n ] )  
@@ -139,7 +139,7 @@ Especifica el nombre de una, dos o tres partes de la tabla que se almacenará co
   
 #### <a name="with-options"></a>Opciones de WITH
 
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON
 
    `DROP_EXISTING = ON` especifica que se quite el índice existente y se cree un nuevo índice de almacén de columnas.  
 ```sql
@@ -148,7 +148,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ```
    El valor predeterminado, DROP_EXISTING = OFF, espera que el nombre del índice sea el mismo que el nombre existente. Se muestra un error si ya existe el nombre de índice especificado.  
   
-##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
+##### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    Reemplaza la configuración del servidor existente para el grado máximo de paralelismo mientras dura la operación de índice. Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
    Los valores de *max_degree_of_parallelism* pueden ser:  
@@ -163,7 +163,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) y [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
  
-###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
    En una tabla basada en disco, *delay* especifica el número mínimo de minutos que debe permanecer un grupo de filas delta en estado CLOSED en el grupo de filas delta antes de que SQL Server pueda comprimirlo en el grupo de filas comprimido. Puesto que las tablas basadas en disco no realizan el seguimiento de los tiempos de inserción y actualización de filas individuales, SQL Server aplica el retraso a los grupos de filas delta en el estado CLOSED.  
    El valor predeterminado es 0 minutos.  
    
@@ -174,7 +174,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    Para obtener recomendaciones sobre cuándo usar COMPRESSION_DELAY, vea [Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
-##### <a name="datacompression--columnstore--columnstorearchive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+##### <a name="data_compression--columnstore--columnstore_archive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    Especifica la opción de compresión de datos para la tabla, el número de partición o el intervalo de particiones especificados. Las opciones son las siguientes:   
 - `COLUMNSTORE` es el valor predeterminado y especifica que se comprima con la compresión de almacén de columnas que ofrezca el mejor rendimiento. Es la elección habitual.  
 - `COLUMNSTORE_ARCHIVE` comprime la tabla o la partición a un tamaño menor. Use esta opción para situaciones como un archivo que requiera un tamaño menor de almacenamiento y pueda permitirse usar más tiempo para el almacenamiento y la recuperación.  
@@ -224,12 +224,12 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    Especifica el nombre de una, dos o tres partes de la tabla que contiene el índice.  
 
 #### <a name="with-options"></a>Opciones de WITH
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON El índice existente se quita y se vuelve a compilar. El nombre de índice especificado debe ser el mismo que el de un índice actualmente existente; sin embargo, la definición se puede modificar. Por ejemplo, puede especificar distintas columnas u opciones de índice.
   
    DROP_EXISTING = OFF Se muestra un error si ya existe el nombre de índice especificado. El tipo de índice no puede cambiarse utilizando DROP_EXISTING. En la sintaxis compatible con versiones anteriores, WITH DROP_EXISTING es equivalente a WITH DROP_EXISTING = ON.  
 
-###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
+###### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    Reemplaza la opción [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) durante la operación de índice. Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
    Los valores de *max_degree_of_parallelism* pueden ser:  
@@ -250,10 +250,10 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    Especifica un límite inferior para el tiempo que una fila debe permanecer en el grupo de filas delta antes de que se pueda migrar a un grupo de filas comprimido. Por ejemplo, un cliente puede indicar que si una fila no se ha modificado durante 120 minutos, se pueda comprimir en formato de almacenamiento en columnas. En el índice de almacén de columnas de las tablas basadas en disco, no se realiza el seguimiento del tiempo de inserción o actualización de una fila; en su lugar, se usa el tiempo de cierre del grupo de filas de diferencial como elemento intermedio de la fila. La duración predeterminada es 0 minutos. Una fila se migra al almacenamiento en columnas una vez que en el grupo de filas delta se han acumulado 1 millón de filas y se ha marcado como cerrado.  
   
-###### <a name="datacompression"></a>DATA_COMPRESSION  
+###### <a name="data_compression"></a>DATA_COMPRESSION  
    Especifica la opción de compresión de datos para la tabla, el número de partición o el intervalo de particiones especificados. Solo se aplica a los índices de almacén de columnas, incluidos los clúster y no clúster. Las opciones son las siguientes:
    
 - `COLUMNSTORE` es el valor predeterminado y especifica que se comprima con la compresión de almacén de columnas que ofrezca el mejor rendimiento. Es la elección habitual.  
@@ -261,7 +261,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  Para más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
-##### <a name="where-filterexpression--and-filterexpression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
+##### <a name="where-filter_expression--and-filter_expression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    Si se ha llamado a un predicado de filtro, especifica qué filas se va a incluir en el índice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea estadísticas filtradas sobre las filas de datos en el índice filtrado.  
   
@@ -373,7 +373,7 @@ Si la tabla subyacente tiene una columna con un tipo de datos no admitido para l
 
 **Índices no clúster de almacén de columnas:**
 -   No puede tener más de 1024 columnas.
--   No se pueden crear como índice basado en restricciones. Se pueden tener restricciones únicas, restricciones de clave principal y restricciones de clave externa en una tabla con un índice de almacén de columnas. Las restricciones se aplican siempre con un índice de almacén de filas. Las restricciones no se pueden aplicar con un índice de almacén de columnas (agrupado o no en clúster).
+-   No se pueden crear como índice basado en restricciones. Se pueden tener restricciones únicas, restricciones de clave principal y restricciones de clave externa en una tabla con un índice de almacén de columnas. Las restricciones se aplican siempre con un índice de almacén de filas. Las restricciones no se pueden aplicar con un índice de almacén de columnas (agrupado o no agrupado).
 -   No puede incluir ninguna columna dispersa.  
 -   No se pueden modificar mediante la instrucción **ALTER INDEX**. Para cambiar el índice no clúster, debe quitar y volver a crear el índice de almacén de columnas en su lugar. Puede usar **ALTER INDEX** para deshabilitar y volver a compilar un índice de almacén de columnas.  
 -   No se pueden crear mediante la palabra clave **INCLUDE**.  
@@ -487,7 +487,7 @@ GO
 1.  En primer lugar, cree una tabla pequeña para usar en este ejemplo.  
   
     ```sql  
-    --Create a rowstore table with a clustered index and a non-clustered index.  
+    --Create a rowstore table with a clustered index and a nonclustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
         OrderDateKey [int] NOT NULL,  
@@ -498,14 +498,14 @@ GO
         CLUSTERED INDEX ( ProductKey )  
     );  
   
-    --Add a non-clustered index.  
+    --Add a nonclustered index.  
     CREATE INDEX my_index ON MyFactTable ( ProductKey, OrderDateKey );  
     ```  
   
-2.  Quite todos los índices no clúster de la tabla de almacén de filas.  
+2.  Quite todos los índices no agrupados de la tabla de almacén de filas.  
   
     ```sql  
-    --Drop all non-clustered indexes  
+    --Drop all nonclustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
   

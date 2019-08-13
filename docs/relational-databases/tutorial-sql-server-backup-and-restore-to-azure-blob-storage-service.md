@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837c720e115a41f9b41dfb0e0e1117966988040f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138369"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893634"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Inicio rápido: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,23 +34,22 @@ Para completar este inicio rápido, debe estar familiarizado con los conceptos d
 ## <a name="create-azure-blob-container"></a>Crear un contenedor de blobs de Azure
 Los contenedores proporcionan una agrupación de un conjunto de blobs. Todos los blobs deben estar en un contenedor. Una cuenta puede contener un número ilimitado de contenedores, pero debe tener al menos un contenedor. Un contenedor puede almacenar un número ilimitado de blobs. 
 
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Para crear un contenedor, siga estos pasos:
 
 1. Abra Azure Portal. 
 1. Navegue a la cuenta de almacenamiento. 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-   1. Seleccione la cuenta de almacenamiento y baje hasta **Blob Services** (Servicios de blob).
-   1. Seleccione **Blobs** y después +**Contenedor** para agregar un nuevo contenedor. 
-   1. Escriba el nombre del contenedor y tome nota del nombre de contenedor especificado. Esta información se usa en la dirección URL (ruta de acceso al archivo de copia de seguridad) en las instrucciones T-SQL más adelante en este inicio rápido. 
-   1. Seleccione **Aceptar**. 
+1. Seleccione la cuenta de almacenamiento y baje hasta **Blob Services** (Servicios de blob).
+1. Seleccione **Blobs** y después +**Contenedor** para agregar un nuevo contenedor. 
+1. Escriba el nombre del contenedor y tome nota del nombre de contenedor especificado. Esta información se usa en la dirección URL (ruta de acceso al archivo de copia de seguridad) en las instrucciones T-SQL más adelante en este inicio rápido. 
+1. Seleccione **Aceptar**. 
     
     ![Nuevo contenedor](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
 
-  >[!NOTE]
-  >La autenticación en la cuenta de almacenamiento es necesaria para las copias de seguridad y la restauración de SQL Server, incluso aunque elija crear un contenedor público. También puede crear un contenedor mediante programación con las API REST. Para más información, vea [Create container](https://docs.microsoft.com/rest/api/storageservices/Create-Container) (Creación de contenedor)
+  > [!NOTE]
+  > La autenticación en la cuenta de almacenamiento es necesaria para las copias de seguridad y la restauración de SQL Server, incluso aunque elija crear un contenedor público. También puede crear un contenedor mediante programación con las API REST. Para más información, vea [Create container](https://docs.microsoft.com/rest/api/storageservices/Create-Container) (Creación de contenedor)
 
 ## <a name="create-a-test-database"></a>Creación de una base de datos de prueba 
 
@@ -93,14 +92,14 @@ GO
 ## <a name="create-a-sql-server-credential"></a>Crear una credencial de SQL Server
 Una credencial de SQL Server es un objeto que se usa para almacenar la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server. Aquí, los procesos de copia de seguridad y restauración de SQL Server usan credenciales para autenticarse en el servicio Windows Azure Blob Storage. La credencial contiene los valores de nombre y la **clave de acceso** de la cuenta de almacenamiento. Una vez creada la credencial, se debe especificar en la opción WITH CREDENTIAL al emitir las instrucciones BACKUP y RESTORE. Para más información sobre las credenciales, vea [Credenciales (motor de base de datos)](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine). 
 
-  >[!IMPORTANT]
-  >Los requisitos para crear una credencial de SQL Server que se describen más adelante son específicos para procesos de copia de seguridad de SQL Server ([Copia de seguridad en URL de SQL Server](backup-restore/sql-server-backup-to-url.md) y [Copia de seguridad administrada de SQL Server en Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server usa el nombre de la cuenta de almacenamiento y la información de la clave de acceso cuando accede a Azure Storage para escribir o leer copias de seguridad.
+  > [!IMPORTANT]
+  > Los requisitos para crear una credencial de SQL Server que se describen más adelante son específicos para procesos de copia de seguridad de SQL Server ([Copia de seguridad en URL de SQL Server](backup-restore/sql-server-backup-to-url.md) y [Copia de seguridad administrada de SQL Server en Microsoft Azure](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server usa el nombre de la cuenta de almacenamiento y la información de la clave de acceso cuando accede a Azure Storage para escribir o leer copias de seguridad.
 
 ### <a name="access-keys"></a>Claves de acceso
-Puesto que Azure Portal todavía está abierto, guarde las claves de acceso necesarias para crear la credencial. 
+Necesitará las claves de acceso de la cuenta de almacenamiento para crear la credencial. 
 
 1. Navegue hasta **Cuenta de almacenamiento** en Azure Portal. 
-1. Baje hasta **Configuración** y seleccione **Claves de acceso**. 
+1. En **Configuración**, seleccione **Claves de acceso**. 
 1. Guarde la clave y la cadena de conexión para usarlas más adelante en este inicio rápido. 
 
    ![Claves de acceso](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)

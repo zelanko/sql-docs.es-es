@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7d326e03c684a17d976d13c27a37aa97ae16792
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091415"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811146"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Plan de consulta para una combinación de tablas basadas en disco.
   
 -   Las filas de la tabla Customer se recuperan del índice clúster, que es la estructura de datos principal y tiene los datos completos de la tabla.  
   
--   Los datos de la tabla Order se recuperan usando el índice no clúster en la columna CustomerID. Este índice contiene la columna CustomerID, que se utiliza para la combinación, y la columna de clave principal OrderID, que se devuelve al usuario. Devolver columnas adicionales de la tabla Order requeriría búsquedas en el índice clúster de la tabla Order.  
+-   Los datos de la tabla Order se recuperan usando el índice no agrupado en la columna CustomerID. Este índice contiene la columna CustomerID, que se utiliza para la combinación, y la columna de clave principal OrderID, que se devuelve al usuario. Devolver columnas adicionales de la tabla Order requeriría búsquedas en el índice clúster de la tabla Order.  
   
 -   El operador físico **Inner Join** implementa el operador lógico **Merge Join**. Los otros tipos de combinación físicos son **Nested Loops** y **Hash Join**. El operador **Merge Join** se aprovecha del hecho de que ambos índices están ordenados por la columna de combinación CustomerID.  
   
@@ -119,7 +119,7 @@ Canalización de procesamiento de consultas de SQL Server
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- Para la primera consulta del ejemplo, el motor de ejecución solicita filas del índice clúster en la tabla Customer y el índice no clúster en la tabla Order de Access Methods. Access Methods atraviesa las estructuras de índice del árbol B para recuperar las filas solicitadas. En este caso, todas las filas se recuperan como las llamadas de plan para los recorridos de índice completos.  
+ Para la primera consulta del ejemplo, el motor de ejecución solicita filas del índice agrupado en la tabla Customer y el índice no agrupado en la tabla Order de Access Methods. Access Methods atraviesa las estructuras de índice del árbol B para recuperar las filas solicitadas. En este caso, todas las filas se recuperan como las llamadas de plan para los recorridos de índice completos.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Acceso de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado a las tablas con optimización para memoria  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] también se denominan [!INCLUDE[tsql](../../includes/tsql-md.md)]. Interpretado hace referencia al hecho de que el plan de consulta es interpretado por el motor de ejecución de consulta para cada operador del plan de consultas. El motor de ejecución lee el operador y sus parámetros y realiza la operación.  

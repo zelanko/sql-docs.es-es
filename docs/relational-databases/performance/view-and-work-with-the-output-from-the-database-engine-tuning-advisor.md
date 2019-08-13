@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1ce0df5d3ebf4b4adde9e35be63c3c105df1d152
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986635"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811361"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -285,7 +285,7 @@ ms.locfileid: "67986635"
  Índice o vista que se ven afectados por la recomendación. El icono de esta columna refleja las recomendaciones que deben quitarse o agregarse en el **Destino de la recomendación**.  
   
  **Detalles**  
- Descripción del **Destino de la recomendación**. Entre los posibles valores, se encuentran agrupado, vista indizada o en blanco, que indica un índice no clúster. También indica si el índice es único.  
+ Descripción del **Destino de la recomendación**. Entre los posibles valores, se encuentran agrupado, vista indizada o en blanco, que indica un índice no agrupado. También indica si el índice es único.  
   
  **Esquema de partición**  
  El esquema de partición se proporcionará en esta columna si es recomendable realizar particiones.  

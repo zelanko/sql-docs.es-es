@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f3e27b283156bb23754a93161fc796e15baec7ea
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077692"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823115"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Copia de seguridad y restauración de bases de datos de SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Puede realizar copias de seguridad de bases de datos de SQL Server 2017 en Linux con las mismas herramientas que otras plataformas. En un servidor Linux, puede usar **sqlcmd** para conectarse a SQL Server y realizar copias de seguridad. En Windows, puede conectarse a SQL Server en Linux y realizar copias de seguridad con la interfaz de usuario. La funcionalidad de copia de seguridad es la misma en todas las plataformas. Por ejemplo, puede realizar copias de seguridad de bases de datos localmente, en unidades remotas o en el [servicio de almacenamiento Microsoft Azure Blob](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+Puede realizar copias de seguridad de bases de datos de SQL Server 2017 en Linux con muchas opciones diferentes. En un servidor Linux, puede usar **sqlcmd** para conectarse a SQL Server y realizar copias de seguridad. En Windows, puede conectarse a SQL Server en Linux y realizar copias de seguridad con la interfaz de usuario. La funcionalidad de copia de seguridad es la misma en todas las plataformas. Por ejemplo, puede realizar copias de seguridad de bases de datos localmente, en unidades remotas o en el [servicio de almacenamiento Microsoft Azure Blob](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
 ## <a name="backup-a-database"></a>Realización de una copia de seguridad de una base de datos
 

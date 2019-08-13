@@ -1,6 +1,6 @@
 ---
-title: Correo electrónico de base de datos y las alertas de correo electrónico con el Agente SQL en Linux
-description: En este artículo se describe cómo usar alertas de correo electrónico y correo electrónico de base de datos con SQL Server en Linux
+title: Correo electrónico de BD y alertas por correo electrónico con el Agente SQL en Linux
+description: En este artículo se describe cómo usar las alertas de correo electrónico y el correo electrónico de base de datos con SQL Server en Linux
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -9,19 +9,19 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: 31f8931f6e0eddc67b2e58ae794631a9ae6555b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077447"
 ---
-# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Correo electrónico de base de datos y las alertas de correo electrónico con el Agente SQL en Linux
+# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Correo electrónico de BD y alertas por correo electrónico con el Agente SQL en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Los pasos siguientes muestran cómo configurar el correo electrónico de base de datos y su uso con el agente de SQL Server (**mssql-server-agent**) en Linux. 
+En los pasos siguientes se muestra cómo configurar el correo electrónico de BD y usarlo con el Agente SQL Server (**mssql-server-agent**) en Linux. 
 
-## <a name="1-enable-db-mail"></a>1. Habilitar correo electrónico de base de datos
+## <a name="1-enable-db-mail"></a>1. Habilitación del correo electrónico de BD
 
 ```sql
 USE master 
@@ -52,7 +52,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
 GO
 ```
 
-## <a name="3-create-a-default-profile"></a>3. Crear un perfil predeterminado
+## <a name="3-create-a-default-profile"></a>3. Creación de un perfil predeterminado
 
 ```sql
 EXECUTE msdb.dbo.sysmail_add_profile_sp 
@@ -61,7 +61,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 GO
 ```
 
-## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. Agregar la cuenta de correo electrónico de base de datos a un perfil de correo electrónico de base de datos
+## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. Adición de la cuenta de Correo electrónico de base de datos al perfil de Correo electrónico de base de datos
 ```sql
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp 
 @profile_name = 'default', 
@@ -69,7 +69,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 @is_default = 1 ; 
  ```
  
-## <a name="5-add-account-to-profile"></a>5. Agregar cuenta al perfil 
+## <a name="5-add-account-to-profile"></a>5. Adición de la cuenta al perfil 
 ```sql
 EXECUTE msdb.dbo.sysmail_add_profileaccount_sp   
 @profile_name = 'default',   
@@ -77,9 +77,9 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
 @sequence_number = 1;  
  ```
  
-## <a name="6-send-test-email"></a>6. Enviar correo electrónico de prueba
+## <a name="6-send-test-email"></a>6. Envío de un correo electrónico de prueba
 > [!NOTE]
-> Es posible que deba ir a su cliente de correo electrónico y habilitar el "Permitir clientes menos seguro enviar correo electrónico". No todos los clientes reconocen el correo electrónico de base de datos como un demonio de correo electrónico.
+> Es posible que tenga que ir al cliente de correo electrónico y habilitar la opción "permitir que los clientes menos seguros envíen correo". No todos los clientes reconocen el correo electrónico de BD como demonio de correo electrónico.
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -90,8 +90,8 @@ EXECUTE msdb.dbo.sp_send_dbmail
 GO
 ```
 
-## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Establezca el perfil de correo electrónico de base de datos con mssql-conf o variable de entorno
-Puede usar la utilidad mssql-conf o variables de entorno para registrar su perfil de correo electrónico de base de datos. En este caso, vamos a llamar a nuestros valores predeterminados de perfil.
+## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Establecimiento del perfil de correo electrónico de BD mediante mssql-conf o la variable de entorno
+Puede usar la utilidad mssql-conf o las variables de entorno para registrar el perfil de correo electrónico de BD. En este caso, llamaremos a nuestro perfil predeterminado.
 
 ```bash
 # via mssql-conf
@@ -100,7 +100,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```
 
-## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Configurar un operador para notificaciones del trabajo SQLAgent 
+## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. Configuración de un operador para las notificaciones del trabajo SQLAgent 
 
 ```sql
 EXEC msdb.dbo.sp_add_operator 
@@ -111,7 +111,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Enviar correo electrónico cuando se realiza correctamente de "Trabajo de agente de prueba" 
+## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. Envío de un correo electrónico cuando el "Trabajo de prueba del agente" se ejecute correctamente 
 
 ```
 EXEC msdb.dbo.sp_update_job 
@@ -122,4 +122,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información sobre cómo usar el Agente SQL Server para crear, programar y ejecutar trabajos, consulte [ejecutar un trabajo de agente SQL Server en Linux](sql-server-linux-run-sql-server-agent-job.md).
+Para obtener más información sobre cómo usar el Agente SQL Server para crear, programar y ejecutar trabajos, consulte [Ejecución de un trabajo de Agente SQL Server en Linux.](sql-server-linux-run-sql-server-agent-job.md)

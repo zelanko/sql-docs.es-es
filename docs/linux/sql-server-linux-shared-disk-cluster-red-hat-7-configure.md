@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032281"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810983"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración del clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
@@ -116,7 +116,7 @@ Hay varias soluciones para proporcionar almacenamiento compartido. En este tutor
 ### <a name="configure-shared-storage-with-nfs"></a>Configuración del almacenamiento compartido con NFS
 
 > [!IMPORTANT] 
-> En esta versión no se admite el hospedaje de archivos de base de datos en un servidor NFS con una versión anterior a la v4. Esto incluye el uso de NFS para la agrupación en clústeres de conmutación por error de discos compartidos, así como las bases de datos en instancias que no están en clúster. Estamos trabajando para habilitar otras versiones del servidor NFS en las próximas versiones. 
+> En esta versión no se admite el hospedaje de archivos de base de datos en un servidor NFS con una versión anterior a la v4. Esto incluye el uso de NFS para la agrupación en clústeres de conmutación por error de discos compartidos, así como las bases de datos en instancias no agrupadas. Estamos trabajando para habilitar otras versiones del servidor NFS en las próximas versiones. 
 
 En el servidor NFS, haga lo siguiente:
 

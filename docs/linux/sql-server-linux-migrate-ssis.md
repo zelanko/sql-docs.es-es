@@ -1,6 +1,6 @@
 ---
-title: Extraer, transformar y cargar datos en Linux con SSIS
-description: Este artículo se describe SQL Server Integration Services (SSIS) para equipos Linux
+title: Extracción, transformación y carga de datos en Linux con SSIS
+description: En este artículo se describe SQL Server Integration Services (SSIS) para equipos Linux
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -9,31 +9,31 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: e6230ee4efebc4b1af873a61e9f2ebfc191df171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67943818"
 ---
-# <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extraer, transformar y cargar datos en Linux con SSIS
+# <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extracción, transformación y carga de datos en Linux con SSIS
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se describe cómo ejecutar paquetes de SQL Server Integration Services (SSIS) en Linux. SSIS soluciona los problemas de integración de datos complejos mediante la extracción de datos de varios orígenes y formatos, transformación y limpieza de los datos y cargar los datos en varios destinos. 
+En este artículo se describe cómo ejecutar paquetes de SQL Server Integration Services (SSIS) en Linux. SSIS resuelve problemas de integración de datos complejos mediante la extracción de datos de varios orígenes y formatos, así como la transformación y limpieza de los datos y la carga de datos en varios destinos. 
 
-Paquetes SSIS que se ejecutan en Linux pueden conectarse a Microsoft SQL Server en ejecución en Windows local o en la nube, en Linux o en Docker. También pueden conectarse a Azure SQL Database, Azure SQL Data Warehouse, orígenes de datos ODBC, archivos sin formato y otros orígenes de datos, incluidos los orígenes ADO.NET, los archivos XML y servicios de OData.
+Los paquetes SSIS que se ejecutan en Linux pueden conectarse a Microsoft SQL Server en ejecución en Windows en el entorno local o en la nube, en Linux o en Docker. También pueden conectarse a Azure SQL Database, Azure SQL Data Warehouse, orígenes de datos ODBC, archivos planos y otros orígenes de datos, incluidos orígenes ADO.NET, archivos XML y servicios OData.
 
-Para obtener más información acerca de las capacidades de SSIS, vea [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
+Para obtener más información sobre las capacidades de SSIS, vea [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Para ejecutar paquetes SSIS en un equipo Linux, primero tiene que instalar SQL Server Integration Services. SSIS no se incluye en la instalación de SQL Server para equipos Linux. Para obtener instrucciones de instalación, consulte [instalar SQL Server Integration Services](sql-server-linux-setup-ssis.md).
+Para ejecutar paquetes SSIS en un equipo Linux, primero tiene que instalar SQL Server Integration Services. SSIS no se incluye en la instalación de SQL Server para equipos Linux. Para obtener instrucciones de instalación, consulte [Instalación de SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 
-También debe tener un equipo de Windows para crear y mantener paquetes. Las herramientas de administración y diseño SSIS son aplicaciones de Windows que no están disponibles actualmente para equipos Linux. 
+También debe tener un equipo Windows para crear y mantener paquetes. Las herramientas de administración y diseño de SSIS son aplicaciones de Windows que no están disponibles actualmente para equipos Linux. 
 
 ## <a name="run-an-ssis-package"></a>Ejecutar un paquete SSIS
 
-Para ejecutar un paquete SSIS en un equipo Linux, realice lo siguiente:
+Para ejecutar un paquete SSIS en un equipo Linux, haga lo siguiente:
 
 1.  Copie el paquete SSIS en el equipo Linux.
 2.  Ejecute el siguiente comando:
@@ -41,16 +41,16 @@ Para ejecutar un paquete SSIS en un equipo Linux, realice lo siguiente:
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
-## <a name="run-an-encrypted-password-protected-package"></a>Ejecutar un paquete cifrado (protegido con contraseña)
-Hay tres maneras de ejecutar un paquete SSIS que se cifra con una contraseña:
+## <a name="run-an-encrypted-password-protected-package"></a>Ejecute un paquete cifrado (protegido por contraseña)
+Hay tres formas de ejecutar un paquete SSIS cifrado con una contraseña:
 
-1.  Establezca el valor de la variable de entorno `SSIS_PACKAGE_DECRYPT`, como se muestra en el ejemplo siguiente:
+1.  Establezca el valor de la variable de entorno `SSIS_PACKAGE_DECRYPT`, como se muestra en el siguiente ejemplo:
 
     ```
     SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
     ```
 
-2.  Especifique el `/de[crypt]` opción para escribir la contraseña de forma interactiva, tal como se muestra en el ejemplo siguiente:
+2.  Especifique la opción `/de[crypt]` para escribir la contraseña de forma interactiva, tal como se muestra en el siguiente ejemplo:
 
     ```
     /opt/ssis/bin/dtexec /f package.dtsx /de
@@ -58,7 +58,7 @@ Hay tres maneras de ejecutar un paquete SSIS que se cifra con una contraseña:
     Enter decryption password:
     ```
 
-3.  Especifique el `/de` opción para proporcionar la contraseña en la línea de comandos, tal como se muestra en el ejemplo siguiente. Este método no se recomienda ya que almacena la contraseña de descifrado con el comando del historial de comandos.
+3.  Especifique la opción `/de` para proporcionar la contraseña en la línea de comandos, tal y como se muestra en el siguiente ejemplo. No se recomienda este método porque almacena la contraseña de descifrado con el comando en el historial de comandos.
 
     ```
     opt/ssis/bin/dtexec /f package.dtsx /de test
@@ -71,47 +71,47 @@ Hay tres maneras de ejecutar un paquete SSIS que se cifra con una contraseña:
 
 ## <a name="design-packages"></a>Diseñar paquetes
 
-**Conectarse a orígenes de datos ODBC**. Con SSIS en la actualización de Linux CTP 2.1 y versiones posteriores, los paquetes SSIS pueden usar conexiones de ODBC en Linux. Esta funcionalidad se ha probado con el servidor SQL Server y los controladores ODBC de MySQL, pero también se espera que funcione con cualquier controlador ODBC Unicode que cumple la especificación de ODBC. En tiempo de diseño, puede proporcionar un DSN o una cadena de conexión para conectarse a los datos ODBC; También puede usar la autenticación de Windows. Para obtener más información, consulte el [entrada de blog de anuncio de compatibilidad con ODBC en Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+**Conectarse a orígenes de datos ODBC**. Con SSIS en la actualización de CTP 2.1 de Linux y versiones posteriores, los paquetes SSIS pueden usar conexiones ODBC en Linux. Esta funcionalidad se ha probado con SQL Server y los controladores ODBC de MySQL, pero también se espera que funcione con cualquier controlador ODBC de Unicode que respete la especificación de ODBC. En tiempo de diseño, puede proporcionar un DSN o una cadena de conexión para conectarse a los datos ODBC; también puede usar la autenticación de Windows. Para obtener más información, consulte [la entrada de blog que anuncia la compatibilidad con ODBC en Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
-**Las rutas de acceso**. Proporcionar las rutas de acceso de estilo de Windows en los paquetes SSIS. SSIS en Linux no admite rutas de acceso basado en Linux, pero las rutas de acceso de estilo de Windows asigna a las rutas de acceso basado en Linux en tiempo de ejecución. A continuación, por ejemplo, SSIS en Linux asigna la ruta de acceso de estilo Windows `C:\test` a la ruta de acceso basado en Linux `/test`.
+**Rutas**. Proporcione rutas de estilo Windows en los paquetes SSIS. SSIS en Linux no admite rutas de estilo Linux, sino que asigna rutas de estilo Windows a rutas de estilo Linux en tiempo de ejecución. Después, por ejemplo, SSIS en Linux asigna la ruta de estilo Windows `C:\test` a la ruta de estilo Linux `/test`.
 
 ## <a name="deploy-packages"></a>Implementar paquetes
-Solo puede almacenar paquetes en el sistema de archivos en Linux en esta versión. La base de datos del catálogo de SSIS y el servicio SSIS heredado no están disponibles en Linux para el almacenamiento y la implementación del paquete.
+En esta versión, solo puede almacenar paquetes en el sistema de archivos de Linux. La base de datos del catálogo de SSIS y el servicio SSIS heredado no están disponibles en Linux para la implementación y el almacenamiento de paquetes.
 
 ## <a name="schedule-packages"></a>Programar paquetes
-Puede usar las herramientas de programación, como el sistema de Linux `cron` para programar paquetes. No puede usar para programar la ejecución del paquete en esta versión del Agente SQL en Linux. Para obtener más información, consulte [paquetes de SSIS de programación en Linux con cron](sql-server-linux-schedule-ssis-packages.md).
+Puede usar herramientas de programación del sistema Linux como `cron` para programar paquetes. No se puede usar el Agente SQL en Linux para programar la ejecución de paquetes en esta versión. Para obtener más información, vea [Programar paquetes SSIS en Linux con cron](sql-server-linux-schedule-ssis-packages.md).
 
 ## <a name="limitations-and-known-issues"></a>Limitaciones y problemas conocidos
 
-Para obtener información detallada sobre las limitaciones y problemas conocidos de SSIS en Linux, consulte [limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md).
+Para obtener información detallada sobre las limitaciones y los problemas conocidos de SSIS en Linux, consulte [Limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md).
 
-## <a name="more-info-about-ssis-on-linux"></a>Obtener más información sobre SSIS en Linux
+## <a name="more-info-about-ssis-on-linux"></a>Más información sobre SSIS en Linux
 
-Para obtener más información acerca de SSIS en Linux, consulte las siguientes entradas de blog:
+Para obtener más información sobre SSIS en Linux, consulte las siguientes entradas de blog:
 
--   [SSIS en Linux está disponible en SQL Server CTP2.1](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
--   [SSIS en Linux (actualización de SQL Server CTP 2.1) es compatible con ODBC](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
+-   [SSIS en Linux está disponible en SQL Server CTP 2.1](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)
+-   [ODBC es compatible con SSIS en Linux (actualización de SQL Server CTP 2.1)](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)
 
-## <a name="more-info-about-ssis"></a>Obtener más información sobre SSIS
+## <a name="more-info-about-ssis"></a>Más información sobre SSIS
 
-Microsoft SQL Server Integration Services (SSIS) es una plataforma para compilar soluciones de integración de datos de alto rendimiento, incluidos los paquetes de extracción, transformación y carga (ETL) para el almacenamiento de datos. Para obtener más información sobre SSIS, vea [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services).
+Microsoft SQL Server Integration Services (SSIS) es una plataforma que permite generar soluciones de integración de datos de alto rendimiento, entre las que se incluyen paquetes de extracción, transformación y carga de datos (ETL) para el almacenamiento de datos. Para obtener más información sobre SSIS, vea [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services).
 
-SSIS incluye las siguientes características:
-- Las herramientas gráficas y asistentes para generar y depurar paquetes en Windows
-- Una serie de tareas para realizar funciones de flujo de trabajo, como operaciones de FTP, ejecutar instrucciones SQL y enviar mensajes de correo electrónico
-- Una variedad de orígenes de datos y destinos para extraer y cargar datos
-- Una variedad de transformaciones para limpiar, agregar, combinar y copiar datos
-- (API) de interfaces de programación de aplicaciones para ampliar SSIS con sus propios scripts personalizados y componentes
+SSIS incluye las características siguientes:
+- Herramientas y asistentes gráficos para compilar y depurar paquetes en Windows
+- Una amplia gama de tareas para realizar funciones de flujo de trabajo, como operaciones FTP, ejecutar instrucciones SQL y enviar mensajes de correo electrónico
+- Diversos orígenes de datos y destinos para extraer y cargar datos
+- Diversas transformaciones para limpiar, agregar, combinar y copiar datos
+- Interfaces de programación de aplicaciones (API) para extender SSIS con sus propios scripts y componentes personalizados
 
-Para empezar a trabajar con SSIS, descargue la versión más reciente de [SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md).
+Para comenzar con SSIS, descargue la versión más reciente de [SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md).
 
-Para obtener más información sobre SSIS, consulte los artículos siguientes:
+Para más información sobre SSIS, vea los siguientes artículos:
 - [Más información sobre SQL Server Integration Services](../integration-services/sql-server-integration-services.md)
-- [Herramientas de administración y desarrollo de SQL Server Integration Services (SSIS)](../integration-services/integration-services-ssis-development-and-management-tools.md)
-- [Tutoriales de SQL Server Integration Services](../integration-services/integration-services-tutorials.md)
+- [Herramientas de implementación y administración de SQL Server Integration Services (SSIS)](../integration-services/integration-services-ssis-development-and-management-tools.md)
+- [Tutoriales de SQL Server Integration Services](../integration-services/integration-services-tutorials.md)
 
 ## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
 -   [Instalar SQL Server Integration Services (SSIS) en Linux](sql-server-linux-setup-ssis.md)
 -   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md)
--   [Ejecución en Linux con cron de paquetes de programación de SQL Server Integration Services](sql-server-linux-schedule-ssis-packages.md)
+-   [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)

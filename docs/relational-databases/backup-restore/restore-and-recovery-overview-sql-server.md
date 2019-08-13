@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 3df2d5cd644fdff3371c2814705a18dbd2dfdfb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeea69e39184744a25890b1dae85390e00934090
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111173"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471056"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "68111173"
 
 ## <a name="adr"></a> Recuperación acelerada de bases de datos
 
-La versión preliminar de SQL Server 2019 CTP 2.3 presenta la [recuperación acelerada de bases de datos](/azure/sql-database/sql-database-accelerated-database-recovery/) para SQL Server local. La recuperación acelerada de bases de datos mejora considerablemente la disponibilidad de la base de datos, especialmente en presencia de transacciones de larga duración, al volver a diseñar el proceso de recuperación del motor de base de datos de SQL Server. La [recuperación de base de datos](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) es el proceso que usa SQL Server para cada base de datos con el fin de empezar en un estado transaccionalmente coherente o limpio. Una base de datos con la recuperación acelerada de base de datos habilitada completa la recuperación más rápidamente después de una conmutación por error o de otro apagado que no haya sido limpio. 
+En la versión preliminar de SQL Server 2019 CTP 2.3 se presenta la [recuperación acelerada de bases de datos](/azure/sql-database/sql-database-accelerated-database-recovery/) para SQL Server local. La recuperación acelerada de bases de datos mejora considerablemente la disponibilidad de la base de datos, especialmente en presencia de transacciones de larga duración, al volver a diseñar el proceso de recuperación del motor de base de datos de SQL Server. La [recuperación de base de datos](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) es el proceso que usa SQL Server para cada base de datos con el fin de empezar en un estado transaccionalmente coherente o limpio. Una base de datos con la recuperación acelerada de base de datos habilitada completa la recuperación más rápidamente después de una conmutación por error o de otro apagado que no haya sido limpio. 
 
 Se puede habilitar la recuperación acelerada de bases de datos en cada base de datos en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 mediante la sintaxis siguiente:
 

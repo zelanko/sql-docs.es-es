@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 382fd4ab40c574fd1a3d9ce2e972e2c6ea07cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9228530dcf0204987feda98083ba3a16c946093
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071353"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809802"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -657,7 +657,7 @@ Para obtener más información, vea [Reorganizar y volver a generar índices](..
 > Pero a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], las estadísticas no se crean examinando todas las filas de la tabla cuando se crea o se vuelve a generar un índice con particiones. En su lugar, el optimizador de consultas usa el algoritmo de muestreo predeterminado para generar estas estadísticas. Para obtener estadísticas sobre índices con particiones examinando todas las filas de la tabla, use CREATE STATISTICS o UPDATE STATISTICS con la cláusula FULLSCAN.  
   
 En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a veces se podía volver a generar un índice no clúster para corregir incoherencias provocadas por errores de hardware.    
-En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, aún es posible reparar estas incoherencias entre el índice y el índice clúster al volver a generar un índice no clúster sin conexión. Sin embargo, no es posible reparar las incoherencias de índices no clúster mediante la regeneración del índice en línea, ya que el mecanismo de regeneración con conexión usará el índice no clúster existente como base para la regeneración y, por tanto, persistirá la incoherencia. La regeneración del índice sin conexión hará que se examine el índice clúster (o montón) y eliminará la incoherencia. Para garantizar una regeneración del índice clúster, quite y vuelva a crear el índice no agrupado. Al igual que en las versiones anteriores, para recuperar incoherencias se recomienda restaurar los datos afectados desde una copia de seguridad. No obstante, es posible que pueda reparar las incoherencias del índice mediante la regeneración del índice no clúster sin conexión. Para obtener más información, vea [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
+En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, aún es posible reparar estas incoherencias entre el índice y el índice clúster al volver a generar un índice no clúster sin conexión. Sin embargo, no es posible reparar las incoherencias de índices no clúster mediante la regeneración del índice en línea, ya que el mecanismo de regeneración con conexión usará el índice no clúster existente como base para la regeneración y, por tanto, persistirá la incoherencia. La regeneración del índice sin conexión hará que se examine el índice clúster (o montón) y eliminará la incoherencia. Para garantizar una regeneración del índice agrupado, quite y vuelva a crear el índice no agrupado. Al igual que en las versiones anteriores, para recuperar incoherencias se recomienda restaurar los datos afectados desde una copia de seguridad. No obstante, es posible que pueda reparar las incoherencias del índice mediante la regeneración del índice no clúster sin conexión. Para obtener más información, vea [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).  
   
 Para volver a generar un índice de almacén de columnas clúster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -754,7 +754,7 @@ Abajo se detallan las funciones que se deshabilitan para las operaciones de rege
 
  Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
   
- ### <a name="waitatlowpriority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY con operaciones de índice en línea  
+ ### <a name="wait_at_low_priority-with-online-index-operations"></a>WAIT_AT_LOW_PRIORITY con operaciones de índice en línea  
   
  Para ejecutar la instrucción DDL para regenerar el índice en línea, todas las transacciones activas de bloqueo que se ejecutan en una tabla determinada deben completarse. Cuando la regeneración de índice en línea se ejecuta, bloquea todas las nuevas transacciones que están listas para iniciar la ejecución en esta tabla. Aunque la vigencia del bloqueo para volver a generar el índice en línea es muy corta, si se espera a que las transacciones abiertas en una tabla dada se completen y se bloquean las nuevas transacciones que se inician, se podría afectar significativamente al rendimiento, produciendo un retraso o un tiempo de espera en la carga de trabajo y se limitaría mucho el acceso a la tabla base. Con la opción **WAIT_AT_LOW_PRIORITY**, el DBA puede administrar los bloqueos S-lock y Sch-M necesarios para las regeneraciones de índice en línea y seleccionar una de las tres opciones. En los tres casos, si durante el tiempo de espera ( (MAX_DURATION = n [minutos]) ) no hay actividades de bloqueo, la regeneración de índice en línea se ejecuta inmediatamente sin esperar y la instrucción DDL se completa.  
   

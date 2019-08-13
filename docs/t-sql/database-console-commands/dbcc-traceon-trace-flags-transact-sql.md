@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 21c43f2780f555b9cabd0ec84b47f80ff0284764
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: c84ef656fcadee3c66b0155fa587a85ebf453095
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388443"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809831"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON: marcas de seguimiento (Transact-SQL)
 

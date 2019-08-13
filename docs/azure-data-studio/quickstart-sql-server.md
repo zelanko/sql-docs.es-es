@@ -1,7 +1,7 @@
 ---
 title: 'Inicio rápido: Conectarse y consultar SQL Server'
 titleSuffix: Azure Data Studio
-description: En este tutorial rápido se muestra cómo usar Azure Data Studio para conectarse a SQL Server y ejecute una consulta
+description: En este inicio rápido se muestra cómo usar Azure Data Studio para conectarse a SQL Server y ejecutar una consulta
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,53 +11,53 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 4117d8c16e96252f792e14d282d285527008874f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959395"
 ---
-# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conectarse y consultar con SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-En este tutorial rápido se muestra cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a SQL Server y, a continuación, usar instrucciones Transact-SQL (T-SQL) para crear el *TutorialDB* utilizados en [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
+# <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conectarse y consultar SQL Server con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+En esta guía de inicio rápido se muestra cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a SQL Server y luego usar instrucciones Transact-SQL (T-SQL) para crear el *TutorialDB* que se usa en los tutoriales de [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Para completar este tutorial rápido, necesitará [!INCLUDE[name-sos](../includes/name-sos-short.md)]y el acceso a un servidor SQL Server.
+Para realizar este inicio rápido, se necesita [!INCLUDE[name-sos](../includes/name-sos-short.md)] y acceso a SQL Server.
 
-- [Instalar [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
+- [Instale [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 
-Si no tiene acceso a un servidor SQL Server, seleccione su plataforma desde los vínculos siguientes (asegúrese de recordar el inicio de sesión de SQL y la contraseña!):
+Si no tiene acceso a SQL Server, seleccione su plataforma en uno de los vínculos siguientes (deberá acordarse de sus credenciales de inicio de sesión de SQL y de su contraseña):
 - [Windows - Descargar SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
 - [macOS - Descargar SQL Server 2017 en Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux: descarga de SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -solo deberá seguir los pasos hasta *crear y consultar datos*.
+- [Linux - Descargar SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install): solo tiene que seguir los pasos de *creación y consulta de datos*.
 
 
 ## <a name="connect-to-a-sql-server"></a>Conectarse a un servidor SQL Server
 
    
-1. Iniciar **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
-1. La primera vez que ejecute [!INCLUDE[name-sos](../includes/name-sos-short.md)] el **bienvenida** debe abrir la página. Si no ve el **bienvenida** página, seleccione **ayuda** > **bienvenida**. Seleccione **nueva conexión** para abrir el **conexión** panel:
+1. Inicie **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. La primera vez que se ejecuta [!INCLUDE[name-sos](../includes/name-sos-short.md)], debe abrirse la **página principal**. Si no ve la **página principal**, seleccione **Ayuda** > **Página principal**. Seleccione **Nueva conexión** para abrir el panel **Conexión**:
    
-   ![Nuevo icono de conexión](media/quickstart-sql-server/new-connection-icon.png)
+   ![Icono Nueva conexión](media/quickstart-sql-server/new-connection-icon.png)
 
-1. Este artículo se usa *inicio de sesión SQL*, pero *Windows autenticación* se admite. Rellene los campos como sigue:
+1. En este artículo se usa el *inicio de sesión de SQL*, pero se admite la *autenticación de Windows*. Rellene los campos como se indica a continuación:
  
     - **Nombre del servidor:** localhost
     - **Tipo de autenticación:** Inicio de sesión de SQL  
-    - **Nombre de usuario:** Nombre de usuario de SQL Server  
-    - **Contraseña:** Contraseña de SQL Server  
+    - **Nombre de usuario:** El nombre de usuario para SQL Server  
+    - **Contraseña:** Contraseña para SQL Server  
     - **Nombre de la base de datos:** deje este campo en blanco 
-    - **Grupo de servidores:** \<Valor predeterminado\>  
+    - **Grupo del servidor:** \<Default\>  
 
-   ![Nueva pantalla de conexión](media/quickstart-sql-server/new-connection-screen.png)
+   ![Pantalla Nueva conexión](media/quickstart-sql-server/new-connection-screen.png)
 
 
 
-## <a name="create-a-database"></a>Creación de una base de datos
+## <a name="create-a-database"></a>Crear una base de datos
 
-Los pasos siguientes crean una base de datos denominada **TutorialDB**:
+En los pasos siguientes se crea una base de datos denominada **TutorialDB**:
 
-1. Haga clic con el botón derecho en el servidor, **localhost**y seleccione **nueva consulta.**
+1. Haga clic con el botón derecho en el servidor, **localhost**, y seleccione **Nueva consulta.**
 1. Pegue el siguiente fragmento de código en la ventana de consulta: 
 
    ```sql
@@ -74,25 +74,25 @@ Los pasos siguientes crean una base de datos denominada **TutorialDB**:
        ALTER DATABASE [TutorialDB] SET QUERY_STORE=ON;
    GO
    ```
-1. Para ejecutar la consulta, haga clic en **ejecutar** .
+1. Para ejecutar la consulta, haga clic en **Ejecutar**.
 
-Una vez finalizada la consulta, el nuevo **TutorialDB** aparece en la lista de bases de datos. Si no lo ve, haga clic en el **bases de datos** nodo y seleccione **actualizar**.
+Una vez hecha la consulta, aparecerá la nueva **TutorialDB** en la lista de bases de datos. Si no la ve, haga clic con el botón derecho en el nodo **Bases de datos** y seleccione **Actualizar**.
 
 
 ## <a name="create-a-table"></a>Creación de una tabla
 
-El editor de consultas aún está conectado a la *maestro* base de datos, pero si desea crear una tabla en la *TutorialDB* base de datos. 
+Aun así, el editor de consultas se conecta a la base de datos maestra (*master*), pero lo que se pretende aquí es crear una tabla en la base de datos *TutorialDB*. 
 
-1. Cambiar el contexto de conexión a **TutorialDB**:
+1. Cambie el contexto de conexión a **TutorialDB**:
 
    ![Cambio de contexto](media/quickstart-sql-server/change-context.png)
 
 
 
-1. Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en **ejecutar**:
+1. Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en **Ejecutar**:
 
    > [!NOTE]
-   > Puede esta opción para anexar o sobrescribir la consulta anterior en el editor. Tenga en cuenta que al hacer clic **ejecutar** ejecuta solo la consulta seleccionada. Si se selecciona nada, haga clic en **ejecutar** ejecuta todas las consultas en el editor.
+   > Puede anexar esto o sobrescribir la consulta anterior en el editor. Tenga en cuenta que al hacer clic en **Ejecutar** solo se ejecuta la consulta seleccionada. Si no se selecciona nada, al hacer clic en **Ejecutar** se ejecutan todas las consultas en el editor.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -111,11 +111,11 @@ El editor de consultas aún está conectado a la *maestro* base de datos, pero s
    GO
    ```
 
-Una vez finalizada la consulta, el nuevo **clientes** tabla aparece en la lista de tablas. Es posible que deba haga el **TutorialDB > tablas** nodo y seleccione **actualizar**.
+Una vez hecha la consulta, aparecerá la tabla nueva **Customers** (Clientes) en la lista de tablas. Es posible que tenga que hacer clic con el botón derecho en el nodo **TutorialDB > Tablas** y seleccionar **Actualizar**.
 
 ## <a name="insert-rows"></a>Insertar filas
 
-- Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en **ejecutar**:
+- Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en **Ejecutar**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -132,7 +132,7 @@ Una vez finalizada la consulta, el nuevo **clientes** tabla aparece en la lista 
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>Ver los datos devueltos por una consulta
-1. Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en **ejecutar**:
+1. Pegue el siguiente fragmento de código en la ventana de consulta y haga clic en **Ejecutar**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -141,10 +141,10 @@ Una vez finalizada la consulta, el nuevo **clientes** tabla aparece en la lista 
 
 1. Se muestran los resultados de la consulta:
 
-   ![Seleccione los resultados](media/quickstart-sql-server/select-results.png)
+   ![Selección de resultados](media/quickstart-sql-server/select-results.png)
 
 
 ## <a name="next-steps"></a>Pasos siguientes
-Ahora que ha conectado correctamente a SQL Server y ejecute una consulta, pruebe el [tutorial del editor de código](tutorial-sql-editor.md).
+Ahora que se ha conectado correctamente a SQL Server y ha ejecutado una consulta, pruebe el [tutorial del editor de código](tutorial-sql-editor.md).
 
 

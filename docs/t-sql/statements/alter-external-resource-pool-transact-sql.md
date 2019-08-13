@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 08/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -17,27 +17,31 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 92a1d932f0fe90369f44cf143897b802f08f9b85
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: ebab091b0e674339141c4ee2ea6d7c7993ccbabf
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471149"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893680"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Modifica un grupo externo de Resource Governor que especifica los recursos que pueden usarse en procesos externos. 
 
-+ Para [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] en [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], el grupo externo rige `rterm.exe`, `BxlServer.exe` y otros procesos generados por ellos.
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+En [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] en [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], el grupo externo rige `rterm.exe`, `BxlServer.exe` y otros procesos generados por ellos.
+::: moniker-end
 
-+ Para [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] en SQL Server 2017, el grupo externo rige los procesos de R que aparecen en la versión anterior, así como `python.exe`, `BxlServer.exe` y otros procesos generados por ellos.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+En [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], el grupo externo rige `rterm.exe`, `python.exe`, `BxlServer.exe` y otros procesos generados por ellos.
+::: moniker-end
 
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="syntax"></a>Sintaxis
 
-```sql
+```
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
     [ MAX_CPU_PERCENT = value ]
@@ -63,23 +67,19 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 Es el nombre de un grupo de recursos externos definidos por el usuario ya existente o el grupo de recursos externo predeterminado creado al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 "default" debe ir entre comillas ("") o corchetes ([]) si se usa con `ALTER EXTERNAL RESOURCE POOL` para evitar el conflicto con `DEFAULT`, que es una palabra reservada del sistema.
 
-
 MAX_CPU_PERCENT =*value*  
-Especifica el promedio máximo de ancho de banda de CPU que pueden recibir todas las solicitudes en el grupo de recursos externo cuando haya contención de CPU. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.
-
+Especifica el promedio máximo de ancho de banda de CPU que pueden recibir todas las solicitudes en el grupo de recursos externo cuando haya contención de CPU. *value* es un valor entero. El intervalo permitido para *value* es de 1 a 100.
 
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
-Adjunte el grupo de recursos externos a las CPU específicas. El valor predeterminado es AUTO.
+Adjunte el grupo de recursos externos a las CPU específicas.
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** asigna el grupo de recursos externos a las CPU de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas por los CPU_ID dados. Cuando se usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , se establece una afinidad entre el grupo de recursos externos y las CPU físicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondientes al nodo o al intervalo de nodos NUMA especificado.
-
+AFFINITY CPU = **(** \<CPU_range_spec> **)** asigna el grupo de recursos externos a las CPU de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificadas por los CPU_ID determinados. Cuando se usa AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , se establece una afinidad entre el grupo de recursos externos y las CPU físicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondientes al nodo o al intervalo de nodos NUMA especificado.
 
 MAX_MEMORY_PERCENT =*value*  
-Especifica la memoria total del servidor que puede ser usada por las solicitudes en este grupo de recursos externos. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.
-
+Especifica la memoria total del servidor que puede ser usada por las solicitudes en este grupo de recursos externos. *value* es un valor entero. El intervalo permitido para *value* es de 1 a 100.
 
 MAX_PROCESSES =*value*  
-Especifica el número máximo de procesos permitidos para el grupo de recursos externos. Especifique 0 para establecer un umbral ilimitado para el grupo, que estará enlazado solamente por recursos del equipo. El valor predeterminado es 0.
+Especifica el número máximo de procesos permitidos para el grupo de recursos externos. Especifique 0 para establecer un umbral ilimitado para el grupo, que estará enlazado solamente por recursos del equipo.
 
 ## <a name="remarks"></a>Notas
 
@@ -110,18 +110,11 @@ GO
 
 ## <a name="see-also"></a>Vea también
 
-[Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md) (Gobernanza de recursos para aprendizaje automático en SQL Server)
-
-[Opción de configuración de servidor Scripts externos habilitados](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
-
-[CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
-
-[DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
-
-[ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
-
-[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
-
-[Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
-
-[ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md) 
++ [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md) (Gobernanza de recursos para aprendizaje automático en SQL Server)
++ [Opción de configuración de servidor Scripts externos habilitados](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
++ [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
++ [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)
++ [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)
++ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)
++ [Grupo de recursos de servidor del regulador de recursos](../../relational-databases/resource-governor/resource-governor-resource-pool.md)
++ [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md) 

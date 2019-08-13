@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: d227cbd5910a33f940313fa2e82039240077c280
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495428"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823121"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 
@@ -46,7 +46,7 @@ SSMS es gratuito.
 
 **[![descargar](../ssdt/media/download.png) Descargar SQL Server Management Studio 18.2](https://go.microsoft.com/fwlink/?linkid=2099720)**
 
-SSMS 18.2 es la versión de disponibilidad general (GA) más reciente de SSMS. Si dispone de SSMS 18.1 (GA) instalado, la instalación de SSMS 18.2 lo actualiza a 18.2. Si tiene instalada una *versión preliminar* de SSMS 18 anterior, desinstálela antes de instalar SSMS 18.2.
+SSMS 18.2 es la versión de disponibilidad general (GA) más reciente de SSMS. Si tiene instalada una versión anterior de disponibilidad general de SSMS 18, la instalación de SSMS 18.2 la actualiza a 18.2. Si tiene instalada una *versión preliminar* de SSMS 18 anterior, desinstálela antes de instalar SSMS 18.2.
 
 **Información de versión**
 
@@ -81,8 +81,7 @@ SQL Server Management Studio 18.2:
 | Ejecución o resultados de la consulta | Se ha agregado una "hora de finalización" en los mensajes en los que se realiza el seguimiento cuando una consulta determinada ha completado su ejecución. |
 | Ejecución o resultados de la consulta  | Permite que se muestren más datos (resultado a texto) y se almacenen en celdas (resultado a cuadrícula). SSMS ahora admite hasta 2 M de caracteres para ambos (hasta 256 K y 64 K, respectivamente). Esto también ha solucionado la incidencia por la que los usuarios no podían obtener más de 43 680 caracteres de las celdas de la cuadrícula. |
 | ShowPlan | Se ha agregado un nuevo atributo en QueryPlan cuando la característica escalar en línea UDF está habilitada (ContainsInlineScalarTsqlUdfs). |
-| SMO | Se ha agregado compatibilidad con las "Restricciones de características". Para obtener más información sobre la propia característica, vea [Restricciones de características](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
-| SMO  | Extensiones de valoración. Vea <we need a link to something>. |
+| SMO | Se ha agregado compatibilidad con las "Restricciones de características". Para obtener información sobre la propia característica, vea [Restricciones de características](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). Para obtener información sobre las extensiones de valoración, consulte [Introducción a la API de SQL Assessment](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570). |
 | Integration Services (SSIS) | Optimización del rendimiento del programador de paquetes SSIS en Azure. |
 |  |  |
 

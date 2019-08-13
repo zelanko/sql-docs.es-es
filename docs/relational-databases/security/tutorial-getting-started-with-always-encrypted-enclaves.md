@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 08/07/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5cc3f92ce5092db0131c9dac4d969b55a903c6e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e70dc6ddf897b34f5ffd0cf3c573ea973a1a36ad
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126789"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888884"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -41,9 +41,11 @@ Para empezar a trabajar con Always Encrypted con enclaves seguros, necesita al m
    - Procesador de 64 bits con traducción de direcciones de segundo nivel (SLAT)
    - Compatibilidad con CPU de la extensión del modo de monitor de VM (VT-c en CPU de Intel)
    - Compatibilidad con virtualización habilitada (Intel VT-x o AMD-V)
-- Si el equipo de SQL Server es una máquina virtual, se debe configurar una máquina virtual para permitir la virtualización anidada.
-   - En Hyper-V 2016 o versiones posteriores, [habilite las extensiones de virtualización anidada](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) en el procesador de máquina virtual.
-   - En Azure, asegúrese de ejecutar un tamaño de VM que admite la virtualización anidada, como las máquinas virtuales de las series Dv3 y Ev3. Consulte [Creación de una máquina virtual de Azure compatible con el anidamiento](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+- Si el equipo de SQL Server es una máquina virtual, se debe configurar la máquina virtual para que admita la seguridad basada en la virtualización.
+   - En Hyper-V 2016 o posterior, use una máquina virtual de generación 1 y [habilite las extensiones de virtualización anidadas](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) en el procesador de máquinas virtuales, o bien use una máquina virtual de generación 2. Para obtener más información sobre las generaciones de máquinas virtuales, consulte [¿Debo crear una máquina virtual de generación 1 o 2 en Hyper-V?](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v) 
+   - En Azure, asegúrese de que está ejecutando un tamaño de máquina virtual compatible con una de las siguientes opciones:
+      - Virtualización anidada, por ejemplo, las máquinas virtuales de la serie Dv3 y Ev3. Consulte [Creación de una máquina virtual de Azure compatible con el anidamiento](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+      - Máquinas virtuales de generación 2, por ejemplo: las máquinas virtuales de la serie Dsv3 o Esv3. Consulte [Compatibilidad para máquinas virtuales de generación 2 (versión preliminar) en Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2).
    - En VMWare vSphere 6.7 o posterior, habilite la compatibilidad con seguridad basada en la virtualización en la máquina virtual, tal como se describe en la [documentación de VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
    - Otros hipervisores y nubes públicas pueden admitir el uso de Always Encrypted con enclaves seguros en una máquina virtual siempre que las extensiones de virtualización (a veces llamadas virtualización anidada) estén expuestas a la máquina virtual. Consulte la documentación de la solución de virtualización para obtener instrucciones de compatibilidad y configuración.
 - [SQL Server Management Studio (SSMS) 18.0 o versiones posteriores](../../ssms/download-sql-server-management-studio-ssms.md)

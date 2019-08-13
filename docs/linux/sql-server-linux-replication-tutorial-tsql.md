@@ -1,6 +1,6 @@
 ---
-title: Configurar la replicación de SQL Server en Linux
-description: Este tutorial muestra cómo configurar la replicación de instantáneas de SQL Server en Linux.
+title: Configuración de la replicación de SQL Server en Linux
+description: En este tutorial se muestra cómo configurar la replicación de instantáneas de SQL Server en Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,48 +10,48 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9ac898430bbdc3704e43c62be09884ee1925cb75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68130108"
 ---
-# <a name="configure-replication-with-t-sql"></a>Configurar la replicación con Transact-SQL
+# <a name="configure-replication-with-t-sql"></a>Configuración de la replicación con T-SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-En este tutorial configurará la replicación de instantáneas de SQL Server en Linux con dos instancias de SQL Server mediante Transact-SQL. El publicador y distribuidor será la misma instancia, y el suscriptor estará en una instancia independiente.
+En este tutorial se configura la replicación de instantáneas de SQL Server en Linux con dos instancias de SQL Server mediante Transact-SQL. El publicador y el distribuidor son la misma instancia, mientras que el suscriptor está en una instancia independiente.
 
 > [!div class="checklist"]
-> * Habilitar a los agentes de replicación de SQL Server en Linux
-> * Crear una base de datos de ejemplo
-> * Configurar carpeta de instantáneas para el acceso a los agentes de SQL Server
-> * Configurar el distribuidor
-> * Configurar el publicador
-> * Configurar la publicación y los artículos
-> * Configurar el suscriptor 
-> * Ejecutar los trabajos de replicación
+> * Habilitación de los agentes de replicación de SQL Server en Linux
+> * Creación de una base de datos de ejemplo
+> * Configuración de la carpeta de instantáneas para el acceso de los agentes de SQL Server
+> * Configuración del distribuidor
+> * Configuración del publicador
+> * Configuración de la publicación y los artículos
+> * Configuración del suscriptor 
+> * Ejecución de los trabajos de replicación
 
-Todas las configuraciones de replicación se pueden configurar con [procedimientos almacenados de replicación](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+Todas las configuraciones de replicación se pueden definir con [procedimientos almacenados de replicación](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
 ## <a name="prerequisites"></a>Requisitos previos  
-Para completar este tutorial, necesitará:
+Para realizar este tutorial, necesita:
 
 - Dos instancias de SQL Server con la versión más reciente de SQL Server en Linux
-- Una herramienta para las consultas de T-SQL de problema para configurar la replicación, como SQLCMD o SSMS
+- Una herramienta para emitir consultas de T-SQL a fin de configurar la replicación, como SQLCMD o SSMS
 
-  Consulte [usar SSMS para administrar SQL Server en Linux](./sql-server-linux-manage-ssms.md).
+  Vea [Empleo de SSMS para administrar SQL Server en Linux](./sql-server-linux-manage-ssms.md).
 
 ## <a name="detailed-steps"></a>Pasos detallados
 
-1. Habilitar a los agentes de replicación de SQL Server en Linux habilitar agente de SQL Server para usar a los agentes de replicación. En ambos equipos host, ejecute los siguientes comandos en el terminal. 
+1. Habilite agentes de replicación de SQL Server en Linux; habilite el agente de SQL Server para usar agentes de replicación. En ambos equipos host, ejecute los siguientes comandos en el terminal. 
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
   ```
 
-1. Crear base de datos de ejemplo y tabla en el publicador crea una base de datos de ejemplo y una tabla que actuará como los artículos para una publicación.
+1. Cree una base de datos y una tabla de ejemplo. En el publicador cree una base de datos y una tabla de ejemplo para que actúen como artículos de una publicación.
 
   ```sql
   CREATE DATABASE Sales
@@ -70,7 +70,7 @@ Para completar este tutorial, necesitará:
   GO
   ```
 
-1. Crear carpeta de instantáneas para los agentes de SQL Server leer y escribir en el distribuidor, cree la carpeta de instantáneas y conceder acceso al usuario "mssql" 
+1. Cree la carpeta de instantáneas en la que van a leer o escribir los agentes de SQL Server. En el distribuidor, cree la carpeta de instantáneas y conceda acceso al usuario "mssql". 
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -78,7 +78,7 @@ Para completar este tutorial, necesitará:
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-1. Configurar el distribuidor en este ejemplo, el publicador también será el distribuidor. Ejecute los comandos siguientes en el publicador para configurar la instancia para la distribución así.
+1. Configure el distribuidor; en este ejemplo, el publicador también es el distribuidor. Ejecute los siguientes comandos en el publicador para configurar también la instancia de distribución.
 
   ```sql
   DECLARE @distributor AS sysname
@@ -111,7 +111,7 @@ Para completar este tutorial, necesitará:
   GO
   ```
 
-1. Configurar el publicador, ejecute los siguientes comandos TSQL en el publicador.
+1. Configure el publicador y ejecute los siguientes comandos de TSQL en él.
 
   ```sql
   DECLARE @publisher AS sysname
@@ -136,7 +136,7 @@ Para completar este tutorial, necesitará:
   GO
   ```
 
-1. Configurar publicación, ejecute el trabajo de los siguientes comandos TSQL en el publicador.
+1. Configure el trabajo de publicación y ejecute los siguientes comandos de TSQL en el publicador.
 
   ```sql
   DECLARE @replicationdb AS sysname
@@ -175,7 +175,7 @@ Para completar este tutorial, necesitará:
   @publisher_password = @publisherpassword
   ```
 
-1. Crear artículos de la tabla ventas ejecutar los siguientes comandos TSQL en el publicador.
+1. Cree artículos a partir de la tabla de ventas y ejecute los siguientes comandos de TSQL en el publicador.
 
   ```sql
   use [Sales]
@@ -195,7 +195,7 @@ Para completar este tutorial, necesitará:
   @vertical_partition = N'false'
   ```
 
-1. Configurar suscripción ejecute los siguientes comandos TSQL en el publicador.
+1. Configure la suscripción y ejecute los siguientes comandos de TSQL en el publicador.
 
   ```sql
   DECLARE @subscriber AS sysname
@@ -238,9 +238,9 @@ Para completar este tutorial, necesitará:
   GO
   ```
 
-1. Ejecutar trabajos de agente de replicación
+1. Ejecute los trabajos del agente de replicación.
 
-  Ejecute la siguiente consulta para obtener una lista de trabajos:
+  Ejecute la consulta siguiente para obtener una lista de trabajos:
 
   ```sql
   SELECT name, date_modified FROM msdb.dbo.sysjobs order by date_modified desc
@@ -264,32 +264,32 @@ Para completar este tutorial, necesitará:
   GO
   ```
 
-1. Suscriptor de conectarse y consultar los datos replicados 
+1. Conecte el suscriptor y consulte los datos replicados. 
 
-  En el suscriptor, compruebe que la replicación funciona mediante la ejecución de la consulta siguiente:
+  En el suscriptor, compruebe que la replicación funciona al ejecutar la siguiente consulta:
 
   ```sql
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-En este tutorial, ha configurado la replicación de instantáneas de SQL Server en Linux con dos instancias de SQL Server mediante Transact-SQL.
+En este tutorial se ha configurado la replicación de instantáneas de SQL Server en Linux con dos instancias de SQL Server mediante Transact-SQL.
 
 > [!div class="checklist"]
-> * Habilitar a los agentes de replicación de SQL Server en Linux
-> * Crear una base de datos de ejemplo
-> * Configurar carpeta de instantáneas para el acceso a los agentes de SQL Server
-> * Configurar el distribuidor
-> * Configurar el publicador
-> * Configurar la publicación y los artículos
-> * Configurar el suscriptor 
-> * Ejecutar los trabajos de replicación
+> * Habilitación de los agentes de replicación de SQL Server en Linux
+> * Creación de una base de datos de ejemplo
+> * Configuración de la carpeta de instantáneas para el acceso de los agentes de SQL Server
+> * Configuración del distribuidor
+> * Configuración del publicador
+> * Configuración de la publicación y los artículos
+> * Configuración del suscriptor 
+> * Ejecución de los trabajos de replicación
 
 ## <a name="see-also"></a>Vea también
 
-Para obtener información detallada acerca de la replicación, vea [la documentación de SQL Server replication](../relational-databases/replication/sql-server-replication.md).
+Para obtener información detallada sobre la replicación, vea [Replicación de SQL Server](../relational-databases/replication/sql-server-replication.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Conceptos: Replicación de SQL Server en Linux](sql-server-linux-replication.md)
+[Conceptos: Replicación de SQL Server en Linux](sql-server-linux-replication.md)
 
-[Procedimientos almacenados de replicación](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+[Procedimientos almacenados de replicación](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)

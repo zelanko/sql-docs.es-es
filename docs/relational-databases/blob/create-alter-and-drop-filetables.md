@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fcccb69515398890b79c0a8f780a861b497ab78a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03fa6e342eab136bbeb90e06d6a6ef4d5325b1d5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085402"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811178"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Crear, modificar y quitar FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,9 +164,9 @@ GO
 |||  
 |-|-|  
 |**Columnas**|**Tipo de índice**|  
-|[path_locator] ASC|Clave principal, no agrupado|  
-|[parent_path_locator] ASC,<br /><br /> [name] ASC|Único, no agrupado|  
-|[stream_id] ASC|Único, no agrupado|  
+|[path_locator] ASC|Clave principal, no agrupada|  
+|[parent_path_locator] ASC,<br /><br /> [name] ASC|Única, no agrupada|  
+|[stream_id] ASC|Única, no agrupada|  
   
  **Restricciones creadas cuando cree una nueva FileTable**  
  Cuando cree una nueva FileTable, también se crean las siguiente restricciones definidas por el sistema:  

@@ -1,7 +1,7 @@
 ---
 title: Control de código fuente
 titleSuffix: Azure Data Studio
-description: Aprenda a configurar el control de código fuente en Azure Data Studio
+description: Obtenga información sobre cómo configurar el control de código fuente en Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,43 +11,43 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959288"
 ---
 #  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Uso del control de código fuente en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] es compatible con Git para control de versión/código fuente.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] admite Git para el control de código fuente o versiones.
 
 
-## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>Compatibilidad con GIT en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>Compatibilidad de Git en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] se distribuye con un administrador de control de código fuente (SCM) de Git, pero aun así deberá [instale Git (versión 2.0.0 o posterior)](https://git-scm.com/download) antes de que estas características están disponibles. 
-
-
-
-## <a name="open-an-existing-git-repository"></a>Abra un repositorio Git existente
-
-1. En el **archivo** menú, seleccione **Abrir carpeta...**
-2. Vaya a la carpeta que contiene los archivos de git realiza el seguimiento y haga clic en **seleccionar la carpeta**. Las subcarpetas en el repositorio local están en buen estadas para que seleccione aquí.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] se suministra con un administrador de control de código fuente (SCM) de Git, pero sigue siendo necesario [instalar Git (versión 2.0.0 o posterior)](https://git-scm.com/download) para que estas características estén disponibles. 
 
 
-## <a name="initialize-a-new-git-repository"></a>Inicializar un nuevo repositorio git
 
-1. Seleccione **Control de código fuente**, a continuación, seleccione el icono de git.
+## <a name="open-an-existing-git-repository"></a>Apertura de un repositorio de Git existente
 
-   ![Icono de git de control de código fuente](media/source-control/source-control.png)
+1. En el menú **Archivo**, seleccione **Abrir carpeta...**
+2. Vaya a la carpeta que contiene los archivos a los que Git realiza un seguimiento y haga clic en **Seleccionar carpeta**. Aquí puede seleccionar las subcarpetas de su repositorio local.
 
-1. Escriba la ruta de acceso a la carpeta que desea inicializar como un repositorio de Git y presione **ENTRAR**.
 
-   ![inicializar repositorio Git](media/source-control/initialize-git-repository.png)
+## <a name="initialize-a-new-git-repository"></a>Inicialización de un nuevo repositorio de Git
 
-## <a name="working-with-git-repositories"></a>Trabajar con repositorios de Git
+1. Seleccione **Control de código fuente** y después seleccione el icono de Git.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] hereda su implementación de Git de VS Code, pero no se admite actualmente los proveedores SCM adicionales. Para obtener los detalles sobre cómo trabajar con Git después de abrir o inicialice un repositorio, consulte [compatibilidad con Git en VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
+   ![Inicio de Git del control de código fuente](media/source-control/source-control.png)
+
+1. Escriba la ruta de acceso a la carpeta que quiera inicializar como un repositorio de Git y presione **Entrar**.
+
+   ![Inicialización del repositorio de Git](media/source-control/initialize-git-repository.png)
+
+## <a name="working-with-git-repositories"></a>Trabajo con repositorios de Git
+
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] hereda su implementación de Git de VS Code, pero actualmente no admite proveedores de SCM adicionales. Para obtener información detallada sobre cómo trabajar con Git después de abrir o inicializar un repositorio, consulte [Compatibilidad de Git en VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
 
 
 ## <a name="additional-resources"></a>Recursos adicionales
-- [Documentación de GIT](https://git-scm.com/documentation)
+- [Documentación de Git](https://git-scm.com/documentation)

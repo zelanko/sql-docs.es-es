@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae776b53016995fdcfd0ccfdb0c242b19f88addc
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 9fdc5ee7428aec65c96755eb9a1c0e013de80d01
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661453"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809774"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -287,7 +287,7 @@ Si no se especificó _partition_scheme_name_ o _filegroup_ y se crearon particio
 
 Para más información sobre los índices con particiones, vea [Tablas e índices con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
-ON _filegroup_name_       
+ON _filegroup_name_      
 **Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Crea el índice especificado en el grupo de archivos especificado. Si no se ha especificado una ubicación y la tabla o vista no tiene particiones, el índice utiliza el mismo grupo de archivos que la tabla o vista subyacente. El grupo de archivos debe existir previamente.
@@ -321,7 +321,7 @@ Para obtener más información, vea [FILESTREAM &#40;SQL Server&#41;](../../rela
 
 Es el objeto completo o no que se indizará.
 
-_database_name_       
+_database_name_      
 Es el nombre de la base de datos.
 
 *schema_name*      
@@ -334,7 +334,7 @@ La vista debe definirse con SCHEMABINDING para crear un índice en ella. Es nece
 
 A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el objeto puede ser una tabla almacenada con un índice de almacén de columnas agrupado.
 
-[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite el formato de nombre de tres partes _database_name_ .[ _]. _ cuando *database_name* es la base de datos actual o _database_name_ es `tempdb` y _object_name_ comienza por #.
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite el formato de nombre de tres partes _database_name_.[_schema_name_]._object_name_ cuando *database_name* es la base de datos actual o _database_name_ es `tempdb` y _object_name_ comienza por #.
 
 **\<relational_index_option\>::=**       
 Especifica las opciones que se van a utilizar en la creación del índice.
@@ -347,14 +347,14 @@ Especifica el relleno del índice. El valor predeterminado es OFF.
 ON      
 El porcentaje de espacio disponible especificado por *fillfactor* se aplica a páginas de nivel intermedio del índice.
 
-No se especifica OFF ni _fillfactor_ .      
+No se especifica OFF ni _fillfactor_.      
 Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dejan espacio suficiente para al menos una fila del tamaño máximo que puede tener el índice, considerando el conjunto de claves incluidas en las páginas de nivel intermedio.
 
-La opción PAD_INDEX solamente resulta útil si también se especifica FILLFACTOR, porque PAD_INDEX utiliza el mismo porcentaje especificado por FILLFACTOR. Si el porcentaje especificado para FILLFACTOR no es lo suficientemente grande como para admitir una fila, [!INCLUDE[ssDE](../../includes/ssde-md.md)] invalida internamente el porcentaje para permitir el valor mínimo. El número de filas de una página de nivel intermedio del índice no es nunca inferior a dos, independientemente de lo bajo que sea el valor de _fillfactor_ .
+La opción PAD_INDEX solamente resulta útil si también se especifica FILLFACTOR, porque PAD_INDEX utiliza el mismo porcentaje especificado por FILLFACTOR. Si el porcentaje especificado para FILLFACTOR no es lo suficientemente grande como para admitir una fila, [!INCLUDE[ssDE](../../includes/ssde-md.md)] invalida internamente el porcentaje para permitir el valor mínimo. El número de filas de una página de nivel intermedio del índice no es nunca inferior a dos, independientemente de lo bajo que sea el valor de _fillfactor_.
 
 En la sintaxis compatible con versiones anteriores, WITH PAD_INDEX es equivalente a WITH PAD_INDEX = ON.
 
-FILLFACTOR **=** _fillfactor_       
+FILLFACTOR **=** _fillfactor_      
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o nueva generación de los índices. *fillfactor* debe ser un valor entero comprendido entre 1 y 100. Si *fillfactor* es 100, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea índices con las páginas hoja llenas al máximo de su capacidad.
@@ -519,7 +519,7 @@ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
 
 Especifica si se deben optimizar la contención de inserción de la última página. El valor predeterminado es OFF. Consulte la sección [Claves secuenciales](#sequential-keys) para obtener más información.
 
-MAXDOP = _max_degree_of_parallelism_       
+MAXDOP = _max_degree_of_parallelism_      
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Reemplaza la opción de configuración de **max_degree_of_parallelism** mientras dure la operación de índice. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.
@@ -554,7 +554,7 @@ El índice o las particiones especificadas se comprimen mediante la compresión 
 
 Para más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ... _ ] **)**       
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)**       
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si el índice no tiene particiones, el argumento ON PARTITIONS generará un error. Si no se proporciona la cláusula ON PARTITIONS, la opción DATA_COMPRESSION se aplica a todas las particiones de un índice con particiones.
@@ -698,9 +698,9 @@ Las columnas que no son de clave, denominadas columnas incluidas, se pueden agre
 ## <a name="specifying-index-options"></a>Especificar opciones de índice
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] incluye opciones de índice nuevas y también modifica el modo en que se especifican las opciones. En la sintaxis compatible con versiones anteriores, WITH *option_name* es equivalente a WITH **(** \<option_name> **= ON )** . Al establecer opciones de índice, se aplican las siguientes reglas:
 
-- Las nuevas opciones de índice solo se pueden especificar mediante WITH ( ** _ = ON | OFF**).
+- Las nuevas opciones de índice solo se pueden especificar mediante WITH ( **_option\_name_ = ON | OFF**).
 - Las opciones no se pueden especificar utilizando la sintaxis compatible con versiones anteriores y la nueva sintaxis en la misma instrucción. Por ejemplo, al especificar WITH (**DROP_EXISTING, ONLINE = ON**), se genera un error en la instrucción.
-- Cuando se crea un índice XML, las opciones se deben especificar mediante WITH ( ** _= ON | OFF**).
+- Cuando se crea un índice XML, las opciones se deben especificar mediante WITH ( **_option_name_= ON | OFF**).
 
 ## <a name="drop_existing-clause"></a>Cláusula DROP_EXISTING
 Puede utilizar la cláusula DROP_EXISTING para volver a generar el índice, agregar o quitar columnas, modificar opciones, modificar el criterio de ordenación de las columnas o cambiar el grupo de archivos o el esquema de partición.
@@ -1109,8 +1109,8 @@ ALTER INDEX test_idx on test_table RESUME
 ALTER INDEX test_idx on test_table ABORT
 ```
 
-### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O. Crear un índice no agrupado en una tabla en la base de datos actual
-En el ejemplo siguiente se crea un índice no agrupado en la columna `VendorID` de la tabla `ProductVendor`.
+### <a name="o-create-a-nonclustered-index-on-a-table-in-the-current-database"></a>O. Creación de un índice no agrupado en una tabla en la base de datos actual
+El ejemplo siguiente crea un índice no clúster en la columna `VendorID` de la tabla `ProductVendor`.
 
 ```sql
 CREATE INDEX IX_ProductVendor_VendorID
@@ -1118,7 +1118,7 @@ CREATE INDEX IX_ProductVendor_VendorID
 ```
 
 ### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>P. Crear un índice agrupado en una tabla de otra base de datos
-En el ejemplo siguiente se crea un índice no agrupado en la columna `VendorID` de la tabla `ProductVendor` en la base de datos `Purchasing`.
+En el ejemplo siguiente se crea un índice no clúster en la columna `VendorID` de la tabla `ProductVendor`en la base de datos `Purchasing`.
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID

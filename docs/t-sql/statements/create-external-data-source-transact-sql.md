@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/27/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 621a122ae3464f207797b6e51a21674192e2a758
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 68060248693b33cead474f051f93d69208ce512f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67902718"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893575"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -42,7 +42,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_ ** &nbsp;|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\* _SQL Server \*_** &nbsp;|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -377,7 +377,7 @@ Para ver este ejemplo en uso, vea [BULK INSERT][bulk_insert_example].
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|** _** &nbsp;|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -604,7 +604,7 @@ Para ver este ejemplo en uso, vea [BULK INSERT][bulk_insert_example].
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|** _** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -642,7 +642,7 @@ Proporciona el protocolo de conectividad y la ruta de acceso al origen de datos 
 | --------------------------- | --------------- | ----------------------------------------------------- |
 | Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Store Gen1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
-| Azure Data Lake Store Gen2 | `abfss`         | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure Data Lake Store Gen2 | `abfs[s]`         | `<container>@<storage_account>.dfs.core.windows.net`  |
 
 Ruta de acceso de ubicación:
 
@@ -651,6 +651,7 @@ Ruta de acceso de ubicación:
 
 Instrucciones y notas adicionales cuando se establece la ubicación:
 
+- La opción predeterminada es usar la habilitación de conexiones SSL seguras al aprovisionar Azure Data Lake Storage Gen 2. Si está habilitada, debe usar `abfss` al seleccionar una conexión SSL segura. Tenga en cuenta que `abfss` funciona también con conexiones SSL no seguras. 
 - El motor de SQL Data Warehouse no comprueba la existencia del origen de datos externo cuando se crea el objeto. Para la validación, crea una tabla externa utilizando el origen de datos externo.
 - Para garantizar una semántica de consulta coherente, use el mismo origen de datos externo para todas las tablas cuando realice consultas a Hadoop.
 - `wasb` es el protocolo predeterminado para Azure Blob Storage. `wasbs` es opcional pero recomendado, ya que se enviarán los datos mediante una conexión SSL segura.
@@ -725,9 +726,9 @@ WITH
 ;
 ```
 
-### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1"></a>B. Creación de un origen de datos externo para hacer referencia a Azure Data Lake Store Gen1
+### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal"></a>B. Creación de un origen de datos externo para hacer referencia a Azure Data Lake Store Gen 1 o 2 mediante una entidad de servicio
 
-La conectividad de Azure Data Lake Store se basa en el URI de ADLS y en la entidad de servicio de la aplicación de Azure Active Directory. La documentación para crear esta aplicación se puede encontrar en [Autenticación entre servicios: Data Lake Store con Azure Active Directory][azure_ad[].
+La conectividad de Azure Data Lake Store puede basarse en el URI de ADLS y en la entidad de servicio de la aplicación de Azure Active Directory. La documentación para crear esta aplicación se puede encontrar en [Autenticación entre servicios: Data Lake Store con Azure Active Directory][azure_ad[].
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -742,6 +743,11 @@ WITH
 --,  SECRET     = '<KEY>'
 ,    SECRET     = 'BjdIlmtKp4Fpyh9hIvr8HJlUida/seM5kQ3EpLAmeDI='
 ;
+
+-- For Gen 1 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 1 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH
 (    LOCATION       = 'adl://newyorktaxidataset.azuredatalakestore.net'
@@ -749,11 +755,21 @@ WITH
 ,    TYPE           = HADOOP
 )
 ;
+
+-- For Gen 2 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH
+(    LOCATION       = 'abfss://newyorktaxidataset.azuredatalakestore.net' -- Please note the abfss endpoint when your account has secure transfer enabled
+,    CREDENTIAL     = ADLS_credential
+,    TYPE           = HADOOP
+)
+;
 ```
 
-### <a name="c-create-external-data-source-to-reference-azure-data-lake-store-adls-gen-2"></a>C. Creación de un origen de datos externo para hacer referencia a Azure Data Lake Store (ADLS) Gen2
-
-La conexión a ADLS Gen2 requiere la clave de cuenta de almacenamiento como secreto para la credencial con ámbito de base de datos. La compatibilidad con OAuth 2.0 no está disponible en este momento.
+### <a name="c-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-the-storage-account-key"></a>C. Creación de un origen de datos externo para hacer referencia a Azure Data Lake Store Gen 1 o 2 con la clave de cuenta de almacenamiento
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -769,6 +785,7 @@ WITH
 ,    SECRET     = 'yz5N4+bxSb89McdiysJAzo+9hgEHcJRJuXbF/uC3mhbezES/oe00vXnZEl14U0lN3vxrFKsphKov16C0w6aiTQ=='
 ;
 
+-- Note this example uses a Gen 2 endpoint (abfss)
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
@@ -825,7 +842,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|** _** &nbsp;|
+|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;
@@ -917,7 +934,7 @@ Si no se especifica el puerto, el valor predeterminado se elige mediante el valo
 | 7                   | 8050                          |
 
 Para obtener una lista completa de las versiones de Hadoop compatibles, vea [Configuración de conectividad de PolyBase (Transact-SQL)][connectivity_pb].
-  
+
 > [!IMPORTANT]  
 > El valor RESOURCE_MANAGER_LOCATION no se valida cuando se crea el origen de datos externo. Escribir un valor incorrecto puede provocar un error de consulta en tiempo de ejecución cada vez que se intente la inserción, ya que el valor proporcionado no podrá realizar la resolución.
 
@@ -947,7 +964,7 @@ Actualmente no se admite un token de SAS con tipo `HADOOP`. Solo se admite con u
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Creación de un origen de datos externo para hacer referencia a Hadoop
 
 Para crear un origen de datos externo para hacer referencia al clúster de Hortonworks o Cloudera Hadoop, especifique el nombre de equipo o la dirección IP de `Namenode` de Hadoop y el puerto. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -960,7 +977,7 @@ WITH
 ### <a name="b-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>B. Creación de un origen de datos externo para hacer referencia a Hadoop con la inserción habilitada
 
 Especifique la opción `RESOURCE_MANAGER_LOCATION` para habilitar la inserción de cálculo en Hadoop para las consultas de PolyBase. Una vez habilitado, PolyBase toma una decisión basada en el coste para determinar si se debe aplicar el cálculo de la consulta en Hadoop.
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -974,7 +991,7 @@ WITH
 ### <a name="c-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>C. Creación de un origen de datos externo para hacer referencia a Hadoop con protección de Kerberos
 
 Para comprobar si el clúster de Hadoop está protegido con Kerberos, compruebe el valor de la propiedad hadoop.security.authentication en core-site.xml de Hadoop. Para hacer referencia a un clúster de Hadoop protegido con Kerberos, debe especificar una credencial con ámbito de base de datos que contenga el nombre de usuario y la contraseña de Kerberos. La clave maestra de base de datos se usa para cifrar el secreto de la credencial de ámbito de base de datos.
-  
+
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'

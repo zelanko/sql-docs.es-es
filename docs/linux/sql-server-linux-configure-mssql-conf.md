@@ -3,17 +3,17 @@ title: Configuración de las opciones de SQL Server en Linux
 description: En este artículo se describe cómo usar la herramienta mssql-conf para configurar las opciones de SQL Server en Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/28/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: aaddcbfb9520f2619df82ddbf3695604c2cbee40
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077600"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661370"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configuración de SQL Server en Linux con la herramienta mssql-conf
 
@@ -405,7 +405,7 @@ La primera captura de fase se controla mediante la configuración **coredump.cor
 **sqlpagent.databasemailprofile** le permite establecer el perfil de correo electrónico de base de datos predeterminado de las alertas por correo electrónico.
 
 ```bash
-sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
 ## <a id="hadr"></a> Alta disponibilidad
 

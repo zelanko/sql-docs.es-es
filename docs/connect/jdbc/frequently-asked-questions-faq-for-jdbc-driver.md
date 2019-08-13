@@ -1,7 +1,7 @@
 ---
 title: Preguntas más frecuentes (P+F) sobre el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 07/31/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 566dfa3fec53878ac565d33af07d405f6f751521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956575"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892373"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F) sobre el controlador JDBC
 
@@ -35,7 +35,15 @@ Consulte la página [Microsoft JDBC Driver for SQL Server Support Matrix](../../
 Los archivos del controlador JDBC Driver disponibles en el repositorio GitHub para el controlador JDBC Driver de Microsoft son el núcleo del controlador JDBC Driver y están bajo la licencia de código abierto que se encuentra en el repositorio. Los paquetes del controlador del Centro de descarga de Microsoft incluyen bibliotecas adicionales para la autenticación integrada de Windows y la habilitación de transacciones XA con el controlador JDBC Driver. Esas bibliotecas adicionales están bajo la licencia incluida con el paquete descargable.
 
 **¿Qué debo saber al actualizar el controlador?**
-El controlador Microsoft JDBC Driver 7.2 admite especificaciones de JDBC 4.2 y 4.3 (parcialmente) e incluye dos bibliotecas de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
+El controlador Microsoft JDBC Driver 7.4 admite especificaciones de JDBC 4.2 y 4.3 (parcialmente) e incluye tres bibliotecas de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
+
+| JAR                        | Especificación de JDBC            | Versión JDK |
+| -------------------------- | ----------------------------- | ----------- |
+| MSSQL-JDBC-7.4.1. jre12. jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 12.0    |
+| MSSQL-JDBC-7.4.1. jre11. jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 11.0    |
+| MSSQL-JDBC-7.4.1. jre8. jar  | JDBC 4.2                      | JDK 8.0     |
+
+ El controlador Microsoft JDBC Driver 7.2 admite especificaciones de JDBC 4.2 y 4.3 (parcialmente) e incluye dos bibliotecas de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
 
 | JAR                        | Especificación de JDBC            | Versión JDK |
 | -------------------------- | ----------------------------- | ----------- |
@@ -134,6 +142,6 @@ Los clientes que utilizan productos SAP y requieren compatibilidad con JRE 1.4, 
 **¿Puede el controlador comunicarse mediante algoritmos aprobados en FIPS?**  
 Microsoft JDBC Driver no contiene algoritmos criptográficos. Si un cliente utiliza algoritmos de sistemas operativos, aplicaciones y JVM que el estándar federal de procesamiento de información (FIPS) considera aceptables y configura el controlador para usar esos algoritmos, el controlador usa solo los designados para la comunicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)

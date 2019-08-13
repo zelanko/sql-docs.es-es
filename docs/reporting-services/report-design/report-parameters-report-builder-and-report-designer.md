@@ -10,12 +10,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ef5664ab93b5e293dd176a91da83284cc2b72743
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463606"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941147"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parámetros de informe (Generador de informes y Diseñador de informes)
 
@@ -75,13 +75,13 @@ Al ver un informe que tiene parámetros, en la barra de herramientas del visor d
   
 1. **Panel Parámetros** : la barra de herramientas del Visor de informes muestra un mensaje de petición de datos y un valor predeterminado para cada parámetro. Puede personalizar el diseño de los parámetros en el panel de parámetros. Para más información, vea [Customize the Parameters Pane in a Report &#40;Report Builder&#41; (Personalizar el panel de parámetros en un informe [Generador de informes])](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
-2. **Parámetro @SalesDate** El parámetro @SalesDate es del tipo de datos **DateTime**. Se mostrará el mensaje Seleccionar la fecha junto al cuadro de texto. Para modificar la fecha, escriba una nueva en el cuadro de texto o utilice el control de calendario.  
+2. **Parámetro SalesDate\@** El parámetro @SalesDate es del tipo de datos **DateTime**. Se mostrará el mensaje Seleccionar la fecha junto al cuadro de texto. Para modificar la fecha, escriba una nueva en el cuadro de texto o utilice el control de calendario.  
   
-3. **Parámetro @ShowAll** El parámetro @ShowAll es del tipo de datos **Boolean**. Utilice los botones de radio para especificar **True** o **False**.  
+3. **Parámetro ShowAll\@** El parámetro @ShowAll es del tipo de datos **Boolean**. Utilice los botones de radio para especificar **True** o **False**.  
   
 4. **Identificador Mostrar u ocultar área de parámetros** : en la barra de herramientas del Visor de informes, haga clic en esta flecha para mostrar u ocultar el panel de parámetros.  
   
-5. **Parámetro @CategoryQuota** El parámetro @CategoryQuota es del tipo de datos **Float**, por lo que tiene un valor numérico.  @CategoryQuota se establece para permitir varios valores.  
+5. **Parámetro CategoryQuota\@** El parámetro @CategoryQuota es del tipo de datos **Float**, por lo que tiene un valor numérico.  @CategoryQuota se establece para permitir varios valores.  
   
 6. **Ver informe**  Después de especificar los valores del parámetro, haga clic en **Ver informe** para ejecutar el informe. Si todos los parámetros poseen valores predeterminados, el informe se ejecuta automáticamente en la primera vista.  
   

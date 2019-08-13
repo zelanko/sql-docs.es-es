@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 998594a4c0c649a0ad73d36e858cf733fc364aae
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661227"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841573"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -168,7 +168,6 @@ Los enclaves seguros mejoran la funcionalidad de Always Encrypted. Las siguiente
     > [!NOTE]
     > Las operaciones anteriores se admiten para las columnas de cadena de caracteres que se usan intercalaciones con un criterio de ordenación binary2 (intercalaciones BIN2). Las columnas de cadena de caracteres que usan intercalaciones BIN2 se pueden cifrar mediante cifrado aleatorio y claves de cifrado de columna habilitadas para enclave. Sin embargo, la única funcionalidad nueva habilitada para dichas columnas es el cifrado en contexto.
 - Creación de índices no agrupados en columnas que usan cifrado aleatorio.
-- Columnas calculadas mediante expresiones que contienen operadores de comparación y el predicado LIKE en columnas que usan cifrado aleatorio.
 
 Todas las otras limitaciones (no solucionadas con las mejoras anteriores) que se enumeran para Always Encrypted (sin enclaves seguros) en [Detalles de las características](always-encrypted-database-engine.md#feature-details) también se aplican a Always Encrypted con enclaves seguros.
 
@@ -182,6 +181,7 @@ Las siguientes limitaciones son específicas de Always Encrypted con enclaves se
     - char[n], varchar[n], binary[n], varbinary[n], si n es mayor que 7935.
 - Las operaciones criptográficas en contexto no se pueden combinar con ningún otro cambio de metadatos de columna, excepto los cambios de intercalación dentro de la misma página de código y nulabilidad. Por ejemplo, no puede cifrar, volver a cifrar ni descifrar una columna Y cambiar un tipo de datos de la columna en una sola instrucción ALTER TABLE o ALTER COLUMN de Transact-SQL. Use dos instrucciones independientes.
 - No se admite el uso de claves habilitadas para enclave en columnas de tablas en memoria.
+- Las expresiones que definen columnas calculadas no pueden realizar cálculos en columnas habilitadas para el enclave mediante el cifrado aleatorio (aunque los cálculos sean LIKE y comparaciones de variedades).
 - Los únicos almacenes de claves que se admiten para almacenar claves maestras de columna habilitadas para el enclave son Almacén de certificados de Windows y Azure Key Vault.
 
 Las siguientes limitaciones se aplican a [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], pero están programadas para solucionarlas:

@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión para el controlador JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,67 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 45af95d26da9b05b6e8e99dd78936e1f7bb6ed6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002441"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891286"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Notas de la versión para el controlador JDBC Driver de Microsoft
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 En este artículo se enumeran las versiones del _controlador JDBC Driver de Microsoft para SQL Server_. Se nombran y describen los cambios en cada una de las versiones.
+## <a name="741"></a>7.4.1
+
+### <a name="compliance"></a>Cumplimiento
+
+2 de agosto de 2019
+
+| Cambio respecto del cumplimiento | Detalles |
+| :---------------- | :------ |
+| Descargue las actualizaciones más recientes para el controlador JDBC Driver 7.4. | &bull; &nbsp; [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Totalmente compatible con la especificación 4.2 de la API de JDBC. | Los archivos JAR en el paquete 7.4 adquieren su nombre según la compatibilidad de la versión de Java.<br/><br/>Por ejemplo, el archivo mssql-jdbc-7.4.1.jre11.jar del paquete 7.4 debe usarse con Java 11. |
+| Compatible con el kit de desarrollo de Java (JDK), versión 12,0, 11,0 y 1,8. | Microsoft JDBC Driver 7.4 para SQL Server es compatible con Java Development Kit (JDK) versión 12.0, además de con JDK 11.0 y 1.8. |
+| &nbsp; | &nbsp; |
+
+### <a name="support-for-jdk-12"></a>Compatibilidad con JDK 12
+
+Microsoft JDBC Driver 7.4 para SQL Server es compatible con Java Development Kit (JDK) versión 12.0, además de con JDK 11.0 y 1.8.
+
+### <a name="introduces-ntlm-authentication"></a>Presenta la autenticación NTLM
+
+| Cambio de NTLM | Detalles |
+| :--------- | :------ |
+| Admite el modo de autenticación NTLM. | Este modo de autenticación permite que tanto los clientes de Windows como los que no son de Windows se autentiquen a sí mismos en SQL Server mediante usuarios del dominio de Windows. |
+| Más información y aplicación de ejemplo para usar este modo de autenticación. | Consulte [conexión mediante la autenticación NTLM](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>Presenta la consulta de ParameterMetaData a través de _useFmtOnly_
+
+| cambio de useFmtOnly | Detalles |
+| :---------- | :------ |
+| propiedad de conexión **useFmtOnly** agregada. | Esta característica permite a los usuarios consultar de forma opcional ParameterMetaData `SET FMTONLY ON` a través de la API heredada. Esto es útil para escenarios en `sp_describe_undeclared_parameters` los que no funciona según lo previsto. |
+| Más detalles y limitaciones. | Consulte [Uso de useFmtOnly](../../connect/jdbc/using-usefmtonly.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>Actualización del _SDK de Microsoft Azure Key Vault para Java_, versión 1.2.1
+
+| Cambio del SDK de Key Vault | Detalles |
+| :------------------- | :------ |
+| Actualización de su dependencia de Maven del _SDK de Microsoft Azure Key Vault para Java_ a la versión 1.2.1. | &nbsp; |
+| Quita el _SDK de Microsoft Azure para Key Vault WebKey_ como dependencia de Maven. | &nbsp; |
+| Detalles adicionales. | Consulte [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) (Dependencias de características de Microsoft JDBC Driver para SQL Server). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conocidos
+
+| Problemas conocidos | Detalles |
+| :----------- | :------ |
+| Al usar la autenticación NTLM. | Actualmente, no se permite habilitar la protección ampliada y las conexiones cifradas al mismo tiempo. |
+| Al usar useFmtOnly. | Hay algunos problemas con esta característica; su causa son las deficiencias en la lógica de análisis de SQL. Consulte [uso de useFmtOnly](../../connect/jdbc/using-usefmtonly.md) para obtener más información y sugerencias de solución. |
+| &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
 
@@ -43,7 +92,7 @@ En este artículo se enumeran las versiones del _controlador JDBC Driver de Micr
 > 
 > Se recomienda actualizar los proyectos para que usen los archivos JAR de la versión 7.2.2. Para obtener más información, vea las notas de la versión para [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) y [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
 
-### <a name="active-directory-managed-service-identity-msi-authentication"></a>Autenticación de Active Directory _Managed Service Identity_ (MSI)
+### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Autenticación de Active Directory _Managed Service Identity_ (MSI)
 
 | Cambio en MSI | Detalles |
 | :--------- | :------ |
@@ -51,7 +100,7 @@ En este artículo se enumeran las versiones del _controlador JDBC Driver de Micr
 | Más información y aplicación de ejemplo para usar este modo de autenticación. | Consulte [Conectarse mediante la autenticación de Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>Introducción de la compatibilidad con la iniciativa _Open Service Gateway Initiative_ (OSGi)
+### <a name="introduces-_open-service-gateway-initiative_-osgi-support"></a>Introducción de la compatibilidad con la iniciativa _Open Service Gateway Initiative_ (OSGi)
 
 | Cambio de OSGi | Detalles |
 | :---------- | :------ |
@@ -59,7 +108,7 @@ En este artículo se enumeran las versiones del _controlador JDBC Driver de Micr
 | Implementación de **Activator** agregada. | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-sqlservererror-apis"></a>Introducción de las API de _SQLServerError_
+### <a name="introduces-_sqlservererror_-apis"></a>Introducción de las API de _SQLServerError_
 
 | Cambio de la API de error | Detalles |
 | :--------------- | :------ |
@@ -67,7 +116,7 @@ En este artículo se enumeran las versiones del _controlador JDBC Driver de Micr
 | Detalles adicionales. | Consulte [Control de errores](../../connect/jdbc/handling-errors.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>Se ha actualizado la versión 1.6.3 de _Biblioteca de autenticación de Microsoft Azure Active Directory (ADAL4J) para Java_.
+### <a name="updated-_microsoft-azure-active-directory-authentication-library-adal4j-for-java_-version-163"></a>Se ha actualizado la versión 1.6.3 de _Biblioteca de autenticación de Microsoft Azure Active Directory (ADAL4J) para Java_.
 
 | Cambio en ADAL4J | Detalles |
 | :------------ | :------ |
@@ -76,7 +125,7 @@ En este artículo se enumeran las versiones del _controlador JDBC Driver de Micr
 | Detalles adicionales. | Consulte [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) (Dependencias de características de Microsoft JDBC Driver para SQL Server). |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>Actualización del _SDK de Microsoft Azure Key Vault para Java_, versión 1.2.0
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-120"></a>Actualización del _SDK de Microsoft Azure Key Vault para Java_, versión 1.2.0
 
 | Cambio del SDK de Key Vault | Detalles |
 | :------------------- | :------ |
@@ -178,7 +227,7 @@ El controlador ahora admite la especificación de un elemento TrustManager perso
 
 El controlador ahora admite los tipos de datos `datetime` y `smallDatetime` cuando se usa parámetros con valores de tabla (TVP).
 
-### <a name="added-support-for-the-sqlvariant-datatype"></a>Adición de compatibilidad para el tipo de datos sql_variant
+### <a name="added-support-for-the-sql_variant-datatype"></a>Adición de compatibilidad para el tipo de datos sql_variant
 
 El controlador JDBC Driver ahora admite los tipos de datos `sql_variant` para su uso con SQL Server. El tipo de datos `sql_variant` también se admite con características como los TVP y la copia masiva con las siguientes limitaciones:
 

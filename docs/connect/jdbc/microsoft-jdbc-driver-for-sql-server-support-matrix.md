@@ -1,7 +1,7 @@
 ---
 title: Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 464ecdb79ee3a143deccec703438e35217503e11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+manager: jroth
+ms.openlocfilehash: 04d7fe419c8639d9f14c3c3795a1007d947c3998
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956337"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893254"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,6 +32,7 @@ ms.locfileid: "67956337"
   
 |Nombre del controlador|Versión del paquete de controladores|Archivos JAR aplicables|Finalización del soporte estándar|
 |-|-|-|-|  
+|Microsoft JDBC Driver 7.4 para SQL Server|7.4|MSSQL-JDBC-7.4.1. jre12. jar<br> MSSQL-JDBC-7.4.1. jre11. jar<br> MSSQL-JDBC-7.4.1. jre8. jar|2 de agosto de 2024|
 |Microsoft JDBC Driver 7.2 para SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 de abril de 2024|
 |Microsoft JDBC Driver 7.0 para SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 de julio de 2023|  
 |Microsoft JDBC Driver 6.4 para SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 de febrero de 2023|    
@@ -53,11 +55,12 @@ ms.locfileid: "67956337"
   
 ## <a name="sql-version-compatibility"></a>Compatibilidad con versiones de SQL  
   
-|Versión del controlador|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Base de datos SQL de Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Instancia administrada de Azure SQL (versión preliminar privada ampliada)|  
-|-|-|-|-|-|-|-|-|-|-|
-|7.2|N|S|S|S|S|S|S|S|S|  
-|7.0|N|S|S|S|S|S|S|S|S|  
-|6.4|N|S|S|S|S|S|S|S|S|  
+|Versión del controlador|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Base de datos SQL de Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
+|-|-|-|-|-|-|-|-|-|-|-|
+|7.4|N|N|S|S|S|S|S|S|S|
+|7.2|N|S|S|S|S|S|S|S|N| 
+|7.0|N|S|S|S|S|S|S|S|N| 
+|6.4|N|S|S|S|S|S|S|S|N| 
 |6.2|S|S|S|S|S|S|S|S|N|
 |6.1|S|S|S|S|S|S|S|N|N|
 |6.0|S|S|S|S|S|S|S|N|N|
@@ -85,6 +88,7 @@ ms.locfileid: "67956337"
   
 |Versión de Microsoft JDBC Driver|Versiones de JRE|Versión de la API de JDBC| 
 |-|-|-|  
+|7.4|1.8, 11, 12|4.2, 4.3 (parcialmente)|
 |7.2|1.8, 11|4.2, 4.3 (parcialmente)|
 |7.0|1.8, 10|4.2, 4.3 (parcialmente)|
 |6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (parcialmente)|  
@@ -107,6 +111,6 @@ ms.locfileid: "67956337"
  El equipo del producto JDBC comprueba nuestro controlador en Windows, Sun Solaris, SUSE Linux y RedHat Linux.  El servicio de asistencia al cliente está disponible para clientes de todas las plataformas; sin embargo, es posible que le pidamos que reproduzca el problema en una plataforma concreta, como Windows.  
   
 ## <a name="application-server-support"></a>Compatibilidad con servidores de aplicaciones  
- Microsoft JDBC Driver for SQL Server se ha probado con varios servidores de aplicaciones.  Pídale a su proveedor de servidores de aplicaciones más información sobre qué versión del controlador es compatible con su producto.  
-  
-  
+ Microsoft JDBC Driver for SQL Server se ha probado con varios servidores de aplicaciones.  Pídale a su proveedor de servidores de aplicaciones más información sobre qué versión del controlador es compatible con su producto.
+ 
+ 

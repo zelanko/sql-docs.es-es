@@ -1,7 +1,7 @@
 ---
 title: Requisitos del sistema para el controlador JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9acd6eeec40421a778c1ab829b9633e1e93a80b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004267"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893972"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisitos del sistema para el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +26,8 @@ ms.locfileid: "68004267"
 - Java Runtime Environment
 
 ## <a name="java-runtime-environment-requirements"></a>Requisitos de Java Runtime Environment  
+
+ A partir de Microsoft JDBC Driver 7.4 para SQL Server, se admiten Java Development Kit (JDK) 12.0 y Java Runtime Environment (JRE) 12.0.
 
  A partir de Microsoft JDBC Driver 7.2 para SQL Server, se admiten Java Development Kit (JDK) 11.0 y Java Runtime Environment (JRE) 11.0.
  
@@ -40,6 +42,31 @@ ms.locfileid: "68004267"
  A partir de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], la compatibilidad del controlador JDBC con la API de especificaciones de Java Database Connectivity (JDBC) se ha ampliado para incluir la API de JDBC 4.0. La API de JDBC 4.0 se presentó como parte de Java Development Kit (JDK) 6.0 y de Java Runtime Environment (JRE) 6.0. JDBC 4.0 es un superconjunto de la API de JDBC 3.0.
   
  Cuando se implementa [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] en sistemas operativos Windows y UNIX, se deben usar los paquetes de instalación, *sqljdbc_\<versión>_enu.exe* y *sqljdbc_\<versión>_enu.tar.gz*, respectivamente. Para obtener más información acerca de cómo implementar el controlador JDBC, vea el tema [Implementar el controlador JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md).  
+
+**Microsoft JDBC Driver 7.4 para SQL Server:**  
+
+  JDBC Driver 7.4 incluye tres bibliotecas de clases JAR en cada paquete de instalación: **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar** y **mssql-jdbc-7.4.1.jre12.jar**.
+
+  JDBC Driver 7.4 está diseñado para funcionar con todas las máquinas virtuales de Java y ser compatible con ellas, aunque solo se ha probado en OpenJDK 1.8, OpenJDK 11.0, OpenJDK 12.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0 y Azul Zulu JRE 12.0.
+  
+  A continuación se resume la compatibilidad que ofrecen los dos archivos JAR incluidos en Microsoft JDBC Driver 7.4 para SQL Server:  
+  
+  |JAR|Cumplimiento con la versión JDBC|Versión de Java recomendada|Descripción|  
+|---------|-----------------------------|----------------------|-----------------|   
+|MSSQL-JDBC-7.4.1. jre8. jar|4.2|8|Requiere la versión 1.8 de Java Runtime Environment (JRE). El uso de JRE 1.7 o anterior lanza una excepción.<br /><br /> Las nuevas características de 7,4 incluyen: compatibilidad con JDK 12, autenticación NTLM y useFmtOnly. |    
+|MSSQL-JDBC-7.4.1. jre11. jar|4.3|11|Requiere Java Runtime Environment (JRE) 11.0. El uso de JRE 10.0 o anterior lanza una excepción.<br /><br /> Las nuevas características de 7,4 incluyen: compatibilidad con JDK 12, autenticación NTLM y useFmtOnly. |  
+|MSSQL-JDBC-7.4.1. jre12. jar|4.3|12|Requiere la versión 12.0 de Java Runtime Environment (JRE). El uso de JRE 11.0 o anterior lanza una excepción.<br /><br /> Las nuevas características de 7,4 incluyen: compatibilidad con JDK 12, autenticación NTLM y useFmtOnly. |   
+
+
+  El controlador JDBC Driver 7.4 también está disponible en el repositorio central de Maven y se puede agregar a un proyecto de Maven agregando el siguiente código en POM.XML:  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.4.1.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC Driver 7.2 para SQL Server:**  
 

@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cdcac17ddc09223d63e7dd923fd561e0a334fc2
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68700058"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941165"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guía de navegación de documentos de SQL Server 
 
@@ -65,7 +65,7 @@ Puede usar el filtro de versión para asegurarse de estar viendo el contenido de
 
 ![Filtro de versión de documentación de SQL](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Al seleccionar **SQL Server** > **Hide nothing** (No ocultar nada), se asegura de que todo el contenido esté visible y que no haya nada oculto detrás del filtro de la versión. 
+Al seleccionar **All SQL (Todo SQL)**  > **Hide nothing** (No ocultar nada), se asegura de que todo el contenido esté visible y que no haya nada oculto detrás del filtro de la versión. 
 
 ## <a name="breadcrumbs"></a>Rutas de navegación
 

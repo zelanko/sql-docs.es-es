@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: d7755f15e78f29814eee93557286736b849c96c6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264591"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893526"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
@@ -26,7 +26,7 @@ Para ver las notas de la versión actual, consulte [Notas de la versión de SQL 
 
 Para obtener información sobre Power BI Report Server, vea [¿Qué es Power BI Report Server?](https://docs.microsoft.com/power-bi/report-server/get-started).
 
-**Descarga** ![download](../analysis-services/media/download.png "download")
+**Descarga** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
 
 Para descargar SQL Server 2017 Reporting Services, vaya al **[Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=55252)** .
 
@@ -34,7 +34,7 @@ Para descargar SQL Server 2017 Reporting Services, vaya al **[Centro de descarga
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>Versión preliminar de SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services no está disponible para CTP 3.1. Instale la versión actual: [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services no está disponible para CTP 3.2. Instale la versión actual: [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -161,7 +161,7 @@ Para más información sobre la compatibilidad de exploradores, vea [Compatibili
 2. Seleccione el panel al que quiere anclar el elemento.
 3. Seleccione con qué frecuencia desea que se actualice el icono en el panel.
 
-![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") Las suscripciones de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administran la actualización y, después de anclar el elemento, se pueden modificar para configurar una programación de actualización distinta.
+![nota](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") Las suscripciones de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administran la actualización y, después de anclar el elemento, se pueden modificar para configurar una programación de actualización distinta.
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 

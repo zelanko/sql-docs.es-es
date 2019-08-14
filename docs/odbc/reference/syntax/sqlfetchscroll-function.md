@@ -124,7 +124,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="comments"></a>Comentarios  
  **SQLFetchScroll** devuelve un conjunto de filas especificado del conjunto de resultados. Los conjuntos de filas se pueden especificar por posición absoluta o relativa o por marcador. Se puede llamar a **SQLFetchScroll** solo mientras exista un conjunto de resultados, es decir, después de una llamada que crea un conjunto de resultados y antes de que se cierre el cursor sobre dicho conjunto de resultados. Si alguna columna está enlazada, devuelve los datos de esas columnas. Si la aplicación ha especificado un puntero a una matriz de estado de fila o a un búfer en el que se va a devolver el número de filas recuperadas, **SQLFetchScroll** también devuelve esta información. Las llamadas a **SQLFetchScroll** se pueden mezclar con llamadas a **SQLFetch** pero no se pueden mezclar con llamadas a **SQLExtendedFetch**.  
   
- Para obtener más información, vea uso de cursores de [bloque](../../../odbc/reference/develop-app/using-block-cursors.md) y uso de cursores desplazables. [](../../../odbc/reference/develop-app/using-scrollable-cursors.md)  
+ Para obtener más información, vea uso de cursores de [bloque](../../../odbc/reference/develop-app/using-block-cursors.md) y [uso de cursores desplazables](../../../odbc/reference/develop-app/using-scrollable-cursors.md)  
   
 ## <a name="positioning-the-cursor"></a>Colocar el cursor  
  Cuando se crea el conjunto de resultados, el cursor se coloca antes del inicio del conjunto de resultados. **SQLFetchScroll** coloca el cursor de bloque en función de los valores de los argumentos *FetchOrientation* y *FetchOffset* como se muestra en la tabla siguiente. En la sección siguiente se muestran las reglas exactas para determinar el inicio del nuevo conjunto de filas.  
@@ -158,7 +158,7 @@ SQLRETURN SQLFetchScroll(
 |*FetchOffset*|Valor del argumento *FetchOffset* .|  
 |*BookmarkRow*|La fila correspondiente al marcador especificado por el atributo de la instrucción SQL_ATTR_FETCH_BOOKMARK_PTR.|  
   
-## <a name="sqlfetchnext"></a>SQL_FETCH_NEXT  
+## <a name="sql_fetch_next"></a>SQL_FETCH_NEXT  
  Se aplican las siguientes reglas.  
   
 |Condición|Primera fila del conjunto de filas nuevo|  
@@ -170,7 +170,7 @@ SQLRETURN SQLFetchScroll(
   
  [1] si se ha cambiado el tamaño del conjunto de filas desde la llamada anterior para capturar filas, este es el tamaño del conjunto de filas que se usó con la llamada anterior.  
   
-## <a name="sqlfetchprior"></a>SQL_FETCH_PRIOR  
+## <a name="sql_fetch_prior"></a>SQL_FETCH_PRIOR  
  Se aplican las siguientes reglas.  
   
 |Condición|Primera fila del conjunto de filas nuevo|  
@@ -186,7 +186,7 @@ SQLRETURN SQLFetchScroll(
   
  [2] si se ha cambiado el tamaño del conjunto de filas desde la llamada anterior para capturar filas, este es el nuevo tamaño del conjunto de filas.  
   
-## <a name="sqlfetchrelative"></a>SQL_FETCH_RELATIVE  
+## <a name="sql_fetch_relative"></a>SQL_FETCH_RELATIVE  
  Se aplican las siguientes reglas.  
   
 |Condición|Primera fila del conjunto de filas nuevo|  
@@ -206,7 +206,7 @@ SQLRETURN SQLFetchScroll(
   
  [3] si se ha cambiado el tamaño del conjunto de filas desde la llamada anterior para capturar filas, este es el nuevo tamaño del conjunto de filas.  
   
-## <a name="sqlfetchabsolute"></a>SQL_FETCH_ABSOLUTE  
+## <a name="sql_fetch_absolute"></a>SQL_FETCH_ABSOLUTE  
  Se aplican las siguientes reglas.  
   
 |Condición|Primera fila del conjunto de filas nuevo|  
@@ -224,14 +224,14 @@ SQLRETURN SQLFetchScroll(
   
  Una captura absoluta realizada en un cursor dinámico no puede proporcionar el resultado necesario porque no se determinan las posiciones de fila de un cursor dinámico. Este tipo de operación es equivalente a una captura primero seguida de una captura relativa; no es una operación atómica, como es una captura absoluta en un cursor estático.  
   
-## <a name="sqlfetchfirst"></a>SQL_FETCH_FIRST  
+## <a name="sql_fetch_first"></a>SQL_FETCH_FIRST  
  Se aplican las siguientes reglas.  
   
 |Condición|Primera fila del conjunto de filas nuevo|  
 |---------------|-----------------------------|  
 |*Cualquier*|*1*|  
   
-## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
+## <a name="sql_fetch_last"></a>SQL_FETCH_LAST  
  Se aplican las siguientes reglas.  
   
 |Condición|Primera fila del conjunto de filas nuevo|  
@@ -241,7 +241,7 @@ SQLRETURN SQLFetchScroll(
   
  [1] si se ha cambiado el tamaño del conjunto de filas desde la llamada anterior para capturar filas, este es el nuevo tamaño del conjunto de filas.  
   
-## <a name="sqlfetchbookmark"></a>SQL_FETCH_BOOKMARK  
+## <a name="sql_fetch_bookmark"></a>SQL_FETCH_BOOKMARK  
  Se aplican las siguientes reglas.  
   
 |Condición|Primera fila del conjunto de filas nuevo|  

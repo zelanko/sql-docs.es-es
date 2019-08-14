@@ -107,7 +107,7 @@ SQLRETURN SQLFetch(
 |Condición|Primera fila del conjunto de filas nuevo|  
 |---------------|-----------------------------|  
 |Antes del inicio|1|  
-|*CurrRowsetStart* LastResultRow-RowsetSize [1]  \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* LastResultRow-RowsetSize [1] \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
 |CurrRowsetStart > *LastResultRow-RowsetSize*[1]|Después del final|  
 |Después del final|Después del final|  
   
@@ -201,7 +201,7 @@ SQLRETURN SQLFetch(
  El contenido del búfer de filas recuperadas no está definido si **SQLFetch** o **SQLFETCHSCROLL** no devuelve SQL_SUCCESS ni SQL_SUCCESS_WITH_INFO, excepto cuando se devuelve SQL_NO_DATA, en cuyo caso el valor del búfer de filas capturadas se establece en 0.  
   
 ### <a name="error-handling"></a>Tratamiento de errores  
- Los errores y las advertencias se pueden aplicar a filas individuales o a toda la función. Para obtener más información sobre los registros de [](../../../odbc/reference/develop-app/diagnostics.md) diagnóstico, consulte diagnósticos y [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
+ Los errores y las advertencias se pueden aplicar a filas individuales o a toda la función. Para obtener más información sobre los registros de [diagnóstico](../../../odbc/reference/develop-app/diagnostics.md) consulte diagnósticos y [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).  
   
 #### <a name="errors-and-warnings-on-the-entire-function"></a>Errores y advertencias en toda la función  
  Si se aplica un error a toda la función, como SQLSTATE HYT00 (tiempo de espera expirado) o SQLSTATE 24000 (estado de cursor no válido), **SQLFetch** devuelve SQL_ERROR y el SQLSTATE aplicable. El contenido de los búferes del conjunto de filas no está definido y la posición del cursor no se modifica.  

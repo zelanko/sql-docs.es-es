@@ -9,18 +9,18 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cafc62e12bcecad1ac6bcf389b87c864576c83a3
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: d62b1fe82698ff8722786b42f534afe83cd6c481
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958702"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68822696"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>¿Cuál es la instancia maestra en un clúster de macrodatos de SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo, se describe el rol de la *instancia maestra de SQL Server* en un clúster de macrodatos de SQL Server 2019. La instancia maestra es una instancia de SQL Server que se ejecuta en un [plano de control](big-data-cluster-overview.md#controlplane) de un clúster de macrodatos de SQL Server.
+En este artículo se describe el rol del *SQL Server instancia maestra* en un clúster de big data para SQL Server 2019. La instancia maestra es una instancia de SQL Server que se ejecuta en un clúster de Big Data para administrar la conectividad, las consultas de escalado horizontal, los metadatos y las bases de datos de usuario y los servicios de machine learning.
 
 La instancia maestra de SQL Server proporciona las siguientes funciones:
 

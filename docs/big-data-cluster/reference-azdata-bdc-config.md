@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed777391af3695da69e04c0e2693cff912c76771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 1962fd25416ab3546c15f9b894375e0f3ed740c6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426295"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894031"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -22,7 +22,7 @@ ms.locfileid: "68426295"
 
 En el siguiente artículo, se proporcionan referencias sobre los comandos **bdc config** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea [azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata bdc config init](#azdata-bdc-config-init) | Inicializa un perfil de configuración de clúster de macrodatos que puede usarse con la creación de clústeres.
@@ -57,7 +57,7 @@ Origen del perfil de configuración: ['aks-dev-test', 'kubeadm-dev-test', 'minik
 #### `--force -f`
 Obliga a sobrescribir el archivo de destino.
 #### `--accept-eula -a`
-¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en “yes”. Los términos de licencia de este producto se pueden ver en https://aka.ms/azdata-eula.
+¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en “yes”. 
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
@@ -92,7 +92,7 @@ Perfil de configuración predeterminado: ['aks-dev-test', 'kubeadm-dev-test', 'm
 El tipo de configuración que quiere ver.
 `cluster`
 #### `--accept-eula -a`
-¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en “yes”. Los términos de licencia de este producto se pueden ver en https://aka.ms/azdata-eula.
+¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en “yes”. 
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
@@ -281,4 +281,4 @@ Aumente el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de **azdata**, vea [azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server](deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).

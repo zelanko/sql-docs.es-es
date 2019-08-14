@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959382"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731057"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
@@ -137,7 +137,7 @@ ms.locfileid: "67959382"
 **Solución alternativa:** Se corregirá en la próxima versión. 
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): la extracción de dacpac bloquea SqlToolsService si se usa una versión no válida. <br/>
 **Solución alternativa:** reinicie Azure Data Studio y asegúrese de que se usa la versión correcta.
-- Se pierden los iconos de Nuevo cuaderno y Abrir cuaderno. <br/> 
+- Se pierden los iconos de Nuevo cuaderno y Abrir cuaderno. <br/>
 **Solución alternativa:** el tipo de conexión heredado está en desuso. Se recomienda conectarse al punto de conexión de SQL Server para obtener todas las acciones previstas (nuevo cuaderno, trabajo de Spark). 
 
 ## <a name="february-2019"></a>Febrero de 2019
@@ -576,7 +576,7 @@ La *versión preliminar pública de diciembre* incluye varias correcciones de er
 
 ## <a name="next-steps"></a>Next Steps
 
-Vea una de las siguientes guías de inicio rápido para empezar:
+Para empezar, vea una de las siguientes guías de inicio rápido:
 
 - [Conectar y consultar SQL Server](quickstart-sql-server.md)
 - [Conectar y consultar Azure SQL Database](quickstart-sql-database.md)

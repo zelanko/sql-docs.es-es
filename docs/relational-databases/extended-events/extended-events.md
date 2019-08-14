@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01a823e288ade074b4e9ccd432c40c15e9f96f07
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495406"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941134"
 ---
 # <a name="extended-events-overview"></a>Introducción a los eventos extendidos
 
@@ -52,7 +52,7 @@ Eventos extendidos es un sistema ligero de supervisión de rendimiento que usa u
   
 ## <a name="extended-events-architecture"></a>Arquitectura de eventos extendidos  
 
-Eventos extendidos es el nombre con el que denominamos a un sistema general de control de eventos para los sistemas del servidor. La infraestructura de Eventos extendidos admite la correlación de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, bajo ciertas condiciones, la correlación de datos del sistema operativo y las aplicaciones de base de datos. En el caso del sistema operativo, la salida de Eventos extendidos debe dirigirse a Seguimiento de eventos para Windows (ETW). ETW se usa para establecer correlaciones entre los datos de eventos y los datos de eventos de la aplicación o del sistema operativo.  
+Eventos extendidos es el nombre con el que denominamos a un sistema general de control de eventos para los sistemas del servidor. La infraestructura de Extended Events admite la correlación de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y bajo ciertas condiciones, la correlación de datos de las aplicaciones de base de datos y sistema operativo. En el caso del sistema operativo, la salida de Eventos extendidos debe dirigirse a Seguimiento de eventos para Windows (ETW). ETW se usa para establecer correlaciones entre los datos de eventos y los datos de eventos de la aplicación o del sistema operativo.  
 
 Todas las aplicaciones tienen puntos de ejecución que son útiles tanto dentro como fuera de una aplicación. Dentro de la aplicación, puede ponerse en cola el procesamiento asincrónico utilizando información recopilada durante la ejecución inicial de una tarea. Fuera de la aplicación, los puntos de ejecución proporcionan utilidades de supervisión con información. La información está relacionada con las características de rendimiento y comportamiento de la aplicación supervisada.  
 

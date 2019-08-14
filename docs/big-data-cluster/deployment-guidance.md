@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9696cf89d4177d8b78d9a0fe08cd27da5112650
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470767"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995835"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Procedimiento para implementar clústeres de macrodatos de SQL Server en Kubernetes
 
@@ -87,10 +87,10 @@ Las opciones de implementación del clúster de macrodatos se definen en archivo
 
 Puede implementar un clúster de macrodatos al ejecutar **azdata bdc create**. Esto le pedirá que elija una de las configuraciones predeterminadas y después le guiará por la implementación.
 
-La primera vez que ejecute `azdata`, debe incluir `--accept-eula` para aceptar el contrato de licencia para el usuario final (CLUF).
+La primera vez que ejecute `azdata`, debe incluir `--accept-eula=yes` para aceptar el contrato de licencia para el usuario final (CLUF).
 
 ```bash
-azdata bdc create --accept-eula
+azdata bdc create --accept-eula=yes
 ```
 
 En este escenario, se le pide la configuración que no forme parte de la configuración predeterminada, como las contraseñas. 

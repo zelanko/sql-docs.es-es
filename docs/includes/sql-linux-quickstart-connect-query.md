@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215632"
 ---
 ## <a name="connect-locally"></a>Conexión local
@@ -52,7 +52,7 @@ En los pasos siguientes se crea una base de datos denominada `TestDB`.
    ```
 
 > [!TIP]
-> Para más información sobre cómo escribir instrucciones Transact-SQL y las consultas, consulte [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Para más información sobre cómo escribir consultas e instrucciones Transact-SQL, vea [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Inserción de datos
 
@@ -108,18 +108,18 @@ QUIT
 
 ## <a name="performance-best-practices"></a>Procedimientos recomendados de rendimiento
 
-Después de instalar SQL Server en Linux, revise las prácticas recomendadas para la configuración de SQL Server y Linux para mejorar el rendimiento de escenarios de producción. Para obtener más información, consulte [procedimientos recomendados e instrucciones de configuración de SQL Server en Linux](../linux/sql-server-linux-performance-best-practices.md).
+Después de instalar SQL Server en Linux, revise los procedimientos recomendados para configurar Linux y SQL Server con el fin de mejorar el rendimiento de los escenarios de producción. Para obtener más información, consulte [Procedimientos recomendados e instrucciones de configuración de SQL Server en Linux](../linux/sql-server-linux-performance-best-practices.md).
 
 ## <a name="cross-platform-data-tools"></a>Herramientas de datos multiplataforma
 
-Además **sqlcmd**, puede usar las siguientes herramientas multiplataforma para administrar SQL Server:
+Además de **sqlcmd**, puede usar las siguientes herramientas multiplataforma para administrar SQL Server:
 
 |||
 |---|---|
-| [Azure Data Studio](../azure-data-studio/index.md) | Una utilidad de administración de base de datos de GUI multiplataforma. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Un editor de código de GUI multiplataforma que ejecutan las instrucciones Transact-SQL con la extensión mssql. |
-| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Una configuración y automatización herramienta multiplataforma en función de los cmdlets. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Una interfaz de línea de comandos multiplataforma para ejecutar comandos de Transact-SQL. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Una utilidad de administración de bases de datos GUI multiplataforma. |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Un editor de código GUI multiplataforma que ejecuta instrucciones Transact-SQL con la extensión mssql. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Una herramienta de configuración y automatización multiplataforma basada en cmdlets. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Una interfaz de línea de comandos multiplataforma para ejecutar comandos Transact-SQL. |
 
 ## <a name="connecting-from-windows"></a>Conexión desde Windows
 
@@ -145,7 +145,7 @@ Para otros escenarios de instalación, vea los siguientes recursos:
 | [Instalación sin conexión](../linux/sql-server-linux-setup.md#offline) | Obtenga información sobre cómo descargar manualmente los paquetes de instalación sin conexión |
 
 > [!TIP]
-> Para obtener respuestas a las preguntas más frecuentes, consulte el [SQL Server en Linux preguntas más frecuentes sobre](../linux/sql-server-linux-faq.md).
+> Para obtener respuesta a las preguntas más frecuentes, vea [Preguntas más frecuentes sobre SQL Server en Linux](../linux/sql-server-linux-faq.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

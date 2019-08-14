@@ -1,5 +1,5 @@
 ---
-title: Configurar varias subredes grupos de disponibilidad AlwaysOn y las instancias de clúster de conmutación por error en Linux
+title: Configuración de grupos de disponibilidad e instancias de clúster de conmutación por error AlwaysOn de varias subredes en Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,33 +9,33 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 2fc848c30af32e5ff2a81ebadf4378b75ff5a521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077589"
 ---
-# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar varias subredes grupos de disponibilidad AlwaysOn y las instancias de clúster de conmutación por error
+# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configuración de grupos de disponibilidad e instancias de clúster de conmutación por error AlwaysOn de varias subredes
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cuando una instancia en clúster siempre en grupo de disponibilidad (AG) o la conmutación por error (FCI) abarca más de un sitio, cada sitio normalmente tiene su propia red. A menudo, esto significa que cada sitio tiene su propia dirección IP. Por ejemplo, direcciones de sitio del empiezan por 192.168.1. *x* e iniciar las direcciones del sitio B con 192.168.2. *x*, donde *x* es la parte de la dirección IP que es única para el servidor. Sin algún tipo de enrutamiento en su lugar en el nivel de red, estos servidores no podrán comunicarse entre sí. Hay dos formas de controlar este escenario: configurar una red que relaciona las dos subredes diferentes, conocidas como una VLAN, o configurar el enrutamiento entre subredes.
+Cuando un grupo de disponibilidad (AG) o una instancia de clúster de conmutación por error (FCI) AlwaysOn abarca más de un sitio, cada sitio suele tener sus propias redes. Esto normalmente significa que cada sitio tiene sus propias direcciones IP. Por ejemplo, las direcciones del sitio A empiezan por 192.168.1.*x*, mientras que las del sitio B comienzan por 192.168.2.*x*, donde *x* es la parte de la dirección IP que es única para el servidor. Si no hay aplicado ningún tipo de enrutamiento en el nivel de red, estos servidores no pueden comunicarse entre sí. Hay dos formas de controlar este escenario: configurar una red entre las dos subredes diferentes, lo que se conoce como VLAN, o configurar el enrutamiento entre las subredes.
 
 ## <a name="vlan-based-solution"></a>Solución basada en VLAN
  
-**Requisitos previos**: Para una solución basada en VLAN, cada servidor que participe en un grupo de disponibilidad o FCI necesita dos tarjetas de red (NIC) para una disponibilidad adecuada (un puerto dual de NIC sería un único punto de error en un servidor físico), de modo que se pueden asignar direcciones IP en su subred nativo, así como uno en la VLAN. Esto es además de otras necesidades de red, como iSCSI, que también necesita su propia red.
+**Requisito previo**: En el caso de una solución basada en VLAN, cada servidor que participa en un grupo de disponibilidad o una instancia de conmutación por error necesita dos tarjetas de red (NIC) para una disponibilidad adecuada (una NIC de puerto doble sería un solo punto de error en un servidor físico), a fin de que se le puedan asignar direcciones IP en su subred nativa, así como una en la VLAN. Esto se suma a cualquier otra necesidad de red, como iSCSI, que también necesita su propia red.
 
-La creación de la dirección IP para el grupo de disponibilidad o FCI se realiza en la VLAN. En el ejemplo siguiente, la VLAN tiene una subred de 192.168.3. *x*, por lo que la dirección IP creada para el grupo de disponibilidad o FCI es 192.168.3.104. Nada adicional debe configurarse, ya que no hay una única dirección IP asignada al grupo de disponibilidad o FCI.
+La creación de la dirección IP para el grupo de disponibilidad o la instancia de clúster de conmutación por error se realiza en la VLAN. En el ejemplo siguiente, la VLAN tiene una subred de 192.168.3.*x*, por lo que la dirección IP creada para el grupo de disponibilidad o la instancia de clúster de conmutación por error es 192.168.3.104. No es necesario configurar nada más, ya que hay una dirección IP única asignada al grupo de disponibilidad o la instancia de conmutación por error.
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
-## <a name="configuration-with-pacemaker"></a>Configuración de Pacemaker
+## <a name="configuration-with-pacemaker"></a>Configuración con Pacemaker
 
-En el mundo de Windows, un clúster de conmutación por error de Windows Server (WSFC) de forma nativa es compatible con varias subredes y controla varias direcciones IP a través de una dependencia OR en la dirección IP. En Linux, no hay ninguna dependencia OR, pero hay una forma de lograr una correcta múltiples subredes de forma nativa con Pacemaker, como se muestra en la siguiente. No puede hacerlo simplemente con la línea de comandos normal de Pacemaker para modificar un recurso. Deberá modificar la información del clúster base (CIB). El CIB es un archivo XML con la configuración de Pacemaker.
+En el entorno Windows, un clúster de conmutación por error de Windows Server (WSFC) admite de forma nativa varias subredes y administra varias direcciones IP a través de una dependencia OR en la dirección IP. En Linux, no hay ninguna dependencia OR, pero hay una manera de lograr una subred múltiple adecuada de forma nativa con Pacemaker, como se muestra a continuación. No puede hacer esto simplemente con la línea de comandos normal de Pacemaker para modificar un recurso. Debe modificar la base de información del clúster (CIB). CIB es un archivo XML con la configuración de Pacemaker.
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
-### <a name="update-the-cib"></a>Actualizar el CIB
+### <a name="update-the-cib"></a>Actualización del CIB
 
 1.  Exporte el CIB.
 
@@ -51,9 +51,9 @@ En el mundo de Windows, un clúster de conmutación por error de Windows Server 
     sudo cibadmin -Q > <filename>
     ```
 
-    Donde *filename* es el nombre que desea llamar el CIB.
+    Donde *filename* es el nombre que quiere asignar al CIB.
 
-2.  Edite el archivo que se generó. Busque el `<resources>` sección. Verá los distintos recursos que se crearon para el grupo de disponibilidad o FCI. Buscar el único asociado con la dirección IP. Agregar un `<instance attributes>` sección con la información de la segunda dirección IP por encima o debajo de la existente, pero antes `<operations>`. Es similar a la siguiente sintaxis:
+2.  Edite el archivo generado. Busque la sección `<resources>`. Se ven los distintos recursos creados para el grupo de disponibilidad o la instancia de clúster de conmutación por error. Busque el asociado a la dirección IP. Agregue una sección `<instance attributes>` con la información de la segunda dirección IP, ya sea por encima o por debajo de la existente, pero antes de `<operations>`. Es similar a la siguiente sintaxis:
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -65,9 +65,9 @@ En el mundo de Windows, un clúster de conmutación por error de Windows Server 
     </instance attributes>
     ```
     
-    donde *NameForAttribute* es el nombre único para este atributo, *puntuación* es el número asignado al atributo, que debe ser mayor que la subred principal, *RuleName*es el nombre de la regla, *ExpressionName* es el nombre de la expresión, *NodeNameInSubnet2* es el nombre del nodo en la otra subred *NameForSecondIP* es el nombre asociado con la segunda dirección IP, *IPAddress* es la dirección IP para la segunda subred, *NameForSecondIPNetmask* es el nombre asociado con la máscara de red, y *Máscara de red* es la máscara de red para la segunda subred.
+    donde *NameForAttribute* es el nombre único de este atributo, *Score* es el número asignado al atributo, que debe ser mayor que el de la subred principal, *RuleName* es el nombre de la regla, *ExpressionName* es el nombre de la expresión, *NodeNameInSubnet2* es el nombre del nodo de la otra subred, *NameForSecondIP* es el nombre asociado a la segunda dirección IP, *IPAddress* es la dirección IP de la segunda subred, *NameForSecondIPNetmask* es el nombre asociado a la máscara de red y *Netmask* es la máscara de red de la segunda subred.
     
-    A continuación muestra un ejemplo.
+    A continuación se muestra un ejemplo.
     
     ```xml
     <instance attributes id="Node3-2nd-IP" score="2">
@@ -79,7 +79,7 @@ En el mundo de Windows, un clúster de conmutación por error de Windows Server 
     </instance attributes>
     ```
 
-3.  Importar el CIB modificada y vuelva a configurar a Pacemaker.
+3.  Importe el CIB modificado y vuelva a configurar Pacemaker.
 
     **RHEL/Ubuntu**
     
@@ -95,9 +95,9 @@ En el mundo de Windows, un clúster de conmutación por error de Windows Server 
 
     donde *filename* es el nombre del archivo CIB con la información de dirección IP modificada.
 
-### <a name="check-and-verify-failover"></a>Compruebe y confirme la conmutación por error
+### <a name="check-and-verify-failover"></a>Comprobación de la conmutación por error
 
-1.  Una vez el CIB correctamente aplicada con la configuración actualizada, haga ping al nombre DNS asociado al recurso de dirección IP en Pacemaker. Debe reflejar la dirección IP asociada con la subred que hospeda el grupo de disponibilidad o FCI.
-2.  Producirá un error en el grupo de disponibilidad o FCI para la otra subred.
-3.  Después de que el grupo de disponibilidad o FCI está totalmente en línea, haga ping al nombre DNS asociado con la dirección IP. Debe reflejar la dirección IP en la segunda subred.
-4.  Si lo desea, el grupo de disponibilidad o FCI conmutar por recuperación a la subred original.
+1.  Después de que el CIB se haya aplicado correctamente con la configuración actualizada, haga ping al nombre DNS asociado al recurso de dirección IP en Pacemaker. Debe reflejar la dirección IP asociada a la subred que hospeda actualmente el grupo de disponibilidad o la instancia de clúster de conmutación por error.
+2.  Conmute el grupo de disponibilidad o la instancia de clúster de conmutación por error en la otra subred.
+3.  Una vez que el grupo de disponibilidad o la instancia de clúster de conmutación por error estén totalmente en línea, haga ping al nombre DNS asociado a la dirección IP. Debe reflejar la dirección IP de la segunda subred.
+4.  Si quiere, conmute el grupo de disponibilidad o la instancia de clúster de conmutación por error en la subred original.

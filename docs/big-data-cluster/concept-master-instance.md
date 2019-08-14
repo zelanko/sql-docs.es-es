@@ -1,7 +1,7 @@
 ---
 title: ¿Qué es la instancia maestra?
 titleSuffix: SQL Server big data clusters
-description: En este artículo se describe la instancia principal de SQL Server en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+description: En este artículo, se describe la instancia maestra de SQL Server en un clúster de macrodatos de SQL Server 2019 (versión preliminar).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,64 +10,64 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: cafc62e12bcecad1ac6bcf389b87c864576c83a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958702"
 ---
-# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>¿Qué es la instancia maestra en un clúster de macrodatos de SQL Server?
+# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>¿Cuál es la instancia maestra en un clúster de macrodatos de SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe el rol de la *instancia principal de SQL Server* en un clúster de macrodatos de SQL Server 2019. La instancia maestra es una instancia de SQL Server que se ejecuta en un clúster de SQL Server macrodatos [plano de control](big-data-cluster-overview.md#controlplane).
+En este artículo, se describe el rol de la *instancia maestra de SQL Server* en un clúster de macrodatos de SQL Server 2019. La instancia maestra es una instancia de SQL Server que se ejecuta en un [plano de control](big-data-cluster-overview.md#controlplane) de un clúster de macrodatos de SQL Server.
 
-La instancia principal de SQL Server proporciona la funcionalidad siguiente:
+La instancia maestra de SQL Server proporciona las siguientes funciones:
 
 ## <a name="connectivity"></a>Conectividad
 
-La instancia principal de SQL Server proporciona un punto de conexión accesible desde el exterior de TDS para el clúster. Puede conectar aplicaciones o herramientas de SQL Server, como Azure Data Studio o SQL Server Management Studio para este extremo, tal como lo haría cualquier otra instancia de SQL Server.
+La instancia maestra de SQL Server proporciona un punto de conexión TDS accesible externamente para el clúster. Puede conectar aplicaciones o herramientas de SQL Server (como Azure Data Studio o SQL Server Management Studio) a este punto de conexión, igual que conectaría cualquier otra instancia de SQL Server.
 
-## <a name="scale-out-query-management"></a>Administración de la consulta de escalabilidad horizontal
+## <a name="scale-out-query-management"></a>Administración de consultas de escalado horizontal
 
-La instancia principal de SQL Server contiene el motor de consultas de escalabilidad horizontal que se utiliza para distribuir las consultas entre instancias de SQL Server en nodos de la [proceso grupo](concept-compute-pool.md). El motor de consultas de escalado horizontal también proporciona acceso a través de Transact-SQL para todas las tablas de Hive en el clúster sin ninguna configuración adicional.
+La instancia maestra de SQL Server contiene el motor de consultas de escalado horizontal que se usa para distribuir consultas en distintas instancias de SQL Server en nodos del [grupo de proceso](concept-compute-pool.md). El motor de consultas de escalado horizontal también proporciona acceso mediante Transact-SQL a todas las tablas de Hive en el clúster, sin necesidad de usar una configuración adicional.
 
-## <a name="metadata-and-user-databases"></a>Bases de datos de usuario y los metadatos
+## <a name="metadata-and-user-databases"></a>Metadatos y bases de datos de usuario
 
-Además de las bases de sistema de SQL Server estándares, la instancia de SQL principal también contiene lo siguiente:
+Además de las bases de datos del sistema de SQL Server estándar, la instancia maestra de SQL también contiene lo siguiente:
 
-- Una base de datos de metadatos que contiene los metadatos de la tabla de HDFS
-- Un mapa de particiones de plano de datos
-- Detalles de las tablas externas que proporcionan acceso al plano de datos de clúster.
-- Orígenes de datos externos de PolyBase y tablas externas definidas en las bases de datos de usuario.
+- Una base de datos de metadatos que contiene metadatos de tablas HDFS.
+- Un mapa de particiones del plano de datos.
+- Detalles de las tablas externas que proporcionan acceso al plano de datos del clúster.
+- Orígenes de datos externos de PolyBase y tablas externas definidas en bases de datos de usuario.
 
-También puede agregar sus propias bases de datos de usuario a la instancia principal de SQL Server.
+También puede agregar sus propias bases de datos de usuario a la instancia maestra de SQL Server.
 
-## <a name="machine-learning-services"></a>Servicios Machine learning
+## <a name="machine-learning-services"></a>Machine Learning Services
 
-Servicios de aprendizaje automático de SQL Server es una característica incluida en el motor de base de datos, utilizado para ejecutar código de Java, R y Python en SQL Server. Esta característica se basa en el marco de extensibilidad de SQL Server que aísla los procesos externos de los procesos del motor principal, pero se integra completamente con los datos relacionales, como procedimientos almacenados, como script de Transact-SQL que contiene instrucciones de R o Python o como Java, R o Código de Python que contiene la instrucción T-SQL.
+Machine Learning Services de SQL Server es la característica complementaria para el motor de la base de datos que se usa para ejecutar código de Java, R y Python en SQL Server. Esta característica se basa en el marco de extensibilidad de SQL Server, que aísla los procesos externos de los procesos del motor principal, pero que se integra por completo con los datos relacionales como procedimientos almacenados, como un script de T-SQL que contiene instrucciones de R o Python, o bien como código de Java, R o Python que contiene T-SQL.
 
-Como parte de un clúster de macrodatos de SQL Server, servicios de machine learning estará disponibles en la instancia principal de SQL Server de forma predeterminada. Esto significa que una vez que la ejecución de scripts externos está habilitada en la instancia principal de SQL Server, se va a ser posible ejecutar Java, scripts de R y Python mediante sp_execute_external_script.
+Como parte del clúster de macrodatos de SQL Server, la característica Machine Learning Services estará disponible de forma predeterminada en la instancia maestra de SQL Server. Esto quiere decir que, cuando se habilite la ejecución del script externo en la instancia maestra de SQL Server, se podrán ejecutar scripts de Java, R y Python mediante sp_execute_external_script.
 
-### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Ventajas de machine learning services en un clúster de macrodatos
+### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>Ventajas de Machine Learning Services en un clúster de macrodatos
 
-SQL Server 2019 facilita big data a combinarse con los datos de dimensiones suelen almacenados en la base de datos empresarial. El valor de los datos de gran tamaño aumenta en gran medida cuando no está en manos de partes de una organización, pero también se incluye en los informes, paneles y aplicaciones. Al mismo tiempo, los científicos de datos pueden seguir usar las herramientas del ecosistema de Spark o HDFS y fácil, tener acceso en tiempo real a los datos en la instancia principal de SQL Server y orígenes de datos externos accesibles _a través de_ el maestro de SQL Server instancia de.
+SQL Server 2019 permite encontrar fácilmente macrodatos para unirlos a los datos dimensionales que suelen almacenarse en la base de datos empresarial. Este valor de los macrodatos se incrementa en gran medida cuando no solo pertenece a una organización, sino que también se incluye en informes, paneles y aplicaciones. Al mismo tiempo, los científicos de datos pueden seguir usando las herramientas del ecosistema de Spark/HDFS y acceder fácilmente y en tiempo real a los datos en la instancia maestra de SQL Server y en orígenes de datos externos accesibles _mediante_ la instancia maestra de SQL Server.
 
-Con los clústeres de SQL Server 2019 datos de gran tamaño, puede hacer más con los lagos de datos de empresa. Los analistas y programadores de SQL Server pueden:
+Con los clústeres de macrodatos de SQL Server 2019, puede conseguir más con los lagos de datos empresariales. Los desarrolladores y analistas de SQL Server pueden:
 
-* Cree aplicaciones que consumen datos de lagos de datos de empresa.
-* Motivo de todos los datos con consultas Transact-SQL.
-* Utilice el ecosistema de herramientas de SQL Server y las aplicaciones existente para tener acceso y analizar datos empresariales.
-* Reducir la necesidad de movimiento de datos a través de la virtualización de datos y data marts.
-* Continuar a usar Spark para escenarios de macrodatos.
-* Compilar aplicaciones empresariales inteligentes mediante Spark o SQL Server para entrenar modelos a través de lagos de datos.
-* Utilizar modelos de bases de datos de producción para un mejor rendimiento.
-* Datos de Stream directamente en puestos de datos empresarial para análisis en tiempo real.
-* Explorar datos visualmente mediante un análisis interactivo y herramientas de BI.
+* Crear aplicaciones que usen datos de lagos de datos empresariales.
+* Razonar sobre todos los datos con consultas Transact-SQL.
+* Usar el ecosistema existente de herramientas de aplicaciones de SQL Server para acceder a datos empresariales y analizarlos.
+* Reducir la necesidad del movimiento de datos mediante la virtualización de datos y data marts.
+* Seguir usando Spark para escenarios de macrodatos.
+* Crea aplicaciones empresariales inteligentes que usen Spark o SQL Server para entrenar modelos con lagos de datos.
+* Hacer operativos modelos en bases de datos de producción para obtener el mejor rendimiento.
+* Transmitir por streaming datos directamente en data marts empresariales para obtener análisis en tiempo real.
+* Explorar datos visualmente mediante análisis interactivos y herramientas de BI.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte los siguientes recursos:
+Para obtener más información sobre los clústeres de macrodatos de SQL Server, vea los recursos siguientes:
 
-- [¿Qué son los clústeres de macrodatos de 2019 de SQL Server?](big-data-cluster-overview.md)
-- [Taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
+- [Taller: arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

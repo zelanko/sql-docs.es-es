@@ -11,45 +11,45 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959533"
 ---
 # <a name="integrated-terminal"></a>Terminal integrado
 
-En [!INCLUDE[name-sos](../includes/name-sos-short.md)], puede abrir un terminal integrado, inicialmente desde la raíz del área de trabajo. Esto puede ser conveniente, ya que no tiene que cambiar windows o modificar el estado de un terminal existente para realizar una tarea de línea de comandos rápida.
+En [!INCLUDE[name-sos](../includes/name-sos-short.md)], puede abrir un terminal integrado, que se inicia al principio en la raíz de su área de trabajo. Esto le puede resultar práctico, ya que no tiene que cambiar de ventana ni modificar el estado de un terminal existente para realizar una tarea de línea de comandos rápida.
 
 Para abrir el terminal:
 
-* Use la **Ctrl +'** método abreviado de teclado con el carácter de acento grave.
-* Use la **vista** | **Terminal integrado** comando de menú.
-* Desde el **paleta de comandos** (**Ctrl + Mayús + P**), use el **Terminal integrado: Alternar vista** comando.
+* Use el método abreviado de teclado **Ctrl+`** con el carácter de acento grave.
+* Use el comando de menú **Ver** | **Terminal integrado**.
+* En la **paleta de comandos** (**Ctrl+Mayús+P**), use el comando **Ver: Alternar terminal integrado**.
 
 ![Terminal](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> Todavía puede abrir un shell externo con el Explorador de **abrir en símbolo** comando (**abrir en Terminal** en Mac o Linux) si prefiere trabajar fuera [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+> Todavía puede abrir un shell externo con el comando **Abrir en símbolo del sistema** de Explorer (**Abrir en terminal** en Mac o Linux) si prefiere trabajar fuera de [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
-## <a name="managing-multiple-terminals"></a>Administrar varios terminales
+## <a name="managing-multiple-terminals"></a>Administración de varios terminales
 
-Puede crear varios terminales abierto a diferentes ubicaciones y navegar fácilmente entre ellos. Se pueden agregar instancias terminales pulsando el icono del signo más en la parte superior derecha de la **TERMINAL** panel o a desencadenar la **Ctrl + Mayús +'** comando. Esto crea otra entrada en la lista desplegable que se puede usar para cambiar entre ellas.
+Puede crear varios terminales abiertos en diferentes ubicaciones y navegar fácilmente entre ellos. Las instancias del terminal se pueden agregar al hacer clic en el icono de signo más situado en la parte superior derecha del panel **TERMINAL** o al desencadenar el comando **Ctrl+Mayús+`** . De esta forma, se crea otra entrada en la lista desplegable que se puede usar para cambiar entre ellos.
 
 ![Varios terminales](media/integrated-terminal/terminal-multiple-instances.png)
 
-Pueden botón Quitar instancias terminales presionando la Papelera.
+Para quitar instancias del terminal, haga clic en el botón de la papelera.
 
 > [!TIP]
-> Si usa varios terminales ampliamente, puede agregar enlaces de teclado para el `focusNext`, `focusPrevious` y `kill` comandos que se describen en la [sección de enlaces de teclado](#key-bindings) permitir la navegación entre ellas usando únicamente el teclado.
+> Si usa mucho varios terminales, puede agregar enlaces de teclado para los comandos `focusNext`, `focusPrevious` y `kill` descritos en la sección [Enlaces de teclado](#key-bindings) para permitir la navegación entre ellos solo con el teclado.
 
 ## <a name="configuration"></a>Configuración
 
-El shell usa el valor predeterminado es `$SHELL` en Linux y macOS, PowerShell en Windows 10 y cmd.exe en versiones anteriores de Windows. Se pueden invalidar manualmente estableciendo `terminal.integrated.shell.*` en [configuración](settings.md). Se pueden pasar argumentos al shell de terminal en Linux y macOS usando el `terminal.integrated.shellArgs.*` configuración.
+El valor predeterminado del shell usado es `$SHELL` en Linux y macOS, PowerShell en Windows 10 y cmd.exe en versiones anteriores de Windows. Se pueden invalidar manualmente si se establece `terminal.integrated.shell.*` en [configuración](settings.md). Los argumentos se pueden pasar al shell del terminal en Linux y macOS con la configuración `terminal.integrated.shellArgs.*`.
 
 ### <a name="windows"></a>Windows
 
-Configurar correctamente el shell de Windows es una cuestión de localizar el archivo ejecutable correcto y actualizar la configuración. A continuación se muestran una lista de los archivos ejecutables de shell comunes y sus ubicaciones predeterminadas:
+Para configurar correctamente el shell en Windows, hay que buscar el ejecutable correcto y actualizar la configuración. A continuación se muestra una lista de los ejecutables comunes del shell y sus ubicaciones predeterminadas:
 
 ```json
 // 64-bit cmd if available, otherwise 32-bit
@@ -63,91 +63,91 @@ Configurar correctamente el shell de Windows es una cuestión de localizar el ar
 ```
 
 > [!NOTE]
-> Para su uso como un terminal integrado, el ejecutable de shell debe ser una aplicación de consola para que `stdin/stdout/stderr` se pueden redirigir.
+> Para usarse como un terminal integrado, el ejecutable del shell debe ser una aplicación de consola para que se pueda redirigir `stdin/stdout/stderr`.
 
 > [!TIP]
-> Se está ejecutando el shell de terminal integrado con los permisos de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Si necesita ejecutar un comando de shell con privilegios elevados (Administrador) o permisos diferentes, puede usar las utilidades de la plataforma, como `runas.exe` dentro de una ventana de terminal.
+> El shell del terminal integrado se ejecuta con los permisos de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Si necesita ejecutar un comando del shell con privilegios elevados (administrador) u otros permisos, puede usar las utilidades de la plataforma, como `runas.exe`, en un terminal.
 
-### <a name="shell-arguments"></a>Argumentos de shell
+### <a name="shell-arguments"></a>Argumentos del shell
 
 Puede pasar argumentos al shell cuando se inicia.
 
-Por ejemplo, para habilitar la ejecución de bash como un shell de inicio de sesión (que se ejecuta `.bash_profile`), pasar la `-l` argumento (con comillas dobles):
+Por ejemplo, para habilitar la ejecución de Bash como un shell de inicio de sesión (que ejecuta `.bash_profile`), pase el argumento `-l` (con comillas dobles):
 
 ```json
 // Linux
 "terminal.integrated.shellArgs.linux": ["-l"]
 ```
 
-## <a name="terminal-display-settings"></a>Configuración de pantalla de Terminal
+## <a name="terminal-display-settings"></a>Configuración de la pantalla del terminal
 
-Puede personalizar la fuente de terminal integrado y el alto de línea con la siguiente configuración:
+Puede personalizar la fuente y el alto de línea del terminal integrado con la siguiente configuración:
 
 * `terminal.integrated.fontFamily`
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>Enlaces de teclado de Terminal
+## <a id="key-bindings"></a>Enlaces de teclado del terminal
 
-El **vista: Alternar Terminal integrado** comando está enlazado a **Ctrl +'** alternar rápidamente el panel de terminal integrado dentro y fuera de la vista.
+El comando **Ver: Alternar terminal integrado** está enlazado con **Ctrl+`** para mostrar u ocultar rápidamente el panel del terminal integrado en la vista.
 
-A continuación se muestran los métodos abreviados de teclado para desplazarse rápidamente dentro el terminal integrado:
+A continuación se muestran los métodos abreviados de teclado para navegar rápidamente por el terminal integrado:
 
 |Key|Comando|  
 |---|---|  
-|**CTRL +\`**|Mostrar el terminal integrado|  
-|**CTRL + MAYÚS +\`**|Crear nueva terminal|  
-|**Ctrl+flecha arriba**|Desplácese hacia arriba|  
-|**Ctrl+flecha abajo**|Desplácese hacia abajo|  
-|**Ctrl + RePág**|Desplazar página hacia arriba|  
-|**Ctrl+PageDown**|Desplazar página hacia abajo|  
-|**CTRL + Inicio**|Desplácese hasta la parte superior|  
-|**CTRL + fin**|Desplácese hacia abajo|  
-|**CTRL + K**|Desactive el terminal|  
+|**Ctrl+\`**|Mostrar el terminal integrado|  
+|**Ctrl+Mayús+\`**|Crear un terminal|  
+|**Ctrl+Flecha arriba**|Desplazarse hacia arriba|  
+|**Ctrl+Flecha abajo**|Desplazarse hacia abajo|  
+|**Ctrl+RePág**|Retroceder una página|  
+|**Ctrl+AvPág**|Avanzar una página|  
+|**Ctrl+Inicio**|Desplazarse hasta el principio|  
+|**Ctrl+Fin**|Desplazarse hasta la parte inferior|  
+|**Ctrl+K**|Borrar el terminal|  
 
-Otros comandos de terminal están disponibles y se pueden enlazar a los métodos abreviados de teclado preferido.
+Hay disponibles otros comandos del terminal y se pueden enlazar a sus métodos abreviados de teclado preferidos.
 
 Estas sobrecargas son:
 
-* `workbench.action.terminal.focus`: Centrar el terminal. Esto es similar a alternar pero centra el terminal en lugar de ocultarlo, si está visible.
-* `workbench.action.terminal.focusNext`: Se centra en la siguiente instancia de terminal.
-* `workbench.action.terminal.focusPrevious`: Se centra en la instancia anterior de terminal.
-* `workbench.action.terminal.kill`: Quite la instancia actual de terminal.
-* `workbench.action.terminal.runSelectedText`: Ejecute el texto seleccionado en la instancia de terminal.
-* `workbench.action.terminal.runActiveFile`: Ejecute el archivo activo en la instancia de terminal.
+* `workbench.action.terminal.focus`: centre el terminal. Esto es parecido a la alternación, pero centra el terminal en lugar de ocultarlo, si está visible.
+* `workbench.action.terminal.focusNext`: centra la siguiente instancia del terminal.
+* `workbench.action.terminal.focusPrevious`: centra la instancia anterior del terminal.
+* `workbench.action.terminal.kill`: quita la instancia actual del terminal.
+* `workbench.action.terminal.runSelectedText`: ejecute el texto seleccionado en la instancia del terminal.
+* `workbench.action.terminal.runActiveFile`: ejecute el archivo activo en la instancia del terminal.
 
-### <a name="run-selected-text"></a>Ejecutar texto seleccionado
+### <a name="run-selected-text"></a>Ejecución del texto seleccionado
 
-Para usar el `runSelectedText` de comandos, seleccione el texto en un editor y ejecute el comando **Terminal: Ejecutar texto seleccionado en el Terminal Active** a través de la **paleta de comandos** (**Ctrl + Mayús + P**). El terminal intenta ejecutar el texto seleccionado:
+Para usar el comando `runSelectedText`, seleccione texto en un editor y ejecute el comando **Terminal: Ejecutar texto seleccionado en el terminal activo** mediante la **paleta de comandos** (**Ctrl+Mayús+P**). El terminal intenta ejecutar el texto seleccionado:
 
-![Ejecutar texto seleccionado](media/integrated-terminal/terminal_run_selected.png)
+![Ejecución del texto seleccionado](media/integrated-terminal/terminal_run_selected.png)
 
-Si no hay texto seleccionado en el editor activo, se ejecuta la línea donde se encuentra el cursor en el terminal.
+Si no se selecciona ningún texto en el editor activo, se ejecuta la línea en la que está el cursor en el terminal.
 
-### <a name="copy--paste"></a>Copiar y pegar
+### <a name="copy--paste"></a>Copiado y pegado
 
 Los enlaces de teclado para copiar y pegar siguen los estándares de la plataforma:
 
-* Linux: **CTRL + MAYÚS + C** y **Ctrl + Mayús + V**
-* Mac: **Cmd + C** y **Cmd + V**
-* Windows: **CTRL + C** y **Ctrl + V**
+* Linux: **Ctrl+Mayús+C** y **Ctrl+Mayús+V**
+* Mac: **Cmd+C** y **Cmd+V**
+* Windows: **Ctrl+C** y **Ctrl+V**
 
 ### <a name="find"></a>Buscar
 
-El Terminal integrado ofrece la funcionalidad de búsqueda básica que se puede desencadenar con **CTRL+f**.
+El terminal integrado tiene una funcionalidad de búsqueda básica que se puede desencadenar con **Ctrl+F**.
 
-Si desea que **CTRL+f** para ir al shell en lugar de iniciar el widget de búsqueda en Linux y Windows, deberá quitar el enlace de teclado de este modo:
+Si quiere que **Ctrl+F** vaya al shell en lugar de iniciar el widget de búsqueda en Linux y Windows, debe quitar el enlace de teclado de la siguiente forma:
 
 ```js
 { "key": "ctrl+f", "command": "-workbench.action.terminal.focusFindWidget",
                       "when": "terminalFocus" },
 ```
 
-### <a name="rename-terminal-sessions"></a>Cambiar el nombre de sesiones de terminal Server
+### <a name="rename-terminal-sessions"></a>Cambio del nombre de las sesiones del terminal
 
-Sesiones de Terminal integradas ahora se pueden cambiar mediante la **Terminal: Cambiar el nombre de** (`workbench.action.terminal.rename`) comando. El nuevo nombre se muestra en la lista desplegable de selección terminal.
+Ahora se puede cambiar el nombre de las sesiones del terminal integrado mediante el comando **Terminal: Cambiar de nombre** (`workbench.action.terminal.rename`). El nuevo nombre se muestra en la lista desplegable de selección del terminal.
 
-### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Forzar los enlaces de teclado para pasar a través del terminal
+### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Forzamiento del paso de los enlaces de teclado mediante el terminal
 
-Mientras el foco está en el terminal integrado, muchos de los enlaces de teclado no funcionarán porque se pasan a las pulsaciones de teclas y se consume el terminal propio. El `terminal.integrated.commandsToSkipShell` opción puede usarse para solucionar este problema. Contiene una matriz de nombres de comando cuyos enlaces claves omitir el procesamiento, el shell y en su lugar se procesó el [!INCLUDE[name-sos](../includes/name-sos-short.md)] sistema de enlace de clave. De forma predeterminada, esto incluye todos los enlaces de teclado de terminales además un Seleccione algunas frecuente los enlaces de teclado.
+Mientras el foco está en el terminal integrado, muchos enlaces de teclado no funcionarán porque las pulsaciones de las teclas se pasan al propio terminal, quien las consume. Se puede usar la configuración `terminal.integrated.commandsToSkipShell` para solucionar este problema. Contiene una matriz de nombres de comando cuyos enlaces de teclado omiten el procesamiento del shell y, en su lugar, se procesan mediante el sistema de enlaces de teclado de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. De forma predeterminada, esto incluye todos los enlaces de teclado del terminal, además de una selección de algunos enlaces de teclado de uso frecuente.
 

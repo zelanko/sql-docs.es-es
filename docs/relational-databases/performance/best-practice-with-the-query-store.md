@@ -1,7 +1,7 @@
 ---
 title: Procedimiento recomendado con el Almacén de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa4528b916e70ed838ab8f3665de9293646d94ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 917a471183d31fab92aa871b6f71a5835c7999d1
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985028"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495390"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -51,7 +51,7 @@ Los parámetros predeterminados son lo suficientemente buenos para iniciarse, pe
   
  Mientras que el Almacén de consultas recopila consultas, planes de ejecución y estadísticas, su tamaño en la base de datos crece hasta que se alcanza este límite. Cuando esto ocurre, el Almacén de consultas cambia automáticamente el modo de operación a solo lectura y deja de recopilar datos nuevos, lo que significa que el análisis de rendimiento ya no es preciso.  
   
- El valor predeterminado (100 MB) puede no ser suficiente si la carga de trabajo genera gran cantidad de planes y consultas diferentes o si desea mantener el historial de consultas durante un período de tiempo más largo. Realice un seguimiento del uso de espacio actual y aumente el valor de Tamaño máximo (MB) para impedir que el Almacén de consultas cambie al modo de solo lectura. Utilice [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o ejecute el siguiente script para obtener la información más reciente sobre el tamaño del Almacén de consultas:  
+ El valor predeterminado en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (100 MB) puede no que no sea suficiente si la carga de trabajo genera una gran cantidad de planes y consultas diferentes, o bien si quiere mantener el historial de consultas durante un mayor período de tiempo. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], el valor predeterminado es de 1 GB. Realice un seguimiento del uso de espacio actual y aumente el valor de Tamaño máximo (MB) para impedir que el Almacén de consultas cambie al modo de solo lectura. Utilice [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o ejecute el siguiente script para obtener la información más reciente sobre el tamaño del Almacén de consultas:  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -109,11 +109,13 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **Modo de captura del almacén de consultas:** especifica la directiva de captura de consultas para el Almacén de consultas.  
   
--   **All**: captura todas las consultas. Ésta es la opción predeterminada.  
+-   **All**: captura todas las consultas. Esta es la opción predeterminada en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].  
   
--   **Auto**: se omiten las consultas poco frecuentes y aquellas con una duración de compilación y ejecución insignificante. Los umbrales para la duración del tiempo de ejecución, compilación y recuento de ejecuciones se determinan internamente.  
+-   **Auto**: se omiten las consultas poco frecuentes y aquellas con una duración de compilación y ejecución insignificante. Los umbrales para la duración del tiempo de ejecución, compilación y recuento de ejecuciones se determinan internamente. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], esta es la opción predeterminada.  
   
 -   **None**: el Almacén de consultas deja de capturar consultas nuevas.  
+
+-   **Personalizado**: permite controles adicionales y ajustar la directiva de recopilación de datos. Las nuevas opciones de configuración personalizadas definen lo que ocurre durante el umbral de tiempo de la directiva de captura interna: un límite de tiempo durante el que se evalúan las condiciones configurables y, si alguna de ellas es verdadera, la consulta puede registrarse en el Almacén de consultas.
   
  El siguiente script establece el modo de captura de consultas en Automático:  
   
@@ -121,7 +123,64 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
+
+### <a name="examples"></a>Ejemplos
+En el ejemplo siguiente, se establece el modo de captura de consultas en automático y se configuran otras opciones recomendadas en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]:  
   
+```sql  
+ALTER DATABASE [QueryStoreDB]   
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```  
+
+En el ejemplo siguiente, se establece el modo de captura de consultas en automático y se configuran otras opciones recomendadas en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] para incluir estadísticas de espera:  
+
+```sql
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+En el ejemplo siguiente, se establece el modo de captura de consultas en automático y se configuran otras opciones recomendadas en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]; de manera opcional, se establece la directiva de captura personalizada con los valores predeterminados:  
+
+```sql
+ALTER DATABASE [QueryStoreDB]  
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
 ## <a name="how-to-start-with-query-performance-troubleshooting"></a>Inicio de la solución de problemas de rendimiento de consultas  
  El flujo de trabajo de la solución de problemas con el Almacén de consultas es sencillo, tal y como se muestra en el diagrama siguiente:  
   
@@ -132,8 +191,8 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
 ```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
-  
- Almacén de consultas tardará algún tiempo en recopilar el conjunto de datos que representa con precisión la carga de trabajo. Normalmente, un día es suficiente incluso para cargas de trabajo muy complejas. Sin embargo, puede empezar a explorar los datos e identificar las consultas que requieran su atención inmediatamente después de haber habilitado la característica.   
+
+Almacén de consultas tardará algún tiempo en recopilar el conjunto de datos que representa con precisión la carga de trabajo. Normalmente, un día es suficiente incluso para cargas de trabajo muy complejas. Sin embargo, puede empezar a explorar los datos e identificar las consultas que requieran su atención inmediatamente después de haber habilitado la característica.   
 Vaya a la subcarpeta Almacén de consultas del nodo de la base de datos en el Explorador de objetos de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para abrir las vistas de solución de problemas de escenarios concretos.   
 El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] funciona con el conjunto de métricas de ejecución, cada una expresada como cualquiera de las siguientes funciones estadísticas:  
   
@@ -246,7 +305,7 @@ FROM sys.database_query_store_options;
   
  Si el problema continúa, significa que los datos del Almacén de consultas siguen dañados en el disco.
  
- Para SQL 2017 y versiones posteriores, el Almacén de consultas podría recuperarse mediante la ejecución del procedimiento almacenado **sp_query_store_consistency_check** en la base de datos afectada. Para 2016, deberá borrar los datos del Almacén de consultas, tal como se muestra a continuación.
+ A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], el Almacén de consultas se puede recuperar si se ejecuta el procedimiento **sp_query_store_consistency_check** almacenado en la base de datos afectada. Para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tendrá que borrar los datos del Almacén de consultas, como se muestra a continuación.
  
  Si esto no ha solucionado el problema, puede intentar borrar el Almacén de consultas antes de solicitar el modo de lectura y escritura.  
   
@@ -271,10 +330,14 @@ FROM sys.database_query_store_options;
   
 |Modo de captura de consultas|Escenario|  
 |------------------------|--------------|  
-|All|Analice la carga de trabajo exhaustivamente en cuanto a todas las formas de las consultas y sus frecuencias de ejecución, y otras estadísticas.<br /><br /> Identifique nuevas consultas en la carga de trabajo.<br /><br /> Detecte si las consultas ad hoc se usan para identificar oportunidades de parametrización automática o de usuario.|  
-|Auto|Céntrese en las consultas pertinentes y accionables; en las consultas que se ejecutan con regularidad o en las que tienen un consumo significativo de recursos.|  
+|All|Analice la carga de trabajo exhaustivamente en cuanto a todas las formas de las consultas y sus frecuencias de ejecución, y otras estadísticas.<br /><br /> Identifique nuevas consultas en la carga de trabajo.<br /><br /> Detecte si las consultas ad hoc se usan para identificar oportunidades de parametrización automática o de usuario.<br /><br />**Nota:** Este es el modo de captura predeterminado en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].|  
+|Auto|Céntrese en las consultas pertinentes y accionables; en las consultas que se ejecutan con regularidad o en las que tienen un consumo significativo de recursos.<br /><br />**Nota:** A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], este es el modo de captura predeterminado.|  
 |None|Ya ha capturado el conjunto de consultas que desea supervisar en tiempo de ejecución y desea eliminar los objetos innecesarios que pueden introducir otras consultas.<br /><br /> El modo Ninguno es adecuado para entornos de pruebas y evaluación comparativa.<br /><br /> El modo Ninguno también es adecuado para los proveedores de software que incluyen la configuración del Almacén de consultas definida para supervisar la carga de trabajo de la aplicación.<br /><br /> El modo Ninguno debe utilizarse con precaución, ya que podría perder la oportunidad de realizar un seguimiento de consultas nuevas importantes y de optimizarlas. Evite el uso del modo Ninguno a menos que tenga un escenario específico que lo requiera.|  
-  
+|Personalizado|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce un modo de captura PERSONALIZADO en el comando `ALTER DATABASE SET QUERY_STORE`. Cuando se habilita, una nueva configuración de la directiva de captura del Almacén de consultas incluye más configuraciones del Almacén para optimizar la recopilación de datos en un servidor específico.<br /><br />Las nuevas opciones de configuración personalizadas definen lo que ocurre durante el umbral de tiempo de la directiva de captura interna: un límite de tiempo durante el que se evalúan las condiciones configurables y, si alguna de ellas es verdadera, la consulta puede registrarse en el Almacén de consultas. Para obtener más información, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
+
+> [!NOTE]
+> Los cursores, las consultas dentro de los procedimientos almacenados y las consultas compiladas de forma nativa siempre se capturan cuando el modo de captura de consultas se establece en Todo, Automático o Personalizado.
+
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Conservación de los datos más relevantes en el Almacén de consultas  
  Configure el Almacén de consultas para que contenga solo los datos pertinentes y para que se ejecute continuamente proporcionando una magnífica experiencia de solución de problemas con un impacto mínimo en la carga de trabajo normal.  
 La tabla siguiente proporciona prácticas recomendadas:  
@@ -310,7 +373,6 @@ Tenga en cuenta las siguientes opciones:
 El Almacén de consultas asocia la entrada de consulta a un objeto contenedor (procedimiento almacenado, función y desencadenador).  Cuando se vuelve a crear un objeto contenedor, se genera una nueva entrada de consulta para el mismo texto de consulta. Esto impide realizar un seguimiento de las estadísticas de rendimiento para esa consulta a lo largo del tiempo y usar un mecanismo para forzar el plan. Para evitar esto, utilice el proceso `ALTER <object>` para cambiar una definición de objeto contenedor siempre que sea posible.  
   
 ##  <a name="CheckForced"></a> Comprobación periódica del estado de los planes forzados  
-
 Forzar el plan es un mecanismo conveniente para corregir el rendimiento de las consultas críticas y hacer que sean más predecibles. Sin embargo, al igual que con las sugerencias de plan y las guías de plan, forzar un plan no es una garantía de que se utilizará en ejecuciones futuras. Normalmente, cuando se cambia el esquema de base de datos de forma que se modifican o se quitan objetos a los que hace referencia el plan de ejecución, al forzar el plan se empiezan a generar errores. En ese caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a la recompilación de consultas mientras el motivo real del error de la operación de forzado aparece en [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). La siguiente consulta devuelve información sobre planes forzados.  
   
 ```sql  
@@ -340,11 +402,15 @@ Las marcas de seguimiento globales 7745 y 7752 pueden usarse para mejorar la dis
   
 -  La marca de seguimiento 7752 permite la carga asincrónica del Almacén de consultas. De esta manera, la base de datos se pone en línea y las consultas se ejecutan antes de que el Almacén de consultas se haya recuperado completamente. El comportamiento predeterminado consiste en realizar la carga sincrónica del Almacén de consultas. Dicho comportamiento impide que se ejecuten las consultas antes de que el Almacén de consultas se haya recuperado, pero también impide que se pierdan las consultas en la colección de datos.
 
+   > [!NOTE]
+   > A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], este comportamiento se controla mediante el motor, y la marca de seguimiento 7752 no tiene ningún efecto.
+
 > [!IMPORTANT]
 > Si usa el Almacén de consultas para conclusiones de la carga de trabajo just-in-time en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tenga previsto instalar las correcciones de escalabilidad de rendimiento en [KB 4340759](https://support.microsoft.com/help/4340759) lo antes posible. 
 
 ## <a name="see-also"></a>Consulte también  
-[Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
+[Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)     
+[Query Store Catalog Views &#40;Transact-SQL&#41; (Vistas de catálogo del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
 [Query Store Stored Procedures &#40;Transact-SQL&#41; (Procedimientos almacenados del Almacén de consultas &#40;Transact-SQL&#41;)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
 [Uso del almacén de consultas con OLTP en memoria](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     
 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)      

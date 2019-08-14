@@ -1,7 +1,7 @@
 ---
-title: Implementar sin conexión
+title: Implementación sin conexión
 titleSuffix: SQL Server big data clusters
-description: Obtenga información sobre cómo realizar una implementación sin conexión de un clúster de macrodatos de SQL Server.
+description: Aprenda a realizar una implementación sin conexión de un clúster de macrodatos de SQL Server.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: cd8b3128fc11037a5ade494813611d473c995f8f
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68419369"
 ---
-# <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Realización de una implementación sin conexión de un clúster de macrodatos SQL Server
+# <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Realización de una implementación sin conexión de un clúster de macrodatos de SQL Server
 
-En este artículo se describe cómo realizar una implementación sin conexión de un clúster de macrodatos SQL Server 2019 (versión preliminar). Los clústeres de Big Data deben tener acceso a un repositorio de Docker desde el que extraer las imágenes del contenedor. Una instalación sin conexión es aquella en la que las imágenes necesarias se colocan en un repositorio privado de Docker. Ese repositorio privado se usa a continuación como el origen de la imagen para una nueva implementación.
+En este artículo se explica cómo realizar una implementación sin conexión de un clúster de macrodatos de SQL Server 2019 (versión preliminar). Los clústeres de macrodatos deben tener acceso a un repositorio de Docker desde el que extraer imágenes de contenedor. Una instalación sin conexión es aquella en la que las imágenes necesarias se encuentran en un repositorio privado de Docker. Ese repositorio privado se usa como origen de imágenes de una nueva implementación.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - Motor de Docker 1.8 o versiones posteriores en cualquier distribución de Linux admitida o Docker para Mac y Windows. Para obtener más información, consulte [Instalar Docker](https://docs.docker.com/engine/installation/).
 
@@ -28,12 +28,12 @@ En este artículo se describe cómo realizar una implementación sin conexión d
 
 ## <a name="load-images-into-a-private-repository"></a>Cargar imágenes en un repositorio privado
 
-En los pasos siguientes se describe cómo extraer las imágenes de contenedor del clúster de Big Data del repositorio de Microsoft y, a continuación, insertarlos en el repositorio privado.
+En los pasos siguientes se explica cómo extraer las imágenes de contenedor de clúster de macrodatos del repositorio de Microsoft y luego insertarlas en el repositorio privado.
 
 > [!TIP]
-> En los pasos siguientes se explica el proceso. Sin embargo, para simplificar la tarea, puede usar el [script automatizado](#automated) en lugar de ejecutar estos comandos manualmente.
+> En los pasos siguientes se explica el proceso. Pero para simplificar la tarea, puede usar el [script automatizado](#automated) en lugar de ejecutar estos comandos manualmente.
 
-1. Extraiga las imágenes del contenedor de clúster de Big Data repitiendo el siguiente comando. Reemplazar `<SOURCE_IMAGE_NAME>` por cada [nombre de imagen](#images). Reemplace `<SOURCE_DOCKER_TAG>` por la etiqueta de la versión del clúster de Big Data, como **2019-CTP 3.2-Ubuntu**.  
+1. Extraiga las imágenes de contenedor de clúster de macrodatos mediante la repetición del siguiente comando. Reemplace `<SOURCE_IMAGE_NAME>` por cada [nombre de imagen](#images). Reemplace `<SOURCE_DOCKER_TAG>` por la etiqueta de la versión del clúster de macrodatos, como **2019-CTP3.2-ubuntu**.  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -57,9 +57,9 @@ En los pasos siguientes se describe cómo extraer las imágenes de contenedor de
    docker push <TARGET_DOCKER_REGISTRY>/<TARGET_DOCKER_REPOSITORY>/<SOURCE_IMAGE_NAME>:<TARGET_DOCKER_TAG>
    ```
 
-### <a id="images"></a>Imágenes de contenedor de clúster de Big Data
+### <a id="images"></a> Imágenes de contenedor de clúster de macrodatos
 
-Las siguientes imágenes de contenedor de clúster de Big Data son necesarias para una instalación sin conexión:
+Las siguientes imágenes de contenedor de clúster de macrodatos son necesarias para una instalación sin conexión:
 
  - **mssql-appdeploy-init**
  - **mssql-monitor-fluentbit**
@@ -80,44 +80,44 @@ Las siguientes imágenes de contenedor de clúster de Big Data son necesarias pa
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
  - **mssql-mleap-serving-runtime**
- - **MSSQL-seguridad-compatibilidad**
+ - **mssql-security-support**
 
-## <a id="automated"></a>Script automatizado
+## <a id="automated"></a> Script automatizado
 
-Puede usar un script de Python automatizado que extraerá automáticamente todas las imágenes de contenedor necesarias y las incluirá en un repositorio privado.
+Puede usar un script de Python automatizado que extraiga automáticamente todas las imágenes de contenedor necesarias y las inserte en un repositorio privado.
 
 > [!NOTE]
-> Python es un requisito previo para usar el script. Para obtener más información sobre cómo instalar Python, consulte la [documentación de Python](https://wiki.python.org/moin/BeginnersGuide/Download).
+> Python es un requisito previo para usar el script. Para obtener más información sobre cómo instalar Python, vea la [documentación de Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 
-1. En bash o PowerShell, descargue el script con **rizo**:
+1. En Bash o PowerShell, descargue el script con **curl**:
 
    ```PowerShell
    curl -o push-bdc-images-to-custom-private-repo.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/offline/push-bdc-images-to-custom-private-repo.py"
    ```
 
-1. A continuación, ejecute el script con uno de los siguientes comandos:
+1. Luego ejecute el script con uno de los siguientes comandos:
 
-   **Windows**
+   **Windows:**
 
    ```PowerShell
    python deploy-sql-big-data-aks.py
    ```
 
-   **Linuxun**
+   **Linux:**
 
    ```bash
    sudo python deploy-sql-big-data-aks.py
    ```
 
-1. Siga las indicaciones para especificar el repositorio de Microsoft y la información privada del repositorio. Una vez completado el script, todas las imágenes necesarias deben encontrarse en el repositorio privado.
+1. Siga los mensajes para especificar la información del repositorio de Microsoft y el repositorio privado. Una vez completado el script, todas las imágenes necesarias deben encontrarse en el repositorio privado.
 
-## <a name="install-tools-offline"></a>Instalar herramientas sin conexión
+## <a name="install-tools-offline"></a>Instalación de herramientas sin conexión
 
-Las implementaciones de clúster de Big Data requieren varias herramientas, como **Python**, **azdata**y **kubectl**. Siga los pasos siguientes para instalar estas herramientas en un servidor sin conexión.
+Las implementaciones de clústeres de macrodatos requieren varias herramientas, como **Python**, **azdata** y **kubectl**. Siga estos pasos para instalar estas herramientas en un servidor sin conexión.
 
-### <a id="python"></a>Instalación de Python sin conexión
+### <a id="python"></a> Instalación de Python sin conexión
 
-1. En una máquina con acceso a Internet, descargue uno de los siguientes archivos comprimidos que contienen Python:
+1. En un equipo con acceso a Internet, descargue uno de los siguientes archivos comprimidos que contienen Python:
 
    | Sistema operativo | Descargar |
    |---|---|
@@ -127,39 +127,39 @@ Las implementaciones de clúster de Big Data requieren varias herramientas, como
 
 1. Copie el archivo comprimido en el equipo de destino y extráigalo en una carpeta de su elección.
 
-1. Solo para Windows, ejecute `installLocalPythonPackages.bat` desde esa carpeta y pase la ruta de acceso completa a la misma carpeta que un parámetro.
+1. Solo para Windows, ejecute `installLocalPythonPackages.bat` desde esa carpeta y pase la ruta de acceso completa a la misma carpeta como un parámetro.
 
    ```PowerShell
    installLocalPythonPackages.bat "C:\python-3.6.6-win-x64-0.0.1-offline\0.0.1"
    ```
 
-### <a id="azdata"></a>Instalación de azdata sin conexión
+### <a id="azdata"></a> Instalación de azdata sin conexión
 
-1. En una máquina con acceso a Internet y [Python](https://wiki.python.org/moin/BeginnersGuide/Download), ejecute el siguiente comando para descargar todos los paquetes de **azdata** en la carpeta actual.
+1. En un equipo con acceso a Internet y [Python](https://wiki.python.org/moin/BeginnersGuide/Download), ejecute el siguiente comando para descargar todos los paquetes de **azdata** en la carpeta actual.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. Copie los paquetes descargados y el archivo **requirements. txt** en el equipo de destino.
+1. Copie los paquetes descargados y el archivo **requirements.txt** en el equipo de destino.
 
-1. Ejecute el siguiente comando en el equipo de destino, especificando la carpeta en la que copió los archivos anteriores.
+1. Ejecute el siguiente comando en el equipo de destino y especifique la carpeta en la que ha copiado los archivos anteriores.
 
    ```PowerShell
    pip install --no-index --find-links <path-to-packages> -r <path-to-requirements.txt>
    ```
 
-### <a id="kubectl"></a>Instalación de kubectl sin conexión
+### <a id="kubectl"></a> Instalación de kubectl sin conexión
 
 Para instalar **kubectl** en un equipo sin conexión, siga estos pasos.
 
-1. Use **rizo** para descargar **kubectl** en una carpeta de su elección. Para obtener más información, consulte [instalación del archivo binario kubectl con rizo](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl).
+1. Use **curl** para descargar **kubectl** en la carpeta que prefiera. Para obtener más información, vea [Instalación del binario de kubectl mediante curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl).
 
 1. Copie la carpeta en el equipo de destino.
 
 ## <a name="deploy-from-private-repository"></a>Implementación desde un repositorio privado
 
-Para realizar la implementación desde el repositorio privado, siga los pasos descritos en la [Guía de implementación](deployment-guidance.md), pero use un archivo de configuración de implementación personalizado que especifique la información privada del repositorio de Docker. Los siguientes comandos de **azdata** muestran cómo cambiar la configuración de Docker en un archivo de configuración de implementación personalizado denominado **control. JSON**:
+Para implementar desde el repositorio privado, siga los pasos de la [guía de implementación](deployment-guidance.md), pero use un archivo de configuración de implementación personalizado que especifique la información del repositorio privado de Docker. Los siguientes comandos de **azdata** muestran cómo cambiar la configuración de Docker de un archivo de configuración de implementación personalizado denominado **control.json**:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -167,8 +167,8 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-La implementación le pedirá el nombre de usuario y la contraseña de Docker, o puede especificarlos en las variables de entorno **DOCKER_USERNAME** y **DOCKER_PASSWORD** .
+La implementación pide el nombre de usuario y la contraseña de Docker, o bien puede especificarlos en las variables de entorno **DOCKER_USERNAME** y **DOCKER_PASSWORD**.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre las implementaciones de clúster de Big Data, consulte [cómo implementar clústeres de macrodatos SQL Server en Kubernetes](deployment-guidance.md).
+Para obtener más información sobre las implementaciones de clústeres de macrodatos, vea [Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md).

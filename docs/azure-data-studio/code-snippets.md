@@ -1,7 +1,7 @@
 ---
-title: Crear fragmentos de código reutilizables
+title: Creación de fragmentos de código reutilizables
 titleSuffix: Azure Data Studio
-description: Obtenga información sobre cómo crear y utilizar fragmentos de código SQL en Azure Data Studio
+description: Obtenga información sobre cómo crear y usar fragmentos de código de SQL en Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,56 +11,56 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959702"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Crear y utilizar fragmentos de código para crear rápidamente scripts de Transact-SQL (T-SQL) en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Crear y usar fragmentos de código para crear rápidamente script de Transact-SQL (T-SQL) en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Fragmentos de código en [!INCLUDE[name-sos](../includes/name-sos-short.md)] son plantillas que facilitan la creación de bases de datos y objetos de base de datos. 
+Los fragmentos de código en [!INCLUDE[name-sos](../includes/name-sos-short.md)] son plantillas que permiten crear fácilmente bases de datos y objetos de bases de datos. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] proporciona varios fragmentos de código de Transact-SQL que le ayudarán a generar rápidamente la sintaxis correcta. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] proporciona varios fragmentos de código de T-SQL para ayudarle a generar rápidamente la sintaxis correcta. 
 
-También se pueden crear fragmentos de código definido por el usuario.
+También se pueden crear fragmentos de código definidos por el usuario.
 
-## <a name="using-built-in-t-sql-code-snippets"></a>Uso de fragmentos de código integrados de T-SQL
+## <a name="using-built-in-t-sql-code-snippets"></a>Usar fragmentos de código de T-SQL integrados
 
-1. Para obtener acceso a los fragmentos de código disponibles, escriba *sql* en el editor de consultas para abrir la lista:
+1. Para acceder a los fragmentos de código disponibles, escriba *sql* en el editor de consultas para abrir la lista:
 
    ![fragmentos de código](media/code-snippets/sql-snippets.png)
 
-1. Seleccione el fragmento de código que desea usar y genera el script de T-SQL. Por ejemplo, seleccione *sqlCreateTable*:
+1. Seleccione el fragmento de código que quiera usar y se generará el script de T-SQL. Por ejemplo, seleccione *sqlCreateTable*:
 
    ![crear fragmentos de código de tabla](media/code-snippets/create-table.png)
 
-1. Actualice los campos resaltados con sus valores específicos. Por ejemplo, reemplace *TableName* y *esquema* con los valores de la base de datos:
+1. Actualice los campos resaltados con los valores específicos. Por ejemplo, reemplace *TableName* y *Schema* por los valores de su base de datos:
 
-   ![Sustituya el campo de plantilla](media/code-snippets/table-from-snippet.png)
+   ![reemplazar campo de plantilla](media/code-snippets/table-from-snippet.png)
 
-   Si ya no está resaltado el campo que desea cambiar (Esto ocurre cuando se mueve el cursor en el editor), haga clic en la palabra que desee cambiar y seleccione **cambie todas las apariciones**:
+   Si el campo que quiere cambiar ya no está resaltado (esto puede ocurrir si desplaza el cursor por el editor), haga clic con el botón derecho en la palabra que quiera cambiar y seleccione **Cambiar todas las repeticiones**:
 
-   ![Sustituya el campo de plantilla](media/code-snippets/change-all.png)
+   ![reemplazar campo de plantilla](media/code-snippets/change-all.png)
 
-1. Actualizar o agregar cualquier T-SQL adicional que necesita para el fragmento de código seleccionado. Por ejemplo, actualizar *Column1*, *Column2*y agregar más columnas.
+1. Actualice o agregue las instrucciones T-SQL que necesite para el fragmento de código seleccionado. Por ejemplo, actualice *Column1* y *Column2*, y agregue más columnas.
 
 
  
-## <a name="creating-sql-code-snippets"></a>Crear fragmentos de código SQL 
+## <a name="creating-sql-code-snippets"></a>Crear fragmentos de código de SQL 
 
-Puede definir sus propios fragmentos de código. Para abrir el archivo de fragmento de código SQL para editarlo:
+Puede definir sus propios fragmentos de código. Para abrir el archivo de fragmento de código de SQL y editarlo:
 
-1. Abra el *paleta de comandos* (**Ctrl + Mayús + P**) y el tipo *recorte*y seleccione **preferencias: Abra los fragmentos de código de usuario**:
+1. Abra la *Paleta de comandos* (**Mayús+Ctrl+P**), escriba *snip* y seleccione **Preferencias: abrir fragmentos de código del usuario**:
 
-   ![Sustituya el campo de plantilla](media/code-snippets/user-snippets.png)
+   ![reemplazar campo de plantilla](media/code-snippets/user-snippets.png)
 
 1. Seleccione **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] hereda su funcionalidad de fragmento de código de Visual Studio Code para que este artículo trata específicamente con fragmentos de código SQL. Para obtener más información, consulte [crear sus propios fragmentos](https://code.visualstudio.com/docs/editor/userdefinedsnippets) en la documentación de Visual Studio Code. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] hereda la función de fragmentos de código de Visual Studio Code, ya que en este artículo se explica específicamente el uso de fragmentos de código de SQL. Para obtener más información, vea [Creación de sus propios fragmento de código](https://code.visualstudio.com/docs/editor/userdefinedsnippets) en la documentación de Visual Studio Code. 
 
-   ![Sustituya el campo de plantilla](media/code-snippets/select-sql.png)
+   ![reemplazar campo de plantilla](media/code-snippets/select-sql.png)
 
 1. Pegue el código siguiente en *sql.json*:
 
@@ -95,12 +95,12 @@ Puede definir sus propios fragmentos de código. Para abrir el archivo de fragme
    ```
 
 1. Guarde el archivo sql.json.
-1. Abra una nueva ventana del editor de consultas haciendo **CTRL+n**.
-2. Tipo **sql**, y ver los fragmentos de código de usuario de dos que acaba de agregar; *sqlCreateTable2* y *sqlSelectTop5*.
+1. Presione **Ctrl+N** para abrir una nueva ventana del editor de consultas.
+2. Escriba **sql**; verá los dos fragmentos de código del usuario que acaba de agregar: *sqlCreateTable2* y *sqlSelectTop5*.
 
-Seleccione uno de los fragmentos de código nuevo y asígnele una serie de pruebas.
+Seleccione uno de los nuevos fragmentos de código y ejecútelo a modo de prueba.
 
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-Para obtener información acerca del editor SQL, vea [tutorial del editor de código](tutorial-sql-editor.md).
+Para obtener información sobre el editor de SQL, vea [Tutorial del editor de código](tutorial-sql-editor.md).

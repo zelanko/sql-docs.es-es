@@ -1,7 +1,7 @@
 ---
 title: -- (Comentarios) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26bf88d13dd69ea6ac113713175d3ccfea5e1351
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3177a33d8560e9e66a610a39e555bf1dbf3cc44a
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950233"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495482"
 ---
 # <a name="---comment-transact-sql"></a>-- (Comentarios) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "67950233"
  Cadena de caracteres que contiene el texto del comentario.  
   
 ## <a name="remarks"></a>Notas  
- Use los dos guiones (--) para comentarios de una línea o anidados. Los comentarios que se insertan con dos guiones (--) se terminan con un carácter de nueva línea. No hay límite de longitud para los comentarios. En la tabla siguiente se enumeran los métodos abreviados de teclado que puede utilizar para acotar un texto como comentario o quitar los comentarios.  
+Use dos guiones ( **--** ) para comentarios de una línea o anidados. Los comentarios insertados con **--** terminan en una nueva línea, que se especifica con un carácter de retorno de carro (U + 000A), un carácter de avance de línea (U + 000D) o una combinación de ambos. No hay límite de longitud para los comentarios. En la tabla siguiente se enumeran los métodos abreviados de teclado que puede utilizar para acotar un texto como comentario o quitar los comentarios.
   
 |Acción|Estándar|  
 |------------|--------------|  

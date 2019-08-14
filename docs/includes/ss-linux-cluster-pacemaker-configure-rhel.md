@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215626"
 ---
 3. En todos los nodos de clúster, abra los puertos de firewall de Pacemaker. Para abrir estos puertos con `firewalld`, ejecute el comando siguiente:
@@ -15,8 +15,8 @@ ms.locfileid: "68215626"
 
    > Si el firewall no tiene una configuración de alta disponibilidad integrada, abra los puertos siguientes para Pacemaker.
    >
-   > * TCP: Puertos 2224, 3121, 21064
-   > * UDP: Puerto 5405
+   > * TCP: puertos 2224, 3121, 21064
+   > * UDP: puerto 5405
 
 1. Instale paquetes de Pacemaker en todos los nodos.
 

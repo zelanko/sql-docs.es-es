@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d2519b1cc56081f8a35308ac41e11f46a7f97211
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215601"
 ---
 1. **En todos los servidores SQL Server, cree un inicio de sesión de servidor para Pacemaker**. La siguiente instrucción Transact-SQL crea un inicio de sesión:
@@ -16,7 +16,7 @@ ms.locfileid: "68215601"
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [pacemakerLogin]
    ```
 
-  En el momento de creación del grupo de disponibilidad, el usuario pacemaker requerirán permisos ALTER, CONTROL y VIEW DEFINITION en el grupo de disponibilidad después de crearlo, pero antes de que todos los nodos se agregan a él.
+  En el momento de crear el grupo de disponibilidad, el usuario de Pacemaker necesitará permisos ALTER, CONTROL y VIEW DEFINITION en el grupo de disponibilidad, una vez creado, pero antes de que se le agreguen nodos.
 
 1. **En todos los servidores SQL Server, guarde las credenciales del inicio de sesión de SQL Server**.
 

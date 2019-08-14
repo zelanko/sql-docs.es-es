@@ -1,7 +1,7 @@
 ---
 title: Conceptos de seguridad
 titleSuffix: SQL Server big data clusters
-description: En este artículo se describe los conceptos de seguridad de clúster de macrodatos de 2019 de SQL Server (versión preliminar). Esto incluye la descripción de los puntos de conexión del clúster y la autenticación del clúster.
+description: En este artículo se describen los conceptos de seguridad del clúster de macrodatos de SQL Server 2019 (versión preliminar). Incluye la descripción de los puntos de conexión del clúster y la autenticación del clúster.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -10,79 +10,79 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958665"
 ---
-# <a name="security-concepts-for-sql-server-big-data-clusters"></a>Conceptos de seguridad para los clústeres de macrodatos de SQL Server
+# <a name="security-concepts-for-sql-server-big-data-clusters"></a>Conceptos de seguridad para los clústeres de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Un clúster seguro macrodatos implica la compatibilidad de consistente y coherente para los escenarios de autenticación y autorización, a través de SQL Server y Spark o HDFS. La autenticación es el proceso de comprobar la identidad de un usuario o servicio y asegurarse de que es quien se afirma ser. Autorización hace referencia a conceder o denegar el acceso a recursos específicos según la identidad del usuario solicitante. Este paso se realiza después de que un usuario se identifica mediante la autenticación.
+Un clúster de macrodatos seguro implica una compatibilidad consistente y coherente con los escenarios de autenticación y autorización, tanto en SQL Server como en HDFS/Spark. La autenticación es el proceso de comprobar la identidad de un usuario o servicio y asegurarse de que es quien dice ser. La autorización se refiere a la concesión o denegación de acceso a recursos específicos en función de la identidad del usuario que lo solicita. Este paso se realiza después de que un usuario se identifica a través de la autenticación.
 
-Autorización en el contexto de datos de gran tamaño normalmente se realiza a través de listas de control de acceso (ACL), que asociar las identidades de usuario con permisos específicos. HDFS admite la autorización mediante la limitación de acceso a las API del servicio, los archivos HDFS y ejecución del trabajo.
+La autorización en el contexto de macrodatos se suele realizar mediante listas de control de acceso (ACL), que asocian las identidades de usuario a permisos específicos. HDFS admite la autorización limitando el acceso a las API de servicio, los archivos HDFS y la ejecución de trabajos.
 
-Este artículo trata los conceptos clave relacionados con la seguridad en el clúster de macrodatos.
+En este artículo se tratan los conceptos clave relacionados con la seguridad en el clúster de macrodatos.
 
 ## <a name="cluster-endpoints"></a>Puntos de conexión de clúster
 
-Existen tres puntos de entrada para el clúster de macrodatos
+Hay tres puntos de entrada al clúster de macrodatos.
 
-* Puerta de enlace de Spark o HDFS (Knox): se trata de un punto de conexión basada en HTTPS. Otros puntos de conexión son procesadas por el proxy a través de este. Puerta de enlace de Spark o HDFS se usa para tener acceso a servicios como webHDFS y Livy. Siempre que vea referencias a Knox, esto es el punto de conexión.
+* Puerta de enlace HDFS/Spark (Knox): se trata de un punto de conexión basado en HTTPS. Otros puntos de conexión se procesan en proxy a través de este. La puerta de enlace HDFS/Spark se usa para acceder a servicios como webHDFS y Livy. Siempre que vea referencias a Knox, este es el punto de conexión.
 
-* Punto de conexión de controlador - servicio de administración de clúster de macrodatos que expone las API de REST de administración del clúster. Algunas herramientas también son accesibles a través de este punto de conexión.
+* Punto de conexión del controlador: servicio de administración de clústeres de macrodatos que expone las API REST para administrar el clúster. También se accede a algunas herramientas a través de este punto de conexión.
 
-* Instancia principal: extremo de TDS para herramientas de base de datos y aplicaciones para conectarse a la instancia de SQL Server Master en el clúster.
+* Instancia maestra: punto de conexión TDS para conectar herramientas y aplicaciones de base de datos a la instancia maestra de SQL Server del clúster.
 
 ![Puntos de conexión de clúster](media/concept-security/cluster_endpoints.png)
 
-Actualmente, no hay ninguna opción de abrir puertos adicionales para acceder al clúster desde el exterior.
+Actualmente, no hay ninguna opción para abrir puertos adicionales para acceder al clúster desde el exterior.
 
-### <a name="how-endpoints-are-secured"></a>¿Cómo se protegen los puntos de conexión
+### <a name="how-endpoints-are-secured"></a>Cómo se protegen los puntos de conexión
 
-Protección de extremos en el clúster de macrodatos se realiza usando contraseñas que pueden ser conjunto/actualizado ya sea mediante las variables de entorno o comandos de CLI. Todas las contraseñas interna del clúster se almacenan como secretos de Kubernetes.  
+La protección de los puntos de conexión en el clúster de macrodatos se realiza mediante contraseñas que se pueden establecer o actualizar con variables de entorno o comandos de la CLI. Todas las contraseñas internas del clúster se almacenan como secretos de Kubernetes.  
 
 ## <a name="authentication"></a>Autenticación
 
-Tras el aprovisionamiento del clúster, se crea un número de inicios de sesión.
+Tras el aprovisionamiento del clúster, se crean varios inicios de sesión.
 
-Algunos de estos inicios de sesión son para que los servicios se comuniquen entre sí, y otros son para que los usuarios finales acceder al clúster.
+Algunos de estos inicios de sesión son para que los servicios se comuniquen entre sí y otros para que los usuarios finales accedan al clúster.
 
 ### <a name="end-user-authentication"></a>Autenticación de usuario final
-Tras el aprovisionamiento del clúster, un número de contraseñas de usuario final debe establecerse mediante variables de entorno. Estas son las contraseñas que los administradores de SQL y los administradores de clústeres se usan para tener acceso a servicios:
+Tras el aprovisionamiento del clúster, es necesario establecer una serie de contraseñas de usuario final mediante variables de entorno. Se trata de contraseñas que los administradores de SQL y los administradores de clústeres usan para acceder a los servicios:
 
 Nombre de usuario del controlador:
- + CONTROLLER_USERNAME = < controller_username >
+ + CONTROLLER_USERNAME=<controller_username>
 
 Contraseña del controlador:  
- + CONTROLLER_PASSWORD = < controller_password >
+ + CONTROLLER_PASSWORD=<controller_password>
 
-Contraseña de SA de SQL Master: 
- + MSSQL_SA_PASSWORD = < controller_sa_password >
+Contraseña de administrador del sistema de SQL Master: 
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
-Contraseña para acceder al punto de conexión de Spark o HDFS:
- + KNOX_PASSWORD = < knox_password >
+Contraseña para acceder al punto de conexión de HDFS/Spark:
+ + KNOX_PASSWORD=<knox_password>
 
-### <a name="intra-cluster-authentication"></a>Autenticación dentro del clúster
+### <a name="intra-cluster-authentication"></a>Autenticación dentro de un clúster
 
-Tras la implementación del clúster, se crea un número de inicios de sesión SQL:
+Tras la implementación del clúster, se crean varios inicios de sesión de SQL:
 
-* Se crea un inicio de sesión especial de SQL en la instancia de SQL de controlador que está administrado, con el rol de administrador del sistema por el sistema. La contraseña para este inicio de sesión se captura como un secreto K8s.
+* Se crea un inicio de sesión de SQL especial en la instancia de SQL del controlador que se administra en el sistema con el rol sysadmin. La contraseña de este inicio de sesión se captura como un secreto de K8s.
 
-* Se crea un inicio de sesión de administrador del sistema en todas las instancias SQL en el clúster, que controlador posee y administra. Es necesario para el controlador realizar tareas administrativas, como la instalación de alta disponibilidad o la actualización, en estas instancias. Estos inicios de sesión también se usan para la comunicación dentro del clúster entre instancias SQL, como la instancia SQL maestra comunicarse con un grupo de datos.
+* Se crea un inicio de sesión de administrador del sistema en todas las instancias de SQL del clúster que el controlador posee y administra. Es necesario que el controlador realice tareas administrativas, como la configuración de alta disponibilidad o la actualización, en estas instancias. Estos inicios de sesión también se usan para la comunicación dentro del clúster entre instancias de SQL, como la instancia maestra de SQL que se comunica con un grupo de datos.
 
 > [!NOTE]
-> En la versión actual, se admite solo la autenticación básica. Control de acceso a objetos HDFS y SQL macrodatos clúster datos y los grupos, aún no está disponible.
+> En la versión actual, solo se admite la autenticación básica. Todavía no está disponible el control de acceso específico a los objetos HDFS y a los grupos de datos y de proceso de clúster de macrodatos de SQL.
 
 ## <a name="intra-cluster-communication"></a>Comunicación dentro del clúster
 
-Comunicación con los servicios que no son de SQL dentro del clúster de macrodatos, por ejemplo, Livy Spark o Spark para el grupo de almacenamiento, se protege mediante certificados. Todos los SQL Server para la comunicación de SQL Server está protegida mediante inicios de sesión SQL.
+La comunicación con servicios que no son de SQL dentro del clúster de macrodatos, como Livy con Spark o Spark con el bloque de almacenamiento, se protege mediante certificados. Todas las comunicaciones de SQL Server se protegen mediante inicios de sesión de SQL.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte los siguientes recursos:
+Para obtener más información sobre los clústeres de macrodatos de SQL Server, consulte los siguientes recursos:
 
-- [¿Qué son los clústeres de macrodatos de 2019 de SQL Server?](big-data-cluster-overview.md)
-- [Taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
+- [Taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

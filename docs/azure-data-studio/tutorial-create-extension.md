@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: Creación de una extensión'
 titleSuffix: Azure Data Studio
-description: Este tutorial muestra cómo crear una extensión para agregar funcionalidad personalizada a Azure Data Studio.
+description: En este tutorial se muestra cómo crear una extensión para agregar funcionalidad personalizada a Azure Data Studio.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,82 +11,82 @@ ms.topic: tutorial
 author: kevcunnane
 ms.author: kcunnane
 ms.openlocfilehash: c7c247e739a9b983dd715844262794bd18fca9cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959085"
 ---
-# <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutorial: Crear una extensión de Azure Data Studio
+# <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutorial: Creación de una extensión de Azure Data Studio
 
-Este tutorial muestra cómo crear una nueva extensión de Azure Data Studio. La extensión crea los enlaces de teclado de SSMS conocidos en Azure Data Studio.
+En este tutorial se muestra cómo crear una extensión de Azure Data Studio. La extensión crea enlaces de teclado de SSMS conocidos en Azure Data Studio.
 
-Durante este tutorial obtendrá información sobre cómo:
+Durante este tutorial aprenderá a realizar lo siguiente:
 > [!div class="checklist"]
-> * Crear un proyecto de extensión
-> * Instalar el generador de extensión
-> * Crear su extensión
-> * Probar la extensión
-> * Empaquetar la extensión
-> * Publicar la extensión en marketplace
+> * Creación de un proyecto de extensión
+> * Instalación del generador de extensiones
+> * Creación de la extensión
+> * Prueba de la extensión
+> * Empaquetado de la extensión
+> * Publicación de la extensión en Marketplace
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Azure Data Studio se basa en el mismo marco de trabajo como código de Visual Studio, por lo que se crean las extensiones de Azure Data Studio con Visual Studio Code. Para empezar, necesita los siguientes componentes:
+Azure Data Studio se basa en el mismo marco que Visual Studio Code, por lo que las extensiones para Azure Data Studio se crean con Visual Studio Code. Para comenzar, necesitará los siguientes componentes:
 
-- [Node.js](https://nodejs.org) instalados y disponibles en su `$PATH`. Node.js incluye [npm](https://www.npmjs.com/), el Administrador de paquetes de Node.js que se usa para instalar el generador de extensión.
-- [Código de Visual Studio](https://code.visualstudio.com) para depurar la extensión.
-- Los datos de Azure Studio [depurar extensión](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (opcional). Esto le permite probar la extensión sin necesidad de paquete e instalarlo en Azure Data Studio.
-- Asegúrese de `azuredatastudio` en su ruta. Para Windows, asegúrese de elegir el `Add to Path` opción en setup.exe. Para Mac o Linux, ejecute el *instalar el comando 'azuredatastudio' en la ruta de acceso* opción.
+- [Node.js](https://nodejs.org) instalado y disponible en su `$PATH`. Node.js incluye [npm](https://www.npmjs.com/), el administrador de paquetes de Node.js, que se usa para instalar el generador de extensiones.
+- [Visual Studio Code](https://code.visualstudio.com) para depurar la extensión.
+- La [extensión Debug](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) de Azure Data Studio (opcional). Esto permite probar la extensión sin necesidad de empaquetarla e instalarla en Azure Data Studio.
+- Asegúrese de que `azuredatastudio` está en su ruta de acceso. En el caso de Windows, asegúrese de elegir la opción `Add to Path` de setup.exe. En Mac o Linux, ejecute la opción de *instalación del comando "azuredatastudio" de PATH*.
 
 
-## <a name="install-the-extension-generator"></a>Instalar el generador de extensión
+## <a name="install-the-extension-generator"></a>Instalación del generador de extensiones
 
-Para simplificar el proceso de creación de extensiones, hemos creado un [generador extensión](https://code.visualstudio.com/docs/extensions/yocode) mediante Yeoman. Para instalarlo, ejecute lo siguiente desde el símbolo del sistema:
+Para simplificar el proceso de creación de extensiones, hemos compilado [un generador de extensiones](https://code.visualstudio.com/docs/extensions/yocode) con Yeoman. Para instalarlo, ejecute lo siguiente desde el símbolo del sistema:
 
 `npm install -g yo generator-azuredatastudio`
 
-## <a name="create-your-extension"></a>Crear su extensión
+## <a name="create-your-extension"></a>Creación de la extensión
 
 Para crear una extensión:
 
-1. Inicie el generador de extensión con el siguiente comando:
+1. Inicie el generador de extensiones con el siguiente comando:
 
    `yo azuredatastudio`
 
-2. Elija **nuevo mapa de teclas** en la lista de tipos de extensión:
+2. Elija **New Keymap** de la lista de tipos de extensiones:
 
-   ![Generador de extensión](./media/tutorial-create-extension/extension-generator.png)
+   ![generador de extensiones](./media/tutorial-create-extension/extension-generator.png)
 
-3. Siga los pasos necesarios para que rellene el nombre de extensión (para este tutorial, use **ssmskeymap2**) y agregar una descripción.
+3. Siga los pasos para rellenar el nombre de la extensión (en este tutorial, use **ssmskeymap2**) y agregue una descripción.
 
-Completar los pasos anteriores, crea una nueva carpeta. Abra la carpeta de código de Visual Studio y está listo para crear su propia extensión de enlace de teclado.
+Al completar los pasos anteriores, se crea una carpeta. Abra la carpeta en Visual Studio Code y estará listo para crear su propia extensión de enlace de teclado.
 
 
-### <a name="add-a-keyboard-shortcut"></a>Agregar un método abreviado de teclado
+### <a name="add-a-keyboard-shortcut"></a>Adición de un método abreviado de teclado
 
-**Paso 1: Buscar los métodos abreviados para reemplazar**
+**Paso 1: Búsqueda de los accesos directos que se van a reemplazar**
 
-Ahora que tenemos nuestra extensión preparado para comenzar, agregue algunos métodos abreviados de teclado SSMS (o enlaces de teclado) en Azure Data Studio. He usado [hoja de referencia de Andy Mallon](https://am2.co/2018/02/updated-cheat-sheet/) y lista de métodos abreviados de teclado de RedGate para inspirarse.
+Ahora que la extensión está lista para usar, agregue algunos métodos abreviados de teclado (o enlaces de teclado) de SSMS en Azure Data Studio. Utilicé la [hoja de referencia de Andy Mallon](https://am2.co/2018/02/updated-cheat-sheet/) y la lista de métodos abreviados de teclado de RedGate como inspiración.
 
-Eran las cosas principales que VI que faltan:
+Lo más importante que noté que faltaba fue:
 
-- Ejecutar una consulta con el plan de ejecución real habilitado. Se trata de **Ctrl + M** en SSMS y no tiene un enlace en Azure Data Studio.
-- Tener **CTRL + MAYÚS + E** como una segunda forma de ejecutar una consulta. Comentarios de los usuarios indican que esto era que faltan.
-- Tener **ALT + F1** ejecutar `sp_help`. Agregamos esto en Azure Data Studio, pero dado que ese enlace ya estaba en uso, asignamos a **ALT + F2** en su lugar.
-- Alternar pantalla completa (**MAYÚS + ALT + INTRO**).
-- **F8** mostrar **Explorador de objetos** / **vista servidores**.
+- Ejecutar una consulta con el plan de ejecución real habilitado. Se usa **Ctrl+M** en SSMS, que no tiene un enlace en Azure Data Studio.
+- Tener **CTRL+MAYÚS+E** como segunda forma de ejecutar una consulta. Los comentarios de los usuarios indicaron que faltaba.
+- Tener **ALT+F1** para ejecutar `sp_help`. Lo agregamos a Azure Data Studio pero como ese enlace ya estaba en uso, lo asignamos a **ALT+F2** en su lugar.
+- Alternar pantalla completa (**MAYÚS+ALT+ENTRAR**).
+- **F8** para mostrar **Explorador de objetos** / **Vista de servidores**.
 
-Es fácil buscar y reemplazar estos enlaces de teclado. Ejecute *abierto de métodos abreviados de teclado* para mostrar el **métodos abreviados de teclado** pestaña en Azure Data Studio, busque *consulta* y, a continuación, elija **enlacedecambiarlaclave**. Cuando haya terminado cambiar el enlace de teclado, puede ver la asignación actualizada en el archivo keybindings.json (ejecutar *abierto de métodos abreviados de teclado* para verlo).
+Resulta fácil encontrar y reemplazar estos enlaces de teclado. Ejecute *Abrir métodos abreviados de teclado* para mostrar la pestaña **Métodos abreviados de teclado** en Azure Data Studio, busque *consulta* y elija **Cambiar enlace de teclado**. Una vez que haya terminado de cambiar el enlace de teclado, puede ver la asignación actualizada en el archivo keybindings.json (ejecute *Abrir métodos abreviados de teclado* para verla).
 
 ![métodos abreviados de teclado](./media/tutorial-create-extension/keyboard-shortcuts.png)
 
-![extensión KeyBindings.JSON](./media/tutorial-create-extension/keybindings-json.png)
+![extensión de keybindings.json](./media/tutorial-create-extension/keybindings-json.png)
 
 
-**Paso 2: Agregar accesos directos a la extensión**
+**Paso 2: Adición de accesos directos a la extensión**
 
-Para agregar accesos directos a la extensión, abra el *package.json* archivo (en la extensión) y reemplace el `contributes` sección con lo siguiente:
+Para agregar accesos directos a la extensión, abra el archivo *package.json* (en la extensión) y reemplace la sección `contributes` por la siguiente:
 
 ```json
 "contributes": {
@@ -119,27 +119,27 @@ Para agregar accesos directos a la extensión, abra el *package.json* archivo (e
 }
 ```
 
-## <a name="test-your-extension"></a>Probar la extensión
+## <a name="test-your-extension"></a>Prueba de la extensión
 
-Asegúrese de `azuredatastudio` está en la ruta de acceso ejecutando el comando de instalación azuredatastudio en ruta de acceso en Azure Data Studio.
+Para asegurarse de que `azuredatastudio` se encuentra en la ruta de acceso, ejecute la opción de instalación del comando azuredatastudio de PATH en Azure Data Studio.
 
-Asegúrese de que está instalada la extensión de Azure Data Studio depurar en Visual Studio Code.
+Asegúrese de que la extensión Debug de Azure Data Studio está instalada en Visual Studio Code.
 
-Seleccione **F5** para iniciar Azure Data Studio en modo de depuración con la extensión que se ejecuta:
+Seleccione **F5** para iniciar Azure Data Studio en modo de depuración con la extensión en ejecución:
 
-![Instalar extensión](./media/tutorial-create-extension/install-extension.png)
+![instalación de la extensión](./media/tutorial-create-extension/install-extension.png)
 
-![extensión de prueba](./media/tutorial-create-extension/test-extension.png)
+![prueba de la extensión](./media/tutorial-create-extension/test-extension.png)
 
-Mapas de claves son una de las extensiones más rápidas para crear, por lo que la nueva extensión debe ser ahora preparado para compartir y funcionan correctamente.
+Las asignaciones de teclas son una de las extensiones más rápidas de crear, por lo que la nueva extensión ahora debería funcionar correctamente y estar lista para compartir.
 
-## <a name="package-your-extension"></a>Empaquetar la extensión
+## <a name="package-your-extension"></a>Empaquetado de la extensión
 
-Para compartir con otros usuarios debe empaquetar la extensión en un único archivo. Esto puede ser publicado en el marketplace de extensiones de Azure Data Studio, o compartida entre su equipo o la Comunidad. Para ello, deberá instalar otro paquete de npm desde la línea de comandos:
+Para compartirla con otros usuarios, ha de empaquetar la extensión en un solo archivo. Este se puede publicar en el Marketplace de extensiones de Azure Data Studio o compartir entre su equipo o comunidad. Para ello, debe instalar otro paquete npm desde la línea de comandos:
 
 `npm install -g vsce`
 
-Navegue hasta el directorio base de la extensión y ejecute `vsce package`. Tuve que agregar un par de líneas adicionales para detener el *vsce* herramienta desde quejan:
+Navegue hasta el directorio base de la extensión y ejecute `vsce package`. Tuve que agregar un par de líneas adicionales para evitar reclamaciones de la herramienta *vsce*:
 
 ```json
 "repository": {
@@ -151,36 +151,36 @@ Navegue hasta el directorio base de la extensión y ejecute `vsce package`. Tuve
 },
 ```
 
-Una vez que esto se ha hecho, mi archivo ssmskeymap 0.1.0.vsix se ha creado y listo para instalar y compartir con todo el mundo!
+Una vez hecho esto, el archivo ssmskeymap-0.1.0.vsix se ha creado y está listo para instalarlo y compartirlo con el mundo.
 
-![Instalar extensión](./media/tutorial-create-extension/extensions.png)
+![instalación de la extensión](./media/tutorial-create-extension/extensions.png)
 
 
-## <a name="publish-your-extension-to-the-marketplace"></a>Publicar la extensión en marketplace
+## <a name="publish-your-extension-to-the-marketplace"></a>Publicación de la extensión en Marketplace
 
-El marketplace de extensiones de Azure Data Studio todavía no está totalmente implementado, pero el proceso actual es para hospedar la extensión de VSIX en algún lugar (por ejemplo, una página de la versión de GitHub), a continuación, envíe un PR actualizando [este archivo JSON](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) con su información de la extensión.
+El Marketplace de extensiones de Azure Data Studio aún no está totalmente implementado, pero el proceso actual consiste en hospedar la extensión VSIX en algún lugar (por ejemplo, una página de versiones de GitHub) y luego enviar una solicitud de incorporación de cambios [al archivo JSON](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) con la información de la extensión.
 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial ha aprendido a:
+En este tutorial ha aprendido a realizar lo siguiente:
 > [!div class="checklist"]
-> * Crear un proyecto de extensión
-> * Instalar el generador de extensión
-> * Crear su extensión
-> * Probar la extensión
-> * Empaquetar la extensión
-> * Publicar la extensión en marketplace
+> * Creación de un proyecto de extensión
+> * Instalación del generador de extensiones
+> * Creación de la extensión
+> * Prueba de la extensión
+> * Empaquetado de la extensión
+> * Publicación de la extensión en Marketplace
 
 
-Esperamos que después de leerlo que estará lleno de inspiración para crear su propia extensión para Azure Data Studio. Contamos con compatibilidad con información de los paneles (gráficos más bonito del mundo que se ejecutan en el servidor SQL Server), un número de las API específicas de SQL y un enorme conjunto existente de puntos de extensión que se hereda de Visual Studio Code.
+Confiamos en que después de leer esto se sienta inspirado para compilar su propia extensión para Azure Data Studio. Tenemos compatibilidad con información del panel (gráficos atractivos que se ejecutan en la instancia de SQL Server), varias API específicas de SQL y un gran conjunto existente de puntos de extensión heredados de Visual Studio Code.
 
-Si tiene una idea, pero no está seguro de cómo empezar, abra un problema o un tweet en el equipo: [azuredatastudio](https://twitter.com/azuredatastudio).
+Si tiene una idea, pero no está seguro de cómo empezar, abra una incidencia o envíe un Tweet al equipo: [azuredatastudio](https://twitter.com/azuredatastudio).
 
-Siempre puede hacer referencia a la [Guía de la extensión de Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview) porque abarca todas las API existentes y patrones.
+Siempre puede hacer referencia a la [guía de extensiones de Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview) porque aborda todas las API y los patrones existentes.
 
 
-Para obtener información sobre cómo trabajar con T-SQL en Azure Data Studio, complete el tutorial de T-SQL, Editor:
+Para obtener información sobre cómo trabajar con T-SQL en Azure Data Studio, siga el tutorial del editor de T-SQL sobre el:
 
 > [!div class="nextstepaction"]
-> [Usar el editor de Transact-SQL para crear objetos de base de datos](tutorial-sql-editor.md).
+> [uso del editor de Transact-SQL para crear objetos de base de datos](tutorial-sql-editor.md).

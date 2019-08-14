@@ -1,7 +1,7 @@
 - name: Le damos la bienvenida a SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
-- name: Control de versiones de la documentación de SQL
-  href: toc/versioning-system-monikers-ui-sql-server.md
+  href: sql-server/sql-server-technical-documentation.md
+- name: Sugerencias de navegación por la documentación de SQL
+  href: sql-server/sql-docs-navigation-guide.md
 - name: Versiones anteriores 2014-2005
   href: toc/previous-versions-sql-server.md
 - name: Información general
@@ -10459,8 +10459,8 @@
       items:
         - name: Obtener ayuda
           href: sql-server/sql-server-get-help.md
-        - name: Sugerencias de navegación por la documentación de SQL
-          href: sql-server/sql-docs-navigation-guide.md
+        - name: Control de versiones de documentos de SQL
+          href: sql-server/versioning-system-monikers-ui-sql-server.md
         - name: Cambio de la pila DBA >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >

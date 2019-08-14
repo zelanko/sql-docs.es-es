@@ -1,6 +1,6 @@
 ---
-title: Configurar la replicación de SQL Server en Linux
-description: En este artículo se describe cómo configurar la replicación de SQL Server en Linux.
+title: Configurar Replicación de SQL Server en Linux
+description: En este artículo, se describe cómo configurar Replicación de SQL Server en Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,40 +11,40 @@ ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67895934"
 ---
-# <a name="configure-sql-server-replication-on-linux"></a>Configurar la replicación de SQL Server en Linux
+# <a name="configure-sql-server-replication-on-linux"></a>Configurar Replicación de SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] presenta la replicación de SQL Server para las instancias de SQL Server en Linux.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] presenta Replicación de SQL Server para instancias de SQL Server en Linux.
 
-Para obtener información detallada acerca de la replicación, vea [la documentación de SQL Server replication](../relational-databases/replication/sql-server-replication.md).
+Para obtener más información sobre la replicación, vea la [documentación sobre Replicación de SQL Server](../relational-databases/replication/sql-server-replication.md).
 
-Configurar la replicación en Linux con SQL Server Management Studio (SSMS) o procedimientos almacenados de Transact-SQL.
+Configure la replicación en Linux con SQL Server Management Studio (SSMS) o procedimientos almacenados de Transact-SQL.
 
-* Para usar SSMS, siga las instrucciones de este artículo.
+* Para usar SSMS, siga las instrucciones que aparecen en este artículo.
 
-  Usar SSMS en un sistema operativo de Windows para conectarse a instancias de SQL Server. De fondo e instrucciones, consulte [Use SSMS para administrar SQL Server en Linux](./sql-server-linux-manage-ssms.md).
+  Use SSMS en un sistema operativo Windows para conectarse a instancias de SQL Server. Para obtener instrucciones e información general, vea [Empleo de SQL Server Management Studio en Windows para administrar SQL Server en Linux](./sql-server-linux-manage-ssms.md).
   
-* Para obtener un ejemplo con los procedimientos almacenados, siga el [replicación configurar SQL Server en Linux](sql-server-linux-replication-tutorial-tsql.md) tutorial.
+* Para obtener un ejemplo con procedimientos almacenados, siga el tutorial [Configurar Replicación de SQL Server en Linux](sql-server-linux-replication-tutorial-tsql.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Antes de configurar los publicadores, distribuidores y suscriptores, deberá completar algunos pasos de configuración para la instancia de SQL Server.
+Antes de configurar los publicadores, distribuidores y suscriptores, necesita completar un par de pasos de configuración para la instancia de SQL Server.
 
-1. Habilitar el Agente SQL Server para usar a los agentes de replicación. En todos los servidores de Linux, ejecute los siguientes comandos en el terminal.
+1. Habilite el Agente SQL Server para usar los agentes de replicación. En todos los servidores con Linux, ejecute los comandos siguientes en el terminal.
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
   sudo systemctl restart mssql-server
   ```
 
-1. Configurar la instancia de SQL Server para la replicación. Para configurar la instancia de SQL Server para la replicación, ejecute `sys.sp_MSrepl_createdatatypemappings` en todas las instancias que participan en la replicación.
+1. Configure la instancia de SQL Server para la replicación. Para configurar la instancia de SQL Server para la replicación, ejecute `sys.sp_MSrepl_createdatatypemappings` en todas las instancias que participen en la replicación.
 
   ```sql
   USE msdb
@@ -53,9 +53,9 @@ Antes de configurar los publicadores, distribuidores y suscriptores, deberá com
   GO
   ```
 
-1. Cree una carpeta de instantáneas. Los agentes de SQL Server requieren a lectura/escritura a una carpeta de instantáneas. Cree la carpeta de instantáneas en el distribuidor.
+1. Cree una carpeta de instantáneas. Los agentes de SQL Server necesitan una carpeta de instantáneas con permisos de lectura y escritura. Cree la carpeta de instantáneas en el distribuidor.
 
-  Para crear la carpeta de instantáneas y conceder acceso a `mssql` usuario, ejecute el siguiente comando:
+  Para crear la carpeta de instantáneas y conceder acceso al usuario `mssql`, ejecute el comando siguiente:
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -69,32 +69,32 @@ Antes de configurar los publicadores, distribuidores y suscriptores, deberá com
   
 Para configurar el distribuidor: 
 
-1. En SSMS, conéctese a la instancia de SQL Server en el Explorador de objetos.
+1. En SSMS, conéctese a su instancia de SQL Server en el Explorador de objetos.
 
-1. Haga clic en **replicación**y haga clic en **Configurar distribución...** .
+1. Haga clic con el botón derecho en **Replicación** y seleccione **Configurar distribución…**
 
-1. Siga las instrucciones de la **Asistente para configurar la distribución**.
+1. Siga las instrucciones del **Asistente para la configuración de distribución**.
 
 ### <a name="create-publication-and-articles"></a>Crear publicaciones y artículos
 
-Para crear una publicación y los artículos:
+Para crear una publicación y artículos:
 
-1. En el Explorador de objetos, haga clic en **replicación** > **publicaciones locales**> **nueva publicación...** .
+1. En el Explorador de objetos, haga clic en **Replicación** > **Publicaciones locales**> **Nueva publicación…**
 
-1. Siga las instrucciones de la **Asistente para nueva publicación** para configurar el tipo de replicación y los artículos que pertenecen a la publicación.
+1. Siga las instrucciones del **Asistente para nueva publicación** para configurar el tipo de replicación y los artículos que pertenecen a la publicación.
 
 ### <a name="configure-the-subscription"></a>Configurar la suscripción
 
-Para configurar la suscripción en el Explorador de objetos, haga clic en **replicación** > **suscripciones locales**> **nuevas suscripciones...** .
+Para configurar la suscripción en el Explorador de objetos, haga clic en **Replicación** > **Suscripciones locales**> **Nuevas suscripciones…**
 
-### <a name="monitor-replication-jobs"></a>Supervisión de trabajos de replicación
+### <a name="monitor-replication-jobs"></a>Supervisar trabajos de replicación
 
-Utilice al Monitor de replicación para supervisar los trabajos de replicación.
+Use el monitor de replicación para supervisar los trabajos de replicación.
 
-En el Explorador de objetos, haga clic en **replicación**y haga clic en **iniciar Monitor de replicación**.
+En el Explorador de objetos, haga clic con el botón derecho en **Replicación** y, después, seleccione **Iniciar monitor de replicación**.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Conceptos: Replicación de SQL Server en Linux](sql-server-linux-replication.md)
+[Conceptos: Replicación de SQL Server en Linux](sql-server-linux-replication.md)
 
-[Procedimientos almacenados de replicación](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
+[Procedimientos almacenados de replicación](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)

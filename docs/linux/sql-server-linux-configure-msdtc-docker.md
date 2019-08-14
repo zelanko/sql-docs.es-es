@@ -1,6 +1,6 @@
 ---
-title: Cómo usar transacciones distribuidas con SQL Server en Docker
-description: Este artículo explica cómo usar Dprovides un tutorial para configurar MSDTC en Linux.
+title: Procedimiento para usar transacciones distribuidas con SQL Server en Docker
+description: En este artículo, se explican los pasos para configurar MSDTC en Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 09/25/2018
@@ -8,53 +8,53 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: fab3934a86994b3c4a0d7d7ecfc7768f65660023
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: 8304bc95a15a5a9cf74ab23bc2e8e47bf7cf72d1
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077680"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476047"
 ---
-# <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Cómo usar transacciones distribuidas con SQL Server en Docker
+# <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Procedimiento para usar transacciones distribuidas con SQL Server en Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se explica cómo configurar los contenedores de Linux de SQL Server en Docker para las transacciones distribuidas.
+En este artículo, se explica cómo configurar contenedores de SQL Server para Linux en Docker para realizar transacciones distribuidas.
 
-A partir de la versión preliminar de SQL Server 2019, imágenes de contenedor admiten la Microsoft distribuida (Coordinador de transacciones) necesarios para las transacciones distribuidas. Para comprender los requisitos de las comunicaciones de MSDTC, vea [cómo configurar el Coordinador de transacciones distribuidas de Microsoft (MSDTC) en Linux](sql-server-linux-configure-msdtc.md). En este artículo se explica los requisitos especiales y escenarios relacionados con los contenedores de Docker de SQL Server.
+A partir de la versión preliminar de SQL Server 2019, las imágenes de contenedor son compatibles con Microsoft DTC (Coordinador de transacciones distribuidas), que es necesario para las transacciones distribuidas. Para comprender los requisitos de comunicaciones de MSDTC, vea [Procedimiento para configurar Microsoft DTC (Coordinador de transacciones distribuidas) en Linux](sql-server-linux-configure-msdtc.md). En este artículo, se explican los requisitos especiales y los escenarios relacionados con los contenedores de Docker de SQL Server.
 
 ## <a name="configuration"></a>Configuración
 
-Para habilitar la transacción de MSDTC en contenedores de docker, debe establecer dos nuevas variables de entorno:
+Para habilitar la transacción de MSDTC en contenedores para Docker, necesita establecer dos nuevas variables de entorno:
 
-- **MSSQL_RPC_PORT**: el puerto TCP que el servicio de asignador de extremos de RPC se enlaza a y escucha en el.  
-- **MSSQL_DTC_TCP_PORT**: el puerto que el servicio MSDTC está configurado para escuchar en.
+- **MSSQL_RPC_PORT**: el puerto TCP al que se enlaza el servicio del asignador de puntos de conexión de RPC y en el que escucha.  
+- **MSSQL_DTC_TCP_PORT**: el puerto en el que se ha configurado el servicio MSDTC para escuchar.
 
 ### <a name="pull-and-run"></a>Extraer y ejecutar
 
-El ejemplo siguiente muestra cómo usar estas variables de entorno para extraer y ejecutar un único contenedor de SQL Server configurado para MSDTC. Esto le permite comunicarse con cualquier aplicación en todos los hosts.
+En el ejemplo siguiente, se muestra cómo usar estas variables de entorno para extraer y ejecutar un único contenedor de SQL Server configurado para MSDTC. Esto le permite comunicarse con cualquier aplicación en cualquier host.
 
 ```bash
 docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
    -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
-   -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
 
 > [!IMPORTANT]
-> El comando anterior solo funciona para Docker en Linux. Docker en Windows, el host de Windows ya realiza escuchas en el puerto 135. Puede quitar el `-p 135:135` parámetro para Docker en Windows, pero tiene algunas limitaciones. El contenedor resultante, a continuación, no se puede usar para las transacciones distribuidas que implican del host. Ésta puede participar solo en las transacciones distribuidas entre contenedores de docker en el host.
+> El comando anterior solo funciona para Docker en Linux. Si ejecuta Docker en Windows, el host de Windows ya escucha en el puerto 135. Puede quitar el parámetro `-p 135:135` para Docker en Windows, pero esto tiene algunas limitaciones. El contenedor resultante no podrá usarse para transacciones distribuidas en las que participe el host; solo puede participar en transacciones distribuidas entre contenedores de Docker en el host.
 
-En este comando, el **Endpoint Mapper de RPC** service se ha enlazado al puerto 135 y el **MSDTC** servicio se ha enlazado al puerto 51000 dentro de la red virtual de docker. Se produce comunicación TDS de SQL Server en el puerto 1433 dentro de la red virtual de docker. Se han expuesto externamente estos puertos al host como puerto TDS 51433, puerto de asignador de extremos RPC 135 y el puerto MSDTC 51000.
+En este comando, el servicio **Asignador de puntos de conexión de RPC** se ha enlazado al puesto 135, y el servicio **MSDTC** se ha enlazado al puerto 51000 en la red virtual de Docker. La comunicación de TDS de SQL Server se realiza en el puerto 1433 de la red virtual de Docker. Estos puertos se han expuesto externamente al host, como el puerto TDS 51433, el puerto 135 del asignador de puntos de conexión de RPC y el puerto 51000 de MSDTC.
 
 > [!NOTE]
-> El Endpoint Mapper de RPC y el puerto MSDTC no tiene que ser el mismo en el host y el contenedor. Por lo que aunque puerto Endpoint Mapper de RPC se ha configurado para ser 135 en el contenedor, potencialmente podría asignarse para el puerto 13501 o cualquier otro puerto disponible en el servidor host.
+> El asignador de puntos de conexión de RPC y el puerto de MSDTC no tienen que coincidir en el host y en el contenedor. Por lo tanto, si el puerto del asignador de puntos de conexión de RPC se ha configurado en el puerto 135 del contenedor, podría asignarse al puerto 13501 o a cualquier otro puerto disponible en el servidor host.
 
 ## <a name="configure-the-firewall"></a>Configuración del firewall
 
-Para poder comunicarse y a través del host, también debe configurar el firewall en el servidor de host para los contenedores. Abra el firewall para todos los puertos que docker contenedor expone para la comunicación externa. En el ejemplo anterior, esto sería puertos 135, 51433 y 51000. Estos son los puertos en el propio host y no los puertos que se asignan en el contenedor. Por lo tanto, si se asigna el puerto de asignador 51000 del contenedor al puerto de host 51001, un punto de conexión de RPC, a continuación, el puerto 51001 (no 51000) se debe abrir en el firewall para la comunicación con el host.  
+Para comunicarse con el host y a través de este, también necesita configurar el firewall en el servidor host para los contenedores. En el firewall, abra todos los puertos donde el contenedor de Docker se exponga para las comunicaciones externas. En el ejemplo anterior, se usarían los puertos 135, 51433 y 51000. Estos son los puertos en el host en sí, y no los puertos a los que se asignan en el contenedor. Por lo tanto, si el puerto 51000 del asignador de puntos de conexión de RPC del contenedor se ha asignado al puerto de host 51001, el puerto 51001 (y no el puerto 51000) tiene que abrirse en el firewall para permitir la comunicación con el host.  
 
-El ejemplo siguiente muestra cómo crear estas reglas en Ubuntu.
+En el ejemplo siguiente, se muestra cómo crear estas reglas en Ubuntu.
 
 ```bash
 sudo ufw allow from any to any port 51433 proto tcp
@@ -62,7 +62,7 @@ sudo ufw allow from any to any port 51000 proto tcp
 sudo ufw allow from any to any port 135 proto tcp
 ```
 
-El ejemplo siguiente muestra cómo esto puede realizarse en Red Hat Enterprise Linux (RHEL):
+En el ejemplo siguiente, se muestra cómo podría realizarse este procedimiento en Red Hat Enterprise Linux (RHEL):
 
 ```bash
 sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
@@ -71,12 +71,12 @@ sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
 sudo firewall-cmd --reload
 ```
 
-## <a name="configure-port-routing-on-the-host"></a>Configurar el enrutamiento de puerto en el host
+## <a name="configure-port-routing-on-the-host"></a>Configurar el enrutamiento de puertos en el host
 
-En el ejemplo anterior, porque el puerto RPC 135 se asigna un único contenedor de Docker con el puerto 135 en el host, las transacciones distribuidas con el host deberían funcionar ahora con ninguna otra configuración. Tenga en cuenta que es posible usar directamente el puerto 135 en el contenedor, dado que SQL Server se ejecuta con privilegios elevados en un contenedor. Para SQL Server fuera de un contenedor, se debe usar un puerto efímero diferente y, a continuación, debe enrutarse el tráfico al puerto 135 a ese puerto.
+En el ejemplo anterior, como un único contenedor de Docker asigna el puerto 135 de RPC al puerto 135 en el host, las transacciones distribuidas con el host tendrían que funcionar sin una configuración adicional. Tenga en cuenta que se puede usar directamente el puerto 135 en el contenedor, ya que SQL Server se ejecuta con privilegios elevados en un contenedor. Para SQL Server fuera de un contenedor, es necesario usar otro puerto efímero; además, el tráfico al puerto 135 tiene que enrutarse a ese puerto.
 
-Sin embargo, si decide asignar el puerto del contenedor 135 a un puerto diferente en el host, como 13500, debe configurar el enrutamiento de puerto en el host. Esto permite que el contenedor de docker participar en transacciones distribuidas con el host y con otros servidores externos. Para obtener más información, consulte [configurar el enrutamiento de puerto](sql-server-linux-configure-msdtc.md#configure-port-routing).
+Pero, si asignó el puerto 135 del contenedor a otro puerto en el host (por ejemplo, 13500), necesita configurar el enrutamiento del puerto en el host. Esto permite al contenedor de Docker participar en transacciones distribuidas con el host y con otros servidores externos. Para obtener más información, vea [Configuración del enrutamiento de puertos](sql-server-linux-configure-msdtc.md#configure-port-routing).
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de MSDTC en Linux, consulte [cómo configurar el Coordinador de transacciones distribuidas de Microsoft (MSDTC) en Linux](sql-server-linux-configure-msdtc.md).
+Para obtener más información sobre MSDTC en Linux, vea [Procedimiento para configurar Microsoft DTC (Coordinador de transacciones distribuidas) en Linux](sql-server-linux-configure-msdtc.md).

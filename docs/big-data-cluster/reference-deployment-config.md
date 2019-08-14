@@ -1,7 +1,7 @@
 ---
-title: Referencia de archivo de configuración de implementación
+title: Referencia del archivo de configuración de implementación
 titleSuffix: SQL Server big data clusters
-description: Referencia de un archivo de configuración de implementación de clúster de macrodatos.
+description: Referencia de un archivo de configuración de implementación de un clúster de macrodatos.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,24 +10,24 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958245"
 ---
-# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Referencia del archivo de configuración de implementación para los clústeres de datos de gran tamaño
+# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Referencia del archivo de configuración de implementación para clústeres de macrodatos
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se proporciona un archivo JSON que describe la estructura de un archivo de configuración de implementación de SQL Server 2019 macrodatos clúster.
+En este artículo, se proporciona un archivo JSON en el que se documenta la estructura de un archivo de configuración de implementación de un clúster de macrodatos de SQL Server 2019.
 
 > [!TIP]
-> No use esto como el archivo de configuración de implementación real. En su lugar, siga las instrucciones de la [instrucciones de implementación](deployment-guidance.md#configfile) acerca de cómo trabajar con archivos de configuración.
+> No lo use como su archivo de configuración de implementación actual. En su lugar, siga las instrucciones de la [guía de implementación](deployment-guidance.md#configfile) para obtener información sobre cómo trabajar con los archivos de configuración.
 
 ## <a name="deployment-configuration-file"></a>Archivo de configuración de implementación
 
-Utilice el siguiente archivo JSON como referencia para la estructura y la configuración de un archivo de configuración de implementación de clúster de macrodatos.
+Use el siguiente archivo JSON como referencia para la estructura de configuración en un archivo de configuración de implementación de clúster de macrodatos.
 
 ```json
 {
@@ -453,4 +453,4 @@ Utilice el siguiente archivo JSON como referencia para la estructura y la config
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre cómo usar y personalizar los archivos de configuración de implementación, consulte [de clústeres de cómo implementar grandes de datos de SQL Server en Kubernetes](deployment-guidance.md#configfile).
+Para obtener más información sobre cómo usar y personalizar archivos de configuración de implementación, vea [Procedimiento para implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md#configfile).

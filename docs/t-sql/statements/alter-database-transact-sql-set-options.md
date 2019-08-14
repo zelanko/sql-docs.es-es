@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 30cab7ddfe6c0c6b88f1fb6e619cb84866c3efbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065721"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495461"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL)
 
@@ -769,7 +769,10 @@ La limpieza según el tamaño no se activará automáticamente.
 SIZE_BASED_CLEANUP_MODE es de tipo **nvarchar**.
 
 QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }         
-Designa el modo de captura de consulta que está activo.
+Designa el modo de captura de consulta que está activo. Cada modo define directivas de captura de consulta específicas.
+
+> [!NOTE]
+> Los cursores, las consultas dentro de procedimientos almacenados y las consultas compiladas de forma nativa siempre se capturan cuando el modo de captura de consulta se establece en ALL, AUTO o CUSTOM.
 
 ALL         
 Captura todas las consultas. ALL es el valor de configuración predeterminado. Es el valor de configuración predeterminado a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
@@ -1232,7 +1235,7 @@ GO
 
 ```
 
-### <a name="b-setting-the-database-to-readonly"></a>B. Establecer la base de datos en READ_ONLY
+### <a name="b-setting-the-database-to-read_only"></a>B. Establecer la base de datos en READ_ONLY
 
 El cambio del estado de una base de datos o un grupo de archivos a READ_ONLY o READ_WRITE requiere el acceso exclusivo a la base de datos. En el siguiente ejemplo la base de datos se establece en el modo `SINGLE_USER` para obtener acceso exclusivo. A continuación, el ejemplo establece el estado de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en `READ_ONLY` y devuelve el acceso a la base de datos a todos los usuarios.
 
@@ -2083,7 +2086,7 @@ No todas las opciones de base de datos usan la cláusula WITH \<termination> ni 
 
 ## <a name="examples"></a>Ejemplos
 
-### <a name="a-setting-the-database-to-readonly"></a>A. Establecer la base de datos en READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. Establecer la base de datos en READ_ONLY
 El cambio del estado de una base de datos o un grupo de archivos a READ_ONLY o READ_WRITE requiere el acceso exclusivo a la base de datos. En el siguiente ejemplo la base de datos se establece en el modo `RESTRICTED_USER` para limitar el acceso. A continuación, el ejemplo establece el estado de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en `READ_ONLY` y devuelve el acceso a la base de datos a todos los usuarios.
 
 ```sql
@@ -2789,7 +2792,7 @@ Puede cambiar los valores predeterminados de cualquiera de las opciones de las b
 
 ## <a name="examples"></a>Ejemplos
 
-### <a name="a-setting-the-database-to-readonly"></a>A. Establecer la base de datos en READ_ONLY
+### <a name="a-setting-the-database-to-read_only"></a>A. Establecer la base de datos en READ_ONLY
 El cambio del estado de una base de datos o un grupo de archivos a READ_ONLY o READ_WRITE requiere el acceso exclusivo a la base de datos. En el ejemplo siguiente, la base de datos se establece en el modo `RESTRICTED_USER` para restringir el acceso. A continuación, el ejemplo establece el estado de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en `READ_ONLY` y devuelve el acceso a la base de datos a todos los usuarios.
 
 ```sql

@@ -1,7 +1,7 @@
 ---
-title: referencia de Spark de BDC de azdata
+title: Referencia de azdata bdc spark
 titleSuffix: SQL Server big data clusters
-description: Artículo de referencia para los comandos de azdata BDC Spark.
+description: Artículo de referencia sobre los comandos de azdata bdc spark.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,25 +10,25 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: cdc07f6feed29606eb24dc98790d7c8ffa4754c9
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426065"
 ---
-# <a name="azdata-bdc-spark"></a>azdata BDC Spark
+# <a name="azdata-bdc-spark"></a>azdata bdc spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En el siguiente artículo se proporciona una referencia para los comandos de **Spark de BDC** en la herramienta **azdata** . Para obtener más información sobre otros comandos de **azdata** , consulte [referencia de azdata](reference-azdata.md)
+En el siguiente artículo se proporciona referencia sobre los comandos de **bdc spark** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos:
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
-[lote de Spark para BDC de azdata](reference-azdata-bdc-spark-batch.md) | Administra las operaciones por lotes en el sistema de Spark.
-[sesión de Spark de BDC de azdata](reference-azdata-bdc-spark-session.md) | Administra las operaciones de activación de sesión en el sistema Spark.
-[azdata BDC Spark (instrucción)](reference-azdata-bdc-spark-statement.md) | Administra instrucciones Spark.
+[azdata bdc spark batch](reference-azdata-bdc-spark-batch.md) | Administra las operaciones por lotes dentro del sistema Spark.
+[azdata bdc spark session](reference-azdata-bdc-spark-session.md) | Administra las operaciones de la sesión activa dentro del sistema Spark.
+[azdata bdc spark statement](reference-azdata-bdc-spark-statement.md) | Administra instrucciones de Spark.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de **azdata** , consulte [referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata** , consulte [instalación de azdata para administrar clústeres de macrodatos SQL Server 2019](deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).

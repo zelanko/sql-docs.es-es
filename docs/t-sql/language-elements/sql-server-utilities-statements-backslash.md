@@ -1,7 +1,7 @@
 ---
 title: Barra diagonal inversa (continuación de línea) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/09/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,14 +28,15 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cc949553b66e1bd8e8d501a40a367d23559bb96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121671"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495443"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>Barra diagonal inversa (continuación de línea) (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 `\` divide una constante de cadena larga, de carácter o binaria, en dos o más líneas para facilitar la lectura.  
@@ -57,7 +58,7 @@ ms.locfileid: "68121671"
  Es la continuación de una cadena.  
   
 ## <a name="remarks"></a>Notas  
- Este comando devuelve las secciones primera y de continuación de la cadena como una cadena, sin la barra diagonal inversa.  
+Este comando devuelve las secciones primera y de continuación de la cadena como una cadena, sin la barra diagonal inversa. La nueva línea después de la barra diagonal inversa debe ser un carácter de avance de línea (U + 000A) o una combinación de retorno de carro (U + 000D) y avance de línea (U + 000A) en ese orden. 
 
 ## <a name="examples"></a>Ejemplos  
 
@@ -84,7 +85,7 @@ def' AS [ColumnResult];
 En el ejemplo siguiente se usa una barra diagonal inversa y un retorno de carro para dividir una cadena binaria en dos líneas.  
 
 ```  
-SELECT 0xabc\  
+SELECT 0xabc\
 def AS [ColumnResult];  
   
 ```  

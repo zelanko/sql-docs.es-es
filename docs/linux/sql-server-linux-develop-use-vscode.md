@@ -1,7 +1,7 @@
 ---
-title: Usar la extensión mssql de código de Visual Studio para SQL Server
+title: Empleo de la extensión mssql de Visual Studio Code para SQL Server
 titleSuffix: SQL Server
-description: Use la extensión mssql para Visual Studio Code para editar y ejecutar scripts de Transact-SQL para SQL Server en Linux.
+description: Use la extensión mssql de Visual Studio Code para editar y ejecutar scripts de Transact-SQL para SQL Server en Linux.
 author: VanMSFT
 ms.author: vanto
 ms.date: 12/18/2018
@@ -10,103 +10,103 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.openlocfilehash: 207a542e07f271607e5d2266b8c32e313b1dff13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077309"
 ---
-# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Use Visual Studio Code para crear y ejecutar scripts de Transact-SQL
+# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Empleo de Visual Studio Code para crear y ejecutar scripts de Transact-SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se muestra cómo usar el **mssql** extensión para Visual Studio Code para desarrollar bases de datos de SQL Server. Dado que Visual Studio Code es multiplataforma, puede usar **mssql** extensión en Linux, macOS y Windows.
+En este artículo se muestra cómo usar la extensión **mssql** de Visual Studio Code para desarrollar bases de datos de SQL Server. Dado que Visual Studio Code es multiplataforma, puede usar la extensión **mssql** en Linux, macOS y Windows.
 
-## <a name="install-and-start-visual-studio-code"></a>Instalar e iniciar Visual Studio Code
+## <a name="install-and-start-visual-studio-code"></a>Instalación e inicio de iniciar Visual Studio Code
 
-Visual Studio Code es un editor de código multiplataforma y gráficos que admite extensiones.
+Visual Studio Code es un editor de código gráfico multiplataforma que admite extensiones.
 
-1. [Descargue e instale Visual Studio Code](https://code.visualstudio.com/) en su equipo.
+1. [Descargue e instale Visual Studio Code](https://code.visualstudio.com/) en el equipo.
 
 1. Inicie Visual Studio Code.
 
    >[!NOTE]
-   >Si el código de Visual Studio no se inicia cuando están conectados a través de una sesión de escritorio remoto de xrdp, consulte [VS Code no funciona en Ubuntu cuando se conecta mediante XRDP](https://github.com/Microsoft/vscode/issues/3451).
+   >Si Visual Studio Code no se inicia cuando se conecta a través de una sesión de escritorio remoto de xrdp, vea [VS Code no funciona en Ubuntu al conectarse mediante XRDP](https://github.com/Microsoft/vscode/issues/3451).
 
-## <a name="install-the-mssql-extension"></a>Instalar la extensión mssql
+## <a name="install-the-mssql-extension"></a>Instalación de la extensión mssql
 
-El [extensión mssql para Visual Studio Code](https://aka.ms/mssql-marketplace) le permite conectarse a un servidor SQL Server, la consulta con Transact-SQL (T-SQL) y ver los resultados.
+La [extensión mssql de Visual Studio Code](https://aka.ms/mssql-marketplace) permite conectarse a SQL Server, consultar con Transact-SQL (T-SQL) y ver los resultados.
 
-1. En Visual Studio Code, seleccione **vista** > **paleta de comandos**, o bien presione **Ctrl**+**MAYÚS** + **P**, o bien presione **F1** para abrir el **paleta de comandos**.
+1. En Visual Studio Code, seleccione **Ver** > **Paleta de comandos**, presione **Ctrl**+**Mayús**+**P** o presione **F1** para abrir la **Paleta de comandos**.
 
-1. En el **paleta de comandos**, seleccione **extensiones: Instalar extensiones** en la lista desplegable. 
+1. En la **Paleta de comandos**, seleccione **Extensiones: Instalar extensiones** en la lista desplegable. 
 
-1. En el **extensiones** panel, escriba *mssql*.
+1. En el panel **Extensiones**, escriba *mssql*.
 
-1. Seleccione el **SQL Server (mssql)** extensión y, a continuación, seleccione **instalar**.
+1. Seleccione la extensión **SQL Server (mssql)** y luego **Instalar**.
 
-   ![Instalar la extensión mssql](./media/sql-server-linux-develop-use-vscode/vscode-extension.png)
+   ![Instalación de la extensión mssql](./media/sql-server-linux-develop-use-vscode/vscode-extension.png)
 
-1. Una vez finalizada la instalación, seleccione **recarga** para habilitar la extensión.
+1. Una vez finalizada la instalación, seleccione **Recargar** para habilitar la extensión.
 
-## <a name="create-or-open-a-sql-file"></a>Crear o abrir un archivo SQL
+## <a name="create-or-open-a-sql-file"></a>Creación o apertura de un archivo SQL
 
-La extensión mssql permite comandos mssql y T-SQL IntelliSense del editor de código cuando se establece el modo de lenguaje en **SQL**.
+La extensión mssql habilita los comandos de mssql y T-SQL IntelliSense en el editor de código cuando el modo de lenguaje está establecido en **SQL**.
 
-1. Seleccione **archivo** > **nuevo archivo** o presione **Ctrl**+**N**. Visual Studio Code abre un nuevo archivo de texto sin formato de forma predeterminada. 
+1. Seleccione **Archivo** > **Nuevo archivo** o presione **Ctrl**+**N**. Visual Studio Code abre de forma predeterminada un nuevo archivo de texto sin formato. 
 
-1. Seleccione **texto sin formato** en la barra de estado inferior, o presione **Ctrl**+**K** > **M**y seleccione **SQL** en la lista desplegable de idiomas. 
+1. Seleccione **Texto sin formato** en la barra de estado inferior o presione **Ctrl**+**K** > **M** y seleccione **SQL** en la lista desplegable de lenguajes. 
 
    ![Modo de lenguaje SQL](./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png)
 
    > [!NOTE]
-   > Si se trata de la primera vez que se ha usado la extensión, la extensión instala herramientas auxiliares de SQL Server.
+   > Si es la primera vez que usa la extensión, esta instala herramientas auxiliares de SQL Server.
 
-Si abre un archivo existente que tiene un *.sql* extensión de archivo, se establece automáticamente el modo de lenguaje en SQL.  
+Si abre un archivo existente con una extensión de archivo *.sql*, el modo de lenguaje se establece automáticamente en SQL.  
 
-## <a name="connect-to-sql-server"></a>Conexión con SQL Server
+## <a name="connect-to-sql-server"></a>Conectar a SQL Server
 
-Siga estos pasos para crear un perfil de conexión y conectarse a un servidor SQL Server.
+Siga estos pasos para crear un perfil de conexión y conectarse a SQL Server.
 
-1. Presione **Ctrl**+**MAYÚS**+**P** o **F1** para abrir el **paleta de comandos**. 
+1. Presione **Ctrl**+**Mayús**+**P** o **F1** para abrir la **Paleta de comandos**. 
 
-1. Tipo *sql* para mostrar el mssql comandos o tipo *sqlcon*y, a continuación, seleccione **MS SQL: Conectar** en la lista desplegable.
+1. Escriba *sql* para mostrar los comandos de mssql o escriba *sqlcon* y luego seleccione **MS SQL: Conectar** en la lista desplegable.
 
-   ![comandos de MSSQL](./media/sql-server-linux-develop-use-vscode/vscode-commands.png)
+   ![Comandos de mssql](./media/sql-server-linux-develop-use-vscode/vscode-commands.png)
 
    >[!NOTE]
-   >Como el archivo vacío de SQL que creó, un archivo de SQL, debe tener el foco en el editor de código para poder ejecutar los comandos de mssql.
+   >Un archivo SQL, como el archivo SQL vacío creado, debe tener el foco en el editor de código para poder ejecutar los comandos de mssql.
 
-1. Seleccione el **MS SQL: Administrar perfiles de conexión** comando.
+1. Seleccione el comando **MS SQL: Administrar perfiles de conexión**.
 
-1. A continuación, seleccione **crear** para crear un nuevo perfil de conexión para SQL Server.
+1. Luego seleccione **Crear** para crear un nuevo perfil de conexión para SQL Server.
 
-1. Siga las indicaciones para especificar las propiedades para el nuevo perfil de conexión. Después de especificar cada valor, presione **ENTRAR** para continuar.
+1. Siga los mensajes para especificar las propiedades del nuevo perfil de conexión. Después de especificar cada valor, presione **Entrar** para continuar.
 
    | Propiedad Conexión | Descripción |
    |---|---|
-   | **Nombre del servidor o la cadena de conexión de ADO** | Especifique el nombre de instancia de SQL Server. Use *localhost* para conectarse a una instancia de SQL Server en el equipo local. Para conectarse a un servidor SQL remoto, escriba el nombre del destino SQL Server, o su dirección IP. Para conectarse a un contenedor de SQL Server, especifique la dirección IP del equipo de host del contenedor. Si tiene que especificar un puerto, use una coma para separarlo de nombre. Por ejemplo, para un servidor escucha en el puerto 1401, escriba `<servername or IP>,1401`.<br/><br/>Como alternativa, puede escribir la cadena de conexión de ADO para la base de datos aquí. |
-   | **Nombre de la base de datos** (opcional) | La base de datos que desea usar. Para conectarse a la base de datos de forma predeterminada, no especifique un nombre de la base de datos. |
-   | **Tipo de autenticación** | Elija **integrado** o **inicio de sesión SQL**. |
-   | **Nombre de usuario.** | Si seleccionó **inicio de sesión SQL**, escriba el nombre de un usuario con acceso a una base de datos en el servidor. |
+   | **Nombre del servidor o cadena de conexión ADO** | Especifique el nombre de la instancia de SQL Server. Use *localhost* para conectarse a una instancia de SQL Server en el equipo local. Para conectarse a una instancia remota de SQL Server, escriba el nombre del servidor SQL Server de destino o su dirección IP. Para conectarse a un contenedor de SQL Server, especifique la dirección IP del equipo host del contenedor. Si necesita especificar un puerto, use una coma para separarlo del nombre. Por ejemplo, en el caso de un servidor que escucha en el puerto 1401, escriba `<servername or IP>,1401`.<br/><br/>Como alternativa, puede escribir la cadena de conexión ADO de la base de datos aquí. |
+   | **Nombre de la base de datos** (opcional) | Base de datos que se quiere usar. Para conectarse a la base de datos predeterminada, no especifique aquí ningún nombre de base de datos. |
+   | **Tipo de autenticación** | Seleccione **Integrado** o **Inicio de sesión de SQL**. |
+   | **User name** | Si ha seleccionado **Inicio de sesión de SQL**, escriba el nombre de un usuario con acceso a una base de datos en el servidor. |
    | **Contraseña** | Escriba la contraseña del usuario especificado. |
-   | **Guardar contraseña** | Presione **ENTRAR** seleccionar **Sí** y guarde la contraseña. Seleccione **No** que se le pida la contraseña cada vez que se usa el perfil de conexión. |
-   | **Nombre del perfil** (opcional) | Escriba un nombre para el perfil de conexión, como *localhost perfil*. |
+   | **Guardar contraseña** | Presione **Entrar** para seleccionar **Sí** y guardar la contraseña. Seleccione **No** para que se le pida la contraseña cada vez que se use el perfil de conexión. |
+   | **Nombre de perfil** (opcional) | Escriba un nombre para el perfil de conexión, como *localhost profile*. |
 
-   Después de escribir todos los valores y seleccione **ENTRAR**, código de Visual Studio crea el perfil de conexión y se conecta a SQL Server.
+   Después de escribir todos los valores y seleccionar **Entrar**, Visual Studio Code crea el perfil de conexión y se conecta a SQL Server.
 
    > [!TIP]
-   > Si se produce un error en la conexión, intente diagnosticar el problema del mensaje de error en la **salida** panel en Visual Studio Code. Para abrir el **salida** panel, seleccione **vista** > **salida**. Revise también el [recomendaciones para solucionar problemas de conexión](./sql-server-linux-troubleshooting-guide.md#connection).
+   > Si se produce un error en la conexión, intente diagnosticar el problema a partir del mensaje de error del panel **Salida** de Visual Studio Code. Para abrir el panel **Salida**, seleccione **Ver** > **Salida**. Además, revise las [recomendaciones para solucionar problemas de conexión](./sql-server-linux-troubleshooting-guide.md#connection).
 
 1. Compruebe la conexión en la barra de estado inferior.
 
-   ![Estado de la conexión](./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png)
+   ![Estado de conexión](./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png)
 
-Como alternativa a los pasos anteriores, también puede crear y editar perfiles de conexión en el archivo de configuración de usuario (*settings.json*). Para abrir el archivo de configuración, seleccione **archivo** > **preferencias** > **configuración**. Para obtener más información, consulte [administrar perfiles de conexión](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles).
+Como alternativa a los pasos anteriores, también puede crear y editar perfiles de conexión en el archivo de configuración de usuario (*settings.json*). Para abrir el archivo de configuración, seleccione **Archivo** > **Preferencias** > **Configuración**. Para obtener más información, vea [Administración de perfiles de conexión](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles).
 
-## <a name="create-a-sql-database"></a>Crear una base de datos SQL
+## <a name="create-a-sql-database"></a>Creación de una base de datos SQL
 
-1. En el nuevo archivo SQL que ha iniciado anteriormente, escriba *sql* para mostrar una lista de fragmentos de código modificable. 
+1. En el nuevo archivo SQL que ha iniciado anteriormente, escriba *sql* para mostrar una lista de fragmentos de código modificables. 
 
    ![Fragmentos de código SQL](./media/sql-server-linux-develop-use-vscode/vscode-sql-snippets.png)
 
@@ -128,32 +128,32 @@ Como alternativa a los pasos anteriores, también puede crear y editar perfiles 
    GO
    ```
 
-1. Presione **Ctrl**+**MAYÚS**+**E** para ejecutar los comandos de Transact-SQL. Ver los resultados en la ventana de consulta.
+1. Presione **Ctrl**+**Mayús**+**E** para ejecutar los comandos de Transact-SQL. Vea los resultados en la ventana de consulta.
 
-   ![Crear mensajes de la base de datos](./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png)
+   ![Creación de mensajes de base de datos](./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png)
 
    > [!TIP]
-   > Puede personalizar las teclas de método abreviado para los comandos de mssql. Consulte [personalizar métodos abreviados](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts).
+   > Puede personalizar las teclas de método abreviado de los comandos de mssql. Vea [Personalización de accesos directos](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts).
 
 ## <a name="create-a-table"></a>Creación de una tabla
 
 1. Elimine el contenido de la ventana del editor de código.
 
-1. Presione **Ctrl**+**MAYÚS**+**P** o **F1** para abrir el **paleta de comandos**. 
+1. Presione **Ctrl**+**Mayús**+**P** o **F1** para abrir la **Paleta de comandos**. 
 
-1. Tipo *sql* para mostrar el mssql comandos o tipo *sqluse*y, a continuación, seleccione el **MS SQL: Usar base de datos** comando.
+1. Escriba *sql* para mostrar los comandos de mssql o escriba *sqluse* y luego seleccione el comando **MS SQL: Uso de las bases de datos**.
 
-1. Seleccione la nueva **TutorialDB** base de datos. 
+1. Seleccione la nueva base de datos **TutorialDB**. 
 
-   ![Usar base de datos](./media/sql-server-linux-develop-use-vscode/vscode-use-database.png)
+   ![Uso de las bases de datos](./media/sql-server-linux-develop-use-vscode/vscode-use-database.png)
 
-1. En el editor de código, escriba *sql* para mostrar los fragmentos de código, seleccione **sqlCreateTable**y, a continuación, presione **ENTRAR**.
+1. En el editor de código, escriba *sql* para mostrar los fragmentos de código, seleccione **sqlCreateTable** y presione **Entrar**.
 
-1. En el fragmento de código, escriba `Employees` para el nombre de tabla.
+1. En el fragmento de código, escriba `Employees` como nombre de la tabla.
 
-1. Presione **ficha** para obtener al campo siguiente y, a continuación, escriba `dbo` para el nombre del esquema.
+1. Presione **Tab** para ir al siguiente campo y luego escriba `dbo` como nombre del esquema.
 
-1. Reemplazar las definiciones de columna con las siguientes columnas:
+1. Reemplace las definiciones de columna por las columnas siguientes:
 
    ```sql
    EmployeesId INT NOT NULL PRIMARY KEY,
@@ -161,11 +161,11 @@ Como alternativa a los pasos anteriores, también puede crear y editar perfiles 
    Location [NVARCHAR](50)  NOT NULL
    ```
 
-1. Presione **Ctrl**+**MAYÚS**+**E** para crear la tabla.
+1. Presione **Ctrl**+**Mayús**+**E** para crear la tabla.
 
-## <a name="insert-and-query"></a>Insertar y consultar
+## <a name="insert-and-query"></a>Inserción y consulta
 
-1. Agregue las siguientes instrucciones para insertar cuatro filas en la **empleados** tabla.
+1. Agregue las siguientes instrucciones para insertar cuatro filas en la tabla **Employees**.
 
    ```sql
    -- Insert rows into table 'Employees'
@@ -185,55 +185,55 @@ Como alternativa a los pasos anteriores, también puede crear y editar perfiles 
    GO
    ```
 
-   Mientras escribe, T-SQL IntelliSense le ayuda a completar las instrucciones:
+   A medida que escribe, T-SQL IntelliSense le ayuda a completar las instrucciones:
 
-   ![Transact-SQL IntelliSense](./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png)
-
-   > [!TIP]
-   > La extensión mssql también tiene comandos que ayudan a crear instrucciones INSERT y SELECT. Estos datos no se utilizaron en el ejemplo anterior.
-
-1. Presione **Ctrl**+**MAYÚS**+**E** para ejecutar los comandos. Dar lugar a los dos conjuntos de presentación en el **resultados** ventana. 
-
-   ![Resultados](./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png)
-
-## <a name="view-and-save-the-result"></a>Ver y guardar el resultado
-
-1. Seleccione **vista** > **Editor diseño** > **voltear diseño** para cambiar a un diseño de división vertical u horizontal.
-
-1. Seleccione el **resultados** y **mensajes** encabezados para contraer y expandir los paneles del panel.
-
-   ![Encabezados de alternancia](./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png)
+   ![T-SQL IntelliSense](./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png)
 
    > [!TIP]
-   > Puede personalizar el comportamiento predeterminado de la extensión mssql. Consulte [personalizar las opciones de extensión](https://github.com/Microsoft/vscode-mssql/wiki/customize-options).
+   > La extensión mssql también tiene comandos que ayudan a crear instrucciones INSERT y SELECT. No se han usado en el ejemplo anterior.
 
-1. Seleccione el icono de cuadrícula maximizar en la segunda cuadrícula de resultados para acercar esos resultados.
+1. Presione **Ctrl**+**Mayús**+**E** para ejecutar los comandos. Los dos conjuntos de resultados se muestran en la ventana **Resultados**. 
 
-   ![Maximizar la cuadrícula](./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png)
+   ![Resultado](./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png)
+
+## <a name="view-and-save-the-result"></a>Consulta y guardado del resultado
+
+1. Seleccione **Ver** > **Editor de diseño** > **Voltear diseño** para cambiar entre un diseño dividido vertical u horizontal.
+
+1. Seleccione los encabezados de panel **Resultados** y **Mensajes** para contraer y expandir los paneles.
+
+   ![Alternancia de encabezados](./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png)
+
+   > [!TIP]
+   > Puede personalizar el comportamiento predeterminado de la extensión mssql. Vea [Personalización de las opciones de extensión](https://github.com/Microsoft/vscode-mssql/wiki/customize-options).
+
+1. Seleccione el icono de maximizar cuadrícula en la segunda cuadrícula de resultados para acercar los resultados.
+
+   ![Maximización de la cuadrícula](./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png)
 
    > [!NOTE]
-   > El icono maximizar muestra cuando el script T-SQL genera las cuadrículas de resultados de dos o más.
+   > El icono de maximizar aparece cuando el script de T-SQL genera dos o más cuadrículas de resultados.
 
-1. Abra el menú contextual de cuadrícula con el botón secundario en la cuadrícula. 
+1. Abra el menú contextual de la cuadrícula al hacer clic con el botón derecho en la cuadrícula. 
 
    ![Menú contextual](./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png)
 
-1. Seleccione **seleccionar todo**.
+1. Seleccione **Seleccionar todo**.
 
-1. Vuelva a abrir el menú contextual de cuadrícula y seleccione **Guardar como JSON** para guardar el resultado a un *.json* archivo.
+1. Vuelva a abrir el menú contextual de la cuadrícula y seleccione **Guardar como JSON** para guardar el resultado en un archivo *.json*.
 
 1. Especifique un nombre de archivo para el archivo JSON. 
 
 1. Compruebe que el archivo JSON se guarda y se abre en Visual Studio Code.
 
-   ![Guardar como JSON](./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png)
+   ![Guardado como JSON](./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png)
 
-Si tiene que guardar y ejecutar secuencias de comandos SQL más adelante, para la administración o un proyecto de desarrollo más grande, guardar las secuencias de comandos con un *.sql* extensión.
+Si necesita guardar y ejecutar scripts de SQL más adelante, para la administración o un proyecto de desarrollo de mayor tamaño, guarde los scripts con una extensión *.sql*.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Si está familiarizado con Transact-SQL, consulte [Tutorial: Escribir instrucciones Transact-SQL](https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements) y [referencia de Transact-SQL (motor de base de datos)](https://docs.microsoft.com/sql/t-sql/language-reference).
+Si no está familiarizado con T-SQL, vea [Tutorial: Escritura de instrucciones Transact-SQL](https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements) y [Referencia de Transact-SQL (motor de base de datos)](https://docs.microsoft.com/sql/t-sql/language-reference).
 
-Para obtener más información sobre el uso o que contribuyen a la extensión mssql, consulte el [wiki de proyecto de extensión mssql](https://github.com/Microsoft/vscode-mssql/wiki).
+Para obtener más información sobre el uso o la contribución a la extensión mssql, vea la [wiki del proyecto de extensión mssql](https://github.com/Microsoft/vscode-mssql/wiki).
 
-Para obtener más información sobre el uso de Visual Studio Code, consulte el [documentación de Visual Studio Code](https://code.visualstudio.com/docs).
+Para obtener más información sobre el uso de Visual Studio Code, vea la [documentación de Visual Studio Code](https://code.visualstudio.com/docs).

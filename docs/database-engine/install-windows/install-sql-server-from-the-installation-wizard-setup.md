@@ -1,7 +1,7 @@
 ---
 title: Instalación de SQL Server 2016 desde el Asistente para la instalación (programa de instalación) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9608e61108ad6f13c14816a35f06ca578e55d192
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419271"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742914"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar SQL Server desde el Asistente para la instalación (programa de instalación)
 
@@ -280,9 +280,9 @@ Esto no se aplica a SQL Server 2019.
   
      El flujo de trabajo del resto de la instalación depende de las características que haya especificado en la instalación. Dependiendo de las selecciones, es posible que no vea todas las páginas. 
 
-1. Si selecciona instalar la característica de PolyBase, se agregará la página **Configuración de PolyBase** al programa de instalación de SQL Server, que se muestra después de la página **Configuración de instancia**. PolyBase requiere, como mínimo, la actualización 51 de Oracle JRE 7 y, si todavía no está instalada, a partir de SQL Server 2019, puede instalar Open JRE de Azul Zulu junto con SQL Server. En la página **Configuración de PolyBase**, puede usar SQL Server como una instancia habilitada para PolyBase independiente, o bien puede usar esta instancia de SQL Server como parte de un grupo de escalado horizontal de PolyBase. Si decide usar el grupo de escalado horizontal, deberá especificar un intervalo de puertos de hasta 6 o más puertos.  En la página **Ubicación de instalación de Java**, puede elegir instalar Open JRE de Azul Zulu, incluido en la instalación de SQL Server 2019, o bien proporcionar una ubicación de otro JRE o JDK que ya se haya instalado en el equipo.
+1. A partir de SQL Server 2019, PolyBase ya no requiere que la actualización 51 (como mínimo) de Oracle JRE 7 esté preinstalada en el equipo antes de instalar la característica. Si selecciona instalar la característica de PolyBase, se agregará la página **Ubicación de instalación de Java** al programa de instalación de SQL Server, que se muestra después de la página **Configuración de instancia**. En la página Ubicación de instalación de Java, puede elegir instalar Open JRE de Azul Zulu, incluido en la instalación de SQL Server 2019, o bien proporcionar una ubicación de otro JRE o JDK que ya se haya instalado en el equipo.
 
-1. A partir de SQL Server 2019, se ha agregado Java a la lista de Machine Learning Services y extensiones de lenguaje, junto con R y Python. Si selecciona instalar la característica de Java, se agregará la página **Ubicación de instalación de Java** a la ventana de diálogo de instalación de SQL Server, que se muestra después de la página **Configuración de instancia**. En la página **Ubicación de instalación de Java**, puede elegir instalar Open JRE de Azul Zulu, incluido en la instalación de SQL Server 2019, o bien proporcionar una ubicación de otro JRE o JDK que ya se haya instalado en el equipo.
+1. A partir de SQL Server 2019, se ha agregado Java con extensiones de lenguaje. Si selecciona instalar la característica de Java, se agregará la página **Ubicación de instalación de Java** a la ventana de diálogo de instalación de SQL Server, que se muestra después de la página **Configuración de instancia**. En la página **Ubicación de instalación de Java**, puede elegir instalar Open JRE de Zulu, incluido en la instalación de SQL Server 2019, o bien proporcionar una ubicación de otro JRE o JDK que ya se haya instalado en el equipo.
 
 1. Use la página **Configuración del servidor - Cuentas de servicio** para especificar las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servicios reales que se configuran en esta página dependen de las características que ha elegido instalar. Para obtener más información acerca de los valores de configuración, consulte [Ayuda del Asistente para instalación](../../sql-server/install/instance-configuration.md#serverconfig).
   

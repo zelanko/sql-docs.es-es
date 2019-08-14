@@ -1,7 +1,7 @@
 ---
-title: Instalación desatendida para SQL Server en Ubuntu
+title: Instalación desatendida de SQL Server en Ubuntu
 titleSuffix: SQL Server
-description: 'Ejemplo de Script SQL Server: instalación desatendida en Ubuntu'
+description: 'Script de SQL Server de ejemplo: instalación desatendida en Ubuntu'
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -9,26 +9,26 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67910483"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ejemplo: Script de instalación desatendida de SQL Server para Ubuntu
+# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ejemplo: script de instalación desatendida de SQL Server para Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este script de Bash de ejemplo instala SQL Server 2017 en Ubuntu 16.04 sin entrada interactiva. Se proporcionan ejemplos de instalación del motor de base de datos, las herramientas de línea de comandos de SQL Server, Agente SQL Server y lleva a cabo los pasos posteriores a la instalación. Opcionalmente, puede instalar la búsqueda de texto completo y crear un usuario administrativo.
+Este script de Bash de ejemplo instala SQL Server 2017 en Ubuntu 16.04 sin la intervención del usuario. Proporciona ejemplos de instalación del motor de base de datos, las herramientas de línea de comandos de SQL Server y el Agente SQL Server, y realiza los pasos posteriores a la instalación. De manera opcional, puede instalar la característica de búsqueda de texto completo y crear un usuario administrativo.
 
 > [!TIP]
-> Si no necesita un script de instalación desatendida, la forma más rápida para instalar SQL Server es seguir el [inicio rápido para Ubuntu](quickstart-install-connect-ubuntu.md). Para obtener más información de configuración, consulte [Guía de instalación para SQL Server en Linux](sql-server-linux-setup.md).
+> Si no necesita un script de instalación desatendida, la forma más rápida de instalar SQL Server es seguir la [guía de inicio rápido para Ubuntu](quickstart-install-connect-ubuntu.md). Para obtener más información sobre la instalación, vea la [guía de instalación de SQL Server en Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-- Necesita al menos 2 GB de memoria para ejecutar SQL Server en Linux.
-- El sistema de archivos debe ser **XFS** o **EXT4**. Otros sistemas de archivos como **BTRFS**, no se admiten.
-- Para otros requisitos del sistema, consulte [requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
+- Necesita al menos 2 GB de memoria para ejecutar SQL Server en Linux.
+- El sistema de archivos debe ser **XFS** o **EXT4**. No se admiten otros sistemas de archivos, como **BTRFS**.
+- Para conocer otros requisitos del sistema, consulte [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
 
 ## <a name="sample-script"></a>Script de ejemplo
 
@@ -153,60 +153,60 @@ fi
 echo Done!
 ```
 
-### <a name="running-the-script"></a>La ejecución del script
+### <a name="running-the-script"></a>Ejecutar el script
 
 Para ejecutar el script
 
-1. Pegue el ejemplo en el editor de texto y guárdelo con un nombre fácil de recordar, como `install_sql.sh`.
+1. Pegue el ejemplo en el editor de texto que prefiera y guárdelo con un nombre fácil de recordar, como `install_sql.sh`.
 
-1. Personalizar `MSSQL_SA_PASSWORD`, `MSSQL_PID`y cualquiera de las demás variables que desea cambiar.
+1. Personalice `MSSQL_SA_PASSWORD`, `MSSQL_PID` y cualquiera de las demás variables que quiera cambiar.
 
-1. Marque el script como archivo ejecutable
+1. Marque el script como ejecutable.
 
    ```bash
    chmod +x install_sql.sh
    ```
 
-1. Ejecute el script
+1. Ejecute el script.
 
    ```bash
    ./install_sql.sh
    ```
 
-### <a name="understanding-the-script"></a>Descripción de la secuencia de comandos
-Lo primero que hace el script de Bash se establece algunas variables. Pueden ser variables de scripting, como en el ejemplo, o las variables de entorno. La variable `MSSQL_SA_PASSWORD` es **requiere** mediante la instalación de SQL Server, los demás son variables personalizadas creadas para la secuencia de comandos. El script de ejemplo lleva a cabo los pasos siguientes:
+### <a name="understanding-the-script"></a>Descripción del script
+Lo primero que hace el script de Bash es establecer algunas variables. Pueden ser variables de scripting, como en el ejemplo, o variables de entorno. La variable `MSSQL_SA_PASSWORD` es **necesaria** para la instalación de SQL Server, las demás son variables personalizadas creadas para el script. Este script de ejemplo realiza los siguientes pasos:
 
-1. Importe las claves públicas de GPG de Microsoft.
+1. Importar las claves públicas de Microsoft GPG
 
-1. Registre los repositorios de Microsoft para SQL Server y las herramientas de línea de comandos.
+1. Registrar los repositorios de Microsoft para SQL Server y las herramientas de línea de comandos
 
-1. Actualice los repositorios locales
+1. Actualizar los repositorios locales
 
 1. Instalar SQL Server
 
-1. Configurar SQL Server con el ```MSSQL_SA_PASSWORD``` y acepte automáticamente el contrato de licencia del usuario final.
+1. Configurar SQL Server con ```MSSQL_SA_PASSWORD``` y aceptar automáticamente el contrato de licencia para el usuario final
 
-1. Automáticamente acepte el contrato de licencia del usuario final para las herramientas de línea de comandos de SQL Server, instalarlos e instalar el paquete de unixodbc-dev.
+1. Aceptar automáticamente el contrato de licencia para el usuario final para las herramientas de línea de comandos de SQL Server, instalarlas e instalar el paquete unixODBC-dev
 
-1. Agregar las herramientas de línea de comandos de SQL Server a la ruta de acceso para facilitar su uso.
+1. Agregar las herramientas de línea de comandos de SQL Server a la ruta de acceso para facilitar su uso
 
-1. Instalar el Agente SQL Server si la variable de scripting ```SQL_INSTALL_AGENT``` se establece, de forma predeterminada.
+1. Instalar el Agente SQL Server si se establece la variable de scripting ```SQL_INSTALL_AGENT```, activada de forma predeterminada
 
-1. Opcionalmente, instale la búsqueda de texto completo de SQL Server, si la variable ```SQL_INSTALL_FULLTEXT``` se establece.
+1. Opcionalmente, instalar Búsqueda de texto completo de SQL Server, si está establecida la variable ```SQL_INSTALL_FULLTEXT```
 
-1. Desbloquee el puerto 1433 para TCP en el firewall del sistema, que es necesario para conectarse a SQL Server desde otro sistema.
+1. Desbloquear el puerto 1433 para TCP en el firewall del sistema, necesario para conectarse a SQL Server desde otro sistema
 
-1. Opcionalmente, establecer las marcas de seguimiento para el seguimiento de interbloqueo. (requiere el comentario de las líneas)
+1. Opcionalmente, establecer marcas de seguimiento para el seguimiento del interbloqueo (requiere quitar marca de comentario de las líneas)
 
-1. Ahora está instalado SQL Server, para que sea operativa, reinicie el proceso.
+1. SQL Server ya está instalado; para que sea operativo, reinicie el proceso.
 
-1. Compruebe que SQL Server está instalado correctamente, al tiempo que oculta los mensajes de error.
+1. Compruebe que SQL Server está instalado correctamente y oculte los mensajes de error.
 
-1. Crear un nuevo usuario de administrador del servidor si ```SQL_INSTALL_USER``` y ```SQL_INSTALL_USER_PASSWORD``` están establecidos.
+1. Cree un nuevo usuario de administrador del servidor si están establecidos ```SQL_INSTALL_USER``` y ```SQL_INSTALL_USER_PASSWORD```.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Simplificar varias instalaciones desatendidas y crear un script de Bash independiente que establece las variables de entorno adecuada. Puede quitar cualquiera de las variables de la secuencia de comandos de ejemplo usa y colocarlos en su propio script de Bash.
+Simplifique varias instalaciones desatendidas y cree un script de Bash independiente que establezca las variables de entorno adecuadas. Puede quitar cualquiera de las variables que usa el script de ejemplo y colocarlas en su propio script de Bash.
 
 ```bash
 #!/bin/bash
@@ -218,9 +218,9 @@ export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
 export SQL_INSTALL_AGENT='y'
 ```
 
-A continuación, ejecute el script de Bash como sigue:
+Después, ejecute el script de Bash de la siguiente manera:
 ```bash
 . ./my_script_name.sh
 ```
 
-Para obtener más información acerca de SQL Server en Linux, consulte [SQL Server en Linux overview](sql-server-linux-overview.md).
+Para obtener más información sobre SQL Server en Linux, vea [Introducción a SQL Server en Linux](sql-server-linux-overview.md).

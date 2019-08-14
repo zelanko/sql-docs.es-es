@@ -1,7 +1,7 @@
 ---
-title: Extensión de la implementación de aplicación
+title: Extensión de implementación de aplicaciones
 titleSuffix: SQL Server big data clusters
-description: Implementar un script de Python o R como una aplicación en clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+description: Implemente un script de Python o R como una aplicación en un clúster de macrodatos de SQL Server 2019 (versión preliminar).
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -10,176 +10,176 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958912"
 ---
-# <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Cómo utilizar VS Code para implementar aplicaciones en clústeres de macrodatos de SQL Server
+# <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Cómo usar VS Code para implementar aplicaciones en clústeres de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe cómo implementar aplicaciones en un clúster de macrodatos de SQL Server con Visual Studio Code con la extensión de la implementación de la aplicación. Esta funcionalidad se introdujo en CTP 2.3. 
+En este artículo se explica cómo implementar aplicaciones en un clúster de macrodatos de SQL Server con Visual Studio Code con la extensión de implementación de aplicaciones. Esta capacidad se ha presentado en CTP 2.3. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-- [Código de Visual Studio](https://code.visualstudio.com/).
-- [Clúster de SQL Server macrodatos](big-data-cluster-overview.md) CTP 2.3 o posterior.
+- [Visual Studio Code](https://code.visualstudio.com/).
+- [Clúster de macrodatos de SQL Server](big-data-cluster-overview.md) CTP 2.3 o posterior.
 
 ## <a name="capabilities"></a>Capabilities
 
 Esta extensión admite las siguientes tareas en Visual Studio Code:
 
-- Autenticar con el clúster de macrodatos de SQL Server.
-- Recuperar una plantilla de aplicación desde el repositorio de GitHub para la implementación de runtimes compatibles.
-- Administrar plantillas de aplicación abierto actualmente en el área de trabajo del usuario.
-- Implementar una aplicación a través de una especificación de formato YAML.
-- Administrar las aplicaciones implementadas en el clúster de macrodatos de SQL Server.
-- Ver todas las aplicaciones que haya implementado en la barra lateral con información adicional.
-- Generar una especificación de ejecución para utilizar la aplicación o eliminar la aplicación desde el clúster.
-- Consumir las aplicaciones implementadas a través de una especificación de ejecución YAML.
+- Autenticar en el clúster de macrodatos de SQL Server.
+- Recuperar una plantilla de aplicación desde el repositorio de GitHub para la implementación de runtime admitidos.
+- Administrar plantillas de aplicación abiertas actualmente en el área de trabajo del usuario.
+- Implementar una aplicación mediante una especificación en formato YAML.
+- Administrar aplicaciones implementadas en un clúster de macrodatos de SQL Server.
+- Ver todas las aplicaciones que se han implementado en la barra lateral con información adicional.
+- Generar una especificación de ejecución para consumir la aplicación o eliminarla del clúster.
+- Consumir aplicaciones implementadas a través de una especificación de ejecución YAML.
 
-Las secciones siguientes aunque recorrer el proceso de instalación y proporciona información general sobre cómo funciona la extensión. 
+En las secciones siguientes se explica el proceso de instalación y se proporciona información general sobre el funcionamiento de la extensión. 
 
-### <a name="install"></a>Install
+### <a name="install"></a>Instalar
 
-En primer lugar, instale la extensión de la implementación de aplicaciones en VS Code:
+En primer lugar, instale la extensión de implementación de aplicaciones en VS Code:
 
-1. Descargar [extensión de implementar la aplicación](https://aka.ms/app-deploy-vscode) para instalar la extensión como parte del código de VS.
+1. Descargue la [extensión de implementación de aplicaciones](https://aka.ms/app-deploy-vscode) para instalarla como parte de VS Code.
 
-1. Inicie VS Code y vaya a la barra lateral de extensiones.
+1. Inicie VS Code y vaya a la barra lateral Extensiones.
 
-1. Haga clic en el `…` menú contextual en la parte superior de la barra lateral y seleccione `Install from vsix`.
+1. Haga clic en el menú contextual `…` de la parte superior de la barra lateral y seleccione `Install from vsix`.
 
    ![Instalación de VSIX](media/vs-extension/install_vsix.png)
 
-1. Buscar el `sqlservbdc-app-deploy.vsix` archivo que descargó y elija que se va a instalar.
+1. Busque el archivo `sqlservbdc-app-deploy.vsix` que ha descargado y selecciónelo para instalarlo.
 
-Después de implementar la aplicación de clúster de macrodatos de SQL Server se ha instalado la extensión, le pedirá que vuelva a cargar VS Code. Ahora debería ver el Explorador de aplicación de BDC de SQL Server en la barra lateral de VS Code.
+Una vez instalada la extensión de implementación de aplicaciones de clúster de macrodatos de SQL Server, se le pide que vuelva a cargar VS Code. Ahora debe ver el explorador de aplicaciones de clúster de macrodatos de SQL Server en la barra lateral de VS Code.
 
-### <a name="app-explorer"></a>Aplicación de explorador
+### <a name="app-explorer"></a>Explorador de aplicaciones
 
-Haga clic en la extensión en la barra lateral para cargar un panel lateral que muestra el Explorador de la aplicación. La siguiente captura de pantalla del explorador de la aplicación de ejemplo muestra ningún aplicaciones o las especificaciones de aplicación disponibles:
+Haga clic en la extensión de la barra lateral para cargar un panel lateral que muestra el explorador de aplicaciones. En la siguiente captura de pantalla de ejemplo del explorador de aplicaciones no se muestra ninguna aplicación ni especificación de aplicación como disponible:
 
 <img src="media/vs-extension/app_explorer.png" width=350px></img>
 <!--![App Explorer](media/vs-extension/app_explorer.png)-->
 
 #### <a name="new-connection"></a>Nueva conexión
 
-Para conectarse al punto de conexión de clúster, use uno de los métodos siguientes:
+Para conectarse al punto de conexión del clúster, use uno de los métodos siguientes:
 
-- Haga clic en la barra de estado en la parte inferior que dice `SQL Server BDC Disconnected`.
-- O haga clic en el `New Connection` situado en la parte superior de la flecha que apunta a una puerta de entrada.
+- Haga clic en la barra de estado de la parte inferior que indica `SQL Server BDC Disconnected`.
+- O haga clic en el botón `New Connection` de la parte superior con la flecha que apunta a una puerta.
 
    ![Nueva conexión](media/vs-extension/connect_to_cluster.png)
 
-VS Code le pide el punto de conexión adecuado, el nombre de usuario y la contraseña. Si no especifica las credenciales correctas y el punto de conexión de aplicación, VS Code le notifica que se conectó al clúster y verá que las aplicaciones implementadas que se rellena en la barra lateral. Si se conecta correctamente, el nombre de usuario y el punto de conexión se guardará en `./sqldbc` como parte del perfil de usuario. Nunca se guardará ninguna contraseña ni símbolos (tokens). Al iniciar sesión de nuevo, el símbolo del sistema se rellene previamente con el host de guardado y el nombre de usuario, pero siempre requieren que escriba una contraseña. Si desea conectarse a un punto de conexión de clúster diferente, simplemente haga clic en el `New Connection` nuevo. La conexión se cerrará automáticamente si cierre VS Code o abra otra área de trabajo y deberá volver a conectar.
+VS Code pide el punto de conexión, el nombre de usuario y la contraseña adecuados. Si se proporcionan las credenciales y el punto de conexión de la aplicación correctos, VS Code notifica que se ha conectado al clúster y que se van a ver todas las aplicaciones implementadas rellenadas en la barra lateral. Si se conecta correctamente, el punto de conexión y el nombre de usuario se guardan en `./sqldbc` como parte del perfil de usuario. Nunca se guardan contraseñas ni tokens. Al volver a iniciar sesión, el símbolo del sistema se rellena previamente con el host y el nombre de usuario guardados, pero siempre hay que escribir una contraseña. Si quiere conectarse a otro punto de conexión del clúster, simplemente vuelva a hacer clic en `New Connection`. La conexión se cierra automáticamente si cierra VS Code o si abre otra área de trabajo y necesita volver a conectarse.
 
 ### <a name="app-template"></a>Plantilla de aplicación
 
-Para implementar una aplicación desde una de nuestras plantillas, haga clic en el `New App Template` situado en la `App Specifications` panel, donde se le pedirá para el nombre, el tiempo de ejecución y en qué ubicación desea colocar la nueva aplicación en el equipo local. Se aconseja que colocarlo en el área de trabajo actual de VS Code para que puede usar la funcionalidad completa de la extensión, pero puede colocarlo en cualquier lugar en el sistema de archivos local.
+Para implementar una nueva aplicación a partir de alguna de las plantillas, haga clic en el botón `New App Template` del panel `App Specifications`, donde se le pide el nombre, el runtime y la ubicación en la que quiere colocar la nueva aplicación en el equipo local. Se recomienda colocarla en el área de trabajo actual de VS Code para poder usar toda la funcionalidad de la extensión, aunque se puede colocar en cualquier lugar del sistema de archivos local.
 
-![Nueva plantilla de aplicación](media/vs-extension/new_app_template.png)
+![Plantilla de nueva aplicación](media/vs-extension/new_app_template.png)
 
-Una vez completado, una nueva plantilla de aplicación se ha aplicado scaffolding para usted en la ubicación especificada y la implementación de `spec.yaml` se abre en el área de trabajo. Si el directorio que seleccionó está en el área de trabajo, también verá que aparece bajo el `App Specifications` panel:
+Una vez hecho, se aplica scaffolding a una plantilla de nueva aplicación en la ubicación especificada y la implementación `spec.yaml` se abre en el área de trabajo. Si el directorio seleccionado está en el área de trabajo, también debería verse en el panel `App Specifications`:
 
-![Cargar plantilla de aplicación](media/vs-extension/loading_app_template.png)
+![Plantilla de aplicación cargada](media/vs-extension/loading_app_template.png)
 
-La plantilla es una sencilla `Hello World` aplicación que se distribuyen como sigue:
+La plantilla es una aplicación `Hello World` sencilla dispuesta de la siguiente manera:
 
 - **spec.yaml**
-   - El clúster enseña a implementar la aplicación
+   - Indica al clúster cómo implementar la aplicación
 - **run-spec.yaml**
-   - Indica al clúster cómo gustaría llamar a la aplicación
+   - Indica al clúster cómo quiere denominar a la aplicación
 - **handler.py**
-   - Se trata de su archivo de código fuente según lo especificado por `src` en `spec.yaml`
-   - Tiene una función llamada `handler` que se considera el `entrypoint` de la aplicación, como se muestra en `spec.yaml`. Toma una entrada de cadena llamada `msg` y devuelve una cadena de salida denominada `out`. Se especifican en `inputs` y `outputs` de la `spec.yaml`.
+   - Este es el archivo de código fuente especificado por `src` en `spec.yaml`
+   - Tiene una función denominada `handler` que se considera el `entrypoint` de la aplicación, como se muestra en `spec.yaml`. Toma una entrada de cadena denominada `msg` y devuelve una salida de cadena de nombre `out`. Se especifican en los elementos `inputs` y `outputs` de `spec.yaml`.
 
-Si no desea que una plantilla con scaffolding y sería preferible simplemente un `spec.yaml` para la implementación de una aplicación que ya ha creado, haga clic en el `New Deploy Spec` situado junto a la `New App Template` botón así pues, siga el mismo proceso, pero solo recibirá la `spec.yaml`, que se puede modificar cómo se elige.
+Si no quiere una plantilla con scaffolding y prefiere simplemente un `spec.yaml` para la implementación de una aplicación que ya ha compilado, haga clic en el botón `New Deploy Spec` situado junto al botón `New App Template` y siga el mismo proceso, aunque solo recibe el `spec.yaml`, que puede modificar como prefiera.
 
-### <a name="deploy-app"></a>Implementación de aplicación
+### <a name="deploy-app"></a>Implementar aplicación
 
-Puede implementar esta aplicación desde el prisma de código al instante `Deploy App` en el `spec.yaml` o presione el botón de la carpeta de rayo junto a la `spec.yaml` archivo en el menú de las especificaciones de la aplicación. La extensión se comprima todos los archivos en el directorio donde su `spec.yaml` se encuentra e implementar su aplicación en el clúster. 
+Puede implementar esta aplicación al instante mediante el CodeLens `Deploy App` de `spec.yaml` o presionar el botón de carpeta de relámpago junto al archivo `spec.yaml` en el menú Especificaciones de la aplicación. La extensión descomprime todos los archivos del directorio donde se encuentra `spec.yaml` e implementa la aplicación en el clúster. 
 
 >[!NOTE]
->Asegúrese de que todos los archivos de aplicación están en el mismo directorio que su `spec.yaml`. El `spec.yaml` debe estar en el nivel raíz de su directorio de código fuente de aplicación. 
+>Asegúrese de que todos los archivos de la aplicación están en el mismo directorio que `spec.yaml`. `spec.yaml` debe estar en el nivel raíz del directorio de código fuente de la aplicación. 
 
-![Implementar el botón de la aplicación](media/vs-extension/deploy_app_lightning.png)
+![Botón Implementar aplicación](media/vs-extension/deploy_app_lightning.png)
 
-![Implementar aplicación de CodeLens](media/vs-extension/deploy_app_codelens.png)
+![CodeLens Implementar aplicación](media/vs-extension/deploy_app_codelens.png)
 
-Se le notificará cuando la aplicación está lista para su uso en función del estado de la aplicación en la barra lateral:
+Se le notifica cuando la aplicación está lista para su consumo en función del estado de la aplicación en la barra lateral:
 
 ![Aplicación implementada](media/vs-extension/app_deploy.png)
 
-![Barra lateral de la aplicación listo](media/vs-extension/app_ready_side_bar.png)
+![Barra lateral Aplicación lista](media/vs-extension/app_ready_side_bar.png)
 
-![Notificación de aplicación preparada](media/vs-extension/app_ready_notification.png)
+![Notificación Aplicación lista](media/vs-extension/app_ready_notification.png)
 
-En el panel del lado, podrá ver el siguiente disponible para usted:
+En el panel lateral puede ver lo siguiente disponible:
 
-Puede ver todas las aplicaciones que haya implementado en la barra lateral con la siguiente información:
+Puede ver todas las aplicaciones que ha implementado en la barra lateral con la siguiente información:
 
 - state
 - version
 - parámetros de entrada
-- Parámetros de salida
-- Vínculos
+- parámetros de salida
+- vínculos
   - swagger
   - detalles
 
-Si hace clic en `Links`, verá que puede tener acceso a la `swagger.json` de la aplicación implementada, por lo que puede escribir sus propios clientes que llaman a la aplicación:
+Si hace clic en `Links`, ve que puede acceder al `swagger.json` de la aplicación implementada, para poder escribir sus propios clientes que llaman a la aplicación:
 
-![swagger](media/vs-extension/swagger.png)
+![Swagger](media/vs-extension/swagger.png)
 
-Consulte [consumir las aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información.
+Vea [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información.
 
-### <a name="app-run"></a>Ejecución de la aplicación
+### <a name="app-run"></a>Ejecución de aplicación
 
-Una vez que la aplicación esté lista, llamar a la aplicación con el `run-spec.yaml` que se proporcionó como parte de la plantilla de aplicación:
+Una vez que la aplicación esté lista, llámela con el `run-spec.yaml` proporcionado como parte de la plantilla de aplicación:
 
 ![Especificación de ejecución](media/vs-extension/run_spec.png)
 
-Especifique cualquier cadena que desee en lugar de `hello` y, a continuación, vuelva a ejecutarla mediante el vínculo de la lente de código o en la barra lateral en el botón de rayo junto a la `run-spec.yaml`. Si no tiene una especificación de ejecución por cualquier motivo, generar uno a partir de la aplicación implementada en el clúster:
+Especifique cualquier cadena que quiera en lugar de `hello` y ejecútela de nuevo a través del vínculo de CodeLens o el botón de relámpago de la barra lateral junto a `run-spec.yaml`. Si, por algún motivo, no tiene una especificación de ejecución, genere una desde la aplicación implementada en el clúster:
 
-![Obtener ejecución especificación](media/vs-extension/get_run_spec.png)
+![Obtención de especificación de ejecución](media/vs-extension/get_run_spec.png)
 
-Una vez que tiene uno y editado a su gusto, ejecútelo. VS Code devuelve la información apropiada cuando la aplicación ha terminado de ejecutarse:
+Una vez que tenga una y la haya editado a su entera satisfacción, ejecútela. VS Code devuelve la información adecuada cuando la aplicación termina de ejecutarse:
 
-![Salida de la aplicación](media/vs-extension/app_output.png)
+![Salida de aplicación](media/vs-extension/app_output.png)
 
-Como puede ver en lo anterior, el resultado se exprese en un archivo temporal `.json` archivo en el área de trabajo. Si desea mantener esta salida, no dude en guardarlo, en caso contrario, se eliminará en el cierre. Si la aplicación no tiene una salida para imprimir en un archivo, sólo obtendrá la `Successful App Run` notificación en la parte inferior. Si no tenía una ejecución correcta, recibirá un mensaje de error correspondiente que le ayudarán a determinar cuál es el problema.
+Como puede ver arriba, la salida se proporciona en un archivo `.json` temporal en el área de trabajo. Si quiere conservar esta salida, no dude en guardarla; de lo contrario, se elimina al cerrar. Si la aplicación no tiene ninguna salida para imprimir en un archivo, solo se obtiene la notificación `Successful App Run` en la parte inferior. Si no se ha producido una ejecución correcta, se recibe un mensaje de error adecuado que ayuda a determinar lo que está mal.
 
-Cuando se ejecuta una aplicación, hay varias maneras para pasar parámetros:
+Al ejecutar una aplicación, hay varias maneras de pasar parámetros:
 
 Puede especificar todas las entradas necesarias a través de un `.json`, es decir:
 
 - `inputs: ./example.json`
 
-Al llamar a una aplicación implementada, si los parámetros de entrada son innata a la aplicación o usuario especificado y que dado el parámetro de entrada no es un tipo primitivo, como una matriz, vector, trama de datos, texto JSON, etc. especifica el tipo de parámetro directamente en línea cuando una llamada a la aplicación, es decir:
+Al llamar a una aplicación implementada, si algún parámetro de entrada es intrínseco de la aplicación o el usuario especificados y ese parámetro de entrada concreto es distinto de un primitivo, como una matriz, un vector, un dataframe, un JSON complejo, etc., especifique el tipo de parámetro directamente en línea cuando llame a la aplicación, es decir:
 
-- vector
+- Vector
     - `inputs:`
         - `x: [1, 2, 3]`
 - Matriz
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
-- Object
+- Objeto
     - `inputs:`
         - `x: {A: 1, B: 2, C: 3}`
 
-O proporcionar una cadena como una ruta de acceso relativa o absoluta a un `.txt`, `.json`, o `.csv` que proporciona la entrada necesaria en el formato que requiere la aplicación. El análisis del archivo se basa en `Node.js Path library`, donde se define una ruta de acceso de archivo como un `string that contains a / or \ character`.
+O proporcione una cadena como ruta de acceso de archivo relativa o absoluta a un `.txt`, `.json` o `.csv` que proporcione la entrada necesaria en el formato que requiera la aplicación. El análisis de archivos se basa en `Node.js Path library`, donde una ruta de acceso de archivo se define como `string that contains a / or \ character`.
 
-Si no se proporciona el parámetro de entrada según sea necesario, se mostrará un mensaje de error con la ruta de acceso de archivo incorrecto si se proporcionó una ruta de acceso del archivo de cadena o ese parámetro no es válido. Se asigna la responsabilidad al creador de la aplicación para asegurarse de que entienden los parámetros que está definiendo.
+Si el parámetro de entrada no se proporciona según lo necesario, se muestra un mensaje de error adecuado con la ruta de acceso de archivo incorrecta si se ha especificado una ruta de acceso de archivo de cadena o que indica que ese parámetro no es válido. La responsabilidad de asegurarse de que entiende los parámetros que define es del creador de la aplicación.
 
-Para eliminar una aplicación, simplemente haga clic en la Papelera puede situado junto a la aplicación en el `Deployed Apps` panel lateral.
+Para eliminar una aplicación, simplemente haga clic en el botón de papelera que se encuentra junto a la aplicación en el panel lateral `Deployed Apps`.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Explore cómo integrar las aplicaciones implementadas en SQL Server, clústeres de macrodatos en sus propias aplicaciones en [consumir las aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información. También puede hacer referencia a los ejemplos adicionales en [ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy) para probar con la extensión.
+Averigüe cómo integrar aplicaciones implementadas en clústeres de macrodatos de SQL Server en aplicaciones propias en [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md). También puede ver los ejemplos adicionales de [Ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy) para probar la extensión.
 
-Para obtener más información acerca de los clústeres de macrodatos de SQL Server, vea [¿cuáles son los clústeres de SQL Server 2019 macrodatos?](big-data-cluster-overview.md).
+Para obtener más información sobre los clústeres de macrodatos de SQL Server, vea [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
 
 
-Nuestro objetivo es hacer que esta extensión útiles para usted y le agradeceremos cualquier comentario. Envíelos a [ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] equipo](https://aka.ms/sqlfeedback).
+Nuestro objetivo es que esta extensión le resulte útil y le agradecemos sus comentarios. Envíelos al [equipo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://aka.ms/sqlfeedback).

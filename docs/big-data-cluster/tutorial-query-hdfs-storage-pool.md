@@ -1,7 +1,7 @@
 ---
-title: Consultar datos HDFS en el bloque de almacenamiento
+title: Consultar datos de HDFS en un grupo de almacenamiento
 titleSuffix: SQL Server big data clusters
-description: Este tutorial muestra cómo consultar datos HDFS en un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Crear una tabla externa a través de los datos en el grupo de almacenamiento y, a continuación, ejecutar una consulta.
+description: En este tutorial, se muestra cómo consultar datos de HDFS en un clúster de macrodatos de SQL Server 2019 (versión preliminar). Cree una tabla externa con los datos en el grupo de almacenamiento y, después, ejecute una consulta.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,53 +10,53 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957706"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consulta de HDFS en un clúster de macrodatos de SQL Server
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: consultar HDFS en un clúster de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Este tutorial muestra cómo consultar datos HDFS en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+En este tutorial, se muestra cómo consultar datos de HDFS en un clúster de macrodatos de SQL Server 2019 (versión preliminar).
 
 En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
-> * Crear una tabla externa que apunte a los datos HDFS en un clúster de macrodatos.
-> * Únase a estos datos con datos de gran valor en la instancia maestra.
+> * Crear una tabla externa que apunte a datos de HDFS en un clúster de macrodatos.
+> * Combinar estos datos con datos de alto valor en la instancia maestra.
 
 > [!TIP]
-> Si lo prefiere, puede descargar y ejecutar un script para los comandos en este tutorial. Para obtener instrucciones, consulte el [ejemplos de datos de virtualización](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) en GitHub.
+> Si lo prefiere, puede descargar y ejecutar un script con los comandos de este tutorial. Para obtener instrucciones, vea los [ejemplos de virtualización de datos](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization) en GitHub.
 
 ## <a id="prereqs"></a> Requisitos previos
 
-- [Herramientas de datos de gran tamaño](deploy-big-data-tools.md)
+- [Herramientas de macrodatos](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
    - **Extensión de SQL Server 2019**
-- [Cargar datos de ejemplo en el clúster de macrodatos](tutorial-load-sample-data.md)
+- [Cargar datos de ejemplo en un clúster de macrodatos](tutorial-load-sample-data.md)
 
-## <a name="create-an-external-table-to-hdfs"></a>Crear una tabla HDFS externa
+## <a name="create-an-external-table-to-hdfs"></a>Crea una tabla externa a HDFS
 
-El grupo de almacenamiento contiene datos de la secuencia de clics de web en un archivo CSV que se almacenan en HDFS. Use los pasos siguientes para definir una tabla externa que puede tener acceso a los datos en ese archivo.
+El grupo de almacenamiento contiene datos de secuencias de clics web en un archivo CSV almacenado en HDFS. Siga este procedimiento para definir una tabla externa que pueda acceder a los datos de ese archivo.
 
-1. En Azure Data Studio, conéctese a la instancia principal de SQL Server del clúster de macrodatos. Para obtener más información, consulte [conectar a la instancia principal de SQL Server](connect-to-big-data-cluster.md#master).
+1. En Azure Data Studio, conéctese a la instancia maestra de SQL Server del clúster de macrodatos. Para obtener más información, vea [Conectarse a una instancia maestra de SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Haga doble clic en la conexión en el **servidores** ventana para mostrar el panel del servidor para la instancia principal de SQL Server. Seleccione **nueva consulta**.
+1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta**.
 
-   ![Consulta de la instancia principal de SQL Server](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
+   ![Consulta de la instancia maestra de SQL Server](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-1. Ejecute el siguiente comando de Transact-SQL para cambiar el contexto para el **ventas** base de datos en la instancia maestra.
+1. Ejecute el siguiente comando de Transact-SQL para cambiar el contexto de la base de datos **Ventas** de la instancia maestra.
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Definir el formato del archivo CSV para leer de HDFS. Presione F5 para ejecutar la instrucción.
+1. Defina el formato del archivo CSV que se leerá desde HDFS. Presione F5 para ejecutar la instrucción.
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -70,7 +70,7 @@ El grupo de almacenamiento contiene datos de la secuencia de clics de web en un 
    );
    ```
 
-1. Si aún no existe, cree un origen de datos externo al bloque de almacenamiento.
+1. Cree un origen de datos externo al grupo de almacenamiento (si aún no existe).
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
@@ -80,7 +80,7 @@ El grupo de almacenamiento contiene datos de la secuencia de clics de web en un 
    END
    ```
 
-1. Crear una tabla externa que puede leer el `/clickstream_data` del bloque de almacenamiento. El **SqlStoragePool** es accesible desde la instancia principal de un clúster de macrodatos.
+1. Cree una tabla externa que pueda leer `/clickstream_data` desde el grupo de almacenamiento. **SqlStoragePool** es accesible desde la instancia maestra de un clúster de macrodatos.
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]
@@ -96,7 +96,7 @@ El grupo de almacenamiento contiene datos de la secuencia de clics de web en un 
 
 ## <a name="query-the-data"></a>Consultar los datos
 
-Ejecute la siguiente consulta para unir los datos HDFS en el `web_clickstream_hdfs` tabla externa con los datos relacionales locales `Sales` base de datos.
+Ejecute la consulta siguiente para unir los datos de HDFS en la tabla externa `web_clickstream_hdfs` con los datos relacionales en la base de datos de `Sales` local.
 
 ```sql
 SELECT  
@@ -120,7 +120,7 @@ GO
 
 ## <a name="clean-up"></a>Limpieza
 
-Use el siguiente comando para quitar la tabla externa que se usa en este tutorial.
+Use el comando siguiente para quitar la tabla externa usada en este tutorial.
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_hdfs];
@@ -129,6 +129,6 @@ GO
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Avance al siguiente artículo para obtener información sobre cómo realizar consultas de Oracle desde un clúster de macrodatos.
+Vea el artículo siguiente para obtener información sobre cómo consultar datos de Oracle desde un clúster de macrodatos.
 > [!div class="nextstepaction"]
 > [Consultar datos externos en Oracle](tutorial-query-oracle.md)

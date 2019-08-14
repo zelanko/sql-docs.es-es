@@ -3,46 +3,48 @@ title: Cómo configurar el Coordinador de transacciones distribuidas de Microsof
 description: Este artículo sirve de tutorial para configurar MSDTC en Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/21/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c753e12b17047f397aeb619c758e2160e5d38e09
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077607"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892524"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Cómo configurar el Coordinador de transacciones distribuidas de Microsoft (MSDTC) en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se describe cómo configurar el Coordinador de transacciones distribuidas de Microsoft (MSDTC) en Linux. La compatibilidad con MSDTC en Linux se incorporó en SQL Server 2019, versión preliminar.
+En este artículo se describe cómo configurar el Coordinador de transacciones distribuidas de Microsoft (MSDTC) en Linux.
+
+> [!NOTE]
+> El Coordinador de transacciones distribuidas en Linux se admite en la versión preliminar de SQL Server 2019 y en SQL Server 2017 a partir de la actualización acumulativa 16.
 
 ## <a name="overview"></a>Información general
 
 Las transacciones distribuidas se habilitan en SQL Server en Linux mediante la inclusión de la funcionalidad de asignador de puntos de conexión de MSDTC y RPC en SQL Server. Un proceso de asignador de puntos de conexión de RPC escucha las solicitudes de RPC entrantes en el puerto 135 de forma predeterminada, y facilita información de los componentes registrados a las solicitudes remotas. Las solicitudes remotas pueden usar la información devuelta por el asignador de puntos de conexión para comunicarse con los componentes de RPC registrados, como los servicios de MSDTC. Un proceso requiere privilegios de superusuario para enlazar con puertos conocidos (números de puerto inferiores a 1024) en Linux. Para evitar que SQL Server se inicie con privilegios raíz en el proceso del asignador de puntos de conexión de RPC, los administradores del sistema deben usar iptables para crear la traducción de direcciones de red con objeto de enrutar el tráfico del puerto 135 al proceso de asignador de puntos de conexión de RPC de SQL Server.
 
-SQL Server 2019 incluye dos parámetros de configuración para la utilidad mssql-conf.
+El Coordinador de transacciones distribuidas usa dos parámetros de configuración para la utilidad mssql-conf:
 
 | Parámetro de mssql-conf | Descripción |
 |---|---|
 | **network.rpcport** | Puerto TCP al que se enlaza el asignador de puntos de conexión de RPC. |
 | **distributedtransaction.servertcpport** | Puerto en el que escucha el servidor de MSDTC. Si no se establece, el servicio de MSDTC usa un puerto efímero aleatorio en los reinicios del servicio, y será necesario reconfigurar las excepciones de firewall para asegurarse de que el servicio de MSDTC pueda continuar con la comunicación. |
 
-Para más información sobre estas y otras opciones de configuración relativas a MSDTC, vea [Configuración de SQL Server en Linux con la herramienta mssql-conf](sql-server-linux-configure-mssql-conf.md#msdtc).
+Para más información sobre estas y otras opciones de configuración relativas a MSDTC, vea [Configuración de SQL Server en Linux con la herramienta mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
 ## <a name="supported-msdtc-configurations"></a>Configuraciones de MSDTC admitidas
 
 Se admiten las siguientes configuraciones de MSDTC:
 
 - Transacciones distribuidas OLE-TX en SQL Server en Linux mediante proveedores ODBC.
-- Transacciones distribuidas XA en SQL Server en Linux mediante proveedores JDBC y ODBC. Para que las transacciones XA se realicen mediante el proveedor ODBC, se debe usar Microsoft ODBC Driver for SQL Server versión 17.3 o posterior.
-- Transacciones distribuidas en el servidor vinculado.
 
-Para conocer las limitaciones y los problemas conocidos de la versión preliminar de MSDTC, vea las [Notas de la versión preliminar de SQL Server 2019 en Linux](sql-server-linux-release-notes-2019.md#msdtc).
+- Transacciones distribuidas XA en SQL Server en Linux mediante proveedores JDBC y ODBC. Para que las transacciones XA se realicen mediante el proveedor ODBC, se debe usar Microsoft ODBC Driver for SQL Server versión 17.3 o posterior. Para obtener más información, vea [Descripción de las transacciones XA](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
+
+- Transacciones distribuidas en el servidor vinculado.
 
 ## <a name="msdtc-configuration-steps"></a>Pasos de configuración de MSDTC
 
@@ -184,9 +186,24 @@ MSDTC para SQL Server en Linux no usa de forma predeterminada la autenticación 
 
 | Configuración | Descripción |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | Configure solo llamadas RPC seguras para transacciones distribuidas. |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configure solo llamadas RPC de seguridad para transacciones distribuidas. |
-| **distributedtransaction.turnoffrpcsecurity**               | Habilite o deshabilite la seguridad RPC de las transacciones distribuidas. |
+| **distributedtransaction.allowonlysecurerpccalls**          | Configure solo llamadas RPC seguras para transacciones distribuidas. El valor predeterminado es "0". |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configure solo llamadas RPC de seguridad para transacciones distribuidas. El valor predeterminado es "0". |
+| **distributedtransaction.turnoffrpcsecurity**               | Habilite o deshabilite la seguridad RPC de las transacciones distribuidas. El valor predeterminado es "0". |
+
+## <a name="additional-guidance"></a>Instrucciones adicionales
+
+### <a name="active-directory"></a>Active Directory
+
+Microsoft recomienda el uso del Coordinador de transacciones distribuidas con RPC habilitado si SQL Server está inscrito en una configuración de Active Directory (AD). Si SQL Server está configurado para usar la autenticación de AD, el Coordinador de transacciones distribuidas utiliza de forma predeterminada la seguridad RPC de autenticación mutua.
+
+### <a name="windows-and-linux"></a>Windows y Linux
+
+Si un cliente de un sistema operativo Windows necesita darse de alta en una transacción distribuida con SQL Server en Linux, deberá tener la siguiente versión mínima del sistema operativo Windows:
+
+| Sistema operativo | Versión mínima | Compilación del SO |
+|---|---|---|
+| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>Pasos siguientes
 

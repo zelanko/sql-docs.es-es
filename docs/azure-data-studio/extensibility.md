@@ -1,7 +1,7 @@
 ---
-title: Agregar funcionalidad adicional a través de la extensibilidad
+title: Adición de funcionalidad adicional a través de la extensibilidad
 titleSuffix: Azure Data Studio
-description: Obtenga información sobre las áreas de extensibilidad clave para ampliar la funcionalidad de Azure Data Studio y el modelo de extensibilidad
+description: Más información sobre el modelo de extensibilidad y las áreas de extensibilidad clave para extender la funcionalidad de Azure Data Studio
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,32 +11,32 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959598"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Introducción a [!INCLUDE[name-sos](../includes/name-sos-short.md)] extensibilidad
+# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Introducción a la extensibilidad de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] tiene varios mecanismos de extensibilidad para personalizar la experiencia del usuario y realizar esas personalizaciones disponibles para la Comunidad de usuarios todo. El núcleo [!INCLUDE[name-sos](../includes/name-sos.md)] plataforma se basa en el código de Visual Studio, por lo que la mayoría de las API de extensibilidad de Visual Studio Code están disponibles. Además, hemos proporcionado puntos de extensibilidad adicional para las actividades específicas de administración de datos.
+[!INCLUDE[name-sos](../includes/name-sos.md)] cuenta con varios mecanismos de extensibilidad para personalizar la experiencia del usuario y poner dichas personalizaciones a disposición de toda la comunidad de usuarios. La plataforma [!INCLUDE[name-sos](../includes/name-sos.md)] principal se basa en Visual Studio Code, por lo que la mayoría de las API de extensibilidad de Visual Studio Code están disponibles. Además, hemos facilitado otros puntos de extensibilidad para actividades específicas de la administración de datos.
 
-Algunos de los puntos de extensibilidad clave son:
+Algunos de los principales puntos de extensibilidad son:
 
-- Extensibilidad de Visual Studio Code API
-- Herramientas de creación de la extensión de Azure Data Studio
-- Administrar las contribuciones de panel de ficha de panel
-- Información detallada con experiencias de acciones
+- API de extensibilidad de Visual Studio Code
+- Herramientas de creación de extensiones de Azure Data Studio
+- Administración de contribuciones del panel de pestañas Panel
+- Información con experiencias de acciones
 - API de extensibilidad de Azure Data Studio
-- API del proveedor de datos personalizados
+- API del proveedor de datos personalizado
 
-## <a name="visual-studio-code-extensibility-apis"></a>Extensibilidad de Visual Studio Code API
+## <a name="visual-studio-code-extensibility-apis"></a>API de extensibilidad de Visual Studio Code
 
-Dado que el núcleo [!INCLUDE[name-sos](../includes/name-sos.md)] plataforma se basa en el código de Visual Studio, detalles sobre las API de extensibilidad de Visual Studio Code se encuentran en el [Extension Authoring](https://code.visualstudio.com/docs/extensions/overview) y [API de extensión](https://code.visualstudio.com/docs/extensionAPI/overview) documentación en el sitio Web de Visual Studio Code.
+Dado que la plataforma [!INCLUDE[name-sos](../includes/name-sos.md)] principal se basa en Visual Studio Code, los detalles sobre las API de extensibilidad de Visual Studio Code se encuentran en la documentación sobre [creación de extensiones](https://code.visualstudio.com/docs/extensions/overview) y la [API de extensión](https://code.visualstudio.com/docs/extensionAPI/overview) en el sitio web de Visual Studio Code.
 
-## <a name="manage-dashboard-tab-panel-contributions"></a>Administrar las contribuciones de panel de ficha de panel
+## <a name="manage-dashboard-tab-panel-contributions"></a>Administración de contribuciones del panel de pestañas Panel
 
-Para obtener más información, consulte [contribución puntos](#contribution-points) y [Variables de contexto](#context-variables).
+Para obtener más información, consulte [Puntos de contribución](#contribution-points) y [Variables de contexto](#context-variables).
 
 ## <a name="azure-data-studio-extensibility-apis"></a>API de extensibilidad de Azure Data Studio
 
@@ -45,19 +45,19 @@ Para obtener más información, consulte [API de extensibilidad](extensibility-a
 
 ## <a name="contribution-points"></a>Puntos de contribución
 
-En esta sección se trata los diversos puntos de contribución que se definen en el manifiesto de la extensión package.json.
+En esta sección se tratan los distintos puntos de contribución que se definen en el manifiesto de la extensión package.json.
 
-IntelliSense se admite dentro de azuredatastudio.
+IntelliSense se admite en azuredatastudio.
 
-## <a name="contributes-dashboard"></a>Contribuye panel
+## <a name="contributes-dashboard"></a>Panel de contribuciones
 
-Contribuir pestaña, el contenedor, el widget de información al panel.
+Pestaña Contribuir, contenedor, widget de información en el panel.
 
-![panel](media/extensibility/dashboard-page.png)
+![Panel](media/extensibility/dashboard-page.png)
 
 `dashboard.tabs`
 
-Dashboard.Tabs crea las secciones de la pestaña dentro de la página del panel. Espera un objeto o una matriz de objetos.  
+Dashboard.tabs crea las secciones de pestañas en la página del panel. Espera un objeto o una matriz de objetos.  
 
 ```json
 "dashboard.tabs": [
@@ -76,7 +76,7 @@ Dashboard.Tabs crea las secciones de la pestaña dentro de la página del panel.
 
 `dashboard.containers`
 
-En lugar de especificar panel contenedor insertadas (dentro de la dashboard.tab). Puede registrar los contenedores mediante dashboard.containers. Acepta un objeto o una matriz del objeto.
+En lugar de especificar el contenedor del panel insertado (en dashboard.tab), puede registrar contenedores con dashboard.containers. Acepta un objeto o una matriz del objeto.
 
 ```json
 "dashboard.containers": [
@@ -95,7 +95,7 @@ En lugar de especificar panel contenedor insertadas (dentro de la dashboard.tab)
 ]
 ```
 
-Para hacer referencia al contenedor registrado, especifique el identificador del contenedor
+Para hacer referencia al contenedor registrado, especifique el identificador del contenedor.
 
 ```json
 "dashboard.tabs": [
@@ -112,7 +112,7 @@ Para hacer referencia al contenedor registrado, especifique el identificador del
 
 `dashboard.insights`
 
-Puede registrar información mediante dashboard.insights. Esto es similar a [Tutorial: Crear un widget de datos personalizados](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Puede registrar información con dashboard.insights. Es similar a lo que se indica en [Tutorial: Compilación de un widget de información personalizada](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
 
 ```json
 "dashboard.insights": {
@@ -131,15 +131,15 @@ Puede registrar información mediante dashboard.insights. Esto es similar a [Tut
 ```
 
 
-### <a name="dashboard-container-types"></a>Tipos de contenedor de panel
+### <a name="dashboard-container-types"></a>Tipos de contenedor del panel
 
-Actualmente, hay cuatro tipos de contenedor admitidos:
+Actualmente hay cuatro tipos de contenedor admitidos:
 
 1. `widgets-container`
 
     ![Contenedor de widgets](media/extensibility/widgets-container.png)
 
-    La lista de los widgets que se mostrará en el contenedor. Es un diseño de flujo. Acepta la lista de los widgets.
+    Lista de los widgets que se mostrarán en el contenedor. Es un diseño de flujo. Acepta la lista de widgets.
 
     ```json
     "container": {
@@ -162,9 +162,9 @@ Actualmente, hay cuatro tipos de contenedor admitidos:
 
 2. `webview-container`
 
-    ![contenedor de WebView](media/extensibility/webview-container.png)
+    ![Contenedor de vistas web](media/extensibility/webview-container.png)
 
-    Se mostrará la vista Web en todo el contenedor. Se espera que el Id. de objeto webview para ser el mismo Id. de la ficha
+    La vista web se mostrará en todo el contenedor. Espera que el identificador de vista web sea igual al identificador de pestaña.
 
     ```json
     "container": {
@@ -174,9 +174,9 @@ Actualmente, hay cuatro tipos de contenedor admitidos:
 
 3. `grid-container`
 
-   ![contenedor de cuadrícula](media/extensibility/grid-container.png)
+   ![Contenedor de cuadrícula](media/extensibility/grid-container.png)
 
-   La lista de vistas Web que se mostrará en el diseño de cuadrícula o de widgets
+   Lista de los widgets o vistas web que se mostrarán en el contenedor
 
     ```json
     "container": {
@@ -226,9 +226,9 @@ Actualmente, hay cuatro tipos de contenedor admitidos:
 
 4.  `nav-section`
 
-    ![sección de la barra de navegación](media/extensibility/nav-section.png)
+    ![Sección de navegación](media/extensibility/nav-section.png)
 
-    La sección de exploración se mostrará en el contenedor
+    La sección de navegación se mostrará en el contenedor
 
     ```json
     "container": {
@@ -263,18 +263,18 @@ Actualmente, hay cuatro tipos de contenedor admitidos:
 
 ## <a name="context-variables"></a>Variables de contexto
 
-Para obtener información general acerca del contexto en el código de Visual Studio y, posteriormente, Azure Data Studio, consulte [extensibilidad](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example).
+Para obtener información general sobre el contexto en Visual Studio Code y posteriormente en Azure Data Studio, consulte el artículo sobre [extensibilidad](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example).
 
 En Azure Data Studio, tenemos un contexto específico en torno a las conexiones de base de datos disponibles para las extensiones.
 
-### <a name="dashboard"></a>panel
+### <a name="dashboard"></a>Panel
 
 En el panel, se proporcionan las siguientes variables de contexto:
 
 |variable de contexto| description|
 |:---|:---|
-|`connectionProvider` | Una cadena del identificador para el proveedor de la conexión actual. Por ejemplo, `connectionProvider == 'MSSQL'`|
-|`serverName`|Una cadena del nombre del servidor de la conexión actual. Por ejemplo, `serverName == 'localhost'`|
-|`databaseName` | Una cadena del nombre de base de datos de la conexión actual. Por ejemplo, `databaseName == 'master'`|
-|`connection` | El objeto de perfil de conexión completa para la conexión actual (IConnectionProfile)|
-|`dashboardContext` | Una cadena del contexto de la página del panel está actualmente. 'Database' o 'server'. Por ejemplo, `dashboardContext == 'database'`|
+|`connectionProvider` | Cadena del identificador del proveedor de la conexión actual. Por ejemplo, Columnas en la tabla de origen capturadas`connectionProvider == 'MSSQL'`|
+|`serverName`|Cadena del nombre de servidor de la conexión actual. Por ejemplo, Columnas en la tabla de origen capturadas`serverName == 'localhost'`|
+|`databaseName` | Cadena del nombre de base de datos de la conexión actual. Por ejemplo, Columnas en la tabla de origen capturadas`databaseName == 'master'`|
+|`connection` | Objeto de perfil de conexión completo de la conexión actual (IConnectionProfile).|
+|`dashboardContext` | Una cadena del contexto de la página del panel está actualmente activada. "database" o "server". Por ejemplo, `dashboardContext == 'database'`|

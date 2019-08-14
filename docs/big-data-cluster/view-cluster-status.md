@@ -1,7 +1,7 @@
 ---
 title: Vista del estado del clúster
 titleSuffix: SQL Server big data clusters
-description: En este artículo se explica cómo ver el estado de un clúster de Big Data mediante Azure Data Studio, notebooks y comandos azdata.
+description: En este artículo, se explica cómo ver el estado de un clúster de macrodatos mediante Azure Data Studio, cuadernos y comandos de azdata.
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
@@ -10,114 +10,114 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: c6dca94b8bd7547222394d7809cb003b9e936982
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68419292"
 ---
-# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Cómo ver el estado de un clúster de Big Data
+# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Procedimiento para ver el estado de un clúster de macrodatos
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe cómo acceder a los puntos de conexión de servicio y ver el estado de un clúster de macrodatos SQL Server (versión preliminar). Puede usar Azure Data Studio y **azdata**, y en este artículo se explican ambas técnicas.
+En este artículo, se describe cómo acceder a los puntos de conexión del servicio y ver el estado de un clúster de macrodatos de SQL Server (versión preliminar). Puede usar tanto Azure Data Studio como **azdata**, y en este artículo se describen las dos técnicas.
 
-## <a id="datastudio"></a>Usar Azure Data Studio
+## <a id="datastudio"></a> Usar Azure Data Studio
 
-Después de descargar la **versión** más reciente de la compilación de [Azure Data Studio](https://aka.ms/azdata-insiders), puede ver los puntos de conexión de servicio y el estado de un clúster de Big Data con el panel del clúster de macrodatos SQL Server. Tenga en cuenta que algunas de las características siguientes solo están disponibles en primer lugar en la compilación de Azure Data Studio.
+Después de descargar la versión más reciente de la **compilación para los participantes del programa Insider** de [Azure Data Studio](https://aka.ms/azdata-insiders), podrá ver los puntos de conexión del servicio y el estado de un clúster de macrodatos con el panel del clúster de macrodatos de SQL Server. Tenga en cuenta que algunas de las características siguientes solo estarán disponibles antes para la compilación de los participantes del programa Insider de Azure Data Studio.
 
-1. En primer lugar, cree una conexión a su clúster de Big Data en Azure Data Studio. Para más información, consulte [conexión a un clúster de SQL Server Big Data con Azure Data Studio](connect-to-big-data-cluster.md).
+1. Primero, cree una conexión al clúster de macrodatos en Azure Data Studio. Para obtener más información, vea [Conectarse a un clúster de macrodatos de SQL Server con Azure Data Studio](connect-to-big-data-cluster.md).
 
-1. Haga clic con el botón derecho en el punto de conexión del clúster de Big Data y haga clic en **administrar**.
+1. Haga clic con el botón derecho en el punto de conexión del clúster de macrodatos y, después, seleccione **Administrar**.
 
-   ![Haga clic con el botón derecho en administrar](media/view-cluster-status/right-click-manage.png)
+   ![botón derecho y administrar](media/view-cluster-status/right-click-manage.png)
 
-1. Seleccione la pestaña clúster de macrodatos de **SQL Server** para acceder al panel del clúster de Big Data.
+1. Seleccione la pestaña **Clúster de macrodatos de SQL Server** para acceder al panel del clúster de macrodatos.
 
-   ![Panel del clúster de Big Data](media/view-cluster-status/bdc-dashboard.png)
+   ![Panel del clúster de macrodatos](media/view-cluster-status/bdc-dashboard.png)
 
-### <a name="service-endpoints"></a>Puntos de conexión de servicio
+### <a name="service-endpoints"></a>Puntos de conexión del servicio
 
-Es importante poder acceder fácilmente a los distintos servicios dentro de un clúster de Big Data. El panel del clúster de Big Data proporciona una tabla de puntos de conexión de servicio que le permite ver y copiar los puntos de conexión de servicio.
+Es importante que se pueda acceder fácilmente a distintos servicios de un clúster de macrodatos. En el panel del clúster de macrodatos, se proporciona una tabla de puntos de conexión del servicio que le permite ver y copiar los puntos de conexión del servicio.
 
-![Puntos de conexión de servicio](media/view-cluster-status/service-endpoints.png)
+![puntos de conexión del servicio](media/view-cluster-status/service-endpoints.png)
 
-Las primeras filas exponen los siguientes servicios:
+En las primeras filas, se muestran estos servicios:
 
 - Proxy de aplicación
 - Servicio de administración de clústeres
 - HDFS y Spark
 - Proxy de administración
 
-Estos servicios enumeran los extremos que se pueden copiar y pegar cuando se necesita el punto de conexión para conectarse a esos servicios. Por ejemplo, puede hacer clic en el icono de copia situado a la derecha del punto de conexión y, a continuación, pegarlo en una ventana de texto que solicite ese extremo. El punto de conexión del servicio de administración de clústeres es necesario para ejecutar el [Bloc de notas de estado de clúster](#notebook).
+En estos servicios, se muestran los puntos de conexión que se pueden copiar y pegar si necesita usar el punto de conexión para conectarse a esos servicios. Por ejemplo, puede hacer clic en el icono de copiar a la derecha del punto de conexión y, después, pegarlo en una ventana de texto en la que se solicite este punto de conexión. El punto de conexión del servicio de administración de clústeres es necesario para ejecutar el [cuaderno de estado del clúster](#notebook).
 
 ### <a name="dashboards"></a>Paneles
 
-La tabla de puntos de conexión de servicio también expone varios paneles para la supervisión:
+En la tabla de puntos de conexión del servicio, también se muestran varios paneles de supervisión:
 
 - Métricas (Grafana)
 - Registros (Kibana)
 - Supervisión de trabajos de Spark
 - Administración de recursos de Spark
 
-Puede hacer clic directamente en estos vínculos. Se le pedirá dos veces que proporcione su nombre de usuario y contraseña antes de conectarse al servicio.
+Puede hacer clic directamente de estos vínculos. Antes de conectarse al servicio, se le pedirá dos veces que especifique el nombre de usuario y la contraseña.
 
-### <a id="notebook"></a>Cuaderno de estado del clúster
+### <a id="notebook"></a> Cuaderno de estado del clúster
 
-1. También puede ver el estado de clúster del clúster de Big Data si inicia el Bloc de notas de estado de clúster. Para iniciar el cuaderno, haga clic en la tarea **Estado del clúster** .
+1. También puede ver el estado del clúster de macrodatos si inicia el cuaderno de estado del clúster. Para iniciar el cuaderno, haga clic en la tarea **Estado del clúster**.
 
-    ![Launch](media/view-cluster-status/cluster-status-launch.png)
+    ![iniciar](media/view-cluster-status/cluster-status-launch.png)
 
-2. Antes de empezar, necesitará los siguientes elementos:
+2. Antes de empezar, necesitará los elementos siguientes:
 
-    - Nombre del clúster de Big Data
+    - Nombre del clúster de macrodatos
     - Nombre de usuario del controlador
     - Contraseña del controlador
     - Puntos de conexión del controlador
 
-    El nombre del clúster de macrodatos predeterminado es **MSSQL-Cluster** a menos que lo personalizara durante la implementación. Puede encontrar el punto de conexión del controlador en el panel del clúster de Big Data en la tabla de puntos de conexión de servicio. El punto de conexión aparece como **servicio de administración**de clústeres. Si no conoce las credenciales, pregunte al administrador que implementó el clúster.
+    El nombre del clúster de macrodatos predeterminado es **mssql-cluster**, excepto si lo personaliza durante la implementación. Encontrará el punto de conexión del controlador del panel del clúster de macrodatos en la tabla de puntos de conexión del servicio. El punto de conexión se muestra como **Servicio de administración de clústeres**. Si no conoce las credenciales, solicítelas al administrador que implementó el clúster.
 
-3. Haga clic en **Ejecutar celdas** en la barra de herramientas superior.
+3. En la barra de herramientas superior, haga clic en **Ejecutar celdas**.
 
-4. Siga las indicaciones de sus credenciales. Presione entrar después de escribir cada credencial para el nombre del clúster de Big Data, el nombre de usuario del controlador y la contraseña del controlador.
+4. Verá una solicitud de credenciales. Presione ENTRAR después de escribir cada credencial para el nombre del clúster de macrodatos, el nombre de usuario del controlador y la contraseña del controlador.
 
     > [!Note]
-    > Si no tiene un archivo de configuración configurado con los macrodatos, se le pedirá el punto de conexión del controlador. Escríbala o péguela y, a continuación, presione Entrar para continuar.
+    > Si no tiene un archivo de configuración preparado con los macrodatos, se le pedirá que especifique el punto de conexión del controlador. Escríbalo o péguelo y, después, presione ENTRAR para continuar.
 
-5. Si se ha conectado correctamente, el resto del cuaderno mostrará el resultado de cada componente del clúster de Big Data. Cuando desee volver a ejecutar una determinada celda de código, mantenga el mouse sobre la celda de código y haga clic en el icono **Ejecutar** .
+5. Si la conexión se establece correctamente, en el resto del cuaderno se mostrará el resultado de cada componente del clúster de macrodatos. Para volver a ejecutar una determinada celda de código, mantenga el mouse sobre la celda de código y haga clic en el icono de **Ejecutar**.
 
 ## <a name="use-azdata"></a>Usar azdata
 
-También puede usar los comandos [azdata](deploy-install-azdata.md) para ver los puntos de conexión y el estado del clúster.
+También puede usar los comandos de [azdata](deploy-install-azdata.md) para ver tanto los puntos de conexión como el estado del clúster.
 
-### <a name="service-endpoints"></a>Puntos de conexión de servicio
+### <a name="service-endpoints"></a>Puntos de conexión del servicio
 
-Puede obtener las direcciones IP de los puntos de conexión externos para el clúster de Big Data mediante los pasos siguientes.
+Siga este procedimiento para obtener las direcciones IP de los puntos de conexión externos del clúster de macrodatos.
 
-1. Busque la dirección IP del punto de conexión del controlador examinando la salida EXTERNAL-IP del siguiente comando de **kubectl** :
+1. Para conocer la dirección IP del punto de conexión del controlador, vea el resultado de EXTERNAL-IP del siguiente comando de **kubectl**:
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > Si no cambió el nombre predeterminado durante la implementación, use `-n mssql-cluster` en el comando anterior. **MSSQL-Cluster** es el nombre predeterminado para el clúster de Big Data.
+   > Si no ha cambiado el nombre predeterminado durante la implementación, use `-n mssql-cluster` en el comando anterior. **mssql-cluster** es el nombre predeterminado del clúster de macrodatos.
 
-1. Inicie sesión en el clúster de Big Data con el [Inicio de sesión de azdata](reference-azdata.md). Establezca el parámetro **--Controller-Endpoint** en la dirección IP externa del punto de conexión del controlador.
+1. Inicie sesión en el clúster de macrodatos con [azdata login](reference-azdata.md). Establezca el parámetro **--controller-endpoint** en la dirección IP externa del punto de conexión del controlador.
 
    ```bash
    azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
-   Especifique el nombre de usuario y la contraseña que configuró para el controlador (CONTROLLER_USERNAME y CONTROLLER_PASSWORD) durante la implementación.
+   Especifique el nombre de usuario y la contraseña que ha configurado para el controlador (CONTROLLER_USERNAME y CONTROLLER_PASSWORD) durante la implementación.
 
-1. Ejecute la [lista de puntos de conexión de BDC de azdata](reference-azdata-bdc-endpoint.md) para obtener una lista con una descripción de cada punto de conexión y sus valores de puerto y dirección IP correspondientes. 
+1. Ejecute [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) para obtener una lista con una descripción de cada punto de conexión y los valores correspondientes de dirección IP y puerto. 
 
    ```bash
    azdata bdc endpoint list -o table
    ```
 
-   En la lista siguiente se muestra la salida de ejemplo de este comando:
+   En la lista siguiente, se muestra un resultado de ejemplo de este comando:
 
    ```output
    Description                                             Endpoint                                                   Ip              Name               Port    Protocol
@@ -137,16 +137,16 @@ Puede obtener las direcciones IP de los puntos de conexión externos para el cl�
 
 ### <a name="view-cluster-status"></a>Vista del estado del clúster
 
-Puede ver el estado del clúster con el comando [azdata BDC status show](reference-azdata-bdc-status.md) .
+Puede ver el estado del clúster con el comando [azdata bdc status show](reference-azdata-bdc-status.md).
 
 ```bash
 azdata bdc status show -o table
 ```
 
 > [!TIP]
-> Para ejecutar los comandos de estado, primero debe iniciar sesión con el comando de **Inicio de sesión de azdata** , que se mostró en la sección puntos de conexión anteriores.
+> Para ejecutar los comandos de estado, primero necesita iniciar sesión con el comando **azdata login**, que se ha mostrado en la sección de puntos de conexión anterior.
 
-En el siguiente ejemplo se muestra la salida de este comando:
+Este es un resultado de ejemplo de este comando:
 
 ```output
 Kind     Name           State
@@ -159,15 +159,15 @@ Data     default        Ready
 Storage  default        Ready
 ```
 
-### <a name="view-pool-status"></a>Ver el estado del grupo
+### <a name="view-pool-status"></a>Ver estado del grupo
 
-Puede ver el estado de los grupos del clúster con el comando de [Estado de grupo de BDC de azdata](reference-azdata-bdc-pool-status.md) . Para usar este comando, especifique el tipo de grupo con el `--kind` parámetro. Los tipos de grupo son:
+Puede ver el estado de los grupos en el clúster con el comando [azdata bdc pool status show](reference-azdata-bdc-pool-status.md). Para usar este comando, especifique el tipo de grupo con el parámetro `--kind`. Los tipos de grupo son:
 
-- Proceso
-- data
+- compute
+- datos
 - maestra
-- Vinos
-- Discos
+- spark
+- storage
 
 Por ejemplo, el comando siguiente muestra el estado del grupo de almacenamiento:
 
@@ -175,7 +175,7 @@ Por ejemplo, el comando siguiente muestra el estado del grupo de almacenamiento:
 azdata bdc pool status show --kind storage
 ```
 
-Debería ver texto similar al siguiente resultado:
+Verá un texto similar al resultado siguiente:
 
 ```output
 [
@@ -198,11 +198,11 @@ Debería ver texto similar al siguiente resultado:
 ]
 ```
 
-El `logsUrl` valor se vincula a un panel de Kibana con información de registro:
+El valor `logsUrl` vincula a un panel de Kibana con información de registro:
 
 ![Panel de Kibana](./media/view-cluster-status/kibana-dashboard.png)
 
-Los `nodeMetricsUrl` valores `sqlMetricsUrl` y se vinculan a un panel de grafana para supervisar el estado de los nodos y las métricas de SQL:
+Los valores `nodeMetricsUrl` y `sqlMetricsUrl` vinculan a un panel de Grafana para supervisar el estado del nodo y las métricas de SQL:
 
 ![Panel de Grafana](./media/view-cluster-status/grafana-dashboard.png)
 
@@ -210,8 +210,8 @@ Los `nodeMetricsUrl` valores `sqlMetricsUrl` y se vinculan a un panel de grafana
 
 ### <a name="view-controller-status"></a>Ver el estado del controlador
 
-Puede ver el estado del controlador con el comando [azdata BDC control status show](reference-azdata-bdc-control-status.md) . Proporciona vínculos similares a los paneles de supervisión relacionados con los nodos de controlador del clúster de Big Data.
+Puede ver el estado del controlador con el comando [azdata bdc control status show](reference-azdata-bdc-control-status.md). Proporciona vínculos similares a los paneles de supervisión relacionados con los nodos de controlador del clúster de macrodatos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de Big Data, consulte [¿Qué son](big-data-cluster-overview.md)los clústeres de macrodatos SQL Server.
+Para obtener más información sobre los clústeres de macrodatos, vea [¿Qué son los clústeres de macrodatos de SQL Server?](big-data-cluster-overview.md)

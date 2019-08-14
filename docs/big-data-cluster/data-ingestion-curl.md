@@ -1,5 +1,5 @@
 ---
-title: Use curl para cargar datos en HDFS | Microsoft Docs
+title: Empleo de curl para cargar datos en HDFS | Microsoft Docs
 titleSuffix: SQL Server big data clusters
 description: Use curl para cargar datos en HDFS en clústeres de macrodatos de SQL Server 2019.
 author: MikeRayMSFT
@@ -10,32 +10,32 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: aae991c6dfdade4145f1e5578273e3b6aeb83299
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958632"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Use curl para cargar datos en HDFS en clústeres de macrodatos de SQL Server
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Empleo de curl para cargar datos en HDFS en clústeres de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se explica cómo usar **curl** para cargar datos en HDFS en clústeres de macrodatos de 2019 de SQL Server (versión preliminar).
+En este artículo se explica cómo usar **curl** para cargar datos en HDFS en clústeres de macrodatos de SQL Server 2019 (versión preliminar).
 
-## <a name="obtain-the-service-external-ip"></a>Obtener la dirección IP externa de servicio
+## <a name="obtain-the-service-external-ip"></a>Obtener la dirección IP externa del servicio
 
-WebHDFS se inicia cuando se completa la implementación, y su acceso se pasa a través de Knox. El punto de conexión de Knox se expone a través de un servicio de Kubernetes denominado **puerta de enlace-svc-external**.  Para crear la dirección URL de WebHDFS necesaria para cargar/descargar archivos, necesitará la **puerta de enlace-svc-external** dirección IP externa y el nombre del clúster de macrodatos de servicio. Puede obtener el **puerta de enlace-svc-external** dirección IP externa del servicio, ejecute el comando siguiente:
+WebHDFS se inicia cuando se completa la implementación; su acceso se realiza a través de Knox. El punto de conexión de Knox se expone a través de un servicio de Kubernetes denominado **gateway-svc-external**.  Para crear la dirección URL de WebHDFS necesaria para cargar o descargar archivos, necesita la dirección IP externa del servicio **gateway-svc-external** y el nombre del clúster de macrodatos. Para obtener la dirección IP externa del servicio **gateway-svc-external**, ejecute el siguiente comando:
 
 ```bash
 kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> El `<big data cluster name>` aquí es el nombre del clúster que especificó en el archivo de configuración de implementación. El nombre predeterminado es `mssql-cluster`.
+> `<big data cluster name>` es el nombre del clúster que ha especificado en el archivo de configuración de implementación. El nombre predeterminado es `mssql-cluster`.
 
-## <a name="construct-the-url-to-access-webhdfs"></a>Construir la dirección URL para tener acceso a WebHDFS
+## <a name="construct-the-url-to-access-webhdfs"></a>Construcción de la dirección URL para acceder a WebHDFS
 
-Ahora, puede construir la dirección URL para tener acceso a la WebHDFS como sigue:
+Ahora, puede construir la dirección URL para acceder a WebHDFS como se indica a continuación:
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
@@ -43,25 +43,25 @@ Por ejemplo:
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
-## <a name="list-a-file"></a>Un archivo de lista
+## <a name="list-a-file"></a>Enumeración de un archivo
 
-Archivo de lista en **hdfs: / / / airlinedata**, use el siguiente comando curl:
+Para mostrar el archivo de **hdfs:///airlinedata**, use el siguiente comando de curl:
 
 ```bash
 curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
 ```
 
-## <a name="put-a-local-file-into-hdfs"></a>Coloque un archivo local en HDFS
+## <a name="put-a-local-file-into-hdfs"></a>Colocación de un archivo local en HDFS
 
-Para colocar un nuevo archivo **test.csv** desde airlinedata Active directory local, use el siguiente comando curl (el **Content-Type** el parámetro es obligatorio):
+Para colocar un nuevo archivo **test. csv** desde el directorio local en el directorio airlinedata, use el siguiente comando de curl (se requiere el parámetro **Content-Type**):
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
-## <a name="create-a-directory"></a>Cree un directorio
+## <a name="create-a-directory"></a>Creación de un directorio
 
-Para crear un directorio **probar** en `hdfs:///`, use el siguiente comando:
+Para crear un directorio **test** en `hdfs:///`, use el siguiente comando:
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
@@ -69,4 +69,4 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre el clúster de macrodatos de SQL Server, vea [¿qué es el clúster de macrodatos de SQL Server?](big-data-cluster-overview.md).
+Para obtener más información sobre los clústeres de macrodatos de SQL Server, vea [¿Qué son los clústeres de macrodatos de SQL Server?](big-data-cluster-overview.md)

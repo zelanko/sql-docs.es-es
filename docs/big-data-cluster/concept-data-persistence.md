@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dcc30e8d86a1a767291b410df7cfd3aa42edf27f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470992"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028590"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes
 
@@ -60,7 +60,7 @@ En la sección [Configurar el almacenamiento](#config-samples), se proporcionan 
 AKS tiene [dos clases de almacenamiento integradas](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) (**default** y **managed-premium**), además del aprovisionador dinámico para estas. Puede especificar una de estas, o bien puede crear su propia clase de almacenamiento para implementar el clúster de macrodatos con el almacenamiento persistente habilitado. De forma predeterminada, en el archivo de configuración del clúster integrado para AKS (*aks-dev-test*) se incluyen configuraciones de almacenamiento persistente que usan la clase de almacenamiento **default**.
 
 > [!WARNING]
-> Los volúmenes persistentes creados con las clases de almacenamiento integradas **default** y **managed-premium** tienen una directiva de reclamación de *Eliminar*. Por lo tanto, al eliminar el clúster de macrodatos de SQL Server, también se eliminarán las reclamaciones de volúmenes persistentes, así como los volúmenes persistentes. Puede crear clases de almacenamiento personalizadas mediante el aprovisionador **azure-disk** con una directiva de reclamación de *Conservar*, como se muestra en [este artículo](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes).
+> Los volúmenes persistentes creados con las clases de almacenamiento integradas **default** y **managed-premium** tienen una directiva de reclamación de *Eliminar*. Por lo tanto, al eliminar el clúster de macrodatos de SQL Server, también se eliminarán las reclamaciones de volúmenes persistentes, así como los volúmenes persistentes. Puede crear clases de almacenamiento personalizadas mediante el aprovisionador **azure-disk** con una directiva de reclamación de *Conservar*, como se muestra en [este artículo](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes).
 
 
 ## <a name="minikube-storage-class"></a>Clase de almacenamiento de Minikube

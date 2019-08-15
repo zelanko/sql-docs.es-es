@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cbec8d77386985e7f33863793b86eb2db0b8d6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944892"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028801"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Proteger una aplicación web Master Data Services
 
@@ -61,7 +61,7 @@ ms.locfileid: "67944892"
 
 12. Cambie `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` por `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` para evitar problemas que puedan aparecer en el cliente de Silverlight.
 
-13. Guarde el archivo y ciérrelo. Si obtiene un error, podría deberse a que ha habilitado UAC. Para obtener más información, vea [Desactivar Control de cuentas de usuario](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Ahora los usuarios deben poder usar HTTPS para tener acceso al sitio.  
+13. Guarde el archivo y ciérrelo. Si obtiene un error, podría deberse a que ha habilitado UAC. Ahora los usuarios deben poder usar HTTPS para tener acceso al sitio.  
 
   
 ## <a name="see-also"></a>Vea también  

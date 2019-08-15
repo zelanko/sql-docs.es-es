@@ -18,17 +18,17 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee4581d91b9f57b48f22e66dc15ff03e6f7320d7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188040"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028539"
 ---
 # <a name="transparent-data-encryption-tde"></a>Cifrado de datos transparente (TDE)
   El*Cifrado de datos transparente* (TDE) cifra los archivos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , conocido como el cifrado de datos en reposo. Puede tomar varias precauciones para proteger la base de datos, como diseñar un sistema seguro, cifrar los datos confidenciales e instalar un firewall alrededor de los servidores de bases de datos. Sin embargo, si se diera el caso de un robo de medios físicos (como unidades de disco o cintas de copia de seguridad), un usuario malintencionado solo tendría que restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
   
- TDE realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. La DEK es una clave simétrica protegida utilizando un certificado almacenado en la base de datos maestra del servidor o una clave asimétrica protegida por un módulo EKM. TDE protege los datos "en reposo", es decir, los archivos de datos y de registro. Ofrece la posibilidad de cumplir muchas leyes, normativas y directrices establecidas en diversos sectores. También permite a los desarrolladores de software cifrar los datos mediante algoritmos de cifrado AES y 3DES sin cambiar las aplicaciones existentes.  
+ TDE realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. El cifrado usa una clave de cifrado de base de datos (DEK), que se almacena en el registro de arranque de la base de datos de disponibilidad durante la recuperación. La DEK es una clave simétrica protegida utilizando un certificado almacenado en la base de datos maestra del servidor o una clave asimétrica protegida por un módulo EKM. TDE protege los datos "en reposo", es decir, los archivos de datos y de registro. Ofrece la posibilidad de cumplir muchas leyes, normativas y directrices establecidas en diversos sectores. También permite a los desarrolladores de software cifrar los datos mediante algoritmos de cifrado AES y 3DES sin cambiar las aplicaciones existentes.  
   
 > [!IMPORTANT]
 >  TDE no proporciona cifrado para los canales de comunicaciones. Para obtener más información sobre cómo cifrar datos en los canales de comunicación, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -44,9 +44,9 @@ ms.locfileid: "63188040"
   
  **Información aplicable a [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- Cuando se usa TDE con [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([Vista previa en algunas regiones](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), el certificado de nivel de servidor almacenado en la base de datos maestra lo crea [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]automáticamente. Para mover una base de datos TDE en [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , debe descifrar la base de datos, moverla y luego volver a habilitar TDE en el destino [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para obtener instrucciones paso a paso para TDE en [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consulte [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).  
+ Cuando se usa TDE con [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([Vista previa en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), el certificado de nivel de servidor almacenado en la base de datos maestra lo crea [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]automáticamente. Para mover una base de datos TDE en [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , debe descifrar la base de datos, moverla y luego volver a habilitar TDE en el destino [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Para obtener instrucciones paso a paso para TDE en [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], consulte [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).  
   
- La vista previa del estado de TDE se aplica incluso en el subconjunto de las regiones geográficas donde la familia de la versión V12 de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] se anuncia como con estado de disponibilidad general. TDE para [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no está diseñado para su uso en bases de datos de producción hasta que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] anuncie que TDE se promueve de vista previa a disponibilidad general. Para más información sobre [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12, consulte [Novedades de la base de datos de SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
+ La vista previa del estado de TDE se aplica incluso en el subconjunto de las regiones geográficas donde la familia de la versión V12 de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] se anuncia como con estado de disponibilidad general. TDE para [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no está diseñado para su uso en bases de datos de producción hasta que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] anuncie que TDE se promueve de vista previa a disponibilidad general. Para más información sobre [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12, consulte [Novedades de la base de datos de SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
  **Información aplicable a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
@@ -143,7 +143,7 @@ GO
   
  Los datos cifrados se comprimen mucho menos que los datos no cifrados equivalentes. Si se usa TDE para cifrar una base de datos, la compresión de copia de seguridad no podrá comprimir  significativamente el almacenamiento de copia de seguridad. Por consiguiente, no se recomienda usar conjuntamente TDE y la compresión de copia de seguridad.  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restricciones  
  No están permitidas las operaciones siguientes durante el cifrado inicial de la base de datos, el cambio clave o el descifrado de una base de datos:  
   
 -   Quitar un archivo de un grupo de archivos de la base de datos.  
@@ -230,7 +230,7 @@ GO
  El TDE se puede habilitar en una base de datos que tenga objetos de OLTP en memoria. Las entradas del registro de OLTP en memoria se cifran si se ha habilitado el TDE. Los datos de un grupo de archivos MEMORY_OPTIMIZED_DATA no se cifran si está habilitado el TDE.  
   
 ## <a name="see-also"></a>Vea también  
- [Mover que una protegida por TDE base de datos a otro servidor SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
+ [Traslado de una base de datos protegida por TDE a otra SQL Server](move-a-tde-protected-database-to-another-sql-server.md)   
  [Habilitar TDE con EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Cifrado de datos transparente con Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [Cifrado de SQL Server](sql-server-encryption.md)   

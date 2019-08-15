@@ -18,12 +18,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5117ec8fd1eae9438569289b05f465fe7616d96
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 93a8f9ddab1fe1f78c5af94cae30c8ce7cbf2c37
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887457"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025453"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
 
@@ -36,7 +36,7 @@ La documentación está separada por la versión. Actualmente está en SQL Serve
 - Para obtener más información sobre SQL Server 2012 y versiones anteriores, consulte [SQL Server documentación de versiones anteriores](https://docs.microsoft.com/previous-versions/sql/).
 - Para obtener más información acerca de SQL Server 2014, vea los [libros en pantalla de SQL Server 2014](../2014-toc/books-online-for-sql-server-2014.md)
 - Para obtener más información sobre SQL Server 2016 y versiones posteriores, consulte la [documentación de Microsoft SQL](https://docs.microsoft.com/sql/).
-- Para obtener más información sobre Azure Analysis Services, consulte la [documentación de Azure Analysis Services](https://docs.microsoft.com/en-us/azure/analysis-services/).
+- Para obtener más información sobre Azure Analysis Services, consulte la [documentación de Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/).
 
 ## <a name="analysis-services-workflow"></a>Analysis Services flujo de trabajo
 

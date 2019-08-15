@@ -10,22 +10,22 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150774"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028606"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisar el rendimiento mediante el almacén de consultas
-  La característica del almacén de consultas ofrece a los DBA conocimientos sobre el rendimiento y la elección del plan de consultas. Esta característica simplifica la solución de problemas de rendimiento al permitirle encontrar rápidamente diferencias de rendimiento provocadas por cambios en los planes de consulta. Captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución, y los conserva para su revisión. Separa los datos por ventanas de tiempo, lo que permite ver patrones de uso la base de datos y comprender cuándo se produjeron cambios del plan de consultas en el servidor. Se puede configurar el almacén de consultas mediante el [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) opción.  
+  La característica del almacén de consultas ofrece a los DBA conocimientos sobre el rendimiento y la elección del plan de consultas. Esta característica simplifica la solución de problemas de rendimiento al permitirle encontrar rápidamente diferencias de rendimiento provocadas por cambios en los planes de consulta. Captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución, y los conserva para su revisión. Separa los datos por ventanas de tiempo, lo que permite ver patrones de uso la base de datos y comprender cuándo se produjeron cambios del plan de consultas en el servidor. El almacén de consultas se puede configurar mediante la opción [ALTER DATABASE Set](/sql/t-sql/statements/alter-database-transact-sql-set-options) .  
   
 ||  
 |-|  
-|**Se aplica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenerlo](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**Se aplica a**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([Obtenerlo](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  Actualmente, se trata de una característica de vista previa. Para usar el Store de la consulta debe reconocer y Aceptar que la implementación de la consulta Store está sujeto a los términos de vista previa en su contrato de licencia (por ejemplo, el contrato Enterprise, contrato de Microsoft Azure o contrato Microsoft Online Subscription), así como cualquier aplicable [términos de uso complementarios de Microsoft Azure Preview](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/).  
+>  Actualmente, se trata de una característica de vista previa. Para usar el Almacén de consultas debe confirmar y aceptar que la implementación de Almacén de consultas está sujeta a los términos de vista previa del contrato de licencia (por ejemplo, el Contrato Enterprise, Contrato de Microsoft Azure o Contrato Microsoft Online Subscription), así como cualquier [términos de uso complementarios aplicables para la vista previa de Microsoft Azure](https://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
   
 ##  <a name="Enabling"></a> Habilitar el Almacén de consultas  
  El Almacén de consultas no está activo para nuevas bases de datos de manera predeterminada.  
@@ -36,7 +36,7 @@ ms.locfileid: "63150774"
   
 2.  En el cuadro de diálogo **Propiedades de la base de datos** , seleccione la página **Almacén de consultas** .  
   
-3.  En el **habilitar** cuadro, seleccione **True**.  
+3.  En el cuadro **Habilitar** , seleccione **true**.  
   
 #### <a name="by-using-transact-sql-statements"></a>Mediante instrucciones Transact-SQL  
   
@@ -90,11 +90,11 @@ JOIN sys.query_store_query_text AS Txt
   
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
- Seleccionar **consultas devueltas**, se abre el **consultas devueltas** panel [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. En el panel Consultas devueltas se muestran las consultas y los planes del almacén de consultas. Los cuadros desplegables de la parte superior le permiten seleccionar consultas en función de varios criterios. Seleccione un plan para ver el plan de consulta gráfica. Los botones están disponibles para ver la consulta de origen, aplicar y eliminar la aplicación de un plan de consulta, y actualizar la pantalla.  
+ Al seleccionar **consultas**con regresión, se abre el panel de **consultas** devueltas en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. En el panel Consultas devueltas se muestran las consultas y los planes del almacén de consultas. Los cuadros desplegables de la parte superior le permiten seleccionar consultas en función de varios criterios. Seleccione un plan para ver el plan de consulta gráfica. Los botones están disponibles para ver la consulta de origen, aplicar y eliminar la aplicación de un plan de consulta, y actualizar la pantalla.  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
- Para forzar un plan, seleccione una consulta y el plan y, a continuación, haga clic en **forzar Plan.** Solo puede forzar planes que se guardaron mediante la característica del plan de consulta y que todavía se conservan en la caché del plan de consulta.  
+ Para forzar un plan, seleccione una consulta y un plan y, a continuación, haga clic en **forzar plan.** Solo puede forzar planes que se guardaron mediante la característica del plan de consulta y que todavía se conservan en la caché del plan de consulta.  
   
 
   
@@ -277,16 +277,16 @@ DEALLOCATE adhoc_queries_cursor;
   
  En el ejemplo anterior se usa el procedimiento almacenado extendido `sp_query_store_remove_query` para quitar datos innecesarios. También puede usar otros dos procedimientos.  
   
--   `sp_query_store_reset_exec_stats` -borrar las estadísticas de tiempo de ejecución de un plan determinado.  
+-   `sp_query_store_reset_exec_stats`-borrar las estadísticas de tiempo de ejecución de un plan determinado.  
   
--   `sp_query_store_remove_plan` : quita un plan único.  
+-   `sp_query_store_remove_plan`: quita un plan único.  
   
 
   
 ###  <a name="Peformance"></a> Auditoría del rendimiento y solución de problemas  
  Como el almacén de consultas conserva el historial de métricas de tiempo de ejecución y compilación a lo largo de las ejecuciones de consulta, hay muchas preguntas diferentes que puede responder con facilidad con respecto a la carga de trabajo.  
   
- **Último *n* las consultas ejecutadas en la base de datos.**  
+ **Últimas *n* consultas ejecutadas en la base de datos.**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -301,7 +301,7 @@ JOIN sys.query_store_runtime_stats AS rs
 ORDER BY rs.last_execution_time DESC;  
 ```  
   
- **Número de ejecuciones de cada consulta.**  
+ **Número de ejecuciones para cada consulta.**  
   
 ```  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
@@ -317,7 +317,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **El número de consultas con el mayor tiempo medio de ejecución durante la última hora.**  
+ **El número de consultas con el mayor promedio de tiempo de ejecución en la última hora.**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -334,7 +334,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **Lee el número de consultas que han tenido la E/S física promedio más importante en las últimas 24 horas, con el correspondiente número de filas promedio y recuento de ejecuciones.**  
+ **El número de consultas que tenían el mayor promedio de lecturas de e/s físicas en las últimas 24 horas, con el recuento medio de filas y el recuento de ejecuciones correspondientes.**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -382,7 +382,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **Las consultas devuelto es recientemente por motivo de rendimiento (en comparación con otro momento dado).** El siguiente ejemplo de consulta devuelve todas las consultas para las que se duplicó el tiempo de ejecución en las últimas 48 horas debido a un cambio de elección del plan. La consulta compara todos los intervalos de estadísticas en tiempo de ejecución en paralelo.  
+ **Consultas que se devolvieron recientemente en rendimiento (comparando un momento dado diferente).** El siguiente ejemplo de consulta devuelve todas las consultas para las que se duplicó el tiempo de ejecución en las últimas 48 horas debido a un cambio de elección del plan. La consulta compara todos los intervalos de estadísticas en tiempo de ejecución en paralelo.  
   
 ```  
 SELECT   
@@ -421,7 +421,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  Si quiere ver el rendimiento de todas las regresiones (no solo de aquellas relacionadas con el cambio de elección de plan), solo tiene que eliminar la condición `AND p1.plan_id <> p2.plan_id` de la consulta anterior.  
   
- **Consultas que devuelto recientemente por motivo de rendimiento (comparando la reciente frente a ejecución historial).** La siguiente consulta compara períodos de ejecución basados en ejecución de consultas. En este ejemplo concreto, la consulta compara la ejecución en el período reciente (1 hora) con el período del historial (última día) e identifica las que introdujeron additional_duration_workload. Esta métrica se calcula como una diferencia entre la media de las ejecuciones recientes y la media de las ejecuciones del historial multiplicada por el número de ejecuciones recientes. En realidad representa la cantidad de ejecuciones recientes de duración adicional introducidas en comparación con el historial:  
+ **Consultas que se devolvieron recientemente en rendimiento (comparando la ejecución reciente frente al historial).** La siguiente consulta compara períodos de ejecución basados en ejecución de consultas. En este ejemplo concreto, la consulta compara la ejecución en el período reciente (1 hora) con el período del historial (última día) e identifica las que introdujeron additional_duration_workload. Esta métrica se calcula como una diferencia entre la media de las ejecuciones recientes y la media de las ejecuciones del historial multiplicada por el número de ejecuciones recientes. En realidad representa la cantidad de ejecuciones recientes de duración adicional introducidas en comparación con el historial:  
   
 ```  
 --- "Recent" workload - last 1 hour  

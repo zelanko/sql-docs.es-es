@@ -21,20 +21,20 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c366a239ca3459bc8fe4517736a4c0bcc64301cb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475971"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028688"
 ---
-# <a name="server-memory-server-configuration-options"></a>Opciones de configuración de memoria del servidor
+# <a name="server-memory-configuration-options"></a>Opciones de configuración de memoria del servidor
   Use las dos opciones de memoria de servidor **Memoria de servidor mínima** y **Memoria de servidor máxima**para reconfigurar la cantidad de memoria (en megabytes) administrada por el Administrador de memoria de SQL Server para un proceso de SQL Server usado por una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  El valor de configuración predeterminado para **Memoria de servidor mínima** es 0 y para **Memoria de servidor máxima** es 2147483647 MB. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede cambiar sus requisitos de memoria de manera dinámica basándose en los recursos del sistema disponibles.  
   
 > [!NOTE]  
->  Si establece el valor **Memoria de servidor máxima** en el valor mínimo, puede reducir significativamente el rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e incluso impedir que se inicie. Si no puede iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tras cambiar esta opción, inicie esta herramienta mediante la opción de inicio **-f** y restablezca la opción **memoria de servidor máxima** a su valor anterior. Para más información, consulte [Opciones de inicio del servicio de motor de base de datos](database-engine-service-startup-options.md).  
+> Si establece el valor **Memoria de servidor máxima** en el valor mínimo, puede reducir significativamente el rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e incluso impedir que se inicie. Si no puede iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tras cambiar esta opción, inicie esta herramienta mediante la opción de inicio **-f** y restablezca la opción **memoria de servidor máxima** a su valor anterior. Para más información, consulte [Opciones de inicio del servicio de motor de base de datos](database-engine-service-startup-options.md).  
   
  Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la memoria de manera dinámica, realiza una consulta periódica en el sistema para determinar la cantidad de memoria libre. El mantenimiento de esta memoria libre evita la paginación en el sistema operativo (SO). Si hay menos memoria libre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libera memoria para el sistema operativo. Si hay más memoria libre, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede asignar más memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agrega memoria solo cuando su carga de trabajo así lo requiere; un servidor inactivo no aumenta el tamaño de su espacio de direcciones virtual.  
   
@@ -63,7 +63,7 @@ Las opciones de servidor **memoria de servidor mínima** y **memoria de servidor
 
 <sup>2</sup> Consulte la página de documentación sobre cómo [Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) para obtener información sobre los subprocesos de trabajo predeterminados calculados para un determinado número de CPU con afinidad en el host actual.
 
-<sup>3</sup> Consulte la página de documentación sobre [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) para obtener información sobre el parámetro de inicio *-g*. Aplicable solo en 32 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bits ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
+<sup>3</sup> Consulte la página de documentación sobre [Opciones de inicio del servicio de motor de base de datos](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014) para obtener información sobre el parámetro de inicio *-g*. Solo aplicable a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de 32 bits (de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).
 
 |Tipo de SO|Cantidad mínima de memoria permitida para **memoria de servidor máxima**|  
 |-------------|----------------------------------------------------------------|  

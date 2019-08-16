@@ -12,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ba1b1b3b8d8fa3f26af84ef12f95858ac32cdeee
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957323"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530891"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Normas de nomenclatura de objetos (Analysis Services)
   En este tema se describen las convenciones de nomenclatura de los objetos, así como las palabras y los caracteres reservados que no se pueden usar en ningún nombre de objeto, código o script en [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -89,7 +89,7 @@ ms.locfileid: "68957323"
   
 ## <a name="see-also"></a>Vea también  
  [Palabras reservadas de MDX](/sql/mdx/mdx-reserved-words)   
- [Traducciones &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/translations-analysis-services)   
+ [Traducciones &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
  [Compatibilidad &#40;con XML for Analysis XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

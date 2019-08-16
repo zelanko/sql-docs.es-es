@@ -1,24 +1,24 @@
 ---
-title: Guía de inicio rápido para una ejecución de código de Python básica "Hola mundo" en T-SQL
-description: Inicio rápido de script de Python en SQL Server. Conozca los aspectos básicos de la llamada al script de Python mediante el procedimiento almacenado del sistema sp_execute_external_script en un ejercicio de Hola a todos.
+title: 'Inicio rápido: Python "Hola mundo"'
+description: En esta guía de inicio rápido, aprenderá los conceptos clave mediante la ejecución de un script de Python "Hola mundo" en SQL Server Machine Learning Services. Usará el procedimiento almacenado del sistema sp_execute_external_script de T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/10/2019
+ms.date: 08/15/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a170bd2ee3e893a83ebb9d3201ee117321e7562b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1149c7888bc783c9d4f658eed5e8405214d6ffc4
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714821"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530971"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Inicio rápido: Script de Python "Hello World" en SQL Server 
+# <a name="quickstart-run-a-hello-world-python-script-on-sql-server-machine-learning-services"></a>Inicio rápido: Ejecutar un script de Python "Hello World" en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En esta guía de inicio rápido, aprenderá conceptos clave mediante la ejecución de un script de Python "Hola mundo" inT-SQL, con una introducción al procedimiento almacenado del sistema **sp_execute_external_script** . 
+En esta guía de inicio rápido, aprenderá los conceptos clave mediante la ejecución de un script de Python "Hola mundo" en SQL Server Machine Learning Services. Usará el procedimiento almacenado del sistema **sp_execute_external_script** de T-SQL.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

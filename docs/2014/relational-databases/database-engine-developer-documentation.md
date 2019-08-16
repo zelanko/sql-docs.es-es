@@ -13,12 +13,12 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890803"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530948"
 ---
 # <a name="developer39s-guide-database-engine"></a>Guía&#39;del desarrollador (motor de base de datos)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un completo conjunto de herramientas para desarrollar, administrar y controlar las aplicaciones de base de datos.  
@@ -52,7 +52,7 @@ ms.locfileid: "68890803"
  Describe cómo puede utilizar la interfaz de programación del cuadro de mensajes de excepción en sus aplicaciones para proporcionar más control sobre la experiencia de mensajería, dar a los usuarios la opción de guardar el contenido de los mensajes de error para consultarlos posteriormente y obtener ayuda con los mensajes.  
   
 ## <a name="see-also"></a>Vea también  
- [Programación de minería de datos](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [Programación de minería de datos](../analysis-services/dev-guide/data-mining-programming.md)   
  [Guía &#40;del desarrollador Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [Guía &#40;del desarrollador Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [Guía &#40;del desarrollador de la replicación&#41;](replication/concepts/replication-developer-documentation.md)   

@@ -10,12 +10,12 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 49a62fb647b7b1a1579103f96907d0635ecc635f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893601"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530881"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementar seguridad dinámica utilizando filtros de filas
   En esta lección complementaria, creará un rol adicional que implemente seguridad dinámica. La seguridad dinámica proporciona seguridad de nivel de fila basada en el nombre de usuario o el identificador de inicio de sesión del usuario que ha iniciado sesión actualmente. Para obtener más información, consulte [Roles &#40;SSAS tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular).  
@@ -130,7 +130,7 @@ ms.locfileid: "68893601"
  En esta tarea, creará un rol de usuario. Este rol incluirá un filtro de fila que define qué filas de la tabla Sales Territory estarán visibles para los usuarios. El filtro se aplicará en una dirección de relación de uno-a muchos para el resto de las tablas relacionadas con Sales Territory. También aplicará un filtro sencillo que proteja la tabla Seguridad de los empleados de las consultas por parte de cualquier usuario que sea miembro del rol.  
   
 > [!NOTE]  
->  El rol de empleados de ventas por territorio que creará en esta lección solo permitirá a los miembros examinar (o consultar) los datos de ventas del territorio de ventas al que pertenezcan. Si agrega un usuario como miembro al rol de empleados de ventas por territorio que también existe como miembro de un rol creado en [la lección 12: Crear roles](https://docs.microsoft.com/analysis-services/lesson-11-create-roles), obtendrá una combinación de permisos. Cuando un usuario es miembro de varios roles, los permisos y los filtros de fila definidos para cada uno de ellos son acumulativos. Es decir, el usuario tendrá los mayores permisos determinados por la combinación de roles.  
+>  El rol de empleados de ventas por territorio que creará en esta lección solo permitirá a los miembros examinar (o consultar) los datos de ventas del territorio de ventas al que pertenezcan. Si agrega un usuario como miembro al rol de empleados de ventas por territorio que también existe como miembro de un rol creado en [la lección 12: Crear roles](../analysis-services/lesson-11-create-roles.md), obtendrá una combinación de permisos. Cuando un usuario es miembro de varios roles, los permisos y los filtros de fila definidos para cada uno de ellos son acumulativos. Es decir, el usuario tendrá los mayores permisos determinados por la combinación de roles.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Para crear empleados de ventas por el rol de usuario de Territorio  
   

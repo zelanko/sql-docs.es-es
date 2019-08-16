@@ -1,5 +1,5 @@
 ---
-title: Herramientas y enfoques de procesamiento (Analysis Services) | Microsoft Docs
+title: Herramientas y enfoques para el procesamiento (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66696d32b62f29df7a4a1866978d72f5d4a173ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072819"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530939"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Herramientas y enfoques de procesamiento (Analysis Services)
   El procesamiento es una operación en la que Analysis Services consulta un origen de datos relacional y rellena objetos de Analysis Services utilizando esos datos.  
@@ -46,7 +46,7 @@ ms.locfileid: "66072819"
  El procesamiento es una operación altamente configurable, controlada por un conjunto de opciones de procesamiento que determinan si se produce un procesamiento completo o incremental en el nivel de objeto. Para más información sobre las opciones de procesamiento, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) y [Procesar objetos de Analysis Services](processing-analysis-services-objects.md).  
   
 > [!NOTE]  
->  En este tema se describen las herramientas y los enfoques para procesar modelos multidimensionales. Para obtener más información acerca de cómo procesar los modelos tabulares, vea [procesar base de datos, tabla o partición](../tabular-models/process-database-table-or-partition-analysis-services.md) y [procesar datos &#40;Tabular de SSAS&#41;](../process-data-ssas-tabular.md).  
+>  En este tema se describen las herramientas y los enfoques para procesar modelos multidimensionales. Para obtener más información sobre el procesamiento de modelos tabulares, vea [procesar base de datos, tabla o partición](../tabular-models/process-database-table-or-partition-analysis-services.md) y [procesar datos &#40;&#41;tabulares](../process-data-ssas-tabular.md).  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>Procesar objetos en SQL Server Management Studio  
   
@@ -122,13 +122,13 @@ ms.locfileid: "66072819"
   
 1.  A partir de esta versión de SQL Server, puede utilizar los cmdlets de Analysis Services PowerShell para procesar objetos. Los cmdlets siguientes pueden ejecutarse de forma interactiva o en un script:  
   
-    -   [Cmdlet Invoke-ProcessCube](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
+    -   [Cmdlet Invoke-ProcessCube](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Cmdlet Invoke-ProcessDimension](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
+    -   [Cmdlet Invoke-ProcessDimension](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Cmdlet Invoke-ProcessPartition](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
+    -   [Cmdlet Invoke-ProcessPartition](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   El[cmdlet Invoke-ASCmd](/sql/analysis-services/powershell/invoke-ascmd-cmdlet), que se puede usar para ejecutar un script XMLA, MDX o DMX que incluya comandos de procesamiento.  
+    -   El[cmdlet Invoke-ASCmd](/powershell/module/sqlserver/invoke-ascmd), que se puede usar para ejecutar un script XMLA, MDX o DMX que incluya comandos de procesamiento.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Supervisar el procesamiento de objetos mediante SQL Server Profiler  
   
@@ -157,6 +157,6 @@ ms.locfileid: "66072819"
 3.  Edite la tarea para especificar una conexión con la base de datos, qué objetos se van a procesar y la opción de proceso. Para obtener más información acerca de cómo implementar esta tarea, vea [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Procesamiento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
+ [Procesamiento de objetos del modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
   
   

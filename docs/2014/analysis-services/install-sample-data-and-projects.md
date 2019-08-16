@@ -10,12 +10,12 @@ ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5fed7f199f80f59c1983ec5f17a4f922c836333
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888627"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530820"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Instalar los datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services
   Use las instrucciones y los vínculos proporcionados en este tema para instalar todos los archivos de datos y de proyecto empleados en los tutoriales de Analysis Services.  
@@ -145,7 +145,7 @@ ms.locfileid: "68888627"
 8.  Inicie SQL Server Management Studio. En SQL Server Management Studio, conéctese a Analysis Services. Compruebe que se está ejecutando en el servidor una base de datos denominada **Analysis Services Tutorial**.  
   
 ## <a name="next-step"></a>Paso siguiente  
- Ahora está preparado para utilizar el tutorial. Para obtener más información sobre cómo comenzar, consulte [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial).  
+ Ahora está preparado para utilizar el tutorial. Para obtener más información sobre cómo comenzar, consulte [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Instale SQL Server 2014 desde la instalación del &#40;Asistente para la instalación&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

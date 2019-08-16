@@ -10,12 +10,12 @@ ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 411e5f822d0f54e6d8b7654b67bf5776ceb3c9e5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888358"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530848"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ocultar y deshabilitar jerarquías de atributo
   De forma predeterminada, se crea una jerarquía de atributo para cada uno de los atributos de una dimensión, y cada jerarquía está disponible para los datos de hechos de dimensionamiento. Esta jerarquía consta de un nivel "Todos" y un nivel de detalle que contiene todos los miembros de la jerarquía. Como ha aprendido, puede organizar los atributos en jerarquías definidas por el usuario para proporcionar rutas de navegación en un cubo. En determinadas circunstancias, le interesará deshabilitar u ocultar algunos atributos y sus jerarquías. Por ejemplo, determinados atributos, como los números de seguridad social o números de identificación nacional, sueldos, las fechas de nacimiento e información sobre el inicio de sesión, no son atributos que los usuarios vayan a utilizar para dimensionar la información del cubo. En lugar de ello, generalmente esta información solo se visualiza como detalles de un miembro de atributo en concreto. Puede ocultar estas jerarquías de atributo, dejando los atributos visibles solo como propiedades de miembro de un atributo específico. También puede hacer que los miembros de otros atributos, como los nombres de cliente o los códigos postales, solo estén visibles cuando se visualizan a través de una jerarquía de usuario en lugar de visualizarse de forma independiente a través de una jerarquía de atributo. Un motivo para hacerlo puede ser el número total de miembros distintos de la jerarquía de atributo. Por último, para mejorar el rendimiento del procesamiento, debe deshabilitar las jerarquías de atributos que los usuarios no utilizarán para examinar.  
@@ -126,6 +126,6 @@ ms.locfileid: "68888358"
      Observe que los niveles ocultos, **Código postal** y **Nombre completo**, están visibles en la jerarquía definida por el usuario.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Ordenar los miembros de atributo en función de un atributo secundario](https://docs.microsoft.com/analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute)  
+ [Ordenar los miembros de atributo en función de un atributo secundario](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   

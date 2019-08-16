@@ -10,12 +10,12 @@ ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48d96a731724717a398c2170d642c419a1f3e9da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888593"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493970"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurar PowerPivot e implementar soluciones (SharePoint 2013)
   En estos temas se describen la implementación y la configuración de mejoras de nivel intermedio realizadas en las características de PowerPivot en [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , incluidas la galería de PowerPivot, la programación de actualización de datos, el panel de administración y los proveedores de datos. Ejecute la herramienta de **Configuración de PowerPivot para SharePoint 2013** para hacer lo siguiente:  
@@ -68,7 +68,7 @@ ms.locfileid: "68888593"
   
     5.  Haga clic en **Crear colección de sitios** en la ventana izquierda. Anote la **Dirección URL del sitio** para pueda consultarla en pasos posteriores. Si el servidor de SharePoint no está configurado todavía, el asistente para la configuración usa como valor predeterminado la aplicación web y las direcciones URL de las colecciones de sitios hasta la raíz de `http://[ServerName]`. Para modificar los valores predeterminados, revise las páginas siguientes en la ventana izquierda: **Crear aplicación web predeterminada** e **implementar solución de aplicación web**  
   
-5.  Opcionalmente, revise los valores restantes de entrada utilizados para completar cada acción. Haga clic en cada acción de la ventana izquierda para ver y examinar los detalles de la acción. Para obtener más información acerca de cada uno, vea la sección "valores de entrada utilizados para configurar el servidor en [configurar o &#40;reparar PowerPivot para SharePoint herramienta&#41; de configuración de PowerPivot 2010](https://docs.microsoft.com/analysis-services/configure-repair-powerpivot-sharepoint-2010) " en este tema.  
+5.  Opcionalmente, revise los valores restantes de entrada utilizados para completar cada acción. Haga clic en cada acción de la ventana izquierda para ver y examinar los detalles de la acción. Para obtener más información acerca de cada uno, vea la sección "valores de entrada utilizados para configurar el servidor en [configurar o &#40;reparar PowerPivot para SharePoint herramienta&#41; de configuración de PowerPivot 2010](../../configure-repair-powerpivot-sharepoint-2010.md) " en este tema.  
   
 6.  Si lo desea, quite cualquier acción que no desee procesar en este momento. Por ejemplo, si desea configurar el Servicio de almacenamiento seguro más adelante, haga clic en **Configurar el servicio de almacenamiento seguro**y, a continuación, desactive la casilla **Incluir esta acción en la lista de tareas**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68888593"
   
 8.  Haga clic en **Ejecutar** para procesar todas las acciones de la lista de tareas. Tenga en cuenta que **Ejecutar** estará disponible cuando valide las acciones. Si **Ejecutar** no está habilitado, haga clic en **Validar** primero.  
   
- Para obtener más información, vea [configurar o reparar PowerPivot para SharePoint &#40;herramienta&#41; de configuración de PowerPivot 2010](https://docs.microsoft.com/analysis-services/configure-repair-powerpivot-sharepoint-2010)  
+ Para obtener más información, vea [configurar o reparar PowerPivot para SharePoint &#40;herramienta&#41; de configuración de PowerPivot 2010](../../configure-repair-powerpivot-sharepoint-2010.md)  
   
 ##  <a name="bkmk_verify_powerpivot"></a>Comprobar la configuración de PowerPivot  
  **Servicios:**  

@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: bec038ece2971c82315aca9965f0d897e6de1034
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893341"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494029"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Crear un proyecto de Analysis Services (Tutorial básico de minería de datos)
   Cada proyecto de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] define los objetos de una sola base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] puede contener muchos tipos diferentes de objetos  
@@ -32,7 +32,7 @@ ms.locfileid: "68893341"
   
  De forma predeterminada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa la instancia **localhost** para los proyectos nuevos. Si está utilizando una instancia con nombre o un servidor diferente, debe crear y abrir el proyecto primero y, a continuación, cambiar el nombre de instancia.  
   
- Para obtener más información acerca de los proyectos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vea [Creating an Analysis Services Project](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project).  
+ Para obtener más información acerca de los proyectos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vea [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
   
 ### <a name="to-create-an-analysis-services-project"></a>Para crear un proyecto de Analysis Services  
   

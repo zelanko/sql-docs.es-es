@@ -10,12 +10,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1d5afebb0f0bf69990a0e93bca49d95f7a4c6b5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9d436ab68f2c0045d1cfa127c251575495f831cd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888283"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493933"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definir una relación referenciada
   Hasta este punto del tutorial, cada dimensión de cubo que definió se basaba en una tabla que estaba directamente vinculada a la tabla de hechos para un grupo de medida a través de una relación de clave principal a clave externa. En las tareas de este tema, debe vincular la dimensión **Geography** a la tabla de hechos de ventas por distribuidor a través de la dimensión **Reseller** , denominada *dimensión de referencia*. Esto permite a los usuarios dimensionar las ventas de distribuidor por geografía. Para obtener más información, consulte [Definir relaciones referenciadas y propiedades de las relaciones referenciadas](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "68888283"
      ![Definir relación (cuadro de diálogo)](../../2014/tutorials/media/l5-referencedrelationship-5.gif "Definir relación (cuadro de diálogo)")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Definir una relación de hechos](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)  
+ [Definir una relación de hechos](lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Relación de los atributos](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

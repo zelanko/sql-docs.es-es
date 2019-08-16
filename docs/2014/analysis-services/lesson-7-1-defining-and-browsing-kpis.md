@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888086"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493792"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definir y examinar KPI
   Para definir indicadores clave de rendimiento (KPI), deberá primero definir un nombre de KPI y el grupo de medida con el que desea asociar el KPI. Un KPI se puede asociar con todos los grupos de medida o con un solo grupo de medida. Se definirán entonces los siguientes elementos del KPI:  
@@ -268,6 +268,6 @@ ms.locfileid: "68888086"
      Aparecerá el margen de beneficio bruto para la venta de bicicletas por distribuidor en Norteamérica en el tercer trimestre de 2007.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 8: Definir acciones](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
+ [Lección 8: Definir acciones](lesson-8-defining-actions.md)  
   
   

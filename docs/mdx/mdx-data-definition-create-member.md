@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 90db0be2372c3af9d3d079a187e4b3cbd8147566
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892137"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494073"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definición de datos de MDX: CREATE MEMBER
 
@@ -114,7 +114,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|Orden de resolución del miembro calculado en aquellos casos en los que un miembro calculado haga referencia a otro miembro calculado (es decir, cuando exista una intersección de miembros calculados).|  
 |FORMAT_STRING|Cadena de formato de estilo de Office que la aplicación cliente puede usar al mostrar valores de celda.|  
 |VISIBLE|Valor que indica si el miembro calculado es visible en el conjunto de filas del esquema. Los miembros calculados visibles se pueden agregar a un conjunto con la función [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) . Un valor distinto de cero indica que el miembro calculado es visible. El valor predeterminado de esta propiedad es *visible*.<br /><br /> Los miembros calculados no visibles (cuando el valor se establece en cero) suelen utilizarse como pasos intermedios en miembros calculados más complejos. También otros tipos de miembro, como las medidas, pueden hacer referencia a estos miembros calculados.|  
-|NON_EMPTY_BEHAVIOR|Medida o conjunto utilizados para determinar el comportamiento de los miembros calculados al resolver celdas vacías.<br /><br /> **Advertencia :esta\* propiedad estáendesuso.\* \* \*** No la active. Vea [Características en desuso de Analysis Services en SQL Server 2016](https://docs.microsoft.com/analysis-services/deprecated-analysis-services-features-in-sql-server-2016) para obtener detalles.|  
+|NON_EMPTY_BEHAVIOR|Medida o conjunto utilizados para determinar el comportamiento de los miembros calculados al resolver celdas vacías.<br /><br /> **Advertencia :esta\* propiedad estáendesuso.\* \* \*** No la active. Consulte [características Desusadas Analysis Services en SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) para obtener más información.|  
 |CAPTION|Cadena que utiliza la aplicación cliente como título para el miembro.|  
 |DISPLAY_FOLDER|Cadena que identifica la ruta de la carpeta que usa la aplicación cliente para mostrar el miembro. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]por, la barra diagonal\\inversa () es el separador de nivel. Si va a asignar varias carpetas para mostrar a un miembro definido, utilice un punto y coma (;) para separar las carpetas.|  
 |ASSOCIATED_MEASURE_GROUP|Nombre del grupo de medida al que se asocia el miembro.|  

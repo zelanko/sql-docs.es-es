@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888067"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493773"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definir y examinar perspectivas
   Una perspectiva puede simplificar la vista de un cubo para fines específicos. De manera predeterminada, los usuarios pueden ver todos los elementos de un cubo para los que tengan permisos. Lo que observan los usuarios cuando ven un cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entero es la perspectiva predeterminada del cubo. Una vista de todo el cubo puede resultar muy compleja para que los usuarios naveguen por ella, en especial aquellos usuarios que solo necesitan interactuar con una pequeña parte del cubo a fin de satisfacer sus requisitos de informes e inteligencia empresarial.  
@@ -191,7 +191,7 @@ ms.locfileid: "68888067"
      ![Medidas Internet sales y reseller sales](../../2014/tutorials/media/l9-perspectives-4.gif "Medidas Internet sales y reseller sales")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Definir y examinar traducciones](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [Definir y examinar traducciones](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Distintas](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

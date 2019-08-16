@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888045"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493845"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lección 6: Definición de cálculos
   En esta lección, aprenderá a definir cálculos, que son scripts o expresiones de Expresiones multidimensionales (MDX). Los cálculos le permiten definir miembros calculados, conjuntos con nombre y ejecutar otros comandos de script para ampliar las capacidades de un cubo de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Por ejemplo, puede ejecutar un comando de script para definir un subcubo y, a continuación, asignar un cálculo a las celdas del subcubo.  
@@ -45,14 +45,14 @@ ms.locfileid: "68888045"
   
  Esta lección contiene las siguientes tareas:  
   
- [Definir miembros calculados](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
+ [Definir miembros calculados](lesson-6-1-defining-calculated-members.md)  
  En esta tarea, aprenderá a definir miembros calculados.  
   
- [Definir conjuntos con nombre](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [Definir conjuntos con nombre](lesson-6-2-defining-named-sets.md)  
  En esta tarea, aprenderá a definir conjuntos con nombre.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 7: Definición de KPI clave &#40;de indicadores de rendimiento&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [Lección 7: Definición de KPI clave &#40;de indicadores de rendimiento&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Escenario de Analysis Services tutorial](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   

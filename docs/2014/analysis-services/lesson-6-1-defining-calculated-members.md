@@ -10,12 +10,12 @@ ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4d2fddf1707ec4e1521b99d9d526f173464cd8e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888182"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493884"
 ---
 # <a name="defining-calculated-members"></a>Definir miembros calculados
   Los miembros calculados son miembros de una dimensión o un grupo de medida que se definen según una combinación de datos del cubo, operadores aritméticos, números y funciones. Por ejemplo, puede crear un miembro calculado que calcule la suma de dos medidas físicas en el cubo. Las definiciones de miembros calculados se almacenan en cubos pero sus valores se calculan en el momento de la consulta.  
@@ -287,7 +287,7 @@ ms.locfileid: "68888182"
      Observe que la venta de accesorios aumenta con el tiempo pero que estas ventas constituyen solo una pequeña fracción del total de ventas. Observe también que el margen de beneficio bruto para la venta de accesorios es superior que para las bicicletas.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Definir conjuntos con nombre](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [Definir conjuntos con nombre](lesson-6-2-defining-named-sets.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Realizan](multidimensional-models-olap-logical-cube-objects/calculations.md)   

@@ -10,12 +10,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd42fdd888ca8d4b7fc72e20fb3c6a71b9e0170f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888137"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493892"
 ---
 # <a name="defining-named-sets"></a>Definir conjuntos con nombre
   Un conjunto con nombre es una expresión de Expresiones multidimensionales (MDX) que devuelve un conjunto de miembros de dimensión. Puede definir conjuntos con nombre y guardarlos como parte de la definición del cubo; también puede crear conjuntos con nombre en aplicaciones cliente. Puede crear conjuntos con nombre combinando datos del cubo, operadores aritméticos, números y funciones. Los usuarios pueden usar los conjuntos con nombre en consultas MDX en aplicaciones cliente y también pueden usarse para definir conjuntos en subcubos. Un subcubo es una colección de conjuntos unidos de forma cruzada que restringe el espacio del cubo al subespacio definido para instrucciones posteriores. La definición de un espacio del cubo restringido es un concepto fundamental para el scripting de MDX.  
@@ -132,7 +132,7 @@ ms.locfileid: "68888137"
      ![Panel de filtro que contiene dos conjuntos con nombre](../../2014/tutorials/media/l6-named-set-05.gif "Panel de filtro que contiene dos conjuntos con nombre")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Lección 7: Definición de KPI clave &#40;de indicadores de rendimiento&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [Lección 7: Definición de KPI clave &#40;de indicadores de rendimiento&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Realizan](multidimensional-models-olap-logical-cube-objects/calculations.md)   

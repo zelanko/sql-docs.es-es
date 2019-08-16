@@ -10,12 +10,12 @@ ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9273f35ccca51d92461783f1110890b161a85059
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888469"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493984"
 ---
 # <a name="browsing-the-deployed-cube"></a>Examinar el cubo implementado
   En la tarea siguiente, examinará el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puesto que nuestro análisis compara las medidas en varias dimensiones, usará una tabla dinámica de Excel para examinar los datos. El uso de una tabla dinámica le permite colocar la información de clientes, fechas y productos en diferentes ejes de modo que pueda ver cómo cambian las ventas por Internet cuando se ven en determinados períodos de tiempo, datos demográficos de los clientes y líneas de productos.  
@@ -45,6 +45,6 @@ ms.locfileid: "68888469"
      ![Ventas por Internet por región y por línea de producto](../../2014/tutorials/media/l3-cube-browser-finish.gif "Ventas por Internet por región y por línea de producto")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 4: Definir propiedades avanzadas de atributos y dimensiones](https://docs.microsoft.com/analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties)  
+ [Lección 4: Definir propiedades avanzadas de atributos y dimensiones](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

@@ -8,17 +8,17 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ba0b03f658f0121b04d5a2002cd2f28fbd522a8d
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 238249ae90556d342e9c6cd50e568d65ff1cb6f6
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/16/2019
-ms.locfileid: "69530964"
+ms.locfileid: "69553177"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>Tutoriales de Python para SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se describen los tutoriales de Python para análisis de bases de datos en [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
+En este artículo se describen los tutoriales de Python para [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). 
 
 + Obtenga información sobre cómo ejecutar scripts de Python.
 + Compilar, entrenar e implementar modelos de Python en SQL Server.

@@ -1,7 +1,7 @@
 ---
 title: Instalar SQL Server desde el símbolo del sistema | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: db2bb1f0a4c36b84ac4d4200c0651b407fdf144a
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 94169ec75f542c27c47bc9f050b2ac36736d13de
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419324"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893017"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Instalar SQL Server desde el símbolo del sistema
 
@@ -227,7 +227,7 @@ Use las instrucciones siguientes para desarrollar comandos de instalación que t
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **Opcional**|Especifica el directorio de los archivos de configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores predeterminados:<br /><br /> Para el modo WOW en 64 bits: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> Para todas las demás instalaciones: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **Opcional**|Especifica el directorio de los archivos de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores predeterminados:<br /><br /> Para el modo WOW en 64 bits: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> Para todas las demás instalaciones: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **Opcional**|Especifica el directorio de los archivos de registro de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores predeterminados:<br /><br /> Para el modo WOW en 64 bits: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> Para todas las demás instalaciones: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **Opcional**|Especifica el modo de servidor de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los valores válidos son MULTIDIMENSIONAL, POWERPIVOT o TABULAR. **ASSERVERMODE** distingue entre mayúsculas y minúsculas. Todos los valores se deben expresar en mayúsculas. Para obtener más información sobre los valores válidos, vea [Instalar Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md).|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **Opcional**|Especifica el modo de servidor de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los valores válidos son MULTIDIMENSIONAL, POWERPIVOT o TABULAR. **ASSERVERMODE** distingue entre mayúsculas y minúsculas. Todos los valores se deben expresar en mayúsculas. Para obtener más información sobre los valores válidos, vea [Instalar Analysis Services](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services).|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **Obligatorio**|Especifica la cuenta del servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña del servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) del servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Valores admitidos:<br /><br /> **Automático**<br /><br /> **Deshabilitado**<br /><br /> **Manual**|  
@@ -279,7 +279,7 @@ Use las instrucciones siguientes para desarrollar comandos de instalación que t
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Opcional**|Especifica el modo de [inicio](#Accounts) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |Python/Machine Learning Services (en base de datos)|/MPYCACHEDIRECTORY|Reservado para uso futuro. Use %TEMP% para almacenar archivos .CAB de Python para su instalación en un equipo que no tenga conexión a Internet. |  
 |R/Machine Learning Services (en base de datos)|/MRCACHEDIRECTORY|Use este parámetro para especificar el directorio Caché para la compatibilidad con las características de Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (independiente) o R en SQL Server 2017 Machine Learning Services o Machine Learning Server (independiente). Esta opción se usa normalmente cuando se instalan componentes de R desde la [línea de comandos en un equipo sin acceso a Internet](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access).|  
-|Java/Machine Learning Services (en base de datos)| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **Opcional** | A partir de SQL Server 2019, especifica la instalación de Java con Machine Learning Services. Si /SQL_INST_JAVA se especifica sin el parámetro /SQLJAVADIR, se supone que desea instalar la instancia JRE de Zulu que proporciona el soporte de instalación. <br /><br /> La especificación de una ruta de acceso de /SQLJAVADIR indica que quiere usar una instancia de JRE o JDK ya instalada. |
+|Java/Extensiones de lenguaje| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **Opcional** | A partir de SQL Server 2019, especifica la instalación de Java con Extensiones de lenguaje. Si /SQL_INST_JAVA se especifica sin el parámetro /SQLJAVADIR, se supone que desea instalar la instancia Open JRE de Zulu que proporciona el soporte de instalación. <br /><br /> La especificación de una ruta de acceso de /SQLJAVADIR indica que quiere usar una instancia de JRE o JDK ya instalada. |
   
 ###### <a name="sample-syntax"></a>Sintaxis de ejemplo:  
  Para instalar una instancia nueva e independiente con los componentes de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], replicación y búsqueda de texto completo y habilitar la inicialización instantánea de archivos para [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 

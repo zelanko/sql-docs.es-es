@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-ms.openlocfilehash: 0ee8902dad88cc148481585aaa9e1e083e536d0f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fe196a82badcab9ebe05004ee05cd67131942dd1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469900"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715611"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Preguntas más frecuentes sobre actualización e instalación de SQL Server Machine Learning o R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +23,7 @@ En este tema se proporcionan respuestas a algunas preguntas comunes sobre la ins
 + Algunos problemas solo se producen con las actualizaciones de versiones preliminares. Por lo tanto, se recomienda identificar primero la versión y la edición antes de leer estas notas. Para obtener información de versión, `@@VERSION` ejecute en una consulta de SQL Server Management Studio.
 + Actualice a la versión más reciente o al lanzamiento de servicio tan pronto como sea posible para resolver cualquier problema corregido en las versiones recientes.
 
-**Se aplica a:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (in-Database)
+**Se aplica a:** SQL Server 2016 R Services, SQL Server Machine Learning Services (in-Database)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>Requisitos y restricciones en versiones anteriores de SQL Server 2016 
 
@@ -30,7 +31,7 @@ En función de la compilación de SQL Server que esté instalando, podrían apli
 
 - En las primeras versiones de SQL Server 2016 R Services, se necesitaba una notación 8.3 en la unidad que contiene el directorio de trabajo. Si ha instalado una versión preliminar, la actualización a SQL Server 2016 Service Pack 1 debe corregir este problema. Este requisito no se aplica a las versiones posteriores a SP1.
 
-- Actualmente, no se puede [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] instalar en un clúster de conmutación por error. Sin embargo, SQL Server versión preliminar 2019 proporciona compatibilidad con la conmutación por error si desea evaluar esta funcionalidad en un entorno de prueba. Para obtener más información, [Consulte las](../what-s-new-in-sql-server-machine-learning-services.md)novedades.
+- Actualmente, no se puede [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] instalar en un clúster de conmutación por error. Sin embargo, SQL Server versión preliminar 2019 proporciona compatibilidad con la conmutación por error si desea evaluar esta funcionalidad en un entorno de prueba. Para obtener más información, consulte las [novedades](../what-s-new-in-sql-server-machine-learning-services.md).
 
 - En una máquina virtual de Azure, es posible que se necesite una configuración adicional. Por ejemplo, puede que necesite crear una excepción de Firewall para admitir el acceso remoto.
 

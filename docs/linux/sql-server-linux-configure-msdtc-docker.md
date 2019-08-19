@@ -1,19 +1,18 @@
 ---
 title: Procedimiento para usar transacciones distribuidas con SQL Server en Docker
-description: En este artículo, se explican los pasos para configurar MSDTC en Linux.
+description: En este artículo se explica cómo usar Microsoft DTC (Coordinador de transacciones distribuidas) para las transacciones distribuidas en un contenedor de SQL Server en Docker.
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/25/2018
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8304bc95a15a5a9cf74ab23bc2e8e47bf7cf72d1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e4d9d52541b6f9c9ca87bcbe4dc1db3c4448725c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476047"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770841"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Procedimiento para usar transacciones distribuidas con SQL Server en Docker
 
@@ -21,7 +20,7 @@ ms.locfileid: "68476047"
 
 En este artículo, se explica cómo configurar contenedores de SQL Server para Linux en Docker para realizar transacciones distribuidas.
 
-A partir de la versión preliminar de SQL Server 2019, las imágenes de contenedor son compatibles con Microsoft DTC (Coordinador de transacciones distribuidas), que es necesario para las transacciones distribuidas. Para comprender los requisitos de comunicaciones de MSDTC, vea [Procedimiento para configurar Microsoft DTC (Coordinador de transacciones distribuidas) en Linux](sql-server-linux-configure-msdtc.md). En este artículo, se explican los requisitos especiales y los escenarios relacionados con los contenedores de Docker de SQL Server.
+Las imágenes de contenedor de SQL Server pueden usar Microsoft DTC (Coordinador de transacciones distribuidas), que es necesario para las transacciones distribuidas. Para comprender los requisitos de comunicaciones de MSDTC, vea [Procedimiento para configurar Microsoft DTC (Coordinador de transacciones distribuidas) en Linux](sql-server-linux-configure-msdtc.md). En este artículo, se explican los requisitos especiales y los escenarios relacionados con los contenedores de Docker de SQL Server.
 
 ## <a name="configuration"></a>Configuración
 
@@ -32,7 +31,32 @@ Para habilitar la transacción de MSDTC en contenedores para Docker, necesita es
 
 ### <a name="pull-and-run"></a>Extraer y ejecutar
 
-En el ejemplo siguiente, se muestra cómo usar estas variables de entorno para extraer y ejecutar un único contenedor de SQL Server configurado para MSDTC. Esto le permite comunicarse con cualquier aplicación en cualquier host.
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+En el ejemplo siguiente, se muestra cómo usar estas variables de entorno para extraer y ejecutar un único contenedor de SQL Server 2017 configurado para MSDTC. Esto le permite comunicarse con cualquier aplicación en cualquier host.
+
+```bash
+docker run \
+   -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
+   -p 51433:1433 -p 135:135 -p 51000:51000  \
+   -d mcr.microsoft.com/mssql/server:2017-latest
+```
+
+```PowerShell
+docker run `
+   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
+   -p 51433:1433 -p 135:135 -p 51000:51000  `
+   -d mcr.microsoft.com/mssql/server:2017-latest
+```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+En el ejemplo siguiente, se muestra cómo usar estas variables de entorno para extraer y ejecutar un único contenedor de SQL Server 2019 en versión preliminar configurado para MSDTC. Esto le permite comunicarse con cualquier aplicación en cualquier host.
 
 ```bash
 docker run \
@@ -41,6 +65,16 @@ docker run \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
    -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
+
+```PowerShell
+docker run `
+   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
+   -p 51433:1433 -p 135:135 -p 51000:51000  `
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+```
+
+::: moniker-end
 
 > [!IMPORTANT]
 > El comando anterior solo funciona para Docker en Linux. Si ejecuta Docker en Windows, el host de Windows ya escucha en el puerto 135. Puede quitar el parámetro `-p 135:135` para Docker en Windows, pero esto tiene algunas limitaciones. El contenedor resultante no podrá usarse para transacciones distribuidas en las que participe el host; solo puede participar en transacciones distribuidas entre contenedores de Docker en el host.

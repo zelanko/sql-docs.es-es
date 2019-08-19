@@ -13,12 +13,12 @@ ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ba8bbd7b78a2ca0a246bf01836a33f2592a8c82
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 24a1b058fcada694bc117bb261c17b863e4be569
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251726"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553097"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Create a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,21 +29,6 @@ ms.locfileid: "68251726"
 En este tema se describe cómo crea un proxy del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 Una cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define un contexto de seguridad en el que es posible ejecutar un paso de trabajo. Cada proxy se corresponde con unas credenciales de seguridad. Para establecer los permisos para un paso de trabajo concreto, cree un proxy que disponga de los permisos necesarios para un subsistema del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, a continuación, asigne ese proxy al paso de trabajo.  
-  
-**En este tema**  
-  
--   **Antes de empezar:**  
-  
-    [Limitaciones y restricciones](#Restrictions)  
-  
-    [Seguridad](#Security)  
-  
--   **Para crear un proxy del Agente SQL Server, utilizando:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
-  
 ## <a name="BeforeYouBegin"></a>Antes de empezar  
   
 ### <a name="Restrictions"></a>Limitaciones y restricciones  

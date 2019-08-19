@@ -19,12 +19,12 @@ ms.assetid: 2b7b8627-082d-4189-8584-abd3a9b604cf
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9ad3d405732ef662f72a67c7652968e263586d69
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8a2f44bd6b5df9d67748c6abc10dc0c18c41878c
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267212"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552971"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,23 +34,9 @@ ms.locfileid: "68267212"
 
 En este tema se describe cómo quitar un operado para que deje de recibir notificaciones de alerta del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-**En este tema**  
-  
--   **Antes de empezar:**  
-  
-    [Limitaciones y restricciones](#Restrictions)  
-  
-    [Seguridad](#Security)  
-  
--   **Para eliminar un operador, utilizando:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
-  
 ## <a name="BeforeYouBegin"></a>Antes de empezar  
   
-### <a name="Restrictions"></a>Limitaciones y restricciones  
+### <a name="Restrictions"></a>Limitaciones y restricciones 
 Cuando se quita un operador, se quitan también todas las notificaciones asociadas con él.  
   
 ### <a name="Security"></a>Seguridad  

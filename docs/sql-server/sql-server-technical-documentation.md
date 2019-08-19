@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 311e4819751fe9a398643e2005bd8480c781ee9f
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 0f4fdc5f81ff01b77f0bb27e5782db6ecd41b004
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941154"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969467"
 ---
 # <a name="sql-server-documentation"></a>Documentación de SQL Server
 
@@ -155,7 +155,7 @@ SQL Server 2014 y versiones anteriores, incluido SQL Server 2005, disponen de do
 
 El _control de versiones_ de esta :::no-loc text="Docs"::: página web se encuentra por encima de la tabla de contenido. Para obtener información sobre cómo usar el control de versiones y exactamente lo que hace, vea:
 
-- [Control del sistema de versiones de la documentación de SQL](../toc/versioning-system-monikers-ui-sql-server.md)
+- [Control del sistema de versiones de la documentación de SQL](versioning-system-monikers-ui-sql-server.md)
 
 <!--
 The following includes/ files contain their own H2 headers.

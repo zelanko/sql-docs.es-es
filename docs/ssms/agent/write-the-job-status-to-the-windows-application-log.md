@@ -17,12 +17,12 @@ ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0450757971b745abb36a0790f2278d1c7bd76136
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 93a5e95aa35c349e77ed3876e47a8b46019519c9
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267638"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552146"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,18 +39,6 @@ Estas respuestas permiten a los administradores de las bases de datos saber cuá
 -   Escribir un mensaje de evento en el registro de aplicación Windows. Puede utilizar esta respuesta solo para trabajos con errores.  
   
 -   Eliminar automáticamente el trabajo. Utilice esta respuesta de trabajo si está seguro de que no necesita volver a ejecutar este trabajo.  
-  
-**En este tema**  
-  
--   **Antes de empezar:**  
-  
-    [Seguridad](#Security)  
-  
--   **Para escribir el estado de un trabajo en el registro de aplicaciones Windows, utilizando:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [objetos de administración de SQL Server](#SMO)  
   
 ## <a name="BeforeYouBegin"></a>Antes de empezar  
   

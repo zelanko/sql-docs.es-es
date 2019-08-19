@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2ded17c5baf35949b16c173236f94f8d0d3dd299
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893989"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028911"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -38,7 +38,7 @@ Community Technology Preview (CTP) 3.2 es la versión pública más reciente de
 |Versión preliminar pública |Antes de CTP 3.2, el clúster de macrodatos de SQL Server estaba disponible para los usuarios pioneros registrados. Esta versión permite a todo el mundo experimentar las características de los clústeres de macrodatos de SQL Server. <br/><br/> Vea [Introducción a los clústeres de macrodatos de SQL Server](../big-data-cluster/deploy-get-started.md).|
 |`azdata` |CTP 3.2 presenta `azdata`: una utilidad de línea de comandos escrita en Python que permite a los administradores de clústeres arrancar y administrar el clúster de macrodatos mediante las API REST. `azdata` reemplaza a `mssqlctl`. Vea [Instalación de `azdata`](../big-data-cluster/deploy-install-azdata.md). |
 |PolyBase |Los nombres de las columnas de la tabla externa ahora se usan para consultar orígenes de datos de ODBC, SQL Server, Oracle, Teradata y MongoDB. En versiones anteriores de CTP, las columnas se enlazaban solo según el ordinal en el destino y los nombres de las columnas de la definición de tabla externa no se usaban.|
-|Actualización de niveles de HDFS |Presentamos la funcionalidad de actualización de niveles de HDFS, gracias a la que se puede actualizar un montaje existente a la instantánea más reciente de los datos remotos. Vea [Niveles de HDFS](../big-data-cluster/hdfs-tiering.md). |
+|Actualización de niveles de HDFS |Presentamos la funcionalidad de actualización de niveles de HDFS, gracias a la que se puede actualizar un montaje existente a la instantánea más reciente de los datos remotos. Vea [Niveles de HDFS](../big-data-cluster/hdfs-tiering.md) |
 |Solución de problemas basada en cuadernos |CTP 3.2 presenta cuadernos de Jupyter para ayudar con la [implementación](../big-data-cluster/deploy-notebooks.md) y la [detección, el diagnóstico y la solución de problemas](../big-data-cluster/manage-notebooks.md) de componentes en un clúster de macrodatos de SQL Server. |
 | &nbsp; | &nbsp; |
 
@@ -83,7 +83,6 @@ El [Archivo de anuncios de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
-|Restricciones de características| Impida que algunas formas de inyección de SQL filtren información sobre la base de datos, incluso cuando la inyección de SQL se realice correctamente. Vea [Restricciones de características](../relational-databases/security/feature-restrictions.md)|
 |Indexación de columnas cifradas|Cree índices en columnas cifradas mediante cifrado aleatorio y claves habilitadas para enclave, a fin de mejorar el rendimiento de consultas enriquecidas (con `LIKE` y operadores de comparación). [Always Encrypted con enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).
 |Suspensión y reanudación del examen inicial del Cifrado de datos transparente (TDE)|Vea [Análisis del Cifrado de datos transparente (TDE): suspensión y reanudación](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
 |Administración de certificados en el Administrador de configuración de SQL Server|Vea [Administración de certificados (Administrador de configuración de SQL Server)](../database-engine/configure-windows/manage-certificates.md)

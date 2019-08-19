@@ -1,7 +1,5 @@
 ---
 title: Agente SQL Server | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -13,31 +11,27 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a131153b269d68091e0b76cda4bda5f14e62fd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265239"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552668"
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un servicio de Microsoft Windows que ejecuta tareas administrativas programadas, denominadas *trabajos* en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
-  
-**En este tema**  
-  
--   [Ventajas del Agente SQL Server](#Benefits)  
-  
--   [Componentes del Agente SQL Server](#Components)  
-  
--   [Seguridad en la administración del Agente SQL Server](#Security)  
-  
-## <a name="Benefits"></a>Ventajas del Agente SQL Server  
+
+## <a name="Benefits"></a>Ventajas del Agente SQL Server 
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar información de los trabajos. Los trabajos contienen uno o más pasos. Cada paso contiene su propia tarea; por ejemplo, realizar una copia de seguridad de una base de datos.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar un trabajo según una programación, como respuesta a un evento específico o a petición. Por ejemplo, si desea realizar una copia de seguridad de todos los servidores de la organización todos los días entre semana después del horario de trabajo, puede automatizar esta tarea. Programe la copia de seguridad para que se ejecute después de las 22:00 h de lunes a viernes; si la copia de seguridad encuentra un problema, el Agente SQL Server puede registrar el evento y notificárselo.  

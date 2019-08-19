@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 191c5f2e603821a5bb9d85aa89a630c71800e660
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 9f881367442cfa2e24921300ba7595bdbf28ce27
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68424426"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028876"
 ---
 # <a name="sql-server-2019-ctp-announcement-archive"></a>Archivo de anuncios de SQL Server 2019 CTP
 
@@ -384,7 +384,7 @@ Los [clústeres de macrodatos](../big-data-cluster/big-data-cluster-overview.md)
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta o mejora las siguientes características nuevas para [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].
 
-#### <a name="new-querypostexecutionplanprofile-extended-event-ctp-24"></a>Nuevo evento extendido query_post_execution_plan_profile (CTP 2.4)
+#### <a name="new-query_post_execution_plan_profile-extended-event-ctp-24"></a>Nuevo evento extendido query_post_execution_plan_profile (CTP 2.4)
 
 El nuevo evento extendido `query_post_execution_plan_profile` recopila el equivalente de un plan de ejecución real en función de la generación de perfiles ligera, a diferencia de `query_post_execution_showplan`, que utiliza la generación de perfiles estándar. Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../relational-databases/performance/query-profiling-infrastructure.md).
 
@@ -416,7 +416,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
-#### <a name="new-dmf-sysdmexecqueryplanstats-ctp-24"></a>Nueva DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
+#### <a name="new-dmf-sysdm_exec_query_plan_stats-ctp-24"></a>Nueva DMF sys.dm_exec_query_plan_stats (CTP 2.4) 
 
 La nueva DMF `sys.dm_exec_query_plan_stats` devuelve el equivalente del último plan de ejecución real conocido para la mayoría de las consultas de acuerdo con la generación de perfiles ligera. Para obtener más información, vea [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) e [Infraestructura de generación de perfiles de consulta](../relational-databases/performance/query-profiling-infrastructure.md). Vea el siguiente script como ejemplo:
 
@@ -556,7 +556,7 @@ Resumable online index create admite los escenarios siguientes:
 
 En el caso de que se produzca un error de creación de índices, sin esta característica, debe ejecutarse de nuevo una operación de creación de índices en línea y reiniciarla desde el principio.
 
-Con esta versión, se amplía la funcionalidad reanudable agregando esta característica a las [recompilaciones de índices en línea reanudables](http://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
+Con esta versión, se amplía la funcionalidad reanudable agregando esta característica a las [recompilaciones de índices en línea reanudables](https://azure.microsoft.com/blog/modernize-index-maintenance-with-resumable-online-index-rebuild/).
 
 Además, esta característica se puede establecer como predeterminada en una base de datos específica mediante la [configuración predeterminada de ámbito de base de datos para operaciones DDL en línea y reanudables](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -688,7 +688,7 @@ Ahora, cualquier archivo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 
 `DBCC CLONEDATABASE` crea una copia de solo esquema de una base de datos que incluye todos los elementos necesarios para solucionar problemas de rendimiento de consultas sin copiar los datos. En versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el comando no copió las estadísticas necesarias para solucionar con precisión los problemas de las consultas del índice de almacén de columnas y se tuvieron que realizar pasos manuales para capturar esta información. Ahora, en [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` captura automáticamente los blobs de estadísticas de índices de almacén de columnas, por lo que no será necesario realizar ningún paso manual.
 
-#### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>Nuevas opciones agregadas a sp_estimate_data_compression_savings (CTP 2.0)
+#### <a name="new-options-added-to-sp_estimate_data_compression_savings-ctp-20"></a>Nuevas opciones agregadas a sp_estimate_data_compression_savings (CTP 2.0)
 
 `sp_estimate_data_compression_savings` devuelve el tamaño actual del objeto solicitado y calcula el tamaño del objeto para el estado de compresión solicitado. Actualmente, este procedimiento admite tres opciones: `NONE`, `ROW` y `PAGE`. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta dos opciones nuevas: `COLUMNSTORE` y `COLUMNSTORE_ARCHIVE`. Estas nuevas opciones permiten estimar los ahorros de espacio si se crea un índice de almacén de columnas se crea la tabla mediante la compresión de almacén de columnas estándar o de archivo.
 
@@ -712,7 +712,7 @@ Para obtener más información sobre la generación de perfiles de baja intensid
 
 - **Nuevos conectores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata y MongoDB**: [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta nuevos conectores de datos externos para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata y MongoDB.
 
-#### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>Nueva función del sistema sys.dm_db_page_info que devuelve información de la página (CTP 2.0)
+#### <a name="new-sysdm_db_page_info-system-function-returns-page-information-ctp-20"></a>Nueva función del sistema sys.dm_db_page_info que devuelve información de la página (CTP 2.0)
 
 `sys.dm_db_page_info(database_id, file_id, page_id, mode)` devuelve información sobre una página de una base de datos. La función devuelve una fila que contiene la información de encabezado en la página, incluidos `object_id`, `index_id` y `partition_id`. Esta función reemplaza la necesidad de usar `DBCC PAGE` en la mayoría de los casos. 
 

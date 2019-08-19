@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a4811c1f41c4c8b9a566dc13b3de713576b4980d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1e8825336edd4e55812f6037bbb4479a3b225e3f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952626"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028730"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Implementación de un grupo de disponibilidad Always On de SQL Server en un clúster de Kubernetes
 
@@ -36,7 +36,7 @@ En Kubernetes, la implementación incluye un operador de SQL Server, los conten
 > [!NOTE]
 > Puede usar cualquier tipo de clúster de Kubernetes. Para crear un clúster de Kubernetes en Azure Kubernetes Service (AKS), consulte [Creación de un clúster de AKS](https://docs.microsoft.com/azure/aks/create-cluster).
 >
-> Use la versión más reciente de Kubernetes. La versión específica depende de su suscripción y región. Consulte [Versiones de Kubernetes compatibles en AKS](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions).  
+> Use la versión más reciente de Kubernetes. La versión específica depende de su suscripción y región. Consulte [Versiones de Kubernetes compatibles en AKS](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions).  
 >
 > El siguiente script crea un clúster de Kubernetes de cuatro nodos en Azure. Antes de ejecutar el script, reemplace `<latest version>` por la última versión disponible. Por ejemplo, `1.12.5`.
 >

@@ -32,10 +32,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "68122177"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
@@ -340,7 +340,7 @@ WHERE phone NOT LIKE '612%'
 ORDER by LastName;  
 ```  
   
-### <a name="g-using-like-with-the--wildcard-character"></a>G. Usar LIKE con el carácter comodín _  
+### <a name="g-using-like-with-the-_-wildcard-character"></a>G. Usar LIKE con el carácter comodín _  
  En el siguiente ejemplo se buscan todos los números de teléfono cuyo código de área empieza por `6` y termina por `2` de la tabla `DimEmployee`. El carácter comodín % se incluye al final del patrón de búsqueda para que coincida con todos los caracteres siguientes en el valor de la columna phone.  
   
 ```sql  

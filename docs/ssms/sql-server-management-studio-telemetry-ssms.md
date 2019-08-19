@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c79a2c3da9ee7f877c3d13bf17ca7912117df883
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82b4af04963c5161cbea300054d19c61b61ec34a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264698"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028820"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SSMS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,4 +64,4 @@ Para optar por recibir o no recibir la recopilación de datos de uso de SSMS:
 ## <a name="see-also"></a>Vea también
 
 - [Configuración de la recopilación de datos de uso y diagnóstico para SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
-- [Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server](http://msdn.microsoft.com/library/mt743085.aspx)
+- [Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server](https://msdn.microsoft.com/library/mt743085.aspx)

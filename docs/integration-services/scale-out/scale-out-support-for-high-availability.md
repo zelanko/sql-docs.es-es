@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: a7c0e9b1d3315edb314cc95980fec8e18d544d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064560"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028754"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
@@ -73,7 +73,7 @@ Actualice el archivo de configuración del Servicio principal de escalabilidad h
 
 El registro en SSISDB se realiza mediante el inicio de sesión **##MS_SSISLogDBWorkerAgentLogin##** , cuya contraseña se genera automáticamente. Para que el registro funcione para todas las réplicas de SSISDB, haga lo siguiente:
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1. Cambio de la contraseña de **##MS_SSISLogDBWorkerAgentLogin##** en la instancia de SQL Server principal
+### <a name="61-change-the-password-of-ms_ssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1. Cambio de la contraseña de **##MS_SSISLogDBWorkerAgentLogin##** en la instancia de SQL Server principal
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2. Agregar el inicio de sesión a la instancia secundaria de SQL Server
 
@@ -98,7 +98,7 @@ Llame al procedimiento almacenado `[catalog].[update_logdb_info]` con los siguie
 
 En máquinas virtuales de Azure, este paso de configuración requiere pasos adicionales. Una explicación completa de estos conceptos y pasos queda fuera del ámbito de este artículo.
 
-1.  Tendrá que configurar un dominio de Azure. Los clústeres de conmutación por error de Windows Server requieren que todos los equipos del clúster sean miembros del mismo dominio. Para obtener más información, vea [Habilitación de Azure Active Directory Domain Services mediante Azure Portal](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
+1.  Tendrá que configurar un dominio de Azure. Los clústeres de conmutación por error de Windows Server requieren que todos los equipos del clúster sean miembros del mismo dominio. Para obtener más información, vea [Habilitación de Azure Active Directory Domain Services mediante Azure Portal](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
 
 2. Tendrá que configurar un equilibrador de carga de Azure. Es un requisito para la escucha de grupo de disponibilidad. Para más información, vea [Tutorial: equilibrar la carga de tráfico interno de las máquinas virtuales con Load Balancer Básico mediante Azure Portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 

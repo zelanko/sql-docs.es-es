@@ -9,12 +9,12 @@ ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702875"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611420"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Cómo montar S3 para los niveles de HDFS en un clúster de macrodatos
 
@@ -33,7 +33,7 @@ En las secciones siguientes se proporciona un ejemplo de cómo configurar los ni
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>Establecer la variable de entorno para las credenciales de clave de acceso
 
-Abra un símbolo del sistema en un equipo cliente que pueda acceder al clúster de macrodatos. Establezca una variable de entorno con el siguiente formato. Tenga en cuenta que las credenciales deben estar en una lista separada por comas. El comando "SET" se usa en Windows. Si usa Linux, use "Export" en su lugar.
+Abra un símbolo del sistema en un equipo cliente que pueda acceder al clúster de macrodatos. Establezca una variable de entorno con el siguiente formato. Tenga en cuenta que las credenciales deben estar en una lista separada por comas. El comando "set" se usa en Windows. Si usa Linux, use "Export" en su lugar.
 
    ```text
     set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
@@ -61,7 +61,7 @@ Ahora que ha preparado un archivo de credenciales con claves de acceso, puede in
    
 1. Establezca la variable de entorno MOUNT_CREDENTIALS siguiendo las instrucciones anteriores.
 
-1. Monte el almacenamiento de HDFS remoto en Azure mediante el comando **azdata bdc storage-pool mount create**. Reemplace los valores de marcador de posición antes de ejecutar el siguiente comando:
+1. Monte el almacenamiento de HDFS remoto en S3 mediante el **almacenamiento de BDC de azdata creación del grupo de montaje**. Reemplace los valores de marcador de posición antes de ejecutar el siguiente comando:
 
    ```bash
    azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
@@ -70,7 +70,7 @@ Ahora que ha preparado un archivo de credenciales con claves de acceso, puede in
    > [!NOTE]
    > El comando mount create es asincrónico. En este momento, no hay ningún mensaje que indique si el montaje se ha realizado correctamente. Consulte la sección sobre el [estado](#status) para comprobar el estado de los montajes.
 
-Si se ha montado correctamente, debería poder consultar los datos de HDFS y ejecutar trabajos de Spark en ellos. Aparecerá en el HDFS del clúster de macrodatos en la ubicación que especifique `--mount-path`.
+Si se ha montado correctamente, debería poder consultar los datos de HDFS y ejecutar trabajos de Spark en ellos. Aparecerán en el HDFS del clúster de macrodatos en la ubicación que especifique `--mount-path`.
 
 ## <a id="status"></a> Obtención del estado de los montajes
 

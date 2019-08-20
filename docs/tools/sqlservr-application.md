@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1778f9b3f6b4662de36e33e3ae7974f4eef4dd82
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1feb0cfe509f4dec4e77076021757045628e2e7a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771025"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028973"
 ---
 # <a name="sqlservr-application"></a>sqlservr (aplicación)
 
@@ -84,8 +84,8 @@ Los parámetros siguientes están obsoletos y no se admiten en [!INCLUDE[ssCurre
 
 |Parámetro | Más información|
 |:-----|:-----|
-|**-h** | En versiones anteriores de instancias de 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espacio de direcciones de memoria virtual para los metadatos de Agregar memoria sin interrupción cuando AWE está habilitado. Se admite [!INCLUDE[sssql14](../includes/sssql14-md.md)]a través de. Para obtener más información, vea [Características de SQL Server en desuso y descontinuadas en SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).|
-|**-g** | *memoria_para_reserva*<br/><br>Se aplica a versiones anteriores de las instancias de 32 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bits de. Se admite [!INCLUDE[sssql14](../includes/sssql14-md.md)]a través de. Especifica un número entero de megabytes (MB) de memoria que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deja disponibles para las asignaciones de memoria en el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pero fuera del bloque de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|
+|**-h** | En versiones anteriores de instancias de 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para reservar espacio de direcciones de memoria virtual para los metadatos de Agregar memoria sin interrupción cuando AWE está habilitado. Se admite [!INCLUDE[sssql14](../includes/sssql14-md.md)]a través de. Para obtener más información, vea [Características de SQL Server en desuso y descontinuadas en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
+|**-g** | *memoria_para_reserva*<br/><br>Se aplica a versiones anteriores de las instancias de 32 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]bits de. Se admite [!INCLUDE[sssql14](../includes/sssql14-md.md)]a través de. Especifica un número entero de megabytes (MB) de memoria que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deja disponibles para las asignaciones de memoria en el proceso de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , pero fuera del bloque de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información, consulte [la documentación de SQL Server 2014 sobre las opciones de configuración de memoria del servidor](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Consulte también

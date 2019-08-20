@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4516effe7308386def1aa7cca885f9fa48547ec5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: c4d5684850dff9157a56435547e48b5446dd929c
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889736"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494554"
 ---
 # <a name="upgrade-reports-ssrs"></a>Actualizar informes (SSRS)
 
@@ -136,8 +136,8 @@ Los archivos de definición de informe (.rdl) se actualizan automáticamente de 
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Cambios substanciales de SQL Server Reporting Services en SQL Server 2016](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
-[Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
+[Cambios substanciales de SQL Server Reporting Services en SQL Server 2016](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
+[Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Funcionalidad de SQL Server Reporting Services no incluida en SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Elementos de informe personalizados](../../reporting-services/custom-report-items/custom-report-items.md)   
 [Actualización de una base de datos del servidor de informes](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  

@@ -1,22 +1,22 @@
 ---
 title: Actualización a una nueva versión
 titleSuffix: SQL Server big data clusters
-description: Aprenda a actualizar clústeres de macrodatos de SQL Server 2019 (versión preliminar) a una nueva versión.
+description: Obtenga información sobre cómo [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] actualizar (versión preliminar) a una nueva versión.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: 867729b7d638960a2dbf2cb5f7544fecf698c94d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731089"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652332"
 ---
-# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Cómo actualizar clústeres de macrodatos de SQL Server
+# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Cómo actualizar[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -72,8 +72,8 @@ azdata --version
 
 ## <a name="install-the-new-release"></a>Instalar la nueva versión
 
-Después de quitar el clúster de macrodatos anterior e instalar la versión de **azdata** más reciente, implemente el nuevo clúster de macrodatos con las instrucciones de implementación actuales. Para obtener más información, vea [Cómo implementar clústeres de macrodatos SQL Server en Kubernetes](deployment-guidance.md). Luego, restaure las bases de datos o los archivos necesarios.
+Después de quitar el clúster de macrodatos anterior e instalar la versión de **azdata** más reciente, implemente el nuevo clúster de macrodatos con las instrucciones de implementación actuales. Para obtener más información, consulte [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] implementación en Kubernetes](deployment-guidance.md). Luego, restaure las bases de datos o los archivos necesarios.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos, vea [¿Qué son los clústeres de macrodatos de SQL Server?](big-data-cluster-overview.md)
+Para obtener más información sobre los clústeres de macrodatos, vea [Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md).

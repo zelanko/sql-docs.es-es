@@ -5,22 +5,22 @@ description: Artículo de referencia de los comandos de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 24a72683c423661a2981e5a16941bcbc180ac6d1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 33cc3070647c58e6ae57c8bff3d587a76ae0a28d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894003"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653097"
 ---
 # <a name="azdata"></a>azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En el siguiente artículo se proporciona una referencia de la herramienta **azdata** para [clústeres de macrodatos de SQL Server 2019 (versión preliminar)](big-data-cluster-overview.md). Para más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).
+En el siguiente artículo se proporciona una referencia para la herramienta **azdata** de [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar)](big-data-cluster-overview.md). Para obtener más información sobre cómo instalar la herramienta **azdata** , vea [instalar azdata para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).
 
 ## <a name="commands"></a>Comandos:
 |     |     |
@@ -59,12 +59,12 @@ Usuario de la cuenta. Si no quiere usar este argumento, puede establecer la vari
 #### `--controller-endpoint -e`
 Punto de conexión del controlador de clúster "https://host:port". Si no quiere usar este argumento, puede usar el archivo kubeconfig en el equipo; Asegúrese de que la configuración se encuentra en la ubicación <user home>predeterminada de/.Kube/config o use el valor de KUBECONFIG env var.
 #### `--accept-eula -a`
-¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en "yes". 
+¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en “yes”. 
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Sirve para aumentar el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Sirve para mostrar este mensaje de ayuda y salir.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
@@ -83,9 +83,9 @@ azdata logout
 ```
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Sirve para aumentar el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Sirve para mostrar este mensaje de ayuda y salir.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
@@ -95,4 +95,4 @@ Aumenta el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).
+Para obtener más información sobre cómo instalar la herramienta **azdata** , vea [instalar azdata para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).

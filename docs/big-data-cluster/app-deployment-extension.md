@@ -1,31 +1,31 @@
 ---
 title: Extensión de implementación de aplicaciones
 titleSuffix: SQL Server big data clusters
-description: Implemente un script de Python o R como una aplicación en un clúster de macrodatos de SQL Server 2019 (versión preliminar).
+description: Implemente un script de Python o R como una [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] aplicación en (versión preliminar).
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 49a59650c406e3b48394da45ad0eeb4589fc4374
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958912"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653622"
 ---
-# <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Cómo usar VS Code para implementar aplicaciones en clústeres de macrodatos de SQL Server
+# <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Cómo usar Visual Studio Code para implementar aplicaciones en[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se explica cómo implementar aplicaciones en un clúster de macrodatos de SQL Server con Visual Studio Code con la extensión de implementación de aplicaciones. Esta capacidad se ha presentado en CTP 2.3. 
+En este artículo se describe cómo implementar aplicaciones en un SQL Server clúster de macrodatos con Microsoft Visual Studio código con la extensión de implementación de la aplicación. Esta capacidad se ha presentado en CTP 2.3. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
-- [Visual Studio Code](https://code.visualstudio.com/).
-- [Clúster de macrodatos de SQL Server](big-data-cluster-overview.md) CTP 2.3 o posterior.
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [SQL Server clúster de Big Data](big-data-cluster-overview.md) CTP 2,3 o posterior
 
 ## <a name="capabilities"></a>Capabilities
 
@@ -42,13 +42,13 @@ Esta extensión admite las siguientes tareas en Visual Studio Code:
 
 En las secciones siguientes se explica el proceso de instalación y se proporciona información general sobre el funcionamiento de la extensión. 
 
-### <a name="install"></a>Instalar
+### <a name="install"></a>Install
 
-En primer lugar, instale la extensión de implementación de aplicaciones en VS Code:
+En primer lugar, instale la extensión de implementación de aplicaciones en Visual Studio Code:
 
-1. Descargue la [extensión de implementación de aplicaciones](https://aka.ms/app-deploy-vscode) para instalarla como parte de VS Code.
+1. Descargue la [extensión de implementación](https://aka.ms/app-deploy-vscode) de la aplicación para instalar la extensión como parte de Visual Studio Code.
 
-1. Inicie VS Code y vaya a la barra lateral Extensiones.
+1. Inicie Visual Studio Code y navegue hasta la barra lateral de extensiones.
 
 1. Haga clic en el menú contextual `…` de la parte superior de la barra lateral y seleccione `Install from vsix`.
 
@@ -56,29 +56,48 @@ En primer lugar, instale la extensión de implementación de aplicaciones en VS 
 
 1. Busque el archivo `sqlservbdc-app-deploy.vsix` que ha descargado y selecciónelo para instalarlo.
 
-Una vez instalada la extensión de implementación de aplicaciones de clúster de macrodatos de SQL Server, se le pide que vuelva a cargar VS Code. Ahora debe ver el explorador de aplicaciones de clúster de macrodatos de SQL Server en la barra lateral de VS Code.
+Una vez instalada la extensión de implementación de la aplicación de clúster de Big Data SQL Server, se le pedirá que vuelva a cargar Visual Studio Code. Ahora debería ver el SQL Server el explorador de aplicaciones de BDC en la barra lateral Visual Studio Code.
 
 ### <a name="app-explorer"></a>Explorador de aplicaciones
 
 Haga clic en la extensión de la barra lateral para cargar un panel lateral que muestra el explorador de aplicaciones. En la siguiente captura de pantalla de ejemplo del explorador de aplicaciones no se muestra ninguna aplicación ni especificación de aplicación como disponible:
 
-<img src="media/vs-extension/app_explorer.png" width=350px></img>
-<!--![App Explorer](media/vs-extension/app_explorer.png)-->
+![Explorador de aplicaciones](media/vs-extension/app_explorer.png)
 
-#### <a name="new-connection"></a>Nueva conexión
+#### <a name="connect-to-cluster"></a>Conexión al clúster
 
 Para conectarse al punto de conexión del clúster, use uno de los métodos siguientes:
 
 - Haga clic en la barra de estado de la parte inferior que indica `SQL Server BDC Disconnected`.
-- O haga clic en el botón `New Connection` de la parte superior con la flecha que apunta a una puerta.
+- O haga clic en el botón `Connect to Cluster` de la parte superior con la flecha que apunta a una puerta.
 
-   ![Nueva conexión](media/vs-extension/connect_to_cluster.png)
+Visual Studio Code solicita el extremo, el nombre de usuario y la contraseña adecuados.
 
-VS Code pide el punto de conexión, el nombre de usuario y la contraseña adecuados. Si se proporcionan las credenciales y el punto de conexión de la aplicación correctos, VS Code notifica que se ha conectado al clúster y que se van a ver todas las aplicaciones implementadas rellenadas en la barra lateral. Si se conecta correctamente, el punto de conexión y el nombre de usuario se guardan en `./sqldbc` como parte del perfil de usuario. Nunca se guardan contraseñas ni tokens. Al volver a iniciar sesión, el símbolo del sistema se rellena previamente con el host y el nombre de usuario guardados, pero siempre hay que escribir una contraseña. Si quiere conectarse a otro punto de conexión del clúster, simplemente vuelva a hacer clic en `New Connection`. La conexión se cierra automáticamente si cierra VS Code o si abre otra área de trabajo y necesita volver a conectarse.
+El extremo que se va a `Cluster Management Service` conectar es el punto de conexión con el puerto 30080.
+
+También puede buscar este punto de conexión desde la línea de comandos hasta 
+
+```
+azdata bdc endpoint list
+```
+
+Una de las otras formas de obtener esta información es hacer clic con el botón secundario en **administrar** en el servidor en Azure Data Studio donde encontrará los puntos de conexión de los servicios enumerados.
+
+![Punto final de ADS](media/vs-extension/ads_end_point.png)
+
+Una vez que haya encontrado el extremo que se va a usar, conéctese al clúster.
+
+![Nueva conexión](media/vs-extension/connect_to_cluster.png)
+
+ Si tiene las credenciales correctas y el punto de conexión de la aplicación, Visual Studio Code le notifica que se ha conectado al clúster y que verá todas las aplicaciones implementadas que se hayan rellenado en la barra lateral. Si se conecta correctamente, el punto de conexión y el nombre de usuario se guardan en `./sqldbc` como parte del perfil de usuario. Nunca se guardan contraseñas ni tokens. Al volver a iniciar sesión, el símbolo del sistema se rellena previamente con el host y el nombre de usuario guardados, pero siempre hay que escribir una contraseña. Si quiere conectarse a otro punto de conexión del clúster, simplemente vuelva a hacer clic en `New Connection`. La conexión se cerrará automáticamente si cierra Visual Studio Code o si abre otro área de trabajo y necesita volver a conectarse.
 
 ### <a name="app-template"></a>Plantilla de aplicación
 
-Para implementar una nueva aplicación a partir de alguna de las plantillas, haga clic en el botón `New App Template` del panel `App Specifications`, donde se le pide el nombre, el runtime y la ubicación en la que quiere colocar la nueva aplicación en el equipo local. Se recomienda colocarla en el área de trabajo actual de VS Code para poder usar toda la funcionalidad de la extensión, aunque se puede colocar en cualquier lugar del sistema de archivos local.
+Debe abrir el *área de trabajo* en Visual Studio Code donde va a guardar los artefactos de la aplicación.
+
+Para implementar una nueva aplicación a partir de alguna de las plantillas, haga clic en el botón `New App Template` del panel `App Specifications`, donde se le pide el nombre, el runtime y la ubicación en la que quiere colocar la nueva aplicación en el equipo local. El nombre y la versión que proporcione deben ser una etiqueta de DNS-1035 y deben constar de caracteres alfanuméricos en minúsculas o '-', empezar con un carácter alfabético y terminar con un carácter alfanumérico.
+
+Se recomienda colocarlo en el área de trabajo Visual Studio Code actual para que pueda usar la funcionalidad completa de la extensión, pero puede colocarlo en cualquier lugar del sistema de archivos local.
 
 ![Plantilla de nueva aplicación](media/vs-extension/new_app_template.png)
 
@@ -86,13 +105,16 @@ Una vez hecho, se aplica scaffolding a una plantilla de nueva aplicación en la 
 
 ![Plantilla de aplicación cargada](media/vs-extension/loading_app_template.png)
 
-La plantilla es una aplicación `Hello World` sencilla dispuesta de la siguiente manera:
+La plantilla es una aplicación `helloworld` sencilla que se dispone como se indica a continuación en el panel especificaciones de la aplicación:
 
 - **spec.yaml**
    - Indica al clúster cómo implementar la aplicación
 - **run-spec.yaml**
    - Indica al clúster cómo quiere denominar a la aplicación
-- **handler.py**
+
+El código fuente de la aplicación se encontraba en la carpeta del área de trabajo.
+
+- **nombre del archivo de origen**
    - Este es el archivo de código fuente especificado por `src` en `spec.yaml`
    - Tiene una función denominada `handler` que se considera el `entrypoint` de la aplicación, como se muestra en `spec.yaml`. Toma una entrada de cadena denominada `msg` y devuelve una salida de cadena de nombre `out`. Se especifican en los elementos `inputs` y `outputs` de `spec.yaml`.
 
@@ -129,7 +151,7 @@ Puede ver todas las aplicaciones que ha implementado en la barra lateral con la 
   - swagger
   - detalles
 
-Si hace clic en `Links`, ve que puede acceder al `swagger.json` de la aplicación implementada, para poder escribir sus propios clientes que llaman a la aplicación:
+Si hace clic `Links`en, verá que puede acceder a la `swagger.json` aplicación implementada, para que pueda escribir sus propios clientes que llamen a la aplicación:
 
 ![Swagger](media/vs-extension/swagger.png)
 
@@ -145,7 +167,7 @@ Especifique cualquier cadena que quiera en lugar de `hello` y ejecútela de nuev
 
 ![Obtención de especificación de ejecución](media/vs-extension/get_run_spec.png)
 
-Una vez que tenga una y la haya editado a su entera satisfacción, ejecútela. VS Code devuelve la información adecuada cuando la aplicación termina de ejecutarse:
+Una vez que tenga una y la haya editado a su entera satisfacción, ejecútela. Visual Studio Code devuelve la información adecuada cuando la aplicación ha terminado de ejecutarse:
 
 ![Salida de aplicación](media/vs-extension/app_output.png)
 
@@ -165,7 +187,7 @@ Al llamar a una aplicación implementada, si algún parámetro de entrada es int
 - Matriz
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
-- Objeto
+- Object
     - `inputs:`
         - `x: {A: 1, B: 2, C: 3}`
 
@@ -177,9 +199,9 @@ Para eliminar una aplicación, simplemente haga clic en el botón de papelera qu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Averigüe cómo integrar aplicaciones implementadas en clústeres de macrodatos de SQL Server en aplicaciones propias en [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md). También puede ver los ejemplos adicionales de [Ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy) para probar la extensión.
+Consulte cómo integrar aplicaciones implementadas [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en en sus propias aplicaciones en [consumir aplicaciones en clústeres](big-data-cluster-consume-apps.md) de macrodatos para obtener más información. También puede ver los ejemplos adicionales de [Ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy) para probar la extensión.
 
-Para obtener más información sobre los clústeres de macrodatos de SQL Server, vea [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
+Para obtener más información [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]acerca de, vea [¿Qué es [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
 
 
 Nuestro objetivo es que esta extensión le resulte útil y le agradecemos sus comentarios. Envíelos al [equipo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://aka.ms/sqlfeedback).

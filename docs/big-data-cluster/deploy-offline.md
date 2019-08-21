@@ -5,22 +5,22 @@ description: Aprenda a realizar una implementación sin conexión de un clúster
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd8b3128fc11037a5ade494813611d473c995f8f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419369"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652366"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Realización de una implementación sin conexión de un clúster de macrodatos de SQL Server
 
-En este artículo se explica cómo realizar una implementación sin conexión de un clúster de macrodatos de SQL Server 2019 (versión preliminar). Los clústeres de macrodatos deben tener acceso a un repositorio de Docker desde el que extraer imágenes de contenedor. Una instalación sin conexión es aquella en la que las imágenes necesarias se encuentran en un repositorio privado de Docker. Ese repositorio privado se usa como origen de imágenes de una nueva implementación.
+En este artículo se describe cómo realizar una implementación sin conexión [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]de un. Los clústeres de macrodatos deben tener acceso a un repositorio de Docker desde el que extraer imágenes de contenedor. Una instalación sin conexión es aquella en la que las imágenes necesarias se encuentran en un repositorio privado de Docker. Ese repositorio privado se usa como origen de imágenes de una nueva implementación.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 - Motor de Docker 1.8 o versiones posteriores en cualquier distribución de Linux admitida o Docker para Mac y Windows. Para obtener más información, consulte [Instalar Docker](https://docs.docker.com/engine/installation/).
 
@@ -171,4 +171,4 @@ La implementación pide el nombre de usuario y la contraseña de Docker, o bien 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre las implementaciones de clústeres de macrodatos, vea [Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md).
+Para obtener más información sobre las implementaciones de clúster de Big Data, consulte [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md).

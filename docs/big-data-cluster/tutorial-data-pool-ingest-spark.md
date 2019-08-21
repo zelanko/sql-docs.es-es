@@ -1,26 +1,26 @@
 ---
 title: Ingestión de datos con trabajos de Spark
 titleSuffix: SQL Server big data clusters
-description: En este tutorial, se muestra cómo ingerir datos en el grupo de datos de un clúster de macrodatos de SQL Server 2019 (versión preliminar) con trabajos de Spark en Azure Data Studio.
+description: En este tutorial se muestra cómo introducir datos en el grupo de datos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] de mediante trabajos de Spark en Azure Data Studio.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957816"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653293"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Ingestión de datos en un grupo de datos de SQL Server con trabajos de Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este tutorial, se muestra cómo usar trabajos de Spark para cargar datos en el [grupo de datos](concept-data-pool.md) de un clúster de macrodatos de SQL Server 2019 (versión preliminar). 
+En este tutorial se muestra cómo usar trabajos de Spark para cargar datos en el [Grupo](concept-data-pool.md) de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]datos de. 
 
 En este tutorial, aprenderá a:
 

@@ -5,16 +5,16 @@ description: Aprenda a personalizar una implementación de clúster de macrodato
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 02e922ca909cd863d496f9c49a60dd986df8bedb
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969491"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652390"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Configuración de opciones de implementación para clústeres de macrodatos
 
@@ -420,4 +420,4 @@ azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.j
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre el uso de archivos de configuración en implementaciones de clústeres de macrodatos, vea [Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md#configfile).
+Para obtener más información sobre el uso de archivos de configuración en implementaciones de clúster de Big Data, consulte [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md#configfile).

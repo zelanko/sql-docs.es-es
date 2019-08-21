@@ -5,16 +5,16 @@ description: Artículo de referencia sobre los comandos de azdata bdc spark sess
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9bf2cdca204598d72f511364f59f45f551298703
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 1573c5b95eeaf314db08acc60d6fe5e1e2c4b753
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811293"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653426"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
@@ -85,15 +85,15 @@ Lista de pares nombre-valor que contienen los valores de configuración de Spark
 Tiempo de espera de sesión inactivo en segundos.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Sirve para aumentar el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Sirve para mostrar este mensaje de ayuda y salir.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
 Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Sirve para aumentar el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-session-list"></a>azdata bdc spark session list
 Enumere todas las sesiones activas en Spark.
 ```bash
@@ -106,15 +106,15 @@ azdata bdc spark session list
 ```
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Sirve para aumentar el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Sirve para mostrar este mensaje de ayuda y salir.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
 Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Sirve para aumentar el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-session-info"></a>azdata bdc spark session info
 Obtiene la información de una sesión de Spark activa con el identificador especificado.  El identificador de sesión se devuelve desde “spark session create”.
 ```bash
@@ -131,15 +131,15 @@ azdata bdc spark session info --session-id 0
 Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Sirve para aumentar el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Sirve para mostrar este mensaje de ayuda y salir.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
 Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Sirve para aumentar el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-session-log"></a>azdata bdc spark session log
 Obtiene las entradas del registro de una sesión de Spark activa con el identificador especificado.  El identificador de sesión se devuelve desde “spark session create”.
 ```bash
@@ -156,15 +156,15 @@ azdata bdc spark session log --session-id 0
 Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Sirve para aumentar el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Sirve para mostrar este mensaje de ayuda y salir.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
 Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Sirve para aumentar el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-session-state"></a>azdata bdc spark session state
 Obtiene el estado de una sesión de Spark activa con el identificador especificado.  El identificador de sesión se devuelve desde “spark session create”.
 ```bash
@@ -181,15 +181,15 @@ azdata bdc spark session state --session-id 0
 Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Sirve para aumentar el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Sirve para mostrar este mensaje de ayuda y salir.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
 Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Sirve para aumentar el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-spark-session-delete"></a>azdata bdc spark session delete
 Este procedimiento elimina una sesión de Spark interactiva. El identificador de sesión se devuelve desde “spark session create”.
 ```bash
@@ -206,16 +206,16 @@ azdata bdc spark session delete --session-id 0
 Número de identificador de sesión de Spark.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Sirve para aumentar el nivel de detalle de registro para mostrar todos los registros de depuración.
+Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Sirve para mostrar este mensaje de ayuda y salir.
+Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
 Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Sirve para aumentar el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata** , vea [instalar azdata para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).

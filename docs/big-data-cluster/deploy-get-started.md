@@ -1,26 +1,29 @@
 ---
 title: Introducción
 titleSuffix: SQL Server big data clusters
-description: Conozca los pasos y recursos para implementar clústeres de macrodatos de SQL Server 2019 (versión preliminar).
+description: Conozca los pasos y los recursos para la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] implementación (versión preliminar).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7d6d1765809092184697d0d2d67b532c31606820
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 323394f9590551528ce9e9dfdf1fb97c7d1c2225
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470910"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653391"
 ---
-# <a name="get-started-with-sql-server-big-data-clusters"></a>Introducción a los clústeres de macrodatos de SQL Server
+# <a name="get-started-with-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Introducción[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se proporciona información general sobre cómo implementar [un clúster de macrodatos de SQL Server 2019 (versión preliminar)](big-data-cluster-overview.md). Está diseñado para darle una idea sobre los conceptos y proporcionar un marco para comprender los demás artículos de implementación de esta sección. Los pasos de implementación específicos varían en función de las opciones de plataforma para el cliente y el servidor.
+En este artículo se proporciona información general sobre cómo [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)implementar. Está diseñado para darle una idea sobre los conceptos y proporcionar un marco para comprender los demás artículos de implementación de esta sección. Los pasos de implementación específicos varían en función de las opciones de plataforma para el cliente y el servidor.
+
+> [!TIP]
+> Para obtener rápidamente un entorno con Kubernetes y un clúster de Big Data implementado para ayudarle a aumentar sus capacidades, use uno de los scripts de ejemplo señalados en [la sección scripts](#scripts). Después de la implementación, para administrar el clúster, use las [herramientas de cliente](#tools) de la sección siguiente.
 
 ## <a id="tools"></a> Herramientas de cliente
 
@@ -39,9 +42,9 @@ Se requieren otras herramientas para distintos escenarios. Cada artículo debe e
 
 Los clústeres de macrodatos se implementan como una serie de contenedores interrelacionados que se administran en [Kubernetes](https://kubernetes.io/docs/home). Puede hospedar Kubernetes de varias maneras. Incluso si ya tiene un entorno de Kubernetes existente, debe revisar los requisitos relacionados con los clústeres de macrodatos.
 
-- **Azure Kubernetes Service (AKS)** : AKS le permite implementar un clúster de Kubernetes administrado en Azure. Usted solo administra y mantiene los nodos del agente. Con AKS, no tiene que aprovisionar su propio hardware para el clúster. También es fácil usar un [script de Python](quickstart-big-data-cluster-deploy.md) o un [cuaderno de implementación](deploy-notebooks.md) para crear el clúster de AKS e implementar el clúster de macrodatos en un solo paso. Para obtener más información sobre la configuración de AKS para la implementación de un clúster de macrodatos, consulte [Configuración de Azure Kubernetes Service para las implementaciones de clústeres de macrodatos de SQL Server 2019 (versión preliminar)](deploy-on-aks.md).
+- **Azure Kubernetes Service (AKS)** : AKS le permite implementar un clúster de Kubernetes administrado en Azure. Usted solo administra y mantiene los nodos del agente. Con AKS, no tiene que aprovisionar su propio hardware para el clúster. También es fácil usar un [script de Python](quickstart-big-data-cluster-deploy.md) o un [cuaderno de implementación](deploy-notebooks.md) para crear el clúster de AKS e implementar el clúster de macrodatos en un solo paso. Para obtener más información sobre la configuración de AKS para una implementación de clúster de Big Data, consulte [configuración de Azure Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Service for Deployments](deploy-on-aks.md).
 
-- **Varias máquinas**: También puede implementar Kubernetes en varias máquinas Linux, que podrían ser servidores físicos o máquinas virtuales. La herramienta [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) se puede usar para crear el clúster de Kubernetes. Puede usar un [script de Bash](deployment-script-single-node-kubeadm.md) para automatizar este tipo de implementación. Este método funciona bien si ya tiene una infraestructura existente que quiere usar para el clúster de macrodatos. Para obtener más información sobre el uso de implementaciones de **kubeadm** con clústeres de macrodatos, consulte [Configuración de Kubernetes en varias máquinas para las implementaciones de clústeres de macrodatos de SQL Server 2019 (versión preliminar)](deploy-with-kubeadm.md).
+- **Varias máquinas**: También puede implementar Kubernetes en varias máquinas Linux, que podrían ser servidores físicos o máquinas virtuales. La herramienta [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) se puede usar para crear el clúster de Kubernetes. Puede usar un [script de Bash](deployment-script-single-node-kubeadm.md) para automatizar este tipo de implementación. Este método funciona bien si ya tiene una infraestructura existente que quiere usar para el clúster de macrodatos. Para más información sobre el uso de implementaciones de **kubeadm** con clústeres de macrodatos, consulte [configuración de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Kubernetes en varias máquinas para implementaciones](deploy-with-kubeadm.md).
 
 - **Minikube**: Minikube le permite ejecutar Kubernetes localmente en un solo servidor. Es una buena opción si está probando clústeres de macrodatos o necesita usarlo en un escenario de prueba o desarrollo. Para obtener más información sobre cómo utilizar Minikube, vea la [documentación de Minikube](https://kubernetes.io/docs/setup/minikube/). Para conocer los requisitos específicos del uso de Minikube con clústeres de macrodatos, consulte [Configuración de Minikube para implementaciones de clústeres de macrodatos de SQL Server 2019](deploy-on-minikube.md).
 
@@ -55,7 +58,8 @@ Después de configurar Kubernetes, implemente un clúster de macrodatos con el c
 
 - En el caso de una instalación completamente desatendida, puede pasar todas las demás configuraciones en variables de entorno. Para obtener más información, consulte [implementaciones desatendidas](deployment-guidance.md#unattended).
 
-## <a name="deployment-scripts"></a>Scripts de implementación
+
+## <a id="scripts"></a>Scripts de implementación
 
 Los scripts de implementación pueden ayudar a implementar clústeres de Kubernetes y de macrodatos en un solo paso. También suelen proporcionar valores predeterminados para la configuración del clúster de macrodatos. Puede personalizar cualquier script de implementación creando una versión que configure de forma diferente la implementación del clúster de macrodatos.
 

@@ -1,26 +1,26 @@
 ---
 title: Restaurar una base de datos
 titleSuffix: SQL Server big data clusters
-description: En este artículo se explica cómo restaurar una base de datos en la instancia maestra de un clúster de macrodatos de SQL Server 2019 (versión preliminar).
+description: En este artículo se muestra cómo restaurar una base de datos en la instancia [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]maestra de un.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49cc2cbb4ede2326bf774b5f39968ad4b00ed991
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969487"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652233"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Restauración de una base de datos en la instancia maestra del clúster de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe cómo restaurar una base de datos existente en la instancia maestra de un clúster de macrodatos de SQL Server 2019 (versión preliminar). El método recomendado consiste en seguir una estrategia de copia de seguridad, copia y restauración.
+En este artículo se describe cómo restaurar una base de datos existente en la instancia [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]maestra de un. El método recomendado consiste en seguir una estrategia de copia de seguridad, copia y restauración.
 
 ## <a name="backup-your-existing-database"></a>Copia de seguridad de la base de datos existente
 
@@ -112,6 +112,6 @@ GO
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos de SQL Server, consulte la siguiente introducción:
+Para obtener más información acerca [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]de, consulte la información general siguiente:
 
-- [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
+- [¿Qué [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]son?](big-data-cluster-overview.md)

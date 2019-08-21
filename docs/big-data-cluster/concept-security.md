@@ -1,22 +1,22 @@
 ---
 title: Conceptos de seguridad
 titleSuffix: SQL Server big data clusters
-description: En este artículo se describen los conceptos de seguridad del clúster de macrodatos de SQL Server 2019 (versión preliminar). Incluye la descripción de los puntos de conexión del clúster y la autenticación del clúster.
+description: En este artículo se describen los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]conceptos de seguridad de. Incluye la descripción de los puntos de conexión del clúster y la autenticación del clúster.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4e4441f0cc4f19d4784019408bfc5309a5734285
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958665"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652250"
 ---
-# <a name="security-concepts-for-sql-server-big-data-clusters"></a>Conceptos de seguridad para los clústeres de macrodatos de SQL Server
+# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Conceptos de seguridad para[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -82,7 +82,7 @@ La comunicación con servicios que no son de SQL dentro del clúster de macrodat
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos de SQL Server, consulte los siguientes recursos:
+Para obtener más información acerca [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]de, consulte los siguientes recursos:
 
-- [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
-- [Taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [¿Qué [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]son?](big-data-cluster-overview.md)
+- [Taller: Arquitectura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

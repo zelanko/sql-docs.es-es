@@ -5,22 +5,22 @@ description: En este artículo se describe el bloque de almacenamiento en un cl�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 58e6f16a088d6dc6c1fc6bd32297e7bd698acbbf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ead6c2ceeecbdfb3466bd4475978b139a0d2ddde
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958658"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652247"
 ---
-# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>¿Qué es el bloque de almacenamiento (clústeres de macrodatos de SQL Server)?
+# <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>¿Qué es el bloque de[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]almacenamiento ()?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe el papel del *bloque de almacenamiento de SQL Server* en un clúster de macrodatos de SQL Server 2019, versión preliminar. En las secciones siguientes se describen la arquitectura y la funcionalidad de un bloque de almacenamiento de SQL.
+En este artículo se describe el rol del *grupo de almacenamiento* de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]SQL Server en un. En las secciones siguientes se describen la arquitectura y la funcionalidad de un bloque de almacenamiento de SQL.
 
 ## <a name="storage-pool-architecture"></a>Arquitectura del bloque de almacenamiento
 
@@ -38,7 +38,7 @@ Los nodos de almacenamiento se encargan de varios aspectos:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos de SQL Server, consulte los recursos siguientes:
+Para obtener más información acerca [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]de, consulte los siguientes recursos:
 
-- [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
-- [Taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [¿Qué [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]son?](big-data-cluster-overview.md)
+- [Taller: Arquitectura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

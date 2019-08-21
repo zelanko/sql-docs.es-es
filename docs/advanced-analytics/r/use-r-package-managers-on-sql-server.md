@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1f6d828a7267ab2b4b1def17f9d1c6bf4a6018dc
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715022"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633618"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Usar administradores de paquetes de R para instalar paquetes de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ Este procedimiento usa RGui, pero puede usar RTerm o cualquier otra herramienta 
 
 ## <a name="install-a-package-using-rgui"></a>Instalación de un paquete con RGui
 
-1. [Determinar la ubicación de la biblioteca de instancias](../package-management/default-packages.md). Navegue hasta la carpeta donde están instaladas las herramientas de R. Por ejemplo, la ruta de acceso predeterminada para una instancia predeterminada de SQL Server 2017 es la siguiente:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Determinar la ubicación de la biblioteca de instancias](../package-management/r-package-information.md). Navegue hasta la carpeta donde están instaladas las herramientas de R. Por ejemplo, la ruta de acceso predeterminada para una instancia predeterminada de SQL Server 2017 es la siguiente:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. Haga clic con el botón secundario en RGui. exe y seleccione **Ejecutar como administrador**. Si no dispone de los permisos necesarios, póngase en contacto con el administrador de la base de datos y proporcione una lista de los paquetes que necesita.
 

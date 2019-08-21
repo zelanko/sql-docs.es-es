@@ -1,22 +1,22 @@
 ---
 title: Creación y exportación de modelos de aprendizaje automático de Spark con MLeap
 titleSuffix: SQL Server big data clusters
-description: Use PySpark para entrenar y crear modelos de aprendizaje automático con Spark en clústeres de macrodatos de SQL Server (versión preliminar). Exportar con MLeap y puntuar el modelo con Java en SQL Server.
+description: Use PySpark para entrenar y crear modelos de aprendizaje automático con Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en (versión preliminar). Exportar con MLeap y puntuar el modelo con Java en SQL Server.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 07/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 91c9dad3c87b9c43a611293a549f782b85beec5c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: bba570a4ac68cf5a4d1405d4152669ed9ed211a0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893966"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653412"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Creación, exportación y puntuación de modelos de aprendizaje automático de Spark en clústeres de macrodatos de SQL Server
+# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Crear, exportar y puntuar modelos de aprendizaje automático de Spark en[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 En el ejemplo siguiente se muestra cómo crear un modelo con los [ml de Spark](https://spark.apache.org/docs/latest/ml-guide.html), exportar el modelo a [MLeap](http://mleap-docs.combust.ml/)y puntuar el modelo en SQL Server con su [extensión de lenguaje Java](../language-extensions/language-extensions-overview.md). Esto se hace en el contexto de un clúster de macrodatos SQL Server 2019.
 
@@ -51,7 +51,7 @@ En este ejemplo, los datos de censo (**AdultCensusIncome. csv**) se usan para cr
 
    Este cuaderno contiene celdas con los comandos necesarios para esta sección del ejemplo.
 
-1. Abra el cuaderno en Azure Data Studio y ejecute cada bloque de código. Para obtener más información sobre cómo trabajar con cuadernos, consulte [uso de cuadernos en SQL Server versión preliminar de 2019](notebooks-guidance.md).
+1. Abra el cuaderno en Azure Data Studio y ejecute cada bloque de código. Para obtener más información sobre el trabajo con cuadernos, vea [Uso de los cuadernos en la versión preliminar de SQL Server 2019](notebooks-guidance.md).
 
 Los datos se leen primero en Spark y se dividen en conjuntos de datos de entrenamiento y de prueba. A continuación, el código entrena un modelo de canalización con los datos de entrenamiento. Por último, exporta el modelo a un conjunto de MLeap.
 
@@ -68,4 +68,4 @@ Después de generar el ejemplo, puede usar Transact-SQL para llamar a la aplicac
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para más información sobre los clústeres de macrodatos, consulte [cómo implementar clústeres de macrodatos SQL Server en Kubernetes](deployment-guidance.md)
+Para obtener más información sobre los clústeres de Big Data, consulte [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)

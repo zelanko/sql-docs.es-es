@@ -1,26 +1,26 @@
 ---
 title: Instalación de herramientas de macrodatos
 titleSuffix: SQL Server big data clusters
-description: Aprenda a instalar herramientas usadas con clústeres de macrodatos de SQL Server 2019 (versión preliminar).
+description: Obtenga información sobre cómo instalar las herramientas [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] usadas con (versión preliminar).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 757209ff89fd40dcc737b65d3b19f2a7d4ef247b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f30b3b2e3c8503d2ac74ede8c1a45114a6b1d555
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419461"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653409"
 ---
-# <a name="install-sql-server-2019-big-data-tools"></a>Instalación de herramientas de macrodatos de SQL Server 2019
+# <a name="install-sql-server-2019-big-data-tools"></a>Instalación de las herramientas de macrodatos de SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describen las herramientas de cliente que se deben instalar para crear, administrar y usar clústeres de macrodatos de SQL Server 2019 (versión preliminar). En la siguiente sección se proporciona una lista de herramientas y vínculos a instrucciones de instalación. Antes de implementar un clúster de macrodatos, configure las herramientas marcadas como obligatorias en Windows o Linux.
+En este artículo se describen las herramientas de cliente que se deben instalar para crear, administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] y usar (versión preliminar). En la siguiente sección se proporciona una lista de herramientas y vínculos a instrucciones de instalación. Antes de implementar un clúster de macrodatos, configure las herramientas marcadas como obligatorias en Windows o Linux.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -28,7 +28,7 @@ En este artículo se describen las herramientas de cliente que se deben instalar
 
 En la tabla siguiente se indican herramientas comunes de clúster de macrodatos y cómo instalarlas:
 
-| Herramienta | Obligatorio | Descripción | Installation |
+| Herramienta | Obligatorio | Descripción | Instalación |
 |---|---|---|---|
 | **python** | Sí | Python es un lenguaje de programación de alto nivel, interpretado y orientado a objetos con semántica dinámica. Muchas partes de los clústeres de macrodatos para SQL Server usan Python. | [Instalación de Python](#python)|
 | **azdata** | Sí | Herramienta de línea de comandos para instalar y administrar un clúster de macrodatos. | [Instalar](deploy-install-azdata.md) |
@@ -87,6 +87,6 @@ Las herramientas restantes solo son necesarias en determinados escenarios. La **
 Después de configurar las herramientas, implemente un clúster de macrodatos de SQL Server 2019 en Kubernetes en la nube o el entorno local. Para obtener más información, vea los siguientes artículos de implementación:
 
 - [Inicio rápido: Implementación de un clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
-- [Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md)
+- [Cómo realizar la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] implementación en Kubernetes](deployment-guidance.md)
 
-Para obtener más información sobre los clústeres de macrodatos, vea [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
+Para obtener más información sobre los clústeres de Big Data, vea [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

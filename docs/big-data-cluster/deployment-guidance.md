@@ -1,22 +1,22 @@
 ---
 title: Guía para la implementación
 titleSuffix: SQL Server big data clusters
-description: Aprenda a implementar clústeres de macrodatos de SQL Server 2019 (versión preliminar) en Kubernetes.
+description: Aprenda a implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar) en Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995835"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652354"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Procedimiento para implementar clústeres de macrodatos de SQL Server en Kubernetes
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Cómo realizar la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] implementación en Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -39,7 +39,7 @@ Antes de implementar un clúster de macrodatos de SQL Server 2019, [instale pr
 
 ## <a id="prereqs"></a> Requisitos previos de Kubernetes
 
-Los clústeres de macrodatos de SQL Server requieren como mínimo la versión 1.10 de Kubernetes para el servidor y el cliente (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]requiere una versión mínima de Kubernetes de al menos v 1.10 para el servidor y el cliente (kubectl).
 
 > [!NOTE]
 > Tenga en cuenta que las versiones de Kubernetes del cliente y el servidor deben ser la versión secundaria +1 o -1. Para obtener más información, consulte [Notas de la versión de Kubernetes y directiva de SKU de sesgo de versión](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -67,7 +67,7 @@ Ejecute el comando **kubectl** para ver la configuración del clúster. Asegúre
 kubectl config view
 ```
 
-Después de haber configurado el clúster de Kubernetes, puede continuar con la implementación de un nuevo clúster de macrodatos de SQL Server. Si va a actualizar desde una versión anterior, consulte [Cómo actualizar clústeres de macrodatos de SQL Server](deployment-upgrade.md).
+Después de haber configurado el clúster de Kubernetes, puede continuar con la implementación de un nuevo clúster de macrodatos de SQL Server. Si va a actualizar desde una versión anterior, consulte [Cómo actualizar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md).
 
 ## <a id="deploy"></a> Información general sobre la implementación
 
@@ -201,7 +201,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> La implementación completa puede tardar mucho tiempo debido al tiempo necesario para descargar las imágenes de contenedor de los componentes del clúster de macrodatos. Pero no debería tardar muchas horas. Si tiene problemas con la implementación, consulte [Supervisión y solución de problemas de clústeres de macrodatos de SQL Server](cluster-troubleshooting-commands.md).
+> La implementación completa puede tardar mucho tiempo debido al tiempo necesario para descargar las imágenes de contenedor de los componentes del clúster de macrodatos. Pero no debería tardar muchas horas. Si tiene problemas con la implementación, consulte [supervisión y solución de problemas [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md).
 
 Cuando finalice la implementación, la salida le notificará que se ha realizado correctamente:
 
@@ -314,4 +314,4 @@ Para obtener más información sobre la implementación del clúster de macrodat
 
 - [Configuración de opciones de implementación para clústeres de macrodatos](deployment-custom-configuration.md)
 - [Realización de una implementación sin conexión de un clúster de macrodatos de SQL Server](deploy-offline.md)
-- [Taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Taller: Arquitectura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

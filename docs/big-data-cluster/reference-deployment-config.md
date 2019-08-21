@@ -5,16 +5,16 @@ description: Referencia de un archivo de configuración de implementación de un
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4be1c381da092dcf51823ed43b7cf42dc6d2479e
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958245"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653497"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>Referencia del archivo de configuración de implementación para clústeres de macrodatos
 
@@ -453,4 +453,4 @@ Use el siguiente archivo JSON como referencia para la estructura de configuraci�
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre cómo usar y personalizar archivos de configuración de implementación, vea [Procedimiento para implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md#configfile).
+Para obtener más información sobre cómo usar y personalizar los archivos de configuración de implementación, vea [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Kubernetes](deployment-guidance.md#configfile).

@@ -5,24 +5,24 @@ description: Envíe trabajos de Spark en clústeres de macrodatos de SQL Server
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f17544ed4dd37ff43be97d114abb58f4fbbbe319
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470699"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653714"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Envío de trabajos de Spark en clústeres de macrodatos de SQL Server en IntelliJ
+# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>Envío de trabajos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark en IntelliJ
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Uno de los escenarios clave para clústeres de macrodatos de SQL Server es la capacidad de enviar trabajos de Spark. La característica de envío de trabajos de Spark permite enviar archivos Jar o Py locales con referencias a clústeres de macrodatos de SQL Server. También permite ejecutar archivos Jar o Py, que ya se encuentran en el sistema de archivos HDFS. 
+Uno de los escenarios clave de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] es la capacidad de enviar trabajos de Spark. La característica de envío de trabajos de Spark permite enviar un archivo jar o py local con referencias [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]a. También permite ejecutar archivos Jar o Py, que ya se encuentran en el sistema de archivos HDFS. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 - Clúster de macrodatos de SQL Server.
 - Java Development Kit para Oracle. Puede instalarlo desde el [sitio web de Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
@@ -51,16 +51,16 @@ Uno de los escenarios clave para clústeres de macrodatos de SQL Server es la ca
 
 1. Inicie IntelliJ IDEA y, luego, cree un proyecto. En el cuadro de diálogo **Nuevo proyecto**, siga estos pasos: 
 
-   A. Seleccione **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Proyecto de Spark con ejemplos (Scala)).
+   a. Seleccione **Azure Spark/HDInsight** > **Spark Project with Samples (Scala)** (Proyecto de Spark con ejemplos (Scala)).
 
-   B. En la lista **Herramienta de compilación**, seleccione una de las siguientes, según sus necesidades:
+   b. En la lista **Herramienta de compilación**, seleccione una de las siguientes, según sus necesidades:
 
       * **Maven**, para la compatibilidad con el asistente para la creación de proyectos de Scala
       * **SBT**, para administrar las dependencias y compilar para el proyecto de Scala
 
     ![Cuadro de diálogo Nuevo proyecto](./media/spark-submit-job-intellij-tool-plugin/create-hdi-scala-app.png)
 
-2. Seleccione **Siguiente**.
+2. Seleccione **Next** (Siguiente).
 
 3. El asistente para la creación de proyectos de Scala detecta automáticamente si ha instalado el complemento Scala. Seleccione **Instalar**.
 
@@ -74,9 +74,9 @@ Uno de los escenarios clave para clústeres de macrodatos de SQL Server es la ca
 
     ![Selección del SDK de Spark](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. Escriba un nombre de proyecto y una ubicación.
+   a. Escriba un nombre de proyecto y una ubicación.
 
-   B. En la lista desplegable **Project SDK** (SDK del proyecto), seleccione **Java 1.8** para el clúster de Spark 2.x o **Java 1.7** para el clúster de Spark 1.x.
+   b. En la lista desplegable **Project SDK** (SDK del proyecto), seleccione **Java 1.8** para el clúster de Spark 2.x o **Java 1.7** para el clúster de Spark 1.x.
 
    c. En la lista desplegable **Versión de Spark**, el asistente para la creación de proyectos de Scala integra la versión correcta del SDK de Spark y el SDK de Scala. Si la versión del clúster de Spark es anterior a 2.0, seleccione **Spark 1.x**. De lo contrario, seleccione **Spark2.x**. En este ejemplo se usa **Spark 2.0.2 (Scala 2.11.8)** .
 
@@ -84,9 +84,9 @@ Uno de los escenarios clave para clústeres de macrodatos de SQL Server es la ca
 
 7. El proyecto de Spark crea automáticamente un artefacto. Para ver el artefacto, siga estos pasos:
 
-   A. En el menú **Archivo**, seleccione **Estructura del proyecto**.
+   a. En el menú **Archivo**, seleccione **Estructura del proyecto**.
 
-   B. En el cuadro de diálogo **Estructura del proyecto**, seleccione **Artefactos** para ver el artefacto predeterminado que se ha creado. También puede crear su propio artefacto si selecciona el signo más ( **+** ).
+   b. En el cuadro de diálogo **Estructura del proyecto**, seleccione **Artefactos** para ver el artefacto predeterminado que se ha creado. También puede crear su propio artefacto si selecciona el signo más ( **+** ).
 
       ![Información del artefacto en el cuadro de diálogo](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -139,7 +139,7 @@ Asegúrese de que cumple el requisito previo de WINUTILS.EXE.
 
 4. Proporcione los valores siguientes y seleccione **Aceptar**:
 
-    |Propiedad |Valor |
+    |Property |Valor |
     |----|----|
     |Clase principal del trabajo|el valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase si selecciona los puntos suspensivos ( **...** ) y elige otra clase.|
     |Variables de entorno|Asegúrese de que el valor de HADOOP_HOME sea correcto.|
@@ -173,7 +173,7 @@ La consola de sesión interactiva de Spark Livy (Scala) solo se admite en Intell
 
 4. Proporcione los valores siguientes y seleccione **Aceptar**:
 
-    |Propiedad |Valor |
+    |Property |Valor |
     |----|----|
     |Clústeres de Spark (solo Linux)|Seleccione el clúster de macrodatos de SQL Server en el que quiere ejecutar la aplicación.|
     |Nombre de clase principal|el valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase si selecciona los puntos suspensivos ( **...** ) y elige otra clase.|
@@ -195,4 +195,4 @@ Por comodidad, puede ver el resultado del script si envía algún código a la c
    ![Enviar selección a consola de Spark](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información sobre los clústeres de macrodatos de SQL Server y los escenarios relacionados, vea [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
+Para obtener más información sobre SQL Server clúster de macrodatos y escenarios relacionados, vea [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)?

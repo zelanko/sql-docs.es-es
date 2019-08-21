@@ -1,7 +1,7 @@
 ---
 title: Novedades
 description: Nuevos anuncios de características para cada versión de SQL Server 2016 R Services, R Server SQL Server Machine Learning Services.
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -9,12 +9,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9d63aac9c91919a2b4e3296f29e939c8cd09ad76
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f582088359c2878f5dfd84d4b353b1f9d8c369e5
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715301"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652293"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services
 
@@ -32,6 +32,7 @@ En esta versión se agregan las características más solicitadas para las opera
 
 | Release | Actualización de características |
 |---------|----------------|
+| RC 1 | Ahora se admite [la conexión de bucle invertido a SQL Server desde un script de Python o R](connect/loopback-connection.md) para Windows y Linux. |
 | CTP 3.2 | No hay cambios. |
 | CTP 3.1 | No hay cambios. |
 | CTP 3.0 | No hay cambios. |

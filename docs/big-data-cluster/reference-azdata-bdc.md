@@ -5,16 +5,16 @@ description: Artículo de referencia sobre los comandos de azdata bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0a2891256bd6e45de356d620d3fa75256528b697
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 44b0f8daafec86714bb8161c1d30130eed3d480d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894016"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653445"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -75,7 +75,7 @@ Nombre del clúster de macrodatos, se usa para espacios de nombres de kubernetes
 #### `--config-profile -c`
 Perfil de configuración del clúster de macrodatos, se usa para implementar el clúster: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--accept-eula -a`
-¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en "yes". Los términos de licencia de este producto se pueden ver [https://go.microsoft.com/fwlink/?LinkId=2002534](https://go.microsoft.com/fwlink/?LinkId=2002534)en.
+¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en “yes”. Los términos de licencia de este producto se pueden ver [https://go.microsoft.com/fwlink/?LinkId=2002534](https://go.microsoft.com/fwlink/?LinkId=2002534)en.
 #### `--node-label -l`
 Etiqueta de nodo del clúster de macrodatos, se usa para designar los nodos en los que se va a implementar.
 #### `--force -f`
@@ -104,7 +104,7 @@ azdata bdc delete --name <cluster_name>
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--name -n`
-Nombre del clúster de macrodatos, se usa para el espacio de nombres de kubernetes.
+Nombre del clúster de macrodatos; se usa para el espacio de nombres de Kubernetes.
 ### <a name="optional-parameters"></a>Parámetros opcionales
 #### `--force -f`
 Fuerza la eliminación del clúster de macrodatos.
@@ -122,4 +122,4 @@ Aumente el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata** , vea [instalar azdata para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).

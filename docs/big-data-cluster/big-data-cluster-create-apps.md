@@ -1,42 +1,42 @@
 ---
 title: Implementación de aplicaciones mediante azdata
 titleSuffix: SQL Server big data clusters
-description: Implemente un script de Python o R como una aplicación en un clúster de macrodatos de SQL Server 2019, versión preliminar.
+description: Implemente un script de Python o R como una [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]aplicación en.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 06b76e7eb8eec8db1993ca558a1f57355457c4ad
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 18e97a3567b50982bd2be11dcc3493951dfe8fa9
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419487"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653154"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Cómo implementar una aplicación en un clúster de macrodatos de SQL Server, versión preliminar
+# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Cómo implementar una aplicación en[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe cómo implementar y administrar scripts de R y Python como una aplicación dentro de un clúster de macrodatos SQL Server 2019, versión preliminar.
+En este artículo se describe cómo implementar y administrar scripts de R y Python como una aplicación dentro de un clúster de macrodatos SQL Server 2019.
 
 ## <a name="whats-new-and-improved"></a>Novedades y mejoras
 
 - Una única utilidad de línea de comandos para administrar el clúster y la aplicación.
 - Implementación simplificada de aplicaciones al tiempo que se proporciona un control granular sobre los archivos de especificación.
-- Compatibilidad con el hospedaje de más tipos de aplicación: SSIS y MLeap (novedad en CTP 2.3).
-- [Extensión VS Code](app-deployment-extension.md) para administrar la implementación de aplicaciones.
+- Compatibilidad con el hospedaje de tipos de aplicación adicionales: SSIS y MLeap (novedad en CTP 2,3).
+- [Visual Studio Code extensión](app-deployment-extension.md) para administrar la implementación de aplicaciones.
 
-Las aplicaciones se implementan y administran mediante la utilidad de línea de comandos `azdata`. En este artículo se proporcionan ejemplos de cómo implementar aplicaciones desde la línea de comandos. Para obtener información sobre cómo usar esto en Visual Studio Code, consulte [Extensión VS Code](app-deployment-extension.md).
+Las aplicaciones se implementan y administran mediante la utilidad de línea de comandos `azdata`. En este artículo se proporcionan ejemplos de cómo implementar aplicaciones desde la línea de comandos. Para obtener información sobre cómo usar esto en Visual Studio Code consulte [extensión de Visual Studio Code](app-deployment-extension.md).
 
 Se admiten los siguientes tipos de aplicaciones:
 - Aplicaciones de R y Python (funciones, modelos y aplicaciones)
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 - [Clústeres de macrodatos de SQL Server 2019](deployment-guidance.md)
 - [Utilidad de línea de comandos azdata](deploy-install-azdata.md)
@@ -74,16 +74,16 @@ azdata login --controller-endpoint https://<ip-address-of-controller-svc-externa
 
 ## <a name="aks"></a>AKS
 
-Si usa AKS, debe ejecutar el siguiente comando en una ventana de bash o CMD para obtener la dirección IP del servicio `mgmtproxy-svc-external`:
+Si usa AKS, debe ejecutar el siguiente comando en una ventana de bash o CMD para obtener la dirección IP del servicio `controller-svc-external`:
 
 
 ```bash
-kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
+kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm o Minikube
 
-Si usa Kubeadm o Minikube, ejecute el siguiente comando para obtener la dirección IP con la que iniciar sesión en el clúster.
+Si usa Kubeadm o Minikube, ejecute el siguiente comando para obtener la dirección IP en la que iniciar sesión en el clúster.
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -105,19 +105,19 @@ El comando siguiente muestra un ejemplo de cómo podría ser este comando:
 azdata app create --spec ./addpy
 ```
 
-Se supone que la aplicación está almacenada en la carpeta `addpy`. Esta carpeta también debe contener un archivo de especificación para la aplicación, denominado `spec.yaml`. Consulte [la página de implementación de aplicaciones](concept-application-deployment.md) para obtener más información sobre el archivo `spec.yaml`.
+Se supone que la aplicación está almacenada en la carpeta `addpy`. Esta carpeta también debe contener un archivo de especificación para la aplicación, denominado `spec.yaml`. Consulte [la página de implementación de la aplicación](concept-application-deployment.md) para obtener `spec.yaml` más información sobre el archivo.
 
 Para implementar esta aplicación de ejemplo, cree los archivos siguientes en un directorio denominado `addpy`:
 
-- Columnas en la tabla de origen capturadas`add.py` Copie el siguiente código de Python en este archivo:
+- `add.py` Copie el siguiente código de Python en este archivo:
    ```py
    #add.py
-   def add(x,y):
-        result = x+y
-        return result
-    result=add(x,y)
+  def add(x, y):
+    result = x+y
+    return result
+  result=add(x,y)
    ```
-- Columnas en la tabla de origen capturadas`spec.yaml` Copie el siguiente código en este archivo:
+- `spec.yaml` Copie el siguiente código en este archivo:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -241,7 +241,7 @@ El comando init proporciona un scaffolding con los artefactos pertinentes necesa
 azdata app init --name hello --version v1 --template python
 ```
 
-Se creará una carpeta denominada Hello.  Puede usar el proceso `cd` en el directorio e inspeccionar los archivos generados en la carpeta. spec.yaml define la aplicación, como el nombre, la versión y el código fuente. Puede editar spec para cambiar el nombre, la versión, la entrada y las salidas.
+Se creará una carpeta denominada Hello.  Puede usar el proceso `cd` en el directorio e inspeccionar los archivos generados en la carpeta. Spec. yaml define la aplicación, como el nombre, la versión y el código fuente. Puede editar las especificaciones para cambiar el nombre, la versión, la entrada y las salidas.
 
 Este es un ejemplo de salida del comando init que verá en la carpeta:
 
@@ -270,8 +270,8 @@ El comando describe proporciona información detallada sobre la aplicación, inc
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30080/api/app/add-app/v1",
+    "swagger": "https://10.1.1.3:30080/api/app/add-app/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -295,6 +295,6 @@ azdata app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Averigüe cómo integrar aplicaciones implementadas en clústeres de macrodatos de SQL Server en sus propias aplicaciones. Para ello, obtenga más información en [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md). También puede consultar otros ejemplos en [Ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy).
+Consulte cómo integrar aplicaciones implementadas [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en en sus propias aplicaciones en [consumir aplicaciones en clústeres](big-data-cluster-consume-apps.md) de macrodatos para obtener más información. También puede ver otros ejemplos en [Ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy).
 
-Para obtener más información sobre los clústeres de macrodatos de SQL Server, vea [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
+Para obtener más información [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]acerca de, vea [¿Qué es [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

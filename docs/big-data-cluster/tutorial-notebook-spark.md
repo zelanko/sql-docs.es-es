@@ -1,26 +1,26 @@
 ---
 title: Ejecutar un cuaderno de ejemplo | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: En este tutorial, se muestra cómo cargar y ejecutar un cuaderno de Spark de ejemplo en un clúster de macrodatos de SQL Server 2019 (versión preliminar).
+description: En este tutorial se muestra cómo puede cargar una ejecución de un cuaderno de Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]de ejemplo en un.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ab558194a67118719c144ea20f9e97496d2cb478
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 18e182a251e0f93127ffc376648a29c3e2d9cd02
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957732"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653267"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Tutorial: ejecutar un cuaderno de ejemplo en un clúster de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este tutorial, se muestra cómo cargar y ejecutar un cuaderno en Azure Data Studio en un clúster de macrodatos de SQL Server 2019 (versión preliminar). Esto permite a los científicos de datos e ingenieros de datos ejecutar código de Python, S o Scala en el clúster.
+En este tutorial se muestra cómo cargar y ejecutar un cuaderno en Azure Data Studio en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]un. Esto permite a los científicos de datos e ingenieros de datos ejecutar código de Python, S o Scala en el clúster.
 
 > [!TIP]
 > Si lo prefiere, puede descargar y ejecutar un script con los comandos de este tutorial. Para obtener instrucciones, vea los [ejemplos de Spark](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) en GitHub.
@@ -67,7 +67,7 @@ Para ejecutar cada celda del cuaderno, pulse el botón Reproducir a la izquierda
 
 ![Ejecutar la celda del cuaderno](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-Ejecute todas las celdas del cuaderno de ejemplo en sucesión. Para obtener más información sobre cómo usar cuadernos con clústeres de macrodatos de SQL Server, vea los recursos siguientes:
+Ejecute todas las celdas del cuaderno de ejemplo en sucesión. Para obtener más información sobre el uso de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]cuadernos con, consulte los siguientes recursos:
 
 - [Cómo usar cuadernos en SQL Server 2019 versión preliminar](notebooks-guidance.md)
 - [Cómo se administran los cuadernos en Azure Data Studio](notebooks-how-to-manage.md)

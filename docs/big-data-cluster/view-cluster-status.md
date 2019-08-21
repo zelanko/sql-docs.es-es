@@ -5,16 +5,16 @@ description: En este artículo, se explica cómo ver el estado de un clúster de
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c6dca94b8bd7547222394d7809cb003b9e936982
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 028864712658e35913fa04fb1a85e4ca960ad573
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419292"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653273"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Procedimiento para ver el estado de un clúster de macrodatos
 
@@ -164,7 +164,7 @@ Storage  default        Ready
 Puede ver el estado de los grupos en el clúster con el comando [azdata bdc pool status show](reference-azdata-bdc-pool-status.md). Para usar este comando, especifique el tipo de grupo con el parámetro `--kind`. Los tipos de grupo son:
 
 - compute
-- datos
+- data
 - maestra
 - spark
 - storage
@@ -214,4 +214,4 @@ Puede ver el estado del controlador con el comando [azdata bdc control status sh
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos, vea [¿Qué son los clústeres de macrodatos de SQL Server?](big-data-cluster-overview.md)
+Para obtener más información sobre los clústeres de macrodatos, vea [Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md).

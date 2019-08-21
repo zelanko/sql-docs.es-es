@@ -1,26 +1,26 @@
 ---
 title: Configurar Azure Kubernetes Service
 titleSuffix: SQL Server big data clusters
-description: Obtenga información sobre cómo configurar Azure Kubernetes Service (AKS) para las implementaciones del clúster de macrodatos de SQL Server 2019 (versión preliminar).
+description: Aprenda a configurar Azure Kubernetes Service (AKS) para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] las implementaciones.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/10/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ba5b4b06d31f391733603ce146a7d05e05aebaf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470816"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652384"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurar Azure Kubernetes Service para implementaciones de clúster de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo, se describe cómo configurar Azure Kubernetes Service (AKS) para las implementaciones del clúster de macrodatos de SQL Server 2019 (versión preliminar).
+En este artículo se describe cómo configurar Azure Kubernetes Service (AKS) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para las implementaciones.
 
 Con AKS, es fácil crear, configurar y administrar un clúster de máquinas virtuales preconfiguradas con un clúster de Kubernetes para ejecutar aplicaciones en contenedores. Esto le permite usar sus aptitudes existentes o aprovechar un amplio y creciente grupo de expertos de la comunidad para implementar y administrar aplicaciones basadas en contenedor en Microsoft Azure.
 
@@ -29,7 +29,7 @@ En este artículo, se describen los pasos para implementar Kubernetes en AKS con
 > [!TIP]
 > También puede crear un script de la implementación de AKS y un clúster de macrodatos en un único paso. Para obtener más información, vea cómo realizar este procedimiento en un [script de Python](quickstart-big-data-cluster-deploy.md) o en un [cuaderno](deploy-notebooks.md) de Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 - [Implementar las herramientas de macrodatos de SQL Server 2019](deploy-big-data-tools.md):
    - **Kubectl**
@@ -165,4 +165,4 @@ Si tiene problemas para crear una instancia de Azure Kubernetes Service con los 
 
 Con los pasos de este artículo, ha configurado un clúster de Kubernetes en AKS. El paso siguiente es implementar un clúster de macrodatos de SQL Server 2019 en el clúster de Kubernetes de AKS. Para obtener más información sobre cómo implementar clústeres de macrodatos, vea el artículo siguiente:
 
-[Procedimiento para implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md)
+[Cómo realizar la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] implementación en Kubernetes](deployment-guidance.md)

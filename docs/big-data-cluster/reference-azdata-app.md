@@ -5,16 +5,16 @@ description: Artículo de referencia de comandos de la aplicación de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 793edde26ebebf9e55c5751adbedf662142280de
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 031d8283f14e06515394bb26aa94049a43b6b79f
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426285"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653227"
 ---
 # <a name="azdata-app"></a>aplicación de azdata
 
@@ -22,7 +22,7 @@ ms.locfileid: "68426285"
 
 En el artículo siguiente, se proporciona una referencia de los comandos **app** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | Plantillas.
@@ -64,7 +64,7 @@ azdata app init --name reduce --template ssis
 #### `--spec -s`
 Generar solo un archivo spec.yaml de la aplicación.
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 #### `--template -t`
@@ -72,7 +72,7 @@ Nombre de la plantilla. Para obtener la lista completa de nombres de plantillas 
 #### `--destination -d`
 Dónde colocar el esqueleto de la aplicación. Valor predeterminado: directorio de trabajo actual.
 #### `--url -u`
-Especifique otra ubicación de repositorio de plantillas. Predeterminado: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+Especifique otra ubicación de repositorio de plantillas. Valor predeterminado: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
@@ -157,7 +157,7 @@ azdata app list
 ```
 ### <a name="optional-parameters"></a>Parámetros opcionales
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -184,7 +184,7 @@ azdata app delete --name reduce --version v1
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -220,7 +220,7 @@ azdata app run --name reduce --version v1 --inputs x=10,y5.6
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="optional-parameters"></a>Parámetros opcionales
@@ -253,7 +253,7 @@ azdata app describe --name reduce --version v1
 #### `--spec -s`
 Ruta a un directorio con un archivo de especificación de YAML en el que se describe la aplicación.
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="global-arguments"></a>Argumentos globales
@@ -270,4 +270,4 @@ Aumente el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).
+Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata** , vea [instalar azdata para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 948ce20bf32aaa2051c4a805a3ca2f131a7c0c8f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715212"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634550"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Actualización de los componentes de machine learning (R y Python) en instancias de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -274,7 +274,7 @@ Como alternativa, esto es más trabajo, pero también puede desinstalar completa
 
 ### <a name="step-3-add-any-third-party-packages"></a>Paso 3: Agregar paquetes de terceros
 
-Es posible que haya agregado otros paquetes de código abierto o de terceros a la biblioteca de paquetes. Como invertir el enlace cambia la ubicación de la biblioteca de paquetes predeterminada, debe volver a instalar los paquetes en la biblioteca que R y Python están usando ahora. Para obtener más información, vea [paquetes](../package-management/default-packages.md)predeterminados, [instalar nuevos paquetes de R](../r/install-additional-r-packages-on-sql-server.md)e [instalar nuevos paquetes de Python](../python/install-additional-python-packages-on-sql-server.md).
+Es posible que haya agregado otros paquetes de código abierto o de terceros a la biblioteca de paquetes. Como invertir el enlace cambia la ubicación de la biblioteca de paquetes predeterminada, debe volver a instalar los paquetes en la biblioteca que R y Python están usando ahora. Para obtener más información, vea información e [instalación](../package-management/install-additional-r-packages-on-sql-server.md)de [paquetes de R](../package-management/r-package-information.md) e información e [instalación](../package-management/install-additional-python-packages-on-sql-server.md)de [paquetes de Python](../package-management/python-package-information.md) .
 
 ## <a name="sqlbindrexe-command-syntax"></a>Sintaxis del comando SqlBindR. exe
 
@@ -284,7 +284,7 @@ Es posible que haya agregado otros paquetes de código abierto o de terceros a l
 
 ### <a name="parameters"></a>Parámetros
 
-|Name|Descripción|
+|NOMBRE|Descripción|
 |------|------|
 |*list*| Muestra una lista de todos los identificadores de instancia de SQL Database en el equipo actual.|
 |*bind*| Actualiza la instancia de SQL Database especificada a la versión más reciente de R Server y garantiza que la instancia obtenga automáticamente las actualizaciones futuras de R Server.|

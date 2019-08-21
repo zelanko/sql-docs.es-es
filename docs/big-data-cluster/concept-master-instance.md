@@ -1,20 +1,20 @@
 ---
 title: ¿Qué es la instancia maestra?
 titleSuffix: SQL Server big data clusters
-description: En este artículo, se describe la instancia maestra de SQL Server en un clúster de macrodatos de SQL Server 2019 (versión preliminar).
+description: En este artículo se describe el SQL Server instancia maestra [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]en un.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d62b1fe82698ff8722786b42f534afe83cd6c481
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822696"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652276"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>¿Cuál es la instancia maestra en un clúster de macrodatos de SQL Server?
 
@@ -53,7 +53,7 @@ Como parte del clúster de macrodatos de SQL Server, la característica Machine 
 
 SQL Server 2019 permite encontrar fácilmente macrodatos para unirlos a los datos dimensionales que suelen almacenarse en la base de datos empresarial. Este valor de los macrodatos se incrementa en gran medida cuando no solo pertenece a una organización, sino que también se incluye en informes, paneles y aplicaciones. Al mismo tiempo, los científicos de datos pueden seguir usando las herramientas del ecosistema de Spark/HDFS y acceder fácilmente y en tiempo real a los datos en la instancia maestra de SQL Server y en orígenes de datos externos accesibles _mediante_ la instancia maestra de SQL Server.
 
-Con los clústeres de macrodatos de SQL Server 2019, puede conseguir más con los lagos de datos empresariales. Los desarrolladores y analistas de SQL Server pueden:
+Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], puede hacer más cosas con los lagos de datos empresariales. Los desarrolladores y analistas de SQL Server pueden:
 
 * Crear aplicaciones que usen datos de lagos de datos empresariales.
 * Razonar sobre todos los datos con consultas Transact-SQL.
@@ -67,7 +67,7 @@ Con los clústeres de macrodatos de SQL Server 2019, puede conseguir más con lo
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos de SQL Server, vea los recursos siguientes:
+Para obtener más información acerca [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]de, consulte los siguientes recursos:
 
-- [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
-- [Taller: arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [¿Qué [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]son?](big-data-cluster-overview.md)
+- [Taller: Arquitectura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

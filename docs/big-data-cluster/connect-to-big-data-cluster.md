@@ -1,28 +1,27 @@
 ---
-title: Conexión a una instancia maestra y a HDFS
-titleSuffix: SQL Server big data clusters
-description: Obtenga información sobre cómo conectarse a la instancia maestra de SQL Server y a la puerta de enlace HDFS/Spark para un clúster de macrodatos de SQL Server 2019, versión preliminar.
+title: Conexión a los clústeres de macrodatos maestros y HDFS
+description: Obtenga información sobre cómo conectarse al SQL Server instancia maestra y la puerta de enlace HDFS/Spark [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]para un.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f09763b210427c84efe75d693fee302d7048db7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb6e1f684a277740c06fbd0a2fdc23dbd77f8e5c
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958644"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652423"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conexión a un clúster de macrodatos de SQL Server con Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe cómo conectarse a un clúster de macrodatos de SQL Server 2019 (versión preliminar) desde Azure Data Studio.
+En este artículo se describe cómo conectarse a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] desde Azure Data Studio.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Requisitos previos
 
 - Tener implementado un [clúster de macrodatos de SQL Server 2019](deployment-guidance.md).
 - [Herramientas de macrodatos de SQL Server 2019](deploy-big-data-tools.md):
@@ -70,4 +69,4 @@ Con la versión de febrero de 2019 de Azure Data Studio, la conexión a la insta
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos de SQL Server 2019, vea [¿Qué son los clústeres de macrodatos de SQL Server 2019?](big-data-cluster-overview.md)
+Para obtener más información [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]acerca de, vea [Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md).

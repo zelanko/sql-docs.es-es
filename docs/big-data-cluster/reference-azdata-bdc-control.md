@@ -5,16 +5,16 @@ description: Artículo de referencia para los comandos azdata bdc control.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8c91338c91dfea749c527c3d83736ed7be6b65e4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5c2dd75157fca457d7dd73e9ee5d4dbe9f61486d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426245"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653347"
 ---
 # <a name="azdata-bdc-control"></a>azdata bdc control
 
@@ -22,11 +22,11 @@ ms.locfileid: "68426245"
 
 En el siguiente artículo se proporciona una referencia para los comandos **bdc control** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, consulte la [referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [azdata bdc control status](reference-azdata-bdc-control-status.md) | Comandos de estado del control.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre cómo instalar la herramienta **azdata**, consulte [Instalación de azdata para administrar clústeres de macrodatos SQL Server 2019](deploy-install-azdata.md).
+Para obtener más información sobre cómo instalar la herramienta **azdata** , vea [instalar azdata para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).

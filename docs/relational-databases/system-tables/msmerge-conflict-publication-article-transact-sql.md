@@ -27,11 +27,11 @@ ms.locfileid: "68893582"
 # <a name="msmerge_conflict_ltpublicationgt_ltarticlegt-transact-sql"></a>Artículo\_&lt;\_sobrepublicación&lt;de conflictos de MSmerge (Transact-SQL)&gt;\_&gt;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  La **tabla\_de\_ _ depublicación\_de conflictos de MSmerge** contiene información sobre las filas en conflicto o los cambios de filas que se deshicieron para lograr la convergencia de datos. En una publicación, cada tabla replicada posee una tabla de conflictos; el nombre de esta tabla de conflictos se anexa al nombre del artículo y la publicación. Estas tablas de conflictos específicos del artículo se encuentran en la base de datos utilizada para registrar los conflictos, que normalmente es la base de datos de publicaciones, pero que puede ser la base de datos de suscripciones si el registro de conflictos está descentralizado.  
+  La **tabla\_de\__artículos_ depublicación\_de conflictos de MSmerge** contiene información sobre las filas en conflicto o los cambios de filas que se deshicieron para lograr la convergencia de datos. En una publicación, cada tabla replicada posee una tabla de conflictos; el nombre de esta tabla de conflictos se anexa al nombre del artículo y la publicación. Estas tablas de conflictos específicos del artículo se encuentran en la base de datos utilizada para registrar los conflictos, que normalmente es la base de datos de publicaciones, pero que puede ser la base de datos de suscripciones si el registro de conflictos está descentralizado.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|** _**|**variable**|Representa una columna en una tabla replicada. Esta tabla del sistema contiene una columna para cada columna del artículo de la tabla.|  
+|**_nombre\_de\_columna del artículo_**|**variable**|Representa una columna en una tabla replicada. Esta tabla del sistema contiene una columna para cada columna del artículo de la tabla.|  
 |**rowguid**|**uniqueidentifier**|El identificador de fila para la fila de conflicto.|  
 |**ModifiedDate**|**datetime**|La fecha en que ocurrió el conflicto.|  
 |**\_identificador\_del origen de origen**|**uniqueidentifier**|La suscripción en la que se deshizo el cambio de fila o se perdió el conflicto.|  

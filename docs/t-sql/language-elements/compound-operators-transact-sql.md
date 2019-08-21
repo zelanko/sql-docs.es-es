@@ -33,7 +33,7 @@ ms.locfileid: "67929536"
 |--------------|------------------------------|------------|  
 |+=|[+= &#40;Asignación de suma&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Agrega una cantidad al valor original y establece este en el resultado de la operación.|  
 |-=|[-= &#40;Subtract Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md) (-= [Asignación de resta] [Transact-SQL])|Resta una cantidad del valor original y establece este en el resultado de la operación.|  
-|*=|[&#42;= &#40;Multiply Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md) (&#42;= [Asignación de multiplicación] [Transact-SQL])|Multiplica por una cantidad y establece el valor original en el resultado de la operación.|  
+|*=|[&#42;= &#40;Multiply Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md) (= [Asignación de multiplicación] [Transact-SQL])|Multiplica por una cantidad y establece el valor original en el resultado de la operación.|  
 |/=|[&#40;Divide Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|Divide por una cantidad y establece el valor original en el resultado de la operación.|  
 |%=|[Modulus Assignment &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md) (Asignación de módulo [Transact-SQL])|Divide por una cantidad y establece el valor original en el módulo.|  
 |&=|[&= &#40;Asignación de AND bit a bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|Realiza una operación AND bit a bit y establece el valor original en el resultado de la operación.|  

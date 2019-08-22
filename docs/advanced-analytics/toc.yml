@@ -183,6 +183,8 @@
   items:
     - name: Conectar
       items:
+        - name: Conexión de bucle invertido
+          href: ../advanced-analytics/connect/loopback-connection.md
         - name: Conexión a OLAP desde R
           items:
             - name: Usar datos de cubos OLAP en R
@@ -225,34 +227,22 @@
           href: ../advanced-analytics/sql-native-scoring.md
     - name: Administración de paquetes
       items:
-        - name: Paquetes predeterminados
-          href: ../advanced-analytics/package-management/default-packages.md
-        - name: Obtención de información del paquete
-          href: ../advanced-analytics/package-management/installed-package-information.md
+        - name: Instalación de paquetes de Python adicionales
+          items:
+            - name: Obtención de información de paquetes de Python
+              href: ../advanced-analytics/package-management/python-package-information.md
+            - name: Instalación de paquetes de Python
+              href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
         - name: Instalación de paquetes de R adicionales
           items:
-            - name: Instalación del paquete de R
-              href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
-            - name: Uso de T-SQL
-              href: ../advanced-analytics/r/install-r-packages-tsql.md
-            - name: Uso de administradores de paquetes
-              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-            - name: Uso de RevoScaleR
-              items:
-                - name: Instalación con RevoScaleR
-                  href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-                - name: Habilitación de la administración de paquetes de R remota
-                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-                - name: Sincronización de paquetes de R
-                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
+            - name: Obtención de información de paquetes de R
+              href: ../advanced-analytics/package-management/r-package-information.md
+            - name: Instalación de paquetes de R
+              href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
             - name: Creación de un repositorio de miniCRAN
               href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
             - name: Sugerencias para usar paquetes de R
               href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
-        - name: Instalación de paquetes de Python adicionales
-          items:
-            - name: Uso de administradores de paquetes
-              href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
     - name: Administración
       items:
         - name: Administración de la integración

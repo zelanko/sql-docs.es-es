@@ -10,12 +10,12 @@ ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 568cb46a17ac29cabe45b79212400fd020be84c3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888415"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890832"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Agrupar miembros de atributo automáticamente
   Cuando se examina un cubo, generalmente se dimensionan los miembros de una jerarquía de atributo según los miembros de otra jerarquía de atributo. Por ejemplo, puede agrupar las ventas de cliente por ciudad, producto comprado o género. No obstante, con determinados tipos de atributo, resulta útil hacer que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree automáticamente grupos de miembros de atributos en función de la distribución de los miembros en una jerarquía de atributo. Por ejemplo, puede hacer que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree grupos de valores de ingresos anuales de los clientes. Al hacerlo, los usuarios que examinen la jerarquía de atributo verán los nombres y los valores de los grupos en lugar de los miembros propiamente dichos. Esto limita el número de niveles que se presentan a los usuarios, lo que puede resultar más útil para el análisis.  
@@ -123,7 +123,7 @@ ms.locfileid: "68888415"
      Observe que ahora hay tres grupos de miembros del atributo **Vacation Hours** que tienen valores de ventas para productos. Los otros siete grupos contienen miembros sin datos de ventas.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Ocultar y deshabilitar jerarquías de atributo](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [Ocultar y deshabilitar jerarquías de atributo](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Agrupar miembros de atributos &#40;discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  

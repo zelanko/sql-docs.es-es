@@ -1,7 +1,7 @@
 ---
 title: Ejemplo de tipos de datos espaciales | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aeefc0c8dec0e05402fa6143e11213e069e4f1eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2f56ed8036602357f8128b0426fbb90c0bab801
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957060"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028273"
 ---
 # <a name="spatial-data-types-sample"></a>Ejemplo de tipos de datos espaciales
 
@@ -33,7 +33,7 @@ El archivo de código de este ejemplo se denomina SpatialDataTypes.java y se enc
 Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Para obtener más información sobre cómo establecer la ruta de clases, vea [usar el controlador JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca del archivo JAR que se debe seleccionar, consulte [Requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información sobre el archivo JAR que se debe seleccionar, vea [Requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Ejemplo
 
@@ -95,7 +95,7 @@ public class SpatialDataTypes {
 }
 ```
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 
-[Trabajar con tipos de datos &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
+[Trabajo con tipos de datos &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
   

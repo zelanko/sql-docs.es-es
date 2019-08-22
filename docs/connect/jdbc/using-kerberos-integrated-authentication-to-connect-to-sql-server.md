@@ -1,7 +1,7 @@
 ---
-title: Usar la autenticación integrada de Kerberos para conectar con SQL Server | Microsoft Docs
+title: Empleo de autenticación integrada de Kerberos para conectar con SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 894da21c079b776524c07cab8b8f223bae769aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916232"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026192"
 ---
-# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Usar la autenticación integrada de Kerberos para conectar con SQL Server
+# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Empleo de autenticación integrada de Kerberos para conectar con SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -49,7 +49,7 @@ A partir de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], una aplicación p
 
 Cuando se usa un origen de datos para crear conexiones, se puede establecer mediante programación el esquema de autenticación con **setAuthenticationScheme** y, opcionalmente, establecer el SPN para las conexiones de Kerberos mediante **setServerSpn**.
 
-Se ha agregado un nuevo registrador para admitir la autenticación Kerberos: com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. Para obtener más información, vea [Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md).
+Se ha agregado un nuevo registrador para admitir la autenticación Kerberos: com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. Para obtener más información, vea [Seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md).
 
 Las directrices siguientes le ayudarán a configurar Kerberos:
 
@@ -61,7 +61,7 @@ Las directrices siguientes le ayudarán a configurar Kerberos:
 > [!NOTE]  
 > El atributo de conexión serverSpn solo es compatible con Microsoft JDBC Driver 4.2 y superior.
 
-## <a name="service-principal-names"></a>Nombres de entidad de seguridad de servicio
+## <a name="service-principal-names"></a>Nombres de entidades de seguridad de servicio
 
 Un nombre principal de servicio (SPN) es el nombre por el que un cliente identifica de forma unívoca una instancia de un servicio.
 
@@ -80,7 +80,7 @@ Para obtener más información sobre los nombres de entidad de seguridad de serv
 >
 > A partir de la versión 6,2, el controlador podrá compilar el **serverSpn** de forma predeterminada, incluso cuando se use Kerberos entre territorios. Aunque también puede usar **serverSpn** explícitamente.
 
-## <a name="creating-a-login-module-configuration-file"></a>Crear un archivo de configuración de un módulo de inicio de sesión
+## <a name="creating-a-login-module-configuration-file"></a>Crear un archivo de configuración de módulo de inicio de sesión
 
 Si lo desea, puede especificar un archivo de configuración de Kerberos. Si no se especifica ningún archivo de configuración, se usarán las configuraciones siguientes:
 
@@ -148,7 +148,7 @@ forwardable = yes
 
 ```
 
-## <a name="enabling-the-domain-configuration-file-and-the-login-module-configuration-file"></a>Habilitar el archivo de configuración de dominio y el archivo de configuración del módulo de inicio de sesión
+## <a name="enabling-the-domain-configuration-file-and-the-login-module-configuration-file"></a>Habilitar el archivo de configuración de dominio y el archivo de configuración de módulo de inicio de sesión
 
 Puede habilitar un archivo de configuración de dominio con -Djava.security.krb5.conf. Puede habilitar un archivo de configuración de módulo de inicio de sesión con **-Djava. Security. auth. login. config**.
 
@@ -159,7 +159,7 @@ Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.kr
 
 ```
 
-## <a name="verifying-that-sql-server-can-be-accessed-via-kerberos"></a>Comprobar que se puede obtener acceso a SQL Server mediante Kerberos
+## <a name="verifying-that-sql-server-can-be-accessed-via-kerberos"></a>Comprobar que se puede acceder a SQL Server mediante Kerberos
 
 Ejecute la consulta siguiente en SQL Server Management Studio:
 
@@ -219,6 +219,6 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 5. Compruebe las credenciales en el vale `klist` a través de y confirme que las credenciales son las que pretende usar para la autenticación.
 6. Ejecute el código de ejemplo anterior y confirme que la autenticación Kerberos se ha realizado correctamente.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

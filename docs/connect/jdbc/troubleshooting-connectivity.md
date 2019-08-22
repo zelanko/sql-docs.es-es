@@ -1,7 +1,7 @@
 ---
 title: Solución de problemas de conectividad | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004234"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027618"
 ---
-# <a name="troubleshooting-connectivity"></a>Solución de los problemas de conectividad
+# <a name="troubleshooting-connectivity"></a>Solución de problemas de conectividad
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] necesita que TCP/IP esté instalado y en ejecución para poder comunicarse con la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para comprobar qué protocolos de biblioteca de red hay instalados.  
@@ -42,8 +42,8 @@ ms.locfileid: "68004234"
   
 -   Cuando usa la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el controlador JDBC requiere que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esté instalado con Autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que no es la predeterminada. Asegúrese de que esta opción esté incluida cuando instale o configure su copia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte también  
- [Diagnosticar problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
+## <a name="see-also"></a>Vea también  
+ [Diagnóstico de problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

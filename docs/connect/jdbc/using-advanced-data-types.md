@@ -1,7 +1,7 @@
 ---
 title: Usar tipos de datos avanzados | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004063"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027008"
 ---
-# <a name="using-advanced-data-types"></a>Usar tipos de datos avanzados
+# <a name="using-advanced-data-types"></a>Empleo de tipos de datos avanzados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -120,7 +120,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 > [!NOTE]  
 > El método CLOB o BLOB no es una forma eficaz de cargar grandes volúmenes de datos.  
 
-### <a name="modifying-large-value-types-in-a-database"></a>Modificación de tipos de valores grandes en una base de datos
+### <a name="modifying-large-value-types-in-a-database"></a>Modificar tipos de valores grandes en una base de datos
 
 En la mayoría de los casos, el método recomendado para actualizar o modificar valores grandes de una base de datos consiste en pasar parámetros a través de las clases [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) mediante comandos de [!INCLUDE[tsql](../../includes/tsql-md.md)] del tipo `UPDATE`, `WRITE` y `SUBSTRING`.  
 
@@ -144,11 +144,11 @@ Además, podría hacer el trabajo en el servidor y pasar los parámetros a una i
 
 Para obtener más información sobre tipos de valores grandes, consulte "Uso de tipos de valores grandes" en los Libros en pantalla de SQL Server.  
 
-## <a name="xml-data-type"></a>Tipos de datos XML
+## <a name="xml-data-type"></a>Tipo de datos de XML
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un tipo de datos **xml** que permite almacenar documentos y fragmentos XML en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El tipo de datos **xml** es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es de algún modo similar a otros tipos integrados, como **int** y **varchar**. Como sucede con otros tipos integrados, puede usar el tipo de datos **xml** como un tipo de columna cuando crea una tabla; como un tipo de variable, de parámetro o de devolución de función; o en funciones CAST y CONVERT de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-En el controlador JDBC, el tipo de datos **xml** se puede asignar como una cadena, una matriz de bytes, un flujo o un objeto CLOB, BLOB o SQLXML. String es el valor predeterminado. Desde la versión 2.0 del controlador JDBC, este controlador proporciona compatibilidad con la API de JDBC 4.0, que presenta la interfaz SQLXML. La interfaz SQLXML define métodos para interactuar con datos XML y manipularlos. El tipo de datos **SQLXML** se asigna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]al tipo de datos **XML** . Para más información sobre cómo leer y escribir datos XML desde y en una base de datos relacional con el tipo de datos Java de **SQLXML**, vea [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md).  
+En el controlador JDBC, el tipo de datos **xml** se puede asignar como una cadena, una matriz de bytes, un flujo o un objeto CLOB, BLOB o SQLXML. String es el valor predeterminado. Desde la versión 2.0 del controlador JDBC, este controlador proporciona compatibilidad con la API de JDBC 4.0, que presenta la interfaz SQLXML. La interfaz SQLXML define métodos para interactuar con datos XML y manipularlos. El tipo de datos **SQLXML** se asigna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]al tipo de datos **XML** . Para obtener más información sobre cómo leer y escribir datos XML desde y en la base de datos relacional con el tipo de datos de Java **SQLXML**, vea [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md).  
   
 La implementación de los tipos de datos **xml** de JDBC Driver proporciona compatibilidad con lo siguiente:  
   
@@ -170,7 +170,7 @@ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se pueden usar los
   
 Para más información sobre los tipos de datos definidos por el usuario, vea "Usar y modificar instancias de tipos definidos por el usuario" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="sqlvariant-data-type"></a>Tipo de datos Sql_variant
+## <a name="sql_variant-data-type"></a>Tipo de datos Sql_variant
 
 Para obtener información sobre el tipo de datos sql_variant, vea [usar el tipo de datos sql_variant](../../connect/jdbc/using-sql-variant-datatype.md).  
 
@@ -178,6 +178,6 @@ Para obtener información sobre el tipo de datos sql_variant, vea [usar el tipo 
 
 Para obtener información sobre los tipos de datos espaciales, vea [usar tipos](../../connect/jdbc/use-spatial-datatypes.md)de datos espaciales.  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

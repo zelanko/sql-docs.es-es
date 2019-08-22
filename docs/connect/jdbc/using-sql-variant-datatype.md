@@ -1,7 +1,7 @@
 ---
 title: Usar el tipo de datos sql_variant | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 662362a692742d206902a0cf23aff63a3ba89df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916170"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025842"
 ---
-# <a name="using-sqlvariant-data-type"></a>Uso del tipo de datos Sql_variant
+# <a name="using-sql_variant-data-type"></a>Uso del tipo de datos Sql_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -65,7 +65,7 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sqlvariant"></a>Usar procedimientos almacenados con sql_variant:   
+## <a name="using-stored-procedures-with-sql_variant"></a>Usar procedimientos almacenados con sql_variant:   
 Tener un procedimiento almacenado como:     
 
 ```java
@@ -81,7 +81,7 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sqlvariant"></a>Limitaciones de sql_variant:
+## <a name="limitations-of-sql_variant"></a>Limitaciones de sql_variant:
 - Al usar TVP para rellenar una tabla `datetime` con un `smalldatetime` `getSmallDateTime()` `getDateTime()` / `date` / valor almacenado en un sql_variant, llamar / / `getDate()` a en un ResultSet no funciona y produce la excepción siguiente:
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
@@ -92,6 +92,6 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

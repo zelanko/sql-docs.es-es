@@ -1,7 +1,7 @@
 ---
 title: Trabajar con instrucciones y conjuntos de resultados | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fb6d545a3a7f8c3b29e5bc372aa4fdadf95edd52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a57ffc5c9314f8e84c077b6c15ab88ed5411f028
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003789"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025363"
 ---
-# <a name="working-with-statements-and-result-sets"></a>Trabajar con instrucciones y conjuntos de resultados
+# <a name="working-with-statements-and-result-sets"></a>Trabajo con instrucciones y conjuntos de resultados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Si trabaja con el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] y los objetos Statement y ResultSet que proporciona, hay varias técnicas que puede usar para mejorar el rendimiento y la confiabilidad de las aplicaciones.
 
-## <a name="use-the-appropriate-statement-object"></a>Usar un objeto de instrucción correcto
+## <a name="use-the-appropriate-statement-object"></a>Usar el objeto de instrucción correcto
 
 Si usa uno de los objetos Statement del controlador JDBC, como [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) o [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), asegúrese de que está usando el objeto correcto para el trabajo.
 
@@ -47,6 +47,6 @@ En el caso de los cursores de servidor de solo lectura, el inconveniente son los
 
 Use secuencias o BLOB y CLOB materializados de forma incremental para controlar la actualización de valores de columnas grandes o el envío de parámetros IN grandes. El controlador JDBC los "fragmenta" en el servidor en varios ciclos de ida y vuelta, lo que permite establecer y actualizar valores mayores que los que puede contener la memoria.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Mejorar el rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Mejora del rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

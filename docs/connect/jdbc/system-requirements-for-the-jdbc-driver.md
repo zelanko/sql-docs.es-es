@@ -1,7 +1,7 @@
 ---
-title: Requisitos del sistema para el controlador JDBC Driver | Microsoft Docs
+title: Requisitos del sistema para el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893972"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027673"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisitos del sistema para el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68893972"
   
  A partir de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], la compatibilidad del controlador JDBC con la API de especificaciones de Java Database Connectivity (JDBC) se ha ampliado para incluir la API de JDBC 4.0. La API de JDBC 4.0 se presentó como parte de Java Development Kit (JDK) 6.0 y de Java Runtime Environment (JRE) 6.0. JDBC 4.0 es un superconjunto de la API de JDBC 3.0.
   
- Cuando se implementa [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] en sistemas operativos Windows y UNIX, se deben usar los paquetes de instalación, *sqljdbc_\<versión>_enu.exe* y *sqljdbc_\<versión>_enu.tar.gz*, respectivamente. Para obtener más información acerca de cómo implementar el controlador JDBC, vea el tema [Implementar el controlador JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md).  
+ Cuando se implementa [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] en sistemas operativos Windows y UNIX, se deben usar los paquetes de instalación, *sqljdbc_\<versión>_enu.exe* y *sqljdbc_\<versión>_enu.tar.gz*, respectivamente. Para obtener más información sobre cómo implementar el controlador JDBC, vea el tema [Implementación del controlador JDBC](../../connect/jdbc/deploying-the-jdbc-driver.md).  
 
 **Microsoft JDBC Driver 7.4 para SQL Server:**  
 
@@ -192,18 +192,18 @@ El controlador JDBC Driver 6.4 también está disponible en el repositorio centr
 |---------|------------------|---------------------|-------------------------|   
 |sqljdbc41.jar|4|7|7 6 5|  
   
-## <a name="sql-server-requirements"></a>Requisitos de SQL Server  
+## <a name="sql-server-requirements"></a>requisitos de SQL Server  
  El controlador JDBC admite conexiones a Azure SQL Database y SQL Server. Para Microsoft JDBC Driver 4.2 y 4.1 para SQL Server, la compatibilidad comienza a partir de SQL Server 2008.
   
-## <a name="operating-system-requirements"></a>Requisitos de sistema operativo  
+## <a name="operating-system-requirements"></a>Requisitos del sistema operativo  
  El controlador JDBC se ha diseñado para funcionar en cualquier sistema operativo que admita el uso de una máquina virtual Java (JVM). No obstante, solo se han probado oficialmente los sistemas operativos Sun Solaris, SUSE Linux y Windows.  
   
-## <a name="supported-languages"></a>Idiomas admitidos  
- El controlador JDBC es compatible con todas las intercalaciones de columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información acerca de las intercalaciones compatibles con el controlador JDBC, consulte [Características internacionales del controlador JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+## <a name="supported-languages"></a>Idiomas compatibles  
+ El controlador JDBC es compatible con todas las intercalaciones de columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información sobre las intercalaciones compatibles con el controlador JDBC, vea [Características internacionales del controlador JDBC](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
  Para obtener más información sobre las intercalaciones, vea "Trabajar con intercalaciones" en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Administrar conjuntos de resultados con el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e2f6b7dac1be8309ff5ece21dbb863b410edbf61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956347"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027907"
 ---
-# <a name="managing-result-sets-with-the-jdbc-driver"></a>Administrar conjuntos de resultados con el controlador JDBC
+# <a name="managing-result-sets-with-the-jdbc-driver"></a>Administración de conjuntos de resultados con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Un conjunto de resultados es un objeto que representa un grupo de datos que ha devuelto un origen de datos, normalmente como resultado de una consulta. Los conjuntos de resultados contienen filas y columnas que alojan los elementos de datos solicitados. Además, se puede navegar por ellos con un cursor. Los conjuntos de resultados pueden ser actualizables, lo que significa que se pueden modificar e incluir esas modificaciones en el origen de datos. Los conjuntos de resultados también pueden tener varios niveles de sensibilidad a los cambios en el origen de datos subyacente.  
@@ -35,10 +35,10 @@ ms.locfileid: "67956347"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Descripción de los tipos de cursor](../../connect/jdbc/understanding-cursor-types.md)|Describe los diferentes tipos de cursor que el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite.|  
-|[Descripción del control de simultaneidad](../../connect/jdbc/understanding-concurrency-control.md)|Describe la compatibilidad del controlador JDBC con el control de simultaneidad.|  
-|[Descripción del bloqueo de filas](../../connect/jdbc/understanding-row-locking.md)|Describe la compatibilidad del controlador JDBC con el bloqueo de filas.|  
+|[Descripción del control de la simultaneidad](../../connect/jdbc/understanding-concurrency-control.md)|Describe la compatibilidad del controlador JDBC con el control de simultaneidad.|  
+|[Descripción del bloqueo de fila](../../connect/jdbc/understanding-row-locking.md)|Describe la compatibilidad del controlador JDBC con el bloqueo de filas.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: Ejemplo de datos de conjunto de resultados de Caching | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: af44648f8012a2d9bb8e4531f880a68751326e27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f59c7010875824b65d6b7d12129056f02537e908
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957364"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028420"
 ---
-# <a name="caching-result-set-data-sample"></a>Almacenar en caché ejemplos de datos de conjunto de resultados
+# <a name="caching-result-set-data-sample"></a>Almacenamiento en caché de ejemplo de datos de conjunto de resultados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -125,6 +125,6 @@ public class CacheResultSet {
 
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Trabajo con conjuntos de resultados](../../connect/jdbc/working-with-result-sets.md)

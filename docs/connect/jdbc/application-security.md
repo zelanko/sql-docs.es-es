@@ -1,7 +1,7 @@
 ---
 title: Seguridad de la aplicación | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa7681890b09647cb554ef6c80e8646fb69c9f42
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81c57e5ab7ca88267693690992106b5f39e2af82
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957466"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028512"
 ---
-# <a name="application-security"></a>Seguridad de aplicaciones
+# <a name="application-security"></a>Seguridad de la aplicación
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Cuando sea usa el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], es importante tomar precauciones para garantizar la seguridad de la aplicación. Las siguientes secciones proporcionan información sobre los pasos que puede realizar para contribuir a la seguridad de su aplicación.  
   
-## <a name="using-java-policy-permissions"></a>Usar los permisos de la directiva de Java  
+## <a name="using-java-policy-permissions"></a>Usar permisos de directiva de Java  
  Cuando sea usa el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], es importante especificar los permisos de directiva de Java que el controlador JDBC necesita. Java Runtime Environment (JRE) proporciona un amplio modelo de seguridad que puede usar en el tiempo de ejecución para determinar si un subproceso tiene acceso a un recurso. Los archivos de directiva de seguridad pueden controlar este acceso. Los archivos de directivas del contenedor están administrados por el encargado de la implementación y el administrador del sistema, pero los permisos que se enumeran en este tema son aquellos que afectan al funcionamiento del controlador JDBC.  
   
  Un permiso típico de los archivos de directivas tiene este aspecto:  
@@ -63,7 +63,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
   
  La compatibilidad con SSL se puede utilizar para proporcionar un nivel adicional de protección además de IPSEC. Para obtener más información sobre el uso de SSL, consulte [uso del cifrado SSL](../../connect/jdbc/using-ssl-encryption.md).  
   
-## <a name="see-also"></a>Consulte también  
- [Proteger las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+## <a name="see-also"></a>Vea también  
+ [Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

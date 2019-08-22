@@ -1,7 +1,7 @@
 ---
 title: Obtener la versión del controlador | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c75f14ca3f24a97240d7430210ab79c70e0bac85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db44a391c16a63d28057c99755018179d6c2c0b5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956552"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028042"
 ---
-# <a name="getting-the-driver-version"></a>Obtener la versión del controlador
+# <a name="getting-the-driver-version"></a>Obtención de la versión del controlador
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   La versión del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] instalado se puede encontrar de las maneras siguientes:  
@@ -40,7 +40,7 @@ ms.locfileid: "67956552"
   
  Donde "xxx.x" es el número de la versión final.  
   
-## <a name="see-also"></a>Consulte también  
- [Diagnosticar problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>Vea también  
+ [Diagnóstico de problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

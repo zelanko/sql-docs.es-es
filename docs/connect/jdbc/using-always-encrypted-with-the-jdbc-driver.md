@@ -1,7 +1,7 @@
 ---
 title: Usar Always Encrypted con el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f19878f73397b9146765fecd879dad07ebb73dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916448"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026644"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Usar Always Encrypted con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > Para ver un ejemplo de cómo incluir estas dependencias en un proyecto de Maven, consulte descarga de dependencias de [ADAL4J y AKV con Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
 ### <a name="using-windows-certificate-store-provider"></a>Uso del proveedor para el Almacén de certificados de Windows
-SQLServerColumnEncryptionCertificateStoreProvider, que se puede utilizar para almacenar claves maestras de columna en el almacén de certificados de Windows. Use el Asistente para Always Encrypted de SQL Server Management Studio (SSMS) u otras herramientas compatibles para crear la clave maestra de columna y las definiciones de clave de cifrado de columna en la base de datos. Se puede usar el mismo asistente para generar un certificado autofirmado en el almacén de certificados de Windows que se puede usar como clave maestra de columna para los datos de Always encrypted. Para obtener más información sobre la clave maestra de columna y la sintaxis de T-SQL de clave de cifrado de columna, vea [crear clave maestra](../../t-sql/statements/create-column-master-key-transact-sql.md) de columna y [crear clave](../../t-sql/statements/create-column-encryption-key-transact-sql.md) de cifrado de columna respectivamente.
+SQLServerColumnEncryptionCertificateStoreProvider, que se puede utilizar para almacenar claves maestras de columna en el almacén de certificados de Windows. Use el Asistente para Always Encrypted de SQL Server Management Studio (SSMS) u otras herramientas compatibles para crear la clave maestra de columna y las definiciones de clave de cifrado de columna en la base de datos. Se puede usar el mismo asistente para generar un certificado autofirmado en el almacén de certificados de Windows que se puede usar como clave maestra de columna para los datos de Always Encrypted. Para obtener más información sobre la clave maestra de columna y la sintaxis de T-SQL de clave de cifrado de columna, vea [crear clave maestra](../../t-sql/statements/create-column-master-key-transact-sql.md) de columna y [crear clave](../../t-sql/statements/create-column-encryption-key-transact-sql.md) de cifrado de columna respectivamente.
 
 El nombre de SQLServerColumnEncryptionCertificateStoreProvider es MSSQL_CERTIFICATE_STORE y se puede consultar mediante la API getName () del objeto de proveedor. Lo registra automáticamente el controlador y se puede usar sin problemas sin ningún cambio en la aplicación.
 
@@ -543,7 +543,7 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 
 Para evitar dichos errores, asegúrese de que:
 
-- Always Encrypted esté habilitado para las consultas de la aplicación que tengan como destino las columnas cifradas (para la cadena de conexión o para una consulta específica).
+- Always Encrypted está habilitado para las consultas de la aplicación que tienen como destino columnas cifradas (para la cadena de conexión o para una consulta específica).
 - los parámetros y las instrucciones preparadas se usan para enviar datos que tienen como destino columnas cifradas. En el ejemplo siguiente se muestra una consulta que filtra de manera incorrecta mediante un literal o constante en una columna cifrada (SSN), en lugar de pasar el literal dentro de un parámetro. Se producirá un error en esta consulta:
 
 ```java
@@ -649,6 +649,6 @@ Con SQLServerBulkCopy, puede copiar datos que ya están cifrados y almacenados e
 > [!NOTE]
 > Tenga cuidado al especificar AllowEncryptedValueModifications ya que esta opción puede provocar daños en la base de datos dado que Microsoft JDBC Driver for SQL Server no comprueba si los datos están realmente cifrados, o si se han cifrado correctamente mediante la misma clave, algoritmo y tipo de cifrado que la columna de destino.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

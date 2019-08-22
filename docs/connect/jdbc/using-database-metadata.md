@@ -1,7 +1,7 @@
 ---
 title: Usar metadatos de base de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fbe290c558dd8c64605bad0a977657904582c696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fce2bf9d72136b303ee3bc974f3aede313233a82
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916260"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026417"
 ---
-# <a name="using-database-metadata"></a>Usar metadatos de una base de datos
+# <a name="using-database-metadata"></a>Empleo de metadatos de la base de datos
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -29,6 +29,6 @@ En el ejemplo siguiente, se pasa una conexión abierta [!INCLUDE[ssSampleDBnorma
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Controlar metadatos con el controlador JDBC](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)
+[Control de metadatos con el controlador JDBC](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)

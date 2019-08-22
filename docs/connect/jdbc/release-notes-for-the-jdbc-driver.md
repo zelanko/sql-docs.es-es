@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión para el controlador JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891286"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027789"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Notas de la versión para el controlador JDBC Driver de Microsoft
 
@@ -158,11 +158,11 @@ Microsoft JDBC Driver 7.0 para SQL Server ahora ofrece soporte para los tipos de
 
 Microsoft JDBC Driver 7.0 para SQL Server ahora implementa las API `beginRequest()` y `endRequest()` desde la clase `java.sql.Connection`. Estas API se introdujeron con las especificaciones de JDBC 4.3 y JDK 9. Para obtener más información sobre la implementación del controlador de estas API, consulte [Cumplimiento de JDBC 4.3 con el controlador JDBC](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
-### <a name="support-for-sql-data-discovery-and-classification"></a>Compatibilidad con Clasificación y detección de datos de SQL
+### <a name="support-for-sql-data-discovery-and-classification"></a>Compatibilidad con la clasificación y detección de datos de SQL
 
-Microsoft JDBC Driver 7.0 para SQL Server proporciona compatibilidad para la detección y clasificación de datos de SQL con cualquier base de datos de destino que admita esta característica. El controlador ahora expone las API de `SQLServerResultSet.getSensitivityClassification()` para extraer esta información del valor `ResultSet` capturado.
+Microsoft JDBC Driver 7.0 para SQL Server proporciona compatibilidad con la clasificación y detección de datos de SQL con cualquier base de datos de destino que admita esta característica. El controlador ahora expone las API de `SQLServerResultSet.getSensitivityClassification()` para extraer esta información del valor `ResultSet` capturado.
 
-Para obtener más información sobre cómo usar esta característica con el controlador JDBC Driver, vea el ejemplo en [Clasificación y detección de datos de SQL](../../connect/jdbc/data-discovery-classification-sample.md).
+Para obtener más información sobre cómo usar esta característica con el controlador JDBC, vea el ejemplo de [Clasificación y detección de datos de SQL](../../connect/jdbc/data-discovery-classification-sample.md).
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>Adición de propiedad de conexión: useBulkCopyForBatchInsert
 

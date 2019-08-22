@@ -1,7 +1,7 @@
 ---
 title: Operación de seguimiento del controlador | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916683"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027593"
 ---
-# <a name="tracing-driver-operation"></a>Hacer un seguimiento del funcionamiento del controlador
+# <a name="tracing-driver-operation"></a>Seguimiento del funcionamiento del controlador
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   El [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite el uso del seguimiento (o registro) para facilitar la resolución de problemas con el controlador JDBC durante su uso en la aplicación. Para habilitar el uso de la función de seguimiento, el controlador JDBC usa las API de registro de java.util.logging, que proporcionan un conjunto de clases para crear objetos Logger y LogRecord.  
@@ -103,7 +103,7 @@ ms.locfileid: "67916683"
 |SQLServerDriver|Registra mensajes en la clase [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md). La aplicación puede configurar el nivel de registro como FINE.|  
 |SQLServerNClob|Registra mensajes en la clase [SQLServerNClob](../../connect/jdbc/reference/sqlservernclob-class.md). La aplicación puede configurar el nivel de registro como FINE.|  
   
-## <a name="enabling-tracing-programmatically"></a>Habilitar seguimiento mediante programación  
+## <a name="enabling-tracing-programmatically"></a>Habilitar el seguimiento mediante programación  
  El seguimiento se puede habilitar mediante programación si se crea un objeto Logger y se indica la categoría que se va a registrar. Por ejemplo, el siguiente código muestra cómo habilitar el registro para las instrucciones SQL:  
   
 ```java
@@ -131,7 +131,7 @@ Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");
 logger.setLevel(Level.OFF);  
 ```  
   
-## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Habilitar seguimiento mediante el archivo Logging.Properties  
+## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Habilitar el seguimiento mediante el archivo logging.properties  
  Además, puede habilitar el seguimiento con el archivo `logging.properties` que se encuentra en el directorio `lib` de la instalación de Java Runtime Environment (JRE). Este archivo se puede usar para establecer los valores predeterminados para los registradores y controladores que se usan al habilitar el seguimiento.  
   
  El siguiente es un ejemplo de la configuración que se puede usar en los archivos `logging.properties`:  
@@ -158,7 +158,7 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 > [!NOTE]  
 >  Puede establecer las propiedades del archivo `logging.properties` con el objeto LogManager que forma parte de java.util.logging.  
   
-## <a name="see-also"></a>Consulte también  
- [Diagnosticar problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>Vea también  
+ [Diagnóstico de problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

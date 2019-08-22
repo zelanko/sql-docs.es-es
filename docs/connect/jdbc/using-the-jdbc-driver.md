@@ -1,7 +1,7 @@
 ---
-title: Uso del controlador JDBC Driver | Microsoft Docs
+title: Empleo del controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b00cd72309fde42ab794d7a365be2a736e3671e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893666"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025772"
 ---
-# <a name="using-the-jdbc-driver"></a>Usar el controlador JDBC
+# <a name="using-the-jdbc-driver"></a>Empleo del controlador JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -41,9 +41,9 @@ Los controladores Microsoft JDBC Driver 6.0 y 4.2 para SQL Server proporcionan l
   
 El controlador Microsoft JDBC Driver 4.1 para SQL Server proporciona el archivo de biblioteca de clases **sqljdbc41.jar**.
 
-Su elección también determinará las características disponibles. Para obtener más información acerca del archivo JAR que se debe seleccionar, consulte [Requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+Su elección también determinará las características disponibles. Para obtener más información sobre el archivo JAR que se debe seleccionar, vea [Requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
-## <a name="setting-the-classpath"></a>Establecer la ruta de clase
+## <a name="setting-the-classpath"></a>Establecer classpath
 
 Los archivos JAR del controlador JDBC Driver de Microsoft no forman parte del SDK de Java y deben incluirse en la ruta de clases de la aplicación de usuario.
 
@@ -227,10 +227,10 @@ A partir de la API 4.0 de JDBC, el método `DriverManager.getConnection()` se ha
 Cuando se llama al método getConnection de la clase DriverManager, se busca un controlador apropiado en el conjunto de controladores JDBC registrados. El archivo sqljdbc4.jar, sqljdbc41.jar o sqljdbc42.jar incluye el archivo "META-INF/services/java.sql.Driver", que contiene como controlador registrado el **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Las aplicaciones existentes, que actualmente cargan los controladores usando el método Class.forName, seguirán trabajando sin modificación.  
   
 > [!NOTE]  
-> La biblioteca de clases sqljdbc4.jar, sqljdbc41.jar o sqljdbc42.jar no se puede utilizar con versiones anteriores de Java Runtime Environment (JRE). Consulte [Requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) para obtener la lista de versiones JRE compatibles con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+> La biblioteca de clases sqljdbc4.jar, sqljdbc41.jar o sqljdbc42.jar no se puede utilizar con versiones anteriores de Java Runtime Environment (JRE). Vea [Requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) para obtener la lista de versiones de JRE compatibles con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
 
-Para obtener más información sobre cómo conectar con orígenes de datos y usar una dirección URL de conexión, consulte [Generar URL de conexión](../../connect/jdbc/building-the-connection-url.md) y [Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
+Para obtener más información sobre cómo conectar con orígenes de datos y usar una dirección URL de conexión, vea [Creación de la dirección URL de conexión](../../connect/jdbc/building-the-connection-url.md) y [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

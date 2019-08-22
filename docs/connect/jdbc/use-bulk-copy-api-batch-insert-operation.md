@@ -1,7 +1,7 @@
 ---
 title: Uso de la API de copia masiva para la operación de inserción por lotes para el controlador JDBC de MSSQL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 028caf1bf69c7e361ea7e4445c192c1fc1adf437
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004134"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027105"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Uso de la API de copia masiva para la operación de inserción por lotes
 
@@ -25,7 +25,7 @@ Microsoft JDBC driver 7,0 for SQL Server admite el uso de la API de copia masiva
 
 Esta característica solo es aplicable a las API de `executeBatch()`  &  `executeLargeBatch()` PreparedStatement y CallableStatement.
 
-## <a name="pre-requisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 Hay dos requisitos previos para habilitar la API de copia masiva para la inserción por lotes.
 
@@ -139,6 +139,6 @@ Starting batch operation using Bulk Copy API.
 Finished. Time taken : 1058 milliseconds.
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Mejorar el rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Mejora del rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

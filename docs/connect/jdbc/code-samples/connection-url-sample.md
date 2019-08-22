@@ -1,7 +1,7 @@
 ---
 title: Ejemplo de dirección URL de conexión | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 96fabc42-59d1-4cc0-93c5-db00cbe55e95
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d3f65b4774564546907e14302552ad129160e55a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6d42e7743e7fba02992e641c18609371b2d1e5a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957256"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028348"
 ---
-# <a name="connection-url-sample"></a>Ejemplo de URL de conexión
+# <a name="connection-url-sample"></a>Ejemplo de dirección URL de conexión
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -34,7 +34,7 @@ El archivo de código para este ejemplo se denomina ConnectURL.java y se encuent
 Para ejecutar esta aplicación de ejemplo, debe configurar la ruta de clase para que incluya el archivo mssql-jdbc.jar. Además, debe tener acceso a la base de datos de ejemplo de [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obtener más información sobre cómo establecer la ruta de clases, vea [usar el controlador JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información acerca del archivo JAR que se debe seleccionar, consulte [Requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases mssql-jdbc que se usan según la configuración preferida de Java Runtime Environment (JRE). Para obtener más información sobre el archivo JAR que se debe seleccionar, vea [Requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -74,6 +74,6 @@ public class ConnectURL {
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Conexión y recuperación de datos](../../../connect/jdbc/code-samples/connecting-and-retrieving-data.md)

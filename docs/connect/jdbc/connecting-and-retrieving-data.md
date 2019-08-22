@@ -1,7 +1,7 @@
 ---
 title: Conexión y recuperación de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c7e642879c095dd4d9dca4f51a936ab72c523e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd4751fe3d1acb7119c87e39ecd8694a0fa83c19
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956883"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028226"
 ---
-# <a name="connecting-and-retrieving-data"></a>Conectar y recuperar datos
+# <a name="connecting-and-retrieving-data"></a>Conexión y recuperación de datos
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -37,7 +37,7 @@ En los temas de esta sección se describen los distintos modos en que puede cone
 | [Ejemplo de URL de conexión](../../connect/jdbc/connection-url-sample.md) | Describe cómo usar una URL de conexión para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y usar una instrucción SQL para recuperar datos. |
 | [Ejemplo de origen de datos](../../connect/jdbc/data-source-sample.md)       | Describe cómo usar un origen de datos para conectarse a SQL y usar un procedimiento almacenado para recuperar datos.                                                 |
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Aplicaciones del controlador JDBC de ejemplo](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+[Aplicaciones de ejemplo del controlador JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   

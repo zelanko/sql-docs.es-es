@@ -1,7 +1,7 @@
 ---
-title: Usar un procedimiento almacenado con un estado de devolución | Microsoft Docs
+title: Empleo de un procedimiento almacenado con un estado de retorno | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: eb5654563a0894abd497dfb0053b3e5667bf433d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b5b5425dcc88a3f4a2b5bc24c85ab41beb04bb48
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916515"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027112"
 ---
-# <a name="using-a-stored-procedure-with-a-return-status"></a>Usar un procedimiento almacenado con un estado de devolución
+# <a name="using-a-stored-procedure-with-a-return-status"></a>Empleo de un procedimiento almacenado con un estado de retorno
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -59,6 +59,6 @@ En el siguiente ejemplo, se pasa una conexión abierta a la base de datos de eje
 
 [!code[JDBC#UsingSprocWithReturnStatus1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_1_1.java)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Usar instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Empleo de instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)

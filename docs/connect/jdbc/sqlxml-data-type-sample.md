@@ -1,7 +1,7 @@
 ---
 title: Ejemplo de tipo de datos SQLXML | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4d5e616fa1a510633caf4e5e2e0b20266a1eb771
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0cc8e3e48024e6d5af789919173454d0ee05e56
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004377"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027650"
 ---
-# <a name="sqlxml-data-type-sample"></a>Ejemplos de tipos de datos SQLXML
+# <a name="sqlxml-data-type-sample"></a>Ejemplo de tipos de datos SQLXML
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -60,6 +60,6 @@ El método showTransformer muestra cómo obtener un dato XML desde una tabla e i
 
 [!code[JDBC#UsingSQLXML1](../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Trabajar con tipos de datos &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)
+[Trabajo con tipos de datos &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ceab8f9d74aed85f51c91650d0efa1cb32f421e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b90383fb387f8593db7aa4ee4760181a7322a475
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175657"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028920"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configuración de conexiones SSL en un servidor de informes en modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo nativo usa el servicio HTTP SSL (Capa de sockets seguros) para establecer conexiones cifradas con un servidor de informes. Si tiene el archivo de certificado (.cer) instalado en un almacén de certificados local en el equipo del servidor de informes, puede enlazar el certificado a una reserva de direcciones URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para admitir las conexiones con el servidor de informes en un canal cifrado.  
@@ -82,7 +82,7 @@ ms.locfileid: "66175657"
   
  Los enlaces SSL son un recurso compartido en Microsoft Windows. Los cambios realizados por el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] u otras herramientas como el Administrador de IIS pueden afectar a otras aplicaciones ubicadas en el mismo equipo. Se recomienda usar la misma herramienta para editar los enlaces que usó para crearlos.  Por ejemplo, si creó enlaces SSL mediante el Configuration Manager, se recomienda usar este administrador para configurar el ciclo de vida de los enlaces. Si utiliza el administrador de IIS para crear enlaces, se recomienda usar este administrador para administrar el ciclo de vida de los enlaces. Si IIS estaba instalado en el equipo antes de que se instalara [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , es recomendable que revise la configuración de SSL en IIS antes de configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Si quita enlaces SSL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el Administrador de configuración de Reporting Services, puede que los enlaces SSL ya no funcionen para los sitios web en un servidor que ejecute Internet Information Services (IIS) o en otro servidor HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] quite la siguiente clave del Registro. Cuando se quita esta clave del Registro, también se quita el enlace SSL para IIS. Sin este enlace, SSL no se proporciona para el protocolo HTTPS. Para diagnosticar este problema, utilice el Administrador de IIS o la utilidad de línea de comandos HTTPCFG.exe. Para resolver el problema, restaure el enlace SSL para los sitios web mediante el Administrador de IIS. Para evitar este problema en el futuro, utilice el Administrador de IIS para quitar los enlaces SSL y luego use dicho administrador para restaurar el enlace para los sitios web que desee. Para más información, consulte el artículo de la base de conocimiento [SSL no funciona después de quitar un enlace SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
+ Si quita enlaces SSL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el Administrador de configuración de Reporting Services, puede que los enlaces SSL ya no funcionen para los sitios web en un servidor que ejecute Internet Information Services (IIS) o en otro servidor HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager quita la siguiente clave del registro: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** cuando se quita esta clave del registro, también se quita el enlace SSL para IIS. Sin este enlace, SSL no se proporciona para el protocolo HTTPS. Para diagnosticar este problema, utilice el Administrador de IIS o la utilidad de línea de comandos HTTPCFG.exe. Para resolver el problema, restaure el enlace SSL para los sitios web mediante el Administrador de IIS. Para evitar este problema en el futuro, use el Administrador de IIS para quitar los enlaces SSL y luego vuelva a emplearlo para restaurar el enlace para los sitios web que quiera. Para más información, consulte el artículo de la base de conocimiento [SSL no funciona después de quitar un enlace SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
 ## <a name="see-also"></a>Vea también  
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   

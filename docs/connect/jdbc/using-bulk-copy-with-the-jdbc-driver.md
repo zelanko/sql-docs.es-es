@@ -1,7 +1,7 @@
 ---
 title: Uso de la copia masiva con el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 499504d3cc238b10b62fe9dc554c77ebf72ec4b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75ee40e0b7ca753efd32e0ab057340f61824acef
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004000"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026413"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Uso de la copia masiva con el controlador JDBC
 
@@ -794,6 +794,6 @@ Limitaciones y notas de implementación:
 | Void setTimeWithTimezoneFormat(DateTimeForm atter dateTimeFormatter)                                   | Establece el formato para analizar los datos Time desde el archivo como java.sql.Types.TIME_WITH_TIMEZONE.           |
 | Void setTimeWithTimezoneFormat(String timeFormat)                                                      | Establece el formato para analizar los datos Time desde el archivo como java.sql.Types.TIME_WITH_TIMEZONE.           |
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

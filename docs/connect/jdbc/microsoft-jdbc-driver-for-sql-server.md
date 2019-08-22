@@ -1,7 +1,7 @@
 ---
 title: Controlador Microsoft JDBC para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a12209cc5782c0134c4e14723d7ce73049db1ddd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc81bae599bcd9e401aad7e610a7c43ed1a0dcec
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956322"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027885"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Controlador JDBC de Microsoft para SQL Server
 
@@ -52,9 +52,9 @@ El controlador JDBC de Microsoft para SQL Server se ha probado con servidores de
   
 ## <a name="samples"></a>Ejemplos  
 
-* [Aplicaciones del controlador JDBC de ejemplo](sample-jdbc-driver-applications.md)  
-* [Introducción con Java en Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [Introducción con Java en macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Introducción con Java en Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Introducción con Java en Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [Introducción con Java en SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [Aplicaciones de ejemplo del controlador JDBC](sample-jdbc-driver-applications.md)  
+* [Introducción a Java en Windows](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [Introducción a Java en macOS](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Introducción a Java en Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Introducción a Java en Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [Introducción a Java en SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

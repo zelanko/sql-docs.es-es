@@ -1,7 +1,7 @@
 ---
 title: Trabajar con conjuntos de resultados | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9d33dbebaad162feb77a4cbea8de33993fc79f14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44eac2fbcc156b3591bdf02fd00ff0d6bd19366b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956961"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028244"
 ---
-# <a name="working-with-result-sets"></a>Trabajar con conjuntos de resultados
+# <a name="working-with-result-sets"></a>Trabajo con conjuntos de resultados
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -34,11 +34,11 @@ En los temas de esta sección se describen las distintas formas en que puede usa
   
 | Tema                                                                                           | Descripción                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Recuperación de ejemplos de datos de conjunto de resultados](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Se describe cómo usar un conjunto de resultados para recuperar y mostrar los datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                         |
-| [Modificación de ejemplos de datos de conjunto de resultados](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Se describe cómo usar un conjunto de resultados para insertar, recuperar y modificar los datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                      |
-| [Almacenamiento en caché de ejemplos de datos de conjunto de resultados](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Se describe cómo usar un conjunto de resultados para recuperar grandes cantidades de datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y cómo controlar el modo en que los datos se almacenan en la memoria caché del cliente. |
+| [Recuperación de ejemplo de datos de conjunto de resultados](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | Se describe cómo usar un conjunto de resultados para recuperar y mostrar los datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                         |
+| [Modificación de ejemplo de datos de conjunto de resultados](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Se describe cómo usar un conjunto de resultados para insertar, recuperar y modificar los datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                      |
+| [Almacenamiento en caché de ejemplo de datos de conjunto de resultados](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Se describe cómo usar un conjunto de resultados para recuperar grandes cantidades de datos de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y cómo controlar el modo en que los datos se almacenan en la memoria caché del cliente. |
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 
-[Aplicaciones del controlador JDBC de ejemplo](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
+[Aplicaciones de ejemplo del controlador JDBC](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

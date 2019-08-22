@@ -1,7 +1,7 @@
 ---
-title: Compatibilidad del controlador JDBC con la alta disponibilidad y la recuperación ante desastres | Microsoft Docs
+title: Compatibilidad del controlador JDBC con alta disponibilidad y recuperación ante desastres | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 322a22c2236898876ae2fd5e942a1ad3617c1959
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a959292b7adc2b5bb547d447f67f2a392de8af4c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956383"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027951"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Compatibilidad del controlador JDBC con alta disponibilidad y recuperación ante desastres
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ Tenga en cuenta lo siguiente:
   
  
   
-## <a name="connecting-with-multisubnetfailover"></a>Conectarse a MultiSubnetFailover  
+## <a name="connecting-with-multisubnetfailover"></a>Conectarse a multiSubnetFailover  
  Especifique siempre **multiSubnetFailover=true** al conectarse a la escucha de grupo de disponibilidad de un grupo de disponibilidad de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o a una instancia de clúster de conmutación por error de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. **multiSubnetFailover** habilita una conmutación por error más rápida en todos los grupos de disponibilidad y las instancias del clúster de conmutación por error en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], y reducirá significativamente el tiempo de conmutación por error en las topologías únicas y AlwaysOn de varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] reintentará agresivamente la conexión TCP.  
   
  La propiedad de conexión **multiSubnetFailover** indica que la aplicación se está implementando en un grupo de disponibilidad o una instancia de clúster de conmutación por error y que [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un intento de conexión a todas las direcciones IP. Si **MultiSubnetFailover=true** se especifica para una conexión, el cliente reintenta la conexión TCP más deprisa que los intervalos de retransmisión TCP predeterminados del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
@@ -83,7 +83,7 @@ Tenga en cuenta lo siguiente:
   
  Una conexión producirá un error si una réplica principal está configurada para rechazar cargas de trabajo de solo lectura y la cadena de conexión contiene **ApplicationIntent=ReadOnly**.  
   
-## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Actualizar para utilizar clústeres de varias subredes a partir de la creación de reflejo de la base de datos  
+## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Actualizar para usar clústeres de varias subredes a partir de la creación de reflejo de la base de datos  
  Si actualiza una aplicación [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] que actualmente usa la creación de reflejo de la base de datos en un escenario de varias subredes, debe quitar la propiedad de conexión **failoverPartner** y reemplazarla por **multiSubnetFailover** establecida en **true**, así como reemplazar el nombre del servidor en la cadena de conexión por una escucha de grupo de disponibilidad. Si una cadena de conexión usa **failoverPartner** y **multiSubnetFailover=true**, el controlador generará un error. En cambio, si una cadena de conexión usa **failoverPartner** y **multiSubnetFailover=false** (o **ApplicationIntent=ReadWrite**), la aplicación usará la creación de reflejo de la base de datos.  
   
  Si la creación de reflejo de la base de datos se usa en la base de datos principal del grupo de disponibilidad y **multiSubnetFailover=true** se usa en la cadena de conexión que se conecta a una base de datos principal, en lugar de a una escucha de grupo de disponibilidad, el controlador devolverá un error.  
@@ -111,11 +111,11 @@ Tenga en cuenta lo siguiente:
   
  Los métodos **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** y **setTransparentNetworkIPResolution** son también se agrega a la clase [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), la clase [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)y la [clase SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
-## <a name="ssl-certificate-validation"></a>Validación de certificados SSL  
+## <a name="ssl-certificate-validation"></a>Validación de certificado SSL  
  Un grupo de disponibilidad consta de varios servidores físicos. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] agregó compatibilidad con **nombres alternativos de sujeto** en los certificados SSL, por lo que es posible asociar varios hosts al mismo certificado. Para obtener más información sobre SSL, vea Descripción de la [compatibilidad con SSL](../../connect/jdbc/understanding-ssl-support.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
- [Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md)  
+ [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md)  
   
   

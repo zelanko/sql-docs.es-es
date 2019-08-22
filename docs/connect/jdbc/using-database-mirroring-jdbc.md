@@ -1,7 +1,7 @@
 ---
 title: Usar la creación de reflejo de la base de datos (JDBC) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6c00b6a0697a4dc6f6e0a358b85fe1e211791826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e0de521e6ef913d27a020cc76f1dc6de00d0f409
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916253"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026435"
 ---
-# <a name="using-database-mirroring-jdbc"></a>Usar la creación de reflejo de la base de datos (JDBC)
+# <a name="using-database-mirroring-jdbc"></a>Empleo de creación de reflejo de la base de datos (JDBC)
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -33,7 +33,7 @@ En caso de que el servidor Partner_A se dañe de forma irreparable, se puede pon
 
 Las configuraciones alternativas de creación de reflejo de la base de datos proporcionan diferentes niveles de rendimiento y de seguridad de los datos, y admiten varias formas de conmutación por error. Para obtener más información, vea "Información general sobre la creación de reflejo de la base de datos" en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="programming-considerations"></a>Consideraciones sobre la programación
+## <a name="programming-considerations"></a>Consideraciones de programación
 
 Cuando el servidor principal genera un error, la aplicación cliente recibe mensajes de error como respuesta a las llamadas a la API que indican que se ha perdido la conexión a la base de datos. En este caso, se pierden todos los cambios sin confirmar introducidos en la base de datos y se revierte la transacción actual. Por lo tanto, la aplicación debe cerrar la conexión (o liberar el objeto de origen de datos) e intentar volver a abrirla. Una vez establecida la conexión, la nueva conexión se redirige de forma transparente a la base de datos reflejada, la cual actúa ahora como el servidor principal sin que el cliente tenga que modificar la cadena de conexión o el objeto de origen de datos.
 
@@ -108,6 +108,6 @@ public class ClientFailover {
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

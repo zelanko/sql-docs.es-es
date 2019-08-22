@@ -1,7 +1,7 @@
 ---
 title: Usar parámetros con valores de tabla | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd5f00d551c189f583af4232fe31716b51594df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98863afb5a47eddfd311563bd03a1c7c7120b161
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003925"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025715"
 ---
-# <a name="using-table-valued-parameters"></a>Usar parámetros con valores de tabla
+# <a name="using-table-valued-parameters"></a>Empleo de parámetros con valores de tabla
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -100,7 +100,7 @@ Existen varias limitaciones para los parámetros con valores de tabla:
 
 - Puede transmitir objetos grandes en un parámetro con valores de tabla.  
   
-## <a name="configuring-a-table-valued-parameter"></a>Configuración de un parámetro con valores de tabla
+## <a name="configuring-a-table-valued-parameter"></a>Configurar un parámetro con valores de tabla
 
 A partir de Microsoft JDBC driver 6,0 para SQL Server, se admiten parámetros con valores de tabla con una instrucción con parámetros o un procedimiento almacenado parametrizado. Los parámetros con valores de tabla se pueden rellenar a partir de un SQLServerDataTable, de un conjunto de resultados o de una implementación proporcionada por el usuario de la interfaz ISQLServerDataRecord. Al establecer un parámetro con valores de tabla para una consulta preparada, debe especificar un nombre de tipo que debe coincidir con el nombre de un tipo compatible creado previamente en el servidor.  
   
@@ -312,6 +312,6 @@ Se han agregado los siguientes métodos a esta clase para admitir el paso de par
 | public void setStructured (String paratemeterName, String tvpName, ResultSet tvpResultSet)             | Rellena un parámetro con valores de tabla que se pasa a un procedimiento almacenado con un conjunto de resultados recuperado de otra tabla. paratemeterName es el nombre del parámetro, tvpName es el nombre del tipo TVP y tvpResultSet es el objeto del conjunto de resultados de origen.                                                                              |
 | public void setStructured (String paratemeterName, String tvpName, ISQLServerDataRecord tvpDataRecord) | Rellena un parámetro con valores de tabla que se pasa a un procedimiento almacenado con un objeto ISQLServerDataRecord. ISQLServerDataRecord se utiliza para transmitir datos por secuencias y el usuario decide cómo usarlo. paratemeterName es el nombre del parámetro, tvpName es el nombre del tipo TVP y tvpDataRecord es un objeto ISQLServerDataRecord. |
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

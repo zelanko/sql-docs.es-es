@@ -1,7 +1,7 @@
 ---
 title: Configuración del cliente para el cifrado SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7098df4d2a38c6a9415504bec6933afc4a4b310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50c1a24dfbfb925cbda961f8a566e0d1bcd26bdf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956898"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028201"
 ---
-# <a name="configuring-the-client-for-ssl-encryption"></a>Configurar el cliente para el cifrado SSL
+# <a name="configuring-the-client-for-ssl-encryption"></a>Configuración del cliente para el cifrado SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] o el cliente tienen que validar que el servidor es el correcto y que una entidad de certificación en la que el cliente confía ha emitido su certificado. Para validar el certificado de servidor, se debe proporcionar material de confianza en el momento de la conexión. Además, el emisor del certificado de servidor debe ser una entidad de certificación en la que el cliente confíe.  
   
  En este tema se describe primero cómo proporcionar el material de confianza en el equipo cliente. A continuación se describe cómo importar un certificado de servidor al almacén de confianza del equipo cliente cuando una entidad de certificación privada emita la instancia del certificado de Capa de sockets seguros (SSL) de SQL Server.  
   
- Para más información sobre cómo validar el certificado de servidor, vea la sección Validar un certificado SSL de servidor en [Descripción de la compatibilidad con SSL](../../connect/jdbc/understanding-ssl-support.md).  
+ Para obtener más información sobre cómo validar el certificado de servidor, vea la sección Validar un certificado SSL de servidor en [Descripción de la compatibilidad con SSL](../../connect/jdbc/understanding-ssl-support.md).  
   
-## <a name="configuring-the-client-trust-store"></a>Configurar el almacén de confianza de cliente  
+## <a name="configuring-the-client-trust-store"></a>Configurar el almacén de confianza de cliente 
  La validación del certificado de servidor requiere que se suministre material de confianza en el momento de la conexión utilizando explícitamente las propiedades de conexión **trustStore** y **trustStorePassword**, o el almacén de confianza predeterminado de la máquina virtual Java (JVM) subyacente de forma implícita. Para más información sobre cómo establecer las propiedades **trustStore** y **trustStorePassword** en una cadena de conexión, vea [Conectar con el cifrado SSL](../../connect/jdbc/connecting-with-ssl-encryption.md).  
   
  Si la propiedad **trustStore** no se ha especificado o se ha establecido en null, el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se basará en el proveedor de seguridad subyacente de JVM, la Extensión de sockets seguros de Java (SunJSSE, Java Secure Socket Extension). El proveedor de SunJSSE proporciona un TrustManager predeterminado, que se utiliza para validar los certificados X.509 que devuelve SQL Server con el material de confianza que se proporciona en un almacén de confianza.  
@@ -83,8 +83,8 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 9. Haga clic en Siguiente y, a continuación, haga clic en Finalizar para exportar el certificado.  
   
-## <a name="see-also"></a>Consulte también  
- [Usar el cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)   
- [Proteger las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+## <a name="see-also"></a>Vea también  
+ [Empleo de cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)   
+ [Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

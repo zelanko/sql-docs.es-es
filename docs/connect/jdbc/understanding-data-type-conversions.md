@@ -1,7 +1,7 @@
 ---
 title: Descripción de las conversiones de tipos de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d7029faf333c00fc18e4f35743706a012b76c1e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ed91f1b38f68715cd174a96cb2f0364fc060482
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004173"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027482"
 ---
 # <a name="understanding-data-type-conversions"></a>Descripción de las conversiones de tipos de datos
 
@@ -23,7 +23,7 @@ ms.locfileid: "68004173"
 
 Para facilitar la conversión de tipos de datos del lenguaje de programación Java a tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] proporciona las conversiones de tipos de datos que necesita la especificación JDBC. Para mayor flexibilidad, todos los tipos se pueden convertir en tipos de datos **Object**, **String**y **Byte []** y desde ellos.
 
-## <a name="getter-method-conversions"></a>Conversiones de métodos de captador
+## <a name="getter-method-conversions"></a>Conversiones del método Getter
 
 Según los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el siguiente gráfico contiene el mapa de conversión del controlador JDBC para los métodos get\<Type>() de la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), así como las conversiones admitidas para los métodos get\<Type> de la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
 
@@ -39,7 +39,7 @@ Los métodos de captador del controlador JDBC admiten tres categorías de conver
 
 Si se llama a getString en un tipo de datos **Binary**, **varbinary**, **varbinary (Max)** o **Image** Column, el valor se devuelve como un valor de cadena hexadecimal.
 
-## <a name="updater-method-conversions"></a>Conversiones de métodos de actualización
+## <a name="updater-method-conversions"></a>Conversiones del método Updater
 
 Para los datos de tipo Java pasados a los métodos update\<Type>() de la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), se aplican las conversiones siguientes.
 
@@ -63,7 +63,7 @@ Cuando el tipo de datos de columna de [!INCLUDE[ssNoVersion](../../includes/ssno
 
 Tenga en cuenta que se necesita una marca de orden de bytes (BOM) si los caracteres XML están en codificaciones de caracteres específicos.
 
-## <a name="setter-method-conversions"></a>Conversiones del método establecedor
+## <a name="setter-method-conversions"></a>Conversiones del método Setter
 
 Para los datos de tipo Java pasados a los métodos set\<Type>() de la clase [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) y de la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), se aplican las siguientes conversiones.
 
@@ -120,6 +120,6 @@ Cuando el tipo de datos de columna de [!INCLUDE[ssNoVersion](../../includes/ssno
 
 Tenga en cuenta que se necesita una marca de orden de bytes (BOM) si los caracteres XML están en codificaciones de caracteres específicos.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
+[Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

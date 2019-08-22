@@ -1,7 +1,7 @@
 ---
 title: Diagnóstico de problemas con el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 39523acba6f13bd73130a3786f1421e0468084f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c36e81631435e4e079d2b52aea4fe9bce587159
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956696"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028103"
 ---
-# <a name="diagnosing-problems-with-the-jdbc-driver"></a>Diagnosticar problemas del controlador JDBC
+# <a name="diagnosing-problems-with-the-jdbc-driver"></a>Diagnóstico de problemas del controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Independientemente de lo bien que una aplicación se haya diseñado y desarrollado, es inevitable que se produzcan problemas. Cuando aparecen, es importante disponer de algunas técnicas para diagnosticar esos problemas. Cuando se usa el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], se pueden producir algunos problemas comunes como que no se disponga de la versión correcta del controlador o que no se pueda establecer una conexión con una base de datos.  
@@ -29,12 +29,12 @@ ms.locfileid: "67956696"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Control de errores](../../connect/jdbc/handling-errors.md)|Describe cómo tratar los errores que se devuelven desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|[Obtener la versión del controlador](../../connect/jdbc/getting-the-driver-version.md)|Describe cómo determinar qué versión del controlador JDBC está instalada.|  
-|[Hacer un seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md)|Describe cómo habilitar el seguimiento cuando se usa el controlador JDBC.|  
-|[Solución de los problemas de conectividad](../../connect/jdbc/troubleshooting-connectivity.md)|Describe cómo solucionar problemas de la conectividad de base de datos.|  
-|[Obtener acceso a información de diagnóstico en el registro de eventos extendidos](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)|Describe cómo usar la información del registro de eventos extendidos del servidor para entender los errores de conexión.|  
+|[Obtención de la versión del controlador](../../connect/jdbc/getting-the-driver-version.md)|Describe cómo determinar qué versión del controlador JDBC está instalada.|  
+|[Seguimiento del funcionamiento del controlador](../../connect/jdbc/tracing-driver-operation.md)|Describe cómo habilitar el seguimiento cuando se usa el controlador JDBC.|  
+|[Solución de problemas de conectividad](../../connect/jdbc/troubleshooting-connectivity.md)|Describe cómo solucionar problemas de la conectividad de base de datos.|  
+|[Acceso a información de diagnóstico en el registro de eventos extendidos](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)|Describe cómo usar la información del registro de eventos extendidos del servidor para entender los errores de conexión.|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también 
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

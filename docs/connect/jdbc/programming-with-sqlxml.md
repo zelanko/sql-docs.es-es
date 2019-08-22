@@ -1,7 +1,7 @@
 ---
 title: Programar con SQLXML | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956172"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027771"
 ---
 # <a name="programming-with-sqlxml"></a>Programar con SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67956172"
   
 -   Para almacenar un objeto SQLXML en una columna de tabla del tipo **xml**, use los métodos setSQLXML de la clase [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) o de la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
- El código muestra de [Ejemplo de tipo de datos SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md) muestra cómo realizar estas tareas API comunes.  
+ El código de ejemplo de [Ejemplo de tipos de datos SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md) muestra cómo realizar estas tareas de API comunes.  
   
 ## <a name="readable-and-writable-sqlxml-objects"></a>Objetos SQLXML de lectura y escritura  
  La tabla siguiente enumera qué tipos de objetos SQLXML son compatibles con los métodos establecedor, captador y actualizador de la API de JDBC. Las columnas de la tabla hacen referencia a lo siguiente:  
@@ -63,7 +63,7 @@ ms.locfileid: "67956172"
   
  Si la aplicación invoca el método setObject especificando un parámetro de escala o de longitud con un objeto SQLXML, se ignora el parámetro de escala o de longitud.  
   
-## <a name="guidelines-and-limitations-when-using-sqlxml-objects"></a>Instrucciones y limitaciones cuando se usan objetos SQLXML  
+## <a name="guidelines-and-limitations-when-using-sqlxml-objects"></a>Instrucciones y limitaciones al usar objetos SQLXML  
  Las aplicaciones pueden usar objetos SQLXML para leer datos XML de la base de datos y para escribirlos en ella. La lista siguiente proporciona información relativa a las instrucciones y limitaciones específicas durante el uso de objetos SQLXML.  
   
 -   Un objeto SQLXML solamente puede ser válido durante la transacción en la que se creó.  
@@ -99,7 +99,7 @@ ms.locfileid: "67956172"
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Almacenamiento en búfer adaptable y compatibilidad con SQLXML  
  Los flujos binarios y de caracteres devueltos por el objeto SQLXML obedecen a los modos de almacenamiento en búfer completo o adaptable. Por otra parte, si los analizadores XML no son secuencia, no obedecerán a los valores completos o adaptables. Para obtener más información sobre el almacenamiento en búfer adaptable, vea [usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md)  
   
   

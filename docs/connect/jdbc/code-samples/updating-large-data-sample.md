@@ -1,7 +1,7 @@
 ---
 title: Actualización de la muestra de datos de gran tamaño | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: efde9e7254d73fcc84caeb2fce3df96bc3c88972
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1bd284f6fb8021164aa3edf6aa31761b7483406e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957024"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028259"
 ---
-# <a name="updating-large-data-sample"></a>Actualizar un ejemplo de datos grandes
+# <a name="updating-large-data-sample"></a>Actualización de ejemplo de datos grandes
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -34,7 +34,7 @@ El archivo de código para este ejemplo se denomina UpdateLargeData.java y se en
 Para ejecutar esta aplicación de ejemplo, deberá tener acceso a la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. También deberá establecer la ruta de clase para incluir el archivo sqljdbc4.jar. Si en la ruta de clase falta una entrada para sqljdbc4.jar, la aplicación de ejemplo produce la excepción común "Clase no encontrada". Para obtener más información sobre cómo establecer la ruta de clases, vea [usar el controlador JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar y sqljdbc42.jar que hay que usar en función de la configuración preferida de Java Runtime Environment (JRE). En este ejemplo se usan los métodos [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) y [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md), que se incluyen en la API de JDBC 4.0, para obtener acceso a los métodos de almacenamiento en búfer de respuestas específicos del controlador. Para compilar y ejecutar este ejemplo, necesitará la biblioteca de clases sqljdbc4.jar, que proporciona compatibilidad con JDBC 4.0. Para obtener más información acerca del archivo JAR que se debe seleccionar, consulte [Requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] proporciona los archivos de biblioteca de clases sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar y sqljdbc42.jar que hay que usar en función de la configuración preferida de Java Runtime Environment (JRE). En este ejemplo se usan los métodos [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) y [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md), que se incluyen en la API de JDBC 4.0, para obtener acceso a los métodos de almacenamiento en búfer de respuestas específicos del controlador. Para compilar y ejecutar este ejemplo, necesitará la biblioteca de clases sqljdbc4.jar, que proporciona compatibilidad con JDBC 4.0. Para obtener más información sobre el archivo JAR que se debe seleccionar, vea [Requisitos del sistema para el controlador JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -50,6 +50,6 @@ El comportamiento predeterminado del controlador es "**adaptive**". Aun así, pa
 
 [!code[JDBC#UsingAdaptiveBuffering3](../../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Trabajo con datos grandes](../../../connect/jdbc/code-samples/working-with-large-data.md)

@@ -1,7 +1,7 @@
 ---
 title: Descripción de las transacciones XA | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7caa67e019ce60f955abf60d215b6c049f3dc708
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004158"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027224"
 ---
 # <a name="understanding-xa-transactions"></a>Descripción de las transacciones XA
 
@@ -38,7 +38,7 @@ Las clases para la implementación de las transacciones distribuidas son las sig
 > [!NOTE]  
 > Las conexiones de transacciones distribuidas XA se establecen de forma predeterminada en el nivel de aislamiento Read Committed.  
   
-## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Instrucciones y limitaciones cuando se usan transacciones XA  
+## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Instrucciones y limitaciones al usar transacciones XA  
 
 Las siguientes instrucciones adicionales se aplican a las transacciones fuertemente acopladas:  
 
@@ -152,7 +152,7 @@ Cuando se inicia, se establece un valor de tiempo de espera para cada transacci�
   
      Significa que todas las transacciones tendrán un tiempo de espera de 30 segundos (el valor máximo) si el cliente no especifica ningún tiempo de espera. Si el cliente especifica algún tiempo de espera, entonces se usará el tiempo de espera del cliente siempre y cuando sea inferior a 30 segundos (el valor máximo).  
   
-### <a name="upgrading-sqljdbcxadll"></a>Actualización de sqljdbc_xa.dll
+### <a name="upgrading-sqljdbc_xadll"></a>Actualización de sqljdbc_xa.dll
 
 Al instalar una nueva versión del controlador JDBC, también debe usar sqljdbc_xa.dll de la nueva versión para actualizar sqljdbc_xa.dll en el servidor.  
   
@@ -347,6 +347,6 @@ class XidImpl implements Xid {
 
 ```
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 
-[Realizar transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
+[Transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

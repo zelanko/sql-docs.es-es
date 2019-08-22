@@ -1,7 +1,7 @@
 ---
 title: Creación de la dirección URL de conexión | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957373"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028452"
 ---
 # <a name="building-the-connection-url"></a>Generar URL de conexión
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67957373"
     > [!NOTE]  
     >  Para obtener un rendimiento óptimo de la conexión, debe establecer portNumber al conectar con una instancia con nombre. De este modo se evita un ciclo de ida y vuelta en el servidor para determinar el número de puerto. Si se usan portNumber e instanceName, portNumber tiene prioridad e instanceName se omite.  
   
--   **property** (opcional) es una o más propiedades de conexión de la opción. Para obtener más información, vea [Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md). Se puede especificar cualquier propiedad de la lista. Las propiedades solo se pueden delimitar mediante punto y coma (";") y no se pueden duplicar.  
+-   **property** (opcional) es una o más propiedades de conexión de la opción. Para obtener más información, vea [Establecimiento de las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md). Se puede especificar cualquier propiedad de la lista. Las propiedades solo se pueden delimitar mediante punto y coma (";") y no se pueden duplicar.  
   
 > [!CAUTION]  
 >  Por motivos de seguridad, debe evitar la generación de direcciones URL de conexión basadas en la entrada del usuario. Debe especificar solo el nombre del servidor y el controlador de la URL. Para los valores de nombre y contraseña, utilice las colecciones de propiedades de conexión. Para obtener más información sobre la seguridad en las aplicaciones JDBC, consulte [proteger aplicaciones de controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
@@ -83,7 +83,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `jdbc:sqlserver://localhost;instanceName=instance1;integratedSecurity=true;<more properties as required>;`  
   
-## <a name="escaping-values-in-the-connection-url"></a>Escape de valores en la URL de conexión  
+## <a name="escaping-values-in-the-connection-url"></a>Escape de valores en la dirección URL de conexión  
  Puede que tenga que aplicar un escape a determinadas partes de los valores URL de conexión debido a la inclusión de caracteres especiales como espacios, puntos y comas, y comillas. El controlador JDBC admite el escape de estos caracteres si se incluyen entre llaves. Por ejemplo, {;} aplica el escape al punto y coma.  
   
  Los valores de escape pueden contener caracteres especiales (sobre todo "=", ";", "[]'" y espacio), pero no pueden contener llaves. Los valores a los que se debe aplicar el escape y contengan llaves se deben agregar a la colección de propiedades.  
@@ -91,7 +91,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  El espacio en blanco dentro de las llaves es literal y no se reduce.  
   
-##  <a name="Connectingintegrated"></a> Conexión con la autenticación integrada en Windows  
+##  <a name="Connectingintegrated"></a> Conexión con autenticación integrada en Windows  
  El controlador JDBC admite el uso de la autenticación integrada de tipo 2 en los sistemas operativos Windows mediante la propiedad de cadena de conexión integratedSecurity. Para usar la autenticación integrada, copie el archivo sqljdbc_auth.dll en un directorio de la ruta del sistema de Windows en que esté instalado el controlador JDBC.  
   
  Los archivos sqljdbc_auth.dll se instalan en la siguiente ubicación:  
@@ -122,7 +122,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

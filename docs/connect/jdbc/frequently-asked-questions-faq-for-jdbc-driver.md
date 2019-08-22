@@ -1,7 +1,7 @@
 ---
 title: Preguntas más frecuentes (P+F) sobre el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2860034ae67fc7cc376e84251dbeebc5a123fade
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892373"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028073"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F) sobre el controlador JDBC
 
@@ -29,7 +29,7 @@ En esta página se ofrecen respuestas a las preguntas más frecuentes sobre Micr
 El controlador JDBC Driver es de código abierto, y el código fuente puede encontrarse en [GitHub](https://github.com/microsoft/mssql-jdbc). Puede ayudar a mejorar el controlador notificando problemas y contribuyendo a la base del código.
 
 **¿Qué versiones de SQL Server y Java admite el controlador?**  
-Consulte la página [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) para más información.
+Vea la página [Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) para obtener detalles.
 
 **¿Cuál es la diferencia entre los paquetes del controlador JDBC Driver disponibles en el Centro de descarga de Microsoft y el controlador JDBC Driver disponible en GitHub?**  
 Los archivos del controlador JDBC Driver disponibles en el repositorio GitHub para el controlador JDBC Driver de Microsoft son el núcleo del controlador JDBC Driver y están bajo la licencia de código abierto que se encuentra en el repositorio. Los paquetes del controlador del Centro de descarga de Microsoft incluyen bibliotecas adicionales para la autenticación integrada de Windows y la habilitación de transacciones XA con el controlador JDBC Driver. Esas bibliotecas adicionales están bajo la licencia incluida con el paquete descargable.

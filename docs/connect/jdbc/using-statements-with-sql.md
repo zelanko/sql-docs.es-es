@@ -1,7 +1,7 @@
 ---
 title: Usar instrucciones con SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 082671d3acf2873bb822e6b836599c00f42d6323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916159"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025829"
 ---
-# <a name="using-statements-with-sql"></a>Usar instrucciones con SQL
+# <a name="using-statements-with-sql"></a>Empleo de instrucciones con SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -34,11 +34,11 @@ En las siguientes secciones se describen las diferentes situaciones de trabajo c
 
 | Tema                                                                                                                        | Descripción                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| [Usar una instrucción SQL sin parámetros](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)                 | Describe cómo usar instrucciones SQL que no contienen parámetros.   |
-| [Usar una instrucción SQL con parámetros](../../connect/jdbc/using-an-sql-statement-with-parameters.md)                       | Describe cómo usar instrucciones SQL que contienen parámetros.      |
-| [Usar una instrucción SQL para modificar objetos de la base de datos](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md) | Describe cómo usar instrucciones SQL para modificar objetos de la base de datos.   |
-| [Usar una instrucción SQL para modificar datos](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)                         | Describe cómo usar instrucciones SQL para modificar datos de una base de datos. |
+| [Empleo de una instrucción SQL sin parámetros](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)                 | Describe cómo usar instrucciones SQL que no contienen parámetros.   |
+| [Empleo de una instrucción SQL con parámetros](../../connect/jdbc/using-an-sql-statement-with-parameters.md)                       | Describe cómo usar instrucciones SQL que contienen parámetros.      |
+| [Empleo de una instrucción SQL para modificar objetos de base de datos](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md) | Describe cómo usar instrucciones SQL para modificar objetos de la base de datos.   |
+| [Empleo de una instrucción SQL para modificar datos](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)                         | Describe cómo usar instrucciones SQL para modificar datos de una base de datos. |
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Usar instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+[Empleo de instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

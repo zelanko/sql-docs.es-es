@@ -1,7 +1,7 @@
 ---
 title: Usar instrucciones con procedimientos almacenados | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 774e79b6baa3db1c6356768de4b04226ddbc7688
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003939"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025863"
 ---
-# <a name="using-statements-with-stored-procedures"></a>Usar instrucciones con procedimientos almacenados
+# <a name="using-statements-with-stored-procedures"></a>Empleo de instrucciones con procedimientos almacenados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -50,12 +50,12 @@ En los temas de esta sección se describen las formas en las que puede llamar a 
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Usar un procedimiento almacenado sin parámetros](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que no contengan parámetros de entrada o de salida.|  
-|[Usar un procedimiento almacenado con parámetros de entrada](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que contengan parámetros de entrada.|  
-|[Usar un procedimiento almacenado con parámetros de salida](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que contengan parámetros de salida.|  
-|[Usar un procedimiento almacenado con un estado de devolución](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que contengan valores de estado de devolución.|  
-|[Usar un procedimiento almacenado con un recuento de actualizaciones](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que devuelvan recuentos de actualizaciones.|  
+|[Empleo de un procedimiento almacenado sin parámetros](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que no contengan parámetros de entrada o de salida.|  
+|[Empleo de un procedimiento almacenado con parámetros de entrada](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que contengan parámetros de entrada.|  
+|[Empleo de un procedimiento almacenado con parámetros de salida](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que contengan parámetros de salida.|  
+|[Empleo de un procedimiento almacenado con un estado de retorno](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que contengan valores de estado de devolución.|  
+|[Empleo de un procedimiento almacenado con un recuento de actualización](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que devuelvan recuentos de actualizaciones.|  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Usar instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+[Empleo de instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

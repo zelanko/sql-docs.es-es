@@ -1,7 +1,7 @@
 ---
 title: Realización de operaciones por lotes | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a77816598e7c8e3f0589f71cb5c02e40e0e17317
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956226"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027925"
 ---
-# <a name="performing-batch-operations"></a>Realizar operaciones por lotes
+# <a name="performing-batch-operations"></a>Realización de operaciones por lotes
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Con el fin de aumentar el rendimiento al realizar varias actualizaciones en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ofrece la posibilidad de enviar varias actualizaciones como una sola unidad de trabajo, denominada también lote.  
@@ -56,7 +56,7 @@ public static void executeBatchUpdate(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte también  
- [Usar instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>Vea también  
+ [Empleo de instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

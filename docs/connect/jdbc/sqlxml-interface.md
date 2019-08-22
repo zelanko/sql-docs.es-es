@@ -1,7 +1,7 @@
 ---
 title: Interfaz SQLXML | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f235525e7a633bc0c49d39f8bec6bf4a79c0885d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 72cccce89d5e30a92f38b956c8b7996949d3bb46
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006023"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027701"
 ---
 # <a name="sqlxml-interface"></a>Interfaz SQLXML
 
@@ -49,6 +49,6 @@ El objeto SQLXML no se puede leer ni escribir cuando la aplicación llama a cual
   
 El objeto SQLXML no se puede escribir ni leer cuando la aplicación llama a cualquiera de los siguientes métodos Setter: setResult, setCharacterStream, setBinaryStream y setString.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 
 [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md)  

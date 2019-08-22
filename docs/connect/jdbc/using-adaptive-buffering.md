@@ -1,7 +1,7 @@
 ---
 title: Usar el almacenamiento en búfer adaptable | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916466"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026800"
 ---
-# <a name="using-adaptive-buffering"></a>Usar el almacenamiento en búfer adaptable
+# <a name="using-adaptive-buffering"></a>Empleo de almacenamiento en búfer adaptable
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -91,6 +91,6 @@ Además, la siguiente lista proporciona algunas recomendaciones para los conjunt
 
 - Para los conjuntos de resultados de solo avance, cuando recupera un conjunto de filas el controlador normalmente lee en la memoria el número de filas indicado por el método [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) del objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), incluso aunque el almacenamiento en búfer adaptable esté habilitado en la conexión. Si la llamada al método [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) del objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) produce un OutOfMemoryError, puede reducir el número de filas recuperadas llamando al método [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) del objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) para configurar el tamaño de captura en un número de filas más pequeño, incluso una sola fila si es necesario. También puede forzar el controlador para que no almacene filas en el almacenamiento den búfer llamando al método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) del objeto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) con el parámetro "**adaptive**" antes de ejecutar la instrucción. Como el conjunto de resultados no es desplazable, si la aplicación accede a un número de columna grande utilizando uno de los métodos get\<Type>Stream, el controlador rechaza el valor en cuanto la aplicación lo lee, lo mismo que hace con los conjuntos de resultados de solo avance y solo lectura.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Mejorar el rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)
+[Mejora del rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

@@ -1,7 +1,7 @@
 ---
 title: Clasificación y detección de datos de SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 08a02ed004c5edd7b849b0c5ae1a43f21da031ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 722cf9bf616d1e98beb7b9cbd1dc0bbdd89d8a4b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956740"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028136"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Clasificación y detección de datos de SQL
 
@@ -182,6 +182,6 @@ public class DataDiscoveryAndClassification {
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Aplicaciones del controlador JDBC de ejemplo](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+[Aplicaciones de ejemplo del controlador JDBC](../../connect/jdbc/sample-jdbc-driver-applications.md)  

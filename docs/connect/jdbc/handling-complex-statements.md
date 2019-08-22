@@ -1,7 +1,7 @@
 ---
 title: Administrar instrucciones complejas | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7adee47147a8aad153bc323470f1711426d92350
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ebd2aee0990b744df1420e88f8cc79870b350f2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956545"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027989"
 ---
-# <a name="handling-complex-statements"></a>Controlar instrucciones complejas
+# <a name="handling-complex-statements"></a>Control de instrucciones complejas
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Cuando se usa el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], puede que tenga que controlar instrucciones complejas, incluidas instrucciones generadas dinámicamente en tiempo de ejecución. Las instrucciones complejas suelen realizar tareas diversas como actualizaciones, inserciones y eliminaciones. Estos tipos de instrucciones pueden devolver varios conjuntos de resultados y parámetros de salida. En estos casos, el código Java que ejecuta las instrucciones puede no saber por anticipado los tipos y el número de objetos y datos devueltos.  
@@ -30,7 +30,7 @@ ms.locfileid: "67956545"
   
  [!code[JDBC#HandlingComplexStatements1](../../connect/jdbc/codesnippet/Java/handling-complex-statements_1.java)]  
   
-## <a name="see-also"></a>Consulte también  
- [Usar instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>Vea también  
+ [Empleo de instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   

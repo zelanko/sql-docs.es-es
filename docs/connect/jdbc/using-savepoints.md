@@ -1,7 +1,7 @@
 ---
 title: Usar puntos de retorno | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9212e2de7a093b92c51489bb17623a2120e5ce35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d860e368fe66ce926687fd343fe9f23704cfc7d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916218"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026131"
 ---
-# <a name="using-savepoints"></a>Usar puntos de retorno
+# <a name="using-savepoints"></a>Empleo de puntos de retorno
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -31,6 +31,6 @@ En el siguiente ejemplo, se usa un punto de retorno a la vez que se realiza una 
 
 [!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Realizar transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)
+[Transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

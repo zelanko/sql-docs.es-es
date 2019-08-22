@@ -1,7 +1,7 @@
 ---
 title: Azure Key Vault ejemplo | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 734d69388f644af93d794287174c19c036d278fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b1ef38ec5175d97c3896c3e6450d6e403f7850fa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957435"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028441"
 ---
 # <a name="azure-key-vault-sample"></a>Ejemplo de Azure Key Vault
 
@@ -243,7 +243,7 @@ public class AKV {
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Versión de ejemplo de Azure Key Vault 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
 [Versión de ejemplo de Azure Key Vault 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  

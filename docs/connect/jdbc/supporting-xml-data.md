@@ -1,7 +1,7 @@
 ---
 title: Compatibilidad con datos XML | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 32b7217e-1f0c-473d-9a45-176daa81584e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: af528f507f39cde948ae269d58abb2c0d9dcce46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 799b22cfac669846c606456f1911e27353a9ba9f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004278"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027714"
 ---
 # <a name="supporting-xml-data"></a>Compatibilidad con datos XML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68004278"
  El controlador JDBC ofrece compatibilidad con la API de JDBC 4.0, que presenta la interfaz SQLXML. La interfaz SQLXML define métodos para interactuar con los datos XML y manipularlos. **SQLXML** es un tipo de datos de JDBC 4,0 y se asigna al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo de datos **XML** . Por tanto, para usar el tipo de datos SQLXML en sus aplicaciones, debe establecer la ruta de clase para incluir el archivo sqljdbc4.jar. Si la aplicación intenta usar sqljdbc3.jar cuando obtiene acceso al objeto SQLXML y sus métodos, se devuelve una excepción.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida siempre los datos XML antes de almacenarlos en la columna de base de datos. Las aplicaciones pueden usar el tipo de datos **SQLXML**, ya que el controlador JDBC lo asigna automáticamente al tipo de datos **xml**. La compatibilidad de **SQLXML** está disponible en sqljdbc4.jar. Consulte [Requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) para obtener la lista de versiones JRE compatibles con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida siempre los datos XML antes de almacenarlos en la columna de base de datos. Las aplicaciones pueden usar el tipo de datos **SQLXML**, ya que el controlador JDBC lo asigna automáticamente al tipo de datos **xml**. La compatibilidad de **SQLXML** está disponible en sqljdbc4.jar. Vea [Requisitos del sistema para el controlador JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md) para obtener la lista de versiones de JRE compatibles con [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  En los temas de esta sección se describe la interfaz SQLXML y se explica cómo programar en el tipo de datos **SQLXML** con los métodos de la API de JDBC.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68004278"
 |[Interfaz SQLXML](../../connect/jdbc/sqlxml-interface.md)|Describe la interfaz SQLXML y sus métodos.|  
 |[Programar con SQLXML](../../connect/jdbc/programming-with-sqlxml.md)|Describe cómo usar los métodos de la API de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] para almacenar y recuperar datos XML en y desde una base de datos relacional con el tipo de datos **SQLXML** de Java. También contiene información acerca de los tipos de objetos SQLXML y proporciona una lista de las instrucciones y las limitaciones importantes cuando se usan objetos SQLXML.|  
   
-## <a name="see-also"></a>Consulte también  
- [Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+## <a name="see-also"></a>Vea también  
+ [Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

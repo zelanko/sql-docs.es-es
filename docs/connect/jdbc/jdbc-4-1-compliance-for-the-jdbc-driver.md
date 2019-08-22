@@ -1,7 +1,7 @@
 ---
 title: Compatibilidad de JDBC 4,1 con el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6bf37b74c06ac03ef135eab7a09d275bde78b867
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea3d783fb98d22b3937016c9e6e60ed625ffca2d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956378"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027970"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>Cumplimiento de JDBC 4.1 con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

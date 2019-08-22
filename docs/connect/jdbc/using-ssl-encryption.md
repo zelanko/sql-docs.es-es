@@ -1,7 +1,7 @@
 ---
 title: Usar el cifrado SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 34a486a2bcde43ccccc053aed9ebd9392ce34e8c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003969"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026033"
 ---
-# <a name="using-ssl-encryption"></a>Usar el cifrado SSL
+# <a name="using-ssl-encryption"></a>Empleo del cifrado SSL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -39,9 +39,9 @@ En los temas de esta sección se describe cómo la versión del [!INCLUDE[jdbcNo
 | Tema                                                                                                        | Descripción                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Descripción de la compatibilidad con SSL](../../connect/jdbc/understanding-ssl-support.md)                                 | Describe cómo el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] admite el cifrado SSL.                                              |
-| [Conectar con el cifrado SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Describe cómo conectarse a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con las nuevas propiedades de conexión específicas de SSL. |
-| [Configurar el cliente para el cifrado SSL](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Describe cómo configurar el almacén de confianza predeterminado del lado cliente y cómo importar un certificado privado al almacén de confianza del equipo cliente.   |
+| [Conexión con cifrado SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)                       | Describe cómo conectarse a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con las nuevas propiedades de conexión específicas de SSL. |
+| [Configuración del cliente para el cifrado SSL](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md) | Describe cómo configurar el almacén de confianza predeterminado del lado cliente y cómo importar un certificado privado al almacén de confianza del equipo cliente.   |
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Proteger las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

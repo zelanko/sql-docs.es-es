@@ -1,7 +1,7 @@
 ---
 title: Descripción de los tipos de cursor | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dbd7e3622df44d6b696b56745495b684d6100eb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5ea30d2280ffea4c2ccf09d1f884a03751ed843
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004185"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027492"
 ---
 # <a name="understanding-cursor-types"></a>Descripción de los tipos de cursor
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "68004185"
 >   
 >  SQL Server restringe los cursores de servidor a un solo conjunto de resultados. Si un lote o procedimiento almacenado contiene varias instrucciones, se debe usar un cursor de cliente de solo lectura y de solo avance.  
   
-## <a name="see-also"></a>Consulte también  
- [Administrar conjuntos de resultados con el controlador JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>Vea también  
+ [Administración de conjuntos de resultados con el controlador JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

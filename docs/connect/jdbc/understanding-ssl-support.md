@@ -1,7 +1,7 @@
 ---
 title: Descripción de la compatibilidad con SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 32820e38a8292068aa95c505a04292fbac2c69af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916608"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027306"
 ---
 # <a name="understanding-ssl-support"></a>Descripción de la compatibilidad con SSL
 
@@ -80,8 +80,8 @@ Durante el protocolo de enlace SSL, el servidor envía su certificado de clave p
   
 - Un nombre DNS puede incluir caracteres comodín. Pero [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] no admite la coincidencia de caracteres comodín. Es decir, abc.com no coincide con \*.com, pero \*.com sí coincide con \*.com.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Usar el cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)
+[Empleo de cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)
 
-[Proteger las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+[Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

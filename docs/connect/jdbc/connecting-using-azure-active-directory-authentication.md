@@ -1,7 +1,7 @@
 ---
-title: Conectarse mediante la autenticación de Azure Active Directory | Microsoft Docs
+title: Conexión mediante autenticación de Azure Active Directory | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2019
+ms.date: 08/12/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a194338a41e64e18076ad37a4f895180a7d9e448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956819"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028121"
 ---
-# <a name="connecting-using-azure-active-directory-authentication"></a>Conectarse usando la autenticación de Azure Active Directory
+# <a name="connecting-using-azure-active-directory-authentication"></a>Conexión mediante autenticación de Azure Active Directory
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -175,7 +175,7 @@ JDK incluye `kinit`, que se puede usar para obtener un TGT de centro de distribu
 #### <a name="linux-and-mac"></a>Linux y Mac
 
 ##### <a name="requirements"></a>Requisitos
-Acceso a un equipo unido a un dominio de Windows para consultar el controlador de dominio de Kerberos.
+Acceso a un equipo Windows unido a dominio para consultar el controlador de dominio de Kerberos.
 
 ##### <a name="step-1-find-kerberos-kdc"></a>Paso 1: buscar el KDC de Kerberos
 - **Ejecutar en**: línea de comandos de Windows
@@ -201,12 +201,12 @@ Acceso a un equipo unido a un dominio de Windows para consultar el controlador d
      kdc = co1-red-dc-28.domain.company.com
   }
   ```
-  A continuación, guarde el archivo krb5. conf y salga de
+  Luego, guarde el archivo krb5.conf y salga.
 
 > [!NOTE]
->  El dominio debe estar en MAYÚSCULAs.
+>  El dominio debe estar en MAYÚSCULAS.
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Paso 3: probar la recuperación de vales de concesión de vales
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Paso 3: Probar la recuperación de un vale de concesión de vales
 - **Ejecutar en**: Linux/Mac
 - **Acción**:
   - Use el comando `kinit username@DOMAIN.COMPANY.COM` para obtener un TGT de KDC y, a continuación, le pedirá la contraseña del dominio.

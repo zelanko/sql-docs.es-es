@@ -1,7 +1,7 @@
 ---
 title: Usar metadatos del conjunto de resultados | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 5e37529a-30db-48c8-b90a-ae9657d0f6b0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86e41f52ed8296c46cfd7b167407b10fc9f0b285
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ed0b1eedcafa1fab59d17f756523fc0fc189200
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005943"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026121"
 ---
-# <a name="using-result-set-metadata"></a>Usar metadatos del conjunto de resultados
+# <a name="using-result-set-metadata"></a>Empleo de metadatos del conjunto de resultados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -29,6 +29,6 @@ En el ejemplo siguiente, se pasa una conexión abierta [!INCLUDE[ssSampleDBnorma
 
 [!code[JDBC#UsingResultSetMetaData1](../../connect/jdbc/codesnippet/Java/using-result-set-metadata_1.java)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Controlar metadatos con el controlador JDBC](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)
+[Control de metadatos con el controlador JDBC](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)

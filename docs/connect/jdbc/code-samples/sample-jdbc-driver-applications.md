@@ -1,7 +1,7 @@
 ---
 title: Aplicaciones del controlador JDBC de ejemplo | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e99e122f1e18c320c6ea6e5b18409ca39780d03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ef5c2d71d398be52ebed2b69020e87d54818176
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957078"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028315"
 ---
-# <a name="sample-jdbc-driver-applications"></a>Aplicaciones del controlador JDBC de ejemplo
+# <a name="sample-jdbc-driver-applications"></a>Aplicaciones de ejemplo del controlador JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -41,6 +41,6 @@ Todas las aplicaciones de ejemplo se incluyen en archivos de código *.java que 
 | [Trabajo con datos grandes](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | Estas aplicaciones de ejemplo demuestran cómo usar el almacenamiento en búfer adaptable para recuperar datos de valores grandes de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sin la sobrecarga que suponen los cursores de servidor.                                                         |
 | [Clasificación y detección de datos de SQL](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | En esta aplicación de ejemplo se muestra cómo recuperar información de detección y clasificación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datos incluida en una base de datos de un objeto ResultSet mediante el controlador JDBC.                                            |
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Introducción al controlador JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md)

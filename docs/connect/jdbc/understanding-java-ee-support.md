@@ -1,7 +1,7 @@
 ---
 title: Descripción de la compatibilidad con Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 318800db7335a47226e75a4e05a4493c366507f9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3eb2778f11aa83498bdfc47ece599aa07c403fe0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892311"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027264"
 ---
 # <a name="understanding-java-ee-support"></a>Descripción de la compatibilidad con Java EE
 
@@ -45,7 +45,7 @@ El nombre de clase se usa siempre que se carga el controlador con la clase Drive
 
 El controlador JDBC proporciona compatibilidad con los orígenes de datos de Java EE / JDBC 3.0. La clase [SQLServerXADataSource ](../../connect/jdbc/reference/sqlserverxadatasource-class.md) del controlador JDBC Driver se implementa por `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
   
-### <a name="datasource-names"></a>Nombre de los orígenes de datos
+### <a name="datasource-names"></a>Nombres de los orígenes de datos
 
 Puede realizar conexiones a bases de datos mediante orígenes de datos. Los orígenes de datos disponibles con el controlador JDBC se describen en la tabla siguiente:  
   
@@ -55,7 +55,7 @@ Puede realizar conexiones a bases de datos mediante orígenes de datos. Los orí
 |ConnectionPoolDataSource|`com.microsoft.sqlserver.jdbc.SQLServerConnectionPoolDataSource` <br/> <br/> Origen de datos para configurar los grupos de conexiones de servidor de aplicaciones de JAVA EE. Normalmente se usa cuando la aplicación se ejecuta dentro de un servidor de aplicaciones de JAVA EE.|  
 |XADataSource|`com.microsoft.sqlserver.jdbc.SQLServerXADataSource` <br/> <br/> Origen de datos para configurar orígenes de datos de JAVA EE XA. Normalmente se usa cuando la aplicación se ejecuta dentro de un servidor de aplicaciones de JAVA EE y un administrador de transacciones de XA.|  
   
-### <a name="data-source-properties"></a>Propiedades de origen de datos
+### <a name="data-source-properties"></a>Propiedades del origen de datos
 
 Todos los orígenes de datos permiten establecer y obtener cualquier propiedad que esté asociada al conjunto de propiedades del controlador subyacente.  
   
@@ -74,8 +74,8 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-Para obtener más información acerca de las propiedades del origen de datos, vea [Establecer las propiedades de los orígenes de datos](../../connect/jdbc/setting-the-data-source-properties.md).  
+Para obtener más información sobre las propiedades de origen de datos, vea [Establecimiento de las propiedades de origen de datos](../../connect/jdbc/setting-the-data-source-properties.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

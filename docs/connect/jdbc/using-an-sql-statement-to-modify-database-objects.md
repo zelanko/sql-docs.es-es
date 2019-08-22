@@ -1,7 +1,7 @@
 ---
-title: Usar una instrucción SQL para modificar objetos de la base de datos | Microsoft Docs
+title: Empleo de una instrucción SQL para modificar objetos de base de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28c71784f8e51600aef111649b12f81b5878b324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de8e357328c151e3762f324dcbeba2525df53530
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916380"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026563"
 ---
-# <a name="using-an-sql-statement-to-modify-database-objects"></a>Usar una instrucción SQL para modificar objetos de la base de datos
+# <a name="using-an-sql-statement-to-modify-database-objects"></a>Empleo de una instrucción SQL para modificar objetos de base de datos
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -32,6 +32,6 @@ En el siguiente ejemplo, se pasa a la función una conexión abierta a la base d
 
 [!code[JDBC#UsingSQLToModifyDBObjects1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-t_0_1.java)]
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Usar instrucciones con SQL](../../connect/jdbc/using-statements-with-sql.md)
+[Empleo de instrucciones con SQL](../../connect/jdbc/using-statements-with-sql.md)

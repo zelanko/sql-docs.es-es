@@ -1,7 +1,7 @@
 ---
 title: Proteger las cadenas de conexión | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 05782c2691b3409339554e2154b385b93c17b4d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1483beed275649156ab84c370facc716818fb974
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945785"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027742"
 ---
-# <a name="securing-connection-strings"></a>Proteger las cadenas de conexión
+# <a name="securing-connection-strings"></a>Protección de cadenas de conexión
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -29,6 +29,6 @@ Otro enfoque consiste en almacenar la contraseña cifrada en un archivo. Asegúr
 
 Si obtiene la información de cadena de conexión de una fuente externa (por ejemplo, si un usuario proporciona un Id. de usuario y una contraseña), debe validar las entradas desde el origen para asegurarse de que presentan el formato correcto y no contienen parámetros adicionales que afecten a la conexión.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Proteger las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)
+[Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)

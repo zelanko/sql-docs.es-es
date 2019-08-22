@@ -1,7 +1,7 @@
 ---
 title: Proteger las aplicaciones del controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c539e94b9fdcd3d1cd281e1a0f1043eec55739bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945740"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027752"
 ---
-# <a name="securing-jdbc-driver-applications"></a>Proteger las aplicaciones del controlador JDBC
+# <a name="securing-jdbc-driver-applications"></a>Protección de las aplicaciones del controlador JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -35,6 +35,6 @@ En los temas de esta sección se describen algunos orígenes de problemas de seg
 | [Usar el cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)               | Describe cómo establecer un canal de comunicación seguro con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante Capa de sockets seguros (SSL). |
 | [Modo FIPS](../../connect/jdbc/fips-mode.md)                                     | Describe cómo usar el controlador JDBC en modo compatible con FIPS.                                                                                                              |
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

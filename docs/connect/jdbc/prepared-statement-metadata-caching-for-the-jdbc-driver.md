@@ -1,7 +1,7 @@
 ---
-title: Almacenamiento en caché de metadatos de instrucción preparado para el controlador JDBC | Microsoft Docs
+title: Almacenamiento en caché de metadatos de instrucciones preparadas para el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a9abd72b366060da2fdffd58c17ace50f01246a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956209"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027838"
 ---
-# <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Almacenamiento en caché de metadatos de instrucción preparado para el controlador JDBC
+# <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Almacenamiento en caché de metadatos de instrucciones preparadas para el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 En este artículo se proporciona información sobre los dos cambios que se implementan para mejorar el rendimiento del controlador.
@@ -87,7 +87,7 @@ Por ejemplo: `connection.setStatementPoolingCacheSize(10)`
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|Especifica el tamaño de la memoria caché de instrucciones preparada para esta conexión. Un valor menor que 1 significa que no hay caché.|
 |int getStatementPoolingCacheSize()|Devuelve el tamaño de la memoria caché de instrucciones preparada para esta conexión. Un valor menor que 1 significa que no hay caché.|
 
-## <a name="see-also"></a>Consulte también  
- [Mejorar el rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>Vea también  
+ [Mejora del rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

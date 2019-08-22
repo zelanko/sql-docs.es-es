@@ -1,7 +1,7 @@
 ---
 title: Descripción de los niveles de aislamiento | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6cfbc099d88a96574439fa8c178b12629d92782c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916641"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027391"
 ---
 # <a name="understanding-isolation-levels"></a>Descripción de los niveles de aislamiento
 
@@ -75,6 +75,6 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 
 Para obtener más información sobre los niveles de aislamiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea "Niveles de aislamiento en [!INCLUDE[ssDE](../../includes/ssde_md.md)]" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Realizar transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
+[Transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

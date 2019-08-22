@@ -1,7 +1,7 @@
 ---
-title: Configurar el modo en que los valores java.sql.Time se envían al servidor | Microsoft Docs
+title: Configuración del modo en que los valores java.sql.Time se envían al servidor | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f22382db2ab6cd9c6f055b8143500e2062721df1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956933"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028233"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configurar el modo en que los valores java.sql.Time se envían al servidor
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -61,7 +61,7 @@ SendTimeAsDatetime debe ser false para las columnas cifradas, ya que las columna
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```
   
-## <a name="see-also"></a>Consulte también  
- [Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+## <a name="see-also"></a>Vea también
+ [Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

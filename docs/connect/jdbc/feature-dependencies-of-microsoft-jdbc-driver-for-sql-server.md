@@ -1,7 +1,7 @@
 ---
 title: Dependencias de características de Microsoft JDBC Driver para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 26395c7a925906e7b27d4e47098164019e56f31d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7abf0d389217535292260b6a5b055697eb4b19df
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893950"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028090"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Dependencias de características de Microsoft JDBC Driver para SQL Server
 
@@ -88,23 +88,23 @@ Los proyectos específicos que requieren cualquiera de las características ante
 </dependency>
 ```
 
-## <a name="dependency-requirements-for-the-jdbc-driver"></a>Requisitos de dependencias para JDBC Driver
+## <a name="dependency-requirements-for-the-jdbc-driver"></a>Requisitos de dependencias para el controlador JDBC
 
-### <a name="working-with-the-azure-key-vault-provider"></a>Uso del proveedor de Azure Key Vault:
+### <a name="working-with-the-azure-key-vault-provider"></a>Trabajo con el proveedor de Azure Key Vault:
 
-- Versión del controlador JDBC Driver 7.4.1 - versiones de dependencia: Azure-Keyvault (versión 1.2.1), Adal4j (versión 1.6.4), Client-Runtime-for-AutoRest (1.6.10) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Versión del controlador JDBC Driver 7.2.2 - versiones de dependencia: Azure-Keyvault (versión 1.2.0), Azure-Keyvault-Webkey (versión 1.2.0), Adal4j (versión 1.6.3), Client-Runtime-for-AutoRest (1.6.5) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Versión del controlador JDBC Driver 7.0.0 - versiones de dependencia: Azure-Keyvault (versión 1.0.0), Adal4j (versión 1.6.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Versión del controlador JDBC Driver 6.4.0 - versiones de dependencia: Azure-Keyvault (versión 1.0.0), Adal4j (versión 1.4.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- Versión del controlador JDBC Driver 6.2.2 - versiones de dependencia: Azure-Keyvault (versión 1.0.0), Adal4j (versión 1.4.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- Versión del controlador JDBC Driver 6.0.0 - versiones de dependencia: Azure-Keyvault (version 0.9.7), Adal4j (version 1.3.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- Versión del controlador JDBC 7.4.1 - versiones de dependencia: Azure-Keyvault (versión 1.2.1), Adal4j (versión 1.6.4), Client-Runtime-for-AutoRest (1.6.10) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- Versión del controlador JDBC 7.2.2 - versiones de dependencia: Azure-Keyvault (versión 1.2.0), Azure-Keyvault-Webkey (versión 1.2.0), Adal4j (versión 1.6.3), Client-Runtime-for-AutoRest (1.6.5) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- Versión del controlador JDBC 7.0.0 - versiones de dependencia: Azure-Keyvault (versión 1.0.0), Adal4j (versión 1.6.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
+- Versión del controlador JDBC 6.4.0 - versiones de dependencia: Azure-Keyvault (versión 1.0.0), Adal4j (versión 1.4.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- Versión del controlador JDBC 6.2.2 - versiones de dependencia: Azure-Keyvault (versión 1.0.0), Adal4j (versión 1.4.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
+- Versión del controlador JDBC 6.0.0 - versiones de dependencia: Azure-Keyvault (versión 0.9.7), Adal4j (versión 1.3.0) y sus dependencias ([aplicación de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
 > Con las versiones de controlador 6.2.2 y 6.4.0, la dependencia azure-keyvault-java se ha actualizado a la versión 1.0.0. Sin embargo, la nueva versión no era compatible con la versión anterior (0.9.7) e interrumpe la implementación existente en el controlador. La nueva implementación en el controlador requirió cambios en la API, lo cual a su vez interrumpe los programas cliente que usan el proveedor de Azure Key Vault.
 >
 > Este problema se resuelve con las versiones más recientes del controlador (de la 7.0.0 en adelante). El constructor quitado que utilizaba el mecanismo de devolución de llamada de autenticación se agrega de nuevo al proveedor de Azure Key Vault para permitir la compatibilidad con versiones anteriores.
 
-### <a name="working-with-azure-active-directory-authentication"></a>Uso de la autenticación de Azure Active Directory:
+### <a name="working-with-azure-active-directory-authentication"></a>Trabajo con autenticación de Azure Active Directory:
 
 - Versión del controlador JDBC Driver 7.4.1 - versiones de dependencia: Adal4j (version 1.6.4), Client-Runtime-for-AutoRest (1.6.10) y sus dependencias
 - Versión del controlador JDBC Driver 7.2.2 - versiones de dependencia: Adal4j (version 1.6.3), Client-Runtime-for-AutoRest (1.6.5) y sus dependencias

@@ -1,7 +1,7 @@
 ---
 title: Administrar el tamaño de la transacción | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0e53ab6e5f2fc2cc12db37d81b1c8f687b503158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b443e3541dbf86fd0cfa947f057faaf62e08226
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956354"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027898"
 ---
-# <a name="managing-transaction-size"></a>Administrar el tamaño de las transacciones
+# <a name="managing-transaction-size"></a>Administración del tamaño de las transacciones
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Cuando trabaja con transacciones, es importante intentar que su tamaño sea el menor posible. El modo predeterminado de confirmación automática, que puede habilitar o deshabilitar con el método [setAutoCommit](../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md), confirmará cada acción en su lugar. Éste es el modo más fácil en que trabajan la mayoría de los programadores.  
@@ -28,7 +28,7 @@ ms.locfileid: "67956354"
   
  Además, asegúrese de utilizar el valor de tiempo de espera para la exclusión si la aplicación prevé que va a haber problemas de bloqueo y será necesario establecer tiempos de espera para solucionarlos. Para ello, puede usar el método [setLockTimeout](../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md). El valor predeterminado del tiempo de espera para la exclusión es -1, lo que significa que el bloqueo se mantendrá indefinidamente mientras se espera la exclusión. Puede establecer el tiempo de espera para la exclusión en 30 segundos, lo que hará que la conexión bloqueada agote el tiempo de espera después de 30 segundos si otra conexión la bloquea.  
   
-## <a name="see-also"></a>Consulte también  
- [Mejorar el rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>Vea también  
+ [Mejora del rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

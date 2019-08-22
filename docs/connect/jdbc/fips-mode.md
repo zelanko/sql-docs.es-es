@@ -1,7 +1,7 @@
 ---
 title: Modo FIPS en JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: genemi
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 manager: kenvh
-ms.openlocfilehash: 482e820d17860b67f46d47f4bb8523e833d0cf5a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 63681ee474d4993e248bf02dcabd9065317ffa39
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252212"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028065"
 ---
 # <a name="fips-mode"></a>Modo FIPS
 
@@ -41,7 +41,7 @@ Los proveedores pueden tener algunos pasos adicionales para configurar una JVM c
 ## <a name="appropriate-ssl-certificate"></a>Certificado SSL adecuado
 Para conectarse a SQL Server en modo FIPS, se requiere un certificado SSL válido. Instálelo en el almacén de claves de Java en el equipo cliente (JVM), donde está habilitado FIPS.
 
-### <a name="importing-ssl-certificate-in-java-keystore"></a>Importación de un certificado SSL en Java KeyStore
+### <a name="importing-ssl-certificate-in-java-keystore"></a>Importación de un certificado SSL en Java keyStore
 En el caso de FIPS, lo más probable es que necesite importar el certificado (. CERT) en PKCS o en un formato específico del proveedor.
 Use el siguiente fragmento de código para importar el certificado SSL y almacenarlo en un directorio de trabajo con el formato de almacén de claves adecuado. _La\_contraseña\_del almacén de confianza_ es su contraseña para Java keystore.
 

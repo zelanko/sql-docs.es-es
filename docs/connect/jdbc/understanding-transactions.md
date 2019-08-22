@@ -1,7 +1,7 @@
 ---
 title: Descripción de las transacciones | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 090597e3afcf335aba674cd11e603067892819b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d5a6caa9c9bf1766b59aa813719d1461b6ef1aa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916587"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027338"
 ---
-# <a name="understanding-transactions"></a>Descripción de transacciones
+# <a name="understanding-transactions"></a>Descripción de las transacciones
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -41,8 +41,8 @@ Una transacción distribuida es una transacción que actualiza datos en dos o m�
 
 El controlador JDBC se integra a la perfección con el Coordinador de transacciones distribuidas (MS DTC) de [!INCLUDE[msCoName](../../includes/msconame_md.md)] para proporcionar una compatibilidad real con las transacciones distribuidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. MS DTC es una herramienta de transacciones distribuidas que proporciona [!INCLUDE[msCoName](../../includes/msconame_md.md)] para sistemas [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. MS DTC usa tecnología probada de procesamiento de transacciones de [!INCLUDE[msCoName](../../includes/msconame_md.md)] para proporcionar compatibilidad con características XA tales como el protocolo de confirmación distribuido de dos fases completo y la recuperación de transacciones distribuidas.
 
-Para obtener más información sobre cómo utilizar las transacciones distribuidas, consulte [Descripción de las transacciones XA](../../connect/jdbc/understanding-xa-transactions.md).
+Para obtener más información sobre cómo usar las transacciones distribuidas, vea [Descripción de las transacciones XA](../../connect/jdbc/understanding-xa-transactions.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Realizar transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)
+[Transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

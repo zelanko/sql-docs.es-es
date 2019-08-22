@@ -1,7 +1,7 @@
 ---
 title: Conexión a una base de datos SQL de Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73c7713a013f03879b63ec2a073cc24fd9bdabe1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956855"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028163"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectarse a una base de datos de SQL Azure
 
@@ -78,7 +78,7 @@ shutdown /r /t 1
 
 Antes de la versión 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], al conectarse a una [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], se tenía que anexar el nombre de servidor al identificador de usuario en la cadena de conexión. Por ejemplo, user@servername. A partir de la versión 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], ya no es necesario anexar @servername al identificador de usuario en la cadena de conexión.  
 
-## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Usar el cifrado requiere establecer hostNameInCertificate
+## <a name="using-encryption-requires-setting-hostnameincertificate"></a>El empleo de cifrado exige establecer hostNameInCertificate
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]Antes de la versión 7,2 de, al conectarse [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]a, debe especificar **hostNameInCertificate** si especifica Encrypt **= true** (si el nombre del servidor de la cadena de conexión es *nombre_corto*). *domainName*, establezca la propiedad **hostNameInCertificate** en \*. *domainName*). Esta propiedad es opcional a partir de la versión 7,2 del controlador.
 
@@ -88,6 +88,6 @@ Por ejemplo:
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

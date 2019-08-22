@@ -1,7 +1,7 @@
 ---
 title: Usar secuencias de escape de SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005936"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025891"
 ---
-# <a name="using-sql-escape-sequences"></a>Usar secuencias de escape SQL
+# <a name="using-sql-escape-sequences"></a>Empleo de secuencias de escape de SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -159,6 +159,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 La sintaxis de escape tiene dos partes: \<*rows*> es obligatorio y especifica el número de filas que se devolverán. OFFSET y \<*row offset*> son opcionales y especifican el número de filas que se omiten antes de empezar a devolver filas. El controlador JDBC solo admite el elemento obligatorio al transformar la consulta para que use TOP en lugar de LIMIT. SQL Server no admite la cláusula de LIMIT. **El controlador JDBC no admite el argumento opcional \<row offset> y el controlador producirá una excepción si se usa**.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Usar instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
+[Empleo de instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

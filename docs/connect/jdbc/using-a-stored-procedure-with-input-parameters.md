@@ -1,7 +1,7 @@
 ---
-title: Usar un procedimiento almacenado con parámetros de entrada | Microsoft Docs
+title: Empleo de un procedimiento almacenado con parámetros de entrada | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 954883c4c69e07493a15ef77eecfed606e9cf9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c84e4081b9369d504d173387c6944b06d927c9c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916526"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026902"
 ---
-# <a name="using-a-stored-procedure-with-input-parameters"></a>Usar un procedimiento almacenado con parámetros de entrada
+# <a name="using-a-stored-procedure-with-input-parameters"></a>Empleo de un procedimiento almacenado con parámetros de entrada
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -54,6 +54,6 @@ public static void executeSprocInParams(Connection con) throws SQLException {
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Usar instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)
+[Empleo de instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)

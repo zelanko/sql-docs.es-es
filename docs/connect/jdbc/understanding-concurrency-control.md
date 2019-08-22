@@ -1,7 +1,7 @@
 ---
 title: Descripción del control de simultaneidad | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b178b0c38b5891d4a3dc13ef620a217bf3ddb186
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004199"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027646"
 ---
 # <a name="understanding-concurrency-control"></a>Descripción del control de la simultaneidad
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68004199"
 |La instrucción se crea con TYPE_SCROLL_INSENSITIVE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un cursor de instantánea estático. Se desconecta de las filas de la tabla subyacente para ayudar a proteger el cursor de las actualizaciones de filas de otros usuarios.|Use TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC o TYPE_FORWARD_ONLY con CONCUR_UPDATABLE para evitar crear un cursor estático.|  
 |El diseño de la tabla imposibilita el uso de un cursor KEYSET o DYNAMIC|La tabla subyacente no tiene claves únicas para habilitar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que identifique de forma única una fila.|Agregue claves únicas a la tabla para permitir la identificación exclusiva de cada fila.|  
   
-## <a name="see-also"></a>Consulte también  
- [Administrar conjuntos de resultados con el controlador JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
+## <a name="see-also"></a>Vea también  
+ [Administración de conjuntos de resultados con el controlador JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

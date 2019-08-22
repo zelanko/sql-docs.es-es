@@ -1,7 +1,7 @@
 ---
 title: Compatibilidad con juegos de caracteres nacionales | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ff8d7435e3a896c05281748568eacc2e92d32f6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae20e40723822da0004b82dd7c89961fa0448e10
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956287"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027872"
 ---
-# <a name="national-character-set-support"></a>Compatibilidad con juego de caracteres nacionales
+# <a name="national-character-set-support"></a>Compatibilidad con juegos de caracteres nacionales
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   El controlador JDBC proporciona compatibilidad con la API de JDBC 4.0, que incluye nuevos métodos de la API de conversión de juegos de caracteres nacionales. Esta compatibilidad incluye nuevos métodos establecedor, captador y actualizador para los tipos de tipo **nchar**, **nvarchar**, **LONGNVARCHAR**y **NCLOB** .  
@@ -35,7 +35,7 @@ ms.locfileid: "67956287"
   
  Para enviar formatos String al servidor en el formato Unicode, las aplicaciones deberían o bien usar los nuevos métodos de carácter nacional de JDBC 4.0 o bien establecer la propiedad de la conexión **sendStringParametersAsUnicode** en **true** cuando se usan métodos de caracteres no nacionales. Lo recomendable es usar los nuevos métodos de caracteres nacionales de JDBC 4.0 cuando sea posible. Para obtener más información sobre la propiedad de conexión **sendStringParametersAsUnicode** , vea [establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a>Consulte también  
- [Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+## <a name="see-also"></a>Vea también  
+ [Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

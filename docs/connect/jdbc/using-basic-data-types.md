@@ -1,7 +1,7 @@
 ---
 title: Usar tipos de datos básicos | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916360"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026507"
 ---
-# <a name="using-basic-data-types"></a>Usar tipos de datos básicos
+# <a name="using-basic-data-types"></a>Empleo de tipos de datos básicos
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -78,7 +78,7 @@ Si tiene que recuperar datos de un origen de datos que se asigne a cualquiera de
   
 [!code[JDBC#UsingBasicDataTypes1](../../connect/jdbc/codesnippet/Java/using-basic-data-types_1.java)]  
   
-## <a name="retrieving-data-by-data-type"></a>Recuperar datos por tipos de datos
+## <a name="retrieving-data-by-data-type"></a>Recuperar datos por tipo de datos
 
 Si tiene que recuperar datos de un origen de datos y sabe el tipo de datos que se van a recuperar, use uno de los métodos get\<Type> de la clase SQLServerResultSet, también conocidos como *métodos de captador*. Con los métodos get\<Type>, puede usar un nombre de columna o un índice de columna, como en el siguiente ejemplo:  
   
@@ -87,7 +87,7 @@ Si tiene que recuperar datos de un origen de datos y sabe el tipo de datos que s
 > [!NOTE]  
 > Los métodos de escala getUnicodeStream y getBigDecimal están en desuso y no son compatibles con el controlador JDBC.
 
-## <a name="updating-data-by-data-type"></a>Actualizar datos por tipos de datos
+## <a name="updating-data-by-data-type"></a>Actualizar datos por tipo de datos
 
 Si tiene que actualizar el valor de un campo en un origen de datos, use uno de los métodos\<de tipo de actualización > de la clase SQLServerResultSet. En el siguiente ejemplo, se usa el método [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) en conjunción con el método [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) para actualizar los datos del origen de datos:  
   
@@ -96,7 +96,7 @@ Si tiene que actualizar el valor de un campo en un origen de datos, use uno de l
 > [!NOTE]  
 > El controlador JDBC no puede actualizar una columna SQL Server con un nombre de columna que tenga más de 127 caracteres de largo. Si se intenta una actualización a una columna cuyo nombre tenga más de 127 caracteres, se genera una excepción.  
   
-## <a name="updating-data-by-parameterized-query"></a>Actualizar datos mediante una consulta con parámetros
+## <a name="updating-data-by-parameterized-query"></a>Actualizar datos por consulta con parámetros
 
 Si tiene que actualizar datos de un origen de datos mediante el uso de una consulta con parámetros, puede establecer el tipo de datos de los parámetros con los métodos set\<Type> de la clase [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), también conocidos como *métodos de establecedor*. En el siguiente ejemplo, se usa el método [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) para precompilar la consulta con parámetros y, luego, el método [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) para establecer el valor de cadena del parámetro antes de llamar al método [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md).  
   
@@ -104,7 +104,7 @@ Si tiene que actualizar datos de un origen de datos mediante el uso de una consu
   
 Para obtener más información acerca de las consultas con parámetros, vea [usar una instrucción SQL con parámetros](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
 
-## <a name="passing-parameters-to-a-stored-procedure"></a>Pasar de parámetros a un procedimiento almacenado
+## <a name="passing-parameters-to-a-stored-procedure"></a>Pasar parámetros a un procedimiento almacenado
 
 Si tiene que pasar parámetros tipados a un procedimiento almacenado, puede establecerlos por índice o por nombre mediante el uso de uno de los métodos set\<Type> de la clase [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). En el siguiente ejemplo, se usa el método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) para configurar la llamada al procedimiento almacenado y, luego, el método [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) para establecer el parámetro para la llamada antes de llamar al método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md).  
   
@@ -115,7 +115,7 @@ Si tiene que pasar parámetros tipados a un procedimiento almacenado, puede esta
 
 Para obtener más información sobre el uso del controlador JDBC con procedimientos almacenados y parámetros de entrada, vea [usar un procedimiento almacenado con parámetros de entrada](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
 
-## <a name="retrieving-parameters-from-a-stored-procedure"></a>Recuperación de parámetros desde un procedimiento almacenado
+## <a name="retrieving-parameters-from-a-stored-procedure"></a>Recuperar parámetros desde un procedimiento almacenado
 
 Si tiene que recuperar parámetros de un procedimiento almacenado, primero debe registrar un parámetro de salida por el nombre o el índice con el método [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) de la clase SQLServerCallableStatement y, luego, asignar el parámetro de salida devuelto a una variable adecuada tras haber ejecutado la llamada al procedimiento almacenado. En el siguiente ejemplo, se usa el método prepareCall para configurar la llamada al procedimiento almacenado, el método registerOutParameter para configurar el parámetro de salida y el método [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) para establecer el parámetro para la llamada antes de llamar al método executeQuery. El valor que devuelve el parámetro de salida del procedimiento almacenado se recupera con el método [getShort](../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md).  
   
@@ -126,6 +126,6 @@ Si tiene que recuperar parámetros de un procedimiento almacenado, primero debe 
   
 Para obtener más información sobre cómo usar el controlador JDBC con procedimientos almacenados y parámetros de salida, vea [usar un procedimiento almacenado con parámetros de salida](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

@@ -86,7 +86,7 @@ FROM <backup_device>
  Por cada copia de seguridad que hay en un dispositivo determinado, el servidor envía una fila de información de encabezado con las siguientes columnas:  
   
 > [!NOTE]
->  RESTORE HEADERONLY consulta todos los conjuntos de copia de seguridad en los medios. Por tanto, puede llevar algún tiempo generar este conjunto de resultados si se utilizan unidades de cinta de alta capacidad. Para tener una visión rápida de los medios sin obtener información sobre cada conjunto de copia de seguridad, use RESTORE LABELONLY o especifique FILE **=** _backup_set_file_number_ .  
+>  RESTORE HEADERONLY consulta todos los conjuntos de copia de seguridad en los medios. Por tanto, puede llevar algún tiempo generar este conjunto de resultados si se utilizan unidades de cinta de alta capacidad. Para tener una visión rápida de los medios sin obtener información sobre cada conjunto de copia de seguridad, use RESTORE LABELONLY o especifique FILE **=** _backup_set_file_number_.  
 > 
 > [!NOTE]
 >  Debido a la naturaleza del formato de cinta de [!INCLUDE[msCoName](../../includes/msconame-md.md)], es posible que los conjuntos de copia de seguridad de otros programas de software ocupen espacio en los mismos medios que los conjuntos de copia de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El conjunto de resultados que devuelve RESTORE HEADERONLY contiene una fila por cada uno de estos otros conjuntos de copia de seguridad.  
@@ -151,7 +151,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> Tipo de sistema de cifrado usado: certificado o clave asimétrica. Si la copia de seguridad no se cifró, este valor es NULL.|  
   
 > [!NOTE]  
->  Si se definen contraseñas para los conjuntos de copia de seguridad, RESTORE HEADERONLY solo muestra información completa para el conjunto de copia de seguridad cuya contraseña coincida con la opción PASSWORD especificada en el comando. RESTORE HEADERONLY también muestra información completa para los conjuntos de copia de seguridad no protegidos. La columna **BackupName** de los otros conjuntos de copia de seguridad protegidos con contraseña que hay en los medios se establece en ** _** (Protegido con contraseña) y todas las demás columnas son NULL.  
+>  Si se definen contraseñas para los conjuntos de copia de seguridad, RESTORE HEADERONLY solo muestra información completa para el conjunto de copia de seguridad cuya contraseña coincida con la opción PASSWORD especificada en el comando. RESTORE HEADERONLY también muestra información completa para los conjuntos de copia de seguridad no protegidos. La columna **BackupName** de los otros conjuntos de copia de seguridad protegidos con contraseña que hay en los medios se establece en **_Password Protected_** (Protegido con contraseña) y todas las demás columnas son NULL.  
   
 ## <a name="general-remarks"></a>Notas generales  
  Un cliente puede utilizar RESTORE HEADERONLY para obtener toda la información de encabezado de todas las copias de seguridad de un dispositivo determinado. Para cada copia de seguridad del dispositivo de copia de seguridad, el servidor envía la información del encabezado como una fila.  

@@ -45,7 +45,7 @@ Puede evitar el error de conexión creando un inicio de sesión para **SQLServer
 
 4. Haga clic en **Opciones avanzadas**, compruebe que la ubicación para buscar es el equipo actual y, a continuación, haga clic en **Buscar ahora**.
 
-     ![Haga clic en Buscar ahora para obtener una lista de grupos] . (media/implied-auth-login4.png "Haga clic en Buscar ahora para obtener una lista de grupos") .
+     ![Haga clic en Buscar ahora para obtener una lista de grupos](media/implied-auth-login4.png "Haga clic en Buscar ahora para obtener una lista de grupos") .
 
 5. Desplácese por la lista de cuentas de grupo en el servidor hasta que encuentre una `SQLRUserGroup`a partir de.
     

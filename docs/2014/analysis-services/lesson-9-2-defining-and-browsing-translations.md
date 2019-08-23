@@ -104,7 +104,7 @@ ms.locfileid: "69493779"
   
      Observe que los elementos del panel de metadatos se vuelven a rellenar. Una vez que los elementos del panel de metadatos se vuelvan a rellenar, observe cómo la medida Internet Sales-Sales Amount ya no aparece en la carpeta para mostrar Venta por Internet. En su lugar, aparece en español en una nueva carpeta para mostrar `Ventas del lnternet`denominada, como se muestra en la siguiente imagen.  
   
-     ![Panel] de metadatos rellenado (../../2014/tutorials/media/l9-translations-6.gif "Panel") de metadatos rellenado  
+     ![Panel](../../2014/tutorials/media/l9-translations-6.gif " de metadatos rellenado Panel") de metadatos rellenado  
   
 6.  En el panel metadatos, haga clic `Cantidad de las Ventas del Internet` con el botón secundario y seleccione **Agregar a consulta**.  
   

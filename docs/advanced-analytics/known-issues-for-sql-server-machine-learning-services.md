@@ -1,23 +1,23 @@
 ---
-title: Problemas conocidos del lenguaje R y la integración de Python
+title: Problemas conocidos de Python y R
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 93b2871fa60d6a7c7a41fae202e960440b53c11e
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 9a8237887786066a8789cb319fc7de550fa7f535
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715191"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000457"
 ---
-# <a name="known-issues-in-machine-learning-services"></a>Problemas conocidos de Machine Learning Services
+# <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemas conocidos de SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se describen los problemas conocidos o las limitaciones de los componentes de aprendizaje automático que se proporcionan como una opción en [SQL Server 2016 R Services](r/sql-server-r-services.md) y [SQL Server Machine Learning Services con R y Python](what-is-sql-server-machine-learning.md).
+En este artículo se describen los problemas conocidos o las limitaciones de los componentes de aprendizaje automático que se proporcionan como una opción en [SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md) y [SQL Server R Services de 2016](r/sql-server-r-services.md).
 
 ## <a name="setup-and-configuration-issues"></a>Problemas de instalación y configuración
 
@@ -502,6 +502,33 @@ A partir de SQL Server 2017, los tipos de datos de actualización acumulativa 12
 
 Esto se ha corregido en SQL Server 2017 Cumulative Update 14 (CU14).
 
+### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6. Error de intérprete incorrecto al instalar paquetes de Python con PIP en Linux 
+
+En SQL Server 2019, si intenta usar **PIP**. Por ejemplo:
+
+```bash
+/opt/mssql/mlservices/runtime/python/bin/pip -h
+```
+
+Recibirá este error:
+
+> *Bash:/opt/MSSQL/mlservices/Runtime/Python/bin/PIP:/opt/Microsoft/mlserver/9.4.7/bin/Python/Python: intérprete incorrecto: No existe ese archivo o directorio*
+
+**Solución alternativa**
+
+Instalación de **PIP** desde la [entidad de paquete de Python (PyPA)](https://www.pypa.io):
+
+```bash
+wget 'https://bootstrap.pypa.io/get-pip.py' 
+/opt/mssql/mlservices/bin/python/python ./get-pip.py 
+```
+
+**Recomendación**
+
+Use [sqlmlutils](https://github.com/microsoft/sqlmlutils/tree/master/Python) o [cree una biblioteca externa](../t-sql/statements/create-external-library-transact-sql.md) para instalar paquetes de Python.
+
+**Se aplica a:** SQL Server 2019 en Linux
+
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise y Microsoft R Open
 
 En esta sección se enumeran los problemas específicos de las herramientas de conectividad, desarrollo y rendimiento de R proporcionadas por el análisis de revolución. Estas herramientas se proporcionaron en versiones preliminares anteriores de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
@@ -522,8 +549,6 @@ Por compatibilidad con [!INCLUDE[rsql_productname](../includes/rsql-productname-
 
 La revisión 0,92 del controlador ODBC de SQLite no es compatible con RevoScaleR. Se sabe que las revisiones 0.88-0.91 y 0,93 y versiones posteriores son compatibles.
 
-## <a name="see-also"></a>Vea también
-
-[Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
+## <a name="next-steps"></a>Pasos siguientes
 
 [Solución de problemas de machine learning en SQL Server](machine-learning-troubleshooting-faq.md)

@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ead6c2ceeecbdfb3466bd4475978b139a0d2ddde
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 114296d0bad77c3bbbb088feed13bd6a4bd5a074
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652247"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009333"
 ---
 # <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>¿Qué es el bloque de[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]almacenamiento ()?
 
@@ -33,7 +33,7 @@ El bloque de almacenamiento consiste en nodos de almacenamiento que se componen 
 Los nodos de almacenamiento se encargan de varios aspectos:
 
 - Ingesta de datos a través de Spark.
-- Almacenamiento de datos en HDFS (formato Parquet). HDFS también proporciona persistencia de datos, ya que los datos de HDFS se reparten por todos los nodos de almacenamiento del clúster de macrodatos de SQL.
+- Almacenamiento de datos en HDFS (formato de texto delimitado y parquet). HDFS también proporciona persistencia de datos, ya que los datos de HDFS se reparten por todos los nodos de almacenamiento del clúster de macrodatos de SQL.
 - Acceso a datos a través de los puntos de conexión de HDFS y SQL Server.
 
 ## <a name="next-steps"></a>Pasos siguientes

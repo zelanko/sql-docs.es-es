@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: eec8b91bbb7d90483b627aebddb7088bc80cb1ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 195da55ed9d4d76298e3a5cbbd44ed562f69da06
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912894"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000805"
 ---
-# <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
+# <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Separa una base de datos que actualmente no se está utilizando de una instancia del servidor y, opcionalmente, ejecuta UPDATE STATISTICS en todas las tablas antes de la separación.  
@@ -45,13 +45,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'database_name'` Es el nombre de la base de datos que se va a desasociar. *database_name* es un **sysname** valor, su valor predeterminado es null.  
+`[ @dbname = ] 'database_name'`Es el nombre de la base de datos que se va a desasociar. *database_name* es un valor **sysname y su** valor predeterminado es NULL.  
   
-`[ @skipchecks = ] 'skipchecks'` Especifica si se debe omitir o ejecutar UPDATE STATISTIC. *valor de skipchecks* es un **nvarchar (10)** valor, su valor predeterminado es null. Para omitir UPDATE STATISTICS, especifique **true**. Para ejecutar UPDATE STATISTICS de forma explícita, especifique **false**.  
+`[ @skipchecks = ] 'skipchecks'`Especifica si se debe omitir o ejecutar UPDATE STATISTIC. *skipchecks* es un valor de tipo **nvarchar (10)** y su valor predeterminado es NULL. Para omitir UPDATE STATISTICs, especifique **true**. Para ejecutar explícitamente UPDATE STATISTICs, especifique **false**.  
   
  De forma predeterminada, UPDATE STATISTICS se ejecuta para actualizar información acerca de los datos de las tablas e índices. Ejecutar UPATE STATISTICS es útil para las bases de datos que se trasladan a medios de solo lectura.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Especifica que no se quitará el archivo de índice de texto completo asociado a la base de datos que se va a separar la base de datos durante la operación de desasociación. *KeepFulltextIndexFile* es un **nvarchar (10)** valor predeterminado es de **true**. Si *KeepFulltextIndexFile* es **false**, todos los archivos de índice de texto completo asociado a la base de datos y se quitan los metadatos del índice de texto completo, a menos que la base de datos es de solo lectura. Si es NULL o **true**, relacionada con el texto completo se conservan los metadatos.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Especifica que el archivo de índice de texto completo asociado a la base de datos que se está desasociando no se quitará durante la operación de separación de la base de datos. *KeepFulltextIndexFile* es un valor de tipo **nvarchar (10)** y su valor predeterminado es **true**. Si *KeepFulltextIndexFile* es **false**, se quitan todos los archivos de índice de texto completo asociados a la base de datos y los metadatos del índice de texto completo, a menos que la base de datos sea de solo lectura. Si es NULL o **true**, se conservan los metadatos relacionados con el texto completo.  
   
 > [!IMPORTANT]
 >  El **@keepfulltextindexfile** parámetro se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No use este parámetro en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que lo usen actualmente.  
@@ -63,10 +63,10 @@ sp_detach_db [ @dbname= ] 'database_name'
  None  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se desasocia una base de datos, todos sus metadatos se eliminan. Si la base de datos era de la base de datos predeterminada de las cuentas de inicio de sesión, **maestro** se convierte en su base de datos predeterminada.  
+ Cuando se desasocia una base de datos, todos sus metadatos se eliminan. Si la base de datos era la base de datos predeterminada de cualquier cuenta de inicio de sesión, **Master** se convierte en su base de datos predeterminada.  
   
 > [!NOTE]  
->  Para obtener información sobre cómo ver la base de datos predeterminada de todas las cuentas de inicio de sesión, vea [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Si tiene los permisos necesarios, puede usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para asignar una nueva base de datos predeterminada para un inicio de sesión.  
+>  Para obtener información acerca de cómo ver la base de datos predeterminada de todas las cuentas de inicio de sesión, consulte la opción de [Transact-SQL &#40;&#41;de sp_helplogins](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Si tiene los permisos necesarios, puede usar [ALTER login](../../t-sql/statements/alter-login-transact-sql.md) para asignar una nueva base de datos predeterminada a un inicio de sesión.  
   
 ## <a name="restrictions"></a>Restricciones  
  No se puede separar una base de datos si se da alguna de estas circunstancias:  
@@ -75,7 +75,7 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   Si está replicada, la base de datos está publicada.  
   
-     Antes de poder separar la base de datos, debe deshabilitar la publicación ejecutando [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
+     Para poder separar la base de datos, debe deshabilitar la publicación ejecutando [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).  
   
     > [!NOTE]  
     >  Si no puede usar **sp_replicationdboption**, puede quitar la replicación ejecutando [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md).  
@@ -98,9 +98,11 @@ sp_detach_db [ @dbname= ] 'database_name'
 -   La base de datos es una base de datos del sistema.  
   
 ## <a name="obtaining-exclusive-access"></a>Obtener acceso exclusivo  
- Separar una base de datos requiere acceso exclusivo a la misma. Si la base de datos que desea separar está en uso, para poder separarla debe establecer la base de datos en modo SINGLE_USER para obtener acceso exclusivo.  
-  
- Por ejemplo, la siguiente `ALTER DATABASE` instrucción obtiene acceso exclusivo a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] después de desconectan de todos los usuarios actuales de la base de datos de la base de datos.  
+ Separar una base de datos requiere acceso exclusivo a la misma. Si la base de datos que desea separar está en uso, para poder separarla debe establecer la base de datos en modo SINGLE_USER para obtener acceso exclusivo.
+
+ Antes de establecer la base de datos como SINGLE_USER, compruebe que la opción AUTO_UPDATE_STATISTICS_ASYNC está establecida en OFF. Cuando esta opción se establece en ON, el subproceso en segundo plano que se usa para actualizar las estadísticas realiza una conexión con la base de datos y no se podrá tener acceso a la base de datos en modo de usuario único. Para obtener más información, vea [establecer una base de datos en modo de usuario único](../databases/set-a-database-to-single-user-mode.md).
+
+ Por ejemplo, la siguiente `ALTER DATABASE` instrucción obtiene acceso exclusivo a la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos después de que todos los usuarios actuales se desconecten de la base de datos.  
   
 ```  
 USE master;  
@@ -110,16 +112,16 @@ GO
 ```  
   
 > [!NOTE]  
->  Para forzar que los usuarios actuales de la base de datos inmediatamente o tras un número especificado de segundos, también puede usar la opción de reversión: ALTER DATABASE *database_name* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Para forzar a los usuarios actuales a salir de la base de datos inmediatamente o dentro de un número especificado de segundos, use también la opción ROLLBACK: ALTER DATABASE *database_name* Set SINGLE_USER with rollback *rollback_option*. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Volver a adjuntar una base de datos  
  Los archivos separados permanecen y se pueden volver a adjuntar utilizando CREATE DATABASE (con la opción FOR ATTACH o FOR ATTACH_REBUILD_LOG). Los archivos se pueden mover a otro servidor y adjuntarse allí.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **sysadmin** fijo de servidor o la pertenencia a la **db_owner** rol de la base de datos.  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o la pertenencia al rol **db_owner** de la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se separa la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] con la base de datos *skipchecks* establecido en true.  
+ En el siguiente ejemplo se separa [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] la base de datos con *skipchecks* establecida en true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  

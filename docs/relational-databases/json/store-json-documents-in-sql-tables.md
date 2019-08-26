@@ -9,15 +9,21 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.openlocfilehash: 4828f5fd8a655d29837dd661267c73f0082f942e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c389f6b7cb2df2d7f464dcc8fc5eeb110a7f4d5
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059569"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957447"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Almacenamiento de documentos JSON en SQL Server o SQL Database
-SQL Server y Azure SQL Database tienen funciones JSON nativas que permiten analizar documentos JSON con el lenguaje SQL estándar. Ahora puede almacenar documentos JSON en SQL Server o SQL Database, y consultar datos JSON como en una base de datos NoSQL. En este artículo se describen las opciones para almacenar documentos JSON en SQL Server o SQL Database.
+SQL Server y Azure SQL Database tienen funciones JSON nativas que permiten analizar documentos JSON con el lenguaje SQL estándar. Ahora puede almacenar documentos JSON en SQL Server o SQL Database y consultar datos JSON como en una base de datos NoSQL. En este artículo se describen las opciones para almacenar documentos JSON en SQL Server o SQL Database.
+
+## <a name="json-storage-format"></a>Formato de almacenamiento JSON
+
+La primera decisión sobre el diseño del almacenamiento es cómo almacenar documentos JSON en las tablas. Hay dos opciones disponibles:
+- **Almacenamiento de LOB**: los documentos JSON se pueden almacenar tal cual en las columnas `NVARCHAR`. Esta es la mejor manera para realizar la ingesta y carga rápida de datos, porque la velocidad de carga coincide con la carga de las columnas de cadena. Este enfoque podría significar una reducción adicional del rendimiento en tiempo de consulta/análisis si no se realiza la indexación en valores JSON, porque los documentos JSON sin formato se deben analizar mientras se ejecutan las consultas. 
+- **Almacenamiento relacional**: los documentos JSON se pueden analizar mientras se insertan en la tabla con las funciones `OPENJSON`, `JSON_VALUE` o `JSON_QUERY`. Es posible almacenar fragmentos de los documentos JSON de entrada en las columnas de tipo de datos SQL o en columnas NVARCHAR que contienen subelementos JSON. Este enfoque aumenta el tiempo de carga, porque el análisis de JSON se realiza durante la carga. Sin embargo, las consultas coinciden con el rendimiento de las consultas clásicas en los datos relacionales.
 
 ## <a name="classic-tables"></a>Tablas clásicas
 

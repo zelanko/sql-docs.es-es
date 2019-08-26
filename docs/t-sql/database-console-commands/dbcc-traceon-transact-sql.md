@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040598"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553261"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 Habilita las marcas de seguimiento especificadas.
   
@@ -48,7 +48,7 @@ Es el número de la marca de seguimiento que se va a activar.
 Es una marca de posición que indica que se pueden especificar varias marcas de seguimiento.  
   
 -1  
-Activa las marcas de seguimiento especificadas de forma global.  
+Activa las marcas de seguimiento especificadas de forma global. Este argumento es necesario en Instancia administrada de Azure SQL. 
   
 WITH NO_INFOMSGS  
 Suprime todos los mensajes de información.  
@@ -61,7 +61,9 @@ En un servidor de producción, para evitar un comportamiento impredecible, se re
 Las marcas de seguimiento se utilizan para personalizar algunas características controlando el funcionamiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las marcas de seguimiento, una vez habilitadas, permanecen habilitadas en el servidor hasta que son deshabilitadas al ejecutarse una instrucción DBCC TRACEOFF. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], hay dos tipos de marcas de seguimiento: sesión y global. Las marcas de seguimiento de sesión se activan para una conexión y solo están visibles para esa conexión. Las marcas de seguimiento globales se establecen en el nivel del servidor y están visibles para todas las conexiones del servidor. Para determinar el estado de las marcas de seguimiento, utilice DBCC TRACESTATUS. Para deshabilitar marcas de seguimiento, utilice DBCC TRACEOFF.
   
 Después de activar una marca de seguimiento que afecta a los planes de consulta, ejecute `DBCC FREEPROCCACHE;` para que los planes almacenados en caché se recompilen con el nuevo comportamiento que afecta a los planes.
-  
+
+Instancia administrada de Azure SQL Database admite las siguientes marcas de seguimiento globales: 460,2301,2389,2390,2453,2467,7471,8207,9389,10316 y 11024
+
 ## <a name="result-sets"></a>Conjuntos de resultados  
  DBCC TRACEON devuelve el siguiente conjunto de resultados (mensaje):  
   

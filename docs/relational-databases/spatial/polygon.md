@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74e6c8cc19bac4c0428924effda87952642a37dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081664"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026141"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -49,9 +49,9 @@ Como se muestra en la ilustración:
  Las instancias aceptadas de **Polygon** son las instancias que pueden almacenarse en una variable de tipo **geometry** o **geography** sin generar una excepción. Se aceptan las siguientes instancias de **Polygon** :  
   
 -   Una instancia vacía de **Polygon** .  
--   Una instancia de **Polygon** que tiene un anillo exterior aceptable y cero o más anillos interiores aceptables.  
+-   Una instancia de **Polygon** que tiene un anillo exterior aceptable ring (**LineString**) y cero o más anillos interiores aceptables (**LineString**s).  
   
-Deben cumplirse necesariamente los criterios siguientes para que un anillo sea aceptable.  
+Deben cumplirse necesariamente los criterios siguientes para que un anillo (**LineString**) sea aceptable.  
   
 -   La instancia de **LineString** debe ser aceptada.  
 -   La instancia de **LineString** debe tener al menos cuatro puntos.  

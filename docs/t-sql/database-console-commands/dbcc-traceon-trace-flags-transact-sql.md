@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c84ef656fcadee3c66b0155fa587a85ebf453095
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 8661bc871018b542b3388adfcbd63f255c1d32a2
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809831"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553294"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON: marcas de seguimiento (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
 Las marcas de seguimiento se usan para establecer características específicas del servidor o para modificar un comportamiento determinado. Por ejemplo, 3226 es una marca de seguimiento de inicio que se usa con frecuencia y que suprime los mensajes de copia de seguridad correctos en el registro de errores. Las marcas de seguimiento se usan con frecuencia para diagnosticar problemas de rendimiento o para depurar procedimientos almacenados o sistemas informáticos complejos, pero Soporte técnico de Microsoft también las puede recomendar para solucionar los comportamientos que afecten negativamente a una carga de trabajo específica.  Todas las marcas de seguimiento documentadas y las recomendadas por Soporte técnico de Microsoft son totalmente compatibles en un entorno de producción cuando se usan como se indica.  Tenga en cuenta que las marcas de seguimiento de esta lista pueden tener consideraciones adicionales sobre su uso en particular, por lo que es aconsejable que lea detenidamente todas las recomendaciones proporcionadas aquí o por su ingeniero de soporte técnico. Además, como sucede con cualquier cambio de configuración de SQL Server, siempre es mejor probar exhaustivamente la marca en un entorno que no sea de producción antes de la implementación.
 
@@ -51,8 +51,10 @@ Use el comando `DBCC TRACESTATUS` para determinar qué marcas de seguimiento est
 
 ## <a name="trace-flags"></a>Marcas de seguimiento
 
-  
-En la siguiente tabla se enumeran y se describen las marcas de seguimiento disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+En la siguiente tabla se enumeran y se describen las marcas de seguimiento disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+
+> [!NOTE]
+> Instancia administrada de Azure SQL Database admite las siguientes marcas de seguimiento globales: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389,1 0316 y 11024. Instancia administrada todavía no admite las marcas de seguimiento de sesión.
  
 > [!NOTE]
 > Algunas marcas de seguimiento se han introducido en versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] específicas. Para más información sobre la versión concreta, vea el artículo de Soporte técnico de Microsoft asociado a una marca de seguimiento específica.

@@ -19,45 +19,44 @@ helpviewer_keywords:
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c3d601df6b045347a46010b422308cabc43188c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6edd1cb219f7250a6f9e5671efdb076c6e0a0349
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024382"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969478"
 ---
-# <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
+# <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el valor de incremento (como **numeric** ( **@@** MAXPRECISION, 0)) especificado al crear una columna de identidad en una tabla o una vista.  
+Devuelve el valor de incremento especificado al crear la columna de identidad de una tabla o una vista.  
   
- ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 IDENT_INCR ( 'table_or_view' )  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **'** *table_or_view* **'**  
- Se trata de una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que especifica la tabla o vista en la que se va a comprobar un valor de incremento de identidad válido. *table_or_view* puede ser una constante de cadena de caracteres entre comillas. También puede ser una variable, una función o un nombre de columna. *table_or_view* es **char**, **nchar**, **varchar** o **nvarchar**.  
+**'** *table_or_view* **'**  
+Se trata de una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que especifica la tabla o vista en la que se va a comprobar un valor de incremento de identidad válido. *table_or_view* puede ser una constante de cadena de caracteres entre comillas. También puede ser una variable, una función o un nombre de columna. *table_or_view* es **char**, **nchar**, **varchar** o **nvarchar**.  
   
-## <a name="return-types"></a>Tipos de valores devueltos  
- **numeric**  
+## <a name="return-types"></a>Tipos devueltos  
+**numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>Excepciones  
- Devuelve NULL si se produce un error o si el autor de la llamada no tiene permiso para ver el objeto.  
+Devuelve NULL si se produce un error o si el autor de la llamada no tiene permiso para ver el objeto.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de elementos de los que sea propietario o para los que tenga permisos. Sin el permiso del objeto de usuario, una función de emisión de metadatos integrada, como IDENT_INCR, puede devolver NULL. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un usuario solo puede ver los metadatos de elementos de los que sea propietario o para los que tenga permisos. Sin el permiso del objeto de usuario, una función de emisión de metadatos integrada, como IDENT_INCR, puede devolver NULL. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. Devolver el valor de incremento de una tabla especificada  
  En el ejemplo siguiente se devuelve el valor de incremento de la tabla `Person.Address` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_INCR('Person.Address') AS Identity_Increment;  
@@ -67,7 +66,7 @@ GO
 ### <a name="b-returning-the-increment-value-from-multiple-tables"></a>B. Devolver el valor de incremento de varias tablas  
  En el siguiente ejemplo se devuelven las tablas de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que incluye una columna de identidad con un valor de incremento.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   

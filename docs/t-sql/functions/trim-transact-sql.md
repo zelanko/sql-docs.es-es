@@ -18,12 +18,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a25a41600aca4d350c7434662de4c25dd51888c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77b8244efda0a1f06e16821d817339feebc9384f
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098791"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561148"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -55,7 +55,7 @@ Devuelve una expresión de caracteres con un tipo de argumento de cadena donde e
 
 ## <a name="remarks"></a>Notas
 
-La función `TRIM` quita el carácter de espacio `char(32)` de ambos lados de forma predeterminada. Este comportamiento equivale a `LTRIM(RTRIM(@string))`. El comportamiento de la función `TRIM` con los caracteres especificados es idéntico al comportamiento de la función `REPLACE`, donde los caracteres de inicio o finalización se reemplazan por cadenas vacías.
+De manera predeterminada, la función `TRIM` quita el carácter de espacio de los extremos de inicio y final de la cadena. Este comportamiento equivale a `LTRIM(RTRIM(@string))`.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -69,18 +69,22 @@ SELECT TRIM( '     test    ') AS Result;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-`test`
+```
+test
+```
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  Quitar los caracteres especificados de ambos lados de la cadena
 
-En el siguiente ejemplo se quita un punto final y los espacios finales.
+En el ejemplo siguiente se quitan los espacios y el punto final antes de `#` y después de la palabra `test`.
 
 ```sql
-SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
+SELECT TRIM( '.,! ' FROM  '     #     test    .') AS Result;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-`#     test`
+```
+#     test
+```
 
 ## <a name="see-also"></a>Consulte también
 

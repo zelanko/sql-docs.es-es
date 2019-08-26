@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952536"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028721"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Administración de SQL Server en Linux con PowerShell Core
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>Exploración de los cmdlets disponibles actualmente en PS Core
-Aunque el módulo SqlServer actualmente tiene 106 cmdlets disponibles en Windows PowerShell, solo 59 de 106 están disponibles en PSCore. A continuación se incluye una lista completa con los 59 cmdlets disponibles actualmente.  Para obtener documentación detallada de todos los cmdlets del módulo SqlServer, vea la [referencia de cmdlets](https://docs.microsoft.com/powershell/module/sqlserver/) de SqlServer.
+Aunque el módulo SqlServer actualmente tiene 109 cmdlets disponibles en Windows PowerShell, solo 62 de 109 están disponibles en PSCore. A continuación se incluye una lista completa con los 59 cmdlets disponibles actualmente.  Para obtener documentación detallada de todos los cmdlets del módulo SqlServer, vea la [referencia de cmdlets](https://docs.microsoft.com/powershell/module/sqlserver/) de SqlServer.
 
 El siguiente comando le mostrará todos los cmdlets disponibles en la versión de PowerShell que está usando.
 
@@ -216,6 +216,8 @@ SELECT Name
 - Get-SqlAgentJobSchedule
 - Get-SqlAgentJobStep
 - Get-SqlAgentSchedule
+- Invoke-SqlAssessment
+- Get-SqlAssessmentItem
 - Remove-SqlAvailabilityDatabase
 - Resume-SqlAvailabilityDatabase
 - Add-SqlAvailabilityDatabase
@@ -266,6 +268,7 @@ SELECT Name
 - Read-SqlTableData
 - Write-SqlTableData
 - Read-SqlViewData
+- Read-SqlXEvent
 - Convert-UrnToPath
 
 ## <a name="see-also"></a>Vea también

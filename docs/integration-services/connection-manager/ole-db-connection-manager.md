@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 70e439dd6ed176fbb9c2d2fe666b314bd48f2f9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3b1526d55321e5f32a243a48f64bde2f579caa6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904266"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028792"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB, administrador de conexiones
 
@@ -93,6 +93,9 @@ ms.locfileid: "67904266"
 ### <a name="managed-identities-for-azure-resources-authentication"></a>Identidades administradas para la autenticación de los recursos de Azure
 Al ejecutar paquetes SSIS en el [entorno de ejecución de integración de Azure-SSIS en Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), puede usar la [identidad administrada](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) asociada a su factoría de datos para la autenticación en Azure SQL Database (o en la instancia administrada). Puede acceder a la factoría designada y copiar datos desde la base de datos o en la base de datos usando esta identidad.
 
+> [!NOTE]
+>  Al usar la autenticación de Azure AD (incluida la autenticación de la identidad administrada) para conectarse a Azure SQL Database (o Instancia administrada), existen problemas conocidos que pueden dar lugar a un error en la ejecución del paquete o a un cambio de comportamiento inesperado. Consulte [Características y limitaciones de Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations) para más información.
+
 Para usar la autenticación de la identidad administrada en Azure SQL Database, siga estos pasos para configurar la base de datos:
 
 1. **Cree un grupo en Azure AD**. Convierta la identidad administrada en miembro del grupo.
@@ -113,7 +116,7 @@ Para usar la autenticación de la identidad administrada en Azure SQL Database, 
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. **Conceda los permisos necesarios al grupo de Azure AD** como lo haría normalmente para los usuarios de SQL y otros. Por ejemplo, ejecute el siguiente código:
+1. **Conceda los permisos necesarios al grupo de Azure AD** como lo haría normalmente para los usuarios de SQL y otros. Consulte [Roles de nivel de base de datos](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) para conocer los roles adecuados.  Por ejemplo, ejecute el siguiente código:
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
@@ -138,11 +141,11 @@ Para usar la autenticación de la identidad administrada en la instancia adminis
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **Conceda los permisos necesarios a la identidad administrada de la factoría de datos**. Ejecute el siguiente comando T-SQL en la base de datos en la que va a copiar o pegar datos:
+1. **Conceda los permisos necesarios a la identidad administrada de la factoría de datos**. Consulte [Roles de nivel de base de datos](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) para conocer los roles adecuados. Ejecute el siguiente comando T-SQL en la base de datos en la que va a copiar o pegar datos:
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
 Después, **configure el proveedor OLE DB** para el administrador de conexiones OLE DB. Tiene dos opciones para hacerlo:
@@ -167,7 +170,7 @@ Por último, **configure la autenticación de la identidad administrada** para e
     >  En el entorno de ejecución de integración de Azure-SSIS, se **reemplazarán** todos los demás métodos de autenticación (por ejemplo, seguridad integrada, contraseña) preconfigurados en el administrador de conexiones OLE DB cuando se use la autenticación de la identidad administrada para establecer la conexión de base de datos.
 
 > [!NOTE]
->  Para configurar la autenticación de la identidad administrada en los paquetes existentes, vuelva a generar el proyecto de SSIS con el [Diseñador SSIS más reciente](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) al menos una vez, e implemente de nuevo ese proyecto SSIS en su entorno de ejecución de integración de Azure-SSIS de modo que la nueva propiedad del administrador de conexiones **ConnectUsingManagedIdentity** se agregue automáticamente a todos los administradores de conexiones OLE DB del proyecto de SSIS.
+>  Para configurar la autenticación de la identidad administrada en los paquetes existentes, la manera preferida es recompilar el proyecto de SSIS con el [Diseñador SSIS más reciente](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) al menos una vez, e implemente de nuevo ese proyecto SSIS en su entorno de ejecución de integración de Azure-SSIS de modo que la nueva propiedad del administrador de conexiones **ConnectUsingManagedIdentity** se agregue automáticamente a todos los administradores de conexiones OLE DB del proyecto de SSIS. La manera alternativa es usar directamente la invalidación de propiedad con la ruta de acceso a la propiedad **\Package.Connections[{el nombre del administrador de conexiones}].Properties[ConnectUsingManagedIdentity]** en tiempo de ejecución.
 
 ## <a name="see-also"></a>Consulte también    
  [Origen de OLE DB](../../integration-services/data-flow/ole-db-source.md)     

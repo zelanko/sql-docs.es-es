@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: be255547163bb37d1222e1c9b21e123f35d2888e
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893526"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000287"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
@@ -34,7 +34,8 @@ Para descargar SQL Server 2017 Reporting Services, vaya al **[Centro de descarga
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>Versión preliminar de SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services no está disponible para CTP 3.2. Instale la versión actual: [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md).
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]la vista previa Reporting Services está disponible y se puede descargar desde el **[centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=100122)** .
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"

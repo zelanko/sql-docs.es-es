@@ -4153,6 +4153,8 @@
     - name: Actualizar SQL Server
       href: database-engine/install-windows/upgrade-sql-server.md
       items:
+        - name: Certificación de compatibilidad
+          href: database-engine/install-windows/compatibility-certification.md
         - name: Actualizaciones de ediciones y versiones admitidas de SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: Actualizaciones de ediciones y versiones admitidas de SQL Server 2016
@@ -4188,8 +4190,10 @@
               href: database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md
             - name: Completar la actualización
               href: database-engine/install-windows/complete-the-database-engine-upgrade.md
-            - name: Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas
+            - name: Cambio del modo de compatibilidad de la base de datos y uso del almacén de consultas
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
+            - name: Cambio del modo de compatibilidad de la base de datos con el asistente para consultas
+              href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: Configuración
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -5700,7 +5704,7 @@
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
             - name: Vídeos >>
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
-    - name: Asistente para experimentación con bases de datos
+    - name: Asistente para experimentación con bases de datos (DEA)
       href: dea/database-experimentation-assistant-overview.md
       items:
         - name: Introducción
@@ -6550,12 +6554,12 @@
                   href: relational-databases/policy-based-management/view-the-properties-of-a-policy-based-management-facet.md
                 - name: Copiar un estado de faceta en un archivo XML
                   href: relational-databases/policy-based-management/copy-a-policy-based-management-facet-state-to-an-xml-file.md
-            - name: Procedimientos recomendados de supervisar y aplicar mediante la administración basada en directivas
+            - name: Procedimientos recomendados para la supervisión y aplicación mediante la administración basada en directivas
               href: relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md
               items:
                 - name: Intensidad del cifrado de claves asimétricas
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
-                - name: Comprobar el subsistema de entrada y salida de disco para problemas de retraso de E/S
+                - name: Comprobación del subsistema de entrada y salida de disco para problemas de retraso de E/S
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: Comprobación de la existencia de problemas de reintento de lectura en el subsistema de entrada y salida del disco
                   href: relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md
@@ -7046,7 +7050,7 @@
           items:
             - name: Configuring Storage Spaces with a NVDIMM-N write-back cache (Configuración de espacios de almacenamiento con una caché con reescritura de NVDIMM-N)
               href: relational-databases/performance/configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
-        - name: Asistente para la optimización de base de datos
+        - name: Asistente para la optimización de bases de datos
           href: relational-databases/performance/database-engine-tuning-advisor.md
           items:
             - name: Conceptos
@@ -7293,6 +7297,8 @@
               href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
             - name: Validar guías de planes tras una actualización
               href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+        - name: Asistente para la optimización de consultas
+          href: relational-databases/performance/upgrade-dbcompat-using-qta.md
         - name: Regulador de recursos
           href: relational-databases/resource-governor/resource-governor.md
           items:

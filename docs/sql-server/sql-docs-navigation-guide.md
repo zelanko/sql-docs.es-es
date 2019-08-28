@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028834"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621726"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Guía de navegación de documentos de SQL Server 
 
@@ -39,16 +39,15 @@ Si quiere crear un archivo PDF, seleccione el vínculo **Descargar PDF** que se 
 
 ## <a name="toc-navigation-hints"></a>Sugerencias de navegación por la TDC
 
-Las entradas de la tabla de contenido (TDC) que tienen un `>` al final de la entrada indican que se quitará de docs.microsoft.com. 
+Las entradas de la tabla de contenido (TDC) que tienen un `>` al final de la entrada indican que se le dirigirá a documentación técnica con una tabla de contenido diferente. 
 
 ![Signos de mayor que sencillos en la TDC](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-Las entradas de la TDC que tienen un `>>` indican que se le dirigirá a documentación técnica con una tabla de contenido diferente. 
+Las entradas de la TDC que tienen un `>>` indican que saldrá de docs.microsoft.com. 
 
 ![Marcadores de navegación de la TDC](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
-Si navega a una de estas páginas, puede volver a la página técnica principal de SQL Server y a la tabla de contenido seleccionando la entrada "SQL Server >>" que se encuentra en la parte superior de cada una de estas tablas de contenido. 
+Si navega a una de estas páginas y quiere volver a la página técnica principal de SQL Server y a la tabla de contenido, seleccione la entrada "Bienvenido a SQL Server >" que se encuentra en la parte superior de cada una de estas tablas de contenido. 
 
 ![Volver a la TDC de SQL](media/sql-server-docs-navigation-guide/navigate-back-to-sql-toc.png)
 
@@ -64,7 +63,7 @@ Puede usar el [filtro de versión](versioning-system-monikers-ui-sql-server.md) 
 
 ![Filtro de versión de documentación de SQL](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-Al seleccionar **Todo SQL** \> **Hide nothing** (No ocultar nada), se asegura de que todo el contenido esté visible y que no haya nada oculto detrás del filtro de la versión. No se recomienda activar la opción [**Hide nothing** (Ocultar nada) para el uso rutinario](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
+Al seleccionar **Todo SQL** \> **Hide nothing** (No ocultar nada), se asegura de que todo el contenido esté visible y que no haya nada oculto detrás del filtro de la versión. La opción **Hide nothing** (No ocultar nada) puede revelar contenido pertinente para varias versiones diferentes de SQL Server en el mismo artículo, lo que puede ser contradictorio o confuso. Por tanto, no se recomienda activar la opción [**Hide nothing** (No ocultar nada) para el uso rutinario](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>Rutas de navegación
 

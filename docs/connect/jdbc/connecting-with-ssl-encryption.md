@@ -1,7 +1,7 @@
 ---
 title: Conectarse con cifrado SSL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 209ced9fbf6d1ceb21ed4e5b6d686dd87eec0de2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ccbd9db2ae39113ca157651bdc6dc1486307419
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956807"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028153"
 ---
-# <a name="connecting-with-ssl-encryption"></a>Conectar con el cifrado SSL
+# <a name="connecting-with-ssl-encryption"></a>Conexión con cifrado SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   En los ejemplos de este artículo se describe cómo usar propiedades de cadena de conexión que permiten a las aplicaciones usar el cifrado de Capa de sockets seguros (SSL) en una aplicación Java. Para más información sobre estas nuevas propiedades de cadena de conexión, como **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** y **hostNameInCertificate**, vea [Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
@@ -63,9 +63,9 @@ String connectionUrl =
 > [!NOTE]  
 >  También puede establecer el valor de las propiedades de conexión mediante los métodos **establecedores** adecuados que proporciona la clase [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Si la  propiedad **Encrypt** está establecida en **true** y la propiedad **trustServerCertificate** está establecida en **false** y el nombre del servidor de la cadena de conexión no coincide con el nombre del servidor en el certificado SSL, se mostrará el siguiente error: emitido: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. A partir de la versión 7,2, el controlador admite la coincidencia de patrones de caracteres comodín en la etiqueta del extremo izquierdo del nombre del servidor en el certificado SSL.
-## <a name="see-also"></a>Consulte también  
- [Usar el cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)   
- [Proteger las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
+ Si la propiedad **Encrypt** está establecida en **true** y la propiedad **trustServerCertificate** está establecida en **false** y el nombre del servidor de la cadena de conexión no coincide con el nombre del servidor en el certificado SSL, se mostrará el siguiente error: emitido: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. A partir de la versión 7,2, el controlador admite la coincidencia de patrones de caracteres comodín en la etiqueta del extremo izquierdo del nombre del servidor en el certificado SSL.
+## <a name="see-also"></a>Vea también  
+ [Empleo de cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)   
+ [Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

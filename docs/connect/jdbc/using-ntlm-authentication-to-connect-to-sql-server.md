@@ -1,7 +1,7 @@
 ---
 title: Usar la autenticación NTLM para conectarse a SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 11fe35e1dc90e32cac460b61fe8a6078c817b0ca
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894107"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026100"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Usar la autenticación NTLM para conectarse a SQL Server
 
@@ -68,7 +68,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 }
 ```
 
-## <a name="service-principal-names"></a>Nombres de entidad de seguridad de servicio
+## <a name="service-principal-names"></a>Nombres de entidades de seguridad de servicio
 
 Un nombre principal de servicio (SPN) es el nombre por el que un cliente identifica de forma unívoca una instancia de un servicio.
 
@@ -97,11 +97,11 @@ Para obtener más información sobre cómo habilitar la protección ampliada y, 
 
 Para obtener más información sobre cómo conectarse con el cifrado SSL, vea:
 
-- [Conectar con el cifrado SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)
+- [Conexión con cifrado SSL](../../connect/jdbc/connecting-with-ssl-encryption.md)
 
 > [!NOTE]
-> En la versión 7,4, no **** se admite la habilitación de la protección ampliada y el cifrado.
+> En la versión 7,4, no **se** admite la habilitación de la protección ampliada y el cifrado.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

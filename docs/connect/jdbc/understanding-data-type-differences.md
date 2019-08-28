@@ -1,7 +1,7 @@
 ---
 title: Descripción de las diferencias de tipos de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0cec994768fb5c3a49257da0fb310937c79c25b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 906a4abf0768fcad2e5ac31a0ee93345dcc8b30c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004163"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027381"
 ---
 # <a name="understanding-data-type-differences"></a>Descripción de las diferencias entre los tipos de datos
 
@@ -30,7 +30,7 @@ Los tipos de datos de cadena de caracteres de JDBC son **Char**, **VARCHAR**y **
 | Tipo            | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Longitud fija    | Los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos **Char** y **nchar** se asignan directamente a los tipos **Char** y **nchar** de JDBC. Estos son tipos de longitud fija con relleno que proporciona el servidor en caso de que la columna tenga `SET ANSI_PADDING ON`. El relleno siempre está habilitado para **nchar**, pero en el caso de **char**, si las columnas char del servidor no tienen relleno, el servidor lo agrega el controlador JDBC.                                                                                                                                                                                                                                                                                                                                                                                      |
-| Longitud variable | Los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos **VARCHAR** y **nvarchar** se asignan directamente a los tipos **de JDBC y** **nvarchar** , respectivamente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Longitud variable | Los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos **VARCHAR** y **nvarchar** se asignan directamente a los tipos de JDBC **VARCHAR** y **nvarchar** , respectivamente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | Long            | Los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos **Text** y **ntext** se asignan al tipo **longvarchar** y **LONGNVARCHAR** de JDBC, respectivamente. Estos son tipos en desuso a partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]de, por lo que en su lugar debe usar tipos de valor grande, **VARCHAR (Max)** o **nvarchar (Max)** .<br /><br /> El uso de\<los métodos Update Numeric Type > y [updateObject (int, Java. lang. Object)](../../connect/jdbc/reference/updateobject-method-int-java-lang-object.md) producirá un error en las columnas de servidor **Text** y **ntext** . Pero se admite el uso del método [setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) con un tipo específico de conversión de caracteres en columnas **text** y **ntext** del servidor. |
   
 ## <a name="binary-string-types"></a>Tipos de cadenas binarias
@@ -77,6 +77,6 @@ El tipo **de marca** de tiempo de [!INCLUDE[ssNoVersion](../../includes/ssnovers
 
 La característica de asignación de tipos personalizados de JDBC que emplean las interfaces SQLData para los tipos avanzados de JDBC (UDT, Struct, etc.). no se incluye en el controlador JDBC.  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
-[Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Descripción de los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

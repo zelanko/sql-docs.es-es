@@ -8,19 +8,33 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-author: MightyPen
+author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: 8088334f4bc9cfd03c23af654fbef9eb478aa9a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e3f7929c17b161d3534474d3d9ad99e559714d2
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67989453"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653807"
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Características de Microsoft ODBC Driver for SQL Server en Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
     
+## <a name="microsoft-odbc-driver-174-for-sql-server-on-windows"></a>Microsoft ODBC Driver 17.4 for SQL Server en Windows
+
+El controlador ODBC 17,4 incluye la posibilidad de ajustar la configuración de mantenimiento de conexiones TCP. Pueden modificarse agregando valores a las claves del registro driver o DSN. Las claves se encuentran en `HKEY_LOCAL_MACHINE\Software\ODBC\` para los orígenes de datos del sistema `HKEY_CURRENT_USER\Software\ODBC\` y en para los orígenes de datos de usuario. Para DSN, los valores deben agregarse a `...\Software\ODBC\ODBC.INI\<DSN Name>` y para el `...\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`controlador.
+
+Para obtener más información, vea [entradas del registro para los componentes ODBC](../../../odbc/reference/install/registry-entries-for-odbc-components.md) .
+
+Los valores son `REG_SZ` y son los siguientes:
+
+- `KeepAlive`controla la frecuencia con la que TCP intenta comprobar que una conexión inactiva sigue intacta mediante el envío de un paquete Keep-Alive. El valor predeterminado es 30 segundos.
+
+- `KeepAliveInterval`determina el intervalo que separa las retransmisiones Keep-Alive hasta que se reciba una respuesta. El valor predeterminado es 1 segundo.
+
+
+
 ## <a name="microsoft-odbc-driver-131-for-sql-server-on-windows"></a>Microsoft ODBC Driver 13.1 for SQL Server en Windows
 
 El controlador ODBC 13,1 para SQL Server contiene toda la funcionalidad de la versión anterior (11) y agrega compatibilidad con la autenticación de Always Encrypted y Azure Active Directory cuando se usa junto con Microsoft SQL Server 2016.  

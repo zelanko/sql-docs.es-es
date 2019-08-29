@@ -183,7 +183,7 @@ exec predict_species_length 'rxLinMod';
 
 En el diseñador SSIS, presione F5 para ejecutar el paquete. Debería ver un resultado similar al de la captura de pantalla siguiente.
 
-![F5 para ejecutar en modo de] depuración (../media/create-workflows-using-r-in-sql-server/ssis-exec-F5-run.png "F5 para ejecutar en modo de") depuración
+![F5 para ejecutar en modo de](../media/create-workflows-using-r-in-sql-server/ssis-exec-F5-run.png "F5 para ejecutar en modo de")
 
 <a name="bkmk_ssrs"></a> 
 

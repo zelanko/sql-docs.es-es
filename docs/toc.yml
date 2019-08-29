@@ -8103,8 +8103,6 @@
           items:
             - name: Inyección de código SQL
               href: relational-databases/security/sql-injection.md
-            - name: Restricciones de características
-              href: relational-databases/security/feature-restrictions.md
             - name: Propiedad de base de datos TRUSTWORTHY
               href: relational-databases/security/trustworthy-database-property.md
             - name: Directiva de contraseñas
@@ -10155,7 +10153,7 @@
               href: tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md
             - name: Cuadros de diálogo de SQL Server Profiler
               href: tools/sql-server-profiler/sql-server-profiler-f1-help.md
-    - name: Aplicaciones auxiliares nativas de Visual Studio
+    - name: Asistente nativos de Visual Studio
       items:
         - name: SqlToolsVSNativeHelpers
           href: relational-databases/sqltoolsvsnativehelpers.md
@@ -12105,8 +12103,6 @@
               href: relational-databases/system-catalog-views/sys-server-principals-transact-sql.md
             - name: sys.server_role_members
               href: relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md
-            - name: sys.sql_feature_restrictions
-              href: relational-databases/system-catalog-views/sys-sql-feature-restrictions.md
             - name: sys.sql_logins
               href: relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md
             - name: sys.symmetric_keys

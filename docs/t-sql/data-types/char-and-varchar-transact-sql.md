@@ -24,12 +24,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e625e1d532f42f2e72e57590943de7e5834dbf
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8162c14620143aa70ea2e87f582ec99e613f234c
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354613"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "69653660"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char y varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ Los tipos de datos de caracteres son de tamaño fijo, **char**, o de tamaño var
 ## <a name="arguments"></a>Argumentos  
 **char** [ ( *n* ) ] Datos de cadena de tamaño fijo. *n* define el tamaño de la cadena en bytes y debe ser un valor entre 1 y 8000. Para juegos de caracteres de codificación de byte único, como el *latino*, el tamaño de almacenamiento es *n* bytes y el número de caracteres que se pueden almacenar también es *n*. Para los juegos de caracteres de codificación multibyte, el tamaño de almacenamiento sigue siendo *n* bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n*. El sinónimo ISO para **char** es **character**. Para más información sobre los juegos de caracteres, vea [Juegos de caracteres de un solo byte y de varios bytes](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
-**varchar** [ ( *n* | **max** ) ] Datos de cadena de tamaño variable. *n* define el tamaño de la cadena en bytes y puede ser un valor entre 1 y 8000. **max** indica que el tamaño máximo de almacenamiento es de 2^31-1 bytes (2 GB). Para juegos de caracteres de codificación de byte único, como el *latino*, el tamaño de almacenamiento es *n* bytes + 2 bytes y el número de caracteres que se pueden almacenar también es *n*. Para los juegos de caracteres de codificación multibyte, el tamaño de almacenamiento sigue siendo *n* bytes + 2 bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n*. Los sinónimos ISO para **varchar** son **charvarying** o **charactervarying**. Para más información sobre los juegos de caracteres, vea [Juegos de caracteres de un solo byte y de varios bytes](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
+**varchar** [ ( *n* | **max** ) ] Datos de cadena de tamaño variable. Utilice *n* para definir el tamaño de la cadena en bytes, que puede ser un valor comprendido entre 1 y 8000, o bien use **max** para indicar un tamaño de restricción de columna hasta un almacenamiento máximo de 2^31-1 bytes (2 GB). Para juegos de caracteres de codificación de byte único, como el *latino*, el tamaño de almacenamiento es *n* bytes + 2 bytes y el número de caracteres que se pueden almacenar también es *n*. Para los juegos de caracteres de codificación multibyte, el tamaño de almacenamiento sigue siendo *n* bytes + 2 bytes, pero el número de caracteres que se pueden almacenar puede ser menor que *n*. Los sinónimos ISO para **varchar** son **charvarying** o **charactervarying**. Para más información sobre los juegos de caracteres, vea [Juegos de caracteres de un solo byte y de varios bytes](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## <a name="remarks"></a>Notas  
 Una idea equivocada habitual es pensar que en [CHAR(*n*) y VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md), la *n* define el número de caracteres. Pero en [CHAR(*n*) y VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) la *n* define la longitud de la cadena en **bytes** (0-8.000). *n* nunca define números de caracteres que se pueden almacenar. Esto es similar a la definición de [NCHAR(*n*) y NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md).    

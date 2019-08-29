@@ -2,7 +2,7 @@
 title: Base de datos tempdb | Microsoft Docs
 description: En este tema se proporcionan detalles relacionados con la configuración y el uso de la base de datos tempdb en SQL Server en Azure SQL Database.
 ms.custom: P360
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e921c5b95a3d7fd4eb1e8c5b0cb9010c7d2344c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127137"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653772"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
 
@@ -217,7 +217,7 @@ Para obtener más información sobre la mejora del rendimiento en tempdb, consul
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadatos tempdb optimizados para memoria
 
-La contención de metadatos tempdb ha sido históricamente un cuello de botella en la escalabilidad para muchas cargas de trabajo que se ejecutan en SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nueva característica que forma parte de la familia de características [Base de datos en memoria](../in-memory-database.md), metadatos tempdb optimizados para memoria, que quita este cuello de botella de forma eficaz y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de tempdb. En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], las tablas del sistema implicadas en la administración de metadatos de la tabla temporal del sistema se pueden mover a tablas optimizadas para memoria no duraderas y sin bloqueos temporales. Para poder participar en esta nueva característica, use el siguiente script:
+La contención de metadatos tempdb ha sido históricamente un cuello de botella en la escalabilidad para muchas cargas de trabajo que se ejecutan en SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nueva característica que forma parte de la familia de características [Base de datos en memoria](../in-memory-database.md), metadatos tempdb optimizados para memoria, que quita este cuello de botella de forma eficaz y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de tempdb. En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], las tablas del sistema implicadas en la administración de metadatos de la tabla temporal del sistema se pueden mover a tablas optimizadas para memoria no duraderas y sin bloqueos temporales.  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nueva característica que forma parte de la familia de características [Base de datos en memoria](../in-memory-database.md), metadatos tempdb optimizados para memoria, que quita este cuello de botella de forma eficaz y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de tempdb. En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], las tablas del sistema implicadas en la administración de metadatos de la tabla temporal se pueden mover a tablas optimizadas para memoria no duraderas y sin bloqueos temporales. Para poder participar en esta nueva característica, use el siguiente script:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -319,7 +319,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
 - [Mover archivos de base de datos](../../relational-databases/databases/move-database-files.md)  
   
-## <a name="see-also"></a>Consulte también
-
-- [Trabajar con tempdb en SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
-- [Troubleshooting Insufficient Disk Space in tempdb](https://msdn.microsoft.com/library/ms176029.aspx) (Solucionar problemas de espacio en disco insuficiente en tempdb)

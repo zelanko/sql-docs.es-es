@@ -10,35 +10,32 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 04/26/2019
+ms.date: 08/20/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f67d1ed9bf809baaa4d934947e86d3fd1b7ed0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111536"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903618"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errores comunes en el cifrado de datos transparente con claves administradas por el cliente en Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-En este artículo se describen los requisitos para usar el cifrado de datos transparente (TDE) con claves administradas por el cliente en Azure Key Vault y cómo identificar y resolver los errores comunes.
+En este artículo se describe cómo identificar y resolver los problemas de acceso a la clave de Azure Key Vault que causaron que una base de datos configurada para utilizar el cifrado de datos transparente (TDE) de [ con claves administradas por el cliente en Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) dejara de estar accesible.
 
-## <a name="requirements"></a>Requisitos
+## <a name="introduction"></a>Introducción
+Cuando TDE está configurado para usar una clave administrada por el cliente en Azure Key Vault, es necesario el acceso continuo a este protector de TDE para que la base de datos esté en línea.  Si el servidor lógico de SQL pierde el acceso al protector de TDE administrado por el cliente en Azure Key Vault, una base de datos denegará todas las conexiones y aparecerá como inaccesible en Azure Portal.
 
-Para solucionar problemas en el cifrado de datos transparente con un protector de TDE administrado por el usuario en Key Vault, debe cumplir con estos requisitos:
+Durante las primeras 48 horas, si se resuelve el problema de acceso a la clave de Azure Key Vault subyacente, la base de datos se restaurará y se conectará en línea automáticamente.  Esto significa que para todos los escenarios de interrupción de la red intermitentes y temporales, no se requiere ninguna acción del usuario y la base de datos se conectará en línea automáticamente.  En la mayoría de los casos, se requiere la intervención del usuario para resolver el problema de acceso a la clave del almacén de claves subyacente. 
 
-- La instancia de SQL Server lógica y el almacén de claves deben estar en la misma región.
-- La identidad de la instancia de SQL Server lógica proporcionada por Azure Active Directory (Azure AD) (AppId en Azure Key Vault) debe ser un inquilino de la suscripción original. Si el servidor se movió a una suscripción distinta de donde se creó, la identidad del servidor (AppId) se debe volver a crear.
-- El almacén de claves debe estar funcionando. Para saber cómo comprobar el estado del almacén de claves, consulte [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview). Si quiere registrarse para recibir notificaciones, lea sobre los [grupos de acciones](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups).
-- En un escenario de recuperación ante desastres geográfica, ambos almacenes de claves deben contener el mismo material clave para que una conmutación por error funcione.
-- El servidor lógico debe tener una identidad de Azure AD (AppId) para autenticarse en el almacén de claves.
-- La AppId debe tener acceso al almacén de claves y debe tener los permisos Get, Wrap y Unwrap para las claves que se seleccionaron como los protectores de TDE.
+Si ya no se necesita una base de datos inaccesible, puede eliminarse inmediatamente para dejar de incurrir en gastos.  No se permiten todas las demás acciones en la base de datos hasta que se restaure el acceso a la clave de Azure Key Vault y la base de datos vuelva a estar en línea.   Tampoco se admite cambiar en el servidor la opción de TDE de claves administradas por el cliente por la de claves administradas por el servicio mientras una base de datos cifrada con claves administradas por el cliente sea inaccesible. Esto es necesario para proteger los datos contra el acceso no autorizado mientras se han revocado los permisos para el protector de TDE. 
 
-Para más información, consulte [Directrices para configurar TDE con Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
+Cuando no se pueda obtener acceso a una base de datos durante más de 48 horas, ya no se realizará la restauración automática.  Si se ha restaurado el acceso a la clave de Azure Key Vault requerido, debe volver a validar el acceso manualmente para que la base de datos vuelva a estar en línea.  Volver a poner la base de datos en línea después de que no se haya podido obtener acceso durante más de 48 horas puede tardar una cantidad considerable de tiempo según el tamaño de la base de datos y, actualmente, requiere una incidencia de soporte técnico. Una vez que la base de datos vuelve a estar en línea, se perderán los valores configurados previamente, como el vínculo geográfico, si se configuró geo-DR, el historial de PITR y las etiquetas.  Por tanto, se recomienda implementar un sistema de notificación mediante [Grupos de acciones](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) que permita resolver los problemas subyacentes del almacén de claves en 48 horas. 
 
-## <a name="common-misconfigurations"></a>Configuraciones erróneas comunes
+
+## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Errores comunes que hacen que las bases de datos dejen de estar accesibles
 
 La mayoría de los problemas que se producen cuando se usa TDE con Key Vault se debe a una de las configuraciones erróneas siguientes:
 
@@ -46,10 +43,11 @@ La mayoría de los problemas que se producen cuando se usa TDE con Key Vault se 
 
 - El almacén se claves se eliminó por error.
 - El firewall se configuró para Azure Key Vault, pero no permite acceso a los servicios de Microsoft.
+- Un error de red intermitente hace que el almacén de claves no esté disponible.
 
 ### <a name="no-permissions-to-access-the-key-vault-or-the-key-doesnt-exist"></a>No existen permisos para acceder al almacén de claves o la clave no existe.
 
-- La clave se eliminó por error.
+- La clave se ha eliminado accidentalmente, se ha deshabilitado o ha expirado.
 - La AppId de la instancia de SQL Server lógica se eliminó por error.
 - La instancia de SQL Server lógica se movió a otra suscripción. Se debe crear una AppId distinta si el servidor lógico se movió a otra suscripción.
 - Los permisos concedidos a la AppId para las claves no son suficientes (no incluyen los permisos Get, Wrap ni Unwrap).
@@ -89,7 +87,7 @@ En Azure Portal, vaya al almacén de claves y, luego, a **Directivas de acceso**
 Para más información, consulte [Asignar una entidad de Azure AD al servidor](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
-> Si la instancia de SQL Server lógica se movió a una suscripción nueva después de la configuración inicial de TDE con Key Vault, repita el paso para configurar la identidad de Azure AD y crear una nueva AppId. Luego, agregue la AppId al almacén de claves y asigne los permisos correctos a la clave. 
+> Si la instancia de SQL Server lógica se movió a un suscriptor nuevo después de la configuración inicial de TDE con Key Vault, repita el paso para configurar la identidad de Azure AD y crear una nueva AppId. Luego, agregue la AppId al almacén de claves y asigne los permisos correctos a la clave. 
 >
 
 ### <a name="missing-key-vault"></a>Falta el almacén de claves
@@ -164,8 +162,82 @@ Confirme que la instancia de SQL Server lógica tiene permisos para el almacén
 - Si está la AppId, asegúrese de que tiene los permisos de clave siguientes: obtención, encapsulado y desencapsulado.
 - Si la AppId no está, agréguela con el botón **Agregar nuevo**. 
 
+## <a name="getting-tde-status-from-the-activity-log"></a>Obtención del estado de TDE del registro de actividad
+
+Para permitir la supervisión del estado de la base de datos debido a problemas de acceso a la clave de Azure Key Vault, se registrarán los siguientes eventos en el [Registro de actividad](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) para el identificador de recurso en función de la dirección URL de Azure Resource Manager y Subscription+Resourcegroup+ServerName+DatabseName: 
+
+**Evento cuando el servicio pierde el acceso a la clave de Azure Key Vault**
+
+EventName: MakeDatabaseInaccessible 
+
+Estado: Iniciado 
+
+Descripción: La base de datos ha perdido el acceso a la clave del almacén de claves de Azure y ahora es inaccesible: <error message>   
+
+ 
+
+**Evento cuando comienza el tiempo de espera de 48 horas para la restauración automática** 
+
+EventName: MakeDatabaseInaccessible 
+
+Estado: InProgress 
+
+Descripción: La base de datos está esperando a que el usuario vuelva a establecer el acceso a la clave del almacén de claves de Azure en un plazo de 48 horas.   
+
+ 
+
+**Evento cuando la base de datos vuelve a estar en línea automáticamente**
+
+EventName: MakeDatabaseAccessible 
+
+Estado: Correcto 
+
+Descripción: Se ha restablecido el acceso a la clave del almacén de claves de Azure y la base de datos ahora está en línea. 
+
+ 
+
+**Evento cuando el problema no se ha resuelto en 48 horas y el acceso a la clave de Azure Key Vault debe validarse manualmente** 
+
+EventName: MakeDatabaseInaccessible 
+
+Estado: Correcto 
+
+Descripción: No se puede tener acceso a la base de datos y el usuario debe resolver los errores del almacén de claves de Azure y restablecer el acceso a la clave del almacén de claves de Azure mediante la clave de revalidación. 
+
+ 
+
+**Evento cuando la base de datos se pone en línea después de volver a validar la clave manualmente**
+
+EventName: MakeDatabaseAccessible 
+
+Estado: Correcto 
+
+Descripción: Se ha restablecido el acceso a la clave del almacén de claves de Azure y la base de datos ahora está en línea. 
+
+ 
+
+**Evento cuando la revalidación del acceso a la clave de Azure Key Vault se ha realizado correctamente y la base de datos vuelve a estar en línea**
+
+EventName: MakeDatabaseAccessible 
+
+Estado: Iniciado 
+
+Descripción: Se ha iniciado la restauración del acceso a la base de datos a la clave del almacén de claves de Azure. 
+
+ 
+
+**Evento cuando se ha producido un error en la revalidación del acceso a la clave de Azure Key Vault**
+
+EventName: MakeDatabaseAccessible 
+
+Estado: Error 
+
+Descripción: Se ha producido un error al restaurar el acceso de la base de datos a la clave del almacén de claves de Azure. 
+
+
 ## <a name="next-steps"></a>Pasos siguientes
 
-- Revise las [directrices para configurar TDE con Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
 - Obtenga información sobre [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview).
-- Obtenga una actualización de cómo [asignar una identidad de Azure AD al servidor](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
+- Configure los [Grupos de acciones](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) para recibir notificaciones y alertas en función de sus preferencias, por ejemplo, correo electrónico/SMS/inserciones/voz, aplicación lógica, webhook, ITSM o Runbook de automatización. 
+
+

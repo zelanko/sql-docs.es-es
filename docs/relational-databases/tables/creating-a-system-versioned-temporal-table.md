@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2daf65d8c080700767fc4c94c5e4e9e0aeafa9e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7031157b993fbe1605e7ee2aee7d479a848f21bd
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058659"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903587"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creación de una tabla temporal con control de versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -148,8 +148,8 @@ Por ejemplo, es posible que cuente con un conjunto de tablas en las que el contr
   
 -   Costos de mantenimiento mínimos  
   
- A la hora de convertir una tabla existente, plantéese usar la cláusula **HIDDEN** para ocultar las nuevas columnas **PERIOD** y, así, evitar repercutir en las aplicaciones existentes que no estén diseñadas para procesarlas.  
-  
+ A la hora de convertir una tabla existente, plantéese usar la cláusula **HIDDEN** para ocultar las nuevas columnas **PERIOD** (las columnas datetime2 **SysStartTime** y **SysEndTime**) y, así, evitar repercutir en las aplicaciones existentes que no estén diseñadas para procesarlas.  
+
 ### <a name="adding-versioning-to-non-temporal-tables"></a>Adición del control de versiones a tablas no temporales  
  Si quiere iniciar el seguimiento de cambios de una tabla no temporal que contenga datos, debe agregar la definición **PERIOD** y, opcionalmente, especificar un nombre para la tabla de historial vacía que SQL Server creará automáticamente:  
   

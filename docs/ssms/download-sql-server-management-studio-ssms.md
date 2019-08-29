@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.openlocfilehash: 46174db6dc0008dbeb9490cc96cf41cdef1bc3ed
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68823121"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123103"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 
@@ -81,7 +81,6 @@ SQL Server Management Studio 18.2:
 | Ejecución o resultados de la consulta | Se ha agregado una "hora de finalización" en los mensajes en los que se realiza el seguimiento cuando una consulta determinada ha completado su ejecución. |
 | Ejecución o resultados de la consulta  | Permite que se muestren más datos (resultado a texto) y se almacenen en celdas (resultado a cuadrícula). SSMS ahora admite hasta 2 M de caracteres para ambos (hasta 256 K y 64 K, respectivamente). Esto también ha solucionado la incidencia por la que los usuarios no podían obtener más de 43 680 caracteres de las celdas de la cuadrícula. |
 | ShowPlan | Se ha agregado un nuevo atributo en QueryPlan cuando la característica escalar en línea UDF está habilitada (ContainsInlineScalarTsqlUdfs). |
-| SMO | Se ha agregado compatibilidad con las "Restricciones de características". Para obtener información sobre la propia característica, vea [Restricciones de características](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). Para obtener información sobre las extensiones de valoración, consulte [Introducción a la API de SQL Assessment](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570). |
 | Integration Services (SSIS) | Optimización del rendimiento del programador de paquetes SSIS en Azure. |
 |  |  |
 

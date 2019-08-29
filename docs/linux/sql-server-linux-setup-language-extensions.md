@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: de5ca4f46513999c1473eed77503b59cc94c3a22
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476020"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653527"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Instalación de Extensiones de lenguaje (Java) de SQL Server 2019 en Linux
 
@@ -29,9 +29,9 @@ La ubicación del paquete de las extensiones de Java está en los repositorios d
 
 Extensiones de lenguaje también se admite en contenedores de Linux. No se proporcionan contenedores preintegrados con Extensiones de lenguaje, pero puede crear uno a partir de los contenedores de SQL Server mediante [una plantilla de ejemplo disponible en GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## <a name="uninstall-previous-ctp"></a>Desinstalación de una CTP anterior
+## <a name="uninstall-previous-ctp-version"></a>Desinstalación de una versión CTP anterior
 
-La lista de paquetes ha cambiado con las últimas versiones CTP, lo que ha dado lugar a menos paquetes. Antes de instalar CTP 3.2, se recomienda desinstalar CTP 2.x para quitar todos los paquetes anteriores. La instalación en paralelo de varias versiones no se admite.
+La lista de paquetes ha cambiado con las últimas versiones CTP, lo que ha dado lugar a menos paquetes. Antes de instalar RC 1, se recomienda desinstalar la versión CTP para quitar todos los paquetes anteriores. La instalación en paralelo de varias versiones no se admite.
 
 ### <a name="1-confirm-package-installation"></a>1. Confirmación de la instalación del paquete
 
@@ -41,9 +41,9 @@ Es posible que quiera comprobar la existencia de una instalación anterior como 
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Desinstalación de paquetes anteriores de CTP 2.x
+### <a name="2-uninstall-previous-ctp-packages"></a>2. Desinstalación de paquetes anteriores de CTP
 
-Desinstale en el nivel de paquete inferior. Los paquetes superiores que dependen de un paquete de nivel inferior se desinstalan automáticamente.
+Realice la desinstalación en el nivel de paquete más bajo. Los paquetes superiores que dependen de un paquete de nivel inferior se desinstalan automáticamente.
 
   + Para la integración de Java, quite **mssql-server-extensibility-java**
 
@@ -55,9 +55,9 @@ Los comandos para quitar paquetes aparecen en la tabla siguiente.
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-32-install"></a>3. Continuar con la instalación de CTP 3.2
+### <a name="3-install-release-candidate-1-rc-1"></a>3. Instalación de la versión candidata para lanzamiento 1 (RC 1)
 
-Instale en el nivel de paquete superior con las instrucciones de este artículo para el sistema operativo.
+Realice la instalación en el nivel de paquete más alto, siguiendo las instrucciones de este artículo correspondientes a su sistema operativo.
 
 Para cada conjunto específico de un sistema operativo de instrucciones de instalación, el  *nivel de paquete superior* es **Ejemplo 1: instalación completa** para el conjunto completo de paquetes o **Ejemplo 2: instalación mínima** para el número mínimo de paquetes necesario para una instalación viable.
 
@@ -69,7 +69,7 @@ Para cada conjunto específico de un sistema operativo de instrucciones de insta
 
 ## <a name="prerequisites"></a>Prerequisites
 
-+ La versión de Linux debe ser [compatible con SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), pero no incluye el motor de Docker. Las versiones admitidas incluyen:
++ La versión de Linux debe ser [compatible con SQL Server](sql-server-linux-release-notes-2019.md#supported-platforms), pero no incluye el motor de Docker. Las versiones admitidas son:
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -83,16 +83,16 @@ Para cada conjunto específico de un sistema operativo de instrucciones de insta
 
 En un dispositivo conectado a Internet, los paquetes se descargan e instalan de forma independiente del motor de base de datos mediante el instalador de paquetes de cada sistema operativo. En la tabla siguiente se indican todos los paquetes disponibles.
 
-| Nombre del paquete | Se aplica a | Descripción |
+| Nombre del paquete | Válido para | Descripción |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | Todos los idiomas | Marco de extensibilidad que se usa para ejecutar código Java. |
-|mssql-server-extensibility-java | Java | Extensión de Java para cargar un entorno de ejecución de Java. No hay bibliotecas ni paquetes adicionales para Java. |
+|mssql-server-extensibility  | Todos los idiomas | Marco de extensibilidad usado para la extensión de lenguaje Java |
+|mssql-server-extensibility-java | Java | Marco de extensibilidad usado para la extensión de lenguaje Java que incluye un runtime de Java compatible |
 
 <a name="RHEL"></a>
 
 ## <a name="install-language-extensions"></a>Instalación de Extensiones de lenguaje
 
-Puede instalar Extensiones de lenguaje y Java en Linux si instala **mssql-server-extensibility-java**. Al instalar **mssql-server-extensibility-java**, el paquete instala automáticamente JRE 8 si aún no está instalado. También agrega la ruta de acceso de JVM a una variable de entorno denominada JRE_HOME.
+Puede instalar Extensiones de lenguaje y Java en Linux si instala **mssql-server-extensibility-java**. Al instalar **mssql-server-extensibility-java**, el paquete instala automáticamente JRE 11 si aún no está instalado. También agrega la ruta de acceso de JVM a una variable de entorno denominada JRE_HOME.
 
 > [!Note]
 > En un servidor conectado a Internet, las dependencias de paquete se descargan e instalan como parte de la instalación del paquete principal. Si el servidor no está conectado a Internet, vea más detalles en la [instalación sin conexión](#offline-install).
@@ -275,7 +275,7 @@ Puede descargar paquetes desde [https://packages.microsoft.com/](https://package
 
 #### <a name="package-list"></a>Lista de paquetes
 
-En función de las extensiones que quiera usar, descargue los paquetes necesarios para un lenguaje específico. Los nombres de archivo exactos incluyen información de la plataforma en el sufijo, pero los nombres de archivo siguientes deben ser lo suficientemente cercanos para que pueda determinar qué archivos va a obtener.
+En función de las extensiones que quiera usar, descargue los paquetes necesarios relativos a un lenguaje específico. Los nombres de archivo exactos incluyen información de la plataforma en el sufijo, pero los nombres de archivo siguientes deben ser lo suficientemente cercanos para que pueda determinar qué archivos va a obtener.
 
 ```
 # Core packages 
@@ -286,7 +286,7 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-ctp-releases"></a>Limitaciones de las versiones CTP
+## <a name="limitations-in-the-rc-1-release"></a>Limitaciones de la versión RC 1
 
 Extensiones de lenguaje y la extensibilidad de Java en Linux todavía están en desarrollo activo. Las siguientes características aún no están habilitadas en la versión preliminar.
 
@@ -295,16 +295,16 @@ Extensiones de lenguaje y la extensibilidad de Java en Linux todavía están en 
 
 ### <a name="resource-governance"></a>Regulación de recursos
 
-Existe paridad entre Linux y Windows para la [regulación de recursos](../t-sql/statements/create-external-resource-pool-transact-sql.md) de los grupos de recursos externos, pero las estadísticas de [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) tienen actualmente unidades diferentes en Linux. Las unidades se van a alinear en una próxima versión CTP.
+Existe paridad entre Linux y Windows para la [regulación de recursos](../t-sql/statements/create-external-resource-pool-transact-sql.md) de los grupos de recursos externos, pero las estadísticas de [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) tienen actualmente unidades diferentes en Linux. 
  
 | Nombre de columna   | Descripción | Valor en Linux | 
 |---------------|--------------|---------------|
-|peak_memory_kb | Cantidad máxima de memoria usada para el grupo de recursos. | En Linux, esta estadística tiene como origen el subsistema CGroups memory, donde el valor es memory.max_usage_in_bytes |
-|write_io_count | Total de operaciones de E/S de escritura emitidas desde el restablecimiento de las estadísticas de Resource Governor. | En Linux, esta estadística tiene como origen el subsistema CGroups blkio, donde el valor de la fila de escritura es blkio.throttle.io_serviced | 
-|read_io_count | Total de operaciones de E/S de lectura emitidas desde el restablecimiento de las estadísticas de Resource Governor. | En Linux, esta estadística tiene como origen el subsistema CGroups blkio, donde el valor de la fila de lectura es blkio.throttle.io_serviced | 
-|total_cpu_kernel_ms | Tiempo del kernel de usuario de CPU acumulativo en milisegundos desde el restablecimiento de las estadísticas de Resource Governor. | En Linux, esta estadística tiene como origen el subsistema CGroups cpuacct, donde el valor de la fila de usuario es cpuacct.stat |  
-|total_cpu_user_ms | Tiempo de usuario de CPU acumulativo en milisegundos desde el restablecimiento de las estadísticas de Resource Governor.| En Linux, esta estadística tiene como origen el subsistema CGroups cpuacct, donde el valor de la fila de sistema es cpuacct.stat | 
-|active_processes_count | Número de procesos externos que se ejecutan en el momento de la solicitud.| En Linux, esta estadística tiene como origen el subsistema GGroups pids, donde el valor es pids.current | 
+|peak_memory_kb | Cantidad máxima de memoria usada con el grupo de recursos | En Linux, esta estadística tiene como origen el subsistema CGroups memory, donde el valor es memory.max_usage_in_bytes. |
+|write_io_count | Total de operaciones de E/S de escritura emitidas desde el restablecimiento de las estadísticas de Resource Governor | En Linux, esta estadística tiene como origen el subsistema CGroups blkio, donde el valor de la fila de escritura es blkio.throttle.io_serviced. | 
+|read_io_count | Total de operaciones de E/S de lectura emitidas desde el restablecimiento de las estadísticas de Resource Governor | En Linux, esta estadística tiene como origen el subsistema CGroups blkio, donde el valor de la fila de lectura es blkio.throttle.io_serviced. | 
+|total_cpu_kernel_ms | Tiempo del kernel de usuario de CPU acumulativo en milisegundos desde el restablecimiento de las estadísticas de Resource Governor | En Linux, esta estadística tiene como origen el subsistema CGroups cpuacct, donde el valor de la fila de usuario es cpuacct.stat. |  
+|total_cpu_user_ms | Tiempo de usuario de CPU acumulativo en milisegundos desde el restablecimiento de las estadísticas de Resource Governor| En Linux, esta estadística tiene como origen el subsistema CGroups cpuacct, donde el valor de la fila de sistema es cpuacct.stat. | 
+|active_processes_count | Número de procesos externos que se ejecutan en el momento de la solicitud| En Linux, esta estadística tiene como origen el subsistema GGroups pids, donde el valor es pids.current. | 
 
 ## <a name="next-steps"></a>Pasos siguientes
 

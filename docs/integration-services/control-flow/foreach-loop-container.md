@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 6285426e0503433157632dddeb71b57a9452154f
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316656"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621687"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
 
@@ -52,7 +52,7 @@ ms.locfileid: "68316656"
   
 -   Enumerador de conjunto de filas del esquema para Foreach de ADO.NET, para enumerar la información de esquema sobre un origen de datos. Por ejemplo, puede enumerar y obtener una lista de tablas de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Enumerador Foreach File para enumerar los archivos de una carpeta. El enumerador puede recorrer subcarpetas. Por ejemplo, puede leer todos los archivos de la carpeta y subcarpetas de Windows que tengan la extensión de nombre de archivo *.log.  
+-   Enumerador Foreach File para enumerar los archivos de una carpeta. El enumerador puede recorrer subcarpetas. Por ejemplo, puede leer todos los archivos de la carpeta y subcarpetas de Windows que tengan la extensión de nombre de archivo *.log. Tenga en cuenta que no se puede especificar el orden en el que se recuperan los archivos.  
   
 -   Enumerador de variable para Foreach, para enumerar el objeto enumerable contenido en una variable especificada. El objeto enumerable puede ser una matriz, una **DataTable**de ADO.NET, un enumerador de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , etc. Por ejemplo, puede enumerar los valores de una matriz que contenga los nombres de los servidores.  
   
@@ -513,8 +513,8 @@ Especifica si se debe buscar de forma recursiva en la carpeta especificada.
 
 El permiso Data Lake Storage Gen2 está determinado por [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) y las [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
 Preste atención a que las ACL estén configuradas mediante el identificador de objeto (OID) de la entidad de servicio para el registro de la aplicación como se detalla [aquí](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
-Esto es diferente del identificador de la aplicación (cliente) que se usa con la configuración de RBAC.
-Cuando a una entidad de seguridad se le conceden permisos de datos RBAC a través de un rol integrado, o a través de un rol personalizado, estos permisos se evalúan primero tras la autorización de una solicitud.
+Esto es diferente del identificador de aplicación (cliente) que se usa con la configuración de RBAC.
+Cuando a una entidad de seguridad se le conceden permisos de datos RBAC a través de un rol integrado, o bien a través de un rol personalizado, estos permisos se evalúan primero tras la autorización de una solicitud.
 Si la operación solicitada está autorizada por las asignaciones RBAC de la entidad de seguridad, la autorización se resuelve inmediatamente y no se realiza ninguna comprobación adicional de la ACL.
 Como alternativa, si la entidad de seguridad no tiene una asignación RBAC o la operación de la solicitud no coincide con el permiso asignado, se realizan comprobaciones de ACL para determinar si la entidad de seguridad está autorizada para realizar la operación solicitada.
 Para que el enumerador funcione, conceda al menos el permiso **Execute** a partir del sistema de archivos raíz, junto con el permiso **Read** para la carpeta de destino.

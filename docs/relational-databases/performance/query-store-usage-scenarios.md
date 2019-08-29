@@ -13,12 +13,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a5a909e31d289b7b9739059fd2f870578a923a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a33a45be38ad49b2ecef68fe64be21b94c08f85
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113437"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123211"
 ---
 # <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -134,7 +134,7 @@ A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], todos los cambios
     B.  Si hay planes de consulta que no se hayan podido forzar o si el rendimiento sigue siendo insuficiente, considere la posibilidad de revertir el [nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) al valor anterior y, después, póngase en contacto con el servicio de atención al cliente de Microsoft.  
     
 > [!TIP]
-> Utilice la tarea [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *Actualizar base de datos* para actualizar el [modo de compatibilidad de la base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades) de la base de datos. Consulte [Actualización de bases de datos mediante el Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) para más información.
+> Utilice la tarea [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *Actualizar base de datos* para actualizar el [modo de compatibilidad de la base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) de la base de datos. Consulte [Actualización de bases de datos mediante el Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) para más información.
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Identificar y mejorar las cargas de trabajo ad hoc  
 Algunas cargas de trabajo no tienen consultas dominantes que se pueden ajustar para mejorar el rendimiento general de la aplicación. Estas cargas de trabajo se suelen caracterizar por un número relativamente grande de consultas diferentes, y todas ellas consumen parte de los recursos del sistema. Al ser únicas, estas consultas se ejecutan con poca frecuencia (normalmente una sola vez, de ahí la nomenclatura “ad hoc”), por lo que su consumo de tiempo de ejecución no es crítico. Por otro lado, dado que la aplicación genera nuevas consultas netas todo el tiempo, se dedica una parte significativa de los recursos del sistema a compilar consultas, lo que no resulta óptimo. Esta situación tampoco es ideal para el Almacén de consultas, dado que el elevado número de consultas y planes acapara el espacio que tiene reservado, lo que significa que el Almacén de consultas probablemente acabe en modo de solo lectura muy rápidamente. Si activó la **directiva de limpieza según el tamaño** ([muy recomendable](best-practice-with-the-query-store.md) para mantener el almacén de consultas siempre en funcionamiento), el proceso en segundo plano limpiará las estructuras del almacén de consultas prácticamente todo el tiempo, lo que también consume muchos recursos del sistema.  
@@ -223,5 +223,4 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Procedimiento recomendado con el Almacén de consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [Actualización de bases de datos mediante el Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
-  
   

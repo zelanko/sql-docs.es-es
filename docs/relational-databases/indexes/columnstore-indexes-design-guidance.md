@@ -11,12 +11,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bd114b329a479745fb8e0b1ce0967d025c10565
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f010a9fbd77d3b6a65103f3ed85a7cc521c279c9
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912115"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009433"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Guía de diseño de índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ Para más información, vea [Columnstore indexes - data warehousing](../../relat
 
 A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede crear índices no agrupados de árbol B como índices secundarios en un índice de almacén de columnas agrupado. El índice no agrupado de árbol B se actualiza cuando se producen cambios en el índice de almacén de columnas. Se trata de una característica eficaz que puede usar en su propio beneficio. 
 
-Mediante el uso del índice de árbol B secundario, puede buscar eficazmente filas específicas sin recorrer todas las filas.  También habrá disponibles otras opciones. Por ejemplo, puede aplicar una restricción de clave principal o externa mediante una restricción UNIQUE en el índice de árbol B. Puesto que un valor que no es único no se insertará en el índice de árbol B, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá insertar ese valor en el almacén de columnas. 
+Mediante el uso del índice de árbol B secundario, puede buscar eficazmente filas específicas sin recorrer todas las filas.  También habrá disponibles otras opciones. Por ejemplo, puede aplicar una restricción de clave principal o externa mediante una restricción UNIQUE en el índice de árbol B. Puesto que un valor que no es único no se insertará en el índice de árbol B, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá insertar ese valor en el almacén de columnas. 
 
 Considere la posibilidad de usar un índice de árbol B en un índice de almacén de columnas para:
 * Ejecutar consultas que busquen valores específicos o rangos pequeños de valores.
@@ -127,7 +127,7 @@ A menos que tenga un tamaño de datos suficientemente grande, un índice de alma
 
 Ejemplo:
 * Cargue 1 000 000 de filas en una partición o una tabla sin particiones. Se obtiene un grupo de filas comprimido con 1 000 000 de filas. Esto es fantástico para compresión de datos alta y un rendimiento de consultas rápido.
-* Cargue 1 000 000 de filas equitativamente en 10 particiones. Cada partición obtiene 100 000 filas, que es menos que el umbral mínimo para la compresión del almacén de columnas. Como resultado, el índice de almacén de columnas podría tener 10 grupos de filas delta con 100 000 filas en cada uno. Existen varias maneras de obligar a los grupos de filas delta al almacén de columnas. Sin embargo, si estas son las únicas filas del índice del almacén de columnas, los grupos de filas comprimidos serán demasiado pequeños para la mejor compresión y rendimiento de consultas.
+* Cargue 1 000 000 de filas equitativamente en 10 particiones. Cada partición obtiene 100 000 filas, que es menos que el umbral mínimo para la compresión del almacén de columnas. Como resultado, el índice de almacén de columnas podría tener 10 grupos de filas delta con 100 000 filas en cada uno. Existen varias maneras de obligar a los grupos de filas delta al almacén de columnas. Aun así, si estas son las únicas filas del índice de almacén de columnas, los grupos de filas comprimidos serán demasiado pequeños para la mejor compresión y rendimiento de consultas.
 
 Para más información sobre la creación de particiones, vea la publicación de blog de Sunil Agarwal, [Should I partition my columnstore index?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/) (¿Debo particionar mi índice de almacén de columnas?).
 
@@ -181,10 +181,9 @@ Se trata de tareas para crear y mantener índices de almacén de columnas.
 |Eliminar un índice de almacén de columnas.|[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Para eliminar un índice de almacén de columnas, se usa la sintaxis de DROP INDEX estándar que usan los índices de árbol B. Si se elimina un índice de almacén de columnas agrupado, la tabla de almacén de columnas se convertirá en un montón.|  
 |Eliminar una fila de un índice de almacén de columnas.|[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Use [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) para eliminar una fila.<br /><br /> fila**almacén de columna** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marca la fila como eliminada lógicamente, pero no recupera el almacenamiento físico de la fila hasta que se vuelva a generar el índice.<br /><br /> fila**almacén delta** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina la fila lógica y físicamente.|  
 |Actualizar una fila en el índice de almacén de columnas.|[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|Use [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) para actualizar una fila.<br /><br /> fila**almacén de columna** :  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] marca la fila como eliminada lógicamente y, después, inserta la fila actualizada en el almacén delta.<br /><br /> fila**almacén delta** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates the row in the almacén delta.|  
-|Forzar que todas las filas del almacén delta vayan al almacén de columnas.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Desfragmentación de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)|ALTER INDEX con la opción REBUILD hace que todas las filas vayan al almacén de columnas.|  
+|Forzar que todas las filas del almacén delta vayan al almacén de columnas.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... REBUILD<br /><br /> [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|ALTER INDEX con la opción REBUILD hace que todas las filas vayan al almacén de columnas.|  
 |Desfragmentar un índice de almacén de columnas.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|ALTER INDEX ... REORGANIZE desfragmenta los índices de almacén de columnas en línea.|  
 |Combinar tablas con índices de almacén de columnas.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)|
-
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para crear un índice de almacén de columnas vacío para:

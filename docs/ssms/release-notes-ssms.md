@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: e499f58eff6c09ac8d32d4cd630afc4c7855c299
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809866"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122992"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas de la versión de SQL Server Management Studio (SSMS)
 
@@ -62,7 +62,6 @@ SSMS 18.2 es la versión de disponibilidad general (GA) más reciente de SSMS. S
 | Ejecución o resultados de la consulta | Se ha agregado una *hora de finalización* en los mensajes en los que se realiza el seguimiento cuando una consulta determinada ha completado su ejecución. |
 | Ejecución o resultados de la consulta | Permite que se muestren más datos (resultado a texto) y se almacenen en celdas (resultado a cuadrícula). SSMS ahora admite hasta 2 M de caracteres para ambos (hasta 256 K y 64 K, respectivamente). Esto también ha solucionado la incidencia por la que los usuarios no podían obtener más de 43 680 caracteres de las celdas de la cuadrícula. |
 | ShowPlan | Se ha agregado un nuevo atributo en QueryPlan cuando la [característica escalar en línea UDF](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) está habilitada (ContainsInlineScalarTsqludfs). |
-| SMO | Se ha agregado compatibilidad con las *Restricciones de características*. Para obtener más información sobre la propia característica, vea [Restricciones de características](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions). |
 | SMO | Se agregó soporte técnico para la *API de SQL Assessment*. Para obtener más información, consulte la [API de SQL Assessment](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview). |
 |  |  |
 
@@ -239,7 +238,6 @@ SSMS 18.1 es la versión de disponibilidad general (GA) más reciente de SSMS. S
 |Always Encrypted| La casilla Habilitar Always Encrypted de la pestaña Always Encrypted del cuadro de diálogo Conectar con el servidor ofrece ahora una manera fácil de habilitar y deshabilitar Always Encrypted para una conexión de base de datos.|
 |Always Encrypted con enclaves seguros| Se han realizado varias mejoras para admitir Always Encrypted con enclaves seguros en la versión preliminar de SQL Server 2019:  Un campo de texto para especificar la dirección URL de atestación de enclave en el cuadro de diálogo Conectar con el servidor (nueva pestaña Always Encrypted).  La nueva casilla del cuadro de diálogo Nueva clave maestra de columna para controlar si una nueva clave maestra de columna permite cálculos de enclave.  Otros cuadros de diálogo de administración de claves de Always Encrypted exponen ahora la información sobre qué claves maestras de columna permiten cálculos de enclave.|
 |Archivos de auditoría|Se ha cambiado el método de autenticación basada en Clave de cuenta de almacenamiento a autenticación basada en AD Azure.|
-|Archivos de auditoría|Se ha actualizado la lista de las acciones de auditoría conocidas para incluir FEATURE RESTRICTION ADD/CHANGE GROUP/DROP.|
 |Clasificación de datos| Se ha reorganizado el menú de tareas de clasificación de datos: se ha agregado un submenú al menú de tareas de base de datos y una opción para abrir el informe desde el menú sin tener que abrir primero la ventana de clasificación de datos.|
 |Clasificación de datos|Se ha agregado la nueva característica "Clasificación de datos" a SMO. El objeto de columna expone propiedades nuevas: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId e IsClassified (de solo lectura). Para obtener más información, consulte [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|
 |Clasificación de datos|Se ha agregado el elemento de menú "Informe de clasificación" al control flotante "Clasificación de datos".|

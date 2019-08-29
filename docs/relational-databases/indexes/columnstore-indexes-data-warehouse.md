@@ -11,12 +11,12 @@ ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d632934b3b350077606d93ca162e8f859f0a533
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7644e38995d7afb7493ed3bfec20f2049beb9055
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912150"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009450"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Almacenamiento de datos de índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67912150"
 -   Aislamiento de instantánea en el nivel de compatibilidad de base de datos 130 y niveles superiores.  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>Mejora del rendimiento al combinar índices de almacén de columnas y no agrupados  
- A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede definir índices no agrupado en un índice de almacén de columnas agrupado.   
+ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], puede definir índices no agrupados en un índice de almacén de columnas agrupado.   
   
 ### <a name="example-improve-efficiency-of-table-seeks-with-a-nonclustered-index"></a>Ejemplo: Mejorar la eficacia de las búsquedas de tabla con un índice no agrupado  
  Para mejorar la eficacia de las búsquedas de tabla en un almacenamiento de datos, puede crear un índice no agrupado diseñado para ejecutar consultas que realicen las mejores búsquedas de tabla. Por ejemplo, las consultas que buscan valores coincidentes o que devuelven un pequeño intervalo de valores tienen un rendimiento mejor en un índice de árbol B que en un índice de almacén de columnas. No requieren un recorrido de tabla completo a través del índice de almacén de columnas y devolverán el resultado correcto más rápidamente si se realiza una búsqueda binaria a través de un índice de árbol B.  
@@ -131,6 +131,6 @@ END TRAN
  [Guía de carga de datos de los índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Rendimiento de las consultas de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Introducción al almacén de columnas para análisis operativos en tiempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [Desfragmentación de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Arquitectura de los índices de almacén de columnas](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) 
   

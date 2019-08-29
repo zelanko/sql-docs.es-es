@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d0e379cf9d3bc6391e6c2c921824c7162b88def
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 985f5fb80f9879470f0f9a1740bd7a4b7bee2b2a
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025624"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609632"
 ---
 # <a name="server-configuration-options-sql-server"></a>Opciones de configuración de servidor (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Las opciones que necesitan que se reinicie [!INCLUDE[ssNoVersion](../../includes
   
 Para algunas opciones, es necesario reiniciar el servidor para que el valor de la nueva configuración surta efecto. Si establece el nuevo valor y ejecuta sp_configure antes de reiniciar el servidor, el nuevo valor aparecerá en la columna **value** de las opciones de configuración, pero no en la columna **value_in_use** . Después de reiniciar el servidor, el nuevo valor aparecerá en la columna **value_in_use** .  
   
-Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajusta según las necesidades del sistema. En la mayoría de los casos, esto elimina la necesidad de establecer los valores manualmente. Como ejemplo se pueden citar las opciones **min server memory** y **max server memory** , así como la opción user connections.  
+Las opciones de configuración automática son aquellas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajusta según las necesidades del sistema. En la mayoría de los casos, esto elimina la necesidad de establecer los valores manualmente. Entre los ejemplos se incluyen la opción **Máximo de subprocesos de trabajo** y la opción de conexiones de usuario.  
   
 ## <a name="configuration-options-table"></a>Tabla de opciones de configuración  
  La siguiente tabla contiene todas las opciones de configuración disponibles, la gama de valores posibles y los valores predeterminados. Las opciones de configuración están marcadas con códigos de letras de la forma siguiente:  

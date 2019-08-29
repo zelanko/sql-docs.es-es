@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 313f1bd13cf1b12a0685eeb101998792e0586767
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79ad225fd74b4c8fd136295f69f26d48c061692a
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098769"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123140"
 ---
-# <a name="trycast-transact-sql"></a>TRY_CAST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+# <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   Devuelve una conversión de valor al tipo de datos especificado si la conversión se realiza correctamente; de lo contrario, devuelve NULL.  
   
@@ -60,7 +60,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-trycast-returns-null"></a>A. TRY_CAST devuelve NULL  
+### <a name="a-try_cast-returns-null"></a>A. TRY_CAST devuelve NULL  
  En el ejemplo siguiente se muestra que TRY_CAST devuelve NULL cuando se produce un error en la conversión.  
   
 ```sql  
@@ -100,7 +100,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-trycast-fails-with-an-error"></a>B. TRY_CAST genera un error  
+### <a name="b-try_cast-fails-with-an-error"></a>B. TRY_CAST genera un error  
  En el ejemplo siguiente, se muestra que TRY_CAST devuelve un error cuando la conversión no está explícitamente permitida.  
   
 ```sql  
@@ -114,7 +114,7 @@ GO
 Explicit conversion from data type int to xml is not allowed.  
 ```  
   
-### <a name="c-trycast-succeeds"></a>C. TRY_CAST se realiza correctamente  
+### <a name="c-try_cast-succeeds"></a>C. TRY_CAST se realiza correctamente  
  Este ejemplo demuestra que la expresión debe tener el formato esperado.  
   
 ```  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a1421c43f050e438898289a34e86ec4b87185a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020871"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030351"
 ---
 # <a name="data-type-precedence-transact-sql"></a>Prioridad de tipo de datos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md.md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 Cuando un operador combina dos expresiones de tipos de datos distintos, el tipo de datos con la prioridad más baja se convierte primero al tipo de datos con la prioridad más alta. Si la conversión no es una conversión implícita admitida, se devuelve un error. Para un operador que combina expresiones de operandos que tienen el mismo tipo de datos, el resultado de la operación tiene ese tipo de datos.
   

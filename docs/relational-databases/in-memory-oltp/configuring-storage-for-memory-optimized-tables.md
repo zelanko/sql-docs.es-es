@@ -10,19 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d4c7f50e791324d7e0a0a13164875c5095eb5d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915284"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634568"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configurar el almacenamiento para las tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Debe configurar la capacidad de memoria y las operaciones de entrada/salida por segundo (IOPS).  
   
 ## <a name="storage-capacity"></a>Capacidad de almacenamiento  
- Use la información de [Estimar los requisitos de memoria para las tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para calcular el tamaño en memoria de las tablas durables optimizadas para memoria de la base de datos. Puesto que los índices no se conservan en las tablas optimizadas para memoria, no incluya el tamaño de los índices. Una vez que determine el tamaño, necesita proporcionar una cantidad de espacio en disco que sea cuatro veces el tamaño de tablas durables en memoria.  
+
+Use la información de [Estimar los requisitos de memoria para las tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) para calcular el tamaño en memoria de las tablas durables optimizadas para memoria de la base de datos. Puesto que los índices no se conservan en las tablas optimizadas para memoria, no incluya el tamaño de los índices. 
+ 
+Después de determinar el tamaño, debe proporcionar espacio en disco suficiente para contener los archivos de punto de comprobación, que se usan para almacenar los datos que se han modificado recientemente. Los datos que se almacenan no solo incluyen el contenido de las filas nuevas que se agregan a las tablas en memoria, sino también versiones nuevas de las filas existentes. Este almacenamiento aumenta al insertar o actualizar filas. Las versiones de fila se combinan y el almacenamiento se recupera cuando se produce el truncamiento del registro. Si el truncamiento del registro se retrasa por alguna razón, el almacén de OLTP en memoria aumentará.
+
+Un buen punto de partida para ajustar el tamaño del almacenamiento para esta área consiste en reservar cuatro veces el tamaño de las tablas perdurables en memoria. Supervise el uso del espacio y prepárese para expandir el almacenamiento que está disponible, en caso necesario.
   
 ## <a name="storage-iops"></a>E/S de almacenamiento por segundo  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] puede aumentar considerablemente el rendimiento de las cargas de trabajo. Por tanto, es importante asegurarse de que la entrada/salida no es un cuello de botella.  

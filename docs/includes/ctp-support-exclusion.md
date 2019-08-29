@@ -1,25 +1,25 @@
 ---
-ms.openlocfilehash: b51f93b12c51bd7bc9659ee1661a7fdc068dd2bd
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: ffd608faf64818a7acd9e38d9c502f575be6716a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028866"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653059"
 ---
 ## <a name="enabled-deployment-scenarios"></a>Escenarios de implementación habilitados
 
-CTP 3.2 habilita estos escenarios:
+La versión candidata para lanzamiento (RC) de SQL Server 2019 permite los escenarios siguientes:
 
-- Instalación simultánea. Instale instancias de SQL Server 2019CTP 3.2 con instancias de SQL Server 2012 a SQL Server 2017 u otras instancias de SQL Server 2019 CTP 3.0 o superior.
+- Instalación simultánea. Instale instancias de SQL Server 2019 RC con instancias de SQL Server 2012 a SQL Server 2017 u otras instancias de SQL Server 2019 CTP 3.0 o superior.
    >[!NOTE]
    >Aunque la instalación simultánea no se bloquea con SQL Server 2008 y 2008 R2, no hay versiones del sistema operativo Windows que se admitan habitualmente entre ellas y SQL Server 2019.
-- Actualización local. Las instancias de SQL Server 2019 CTP 3.2 se actualizan desde instancias de SQL Server 2012 a SQL Server 2017 y SQL Server CTP 3.0. No se admite la actualización desde una instancia de SQL Server 2019 CTP inferior a la versión 3.0; se debe realizar una instalación nueva.
+- Actualización local. Actualice las instancias de SQL Server 2019 RC desde instancias de SQL Server 2012 a SQL Server 2017 y SQL Server CTP 3.0. No se admite la actualización desde una instancia de SQL Server 2019 CTP inferior a la versión 3.0; se debe realizar una instalación nueva.
    >[!NOTE]
    >Aunque la instalación local desde SQL Server 2008 y 2008 R2 no se bloquea, no hay versiones del sistema operativo Windows que se admitan habitualmente entre ellas y SQL Server 2019.
 
 ## <a name="support"></a>Soporte técnico
 
-SQL Server 2019 CTP 3.2 es software en versión preliminar. No se admite públicamente para las operaciones. Los clientes que participen en el [programa de adopción temprana de SQL](https://aka.ms/sqleap) pueden tener soporte técnico para ejecutar SQL Server 2019 CTP 3.2 por un contrato especial, en colaboración con Microsoft.
+SQL Server 2019 RC es software en versión preliminar. No se admite públicamente para las operaciones. Los clientes que participen en el [programa de adopción temprana de SQL](http://aka.ms/sqleap) pueden tener soporte técnico para ejecutar SQL Server 2019 RC por un contrato especial, en colaboración con Microsoft.
 
 En una de las ubicaciones siguientes se puede encontrar soporte técnico limitado para los clientes que no participen en el programa de adopción temprana:
 

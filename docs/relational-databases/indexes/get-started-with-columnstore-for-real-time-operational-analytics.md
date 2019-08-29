@@ -11,12 +11,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f3ce558bb9e5856e0cd5828f8facce28dc2c729
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107082"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009490"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -105,9 +105,7 @@ ms.locfileid: "68107082"
   
 -   [Minimizing the impact of nonclustered columnstore index maintenance by using a compression delay - performance numbers (Minimizar el impacto del mantenimiento de índices de almacén de columnas no agrupados mediante un retraso de compresión: cifras de rendimiento)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
   
--   [Real time operational analytics with memory-optimized tables (Análisis operativos en tiempo real con tablas optimizadas para memoria)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
-  
--   [Minimize index fragmentation in a columnstore index (Minimizar la fragmentación de índice de un índice de almacén de columnas)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
+-   [Análisis operativos en tiempo real con tablas optimizadas para memoria](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
   
 -   [Columnstore index and the merge policy for rowgroups (Índice de almacén de columnas y directiva de combinación de grupos de filas)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
@@ -175,7 +173,7 @@ Group By customername
  Aunque puede usar un índice de almacén de columnas filtrado para minimizar el mantenimiento de los índices de almacén de columnas, las consultas de análisis seguirán necesitando importantes cantidades de recursos informáticos (CPU, E/S, memoria) que afectan al rendimiento de las cargas de trabajo operativas. Nuestra recomendación para la mayor parte de las cargas de trabajo críticas es usar la configuración de AlwaysOn. En esta configuración, puede eliminar el impacto de los análisis descargándolos en una secundaria legible.  
   
 ## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>Sugerencia de rendimiento 3: reducir la fragmentación de índice conservando los datos activos en grupos de filas delta  
- Las tablas con índices de almacén de columnas pueden llegar a fragmentarse (se eliminan filas) de forma muy acusada si la carga de trabajo actualiza o elimina filas que se han comprimido. Un índice de almacén de columnas fragmentado conduce a un uso ineficaz de la memoria y el almacenamiento. Pero, aparte del uso ineficaz de los recursos, también repercute negativamente en el rendimiento de las consultas de análisis, dada la E/S adicional y la necesidad de filtrar las filas eliminadas del conjunto de resultados.  
+ Las tablas con índices de almacén de columnas pueden llegar a fragmentarse (es decir, se eliminan filas) de forma muy acusada si la carga de trabajo actualiza o elimina filas que se han comprimido. Un índice de almacén de columnas fragmentado conduce a un uso ineficaz de la memoria y el almacenamiento. Pero, aparte del uso ineficaz de los recursos, también repercute negativamente en el rendimiento de las consultas de análisis, dada la E/S adicional y la necesidad de filtrar las filas eliminadas del conjunto de resultados.  
   
  Las filas eliminadas no se quitarán físicamente hasta que se lleve a cabo una desfragmentación del índice con el comando REORGANIZE o hasta que se vuelva a generar el índice de almacén de columnas en toda la tabla o en las particiones afectadas. Ambos comandos, REORGANIZE y REBUILD, son operaciones costosas que consumen recursos que, de otro modo, se podrían usar para la carga de trabajo. Además, si las filas se comprimen demasiado pronto, puede que haya que volver a comprimirlas varias veces debido a las actualizaciones, lo que daría lugar a una sobrecarga de compresión innecesaria.  
 La fragmentación del índice se puede reducir con la opción COMPRESSION_DELAY.  
@@ -226,6 +224,5 @@ ORDER BY created_time DESC
  [Carga de datos de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Rendimiento de las consultas de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Índices de almacén de columnas para el almacenamiento de datos](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Desfragmentación de índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
-  
+ [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

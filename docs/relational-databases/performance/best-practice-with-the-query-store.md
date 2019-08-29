@@ -1,7 +1,7 @@
 ---
 title: Procedimiento recomendado con el Almacén de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 917a471183d31fab92aa871b6f71a5835c7999d1
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495390"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903612"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -135,7 +135,7 @@ SET QUERY_STORE = ON
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
       QUERY_CAPTURE_MODE = AUTO,
-      MAX_STORAGE_SIZE_MB = 1024,
+      MAX_STORAGE_SIZE_MB = 1000,
       INTERVAL_LENGTH_MINUTES = 60
     );
 ```  
@@ -149,7 +149,8 @@ SET QUERY_STORE = ON
       OPERATION_MODE = READ_WRITE, 
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
-      MAX_STORAGE_SIZE_MB = 1024, 
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1000, 
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO, 
       MAX_PLANS_PER_QUERY = 200,
@@ -157,7 +158,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-En el ejemplo siguiente, se establece el modo de captura de consultas en automático y se configuran otras opciones recomendadas en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]; de manera opcional, se establece la directiva de captura personalizada con los valores predeterminados:  
+En el ejemplo siguiente, se establece el modo de captura de consultas en automático y se configuran otras opciones recomendadas en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. **De manera opcional**, se establece la directiva de captura personalizada con los valores predeterminados, en lugar del nuevo modo de captura automático predeterminado:  
 
 ```sql
 ALTER DATABASE [QueryStoreDB]  
@@ -166,7 +167,7 @@ SET QUERY_STORE = ON
       OPERATION_MODE = READ_WRITE, 
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
-      MAX_STORAGE_SIZE_MB = 1024, 
+      MAX_STORAGE_SIZE_MB = 1000, 
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO, 
       MAX_PLANS_PER_QUERY = 200,

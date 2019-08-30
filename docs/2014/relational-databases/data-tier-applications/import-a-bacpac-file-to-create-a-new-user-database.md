@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 140f3da91af4179302a17604eb6c85b533dcfc2b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918191"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154638"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
   Importe un archivo de aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una instancia nueva de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra o para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -101,9 +101,9 @@ ms.locfileid: "62918191"
   
 -   **Importar desde el disco local**: haga clic en **Examinar...** para navegar por el equipo local, o bien especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
   
--   **Importar desde Windows Azure** -importa un archivo BACPAC desde un contenedor de Windows Azure. Debe conectarse a un contenedor de Windows Azure para validar esta opción. Observe que esta opción también requiere que se especifique un directorio local para el archivo temporal. El archivo temporal se creará en la ubicación especificada y permanecerá allí una vez finalizada la operación.  
+-   **Importar desde Azure** : importa un archivo BACPAC desde un contenedor de Azure. Debe conectarse a un contenedor de Azure para validar esta opción. Observe que esta opción también requiere que se especifique un directorio local para el archivo temporal. El archivo temporal se creará en la ubicación especificada y permanecerá allí una vez finalizada la operación.  
   
-     Al examinar Windows Azure, podrá intercambiar entre los contenedores de una cuenta única. Debe especificar un único archivo .bacpac para continuar con la operación de importación. Tenga en cuenta que puede ordenar columnas por **Nombre**, **Tamaño**o **Fecha de modificación**.  
+     Al examinar Azure, podrá intercambiar entre los contenedores de una cuenta única. Debe especificar un único archivo .bacpac para continuar con la operación de importación. Tenga en cuenta que puede ordenar columnas por **Nombre**, **Tamaño**o **Fecha de modificación**.  
   
      Para continuar, especifique el archivo .bacpac para importar y, a continuación, haga clic en **Abrir**.  
   
@@ -120,13 +120,13 @@ ms.locfileid: "62918191"
   
  Para continuar, haga clic en **Siguiente**.  
   
- **Para una base de datos SQL:**  
+ **Para un SQL Database:**  
   
 -   **Nombre de la nueva base de datos**: proporcione un nombre para la base de datos importada.  
   
--   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -especificar [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obtener más información acerca de las [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea este sitio web de [base de datos SQL](http://www.windowsazure.com/home/tour/database/) .  
+-   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  : especifique [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obtener más información acerca de las [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea este sitio web de [base de datos SQL](http://www.windowsazure.com/home/tour/database/) .  
   
--   **Tamaño máximo de la base de datos (GB)** -Use el menú desplegable para especificar el tamaño máximo de la base de datos.  
+-   **Tamaño máximo de la base de datos (GB)** : Use el menú desplegable para especificar el tamaño máximo de la base de datos.  
   
  Para continuar, haga clic en **Siguiente**.  
   

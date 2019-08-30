@@ -12,12 +12,12 @@ ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62877064"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155076"
 ---
 # <a name="back-up-database-general-page"></a>Copia de seguridad de base de datos (página General)
   Utilice la página **General** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar la configuración de una operación de copia de seguridad de la base de datos.  
@@ -54,7 +54,7 @@ ms.locfileid: "62877064"
  **Tipo de copia de seguridad**  
  Seleccione el tipo de copia de seguridad que desea realizar para la base de datos especificada.  
   
-|Tipo de copia de seguridad|Disponible para|Restrictions|  
+|Tipo de copia de seguridad|Disponible para|Restricciones|  
 |-----------------|-------------------|------------------|  
 |Completo|Bases de datos, archivos y grupos de archivos|En la base de datos **maestra** , solo son posibles copias de seguridad completas.<br /><br /> En el modelo de recuperación simple, las copias de seguridad de archivos y grupos de archivos solo están disponibles para los grupos de archivos de solo lectura.|  
 |Diferencial|Bases de datos, archivos y grupos de archivos|En el modelo de recuperación simple, las copias de seguridad de archivos y grupos de archivos solo están disponibles para los grupos de archivos de solo lectura.|  
@@ -89,7 +89,7 @@ ms.locfileid: "62877064"
 |-|-|  
 |**Disco**|Hace la copia de seguridad en disco. Puede tratarse de un archivo de sistema o un dispositivo de copia de seguridad basado en disco creado para la base de datos. Los discos seleccionados actualmente aparecerán en la lista **Copia de seguridad en** . Puede seleccionar hasta 64 dispositivos de disco para la operación de copia de seguridad.|  
 |**Cinta**|Hace la copia de seguridad en cinta. Puede tratarse de una unidad de cinta local o un dispositivo de copia de seguridad basado en cinta creado para la base de datos. Las cintas seleccionadas actualmente aparecerán en la lista **Copia de seguridad en** . El número máximo es 64. Si no hay dispositivos de cinta conectados al servidor, esta opción no estará activada. Las cintas que seleccione aparecerán en la lista **Copia de seguridad en** .<br /><br /> Nota: La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
-|**Dirección URL**|Hace la copia de seguridad de Almacenamiento de blob de Windows Azure.|  
+|**URL**|Realiza una copia de seguridad en Azure BLOB Storage.|  
   
  El siguiente conjunto de las opciones que aparecen depende del tipo de destino seleccionado. Si selecciona Disco o Cinta, se muestran las siguientes opciones.  
   
@@ -107,14 +107,14 @@ ms.locfileid: "62877064"
  **Nombre de archivo**  
  Especifica el nombre del archivo de copia de seguridad.  
   
- **Credencial de SQL**  
- Seleccione una credencial SQL usada para autenticarse en Almacenamiento de Windows Azure. Si no tiene una credencial existente de SQL que se pueda usar, haga clic en el botón **Crear** para crear una nueva credencial SQL.  
+ **Credencial SQL**  
+ Seleccione una credencial SQL usada para autenticarse en Azure Storage. Si no tiene una credencial existente de SQL que se pueda usar, haga clic en el botón **Crear** para crear una nueva credencial SQL.  
   
 > [!IMPORTANT]  
->  El cuadro de diálogo que se abre al hacer clic en **Crear** requiere un certificado de administración o el perfil de publicación para la suscripción. Si no tiene acceso al certificado de administración o al perfil de publicación, puede crear una credencial de SQL; para ello, especifique la información del nombre de cuenta de almacenamiento y de clave de acceso mediante Transact-SQL o SQL Server Management Studio. Vea el código de ejemplo en la en la [para crear una credencial](../security/authentication-access/create-a-credential.md#Credential) tema para crear una credencial mediante Transact-SQL. O bien, con SQL Server Management Studio, desde el motor de base de datos, haga clic con el botón secundario en **Seguridad**, seleccione **Nuevo**y **Credencial**. Especifique el nombre de cuenta de almacenamiento para **Identidad** y la clave de acceso en el campo **Contraseña** .  
+>  El cuadro de diálogo que se abre al hacer clic en **Crear** requiere un certificado de administración o el perfil de publicación para la suscripción. Si no tiene acceso al certificado de administración o al perfil de publicación, puede crear una credencial de SQL; para ello, especifique la información del nombre de cuenta de almacenamiento y de clave de acceso mediante Transact-SQL o SQL Server Management Studio. Vea el código de ejemplo en el en el tema [para crear una credencial](../security/authentication-access/create-a-credential.md#Credential) para crear una credencial mediante TRANSACT-SQL. O bien, con SQL Server Management Studio, desde el motor de base de datos, haga clic con el botón secundario en **Seguridad**, seleccione **Nuevo**y **Credencial**. Especifique el nombre de cuenta de almacenamiento para **Identidad** y la clave de acceso en el campo **Contraseña** .  
   
  **Contenedor de almacenamiento de Windows Azure**  
- Especifique el nombre del contenedor de Almacenamiento de Windows Azure  
+ Especificar el nombre del contenedor de almacenamiento de Azure  
   
  **Prefijo URL:**  
  Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que emplee un formato distinto de **\<cuenta de almacenamiento>.blob.core.windows.net**.  

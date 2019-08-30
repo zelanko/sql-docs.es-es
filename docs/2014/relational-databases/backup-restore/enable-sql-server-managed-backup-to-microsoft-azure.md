@@ -1,5 +1,5 @@
 ---
-title: Configuración de SQL Server copia de seguridad administrada en Windows Azure | Microsoft Docs
+title: Configuración de SQL Server copia de seguridad administrada en Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-server-2014
@@ -10,14 +10,14 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b72fcf0a067838651d9c41205c3604750fecc6d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: b69439226b55965e37f24f2131c77340ae833590
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028643"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154721"
 ---
-# <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>Configurar Copia de seguridad administrada de SQL Server para Microsoft Azure
+# <a name="setting-up-sql-server-managed-backup-to-azure"></a>Configuración de SQL Server copia de seguridad administrada en Azure
   Este tema incluye dos tutoriales:  
   
  Configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en el nivel de base de datos, habilitar la notificación por correo electrónico y supervisar la actividad de copia de seguridad.  

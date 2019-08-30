@@ -1,5 +1,5 @@
 ---
-title: Conectarse a Windows Azure Storage | Microsoft Docs
+title: Conectarse a Azure Storage | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3525f28864c3260bd2b50d98f441f6ed5072accb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808576"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154303"
 ---
-# <a name="connect-to-windows-azure-storage"></a>Conectar a Azure Storage
-  Utilice el cuadro de diálogo de **Conexión de almacenamiento de Windows Azure** para especificar una cuenta de almacenamiento y validar la conexión a Windows Azure.  
+# <a name="connect-to-azure-storage"></a>Conectar a Azure Storage
+  Use el cuadro de diálogo **Azure Storage conexión** para especificar una cuenta de almacenamiento y validar la conexión a Azure.  
   
 ## <a name="options"></a>Opciones  
- Especifique la siguiente información sobre su cuenta de Windows Azure y, a continuación, haga clic en **Siguiente** para continuar.  
+ Especifique la siguiente información sobre su cuenta de Azure y, a continuación, haga clic en **siguiente** para continuar.  
   
 1.  **Cuenta de almacenamiento** : especifique el nombre de la cuenta de almacenamiento.  
   

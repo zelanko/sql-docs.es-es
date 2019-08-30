@@ -22,19 +22,19 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d159b6c0496d99956e17f1607f71cf7df86e4dea
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922126"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155011"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   En este tema se presenta el componente de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La copia de seguridad de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es esencial para proteger los datos. En esta descripción se tratan los tipos y las restricciones de copia de seguridad. En el tema también se presentan los dispositivos y los medios de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **En este tema:**  
   
--   [Los componentes y conceptos](#TermsAndDefinitions)  
+-   [Componentes y conceptos](#TermsAndDefinitions)  
   
 -   [Compresión de copia de seguridad](#BackupCompression)  
   
@@ -77,16 +77,16 @@ ms.locfileid: "62922126"
  [copia de seguridad de registros](transaction-log-backups-sql-server.md)  
  Copia de seguridad de los registros de transacciones que incluye todos los registros no guardados en una copia de seguridad de registros anterior. (modelo de recuperación completa)  
   
- [copia de seguridad de archivo](full-file-backups-sql-server.md)  
+ [copia de seguridad de archivos](full-file-backups-sql-server.md)  
  Copia de seguridad de uno o varios archivos de base de datos o grupos de archivos.  
   
  [copia de seguridad parcial](partial-backups-sql-server.md)  
  Contiene datos de algunos de los grupos de archivos de una base de datos, incluidos los datos del grupo de archivos principal, todos los grupos de archivos de lectura/escritura, y los archivos de solo lectura opcionalmente especificados.  
   
- **Medios de copia de seguridad términos y definiciones**  
+ **Términos y definiciones de medios de copia de seguridad**  
   
- [Dispositivo de copia de seguridad](backup-devices-sql-server.md)  
- Disco o dispositivo de cinta en el que se escriben las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio de almacenamiento Blob de Windows Azure y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para más información, consulte [Copia de seguridad y restauración de SQL Server con el servicio Azure Blob Storage](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ [dispositivo de copia de seguridad](backup-devices-sql-server.md)  
+ Disco o dispositivo de cinta en el que se escriben las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio de almacenamiento de blobs de Azure y el formato de **dirección URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [SQL Server Backup and restore with Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [medio de copia de seguridad](media-sets-media-families-and-backup-sets-sql-server.md)  
  Una o varias cintas o archivos de disco en los que se han escrito una o varias copias de seguridad.  
@@ -103,10 +103,10 @@ ms.locfileid: "62922126"
  [conjunto de medios reflejado](mirrored-backup-media-sets-sql-server.md)  
  Varias copias (reflejos) de un conjunto de medios.  
   
-##  <a name="BackupCompression"></a> Compresión de copia de seguridad  
+##  <a name="BackupCompression"></a>Compresión de copia de seguridad  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y versiones posteriores admiten la compresión de copias de seguridad, y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores pueden restaurar una copia de seguridad comprimida. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
-##  <a name="Restrictions"></a> Restricciones en las operaciones de copia de seguridad en SQL Server  
+##  <a name="Restrictions"></a>Restricciones en las operaciones de copia de seguridad en SQL Server  
  Se puede realizar la copia de seguridad mientras la base de datos está en línea y en uso. Sin embargo, existen las siguientes restricciones.  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>No se pueden realizar copias de seguridad de los datos sin conexión  
@@ -136,7 +136,7 @@ ms.locfileid: "62922126"
  Si una operación de copia de seguridad se superpone a una operación de administración de archivos o de reducción, surge un conflicto. Con independencia de la operación en conflicto que empieza en primer lugar, la segunda operación espera a que se agote el tiempo de espera del bloqueo establecido por la primera operación. (El tiempo de espera se controla mediante un valor de tiempo de espera de sesión). Si el bloqueo se libera durante el tiempo de espera, la segunda operación continúa. Si se agota el tiempo de espera del bloqueo, la segunda operación no se realiza correctamente.  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
- **Para trabajar con dispositivos y medios de copia de seguridad**  
+ **Para trabajar con dispositivos de copia de seguridad y medios de copia de seguridad**  
   
 -   [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62922126"
   
 -   [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server copias de seguridad y restauración en Azure Blob Storage servicio](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Para crear una copia de seguridad**  
   
@@ -179,7 +179,7 @@ ms.locfileid: "62922126"
   
 -   [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server copias de seguridad y restauración en Azure Blob Storage servicio](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](back-up-and-restore-of-sql-server-databases.md)   

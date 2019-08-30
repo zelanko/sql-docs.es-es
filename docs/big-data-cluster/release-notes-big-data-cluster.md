@@ -5,27 +5,39 @@ description: En este artículo se describen las actualizaciones más recientes y
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653438"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160693"
 ---
-# <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de la versión de los clústeres de macrodatos en SQL Server
+# <a name="release-notes-for-sql-server-big-data-clusters"></a>Notas de la versión de clústeres de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se enumeran las actualizaciones y los problemas conocidos de las [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]versiones más recientes de.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a id="rc"></a>Candidato de versión comercial (agosto)
 
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+En las secciones siguientes se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server Release Candidate 2019.
+
+### <a name="whats-new"></a>What's New
+
+|Nueva característica o actualización | Detalles |
+|:---|:---|
+|SQL Server Always On grupo de disponibilidad |Al implementar un clúster de macrodatos de SQL Server, puede configurar la implementación para crear un grupo de disponibilidad que proporcione:<br/><br/>-Alta disponibilidad <br/><br/>-Escalado horizontal de lectura <br/><br/>-Escalado horizontal de la inserción de datos en el grupo de datos<br/><br>Consulte [implementación con alta disponibilidad](../big-data-cluster/deployment-high-availability.md). |
+|`azdata` |Instalación simplificada para la herramienta con el [Administrador de instalación](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook`Command](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`Command](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[Descargue la versión candidata para lanzamiento de Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Se han agregado cuadernos de solución de problemas a través de SQL Server guía 2019 de Jupyter.<br/><br/>Experiencia de inicio de sesión de controlador agregada.<br/><br/>Se ha agregado el panel del controlador para ver los puntos de conexión de servicio, ver el estado de mantenimiento del clúster y acceder a los cuadernos de solución de problemas.<br/><br/>Rendimiento de edición/salida de celda del Bloc de notas mejorado.|
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conocidos
+
+SQL Server 2019 los clústeres de macrodatos Release Candidate la `15.0.1900.47`actualización del número de compilación es.
 
 ## <a id="ctp32"></a> CTP 3.2 (julio)
 
@@ -48,13 +60,13 @@ En las secciones siguientes se describen los problemas conocidos y las limitacio
 
 #### <a name="polybase"></a>PolyBase
 
-- La desactivación de la cláusula TOP cuando el recuento es > 1000 no se admite en esta versión. En estos casos, se leerán todas las filas del origen de datos remotos.
+- La desactivación de la cláusula TOP cuando el recuento es > 1000 no se admite en esta versión. En estos casos, se leerán todas las filas del origen de datos remotos. (Corregido en versión candidata para lanzamiento)
 
 - En esta versión no se admite la desactivación de combinaciones colocadas en orígenes de datos externos. Por ejemplo, la desactivación de dos tablas de grupos de datos del tipo de distribución ROUND_ROBIN obtendrá los datos en la instancia maestra de SQL o en la instancia del grupo de proceso para realizar la operación de unión.
 
 #### <a name="compute-pool"></a>Grupo de proceso
 
-- La implementación de clúster de macrodatos solo admite el grupo de proceso con una instancia.
+- La implementación de clúster de macrodatos solo admite el grupo de proceso con una instancia. (Corregido en versión candidata para lanzamiento)
 
 #### <a name="storage-pool"></a>Grupo de almacenamiento
 

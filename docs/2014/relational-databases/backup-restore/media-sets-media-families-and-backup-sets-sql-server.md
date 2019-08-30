@@ -23,18 +23,18 @@ ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6f9d80f8ea696bfbe85a7f5a7aefac32eba1211
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876279"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154788"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de medios, familias de medios y conjuntos de copias de seguridad (SQL Server)
   En este tema se presenta la terminología básica de medios de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y está pensada para lectores noveles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tema describe el formato que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los medios de copia de seguridad, la correspondencia entre los medios y los dispositivos de copia de seguridad, la organización de las copias de seguridad en los medios y varias consideraciones para los conjuntos y las familias de medios. El tema también describe los pasos inicializar o dar formato a los medios de copia de seguridad antes de usarlos por primera vez o reemplazar un conjunto de medios anterior por otro nuevo, cómo sobrescribir los conjuntos de copia de seguridad anteriores en un conjunto de medios y cómo agregar nuevos conjuntos de copia de seguridad a un conjunto de medios.  
   
 > [!NOTE]  
->  Para obtener más información sobre la copia de seguridad de SQL Server en el servicio de almacenamiento Blob de Windows Azure, vea [Copia de seguridad y restauración de SQL Server con el servicio de almacenamiento Blob de Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Para obtener más información sobre SQL Server copia de seguridad en el servicio de almacenamiento de blobs de Azure, consulte [SQL Server Backup and restore with Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
   
 ##  <a name="TermsAndDefinitions"></a> Términos y definiciones  
@@ -48,15 +48,15 @@ ms.locfileid: "62876279"
  Contenido de la copia de seguridad que se agrega a un conjunto de medios mediante una operación de copia de seguridad correcta.  
   
   
-##  <a name="OvMediaSetsFamiliesBackupSets"></a> Información general de conjuntos de medios, familias de medios y conjuntos de copia de seguridad  
- Las copias de seguridad de uno o varios medios de copia de seguridad constituyen un conjunto de medios. Un *conjunto de medios* es una colección ordenada de *medios de copia de seguridad*, cintas o archivos de disco, o blobs de Windows Azure en la que se han escrito una o más operaciones de copia de seguridad mediante un tipo y número fijo de dispositivos de copia de seguridad. Un conjunto de medios dado usa unidades de cinta, unidades de disco o blobs de Windows Azure, pero no una combinación de dos o más. Por ejemplo, los dispositivos de copia de seguridad asociados con un conjunto de medios pueden ser tres unidades de cinta denominadas `\\.\TAPE0`, `\\.\TAPE1`y `\\.\TAPE2`. Este conjunto de medios está formado solamente por cintas, empezando con un mínimo de tres (una por unidad). El tipo y número de los dispositivos de copia de seguridad se establece cuando se crea un conjunto de medios y ya no se pueden cambiar. Sin embargo, si es necesario, entre las operaciones de las copias de seguridad y restauración un dispositivo determinado puede sustituirse por un dispositivo del mismo tipo.  
+##  <a name="OvMediaSetsFamiliesBackupSets"></a>Información general sobre conjuntos de medios, familias de medios y conjuntos de copia de seguridad  
+ Las copias de seguridad de uno o varios medios de copia de seguridad constituyen un conjunto de medios. Un *conjunto de medios* es una colección ordenada de *medios de copia de seguridad*, cintas o archivos de disco, o blobs de Azure en la que se han escrito una o más operaciones de copia de seguridad mediante un tipo y número fijos de dispositivos de copia de seguridad. Un conjunto de medios dado usa unidades de cinta, unidades de disco o blobs de Azure, pero no una combinación de dos o más. Por ejemplo, los dispositivos de copia de seguridad asociados con un conjunto de medios pueden ser tres unidades de cinta denominadas `\\.\TAPE0`, `\\.\TAPE1`y `\\.\TAPE2`. Este conjunto de medios está formado solamente por cintas, empezando con un mínimo de tres (una por unidad). El tipo y número de los dispositivos de copia de seguridad se establece cuando se crea un conjunto de medios y ya no se pueden cambiar. Sin embargo, si es necesario, entre las operaciones de las copias de seguridad y restauración un dispositivo determinado puede sustituirse por un dispositivo del mismo tipo.  
   
  Un conjunto de medios se crea en el medio de copia de seguridad durante una operación de copia de seguridad al dar formato a un medio de copia de seguridad. Para obtener más información, vea [Crear un conjunto de medios](#CreatingMediaSet), más adelante en este tema. Después de dar formato, cada archivo o cinta contiene un encabezado de medios para el conjunto de medios y está listo para recibir el contenido de la copia de seguridad. Con el encabezado adecuado, la operación de copia de seguridad empieza a realizar la copia de seguridad de los datos especificados en los medios de copia de seguridad en todos los dispositivos de copia de seguridad especificados para la operación.  
   
 > [!NOTE]  
 >  Los conjuntos de medios pueden reflejarse como medida de protección ante posibles daños en el volumen de medios (una cinta o un archivo de disco). Para obtener más información, vea [Conjuntos de medios de copia de seguridad reflejados &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] o versiones posteriores pueden leer copias de seguridad comprimidas. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]o posterior puede leer copias de seguridad comprimidas. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
 ### <a name="media-families"></a>Familias de medios  
@@ -89,7 +89,7 @@ ms.locfileid: "62876279"
 -   Si la descripción del medio contiene una etiqueta de medios MTF o una descripción del medio.  
   
     > [!NOTE]  
-    >  Todos los medios que se usan para una operación de copia de seguridad o restauración utilizan un formato estándar de copia de seguridad denominado [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] conserva cualquier etiqueta de medios MTF escrita por otra aplicación pero no escribe etiquetas de medios MTF.  
+    >  Todos los medios que se usan para una operación de copia de seguridad o de restauración utilizan [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] un formato de copia de seguridad estándar denominado conserva cualquier etiqueta de medios MTF escrita por otra aplicación, pero no escribe etiquetas de medios MTF.  
   
 -   Etiqueta de medios en formato de cinta de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] o descripción del medio (en texto sin formato).  
   
@@ -166,12 +166,12 @@ GO
   
 -   Número de conjuntos de copia de seguridad  
   
-##  <a name="ConsiderationsForMediaSetFamilies"></a> Uso de medios conjuntos y familias  
+##  <a name="ConsiderationsForMediaSetFamilies"></a>Usar conjuntos de medios y familias  
  En esta sección se tratan varias consideraciones para usar los conjuntos y las familias de medios.  
   
   
   
-###  <a name="CreatingMediaSet"></a> Crear un nuevo conjunto de medios  
+###  <a name="CreatingMediaSet"></a>Creación de un nuevo conjunto de medios  
  Para crear un conjunto de medios es necesario formatear el medio de copia de seguridad (una o varias cintas o archivos de disco). El proceso de formato cambia el medio de copia de seguridad de la siguiente manera:  
   
 1.  Elimina el antiguo encabezado (si existe), eliminando adecuadamente el contenido anterior de los medios de copia de seguridad.  
@@ -181,7 +181,7 @@ GO
 2.  Escribe un nuevo encabezado de medios en el medio de copia de seguridad (cinta o archivo de disco) en cada uno de los dispositivos de copia de seguridad.  
   
   
-###  <a name="UseExistingMediaSet"></a> Copia de seguridad en un conjunto de medios existente  
+###  <a name="UseExistingMediaSet"></a>Realizar copias de seguridad en un conjunto de medios existente  
  Al hacer una copia de seguridad en un conjunto de medios existente, las opciones son las siguientes:  
   
 -   Anexarlo al conjunto de copia de seguridad existente.  
@@ -200,7 +200,7 @@ GO
     > [!NOTE]  
     >  Sobrescribir los conjuntos de copia de seguridad existentes se especifica mediante la opción INIT de la instrucción BACKUP.  
   
-####  <a name="Appending"></a> Anexar a conjuntos de copia de seguridad existentes  
+####  <a name="Appending"></a>Anexar a conjuntos de copia de seguridad existentes  
  En el mismo medio se pueden almacenar copias de seguridad de las mismas o diferentes bases de datos, realizadas en distintos momentos. Al anexar otro conjunto de copia de seguridad al medio existente, el contenido anterior del medio permanece intacto y la nueva copia de seguridad se escribe después del final de la última copia de seguridad del medio.  
   
  De manera predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre anexa nuevas copias de seguridad al medio. El anexo solo se puede agregar al final del medio. Por ejemplo, si el volumen de un medio contiene cinco conjuntos de copia de seguridad, no es posible omitir los primeros tres conjuntos para sobrescribir el cuarto con un nuevo conjunto de copia de seguridad.  
@@ -210,10 +210,10 @@ GO
  Las copias de seguridad de Microsoft Windows y las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden compartir el mismo medio, pero no son interoperables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede realizar una copia de seguridad de datos de Windows.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)] o versiones posteriores pueden leer copias de seguridad comprimidas. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](backup-compression-sql-server.md).  
+>  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]o versiones posteriores pueden leer copias de seguridad comprimidas. Para obtener más información, vea [Compresión de copia de seguridad &#40;SQL Server&#41;](backup-compression-sql-server.md).  
   
   
-####  <a name="Overwriting"></a> Sobrescribir los conjuntos de copia de seguridad  
+####  <a name="Overwriting"></a>Sobrescribir conjuntos de copia de seguridad  
  La sobrescritura de los conjuntos de copia de seguridad existentes se especifica mediante la opción INIT de la instrucción BACKUP. Esta opción sobrescribe todos los conjuntos de copia de seguridad del medio y mantiene el encabezado de medios, si se mantiene algo. Si no existe ningún encabezado de medios, se crea uno.  
   
  Para los encabezados de cinta, dejar el encabezado en su sitio puede tener sentido. En medios de copia de seguridad en disco, solo se sobrescriben los archivos que utilizan los dispositivos de copia de seguridad especificados en la operación de copia de seguridad; los demás archivos del disco no se ven afectados. Cuando se sobrescriben copias de seguridad, se mantiene el encabezado de medios existente y la nueva copia de seguridad se crea como la primera en el dispositivo de copia de seguridad. Si no hay ningún encabezado de medios, se escribe automáticamente uno válido con el nombre y la descripción del medio correspondientes. Si el encabezado de medios existente no es válido, terminará la operación de copia de seguridad. Si el medio está vacío, se genera el nuevo encabezado de medios con los datos proporcionados por MEDIANAME, MEDIAPASSWORD y MEDIADESCRIPTION, si hubiera.  
@@ -236,7 +236,7 @@ GO
  Si el medio de copia de seguridad está protegido con contraseña por Microsoft Windows, Microsoft SQL Server no escribe en el medio. Para sobrescribir un medio protegido por contraseña, debe reinicializarlo.  
   
   
-###  <a name="SequenceNumbers"></a> Números de secuencia  
+###  <a name="SequenceNumbers"></a>Números de secuencia  
  El orden correcto es importante para varias familias de medios de un conjunto de medios o varios medios de copia de seguridad de una familia de medios. Por tanto, la copia de seguridad asigna números de secuencia de las maneras siguientes:  
   
 -   Familias de medios secuenciales de un conjunto de medios  
@@ -259,7 +259,7 @@ GO
      Para cualquier restauración desde copias de seguridad en disco y para cualquier restauración en línea, deben montarse todas las familias de medios simultáneamente. Para una restauración sin conexión desde copias de seguridad en cinta, puede procesar las familias de medios desde menos dispositivos de copia de seguridad. Cada familia de medios debe procesarse completamente antes de iniciar el procesamiento de la siguiente familia. Las familias de medios siempre se procesan en paralelo, a menos que se realice una restauración con un solo dispositivo.  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
- **Para crear un medio nuevo conjunto**  
+ **Para crear un nuevo conjunto de medios**  
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md) (Opción **Hacer copia de seguridad en un nuevo conjunto de medios y borrar todos los conjuntos de copia de seguridad existentes**)  
   
@@ -283,13 +283,13 @@ GO
   
 -   [Establecer la fecha de expiración de una copia de seguridad &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
- **Para ver los números de secuencia de secuencia y la familia de medios**  
+ **Para ver la secuencia de medios y los números de secuencia de la familia**  
   
 -   [Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
 -   [backupmediafamily &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupmediafamily-transact-sql) (Columna **family_sequence_number**)  
   
- **Para ver los conjuntos de copia de seguridad de un dispositivo de copia de seguridad determinado**  
+ **Para ver los conjuntos de copia de seguridad en un dispositivo de copia de seguridad determinado**  
   
 -   [Ver los archivos de datos y de registro en un conjunto de copia de seguridad &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   

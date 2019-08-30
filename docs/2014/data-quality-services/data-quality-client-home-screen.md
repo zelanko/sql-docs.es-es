@@ -12,12 +12,12 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1d3dd0bf00f9ca0917e94e2d942dcb929ef35055
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480743"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154481"
 ---
 # <a name="data-quality-client-home-screen"></a>Página de inicio del cliente de calidad de datos
   Utilice esta pantalla para obtener acceso a las interfaces de usuario de cada uno de los tres grupos principales de tareas de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): administración de bases de conocimiento, proyectos de calidad de datos y administración.  
@@ -57,7 +57,7 @@ ms.locfileid: "65480743"
  Muestra una vista con el estado de todas las actividades (actuales y pasadas) relacionadas con el servidor [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]que está conectado. Los tipos de actividades supervisadas incluyen la administración del conocimiento, un proyecto de calidad de datos y la corrección de datos basada en SSIS.  
   
  **Configuración**  
- Muestre las propiedades de configuración de cuentas de servicio de datos de referencia (a través de Windows Azure Marketplace y directamente para los servicios de datos de referencia), las opciones generales de configuración (limpieza interactiva, coincidencias y generación de perfiles) y los valores de gravedad del registro.  
+ Muestra las propiedades de configuración de las cuentas de servicio de datos de referencia (a través de Azure Marketplace y directamente a los servicios de datos de referencia), la configuración general (limpieza interactiva, coincidencia y generación de perfiles) y la configuración de la gravedad del registro.  
   
 ## <a name="see-also"></a>Vea también  
  [Bases de conocimiento y dominios de DQS](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   

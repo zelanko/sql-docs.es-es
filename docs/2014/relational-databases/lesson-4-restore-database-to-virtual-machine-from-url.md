@@ -1,5 +1,5 @@
 ---
-title: Lección 5. (Opcional) Cifrar la base de datos mediante TDE | Microsoft Docs
+title: Lección 5. Opta Cifrar la base de datos mediante TDE | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e78a787a67c430ec82bea4788fd1c92c4c72c4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4eda59ac47444eb589e17d6e1aab2428c77a991f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090678"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154517"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Lección 5. (Opcional) Cifrar la base de datos mediante TDE
-  Como paso opcional, puede cifrar la base de datos creada recientemente. El cifrado de datos transparente (TDE) realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. Este tipo de cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. Para obtener más información, consulte [cifrado de datos transparente &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md) y [mover una base de datos protegida de TDE a otra de SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
+  Como paso opcional, puede cifrar la base de datos creada recientemente. El cifrado de datos transparente (TDE) realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. Este tipo de cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. Para obtener más información, [vea &#40;cifrado de datos transparente&#41; TDE](security/encryption/transparent-data-encryption.md) y [mueva una base de datos protegida por TDE a otra SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
  En esta lección se supone que ya completó los pasos siguientes:  
   
--   Tiene una cuenta de Almacenamiento de Windows Azure.  
+-   Tiene una cuenta de Azure Storage.  
   
--   Ha creado un contenedor con su cuenta de Almacenamiento de Windows Azure.  
+-   Ha creado un contenedor en su cuenta de Azure Storage.  
   
 -   Ha creado una directiva en un contenedor con derechos de lectura, escritura y enumeración. También generó una clave SAS.  
   
@@ -87,10 +87,10 @@ GO
   
 ```  
   
- Para instrucciones Transact-SQL de información detallada que se han usado en esta lección, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER DATABASE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql), [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql), y [sys.dm_database_ encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
+ Para obtener información detallada sobre las instrucciones Transact-SQL que se han utilizado en esta lección, vea [Create Database &#40;SQL Server Transact&#41;-](/sql/t-sql/statements/create-database-sql-server-transact-sql)SQL, [ALTER DATABASE &#40;Transact&#41;-SQL](/sql/t-sql/statements/alter-database-transact-sql), [Create &#40; Master Key Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [Create Certificate &#40;de Transact&#41;-SQL](/sql/t-sql/statements/create-certificate-transact-sql)y [Sys. DM &#40;_ _database_encryption_keys Transact&#41;-SQL](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
   
  **Lección siguiente:**  
   
- [Lección 6: Migrar una base de datos desde un origen de máquina local a un equipo de destino de Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Lección 6: Migración de una base de datos de una máquina de origen local a un equipo de destino en Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

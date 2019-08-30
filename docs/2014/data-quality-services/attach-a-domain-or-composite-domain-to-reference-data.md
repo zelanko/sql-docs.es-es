@@ -13,15 +13,15 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 153f4e25372a7cbb5e58f7fdc4d5a9134b60ed61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74554e305dbbeb736eba3d8379c7f6569e56d333
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65481114"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154511"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Adjuntar un dominio o un dominio compuesto a datos de referencia
-  En este tema se describe cómo adjuntar dominios o dominios compuestos de una base de conocimiento de calidad de datos a un servicio de datos de referencia en Windows Azure Marketplace para generar conocimiento con los datos de referencia de alta calidad. Cada servicio de datos de referencia contiene un esquema (columnas de datos). Después de adjuntar un dominio o un dominio compuesto a un servicio de datos de referencia, debe asignar el dominio adjunto o los dominios individuales dentro del dominio compuesto adjunto a las columnas adecuadas de un esquema del servicio de datos de referencia. Adjuntar un dominio compuesto a un servicio de datos de referencia permite adjuntar solo un dominio a un servicio de datos de referencia y, a continuación, asignar los dominios individuales incluidos en el dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia.  
+  En este tema se describe cómo adjuntar dominios o dominios compuestos de una base de conocimiento de calidad de datos a un servicio de datos de referencia de Azure Marketplace para generar conocimiento con los datos de referencia de alta calidad. Cada servicio de datos de referencia contiene un esquema (columnas de datos). Después de adjuntar un dominio o un dominio compuesto a un servicio de datos de referencia, debe asignar el dominio adjunto o los dominios individuales dentro del dominio compuesto adjunto a las columnas adecuadas de un esquema del servicio de datos de referencia. Adjuntar un dominio compuesto a un servicio de datos de referencia permite adjuntar solo un dominio a un servicio de datos de referencia y, a continuación, asignar los dominios individuales incluidos en el dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia.  
   
 > [!WARNING]  
 >  El dominio compuesto adjunto a un servicio de datos de referencia está disponible en la lista desplegable de dominios al asignar dominios a las columnas del esquema del servicio de datos de referencia. No asigne el dominio compuesto a una columna del esquema del servicio de datos de referencia; solo debe asignar dominios individuales dentro de un dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia. De lo contrario, se producirá un error.  
@@ -67,7 +67,7 @@ ms.locfileid: "65481114"
          ![Cuadro de diálogo Catálogo de proveedores de datos de referencia en línea](../../2014/data-quality-services/media/dqs-onlinereferencedataproviderscatalog.gif "Cuadro de diálogo Catálogo de proveedores de datos de referencia en línea")  
   
         > [!NOTE]  
-        >  -   En el cuadro de diálogo **Catálogo de proveedores de datos de referencia en línea** , el nodo **DataMarket Data Quality Services** muestra todos los proveedores de servicios de datos de referencia a los que se ha suscrito en Windows Azure Marketplace. Si ha configurado proveedores de servicios directos de datos de referencia de terceros en línea en DQS, estos aparecerán en otro nodo denominado **Proveedores en línea directa de terceros** (no disponible en este momento debido a que se ha configurado ningún proveedor de servicios directos de datos de referencia de terceros en línea en DQS).  
+        >  -   En el cuadro de diálogo **Catálogo de proveedores de datos de referencia en línea** , el nodo **Datamarket Data Quality Services** muestra todos los proveedores de servicios de datos de referencia a los que se ha suscrito en Azure Marketplace. Si ha configurado proveedores de servicios directos de datos de referencia de terceros en línea en DQS, estos aparecerán en otro nodo denominado **Proveedores en línea directa de terceros** (no disponible en este momento debido a que se ha configurado ningún proveedor de servicios directos de datos de referencia de terceros en línea en DQS).  
   
 9. Regresará a la pestaña **Datos de referencia** . En el área **Configuración de proveedores**, cambie los valores de los cuadros siguientes, si es necesario:  
   
@@ -79,7 +79,7 @@ ms.locfileid: "65481114"
   
 10. Haga clic en **Finalizar** para publicar la base de conocimiento. Aparecerá un mensaje de confirmación una vez que la base de conocimiento se haya publicado correctamente.  
   
- Ahora puede utilizar esta base de conocimiento para la actividad de limpieza en un proyecto de calidad de datos con objeto de normalizar y limpiar direcciones de EE. UU. en los datos de origen de acuerdo con el conocimiento proporcionado por Melissa Data a través de Windows Azure Marketplace.  
+ Ahora puede usar esta base de conocimiento para la actividad de limpieza en un proyecto de calidad de datos para normalizar y limpiar direcciones de EE. UU. en los datos de origen en función del conocimiento proporcionado por Melissa data a través de Azure Marketplace.  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de asignar un dominio a datos de referencia  
  Cree un proyecto de calidad de datos y ejecute la actividad de limpieza en los datos de origen que incluyan direcciones de EE. UU., comparándolos con la base de conocimiento creada en este tema. Vea [Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

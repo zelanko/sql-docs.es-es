@@ -1,5 +1,5 @@
 ---
-title: Tareas específicas de programación | Microsoft Docs
+title: Programar tareas específicas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2da3cb344573731c70839612381aeb07485850f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030233"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148400"
 ---
 # <a name="programming-specific-tasks"></a>Tareas específicas de programación
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "68030233"
 |[Implementar la búsqueda de texto completo](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|Describe cómo implementar los catálogos e índices de búsqueda de texto completo en SMO.|  
 |[Implementar extremos](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|Describe cómo crear puntos finales para controlar las cargas útiles de creación de reflejos de base de datos, solicitudes SOAP y Service Broker.|  
 |[Crear y actualizar estadísticas](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|Describe cómo configurar y supervisar las estadísticas de una base de datos en SMO.|  
-|[Seguimiento y reproducción de eventos](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Describe cómo utilizar el **seguimiento** y **reproducir** objetos de SMO para eventos de seguimiento y reproducción.|  
+|[Seguimiento y reproducción de eventos](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|Describe cómo usar los objetos **Trace** y **Replay** de SMO para realizar el seguimiento y reproducir eventos.|  
   
   

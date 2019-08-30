@@ -1,5 +1,5 @@
 ---
-title: Crear un proyecto de Visual C# SMO en Visual Studio .NET | Microsoft Docs
+title: Crear un proyecto C# de Visual SMO en Visual Studio .net | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,40 +10,40 @@ ms.topic: reference
 helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2a5b158a33bf678cd285bcd408379a3f0abb907
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11fb5e8aec7f61c83ec2b3edecdb3aa027cf2693
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098013"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148643"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Cómo crear un proyecto de Visual C# SMO en Visual Studio .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   En esta sección se describe cómo generar una aplicación de consola SMO simple.  
   
- En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación de la **agente** espacio de nombres es opcional. Usarlo cuando se escribe un programa que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. El **común** espacio de nombres es necesario para establecer una conexión segura a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El **SqlClient** espacio de nombres se utiliza para procesar los errores de excepción de SQL.  
+ En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación del espacio de nombres del **agente** es opcional. Úselo cuando esté escribiendo un programa que use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el agente. El espacio de nombres **común** es necesario para establecer una conexión segura con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instancia de. El espacio de nombres **SqlClient** se usa para procesar errores de excepción de SQL.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Crear un proyecto de Visual C# SMO en Visual Studio.NET  
   
-1. Inicie Visual Studio
+1. Iniciar Visual Studio
   
-2. En el **archivo** menú, haga clic en **New** y, a continuación, **proyecto**.  Aparecerá el cuadro de diálogo **Nuevo proyecto** .   
+2. En el menú **archivo** , haga clic en **nuevo** y luego en **proyecto**.  Aparecerá el cuadro de diálogo **Nuevo proyecto** .   
   
-3. En el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **instalado** panel, vaya a **plantillas**\\**Visual C#** \\**Windows** y seleccione **aplicación de consola**.  
+3. En el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] panel **instalado** , vaya a **plantillas**\\**Visual C#**  \\ **Windows** y seleccione **aplicación de consola**.  
   
-4. (Opcional) En el **nombre** texto, escriba el nombre de la nueva aplicación.  
+4. Opta En el cuadro de texto **nombre** , escriba el nombre de la nueva aplicación.  
 
 5. Haga clic en **Aceptar** para cargar la plantilla de aplicación de consola.  
 
-6. Siga las instrucciones de [instalar SMO](installing-smo.md) para instalar el paquete para el proyecto para hacer referencia a.
+6. Siga las instrucciones de [instalación de SMO](installing-smo.md) para instalar el paquete para que el proyecto haga referencia.
   
 7. En el menú **Ver** , haga clic en **Código**.
     
-8. En el código, antes de la instrucción de espacio de nombres, escriba lo siguiente **mediante** instrucciones para certificar los tipos del espacio de nombres de SMO:
+8. En el código, antes de la instrucción de espacio de nombres, escriba las siguientes instrucciones **using** para certificar los tipos en el espacio de nombres de SMO:
   
     ```  
     using Microsoft.SqlServer.Management.Smo;  

@@ -1,5 +1,5 @@
 ---
-title: 'Lección 4: Crear una base de datos de Azure Storage | Microsoft Docs'
+title: 'Lección 4: Crear una base de datos en Azure Storage | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7361cb5d0e68cfa3f45f46d7f99d68c88c1a556b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45cce2278e17fcb95f11920c2426caf580385518
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090820"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153762"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lección 4: Creación de una base de datos en Windows Azure Storage
-  En esta lección, aprenderá a crear una base de datos mediante la característica Archivos de datos de SQL Server en Windows Azure. Tenga en cuenta que, antes que esta lección, debe completar las lecciones 1, 2 y 3. La lección 3 es un paso muy importante porque tiene que almacenar la información sobre el contenedor de Almacenamiento de Windows Azure, su nombre de directiva asociado y la clave SAS en el almacén de credenciales de SQL Server antes de pasar a la lección 4.  
+# <a name="lesson-4-create-a-database-in-azure-storage"></a>Lección 4: Crear una base de datos en Azure Storage
+  En esta lección, obtendrá información sobre cómo crear una base de datos mediante la característica archivos de datos de SQL Server en Azure. Tenga en cuenta que, antes que esta lección, debe completar las lecciones 1, 2 y 3. La lección 3 es un paso muy importante porque debe almacenar la información sobre el contenedor de Azure Storage y su nombre de directiva asociado y la clave SAS en el almacén de credenciales de SQL Server antes de la lección 4.  
   
- Para cada contenedor de almacenamiento utilizado por un archivo de datos o de registro, debe crear una credencial de SQL Server cuyo nombre coincida con la ruta de acceso del contenedor. Después, crea una nueva base de datos de Azure Storage  
+ Para cada contenedor de almacenamiento utilizado por un archivo de datos o de registro, debe crear una credencial de SQL Server cuyo nombre coincida con la ruta de acceso del contenedor. A continuación, puede crear una nueva base de datos en Azure Storage  
   
  En esta lección se supone que ya completó los pasos siguientes:  
   
--   Tiene una cuenta de Almacenamiento de Windows Azure.  
+-   Tiene una cuenta de Azure Storage.  
   
--   Ha creado un contenedor con su cuenta de Almacenamiento de Windows Azure.  
+-   Ha creado un contenedor en su cuenta de Azure Storage.  
   
 -   Ha creado una directiva en un contenedor con derechos de lectura, escritura y enumeración. También generó una clave SAS.  
   
 -   Ha creado una credencial de SQL Server en el equipo de origen.  
   
- Para crear una base de datos en Microsoft Azure usando la característica Archivos de datos de SQL Server en Microsoft Azure, siga estos pasos:  
+ Para crear una base de datos en Azure con la característica archivos de datos SQL Server en Azure Storage, siga estos pasos:  
   
 1.  Conéctese a SQL Server Management Studio.  
   
@@ -71,25 +71,25 @@ ms.locfileid: "66090820"
   
 5.  Para ver el nuevo TestDB1 en su servidor SQL Server local, actualice las bases de datos en el Explorador de objetos.  
   
-6.  Asimismo, para ver la base de datos recién creada en su cuenta de almacenamiento, conéctese a ella mediante SQL Server Management Studio (SSMS). Para obtener información sobre cómo conectar con Almacenamiento de Windows Azure con SQL Server Management Studio, siga estos pasos:  
+6.  Asimismo, para ver la base de datos recién creada en su cuenta de almacenamiento, conéctese a ella mediante SQL Server Management Studio (SSMS). Para obtener información sobre cómo conectarse a un almacenamiento de Azure mediante SQL Server Management Studio, siga estos pasos:  
   
-    1.  Primero, obtenga la información de la cuenta de almacenamiento. Inicie sesión en el Portal de administración. A continuación, haga clic en **almacenamiento** y elija la cuenta de almacenamiento. Cuando se selecciona una cuenta de almacenamiento, haga clic en **administrar claves de acceso** en la parte inferior de la página. Se abrirá un cuadro de diálogo similar a esta:  
+    1.  Primero, obtenga la información de la cuenta de almacenamiento. Inicie sesión en el Portal de administración. A continuación, haga clic en **almacenamiento** y elija su cuenta de almacenamiento. Cuando se seleccione una cuenta de almacenamiento, haga clic en **administrar claves de acceso** en la parte inferior de la página. Se abrirá un cuadro de diálogo similar a esta:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  Copia el **nombre de la cuenta de almacenamiento** y **clave de acceso principal** valores para el **conectar a Windows Azure Storage** ventana de cuadro de diálogo en SSMS. A continuación, haga clic en **Connect**. De esta forma, la información sobre los contenedores de la cuenta de almacenamiento en SSMS aparecerán como se muestra en la siguiente captura de pantalla:  
+    2.  Copie los valores de **nombre de cuenta de almacenamiento** y clave de **acceso principal** en la ventana de diálogo **conectar a Azure Storage** en SSMS. A continuación, haga clic en **conectar**. De esta forma, la información sobre los contenedores de la cuenta de almacenamiento en SSMS aparecerán como se muestra en la siguiente captura de pantalla:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
- La siguiente captura de pantalla demuestra la nueva base de datos creada tanto en el entorno local como en Azure Storage.  
+ En la captura de pantalla siguiente se muestra la nueva base de datos creada tanto en el entorno local como en el Azure Storage.  
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Nota:** Si hay referencias activas a archivos de datos en un contenedor, cualquier intento de eliminar la credencial asociada de SQL Server produce un error. De igual forma, si ya hay una concesión en un archivo de base de datos específico de un blob y desea eliminarlo, primero debe interrumpirla en el blob. Para interrumpir la concesión, puede usar [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
+ **Nota:** Si hay referencias activas a los archivos de datos en un contenedor, se produce un error en cualquier intento de eliminar la credencial de SQL Server asociada. De igual forma, si ya hay una concesión en un archivo de base de datos específico de un blob y desea eliminarlo, primero debe interrumpirla en el blob. Para interrumpir la concesión, puede usar la [concesión](https://msdn.microsoft.com/library/azure/ee691972.aspx)de blobs.  
   
- Mediante esta nueva característica, puede configurar SQL Server de modo que cualquier instrucción CREATE DATABASE será, de forma predeterminada, una base de datos habilitada para la nube. Es decir, puede establecer los datos predeterminados y las ubicaciones del registro en las propiedades de la instancia de SQL Server Management Studio Server de modo que, cuando cree una base de datos, todos los archivos de base de datos (.mdf,.ldf) se crean como blobs de página en Azure Storage.  
+ Mediante esta nueva característica, puede configurar SQL Server de modo que cualquier instrucción CREATE DATABASE será, de forma predeterminada, una base de datos habilitada para la nube. En otras palabras, puede establecer las ubicaciones predeterminadas de datos y de registro en SQL Server Management Studio propiedades de la instancia de servidor, de modo que cada vez que cree una base de datos, todos los archivos de base de datos (. MDF,. ldf) se crean como blobs en páginas en Azure Storage.  
   
- Para crear una base de datos de Azure Storage con la interfaz de usuario de SQL Server Management Studio, siga estos pasos:  
+ Para crear una base de datos en Azure Storage mediante SQL Server Management Studio interfaz de usuario, siga estos pasos:  
   
 1.  En el Explorador de objetos, conéctese a una instancia del Motor de base de datos de SQL Server y, a continuación, expándala.  
   

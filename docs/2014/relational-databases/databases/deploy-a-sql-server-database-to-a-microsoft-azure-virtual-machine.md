@@ -30,7 +30,7 @@ helpviewer_keywords:
 - Deploy a database
 - Deploy to Azure VM
 - Migrate to Azure
-- Windows Azure virtual machine
+- Azure virtual machine
 - Migrate to Azure VM
 - Migrate to the cloud
 - SQL Server Management Studio
@@ -42,29 +42,29 @@ ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 933a03f2e6192be32eebd84923f4e513bd1716e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfea092757a708e0a83cefd581f8321f08d344e3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66054050"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154560"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure
-  Use el asistente para **Implementar una base de datos de SQL Server en una máquina virtual de Windows Azure[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para implementar una base de datos desde una instancia del** en [!INCLUDE[ssDE](../../includes/ssde-md.md)] en una máquina virtual (VM) de Windows Azure. El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
+  Use el Asistente para **implementar una base de datos de SQL Server en una máquina** virtual de Azure para implementar una [!INCLUDE[ssDE](../../includes/ssde-md.md)] base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos desde una instancia del en en una máquina virtual (VM) de Azure. El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
   
  No puede usar el asistente para las copias de seguridad diferenciales porque no sobrescribirá una base de datos existente que tenga el mismo nombre de base de datos. Para reemplazar una base de datos existente en la VM, debe quitar primero la base de datos existente o cambiar el nombre de la base de datos. Si hay un conflicto de nombres entre el nombre de la base de datos para una operación de implementación en ejecución y una base de datos existente en la VM, el asistente sugerirá un nombre de base de datos anexado para la base de datos en ejecución de manera que pueda completar la operación.  
   
 ##  <a name="before_you_begin"></a> Antes de comenzar  
  Para completar este asistente, debe poder proporcionar la siguiente información y tener esta configuración:  
   
--   Los detalles de la cuenta de Microsoft asociados a la suscripción de Windows Azure.  
+-   Los detalles de cuenta de Microsoft asociados con la suscripción de Azure.  
   
--   El perfil de publicación de Windows Azure.  
+-   Su perfil de publicación de Azure.  
   
     > [!CAUTION]  
     >  SQL Server admite actualmente la versión 2.0 del perfil de publicación. Para descargar la versión compatible del perfil de publicación, vea [Descargar perfil de publicación 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
   
--   El certificado de administración cargado para la suscripción de Windows Azure.  
+-   El certificado de administración cargado en la suscripción de Azure.  
   
 -   El certificado de administración guardado en el almacén de certificados personal en el equipo en el que se está ejecutando el asistente.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66054050"
   
 -   Si está implementando la base de datos en una VM existente, la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe estar configurada para escuchar en un puerto TCP/IP.  
   
--   La VM de Windows Azure o la imagen de la Galería que pretende usar para la creación de la VM debe tener el adaptador para la nube de SQL Server configurado y en ejecución.  
+-   Una máquina virtual de Azure o una imagen de la galería que planea usar para la creación de la máquina virtual debe tener el SQL Server Adaptador para la nube configurado y en ejecución.  
   
--   Debe configurar un extremo abierto para el adaptador para la nube de SQL Server en la puerta de enlace de Windows Azure con el puerto privado 11435.  
+-   Debe configurar un punto de conexión abierto para el SQL Server Adaptador para la nube en la puerta de enlace de Azure con el puerto privado 11435.  
   
- Además, si piensa implementar la base de datos en una VM de Windows Azure existente, también debe poder proporcionar:  
+ Además, si piensa implementar la base de datos en una máquina virtual de Azure existente, también debe poder proporcionar:  
   
 -   El nombre DNS del servicio en la nube que hospeda la VM.  
   
@@ -84,13 +84,13 @@ ms.locfileid: "66054050"
   
 -   Credenciales con privilegios de operador de copia de seguridad en la base de datos que pretende implementar, desde la instancia de origen de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para obtener más información sobre cómo ejecutar SQL Server en máquinas virtuales de Microsoft Azure, consulte [Preparar para la migración a SQL Server en máquinas virtuales de Microsoft Azure](https://msdn.microsoft.com/library/dn133142.aspx).  
+ Para obtener más información acerca de cómo ejecutar SQL Server en máquinas virtuales de Azure, consulte [preparación para la migración a SQL Server en azure virtual machines](https://msdn.microsoft.com/library/dn133142.aspx).  
   
  En los equipos que ejecutan sistemas operativos Windows Server, debe usar la configuración siguiente para ejecutar este asistente:  
   
--   Desactivar la configuración de seguridad mejorada:  Use el Administrador de servidor > servidor Local para establecer la configuración de seguridad mejorada de Internet Explorer (ESC) **OFF**.  
+-   Desactive la configuración de seguridad mejorada:  Utilice Administrador del servidor > servidor local para establecer la configuración de seguridad mejorada (ESC) deInternet Explorer en desactivada.  
   
--   Habilitar JavaScript:  Internet Explorer > Opciones de Internet > seguridad > Nivel personalizado > Scripting > Active Scripting: **Habilitar**.  
+-   Habilitar JavaScript:  Internet Explorer > Opciones de Internet > Seguridad > nivel de cliente > Scripting > Active Scripting: **Habilitar**.  
   
 ###  <a name="limitations"></a> Limitaciones y restricciones  
  La limitación de tamaño de la base de datos para esta operación es 1 TB.  
@@ -101,7 +101,7 @@ ms.locfileid: "66054050"
   
  La característica de implementación no admite los servicios hospedados asociados a un grupo de afinidad. Por ejemplo, las cuentas de almacenamiento asociadas a un grupo de afinidad no se pueden seleccionar para usarlas en la página **Configuración de implementación** de este asistente.  
   
- La versión de SQL Server de la máquina virtual debe ser igual o posterior a la versión de SQL Server de origen. Las versiones de la base de datos de SQL Server que se pueden implementar en la máquina virtual de Windows Azure con este asistente son:  
+ La versión de SQL Server de la máquina virtual debe ser igual o posterior a la versión de SQL Server de origen. SQL Server versiones de base de datos que se pueden implementar en una máquina virtual de Azure mediante este asistente:  
   
 -   SQL Server 2008  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66054050"
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
- Las versiones de la base de datos de SQL Server que se ejecutan en una base de datos de la VM de Windows Azure se pueden implementar en:  
+ SQL Server versiones de base de datos que se ejecutan en una base de datos de máquinas virtuales de Azure se pueden implementar en:  
   
 -   SQL Server 2012  
   
@@ -152,7 +152,7 @@ ms.locfileid: "66054050"
   
             -   BackupPath="\\\\[nombre de servidor]\\[volumen]\\" \<!-- La última ruta de acceso usada para la copia de seguridad. Se usa como valor predeterminado del asistente. -->  
   
-            -   CleanupDisabled = False /> \<! -- El asistente no eliminará los archivos intermedios y objetos de Windows Azure (VM, CS, SA). -->  
+            -   CleanupDisabled = false/> \<!--asistente no eliminará los archivos intermedios y los objetos de Azure (VM, CS, SA). -->  
   
         -   <PublishProfile \<! -- La última información usada del perfil de publicación. -->  
   
@@ -171,19 +171,19 @@ ms.locfileid: "66054050"
 ###  <a name="permissions"></a> Permissions  
  La base de datos que se implementa debe estar en un estado normal, la base de datos debe ser accesible para la cuenta de usuario que ejecuta el asistente y la cuenta de usuario debe tener permisos para realizar una operación de copia de seguridad.  
   
-##  <a name="launch_wizard"></a> Uso de la base de datos de implementación para el Asistente para la máquina virtual de Azure de Windows  
+##  <a name="launch_wizard"></a>Uso del Asistente para implementar una base de datos en máquina virtual de Azure  
  **Para iniciar el asistente, realice los pasos siguientes:**  
   
 1.  Use SQL Server Management Studio para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la base de datos que desea implementar.  
   
 2.  En el **Explorador de objetos**, expanda el nombre de instancia y, a continuación, expanda el nodo **Bases de datos** .  
   
-3.  Haga clic en la base de datos que desea implementar, seleccione **tareas**y, a continuación, seleccione **implementar base de datos a la máquina virtual de Windows Azure...**  
+3.  Haga clic con el botón derecho en la base de datos que desea implementar, seleccione **tareas**y, después, seleccione **implementar base de datos en máquina virtual de Azure...**  
   
 
   
 ##  <a name="Introduction"></a> Página Introducción  
- Esta página describe el asistente para **Implementar una base de datos de SQL Server en Windows VM Azure** .  
+ En esta página se describe el asistente **para implementar una base de datos SQL Server en una máquina virtual de Azure** .  
   
  **Opciones**  
   
@@ -193,57 +193,57 @@ ms.locfileid: "66054050"
   
 -   **Cancelar**: cancela la operación y cierra el asistente.  
   
--   **Ayudar a** -inicia el tema de Ayuda de MSDN para el asistente.  
+-   **Ayuda** : inicia el tema de ayuda de MSDN para el asistente.  
   
 ##  <a name="Source_settings"></a> Configuración de origen  
- Utilice esta página para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos que desea implementar en la VM de Windows Azure. También especificará una ubicación temporal para que los archivos se guarden del equipo local antes de que se transfieran a Windows Azure. Esta puede ser una ubicación de red compartida.  
+ Use esta página para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos que desea implementar en la máquina virtual de Azure. También especificará una ubicación temporal para que los archivos se guarden desde el equipo local antes de que se transfieran a Azure. Esta puede ser una ubicación de red compartida.  
   
  **Opciones**  
   
--   Haga clic en **conectar...**  y, a continuación, especifique los detalles de conexión para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos para implementar.  
+-   Haga clic en **conectar...** y, a continuación, especifique los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detalles de conexión de la instancia de que hospeda la base de datos que se va a implementar.  
   
 -   Use la lista desplegable **Seleccionar base de datos** para especificar la base de datos que implementar.  
   
--   En el campo **Otras configuraciones** , especifique una carpeta compartida que estará accesible para el servicio VM de Windows Azure.  
+-   En el campo **otras opciones** , especifique una carpeta compartida que sea accesible para el servicio de VM de Azure.  
   
-##  <a name="Azure_sign-in"></a> Windows Azure inicio de sesión  
- Utilice esta página para conectarse a Windows Azure y proporcionar los detalles del perfil de publicación o del certificado de administración.  
+##  <a name="Azure_sign-in"></a>Inicio de sesión en Azure  
+ Use esta página para conectarse a Azure y proporcionar el certificado de administración o los detalles del perfil de publicación.  
   
  **Opciones**  
   
--   **Certificado de administración** -Utilice esta opción para especificar un certificado del almacén de certificados local que coincide con el certificado de administración de Windows Azure.  
+-   **Certificado de administración** : Utilice esta opción para especificar un certificado del almacén de certificados local que coincida con el certificado de administración de Azure.  
   
--   **Perfil de publicación** -Utilice esta opción si ya tiene un perfil de publicación descargado en el equipo.  
+-   **Perfil de publicación** : Utilice esta opción si ya tiene un perfil de publicación descargado en el equipo.  
   
--   **Inicio de sesión en** - Use esta opción para iniciar sesión en Windows Azure mediante Microsoft cuenta - por ejemplo, una cuenta de Hotmail o Live ID - para generar y descargar un nuevo certificado de administración. Observe que el número de certificados por suscripción está limitado.  
+-   **Iniciar sesión** : Use esta opción para iniciar sesión en Azure con un cuenta de Microsoft (por ejemplo, un Live ID o una cuenta de hotmail) para generar y descargar un nuevo certificado de administración. Observe que el número de certificados por suscripción está limitado.  
   
--   **Suscripción** : seleccionar, escriba o pegue el identificador de suscripción de Windows Azure que coincida con el certificado de administración desde el almacén de certificados local o un perfil de publicación.  
+-   **Suscripción** : seleccione, escriba o pegue el identificador de suscripción de Azure que coincida con el certificado de administración del almacén de certificados local o un perfil de publicación.  
   
 ##  <a name="Deployment_settings"></a> Página Configuración de implementación  
  Use esta página para especificar el servidor de destino y proporcionar detalles sobre la nueva base de datos.  
   
  **Opciones**  
   
--   **Máquina Virtual de Azure** -especificar la información de la máquina virtual que se va a hospedar la base de datos de SQL Server:  
+-   **Máquina virtual de Azure** : especifique los detalles de la máquina virtual que hospedará la base de datos SQL Server:  
   
--   **Nombre del servicio en la nube** -especifique el nombre del servicio que hospeda la máquina virtual. Para crear un nuevo servicio en la nube, especifique un nombre para este.  
+-   **Nombre del servicio en la nube** : especifique el nombre del servicio que hospeda la máquina virtual. Para crear un nuevo servicio en la nube, especifique un nombre para este.  
   
--   **Nombre de máquina virtual** -especifique el nombre de la máquina virtual que se va a hospedar la base de datos de SQL Server. Para crear una nueva VM de Windows Azure, especifique un nombre para esta.  
+-   **Nombre de la máquina virtual** : especifique el nombre de la máquina virtual que hospedará la base de datos de SQL Server. Para crear una nueva máquina virtual de Azure, especifique un nombre para la nueva máquina virtual.  
   
--   **Configuración de** -Use el botón Configuración para crear una nueva máquina virtual para hospedar la base de datos de SQL Server. Si está utilizando una VM existente, la información que proporcione se utilizará para autenticar las credenciales.  
+-   **Configuración** : Use el botón configuración para crear una nueva máquina virtual que hospede la base de datos de SQL Server. Si está utilizando una VM existente, la información que proporcione se utilizará para autenticar las credenciales.  
   
--   **Cuenta de almacenamiento** -seleccione la cuenta de almacenamiento en la lista desplegable. Para crear una nueva cuenta de almacenamiento, especifique un nombre para esta. Observe que las cuentas de almacenamiento asociadas a un grupo de afinidad no estarán disponibles en la lista desplegable.  
+-   **Cuenta de almacenamiento** : seleccione la cuenta de almacenamiento en la lista desplegable. Para crear una nueva cuenta de almacenamiento, especifique un nombre para esta. Observe que las cuentas de almacenamiento asociadas a un grupo de afinidad no estarán disponibles en la lista desplegable.  
   
--   **Base de datos de destino** -especificar los detalles de la base de datos de destino.  
+-   **Base de datos de destino** : especifique los detalles de la base de datos de destino.  
   
--   **Conexión de servidor** -detalles de conexión para el servidor.  
+-   **Conexión de servidor** : detalles de conexión para el servidor.  
   
--   **Base de datos** : Especifique o confirme el nombre de una base de datos. Si el nombre de la base de datos ya existe en la instancia de SQL Server de destino, se recomienda especificar un nombre de base de datos modificado.  
+-   **Base de datos** : especifique o confirme el nombre de una nueva base de datos. Si el nombre de la base de datos ya existe en la instancia de SQL Server de destino, se recomienda especificar un nombre de base de datos modificado.  
   
 ##  <a name="Summary"></a> Página Resumen  
  Esta página se utiliza para revisar la configuración especificada para la operación. Para completar la operación de implementación con los valores especificados, haga clic en **Finalizar**. Para cancelar la operación de implementación y salir del asistente, haga clic en **Cancelar**.  
   
- Puede haber pasos manuales que sean necesarios para implementar los detalles de la base de datos en la base de datos de SQL Server en la VM de Windows Azure. Estos pasos se describen en detalle.  
+ Puede haber pasos manuales necesarios para implementar los detalles de la base de datos en la SQL Server base de datos en la máquina virtual de Azure. Estos pasos se describen en detalle.  
   
 ##  <a name="Results"></a> Página Resultados  
  En esta página se notifica la corrección o el error de la operación de implementación, mostrando los resultados de cada acción. Cualquier acción que encuentre un error tendrá una indicación en la columna **Resultado** . Haga clic en el vínculo para ver un informe del error para esa acción.  
@@ -256,7 +256,7 @@ ms.locfileid: "66054050"
  [Exportar una aplicación de capa de datos](../data-tier-applications/export-a-data-tier-application.md)   
  [Importar un archivo de bacpac para crear una nueva base de datos de usuario](../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
  [Copias de seguridad y restauración de bases de datos SQL de Azure](https://msdn.microsoft.com/library/azure/jj650016.aspx)   
- [Implementación de SQL Server en máquinas virtuales de Microsoft Azure](https://msdn.microsoft.com/library/dn133141.aspx)   
- [Preparación para la migración a SQL Server en máquinas virtuales de Microsoft Azure](https://msdn.microsoft.com/library/dn133142.aspx)  
+ [SQL Server implementación en Azure Virtual Machines](https://msdn.microsoft.com/library/dn133141.aspx)   
+ [Preparación para la migración a SQL Server en Azure Virtual Machines](https://msdn.microsoft.com/library/dn133142.aspx)  
   
   

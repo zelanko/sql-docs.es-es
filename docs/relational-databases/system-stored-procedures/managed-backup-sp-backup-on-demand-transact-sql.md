@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_on_demand (Transact-SQL) | Microsoft Docs
+title: managed_backup. sp_backup_on_demand (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 980fb3006819e5727033376beae1f8156d26e0fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942052"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155403"
 ---
-# <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Solicita [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] que realice una copia de seguridad de la base de datos especificada.  
   
- Utilice este procedimiento almacenado para realizar copias de seguridad ad hoc para una base de datos configurada con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esto evita la interrupción en la cadena de copias de seguridad, los procesos de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] lo saben y la copia de seguridad se almacena en el mismo contenedor de almacenamiento Blob de Windows Azure.  
+ Utilice este procedimiento almacenado para realizar copias de seguridad ad hoc para una base de datos configurada con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esto evita cualquier interrupción en la cadena de copia [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] de seguridad y los procesos son conscientes y la copia de seguridad se almacena en el mismo contenedor de almacenamiento de blobs de Azure.  
   
  Tras finalizar correctamente la copia de seguridad, se devuelve la ruta de acceso al archivo de la copia de seguridad completa. Esto incluye el nombre y la ubicación del nuevo archivo de copia de seguridad resultante de la operación de copia de seguridad.  
   
@@ -50,10 +50,10 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> Argumentos  
  @database_name  
- El nombre de la base de datos en la que se realiza la copia de seguridad. El @database_name es **SYSNAME**.  
+ El nombre de la base de datos en la que se realiza la copia de seguridad. Es @database_name de **tipo SYSNAME**.  
   
  @type  
- El tipo de copia de seguridad que se va a realizar:  Base de datos o de registro. El @type parámetro es **nvarchar (32)** .  
+ El tipo de copia de seguridad que se va a realizar:  Base de datos o registro. El @type parámetro es **nvarchar (32)** .  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto) o 1 (error)  
@@ -61,10 +61,10 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Requiere la pertenencia a **db_backupoperator** rol, la base de datos con **ALTER ANY CREDENTIAL** permisos, y **EXECUTE** permisos **sp_delete_ backuphistory**procedimiento almacenado.  
+ Requiere la pertenencia al rol de base de datos **db_backupoperator** , con permisos **ALTER any Credential** y permisos **Execute** en el procedimiento almacenado **sp_delete_backuphistory**.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente realiza una solicitud de copia de seguridad de base de datos de la base de datos 'TestDB'. Esta base de datos tiene [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] habilitado.  
+ En el ejemplo siguiente se realiza una solicitud de copia de seguridad de base de datos para la base de datos ' TestDB '. Esta base de datos tiene [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] habilitado.  
   
 ```  
 Use MSDB  

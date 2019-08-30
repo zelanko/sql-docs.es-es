@@ -1,5 +1,5 @@
 ---
-title: Crear un origen de datos (SSAS Multidimensional) | Microsoft Docs
+title: Crear un origen de datos (SSAS multidimensional) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,12 +18,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db9a94bf47071692b4ecf85e6bdb850132b8a417
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d224c58651601bd18baf8e4aa79ece34a653d8c4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076518"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152899"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crear un origen de datos (SSAS multidimensional)
   En un modelo multidimensional de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un objeto de origen de datos representa una conexión al origen de datos del que va a procesar o importar los datos. Un modelo multidimensional debe contener al menos un objeto de origen de datos, pero puede agregar más para combinar datos de varios almacenamientos de datos. Siga las instrucciones de este tema para crear un objeto de origen de datos para el modelo. Para obtener más información sobre cómo establecer propiedades en este objeto, vea [Establecer propiedades de origen de datos &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "66076518"
  Las conexiones que utilizan la autenticación de Windows se especifican en la pestaña **Información de suplantación** del Diseñador de origen de datos. Utilice esta pestaña para elegir la opción de suplantación que especifica la cuenta en la que se ejecuta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al conectarse al origen de datos externo. No todas las opciones se pueden usar en todos los escenarios. Para obtener más información sobre estas opciones y cuándo usarlas, vea [Establezca las opciones de suplantación &#40;SSAS - multidimensional&#41;](set-impersonation-options-ssas-multidimensional.md).  
   
 ### <a name="database-authentication"></a>Autenticación de base de datos  
- Como alternativa a la autenticación de Windows, puede especificar una conexión que use un servicio de autenticación proporcionado por el sistema de administración de bases de datos. En algunos casos, se requiere usar la autenticación de base de datos. Algunos escenarios que requieren el uso de la autenticación de base de datos incluyen el uso de la autenticación de SQL Server para conectarse a una base de datos de Windows Azure SQL o el acceso a un origen de datos relacional que se ejecuta en otro sistema operativo o en un dominio que no sea de confianza.  
+ Como alternativa a la autenticación de Windows, puede especificar una conexión que use un servicio de autenticación proporcionado por el sistema de administración de bases de datos. En algunos casos, se requiere usar la autenticación de base de datos. Entre los escenarios que llaman para usar la autenticación de base de datos se incluye el uso de SQL Server autenticación para conectarse a un Azure SQL Database o el acceso a un origen de datos relacional que se ejecuta en un sistema operativo diferente o en un dominio que no es de confianza.  
   
  En el caso de un origen de datos que use la autenticación de base de datos, el nombre de usuario y la contraseña de un inicio de sesión de base de datos se especifica en la cadena de conexión. Las credenciales se agregan a la cadena de conexión cuando se especifica un nombre de usuario y una contraseña en el Administrador de conexión la conexión a un origen de datos se configura en el modelo de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . No olvide especificar una identidad que tenga permisos de lectura para los datos.  
   
@@ -76,19 +76,19 @@ ms.locfileid: "66076518"
   
 3.  En la página **Seleccione cómo definir la conexión** , elija **Crear un origen de datos basado en una conexión nueva o existente** y, a continuación, haga clic en **Nueva** para abrir el **Administrador de conexiones**.  
   
-     Las nuevas conexiones se crean en el Administrador de conexiones. En el Administrador de conexiones, se selecciona un proveedor y luego se especifican las propiedades de las cadenas de conexión que usa el proveedor para conectarse a los datos subyacentes. La información exacta necesaria depende del proveedor seleccionado, pero generalmente incluye un servidor o una instancia de servicio, la información para iniciar la sesión en el servidor o la instancia de servicio, un nombre de archivo o de base de datos y otras configuraciones específicas del proveedor. El resto de este procedimiento, supondremos una conexión de base de datos de SQL Server.  
+     Las nuevas conexiones se crean en el Administrador de conexiones. En el Administrador de conexiones, se selecciona un proveedor y luego se especifican las propiedades de las cadenas de conexión que usa el proveedor para conectarse a los datos subyacentes. La información exacta necesaria depende del proveedor seleccionado, pero generalmente incluye un servidor o una instancia de servicio, la información para iniciar la sesión en el servidor o la instancia de servicio, un nombre de archivo o de base de datos y otras configuraciones específicas del proveedor. En el resto de este procedimiento, supondremos una conexión de base de datos SQL Server.  
   
 4.  Seleccione el proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework o el proveedor OLE DB nativo que se va a usar para la conexión.  
   
      El proveedor predeterminado para una conexión nueva es el proveedor OLE DB nativo\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Este proveedor se usa para conectarse a una instancia del Motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante OLE DB. Normalmente, para las conexiones con una base de datos relacional de SQL Server, el uso de OLE DB nativo\SQL Server Native Client 11.0 ofrece más velocidad que el uso de proveedores alternativos.  
   
-     También puede elegir un proveedor diferente para acceder a otros orígenes de datos. Para obtener una lista de los proveedores y bases de datos relacionales admitidos por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consulte [Data Sources Supported &#40;Multidimensional de SSAS&#41;](supported-data-sources-ssas-multidimensional.md).  
+     También puede elegir un proveedor diferente para acceder a otros orígenes de datos. Para obtener una lista de los proveedores y las bases de datos relacionales compatibles con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea orígenes de [datos compatibles&#41; &#40;con SSAS multidimensional](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Especifique la información solicitada por el proveedor seleccionado para conectar con el origen de datos subyacente. Si selecciona el proveedor **OLE DB nativo\SQL Server Native Client** , especifique la siguiente información:  
   
-    1.  **Nombre del servidor** es el nombre de red de la instancia del motor de base de datos. Se puede especificar como la dirección IP, el nombre NETBIOS del equipo o un nombre de dominio completo. Si el servidor se instala como una instancia con nombre, debe incluir el nombre de instancia (por ejemplo, \<nombreDeEquipo >\\< instancename\>).  
+    1.  **Nombre del servidor** es el nombre de red de la instancia del motor de base de datos. Se puede especificar como la dirección IP, el nombre NETBIOS del equipo o un nombre de dominio completo. Si el servidor está instalado como una instancia con nombre, debe incluir el nombre de instancia (por ejemplo \<, COMPUTERNAME\\> <\>InstanceName).  
   
-    2.  **Iniciar sesión en el servidor** especifica cómo se autenticará la conexión. **Usar la autenticación de Windows** usa la autenticación de Windows. **Usar autenticación de SQL Server** especifica un inicio de sesión de usuario de base de datos para una instancia de SQL Server o bases de datos de Windows Azure SQL que admiten la autenticación de modo mixto.  
+    2.  **Iniciar sesión en el servidor** especifica cómo se autenticará la conexión. **Usar la autenticación de Windows** usa la autenticación de Windows. **Usar autenticación de SQL Server** especifica un inicio de sesión de usuario de base de datos para instancias de Azure SQL Database o una instancia de SQL Server que admite la autenticación de modo mixto.  
   
         > [!IMPORTANT]  
         >  El Administrador de conexiones incluye una casilla **Guardar mi contraseña** para las conexiones que utilizan la autenticación de SQL Server. Aunque la casilla está siempre visible, no se utiliza siempre.  
@@ -105,7 +105,7 @@ ms.locfileid: "66076518"
   
          La nueva conexión se muestra en el panel **Conexión de datos** de la página **Seleccione cómo definir la conexión** del Asistente para orígenes de datos.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 7.  En la página **Información de suplantación**, especifique las credenciales de Windows o la identidad de usuario que Analysis Services usará al conectarse al origen de datos externo. Si usa la autenticación de base de datos, estas opciones no se tienen en cuenta para la conexión.  
   
@@ -117,9 +117,9 @@ ms.locfileid: "66076518"
   
      La cuenta que especifique debe tener permisos de lectura en el origen de datos.  
   
-8.  Haga clic en **Siguiente**.  En **Finalización del asistente**, escriba un nombre del origen de datos o use el nombre predeterminado. El nombre predeterminado es el nombre de la base de datos especificada en la conexión. En el panel **Vista previa** se muestra la cadena de conexión de este nuevo origen de datos.  
+8.  Haga clic en **Next**.  En **Finalización del asistente**, escriba un nombre del origen de datos o use el nombre predeterminado. El nombre predeterminado es el nombre de la base de datos especificada en la conexión. En el panel **Vista previa** se muestra la cadena de conexión de este nuevo origen de datos.  
   
-9. Haga clic en **Finalizar**.  El nuevo origen de datos aparece en la carpeta **Orígenes de datos** del Explorador de soluciones.  
+9. Haga clic en **Finalizar**  El nuevo origen de datos aparece en la carpeta **Orígenes de datos** del Explorador de soluciones.  
   
 ##  <a name="bkmk_connection"></a> Crear un origen de datos con una conexión existente  
  Al trabajar en un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , el origen de datos se puede basar en un origen de datos existente de la solución o en un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . El Asistente para orígenes de datos ofrece varias opciones para crear el objeto de origen de datos, como es usar una conexión existente en el mismo proyecto.  
@@ -151,7 +151,7 @@ ms.locfileid: "66076518"
  Puede crear más de un objeto de origen de datos para admitir conexiones a orígenes de datos adicionales. Cada origen de datos debe tener columnas que se puedan usar para crear relaciones.  
   
 > [!NOTE]  
->  Si se definen varios orígenes de datos y se consultan los datos de varios orígenes en una sola consulta, como en una dimensión de copo de nieve, debe definir un origen de datos que admita consultas remotas mediante `OpenRowset`. Normalmente, será un origen de datos de Microsoft SQL Server.  
+>  Si se definen varios orígenes de datos y se consultan los datos de varios orígenes en una sola consulta, como en el caso de una dimensión en copos de nieve, debe definir un origen de datos `OpenRowset`que admita consultas remotas mediante. Normalmente, será un origen de datos de Microsoft SQL Server.  
   
  Algunos requisitos para usar varios orígenes de datos son los siguientes:  
   
@@ -172,7 +172,7 @@ ms.locfileid: "66076518"
 5.  Busque la tabla que agregó y selecciónela. Haga clic con el botón derecho en la tabla y seleccione **Nueva relación**. Elija las columnas de origen y de destino que contienen los datos coincidentes.  
   
 ## <a name="see-also"></a>Vea también  
- [Orígenes de datos admitidos &#40;SSAS Multidimensional&#41;](supported-data-sources-ssas-multidimensional.md)   
+ [Orígenes de datos &#40;compatibles con SSAS multidimensional&#41;](supported-data-sources-ssas-multidimensional.md)   
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)  
   
   

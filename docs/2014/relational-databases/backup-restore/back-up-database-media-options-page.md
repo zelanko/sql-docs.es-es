@@ -13,12 +13,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 712ea68c3e0405399e3868e3f7fce375c351f4c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876822"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154837"
 ---
 # <a name="back-up-database-media-options-page"></a>Copia de seguridad de la base de datos (página Opciones multimedia)
   Utilice la página  **Opciones multimedia** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar las opciones multimedia de la base de datos.  
@@ -38,7 +38,7 @@ ms.locfileid: "62876822"
 ## <a name="options"></a>Opciones  
   
 ### <a name="overwrite-media"></a>Sobrescribir medios  
- Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó la dirección URL (Almacenamiento de Windows Azure) como el destino de la copia de seguridad en la página General del cuadro de diálogo Copia de seguridad de base de datos, las opciones de la sección Sobrescribir medios estarán deshabilitadas. Puede sobrescribir una copia de seguridad mediante la instrucción Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para más información, consulte [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó dirección URL (Azure Storage) como destino de la copia de seguridad en la página general del cuadro de diálogo copia de seguridad de base de datos, las opciones de la sección sobrescribir medios están deshabilitadas. Puede sobrescribir una copia de seguridad mediante la instrucción Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para más información, consulte [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Solo la opción **Hacer copia de seguridad en un nuevo medio y borrar todos los conjuntos de copia de seguridad existentes** se admite con las opciones de cifrado. Si selecciona las opciones de la sección **Hacer copia de seguridad en un medio existente** , las opciones de cifrado en la página **Opciones de copia de seguridad** se deshabilitarán.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62876822"
 >  Para obtener más información sobre las copias de seguridad del registro de transacciones, vea [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
  **Truncar el registro de transacciones**  
- Realice una copia de seguridad del registro de transacciones y trúnquelo para liberar espacio de registro. La base de datos permanece en línea. Ésta es la opción predeterminada.  
+ Realice una copia de seguridad del registro de transacciones y trúnquelo para liberar espacio de registro. La base de datos permanece en línea. Esta es la opción predeterminada.  
   
  **Realizar copia de seguridad del final del registro y dejar la base de datos en estado de restauración**  
  Realice una copia de seguridad del final del registro y deje la base de datos en estado de restauración. Esta opción crea una *copia del final del registro*, que realiza una copia de seguridad de los registros de los que todavía no se ha realizado ninguna (registro activo), generalmente, para la preparación de la restauración de una base de datos. La base de datos no estará disponible para los usuarios hasta que haya finalizado su restauración.  

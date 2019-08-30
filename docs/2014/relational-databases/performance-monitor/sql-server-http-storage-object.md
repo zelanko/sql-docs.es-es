@@ -10,17 +10,17 @@ ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f104f7a6395442484be15f1e72c849edbf11e74f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250540"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152677"
 ---
-# <a name="sql-server-httpstorageobject"></a>SQL Server, HTTP_STORAGE_OBJECT
-  El objeto de rendimiento de **SQLServer:HTTP_STORAGE_OBJECT** está compuesto de contadores de rendimiento que supervisan la cuenta de almacenamiento de Microsoft Azure. Uso de [archivos de datos de SQL Server en Windows Azure](../databases/sql-server-data-files-in-microsoft-azure.md) característica, puede almacenar los archivos de base de datos en almacenamiento de Blobs de Windows Azure. Este objeto de rendimiento trata cada cuenta de Almacenamiento de Windows Azure como una unidad diferente.  
+# <a name="sql-server-http_storage_object"></a>SQL Server, HTTP_STORAGE_OBJECT
+  El objeto de rendimiento **SQLServer: HTTP_STORAGE_OBJECT** consta de contadores de rendimiento que supervisan Azure Storage cuenta. Con [SQL Server archivos de datos en la característica de Azure](../databases/sql-server-data-files-in-microsoft-azure.md) , puede almacenar archivos de base de datos en Azure Storage BLOBs. Este objeto de rendimiento trata cada cuenta de Azure Storage como una unidad diferente.  
   
-|Nombre de contador|Descripción|  
+|Nombre del contador|Descripción|  
 |------------------|-----------------|  
 |**Lectura de bytes/seg**|Cantidad de datos que se transfieren desde almacenamiento HTTP por segundo durante las operaciones de lectura.|  
 |**Escritura de bytes/seg**|Cantidad de datos que se transfieren desde almacenamiento HTTP por segundo durante las operaciones de escritura.|  

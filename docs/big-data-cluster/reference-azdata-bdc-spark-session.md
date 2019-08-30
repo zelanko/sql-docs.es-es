@@ -5,22 +5,22 @@ description: Artículo de referencia sobre los comandos de azdata bdc spark sess
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1573c5b95eeaf314db08acc60d6fe5e1e2c4b753
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 820dadee39c4d68455b8c609b512a6504eb5fbad
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653426"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154425"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el siguiente artículo se proporciona una referencia sobre los comandos de **bdc spark session** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
+Este artículo es un artículo de referencia para **azdata**. 
 
 ## <a name="commands"></a>Comandos:
 |     |     |
@@ -52,7 +52,7 @@ azdata bdc spark session create [--session-kind -k]
 ### <a name="examples"></a>Ejemplos
 Crear una sesión.
 ```bash
-azdata bdc spark session create --session-kind pyspark
+azdata spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>Parámetros opcionales
 #### `--session-kind -k`
@@ -102,7 +102,7 @@ azdata bdc spark session list
 ### <a name="examples"></a>Ejemplos
 Enumere todas las sesiones activas.
 ```bash
-azdata bdc spark session list
+azdata spark session list
 ```
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
@@ -124,7 +124,7 @@ azdata bdc spark session info --session-id -i
 ### <a name="examples"></a>Ejemplos
 Obtener la información de la sesión con el identificador 0.
 ```bash
-azdata bdc spark session info --session-id 0
+azdata spark session info --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -149,7 +149,7 @@ azdata bdc spark session log --session-id -i
 ### <a name="examples"></a>Ejemplos
 Obtener el registro de la sesión con el identificador 0.
 ```bash
-azdata bdc spark session log --session-id 0
+azdata spark session log --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -174,7 +174,7 @@ azdata bdc spark session state --session-id -i
 ### <a name="examples"></a>Ejemplos
 Obtener el estado de la sesión con el identificador 0.
 ```bash
-azdata bdc spark session state --session-id 0
+azdata spark session state --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -199,7 +199,7 @@ azdata bdc spark session delete --session-id -i
 ### <a name="examples"></a>Ejemplos
 Eliminar una sesión.
 ```bash
-azdata bdc spark session delete --session-id 0
+azdata spark session delete --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -218,4 +218,6 @@ Aumente el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata** , vea [instalar azdata para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).
+- Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md). 
+
+- Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).

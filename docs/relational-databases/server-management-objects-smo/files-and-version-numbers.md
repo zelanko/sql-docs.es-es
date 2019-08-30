@@ -1,5 +1,5 @@
 ---
-title: Los archivos y números de versión | Documentos de Microsoft
+title: Archivos y números de versión | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - SMO [SQL Server], versions
 - versions [SMO]
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7936eaf327f9df3cb0f3d8545d7bf557ef1471ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098041"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148666"
 ---
 # <a name="files-and-version-numbers"></a>Archivos y números de versión
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Todos los necesarios los componentes del objeto de administración de SQL Server (SMO) se incluyen en el paquete Microsoft.SqlServer.SqlManagementObjects NuGet. SMO se implementa en varios ensamblados administrados. Puede desarrollar aplicaciones SMO en un cliente o un servidor.  
+  Todos los componentes de objetos de administración de SQL Server (SMO) necesarios se incluyen en el paquete NuGet Microsoft. SqlServer. SqlManagementObjects. SMO se implementa en varios ensamblados administrados. Puede desarrollar aplicaciones SMO en un cliente o un servidor.  
 
 > > [!Important]
-> > La versión del archivo de los ensamblados SMO se muestra como principal. **0**. Build.Revision. Pero la versión de ensamblado incrustado es principal. **100**. Build.Revision. Esto sirve para mantener la versión de SMO que se usan en cada aplicación independiente, por lo que las actualizaciones en uno no afecta a los demás.
+> > La versión de archivo de los ensamblados SMO se muestra como principal. **0**. Compilación. revisión. Pero la versión del ensamblado incrustado es principal. **100**. Compilación. revisión. Esto se hace para mantener la versión de SMO usada en cada aplicación independiente, de modo que las actualizaciones a una no afecten a ninguna otra.
 > > 
-> > Por este motivo debe **no** instalar estas versiones de los ensamblados a la caché de ensamblados Global (GAC). Si lo hace, podría hacer que otras aplicaciones, tales como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, se interrumpa. 
+> > Debido a esto, **no** debe instalar estas versiones de los ensamblados en la caché de ensamblados global (GAC). Esto podría hacer que otras aplicaciones, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, se interrumpan. 
   
 |Archivo|Descripción|  
 |-----------|-----------------|  

@@ -19,12 +19,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d20276a90a64ca414b8bb6253b03df08908a1f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62921239"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154778"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Restaurar una copia de seguridad de base de datos (SQL Server Management Studio)
   En este tema se explica cómo restaurar una copia de seguridad completa de la base de datos.  
@@ -40,7 +40,7 @@ ms.locfileid: "62921239"
   
 2.  Expanda **Bases de datos**. En función de la base de datos, seleccione una base de datos de usuario o expanda **Bases de datos del sistema**y, a continuación, seleccione una base de datos del sistema.  
   
-3.  Haga clic en la base de datos, seleccione **tareas**, apunte a **restaurar**y, a continuación, haga clic en **base de datos**, lo que se abre el **Restaurar base de datos** cuadro de diálogo.  
+3.  Haga clic con el botón secundario en la base de datos, seleccione **tareas**, **restaurar**y, a continuación, haga clic en **base de datos**, que abre el cuadro de diálogo **restaurar base de datos** .  
   
 4.  En la página **General** , use la sección **Origen** para especificar el origen y la ubicación de los conjuntos de copias de seguridad que se deben restaurar. Seleccione una de las siguientes opciones:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62921239"
   
     -   **Dispositivo**  
   
-         Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
+         Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
   
          Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
   
@@ -62,21 +62,21 @@ ms.locfileid: "62921239"
         > [!NOTE]  
         >  Esta lista solo está disponible cuando se selecciona la opción **Dispositivo** . Solo estarán disponibles las bases de datos que tienen copias de seguridad en el dispositivo seleccionado.  
   
-         **Medios de copia de seguridad**  
-         Seleccione el medio de la operación de restauración: **Archivo**, **cinta**, **URL**o **dispositivo de copia de seguridad**. La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el sistema; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.  
+         **Medio de copia de seguridad**  
+         Seleccione el medio para la operación de restauración: **Archivo**, **cinta**, **dirección URL**o **dispositivo de copia de seguridad**. La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el sistema; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.  
   
          **Ubicación de copia de seguridad**  
          Consulte, agregue o quite medios de la operación de restauración. La lista puede contener un máximo de 64 archivos, cintas o dispositivos de copia de seguridad.  
   
          **Agregar**  
-         Agrega la ubicación de un dispositivo de copia de seguridad para el **ubicación de copia de seguridad** lista. En función del tipo de medio que seleccione en el campo **Medio para copia de seguridad** , al hacer clic en **Agregar** , se abrirá uno de los siguientes cuadros de diálogo.  
+         Agrega la ubicación de un dispositivo de copia de seguridad a la lista ubicación de la **copia de seguridad** . En función del tipo de medio que seleccione en el campo **Medio para copia de seguridad** , al hacer clic en **Agregar** , se abrirá uno de los siguientes cuadros de diálogo.  
   
         |Tipo de medio|Cuadro de diálogo|Descripción|  
         |----------------|----------------|-----------------|  
         |**Archivo**|**Buscar archivo de copia de seguridad**|En este cuadro de diálogo, puede seleccionar un archivo local en el árbol, o bien especificar un archivo remoto mediante su nombre UNC (convención de nomenclatura universal) completo. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
         |**Device**|**Seleccionar dispositivo de copia de seguridad**|En este cuadro de diálogo, puede seleccionar un dispositivo de una lista de dispositivos lógicos de copia de seguridad en la instancia del servidor.|  
         |**Cinta**|**Seleccionar cinta de copia de seguridad**|En este cuadro de diálogo, puede seleccionar una cinta de la lista de unidades de cinta que están conectadas físicamente al equipo en el que se ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-        |**Dirección URL**|De esta forma se inician dos cuadros de diálogo en el siguiente orden:<br /><br /> 1) **conectarse a Windows Azure Storage**<br /><br /> 2) **Buscar archivo de copia de seguridad en Windows Azure**|En el cuadro de diálogo **Conectar con Almacenamiento de Windows Azure**  , seleccione una credencial existente de SQL que almacena la información del nombre de cuenta y de tecla de acceso de Almacenamiento de Windows Azure, o cree la nueva credencial de SQL especificando el nombre de cuenta de almacenamiento y la información de las teclas de acceso de almacenamiento. Para obtener más información, consulte [conectar a Windows Azure Storage &#40;restaurar&#41;](connect-to-microsoft-azure-storage-restore.md).<br /><br /> En el cuadro de diálogo **Buscar archivo de copia de seguridad** , puede seleccionar un archivo de la lista de contenedores mostrados en el marco de la izquierda.|  
+        |**URL**|De esta forma se inician dos cuadros de diálogo en el siguiente orden:<br /><br /> 1) **Conéctese a Azure Storage**<br /><br /> 2) **Buscar el archivo de copia de seguridad en Azure**|En el cuadro de diálogo **conectar con el Azure Storage** , seleccione una credencial existente de SQL que almacene la información de nombre y clave de acceso de la cuenta de Azure Storage, o bien cree una nueva credencial de SQL especificando el nombre de la cuenta de almacenamiento y la información de la clave de acceso de almacenamiento. Para obtener más información, vea [conectarse a &#40;Azure Storage&#41;restore](connect-to-microsoft-azure-storage-restore.md).<br /><br /> En el cuadro de diálogo **Buscar archivo de copia de seguridad** , puede seleccionar un archivo de la lista de contenedores mostrados en el marco de la izquierda.|  
   
          Si la lista está completa, el botón **Agregar** no está disponible.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62921239"
   
         -   **RESTORE WITH STANDBY** deja la base de datos en modo de solo lectura. Deshace las transacciones sin confirmar, pero guarda las acciones de deshacer en un archivo en espera para que los efectos de la recuperación puedan revertirse.  
   
-    3.  **Realizar copia del final del registro de la cola antes de la restauración** se seleccionará si es necesario en el momento dado que ha seleccionado. No es necesario modificar este valor, pero puede optar por realizar la copia del final del registro incluso si no es necesario. ¿Un nombre de archivo aquí? Si el primer conjunto de copia de seguridad de la página **General** está en Windows Azure, el registro de cola también se copia en el mismo contenedor de almacenamiento.  
+    3.  **Realizar copia del final del registro de la cola antes de la restauración** se seleccionará si es necesario en el momento dado que ha seleccionado. No es necesario modificar este valor, pero puede optar por realizar la copia del final del registro incluso si no es necesario. ¿Un nombre de archivo aquí? Si el primer conjunto de copia de seguridad de la página **General** se encuentra en Azure, también se realizará una copia de seguridad del registro del final en el mismo contenedor de almacenamiento.  
   
     4.  Puede haber errores en las operaciones de restauración si hay conexiones activas con la base de datos. Active la opción **Cerrar conexiones existentes** para asegurarse de que se cierren todas las conexiones activas entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y la base de datos. Esta casilla establece la base de datos en modo de usuario único antes de realizar las operaciones de restauración, y establece la base de datos en modo multiusuario una vez completadas.  
   

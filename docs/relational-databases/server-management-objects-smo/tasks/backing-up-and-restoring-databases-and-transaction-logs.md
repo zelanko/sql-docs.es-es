@@ -1,5 +1,5 @@
 ---
-title: Copia de seguridad y restauración de bases de datos y registros de transacciones | Microsoft Docs
+title: Realizar copias de seguridad y restaurar bases de datos y registros de transacciones | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,27 +17,27 @@ helpviewer_keywords:
 - backing up databases [SMO]
 - database restores [SMO]
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9480cf6bb80b73804046f8e8101567d1af26129f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b721a57d25a1187d924e8cf66b23a2f5c2b4daaa
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092810"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148551"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Realizar copias de seguridad y restaurar bases de datos y registros de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  En SMO, la clase <xref:Microsoft.SqlServer.Management.Smo.Backup> y la clase <xref:Microsoft.SqlServer.Management.Smo.Restore> son clases de utilidad que proporcionan las herramientas para realizar las tareas concretas de copias de seguridad y restauración. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto representa una tarea de copia de seguridad concreta necesaria en lugar de un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objeto en la instancia del servidor.  
+  En SMO, la clase <xref:Microsoft.SqlServer.Management.Smo.Backup> y la clase <xref:Microsoft.SqlServer.Management.Smo.Restore> son clases de utilidad que proporcionan las herramientas para realizar las tareas concretas de copias de seguridad y restauración. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto representa una tarea de copia de seguridad específica que es necesaria en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] lugar de un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objeto en la instancia del servidor.  
   
  Si se produce una pérdida de datos o se dañan, se debe restaurar la copia de seguridad, total o parcialmente. La restauración parcial utiliza la colección <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> para segmentar los datos que se van a restaurar. Si la copia de seguridad es de un registro de transacciones, los datos se pueden desde un momento determinado utilizando la propiedad <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Restore>. Los datos también se pueden validar utilizando el método <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. El procedimiento de copia de seguridad recomendado es comprobar la integridad de la copia de seguridad haciendo una operación de restauración y comprobando los datos en la base de datos periódicamente.  
   
- Al igual que el <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto, el <xref:Microsoft.SqlServer.Management.Smo.Restore> objeto no deben crearse mediante el uso de un **crear** método porque no representa ningún objeto en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> es un conjunto de propiedades y métodos que se utilizan para restaurar una base de datos.  
+ Al igual <xref:Microsoft.SqlServer.Management.Smo.Backup> que el objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> , no es necesario crear el objeto mediante un método **Create** porque no representa ningún objeto en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> es un conjunto de propiedades y métodos que se utilizan para restaurar una base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Realizar copias de seguridad de bases de datos y registros de transacciones en Visual Basic  
  En este ejemplo de código se muestra cómo realizar una copia de seguridad de una base de datos existente en un archivo y cómo restaurarla.  

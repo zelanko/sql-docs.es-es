@@ -1,5 +1,5 @@
 ---
-title: Creación de aplicaciones con SQL Server Native Client | Documentos de Microsoft
+title: Compilar aplicaciones con SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eac83c7dd853e2cff17198d37c47d54fc5919324
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2bee2a152b3d37f279bff2e7983a4dce7cf32fb4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069365"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155784"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Generar aplicaciones con SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68069365"
  [Directivas de soporte para SQL Server Native Client](../../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md)  
  Se describe cómo se pueden usar varios componentes de acceso a datos con versiones diferentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- [Conectarse a Windows Azure SQL Database con SQL Server Native Client](../../../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
+ [Conexión a una Azure SQL Database con SQL Server Native Client](../../../relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  Describe cómo conectarse a una base de datos de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Vea también  

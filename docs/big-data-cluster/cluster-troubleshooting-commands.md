@@ -5,22 +5,25 @@ description: En este artículo se proporcionan comandos útiles para supervisar 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 36203552e9070d80179fa88df0a7d1951b09664a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653021"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153631"
 ---
 # <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Supervisión y solución de problemas[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se describen varios comandos de Kubernetes útiles que puede usar para supervisar y [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]solucionar problemas de. Se muestra cómo ver información detallada de un pod u otros artefactos de Kubernetes que se encuentran en el clúster de macrodatos. En este artículo también se tratan las tareas habituales, como copiar archivos en un contenedor que ejecute uno de los servicios de clúster de macrodatos de SQL Server, o bien copiarlos desde uno.
+
+> [!TIP]
+> Para supervisar el estado de los componentes de los clústeres de macrodatos, puede usar los comandos de [**Estado de azdata BDC**](deployment-guidance.md#status) o los cuadernos de [solución de problemas](manage-notebooks.md) integrados en proporcionados con Azure Data Studio.
 
 > [!TIP]
 > Ejecute los siguientes comandos de **kubectl** en un equipo cliente Windows (cmd o PS) o Linux (bash). Requieren la autenticación previa en el clúster y un contexto de clúster en el que ejecutarse. Por ejemplo, para un clúster de AKS creado anteriormente, puede ejecutar `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` para descargar el archivo de configuración del clúster de Kubernetes y establecer el contexto del clúster.

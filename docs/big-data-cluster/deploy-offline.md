@@ -5,16 +5,16 @@ description: Aprenda a realizar una implementación sin conexión de un clúster
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 243771141bbd255e045ef0a1667235f1c414777b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652366"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155267"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Realización de una implementación sin conexión de un clúster de macrodatos de SQL Server
 
@@ -33,7 +33,7 @@ En los pasos siguientes se explica cómo extraer las imágenes de contenedor de 
 > [!TIP]
 > En los pasos siguientes se explica el proceso. Pero para simplificar la tarea, puede usar el [script automatizado](#automated) en lugar de ejecutar estos comandos manualmente.
 
-1. Extraiga las imágenes de contenedor de clúster de macrodatos mediante la repetición del siguiente comando. Reemplace `<SOURCE_IMAGE_NAME>` por cada [nombre de imagen](#images). Reemplace `<SOURCE_DOCKER_TAG>` por la etiqueta de la versión del clúster de macrodatos, como **2019-CTP3.2-ubuntu**.  
+1. Extraiga las imágenes de contenedor de clúster de macrodatos mediante la repetición del siguiente comando. Reemplace `<SOURCE_IMAGE_NAME>` por cada [nombre de imagen](#images). Reemplace `<SOURCE_DOCKER_TAG>` por la etiqueta de la versión del clúster de Big Data, como **2019-RC1-Ubuntu**.  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -60,27 +60,31 @@ En los pasos siguientes se explica cómo extraer las imágenes de contenedor de 
 ### <a id="images"></a> Imágenes de contenedor de clúster de macrodatos
 
 Las siguientes imágenes de contenedor de clúster de macrodatos son necesarias para una instalación sin conexión:
+- **mssql-app-service-proxy**
+- **MSSQL-control-guardián**
+- **mssql-controller**
+- **MSSQL-DNS**
+- **mssql-hadoop**
+- **mssql-mleap-serving-runtime**
+- **mssql-mlserver-py-runtime**
+- **mssql-mlserver-r-runtime**
+- **mssql-monitor-collectd**
+- **mssql-monitor-elasticsearch**
+- **mssql-monitor-fluentbit**
+- **mssql-monitor-grafana**
+- **mssql-monitor-influxdb**
+- **mssql-monitor-kibana**
+- **mssql-monitor-telegraf**
+- **MSSQL-Security-domainctl**
+- **mssql-security-knox**
+- **mssql-security-support**
+- **mssql-server**
+- **mssql-server-controller**
+- **mssql-server-data**
+- **MSSQL-Server-ha**
+- **mssql-service-proxy**
+- **mssql-ssis-app-runtime**
 
- - **mssql-appdeploy-init**
- - **mssql-monitor-fluentbit**
- - **mssql-monitor-collectd**
- - **mssql-server-data**
- - **mssql-hadoop**
- - **mssql-monitor-elasticsearch**
- - **mssql-monitor-influxdb**
- - **mssql-security-knox**
- - **mssql-mlserver-r-runtime**
- - **mssql-mlserver-py-runtime**
- - **mssql-controller**
- - **mssql-server-controller**
- - **mssql-monitor-grafana**
- - **mssql-monitor-kibana**
- - **mssql-service-proxy**
- - **mssql-app-service-proxy**
- - **mssql-ssis-app-runtime**
- - **mssql-monitor-telegraf**
- - **mssql-mleap-serving-runtime**
- - **mssql-security-support**
 
 ## <a id="automated"></a> Script automatizado
 
@@ -113,7 +117,7 @@ Puede usar un script de Python automatizado que extraiga automáticamente todas 
 
 ## <a name="install-tools-offline"></a>Instalación de herramientas sin conexión
 
-Las implementaciones de clústeres de macrodatos requieren varias herramientas, como **Python**, **azdata** y **kubectl**. Siga estos pasos para instalar estas herramientas en un servidor sin conexión.
+Las implementaciones de clúster de Big Data requieren variasherramientas, `azdata`como Python, y **kubectl**. Siga estos pasos para instalar estas herramientas en un servidor sin conexión.
 
 ### <a id="python"></a> Instalación de Python sin conexión
 
@@ -135,13 +139,13 @@ Las implementaciones de clústeres de macrodatos requieren varias herramientas, 
 
 ### <a id="azdata"></a> Instalación de azdata sin conexión
 
-1. En un equipo con acceso a Internet y [Python](https://wiki.python.org/moin/BeginnersGuide/Download), ejecute el siguiente comando para descargar todos los paquetes de **azdata** en la carpeta actual.
+1. En una máquina con acceso a Internet y [Python](https://wiki.python.org/moin/BeginnersGuide/Download), ejecute el siguiente comando para descargar todos `azdata` los paquetes en la carpeta actual.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. Copie los paquetes descargados y el archivo **requirements.txt** en el equipo de destino.
+1. Copie los paquetes descargados `requirements.txt` y el archivo en el equipo de destino.
 
 1. Ejecute el siguiente comando en el equipo de destino y especifique la carpeta en la que ha copiado los archivos anteriores.
 
@@ -159,7 +163,7 @@ Para instalar **kubectl** en un equipo sin conexión, siga estos pasos.
 
 ## <a name="deploy-from-private-repository"></a>Implementación desde un repositorio privado
 
-Para implementar desde el repositorio privado, siga los pasos de la [guía de implementación](deployment-guidance.md), pero use un archivo de configuración de implementación personalizado que especifique la información del repositorio privado de Docker. Los siguientes comandos de **azdata** muestran cómo cambiar la configuración de Docker de un archivo de configuración de implementación personalizado denominado **control.json**:
+Para implementar desde el repositorio privado, siga los pasos de la [guía de implementación](deployment-guidance.md), pero use un archivo de configuración de implementación personalizado que especifique la información del repositorio privado de Docker. Los siguientes `azdata` comandos muestran cómo cambiar la configuración de Docker en un archivo de configuración de implementación `control.json`personalizado denominado:
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -167,7 +171,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-La implementación pide el nombre de usuario y la contraseña de Docker, o bien puede especificarlos en las variables de entorno **DOCKER_USERNAME** y **DOCKER_PASSWORD**.
+La implementación le pedirá el nombre de usuario y la contraseña de Docker, o puede especificarlos `DOCKER_USERNAME` en `DOCKER_PASSWORD` las variables de entorno y.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

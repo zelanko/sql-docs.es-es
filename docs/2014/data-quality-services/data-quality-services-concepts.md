@@ -10,12 +10,12 @@ ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad52c1f1d431e1ded8f63728bf17c951196c406d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f1cba6a6a20fc804d29aeb0dbf43d7bebfbb225
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480714"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154454"
 ---
 # <a name="data-quality-services-concepts"></a>Conceptos de Data Quality Services
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) en administración del conocimiento, proyectos de calidad de datos y administración de calidad de datos.  
@@ -37,7 +37,7 @@ ms.locfileid: "65480714"
   
  **Reference Data Services**  
   
- Puede usar los datos de referencia para validar, corregir y enriquecer los datos, aprovechando los servicios de compañías que garantizan la calidad de sus datos de referencia. Puede usar los servicios de Windows Azure MarketPlace para conectar con proveedores de datos de referencia o puede usar una conexión directa a un proveedor. Para obtener más información, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
+ Puede usar los datos de referencia para validar, corregir y enriquecer los datos, aprovechando los servicios de compañías que garantizan la calidad de sus datos de referencia. Puede usar los servicios de Azure Marketplace para conectarse a los proveedores de datos de referencia o puede usar una conexión directa a un proveedor. Para obtener más información, consulte [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md).  
   
  Para obtener más información sobre la administración de conocimiento en DQS, vea [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   

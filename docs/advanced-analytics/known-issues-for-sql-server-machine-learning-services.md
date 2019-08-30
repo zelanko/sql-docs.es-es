@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d56e3109c0820b800bbd72c9cc86bed9b7a09eea
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: e762354a2f391ba4c52f8bc0aa5fece537c79288
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030295"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155372"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Problemas conocidos de SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ Busque Launchpad en la `Binn` carpeta de la instancia. Por ejemplo, en una insta
 
 ### <a name="9-remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>9. Los contextos de cálculo remotos están bloqueados por un firewall en SQL Server instancias que se ejecutan en máquinas virtuales de Azure
 
-Si ha instalado [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] en una máquina virtual de Windows Azure, es posible que no pueda usar contextos de proceso que requieran el uso del área de trabajo de la máquina virtual. La razón es que, de forma predeterminada, el Firewall de Azure virtual machines incluye una regla que bloquea el acceso a la red para las cuentas de usuario locales de R.
+Si ha instalado [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] en una máquina virtual de Azure, es posible que no pueda usar contextos de proceso que requieran el uso del área de trabajo de la máquina virtual. La razón es que, de forma predeterminada, el Firewall de Azure virtual machines incluye una regla que bloquea el acceso a la red para las cuentas de usuario locales de R.
 
 Como solución alternativa, en la máquina virtual de Azure, Abra **firewall de Windows con seguridad avanzada**, seleccione **reglas de salida**y deshabilite la regla siguiente: **Bloquear el acceso a la red para las cuentas de usuario locales de R en la instancia de SQL Server MSSQLSERVER**. También puede dejar la regla habilitada, pero cambiar la propiedad de seguridad a **permitir si es seguro**.
 

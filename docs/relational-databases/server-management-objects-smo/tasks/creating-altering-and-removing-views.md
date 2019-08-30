@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - views [SMO]
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2851cab846e8f814e03e2b96ad10c69136c9a27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f441b1a732d9b75c7d2cda7d7b949b991ce4a689
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111490"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148454"
 ---
 # <a name="creating-altering-and-removing-views"></a>Crear, modificar y eliminar vistas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68111490"
  La propiedad <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.View> define la vista. Es el equivalente de la instrucción SELECT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] para crear una vista.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-basic"></a>Crear, modificar y quitar una vista en Visual Basic  
  En este ejemplo de código se muestra cómo crear una vista de dos tablas utilizando una combinación interna. La vista se crea utilizando el modo de texto, de modo que debe establecerse la propiedad <xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>.  

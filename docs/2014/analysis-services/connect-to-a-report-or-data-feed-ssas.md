@@ -1,5 +1,5 @@
 ---
-title: Conectarse a un informe o fuente de datos (SSAS) | Microsoft Docs
+title: Conectarse a un informe o a una fuente de distribución de datos (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bc15a005371b719f880f9b64a11a7b33e81ff51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66087170"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70151832"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Conectarse a un informe o a una fuente de distribución de datos (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite conectar con una fuente de distribución de datos. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -44,7 +44,7 @@ ms.locfileid: "66087170"
  **Nombre descriptivo de la conexión**  
  Escriba un nombre descriptivo para la conexión con la fuente de distribución de datos.  
   
- **Dirección URL de fuente de datos**  
+ **URL de fuente de distribución de datos**  
  Escriba la ruta de acceso completa a un documento de servicio Atom (.atomsvc, .atom) o la dirección URL de una sola fuente de distribución de datos, o bien haga clic en **Examinar** para seleccionar un documento de servicio Atom.  
   
  **Examinar**  
@@ -53,9 +53,9 @@ ms.locfileid: "66087170"
  Haga clic en **Ver conjuntos de datos de Azure DataMarket disponibles** para mostrar los conjuntos de datos disponibles.  
   
  **Clave de cuenta**  
- Especifique la clave de cuenta usada para tener acceso a sus suscripciones de conjunto de datos de Azure DataMarket.  
+ Especifique la clave de cuenta que se usa para acceder a las suscripciones del conjunto de los conjuntos de Azure Marketplace.  
   
- **Buscar**  
+ **Localización**  
  Busque una clave de cuenta asociada a una cuenta de Windows Live.  
   
  **Guardar mi clave de cuenta**  
@@ -71,7 +71,7 @@ ms.locfileid: "66087170"
  **Nombre descriptivo de la conexión**  
  Escriba un nombre descriptivo para la conexión con la fuente de distribución de datos.  
   
- **Dirección URL de fuente de datos**  
+ **URL de fuente de distribución de datos**  
  Escriba la ruta de acceso completa a un documento de servicio Atom (.atomsvc, .atom) o la dirección URL de una sola fuente de distribución de datos, o bien haga clic en **Examinar** para seleccionar un documento de servicio Atom.  
   
  Haga clic en **Incluir todas las columnas de fuente** para especificar si se importan todas las columnas de fuente de distribución de datos.  

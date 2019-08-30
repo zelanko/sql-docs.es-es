@@ -10,19 +10,19 @@ ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [SMO]
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c33572469cfaa37673212d483cc05d15d3a1b828
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd6a7b8817e86207e9e8c8df2270344d5106ead3
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111540"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148491"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Crear, modificar y eliminar las funciones definidas por el usuario
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
-  El <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objeto proporciona la funcionalidad que permite a los usuarios administrar mediante programación las funciones definidas por el usuario en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las funciones definidas por el usuario admiten los parámetros de entrada y salida y también admiten las referencias directas a las columnas de la tabla.  
+  El <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objeto proporciona funcionalidad que permite a los usuarios administrar mediante programación las funciones definidas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] por el usuario en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las funciones definidas por el usuario admiten los parámetros de entrada y salida y también admiten las referencias directas a las columnas de la tabla.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere registrar los ensamblados en una base de datos antes de que se puedan utilizar en los procedimientos almacenados, funciones definidas por el usuario, desencadenadores y los tipos de datos definidos por el usuario. SMO admite esta característica con el objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68111540"
  Cuando el objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> hace referencia a un ensamblado .NET, debe registrar el ensamblado creando un objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> y agregándolo al objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection>, que pertenece al objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Crear una función escalar definida por el usuario en Visual Basic  
  En este ejemplo de código se muestra cómo crear y quitar una función escalar definida por el usuario que tiene un parámetro de objeto <xref:System.DateTime> de entrada y un tipo de valor devuelto entero de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. La función definida por el usuario se crea en la base de datos de [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . En el ejemplo se crea una función definida por el usuario, ISOweek, que toma un argumento de fecha y calcula el número de semana ISO. Para que esta función realice los cálculos correctamente, la opción DATEFIRST de base de datos debe establecerse en 1 antes de que se llame a la función.  
@@ -101,7 +101,7 @@ udf.Drop()
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>Crear una función escalar definida por el usuario en PowerShell  
- En este ejemplo de código se muestra cómo crear y quitar una función escalar definida por el usuario que tiene un parámetro de objeto <xref:System.DateTime> de entrada y un tipo de valor devuelto entero de [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La función definida por el usuario se crea en la base de datos de [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . En el ejemplo se crea la función definida por el usuario. `ISOweek`. Esta función toma un argumento de fecha para calcular el número de semana ISO. Para que esta función realice los cálculos correctamente, la opción `DATEFIRST` de base de datos debe establecerse en `1` antes de que se llame a la función.  
+ En este ejemplo de código se muestra cómo crear y quitar una función escalar definida por el usuario que tiene un parámetro de objeto <xref:System.DateTime> de entrada y un tipo de valor devuelto entero de [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La función definida por el usuario se crea en la base de datos de [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . En el ejemplo se crea la función definida por el usuario. `ISOweek` Esta función toma un argumento de fecha para calcular el número de semana ISO. Para que esta función realice los cálculos correctamente, la opción `DATEFIRST` de base de datos debe establecerse en `1` antes de que se llame a la función.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

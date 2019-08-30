@@ -10,25 +10,25 @@ ms.topic: reference
 helpviewer_keywords:
 - stored procedures [SMO]
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1eaec75e05dba6d6fd859c1537d7a528df16959c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 902f2a4b2dd60b96f26ed8d93eff28471baeb63c
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939039"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148498"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Crear, modificar y eliminar los procedimientos almacenados
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   En los objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), el objeto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> representa los procedimientos almacenados.  
   
- Para crear un objeto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> en SMO, se requiere establecer la propiedad <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> en el script [!INCLUDE[tsql](../../../includes/tsql-md.md)] que define el procedimiento almacenado. Los parámetros requieren el \@ prefijo y se deben crear individualmente utilizando <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> objetos y agregar a la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> colección de la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
+ Para crear un objeto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> en SMO, se requiere establecer la propiedad <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> en el script [!INCLUDE[tsql](../../../includes/tsql-md.md)] que define el procedimiento almacenado. Los parámetros requieren \@ el prefijo y se deben crear individualmente <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> utilizando objetos y agregando <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> a la colección del objeto.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Crear, modificar y eliminar un procedimiento almacenado en Visual Basic  
  En este ejemplo de código se muestra cómo crear un procedimiento almacenado para la base de datos [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . El ejemplo devuelve el apellido de un empleado cuando se proporciona el número de identificador del empleado. El procedimiento almacenado requiere un parámetro de entrada que especifique el número de identificador del empleado y un parámetro de salida para devolver el apellido del empleado.  

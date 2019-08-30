@@ -15,18 +15,18 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec94f8387d7b833a80cd4df09f7d4208974d40a7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922279"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154820"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Crear una copia de seguridad completa de base de datos (SQL Server)
   En este tema se describe cómo crear una copia de seguridad completa de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
   
 > [!NOTE]  
->  Para obtener información sobre la copia de seguridad de SQL Server en el servicio de almacenamiento Blob de Windows Azure, vea [Copia de seguridad y restauración de SQL Server con el servicio de almacenamiento Blob de Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Para obtener información sobre SQL Server copia de seguridad en el servicio de almacenamiento de blobs de Azure, consulte [SQL Server Backup and restore with Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **En este tema**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62922279"
   
      [Seguridad](#Security)  
   
--   **Para crear una base de datos completa de copia de seguridad, utilizando:**  
+-   **Para crear una copia de seguridad completa de la base de datos, use:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62922279"
   
 3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y haga clic en **Copia de seguridad**. Aparece el cuadro de diálogo **Copia de seguridad de base de datos** .  
   
-4.  En la `Database` cuadro de lista, compruebe el nombre de la base de datos. También puede seleccionar otra base de datos en la lista.  
+4.  En el `Database` cuadro de lista, compruebe el nombre de la base de datos. También puede seleccionar otra base de datos en la lista.  
   
 5.  Puede realizar una copia de seguridad de la base de datos en cualquier modelo de recuperación (**FULL**, **BULK_LOGGED**o **SIMPLE**).  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62922279"
     > [!NOTE]  
     >  Cuando la opción **Diferencial** está seleccionada, no puede crear una copia de seguridad de solo copia.  
   
-8.  Para **componente de copia de seguridad**, haga clic en `Database`.  
+8.  En **componente de copia**de `Database`seguridad, haga clic en.  
   
 9. Acepte el nombre del conjunto de copia de seguridad predeterminado sugerido en el cuadro de texto **Nombre** o especifique otro nombre.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62922279"
          Para esta opción, especifique un nombre en el cuadro de texto **Nuevo nombre del conjunto de medios** y, si lo desea, describa el conjunto de medios en el cuadro de texto **Nueva descripción del conjunto de medios** .  
   
         > [!IMPORTANT]  
-        >  Esta opción está deshabilitada si seleccionó **Dirección URL** en la página **General** . Estas acciones no se admiten al realizar la copia de seguridad en Almacenamiento de Windows Azure.  
+        >  Esta opción está deshabilitada si seleccionó **Dirección URL** en la página **General** . Estas acciones no se admiten cuando se realiza una copia de seguridad en Azure Storage.  
   
 14. Opcionalmente, en la sección **Confiabilidad** , seleccione:  
   
@@ -161,7 +161,7 @@ ms.locfileid: "62922279"
   
 18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] y las versiones posteriores admiten la [compresión de copia de seguridad](backup-compression-sql-server.md). De forma predeterminada, el hecho de que se comprima una copia de seguridad depende del valor de la opción de configuración del servidor **backup-compression default** . Pero, independientemente del valor predeterminado actual de nivel de servidor, puede comprimir una copia de seguridad si activa **Comprimir copia de seguridad**e impedir la compresión si activa **No comprimir copia de seguridad**.  
   
-     **Para ver o cambiar el valor predeterminado de compresión de copia de seguridad actual**  
+     **Para ver o cambiar el valor predeterminado de la compresión de copia de seguridad actual**  
   
     -   [Ver o establecer la opción de configuración del servidor de compresión de copia de seguridad predeterminada](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "62922279"
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          En SQL Server 2014 o versiones posteriores únicamente, especifica el algoritmo de cifrado que se va a utilizar y el certificado o la clave asimétrica que se va a usar para proteger el cifrado.  
   
-         DESCRIPCIÓN **=** { **' *`text`* '**  |  **@** _text_ variable_ }  
+         Descripción **=** { ***'`text`* '**  |  text_variable **}@**  
          Especifica el texto sin formato que describe el conjunto de copia de seguridad. La cadena puede tener un máximo de 255 caracteres.  
   
          NAME **=** { *backup_set_name* |  **@** _backup_set_name_var_ }  
@@ -272,7 +272,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
   
-1.  Utilice el cmdlet `Backup-SqlDatabase`. Para indicar explícitamente que se trata de una copia de seguridad completa de la base de datos, especifique el **- BackupAction** parámetro con su valor predeterminado, `Database`. Este parámetro es opcional para las copias de seguridad de base de datos completas.  
+1.  Utilice el cmdlet `Backup-SqlDatabase`. Para indicar explícitamente que se trata de una copia de seguridad completa de la base de datos, especifique el `Database`parámetro **-BackupAction** con su valor predeterminado,. Este parámetro es opcional para las copias de seguridad de base de datos completas.  
   
      En el ejemplo siguiente se crea una copia de seguridad completa de la base de datos `MyDB` en la ubicación de copia de seguridad predeterminada de la instancia de servidor `Computer\Instance`. Opcionalmente, en este ejemplo se especifica `-BackupAction Database`.  
   
@@ -291,7 +291,7 @@ GO
   
 -   [Crear una copia de seguridad diferencial de una base de datos &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
--   [Restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [Restaurar una copia de &#40;seguridad de base de datos SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurar una copia de seguridad de base de datos en el modelo de recuperación simple &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   

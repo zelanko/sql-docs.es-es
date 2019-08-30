@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Creación de la Base de conocimiento DQS proveedores | Microsoft Docs'
+title: 'Lección 1: Crear la base de conocimiento de DQS proveedores | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6e25b57bce84876de1119ec52ad068602cd5cf13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26759a68274cfbc520e5e176d0dd3e1fab07e720
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485589"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154966"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lección 1: Creación de la base de conocimiento de DQS Proveedores
   En esta lección, creará una base de conocimiento de DQS denominada **Proveedores** con el conocimiento (los metadatos) sobre los datos de proveedor. Usará la base de conocimiento para realizar las actividades de limpieza y coincidencia sobre los datos de proveedor de entrada. La actividad de limpieza identifica los datos incorrectos o no válidos, corrige los datos incorrectos, propone correcciones y sugerencias, normaliza los datos y enriquece los datos con más información. La actividad de coincidencia compara los datos e identifica los registros similares (pero ligeramente diferentes) en los datos, lo que ayuda a quitar duplicados de los datos.  
@@ -38,11 +38,11 @@ ms.locfileid: "65485589"
   
 -   Crear un dominio compuesto denominado Validación de direcciones que incluye los dominios Línea de dirección, Ciudad, Estado y Código postal. Un dominio compuesto es un dominio que consta de uno o varios dominios únicos. Permite crear una regla que afecta a varios dominios. Por ejemplo, puede definir una regla: si la ciudad es Los Ángeles, el estado debe ser CA, donde la ciudad y el son dominios independientes.  
   
--   Configurar y usar un servicio de datos de referencia. La característica Servicio de datos de referencia de Data Quality Services (DQS) le permite suscribirse a proveedores de datos de referencia terceros, y limpiar y enriquecer sus datos empresariales validándolos con los datos de alta calidad de dichos proveedores. Puede usar servicios de proveedores de DQS punteros desde DQS para normalizar, corregir o enriquecer los datos durante el proceso de limpieza. En este tutorial, aprenderá a configurar el entorno de DQS para usar un servicio de datos de referencia de Windows Azure Marketplace y usar el servicio asociado al dominio compuesto Validación de direcciones para limpiar los datos de dirección.  
+-   Configurar y usar un servicio de datos de referencia. La característica Servicio de datos de referencia de Data Quality Services (DQS) le permite suscribirse a proveedores de datos de referencia terceros, y limpiar y enriquecer sus datos empresariales validándolos con los datos de alta calidad de dichos proveedores. Puede usar servicios de proveedores de DQS punteros desde DQS para normalizar, corregir o enriquecer los datos durante el proceso de limpieza. En este tutorial, aprenderá a configurar el entorno de DQS para usar un servicio de datos de referencia en Azure Marketplace y usar el servicio asociado al dominio compuesto validación de direcciones para limpiar los datos de dirección.  
   
 -   Publicar la base de conocimiento para que se pueda usar en las actividades de limpieza y coincidencia.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 1: Crear una Base de conocimiento y dominios](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
+ [Tarea 1: Crear una base de conocimiento y dominios](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

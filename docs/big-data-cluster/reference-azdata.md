@@ -5,33 +5,33 @@ description: Artículo de referencia de los comandos de azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 33cc3070647c58e6ae57c8bff3d587a76ae0a28d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6d737b8e8b353100d5585a625fe9a53232c78f75
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653097"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155132"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
-En el siguiente artículo se proporciona una referencia para la herramienta **azdata** de [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar)](big-data-cluster-overview.md). Para obtener más información sobre cómo instalar la herramienta **azdata** , vea [instalar azdata para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 ## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
+|[azdata notebook](reference-azdata-notebook.md) | Comandos para ver, ejecutar y administrar cuadernos desde un terminal. |
+|[azdata sql](reference-azdata-sql.md) | La CLI de SQL DB permite al usuario interactuar con SQL Server mediante T-SQL. |
 |[azdata app](reference-azdata-app.md) | Para crear, eliminar, ejecutar y administrar aplicaciones. |
 |[azdata bdc](reference-azdata-bdc.md) | Para seleccionar, administrar y poner en funcionamiento clústeres de macrodatos de SQL Server. |
-|[azdata login](#azdata-login) | Para iniciar sesión en el punto de conexión del controlador del clúster.
-|[azdata logout](#azdata-logout) | Para cerrar la sesión del clúster.
-
+|[control azdata](reference-azdata-control.md) | Crear, eliminar y administrar los planos de control. |
+[azdata login](#azdata-login) | Para iniciar sesión en el punto de conexión del controlador del clúster.
+[azdata logout](#azdata-logout) | Para cerrar la sesión del clúster.
 ## <a name="azdata-login"></a>azdata login
-Una vez implementado el clúster, se mostrará el punto de conexión del controlador durante la implementación, que debe usar para iniciar sesión.  Si no conoce el punto de conexión del controlador, puede iniciar sesión con la configuración de Kube del clúster en el sistema en la ubicación predeterminada de <user home>/.Kube/config o usar KUBECONFIG env var, es decir, Export KUBECONFIG = path/to/. Kube/config.
+Una vez implementado el clúster, mostrará el punto de conexión del controlador durante la implementación que se debe usar para iniciar sesión.  Si no conoce el punto de conexión del controlador, puede iniciar sesión teniendo el archivo kubeconfig del clúster en el sistema en la ubicación predeterminada, <user home>/.kube/config, o usar la variable de entorno KUBECONFIG, esto es, export KUBECONFIG=path/to/.kube/config.
 ```bash
 azdata login [--cluster-name -n] 
              [--controller-username -u]  
@@ -43,7 +43,7 @@ Iniciar sesión de forma interactiva. Siempre se le pedirá el nombre del clúst
 ```bash
 azdata login
 ```
-Inicie sesión (de forma no interactiva). Inicie sesión con el nombre del clúster, el nombre de usuario del controlador, el punto de conexión del controlador y el conjunto de aceptación del Contrato de licencia para el usuario final como argumentos. La variable de entorno CONTROLLER_PASSWORD debe estar establecida.  Si no desea especificar el punto de conexión del controlador, tenga la configuración Kube en el equipo en la ubicación predeterminada de <user home>/.Kube/config o use KUBECONFIG env var, es decir, Export KUBECONFIG = path/to/. Kube/config.
+Inicie sesión (de forma no interactiva). Inicie sesión con el nombre del clúster, el nombre de usuario del controlador, el punto de conexión del controlador y el conjunto de aceptación del Contrato de licencia para el usuario final como argumentos. La variable de entorno CONTROLLER_PASSWORD debe estar establecida.  Si no quiere especificar el punto de conexión del controlador, coloque el archivo kubeconfig en el equipo, en la ubicación predeterminada, <user home>/.kube/config, o use la variable de entorno KUBECONFIG, esto es, export KUBECONFIG=path/to/.kube/config.
 ```bash
 azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
@@ -57,9 +57,9 @@ Nombre del clúster.
 #### `--controller-username -u`
 Usuario de la cuenta. Si no quiere usar este argumento, puede establecer la variable de entorno CONTROLLER_USERNAME.
 #### `--controller-endpoint -e`
-Punto de conexión del controlador de clúster "https://host:port". Si no quiere usar este argumento, puede usar el archivo kubeconfig en el equipo; Asegúrese de que la configuración se encuentra en la ubicación <user home>predeterminada de/.Kube/config o use el valor de KUBECONFIG env var.
+Punto de conexión del controlador de clúster "https://host:port". Si no quiere usar este argumento, puede usar el archivo kubeconfig en el equipo; asegúrese de que está en la ubicación predeterminada, <user home>de/.Kube/config, o use la variable de entorno KUBECONFIG.
 #### `--accept-eula -a`
-¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en “yes”. 
+¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en “yes”. Los términos de licencia de este producto se pueden ver en https://aka.ms/azdata-eula.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
@@ -68,9 +68,9 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información, [http://jmespath.org/](http://jmespath.org/]) vea para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-logout"></a>azdata logout
 Para cerrar la sesión del clúster.
 ```bash
@@ -89,10 +89,10 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información, [http://jmespath.org/](http://jmespath.org/]) vea para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
 #### `--verbose`
-Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre cómo instalar la herramienta **azdata** , vea [instalar azdata para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).
+- Para más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).

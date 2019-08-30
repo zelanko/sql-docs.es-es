@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo funciona la persistencia de los da
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028590"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155350"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes
 
@@ -83,7 +83,7 @@ Para todas las personalizaciones, primero tiene que crear una copia del archivo 
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-Esto creará dos archivos (**cluster.json** y **control.json**) que se pueden personalizar; para hacerlo, puede editarlos de forma manual, o bien puede usar el comando **azdata bdc config**. Puede usar una combinación de las bibliotecas jsonpath y jsonpatch para proporcionar formas de editar los archivos de configuración.
+Esto crea dos archivos, **BDC. JSON** y **control. JSON** , que se pueden personalizar editando manualmente, o bien se puede usar el comando **azdata de configuración de BDC** . Puede usar una combinación de las bibliotecas jsonpath y jsonpatch para proporcionar formas de editar los archivos de configuración.
 
 
 ### <a id="config-samples"></a> Configurar el nombre de la clase de almacenamiento o el tamaño de las reclamaciones
@@ -109,7 +109,7 @@ Otra opción es editar de forma manual el archivo de configuración personalizad
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "path": "$.spec.resources.storage-0.spec",
       "value": {
         "type":"Storage",
         "replicas":2,
@@ -134,7 +134,7 @@ Otra opción es editar de forma manual el archivo de configuración personalizad
 Aplique el archivo de revisión. Use el comando **azdata bdc config patch** para aplicar los cambios en el archivo de revisión JSON. En el ejemplo siguiente, se aplica el archivo patch.json en un archivo de configuración de implementación de destino custom.json.
 
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes

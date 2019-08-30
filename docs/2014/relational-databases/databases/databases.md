@@ -14,12 +14,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917099"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154581"
 ---
 # <a name="databases"></a>Bases de datos
   Una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consta de una colección de tablas en las que se almacena un conjunto específico de datos estructurados. Una tabla contiene una colección de filas, también denominadas tuplas o registros, y columnas, también denominadas atributos. Cada columna de la tabla se ha diseñado para almacenar un determinado tipo de información; por ejemplo, fechas, nombres, importes en moneda o números.  
@@ -42,7 +42,7 @@ ms.locfileid: "62917099"
 |-|-|  
 |[Bases de datos del sistema](system-databases.md)|[Eliminar archivos de datos o de registro de una base de datos](delete-data-or-log-files-from-a-database.md)|  
 |[Bases de datos independientes](contained-databases.md)|[Mostrar la información del espacio ocupado por los datos y el registro de una base de datos](display-data-and-log-space-information-for-a-database.md)|  
-|[Archivos de datos de SQL Server en Windows Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentar el tamaño de una base de datos](increase-the-size-of-a-database.md)|  
+|[SQL Server de los archivos de datos en Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentar el tamaño de una base de datos](increase-the-size-of-a-database.md)|  
 |[Archivos y grupos de archivos de base de datos](database-files-and-filegroups.md)|[Cambiar el nombre de una base de datos](rename-a-database.md)|  
 |[Estados de base de datos](database-states.md)|[Establecer una base de datos en modo de usuario único](set-a-database-to-single-user-mode.md)|  
 |[Estados de los archivos](file-states.md)|[Reducir una base de datos](shrink-a-database.md)|  

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2ee3474d5fedd467170c601a7807117c23e37096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 660c48540bb7d7763eb149c0882f5b37f2cc0d1e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935407"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152575"
 ---
 # <a name="data-quality-client-home-screen"></a>Página de inicio del cliente de calidad de datos
 
@@ -60,7 +60,7 @@ ms.locfileid: "67935407"
  Muestra una vista con el estado de todas las actividades (actuales y pasadas) relacionadas con el servidor [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]que está conectado. Los tipos de actividades supervisadas incluyen la administración del conocimiento, un proyecto de calidad de datos y la corrección de datos basada en SSIS.  
   
  **Configuración**  
- Muestre las propiedades de configuración de cuentas de servicio de datos de referencia (a través de Windows Azure Marketplace y directamente para los servicios de datos de referencia), las opciones generales de configuración (limpieza interactiva, coincidencias y generación de perfiles) y los valores de gravedad del registro.  
+ Muestra las propiedades de configuración de las cuentas de servicio de datos de referencia (a través de Azure Marketplace y directamente a los servicios de datos de referencia), la configuración general (limpieza interactiva, coincidencia y generación de perfiles) y la configuración de la gravedad del registro.  
   
 ## <a name="see-also"></a>Vea también  
  [Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   

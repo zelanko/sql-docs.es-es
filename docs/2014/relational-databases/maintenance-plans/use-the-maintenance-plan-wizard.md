@@ -34,12 +34,12 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81e6b5b53f2cf12489ae199051ef837ae75d3875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806407"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153822"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar el Asistente para planes de mantenimiento
   En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor mediante el Asistente para planes de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. El Asistente para planes de mantenimiento crea un plan de mantenimiento que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar periódicamente. Esto permite realizar diversas tareas de administración de bases de datos, incluidas copias de seguridad, comprobaciones de integridad de la base de datos o actualizaciones de las estadísticas de la base de datos a intervalos especificados.  
@@ -67,7 +67,7 @@ ms.locfileid: "62806407"
 ####  <a name="Permissions"></a> Permisos  
  Para crear o administrar planes de mantenimiento, debe ser miembro del rol fijo de servidor **sysadmin** . El Explorador de objetos solo muestra el nodo **Planes de mantenimiento** para los usuarios que son miembros del rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usar el Asistente para planes de mantenimiento  
+##  <a name="SSMSProcedure"></a>Usar el Asistente para planes de mantenimiento  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>Para iniciar el Asistente para planes de mantenimiento  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62806407"
   
         7.  Haga clic en **Aceptar**.  
   
-    6.  Haga clic en **Siguiente**.  
+    6.  Haga clic en **Next**.  
   
 6.  En la página **Seleccionar servidores de destino** , seleccione los servidores en los que desea ejecutar el plan de mantenimiento. Esta página solo está visible en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuradas como servidores maestros.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "62806407"
      La base de datos se comprime en páginas contiguas, pero no se cancela la asignación de las páginas y los archivos de la base de datos no se comprimen. Utilice esta opción si espera que la base de datos se expanda de nuevo y no desea reasignar el espacio. Con esta opción, los archivos de la base de datos no se comprimen lo máximo posible. Utiliza la opción NOTRUNCATE.  
   
      **Devolver espacio liberado al sistema operativo**  
-     La base de datos se comprime en páginas contiguas y las páginas se devuelven al sistema operativo para que otros programas puedan utilizarlas. Estos archivos de base de datos se comprimen lo máximo posible. Utiliza la opción TRUNCATEONLY. Ésta es la opción predeterminada.  
+     La base de datos se comprime en páginas contiguas y las páginas se devuelven al sistema operativo para que otros programas puedan utilizarlas. Estos archivos de base de datos se comprimen lo máximo posible. Utiliza la opción TRUNCATEONLY. Esta es la opción predeterminada.  
   
 #### <a name="define-the-index-tasks"></a>Definir las tareas de índice  
   
@@ -242,7 +242,7 @@ ms.locfileid: "62806407"
      Muestra opciones para aplicar un factor de relleno a índices y tablas.  
   
      **Espacio disponible predeterminado por página**  
-     Reorganiza las páginas con la cantidad predeterminada de espacio disponible. Se quitarán los índices de las tablas de la base de datos y se volverán a crear con el factor de relleno que se especificó al crear los índices. Ésta es la opción predeterminada.  
+     Reorganiza las páginas con la cantidad predeterminada de espacio disponible. Se quitarán los índices de las tablas de la base de datos y se volverán a crear con el factor de relleno que se especificó al crear los índices. Esta es la opción predeterminada.  
   
      Cuadro**Cambiar el espacio disponible por página a**  
      Quita los índices de las tablas de la base de datos y vuelve a crearlos con un nuevo factor de relleno calculado automáticamente, de forma que reserva la cantidad de espacio disponible especificada en las páginas de índice. Cuanto mayor sea el porcentaje, más espacio disponible se reservará en las páginas de índice y mayor tamaño tendrá el índice. Los valores válidos son de 0 a 100. Usa la opción `FILLFACTOR` .  
@@ -254,7 +254,7 @@ ms.locfileid: "62806407"
      Usa la opción `SORT_IN_TEMPDB` que determina dónde se almacenan temporalmente los resultados de ordenación intermedios, generados durante la creación de índices. En caso de que sea necesario realizar una operación de ordenación o de que esta pueda realizarse en la memoria, se omitirá la opción `SORT_IN_TEMPDB` .  
   
      Casilla**Mantener el índice en línea al volver a indizar**  
-     Usa la opción `ONLINE` para permitir a los usuarios obtener acceso a los datos de la tabla subyacente o del índice clúster y a todos los índices no clúster asociados durante las operaciones de índice. Al seleccionar esta opción activa opciones adicionales para volver a generar los índices que no se permiten para las recompilaciones en línea: **No volver a generar índices** y **volver a generar índices sin conexión**.  
+     Usa la opción `ONLINE` para permitir a los usuarios obtener acceso a los datos de la tabla subyacente o del índice clúster y a todos los índices no clúster asociados durante las operaciones de índice. La selección de esta opción activa opciones adicionales para volver a crear índices que no permiten volver a generarlos en línea: **No volver a generar índices** y **Volver a generar índices sin conexión**.  
   
     > [!NOTE]  
     >  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -364,13 +364,13 @@ ms.locfileid: "62806407"
      Especifica la carpeta que va a contener los archivos de base de datos creados de forma automática. Esta opción se deshabilita si seleccionó Dirección URL como destino de la copia de seguridad.  
   
      **Credencial SQL**  
-     Seleccione una credencial SQL utilizada para autenticarse en Almacenamiento de Windows Azure. Si no tiene una credencial existente de SQL que se pueda usar, haga clic en el botón **Crear** para crear una nueva credencial SQL.  
+     Seleccione una credencial SQL usada para autenticarse en Azure Storage. Si no tiene una credencial existente de SQL que se pueda usar, haga clic en el botón **Crear** para crear una nueva credencial SQL.  
   
     > [!IMPORTANT]  
-    >  El cuadro de diálogo que se abre al hacer clic en **Crear** requiere un certificado de administración o el perfil de publicación para la suscripción. Si no tiene acceso al certificado de administración o al perfil de publicación, puede crear una credencial de SQL; para ello, especifique la información del nombre de cuenta de almacenamiento y de clave de acceso mediante Transact-SQL o SQL Server Management Studio. Vea el código de ejemplo en el [para crear una credencial](../security/authentication-access/create-a-credential.md#Credential) tema para crear una credencial mediante Transact-SQL. O bien, con SQL Server Management Studio, desde el motor de base de datos, haga clic con el botón secundario en **Seguridad**, seleccione **Nuevo**y **Credencial**. Especifique el nombre de cuenta de almacenamiento para **Identidad** y la clave de acceso en el campo **Contraseña** .  
+    >  El cuadro de diálogo que se abre al hacer clic en **Crear** requiere un certificado de administración o el perfil de publicación para la suscripción. Si no tiene acceso al certificado de administración o al perfil de publicación, puede crear una credencial de SQL; para ello, especifique la información del nombre de cuenta de almacenamiento y de clave de acceso mediante Transact-SQL o SQL Server Management Studio. Vea el código de ejemplo del tema [para crear una credencial](../security/authentication-access/create-a-credential.md#Credential) para crear una credencial mediante TRANSACT-SQL. O bien, con SQL Server Management Studio, desde el motor de base de datos, haga clic con el botón secundario en **Seguridad**, seleccione **Nuevo**y **Credencial**. Especifique el nombre de cuenta de almacenamiento para **Identidad** y la clave de acceso en el campo **Contraseña** .  
   
      **Contenedor de almacenamiento de Windows Azure**  
-     Especifique el nombre del contenedor de Almacenamiento de Windows Azure  
+     Especificar el nombre del contenedor de almacenamiento de Azure  
   
      **Prefijo URL:**  
      Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que emplee un formato distinto de **\<cuenta de almacenamiento>.blob.core.windows.net**.  

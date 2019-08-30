@@ -1,5 +1,5 @@
 ---
-title: Lección 9. Restaurar una base de datos de almacenamiento de Windows Azure | Microsoft Docs
+title: Lección 9. Restaurar una base de datos desde Azure Storage | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,31 +10,31 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41fbe4cefb6a759befd8b96ded8487ff54b0a1c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1a58b7c233c3b49cf85ba34bedcd74121047564
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090644"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154976"
 ---
-# <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>Lección 9. Restaurar una base de datos desde Azure Storage
-  En esta lección, aprenderá a restaurar un archivo de copia de seguridad de la base de datos de Azure Storage en una base de datos, que reside en local o en una máquina virtual de Microsoft Azure. Para seguir esta lección, no es necesario completar las lecciones 4, 5, 6, 7 y 8.  
+# <a name="lesson-9-restore-a-database-from-azure-storage"></a>Lección 9. Restaurar una base de datos desde Azure Storage
+  En esta lección, aprenderá a restaurar un archivo de copia de seguridad de base de datos de Azure Storage en una base de datos, que reside en local o en una máquina virtual de Azure. Para seguir esta lección, no es necesario completar las lecciones 4, 5, 6, 7 y 8.  
   
  En esta lección se supone que ya completó los pasos siguientes:  
   
 -   Ha creado una base de datos en el equipo de origen.  
   
--   Ha creado una copia de seguridad de la base de datos (.bak) en Windows Azure Storage mediante el uso de la [Copia de seguridad y restauración de SQL Server con el servicio de almacenamiento Blob de Windows Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) característica. Tenga en cuenta que deberá crear una credencial de SQL Server en este paso. Esta credencial utiliza las claves de la cuenta de almacenamiento.  
+-   Ha creado una copia de seguridad de su base de datos (. bak) en Azure Storage mediante el uso de la característica [SQL Server Backup and restore with Azure BLOB Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) . Tenga en cuenta que deberá crear una credencial de SQL Server en este paso. Esta credencial utiliza las claves de la cuenta de almacenamiento.  
   
--   Tiene una cuenta de Almacenamiento de Windows Azure.  
+-   Tiene una cuenta de Azure Storage.  
   
--   Ha creado un contenedor con su cuenta de Almacenamiento de Windows Azure.  
+-   Ha creado un contenedor en su cuenta de Azure Storage.  
   
 -   Ha creado una directiva en un contenedor con derechos de lectura, escritura y enumeración. También generó una clave SAS.  
   
--   Ha creado una credencial de SQL Server en el equipo para la característica de integración de Azure Storage. Observe que esta credencial requiere una clave de la firma de acceso compartido (SAS).  
+-   Ha creado una SQL Server credencial en el equipo para Azure Storage característica de integración. Observe que esta credencial requiere una clave de la firma de acceso compartido (SAS).  
   
- Para restaurar una base de datos desde Azure Storage, puede seguir estos pasos:  
+ Para restaurar una base de datos a partir de Azure Storage, puede seguir estos pasos:  
   
 1.  Inicie SQL Server Management Studio. Conéctese a la instancia predeterminada.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66090644"
   
 3.  Copie y pegue el script completo siguiente en la ventana de consultas. Modifique el script según sea necesario.  
   
-     **Nota:** Ejecutar el `RESTORE` instrucción para restaurar la copia de seguridad de base de datos (.bak) en Windows Azure Storage a una instancia de base de datos en otro equipo.  
+     **Nota:** Ejecute la `RESTORE` instrucción para restaurar la copia de seguridad de base de datos (. bak) de Azure Storage en una instancia de base de datos de otro equipo.  
   
     ```sql  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66090644"
     GO   
     SELECT * from dbo.Table1;   
     GO   
-    -- Create a credential to be used by SQL Server Backup and Restore with Windows Azure -----Blob Storage Service.   
+    -- Create a credential to be used by SQL Server Backup and Restore with Azure -----Blob Storage Service.   
     USE master;   
     GO   
     CREATE CREDENTIAL BackupCredential    
@@ -70,7 +70,7 @@ ms.locfileid: "66090644"
     GO   
     -- Display the newly created credential   
     SELECT * from sys.credentials   
-    -- Create a backup in Windows Azure Storage.   
+    -- Create a backup in Azure Storage.   
     BACKUP DATABASE TestDBRestoreFrom    
     TO URL = 'https://teststorageaccnt.blob.core.windows.net/testrestorefrom/TestDBRestoreFrom.bak'    
           WITH CREDENTIAL = 'BackupCredential'    
@@ -95,6 +95,6 @@ ms.locfileid: "66090644"
   
     ```  
   
- **Final del Tutorial: Archivos de datos de SQL Server en el servicio de almacenamiento de Windows Azure**  
+ **Fin del tutorial: SQL Server archivos de datos en Azure Storage servicio**  
   
   

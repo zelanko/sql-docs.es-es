@@ -5,22 +5,22 @@ description: Artículo de referencia sobre los comandos de azdata bdc debug.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d2cdb04cfc0bf98e2143b8e7b5ae67a7b0db9069
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 9e14528baf80d08841f6e9e17a0476dfa81fd48d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653366"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153199"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-En el siguiente artículo se proporciona una referencia sobre los comandos de **bdc debug** de la herramienta **azdata**. Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md).
+Este artículo es un artículo de referencia para **azdata**. 
 
 ## <a name="commands"></a>Comandos:
 |     |     |
@@ -28,7 +28,7 @@ En el siguiente artículo se proporciona una referencia sobre los comandos de **
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copie registros.
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | Desencadene el volcado de registros.
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
-Copie los registros de depuración del clúster de macrodatos; se necesita kubeconfig en el sistema.
+Copie los registros de depuración del clúster de Big Data: la configuración Kubernetes es necesaria en el sistema.
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
@@ -60,7 +60,7 @@ Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
-Desencadene el volcado de registros y cópielo del contenedor; se necesita kubeconfig en el sistema.
+Desencadenar el volcado de registro y copiarlo desde la configuración de Container-Kubernetes es necesaria en el sistema.
 ```bash
 azdata bdc debug dump --namespace -n 
                       --container -c  
@@ -88,4 +88,6 @@ Aumente el nivel de detalle de registro. Use --debug para obtener registros de d
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre otros comandos de **azdata**, vea [Referencia de azdata](reference-azdata.md). Para obtener más información sobre cómo instalar la herramienta **azdata** , vea [instalar azdata para administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md).
+- Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md). 
+
+- Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).

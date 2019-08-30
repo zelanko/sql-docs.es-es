@@ -1,5 +1,5 @@
 ---
-title: Administrar usuarios, Roles e inicios de sesión | Microsoft Docs
+title: Administración de usuarios, roles e inicios de sesión | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - roles [SMO]
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae6c07026bbbc12fc526eca1b5079bcc9cf36782
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fda8d8345b48853285db8c5d09754ed161420767
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030257"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148411"
 ---
 # <a name="managing-users-roles-and-logins"></a>Administrar usuarios, roles e inicios de sesión
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68030257"
  Las bases de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también tienen roles que especifican un conjunto de privilegios en el nivel de base de datos que permiten a un usuario realizar tareas concretas. A diferencia de los roles del servidor, los roles de la base de datos no son fijos. Se pueden crear, modificar y quitar. Los privilegios y usuarios pueden estar asignados a un rol de la base de datos para la administración masiva.  
   
 ## <a name="example"></a>Ejemplo  
- Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Enumerar inicios de sesión y usuarios asociados en Visual C#  
  Cada usuario de una base de datos está asociado a un inicio de sesión. El inicio de sesión puede asociarse a usuarios de más de una base de datos. El ejemplo de código muestra cómo llamar al método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para hacer una lista de todos los usuarios de la base de datos que están asociados al inicio de sesión. En el ejemplo se crean un inicio de sesión y un usuario en la base de datos [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] para asegurarse de que hay información de asignación que mostrar.  
@@ -91,7 +91,7 @@ CD \sql\localhost\Default\Databases
 ```  
   
 ## <a name="managing-roles-and-users"></a>Administrar roles y usuarios  
- Este ejemplo muestra cómo administrar los roles y los usuarios. Para ejecutar este ejemplo necesita hacer referencia a los ensamblados siguientes:  
+ Este ejemplo muestra cómo administrar los roles y los usuarios. Para ejecutar este ejemplo, deberá hacer referencia a los siguientes ensamblados:  
   
 -   Microsoft.SqlServer.Smo.dll  
   

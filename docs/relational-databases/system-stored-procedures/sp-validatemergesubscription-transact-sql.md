@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1a99c36f8e0e26210b7f9fd7d6c7687be0d0e5e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3341bf25e43f73143fa1dd0e66add9f4b86c22bb
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119357"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155529"
 ---
-# <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
+# <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Realiza una validación de la suscripción especificada. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -40,14 +40,14 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication=** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+ **[\@publicación =** ] **'***publicación***'**  
+ Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. *Subscriber* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripción. *subscriber_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @subscriber_db = ] 'subscriber_db'`Es el nombre de la base de datos de suscripciones. *subscriber_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @level = ] level` Es el tipo de validación que se realizará. *nivel* es **tinyint**, no tiene ningún valor predeterminado. Puede ser uno de estos valores.  
+`[ @level = ] level`Es el tipo de validación que se va a realizar. *LEVEL* es de **tinyint**y no tiene ningún valor predeterminado. Puede ser uno de estos valores.  
   
 |Valor de nivel|Descripción|  
 |-----------------|-----------------|  
@@ -62,7 +62,7 @@ sp_validatemergesubscription [@publication=] 'publication'
  **sp_validatemergesubscription** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_validatemergesubscription**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_validatemergesubscription**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Lección 6: Migrar una base de datos desde un origen de máquina local a un equipo de destino de Windows Azure | Microsoft Docs'
+title: 'Lección 6: Migración de una base de datos de una máquina de origen local a un equipo de destino en Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a5787a3f5aecd746ac9aafd5850e6109ebcd999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59c063b0aca4a373671efc28c9b0d45baced836a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090695"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153731"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lección 6: Migración de una base de datos desde un equipo de origen local a un equipo de destino en Windows Azure
-  En esta lección se supone que ya tiene otro servidor SQL Server, que puede residir en otro equipo local o en una máquina virtual de Windows Azure. Para obtener información sobre cómo crear una máquina virtual de SQL Server en Windows Azure, consulte [aprovisionamiento de una máquina Virtual de SQL Server en Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Después de aprovisionar una máquina virtual de SQL Server en Windows Azure, asegúrese de que puede conectarse a una instancia de SQL Server en esta máquina virtual a través de SQL Server Management Studio en otro equipo.  
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Lección 6: Migración de una base de datos de una máquina de origen local a un equipo de destino en Azure
+  En esta lección se supone que ya tiene otro SQL Server, que puede residir en otro equipo local o en una máquina virtual de Azure. Para obtener información sobre cómo crear una máquina virtual SQL Server en Azure, consulte [aprovisionamiento de una máquina virtual SQL Server en Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Después de aprovisionar una máquina virtual SQL Server en Azure, asegúrese de que puede conectarse a una instancia de SQL Server en esta máquina virtual a través de SQL Server Management Studio en otro equipo.  
   
  En esta lección también se supone que ya completó los pasos siguientes:  
   
--   Tiene una cuenta de Almacenamiento de Windows Azure.  
+-   Tiene una cuenta de Azure Storage.  
   
--   Ha creado un contenedor con su cuenta de Almacenamiento de Windows Azure.  
+-   Ha creado un contenedor en su cuenta de Azure Storage.  
   
 -   Ha creado una directiva en un contenedor con derechos de lectura, escritura y enumeración. También generó una clave SAS.  
   
 -   Ha creado una credencial de SQL Server en el equipo de origen.  
   
--   Ha creado una máquina virtual de SQL Server de destino en Windows Azure. Para crearla, se recomienda que seleccione una imagen de plataforma que incluya SQL Server 2014.  
+-   Ya ha creado una máquina virtual de destino SQL Server en Azure. Para crearla, se recomienda que seleccione una imagen de plataforma que incluya SQL Server 2014.  
   
- Para migrar una base de datos local de SQL Server a otra máquina virtual de Windows Azure, puede seguir estos pasos:  
+ Para migrar una base de datos de SQL Server local a otra máquina virtual de Azure, puede seguir estos pasos:  
   
 1.  En la máquina de origen (que es un equipo local en este tutorial), abra una ventana de consulta en SQL Server Management Studio. Separe la base de datos para moverla a otra máquina ejecutando estas instrucciones:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66090695"
   
              Al final de este paso, la máquina de destino ha importado el certificado de cifrado cuya copia de seguridad se realizó desde la máquina de origen. A continuación, puede adjuntar los archivos de datos en el equipo de destino.  
   
-    2.  A continuación, cree una base de datos con los archivos de registro y de datos que señalan a los archivos existentes en Azure Storage con la opción FOR ATTACH. En la ventana de consulta, ejecute la instrucción siguiente:  
+    2.  A continuación, cree una base de datos con los archivos de datos y de registro que apuntan a los archivos existentes en Azure Storage mediante la opción FOR ATTACH. En la ventana de consulta, ejecute la instrucción siguiente:  
   
         ```sql  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66090695"
   
  Tenga en cuenta que la base de datos cifrada se transfirió a otra instancia de cálculo sin mover los datos.  
   
- Para crear una base de datos con los archivos de registros y datos para los archivos existentes de Azure Storage mediante la interfaz de usuario de SQL Server Management Studio, siga estos pasos:  
+ Para crear una base de datos con archivos de datos y de registro que señalen a los archivos existentes en Azure Storage mediante SQL Server Management Studio interfaz de usuario, siga estos pasos:  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del Motor de base de datos de SQL Server y expándala.  
   
@@ -132,13 +132,13 @@ ms.locfileid: "66090695"
   
 3.  Conéctese a la máquina de destino, que tiene SQL Server 2014 CTP2 o posterior. Para preparar la máquina de destino, debe crear una credencial de SQL Server en ella para señalar al mismo contenedor en el que colocó TestDB1. Si va a volver a adjuntar la base de datos en el mismo equipo, no es necesario crear otra credencial.  
   
-4.  En **Explorador de objetos**, haga clic en **bases de datos** y haga clic en **adjuntar**.  
+4.  En **Explorador de objetos**, haga clic con el botón derecho en **bases** de **datos**y haga clic en asociar.  
   
-5.  En el **adjuntar bases de datos** cuadro de diálogo, para especificar la base de datos que se adjuntará, haga clic en **agregar**. En el **buscar archivos de base de datos** ventana de cuadro de diálogo:  
+5.  En el cuadro de diálogo Adjuntar **bases de datos** , para especificar la base de datos que se va a adjuntar, haga clic en **Agregar**. En la ventana de diálogo **buscar archivos de base de datos** :  
   
-     Ubicación del archivo de datos de base de datos, escriba: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`.  
+     En ubicación del archivo de datos de la `https://teststorageaccnt.blob.core.windows.net/testcontainer/`base de datos, escriba:.  
   
-     Nombre de archivo, escriba: `TestDB1Data.mdf`.  
+     En nombre de archivo, escriba `TestDB1Data.mdf`:.  
   
 6.  Haga clic en **Aceptar**.  
   
@@ -146,6 +146,6 @@ ms.locfileid: "66090695"
   
  **Lección siguiente:**  
   
- [Lección 7: Mover los archivos de datos a almacenamiento de Windows Azure](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [Lección 7: Mueva los archivos de datos a Azure Storage](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

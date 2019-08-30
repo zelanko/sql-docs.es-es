@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con versiones anteriores en SMO | Documentos de Microsoft
+title: Compatibilidad con versiones anteriores en SMO | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a002b4f5d4b678171fc5dd396152d155779f78b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 013dfc93c5e6acfa22d4283cbb0460a1c8f97c23
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126771"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148777"
 ---
 # <a name="backward-compatibility-in-smo"></a>Compatibilidad con versiones anteriores en SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -59,6 +59,6 @@ Imports Microsoft.SqlServer.Management.Common
   
  Si el código usa el objeto Transfer directamente, tendrá que efectuar un vínculo al espacio de nombres Microsoft.SqlServer.Management.SmoExtended.  
   
- Al migrar código, es posible que tenga que modificarlo. Esto ocurre porque varias características de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] se han quedado en desuso en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información acerca de las características en desuso, consulte [en desuso las características de motor de base de datos en SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] libros en pantalla.  
+ Al migrar código, es posible que tenga que modificarlo. Esto ocurre porque varias características de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] se han quedado en desuso en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información acerca de las características en desuso, vea [características desusadas motor de base de datos en SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md) en los libros en pantalla de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
   

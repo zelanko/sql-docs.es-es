@@ -12,12 +12,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae5cc8303fa09eae7a4af6ef9ae6d589f43bcb2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061740"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154029"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Editor de destinos de ADO NET (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destinos de ADO NET** para seleccionar la conexión [!INCLUDE[vstecado](../includes/vstecado-md.md)] del destino. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -36,13 +36,13 @@ ms.locfileid: "66061740"
  **Connection manager**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un administrador de conexiones mediante el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET** .  
   
  **Usar una tabla o una vista**  
  Seleccione una tabla o vista de la lista o cree una tabla haciendo clic en **Nueva**.  
   
- **Nueva**  
+ **Nuevo**  
  Cree un tabla o una vista mediante el cuadro de diálogo **Crear tabla** .  
   
 > [!NOTE]  
@@ -66,7 +66,7 @@ ms.locfileid: "66061740"
 >  Para obtener más información, vea [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) y [IDENTITY &#40;propiedad de Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
 ## <a name="external-resources"></a>Recursos externos  
- Artículo técnico, sobre cómo [cargar datos en Windows Azure SQL Database de la forma más rápida](https://go.microsoft.com/fwlink/?LinkId=244333), en sqlcat.com  
+ Artículo técnico sobre [Cómo cargar datos en Azure SQL Database la manera rápida](https://go.microsoft.com/fwlink/?LinkId=244333), en sqlcat.com  
   
 ## <a name="see-also"></a>Vea también  
  [Editor de destinos de ADO NET &#40;página Asignaciones&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   

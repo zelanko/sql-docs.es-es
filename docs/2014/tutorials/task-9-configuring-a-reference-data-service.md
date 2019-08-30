@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 9: Configurar un servicio de datos de referencia | Microsoft Docs'
+title: 'Tarea 9: Configuración de un servicio de datos de referencia | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,33 +10,33 @@ ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 08ead4185051ad90f53e904b55e541e9bb2edd2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4c756463c43ede8c6dae0cda0a184f0ec7f9956
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489574"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154932"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>Tarea 9: Configuración de un servicio de datos de referencia
-  En esta tarea, configurará DQS para que use un servicio de datos de referencia de Windows Azure Marketplace. En la siguiente tarea, configurará la **validación de direcciones** dominio para usar este servicio. En tiempo de ejecución, durante la actividad de limpieza, DQS pasa los valores de dominios en el **validación de direcciones** dominio al servicio para la limpieza. Consulte [configurar DQS para utilizar datos de referencia](https://msdn.microsoft.com/library/hh213070.aspx) para obtener más detalles.  
+  En esta tarea, se configura DQS para usar un servicio de datos de referencia en Azure Marketplace. En la tarea siguiente, configurará el dominio de **validación de direcciones** para utilizar este servicio. En tiempo de ejecución, durante la actividad de limpieza, DQS pasa los valores de los dominios del dominio de **validación de direcciones** al servicio para su limpieza. Vea [configurar DQS para usar datos de referencia](https://msdn.microsoft.com/library/hh213070.aspx) para obtener más detalles.  
   
-1.  En la página principal de **cliente DQS**, en el **administración** panel, haga clic en **configuración**.  
+1.  En la Página principal del **cliente DQS**, en el panel **Administración** , haga clic en **configuración**.  
   
-2.  Asegúrese de que **datos de referencia** pestaña está activa.  
+2.  Asegúrese de que la pestaña **datos de referencia** está activa.  
   
-3.  En el **configuración de red** área, escriba los valores adecuados en el **servidor Proxy** y **puerto** campos si necesita usar un servidor proxy para conectarse a Internet.  
+3.  En el área **configuración de red** , escriba los valores adecuados en los campos **servidor proxy** y **Puerto** si necesita usar un servidor proxy para conectarse a Internet.  
   
-4.  Tipo de su **clave de cuenta de Windows Azure Marketplace** para el **Id. de cuenta de DataMarket** campo.  
+4.  Escriba la **clave de la cuenta de Azure Marketplace** para el campo ID. de **cuenta de datamarket** .  
   
-     ![Cuenta de servicio de datos de referencia de mercado de datos de Azure](../../2014/tutorials/media/et-configuringareferencedataservice.jpg "cuenta de servicio de datos de referencia de mercado de datos de Azure")  
+     ![Cuenta de servicio de datos de referencia de Azure Data Market](../../2014/tutorials/media/et-configuringareferencedataservice.jpg "Cuenta de servicio de datos de referencia de Azure Data Market")  
   
-5.  Haga clic en **validar** situado junto al cuadro de texto para validar el identificador de cuenta.  
+5.  Haga clic en el botón **validar** junto al cuadro de texto para validar el identificador de la cuenta.  
   
 6.  Haga clic en **Aceptar** en el cuadro de mensaje.  
   
-7.  Haga clic en **cerrar** en la parte inferior de la página para cambiar a la página principal del cliente de DQS.  
+7.  Haga clic en **cerrar** en la parte inferior de la página para cambiar a la Página principal del cliente DQS.  
   
 ## <a name="next-task"></a>Tarea siguiente  
- [Tarea 10: Configurar un dominio compuesto para usar el servicio de datos de referencia](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
+ [Tarea 10: Configuración de un dominio compuesto para usar el servicio de datos de referencia](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
   
   

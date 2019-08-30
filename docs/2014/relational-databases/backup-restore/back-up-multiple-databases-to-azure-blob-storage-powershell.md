@@ -1,5 +1,5 @@
 ---
-title: Usar PowerShell para copia de seguridad de varias bases de datos al servicio de Windows Azure Blob Storage | Microsoft Docs
+title: Usar PowerShell para realizar una copia de seguridad de varias bases de datos en Azure Blob Storage servicio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03a747825c20b1183977b6c5b8e7f46ef2aa034f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1be1f05ff09d85d29903e4e3be7f1f11600a7b1
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922579"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155029"
 ---
-# <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>Usar PowerShell para hacer la copia de seguridad de varias bases de datos en el servicio Azure Blob Storage
-  Este tema proporciona ejemplos de scripts que se pueden utilizar para automatizar las copias de seguridad del servicio de almacenamiento Blob de Windows Azure con los cmdlets de PowerShell.  
+# <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>Usar PowerShell para realizar una copia de seguridad de varias bases de datos en Azure Blob Storage servicio
+  En este tema se proporcionan scripts de ejemplo que se pueden usar para automatizar las copias de seguridad en el servicio de almacenamiento de blobs de Azure mediante cmdlets de PowerShell.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Información general de los cmdlets de PowerShell para las copias de seguridad y restauración  
- `Backup-SqlDatabase` y `Restore-SqlDatabase` son los dos cmdlets principales disponibles para realizar operaciones de copias de seguridad y restauración. Además, hay otros cmdlets que pueden requerir automatizar las copias de seguridad para el almacenamiento Blob de Windows Azure como el conjunto de cmdlets de **SqlCredential** . La siguiente es una lista de los cmdlets de PowerShell disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que se utilizan en las operaciones de copia de seguridad y restauración:  
+ `Backup-SqlDatabase` y `Restore-SqlDatabase` son los dos cmdlets principales disponibles para realizar operaciones de copias de seguridad y restauración. Además, hay otros cmdlets que pueden ser necesarios para automatizar las copias de seguridad en almacenamiento de blobs de Azure como el conjunto de cmdlets de **SqlCredential** que se indican a continuación es [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] una lista de los cmdlets de PowerShell disponibles en que se usan en las operaciones de copia de seguridad y restauración:  
   
  Backup-SqlDatabase  
  Este cmdlet se utiliza para crear una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -30,7 +30,7 @@ ms.locfileid: "62922579"
  Se usa para restaurar una base de datos.  
   
  New-SqlCredential  
- Este cmdlet se utiliza para crear una credencial SQL para la copia de seguridad de SQL Server en el Almacenamiento de Windows Azure. Para obtener más información sobre las credenciales y su uso en las copias de seguridad y restauración de SQL Server, vea [Copia de seguridad y restauración de SQL Server con el servicio de almacenamiento Blob de Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Este cmdlet se usa para crear una credencial de SQL que se usará para la copia de seguridad de SQL Server en Azure Storage. Para obtener más información sobre las credenciales y su uso en SQL Server copias de seguridad y restauración, consulte [SQL Server Backup and restore with Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Get-SqlCredential  
  Este cmdlet se utiliza para recuperar el objeto Credencial y sus propiedades.  
@@ -42,7 +42,7 @@ ms.locfileid: "62922579"
  Este cmdlet se utiliza para cambiar o establecer las propiedades del objeto Credencial SQL.  
   
 > [!TIP]  
->  Los cmdlets de credenciales se utilizan en las copias de seguridad y en la restauración en los escenarios de almacenamiento Blob de Windows Azure.  
+>  Los cmdlets de credenciales se usan en escenarios de copia de seguridad y restauración en Azure BLOB Storage.  
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell para operaciones de copia de seguridad de varias instancias y varias bases de datos  
  Las secciones siguientes contienen scripts para varias operaciones como crear una credencial SQL en varias instancias de SQL Server, hacer la copia de seguridad de todas las bases de datos de usuario en una instancia de SQL Server, etcétera. Puede utilizar estos scripts para automatizar o para programar las operaciones de copia de seguridad según los requisitos de su entorno. Los scripts que aquí se muestran son ejemplos y se pueden modificar o ampliar para su entorno.  
@@ -51,11 +51,11 @@ ms.locfileid: "62922579"
   
 1.  **Navegar por las rutas de acceso de SQL Server PowerShell:** Windows PowerShell implementa cmdlets para navegar por la estructura de ruta de acceso que representa la jerarquía de objetos compatible con un proveedor de PowerShell. Cuando ha navegado a un nodo de la ruta de acceso, puede usar otros cmdlets para realizar operaciones básicas en el objeto actual.  
   
-2.  `Get-ChildItem` cmdlet: La información devuelta por la `Get-ChildItem` depende de la ubicación en una ruta de acceso de PowerShell de SQL Server. Por ejemplo, si la ubicación está en el equipo, este cmdlet devuelve todas las instancias del motor de base de datos de SQL Server instaladas en él. Como otro ejemplo, si la ubicación está en un objeto como son las bases de datos, este cmdlet devuelve una lista de objetos de base de datos.  De forma predeterminada, el cmdlet `Get-ChildItem` no devuelve los objetos del sistema.  Con el parámetro -Force, puede ver los objetos del sistema.  
+2.  `Get-ChildItem`cmdlet La información devuelta por `Get-ChildItem` depende de la ubicación en una ruta de acceso SQL Server PowerShell. Por ejemplo, si la ubicación está en el equipo, este cmdlet devuelve todas las instancias del motor de base de datos de SQL Server instaladas en él. Como otro ejemplo, si la ubicación está en un objeto como son las bases de datos, este cmdlet devuelve una lista de objetos de base de datos.  De forma predeterminada, el cmdlet `Get-ChildItem` no devuelve los objetos del sistema.  Con el parámetro -Force, puede ver los objetos del sistema.  
   
      Para obtener más información, consulte [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).  
   
-3.  Aunque cada ejemplo de código se pueda probar de forma independiente cambiando los valores de las variables, crear una cuenta de Almacenamiento de Windows Azure y una credencial SQL son requisitos previos y es imprescindible para todas las operaciones de copia de seguridad y de restauración en el servicio de almacenamiento Blob de Windows Azure.  
+3.  Aunque cada ejemplo de código se puede probar de forma independiente cambiando los valores de las variables, crear una cuenta de Azure Storage y una credencial SQL son requisitos previos y son necesarios para todas las operaciones de copia de seguridad y restauración en el servicio Azure BLOB Storage.  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Crear una credencial SQL en todas las instancias de SQL Server  
  Hay dos ejemplos de scripts y ambos crean una credencial SQL "mybackupToURL" en todas las instancias de SQL Server de un equipo. El primer ejemplo es sencillo, crea la credencial y no intercepta las excepciones.  Por ejemplo, si hubiera ya una credencial existente con el mismo nombre en una de las instancias del equipo, el script produciría un error. El segundo ejemplo intercepta los errores y permite que el script continúe.  
@@ -265,7 +265,7 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Copia de seguridad y restauración de SQL Server con el servicio Azure Blob Storage](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

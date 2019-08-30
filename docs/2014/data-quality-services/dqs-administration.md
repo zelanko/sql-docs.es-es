@@ -14,12 +14,12 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cc8f84eb268fab041b65e4fc2faced7ee9b0103a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f4ddc16bdfcc7e0d3acdfabe83e81f3d06c0b93
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480623"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154438"
 ---
 # <a name="dqs-administration"></a>dqs, administración
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite administrar diversas actividades de DQS realizadas en [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], configurar las propiedades del servidor relacionadas con las actividades de DQS, configurar los valores de Reference Data Service y configurar los valores del registro de DQS. Todo esto se realizan a través de la característica **Administración** en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. En función del acceso de seguridad (rol) en DQS, se le concede o deniega el acceso a diversas funcionalidades de esta área.  
@@ -32,7 +32,7 @@ ms.locfileid: "65480623"
   
 -   Permite a los administradores de DQS supervisar las actividades de DQS en un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]y *finalizar* una actividad en ejecución o *detener* un proceso en ejecución dentro de una actividad, si así se requiere.  
   
--   Configure los valores Reference Data Service tal como configura la conectividad con Windows Azure Marketplace y administra proveedores directos de servicios de datos de referencia externos.  
+-   Configure los valores del servicio de datos de referencia, como la configuración de la conectividad con Azure Marketplace y la administración directa de proveedores de servicios de datos de referencia de terceros.  
   
 -   Configure los umbrales para la limpieza y las actividades de búsqueda de coincidencias.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65480623"
 ### <a name="configuration"></a>Configuración  
  La pantalla de **Configuración** en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permite al administrador de DQS hacer lo siguiente:  
   
--   **Datos de referencia**: configurar los proveedores de servicios de datos de referencia: Microsoft Azure Marketplace o proveedores de servicios de datos de referencia directos. Una vez haya establecido los proveedores de servicios de datos de referencia, podrá asignar un dominio o un dominio compuesto a los datos de referencia durante la actividad de administración de dominios en una base de conocimiento y, posteriormente, usar la misma base de conocimiento para la actividad de limpieza en un proyecto de calidad de datos. Por otra parte, le permite especificar la configuración del proxy para la conexión a Internet con el fin de usar Windows Azure Marketplace.  
+-   **Datos de referencia**: configurar los proveedores de servicios de datos de referencia: Azure Marketplace o proveedores de servicios de datos de referencia directos. Una vez haya establecido los proveedores de servicios de datos de referencia, podrá asignar un dominio o un dominio compuesto a los datos de referencia durante la actividad de administración de dominios en una base de conocimiento y, posteriormente, usar la misma base de conocimiento para la actividad de limpieza en un proyecto de calidad de datos. También permite especificar la configuración de proxy para conectarse a Internet para usar Azure Marketplace.  
   
 -   **Configuración general**: especifique los valores del umbral para la limpieza de datos y la coincidencia de datos, además de si quiere habilitar las notificaciones para la generación de perfiles en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Estos umbrales los utiliza DQS durante la limpieza asistida por PC y las actividades de búsqueda de coincidencias en un proyecto de calidad de datos.  
   

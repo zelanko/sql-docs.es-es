@@ -1,5 +1,5 @@
 ---
-title: Crear, modificar y quitar tablas | Documentos de Microsoft
+title: Crear, modificar y quitar tablas | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,22 +10,22 @@ ms.topic: reference
 helpviewer_keywords:
 - tables [SMO]
 ms.assetid: ff0bcfff-812f-4999-b0c7-736a97804c2b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 716f3868fc8f9e1619f0c8dec1230cecb35f7d5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac595fca4283a2775304e0f228fdedae3ccf5504
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939042"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148466"
 ---
 # <a name="creating-altering-and-removing-tables"></a>Crear, modificar y quitar tablas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   En los objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), el objeto <xref:Microsoft.SqlServer.Management.Smo.Table> representa las tablas. En la jerarquía de objetos SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Table> se encuentra por debajo del objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, debe elegir el entorno de programación, la plantilla de programación y el lenguaje en los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, debe elegir el entorno de programación, la plantilla de programación y el lenguaje en los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Crear, modificar y quitar una tabla en Visual Basic  
  En este ejemplo de código se crea una tabla que incluye varias columnas con tipos y propósitos diferentes. El código también proporciona ejemplos de cómo crear un campo de identidad, cómo crear una clave principal y cómo modificar las propiedades de la tabla.  

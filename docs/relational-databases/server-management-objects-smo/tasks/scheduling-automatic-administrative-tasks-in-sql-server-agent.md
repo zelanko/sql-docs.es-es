@@ -1,5 +1,5 @@
 ---
-title: Programar tareas administrativas automáticas en el Agente SQL Server | Microsoft Docs
+title: Programar tareas administrativas automáticas en Agente SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Agent [SMO]
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64de081adef73e1480fd0bc4ca6b9bf3aacded7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b388074f569b5797eeac700bdd647477f56faeb2
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030185"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148326"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Programar tareas administrativas automáticas en el Agente SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "68030185"
  Los objetos del Agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se encuentran en el espacio de nombres <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-Para los programas que utilizan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agente, debe incluir el **mediante** instrucción para calificar el espacio de nombres de agente. Inserte la instrucción después de las demás **mediante** instrucciones antes de cualquier declaración en la aplicación, como:
+En el caso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los programas que utilizan el agente, debe incluir la instrucción **using** para certificar el espacio de nombres del agente. Inserte la instrucción después de las otras instrucciones **using** , antes de cualquier declaración de la aplicación, como:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -166,9 +166,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Crear una alerta en Visual C#  
  En este ejemplo de código se crea una alerta que se desencadena mediante una condición de rendimiento. La condición se debe proporcionar en un formato concreto:  
   
- **ObjectName | CounterName | Instancia | ComparisionOp | CompValue**  
+ **ObjectName | Nombre de | Instancia de | ComparisionOp | CompValue**  
   
- Se requiere un operador para la notificación de alerta. El <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requiere los corchetes porque **operador** es un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palabra clave.  
+ Se requiere un operador para la notificación de alerta. El <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requiere los corchetes porque el operador [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] es una palabra clave.  
   
 ```csharp  
 {  
@@ -199,9 +199,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>Crear una alerta en PowerShell  
  En este ejemplo de código se crea una alerta que se desencadena mediante una condición de rendimiento. La condición se debe proporcionar en un formato concreto:  
   
- **ObjectName | CounterName | Instancia | ComparisionOp | CompValue**  
+ **ObjectName | Nombre de | Instancia de | ComparisionOp | CompValue**  
   
- Se requiere un operador para la notificación de alerta. El <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requiere los corchetes porque **operador** es un [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] palabra clave.  
+ Se requiere un operador para la notificación de alerta. El <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> tipo requiere los corchetes porque el operador [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] es una palabra clave.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

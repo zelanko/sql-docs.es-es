@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 05/08/2019
-ms.openlocfilehash: be255547163bb37d1222e1c9b21e123f35d2888e
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.date: 08/27/2019
+ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000287"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123112"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
@@ -32,9 +32,21 @@ Para descargar SQL Server 2017 Reporting Services, vaya al **[Centro de descarga
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-preview-reporting-services"></a>Versión preliminar de SQL Server 2019 Reporting Services
+## <a name="sql-server-2019-reporting-services-preview"></a>Versión preliminar de SQL Server 2019 Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]la vista previa Reporting Services está disponible y se puede descargar desde el **[centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=100122)** .
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Reporting Services vista previa está disponible para su descarga desde el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=100122).
+
+### <a name="azure-sql-managed-instance-support"></a>Compatibilidad con la Instancia administrada de Azure SQL
+
+Ahora puede hospedar un catálogo de base de datos usado para SQL Server Reporting Services (SSRS) en Azure SQL Instancia administrada (MI) hospedado en una máquina virtual o en su centro de datos. La compatibilidad se limita al uso de credenciales de base de datos para la conexión a SQL MI.
+
+### <a name="power-bi-premium-dataset-support"></a>Compatibilidad de Power BI Premium DataSet
+
+Puede conectarse a los conjuntos de valores de Power BI mediante Microsoft Generador de informes o SQL Server Data Tools (SSDT). Después, puede publicar esos informes en SSRS 2019 con la conectividad de SQL Server Analysis Services. Los usuarios deben usar un nombre de usuario y una contraseña de Windows almacenados para habilitar el escenario.
+
+### <a name="alttext-alternative-text-support-for-report-elements"></a>Compatibilidad de AltText (texto alternativo) con los elementos de informe
+
+Al crear informes, puede utilizar la información sobre herramientas para especificar el texto de cada elemento del informe. La tecnología de lector de pantalla identifica correctamente esta información sobre herramientas.
 
 ::: moniker-end
 
@@ -67,7 +79,8 @@ Lea más en el [blog de Reporting Services](https://blogs.msdn.microsoft.com/sql
 * Descargue [Generador de informes de SQL Server](https://go.microsoft.com/fwlink/?LinkId=734968).
 * Descargue [SQL Server Data Tools (versión candidata para lanzamiento)](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
 
-> **Nota**: Solo se puede usar el diseñador de consultas de DAX con orígenes de datos tabulares de SSAS integrados en SQL Server 2016+.
+> [!NOTE]
+> Solo se puede usar el diseñador de consultas de DAX con orígenes de datos tabulares de SSAS integrados en SQL Server 2016+.
 ::: moniker-end
 
 ## <a name="ssrs-2016"></a>SSRS 2016

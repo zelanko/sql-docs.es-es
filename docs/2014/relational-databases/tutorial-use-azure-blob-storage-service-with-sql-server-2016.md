@@ -10,12 +10,12 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 89022104fef0b99412060290361961922b9d6b08
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a15f6735ef0ef79b7eb953445c926f60f6bfb12e
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155305"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176086"
 ---
 # <a name="tutorial-sql-server-data-files-in-azure-storage-service"></a>Tutorial: SQL Server archivos de datos en Azure Storage servicio
   Este es el tutorial SQL Server los archivos de datos en Azure Storage Service. Este tutorial le ayudará a comprender cómo almacenar los archivos de datos de SQL Server en el servicio de almacenamiento de blobs de Azure directamente.  

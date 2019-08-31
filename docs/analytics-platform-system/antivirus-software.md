@@ -1,6 +1,6 @@
 ---
-title: Software antivirus - Analytics Platform System | Microsoft Docs
-description: Si su centro de datos requiere un software antivirus, use estas instrucciones para instalar el software antivirus en Analytics Platform System. Se recomienda no instalar el software antivirus a menos que sea un requisito firme de su centro de datos.
+title: Software antivirus-Analytics Platform System (APS) | Microsoft Docs
+description: Si el centro de datos requiere un software antivirus, siga estas instrucciones para instalar el software antivirus en Analytics Platform System (APS). Se recomienda no instalar el software antivirus a menos que sea un requisito firme de su centro de datos.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,42 +8,42 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1e52841ebe96d8aab84e4d09c91b590e8e4d7e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961600"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176054"
 ---
-# <a name="antivirus-software-for-analytics-platform-system"></a>Software antivirus para Analytics Platform System
-Si su centro de datos requiere un software antivirus, use estas instrucciones para instalar el software antivirus en Analytics Platform System. Se recomienda no instalar el software antivirus a menos que sea un requisito firme de su centro de datos.  
+# <a name="antivirus-software-for-analytics-platform-system-aps"></a>Software antivirus para Analytics Platform System (APS)
+Si el centro de datos requiere un software antivirus, siga estas instrucciones para instalar el software antivirus en Analytics Platform System. Se recomienda no instalar el software antivirus a menos que sea un requisito firme de su centro de datos.  
   
 > [!WARNING]  
-> Se recomienda encarecidamente que evaluar individualmente el riesgo de seguridad para cada equipo y Analytics Platform System, como un todo, y que seleccione las herramientas que son adecuadas para el nivel de riesgo de seguridad de cada equipo. Además, se recomienda que antes de implementar cualquier proyecto de protección contra virus, probar todo el sistema bajo una carga completa para medir los cambios en la estabilidad y rendimiento.  
+> Le recomendamos encarecidamente que evalúe individualmente el riesgo de seguridad para cada equipo y para el sistema de plataforma de análisis en su conjunto y que seleccione las herramientas adecuadas para el nivel de riesgo de seguridad de cada equipo. Además, se recomienda que antes de implementar cualquier proyecto de protección antivirus, pruebe todo el sistema con una carga completa para medir los cambios de estabilidad y rendimiento.  
 >   
-> Software antivirus requiere algunos recursos del sistema para ejecutar. Debe realizar pruebas antes y después de instalar el software antivirus para determinar si hay cualquier impacto en el sistema de plataforma de análisis de rendimiento.  
+> El software de protección antivirus requiere que se ejecuten algunos recursos del sistema. Debe realizar pruebas antes y después de instalar el software antivirus para determinar si hay algún efecto de rendimiento en el sistema Analytics Platform System.  
   
-En este tema se basa en las instrucciones de [cómo elegir software antivirus se ejecuten en equipos que ejecutan SQL Server](https://support.microsoft.com/kb/309422) y [961804 de artículo de KB](https://support.microsoft.com/kb/961804/en-us).  
+Este tema se basa en las instrucciones de [Cómo elegir el software antivirus que se va a ejecutar en los equipos que ejecutan SQL Server](https://support.microsoft.com/kb/309422) y el [artículo de KB 961804](https://support.microsoft.com/kb/961804/en-us).  
   
-## <a name="exclusion-list-for-physical-hosts"></a>Lista de exclusión para Hosts físicos  
-Para instalar el software antivirus en los hosts físicos, excluya la siguiente lista de directorios y procesos. No se explorará el software antivirus.  
+## <a name="exclusion-list-for-physical-hosts"></a>Lista de exclusión para hosts físicos  
+Para instalar el software antivirus en los hosts físicos, excluya la siguiente lista de directorios y procesos. No se deben analizar mediante el software antivirus.  
   
-**Excluir estos directorios:**  
+**Excluya estos directorios:**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - directorio de configuración de máquina Virtual  
+-   C:\ProgramData\Microsoft\Windows\Hyper-V: directorio de configuración de máquina virtual  
   
--   Discos duros C:\Users\Public\Documents\Hyper-V\Virtual - directorio predeterminado de la unidad de disco duro virtual  
+-   C:\Users\Public\Documents\Hyper-V\Virtual discos duros-directorio de unidad de disco duro virtual predeterminado  
   
--   C:\clusterStorage - directorios de la unidad de disco duro Virtual  
+-   C:\clusterStorage: directorios de unidad de disco duro virtual  
   
-**Excluir estos procesos:**  
+**Excluya estos procesos:**  
   
--   Administración de máquinas virtuales (Vmms.exe)  
+-   Administración de máquinas virtuales (vMMS. exe)  
   
--   Procesos de trabajo de máquina virtual (Vmwp.exe)  
+-   Procesos de trabajo de las máquinas virtuales (VMWP. exe)  
   
-## <a name="exclusion-list-for-virtual-machines-vms"></a>Lista de exclusión para máquinas virtuales (VM)  
-Para instalar el software antivirus en las máquinas virtuales, excluya la siguiente lista de directorios y archivos. No se explorará el software antivirus.  
+## <a name="exclusion-list-for-virtual-machines-vms"></a>Lista de exclusión para Virtual Machines (VM)  
+Para instalar el software antivirus en las máquinas virtuales, excluya la siguiente lista de directorios y archivos. No se deben analizar mediante el software antivirus.  
   
 **_PDW_region_-CTL01**  
   
@@ -74,5 +74,5 @@ Para instalar el software antivirus en las máquinas virtuales, excluya la sigui
 -   C:\iscsitarget  
   
 ## <a name="see-also"></a>Vea también  
-[Tareas de administración de dispositivo &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
+[Tareas &#40;de administración de dispositivos análisis de plataforma System&#41;](appliance-management-tasks.md)  
   

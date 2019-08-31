@@ -10,12 +10,12 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e50da40b080b6b6a45fb7a0cccb6c5cedc7841e7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154205"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176127"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Características compatibles con las ediciones de SQL Server 2014
 
@@ -172,7 +172,7 @@ ms.locfileid: "70154205"
 |e[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Sí|Sí|Sí|Sí||||  
 |Paquete de administración de Microsoft System Center Operations Manager|Sí|Sí|Sí|Sí||||  
 |Asistente para la optimización de motor de base de datos (DTA)|Sí|Sí|Sí<sup>3</sup>|Sí<sup>3</sup>||||  
-|Asistente para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementar una base de datos en una máquina virtual de Azure|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
+|Implementar una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos en un asistente para VM de Azure|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Archivos de datos en Azure|Sí|Sí|Sí|Sí|Sí|Sí|Sí|  
   
  <sup>2</sup> [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se pueden crear perfiles de Web,, con herramientas y con Advanced Services mediante las ediciones Standard [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y Enterprise. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  

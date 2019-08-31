@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 579f4c4e236fcc9ee22067522c47a8286b869d51
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: 2c6fd8a9339756c6c22870e4eca6203064dc27f4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000787"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190360"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalar nuevos paquetes de R con sqlmlutils
 
@@ -64,13 +64,13 @@ Si el equipo cliente tiene acceso a Internet, puede descargar e instalar **sqlml
 Si el equipo cliente no tiene una conexión a Internet, debe descargar los paquetes **sqlmlutils** y **RODBCext** de antemano con un equipo que tenga acceso a Internet. Después, puede copiar los archivos en una carpeta en el equipo cliente e instalar los paquetes sin conexión.
 
 El paquete **RODBCext** tiene varios paquetes dependientes y la identificación de todas las dependencias de un paquete resulta complicada. Se recomienda usar [**miniCRAN**](https://andrie.github.io/miniCRAN/) para crear una carpeta de repositorio local para el paquete que incluya todos los paquetes dependientes.
-Para obtener más información, vea [crear un repositorio de paquetes de R local mediante miniCRAN](../r/create-a-local-package-repository-using-minicran.md).
+Para obtener más información, vea [crear un repositorio de paquetes de R local mediante miniCRAN](create-a-local-package-repository-using-minicran.md).
 
 El paquete **sqlmlutils** consta de un solo archivo zip que se puede copiar en el equipo cliente e instalar.
 
 En un equipo con acceso a Internet:
 
-1. Instale **miniCRAN**. Consulte [instalación de miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) para obtener más información.
+1. Instale **miniCRAN**. Consulte [instalación de miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) para obtener más información.
 
 1. En RStudio, ejecute el siguiente script de R para crear un repositorio local del paquete **RODBCext**. En este ejemplo se crea el repositorio en `c:\downloads\rodbcext`la carpeta.
 
@@ -147,7 +147,7 @@ Si el equipo cliente que usa para conectarse a SQL Server tiene acceso a Interne
 ### <a name="add-the-package-offline"></a>Agregar el paquete sin conexión
 
 Si el equipo cliente no tiene una conexión a Internet, puede usar **miniCRAN** para descargar el paquete de **glue** mediante un equipo que tenga acceso a Internet. A continuación, copie el paquete en el equipo cliente en el que puede instalar el paquete sin conexión.
-Consulte [instalación de miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) para obtener información sobre la instalación de **miniCRAN**.
+Consulte [instalación de miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) para obtener información sobre la instalación de **miniCRAN**.
 
 En un equipo con acceso a Internet:
 
@@ -249,6 +249,6 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 ## <a name="next-steps"></a>Pasos siguientes
 
 - Para obtener información sobre los paquetes de R instalados, vea [obtener información de paquetes de r](r-package-information.md) .
-- Para obtener ayuda para trabajar con paquetes de R, consulte [sugerencias para usar paquetes de r](../r/packages-installed-in-user-libraries.md) .
+- Para obtener ayuda para trabajar con paquetes de R, consulte [sugerencias para usar paquetes de r](tips-for-using-r-packages.md) .
 - Para obtener información sobre la instalación de paquetes de Python, consulte [instalación de paquetes de Python con PIP](install-additional-python-packages-on-sql-server.md) .
 - Para obtener más información acerca de SQL Server Machine Learning Services, consulte [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)

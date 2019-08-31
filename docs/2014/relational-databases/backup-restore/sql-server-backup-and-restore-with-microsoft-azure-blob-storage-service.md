@@ -10,12 +10,12 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 26a2bd478c219f78376a1588ca5a772e42b92421
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 82220ab3649cb3af858e5a61e4c3ddfc5116d661
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154691"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175806"
 ---
 # <a name="sql-server-backup-and-restore-with-azure-blob-storage-service"></a>SQL Server copias de seguridad y restauración con Azure Blob Storage servicio
   En este tema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se presentan las copias de seguridad y la restauración desde el [servicio de almacenamiento](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)de blobs de Azure. También se ofrece un resumen de las ventajas de usar Azure BLOB Service para almacenar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copias de seguridad.  

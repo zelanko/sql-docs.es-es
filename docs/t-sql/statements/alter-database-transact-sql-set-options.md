@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495461"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110285"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL)
 
@@ -2912,6 +2912,7 @@ SET
 <option_spec>::=
 {
 <RESULT_SET_CACHING>
+|<snapshot_option>
 }
 ;
 
@@ -2919,6 +2920,12 @@ SET
 {
 RESULT_SET_CACHING {ON | OFF}
 }
+
+<snapshot_option>::=
+{
+READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 ```
 
@@ -2929,7 +2936,7 @@ RESULT_SET_CACHING {ON | OFF}
 Es el nombre de la base de datos que se va a modificar.
 
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-Se aplica a Azure SQL Data Warehouse (versión preliminar)
+**Se aplica a** Azure SQL Data Warehouse (versión preliminar)
 
 Este comando debe ejecutarse mientras se está conectado a la base de datos `master`.  Los cambios realizados a esta configuración de base de datos se aplicarán inmediatamente.  Los costos de almacenamiento se aplican mediante el almacenamiento en caché de conjuntos de resultados de consultas. Después de deshabilitar el almacenamiento en caché de resultados para una base de datos, la caché de resultados que persistía anteriormente se eliminará inmediatamente del almacenamiento de Azure SQL Data Warehouse. Se ha incorporado una nueva columna, is_result_set_caching_on, en `sys.databases` para mostrar la configuración de almacenamiento en caché de resultados de una base de datos.  
 
@@ -2947,6 +2954,21 @@ especifica que los conjuntos de resultados de consultas devueltos de esta base d
 comando|Like|%DWResultCacheDb%|
 | | |
 
+
+<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT { ON | OFF }   
+**Se aplica a** Azure SQL Data Warehouse (versión preliminar)
+
+ON Habilita la opción READ_COMMITTED_SNAPSHOT en el nivel de base de datos.
+
+OFF Desactiva la opción READ_COMMITTED_SNAPSHOT en el nivel de base de datos.
+
+La activación o desactivación de READ_COMMITTED_SNAPSHOT para una base de datos finalizará todas las conexiones abiertas en esta base de datos.  Puede que quiera realizar este cambio durante el período de mantenimiento de la base de datos o esperar hasta que no haya ninguna conexión activa a la base de datos, excepto por la conexión que ejecuta el comando ALTER DATABSE.  La base de datos no tiene que estar en modo de usuario único.  No se admite el cambio del valor READ_COMMITTED_SNAPSHOT en el nivel de sesión.  Para comprobar este valor en una base de datos, consulte la columna is_read_committed_snapshot_on en sys.databases.
+
+En una base de datos con la opción READ_COMMITTED_SNAPSHOT habilitada, las consultas pueden experimentar un rendimiento más lento debido al examen de versiones si hay varias versiones de los datos. Las transacciones abiertas grandes también pueden aumentar el tamaño de la base de datos si hay cambios de datos mediante estas transacciones que bloquean la limpieza de las versiones.  
+
+
+
+
 ## <a name="remarks"></a>Notas
 
 Si se cumplen todos los requisitos siguientes, el conjunto de resultados almacenado en caché se vuelve a usar para una consulta:
@@ -2959,12 +2981,9 @@ Una vez activado el almacenamiento en caché del conjunto de resultados de una b
 
 ## <a name="permissions"></a>Permisos
 
-Se requieren estos permisos:
+Para establecer la opción RESULT_SET_CACHING, un usuario necesita un inicio de sesión principal de nivel de servidor (el que crea el proceso de aprovisionamiento) o ser miembro del rol de la base de datos de `dbmanager`.  
 
-- Inicio de sesión principal en el nivel de servidor (creado por el proceso de aprovisionamiento), o
-- Miembro del rol de base de datos `dbmanager`.
-
-El propietario de la base de datos no puede modificarla a menos que sea miembro del rol dbmanager.
+Para establecer la opción READ_COMMITTED_SNAPSHOT, un usuario necesita el permiso ALTER en la base de datos.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -3027,6 +3046,12 @@ SELECT 0 as is_cache_hit;
 SELECT *  
 FROM sys.dm_pdw_request_steps  
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+### <a name="enable-read_committed_snapshot-option-for-a-database"></a>Habilitación de la opción Read_Committed_Snapshot para una base de datos
+```sql
+ALTER DATABASE MyDatabase  
+SET READ_COMMITTED_SNAPSHOT ON
 ```
 
 ## <a name="see-also"></a>Vea también

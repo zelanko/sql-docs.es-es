@@ -18,19 +18,19 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68231638"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123125"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Actualización de bases de datos mediante el Asistente para la optimización de consultas
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Al migrar desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o posterior, y al [actualizar el nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) al más reciente disponible, una carga de trabajo podría quedar expuesta al riesgo de regresión del rendimiento. Esto también es posible en menor grado al actualizar entre [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y cualquier versión más reciente.
 
-A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], y con cada nueva versión, todos los cambios del optimizador de consultas se canalizan al nivel de compatibilidad de la base de datos más reciente, por lo que los planes de ejecución no se cambian en el momento de la actualización, sino cuando un usuario cambia la opción de base de datos `COMPATIBILITY_LEVEL` a la más reciente disponible. Para obtener más información sobre los cambios del optimizador de consultas incorporados en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vea [Estimación de cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md). Para obtener más información sobre los niveles de compatibilidad y cómo pueden afectar a las actualizaciones, vea [Niveles de compatibilidad y actualizaciones de SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades).
+A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], y con cada nueva versión, todos los cambios del optimizador de consultas se canalizan al nivel de compatibilidad de la base de datos más reciente, por lo que los planes de ejecución no se cambian en el momento de la actualización, sino cuando un usuario cambia la opción de base de datos `COMPATIBILITY_LEVEL` a la más reciente disponible. Para obtener más información sobre los cambios del optimizador de consultas incorporados en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vea [Estimación de cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md). Para obtener más información sobre los niveles de compatibilidad y cómo pueden afectar a las actualizaciones, vea [Actualizaciones del motor de base de datos y niveles de compatibilidad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades).
 
 Esta capacidad de canalización proporcionada por el nivel de compatibilidad de la base de datos, en combinación con el Almacén de consultas, ofrece un gran nivel de control sobre el rendimiento de las consultas durante el proceso de actualización si la actualización sigue el flujo de trabajo recomendado que se indica a continuación. Para obtener más información sobre el flujo de trabajo recomendado para actualizar el nivel de compatibilidad, vea [Cambiar el nivel de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). 
 
@@ -210,7 +210,7 @@ QTA es una característica basada en sesión que almacena el estado de sesión e
 Requiere la pertenencia al rol **db_owner**.
   
 ## <a name="see-also"></a>Consulte también  
- [Niveles de compatibilidad y actualizaciones de SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
+ [Actualizaciones del motor de base de datos y niveles de compatibilidad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)    
  [Herramientas de supervisión y optimización del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [Cambiar el nivel de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       

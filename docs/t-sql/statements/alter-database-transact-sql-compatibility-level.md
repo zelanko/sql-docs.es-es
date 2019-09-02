@@ -1,7 +1,7 @@
 ---
 title: Nivel de compatibilidad de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2019
+ms.date: 08/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 750679a41b3178dd587ddbdee2fb33ee491a41b5
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 047dc16f8eeebe2547aef453a9a86e08be714ff6
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471162"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122983"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)
 
@@ -54,6 +54,8 @@ Es el nombre de la base de datos que se va a modificar.
 COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
 Es la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que se va a hacer compatible la base de datos. Se pueden configurar los siguientes valores de nivel de compatibilidad (no todas las versiones admiten todo el nivel de compatibilidad mencionado anteriormente):
 
+<a name="supported-dbcompats"></a>
+
 |Product|Versión del motor de base de datos|Designación de nivel de compatibilidad predeterminado|Valores de nivel de compatibilidad admitidos|
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
@@ -69,8 +71,7 @@ Es la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con 
 |SQL Server 2000|8|80|80|
 
 ## <a name="remarks"></a>Notas
-
-En todas las instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nivel de compatibilidad predeterminado se establece en la versión del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las bases de datos se establecen en este nivel a menos que la base de datos **modelo** tenga un nivel de compatibilidad inferior. Cuando una base de datos se actualiza desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dicha base de datos mantiene su nivel de compatibilidad si es al menos la versión mínima permitida para esa instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Actualizar una base de datos con un nivel de compatibilidad inferior al nivel permitido hace que la base de datos se establezca automáticamente en el nivel de compatibilidad más bajo permitido. Esto se aplica a las bases de datos del usuario y del sistema.
+En todas las instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nivel de compatibilidad predeterminado se establece en la versión del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las nuevas bases de datos se establecen en este nivel a menos que la base de datos **modelo** tenga un nivel de compatibilidad inferior. En el caso de las bases de datos adjuntadas o restauradas desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dicha base de datos mantiene su nivel de compatibilidad si es al menos la versión mínima permitida para esa instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mover una base de datos con un nivel de compatibilidad inferior al nivel permitido mediante el [!INCLUDE[ssde_md](../../includes/ssde_md.md)] hace que la base de datos se establezca automáticamente en el nivel de compatibilidad más bajo permitido. Esto se aplica a las bases de datos del usuario y del sistema.
 
 Se prevén los siguientes comportamientos para [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] cuando se adjunta o se restaura una base de datos, así como después de una actualización local:
 
@@ -85,10 +86,13 @@ Para ver el nivel de compatibilidad actual de una base de datos, consulte la col
 > [!NOTE]
 > Una [base de datos de distribución](../../relational-databases/replication/distribution-database.md) creada en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que se actualiza a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM o Service Pack 1 tiene el nivel de compatibilidad 90, que no es compatible con otras bases de datos. Esto no afecta a la funcionalidad de la replicación. Si se actualiza a un service pack o a una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nivel de compatibilidad de la base de datos de distribución aumentará para coincidir con el de la base de datos **maestra**.
 
-En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a partir de **enero de 2018**, el nivel de compatibilidad predeterminado es 140 para las bases de datos recién creadas. No actualizamos el nivel de compatibilidad de las bases de datos existentes. Queda a la elección de los clientes. Microsoft recomienda encarecidamente que los clientes planeen la actualización al último nivel de compatibilidad con el fin de aprovechar las últimas mejoras de optimización de consulta.
+> [!NOTE]
+> En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a partir de **enero de 2018**, el nivel de compatibilidad predeterminado es 140 para las bases de datos recién creadas. [!INCLUDE[msCoName](../../includes/msconame-md.md)] no actualiza el nivel de compatibilidad de las bases de datos existentes. Queda a la elección de los clientes.        
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda encarecidamente que los clientes planeen la actualización al último nivel de compatibilidad con el fin de aprovechar las últimas mejoras de optimización de consulta.        
+
 Si quiere aprovechar el nivel de compatibilidad de base de datos 140 para su base de datos global, pero tiene motivos para quedarse con el modelo de [**estimación de cardinalidad**](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], que se asigna al nivel de compatibilidad de base de datos 110, consulte [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) y, en concreto, su palabra clave `LEGACY_CARDINALITY_ESTIMATION = ON`.
 
-Para más información sobre cómo valorar las diferencias de rendimiento de las consultas más importantes entre dos niveles de compatibilidad de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vea la [mejora en el rendimiento de las consultas con el nivel de compatibilidad 130 de Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Tenga en cuenta que en este artículo se hace referencia al nivel de compatibilidad 130 y a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aunque se aplica la misma metodología a los traslados al nivel de compatibilidad 140 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Para más información sobre cómo valorar las diferencias de rendimiento de las consultas más importantes entre dos niveles de compatibilidad diferentes de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vea la [mejora en el rendimiento de las consultas con el nivel de compatibilidad 130 de Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Tenga en cuenta que en este artículo se hace referencia al nivel de compatibilidad 130 y a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aunque se aplica la misma metodología a las actualizaciones al nivel de compatibilidad 140 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Para determinar la versión del [!INCLUDE[ssDE](../../includes/ssde-md.md)] al que está conectado, ejecute la consulta siguiente.
 
@@ -105,57 +109,34 @@ Para averiguar el nivel de compatibilidad actual, consulte la columna **compatib
 SELECT name, compatibility_level FROM sys.databases;
 ```
 
-## <a name="compatibility-levels-and-sql-server-upgrades"></a>Niveles de compatibilidad y actualizaciones de SQL Server
+## <a name="compatibility-levels-and-database-engine-upgrades"></a>Actualizaciones del motor de base de datos y niveles de compatibilidad
+El nivel de compatibilidad de base de datos es una valiosa herramienta que sirve para modernizar las bases de datos, ya que permite actualizar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mientras se conserva el estado funcional de las aplicaciones conectadas manteniendo el mismo nivel de compatibilidad de base de datos previo a la actualización. Esto significa que es posible realizar la actualización desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (como [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (incluida la Instancia administrada) sin cambios en la aplicación (salvo en lo que respecta a la conectividad de la base de datos). Para obtener más información, vea [Certificación de compatibilidad](../../database-engine/install-windows/compatibility-certification.md).
 
-El nivel de compatibilidad de base de datos es una valiosa herramienta que sirve para modernizar las bases de datos, ya que permite actualizar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mientras se conserva el estado funcional de las aplicaciones conectadas manteniendo el mismo nivel de compatibilidad de base de datos previo a la actualización.
-Siempre y cuando la aplicación no necesite aprovechar las mejoras que solo están disponibles en un nivel de compatibilidad de base de datos superior, es un enfoque válido para actualizar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y mantener el nivel de compatibilidad de base de datos anterior. Para más información sobre el uso del nivel de compatibilidad para la compatibilidad con versiones anteriores, vea la sección [Usar el nivel de compatibilidad para la compatibilidad con versiones anteriores](#using-compatibility-level-for-backward-compatibility), que aparece más adelante en este artículo.
+Siempre y cuando la aplicación no necesite aprovechar las mejoras que solo están disponibles en un nivel de compatibilidad de base de datos superior, es un enfoque válido para actualizar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y mantener el nivel de compatibilidad de base de datos anterior. Para obtener más información sobre cómo usar el nivel de compatibilidad para la compatibilidad con versiones anteriores, vea [Certificación de compatibilidad](../../database-engine/install-windows/compatibility-certification.md).
 
-Para los nuevos trabajos de desarrollos, o en el caso de que una aplicación existente requiera el uso de características nuevas, así como las mejoras de rendimiento efectuadas en el espacio del optimizador de consultas, plantéese actualizar el nivel de compatibilidad de base de datos a la versión más reciente disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y certifique la aplicación para que funcione con ese nivel de compatibilidad. Para obtener más información detallada sobre cómo actualizar el nivel de compatibilidad de base de datos, vea [Prácticas recomendadas para actualizar el nivel de compatibilidad de base de datos](#best-practices-for-upgrading-database-compatibility-level), que aparece más adelante en el artículo.
+## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Prácticas recomendadas para actualizar el nivel de compatibilidad de base de datos
+Para ver el flujo de trabajo recomendado para actualizar el nivel de compatibilidad, vea [Cambiar el nivel de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Además, para una experiencia asistida con la actualización del nivel de compatibilidad de base de datos, consulte [Actualización de bases de datos mediante el Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
 
-> [!TIP]
-> Si una aplicación se ha probado y certificado en una determinada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quiere decir que se ha probado y certificado implícitamente en ese nivel de compatibilidad de base de datos nativo de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
->
-> Por lo tanto, el nivel de compatibilidad de base de datos proporciona una ruta de acceso de certificación sencilla para una aplicación existente cuando se usa el nivel de compatibilidad de base de datos correspondiente a la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] probada.
->
-> Para más información sobre las diferencias existentes entre los niveles de compatibilidad, vea las secciones correspondientes de este artículo.
+## <a name="compatibility-levels-and-stored-procedures"></a>Niveles de compatibilidad y procedimientos almacenados
+Cuando se ejecuta un procedimiento almacenado, se utiliza el nivel de compatibilidad actual de la base de datos en la que se define. Cuando se cambia el nivel de compatibilidad de una base de datos, todos sus procedimientos almacenados se vuelven a compilar de forma automática según sea necesario.
 
-Para actualizar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] a la versión más reciente y mantener al mismo tiempo el nivel de compatibilidad de base de datos que existía antes de la actualización y su estado de compatibilidad, se recomienda realizar la validación del área de superficie funcional estática del código de aplicación de la base de datos (objetos de programación, como procedimientos almacenados, funciones, desencadenadores y demás) y de la aplicación (mediante un seguimiento de la carga de trabajo que captura el código dinámico enviado por la aplicación), mediante la herramienta [Microsoft Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) (DMA). La ausencia de errores en la salida de la herramienta DMA, sobre funcionalidades incompatibles o ausentes, protege la aplicación de cualquier regresión funcional en la nueva versión de destino. Para obtener más información sobre la herramienta DMA, vaya [aquí](https://blogs.msdn.microsoft.com/datamigration/dma).
-
-> [!NOTE]
-> DMA admite el nivel de compatibilidad de base de datos 100 y posterior. Queda excluido [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] como versión de origen.   
-
-> [!IMPORTANT]
-> Microsoft recomienda que se lleven a cabo algunas pruebas mínimas para validar el éxito de una actualización, mientras se mantiene el nivel de compatibilidad de base de datos anterior. Debe determinar qué comprenderían estas pruebas mínimas para su aplicación y su escenario.   
-
-> [!NOTE]
-> Microsoft ofrece protección de formas de los planes de consulta cuando:
->
-> - La nueva versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (destino) se ejecuta en un hardware comparable al hardware en el que se ejecutaba la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior (origen).
-> - Se usa el mismo [nivel de compatibilidad de base de datos admitido](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#remarks) tanto en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino como en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de origen.
->
-> Se corregirán todas las regresiones de forma de los planes de consulta (en comparación con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de origen) que se produzcan en las condiciones anteriores. Póngase en contacto con el servicio de atención al cliente de Microsoft si es el caso.
-
-## <a name="using-compatibility-level-for-backward-compatibility"></a>Usar el nivel de compatibilidad para la compatibilidad con versiones anteriores
-
-El valor de configuración de *nivel de compatibilidad de base de datos* afecta solo al comportamiento de la base de datos especificada, y no a todo el servidor. El nivel de compatibilidad de base de datos proporciona compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en lo que se refiere a [!INCLUDE[tsql](../../includes/tsql-md.md)] y los comportamientos de optimización de consulta. 
-
-> [!TIP]
-> Como el *nivel de compatibilidad de la base de datos* es una configuración de nivel de base de datos, una aplicación que se ejecuta en un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] más reciente mientras usa un nivel de compatibilidad de la base de datos anterior, de todos modos se pueden aprovechar las mejoras de nivel de servidor sin ningún requisito de cambio de aplicación.
->
-> Estos incluyen una supervisión enriquecida y mejoras en la solución de problemas, con nuevas [vista de administración dinámica del sistema](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) y [eventos extendidos](../../relational-databases/extended-events/extended-events.md). Y también mejora la escalabilidad, por ejemplo, con [soft-NUMA automático](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+## <a name="using-compatibility-level-for-backward-compatibility"></a>Uso del nivel de compatibilidad para la compatibilidad con versiones anteriores
+La configuración del [nivel de compatibilidad de la base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) proporciona compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en lo que se refiere a [!INCLUDE[tsql](../../includes/tsql-md.md)] y los comportamientos de optimización de consulta solo para la base de datos especificada, no para todo el servidor.  
 
 A partir del modo de compatibilidad 130, todas las características nuevas que afectan a los planes de consulta se han agregado únicamente al nuevo nivel de compatibilidad de forma intencionada. La finalidad de esto ha sido reducir el riesgo durante las actualizaciones que surgen de la degradación del rendimiento debido a los cambios en el plan de consulta potencialmente introducidos por los nuevos comportamientos de optimización de consulta.      
-Desde la perspectiva de las aplicaciones, el objetivo debería seguir siendo actualizar al nivel de compatibilidad más reciente en algún momento para heredar algunas de las nuevas características, como el [procesamiento inteligente de consultas](../../relational-databases/performance/intelligent-query-processing.md), pero hacerlo de un modo controlado. Use el nivel de compatibilidad inferior como ayuda más segura para la migración para solucionar diferencias de comportamiento entre las versiones que se controlan con el valor de nivel de compatibilidad correspondiente.
-Para obtener más información detallada, así como el flujo de trabajo recomendado para actualizar el nivel de compatibilidad de base de datos, vea [Prácticas recomendadas para actualizar el nivel de compatibilidad de base de datos](#best-practices-for-upgrading-database-compatibility-level), que aparece más adelante en el artículo.
+
+Desde la perspectiva de las aplicaciones, use el nivel de compatibilidad inferior como ruta más segura para la migración para solucionar diferencias de comportamiento entre las versiones que se controlan con el valor de nivel de compatibilidad correspondiente. El objetivo debería seguir siendo actualizar al nivel de compatibilidad más reciente en algún momento para heredar algunas de las nuevas características, como el [procesamiento inteligente de consultas](../../relational-databases/performance/intelligent-query-processing.md), pero hacerlo de un modo controlado. 
+
+Para obtener más información detallada, así como el flujo de trabajo recomendado para actualizar el nivel de compatibilidad de base de datos, vea [Prácticas recomendadas para actualizar el nivel de compatibilidad de base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#best-practices-for-upgrading-database-compatibility-level).
 
 > [!IMPORTANT]
-> La funcionalidad descontinuada incluida en una determinada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está protegida por el nivel de compatibilidad. Esto hace referencia a una funcionalidad que se quitó del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
+> La funcionalidad **descontinuada** incluida en una determinada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **no está** protegida por el nivel de compatibilidad. Esto hace referencia a una funcionalidad que se quitó del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > Por ejemplo, la sugerencia `FASTFIRSTROW` está descontinuada en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y se ha reemplazado por la sugerencia `OPTION (FAST n )`. Establecer el nivel de compatibilidad de base de datos en 110 no hará que la sugerencia descontinuada se restaure.  
 >  
 > Para obtener más información sobre las funcionalidades no incluidas, consulte [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Funcionalidad del motor de base de datos no incluida en SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) y [Funcionalidad del motor de base de datos no incluida en SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).    
 
 > [!IMPORTANT]
-> Los cambios importantes incluidos en una determinada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **pueden** no estar protegidos por el nivel de compatibilidad. Esto hace referencia a cambios de comportamiento entre las versiones del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. El comportamiento de [!INCLUDE[tsql](../../includes/tsql-md.md)] suele estar protegido por el nivel de compatibilidad. En cambio, los objetos del sistema eliminados o modificados **no** están protegidos por el nivel de compatibilidad.
+> Los **cambios importantes** incluidos en una determinada versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **pueden no** estar protegidos por el nivel de compatibilidad. Esto hace referencia a cambios de comportamiento entre las versiones del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. El comportamiento de [!INCLUDE[tsql](../../includes/tsql-md.md)] suele estar protegido por el nivel de compatibilidad. En cambio, los objetos del sistema eliminados o modificados **no** están protegidos por el nivel de compatibilidad.
 >
 > Un ejemplo de cambio importante **protegido** por el nivel de compatibilidad es una conversión implícita del tipo de datos datetime a datetime2. En el nivel de compatibilidad de base de datos 130, esto muestra una mayor precisión al reflejar las fracciones de milisegundos, lo que se traduce en diferentes valores convertidos. Para restaurar el comportamiento de conversión anterior, establezca el nivel de compatibilidad de base de datos en 120 o en uno inferior.
 >
@@ -166,16 +147,7 @@ Para obtener más información detallada, así como el flujo de trabajo recomend
 >
 > Para más información sobre los cambios importantes, consulte [Cambios sustanciales en las características del motor de base de datos de SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Cambios substanciales en las características del motor de base de datos de SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Cambios sustanciales en las características del motor de base de datos de SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) y [Cambios sustanciales en las características del motor de base de datos de SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).
 
-## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Prácticas recomendadas para actualizar el nivel de compatibilidad de base de datos
-
-Para ver el flujo de trabajo recomendado para actualizar el nivel de compatibilidad, vea [Cambiar el modo de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md). Además, para una experiencia asistida con la actualización del nivel de compatibilidad de base de datos, consulte [Actualización de bases de datos mediante el Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
-
-## <a name="compatibility-levels-and-stored-procedures"></a>Niveles de compatibilidad y procedimientos almacenados
-
-Cuando se ejecuta un procedimiento almacenado, se utiliza el nivel de compatibilidad actual de la base de datos en la que se define. Cuando se cambia el nivel de compatibilidad de una base de datos, todos sus procedimientos almacenados se vuelven a compilar de forma automática según sea necesario.
-
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>Diferencias entre los niveles de compatibilidad 140 y 150
-
 En esta sección se describen los nuevos comportamientos incluidos en el nivel de compatibilidad 150.
 
 El nivel de compatibilidad 150 de la base de datos está actualmente en versión preliminar pública para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Este nivel de compatibilidad de la base de datos se asociará con la próxima generación de las mejoras de procesamiento de consultas más allá de lo que se introdujo en el nivel de compatibilidad 140 de la base de datos.
@@ -305,7 +277,7 @@ Para obtener más información, vea [Palabras clave reservadas](../../t-sql/lang
 
 ## <a name="permissions"></a>Permisos
 
-Requiere el permiso ALTER en la base de datos.
+Debe tener el permiso `ALTER` para la base de datos.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -410,11 +382,14 @@ SELECT @v = BusinessEntityID FROM
 SELECT @v;
 ```
 
-## <a name="see-also-alter-databaset-sqlstatementsalter-database-transact-sqlmd"></a>Consulte también [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)
-
-- [Palabras clave reservadas](../../t-sql/language-elements/reserved-keywords-transact-sql.md)
-- [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
-- [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
-- [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
-- [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)
-- [Ver o cambiar el nivel de compatibilidad de una base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)
+## <a name="see-also"></a>Consulte también 
+[Certificación de compatibilidad](../../database-engine/install-windows/compatibility-certification.md)       
+[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)       
+[Palabras clave reservadas](../../t-sql/language-elements/reserved-keywords-transact-sql.md)       
+[CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md)       
+[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)       
+[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)       
+[sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)       
+[Ver o cambiar el nivel de compatibilidad de una base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)       
+[Cambiar el nivel de compatibilidad de la base de datos y usar el almacén de consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       
+[Actualización de bases de datos mediante el Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

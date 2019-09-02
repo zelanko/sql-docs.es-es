@@ -5,17 +5,17 @@ description: Aprenda a crear un grupo de disponibilidad AlwaysOn de SQL Server p
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 02/14/2018
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027249"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030304"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configuración de un grupo de disponibilidad AlwaysOn de SQL Server para alta disponibilidad en Linux
 
@@ -49,7 +49,7 @@ Los pasos necesarios para crear un grupo de disponibilidad en servidores Linux d
    * [Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 
    >[!IMPORTANT]
-   >Para la alta disponibilidad, los entornos de producción requieren un agente de barrera, como, por ejemplo, STONITH. En las demostraciones de esta documentación no se usan agentes de barrera. Las demostraciones solo son para pruebas y validación. 
+   >Para la alta disponibilidad, los entornos de producción requieren un agente de barrera, como, por ejemplo, STONITH. En los ejemplos de esta documentación, no se usan agentes de barrera. Los ejemplos solo se proporcionan con fines de prueba y validación. 
    
    >Un clúster de Linux usa barreras para devolver el clúster a un estado conocido. La forma de configurar las barreras depende de la distribución y del entorno. Actualmente, las barreras no están disponibles en algunos entornos de nube. Para más información, vea [Directivas de soporte para clústeres de alta disponibilidad de RHEL: plataformas de virtualización](https://access.redhat.com/articles/29440).
    
@@ -135,7 +135,7 @@ Ejecute **solo uno** de los siguientes scripts:
 - Crear un grupo de disponibilidad con dos réplicas sincrónicas y una réplica de configuración:
 
    >[!IMPORTANT]
-   >Esta arquitectura permite que cualquier edición de SQL Server hospede la tercera réplica. Por ejemplo, la tercera réplica se puede hospedar en SQL Server Enterprise Edition. En Enterprise Edition, el único tipo de punto de conexión válido es `WITNESS`. 
+   >Esta arquitectura permite que cualquier edición de SQL Server hospede la tercera réplica. Por ejemplo, la tercera réplica se puede hospedar en SQL Server Express Edition. En Express Edition, el único tipo de punto de conexión válido es `WITNESS`. 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 
@@ -193,16 +193,16 @@ También puede configurar un grupo de disponibilidad con `CLUSTER_TYPE=EXTERNAL`
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>Unión de réplicas secundarias al grupo de disponibilidad
 
-El usuario de Pacemaker requiere los permisos `ALTER`, `CONTROL` y `VIEW DEFINITION` en el grupo de disponibilidad en todas las réplicas. Para conceder estos permisos, una vez creado el grupo de disponibilidad, ejecute el siguiente script de Transact-SQL en la réplica principal y en cada réplica secundaria inmediatamente después de agregarlas a dicho grupo de disponibilidad. Antes de ejecutar el script, reemplace `<pacemakerLogin>` por el nombre de la cuenta de usuario de Pacemaker.
+El usuario de Pacemaker requiere los permisos `ALTER`, `CONTROL` y `VIEW DEFINITION` en el grupo de disponibilidad en todas las réplicas. Para conceder estos permisos, una vez creado el grupo de disponibilidad, ejecute el siguiente script de Transact-SQL en la réplica principal y en cada réplica secundaria inmediatamente después de agregarlas a dicho grupo de disponibilidad. Antes de ejecutar el script, reemplace `<pacemakerLogin>` por el nombre de la cuenta de usuario de Pacemaker. Si no tiene un inicio de sesión de Pacemaker, [cree un inicio de sesión de SQL Server para Pacemaker](sql-server-linux-availability-group-cluster-ubuntu.md#create-a-sql-server-login-for-pacemaker).
 
-```Transact-SQL
+```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
 El siguiente script de Transact-SQL une una instancia de SQL Server a un grupo de disponibilidad denominado `ag1`. Actualice el script para su entorno. En cada instancia de SQL Server que hospede una réplica secundaria, ejecute el siguiente script de Transact-SQL para unirla al grupo de disponibilidad.
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
          
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
@@ -218,7 +218,7 @@ Si ha seguido los pasos descritos en este documento, tendrá un grupo de disponi
 ## <a name="notes"></a>Notas
 
 >[!IMPORTANT]
->Después de configurar el clúster y agregar el grupo de disponibilidad como un recurso de clúster, no puede usar Transact-SQL para conmutar por error los recursos del grupo de disponibilidad. Los recursos de clúster de SQL Server en Linux no están tan bien integrados con el sistema operativo como lo están en un clúster de conmutación por error de Windows Server (WSFC). El servicio SQL Server no es consciente de la presencia del clúster. Toda la orquestación se realiza a través de las herramientas de administración del clúster. En RHEL o Ubuntu, use `pcs`. En SLES, use `crm`. 
+>Después de configurar el clúster y agregar el grupo de disponibilidad como un recurso de clúster, no puede usar Transact-SQL para conmutar por error los recursos del grupo de disponibilidad. Los recursos de clúster de SQL Server en Linux no están tan bien integrados con el sistema operativo como lo están en un clúster de conmutación por error de Windows Server (WSFC). El servicio SQL Server no es consciente de la presencia del clúster. Toda la orquestación se realiza con las herramientas de administración de clústeres. En RHEL o Ubuntu, use `pcs`. En SLES, use `crm`. 
 
 >[!IMPORTANT]
 >Si el grupo de disponibilidad es un recurso de clúster, existe un problema conocido en la versión actual en el que la conmutación por error forzada con pérdida de datos en una réplica asincrónica no funciona. Esto se corregirá en la próxima versión. La conmutación por error manual o automática en una réplica sincrónica sí se realiza correctamente.
@@ -226,8 +226,8 @@ Si ha seguido los pasos descritos en este documento, tendrá un grupo de disponi
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Configuración de clústeres de Red Hat Enterprise Linux para recursos de clúster de grupo de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-rhel.md)
+[Configuración de clúster RHEL para el grupo de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-rhel.md)
 
-[Configuración de clústeres de SUSE Linux Enterprise Server para recursos de clúster de grupo de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-sles.md)
+[Configuración de clústeres de SLES para grupos de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-sles.md)
 
-[Configuración de clústeres de Ubuntu para recursos de clúster de grupo de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-ubuntu.md)
+[Configurar el clúster de Ubuntu para recursos de clúster del grupo de disponibilidad de SQL Server](sql-server-linux-availability-group-cluster-ubuntu.md)

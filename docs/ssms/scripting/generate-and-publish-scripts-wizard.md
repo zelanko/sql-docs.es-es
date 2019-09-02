@@ -43,12 +43,12 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05d3dab8585dd62716a9846ab591c7d70479e1c3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265486"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122998"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -154,7 +154,7 @@ Para un tutorial más detallado sobre cómo usar el Asistente para generar y pub
   
 -   **Anexar a archivo** : si es **True**, este script se agrega al final de un script existente, especificado en la página **Establecer opciones de scripting** . Si es **False**, el nuevo script sobrescribe un script anterior. El valor predeterminado es **False**.  
   
--   **Continuar scripting en caso de error** : si es **True**, el script se detendrá si se produce un error. Si es **False**, el scripting continúa. El valor predeterminado es **False**.  
+-   **Continuar scripting en caso de error**: si es **false**, el script se detendrá si se produce un error. Si es **true**, el scripting continuará. El valor predeterminado es **False**.  
   
 -   **Convertir UDDT en tipos base** : si es **True**, los tipos de datos definidos por el usuario (UDDT) se convierten en los tipos de datos base subyacentes que se usaron para crearlos. Use **True** cuando el UDDT no exista en la base de datos en la que se ejecutará el script. Si es **False**, se usan los UDDT. El valor predeterminado es **False**.  
   

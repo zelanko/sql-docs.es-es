@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 23597e4937f279694d7e4286e5aec3d714b54afa
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e21761c221ec83770be7c9aa19f8a4ec971617e2
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910467"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030317"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Inicio rápido: Instalación de SQL Server y creación de una base de datos en Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -46,12 +46,15 @@ Para instalar Ubuntu 16.04 en su propio equipo, vaya a [http://releases.ubuntu.
 > [!NOTE]
 > En este momento, no se admite como destino de instalación el [subsistema de Windows para Linux](https://msdn.microsoft.com/commandline/wsl/about) para Windows 10.
 
-Para conocer otros requisitos del sistema, consulte [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
+Para conocer otros requisitos del sistema, vea [Requisitos del sistema para SQL Server en Linux](sql-server-linux-setup.md#system).
+
+> [!NOTE]
+> Ubuntu 18.04 todavía no se admite oficialmente, pero la ejecución de SQL Server es posible con [modificaciones](https://blogs.msdn.microsoft.com/sql_server_team/installing-sql-server-2017-for-linux-on-ubuntu-18-04-lts/).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>Instalación de SQL Server
+## <a id="install"></a>Instalar SQL Server
 
 Para configurar SQL Server en Ubuntu, ejecute los siguientes comandos en un terminal para instalar el paquete **mssql-server**.
 
@@ -68,30 +71,30 @@ Para configurar SQL Server en Ubuntu, ejecute los siguientes comandos en un term
    ```
 
    > [!TIP]
-   > Si quiere probar SQL Server 2019, debe registrar en su lugar el repositorio de **versión preliminar (2019)** . Use el comando siguiente para las instalaciones de SQL Server 2019:
+   > Si quiere probar SQL Server 2019, debe registrar en su lugar el repositorio de **versión preliminar (2019)** . Use el comando siguiente para las instalaciones de SQL Server 2019:
    >
    > ```bash
    > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
    > ```
 
-3. Ejecute los comandos siguientes para instalar SQL Server:
+3. Ejecute los comandos siguientes para instalar SQL Server:
 
    ```bash
    sudo apt-get update
    sudo apt-get install -y mssql-server
    ```
 
-4. Una vez finalizada la instalación del paquete, ejecute **mssql-conf setup** y siga las indicaciones para establecer la contraseña de SA y seleccionar la edición.
+4. Cuando finalice la instalación del paquete, ejecute **mssql-conf setup** y siga las indicaciones para establecer la contraseña de administrador del sistema y elegir la edición.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > Las siguientes ediciones de SQL Server 2017 tienen licencia gratuita: Evaluation, Developer y Express.
+   > Las siguientes ediciones de SQL Server 2017 tienen licencia gratuita: Evaluation, Developer y Express.
 
    > [!NOTE]
-   > Asegúrese de especificar una contraseña segura para la cuenta SA (longitud mínima de 8 caracteres, incluidas mayúsculas y minúsculas, dígitos en base 10 o símbolos no alfanuméricos).
+   > Asegúrese de especificar una contraseña segura para la cuenta del administrador del sistema (longitud mínima de 8 caracteres, incluidas mayúsculas y minúsculas, dígitos en base 10 o símbolos no alfanuméricos).
 
 5. Una vez finalizada la configuración, compruebe que el servicio se está ejecutando:
 
@@ -130,14 +133,14 @@ Para configurar SQL Server en Ubuntu, ejecute los siguientes comandos en un term
    sudo apt-get install -y mssql-server
    ```
 
-4. Una vez finalizada la instalación del paquete, ejecute **mssql-conf setup** y siga las indicaciones para establecer la contraseña de SA y seleccionar la edición.
+4. Cuando finalice la instalación del paquete, ejecute **mssql-conf setup** y siga las indicaciones para establecer la contraseña de administrador del sistema y elegir la edición.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!NOTE]
-   > Asegúrese de especificar una contraseña segura para la cuenta SA (longitud mínima de 8 caracteres, incluidas mayúsculas y minúsculas, dígitos en base 10 o símbolos no alfanuméricos).
+   > Asegúrese de especificar una contraseña segura para la cuenta del administrador del sistema (longitud mínima de 8 caracteres, incluidas mayúsculas y minúsculas, dígitos en base 10 o símbolos no alfanuméricos).
 
 5. Una vez finalizada la configuración, compruebe que el servicio se está ejecutando:
 
@@ -153,7 +156,7 @@ En este momento, SQL Server 2019 (versión preliminar) se está ejecutando en e
 
 ## <a id="tools"></a>Instalación de las herramientas de línea de comandos de SQL Server
 
-Para crear una base de datos, debe conectarse con una herramienta que pueda ejecutar instrucciones Transact-SQL en SQL Server. En los pasos siguientes se instalan las herramientas de línea de comandos de SQL Server [sqlcmd](../tools/sqlcmd-utility.md) y [bcp](../tools/bcp-utility.md).
+Para crear una base de datos, necesita conectarse con una herramienta que pueda ejecutar instrucciones Transact-SQL en SQL Server. En los pasos siguientes se instalan las herramientas de línea de comandos de SQL Server [sqlcmd](../tools/sqlcmd-utility.md) y [bcp](../tools/bcp-utility.md).
 
 Siga estos pasos para instalar **mssql-tools** en Ubuntu. 
 

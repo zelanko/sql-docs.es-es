@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05742e279d65d828fcbd9a7917033fcf8df2825d
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 17fad67ff8eb050b191d22cf2638dd992ba2e6b3
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984580"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190408"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -89,13 +89,13 @@ Proporciona el protocolo de conectividad y la ruta de acceso al origen de datos 
 | Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
 | MongoDB o CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
-| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019+): solo Windows           |
+| ODBC                        | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019+): solo Windows           |
 | Operaciones masivas             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017 y versiones posteriores)                  |
 
 Ruta de acceso de ubicación:
 
 - `<`NameNode`>`: nombre de equipo, nombre de URI de servicio o dirección IP del `Namenode` en el clúster de Hadoop. PolyBase debe resolver los nombres DNS utilizados por el clúster de Hadoop. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port` = el puerto en el cual escucha el origen de datos externo. En Hadoop, el puerto se puede encontrar mediante el parámetro de configuración `fs.default.name`. El valor predeterminado es 8020.
+- `port` = el puerto en el cual escucha el origen de datos externo. En Hadoop, el puerto se puede encontrar mediante el parámetro de configuración `fs.defaultFS`. El valor predeterminado es 8020.
 - `<container>` = el contenedor de la cuenta de almacenamiento que contiene los datos. Los contenedores raíz son de solo lectura, no se pueden volver a escribir datos en el contenedor.
 - `<storage_account>` = el nombre de la cuenta de almacenamiento del recurso de Azure.
 - `<server_name>` = el nombre de host.
@@ -794,6 +794,24 @@ WITH
 [;]
 ```
 
+### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>D. Creación de un origen de datos externo para hacer referencia a conectividad de Polybase para Azure Data Lake Store Gen 2
+
+No es necesario especificar SECRET al conectarse a la cuenta de Azure Data Lake Store Gen2 con el mecanismo de [identidad administrada](/azure/active-directory/managed-identities-azure-resources/overview
+).
+
+```sql
+-- If you do not have a Master Key on your DW you will need to create one
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+
+--Create database scoped credential with **IDENTITY = 'Managed Service Identity'**
+
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
+
+--Create external data source with abfss:// scheme for connecting to your Azure Data Lake Store Gen2 account
+
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
+```
+
 ## <a name="see-also"></a>Consulte también
 
 - [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
@@ -881,7 +899,7 @@ Proporciona el protocolo de conectividad y la ruta de acceso al origen de datos 
 Ruta de acceso de ubicación:
 
 - `<`NameNode`>`: nombre de equipo, nombre de URI de servicio o dirección IP del `Namenode` en el clúster de Hadoop. PolyBase debe resolver los nombres DNS utilizados por el clúster de Hadoop. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port` = el puerto en el cual escucha el origen de datos externo. En Hadoop, el puerto se puede encontrar mediante el parámetro de configuración `fs.default.name`. El valor predeterminado es 8020.
+- `port` = el puerto en el cual escucha el origen de datos externo. En Hadoop, el puerto se puede encontrar mediante el parámetro de configuración `fs.defaultFS`. El valor predeterminado es 8020.
 - `<container>` = el contenedor de la cuenta de almacenamiento que contiene los datos. Los contenedores raíz son de solo lectura, no se pueden volver a escribir datos en el contenedor.
 - `<storage_account>` = el nombre de la cuenta de almacenamiento del recurso de Azure.
 

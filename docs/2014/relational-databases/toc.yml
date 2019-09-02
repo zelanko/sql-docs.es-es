@@ -230,31 +230,31 @@
               href: ../tutorials/schedule-the-policies.md
             - name: Implementar directivas programadas en varias instancias
               href: ../tutorials/deploy-scheduled-policies-to-multiple-instances.md
-    - name: 'Tutorial: Copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage'
+    - name: 'Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage'
       href: tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md
       items:
-        - name: 'Lección 1: Creación de objetos de Windows Azure Storage'
+        - name: 'Lección 1: Crear objetos de Azure Storage'
           href: ../tutorials/lesson-1-create-windows-azure-storage-objects.md
         - name: 'Lección 2: Crear una credencial de SQL Server'
           href: ../tutorials/lesson-2-create-a-sql-server-credential.md
-        - name: 'Lección 3: Escritura de una copia de seguridad completa de la base de datos en el servicio Azure Blob Storage de Windows'
+        - name: 'Lección 3: Escribir una copia de seguridad completa de la base de datos en el servicio Azure Blob Storage'
           href: ../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md
         - name: 'Lección 4: Realización de una restauración desde una copia de seguridad completa de la base de datos'
           href: ../tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md
-    - name: 'Tutorial: Archivos de datos de SQL Server en el servicio Azure Storage'
+    - name: "Tutorial: Archivos de datos de SQL\_Server en el servicio Azure Storage"
       href: tutorial-use-azure-blob-storage-service-with-sql-server-2016.md
       items:
-        - name: 'Lección 1: Creación de la cuenta y el contenedor de Windows Azure Storage'
+        - name: 'Lección 1: Crear la cuenta y el contenedor de Azure Storage'
           href: ../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md
         - name: 'Lección 2: Crear una directiva en el contenedor y generar una clave de firma de acceso compartido (SAS)'
           href: lesson-1-create-stored-access-policy-and-shared-access-signature.md
         - name: 'Lección 3: Crear una credencial de SQL Server'
           href: lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md
-        - name: 'Lección 4: Creación de una base de datos en Windows Azure Storage'
+        - name: 'Lección 4: Crear una base de datos en Azure Storage'
           href: lesson-3-database-backup-to-url.md
         - name: Lección 5. (Opcional) Cifrar la base de datos mediante TDE
           href: lesson-4-restore-database-to-virtual-machine-from-url.md
-        - name: 'Lección 6: Migración de una base de datos desde un equipo de origen local a un equipo de destino en Windows Azure'
+        - name: 'Lección 6: Migrar una base de datos desde un equipo de origen local a un equipo de destino en Azure'
           href: lesson-5-backup-database-using-file-snapshot-backup.md
         - name: 'Lección 7: Mover los archivos de datos a Azure Storage'
           href: lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md

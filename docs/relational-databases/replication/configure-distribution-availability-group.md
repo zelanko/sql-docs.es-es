@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20c6b4a4235e384f9a5c32ee6cef28d0f136f106
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5a2475de5c318a937c1290d9f235f074909a7954
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768690"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030328"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar la base de datos de distribución de replicación en un grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,13 @@ Después de configurar una base de datos de distribución en el AG según los pa
 
 ## <a name="limitations-or-exclusions"></a>Limitaciones o exclusiones
 
-- No se admiten los distribuidores locales. Por ejemplo, el publicador y el distribuidor deben ser instancias de SQL Server diferentes. Los publicadores que se usan a sí mismos como distribuidores (denominados "distribuidores locales") no admiten las bases de datos de distribución en un AG.
+- No se admiten los distribuidores locales. Por ejemplo, el publicador y el distribuidor deben ser instancias de SQL Server diferentes. Estas instancias se pueden hospedar en los mismos conjuntos de nodos.  Los publicadores que se usan a sí mismos como distribuidores (denominados "distribuidores locales") no admiten las bases de datos de distribución en un AG.
 - No se admite el publicador de Oracle.
 - No se admite la replicación de mezcla.
 - No se admite la replicación transaccional con suscriptores de actualización inmediata o en cola.
 - No se admite la replicación punto a punto.
-- Todas las instancias de SQL Server que hospedan réplicas de base de datos de distribución deben ser SQL Server 2017 CU 6 o posterior. 
+- Todas las instancias de SQL Server 2017 que hospedan réplicas de bases de datos de distribución deben pertenecer a SQL Server 2017 CU 6 o una versión posterior. 
+- Todas las instancias de SQL Server 2016 que hospedan réplicas de bases de datos de distribución deben pertenecer a SQL Server 2016 SP2 CU3 o una versión posterior.
 - Todas las instancias de SQL Server que hospedan réplicas de base de datos de distribución deben tener la misma versión, excepto durante el período limitado en el que tiene lugar la actualización.
 - La base de datos de distribución debe estar en modo de recuperación completa.
 - Para efectuar la recuperación y para permitir el truncamiento del registro de transacciones, se deben configurar copias de seguridad de registro completas y de transacciones.

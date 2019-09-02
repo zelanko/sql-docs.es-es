@@ -8,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 05936a9555cacfc88c9219e19bc57772109ed047
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0fcc2172cca192c8c7580450ab50b4416f9ec2d
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957513"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154182"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Historial de controladores para Microsoft SQL Server
 
@@ -57,7 +57,7 @@ Introducida en 2009 como proyecto de código abierto, los controladores de Micro
 
 ### <a name="microsoft-driver-for-nodejs-for-sql-server"></a>Controlador de Microsoft para node. js para SQL Server
 
-El controlador de Microsoft para node. js para SQL Server permite a las aplicaciones de node. js en Microsoft Windows y Microsoft Windows Azure tener acceso a Microsoft SQL Server y Microsoft Windows Azure SQL Database. Los esfuerzos de desarrollo ya no se centran en este controlador. No se recomienda crear nuevas aplicaciones con el controlador de Microsoft para node. js para SQL Server.
+El controlador de Microsoft para node. js para SQL Server permite que las aplicaciones de node. js en Microsoft Windows y Microsoft Azure tengan acceso a Microsoft SQL Server y Microsoft Azure SQL Database. Los esfuerzos de desarrollo ya no se centran en este controlador. No se recomienda crear nuevas aplicaciones con el controlador de Microsoft para node. js para SQL Server.
 
 Para obtener más información sobre el controlador de Microsoft para node. js para SQL Server, consulte [WindowsAzure/node-SQLServer](https://github.com/Azure/node-sqlserver).
 

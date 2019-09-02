@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2018
+ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6563abe72382cb912e3d71851398e5d778b47a19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 47b924754f221b93e8f9e661a1b12afb5f07fcd4
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091752"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026231"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *group_name* | "**default**"  
+ *group_name* | "**default**"       
  Es el nombre de un grupo de cargas de trabajo definido por un usuario ya existente o el grupo de cargas de trabajo predeterminado del regulador de recursos.  
   
 > [!NOTE]  
@@ -59,7 +59,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > Todos los grupos de cargas de trabajo y de recursos predefinidos usan nombres en minúsculas, como "predeterminado". Debe tenerse esto en cuenta en los servidores que usan una intercalación que distingue entre mayúsculas y minúsculas. En los servidores que usan una intercalación que no distingue entre mayúsculas y minúsculas, como SQL_Latin1_General_CP1_CI_AS, los nombres "predeterminado" y "Predeterminado" son equivalentes.  
   
- IMPORTANCE = { LOW | MEDIUM | HIGH }  
+ IMPORTANCE = { LOW | **MEDIUM** | HIGH }       
  Especifica la importancia relativa de una solicitud en el grupo de cargas de trabajo. IMPORTANCE puede ser es uno de los siguientes valores:  
   
 -   LOW  
@@ -71,30 +71,29 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  IMPORTANCE es local para el grupo de recursos de servidor; los grupos de cargas de trabajo de importancia distinta dentro del mismo grupo de recursos de servidor se influyen entre sí, pero no influyen en los grupos de cargas de trabajo de otro grupo de recursos de servidor.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
- Especifica la cantidad máxima de memoria que una única solicitud puede tomar del grupo. Este porcentaje es relativo al tamaño del grupo de recursos de servidor especificado por MAX_MEMORY_PERCENT.  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
+ Especifica la cantidad máxima de memoria que una única solicitud puede tomar del grupo. *valor* es un porcentaje relativo al tamaño del grupo de recursos de servidor especificado por MAX_MEMORY_PERCENT.  
+
+El elemento *value* es un entero hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], y un elemento de float a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. El valor predeterminado es de 25. El intervalo permitido para *value* es de 1 a 100.
   
 > [!NOTE]  
 > La cantidad especificada se refiere únicamente a la memoria concedida para la ejecución de la consulta.  
   
- *valor* debe ser 0 o un entero positivo. El intervalo permitido para *value* es de 0 a 100. El valor predeterminado de *valor* es 25.  
-  
- Observe lo siguiente:  
-  
--   Establecer *valor* en 0 evita la ejecución de consultas con operaciones SORT y HASH JOIN en grupos de cargas de trabajo definidos por el usuario.  
-  
--   No es recomendable establecer *valor* en un valor superior a 70 porque es posible que el servidor no pueda reservar memoria suficiente si se están ejecutando otras consultas simultáneas. Esto puede dar lugar al final a un error de tiempo de espera de consulta 8645.  
+> [!IMPORTANT]
+> Establecer *valor* en 0 evita la ejecución de consultas con operaciones SORT y HASH JOIN en grupos de cargas de trabajo definidos por el usuario.     
+>
+> No se recomienda establecer el elemento *value* en un valor superior a 70 porque es posible que el servidor no pueda reservar memoria suficiente si se están ejecutando otras consultas simultáneas. Esto puede dar lugar al final a un error de tiempo de espera de consulta 8645.      
   
 > [!NOTE]  
->  Si los requisitos de memoria de consulta superan el límite especificado por este parámetro, el servidor hace lo siguiente:  
+> Si los requisitos de memoria de consulta superan el límite especificado por este parámetro, el servidor hace lo siguiente:  
 >   
->  En el caso de los grupos de cargas de trabajo definidos por el usuario, el servidor intenta reducir el grado de paralelismo de consulta hasta que el requisito de memoria cae por debajo del límite, o hasta que el grado de paralelismo sea igual a 1. Si el requisito de memoria de consulta sigue siendo mayor que el límite, se produce el error 8657.  
+> -  En el caso de los grupos de cargas de trabajo definidos por el usuario, el servidor intenta reducir el grado de paralelismo de consulta hasta que el requisito de memoria cae por debajo del límite, o hasta que el grado de paralelismo sea igual a 1. Si el requisito de memoria de consulta sigue siendo mayor que el límite, se produce el error 8657.  
 >   
->  En el caso de los grupos de cargas de trabajo internos y predeterminados, el servidor permite que la consulta obtenga la memoria necesaria.  
+> -  En el caso de los grupos de cargas de trabajo internos y predeterminados, el servidor permite que la consulta obtenga la memoria necesaria.  
 >   
->  Tenga en cuenta que ambos casos están sujetos a un error de tiempo de espera 8645 si el servidor no tiene suficiente memoria física.  
+> Tenga en cuenta que ambos casos están sujetos a un error de tiempo de espera 8645 si el servidor no tiene suficiente memoria física.  
   
- REQUEST_MAX_CPU_TIME_SEC =*value*  
+ REQUEST_MAX_CPU_TIME_SEC = *value*       
  Especifica la cantidad máxima de tiempo de CPU, en segundos, que puede usar una solicitud. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *value* es 0, que indica una cantidad ilimitada.  
   
 > [!NOTE]  
@@ -109,9 +108,9 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!NOTE]  
 > Una consulta no tiene por qué generar un error cuando se agota el tiempo de espera para la concesión de memoria. Solo se producirá un error si se ejecutan demasiadas consultas simultáneamente. De lo contrario, es posible que la consulta obtenga la concesión de memoria mínima, lo que reducirá su rendimiento.  
   
- *value* debe ser un entero positivo. El valor predeterminado de *value*, 0, usa un cálculo interno basado en el costo de la consulta para determinar el tiempo máximo.  
+ *value* debe ser un entero positivo. El valor predeterminado de *valor*, 0, usa un cálculo interno basado en el costo de la consulta para determinar el tiempo máximo.  
   
- MAX_DOP =*value*  
+ MAX_DOP =*value*       
  Especifica el grado máximo de paralelismo (DOP) para las solicitudes paralelas. *value* debe ser 0 o un entero positivo entre 1 y 255. Cuando *value* es 0, el servidor elige el grado máximo de paralelismo. Esta es la configuración predeterminada y recomendada.  
   
 > [!NOTE]  
@@ -132,10 +131,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Una vez configurado DOP, solo se puede reducir ante la concesión de presión de memoria. La reconfiguración del grupo de cargas de trabajo no es visible mientras se espera en la cola de concesión de memoria.  
   
- GROUP_MAX_REQUESTS =*value*  
+ GROUP_MAX_REQUESTS = *value*      
  Especifica el número máximo de solicitudes simultáneas que pueden ejecutarse en el grupo de cargas de trabajo. *valor* debe ser 0 o un entero positivo. El valor predeterminado de *valor*, 0, permite solicitudes ilimitadas. Cuando se alcanza el máximo de solicitudes simultáneas, un usuario de ese grupo puede iniciar sesión, pero se coloca en estado de espera hasta que las solicitudes simultáneas caigan por debajo del valor especificado.  
   
- USING { *pool_name* | "**default**" }  
+ USING { *pool_name* | "**default**" }      
  Asocia el grupo de cargas de trabajo al grupo de recursos definido por el usuario identificado por *pool_name*, lo que coloca el grupo de cargas de trabajo en el grupo de recursos. Si no se proporciona *pool_name* o si no se usa el argumento USING, el grupo de cargas de trabajo se coloca en el grupo predeterminado de Resource Governor que se haya definido previamente.  
   
  La opción "default" debe estar incluida entre comillas ("") o corchetes ([]) si se utiliza con ALTER WORKLOAD GROUP para evitar el conflicto con DEFAULT, que es una palabra reservada del sistema. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
@@ -155,7 +154,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!CAUTION]  
 > El borrado de los planes almacenados en caché de un grupo de recursos asociado a más de un grupo de cargas de trabajo afecta a todos los grupos de cargas de trabajo con el grupo de recursos definido por el usuario identificado por *pool_name*.  
   
- Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados del regulador de recursos. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
+ Si va a ejecutar instrucciones de DDL, se recomienda familiarizarse primero con los estados de Resource Governor. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
  REQUEST_MEMORY_GRANT_PERCENT: En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se permite que la creación de índices use más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos admite este tratamiento especial en versiones posteriores; sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y del grupo de recursos de servidor.  
   
@@ -164,7 +163,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  La memoria usada para la creación de índices en una tabla con particiones no alineada es proporcional al número de particiones involucradas.  Si la memoria total necesaria supera el límite por consulta (REQUEST_MAX_MEMORY_GRANT_PERCENT) impuesto por la configuración del grupo de cargas de trabajo del regulador de recursos, puede que esta creación de índices no se ejecute. Dado que el grupo de cargas de trabajo "predeterminado" permite que una consulta supere el límite por consulta con la memoria mínima necesaria para iniciar la compatibilidad con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], es posible que el usuario pueda ejecutar la misma creación de índices en el grupo de cargas de trabajo "predeterminado" si el grupo de recursos de servidor "predeterminado" tiene configurada una memoria total suficiente para ejecutar dicha consulta.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso CONTROL SERVER.  
+ Requiere el permiso `CONTROL SERVER`.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se cambia la importancia de las solicitudes en el grupo predeterminado de `MEDIUM` a `LOW`.  
@@ -177,7 +176,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
- En el ejemplo siguiente se mueve un grupo de cargas de trabajo desde el grupo de recursos actual al grupo de recursos predeterminado.  
+ En el ejemplo siguiente se muestra cómo mover un grupo de cargas de trabajo del grupo de recursos actual al predeterminado.  
   
 ```sql  
 ALTER WORKLOAD GROUP adHoc  

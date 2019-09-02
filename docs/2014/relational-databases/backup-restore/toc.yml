@@ -1,10 +1,10 @@
 - name: Realizar copias de seguridad y restaurar bases de datos de SQL Server
   href: back-up-and-restore-of-sql-server-databases.md
   items:
-    - name: Copia de seguridad y restauración de SQL Server con el servicio Azure Blob Storage
+    - name: "Copia de seguridad y restauración de SQL\_Server con el servicio Azure Blob Storage"
       href: sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       items:
-        - name: Usar PowerShell para hacer la copia de seguridad de varias bases de datos en el servicio Azure Blob Storage
+        - name: Uso de PowerShell para hacer la copia de seguridad de varias bases de datos en el servicio Azure Blob Storage
           href: back-up-multiple-databases-to-azure-blob-storage-powershell.md
     - name: Copia de seguridad en URL de SQL Server
       href: sql-server-backup-to-url.md
@@ -13,24 +13,24 @@
           href: sql-server-backup-to-url-best-practices-and-troubleshooting.md
     - name: Eliminar archivos de blob de copia de seguridad con concesiones activas
       href: deleting-backup-blob-files-with-active-leases.md
-- name: Copia de seguridad administrada de SQL Server para Windows Azure
+- name: "Copia de seguridad administrada de SQL\_Server en Azure"
   href: sql-server-managed-backup-to-microsoft-azure.md
   items:
-    - name: Configurar Copia de seguridad administrada de SQL Server para Microsoft Azure
+    - name: "Configuración de copia de seguridad administrada de SQL\_Server en Azure"
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: 'Copia de seguridad administrada de SQL Server en Windows Azure: Interoperabilidad y coexistencia'
+    - name: "Copia de seguridad administrada de SQL\_Server en Azure: Interoperabilidad y coexistencia"
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
-    - name: Copia de seguridad administrada de SQL Server para Microsoft Azure - Configuración de la retención y el almacenamiento
+    - name: "Copia de seguridad administrada de SQL\_Server en Azure: configuración de la retención y el almacenamiento"
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
-    - name: Configurar Copia de seguridad administrada de SQL Server para Microsoft Azure para grupos de disponibilidad
+    - name: "Configuración de copia de seguridad administrada de SQL\_Server para Azure para grupos de disponibilidad"
       href: ../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md
-    - name: Supervisar la Copia de seguridad administrada de SQL Server para Microsoft Azure
+    - name: "Supervisión de copia de seguridad administrada de SQL\_Server en Azure"
       href: ../../database-engine/monitor-sql-server-managed-backup-to-windows-azure.md
-    - name: Solucionar problemas de la Copia de seguridad administrada de SQL Server para Microsoft Azure
+    - name: "Solución de problemas de la copia de seguridad administrada de SQL\_Server en Azure"
       href: ../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md
     - name: Configurar la copia de seguridad administrada (SQL Server Management Studio)
       href: ../../database-engine/configure-managed-backup-sql-server-management-studio.md
-    - name: La restauración de las copias de seguridad archivadas en Microsoft Azure
+    - name: Restauración de las copias de seguridad almacenadas en Azure
       href: restoring-from-backups-stored-in-microsoft-azure.md
 - name: modelos de recuperación
   href: recovery-models-sql-server.md
@@ -160,7 +160,7 @@
       href: dbengine-continue-with-restore.md
     - name: Seleccionar dispositivo de copia de seguridad
       href: select-backup-device.md
-    - name: Conectarse a Azure Storage (Restaurar)
+    - name: Conectar a Azure Storage (restauración)
       href: connect-to-microsoft-azure-storage-restore.md
     - name: Restaurar una base de datos a una nueva ubicación
       href: restore-a-database-to-a-new-location-sql-server.md

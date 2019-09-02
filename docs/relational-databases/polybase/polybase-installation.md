@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 770b7d3d9a16adf64134ba6896c7c3a1f46dcc9b
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 6229d1df654aba2c83e10ee7b692464ed8e46897
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561120"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175552"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
 
@@ -28,8 +28,6 @@ Para instalar una versión de evaluación de SQL Server, vaya a [SQL Server Eval
 - Edición SQL Server Evaluation (64 bits).  
    
 - Microsoft .NET Framework 4.5.  
-
-- Oracle Java SE Runtime Environment (JRE). Se admiten las versiones 7 (a partir de la 7.51) y 8. Tanto [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) como [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) funcionan. Vaya a la página de [descargas de Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html). Si JRE no está presente, se produce un error del instalador. No se admiten JRE9 ni JRE10.
 
 - Memoria mínima: 4 GB. 
    

@@ -23,12 +23,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66d10ee997949d8415ebe3ed582f63b1994840cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086759"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148837"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +43,9 @@ Define una fecha que se combina con una hora del día con reconocimiento de zona
 |Uso|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Formatos de literal de cadena predeterminados (utilizados para el cliente de nivel inferior)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> Para más información, vea la sección "Compatibilidad con versiones anteriores de clientes de niveles inferiores" más adelante.|  
 |Intervalo de fechas|De 0001-01-01 a 31.12.99<br /><br /> Del 1 de enero del año 1 E. C. al 31 de diciembre de 9999 E. C.|  
-|Intervalo de horas|De 00:00:00 a 23:59:59,9999999 (no se admiten fracciones de segundo en Informatica)|  
-|Intervalo de ajuste de zona horaria|De -14:00 a + 14:00 (se omite el desplazamiento de zona horaria en Informatica)|  
-|Intervalos de elementos|AAAA es una cifra de cuatro dígitos comprendida entre 0001 y 9999 que representa un año.<br /><br /> MM es una cifra de dos dígitos, comprendida entre 01 y 12, que representa un mes del año especificado.<br /><br /> DD es una cifra de dos dígitos, comprendida entre 01 y 31 dependiendo del mes, que representa un día del mes especificado.<br /><br /> hh es una cifra de dos dígitos comprendida entre 00 y 23 que representa la hora.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59 que representa los minutos.<br /><br /> s es una cifra de dos dígitos comprendida entre 00 y 59 que representa los segundos.<br /><br /> n* es una cifra de cero a siete dígitos comprendida entre 0 y 9999999 que representa las fracciones de segundos. No se admiten fracciones de segundo en Informatica.<br /><br /> hh es una cifra de dos dígitos comprendida entre -14 y 14. Se omite el desplazamiento de zona horaria en Informatica.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59. Se omite el desplazamiento de zona horaria en Informatica.|  
+|Intervalo de horas|De 00:00:00 a 23:59:59.9999999|  
+|Intervalo de ajuste de zona horaria|De -14:00 a +14:00|  
+|Intervalos de elementos|AAAA es una cifra de cuatro dígitos comprendida entre 0001 y 9999 que representa un año.<br /><br /> MM es una cifra de dos dígitos, comprendida entre 01 y 12, que representa un mes del año especificado.<br /><br /> DD es una cifra de dos dígitos, comprendida entre 01 y 31 dependiendo del mes, que representa un día del mes especificado.<br /><br /> hh es una cifra de dos dígitos comprendida entre 00 y 23 que representa la hora.<br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59 que representa los minutos.<br /><br /> s es una cifra de dos dígitos comprendida entre 00 y 59 que representa los segundos.<br /><br /> n* es una cifra de cero a siete dígitos comprendida entre 0 y 9999999 que representa las fracciones de segundos.<br /><br /> hh es una cifra de dos dígitos comprendida entre -14 y 14. <br /><br /> mm es una cifra de dos dígitos comprendida entre 00 y 59.|  
 |Longitud en caracteres|De 26 posiciones como mínimo (AAAA-MM-DD hh:mm:ss {+&#124;-}hh:mm) a 34 como máximo (AAAA-MM-DD hh:mm:ss.nnnnnnn {+&#124;-}hh:mm)|  
 |Precisión, escala|Vea la tabla siguiente.|  
 |Tamaño de almacenamiento|10 bytes, fijo es el valor predeterminado con el valor predeterminado de 100 ns de precisión de fracciones de segundo.|  

@@ -1,7 +1,7 @@
 ---
 title: Administración extensible de claves (EKM) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: aliceku
 ms.author: aliceku
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16daf2968b80b5ca93ba117e850999a89411fb59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1526a23955a5e39f3f70ebe9a457560514e164fb
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049884"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148792"
 ---
 # <a name="extensible-key-management-ekm"></a>Administración extensible de claves (EKM)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona las funciones del cifrado de datos junto con la *Administración extensible de claves* (EKM), las cuales usan la *API criptográfica de Microsoft* (MSCAPI) para el cifrado y generación de clave. Las claves de cifrado utilizadas para cifrar datos y claves se crean en contenedores transitorios de claves y se deben exportar desde un proveedor antes de que se almacenen en la base de datos. Este enfoque permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]llevar a cabo la administración de claves, que incluye una jerarquía de claves de cifrado y la copia de seguridad de las claves.  
   
  Con la creciente demanda para cumplir con las leyes y con las políticas de privacidad de datos, las organizaciones están aprovechándose del cifrado como una forma de obtener una solución de "defensa en profundidad". Este enfoque es a menudo poco práctico si solo se utilizan las herramientas de administración del cifrado de base de datos. Los fabricantes de hardware proporcionan productos específicamente diseñados para la administración de claves de la empresa usando *Módulos de seguridad por hardware* (HSM). Los dispositivos HSM almacenan las claves de cifrado en módulos de hardware o de software. Ésta es una solución más segura porque las claves de cifrado no residen junto a los datos de cifrado.  

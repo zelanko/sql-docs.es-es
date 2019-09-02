@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 52d3a6f14042a5208803c84557d6b3b7e4e4f37e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986232"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190376"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -219,7 +219,8 @@ Una operación de publicación de SqlPackage.exe actualiza incrementalmente el e
 |**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|Al final de la publicación, se comprobarán todas las restricciones como un conjunto, evitando los errores de datos causados por una restricción check o Foreign Key en medio de la publicación. Si esta opción es False, las restricciones se publican sin comprobar los datos correspondientes.|
 |**/p:**|ScriptRefreshModule = (BOOLEANO ' true ')|Incluye instrucciones de actualización al final del script de publicación.|
 |**/p:**|Storage=({File&#124;Memory})|Especifica la forma en que se almacenan los elementos cuando se genera el modelo de base de datos. Por motivos de rendimiento, el valor predeterminado es InMemory. Cuando se trata de bases de datos grandes, se requiere almacenamiento respaldado por archivos.|
-|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|Especifica si los errores detectados durante la comprobación de la publicación se deben tratar como advertencias. La comprobación se realiza con el plan de implementación generado antes de que el plan se ejecute con la base de datos de destino. El plan de comprobación detecta problemas, como la pérdida de objetos solo en el destino (como los índices) que deben quitarse para hacer un cambio. La comprobación también detecta situaciones en las que existen dependencias (como una tabla o vista) debido a una referencia a un proyecto compuesto, pero no existen en la base de datos de destino. Puede optar por hacer esto para obtener una lista completa de todos los problemas, en lugar de que la acción de publicación se detenga en el primer error.|**/p:**|UnmodifiableObjectWarnings = (BOOLEANO ' true ')|Especifica si generar advertencias cuando se encuentren diferencias en los objetos que no se puedan modificar, por ejemplo, si el tamaño de archivo o las rutas de acceso a los archivos son diferentes para un archivo.|
+|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|Especifica si los errores detectados durante la comprobación de la publicación se deben tratar como advertencias. La comprobación se realiza con el plan de implementación generado antes de que el plan se ejecute con la base de datos de destino. El plan de comprobación detecta problemas, como la pérdida de objetos solo en el destino (como los índices) que deben quitarse para hacer un cambio. La comprobación también detecta situaciones en las que existen dependencias (como una tabla o vista) debido a una referencia a un proyecto compuesto, pero no existen en la base de datos de destino. Puede optar por hacer esto para obtener una lista completa de todos los problemas, en lugar de que la acción de publicación se detenga en el primer error.
+|**/p:**|UnmodifiableObjectWarnings = (BOOLEANO ' true ')|Especifica si generar advertencias cuando se encuentren diferencias en los objetos que no se puedan modificar, por ejemplo, si el tamaño de archivo o las rutas de acceso a los archivos son diferentes para un archivo.|
 |**/p:**|VerifyCollationCompatibility = (BOOLEANO ' true ')|Especifica si se comprobó la compatibilidad de intercalación.|
 |**/p:**|VerifyDeployment = (BOOLEANO ' true ')|Especifica si realizar comprobaciones antes de la publicación que detengan la acción de publicación si hay problemas que pudieran impedir que la publicación se realizara correctamente. Por ejemplo, la acción de publicación podría detenerse si tiene claves externas en la base de datos de destino que no existan en el proyecto de base de datos, y eso provoca errores al publicar.|
 |

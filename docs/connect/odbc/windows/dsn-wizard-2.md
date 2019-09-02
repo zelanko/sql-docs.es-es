@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-ms.openlocfilehash: c997dd30b6d1e9844843ff4fa626c46b42fed463
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4ab8be02351a23c78251a99ca707e946ee8944c8
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936571"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152566"
 ---
 # <a name="data-source-wizard-screen-2"></a>Pantalla del Asistente para orígenes de datos 2
 
@@ -43,7 +43,7 @@ Especifica que el controlador se autentique en SQL Server mediante un identifica
 
 ### <a name="with-active-directory-interactive-authentication"></a>Con autenticación interactiva de Active Directory
 
-Especifica que el controlador se autentique en SQL Server mediante Azure Active Directory modo interactivo proporcionando el identificador de inicio de sesión. Esto desencadenará el cuadro de diálogo de solicitud de autenticación de Windows Azure.
+Especifica que el controlador se autentique en SQL Server mediante Azure Active Directory modo interactivo proporcionando el identificador de inicio de sesión. Esto desencadenará el cuadro de diálogo de solicitud de autenticación de Azure.
 
 ### <a name="login-id"></a>Id. de inicio de sesión
 

@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2bbb7465b3d012d5aa786a0e8c614a9d4689074
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 69d548d6d6682a1bdd999bf2b9a4fdba4cefd669
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329330"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212444"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitectura de integración CLR: entorno hospedado CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   La integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con .NET Framework Common Language Runtime (CLR) permite a los programadores de base de datos usar lenguajes como Visual C#, Visual Basic .NET y Visual C++. Las funciones, procedimientos almacenados, desencadenadores, tipos de datos y agregados pertenecen a los tipos de lógica de negocios que los programadores pueden escribir con estos lenguajes.  
   
   CLR incluye la memoria de recopilación de elementos no utilizados, el subprocesamiento preventivo, los servicios de metadatos (reflexión de tipos), la capacidad de comprobación de código y la seguridad de acceso del código. CLR usa metadatos para localizar y cargar clases, colocar instancias en memoria, resolver invocaciones a métodos, generar código nativo, exigir mecanismos de seguridad y establecer los límites del contexto en tiempo de ejecución.  
@@ -159,7 +159,7 @@ Thread.EndThreadAffinity();
 |Seguridad de acceso del código|Solo ejecución|Ejecución + acceso a recursos externos|No restringida|  
 |Restricciones del modelo de programación|Sí|Sí|Sin restricciones|  
 |Requisito de capacidad de comprobación|Sí|Sí|Sin|  
-|Capacidad de llamar a código nativo|No|Sin|Sí|  
+|Capacidad de llamar a código nativo|Sin|No|Sí|  
   
  SAFE es el modo más confiable y seguro, con restricciones asociadas relativas al modelo de programación permitido. Los ensamblados SAFE tienen permisos suficientes para la ejecución, realización de cálculos y obtención de acceso a la base de datos local. Los ensamblados SAFE deben tener capacidad para comprobar la seguridad de los tipos y no pueden llamar a código no administrado.  
   

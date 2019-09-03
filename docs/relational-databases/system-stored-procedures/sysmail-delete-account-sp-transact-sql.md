@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 365fc36d7933a8db31e2e7c608417e3621600c9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b6adc5f6c02eae49a5f5e2598c6b02e5b00534e
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017715"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211263"
 ---
-# <a name="sysmaildeleteaccountsp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Elimina una cuenta SMTP del Correo electrónico de base de datos. Para eliminar una cuenta, puede utilizar también el Asistente para configuración del Correo electrónico de base de datos.  
   
@@ -39,9 +39,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @account_id = ] account_id` El número de Id. de la cuenta que desea eliminar. *account_id* es **int**, no tiene ningún valor predeterminado. Cualquier *account_id* o *account_name* debe especificarse.  
+`[ @account_id = ] account_id`Número de ID. de la cuenta que se va a eliminar. *ACCOUNT_ID* es de **tipo int**y no tiene ningún valor predeterminado. Se debe especificar *ACCOUNT_ID* o *account_name* .  
   
-`[ @account_name = ] 'account_name'` El nombre de la cuenta que desea eliminar. *account_name* es **sysname**, no tiene ningún valor predeterminado. Cualquier *account_id* o *account_name* debe especificarse.  
+`[ @account_name = ] 'account_name'`Nombre de la cuenta que se va a eliminar. *account_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Se debe especificar *ACCOUNT_ID* o *account_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -52,10 +52,10 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ## <a name="remarks"></a>Comentarios  
  Este procedimiento elimina la cuenta especificada, independientemente de si está siendo utilizada por un perfil. Un perfil que no contiene cuentas no puede enviar correo electrónico correctamente.  
   
- El procedimiento almacenado **sysmail_delete_account_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. El procedimiento debe ejecutarse con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_delete_account_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
 ## <a name="permissions"></a>Permisos  
- Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+ Los permisos de ejecución para este procedimiento tienen como valor predeterminado los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se muestra cómo eliminar la cuenta de Correo electrónico de base de datos denominada `AdventureWorks Administrator`.  
@@ -67,8 +67,8 @@ EXECUTE msdb.dbo.sysmail_delete_account_sp
   
 ## <a name="see-also"></a>Vea también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Crear una cuenta de correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Objetos de configuración de correo electrónico de base de datos](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Creación de una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Correo electrónico de base de datos objetos de configuración](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [sysmail_add_account_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md)   
  [sysmail_delete_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profile-sp-transact-sql.md)   
  [sysmail_delete_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-profileaccount-sp-transact-sql.md)   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9e60c376e0bced63241674b82d05700281a06ad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0f9d73dace4e17d87e1c93da703786fc920b2fb
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008488"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176171"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Uso de Azure Active Directory con el controlador ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -33,7 +33,7 @@ La `Authentication` palabra clave se puede usar al conectarse con un DSN o una c
 
 |Nombre|Valores|Valor predeterminado|Descripción|
 |-|-|-|-|
-|`Authentication`|(sin establecer), (cadena vacía), `SqlPassword` `ActiveDirectoryPassword`,, `ActiveDirectoryIntegrated` `ActiveDirectoryInteractive`,,`ActiveDirectoryMsi` |(sin establecer)|Controla el modo de autenticación.<table><tr><th>Valor<th>Descripción<tr><td>(sin establecer)<td>Modo de autenticación determinado por otras palabras clave (opciones de conexión heredadas existentes).<tr><td>(cadena vacía)<td>Nombre de la cadena de conexión Invalide y `Authentication` anule la definición de un valor establecido en el DSN.<tr><td>`SqlPassword`<td>Autentique directamente en una instancia de SQL Server mediante un nombre de usuario y una contraseña.<tr><td>`ActiveDirectoryPassword`<td>Autenticarse con una identidad de Azure Active Directory mediante un nombre de usuario y una contraseña.<tr><td>`ActiveDirectoryIntegrated`<td>_Solo Windows Driver_. Autenticarse con una identidad de Azure Active Directory mediante la autenticación integrada.<tr><td>`ActiveDirectoryInteractive`<td>_Solo Windows Driver_. Autenticarse con una identidad de Azure Active Directory mediante la autenticación interactiva.<tr><td>`ActiveDirectoryMsi`<td>Autentique con Azure Active Directory identidad mediante la autenticación de identidad de servicio administrada. Para la identidad asignada por el usuario, el UID se establece en el identificador de objeto de la identidad del usuario.</table>|
+|`Authentication`|(sin establecer), (cadena vacía), `SqlPassword` `ActiveDirectoryPassword`,, `ActiveDirectoryIntegrated` `ActiveDirectoryInteractive`,,`ActiveDirectoryMsi` |(sin establecer)|Controla el modo de autenticación.<table><tr><th>Valor<th>Descripción<tr><td>(sin establecer)<td>Modo de autenticación determinado por otras palabras clave (opciones de conexión heredadas existentes).<tr><td>(cadena vacía)<td>Ayuda con las cadenas de conexión Invalide y `Authentication` anule la definición de un valor establecido en el DSN.<tr><td>`SqlPassword`<td>Autentique directamente en una instancia de SQL Server mediante un nombre de usuario y una contraseña.<tr><td>`ActiveDirectoryPassword`<td>Autenticarse con una identidad de Azure Active Directory mediante un nombre de usuario y una contraseña.<tr><td>`ActiveDirectoryIntegrated`<td>_Solo Windows Driver_. Autenticarse con una identidad de Azure Active Directory mediante la autenticación integrada.<tr><td>`ActiveDirectoryInteractive`<td>_Solo Windows Driver_. Autenticarse con una identidad de Azure Active Directory mediante la autenticación interactiva.<tr><td>`ActiveDirectoryMsi`<td>Autentique con Azure Active Directory identidad mediante la autenticación de identidad de servicio administrada. Para la identidad asignada por el usuario, el UID se establece en el identificador de objeto de la identidad del usuario.</table>|
 |`Encrypt`|(sin establecer), `Yes`, `No`|(consulte la descripción)|Controla el cifrado de una conexión. Si el valor de atributo anterior de la `Authentication` configuración no es _ninguno_ en el DSN o la cadena de conexión, el `Yes`valor predeterminado es. De lo contrario, el valor predeterminado es `No`. Si el atributo `SQL_COPT_SS_AUTHENTICATION` invalida el valor de atributo anterior de `Authentication`, establezca explícitamente el valor de Encryption en el DSN o la cadena de conexión o el atributo de conexión. El valor de atributo anterior del cifrado `Yes` es si el valor se `Yes` establece en en el DSN o en la cadena de conexión.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Atributos de conexión nuevos o modificados
@@ -99,7 +99,7 @@ Estas opciones se corresponden con los cinco mismos disponibles en la interfaz d
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
 6. (_Solo Windows Driver_). Autenticación integrada de Windows mediante ADAL, que implica el canje de credenciales de cuenta de Windows para un token de acceso emitido por AAD, suponiendo que la base de datos de destino está en Azure SQL Database. Se valida el certificado de servidor, independientemente de la configuración de cifrado (a `true`menos que `TrustServerCertificate` se establezca en). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-7. (_Solo Windows Driver_). La autenticación interactiva de AAD usa tecnología de Azure multi-factor Authentication para configurar la conexión. En este modo, al proporcionar el identificador de inicio de sesión, se desencadena un cuadro de diálogo de autenticación de Windows Azure que permite al usuario escribir la contraseña para completar la conexión. El nombre de usuario se pasa en la cadena de conexión.
+7. (_Solo Windows Driver_). La autenticación interactiva de AAD usa tecnología de Azure multi-factor Authentication para configurar la conexión. En este modo, al proporcionar el identificador de inicio de sesión, se desencadena un cuadro de diálogo de autenticación de Azure que permite al usuario escribir la contraseña para completar la conexión. El nombre de usuario se pasa en la cadena de conexión.
 `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
@@ -163,7 +163,7 @@ En el ejemplo siguiente se muestra el código necesario para conectarse a SQL Se
     ...
     free(pAccToken);
 ~~~
-A continuación se muestra una cadena de conexión de ejemplo para su uso con la autenticación interactiva de Azure Active Directory. Tenga en cuenta que no contiene el campo PWD, ya que la contraseña se escribiría con la pantalla de autenticación de Windows Azure.
+A continuación se muestra una cadena de conexión de ejemplo para su uso con la autenticación interactiva de Azure Active Directory. Tenga en cuenta que no contiene el campo PWD, ya que la contraseña se escribiría con la pantalla de autenticación de Azure.
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~

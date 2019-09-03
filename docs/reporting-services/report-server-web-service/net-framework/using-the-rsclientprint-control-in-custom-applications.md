@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b0da6d086754b63a2d796c4f7ff8e1b7fd2d2cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5304a540e3f1af6930e982ceaff01063a7c0f432
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63249809"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155732"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usar el control RSClientPrint en aplicaciones personalizadas
   El control ActiveX de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **RSPrintClient** proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. Proporciona un cuadro de diálogo **Imprimir** para que un usuario pueda iniciar un trabajo de impresión, obtener una vista previa de un informe, especificar las páginas que se van a imprimir y cambiar los márgenes. Durante una operación de impresión del lado cliente, el servidor de informes representa el informe en la extensión de representación en imágenes (EMF) y utiliza las capacidades de impresión del sistema operativo para crear el trabajo de impresión y enviarlo a una impresora.  
@@ -91,7 +91,7 @@ ms.locfileid: "63249809"
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- Cuando ejecute el informe en Windows Azure SQL Reporting, use los siguientes valores de CLSID.  
+ Cuando ejecute el informe en Azure SQL Reporting, use los siguientes valores de CLSID.  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   

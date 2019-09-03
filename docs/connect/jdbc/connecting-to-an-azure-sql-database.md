@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 73c7713a013f03879b63ec2a073cc24fd9bdabe1
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028163"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155111"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectarse a una base de datos de SQL Azure
 
@@ -52,7 +52,7 @@ Para evitar que un componente de red elimine las conexiones inactivada, se debe 
   
 Reinicie el equipo para que surta efecto la configuración del Registro.  
 
-Para llevar a cabo esta tarea cuando se ejecuta en Windows Azure, cree una tarea de inicio para agregar las claves del Registro.  Por ejemplo, agregue la siguiente tarea de inicio al archivo de definición de servicios:  
+Para llevar a cabo esta tarea cuando se ejecuta en Azure, cree una tarea de inicio para agregar las claves del Registro.  Por ejemplo, agregue la siguiente tarea de inicio al archivo de definición de servicios:  
 
 ```xml
 <Startup>  

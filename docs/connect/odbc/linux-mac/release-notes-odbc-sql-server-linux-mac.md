@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 5d2587a6150807841edc9773478f1b798ee60d84
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: a22cf1c2da261805309c8ac223a8535afbcd34d1
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742810"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152736"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Notas de la versión de Microsoft ODBC Driver para SQL Server en Linux y macOS
 
@@ -35,7 +35,7 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
-## <a name="174-august-2019"></a>17,4, 2019 de agosto
+## <a name="174-august-2019"></a>17.4, agosto de 2019
 
 | Característica agregada | Detalles |
 | :------------ | :------ |
@@ -133,6 +133,6 @@ El controlador ODBC en SUSE Linux (Preview) es compatible con SUSE Linux Enterpr
 
 El controlador ODBC en Linux es compatible con [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para obtener más información, vea [Compatibilidad del controlador ODBC con alta disponibilidad y recuperación ante desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-El controlador ODBC en Linux es compatible con conexiones a Base de datos SQL de Microsoft Azure. Para obtener más información, consulte [How to: Connect to Windows Azure SQL Database Using ODBC](https://msdn.microsoft.com/library/hh974312.aspx)(Cómo conectarse a Base de datos SQL de Windows Azure con ODBC).  
+El controlador ODBC en Linux es compatible con conexiones a Base de datos SQL de Microsoft Azure. Para más información, consulte [Conexión a Azure SQL Database con ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 La opción `-l` (tiempo de expiración del inicio de sesión) se ha agregad para `bcp`. Para obtener más información, vea [Conexión con **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

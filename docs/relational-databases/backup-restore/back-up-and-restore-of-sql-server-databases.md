@@ -22,22 +22,22 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1b37e555c4118ca3199e132d20a6689c80b40bab
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: c948c6e26655b8a450aee22f1ca6a6a178e0db76
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893468"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176324"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Realizar copias de seguridad y restaurar bases de datos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este artículo se describen las ventajas de realizar copias de seguridad de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los términos de copias de seguridad y restauración básicos, y se presentan las estrategias de copias de seguridad y restauración para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como consideraciones de seguridad para las copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
-> **¿Busca instrucciones detalladas?** En este tema **no se entrega ningún paso específico sobre cómo crear una copia de seguridad**. Si desea obtener información sobre cómo crear una copia de seguridad, desplace esta página hacia abajo hasta la sección de vínculos, los que están organizados por tareas de copia de seguridad y si desea usar SSMS o T-SQL.  
+> En este artículo se presentan las copias de seguridad de SQL Server. Para conocer los pasos específicos para realizar copias de seguridad de bases de datos de SQL Server, consulte [Crear copias de seguridad](#creating-backups).
   
  El componente de copia de seguridad y restauración de SQL Server ofrece una protección esencial para los datos críticos almacenados en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para minimizar el riesgo de pérdida de datos catastrófica, debe realizar copias de seguridad de las bases de datos para conservar las modificaciones en los datos de forma periódica. Una estrategia de copias de seguridad y restauración correctamente planeada contribuye a la protección de las bases de datos de la pérdida de datos derivada de daños causados por diferentes errores. Pruebe la estrategia mediante la restauración de las copias de seguridad y la posterior recuperación de la base de datos para estar preparado y poder responder de forma eficaz ante un desastre.
   
- Además del almacenamiento local para almacenar las copias de seguridad, SQL Server también admite la copia de seguridad y la restauración en el Servicio de Azure Blob Storage. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para archivos de base de datos almacenados mediante el servicio de almacenamiento de blobs de Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] proporciona la opción de usar instantáneas de Azure para copias de seguridad casi instantáneas y restauraciones más rápidas. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+ Además del almacenamiento local para almacenar las copias de seguridad, SQL Server también admite la copia de seguridad y la restauración en el servicio Azure Blob Storage. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para archivos de base de datos almacenados mediante el servicio de almacenamiento de blobs de Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] proporciona la opción de usar instantáneas de Azure para copias de seguridad casi instantáneas y restauraciones más rápidas. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
 ##  <a name="why-back-up"></a>Por qué realizar copias de seguridad  
 -   La copia de seguridad de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la ejecución de procedimientos de restauración de prueba de las copias de seguridad y el almacenamiento de las copias en una ubicación segura y fuera del sitio contribuyen a protegerse ante una pérdida de datos catastrófica. **Las copias de seguridad son la única forma de proteger los datos.**
@@ -47,7 +47,7 @@ ms.locfileid: "68893468"
     -   Errores de medios.    
     -   Errores de usuario, por ejemplo, quitar una tabla por error.    
     -   Errores de hardware, por ejemplo, una unidad de disco dañada o la pérdida permanente de un servidor.    
-    -   Desastres naturales. El uso de la copia de seguridad de SQL Server en el servicio de almacenamiento Blob de Windows Azure le permite crear una copia de seguridad externa en una región diferente de la ubicación local, con lo que podrá utilizarla en caso de que un desastre natural afecte a su ubicación.  
+    -   Desastres naturales. El uso de la copia de seguridad de SQL Server en el servicio Azure Blob Storage le permite crear una copia de seguridad externa en una región diferente de la ubicación local, con lo que podrá utilizarla en caso de que un desastre natural afecte a su ubicación.  
   
 -   Además, las copias de seguridad de una base de datos son útiles para fines administrativos habituales, como copiar una base de datos de un servidor a otro, configurar [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] o la creación de reflejo de la base de datos y el archivo.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68893468"
  Copia de los datos que se puede usar para restaurar y recuperar los datos después de un error. Las copias de seguridad de una base de datos también se pueden usar para restaurar una copia de la base de datos en una nueva ubicación.  
   
 dispositivo de**copia de seguridad**  
- Disco o dispositivo de cinta en el que se escriben las copias de seguridad de SQL Server del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio de Almacenamiento de blobs de Microsoft Azure y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Disco o dispositivo de cinta en el que se escriben las copias de seguridad de SQL Server del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage, y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 **medio de copia de seguridad**  
  Una o varias cintas o archivos de disco en los que se han escrito una o varias copias de seguridad.  

@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 367815ef719b9a44462afc41f62e69d3c1f6fb26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4fafacc6dc11415ed691fdf64b494daebc8cc64
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134802"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176347"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar una aplicación de capa de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ En Azure SQL DB deberá conceder **en cada base de datos** los permisos VIEW DEF
   
 -   **Guardar en disco local** : crea un archivo BACPAC en un directorio del equipo local. Haga clic en **Examinar...** para navegar por el equipo local, o bien especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
   
--   **Guardar en Windows Azure** : crea un archivo BACPAC en un contenedor de Windows Azure. Debe conectarse a un contenedor de Windows Azure para validar esta opción. Observe que esta opción también requiere que se especifique un directorio local para el archivo temporal. Tenga en cuenta que el archivo temporal se creará en la ubicación especificada y permanecerá en ella una vez completada la operación.  
+-   **Guardar en Azure**: crea un archivo BACPAC en un contenedor de Azure. Debe conectarse a un contenedor de Azure para validar esta opción. Observe que esta opción también requiere que se especifique un directorio local para el archivo temporal. Tenga en cuenta que el archivo temporal se creará en la ubicación especificada y permanecerá en ella una vez completada la operación.  
   
  Para especificar un subconjunto de tablas para exportar, utilice la opción **Avanzadas** .  
   

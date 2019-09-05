@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81df6387bf6744e436922c5b031d01fb86bc50dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081443"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176264"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "68081443"
 ## <a name="backup-media-terms-and-definitions"></a>Términos y definiciones de medios de copia de seguridad  
   
  **[dispositivo de copia de seguridad](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
- Disco o dispositivo de cinta en el que se escriben las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio de Almacenamiento de blobs de Microsoft Azure y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Disco o dispositivo de cinta en el que se escriben las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage, y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **[medio de copia de seguridad](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)**  
  Una o varias cintas o archivos de disco en los que se han escrito una o varias copias de seguridad.  
@@ -149,7 +149,7 @@ ms.locfileid: "68081443"
   
 -   [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Crear una copia de seguridad**  
   
@@ -172,7 +172,7 @@ ms.locfileid: "68081443"
   
 -   [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="and-more"></a>Y más. 
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   

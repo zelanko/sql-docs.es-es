@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d5fa3b8a91147789dfafad6a69ac6210dfd8119
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a8ee23c8eb8a51328ccc9808207f04823e9b980
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940884"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176307"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Realizar copias de seguridad de varias bases de datos en Azure Blob Storage - PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Este tema proporciona ejemplos de scripts que se pueden utilizar para automatizar las copias de seguridad del servicio de almacenamiento Blob de Windows Azure con los cmdlets de PowerShell.  
+  Este tema proporciona ejemplos de scripts que se pueden utilizar para automatizar las copias de seguridad del servicio Azure Blob Storage con los cmdlets de PowerShell.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Información general de los cmdlets de PowerShell para las copias de seguridad y restauración  
- El **Backup-SqlDatabase** y **Restore-SqlDatabase** son dos cmdlets principales disponibles para realizar operaciones de copia de seguridad y restauración. Además, hay otros cmdlets que pueden requerir automatizar las copias de seguridad para el almacenamiento Blob de Windows Azure como el conjunto de cmdlets de **SqlCredential** . La siguiente es una lista de los cmdlets de PowerShell disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que se utilizan en las operaciones de copia de seguridad y restauración:  
+ El **Backup-SqlDatabase** y **Restore-SqlDatabase** son dos cmdlets principales disponibles para realizar operaciones de copia de seguridad y restauración. Además, hay otros cmdlets que pueden requerir automatizar las copias de seguridad para Azure Blob Storage, como el conjunto de cmdlets de **SqlCredential**. La siguiente es una lista de los cmdlets de PowerShell disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que se utilizan en las operaciones de copia de seguridad y restauración:  
   
  Backup-SqlDatabase  
  Este cmdlet se utiliza para crear una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "67940884"
  Se usa para restaurar una base de datos.  
   
  New-SqlCredential  
- Este cmdlet se utiliza para crear una credencial SQL para la copia de seguridad de SQL Server en el Almacenamiento de Windows Azure. Para obtener más información sobre las credenciales y su uso en las copias de seguridad y restauración de SQL Server, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Este cmdlet se utiliza para crear una credencial SQL para la copia de seguridad de SQL Server en Azure Storage. Para obtener más información sobre las credenciales y su uso en las copias de seguridad y restauración de SQL Server, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  Get-SqlCredential  
  Este cmdlet se utiliza para recuperar el objeto Credencial y sus propiedades.  
@@ -44,7 +44,7 @@ ms.locfileid: "67940884"
  Este cmdlet se utiliza para cambiar o establecer las propiedades del objeto Credencial SQL.  
   
 > [!TIP]  
->  Los cmdlets de credenciales se utilizan en las copias de seguridad y en la restauración en los escenarios de almacenamiento Blob de Windows Azure.  
+>  Los cmdlets de credenciales se utilizan en las copias de seguridad y en la restauración en los escenarios de Azure Blob Storage.  
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell para operaciones de copia de seguridad de varias instancias y varias bases de datos  
  Las secciones siguientes contienen scripts para varias operaciones como crear una credencial SQL en varias instancias de SQL Server, hacer la copia de seguridad de todas las bases de datos de usuario en una instancia de SQL Server, etcétera. Puede utilizar estos scripts para automatizar o para programar las operaciones de copia de seguridad según los requisitos de su entorno. Los scripts que aquí se muestran son ejemplos y se pueden modificar o ampliar para su entorno.  
@@ -59,7 +59,7 @@ ms.locfileid: "67940884"
   
      Para obtener más información, consulte [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).  
   
-3.  Aunque cada ejemplo de código se pueda probar de forma independiente cambiando los valores de las variables, crear una cuenta de Almacenamiento de Windows Azure y una credencial SQL son requisitos previos y es imprescindible para todas las operaciones de copia de seguridad y de restauración en el servicio de almacenamiento Blob de Windows Azure.  
+3.  Aunque cada ejemplo de código se pueda probar de forma independiente cambiando los valores de las variables, la creación de una cuenta de Azure Storage y una credencial SQL son requisitos previos imprescindibles para todas las operaciones de copia de seguridad y de restauración en el servicio Azure Blob Storage.  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>Crear una credencial SQL en todas las instancias de SQL Server  
  Hay dos ejemplos de scripts y ambos crean una credencial SQL "mybackupToURL" en todas las instancias de SQL Server de un equipo. El primer ejemplo es sencillo, crea la credencial y no intercepta las excepciones.  Por ejemplo, si hubiera ya una credencial existente con el mismo nombre en una de las instancias del equipo, el script produciría un error. El segundo ejemplo intercepta los errores y permite que el script continúe.  

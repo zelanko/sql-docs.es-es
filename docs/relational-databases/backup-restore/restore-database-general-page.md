@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 160cf58c-b06a-475f-9a69-2b051e5767ab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4ba9c414aa28455b15ef46fb9d334f40ee4a6b6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 050fb8ed2364066dfe0a6a41e41ec295590d7895
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944794"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155517"
 ---
 # <a name="restore-database-general-page"></a>Restaurar la base de datos (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67944794"
 |Término|Definición|  
 |----------|----------------|  
 |**Base de datos**|Seleccione la base de datos que desea restaurar en la lista desplegable. La lista solo contiene las bases de datos de las que se han realizado copias de seguridad de acuerdo con el historial de copias de seguridad de **msdb** .|  
-|**Dispositivo**|Seleccione los dispositivos de copia de seguridad lógicos o físicos (cintas, direcciones URL o archivos) que contienen las copias de seguridad que desee restaurar. Es obligatorio si la copia de seguridad de la base de datos se realizó de otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para seleccionar uno o varios dispositivos de copia de seguridad lógicos o físicos, haga clic en el botón Examinar, que abre el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En dicho cuadro, puede seleccionar hasta 64 dispositivos pertenecientes a un conjunto de medios. Los dispositivos de cinta deben estar conectados físicamente al equipo donde se ejecuta una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un archivo de copia de seguridad puede estar en un dispositivo de disco local o extraíble. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md). También puede seleccionar **Dirección URL** como el tipo de dispositivo de copia de seguridad almacenado en Almacenamiento de Windows Azure.<br /><br /> Al salir del cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** , el dispositivo seleccionado aparecerá en forma de valores de solo lectura en la lista **Dispositivo** .|  
+|**Dispositivo**|Seleccione los dispositivos de copia de seguridad lógicos o físicos (cintas, direcciones URL o archivos) que contienen las copias de seguridad que desee restaurar. Es obligatorio si la copia de seguridad de la base de datos se realizó de otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para seleccionar uno o varios dispositivos de copia de seguridad lógicos o físicos, haga clic en el botón Examinar, que abre el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En dicho cuadro, puede seleccionar hasta 64 dispositivos pertenecientes a un conjunto de medios. Los dispositivos de cinta deben estar conectados físicamente al equipo donde se ejecuta una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un archivo de copia de seguridad puede estar en un dispositivo de disco local o extraíble. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md). También puede seleccionar **Dirección URL** como el tipo de dispositivo de copia de seguridad almacenado en Azure Storage.<br /><br /> Al salir del cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** , el dispositivo seleccionado aparecerá en forma de valores de solo lectura en la lista **Dispositivo** .|  
 |**Base de datos**|Seleccione el nombre de la base de datos cuyas copias de seguridad se deben restaurar en el cuadro de lista desplegable.<br /><br /> Nota: Esta lista solo está disponible cuando se selecciona la opción **Dispositivo** . Solo estarán disponibles las bases de datos que tienen copias de seguridad en los dispositivos seleccionados.|  
   
 ### <a name="destination"></a>Destino  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: dbfcc5df16b1801154f9be9af46c7bad07925f3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ce8040b37ec08c82b11c9ff572c13125064523b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093477"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155776"
 ---
 # <a name="sql-server-http-storage"></a>SQL Server, Almacenamiento HTTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  El objeto de rendimiento **SQLServer:Almacenamiento HTTP** está compuesto por contadores de rendimiento que supervisan la cuenta de Microsoft Azure Storage. Si usa la característica [Archivos de datos de SQL Server de Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) , puede almacenar archivos de base de datos en los blobs de almacenamiento de Microsoft Azure. Este objeto de rendimiento trata cada cuenta de Almacenamiento de Windows Azure como una unidad diferente.  
+  El objeto de rendimiento **SQLServer:Almacenamiento HTTP** está compuesto por contadores de rendimiento que supervisan la cuenta de Microsoft Azure Storage. Si usa la característica [Archivos de datos de SQL Server de Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md), puede almacenar archivos de base de datos en blobs de Azure Storage Blob. Este objeto de rendimiento trata cada cuenta de Azure Storage como una unidad diferente.  
   
 |Nombre de contador|Descripción|  
 |------------------|-----------------|  

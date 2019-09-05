@@ -13,12 +13,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f41eb44b026c78a3d99814b231f52b518c18a177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136582"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148298"
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimientos almacenados (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,18 +59,19 @@ ms.locfileid: "68136582"
  Si ha habido cambios importantes en las tablas o datos a los que se hace referencia en el procedimiento, el plan precompilado podría hacer que el procedimiento se ejecutara con mayor lentitud. En este caso, volver a crear el procedimiento y forzar un nuevo plan de ejecución puede mejorar el rendimiento.  
   
 ## <a name="types-of-stored-procedures"></a>Tipos de procedimientos almacenados  
- Definidos por el usuario  
+
+ **Definidos por el usuario**  
  Un procedimiento definido por el usuario se puede crear en una base de datos definida por el usuario o en todas las bases de datos del sistema excepto en la base de datos **Resource** . El procedimiento se puede desarrollar en [!INCLUDE[tsql](../../includes/tsql-md.md)] o como una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
- Temporales  
+ **Temporales**  
  Los procedimientos temporales son una forma de procedimientos definidos por el usuario. Los procedimientos temporales son iguales que los procedimientos permanentes salvo porque se almacenan en **tempdb**. Hay dos tipos de procedimientos temporales: locales y globales. Se diferencian entre sí por los nombres, la visibilidad y la disponibilidad. Los procedimientos temporales locales tienen como primer carácter de sus nombres un solo signo de número (#); solo son visibles en la conexión actual del usuario y se eliminan cuando se cierra la conexión. Los procedimientos temporales globales presentan dos signos de número (##) antes del nombre; son visibles para cualquier usuario después de su creación y se eliminan al final de la última sesión en la que se usa el procedimiento.  
   
- Sistema  
+ **Sistema**  
  Los procedimientos del sistema se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Están almacenados físicamente en la base de datos interna y oculta **Resource** y se muestran de forma lógica en el esquema **sys** de cada base de datos definida por el sistema y por el usuario. Además, la base de datos **msdb** también contiene procedimientos almacenados del sistema en el esquema **dbo** que se usan para programar alertas y trabajos. Dado que los procedimientos del sistema empiezan con el prefijo **sp_** , le recomendamos que no use este prefijo cuando asigne un nombre a los procedimientos definidos por el usuario. Para obtener una lista completa de los procedimientos del sistema, vea [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los procedimientos del sistema que proporcionan una interfaz de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a los programas externos para varias actividades de mantenimiento. Estos procedimientos extendidos usan el prefijo xp_. Para obtener una lista completa de los procedimientos extendidos, vea [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md).  
   
- Extendidos definidos por el usuario  
+ **Extendidos definidos por el usuario**  
  Los procedimientos extendidos le permiten crear sus propias rutinas externas en un lenguaje de programación como puede ser C. Estos procedimientos son DLL que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede cargar y ejecutar dinámicamente.  
   
 > [!NOTE]  
@@ -94,6 +95,6 @@ ms.locfileid: "68136582"
 |Describe cómo se usan los parámetros en un procedimiento almacenado.|[Parámetros](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Procedimientos almacenados de CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
-  
+ [Procedimientos almacenados de CLR](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
+ [Resolución diferida de nombres](../../t-sql/statements/create-trigger-transact-sql.md#deferred-name-resolution)
   

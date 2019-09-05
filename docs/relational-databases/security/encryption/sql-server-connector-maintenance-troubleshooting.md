@@ -1,7 +1,7 @@
 ---
 title: Mantenimiento y solución de problemas del conector de SQL Server| Microsoft Docs
 ms.custom: ''
-ms.date: 04/05/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140698"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148779"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Mantenimiento y solución de problemas del conector de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,11 +138,12 @@ Si actualmente usa la versión 1.0.0.440 o anterior, siga estos pasos para actua
 8.  Después de comprobar que la actualización funciona, puede eliminar la antigua carpeta del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (si decide cambiar el nombre en lugar de desinstalar en el paso 3).  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Puesta en marcha de la entidad de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa entidades de servicio creadas en Azure Active Directory como credenciales para acceder al Almacén de claves.  La entidad de servicio tiene identificador de cliente y clave de autenticación.  Una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura con el **nombre de almacén**, el **identificador de cliente**y la **clave de autenticación**.  La **clave de autenticación** es válida durante un determinado período de tiempo (1 o 2 años).   Antes de que expire el período de tiempo se debe generar una nueva clave en Azure AD para la entidad de servicio.  Después, la credencial debe cambiarse en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una caché para la credencial en la sesión actual, por lo que cuando se cambia una credencial, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] se debe reiniciar.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa entidades de servicio creadas en Azure Active Directory como credenciales para acceder al Almacén de claves.  La entidad de servicio tiene identificador de cliente y clave de autenticación.  Una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se configura con el **nombre de almacén**, el **identificador de cliente**y la **clave de autenticación**.  La **clave de autenticación** es válida durante un determinado período de tiempo (uno o dos años).   Antes de que expire el período de tiempo se debe generar una nueva clave en Azure AD para la entidad de servicio.  Después, la credencial debe cambiarse en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] mantiene una caché para la credencial en la sesión actual, por lo que cuando se cambia una credencial, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] se debe reiniciar.  
   
 ### <a name="key-backup-and-recovery"></a>Copia de seguridad y recuperación de claves  
 Se debe realizar una copia de seguridad del almacén de claves con cierta frecuencia. Si se pierde una clave asimétrica en el almacén, se puede restaurar desde la copia de seguridad. La clave debe restaurarse con el mismo nombre que antes, que es lo que hará el comando de PowerShell Restore (consulte los pasos siguientes).  
-Si el almacén se ha perdido, tendrá que volver a crear un almacén y restaurar la clave asimétrica en el almacén usando el mismo nombre que antes. El nombre del almacén puede ser diferente (o el mismo que antes). También debe establecer los permisos de acceso en el nuevo almacén para conceder a la entidad de servicio de SQL Server el acceso necesario para los escenarios de cifrado de SQL Server y ajustar la credencial de SQL Server para que se refleje el nuevo nombre del almacén .  
+Si el almacén se ha perdido, tendrá que volver a crear un almacén y restaurar la clave asimétrica en el almacén usando el mismo nombre que antes. El nombre del almacén puede ser diferente (o el mismo que antes). También debe establecer los permisos de acceso en el nuevo almacén para conceder a la entidad de servicio de SQL Server el acceso necesario para los escenarios de cifrado de SQL Server y ajustar la credencial de SQL Server para que se refleje el nuevo nombre del almacén .
+
 En resumen, estos son los pasos:  
   
 * Realice una copia de seguridad de la clave del almacén (con el cmdlet de Powershell Backup-AzureKeyVaultKey).  
@@ -191,7 +192,7 @@ Las copias de seguridad de claves se pueden restaurar entre regiones de Azure, s
 3. Seleccione la suscripción a Azure que usa actualmente y haga clic en **Editar directorio** en los comandos que aparecen en la parte inferior de la pantalla.
 4. En la ventana emergente, use el menú desplegable **Directorio** para seleccionar el Active Directory que desea usar. Esto lo convertirá en el directorio predeterminado.
 5. Asegúrese de ser el administrador global del Active Directory recién seleccionado. Si no es el administrador global, podría perder permisos de administración después del cambio de directorios.
-6. Una vez que se cierra la ventana emergente, si no ve ninguna de las suscripciones, puede que tenga que actualizar el filtro **Filtrar por directorio** del filtro **Suscripciones** en el menú superior derecho para ver las suscripciones que usa el Active Directory recién seleccionado.
+6. Una vez que se cierra la ventana emergente, si no ve ninguna de las suscripciones, puede que tenga que actualizar el filtro **Filtrar por directorio** del filtro **Suscripciones** en el menú superior derecho de la pantalla para ver las suscripciones que usa la instancia de Active Directory recién seleccionada.
 
     > [!NOTE] 
     > Puede que no tenga los permisos para realmente cambiar el directorio predeterminado de la suscripción a Azure. En este caso, cree la entidad de servicio de AAD dentro del directorio predeterminado para que esté en el mismo directorio que Azure Key Vault que se usará más adelante.
@@ -212,16 +213,16 @@ Código de error  |Símbolo  |Descripción
 6 | scp_err_InvalidArgument | El argumento proporcionado no es válido.    
 7 | scp_err_ProviderError | Se ha producido un error sin especificar en el proveedor EKM que ha detectado el motor de SQL.    
 2049 | scp_err_KeyNameDoesNotFitThumbprint | El nombre de la clave es demasiado largo para caber en la huella digital del motor de SQL. El nombre de la clave no debe superar los 26 caracteres.    
-2050 | scp_err_PasswordTooShort | La cadena de secreto, que es la concatenación del id. de cliente de AAD y el secreto, no llega a 32 caracteres.    
+2050 | scp_err_PasswordTooShort | La cadena de secreto, que es la concatenación del identificador de cliente y el secreto de AAD, no llega a 32 caracteres.    
 2051 | scp_err_OutOfMemory | El motor de SQL se ha quedado sin memoria y no se ha podido asignar la memoria para el proveedor EKM.    
 2052 | scp_err_ConvertKeyNameToThumbprint | No se ha podido convertir el nombre de la clave en una huella digital.    
 2053 | scp_err_ConvertThumbprintToKeyName|  No se ha podido convertir la huella digital en un nombre de clave.    
 3000 | ErrorSuccess | La operación de AKV se ha realizado correctamente.    
 3001 | ErrorUnknown | Se ha producido un error en la operación de AKV con un error sin especificar.    
-3002 | ErrorHttpCreateHttpClientOutOfMemory | No se puede crear un HttpClient para la operación de AKV debido a que no hay memoria suficiente.    
-3003 | ErrorHttpOpenSession | No se puede abrir una sesión HTTP debido a un error de red.    
-3004 | ErrorHttpConnectSession | No se puede conectar una sesión HTTP debido a un error de red.    
-3005 | ErrorHttpAttemptConnect | No se puede intentar realizar una conexión debido a un error de red.    
+3002 | ErrorHttpCreateHttpClientOutOfMemory | No se puede crear un elemento HttpClient para la operación de AKV debido a que no hay memoria suficiente.    
+3003 | ErrorHttpOpenSession | No se puede abrir una sesión Http debido a un error de red.    
+3004 | ErrorHttpConnectSession | No se puede conectar una sesión Http debido a un error de red.    
+3005 | ErrorHttpAttemptConnect | No se puede intentar una conexión debido a un error de red.    
 3006 | ErrorHttpOpenRequest | No se puede abrir una solicitud debido a un error de red.    
 3007 | ErrorHttpAddRequestHeader | No se puede agregar un encabezado de solicitud.    
 3008 | ErrorHttpSendRequest | No se puede enviar una solicitud debido a un error de red.    
@@ -236,7 +237,7 @@ Código de error  |Símbolo  |Descripción
 3017 | ErrorHttpQueryHeaderNotFound | No se encuentra el encabezado de consulta en la respuesta.    
 3018 | ErrorHttpQueryHeaderUpdateBufferLength | No se puede actualizar la longitud del búfer al realizar una consulta del encabezado de respuesta.    
 3019 | ErrorHttpReadData | No se pueden leer los datos de respuesta debido a un error de red. 
-3076 | ErrorHttpResourceNotFound | El servidor respondió con un error 404 porque no se encontró el nombre de clave. Asegúrese de que el nombre de clave existe en el almacén.
+3076 | ErrorHttpResourceNotFound | El servidor respondió con un error 404 porque no se encontró el nombre de clave. Asegúrese de que el nombre de la clave existe en el almacén.
 3077 | ErrorHttpOperationForbidden | El servidor respondió con un error 403 porque el usuario no tiene el permiso adecuado para realizar la acción. Asegúrese de que tiene el permiso para la operación especificada. Como mínimo, el conector requiere los permisos 'get, list, wrapKey, unwrapKey' para funcionar adecuadamente.   
   
 Si no ve el código de error en esta tabla, estas son algunas razones más por las que se puede estar produciendo el error:   
@@ -292,9 +293,9 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
   
 -   Referencia de [cmdlets del Almacén de claves de Azure](/powershell/module/azurerm.keyvault/) de PowerShell  
   
-## <a name="see-also"></a>Consulte también  
- [Administración extensible de claves con el Almacén de claves de Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
- [EKM provider enabled (opción de configuración del servidor)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
-  
-  
+## <a name="see-also"></a>Consulte también
+
+ [Administración extensible de claves con Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [Usar el conector de SQL Server con características de cifrado de SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)  
+ [EKM provider enabled (opción de configuración del servidor)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)

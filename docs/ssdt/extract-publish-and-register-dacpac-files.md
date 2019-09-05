@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e113ccb9b94c6bae953cb330072c8a6f7bfea9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2aee0f145c2ef2b82b929a8f6358a764a10050f5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912800"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154797"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>Extraer, publicar y registrar archivos .dacpac
 En este tema se describen cuatro procedimientos que puede realizar haciendo clic con el botón secundario en una base de datos conectada en el Explorador de objetos de SQL Server:  
@@ -50,7 +50,7 @@ Cuando se activa, la casilla **Registrar como aplicación de capa de datos** hac
 En el cuadro de diálogo **Configuración de publicación avanzada** hay más opciones de configuración de publicación; se puede obtener acceso a este cuadro de diálogo haciendo clic en el botón **Avanzadas**.  
   
 ## <a name="extract-data-tier-application"></a>Extraer aplicación de capa de datos  
-Puede extraer un archivo .dacpac de una base de datos. La extracción crea un archivo de instantánea de base de datos (.dacpac) a partir de una SQL Database de Microsoft Azure o de SQL Server que puede contener datos de tablas de usuario, además del esquema de la base de datos.  
+Puede extraer un archivo .dacpac de una base de datos. La extracción crea un archivo de instantánea de base de datos (.dacpac) a partir de un servidor SQL Server en vivo o una instancia de Azure SQL Database que podría contener datos de tablas de usuario, además del esquema de la base de datos.  
   
 Especifique el archivo .dacpac que se va a crear. El botón **Propiedades de DAC** muestra el cuadro de diálogo **Propiedades de DAC**, que le permite especificar propiedades del archivo .dacpac.  
   

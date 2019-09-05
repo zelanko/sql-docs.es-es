@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db74b6381962d200242f1db912a18404d67ef06a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5cc065dc6f7b8e5b3d7ac5e84867029c9bd50f0f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938896"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155834"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -178,7 +178,7 @@ CREATE USER user_name
  LOGIN *login_name*  
  Especifica el inicio de sesión para el que se crea el usuario de base de datos. *login_name* debe ser un inicio de sesión válido en el servidor. Puede ser un inicio de sesión basado en una entidad de seguridad de Windows (usuario o grupo) o un inicio de sesión con autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando este inicio de sesión de SQL Server accede a la base de datos, adquiere el nombre y el identificador del usuario de la base de datos que se está creando. Cuando cree un inicio de sesión asignado a una entidad de seguridad de Windows, use el formato **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Para obtener ejemplos, vea [Resumen de la sintaxis](#SyntaxSummary).  
   
- Si la instrucción CREATE USER es la única instrucción en un lote SQL, SQL Database de Microsoft Azure admite la cláusula WITH LOGIN. Si la instrucción CREATE USER no es la única instrucción en un lote SQL ni se ejecuta en SQL dinámico, la cláusula WITH LOGIN no se admite.  
+ Si la instrucción CREATE USER es la única instrucción en un lote SQL, Azure SQL Database admite la cláusula WITH LOGIN. Si la instrucción CREATE USER no es la única instrucción en un lote SQL ni se ejecuta en SQL dinámico, la cláusula WITH LOGIN no se admite.  
   
  WITH DEFAULT_SCHEMA = *schema_name*  
  Especifica el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este usuario de base de datos.  

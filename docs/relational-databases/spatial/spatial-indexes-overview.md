@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9094f5335fc3978ba2e5018873dc2cdd8b455347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a19d934fcc8b6d190b762b170117722fe4e29b6e
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048469"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190414"
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,10 +123,10 @@ ms.locfileid: "68048469"
 >  El valor **tessellation_scheme** de un índice espacial es visible en la vista de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
   
 #### <a name="geometry-grid-tessellation-scheme"></a>Esquema de teselación de cuadrícula de geometría  
- La teselación GEOMETRY_AUTO_GRID es el esquema de teselación predeterminado para el tipo de datos **geometry** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y versiones posteriores.  La teselación GEOMETRY_GRID es el único esquema de teselación disponible para los tipos de datos geometry de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En esta sección se tratan los aspectos de teselación de cuadrícula de geometría relacionados con trabajar con índices espaciales: métodos compatibles y cuadros de límite.  
+ La teselación GEOMETRY_AUTO_GRID es el esquema de teselación predeterminado para el tipo de datos **geometry** de [!INCLUDE[ssNoVersion](../../includes/sssql11-md.md)] y versiones posteriores.  La teselación GEOMETRY_GRID es el único esquema de teselación disponible para los tipos de datos geometry de [!INCLUDE[ssNoVersion](../../includes/sskatmai-md.md)]. En esta sección se tratan los aspectos de teselación de cuadrícula de geometría relacionados con trabajar con índices espaciales: métodos compatibles y cuadros de límite.  
   
 > [!NOTE]  
->  Puede especificar explícitamente este esquema de teselación con la cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de la instrucción [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+>  Puede especificar explícitamente este esquema de teselación con la cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de la instrucción [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ##### <a name="the-bounding-box"></a>El cuadro de límite  
  Los datos geométricos ocupan un plano que puede ser infinito. Sin embargo, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un índice espacial requiere un espacio finito. Para establecer un espacio finito para descomposición, el esquema de teselación de cuadrícula de geometría exige un *cuadro de límite*rectangular. El cuadro de límite está definido por cuatro coordenadas, **(** _x-min_ **,** _y-min_ **)** y **(** _x-max_ **,** _y-max_ **)** , que se almacenan como propiedades del índice espacial. Estas coordenadas representan lo siguiente:  

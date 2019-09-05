@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 249fb623945c1e086a677268d857f3bb16362a2e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811191"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154655"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y características admitidas de SQL Server 2017 en Linux
 
@@ -110,7 +110,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Copias de seguridad reflejadas|Sí|No|No|No|
 |Agregar memoria y CPU sin interrupción|Sí|No|No|No|
 |Copia de seguridad cifrada|Sí|Sí|No|No|
-|Copia de seguridad híbrida en Windows Azure (copia de seguridad en dirección URL)|Sí|Sí|No|No|
+|Copia de seguridad híbrida en Azure (copia de seguridad en dirección URL)|Sí|Sí|No|No|
   
 <sup>1</sup> En Enterprise Edition, el número de nodos es el máximo del sistema operativo. En Standard Edition hay compatibilidad con dos nodos. 
 

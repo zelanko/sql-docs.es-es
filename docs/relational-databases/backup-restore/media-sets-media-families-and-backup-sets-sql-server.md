@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a7abc9ffe6cdcc8f33c54ae8ce971330b9f9fee8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 13ae1c4ae17bca661289d044217f63c4bebb9a9c
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033788"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155579"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de medios, familias de medios y conjuntos de copias de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68033788"
   
   Este tema describe el formato que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los medios de copia de seguridad, la correspondencia entre los medios y los dispositivos de copia de seguridad, la organización de las copias de seguridad en los medios y varias consideraciones para los conjuntos y las familias de medios. El tema también describe los pasos inicializar o dar formato a los medios de copia de seguridad antes de usarlos por primera vez o reemplazar un conjunto de medios anterior por otro nuevo, cómo sobrescribir los conjuntos de copia de seguridad anteriores en un conjunto de medios y cómo agregar nuevos conjuntos de copia de seguridad a un conjunto de medios.  
   
->**NOTA:** Para obtener más información sobre la copia de seguridad de SQL Server para el servicio de almacenamiento de blobs de Windows Azure, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>**NOTA:** Para obtener más información sobre la copia de seguridad de SQL Server para el servicio Azure Blob Storage, vea [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
    
 ##  <a name="TermsAndDefinitions"></a> Términos  
  **conjunto de medios**  

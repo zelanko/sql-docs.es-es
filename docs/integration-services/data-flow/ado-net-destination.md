@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 987ce3d90159a83d141a241579e5cbfc727277c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eef20d5dce1d76d6870a39e34a3da1404838917f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045473"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155175"
 ---
 # <a name="ado-net-destination"></a>Destino ADO NET
 
@@ -32,7 +32,7 @@ ms.locfileid: "68045473"
 
   El destino ADO NET carga datos en una serie de bases de datos compatibles con [!INCLUDE[vstecado](../../includes/vstecado-md.md)]que usan una tabla o vista de base de datos. Tiene la opción de cargar estos datos en una tabla o vista existente, o bien puede crear una nueva tabla y cargar los datos en ella.  
   
- Puede usar el destino de ADO NET para conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. No se admite la conexión a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante OLE DB. Para obtener más información sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea [Instrucciones y limitaciones generales de Base de datos SQL de Azure](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Puede usar el destino de ADO NET para conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. No se admite la conexión a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante OLE DB. Para más información sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Instrucciones y limitaciones generales (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>Solucionar problemas del destino ADO NET  
  Puede registrar las llamadas realizadas por el destino ADO NET a proveedores de datos externos. Puede utilizar esta nueva capacidad de registro para solucionar problemas relacionados con el almacenamiento de datos en orígenes de datos externos que realiza el destino ADO NET. Para registrar las llamadas realizadas por el destino ADO NET a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para obtener más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
@@ -110,7 +110,7 @@ ms.locfileid: "68045473"
 >  Para obtener más información, vea [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) y [IDENTITY &#40;propiedad de Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
- Artículo técnico, sobre cómo [cargar datos en Windows Azure SQL Database de la forma más rápida](https://go.microsoft.com/fwlink/?LinkId=244333), en sqlcat.com  
+ Artículo técnico sobre cómo [cargar datos en Azure SQL Database de la forma más rápida](https://go.microsoft.com/fwlink/?LinkId=244333), en sqlcat.com  
   
 ## <a name="ado-net-destination-editor-mappings-page"></a>Editor de destinos de ADO NET (página Asignaciones)
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destinos de ADO NET** para asignar columnas de entrada a columnas de destino.  

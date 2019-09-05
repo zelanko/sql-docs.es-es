@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 818bb9690153d862211739bcd134ba9fbdf11ae1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912651"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155654"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -308,7 +308,7 @@ Las reglas de SQL Server permiten crear un inicio de sesión con autenticación 
 
 En SQL Database, los datos de inicio de sesión necesarios para autenticar una conexión y las reglas de firewall de nivel de servidor se almacenan temporalmente en caché en cada base de datos. Esta caché se actualiza regularmente. Para forzar una actualización de la caché de autenticación y garantizar que una base de datos tenga la versión más reciente de la tabla de inicios de sesión, ejecute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-Para obtener más información sobre los inicios de sesión de SQL Database, vea [Administrar bases de datos e inicios de sesión en Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+Para obtener más información sobre los inicios de sesión de SQL Database, vea [Administración de bases de datos e inicios de sesión en Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="permissions"></a>Permisos
 
@@ -607,7 +607,7 @@ Las reglas de SQL Server permiten crear un inicio de sesión con autenticación 
 
 En SQL Data Warehouse, los datos de inicio de sesión necesarios para autenticar una conexión y las reglas de firewall de nivel de servidor se almacenan temporalmente en caché en cada base de datos. Esta caché se actualiza regularmente. Para forzar una actualización de la caché de autenticación y garantizar que una base de datos tenga la versión más reciente de la tabla de inicios de sesión, ejecute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-Para obtener más información sobre los inicios de sesión de Azure SQL Data Warehouse, vea [Administrar bases de datos e inicios de sesión en Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+Para obtener más información sobre los inicios de sesión de SQL Data Warehouse, vea [Administración de bases de datos e inicios de sesión en Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="permissions"></a>Permisos
 

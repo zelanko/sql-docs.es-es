@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4c93f36ca78bbd6cdeedf8d88314f7374f34a9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d5ca430aa06e3f8a0072bff474e67e6f9defc74
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041379"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176365"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Este tema incluye prácticas recomendadas y sugerencias para la solución de problemas de copias de seguridad y restauraciones de SQL Server en el servicio Blob de Windows Azure.  
+  Este tema incluye prácticas recomendadas y sugerencias para la solución de problemas de copias de seguridad y restauraciones de SQL Server en Azure Blob service.  
   
- Para obtener más información sobre cómo usar el servicio de almacenamiento Blob de Windows Azure para realizar operaciones de copia de seguridad o restauración de SQL Server, vea:  
+ Para obtener más información sobre cómo usar el servicio Azure Blob Storage para realizar operaciones de copia de seguridad o restauración de SQL Server, vea:  
   
 -   [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Administrar copias de seguridad  
  La lista siguiente incluye recomendaciones generales para administrar copias de seguridad:  
@@ -35,7 +35,7 @@ ms.locfileid: "68041379"
   
 -   Al crear un contenedor, se recomienda establecer el nivel de acceso en **privado**, de forma que solo los usuarios o las cuentas que puedan proporcionar la información de autenticación necesaria sean capaces de leer o escribir los blobs en el contenedor.  
   
--   En el caso de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecute en una máquina virtual de Microsoft Azure, use una cuenta de almacenamiento de la misma región que la máquina virtual para evitar costos de transferencia de datos entre ellas. El uso de la misma región también garantiza un rendimiento óptimo para las operaciones de copia de seguridad y restauración.  
+-   En el caso de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecute en una máquina virtual de Azure, use una cuenta de almacenamiento de la misma región que la máquina virtual para evitar costos de transferencia de datos entre ellas. El uso de la misma región también garantiza un rendimiento óptimo para las operaciones de copia de seguridad y restauración.  
   
 -   Una actividad de copia de seguridad con errores puede dar como resultado un archivo de copia de seguridad no válido. Se recomienda identificar periódicamente las copias de seguridad con errores y eliminar los archivos blob. Para obtener más información, consulte [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md).  
   
@@ -45,18 +45,18 @@ ms.locfileid: "68041379"
   
 ## <a name="handling-large-files"></a>Controlar archivos grandes  
   
--   La operación de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea varios subprocesos para optimizar la transferencia de datos a los servicios de almacenamiento Blob de Windows Azure.  Sin embargo, el rendimiento depende en varios factores, como el ancho de banda del ISV y el tamaño de la base de datos. Si piensa hacer copia de seguridad de bases de datos o grupos de archivos grandes desde una base de datos de SQL Server local, se recomienda que realice primero algunas pruebas de rendimiento. El [SLA de Almacenamiento](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) de Azure tiene unos tiempos máximos de procesamiento para los blobs que puede tener en cuenta.  
+-   La operación de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emplea varios subprocesos para optimizar la transferencia de datos a los servicios Azure Blob Storage.  Sin embargo, el rendimiento depende en varios factores, como el ancho de banda del ISV y el tamaño de la base de datos. Si piensa hacer copia de seguridad de bases de datos o grupos de archivos grandes desde una base de datos de SQL Server local, se recomienda que realice primero algunas pruebas de rendimiento. El [SLA de Almacenamiento](https://azure.microsoft.com/support/legal/sla/storage/v1_0/) de Azure tiene unos tiempos máximos de procesamiento para los blobs que puede tener en cuenta.  
   
 -   Use la opción `WITH COMPRESSION` como se recomienda en la sección [Administrar copias de seguridad](##managing-backups), ya que es muy importante al realizar la copia de seguridad de archivos grandes.  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Resolución de problemas para realizar la copia de seguridad de una dirección URL o una restauración a partir de esta  
- A continuación se indican algunas formas rápidas de solucionar errores al hacer copia de seguridad o restaurar desde el servicio de almacenamiento Blob de Windows Azure.  
+ A continuación se indican algunas formas rápidas de solucionar errores al hacer copia de seguridad o restaurar desde el servicio Azure Blob Storage.  
   
  Para evitar errores debidos a opciones no admitidas o a limitaciones, consulte la lista de limitaciones y la información de compatibilidad con los comandos BACKUP y RESTORE del artículo [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) .  
   
  **Errores de autenticación:**  
   
--   `WITH CREDENTIAL` es una opción nueva que es necesaria para la copia de seguridad o la restauración con el servicio Microsoft Azure Blob Storage. He aquí algunos errores relacionados con las credenciales:  
+-   `WITH CREDENTIAL` es una opción nueva que es necesaria para la copia de seguridad o la restauración con el servicio Azure Blob Storage. He aquí algunos errores relacionados con las credenciales:  
   
      La credencial especificada en el comando **BACKUP** o **RESTORE** no existe. Para evitar este problema, puede incluir instrucciones T-SQL para crear la credencial si no existe ninguna en la instrucción de copia de seguridad. He aquí un ejemplo que puede usar:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68041379"
   
 -   La credencial existe pero la cuenta de inicio de sesión usada para ejecutar el comando de copia de seguridad no tiene permisos de acceso a las credenciales. Use una cuenta de inicio de sesión en el rol **db_backupoperator** con permisos para ***Modificar cualquier credencial*** .  
   
--   Compruebe los valores de clave y nombre de la cuenta de almacenamiento. La información almacenada en la credencial debe coincidir con los valores de propiedad de la cuenta de almacenamiento de Windows Azure que se usa en las operaciones de copia de seguridad y restauración.  
+-   Compruebe los valores de clave y nombre de la cuenta de almacenamiento. La información almacenada en la credencial debe coincidir con los valores de propiedad de la cuenta de Azure Storage que se usa en las operaciones de copia de seguridad y restauración.  
   
  **Errores de copia de seguridad:**  
   

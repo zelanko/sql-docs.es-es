@@ -1,7 +1,7 @@
 ---
 title: Habilitar TDE en SQL Server con EKM | Microsoft Docs
 ms.custom: ''
-ms.date: 04/15/2016
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
 author: aliceku
 ms.author: aliceku
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74aab68265e094946cde81bb11b2a09b655fe8fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 309496c17693ca42ea7ecd8a029547f6d821254a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049923"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148803"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>Habilitar TDE en SQL Server con EKM
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este artículo se describe cómo habilitar el cifrado de datos transparente (TDE) en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para proteger una clave de cifrado de base de datos mediante una clave asimétrica almacenada en un módulo EKM (Administración extensible de claves) con [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  TDE cifra el almacenamiento de una base de datos completa utilizando una clave simétrica denominada clave de cifrado de base de datos. La clave de cifrado de base de datos también se puede proteger utilizando un certificado que se protege mediante la clave maestra de base de datos de la base de datos maestra. Para obtener más información sobre cómo proteger la clave de cifrado de base de datos usando la clave maestra de base de datos, vea [Cifrado de datos transparente &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). Para obtener más información sobre cómo configurar TDE cuando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se está ejecutando en una máquina virtual de Azure, vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Para obtener más información sobre cómo configurar TDE con una clave del Almacén de claves de Azure, vea [Usar el Conector de SQL Server con características de cifrado de SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
@@ -36,7 +35,7 @@ ms.locfileid: "68049923"
   
 -   Debe ser un usuario con muchos privilegios (como un administrador del sistema) para crear una clave de cifrado de base de datos y cifrar una base de datos. Ese usuario debe poder ser autenticado por el módulo EKM.  
   
--   Tras iniciarse, [!INCLUDE[ssDE](../../../includes/ssde-md.md)] debe abrir la base de datos. Para ello, debe crear una credencial que será autenticada por EKM y agregarla a un inicio de sesión que se basa en una clave asimétrica. Los usuarios no pueden iniciar sesión mediante ese inicio de sesión, pero el [!INCLUDE[ssDE](../../../includes/ssde-md.md)] podrá autenticarse con el dispositivo EKM.  
+-   Tras iniciarse, [!INCLUDE[ssDE](../../../includes/ssde-md.md)] debe abrir la base de datos. Para ello, debe crear una credencial que será autenticada por EKM y agregarla a un inicio de sesión que se basa en una clave asimétrica. Los usuarios no pueden iniciar sesión mediante ese inicio de sesión, pero [!INCLUDE[ssDE](../../../includes/ssde-md.md)] podrá autenticarse con el dispositivo EKM.  
   
 -   Si la clave asimétrica almacenada en el módulo EKM se pierde, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]no podrá abrir la base de datos. Si el proveedor EKM permite hacer una copia de seguridad de la clave asimétrica, debería crear una y almacenarla en una ubicación segura.  
   

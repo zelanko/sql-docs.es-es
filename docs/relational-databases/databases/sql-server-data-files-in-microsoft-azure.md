@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2c423f3df3f2dce99caa8ec085ab12f5eac8060c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a658c990296de88ebdf8f9d3fb6373ea6a9a2c18
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127164"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153101"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Archivos de datos de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68127164"
 ## <a name="concepts-and-requirements"></a>Conceptos y requisitos  
   
 ### <a name="azure-storage-concepts"></a>Conceptos de Azure Storage  
- Cuando use la característica Archivos de datos de SQL Server en Windows Azure, debe crear una cuenta de almacenamiento y un contenedor en Windows Azure. A continuación, debe crear una credencial de SQL Server, que incluye información sobre la directiva del contenedor así como una firma de acceso compartido, la cual resulta necesaria para tener acceso al contenedor.  
+ Cuando use la característica Archivos de datos de SQL Server en Azure, debe crear una cuenta de almacenamiento y un contenedor en Azure. A continuación, debe crear una credencial de SQL Server, que incluye información sobre la directiva del contenedor así como una firma de acceso compartido, la cual resulta necesaria para tener acceso al contenedor.  
   
  En [Microsoft Azure](https://azure.microsoft.com), una cuenta de [Azure Storage](https://azure.microsoft.com/services/storage/) representa el nivel superior del espacio de nombres para tener acceso a los blobs. Una cuenta de almacenamiento puede contener un número ilimitado de contenedores, siempre que su tamaño total sea inferior a los límites de almacenamiento. Para obtener la información más reciente acerca de los límites de almacenamiento, vea [Suscripciones de Azure y límites de servicio, cuotas y restricciones](https://docs.microsoft.com/azure/azure-subscription-service-limits). Un contenedor proporciona una agrupación de un conjunto de [blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). Todos los blobs deben estar en un contenedor. Una cuenta puede contener un número ilimitado de contenedores. De forma similar, un contenedor puede almacenar un número ilimitado de blobs igualmente. Se pueden almacenar dos tipos de blobs en Azure Storage: blobs en bloques y blobs en páginas. Esta nueva característica utiliza blobs en páginas, que son más eficaces cuando los intervalos de bytes en el archivo se modifican con frecuencia. Puede obtener acceso a blobs mediante el siguiente formato de dirección URL: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
@@ -124,7 +124,7 @@ ON
  Use cmdlets de PowerShell para almacenar archivos de datos de SQL Server en el servicio Blob Storage de Azure; para ello, se debe hacer referencia a una ruta de acceso de dirección URL de Blob Storage en lugar de a una ruta de acceso de archivos. Obtenga acceso a blobs mediante el siguiente formato de dirección URL: `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>Objetos de SQL Server y compatibilidad con contadores de rendimiento  
- A partir de SQL Server 2014, se ha agregado un nuevo objeto de SQL Server que se usará con la característica Archivos de datos de SQL Server en Azure Storage. El nuevo objeto de SQL Server se denomina [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) y lo puede usar el Monitor de sistema para supervisar la actividad cuando se ejecuta SQL Server con Almacenamiento de Windows Azure.  
+ A partir de SQL Server 2014, se ha agregado un nuevo objeto de SQL Server que se usará con la característica Archivos de datos de SQL Server en Azure Storage. El nuevo objeto de SQL Server se denomina [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) y lo puede usar el Monitor de sistema para supervisar la actividad cuando se ejecuta SQL Server con Azure Storage.  
   
 ### <a name="sql-server-management-studio-support"></a>Compatibilidad con SQL Server Management Studio  
  SQL Server Management Studio le permite usar esta característica a través de varias ventanas de diálogo. Por ejemplo, escriba la ruta de acceso a la dirección URL del contenedor de almacenamiento, como > https://teststorageaccnt.blob.core.windows.net/testcontainer/:

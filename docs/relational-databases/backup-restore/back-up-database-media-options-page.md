@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c515da38e0218d1026019b718411a0b56d61c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940912"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155560"
 ---
 # <a name="back-up-database-media-options-page"></a>Copia de seguridad de la base de datos (página Opciones multimedia)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67940912"
 ## <a name="options"></a>Opciones  
   
 ### <a name="overwrite-media"></a>Sobrescribir medios  
- Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó la dirección URL (Almacenamiento de Windows Azure) como el destino de la copia de seguridad en la página General del cuadro de diálogo Copia de seguridad de base de datos, las opciones de la sección Sobrescribir medios estarán deshabilitadas. Puede sobrescribir una copia de seguridad con la instrucción Transact-SQL **BACKUP TO URL. WITH FORMAT**. Para más información, consulte [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+ Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó la dirección URL (Azure Storage) como el destino de la copia de seguridad en la página General del cuadro de diálogo Copia de seguridad de base de datos, las opciones de la sección Sobrescribir medios estarán deshabilitadas. Puede sobrescribir una copia de seguridad con la instrucción Transact-SQL **BACKUP TO URL. WITH FORMAT**. Para más información, consulte [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
 
  La opción **Sobrescribir medios** está deshabilitada si seleccionó **Dirección URL** como destino de la copia de seguridad en la página **General**.
   

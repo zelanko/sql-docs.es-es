@@ -10,12 +10,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1198933f5dd996b2cf050ea0fbb7960410095869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67c7ab63fcc152778add51725e5962028651345b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136516"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155698"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de la versión de SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -225,11 +225,11 @@ Anteriormente, DACFx no conservaba el estado (WITH CHECK/NOCHECK) de las restric
   
 **Actualizaciones de SqlPackage.exe (herramienta de línea de comandos DACFx)**  
   
--   Extraer DACPAC con datos: crea un archivo de captura de pantalla de base de datos (.dacpac) a partir de una base de datos SQL de Windows Azure o de SQL Server que contiene datos de tablas de usuario además del esquema de la base de datos. Estos paquetes se pueden publicar en una SQL Database de Microsoft Azure o de SQL Server nueva o existente con la acción Publicar de SqlPackage.exe. Los datos contenidos en el paquete reemplazan a los datos existentes en la base de datos de destino.  
+-   Extraer DACPAC con datos: crea un archivo de instantánea de base de datos (.dacpac) a partir de un servidor SQL Server o una instancia de Azure SQL Database en vivo que contiene datos de tablas de usuario además del esquema de la base de datos. Estos paquetes se pueden publicar en una instancia nueva o existente de SQL Server o Azure SQL Database con la acción Publicar de SqlPackage.exe. Los datos contenidos en el paquete reemplazan a los datos existentes en la base de datos de destino.  
   
--   Exportar BACPAC - Crea un archivo de copia de seguridad lógica (.bacpac) a partir de una Base de datos SQL de Windows Azure o SQL Server que contiene el esquema de base de datos y los datos de usuario que se pueden usar para migrar una base de datos de una Base de datos SQL de Windows Azure a un SQL Server local. Las bases de datos compatibles con Azure se pueden exportar y a continuación importar entre versiones compatibles de SQL Server.  
+-   Exportar BACPAC: crea un archivo de copia de seguridad lógica (.bacpac) a partir de una instancia de SQL Server o Azure SQL Database que contiene el esquema de base de datos y los datos de usuario que se pueden usar para migrar una base de datos desde una instancia local de SQL Server a Azure SQL Database. Las bases de datos compatibles con Azure se pueden exportar y a continuación importar entre versiones compatibles de SQL Server.  
   
--   Importar BACPAC: importa un archivo .bacpac para crear una base de datos SQL de Windows Azure o de SQL Server, o bien para rellenar una vacía.  
+-   Importar BACPAC: importa un archivo .bacpac para crear una instancia nueva de SQL Server o Azure SQL Database, o bien para rellenar una vacía.  
   
 La documentación completa de SqlPackage.exe en MSDN se puede encontrar [aquí](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
   

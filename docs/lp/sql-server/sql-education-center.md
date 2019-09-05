@@ -10,12 +10,12 @@ ms.author: mathoma
 ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 8c4838ab33764a526f70684212f9af491ee9f09e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4430d76ac8e848127e9936bb6ecf8aa8b08e9982
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047964"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176279"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -128,6 +128,60 @@ ms.locfileid: "68047964"
                                         </div>
                                         <div class="cardText">
                                             <p>Ejecución de SQL Server en Linux</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/azure/sql-database/sql-database-single-database-get-started" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Base de datos única de Azure SQL Database</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/azure/sql-database/sql-database-managed-instance-get-started" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Instancia administrada de Azure SQL Database</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                            <li>
+                            <a href="/azure/sql-data-warehouse/create-data-warehouse-portal" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Almacenamiento de datos SQL de Azure</p> 
                                         </div>
                                     </div>
                                 </div>
@@ -256,7 +310,7 @@ ms.locfileid: "68047964"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <p>Copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage</p>
+                                            <p>Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage</p>
                                         </div>
                                     </div>
                                 </div>

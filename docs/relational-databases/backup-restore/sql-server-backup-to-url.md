@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6be8d736294df50a5ca3d288b77e4b0daac556b8
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941123"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176357"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,22 +41,22 @@ ms.locfileid: "68941123"
   
 -   [Copia de seguridad de SQL Server en una dirección URL mediante el Asistente para planes de mantenimiento](../../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)  
   
--   [Restaurar desde el almacenamiento de Windows Azure con SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
+-   [Restauración desde Azure Storage con SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
   
 ###  <a name="security"></a> Seguridad  
  A continuación se muestran los requisitos y las consideraciones de seguridad al hacer copia de seguridad o restaurar desde los servicios de almacenamiento de blobs de Microsoft Azure.  
   
--   Al crear un contenedor para el servicio de almacenamiento de blobs de Microsoft Azure, se recomienda establecer el acceso en **privado**. Al configurar el acceso privado se restringe el acceso a los usuarios o las cuentas capaces de proporcionar la información necesaria para autenticarse en la cuenta de Windows Azure.  
+-   Al crear un contenedor para el servicio de almacenamiento de blobs de Microsoft Azure, se recomienda establecer el acceso en **privado**. Al configurar el acceso privado se restringe el acceso a los usuarios o las cuentas capaces de proporcionar la información necesaria para autenticarse en la cuenta de Azure.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que en una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se almacenen bien un nombre de cuenta de Microsoft Azure y autenticación de clave de acceso, bien una firma de acceso compartido y un token de acceso. Esta información se emplea para autenticarse en la cuenta de Microsoft Azure cuando se realizan operaciones de copia de seguridad o de restauración.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que en una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se almacenen bien un nombre de cuenta de Azure y una autenticación de clave de acceso, bien una firma de acceso compartido y un token de acceso. Esta información se emplea para autenticarse en la cuenta de Azure cuando se realizan operaciones de copia de seguridad o de restauración.  
   
 -   La cuenta de usuario que se usa para emitir comandos BACKUP o RESTORE debe tener el rol de base de datos **operador de db_backup** con permisos **Modificar cualquier credencial** .  
   
 ###  <a name="intorkeyconcepts"></a> Introducción a los principales componentes y conceptos  
  En las dos secciones siguientes se presentan el servicio de almacenamiento de blobs de Microsoft Azure y los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se usan al realizar copia de seguridad o restaurar desde el servicio de almacenamiento de blobs de Microsoft Azure. Es importante entender los componentes y la interacción entre ellos para realizar una copia de seguridad o una restauración desde el servicio de almacenamiento de blobs de Microsoft Azure.  
   
- La creación de una cuenta de Azure Storage en su suscripción de Azure es el primer paso de este proceso. Esta cuenta de almacenamiento es una cuenta administrativa que tiene permisos administrativos completos en todos los contenedores y objetos creados con la cuenta de almacenamiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar el nombre de la cuenta de almacenamiento de Microsoft Azure y su valor de clave de acceso para autenticarse, escribir y leer los blobs en el servicio de almacenamiento de blobs de Microsoft Azure, o bien usar un token de firma de acceso compartido generado en determinados contenedores concediéndole derechos de escritura y lectura. Para más información sobre cuentas de Azure Storage, vea [Acerca de las cuentas de Azure Storage](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/); para más información sobre las firmas de acceso compartido, vea [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). La credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena esta información de autenticación y se emplea durante las operaciones de copia de seguridad o restauración.  
+ La creación de una cuenta de Azure Storage en su suscripción de Azure es el primer paso de este proceso. Esta cuenta de almacenamiento es una cuenta administrativa que tiene permisos administrativos completos en todos los contenedores y objetos creados con la cuenta de almacenamiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar el nombre de la cuenta de Azure Storage y su valor de clave de acceso para autenticarse y escribir y leer los blobs en el servicio Blob Storage de Microsoft Azure, o bien usar un token de firma de acceso compartido generado en determinados contenedores concediéndole derechos de escritura y lectura. Para más información sobre cuentas de Azure Storage, vea [Acerca de las cuentas de Azure Storage](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/); para más información sobre las firmas de acceso compartido, vea [Firmas de acceso compartido, Parte 1: Descripción del modelo SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). La credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena esta información de autenticación y se emplea durante las operaciones de copia de seguridad o restauración.  
   
 ###  <a name="blockbloborpageblob"></a> Copia de seguridad en blobs en bloques y blobs en páginas 
  Se pueden almacenar dos tipos de blobs en el servicio de almacenamiento de blobs de Microsoft Azure: blobs en bloques y blobs en páginas. La copia de seguridad de SQL Server puede usar cualquier tipo de blob en función de la sintaxis de Transact-SQL que se use: si se usa la clave de almacenamiento en la credencial, se usará el blob en páginas; si se usa la firma de acceso compartido, se usará el blob en bloques.
@@ -71,7 +71,7 @@ Cuando hace una copia de seguridad en blob en bloques, el tamaño máximo de blo
 - Hacer una copia de seguridad en varios blobs en bloques
 
 ###  <a name="Blob"></a> Servicio de almacenamiento de blobs de Microsoft Azure  
- **Cuenta de almacenamiento:** La cuenta de almacenamiento es el punto de partida para todos los servicios de almacenamiento. Para obtener acceso al servicio de almacenamiento de blobs de Microsoft Azure, cree primero una cuenta de almacenamiento de Microsoft Azure. Para obtener más información, vea [Crear una cuenta de almacenamiento](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
+ **Cuenta de almacenamiento:** La cuenta de almacenamiento es el punto de partida para todos los servicios de almacenamiento. Para obtener acceso al servicio Blob Storage de Microsoft Azure, cree primero una cuenta de Azure Storage. Para obtener más información, vea [Crear una cuenta de almacenamiento](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   
  **Contenedor:** un contenedor proporciona una agrupación de un conjunto de blobs y puede almacenar un número ilimitado de blobs. Para escribir una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servicio de almacenamiento de blobs de Microsoft Azure, debe haber creado al menos el contenedor raíz. Puede generar un token de firma de acceso compartido en un contenedor y conceder acceso a objetos en un único contenedor específico.  
   
@@ -211,7 +211,7 @@ Puede realizar una copia de seguridad de una base de datos en una dirección URL
 > [!NOTE]  
 >  Para crear una copia de seguridad de instantánea de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o sobrescribir un conjunto de medios existente, use Transact-SQL, PowerShell o C# en lugar de la tarea Copia de seguridad en SQL Server Management Studio.  
   
- En los siguientes pasos se describen los cambios realizados en la tarea Copia de seguridad de la base de datos en SQL Server Management Studio para permitir realizar la copia de seguridad en el almacenamiento de Microsoft Azure:  
+ En los siguientes pasos se describen los cambios realizados en la tarea Copia de seguridad de la base de datos en SQL Server Management Studio para permitir realizar la copia de seguridad en Azure Storage:  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del Motor de base de datos de SQL Server y expándala.
 
@@ -242,7 +242,7 @@ Al seleccionar **Dirección URL** como destino, ciertas opciones de la página *
  [Crear credencial - autenticarse en Almacenamiento de Azure](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> Copia de seguridad de SQL Server en una dirección URL mediante el Asistente para planes de mantenimiento  
- Al igual que la tarea de copia de seguridad descrita antes, el Asistente para planes de mantenimiento de SQL Server Management Studio incluye **Dirección URL** como una de las opciones de destino, así como otros objetos de compatibilidad necesarios para realizar la copia de seguridad en el almacenamiento de Microsoft Azure como la credencial SQL. Para obtener más información, consulte la sección **Definir las tareas Copia de seguridad** en [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
+ Al igual que la tarea de copia de seguridad descrita antes, el Asistente para planes de mantenimiento de SQL Server Management Studio incluye **Dirección URL** como una de las opciones de destino, así como otros objetos de compatibilidad necesarios para realizar la copia de seguridad en Azure Storage, como la credencial SQL. Para obtener más información, consulte la sección **Definir las tareas Copia de seguridad** en [Using Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
   
 > [!NOTE]  
 >  Para crear un conjunto de copia de seguridad con bandas, una copia de seguridad de instantánea de archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una credencial SQL con el token de acceso compartido, use Transact-SQL, PowerShell o C# en lugar de la tarea Copia de seguridad en el Asistente para planes de mantenimiento.  

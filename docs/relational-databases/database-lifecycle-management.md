@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
 - SQL Database
-- Windows Azure Training Kit
+- Azure Training Kit
 - Database development
 - Database backup
 - Database connection management
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - Backup and restore
 - Database import and export
 - SQL Data Sync
-- Windows Azure Service Dashboard
+- Azure Service Dashboard
 - SQL Server Management Studio
 - Database management
 - Database export
@@ -31,12 +31,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39045b1fae3920c0c173d4e1d3419b0d0ad41fe1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ed1f0716e3919e88ad7dfd1ae6c54f8e702761f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134596"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155488"
 ---
 # <a name="database-lifecycle-management"></a>Administración del ciclo de vida de base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "68134596"
  Para leer el tema completo, vea [Administración de ciclo de vida de base de datos (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949).  
   
 ## <a name="see-also"></a>Consulte también  
- [Página principal de Windows Azure](https://www.windowsazure.com/)   
- [Centro para desarrolladores de Windows Azure](https://www.windowsazure.com/develop/overview/)   
- [Centro de administración de Windows Azure](https://www.windowsazure.com/manage/overview/)   
- [Blog del equipo de Windows Azure](https://www.windowsazure.com/community/blog/)   
- [Opciones de soporte técnico de Windows Azure](https://www.windowsazure.com/support/contact/)  
+ [Página principal de Azure](https://www.windowsazure.com/)   
+ [Centro para desarrolladores de Azure](https://www.windowsazure.com/develop/overview/)   
+ [Centro de administración de Azure](https://www.windowsazure.com/manage/overview/)   
+ [Blog del equipo de Azure](https://www.windowsazure.com/community/blog/)   
+ [Opciones de soporte técnico de Azure](https://www.windowsazure.com/support/contact/)  
   
   

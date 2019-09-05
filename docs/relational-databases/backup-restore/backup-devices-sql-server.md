@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a44b8b9c4ae4c70ec41a7c699572ecf4adcc224
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f7ae7d1cddf05ce05c71c6a95f64266eae835aff
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68103784"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152131"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de copia de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68103784"
  dispositivo físico de copia de seguridad  
  Unidad de cinta o un archivo de disco proporcionado por el sistema operativo. Una copia de seguridad puede utilizar entre 1 y 64 dispositivos de copia de seguridad. Si una copia de seguridad requiere varios dispositivos de copia de seguridad, estos deben ser de un mismo tipo (disco o cinta).  
   
- Las copias de seguridad de SQL Server también se pueden escribir en un servicio de almacenamiento Blob de Microsoft Azure además de en disco o cinta.  
+ Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage.  
  
   
 ##  <a name="DiskBackups"></a> Uso de dispositivos de copia de seguridad en disco  
@@ -181,8 +181,8 @@ GO
  Si deja abierta la cinta accidentalmente, la manera más rápida de liberarla es usar el siguiente comando: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Para obtener más información, vea [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
-## <a name="using-the-windows-azure-blob-storage-service"></a>Uso del servicio Blob Storage de Microsoft Azure  
- Las copias de seguridad de SQL Server se pueden escribir en un servicio de almacenamiento Blob de Windows Azure.  Para obtener más información sobre cómo usar el servicio de almacenamiento de blobs de Windows Azure para las copias de seguridad, vea [Copia de seguridad y restauración de SQL Server con el servicio de Almacenamiento de blobs de Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+## <a name="using-the-azure-blob-storage-service"></a>Uso del servicio Azure Blob Storage  
+ Las copias de seguridad de SQL Server se pueden escribir en un servicio de Azure Blob Storage.  Para más información sobre cómo usar el servicio Azure Blob Storage para las copias de seguridad, consulte [Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a> Usar un dispositivo lógico de copia de seguridad  
  Un *dispositivo lógico de copia de seguridad* es un nombre opcional y definido por el usuario que apunta a un dispositivo físico de copia de seguridad específico (un archivo de disco o una unidad de cinta). Un dispositivo lógico de copia de seguridad permite usar el direccionamiento indirecto cuando se hace referencia al dispositivo físico de copia de seguridad correspondiente.  
@@ -218,7 +218,7 @@ GO
   
   
 ##  <a name="Archiving"></a> Archivar copias de seguridad de SQL Server  
- Se recomienda que use una utilidad de copia de seguridad del sistema de archivos para archivar las copias de seguridad en disco y que guarde los archivos fuera de las instalaciones. El uso de discos tiene la ventaja de poder utilizar la red para escribir las copias de seguridad archivadas en un disco fuera de las instalaciones. El servicio de almacenamiento Blob de Windows Azure se puede utilizar como una opción de archivado externo.  Puede cargar las copias de seguridad en disco, o escribir directamente las copias de seguridad en el servicio de almacenamiento Blob de Windows Azure.  
+ Se recomienda que use una utilidad de copia de seguridad del sistema de archivos para archivar las copias de seguridad en disco y que guarde los archivos fuera de las instalaciones. El uso de discos tiene la ventaja de poder utilizar la red para escribir las copias de seguridad archivadas en un disco fuera de las instalaciones. El servicio Azure Blob Storage se puede usar como una opción de archivado externo.  Puede cargar las copias de seguridad en disco, o escribir directamente las copias de seguridad en dicho servicio.  
   
  Otro método común de archivado consiste en escribir las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un disco local de copia de seguridad, archivarlas en cinta y guardar estas cintas fuera de las instalaciones.  
 

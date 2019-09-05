@@ -1,6 +1,6 @@
 ---
 title: Novedades de SQL Server 2019 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026241"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155478"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -40,15 +40,12 @@ En las secciones siguientes se proporciona información general sobre estas cara
 
 | Nueva característica o actualización | Detalles |
 |:---|:---|
-| Solución de macrodatos escalable | [Implementación de clústeres escalables](../big-data-cluster/deploy-get-started.md) de contenedores de SQL Server, Spark y HDFS que se ejecutan en Kubernetes <br/><br/> Lectura, escritura y procesamiento de macrodatos desde Transact-SQL o Spark<br/><br/> Combinación y análisis de forma sencilla de datos relacionales de alto valor con macrodatos de gran volumen<br/><br/>Consulta de orígenes de datos externos<br/><br/>Almacenamiento de macrodatos en HDFS administrados mediante SQL Server<br/><br/>Consulta de datos de varios orígenes de datos externos a través del clúster<br/><br/> Uso de los datos para tareas de inteligencia artificial, aprendizaje automático y otras tareas de análisis<br/><br/> Implementación y ejecución de aplicaciones en [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/>|
+| Solución de macrodatos escalable | [Implementación de clústeres escalables](../big-data-cluster/deploy-get-started.md) de contenedores de SQL Server, Spark y HDFS que se ejecutan en Kubernetes <br/><br/> Lectura, escritura y procesamiento de macrodatos desde Transact-SQL o Spark<br/><br/> Combinación y análisis de forma sencilla de datos relacionales de alto valor con macrodatos de gran volumen<br/><br/>Consulta de orígenes de datos externos<br/><br/>Almacenamiento de macrodatos en HDFS administrados mediante SQL Server<br/><br/>Consulta de datos de varios orígenes de datos externos a través del clúster<br/><br/> Uso de los datos para tareas de inteligencia artificial, aprendizaje automático y otras tareas de análisis<br/><br/> Implementación y ejecución de aplicaciones en [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] <br/><br/> Las bases de datos de la instancia maestra de SQL Server utilizan el grupo de disponibilidad Always On.<br/>|
 | &nbsp; | &nbsp; |
 
 Para obtener más información, consulte [Qué son [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] de SQL Server](../big-data-cluster/big-data-cluster-overview.md).
 
 El [Archivo de anuncios de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP)](what-s-new-in-sql-server-ver15-prerelease.md) contiene una lista de características anunciadas y modificadas para las versiones anteriores de CTP de esta característica.
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a name="database-engine"></a>Motor de base de datos
 

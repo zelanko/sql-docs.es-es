@@ -10,12 +10,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136489"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155690"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ En concreto, si una consulta contiene predicados de igualdad que implican un sub
   
 **Solución alternativa:** en caso de que esté usando índices hash, inspeccione las consultas y los planes de consulta para determinar si las consultas pueden beneficiarse de operaciones Index Seek en un subconjunto de la clave de índice, o de operaciones Index Seek en predicados de desigualdad. Si necesita buscar en un subconjunto de la clave de índice, use un índice NO CLÚSTER, o use un índice HASH solamente en las columnas en las que necesita buscar. Si necesita buscar en un predicado de desigualdad, use un índice NO CLÚSTER en lugar de HASH.  
   
-#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>Error al usar una tabla optimizada para memoria y una variable de tabla optimizada para memoria en la misma consulta, si la opción de base de datos READ_COMMITTED_SNAPSHOT está establecida en ON  
+#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-read_committed_snapshot-is-set-to-on"></a>Error al usar una tabla optimizada para memoria y una variable de tabla optimizada para memoria en la misma consulta, si la opción de base de datos READ_COMMITTED_SNAPSHOT está establecida en ON  
 **Problema:** si la opción de base de datos READ_COMMITTED_SNAPSHOT está establecida en ON, y tiene acceso a una tabla optimizada para memoria y a una variable de tabla optimizada para memoria en la misma instrucción en un contexto que no sea de transacción de usuario, puede aparecer este mensaje de error:  
   
 ```  
@@ -213,7 +213,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
   
 **Solución alternativa:** Ninguno. No se fie del valor de worker_time notificado en las DMV de estadísticas de ejecución para las consultas de ejecución breve en procedimientos almacenados compilados de forma nativa.  
   
-#### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Error con SHOWPLAN_XML para los procedimientos almacenados compilados de forma nativa que contienen expresiones largas  
+#### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>Error con SHOWPLAN_XML para los procedimientos almacenados compilados de forma nativa que contienen expresiones largas  
 **Problema:** si un procedimiento almacenado compilado de forma nativa contiene una expresión larga, al obtener SHOWPLAN_XML para el procedimiento, ya sea con la opción T-SQL establecida en SET SHOWPLAN_XML ON o mediante la opción "Mostrar plan de ejecución estimado" de Management Studio, puede aparecer el error siguiente:  
   
 ```  
@@ -334,10 +334,10 @@ Para obtener más información, vea [Sugerencias, trucos y solución de problema
   
 Para obtener más información, vea [Sugerencias, trucos y solución de problemas de SQL Server 2014 Reporting Services](https://go.microsoft.com/fwlink/?LinkID=391254).  
   
-### <a name="AzureVM"></a>SQL Server 2014 RTM en máquinas virtuales de Windows Azure  
+### <a name="AzureVM"></a>SQL Server 2014 RTM en máquinas virtuales de Azure  
   
-#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>El Asistente para agregar réplica de Azure devuelve un error al configurar un agente de escucha del grupo de disponibilidad en Windows Azure  
-**Problema:** si un grupo de disponibilidad tiene un agente de escucha, el Asistente para crear réplicas de Azure devolverá un error al intentar configurar el agente de escucha en Windows Azure.  
+#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>El Asistente para agregar réplicas de Azure devuelve un error al configurar un agente de escucha del grupo de disponibilidad en Azure  
+**Problema:** Si un grupo de disponibilidad tiene un agente de escucha, el Asistente para crear réplicas de Azure devolverá un error al intentar configurar el agente de escucha en Azure.  
   
 Este problema se debe a que los agentes de escucha de los grupos de disponibilidad necesitan que se asigne una dirección IP a cada subred que hospede réplicas de grupos de disponibilidad, incluida la subred de Azure.  
   
@@ -345,9 +345,9 @@ Este problema se debe a que los agentes de escucha de los grupos de disponibilid
   
 1.  En la página Agente de escucha, asigne una dirección IP estática disponible en la subred de Azure que hospedará la réplica del grupo de disponibilidad al Agente de escucha del grupo de disponibilidad.  
   
-    Esta solución alternativa permitirá que el asistente agregue la réplica a Windows Azure.  
+    Esta solución alternativa permitirá que el asistente agregue la réplica a Azure.  
   
-2.  Cuando se complete el asistente, necesitará finalizar la configuración del agente de escucha en Windows Azure como se describe en [Configuración del agente de escucha de los Grupos de disponibilidad de AlwaysOn en Windows Azure](https://msdn.microsoft.com/library/dn376546.aspx).  
+2.  Cuando se complete el asistente, necesitará finalizar la configuración del agente de escucha en Azure como se describe en [Configuración del agente de escucha de los Grupos de disponibilidad AlwaysOn en Azure](https://msdn.microsoft.com/library/dn376546.aspx).  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   

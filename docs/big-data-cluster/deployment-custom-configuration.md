@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 230ec2300bff55cefbb176c69d677b4e04d6ad30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155319"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304829"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurar las opciones de implementación de los recursos y servicios de clúster
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-A partir de un conjunto predefinido de perfiles de configuración integrados en la herramienta de administración de azdata, puede modificar fácilmente la configuración predeterminada para que se adapte mejor a los requisitos de la carga de trabajo de BDC. A partir de la versión Release Candidate, la estructura de los archivos de configuración se actualizó para permitir la actualización granular de la configuración de cada servicio del recurso. 
+A partir de un conjunto predefinido de perfiles de configuración que se integran en la herramienta de administración de azdata, puede modificar fácilmente la configuración predeterminada para satisfacer mejor sus requisitos de carga de trabajo de BDC. A partir de la versión Release Candidate, la estructura de los archivos de configuración se actualizó para permitir la actualización granular de la configuración de cada servicio del recurso. 
 
 También puede establecer configuraciones de nivel de recurso o actualizar las configuraciones de todos los servicios de un recurso. A continuación se muestra un resumen de la estructura de **BDC. JSON**:
 
@@ -99,7 +99,7 @@ Para actualizar las configuraciones de nivel de recurso como las instancias de u
 }
 ``` 
 
-De igual forma, para cambiar la configuración de un servicio de inicio dentro de un recurso específico. Por ejemplo, si desea cambiar la configuración de memoria de Spark solo para el componente de Spark en el bloque de almacenamiento, actualizará el recurso **Storage-0** con una sección de **configuración** para el servicio **Spark** en el archivo de configuración **BDC. JSON.** .
+De igual forma, para cambiar la configuración de un único servicio dentro de un recurso específico. Por ejemplo, si desea cambiar la configuración de memoria de Spark solo para el componente de Spark en el grupo de almacenamiento, actualizará el recurso **Storage-0** con una sección de **configuración** para el servicio **Spark** en el archivo de configuración **BDC. JSON.** .
 ```json
 "resources":{
     ...
@@ -243,7 +243,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 ## <a id="storage"></a> Configuración del almacenamiento
 
-También puede cambiar la clase de almacenamiento y las características que se usan para cada grupo. En el ejemplo siguiente se asigna una clase de almacenamiento personalizada al bloque de almacenamiento y se actualiza el tamaño de la notificación de volumen persistente para almacenar datos de hasta 100 GB. En primer lugar, cree un archivo patch.json como el de abajo, que incluye la nueva sección *storage*, además de *type* y *replicas*.
+También puede cambiar la clase de almacenamiento y las características que se usan para cada grupo. En el ejemplo siguiente se asigna una clase de almacenamiento personalizada al almacenamiento y a los grupos de datos y se actualiza el tamaño de la demanda de volumen persistente para almacenar datos en 500 GB para HDFS (bloque de almacenamiento) y 100 GB para el grupo de datos. En primer lugar, cree un archivo patch.json como el de abajo, que incluye la nueva sección *storage*, además de *type* y *replicas*.
 
 ```json
 {
@@ -256,13 +256,33 @@ También puede cambiar la clase de almacenamiento y las características que se 
         "replicas": 2,
         "storage": {
           "data": {
-            "size": "100Gi",
-            "className": "myStorageClass",
+            "size": "500Gi",
+            "className": "myHDFSStorageClass",
             "accessMode": "ReadWriteOnce"
           },
           "logs": {
             "size": "32Gi",
-            "className": "myStorageClass",
+            "className": "myHDFSStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "spec.resources.data-0.spec",
+      "value": {
+        "type": "Data",
+        "replicas": 2,
+        "storage": {
+          "data": {
+            "size": "100Gi",
+            "className": "myDataStorageClass",
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myDataStorageClass",
             "accessMode": "ReadWriteOnce"
           }
         }
@@ -297,7 +317,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 Puede controlar la ubicación de pods en nodos de Kubernetes con recursos específicos para acomodar varios tipos de requisitos de carga de trabajo. Por ejemplo, puede que desee asegurarse de que los pods de recursos del grupo de almacenamiento se colocan en los nodos con más almacenamiento o SQL Server instancias maestras se colocan en los nodos que tienen más recursos de CPU y memoria. En este caso, primero crea un clúster de Kubernetes heterogéneo con distintos tipos de hardware y luego [asigna etiquetas de nodo](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/) en consecuencia. En el momento de implementar el clúster de macrodatos, puede especificar las mismas etiquetas en el nivel de grupo del archivo de configuración de implementación de clúster. Luego Kubernetes se encarga de ajustar los pods en los nodos que coinciden con las etiquetas especificadas. La clave de etiqueta específica que debe agregarse a los nodos del clúster de kubernetes es **MSSQL-Cluster-Wide**. El valor de esta etiqueta puede ser cualquier cadena que elija.
 
-En el ejemplo siguiente se muestra cómo editar un archivo de configuración personalizado para incluir una configuración de etiqueta de nodo para la SQL Server instancia maestra, grupo de procesos, grupo de datos & grupo de almacenamiento. Observe que no hay ninguna clave *nodeLabel* en las configuraciones integradas, por lo que tiene que editar manualmente un archivo de configuración personalizado o crear un archivo de revisión y aplicarlo al archivo de configuración personalizado. El pod de la instancia principal de SQL Server se implementará en un nodo que contenga una etiqueta **MSSQL-Cluster-Wide** con el valor **BDC-Master**. El grupo de proceso y los pods del grupo de datos se implementarán en los nodos que contengan una etiqueta **MSSQL-Cluster-Wide** con valor **BDC-SQL**. Los pods del bloque de almacenamiento se implementarán en los nodos que contengan una etiqueta **MSSQL-Cluster-Wide** con valor **BDC-Storage**.
+En el ejemplo siguiente se muestra cómo editar un archivo de configuración personalizado para incluir una configuración de etiqueta de nodo para la SQL Server instancia maestra, grupo de procesos, grupo de datos & grupo de almacenamiento. No hay ninguna clave *nodeLabel* en las configuraciones integradas, por lo que tendrá que editar manualmente un archivo de configuración personalizado o crear un archivo de revisión y aplicarlo al archivo de configuración personalizado. El pod de la instancia principal de SQL Server se implementará en un nodo que contenga una etiqueta **MSSQL-Cluster-Wide** con el valor **BDC-Master**. El grupo de proceso y los pods del grupo de datos se implementarán en los nodos que contengan una etiqueta **MSSQL-Cluster-Wide** con valor **BDC-SQL**. Los pods del bloque de almacenamiento se implementarán en los nodos que contengan una etiqueta **MSSQL-Cluster-Wide** con valor **BDC-Storage**.
 
 Cree un archivo denominado **patch.json** en el directorio actual con el siguiente contenido:
 

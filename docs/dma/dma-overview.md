@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: 26a8dbc4a156b8910bd35dfb7381608ec7198f78
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: ac039906bddc700e9e0b2517d0e34274e088ad2e
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000601"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304705"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Información general de Data Migration Assistant
 El Data Migration Assistant (DMA) le ayuda a actualizar a una plataforma de datos moderna mediante la detección de problemas de compatibilidad que pueden afectar a la funcionalidad de la base de datos en la nueva versión de SQL Server o Azure SQL Database. DMA recomienda mejoras de rendimiento y confiabilidad para el entorno de destino y permite trasladar el esquema, los datos y los objetos no contenidas del servidor de origen al servidor de destino.
@@ -90,6 +90,7 @@ DMA reemplaza todas las versiones anteriores de SQL Server Asesor de actualizaci
 - SQL Server 2017 en Windows y Linux
 - Se aplica a: Base de datos SQL de Azure
 - Instancia administrada de Azure SQL Database
+- SQL Server que se ejecuta en una máquina virtual de Azure
 
 ## <a name="see-also"></a>Vea también
 [Evaluación de la migración de SQL Server](../dma/dma-assesssqlonprem.md)     

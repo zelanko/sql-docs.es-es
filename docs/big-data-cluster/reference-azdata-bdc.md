@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 408b3c2d55d5e2515a2df979cd54b380a0d54704
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 689b01b7798a5a1f4ec282343bfea0a1781e3437
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155139"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304734"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -71,7 +71,7 @@ Nombre del clúster de macrodatos, se usa para espacios de nombres de kubernetes
 #### `--config-profile -c`
 Perfil de configuración del clúster de Big Data, que se usa para implementar el clúster: [' AKS-dev-test ', ' kubeadm-Prod ', ' minikube-dev-test ', ' kubeadm-dev-test ']
 #### `--accept-eula -a`
-¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en "yes". Los términos de licencia de este producto se pueden ver en https://aka.ms/azdata-eula y https://go.microsoft.com/fwlink/?LinkId=2002534.
+¿Acepta los términos de licencia? [sí/no]. Si no quiere usar este argumento, puede establecer la variable de entorno ACCEPT_EULA en “yes”. Los términos de licencia de este producto se pueden ver en https://go.microsoft.com/fwlink/?LinkId=2002534.
 #### `--node-label -l`
 Etiqueta de nodo del clúster de macrodatos, se usa para designar los nodos en los que se va a implementar.
 #### `--force -f`

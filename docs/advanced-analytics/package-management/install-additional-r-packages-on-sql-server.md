@@ -9,18 +9,18 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c6fd8a9339756c6c22870e4eca6203064dc27f4
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 3b5a55ec16c7dfa2f16dbae62674a475fb39c5d7
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190360"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70275674"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalar nuevos paquetes de R con sqlmlutils
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se describe cómo usar las funciones del paquete [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) para instalar nuevos paquetes de R en una instancia de SQL Server Machine Learning Services o SQL Server R Services. Los paquetes que se instalan se pueden usar en scripts de R que se ejecutan en la base de datos mediante la instrucción T-SQL [SP-Execute-external-script-Transact-SQL](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
+En este artículo se describe cómo usar las funciones del paquete [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) para instalar nuevos paquetes de R en una instancia de SQL Server Machine Learning Services o SQL Server R Services. Los paquetes que se instalan se pueden usar en scripts de R que se ejecutan en la base de datos mediante la instrucción T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
 
 > [!NOTE]
 > No se recomienda `install.packages` el comando de r estándar para agregar paquetes de r en SQL Server. En su lugar, use **sqlmlutils** como se describe en este artículo.
@@ -151,7 +151,7 @@ Consulte [instalación de miniCRAN](create-a-local-package-repository-using-mini
 
 En un equipo con acceso a Internet:
 
-1. Ejecute el siguiente script de R para crear un repositorio localpara el pegado. En este ejemplo se crea la carpeta `c:\downloads\glue`Repository en.
+1. Ejecute el siguiente script de R para crear un repositorio local para el **pegado**. En este ejemplo se crea la carpeta `c:\downloads\glue`Repository en.
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 

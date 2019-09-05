@@ -92,13 +92,13 @@
         - name: Categorización de clientes (agrupación en clústeres k-means)
           items:
             - name: 1 - Introducción
-              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model.md
+              href: ../advanced-analytics/tutorials/python-clustering-model.md
             - name: 2 - Preparación de los datos
-              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-prepare-data.md
+              href: ../advanced-analytics/tutorials/python-clustering-model-prepare-data.md
             - name: 3 - Creación del modelo
-              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-build.md
+              href: ../advanced-analytics/tutorials/python-clustering-model-build.md
             - name: 4 - Implementación del modelo
-              href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md
+              href: ../advanced-analytics/tutorials/python-clustering-model-deploy.md
         - name: Creación de un modelo de Python mediante revoscalepy
           href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
         - name: Python para desarrolladores de SQL

@@ -103,7 +103,7 @@ SQLRETURN SQLAllocHandle(
 |IM001|El controlador no admite esta función|(DM) el argumento *HandleType* era SQL_HANDLE_STMT y el controlador no era un controlador ODBC válido.<br /><br /> (DM) el argumento *HandleType* era SQL_HANDLE_DESC y el controlador no admite la asignación de un identificador de descriptor.|  
   
 ## <a name="comments"></a>Comentarios  
- **SQLAllocHandle** se utiliza para asignar identificadores para entornos, conexiones, instrucciones y descriptores, tal como se describe en las secciones siguientes. Para obtener información general acerca de los [](../../../odbc/reference/develop-app/handles.md)identificadores, vea identificadores.  
+ **SQLAllocHandle** se utiliza para asignar identificadores para entornos, conexiones, instrucciones y descriptores, tal como se describe en las secciones siguientes. Para obtener información general acerca de los identificadores, vea [Identificadores](../../../odbc/reference/develop-app/handles.md).  
   
  Una aplicación puede asignar más de un entorno, conexión o identificador de instrucción a la vez si el controlador admite varias asignaciones. En ODBC, no se define ningún límite en el número de identificadores de entorno, conexión, instrucción o descriptor que se pueden asignar en un momento dado. Los controladores pueden imponer un límite en cuanto al número de un determinado tipo de identificador que se puede asignar a la vez; para obtener más información, consulte la documentación del controlador.  
   
@@ -112,7 +112,7 @@ SQLRETURN SQLAllocHandle(
 > [!NOTE]  
 >  La programación de aplicaciones ODBC es incorrecta para llamar a **SQLAllocHandle** dos veces con la misma variable de aplicación definida para  *\*OutputHandlePtr* sin llamar a **SQLFreeHandle** para liberar el identificador antes de reasignarlo. . Si se sobrescriben los identificadores ODBC de tal manera, se podría producir un comportamiento incoherente o errores en la parte de los controladores ODBC.  
   
- En los sistemas operativos que admiten varios subprocesos, las aplicaciones pueden usar el mismo entorno, conexión, instrucción o identificador de descriptor en subprocesos diferentes. Por lo tanto, los controladores deben admitir el acceso multiproceso seguro a esta información; una manera de lograrlo, por ejemplo, es usar una sección crítica o un semáforo. Para obtener más información sobre los subprocesos, vea multithreading. [](../../../odbc/reference/develop-app/multithreading.md)  
+ En los sistemas operativos que admiten varios subprocesos, las aplicaciones pueden usar el mismo entorno, conexión, instrucción o identificador de descriptor en subprocesos diferentes. Por lo tanto, los controladores deben admitir el acceso multiproceso seguro a esta información; una manera de lograrlo, por ejemplo, es usar una sección crítica o un semáforo. Para obtener más información sobre los subprocesos, vea [multithreading](../../../odbc/reference/develop-app/multithreading.md).  
   
  **SQLAllocHandle** no establece el atributo de entorno SQL_ATTR_ODBC_VERSION cuando se llama para asignar un identificador de entorno. la aplicación debe establecer el atributo de entorno, o SQLSTATE HY010 (error de secuencia de función) se devolverá cuando se llame a **SQLAllocHandle** para asignar un identificador de conexión.  
   
@@ -171,7 +171,7 @@ SQLRETURN SQLAllocHandle(
   
  Cuando se libera el descriptor asignado explícitamente, el descriptor asignado implícitamente vuelve a estar asociado a la instrucción. (El atributo SQL_ATTR_APP_ROW_DESC o SQL_ATTR_APP_PARAM_DESC de la instrucción se vuelve a establecer en el identificador de descriptor asignado implícitamente). Esto se aplica a todas las instrucciones asociadas con el descriptor asignado explícitamente en la conexión.  
   
- Para obtener más información acerca de los descriptores, consulte descriptores. [](../../../odbc/reference/develop-app/descriptors.md)  
+ Para obtener más información acerca de los descriptores, vea [Descriptores](../../../odbc/reference/develop-app/descriptors.md).  
   
 ## <a name="code-example"></a>Ejemplo de código  
  Vea el [programa ODBC de ejemplo](../../../odbc/reference/sample-odbc-program.md), la función [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md), la [función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)y la [función SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md).  

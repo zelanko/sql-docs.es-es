@@ -32,7 +32,7 @@ ms.locfileid: "68073485"
   
     -   El solucionador predeterminado. El comportamiento del solucionador predeterminado depende de si se trata de una suscripción de cliente o de servidor. Para más información sobre cómo especificar el tipo de suscripción, vea [Specify a Merge Subscription Type and Conflict Resolution Priority &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/specify-a-merge-subscription-type-and-conflict-resolution-priority.md) (Especificar un tipo de suscripción de mezcla y la prioridad de resolución de conflictos &#40;SQL Server Management Studio&#41;).  
   
-    -   Un solucionador personalizado, escrito por el usuario, que puede ser un controlador de lógica de negocios (escrito en código administrado) o un solucionador personalizado basado en COM. Para más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Si necesita implementar lógica personalizada que se ejecute para cada fila replicada, no solo para filas con conflictos, vea [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Un solucionador personalizado, escrito por el usuario, que puede ser un controlador de lógica de negocios (escrito en código administrado) o un solucionador personalizado basado en COM. Para más información, consulte [Replicación de mezcla avanzada: detección y resolución de conflictos](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md). Si necesita implementar lógica personalizada que se ejecute para cada fila replicada, no solo para filas con conflictos, vea [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
     -   Un solucionador estándar basado en COM, incluido con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -69,9 +69,9 @@ ms.locfileid: "68073485"
   
 1.  Si piensa registrar su propio solucionador de conflictos personalizado, cree uno de los tipos siguientes:  
   
-    -   Solucionador basado en código administrado como un controlador de lógica de negocios. Para más información, consulte [Implement a Business Logic Handler for a Merge Article](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
+    -   Solucionador basado en código administrado como un controlador de lógica de negocios. Para más información, consulte [Implementar un controlador de lógica de negocios para un artículo de mezcla](../../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-    -   Solucionador basado en procedimientos almacenados y solucionador basado en COM. Para más información, consulte [Implement a Custom Conflict Resolver for a Merge Article](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md).  
+    -   Solucionador basado en procedimientos almacenados y solucionador basado en COM. Para más información, consulte [Implementación de un solucionador de conflictos personalizado para un artículo de mezcla](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md).  
   
 2.  Para determinar si el solucionador deseado ya está registrado, ejecute [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) en el publicador en cualquier base de datos. Esto muestra una descripción del solucionador personalizado así como del identificador de clase (CLSID) de cada solucionador basado en COM registrado en el distribuidor o información sobre el ensamblado administrado de cada controlador de lógica de negocios registrado en el distribuidor.  
   

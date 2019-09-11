@@ -94,7 +94,7 @@ ms.locfileid: "70175966"
 -   Al restaurar desde una copia de seguridad comprimida, puede aparecer el siguiente error:  
   
     -   **SqlException 3284. Gravedad 16 estado: 5**  
-        **La marca de error del https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak mensaje en el dispositivo ' ' no está alineada. Vuelva a emitir la instrucción restore con el mismo tamaño de bloque usado para crear el conjunto de subconjunto: ' 65536 ' parece un valor posible.**  
+        **La marca de error del'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak 'mensaje en el dispositivo no está alineada. Vuelva a emitir la instrucción restore con el mismo tamaño de bloque usado para crear el conjunto de subconjunto: ' 65536 ' parece un valor posible.**  
   
          Para resolver este error, vuelva a emitir la instrucción `BACKUP` especificando `BLOCKSIZE = 65536`.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "70175966"
   
  Los servidores proxy pueden tener configuraciones que limitan el número de conexiones por minuto. Copia de seguridad en URL es un proceso multiproceso y, por tanto, puede sobrepasar este límite. Si esto ocurre, el servidor proxy elimina la conexión. Para resolver este problema, cambie la configuración de proxy para que SQL Server no utilice el proxy.   A continuación se muestran algunos ejemplos de los tipos o mensajes de error que puede ver en el registro de errores:  
   
--   No se pudo http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak escribir en "": BACKUP TO URL recibió una excepción del extremo remoto. Mensaje de excepción: No se pueden leer los datos de la conexión de transporte: La conexión se cerró.  
+-   No se pudo'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 'escribir en : BACKUP TO URL recibió una excepción del extremo remoto. Mensaje de excepción: No se pueden leer los datos de la conexión de transporte: La conexión se cerró.  
   
 -   Error de E/S irrecuperable en el archivo "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ". No se pudo recopilar el error del punto de conexión remoto.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "70175966"
   
      Fin anómalo de BACKUP DATABASE.  
   
--   BackupIoRequest:: ReportIoError: error de escritura en el dispositivo http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak de copia de seguridad ' '. Error de sistema operativo Copia de seguridad en URL recibió una excepción del extremo remoto. Mensaje de excepción: No se pueden leer los datos de la conexión de transporte: La conexión se cerró.  
+-   BackupIoRequest:: ReportIoError: error de escritura en el dispositivo'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 'de copia de seguridad. Error de sistema operativo Copia de seguridad en URL recibió una excepción del extremo remoto. Mensaje de excepción: No se pueden leer los datos de la conexión de transporte: La conexión se cerró.  
   
  Si activa el registro detallado mediante la marca de seguimiento 3051, puede ver también el mensaje siguiente en los registros:  
   

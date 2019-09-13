@@ -24,7 +24,7 @@ ms.locfileid: "70175358"
   
 -   Ha creado una base de datos en el equipo de origen.  
   
--   Ha creado una copia de seguridad de su base de datos (. bak) en Azure Storage mediante el uso de la característica [SQL Server Backup and restore with Azure BLOB Storage Service](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) . Tenga en cuenta que deberá crear una credencial de SQL Server en este paso. Esta credencial utiliza las claves de la cuenta de almacenamiento.  
+-   Ha creado una copia de seguridad de su base de datos (. bak) en Azure Storage mediante el uso de la característica [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) . Tenga en cuenta que deberá crear una credencial de SQL Server en este paso. Esta credencial utiliza las claves de la cuenta de almacenamiento.  
   
 -   Tiene una cuenta de Azure Storage.  
   

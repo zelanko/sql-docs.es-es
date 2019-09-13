@@ -86,7 +86,7 @@ ms.locfileid: "70175989"
  **Términos y definiciones de medios de copia de seguridad**  
   
  [dispositivo de copia de seguridad](backup-devices-sql-server.md)  
- Disco o dispositivo de cinta en el que se escriben las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio de almacenamiento de blobs de Azure y el formato de **dirección URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [SQL Server Backup and restore with Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Disco o dispositivo de cinta en el que se escriben las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio de almacenamiento de blobs de Azure y el formato de **dirección URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  [medio de copia de seguridad](media-sets-media-families-and-backup-sets-sql-server.md)  
  Una o varias cintas o archivos de disco en los que se han escrito una o varias copias de seguridad.  

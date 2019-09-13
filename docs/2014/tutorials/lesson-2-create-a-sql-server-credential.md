@@ -49,7 +49,7 @@ ms.locfileid: "70154328"
   
 5.  Compruebe la instrucción T-SQL y haga clic en **Ejecutar**.  
   
- Para obtener más información sobre el servicio Azure BLOB Storage para los conceptos y los requisitos de copia de seguridad, vea [SQL Server Backup and restore with Azure BLOB Storage Service](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Para obtener más información sobre el servicio Azure BLOB Storage para los conceptos y los requisitos de copia de seguridad, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ### <a name="next-lesson"></a>Lección siguiente  
  [Lección 3: Escriba una copia de seguridad completa de la base](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)de datos en el servicio Azure BLOB Storage.  

@@ -34,7 +34,7 @@ ms.locfileid: "70154788"
   En este tema se presenta la terminología básica de medios de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y está pensada para lectores noveles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tema describe el formato que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los medios de copia de seguridad, la correspondencia entre los medios y los dispositivos de copia de seguridad, la organización de las copias de seguridad en los medios y varias consideraciones para los conjuntos y las familias de medios. El tema también describe los pasos inicializar o dar formato a los medios de copia de seguridad antes de usarlos por primera vez o reemplazar un conjunto de medios anterior por otro nuevo, cómo sobrescribir los conjuntos de copia de seguridad anteriores en un conjunto de medios y cómo agregar nuevos conjuntos de copia de seguridad a un conjunto de medios.  
   
 > [!NOTE]  
->  Para obtener más información sobre SQL Server copia de seguridad en el servicio de almacenamiento de blobs de Azure, consulte [SQL Server Backup and restore with Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Para obtener más información sobre SQL Server copia de seguridad en el servicio de almacenamiento de blobs de Azure, consulte [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
   
 ##  <a name="TermsAndDefinitions"></a> Términos y definiciones  

@@ -210,7 +210,7 @@ GO
  Si deja abierta la cinta accidentalmente, la manera más rápida de liberarla es usar el siguiente comando: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Para obtener más información, vea [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-azure-blob-storage-service"></a>Usar el servicio de Azure Blob Storage  
- Se pueden escribir SQL Server copias de seguridad en el servicio Azure Blob Storage.  Para obtener más información sobre cómo usar el servicio Azure BLOB Storage para las copias de seguridad, vea [SQL Server Backup and restore with Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Se pueden escribir SQL Server copias de seguridad en el servicio Azure Blob Storage.  Para obtener más información sobre cómo usar el servicio Azure BLOB Storage para las copias de seguridad, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a>Uso de un dispositivo lógico de copia de seguridad  
  Un *dispositivo lógico de copia de seguridad* es un nombre opcional y definido por el usuario que apunta a un dispositivo físico de copia de seguridad específico (un archivo de disco o una unidad de cinta). Un dispositivo lógico de copia de seguridad permite usar el direccionamiento indirecto cuando se hace referencia al dispositivo físico de copia de seguridad correspondiente.  

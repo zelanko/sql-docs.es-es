@@ -34,7 +34,8 @@ ms.locfileid: "70176026"
   
  El componente de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece una protección esencial para los datos críticos almacenados en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para minimizar el riesgo de pérdida de datos catastrófica, debe realizar copias de seguridad de las bases de datos para conservar las modificaciones en los datos de forma periódica. Una estrategia de copias de seguridad y restauración correctamente planeada contribuye a la protección de las bases de datos de la pérdida de datos derivada de daños causados por diferentes errores. Pruebe la estrategia mediante la restauración de las copias de seguridad y la posterior recuperación de la base de datos para estar preparado y poder responder de forma eficaz ante un desastre.  
   
- Además del almacenamiento local para almacenar las copias de seguridad, SQL Server también admite la copia de seguridad y la restauración desde el servicio Azure Blob Storage. Para obtener más información, vea [SQL Server Backup and restore with Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Además del almacenamiento local para almacenar las copias de seguridad, SQL Server también admite la copia de seguridad y la restauración desde el servicio Azure Blob Storage. Para obtener más información, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio
+](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 
   
@@ -67,7 +68,8 @@ ms.locfileid: "70176026"
  Copia de los datos que se puede usar para restaurar y recuperar los datos después de un error. Las copias de seguridad de una base de datos también se pueden usar para restaurar una copia de la base de datos en una nueva ubicación.  
   
  dispositivo de copia de seguridad  
- Disco o dispositivo de cinta en el que se escriben las copias de seguridad de SQL Server del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio de almacenamiento de blobs de Azure y el formato de **dirección URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [SQL Server Backup and restore with Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Disco o dispositivo de cinta en el que se escriben las copias de seguridad de SQL Server del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio de almacenamiento de blobs de Azure y el formato de **dirección URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio
+](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  medio de copia de seguridad  
  Una o varias cintas o archivos de disco en los que se han escrito una o varias copias de seguridad.  

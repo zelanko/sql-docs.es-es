@@ -84,7 +84,7 @@ ms.locfileid: "68769656"
  
 -   Las tablas replicadas en tablas optimizadas para memoria de un suscriptor están limitadas a los tipos de datos permitidos en las tablas optimizadas para memoria. Para obtener más información, vea [Tipos de datos admitidos para OLTP en memoria](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).  
   
--   No todas las características de Transact-SQL son compatibles con las tablas optimizadas en memoria. Vea [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obtener información detallada.  
+-   No todas las características de Transact-SQL son compatibles con las tablas optimizadas en memoria. Vea [Construcciones Transact-SQL no admitidas por OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) para obtener información detallada.  
   
 ##  <a name="Schema"></a> Modificar un archivo de esquema  
   

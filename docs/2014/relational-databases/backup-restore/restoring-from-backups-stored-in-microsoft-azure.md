@@ -27,7 +27,7 @@ ms.locfileid: "70154702"
   
 ### <a name="using-transact-sql"></a>Usar Transact-SQL  
   
--   Dado que SQL Server debe conectarse a un origen externo para recuperar los archivos de copia de seguridad, la credencial de SQL se utiliza para autenticarse en la cuenta de almacenamiento. Por consiguiente, la instrucción RESTORE requiere la opción WITH CREDENTIAL. Para obtener más información, vea [SQL Server Backup and restore with Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+-   Dado que SQL Server debe conectarse a un origen externo para recuperar los archivos de copia de seguridad, la credencial de SQL se utiliza para autenticarse en la cuenta de almacenamiento. Por consiguiente, la instrucción RESTORE requiere la opción WITH CREDENTIAL. Para obtener más información, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 -   Si usa [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para administrar las copias de seguridad en la nube, podrá revisar todas las copias de seguridad disponibles en el almacén mediante la función del sistema **smart_admin.fn_available_backups** . Esta función del sistema devuelve todas las copias de seguridad disponibles para una base de datos en una tabla. Como los resultados se devuelven en una tabla, puede filtrarlos u ordenarlos. Para obtener más información, vea [smart_admin. &#40;FN_AVAILABLE_BACKUPS Transact-&#41;SQL](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql).  
   

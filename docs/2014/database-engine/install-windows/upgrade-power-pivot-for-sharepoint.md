@@ -289,7 +289,7 @@ Get-PowerPivotSystemService
   
 3.  Haga clic en **Proveedores de datos de confianza**. Debe ver MSOLAP.5 (Proveedor OLE DB de Microsoft para OLAP Services 11.0). Si actualizó la instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , también verá MSOLAP.4 de la versión anterior.  
   
-4.  Para obtener más información, vea [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
+4.  Para obtener más información, vea [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
   
  MSOLAP.4 se describe como el proveedor Microsoft OLE DB para OLAP Services 10.0. Esta versión podría ser la predeterminada de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] que se instala con Excel Services o podría ser la versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] . La versión predeterminada que SharePoint instala no admite el acceso a datos PowerPivot. Debe tener la versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o posterior para conectarse a los libros PowerPivot en SharePoint. Para comprobar que tiene la versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , utilice las instrucciones de la sección anterior que explican cómo comprobar la versión viendo las propiedades del archivo.  
   

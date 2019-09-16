@@ -52,7 +52,7 @@ El Monitor de replicación proporciona las siguientes pestañas con información
 3.  Para ver información sobre las suscripciones, haga clic en la pestaña **Todas las suscripciones**, haga clic con el botón derecho en la suscripción y, después, seleccione **Propiedades**. En esta pestaña, también puede realizar tareas y tener acceso a información más detallada. 
 4.  Para ver información sobre los agentes, haga clic en la pestaña **Agentes**. En esta pestaña, también puede realizar tareas y tener acceso a información más detallada. 
 5.  Para ver información sobre las advertencias y los umbrales del agente, haga clic en la pestaña **Advertencias**. Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
-6.  Para ver información sobre los testigos de seguimiento, haga clic en la pestaña **Testigos de seguimiento**. Para obtener más información acerca de cómo utilizar los testigos de seguimiento, vea [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+6.  Para ver información sobre los testigos de seguimiento, haga clic en la pestaña **Testigos de seguimiento**. Para obtener más información acerca de cómo utilizar los testigos de seguimiento, vea [Medir la latencia y validar las conexiones de la replicación transaccional](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="for-a-publisher"></a>Para un publicador 
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: dd5d5003970f87d39148a058ca02befaf006775c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027306"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874629"
 ---
 # <a name="understanding-ssl-support"></a>Descripción de la compatibilidad con SSL
 
@@ -28,7 +28,7 @@ Si la aplicación no solicita cifrado, [!INCLUDE[jdbcNoVersion](../../includes/j
 > [!NOTE]  
 > Asegúrese de que el valor pasado a **serverName** coincida exactamente con el nombre común (CN) o con el nombre DNS del nombre alternativo de sujeto (SAN) del certificado de servidor para que la conexión SSL se establezca correctamente.  
 >
-> Para obtener más información sobre cómo configurar SSL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el tema Cifrar conexiones a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Para obtener más información sobre cómo configurar SSL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Habilitar conexiones cifradas en el motor de base de datos](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="remarks"></a>Notas
 

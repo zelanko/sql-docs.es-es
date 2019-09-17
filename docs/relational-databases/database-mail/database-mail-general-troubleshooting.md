@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 01b58ac9ebbcb7cdfba9ac8c8fe3f58b67278547
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4ea44a55a7c58e64f327a97943481dfd63289324
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134414"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228419"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Pasos generales para solucionar problemas del Correo electrónico de base de datos 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 La solución de problemas del Correo electrónico de base de datos conlleva comprobar las siguientes áreas generales del sistema del Correo electrónico de base de datos. Estos procedimientos se presentan en un orden lógico, pero se pueden evaluar en cualquier orden.
 

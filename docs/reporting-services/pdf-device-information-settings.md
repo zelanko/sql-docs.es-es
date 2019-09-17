@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 10633ef2ed778a7b7c3d5bcd64ee006cefe24752
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503679"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911330"
 ---
 # <a name="pdf-device-information-settings"></a>Configuración de la información del dispositivo PDF
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para representar informes en formato PDF.  
@@ -28,6 +28,7 @@ ms.locfileid: "65503679"
 |**ColumnSpacing**|Espacio entre las columnas que se va a establecer para el informe. Este valor invalida la configuración original del informe.|  
 |**DpiX**|La resolución del dispositivo de salida en la dirección de x.|  
 |**DpiY**|La resolución del dispositivo de salida en la dirección de y.|  
+|**EmbedFonts**|Indica si se van a incrustar fuentes en el archivo PDF, cuyo tamaño es mayor, pero las fuentes del informe se representarán correctamente para todos los clientes. Un valor de **None** deshabilita la incrustación de fuentes.|  
 |**EndPage**|Última página del informe que se va a representar. El valor predeterminado es el de **StartPage**.|  
 |**HumanReadablePDF**|Indica si se debe representar un archivo PDF sin comprimir, que es mayor en tamaño, pero más legible en un editor de texto sin formato. El valor predeterminado es **false**.|  
 |**MarginBottom**|Valor del margen inferior, en pulgadas, que se va a establecer para el informe. Debe incluir un valor entero o un valor decimal seguido de "in" (por ejemplo, 1in). Este valor invalida la configuración original del informe.|  

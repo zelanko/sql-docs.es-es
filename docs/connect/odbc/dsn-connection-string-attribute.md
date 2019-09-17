@@ -10,10 +10,10 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/02/2019
 ms.locfileid: "68702793"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Atributos y palabras clave de cadena de conexión y DSN
@@ -124,7 +124,7 @@ Estos son algunos de los atributos y las palabras clave de cadena de conexión q
 
 Se usa para describir el origen de datos.
 
-### <a name="sqlcoptssansioem"></a>SQL_COPT_SS_ANSI_OEM
+### <a name="sql_copt_ss_ansi_oem"></a>SQL_COPT_SS_ANSI_OEM
 
 Controla la conversión de datos de ANSI a OEM. 
 
@@ -133,7 +133,7 @@ Controla la conversión de datos de ANSI a OEM.
 | SQL_AO_OFF | (Valor predeterminado) No se realiza la traducción. |
 | SQL_AO_ON | Se realiza la traducción. |
 
-### <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT
+### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 Controla el uso de conexiones de reserva de SQL Server. Ya no se admite.
 
@@ -146,7 +146,7 @@ Controla el uso de conexiones de reserva de SQL Server. Ya no se admite.
 
 ## <a name="new-connection-string-keywords-and-connection-attributes"></a>Nuevos atributos de conexión y palabras clave de cadena de conexión
 
-###  <a name="authentication---sqlcoptssauthentication"></a>Autenticación: SQL_COPT_SS_AUTHENTICATION
+###  <a name="authentication---sql_copt_ss_authentication"></a>Autenticación: SQL_COPT_SS_AUTHENTICATION
 
 Establece el modo de autenticación que se utilizará al conectarse a SQL Server. Para obtener más información, vea [Uso de Azure Active Directory](using-azure-active-directory.md).
 
@@ -163,7 +163,7 @@ Establece el modo de autenticación que se utilizará al conectarse a SQL Serve
 > [!NOTE]
 > Al utilizar un atributo o palabra clave `Authentication`, especifique explícitamente la opción `Encrypt` en el valor deseado de la cadena de conexión, DSN o atributo de conexión. Para más información, consulte [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
-### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption: SQL_COPT_SS_COLUMN_ENCRYPTION
+### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption: SQL_COPT_SS_COLUMN_ENCRYPTION
 
 Controla el cifrado transparente de columnas (Always Encrypted). Para obtener más información, vea [Uso de Always Encrypted (ODBC)](using-always-encrypted-with-the-odbc-driver.md).
 
@@ -173,7 +173,7 @@ Controla el cifrado transparente de columnas (Always Encrypted). Para obtener m
 |Deshabilitado|SQL_CE_DISABLED|(Valor predeterminado) Deshabilita Always Encrypted.|
 | |SQL_CE_RESULTSETONLY|Habilita solamente el descifrado (los resultados y valores devueltos).|
 
-### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution: SQL_COPT_SS_TNIR
+### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution: SQL_COPT_SS_TNIR
 
 Controla la característica de resolución de IP de red transparente, que interactúa con MultiSubnetFailover para permitir intentos de reconexión más rápidos. Para obtener más información, vea [Uso de resolución de IP de red transparente](using-transparent-network-ip-resolution.md).
 
@@ -191,7 +191,7 @@ Controla el uso de SET FMTONLY para los metadatos al conectarse a SQL Server 20
 |No|(Valor predeterminado) Si está disponible, use sp_describe_first_result_set para los metadatos. |
 |Sí| Use SET FMTONLY para los metadatos. |
 
-### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
+### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
 Permite el uso de un token de acceso de Azure Active Directory para la autenticación. Para obtener más información, vea [Uso de Azure Active Directory](using-azure-active-directory.md).
 
@@ -200,7 +200,7 @@ Permite el uso de un token de acceso de Azure Active Directory para la autentica
 | NULL | (Valor predeterminado) No se proporciona ningún token de acceso. |
 | ACCESSTOKEN* | Puntero a un token de acceso. |
 
-### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
+### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
 Se comunica con una biblioteca de proveedor de almacén de claves cargada. Controla el cifrado transparente de columnas (Always Encrypted). Este atributo no tiene ningún valor predeterminado. Consulte [Proveedores de almacén de claves personalizados](custom-keystore-providers.md) para obtener más información.
 
@@ -208,7 +208,7 @@ Se comunica con una biblioteca de proveedor de almacén de claves cargada. Contr
 |-|-|
 | CEKEYSTOREDATA * | Estructura de datos de comunicación para la biblioteca de proveedor de almacén de claves |
 
-### <a name="sqlcoptsscekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
+### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
 Carga una biblioteca de proveedor de almacén de claves para Always Encrypted o recupera los nombres de las bibliotecas de proveedor de almacén de claves cargadas. Consulte [Proveedores de almacén de claves personalizados](custom-keystore-providers.md) para obtener más información. Este atributo no tiene ningún valor predeterminado.
 
@@ -216,7 +216,7 @@ Carga una biblioteca de proveedor de almacén de claves para Always Encrypted o
 |-|-|
 | char * | Ruta de acceso a una biblioteca de proveedor de almacén de claves |
 
-### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
+### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
 Para habilitar transacciones XA con un procesador de transacciones (TP) compatible con XA, la aplicación debe llamar a **SQLSetConnectAttr** con SQL_COPT_SS_ENLIST_IN_XA establecido y un puntero a un objeto `XACALLPARAM`. Esta opción es compatible con Windows, Linux (17.3 y versiones posteriores) y Mac.
 ```

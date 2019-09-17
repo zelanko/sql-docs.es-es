@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160693"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988093"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>Notas de la versión de clústeres de macrodatos de SQL Server
 
@@ -37,7 +37,9 @@ En las secciones siguientes se describen las nuevas características y los probl
 
 ### <a name="known-issues"></a>Problemas conocidos
 
-SQL Server 2019 los clústeres de macrodatos Release Candidate la `15.0.1900.47`actualización del número de compilación es.
+* SQL Server 2019 los clústeres de macrodatos Release Candidate la `15.0.1900.47`actualización del número de compilación es.
+
+* El perfil de implementación "kubeadm-Prod" no se admite en los clústeres de macrodatos de SQL Server 2019 Release Candidate con el número de compilación anterior. En su lugar, use el perfil "kubeadm-dev-test" para las implementaciones de Kubeadm.
 
 ## <a id="ctp32"></a> CTP 3.2 (julio)
 
@@ -167,7 +169,7 @@ En las secciones siguientes se describen los problemas conocidos y las limitacio
 
 #### <a name="kibana-logs-dashboards"></a>Paneles de registros Kibana
 
-- Entre Aris CTP 3.0 y 3.1, la versión de Kibana se actualizó de 6.3.1 a 7.0.1.  Esto ha hecho que el explorador Edge no sea compatible con Kibana. Los usuarios verán una página en blanco al cargar la versión actual de los paneles de Kibana en Edge. Consulte [aquí]( https://www.elastic.co/support/matrix#matrix_browse) los exploradores compatibles con Kibana.rs 
+- Entre Aris CTP 3.0 y 3.1, la versión de Kibana se actualizó de 6.3.1 a 7.0.1.  Esto ha hecho que el explorador Microsoft Edge no sea compatible con Kibana. Los usuarios verán una página en blanco al cargar la versión actual de los paneles de Kibana en Microsoft Edge. Consulte [aquí]( https://www.elastic.co/support/matrix#matrix_browse) los exploradores compatibles con Kibana.rs 
 
 
 ## <a id="ctp30"></a> CTP 3.0 (mayo)

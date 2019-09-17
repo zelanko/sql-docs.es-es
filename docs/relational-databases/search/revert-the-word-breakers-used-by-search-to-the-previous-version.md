@@ -10,12 +10,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b13b484806775a9a1eb8826a22cf446a17a3a9a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d66dad7c13187711cf1422c9ad932cfe0ed4ed8
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021103"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874905"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Revertir los separadores de palabras usados por las búsquedas a la versión anterior
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "68021103"
 |Neutro|Neutro|0000|  
 |Noruego (Bokmal)|nor|1044|  
 |Punjabí|pan|1094|  
-|Portugués brasileño|ptb|1046|  
+|Portugués (Brasil)|ptb|1046|  
 |Portugués|ptg|2070|  
 |Rumano|rom|1048|  
 |Eslovaco|sky|1051|  

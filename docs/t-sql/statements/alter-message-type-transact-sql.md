@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e4f54cc7e37c6def3b0fad29851012ef6e1a2829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b08bd61a0150b0e3711219eea783985f80ffd72f
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071280"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745308"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Cambia las propiedades de un tipo de mensaje.  
   
@@ -50,7 +50,7 @@ ALTER MESSAGE TYPE message_type_name
  *message_type_name*  
  Es el nombre del tipo de mensaje que se va a cambiar. No se pueden especificar nombres de servidor, base de datos o esquema.  
   
- VALIDATION  
+ VALIDATION   
  Especifica cómo [!INCLUDE[ssSB](../../includes/sssb-md.md)] valida el cuerpo del mensaje para mensajes de este tipo.  
   
  Ninguno  
@@ -59,7 +59,7 @@ ALTER MESSAGE TYPE message_type_name
  EMPTY  
  El cuerpo del mensaje debe tener un valor NULL.  
   
- WELL_FORMED_XML  
+ WELL_FORMED_XML   
  El cuerpo del mensaje debe contener XML correcto.  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  

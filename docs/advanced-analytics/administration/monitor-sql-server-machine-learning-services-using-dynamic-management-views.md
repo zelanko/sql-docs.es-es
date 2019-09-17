@@ -1,35 +1,35 @@
 ---
-title: Supervisión de la ejecución de scripts de R y Python mediante vistas de administración dinámica (DMV)
-description: Use las vistas de administración dinámica (DMV) para supervisar la ejecución de scripts externos de R y Python en SQL Server Machine Learning Services.
+title: Supervisión de la ejecución de scripts de Python y R mediante DMV
+description: Use las vistas de administración dinámica (DMV) para supervisar la ejecución de scripts externos de Python y R en SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 09/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ade3714459ebc0457b6afea2600cc0547c9940a1
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715319"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978404"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Supervisar SQL Server Machine Learning Services mediante vistas de administración dinámica (DMV)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Use las vistas de administración dinámica (DMV) para supervisar la ejecución de scripts externos (R y Python), los recursos usados, diagnosticar problemas y ajustar el rendimiento en SQL Server Machine Learning Services.
+Use las vistas de administración dinámica (DMV) para supervisar la ejecución de scripts externos (Python y R), los recursos usados, diagnosticar problemas y ajustar el rendimiento en SQL Server Machine Learning Services.
 
 En este artículo, encontrará las DMV específicas de SQL Server Machine Learning Services. También encontrará consultas de ejemplo que muestran:
 
 + Opciones de configuración y configuración de machine learning
-+ Sesiones activas que ejecutan scripts de R o Python externos
-+ Estadísticas de ejecución para el tiempo de ejecución externo de R y Python
++ Sesiones activas que ejecutan Python o scripts externos
++ Estadísticas de ejecución del tiempo de ejecución externo para Python y R
 + Contadores de rendimiento para scripts externos
 + Uso de memoria para el sistema operativo, el SQL Server y los grupos de recursos externos
 + Configuración de memoria para SQL Server y grupos de recursos externos
 + Resource Governor de grupos de recursos, incluidos los grupos de recursos externos
-+ Paquetes instalados para R y Python
++ Paquetes instalados para Python y R
 
 Para obtener más información general sobre las DMV, consulte [vistas de administración dinámica del sistema](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).
 
@@ -167,7 +167,7 @@ WHERE object_name LIKE '%External Scripts%'
 | Contador | Descripción |
 |---------|-------------|
 | Ejecuciones totales | Número de procesos externos iniciados por llamadas locales o remotas. |
-| Ejecuciones en paralelo | Número de veces que un script incluyó la _@parallel_ especificación y que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pudo generar y usar un plan de consulta paralelo. |
+| Ejecuciones en paralelo | Número de veces que un script incluyó la  _\@especificación paralela_ y que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pudo generar y usar un plan de consulta paralelo. |
 | Ejecuciones de streaming | Número de veces que se ha invocado la característica de streaming. |
 | Ejecuciones CC de SQL | Número de scripts externos ejecutados en los que se creó una instancia de la llamada de forma remota y se usó SQL Server como el contexto de cálculo. |
 | Autenticación implícita. Inicios de sesión | Número de veces que se realizó una llamada de bucle invertido ODBC mediante autenticación implícita; es decir, el [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ejecutó la llamada en nombre del usuario que envía la solicitud de script. |

@@ -1,10 +1,7 @@
 ---
 title: Editores de consultas y texto (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
@@ -24,23 +21,29 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e83ad20b181e96320bc051db7b719ae4827dde9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266031"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988161"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de consultas y texto (SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Es posible usar uno de los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para editar y probar de forma interactiva un script [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX o XML/A o un archivo XML o de texto sin formato. Cada editor depende de un servicio específico del lenguaje que colorea las palabras clave y comprueba si hay errores de sintaxis y de uso. El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] incluye un depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] que puede usar para corregir los problemas de código [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
-## <a name="sql-server-management-studio-editors"></a>Editores de SQL Server Management Studio  
+## <a name="sql-server-management-studio-editors"></a>Editores de SQL Server Management Studio
+
  Los cuatro editores de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] comparten una arquitectura común. El editor de texto implementa el nivel base de funcionalidad y se puede usar como un editor básico para archivos de texto. Los otros tres editores, o los editores de consultas, amplían esta base de la funcionalidad mediante la inclusión de un servicio de lenguaje que define la sintaxis de uno de los lenguajes admitidos en SQL Server. Los editores de consultas también implementan niveles variables de compatibilidad con las características de editor como IntelliSense y la depuración. Los editores de consultas incluyen el editor de consultas del motor de base de datos para usarlo en la compilación de scripts que contienen instrucciones Transact-SQL y XQuery, el editor MDX del lenguaje MDX, el editor DMX para el lenguaje DMX y el editor XML/A para el lenguaje XML for Analysis.  
   
-## <a name="common-components"></a>Componentes comunes  
+## <a name="common-components"></a>Componentes comunes
+
  Todos los editores de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] comparten estos componentes:  
   
  **Panel de código**  
@@ -60,7 +63,8 @@ ms.locfileid: "68266031"
  **Ajuste de línea**  
  Muestra las líneas largas de texto o código como varias líneas, lo que permite ver todo el texto de la línea. El ajuste de línea no afecta al modo en que aparece el texto al ejecutarse o imprimirse. El ajuste de línea se activa desde el cuadro de diálogo **Opciones**, en **Herramientas** , ya sea en la página Editor de texto, Todos los lenguajes, General o en una página específica del editor.  
   
-## <a name="code-editor-components"></a>Componentes del editor de código  
+## <a name="code-editor-components"></a>Componentes del editor de código
+
  Los editores de código contienen estas características además de las que se comparten con los editores de texto y XML:  
   
  **Resultado**  
@@ -84,7 +88,8 @@ ms.locfileid: "68266031"
  **Barra de estado**  
  Muestra información del sistema asociada a la ventana del Editor de consultas, como a qué instancia está conectado el Editor de consultas.  
   
-## <a name="database-engine-query-editor-components"></a>Componentes del editor de consultas del motor de base de datos  
+## <a name="database-engine-query-editor-components"></a>Componentes del editor de consultas del motor de base de datos
+
  Estos componentes solo están disponibles en el editor de consultas del motor de base de datos:  
   
  **Depurador**  
@@ -130,7 +135,6 @@ ms.locfileid: "68266031"
 |Describe cómo usar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] para recorrer el código y consultar la información de depuración, como los valores de variables y parámetros.|[Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |Describe cómo definir colores personalizados para diferentes instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]y establecerlos como el fondo de la barra de estado en las ventanas del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barra de estado &#40;Editor de consultas del motor de base de datos&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>Consulte también  
- [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  
+## <a name="next-steps"></a>Pasos siguientes
+
+ [Métodos abreviados de teclado de SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)

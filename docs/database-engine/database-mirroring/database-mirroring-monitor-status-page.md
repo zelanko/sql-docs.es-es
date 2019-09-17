@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 449633953c0561191471733fa3a3dcba0fb24b83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 293b58adde0ccbfe6394cd3917d2671f23f3b290
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006395"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212361"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de creación de reflejo de la base de datos (página Estado)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "68006395"
 -   **Seguridad alta con conmutación automática por error (sincrónico)**  
   
 ## <a name="remarks"></a>Notas  
- Los miembros del rol fijo de base de datos **dbm_monitor** pueden ver el estado actual de la creación de reflejo mediante el Monitor de creación de reflejo de la base de datos o el procedimiento almacenado **sp_dbmmonitorresults** . No obstante, estos usuarios no pueden actualizar la tabla de estado. Dependen del **Trabajo del Monitor de creación de reflejo de la base de datos**para actualizar la tabla de estado a intervalos regulares. Para conocer la antigüedad del estado presentado, los usuarios pueden examinar las horas en las etiquetas **Registro del servidor principal (***\<hora>***)** y **Registro del servidor reflejado (***\<hora>***)** .  
+ Los miembros del rol fijo de base de datos **dbm_monitor** pueden ver el estado actual de la creación de reflejo mediante el Monitor de creación de reflejo de la base de datos o el procedimiento almacenado **sp_dbmmonitorresults** . No obstante, estos usuarios no pueden actualizar la tabla de estado. Dependen del **Trabajo del Monitor de creación de reflejo de la base de datos**para actualizar la tabla de estado a intervalos regulares. Para conocer la antigüedad del estado presentado, los usuarios pueden examinar las horas en las etiquetas **Registro del servidor principal (** _\<hora>_ **)** y **Registro del servidor reflejado (** _\<hora>_ **)** .  
   
  Si este trabajo no existe o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene, el estado quedará cada vez más desusado y puede que deje de reflejar la configuración de la sesión de creación de reflejo. Por ejemplo, después de una conmutación por error, es posible que parezca que los asociados comparten el mismo rol (de servidor principal o reflejado) o que el servidor principal actual se muestre como reflejado, a la vez que el servidor reflejado actual se muestra como principal.  
   

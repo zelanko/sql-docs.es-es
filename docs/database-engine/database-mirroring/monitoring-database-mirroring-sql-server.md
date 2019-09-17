@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b29c55f0618d095840a7f56e5618231935b6fe4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996545"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212288"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Supervisar la creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,8 +130,8 @@ ms.locfileid: "67996545"
   
      Los administradores del sistema pueden usar el procedimiento almacenado del sistema **sp_dbmmonitorresults** para ver y, opcionalmente, actualizar la tabla de estado, si esta no se ha actualizado en los 15 segundos anteriores. Este procedimiento llama al procedimiento **sp_dbmmonitorupdate** y devuelve una o más filas del historial, en función de la cantidad solicitada en la llamada del procedimiento. Para obtener más información sobre el estado en su conjunto de resultados, vea [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md).  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>Supervisar el estado de la creación de reflejo de la base de datos (por los miembros dbm_monitor)  
- Como se ha mencionado, la primera vez que se ejecuta **sp_dbmmonitorupdate** , se crea el rol fijo de base de datos **dbm_monitor** en la base de datos **msdb** . Los miembros del rol fijo de base de datos **dbm_monitor** pueden ver el estado actual de la creación de reflejo mediante el Monitor de creación de reflejo de la base de datos o el procedimiento almacenado **sp_dbmmonitorresults** . No obstante, estos usuarios no pueden actualizar la tabla de estado. Para conocer la antigüedad del estado presentado, los usuarios pueden examinar las horas en las etiquetas **Registro del servidor principal (***\<hora>***)** y **Registro del servidor reflejado (***\<hora>***)** de la página **Estado**.  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>Supervisar el estado de la creación de reflejo de la base de datos (por los miembros dbm_monitor)  
+ Como se ha mencionado, la primera vez que se ejecuta **sp_dbmmonitorupdate** , se crea el rol fijo de base de datos **dbm_monitor** en la base de datos **msdb** . Los miembros del rol fijo de base de datos **dbm_monitor** pueden ver el estado actual de la creación de reflejo mediante el Monitor de creación de reflejo de la base de datos o el procedimiento almacenado **sp_dbmmonitorresults** . No obstante, estos usuarios no pueden actualizar la tabla de estado. Para conocer la antigüedad del estado presentado, los usuarios pueden examinar las horas en las etiquetas **Registro del servidor principal (** _\<hora>_ **)** y **Registro del servidor reflejado (** _\<hora>_ **)** de la página **Estado**.  
   
  Los miembros del rol fijo de base de datos **dbm_monitor** dependen del **Trabajo del Monitor de creación de reflejo de la base de datos** para actualizar la tabla de estado a intervalos periódicos. Si el trabajo no existe o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está inactivo, el estado pasa a estar cada vez más desusado y es posible que no refleje la configuración de la sesión de creación de reflejo. Por ejemplo, después de una conmutación por error, es posible que parezca que los asociados comparten el mismo rol (de servidor principal o reflejado) o que el servidor principal actual se muestre como reflejado, a la vez que el servidor reflejado actual se muestra como principal.  
   

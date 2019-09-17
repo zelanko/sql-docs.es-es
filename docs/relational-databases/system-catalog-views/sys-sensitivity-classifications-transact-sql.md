@@ -6,9 +6,8 @@ ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 ms.custom: ''
-ms.manager: craigg
-ms.author: arib
-author: vainolo
+ms.author: mibar
+author: barmichal
 f1_keywords:
 - 'sys.sensitivity_classifications '
 dev_langs:
@@ -23,47 +22,47 @@ helpviewer_keywords:
 - labels [SQL]
 - information types
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a47b311af70c58c36c8c467115c277f300092376
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d14cd93b08c0094ad984a6469b433e0b266479
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014430"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929780"
 ---
-# <a name="syssensitivityclassifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
+# <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Devuelve una fila para cada elemento clasificado en la base de datos.
+Devuelve una fila por cada elemento clasificado en la base de datos.
 
 |Nombre de columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|  
 |**class**|**int**|Identifica la clase del elemento en el que existe la clasificación|  
-|**class_desc**|**varchar(16)**|Una descripción de la clase del elemento en el que existe la clasificación|  
-|**major_id**|**int**|Identificador del elemento en el que existe la clasificación. < br \>< br \>si class es 0, major_id siempre es 0.<br>Si class es 1, 2 ó 7, major_id es object_id.|  
-|**minor_id**|**int**|Id. secundario del elemento en el que existe la clasificación, interpretado según su clase.<br><br>Si clase = 1, minor_id es column_id (si columna), o 0 (si objeto).<br>Si class = 2, minor_id es parameter_id.<br>Si clase = 7, minor_id es index_id. |  
-|**label**|**sysname**|La etiqueta (legibles) asignada para la clasificación de confidencialidad|  
-|**label_id**|**sysname**|Un identificador asociado con la etiqueta, que se puede usar un sistema de protección de información, como Azure Information Protection (AIP)|  
-|**information_type**|**sysname**|El tipo de información (legibles) asignado para la clasificación de confidencialidad|  
-|**information_type_id**|**sysname**|Un identificador asociado con el tipo de información que se puede usar un sistema de protección de información, como Azure Information Protection (AIP)|  
+|**class_desc**|**varchar(16)**|Descripción de la clase del elemento en el que existe la clasificación|  
+|**major_id**|**int**|Identificador del elemento en el que existe la clasificación. < br \>< br \>si la clase es 0, major_id siempre es 0.<br>Si class es 1, 2 ó 7, major_id es object_id.|  
+|**minor_id**|**int**|ID. secundario del elemento en el que existe la clasificación, interpretado de acuerdo con su clase.<br><br>Si Class = 1, minor_id es column_id (si la columna), de lo contrario 0 (si es Object).<br>Si class = 2, minor_id es parameter_id.<br>Si Class = 7, minor_id es el tipo de la. |  
+|**label**|**sysname**|La etiqueta (inteligible) asignada para la clasificación de confidencialidad|  
+|**label_id**|**sysname**|Identificador asociado a la etiqueta, que se puede usar en un sistema de protección de la información, como Azure Information Protection (AIP).|  
+|**information_type**|**sysname**|El tipo de información (legible) asignado para la clasificación de confidencialidad|  
+|**information_type_id**|**sysname**|IDENTIFICADOR asociado con el tipo de información, que se puede usar en un sistema de protección de la información, como Azure Information Protection (AIP).|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Comentarios  
 
-- Esta vista proporciona visibilidad sobre el estado de clasificación de la base de datos. Se puede usar para administrar las clasificaciones de la base de datos, así como para generar informes.
-- Se admite actualmente solo clasificación de las columnas de la base de datos. En consecuencia:
-    - **clase** -siempre tendrá el valor 1 (que representa una columna)
-    - **class_desc** -siempre tendrá el valor *OBJECT_OR_COLUMN*
-    - **major_id** -representa el identificador de la tabla que contiene la columna clasificada, correspondiente a sys.all_objects.object_id
-    - **minor_id** -representa el identificador de la columna en el que la clasificación no existe, correspondiente con sys.all_columns.column_id
+- Esta vista proporciona visibilidad en el estado de clasificación de la base de datos. Se puede usar para administrar las clasificaciones de la base de datos, así como para generar informes.
+- Actualmente solo se admite la clasificación de columnas de base de datos. Por consiguiente
+    - **clase** : siempre tendrá el valor 1 (que representa una columna).
+    - **class_desc** : siempre tendrá el valor *OBJECT_OR_COLUMN*
+    - **major_id** : representa el identificador de la tabla que contiene la columna clasificada, que corresponde a sys. All _objects. object_id
+    - **minor_id** : representa el identificador de la columna en la que existe la clasificación, correspondiente a sys. All _columns. column_id
 
 ## <a name="examples"></a>Ejemplos
 
-### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. Lista de las columnas clasificadas todo y su clasificación correspondiente
+### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. Enumerar todas las columnas clasificadas y su clasificación correspondiente
 
-El ejemplo siguiente devuelve una tabla que enumera el nombre de tabla, columna, etiqueta, etiqueta ID, tipo de información de Id. de tipo de información para cada columna clasificada en la base de datos.
+En el ejemplo siguiente se devuelve una tabla que muestra el nombre de la tabla, el nombre de la columna, la etiqueta, el ID. de etiqueta, el tipo de información, el ID. de tipo de información de cada columna clasificada de la base
 
 > [!NOTE]
-> Etiqueta es una palabra clave para Azure SQL Data Warehouse.
+> Label es una palabra clave para Azure SQL Data Warehouse.
 
 ```sql
 SELECT

@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155478"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228466"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -88,7 +88,7 @@ El [Archivo de anuncios de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
-|Compatibilidad con la codificación de caracteres UTF-8 |Se admite el carácter UTF-8 para la codificación de importación y exportación, y como intercalación de nivel de base de datos o de columna para los datos de cadena. Esto permite que las aplicaciones se extiendan a una escala global, en que el requisito de proporcionar servicios y aplicaciones de bases de datos multilingües mundiales es fundamental para satisfacer las demandas de los clientes y las normativas de mercado específicas. Vea [Compatibilidad con la intercalación y Unicode](../relational-databases/collations/collation-and-unicode-support.md)<br/><br/> La versión candidata para lanzamiento de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] habilita la compatibilidad con UTF-8 para las tablas externas de Polybase y Always Encrypted.|
+|Compatibilidad con la codificación de caracteres UTF-8 |Se admite el carácter UTF-8 para la codificación de importación y exportación, y como intercalación de nivel de base de datos o de columna para los datos de cadena. Esto permite que las aplicaciones se extiendan a una escala global, en que el requisito de proporcionar servicios y aplicaciones de bases de datos multilingües mundiales es fundamental para satisfacer las demandas de los clientes y las normativas de mercado específicas. Vea [Compatibilidad con la intercalación y Unicode](../relational-databases/collations/collation-and-unicode-support.md).<br/><br/> La versión candidata para lanzamiento de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] habilita la compatibilidad con UTF-8 para las tablas externas de Polybase y Always Encrypted.|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase

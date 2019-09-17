@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a8a5955d56d635a56899653b7cd2bd98b4924ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134438"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228435"
 ---
 # <a name="common-errors-with-database-mail"></a>Errores comunes del Correo electrónico de base de datos 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 En este artículo se describen algunos errores comunes detectados en el Correo electrónico de base de datos y las formas de resolverlos.
 
-## <a name="could-not-find-stored-procedure-spsenddbmail"></a>No se encontró el procedimiento almacenado 'sp_send_dbmail'
+## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>No se encontró el procedimiento almacenado 'sp_send_dbmail'
 El procedimiento almacenado [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) está instalado en la base de datos msdb. Debe ejecutar **sp_send_dbmail** desde la base de datos msdb, o bien especificar un nombre de tres partes para el procedimiento almacenado.
 
 Ejemplo:
@@ -48,7 +48,7 @@ Este mensaje tiene dos causas posibles. El perfil especificado no existe o el us
 
 Para comprobar los permisos de un perfil, ejecute el procedimiento almacenado [sysmail_help_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) con el nombre del perfil. Use el procedimiento almacenado [sysmail_add_principalprofile_sp (Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) o el [Asistente para configuración de Correo electrónico de base de datos](configure-database-mail.md) para conceder permiso a un usuario o grupo de msdb para tener acceso a un perfil.
 
-## <a name="permission-denied-on-spsenddbmail"></a>Permiso denegado para sp_send_dbmail
+## <a name="permission-denied-on-sp_send_dbmail"></a>Permiso denegado para sp_send_dbmail
 
 En este tema se describe cómo solucionar un mensaje de error en el que se indica que el usuario que intenta enviar mensajes del Correo electrónico de base de datos no tiene permiso para ejecutar sp_send_dbmail.
 
@@ -68,7 +68,7 @@ GO
 ```
 Para obtener más información, vea [sp_addrolemember](../system-stored-procedures/sp-addrolemember-transact-sql.md) y [sp_droprolemember](../system-stored-procedures/sp-droprolemember-transact-sql.md).
 
-## <a name="database-mail-queued-no-entries-in-sysmaileventlog-or-windows-application-event-log"></a>Correo electrónico de base de datos en cola, sin entradas en sysmail_event_log o en el registro de eventos de aplicación Windows 
+## <a name="database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log"></a>Correo electrónico de base de datos en cola, sin entradas en sysmail_event_log o en el registro de eventos de aplicación Windows 
 
 El Correo electrónico de base de datos depende de Service Broker para poner en cola los mensajes de correo electrónico. Si el Correo electrónico de base de datos se detiene o si la entrega de mensajes de Service Broker no está activada en la base de datos **msdb**, los mensajes se ponen en cola, pero no se pueden entregar. En ese caso, los mensajes de Service Broker permanecen en la cola del correo de Service Broker. Service Broker no activa el programa externo, por lo que no hay entradas de registro en **sysmail_event_log** ni actualizaciones del estado del elemento en **sysmail_allitems**.
 

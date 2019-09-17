@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edd83dd3b96b80052c9920bd2cd6486273b4a1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39a5ab4ab7159c0915994e555271ba0246f3f896
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083911"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212308"
 ---
 # <a name="view-offline-log-files"></a>Ver sin conexión archivos de registro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "68083911"
   
     3.  Escriba el nombre del equipo remoto y haga clic en **Aceptar**.  
   
-3.  Haga clic con el botón derecho en **Control WMI (local)** o **Control WMI (***nombreEquipoRemoto***)** y, después, haga clic en **Propiedades**.  
+3.  Haga clic con el botón derecho en **Control WMI (local)** o **Control WMI (** _nombreEquipoRemoto_ **)** y, después, haga clic en **Propiedades**.  
   
 4.  En el cuadro de diálogo **Propiedades de Control WMIP** , haga clic en la pestaña **Seguridad** .  
   

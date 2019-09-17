@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f578ae9dbc60b255959de406999feb8b68171389
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476198"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913560"
 ---
-# <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Instalación de SQL Server 2019 Machine Learning Services (R, Python) en Linux
+# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>Instalación de SQL Server Machine Learning Services (R, Python) en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -31,17 +31,17 @@ Machine Learning Services también se admite en contenedores de Linux. No propor
 
 ## <a name="uninstall-previous-ctp"></a>Desinstalación de CTP anteriores
 
-La lista de paquetes ha cambiado con las últimas versiones de CTP, lo que ha dado lugar a menos paquetes. Antes de instalar CTP 3.2, se recomienda desinstalar CTP 2.x para quitar todos los paquetes anteriores. La instalación en paralelo de varias versiones no es posible.
+La lista de paquetes ha cambiado con las últimas versiones CTP, lo que ha dado lugar a menos paquetes. Antes de instalar CTP 3.2, se recomienda desinstalar CTP 2.x para quitar todos los paquetes anteriores. La instalación en paralelo de varias versiones no se admite.
 
-### <a name="1-confirm-package-installation"></a>1. Confirmar la instalación del paquete
+### <a name="1-confirm-package-installation"></a>1. Confirmación de la instalación del paquete
 
-Conviene comprobar la existencia de una instalación anterior como primer paso. Los siguientes archivos señalan una instalación existente: checkinstallextensibility.sh, exthost, launchpad.
+Es posible que quiera comprobar la existencia de una instalación anterior como primer paso. Los archivos siguientes indican una instalación existente: checkinstallextensibility.sh, exthost, launchpad.
 
 ```bash
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Desinstalar los paquetes de CTP 2.x anteriores
+### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. Desinstalación de paquetes anteriores de CTP 2.x
 
 Realice la desinstalación en el nivel de paquete más bajo. Los paquetes ascendentes que dependan de un paquete de nivel inferior se desinstalarán automáticamente.
 
@@ -50,7 +50,7 @@ Realice la desinstalación en el nivel de paquete más bajo. Los paquetes ascend
 
 Los comandos para quitar paquetes aparecen recogidos en la siguiente tabla.
 
-| Plataforma  | Comando(s) de eliminación de paquetes | 
+| Plataforma  | Comandos de eliminación de paquetes | 
 |-----------|----------------------------|
 | RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
 | SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |

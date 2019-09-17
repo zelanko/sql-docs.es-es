@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952619"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809956"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Conceptos básicos sobre disponibilidad de SQL Server en implementaciones de Linux
 
@@ -215,9 +215,6 @@ Para más información, vea:
 -   Documentación de Hyper-V: [Uso de la agrupación en clústeres invitados para alta disponibilidad](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
 -   Notas del producto (redactadas para implementaciones basadas en Windows, si bien la mayoría de los conceptos son válidos en este caso también): [Planeación de implementaciones de SQL Server críticas y de alta disponibilidad con VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
->[!NOTE]
->Hyper-V todavía no admite RHEL con un clúster de Pacemaker con STONITH. Hasta que lo haga, si desea más información y actualizaciones, vea [Directivas de compatibilidad de clústeres de alta disponibilidad de RHEL](https://access.redhat.com/articles/29440#3physical_host_mixing).
-
 ### <a name="networking"></a>Redes
 A diferencia de un WSFC, Pacemaker no requiere un nombre dedicado ni una dirección IP dedicada como mínimo para el clúster de Pacemaker en sí. Los grupos de disponibilidad y las instancias de clúster de conmutación por error requerirán direcciones IP (vea la documentación de cada uno para más información), pero no nombres, ya que no hay ningún recurso de nombre de red. SLES permite configurar una dirección IP con fines de administración, pero no es necesario, como se desprende de [Crear el clúster de Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md#create).
 
@@ -229,9 +226,6 @@ Una diferencia de tener varias NIC y Pacemaker frente a un WSFC es que Pacemaker
 La configuración y los requisitos de cuórum están relacionados con implementaciones de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] específicas de un grupo de disponibilidad o una instancia de clúster de conmutación por error.
 
 STONITH es necesario en un clúster de Pacemaker compatible. Use la documentación de la distribución para configurar STONITH. Encontrará un ejemplo de SLES en [Barreras basadas en el almacenamiento](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html). También hay un agente STONITH de VMware vCenter para soluciones basadas en ESXI. Para más información, vea [Agente del complemento STONITH para barreras de SOAP de VMware VM vCenter (no oficial)](https://github.com/olafrv/fence_vmware_soap).
-
-> [!NOTE]
-> En el momento de redactar este artículo, Hyper-V carece de una solución para STONITH. Esto es así en implementaciones locales, y también afecta a las implementaciones de Pacemaker basadas en Azure que usan determinadas distribuciones, como RHEL.
 
 ### <a name="interoperability"></a>Interoperabilidad
 En esta sección se documenta cómo un clúster basado en Linux puede interactuar con un WSFC o con otras distribuciones de Linux.

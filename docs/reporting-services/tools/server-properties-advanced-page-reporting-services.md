@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463589"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908260"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
 
@@ -93,9 +93,9 @@ Indica si la respuesta a la solicitud del cliente puede exponerse cuando la marc
 
 **AccessControlMaxAge** Especifica el número de segundos durante los que se pueden almacenar en caché los resultados de la solicitud preparatoria. El valor predeterminado es 600 (10 minutos).
 
-**AllowedResourceExtensionsForUpload** conjunto de extensiones de recursos que se pueden cargar en el servidor de informes. No es necesario incluir extensiones para tipos de archivos integrados como &ast;.rdl y &ast;.pbix. El valor predeterminado es "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
+**AllowedResourceExtensionsForUpload (solo Power BI Report Server y Reporting Services 2017 y versiones posteriores)** Conjunto de extensiones de recursos que se pueden cargar en el servidor de informes. No es necesario incluir extensiones para tipos de archivos integrados como &ast;.rdl y &ast;.pbix. El valor predeterminado es "&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx".
 
-**RestrictedResourceMimeTypeForUpload** no pueden cargar contenido con el conjunto de usuarios de los tipos mime. Solo se pueden descargar todos los recursos que ya estén almacenados con un tipo mime restringido como application/octet-stream en lugar de abrir o ejecutar el explorador.  De forma predeterminada, no hay ningún elemento restringido en esta lista, pero se recomienda que las organizaciones rellenan para proporcionar la experiencia más segura.
+**RestrictedResourceMimeTypeForUpload** Conjunto de tipos MIME los usuarios no pueden cargar contenido con. Los recursos que ya estén almacenados con un tipo MIME restringido solo se pueden descargar como aplicación/flujo de octetos en lugar de abrirse o ejecutarse en el explorador.  De forma predeterminada, no hay ningún elemento restringido en esta lista, pero se recomienda que las organizaciones lo rellenen para proporcionar la mejor experiencia.
 
 **EditSessionCacheLimit**  
 Especifica el número de entradas de datos en memoria caché que pueden estar activas en una sesión de edición de informes. El número predeterminado es 5.  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: a144a3c2eea75a90445ca5a3b13d756f4be4c503
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190376"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774206"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -87,6 +87,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|Especifica si se omiten las relaciones entre usuarios e inicios de sesión.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Especifica el tipo de almacenamiento de seguridad para el modelo de esquema que se usa durante la extracción.|
 |**/p:**|TableData=(STRING)|Indica la tabla de la que se extraerán los datos. Especifique el nombre de la tabla con o sin los corchetes que rodean las partes del nombre en el siguiente formato: schema_name. table_identifier.|
+|**/p:**| TempDirectoryForTableData = (cadena)|Especifica el directorio temporal que se usa para almacenar en búfer los datos de la tabla antes de que se escriban en el archivo de paquete.|
 |**/p:**|VerifyExtraction = (BOOLEANO)|Especifica si el archivo DACPAC que se extrajo debe comprobarse.|
 
 ## <a name="publish-parameters-properties-and-sqlcmd-variables"></a>Parámetros, propiedades y variables SQLCMD de publicación
@@ -149,6 +150,7 @@ Una operación de publicación de SqlPackage.exe actualiza incrementalmente el e
 |**/p:**|CompareUsingTargetCollation = (BOOLEANO)|Esta configuración determina la forma en que se trata la intercalación de la base de datos durante la implementación; de forma predeterminada, la intercalación de la base de datos de destino se actualizará si no coincide con la especificada por el origen. Cuando se ha establecido esta opción, se usará la intercalación de la base de datos (o servidor) de destino.|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|Especifica si la base de datos de destino debe actualizarse o si se va a quitar para volver a crearse al publicar en una base de datos.|
 |**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;default} ' default ')|Define la edición de un Azure SQL Database.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')|Especifica el tiempo de expiración de bloqueo de la base de datos en segundos al ejecutar consultas en SQLServer. Use-1 para esperar indefinidamente.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Define el tamaño máximo en GB de una instancia de Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Define el nivel de rendimiento de una instancia de Azure SQL Database, como "P0" o "S1".|
 |**/p:**|DeployDatabaseInSingleUserMode = (BOOLEANO)|Si se establece en True, la base de datos se establecerá en modo de usuario único antes de implementarse.|
@@ -207,6 +209,7 @@ Una operación de publicación de SqlPackage.exe actualiza incrementalmente el e
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|Especifica si las diferencias en el valor de la cláusula WITH NOCHECK para las claves externas se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|Incluir todos los elementos compuestos como parte de una única operación de publicación.|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|Especifica si las instrucciones transaccionales se deben usar siempre que sea posible al publicar en una base de datos.|
+|**/p:**|LongRunningCommandTimeout = (INT32)|Especifica el tiempo de espera del comando de larga duración en segundos al ejecutar consultas en SQL Server. Use 0 para esperar indefinidamente.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Especifica que la acción de publicación debe quitar y volver a crear siempre un ensamblado en lugar de emitir una instrucción ALTER ASSEMBLY.|
 |**/p:**|PopulateFilesOnFileGroups = (BOOLEANO ' true ')|Especifica si se crea también un nuevo archivo cuando se crea un nuevo FileGroup en la base de datos de destino.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Especifica si el esquema está registrado con el servidor de base de datos.|
@@ -268,6 +271,7 @@ Una acción de exportación de SqlPackage.exe exporta una base de datos activa d
 |**/p:**|CommandTimeout = (INT32 ' 60 ')|Especifica el tiempo de espera de comando en segundos cuando se ejecutan consultas en SQL Server.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Especifica el tipo de almacenamiento de seguridad para el modelo de esquema que se usa durante la extracción.|
 |**/p:**|TableData=(STRING)|Indica la tabla de la que se extraerán los datos. Especifique el nombre de la tabla con o sin los corchetes que rodean las partes del nombre en el siguiente formato: schema_name. table_identifier.|
+|**/p:**|TempDirectoryForTableData = (cadena)|Especifica el directorio temporal que se usa para almacenar en búfer los datos de la tabla antes de que se escriban en el archivo de paquete.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Especifica la versión del motor de destino que se espera. Esto afecta a si se permiten los objetos admitidos por Azure SQL Database servidores con funcionalidades V12, como las tablas optimizadas para memoria, en el BacPac generado.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Especifica si los tipos de documentos de texto completo admitidos para Microsoft Azure SQL Database v12 deben comprobarse.|
   

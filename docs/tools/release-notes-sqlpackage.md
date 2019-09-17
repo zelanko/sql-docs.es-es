@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 590ca8048d45d9832ff53775512f991268843872
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7fb220f8a5a33d33e2ee9177efd9fe2f713b7439
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809454"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774178"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas de la versión de SqlPackage.exe
 
@@ -35,10 +35,49 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="183-sqlpackage"></a>18.3 sqlpackage
+
+|Plataforma|Descargar|Fecha de la versión|Versión|Compilar
+|:---|:---|:---|:---|:---|
+|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2102893)|6 de septiembre de 2019|18,3|15.0.4532.1|
+|macOS .NET Core (versión preliminar)|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2102894)|6 de septiembre de 2019| 18,3|15.0.4532.1|
+|Linux .NET Core (versión preliminar)|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2102978)|6 de septiembre de 2019| 18,3|15.0.4532.1|
+|Windows .NET Core (versión preliminar)|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2102979)|6 de septiembre de 2019| 18,3|15.0.4532.1|
+
+### <a name="features"></a>Características
+
+| Característica | Detalles |
+| :------ | :------ |
+| Azure SQL Data Warehouse (versión preliminar) | Agregue compatibilidad para implementar en Azure SQL Data Warehouse. | 
+| Implementación | Agregue el parámetro/p: DatabaseLockTimeout = (INT32 ' 60 ') a sqlpackage. | 
+| Implementación | Agregue el parámetro/p: LongRunningCommandTimeout = (INT32) a sqlpackage. |
+| Exportar/extraer | Agregue el parámetro/p: TempDirectoryForTableData = (STRING) a sqlpackage. |
+| Implementación | Permite que los colaboradores de implementación se carguen desde ubicaciones adicionales. Los colaboradores de implementación se cargarán desde el mismo directorio que el archivo. dacpac de destino que se está implementando, el directorio de extensiones en relación con el binario sqlpackage. exe y el parámetro/p: AdditionalDeploymentContributorPaths = (cadena) agregado a sqlpackage donde se pueden especificar ubicaciones de directorio adicionales. |
+| Implementación | Agregar compatibilidad para OPTIMIZE_FOR_SEQUENTIAL_KEY. |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>Correcciones
+
+| Fix | Detalles |
+| :-- | :------ |
+| Implementación | Corrija para omitir los índices automáticos de modo que no se quiten en la implementación. | 
+| Always Encrypted | Corrección para el control de las columnas de Always Encrypted VARCHAR. | 
+| Compilación e implementación | Corrija para resolver el método Nodes () para los conjuntos de columnas XML.| 
+| ScriptDom | Corrija los casos adicionales en los que la cadena ' URL ' se interprete como un token de nivel superior. | 
+| Gráfico | Corrección de TSQL generada para las referencias a pseudo columnas en restricciones.  | 
+| Exportar | Genere contraseñas aleatorias que cumplan los requisitos de complejidad. | 
+| Implementación | Corrección para respetar los tiempos de espera de comandos al recuperar restricciones. | 
+| .NET Core (versión preliminar) | Corrija el registro de diagnóstico en un archivo. | 
+| .NET Core (versión preliminar) | Use el streaming para exportar datos de tablas para admitir tablas grandes. | 
+| &nbsp; | &nbsp; |
+
 ## <a name="182-sqlpackage"></a>sqlpackage 18.2
 
-Fecha de publicación: &nbsp; 15 de abril de 2019  
-Compilación: &nbsp; 15.0.4384.2 
+|Plataforma|Descargar|Fecha de la versión|Versión|Compilar
+|:---|:---|:---|:---|:---|
+|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 de abril de 2019|18.2|15.0.4384.2|
+|macOS .NET Core (versión preliminar)|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2087247)|15 de abril de 2019 | 18.2 |15.0.4384.2|
+|Linux .NET Core (versión preliminar)|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2087431)|15 de abril de 2019 | 18.2 |15.0.4384.2|
 
 ### <a name="features"></a>Características
 

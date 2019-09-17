@@ -2,23 +2,30 @@
 title: Novedades de SSMA para Access (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 39f8d7da95fc8e2102d1208216a2eb43bb038fea
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 608f7c8b2de7ae43bdd44e72da25f864f985efeb
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632070"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745437"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novedades de SSMA para Access (AccessToSQL)
 
 En este artículo se enumeran SQL Server Migration Assistant (SSMA) para obtener acceso a los cambios en cada versión.  
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+La versión v 8.4 de SSMA para Access se ha mejorado con correcciones de destino diseñadas para solucionar problemas de accesibilidad y corregir un error relacionado con las columnas de índice máximo (para permitir 32 en lugar de 16) para SQL Server 2016 y versiones posteriores.
+
+> [!IMPORTANT]
+> Con SSMA v 7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -27,18 +34,12 @@ La publicación v 8.3 de SSMA para el acceso se ha mejorado con correcciones de 
 * Solucionar problemas de accesibilidad
 * Agregar compatibilidad básica para el tipo ' hierarchyid ' en SQL Server
 
-> [!IMPORTANT]
-> Con SSMA v 7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
-
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
 La versión v 8.2 de SSMA para Access se ha mejorado con correcciones de destino diseñadas para mejorar la calidad y las métricas de conversión.
 
 > [!NOTE]
 > Un problema conocido con la actualización automática puede producir un error en una actualización de SSMA v 8.1 a v 8.2. Si se produce este error, descargue la nueva versión e instálela manualmente.
-
-> [!IMPORTANT]
-> Con SSMA v 7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v81"></a>SSMA v 8.1
 
@@ -122,7 +123,7 @@ La versión v 7.3 de SSMA para Access contiene los siguientes cambios:
         ![Comando Guardar como proyecto de SSDT](../media/export-schema-scripts_red.png)
   * Bibliotecas que puede usar SSMA para realizar conversiones personalizadas.
     * Ahora puede construir código que pueda controlar las conversiones de sintaxis personalizadas y las conversiones que no se administraron previamente mediante SSMA.
-      * En esta entrada de blog se ofrecen instrucciones sobre cómo construir un convertidor personalizado, que amplían las [capacidades de conversión de SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
+      * En esta entrada de blog se ofrecen instrucciones sobre cómo construir un convertidor personalizado, que [amplían las capacidades de conversión de SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
       * Descargue un proyecto de ejemplo para la conversión de esta [entrada de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>SSMA v 7.2

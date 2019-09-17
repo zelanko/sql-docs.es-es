@@ -5,16 +5,16 @@ description: En este artículo se explica cómo configurar la organización en n
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 822c10ad41232d213302e4bb5e328449d9f5f764
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 679fbd63d77e21a84db315cf05adf112d122ad63
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652317"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774214"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Procedimiento para montar ADLS Gen2 para los niveles de HDFS en un clúster de macrodatos
 
@@ -33,33 +33,35 @@ En la siguiente sección se describe cómo configurar Azure Data Lake Storage Ge
 
 1. [Cree una cuenta de almacenamiento con capacidades de Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. [Cree un contenedor de blobs](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) en esta cuenta de almacenamiento para los datos externos.
+1. [Cree un sistema de archivos o contenedor de blobs](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) en esta cuenta de almacenamiento para los datos externos.
 
 1. Cargue un archivo .csv o Parquet en el contenedor. Estos son los datos de HDFS externos que se montarán en HDFS en el clúster de macrodatos.
 
 ## <a name="credentials-for-mounting"></a>Credenciales para el montaje
 
-## <a name="use-oauth-credentials-to-mount"></a>Uso de credenciales de OAuth para el montaje
+### <a name="use-oauth-credentials-to-mount"></a>Uso de credenciales de OAuth para el montaje
 
 Para poder usar las credenciales de OAuth para el montaje, debe llevar a cabo los pasos siguientes:
 
 1. Vaya a [Azure Portal](https://portal.azure.com).
-1. Vaya a "Servicios" en el panel de navegación izquierdo y haga clic en "Azure Active Directory".
-1. Acceda a "Registros de aplicaciones" en el menú, cree una aplicación web y siga los pasos del asistente. **Recuerde el nombre que cree aquí**. Tendrá que agregar este nombre a su cuenta de ADLS como usuario autorizado.
-1. Una vez creada la aplicación web, vaya a "Claves" en "Configuración" de la aplicación.
-1. Seleccione una duración de clave y haga clic en "Guardar". **Guarde la clave generada.**
-1.  Vuelva a la página "Registros de aplicaciones" y haga clic en el botón "Puntos de conexión" situado en la parte superior. **Anote la URL de "Punto de conexión del token"** .
+1. Vaya a "Azure Active Directory". Debería ver este servicio en la barra de navegación izquierda.
+1. En la barra de navegación derecha, seleccione "Registros de aplicaciones" y cree un nuevo registro.
+1. Cree una aplicación web y siga el asistente. **Recuerde el nombre de la aplicación que cree aquí**. Tendrá que agregar este nombre a su cuenta de ADLS como usuario autorizado. Tenga en cuenta también el identificador de cliente de la aplicación en la información general cuando seleccione la aplicación.
+1. Una vez creada la aplicación Web, vaya a "certificados & Secrets" y cree un **nuevo secreto de cliente** y seleccione una duración de clave. **Agregue** el secreto.
+1.  Vuelva a la página registros de aplicaciones y haga clic en los "puntos de conexión" en la parte superior. **Anote el "punto de conexión del token de OAuth (V2)** Dirección
 1. Debería tener anotado lo siguiente para OAuth:
 
-    - El "id. de aplicación" de la aplicación web que ha creado anteriormente en el paso 3.
-    - La clave que acaba de generar en el paso 5.
-    - El punto de conexión del token del paso 6.
+    - "ID. de cliente de aplicación" de la aplicación Web
+    - El secreto de cliente
+    - El punto de conexión del token
 
 ### <a name="adding-the-service-principal-to-your-adls-account"></a>Adición de la entidad de servicio a la cuenta de ADLS
 
-1. Vuelva al portal, abra su cuenta de ADLS y seleccione "Control de acceso (IAM)" en el menú de la izquierda.
-1. Seleccione "Agregar una asignación de roles" y busque el nombre que ha creado en el paso 3 anterior (tenga en cuenta que no aparece en la lista, pero lo encontrará si busca el nombre completo).
-1. Ahora, agregue el rol "Colaborador de datos de blobs de almacenamiento (versión preliminar)".
+1. Vuelva al portal y vaya al sistema de archivos de la cuenta de almacenamiento de ADLS y seleccione control de acceso (IAM) en el menú de la izquierda.
+1. Seleccione "agregar una asignación de roles". 
+1. Seleccionar rol "colaborador de datos de BLOB de almacenamiento"
+1. Busque el nombre que ha creado anteriormente (tenga en cuenta que no aparece en la lista, pero se encontrará si busca el nombre completo).
+1. Guarde el rol.
 
 Espere de cinco a diez minutos antes de usar las credenciales para el montaje.
 
@@ -70,9 +72,9 @@ Abra un símbolo del sistema en un equipo cliente que pueda acceder al clúster 
    ```text
     set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
-    fs.azure.account.oauth2.client.secret=[<key> from step5 above]
+    fs.azure.account.oauth2.client.endpoint=[token endpoint],
+    fs.azure.account.oauth2.client.id=[Application client ID],
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
 
 ## <a name="use-access-keys-to-mount"></a>Uso de claves de acceso para el montaje
@@ -137,7 +139,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 
 ## <a name="refresh-a-mount"></a>Actualización de un montaje
 
-En el siguiente ejemplo se actualiza el montaje.
+En el siguiente ejemplo se actualiza el montaje. Esta actualización también borrará la memoria caché de montaje.
 
 ```bash
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>

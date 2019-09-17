@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: df7ae090efbcd448dc5df3df5355273c891da4fe
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941169"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846636"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sent_before = ] 'sent_before'`Elimina los mensajes de correo electrónico hasta la fecha y la hora proporcionadas como el argumento *sent_before* . *sent_before* es de **tipo DateTime** y su valor predeterminado es NULL. NULL indica todas las fechas.  
+`[ \@sent_before = ] 'sent_before'`Elimina los mensajes de correo electrónico hasta la fecha y la hora proporcionadas como el argumento *sent_before* . *sent_before* es de **tipo DateTime** y su valor predeterminado es NULL. NULL indica todas las fechas.  
   
-`[ @sent_status = ] 'sent_status'`Elimina los mensajes de correo electrónico del tipo especificado por *sent_status*. *sent_status* es de tipo **VARCHAR (8)** y no tiene ningún valor predeterminado. Las entradas válidas se **envían**, no se **envían**, se reintentan y **se produce un error**. NULL indica todos los estados.  
+`[ \@sent_status = ] 'sent_status'`Elimina los mensajes de correo electrónico del tipo especificado por *sent_status*. *sent_status* es de tipo **VARCHAR (8)** y no tiene ningún valor predeterminado. Las entradas válidas se **envían**, no se **envían**, se **reintentan**y **se produce un error**. NULL indica todos los estados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

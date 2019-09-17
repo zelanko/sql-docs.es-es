@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2c0e5f5a5f194045b5d1b48a383f9d4dfd282649
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 307697f43fc1c2615f212ae5f433485814dd62d0
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158170"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874703"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implementación de SQL Server clúster de Big Data con alta disponibilidad
 
@@ -31,6 +31,7 @@ Estas son algunas de las funcionalidades que los grupos de disponibilidad habili
 1. Un punto de conexión externo se aprovisiona automáticamente para conectarse a las bases de datos de AG. Este punto `master-svc-external` de conexión desempeña el rol del agente de escucha de AG.
 1. Se aprovisiona un segundo extremo externo para las conexiones de solo lectura a las réplicas secundarias. 
 
+
 # <a name="deploy"></a>Implementar
 
 Para implementar SQL Server maestro en un grupo de disponibilidad:
@@ -39,9 +40,9 @@ Para implementar SQL Server maestro en un grupo de disponibilidad:
 1. Especificar el número de réplicas para el AG (el mínimo es 3)
 1. Configurar los detalles del segundo extremo externo creado para las conexiones a las réplicas secundarias de solo lectura
 
-En los pasos siguientes se muestra cómo crear un archivo de revisión que incluye esta configuración y cómo aplicarla a `aks-dev-test` los `kubeadm-dev-test` perfiles de configuración de o. Estos pasos le guían a través de un ejemplo de `aks-dev-test` cómo aplicar una revisión al perfil para agregar los atributos de alta disponibilidad.
+En los pasos siguientes se muestra cómo crear un archivo de revisión que incluye esta configuración y cómo aplicarla a `aks-dev-test` los `kubeadm-dev-test` perfiles de configuración de o. Estos pasos le guían a través de un ejemplo de `aks-dev-test` cómo aplicar una revisión al perfil para agregar los atributos de alta disponibilidad. En el caso de una implementación en un clúster de kubeadm, se aplicaría una revisión similar, pero asegúrese de que está usando *NodePort* para el **serviceType** en la sección de **puntos de conexión** .
 
-1. Crear un `ha-patch.json` archivo
+1. Crear un `patch.json` archivo
 
     ```json
     {
@@ -78,7 +79,7 @@ En los pasos siguientes se muestra cómo crear un archivo de revisión que inclu
 1. Clonar el perfil de destino
 
     ```bash
-    azdata config init --source aks-dev-test --target custom-aks
+    azdata bdc config init --source aks-dev-test --target custom-aks
     ```
 
 1. Aplicar el archivo de revisión al perfil personalizado
@@ -102,6 +103,10 @@ azdata bdc endpoint list -e sql-server-master -o table
 `Description                           Endpoint             Name               Protocol`
 `------------------------------------  -------------------  -----------------  ----------`
 `SQL Server Master Instance Front-End  13.64.235.192,31433  sql-server-master  tds`
+
+> [!NOTE]
+> Los eventos de conmutación por error pueden producirse durante la ejecución de una consulta distribuida que tiene acceso a datos de orígenes de datos remotos como HDFS o un grupo de datos. Como procedimiento recomendado, las aplicaciones deben diseñarse para tener lógica de reintento de conexión en caso de desconexiones producidas por la conmutación por error.  
+>
 
 ### <a name="connect-to-databases-on-the-secondary-replicas"></a>Conexión a bases de datos en las réplicas secundarias
 

@@ -1,5 +1,5 @@
 ---
-title: Sys.syslanguages (Transact-SQL) | Microsoft Docs
+title: Sys. syslanguages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053393"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874870"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "68053393"
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|Id. de idioma único.|  
 |dateformat|**nchar(3)**|Orden de la fecha (por ejemplo, DMA).|  
-|datefirst|**tinyint**|Primer día de la semana: 1 para el lunes, 2 para el martes y así sucesivamente hasta 7 para el domingo.|  
+|datefirst|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para Domingo.|  
 |upgrade|**int**|Reservado para uso del sistema.|  
-|name|**sysname**|Nombre de idioma oficial, por ejemplo, en francés.|  
+|name|**sysname**|Nombre del idioma oficial, por ejemplo, Français.|  
 |alias|**sysname**|Nombre alternativo del idioma (por ejemplo, francés).|  
 |meses|**nvarchar(372)**|Lista separada por comas con los nombres completos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 20 caracteres.|  
 |shortmonths|**nvarchar(132)**|Lista separada por comas con los nombres cortos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 9 caracteres.|  
@@ -69,7 +69,7 @@ ms.locfileid: "68053393"
 |Rumano|1048|1048|  
 |Croata|1050|1050|  
 |Eslovaco|1051|1051|  
-|Esloveno|1060|1060|  
+|Slovene|1060|1060|  
 |Greek|1032|1032|  
 |Búlgaro|1026|1026|  
 |Ruso|1049|1049|  
@@ -86,7 +86,7 @@ ms.locfileid: "68053393"
 |Tailandés|1054|1054|  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas de compatibilidad &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Vistas &#40;de compatibilidad de TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Asignar tablas del sistema a las &#40;vistas del sistema TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

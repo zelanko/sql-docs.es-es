@@ -1,5 +1,5 @@
 ---
-title: Use la Galería de PowerPivot | Microsoft Docs
+title: Usar la galería de PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a36ad34a7f8636d5d13c8d914f8b90965ead65c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e4dd52a33fbfb84f65658db6c645a5317b39c44
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070882"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874484"
 ---
 # <a name="use-powerpivot-gallery"></a>Usar la galería de PowerPivot
   La Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una biblioteca de documentos de SharePoint con una finalidad especial que permite obtener una eficaz vista previa y administrar los documentos de los libros de Excel publicados y los informes de Reporting Services que contienen datos PowerPivot.  
@@ -25,17 +25,17 @@ ms.locfileid: "66070882"
   
 ##  <a name="bkmk_top"></a> En este tema  
   
--   [Iconos en la Galería de PowerPivot](#icons)  
+-   [Iconos de la galería de PowerPivot](#icons)  
   
--   [Guardar un libro de Excel en la Galería de PowerPivot](#add)  
+-   [Guardar un libro de Excel en la galería de PowerPivot](#add)  
   
 -   [Crear nuevos informes o libros basados en un libro PowerPivot publicado](#newdocs)  
   
 -   [Abrir un libro o informe en el modo de página completa](#view)  
   
--   [Programar la actualización de datos para los libros PowerPivot en la Galería de PowerPivot](#newdr)  
+-   [Programar la actualización de datos para los libros PowerPivot en la galería de PowerPivot](#newdr)  
   
--   [Eliminar un libro o informe en la Galería de PowerPivot](#delete)  
+-   [Eliminar un libro o informe en la galería de PowerPivot](#delete)  
   
 -   [Actualizar una imagen en miniatura](#image)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "66070882"
   
 > [!NOTE]  
 >  La Galería de Power Pivot requiere Microsoft Silverlight.  El navegador Microsoft Edge no es compatible con Silverlight.   
-> Para ver el contenido de la biblioteca en Edge, haga clic en la pestaña **Biblioteca** de la Galería de Power Pivot y, luego, cambie la vista de la biblioteca de documentos a **Todos los documentos**.    
+> Para ver el contenido de la biblioteca en Microsoft Edge, haga clic en la pestaña **biblioteca** de la galería de Power Pivot y, a continuación, cambie la vista biblioteca de documentos a **todos los documentos**.    
 > Para cambiar la vista predeterminada, haga clic en la pestaña **Biblioteca** y, después, en Modificar vista. Haga clic en "Establecer esta vista como predeterminada" y, después, en Aceptar para guardar la vista predeterminada.  
->  Para obtener más información sobre la compatibilidad de Edge, consulte el blog de Windows, [un salto desde el pasado, 2ª parte: Adiós a ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Para obtener más información sobre lo que Microsoft Edge admite, vea el blog [de Windows, un salto del pasado, parte 2: Decir adiós a ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
- Para obtener una lista completa de requisitos previos, consulte [crear y personalizar la Galería de PowerPivot](create-and-customize-power-pivot-gallery.md).  
+ Para obtener una lista completa de los requisitos previos, vea [crear y personalizar la galería de PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
-##  <a name="icons"></a> Iconos en la Galería de PowerPivot  
+##  <a name="icons"></a>Iconos de la galería de PowerPivot  
  Los iconos proporcionan un indicador visual sobre la disponibilidad y el estado del contenido.  
   
 |Icono|Descripción|  
@@ -64,18 +64,18 @@ ms.locfileid: "66070882"
 |![GMNI_PowerPivotGalleryIcon_badtype](../media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|El icono de contenido no disponible aparece cuando el documento que ha cargado no se puede representar en la Galería de PowerPivot. Los tipos de documento compatibles son los libros PowerPivot y los informes creados en el Generador de informes de SQL Server 2008 R2 Reporting Services.<br /><br /> Este icono también aparece si recicla un documento desde la Papelera de reciclaje.<br /><br /> Si va a obtener este icono para un documento que antes presentó una imagen de vista previa válida, puede actualizar la imagen modificando una propiedad de documento y guardando sus cambios a continuación.|  
 |![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|El icono de contenido bloqueado aparece cuando las imágenes en miniatura se deshabilitan deliberadamente para este documento. La Galería de PowerPivot no genera imágenes en miniatura para los libros de Excel que no contienen ningún dato de PowerPivot o para los libros PowerPivot o los informes de Reporting Services que no cumplen los requisitos para la generación de instantáneas. Para obtener más información, vea la sección Requisitos previos en este tema.|  
   
-##  <a name="add"></a> Guardar un libro de Excel en la Galería de PowerPivot  
+##  <a name="add"></a>Guardar un libro de Excel en la galería de PowerPivot  
  Puede publicar libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la biblioteca mediante todas las técnicas de uso compartido que Excel 2010 proporciona. Por ejemplo, en Excel 2010, puede utilizar Guardar como para especificar toda o parte de una ruta de acceso de SharePoint a una biblioteca.  
   
 1.  Guarde el archivo.  
   
-2.  1.  **Excel 2010:** En el menú archivo, haga clic en **guardar y enviar**.  
+2.  1.  **Excel 2010:** En el menú Archivo, haga clic en **guardar & enviar**.  
   
     2.  Haga clic en **Guardar en SharePoint**.  
   
     3.  Haga clic en **Opciones de publicación** si desea usar Opciones de Excel Services para seleccionar hojas o parámetros individuales que desee publicar. Por ejemplo, la pestaña Parámetros de Opciones de Excel Services le permite elegir qué segmentaciones de datos aparecen en el libro publicado.  
   
-    1.  **Excel 2013:**  En el menú archivo, haga clic en **guardar**.  
+    1.  **Excel 2013:**  En el menú Archivo, haga clic en **Guardar**.  
   
     2.  Haga clic en **Opciones de vista de explorador** si desea usar Opciones de Excel Services para seleccionar hojas o parámetros individuales que desee publicar. Por ejemplo, la pestaña Parámetros de Opciones de Excel Services le permite elegir qué segmentaciones de datos aparecen en el libro publicado.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66070882"
   
 3.  En **Cargar documento**, seleccione una opción de carga y, a continuación, escriba el nombre y la ubicación del archivo que desea cargar. La configuración de la biblioteca determina dónde aparece el documento. Puede que tenga que actualizar la ventana del explorador para ver la incorporación más reciente.  
   
-##  <a name="newdocs"></a> Crear nuevos informes o libros basados en un libro PowerPivot publicado  
+##  <a name="newdocs"></a>Crear nuevos informes o libros basados en un libro PowerPivot publicado  
  En el caso de los libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que publique en la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , puede crear libros adicionales o informes de Reporting Services que usen el libro publicado como origen de datos conectado.  
   
 |||  
@@ -118,14 +118,14 @@ ms.locfileid: "66070882"
   
  Una solución alternativa a ver el libro en un explorador es abrirlo en Excel en una estación de trabajo del cliente. Debe tener Excel 2013 o Excel 2010 y el complemento [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] para ver el archivo. Puede utilizar Excel 2007 para abrir el archivo, pero no puede utilizarlo para dinamizar los datos. Por esta razón se recomienda Excel 2013 o Excel 2010 tanto para ver como para crear datos PowerPivot. Si no tiene las aplicaciones necesarias, debe utilizar un explorador para ver el libro de SharePoint.  
   
-##  <a name="newdr"></a> Programar la actualización de datos para los libros PowerPivot en la Galería de PowerPivot  
+##  <a name="newdr"></a>Programar la actualización de datos para los libros PowerPivot en la galería de PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un libro de Excel publicado pueden actualizarse a los intervalos programados.  
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Haga clic en el botón Administrar datos para crear o ver una programación que recupere los datos actualizados de los orígenes de datos conectados. Para obtener instrucciones sobre cómo crear una programación, vea [programar una actualización de datos &#40;PowerPivot para SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|Haga clic en el botón Administrar datos para crear o ver una programación que recupere los datos actualizados de los orígenes de datos conectados. Para obtener instrucciones sobre cómo crear una programación, vea [programar una actualización &#40;de datos&#41;PowerPivot para SharePoint](../schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
   
-##  <a name="delete"></a> Eliminar un libro o informe en la Galería de PowerPivot  
+##  <a name="delete"></a>Eliminar un libro o informe en la galería de PowerPivot  
  Para eliminar un documento de la biblioteca, cambie primero a la vista Todos los documentos.  
   
 1.  En un sitio de SharePoint, abra la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -154,16 +154,16 @@ ms.locfileid: "66070882"
 ### <a name="document-type-is-not-supported"></a>El tipo de documento no se admite  
  No se admite el tipo de contenido **Documento de galería de PowerPivot** . Si habilita el tipo de contenido **Documento de galería de PowerPivot** para una biblioteca de documentos e intenta crear un nuevo documento de ese tipo, verá un mensaje de error similar al siguiente:  
   
--   'Nuevo documento' requiere un explorador compatible con Microsoft Sharepoint Foundation, web y la aplicación. Para agregar un documento a esta biblioteca de documentos, haga clic en el botón 'Cargar documento'.  
+-   ' Nuevo documento ' requiere una aplicación compatible con Microsoft SharePoint Foundation y un explorador Web. Para agregar un documento a esta biblioteca de documentos, haga clic en el botón ' cargar documento '.  
   
--   "La dirección de Internet ' nombre http://[server] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx' no es válido." " Microsoft Excel no se puede obtener acceso al archivo ' nombre http://[server] / testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx'. Existen varias razones posibles:  
+-   "La dirección de Internet ' http://[nombre de servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/template. xlsx ' no es válida." " Microsoft Excel no puede acceder al archivo ' http://[nombre de servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/template. xlsx '. Existen varias razones posibles:  
   
  El tipo de contenido **Documento de galería de PowerPivot** no se agrega automáticamente a las bibliotecas de documentos. No encontrará este problema a menos que habilite manualmente el tipo de contenido no admitido.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una ubicación de confianza para sitios PowerPivot en Administración Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Eliminar galería de PowerPivot](delete-power-pivot-gallery.md)   
- [Crear y personalizar la Galería de PowerPivot](create-and-customize-power-pivot-gallery.md)   
- [Programar una actualización de datos &#40;PowerPivot para SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
+ [Crear una ubicación de confianza para los sitios de PowerPivot en administración central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Eliminar la galería de PowerPivot](delete-power-pivot-gallery.md)   
+ [Crear y personalizar la galería de PowerPivot](create-and-customize-power-pivot-gallery.md)   
+ [Programar una actualización &#40;de datos PowerPivot para SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   
   

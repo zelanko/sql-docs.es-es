@@ -10,17 +10,17 @@ ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa66d85d11c4c99094f554cb1be8c036329b8608
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3150dd7c37564429f5f31205bdf733fe134baf5d
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62655556"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874563"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Mostrar metadatos de columna y del catálogo para columnas dispersas (OLE DB)
   En este ejemplo se crea una tabla con tres columnas: una columna dispersa, otra que no es dispersa y una tercera de conjunto de columnas. A continuación, el ejemplo muestra las marcas OLE DB que muestran los metadatos de columna y de catálogo para la columna no dispersa y para la columna de conjunto de columnas.  
   
- En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior. Para obtener más información sobre las columnas dispersas, vea [con las columnas dispersas en SQL Server Native Client](../native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
+ En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior. Para obtener más información sobre las columnas dispersas, consulte [compatibilidad con columnas dispersas en SQL Server Native Client](../native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Ejemplo  
  Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
@@ -112,7 +112,7 @@ void DumpErrorInfo ( IUnknown* pObjectWithError, REFIID IID_InterfaceWithError )
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    // Only ask for error information if the interface supports it.  

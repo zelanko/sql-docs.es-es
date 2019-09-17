@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304829"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745444"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurar las opciones de implementación de los recursos y servicios de clúster
 
@@ -126,7 +126,7 @@ De igual forma, para cambiar la configuración de un único servicio dentro de u
 }
 ```
 
-Si desea aplicar la misma configuración a un servicio asociado a varios recursos, actualizará los **valores** correspondientes en la sección **servicios** . Por ejemplo, si desea establecer la misma configuración para Spark tanto en el grupo de almacenamiento como en los grupos de Spark, actualizará la sección de **configuración** en la sección servicio **Spark** del archivo de configuración **BDC. JSON** .
+Si desea aplicar la misma configuración a un servicio asociado a varios recursos, actualizará los **valores** correspondientes en la sección **servicios** . Por ejemplo, si desea establecer la misma configuración para Spark en el grupo de almacenamiento y en los grupos de Spark, actualizará la sección de **configuración** en la sección servicio **Spark** del archivo de configuración **BDC. JSON** .
 
 ```json
 "services": {

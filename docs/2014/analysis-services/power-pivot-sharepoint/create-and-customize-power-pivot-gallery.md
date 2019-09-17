@@ -1,5 +1,5 @@
 ---
-title: Crear y personalizar la Galería de PowerPivot | Microsoft Docs
+title: Crear y personalizar la galería de PowerPivot | Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b1a7cc26edb726952e71e25deb271ef1dd997d18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 305ae31522a54a776c989f4b8f4b0c4ceabe6658
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071525"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874404"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Crear y personalizar la Galería de PowerPivot
   La Galería de PowerPivot es un tipo especial de biblioteca de documentos de SharePoint que permite obtener una vista previa y administrar los documentos de los libros de Excel publicados y los informes de Reporting Services que contienen datos PowerPivot.  
@@ -26,9 +26,9 @@ ms.locfileid: "66071525"
   
 -   [Información general](#overview)  
   
--   [Creación de la Galería de PowerPivot](#createlib)  
+-   [Crear la galería de PowerPivot](#createlib)  
   
--   [Personalizar una biblioteca de galería de PowerPivot](#customize)  
+-   [Personalizar una biblioteca de la galería de PowerPivot](#customize)  
   
 -   [Deshabilitar u ocultar el botón Actualizar](#bkmk_hide_refresh_button)  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66071525"
   
     > [!NOTE]  
     >  La Galería de Power Pivot requiere Microsoft Silverlight.  El navegador Microsoft Edge no es compatible con Silverlight.   
-    > Para ver el contenido de la biblioteca en Edge, haga clic en la pestaña **Biblioteca** de la Galería de Power Pivot y, luego, cambie la vista de la biblioteca de documentos a **Todos los documentos**.    
+    > Para ver el contenido de la biblioteca en Microsoft Edge, haga clic en la pestaña **biblioteca** de la galería de Power Pivot y, a continuación, cambie la vista biblioteca de documentos a **todos los documentos**.    
     > Para cambiar la vista predeterminada, haga clic en la pestaña **Biblioteca** y, después, en Modificar vista. Haga clic en "Establecer esta vista como predeterminada" y, después, en Aceptar para guardar la vista predeterminada.  
-    >  Para obtener más información sobre la compatibilidad de Edge, consulte el blog de Windows, [un salto desde el pasado, 2ª parte: Adiós a ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Para obtener más información sobre lo que Microsoft Edge admite, vea el blog [de Windows, un salto del pasado, parte 2: Decir adiós a ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
 -   Debe ser propietario de un sitio para crear una biblioteca.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66071525"
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no puede estar en un sitio restringido. El sitio primario que contiene la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] debe agregarse al sitio de confianza o a la zona Intranet local.  
   
--   La solución de aplicación web de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] debe haberse implementado para la aplicación y la característica [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] debe haberse activado para la colección de sitios. Para obtener más información, consulte [implementar soluciones de PowerPivot para SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) y[activar la característica Integración de PowerPivot para colecciones de sitios en Administración Central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
+-   La solución de aplicación web de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] debe haberse implementado para la aplicación y la característica [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] debe haberse activado para la colección de sitios. Para obtener más información, vea [implementar soluciones de PowerPivot en SharePoint](deploy-power-pivot-solutions-to-sharepoint.md) y[activar la integración de características de PowerPivot para colecciones de sitios en administración central](activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 -   Para crear o ver un informe de Reporting Services que se base en un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , el libro y el informe deben estar en la misma Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El informe debe usar un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con datos incrustados o el libro debe contener como máximo un origen de datos externo que sea un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -61,16 +61,16 @@ ms.locfileid: "66071525"
   
  La actualización de los datos de libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] desde orígenes de datos externos se admite totalmente en la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , pero necesita una configuración adicional. Un administrador de granja o de servicios debe agregar la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como una ubicación de confianza de Excel Services. Para obtener más información, consulte [crear una ubicación de confianza para sitios PowerPivot en Administración Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
-##  <a name="createlib"></a> Creación de la Galería de PowerPivot  
+##  <a name="createlib"></a>Crear la galería de PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se crea automáticamente al instalar [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] mediante la opción de instalación Nuevo servidor. Si agregó [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a una granja existente o si desea una biblioteca adicional, puede crear una nueva para la aplicación o el sitio.  
   
-1.  1.  **SharePoint 2010**: Haga clic en **acciones del sitio** en la esquina superior izquierda de la página del sitio principal.  
+1.  1.  **SharePoint 2010**: Haga clic en **acciones del sitio** en la esquina superior izquierda de la Página principal del sitio.  
   
     2.  Haga clic en **Más opciones**.  
   
     3.  En Bibliotecas, haga clic en **Galería de PowerPivot**.  
   
-    1.  **SharePoint 2013**: Haga clic en el icono de configuración ![configuración de SharePoint](../media/as-sharepoint2013-settings-gear.gif "configuración de SharePoint"). Haga clic en **Contenido del sitio**  
+    1.  **SharePoint 2013**: Haga clic en el ![icono de configuración configuración de]SharePoint configuración de(../media/as-sharepoint2013-settings-gear.gif "SharePoint"). Haga clic en **Contenido del sitio**  
   
     2.  Haga clic en **Agregar una aplicación**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66071525"
   
 2.  Escriba el nombre de la biblioteca. Asegúrese de incluir información descriptiva que sirva de ayuda a los usuarios para identificar esta biblioteca como una eficaz vista previa para los libros PowerPivot y los informes de Reporting Services.  
   
-3.  Haga clic en **Crear**.  
+3.  Haga clic en **Create**(Crear).  
   
 4.  Pida al administrador del servicio o la granja que agregue la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como una ubicación de confianza para Excel Services. Este paso es necesario para evitar errores si un usuario configura un libro para la actualización de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener más información acerca de esta tarea, vea [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66071525"
   
  Puede crear bibliotecas adicionales de la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] si va a aplicar permisos distintos para diferentes colecciones de sitios o para sitios individuales.  
   
-##  <a name="customize"></a> Personalizar una biblioteca de galería de PowerPivot  
+##  <a name="customize"></a>Personalizar una biblioteca de la galería de PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una biblioteca de documentos de SharePoint. Por consiguiente, puede utilizar las herramientas de biblioteca estándar de SharePoint para cambiar la configuración de la biblioteca o trabajar con documentos individuales en la biblioteca. Cada biblioteca que crea se puede personalizar independientemente para utilizar una configuración de la biblioteca o de la vista diferente.  
   
  El criterio de ordenación y los filtros se pueden modificar para cambiar el lugar donde los libros aparecen en la lista. De forma predeterminada, los documentos se enumeran en el orden en el que se agregaron: el último documento publicado aparece en la parte inferior de la lista. Una vez publicado un documento, conserva su lugar en la lista. Al actualizar y volver a publicar las actualizaciones del documento, su lugar se actualiza en la lista.  
@@ -106,7 +106,7 @@ ms.locfileid: "66071525"
   
 3.  **SharePoint 2010:** En vistas personalizadas, haga clic en **modificar esta vista**.  
   
-     **SharePoint 2013:** En **administrar vistas**, haga clic en **Modificar vista**.  
+     **SharePoint 2013:** En **administrar vistas**, haga clic en **modificar vista**.  
   
 4.  En Ordenar, especifique los criterios que se utilizarán para determinar cómo aparecen los libros en la lista. De forma predeterminada, los documentos se enumeran en el orden en el que se agregaron.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "66071525"
   
  ![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh")  
   
- Los propietarios o los autores de los libros deben tener el permiso para **contribuir** si desean programar la actualización de los datos en un libro. Los usuarios con permisos para contribuir pueden abrir y editar la página de configuración de actualización de datos del libro para especificar las credenciales y la información utilizada para actualizar los datos de programación.  
+ Los propietarios o los autores de los libros deben tener el permiso para **contribuir** si desean programar la actualización de los datos en un libro. Los usuarios con permisos contribuir pueden abrir y editar la página de configuración de la actualización de datos del libro para especificar las credenciales y la información de programación que se usa para actualizar los datos.  
   
  Los usuarios que solo tengan los niveles de permisos **Ver** o **Leer** no podrán tener acceso al botón para actualizar. El botón para actualizar es visible pero está deshabilitado. Para obtener más información, vea [Permisos de usuario y niveles de permisos en SharePoint 2013](https://technet.microsoft.com/library/cc721640.aspx).  
   
@@ -147,9 +147,9 @@ ms.locfileid: "66071525"
 3.  En Administrar vistas, en Vista actual, seleccione la vista que desee utilizar en la lista. Las vistas prediseñadas incluyen la Vista de galería, la Vista de teatro y la Vista de carrusel. O bien, puede elegir Todos los documentos si desea mover, eliminar o administrar los documentos de la biblioteca.  
   
 ## <a name="see-also"></a>Vea también  
- [Solucionar problemas de un PowerPivot para SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
- [Use la Galería de PowerPivot](use-power-pivot-gallery.md)   
- [Crear una ubicación de confianza para sitios PowerPivot en Administración Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Solucionar problemas de una instalación de PowerPivot para SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
+ [Usar la galería de PowerPivot](use-power-pivot-gallery.md)   
+ [Crear una ubicación de confianza para los sitios de PowerPivot en administración central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Eliminar la Galería de PowerPivot](delete-power-pivot-gallery.md)  
   
   

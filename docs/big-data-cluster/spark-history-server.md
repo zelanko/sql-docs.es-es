@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653676"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878696"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark en el servidor de historial de Spark
 
@@ -27,7 +27,7 @@ En este artículo se proporcionan instrucciones para usar el servidor de histori
 La experiencia del usuario del servidor de historial de Spark de código abierto se ha mejorado con información, como, por ejemplo, datos específicos del trabajo y visualización interactiva de los flujos de datos y del gráfico de trabajo para el clúster de macrodatos. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Apertura de la interfaz de usuario web del servidor de historial de Spark mediante URL
-Para abrir el servidor de historial de Spark, vaya a la siguiente dirección URL, y reemplace `<Ipaddress>` y `<Port>` por la información específica del clúster de macrodatos. Puede consultar más información en: [Implementar el clúster de macrodatos de SQL Server](quickstart-big-data-cluster-deploy.md)
+Para abrir el servidor de historial de Spark, vaya a la siguiente dirección URL, y reemplace `<Ipaddress>` y `<Port>` por la información específica del clúster de macrodatos. Tenga en cuenta que en una configuración de clúster de Big Data (nombre de usuario/contraseña) básica, debe proporcionar la **raíz** del usuario cuando se le pida que inicie sesión en los puntos de conexión de puerta de enlace (Knox). Puede consultar más información en: [Implementar el clúster de macrodatos de SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory

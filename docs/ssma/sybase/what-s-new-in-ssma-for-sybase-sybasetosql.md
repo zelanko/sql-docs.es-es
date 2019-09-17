@@ -1,7 +1,7 @@
 ---
 title: Novedades de SSMA para SAP ASE (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -9,15 +9,23 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: b0284d0a562578e8b27f492e79e9662a240f8ccb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 44e59d80b21b71fbbc94b9c902edfb1019256d06
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811438"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745284"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Novedades de SSMA para SAP ASE (SybaseToSQL)
+
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para SAP ASE (anteriormente SSMA para Sybase) en cada versión.
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+La versión v 8.4 de SSMA para SAP ASE se ha mejorado con correcciones de destino diseñadas para solucionar problemas de accesibilidad y corregir un error relacionado con las columnas de índice máximo (para permitir 32 en lugar de 16) para SQL Server 2016 y versiones posteriores.
+
+> [!IMPORTANT]
+> Con SSMA v 7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -25,9 +33,6 @@ El lanzamiento de la versión 8.3 de SSMA para SAP ASE se ha mejorado con correc
 
 * Solucionar problemas de accesibilidad
 * Agregar compatibilidad básica para el tipo ' hierarchyid ' en SQL Server
-
-> [!IMPORTANT]
-> Con SSMA v 7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -39,9 +44,6 @@ La versión v 8.2 de SSMA para SAP ASE se ha mejorado con un conjunto de correcc
 
 > [!NOTE]
 > Un problema conocido con la actualización automática puede producir un error en una actualización de SSMA v 8.1 a v 8.2. Si se produce este error, descargue la nueva versión e instálela manualmente.
-
-> [!IMPORTANT]
-> Con SSMA v 7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
 ## <a name="ssma-v81"></a>SSMA v 8.1
 
@@ -131,7 +133,7 @@ La versión v 7.3 de SSMA para Sybase contiene los siguientes cambios:
         ![Comando Guardar como proyecto de SSDT](../media/export-schema-scripts_red.png)
   * Bibliotecas que puede usar SSMA para realizar conversiones personalizadas.
     * Ahora puede construir código que pueda controlar las conversiones de sintaxis personalizadas y las conversiones que no se administraron previamente mediante SSMA.
-      * En esta entrada de blog se ofrecen instrucciones sobre cómo construir un convertidor personalizado, que amplían las [capacidades de conversión de SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
+      * En esta entrada de blog se ofrecen instrucciones sobre cómo construir un convertidor personalizado, que [amplían las capacidades de conversión de SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
       * Descargue un proyecto de ejemplo para la conversión de esta [entrada de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>SSMA v 7.2

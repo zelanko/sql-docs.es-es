@@ -1,5 +1,5 @@
 ---
-title: Uso de mensajes | Microsoft Docs
+title: Usar mensajes | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,25 +10,25 @@ ms.topic: reference
 helpviewer_keywords:
 - messages [SMO]
 ms.assetid: 4037a866-4826-4c1f-890c-e7e3658adf13
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d30b267a0a821c015990ff54ac47eb91e925e982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73dbbb93c226c145dc16f5148f903900b602760e
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68029999"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911228"
 ---
 # <a name="using-messages"></a>Usar mensajes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  En SMO, los mensajes del sistema se representan mediante el <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> objeto al que pertenece el **Server** objeto. Dado que los mensajes del sistema no se pueden modificar, las propiedades del objeto **SystemMessage** son de solo lectura.  
+  En SMO, los mensajes del sistema se representan <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> mediante el objeto que pertenece al objeto de **servidor** . Dado que los mensajes del sistema no se pueden modificar, las propiedades del objeto **SystemMessage** son de solo lectura.  
   
  El objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> representa los mensajes definidos por el usuario mediante programación en SMO. Los mensajes definidos por el usuario existentes se pueden detectar realizando una iteración en la colección. Los nuevos mensajes definidos por el usuario se pueden crear creando instancias de un nuevo objeto **UserDefinedMessage** y estableciendo las propiedades adecuadas.  
   
 ## <a name="examples"></a>Ejemplos  
- Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>Buscar un mensaje del sistema determinado en Visual Basic  
  En el ejemplo de código se muestra cómo identificar un mensaje del sistema por número de identificador y cómo mostrar el mensaje.  

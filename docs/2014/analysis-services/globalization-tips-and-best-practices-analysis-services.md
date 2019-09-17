@@ -16,12 +16,12 @@ ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b94579317abf51f8545bce687ef6a8a882e7233
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080858"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874416"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Sugerencias de globalización y procedimientos recomendados (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  solo a modelos multidimensionales  
@@ -68,7 +68,7 @@ ms.locfileid: "66080858"
   
      En RPC y Singapur, Microsoft Support acostumbra a preferir el chino simplificado con pinyin como orden de clasificación. Las intercalaciones recomendadas son Chinese_PRC (para SQL Server 2000), Chinese_PRC_90 (para SQL Server 2005) o Chinese_Simplified_Pinyin_100 (para SQL Server 2008 y versiones posteriores).  
   
-     En Taiwán, es más habitual ver chino tradicional con el criterio de ordenación recomendado se basa en el número de trazos: Chinese_Taiwan_Stroke (para SQL Server 2000), Chinese_Taiwan_Stroke_90 (para SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (para SQL Server 2008 y versiones posteriores).  
+     En Taiwán, es más habitual ver chino tradicional con el criterio de ordenación recomendado basado en el número de trazos: Chinese_Taiwan_Stroke (por SQL Server 2000), Chinese_Taiwan_Stroke_90 (para SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (para SQL Server 2008 y versiones posteriores).  
   
      Otras regiones (por ejemplo, Hong Kong y Macao) también utilizan el chino tradicional. Para las intercalaciones en Hong Kong es habitual ver Chinese_Hong_Kong_Stroke_90 (en SQL Server 2005). En Macao, se utiliza con bastante frecuencia Chinese_Traditional_Stroke_Count_100 (en SQL Server 2008 y versiones posteriores).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66080858"
   
 |Alfabeto del idioma|Distinción de mayúsculas y minúsculas|  
 |---------------------|----------------------|  
-|**Alfabeto Latín básico**|Los identificadores de objetos expresados en el alfabeto latino (cualquiera de las 26 letras mayúsculas o minúsculas del inglés) se tratan sin distinguir mayúsculas de minúsculas, independientemente de la intercalación. Por ejemplo, los identificadores de objeto siguientes se consideran idénticos: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services trata los caracteres de la cadena como si todos estuvieran en mayúsculas y, luego, realiza una comparación de byte simple que es independiente del idioma.<br /><br /> Tenga en cuenta que solo los 26 caracteres se ven afectados. Si el idioma es Europeo occidental pero utiliza caracteres escandinavos, los caracteres adicionales no estarán en mayúsculas.|  
+|**Alfabeto Latín básico**|Los identificadores de objetos expresados en el alfabeto latino (cualquiera de las 26 letras mayúsculas o minúsculas del inglés) se tratan sin distinguir mayúsculas de minúsculas, independientemente de la intercalación. Por ejemplo, los siguientes identificadores de objeto se consideran idénticos: 54321**abcdef**, 54321**abcdef**, 54321**abcdef**. Internamente, Analysis Services trata los caracteres de la cadena como si todos estuvieran en mayúsculas y, luego, realiza una comparación de byte simple que es independiente del idioma.<br /><br /> Tenga en cuenta que solo los 26 caracteres se ven afectados. Si el idioma es Europeo occidental pero utiliza caracteres escandinavos, los caracteres adicionales no estarán en mayúsculas.|  
 |**Cirílico, griego, copto y armenio**|Los identificadores de objetos en script bicameral no latino, como el cirílico, siempre distinguen entre mayúsculas y minúsculas. Por ejemplo, Измерение y измерение se consideran dos valores distintos, aunque la única diferencia sea el uso de mayúsculas y minúsculas en la primera letra.|  
   
  **Implicaciones de la distinción entre mayúsculas y minúsculas para los identificadores de objetos**  
@@ -91,7 +91,7 @@ ms.locfileid: "66080858"
  Solo los identificadores de objetos, y no los nombres de objetos, están sujetos a los comportamientos de mayúsculas y minúsculas que se describen en la tabla. Si ve un cambio en el funcionamiento de la solución (una comparación del antes y el después de instalar SQL Server 2012 SP2 o una versión posterior), probablemente se trate de un problema de procesamiento. Las consultas no se ven afectadas por los identificadores de objeto. En los dos lenguajes de consulta (DAX y MDX), el motor de fórmulas utiliza el nombre del objeto (no el identificador).  
   
 > [!NOTE]  
->  Los cambios de código relacionados con la distinción entre mayúsculas y minúsculas han supuesto un cambio importante para algunas aplicaciones. Consulte [cambios recientes en las características de Analysis Services en SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
+>  Los cambios de código relacionados con la distinción entre mayúsculas y minúsculas han supuesto un cambio importante para algunas aplicaciones. Consulte [cambios importantes en las características de Analysis Services en SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
   
 ##  <a name="bkmk_test"></a> Pruebas de configuración regional con Excel, SQL Server Profiler y SQL Server Management Studio  
  Al probar las traducciones, la conexión debe especificar el LCID de la traducción. Como se documenta en el tema sobre [cómo obtener otro idioma de SSAS en Excel](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx), puede utilizar Excel para probar las traducciones.  
@@ -102,11 +102,11 @@ ms.locfileid: "66080858"
   
 -   Agregue `Locale Identifier=1036` a la cadena de conexión. Guarde el archivo y ciérrelo.  
   
--   Abra Excel | **Datos** | **Conexiones existentes**. Filtre la lista para que solo aparezcan los archivos de las conexiones de este equipo. Busque la conexión de Adventure Works (observe el nombre con atención: puede que haya más de una). Abra la conexión.  
+-   Abra Excel | **Datos** | **Conexiones existentes**. Filtre la lista para que solo aparezcan los archivos de las conexiones de este equipo. Busque la conexión de Adventure Works (observe el nombre con atención: puede que haya más de una). Abrir la conexión.  
   
      Debería ver las traducciones al francés de la base de datos de muestra de Adventure Works.  
   
-     ![Tabla dinámica de Excel con traducciones al francés](media/ssas-localetest-excel.png "tabla dinámica de Excel con traducciones al francés")  
+     ![Tabla dinámica de Excel con traducciones en francés](media/ssas-localetest-excel.png "Tabla dinámica de Excel con traducciones en francés")  
   
  A modo de seguimiento, puede usar SQL Server Profiler para confirmar la configuración regional. Haga clic en un evento de `Session Initialize` y, luego, observe la lista de propiedades del área de texto inferior para buscar `<localeidentifier>1036</localeidentifier>`.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "66080858"
   
 -   Ejecute una consulta MDX en la base de datos de Adventure Works. Los resultados de la consulta deberían ser las traducciones al francés.  
   
-     ![Consulta MDX con traducciones al francés en SSMS](media/ssas-localetest-ssms.png "consulta MDX con traducciones al francés en SSMS")  
+     ![Consulta MDX con traducciones en francés en SSMS](media/ssas-localetest-ssms.png "Consulta MDX con traducciones en francés en SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Escritura de consultas MDX en una solución que contiene traducciones  
  Las traducciones proporcionan información de los nombres de los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , pero los identificadores de los mismos objetos no se traducen. Siempre que sea posible, utilice los identificadores y las claves de los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en lugar de los títulos y los nombres traducidos. Por ejemplo, utilice claves de miembro en lugar de nombres de miembro en los scripts e instrucciones MDX (Expresiones multidimensionales) con el fin de asegurar la portabilidad entre diferentes idiomas.  
@@ -139,7 +139,7 @@ ms.locfileid: "66080858"
   
 3.  **Usar formatos de fecha ISO para información de fecha y hora universal**  
   
-     Una [experto en Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) tiene esta recomendación: "Siempre uso el ISO formato de fecha aaaa-mm-dd para todas las cadenas de fecha que paso a las consultas en SQL o MDX porque no es ambiguo y funciona independientemente del cliente o la configuración regional del servidor. Sé que el servidor debería recurrir a su configuración regional al analizar formatos de fecha ambiguos, pero también creo que si hay una opción que no da pie a varias interpretaciones, lo mejor es elegir esa opción en cualquier caso”.  
+     Un [experto en Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) tiene esta recomendación: "Siempre uso el formato de fecha ISO AAAA-MM-DD para cualquier cadena de fecha que paso a las consultas en SQL o MDX, porque no es ambiguo y funcionará independientemente de la configuración regional del cliente o del servidor. Sé que el servidor debería recurrir a su configuración regional al analizar formatos de fecha ambiguos, pero también creo que si hay una opción que no da pie a varias interpretaciones, lo mejor es elegir esa opción en cualquier caso”.  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

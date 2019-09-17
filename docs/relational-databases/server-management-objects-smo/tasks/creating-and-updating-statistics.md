@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - statistical information [SMO]
 ms.assetid: 47a0a172-a969-4deb-bca9-dd04401a0fe1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a52823c6a136f413826348174e5e7902c141e13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a1a48bd559ee3af794129d7a6559efba65b30c8
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111473"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911155"
 ---
 # <a name="creating-and-updating-statistics"></a>Crear y actualizar estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68111473"
  Es posible de crear estadísticas para cualquier columna utilizando los objetos <xref:Microsoft.SqlServer.Management.Smo.Statistic> y <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>. El método <xref:Microsoft.SqlServer.Management.Smo.Statistic.Update%2A> se puede ejecutar para actualizar las estadísticas en el objeto <xref:Microsoft.SqlServer.Management.Smo.Statistic>. Los resultados se pueden ver en el optimizador de consultas.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-and-update-statistics-in-visual-basic"></a>Crear y actualizar estadísticas en Visual Basic  
  En este ejemplo de código se crea una nueva tabla en una base de datos existente para la que se crean los objetos <xref:Microsoft.SqlServer.Management.Smo.Statistic> y <xref:Microsoft.SqlServer.Management.Smo.StatisticColumn>.  

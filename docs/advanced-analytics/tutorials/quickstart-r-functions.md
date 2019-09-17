@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f81b4f755441a5129892ed321d74bb8c6427ee4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: c8c8f69391db2e1028a0da33dbaf77fd60eafd8f
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714847"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70909199"
 ---
-# <a name="quickstart-using-r-functions"></a>Inicio rápido: Uso de funciones de R
+# <a name="quickstart-use-r-functions"></a>Inicio rápido: Uso de funciones de R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Si ha completado las guías de inicio rápido anteriores, está familiarizado con las operaciones básicas y está listo para algo más complejo, como las funciones estadísticas. Las funciones estadísticas avanzadas que son complicadas de implementar en T-SQL se pueden realizar en R con una sola línea de código.

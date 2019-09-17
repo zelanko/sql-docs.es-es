@@ -1,5 +1,5 @@
 ---
-title: Duraciones de transacción | Microsoft Docs
+title: Duración de las transacciones | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 290d4c43767ba7e1c6f784c84473e9a05503af54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 627dafb26a4368261e820dd03525f147429cdbcb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62920071"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874430"
 ---
 # <a name="transaction-lifetimes"></a>Período de duración de las transacciones
   Hay una diferencia importante entre las transacciones iniciadas en procedimientos almacenados [!INCLUDE[tsql](../../includes/tsql-md.md)] y las iniciadas en código administrado: el código de Common Language Runtime (CLR) no puede desequilibrar el estado de la transacción al entrar o salir de una invocación CLR. Tenga en cuenta las implicaciones siguientes de esta diferencia:  
@@ -29,7 +29,7 @@ ms.locfileid: "62920071"
   
 -   Un intento para confirmar una transacción no iniciada en el mismo procedimiento produce un error en tiempo de ejecución.  
   
--   Un intento de revertir una transacción no iniciada en el mismo procedimiento hace que la transacción no responda (evitando que ser produzca cualquier otra operación con efectos secundarios). La transacción se interrumpe hasta que el código CLR se sale del ámbito. Tenga en cuenta que esto puede resultar útil cuando detecta un error dentro de su procedimiento y desea asegurarse de que toda la transacción finaliza.  
+-   Un intento de revertir una transacción no iniciada en el mismo procedimiento hace que la transacción deje de responder (lo que impide que se produzca cualquier otra operación con efectos secundarios). La transacción se interrumpe hasta que el código CLR se sale del ámbito. Tenga en cuenta que esto puede resultar útil cuando detecta un error dentro de su procedimiento y desea asegurarse de que toda la transacción finaliza.  
   
 ## <a name="see-also"></a>Vea también  
  [Integración CLR y transacciones](../native-client-ole-db-transactions/transactions.md)  

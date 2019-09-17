@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0681e82f9e36fd2a2f66bb8b7d3faa2f07a72f13
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770939"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745383"
 ---
-# <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
+# <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Muestra información acerca del distribuidor, la base de datos de distribución, [!INCLUDE[msCoName](../../includes/msconame-md.md)] el directorio de trabajo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la cuenta de usuario del agente. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones o en cualquier base de datos.  
@@ -105,12 +105,12 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Columna del conjunto de resultados|Parámetro de salida|  
 |-----------------------|----------------------|  
-|account|**@account**|  
-|min distrib retention|**@min_distretention**|  
-|max distrib retention|**@max_distretention**|  
-|history retention|**@history_retention**|  
-|history cleanup agent|**@history_cleanupagent**|  
-|distribution cleanup agent|**@distrib_cleanupagent**|  
+|account|**\@Código**|  
+|min distrib retention|**\@min_distretention**|  
+|max distrib retention|**\@max_distretention**|  
+|history retention|**\@history_retention**|  
+|history cleanup agent|**\@history_cleanupagent**|  
+|distribution cleanup agent|**\@distrib_cleanupagent**|  
 |rpc login name|none|  
   
  La siguiente columna de conjuntos de resultados se devuelve a los usuarios de la lista de acceso a la publicación para una publicación en el distribuidor:  
@@ -121,10 +121,10 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Columna del conjunto de resultados|Parámetro de salida|  
 |-----------------------|----------------------|  
-|distributor|**@distributor**|  
-|base de datos de distribución|**@distribdb**|  
-|rpc server name|**@rpcsrvname**|  
-|publisher type|**@publisher_type**|  
+|distributor|**\@distribuidor**|  
+|base de datos de distribución|**\@distribdb**|  
+|rpc server name|**\@rpcsrvname**|  
+|publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del distribuidor y del publicador](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

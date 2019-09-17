@@ -1,5 +1,5 @@
 ---
-title: Calcular la interrupción del servicio durante la conmutación (creación de reflejo de base de datos) de roles | Microsoft Docs
+title: Calcular la interrupción del servicio durante la conmutación de roles (creación de reflejo de la base de datos) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4104fd32688abaf379db30a6ecf604a35c557778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9830334843fd2c350091f7dc2af5493141bcfb1
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806863"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874441"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Calcular la interrupción del servicio durante la conmutación de roles (creación de reflejo de la base de datos)
   Durante una conmutación de roles, la cantidad de tiempo que la creación de reflejo de la base de datos estará fuera de servicio depende del tipo y la causa de la conmutación de roles.  
@@ -37,7 +37,7 @@ ms.locfileid: "62806863"
 -   En el caso de la conmutación por error manual, el único factor es el tiempo necesario para realizar la conmutación por error de la base de datos una vez que se emite el comando de conmutación por error.  
   
 ## <a name="error-detection"></a>Detección de errores  
- El tiempo que necesita el sistema para detectar un error depende del tipo de error; por ejemplo, un error de red se detecta casi al instante, mientras que la detección de un servidor que no responde tarda 10 segundos de forma predeterminada, ya que ése es el tiempo de espera predeterminado.  
+ La hora en que el sistema observa un error depende del tipo de error; por ejemplo, un error de red se detecta casi al instante, mientras que si se observa que un servidor que no responde tarda 10 segundos (con el tiempo de espera predeterminado).  
   
  Para obtener información sobre los errores que pueden causar un error durante una sesión de creación de reflejo de la base de datos y detección del tiempo de espera en modo de seguridad alta con conmutación automática por error, vea [Posibles errores durante la creación de reflejo de la base de datos](possible-failures-during-database-mirroring.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62806863"
  El tiempo de la conmutación por error consiste principalmente en el tiempo que el servidor reflejado anterior necesita para poner al día los registros pendientes en su cola rehecha más un breve tiempo adicional (para obtener más información sobre cómo procesa las entradas de registro el servidor reflejado, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)). Para obtener información acerca de cómo calcular el tiempo de la conmutación por error, vea Calcular la tasa de puesta al día de la conmutación por error, más adelante en este tema.  
   
 > [!IMPORTANT]  
->  Si la conmutación por error se produce durante una transacción en la que se crea un índice o tabla y después se cambia, es posible que tarde más de lo habitual.  Por ejemplo, la conmutación por error durante la siguiente serie de operaciones puede aumentar el tiempo de conmutación por error:  BEGIN TRANSACTION, CREATE INDEX en una tabla y SELECT INTO en la tabla. Existe la posibilidad de un mayor tiempo de conmutación por error durante una transacción de este tipo hasta su finalización con una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
+>  Si la conmutación por error se produce durante una transacción en la que se crea un índice o tabla y después se cambia, es posible que tarde más de lo habitual.  Por ejemplo, si se realiza una conmutación por error durante la siguiente secuencia de operaciones, es posible que el tiempo de conmutación por error sea mayor:  BEGIN TRANSACTION, CREATE INDEX en una tabla y SELECT INTO en la tabla. Existe la posibilidad de un mayor tiempo de conmutación por error durante una transacción de este tipo hasta su finalización con una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
   
 ### <a name="the-redo-queue"></a>Cola rehecha  
  La confirmación de la base de datos conlleva aplicar las entradas de registro que se encuentren en la cola rehecha del servidor reflejado. La *cola rehecha* está formada por las entradas de registro que se han escrito en el disco del servidor reflejado, pero todavía no se han puesto al día en la base de datos reflejada.  

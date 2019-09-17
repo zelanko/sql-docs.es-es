@@ -1,5 +1,5 @@
 ---
-title: Almacenamiento e intercalación en los modelos tabulares de cadenas | Microsoft Docs
+title: Almacenamiento e intercalación de cadenas en modelos tabulares | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,19 +10,19 @@ ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18601e43e8aea80350e297336174cce0b4ef7bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066424"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874491"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Almacenamiento e intercalación de cadenas en modelos tabulares
   Las cadenas (valores de texto) se almacenan en los modelos tabulares utilizando un formato muy comprimido; debido a esta compresión, puede obtener resultados inesperados al recuperar cadenas completas o parciales. Además, dado que la configuración regional y las intercalaciones de las cadenas se heredan jerárquicamente del objeto primario más próximo, si no se define explícitamente el idioma de las cadenas, la configuración regional y la intercalación del elemento primario pueden afectar a la forma de almacenamiento de cada una de las cadenas y determinar si la cadena es única o se combina con cadenas similares tal como se define en la intercalación primaria.  
   
  En este tema se describe el mecanismo mediante el cual se comprimen y almacenan las cadenas, y se proporcionan ejemplos de cómo afectan la intercalación y el idioma a los resultados de las fórmulas de texto en los modelos tabulares.  
   
-## <a name="storage"></a>Storage  
+## <a name="storage"></a>Almacenamiento  
  En los modelos tabulares, todos los datos están muy comprimidos para que puedan almacenarse sin problemas en la memoria. En consecuencia, todas las cadenas consideradas léxicamente equivalentes se almacenan solo una vez. La primera instancia de la cadena se utiliza como la representación canónica y a partir de este momento cada cadena equivalente se indiza al mismo valor comprimido que la primera repetición.  
   
  La pregunta clave es: ¿qué constituye una cadena léxicamente equivalente? Dos cadenas se consideran léxicamente equivalentes si se pueden considerar como la misma palabra. Por ejemplo, cuando busca la palabra **violin** en inglés en un diccionario, puede encontrar la entrada **Violin** o **violin**, dependiendo de la directiva editorial del diccionario, pero generalmente considerará ambas palabras equivalentes, y no tendrá en cuenta la diferencia en el uso de mayúsculas. En un modelo tabular, el factor que determina si dos cadenas son léxicamente equivalentes no es la directiva editorial ni las preferencias del usuario, sino la configuración regional y la intercalación asignadas a la columna.  
@@ -47,14 +47,14 @@ ms.locfileid: "66066424"
   
  Es posible que los datos procediesen de varios orígenes diferentes, y por lo tanto el estilo de mayúsculas y minúsculas y el uso de los acentos fuese incoherente, y la base de datos relacional almacenase estas diferencias tal cual. Pero, en general, los valores son **Plant** o **Tree**, solo que con estilos distintos de mayúscula y minúscula.  
   
- Cuando se cargan estos valores en un modelo tabular que utiliza la intercalación y la forma de ordenación predeterminados para el inglés estadounidense, el uso de mayúsculas o minúsculas no es importante, por lo que solo se almacenarán dos valores para toda la columna:  
+ Cuando estos valores se cargan en un modelo tabular que utiliza la intercalación y el criterio de ordenación predeterminados para inglés (Estados Unidos), el caso no es importante, por lo que solo se almacenarán dos valores para toda la columna:  
   
 |Classification - English|  
 |-------------------------------|  
 |trEE|  
 |PlAnT|  
   
- Si utiliza la columna **Classification - English**, en el modelo, cuando muestre la clasificación de las plantas verá no los valores originales, con sus varios usos de mayúsculas y minúsculas, pero solo la primera instancia. El motivo es que todas las variantes de mayúsculas y minúsculas de **tree** se consideran equivalentes en esta intercalación y configuración regional; por lo tanto, solo se conservó una cadena y la primera instancia de esta que encuentre el sistema será la que se guarde.  
+ Si usa la columna **clasificación-inglés**en el modelo, siempre que muestre la clasificación de planta, no verá los valores originales, con sus distintos usos de mayúsculas y minúsculas, sino solo la primera instancia. El motivo es que todas las variantes de mayúsculas y minúsculas de **tree** se consideran equivalentes en esta intercalación y configuración regional; por lo tanto, solo se conservó una cadena y la primera instancia de esta que encuentre el sistema será la que se guarde.  
   
 > [!WARNING]  
 >  Quizá decida que desea definir la cadena que se almacenará en primer lugar, de acuerdo con lo que considera correcto, pero esto puede resultar muy difícil. No es fácil determinar con antelación qué fila debe procesar el motor en primer lugar, dado que todos los valores se consideran iguales. En lugar de ello, si necesita establecer el valor estándar, deberá limpiar todas las cadenas antes de cargar el modelo.  

@@ -10,12 +10,12 @@ ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e8b4442d8d7f6e8838d9c5bb56e4c545b6f931c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011089"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874726"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Revertir los separadores de palabras usados por las búsquedas a la versión anterior
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala y habilita una versión de los separadores de palabras y lematizadores para todos los idiomas admitidos por búsqueda de texto completo, a excepción del coreano. En este tema se describe cómo pasar de esta versión de estos componentes a la versión previa o viceversa.  
@@ -79,8 +79,8 @@ ms.locfileid: "66011089"
 |Neutro|Neutro|0000|  
 |Noruego (Bokmal)|nor|1044|  
 |Punjabí|pan|1094|  
-|Portugués brasileño|ptb|1046|  
 |Portugués|ptg|2070|  
+|Portugués (Brasil) |ptb|1046|  
 |Rumano|rom|1048|  
 |Eslovaco|sky|1051|  
 |Esloveno|slv|1060|  
@@ -130,7 +130,7 @@ ms.locfileid: "66011089"
 |Lenguaje|Abreviatura<br />utilizada en el<br />Registro|LCID|  
 |--------------|---------------------------------------|----------|  
 |Árabe|ara|1025|  
-|German|deu|1031|  
+|Alemán|deu|1031|  
 |Japonés|jpn|1041|  
 |Neerlandés|nld|1043|  
 |Ruso|rus|1049|  
@@ -164,7 +164,7 @@ ms.locfileid: "66011089"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador anterior de la tabla.  
   
-7.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+7.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 8.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras actual.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "66011089"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador actual de la tabla.  
   
-5.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+5.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 6.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras anterior.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "66011089"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador anterior de la tabla.  
   
-4.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+4.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 5.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras actual.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66011089"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador actual de la tabla.  
   
-4.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+4.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** . *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 5.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras anterior.  
   

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69d548d6d6682a1bdd999bf2b9a4fdba4cefd669
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 016d8af878a75a0a4e72b17fc9fa09f8791b242b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212444"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096915"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Arquitectura de integración CLR: entorno hospedado CLR
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ Thread.EndThreadAffinity();
   
  A la vista de estas consideraciones, se desaconseja el uso de variables estáticas y miembros de datos estáticos de las clases que se utilizan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En el caso de ensamblados SAFE y EXTERNAL_ACCESS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examina los metadatos del ensamblado en el momento de creación del ensamblado (CREATE ASSEMBLY) y no puede crear dichos ensamblados si detecta el uso de variables y miembros de datos estáticos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tampoco permite llamadas a .NET Framework API anotadas con los atributos **SharedState**, * * Synchronization y **ExternalProcessMgmt** de protección del host. Esto impide que los ensamblados EXTERNAL_ACCESS y SAFE llamen a cualquiera de las API que habilitan el estado compartido, ejecuten la sincronización y puedan afectar a la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea restricciones del modelo de programación de la [integración CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tampoco permite llamadas a .NET Framework API anotadas con los atributos de protección de host **SharedState**, **Synchronization**y **ExternalProcessMgmt** . Esto impide que los ensamblados EXTERNAL_ACCESS y SAFE llamen a cualquiera de las API que habilitan el estado compartido, ejecuten la sincronización y puedan afectar a la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea restricciones del modelo de programación de la [integración CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de la integración CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   

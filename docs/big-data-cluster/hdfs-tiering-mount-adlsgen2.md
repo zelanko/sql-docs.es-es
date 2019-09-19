@@ -9,12 +9,12 @@ ms.date: 08/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 679fbd63d77e21a84db315cf05adf112d122ad63
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.openlocfilehash: f209d249fb0e289258aa20bbfafd8a715dc463d6
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70774214"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118121"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Procedimiento para montar ADLS Gen2 para los niveles de HDFS en un clúster de macrodatos
 
@@ -108,7 +108,7 @@ Ahora que ha establecido la variable de entorno MOUNT_CREDENTIALS para las clave
 1. Inicie sesión con **azdata** mediante la dirección IP externa del punto de conexión del controlador con el nombre de usuario y la contraseña del clúster:
 
    ```bash
-   azdata login -e https://<IP-of-controller-svc-external>:30080/
+   azdata login -e https://<IP-of-controller-svc-external>:30080
    ```
 1. Establezca la variable de entorno MOUNT_CREDENTIALS (desplácese hacia arriba para obtener instrucciones).
 

@@ -1,39 +1,45 @@
 ---
-title: Inicio rápido sobre los tipos de datos y objetos de R y SQL
-description: En esta guía de inicio rápido, aprenderá a trabajar con tipos de datos y objetos de datos en R y SQL Server.
+title: Trabajar con objetos y tipos de datos de R y SQL
+titleSuffix: SQL Server Machine Learning Services
+description: En esta guía de inicio rápido, aprenderá a trabajar con tipos de datos y objetos de datos en R y SQL Server con SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 09/17/2019
 ms.topic: quickstart
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb007525834c312952f9eb02809edadebaefa305
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715429"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149959"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Inicio rápido: Administrar tipos de datos y objetos mediante R en SQL Server
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Inicio rápido: Administrar tipos de datos y objetos mediante R en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En esta guía de inicio rápido, se ofrece una introducción práctica a los problemas comunes que se producen al mover datos entre R y SQL Server. La experiencia que se obtiene en este ejercicio proporciona información básica sobre el uso de datos en su propio script.
+En esta guía de inicio rápido, obtendrá información sobre los problemas comunes que se producen al mover datos entre R y SQL Server. La experiencia que se obtiene en este ejercicio proporciona información básica sobre el uso de datos en su propio script.
 
 Algunos de los problemas más comunes son:
 
-+ A veces, los tipos de datos no coinciden
-+ Pueden producirse conversiones implícitas
-+ A veces, se requieren operaciones de conversión
-+ R y SQL usan objetos de datos distintos
+- A veces, los tipos de datos no coinciden
+- Pueden producirse conversiones implícitas
+- A veces, se requieren operaciones de conversión
+- R y SQL usan objetos de datos distintos
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-En una guía de inicio rápido anterior, [Verify r existe en SQL Server](quickstart-r-verify.md), se proporciona información y vínculos para configurar el entorno de r necesario para esta guía de inicio rápido.
+- Esta guía de inicio rápido requiere acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con el lenguaje R instalado.
+
+  La instancia de SQL Server puede estar en una máquina virtual de Azure o en un entorno local. Tenga en cuenta que la característica de scripting externo está deshabilitada de forma predeterminada, por lo que es posible que tenga que [Habilitar el scripting externo](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) y comprobar que **SQL Server Launchpad servicio** se está ejecutando antes de empezar.
+
+- También necesita una herramienta para ejecutar consultas SQL que contienen scripts de R. Puede ejecutar estos scripts mediante cualquier herramienta de consulta o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. Esta guía de inicio rápido usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## <a name="always-return-a-data-frame"></a>Devolver siempre una trama de datos
 
-Cuando el script devuelve resultados de R a SQL Server, debe devolverlos como una trama de datos (**data.frame**). Cualquier otro tipo de objeto que se genere en el script, ya sea una lista, un factor, un vector o datos binarios, debe convertirse en una trama de datos si desea generarla como parte de los resultados del procedimiento almacenado. Por suerte, existen varias funciones de R con las que se pueden cambiar objetos en tramas de datos. Se puede incluso serializar un modelo binario y devolverlo en una trama de datos, algo que haremos más adelante en este tutorial.
+Cuando el script devuelve resultados de R a SQL Server, debe devolverlos como una trama de datos (**data.frame**). Cualquier otro tipo de objeto que se genere en el script, ya sea una lista, un factor, un vector o datos binarios, debe convertirse en una trama de datos si desea generarla como parte de los resultados del procedimiento almacenado. Por suerte, existen varias funciones de R con las que se pueden cambiar objetos en tramas de datos. Incluso puede serializar un modelo binario y devolverlo en una trama de datos, que lo hará más adelante en esta guía de inicio rápido.
 
 En primer lugar, vamos a experimentar con algunos objetos básicos de R: vectores, matrices y listas, y ver cómo la conversión a una trama de datos cambia la salida pasada a SQL Server.
 
@@ -60,7 +66,7 @@ EXECUTE sp_execute_external_script
 
 ## <a name="identify-schema-and-data-types"></a>Identificar los tipos de datos y esquemas
 
-¿Por qué los resultados tan diferentes? 
+¿Por qué los resultados tan diferentes?
 
 La respuesta se suele hallar con el comando de R `str()`. Agregue la función `str(object_name)` en cualquier parte del script de R para que el esquema de datos del objeto de R especificado se devuelva como un mensaje informativo. Para ver los mensajes, consulte el panel **Mensajes** de Visual Studio Code o la pestaña **Mensajes** de SSMS.
 
@@ -119,6 +125,22 @@ Por ahora, basta con saber que hay que comprobar los resultados esperados cuando
 
 Cada objeto de datos de R tiene sus propias reglas sobre el tratamiento que se da a los valores cuando dicho objeto se combina con otro si ambos objetos de datos tienen el mismo número de dimensiones, o si cualquier objeto de datos contiene tipos de datos heterogéneos.
 
+En primer lugar, cree una tabla pequeña de datos de prueba.
+
+```sql
+CREATE TABLE RTestData (col1 INT NOT NULL)
+
+INSERT INTO RTestData
+VALUES (1);
+
+INSERT INTO RTestData
+VALUES (10);
+
+INSERT INTO RTestData
+VALUES (100);
+GO
+```
+
 Por ejemplo, supongamos que ejecuta la siguiente instrucción para realizar la multiplicación de matrices mediante R. Puede multiplicar una matriz de una sola columna con los tres valores por una matriz con cuatro valores y esperar una matriz de 4x3 como resultado.
 
 ```sql
@@ -140,7 +162,7 @@ En realidad, la única columna de tres valores se convierte en una matriz de una
 |---|---|---|---|
 |12|13|14|15|
 |120|130|140|150|
-|1200|1300|1400|1\.500|
+|1200|1300|1400|1500|
 
 Sin embargo, tenga en cuenta lo que sucede cuando se cambia el `y`tamaño de la matriz.
 
@@ -158,7 +180,7 @@ execute sp_execute_external_script
 Esta vez, R devuelve un solo valor como resultado.
 
 **Resultado**
-    
+
 |Col1|
 |---|
 |1542|
@@ -167,10 +189,8 @@ Esta vez, R devuelve un solo valor como resultado.
 
 > [!TIP]
 > 
-> ¿Obtiene errores? En estos ejemplos se requiere la tabla **RTestData**. Si no ha creado la tabla de datos de prueba, vuelva a este tema para crear la tabla: [Controlar entradas y salidas](../tutorials/rtsql-working-with-inputs-and-outputs.md).
-> 
-> Si ha creado la tabla pero sigue apareciendo un error, asegúrese de que está ejecutando el procedimiento almacenado en el contexto de la base de datos que contiene la tabla y no en la base de datos **maestra** o en otra.
-> 
+> ¿Obtiene errores? Asegúrese de que está ejecutando el procedimiento almacenado en el contexto de la base de datos que contiene la tabla y no en la base de datos **maestra** o en otra.
+>
 > Además, se recomienda evitar el uso de tablas temporales en estos ejemplos. Algunos clientes de R finalizarán una conexión entre lotes y eliminarán tablas temporales.
 
 ## <a name="merge-or-multiply-columns-of-different-length"></a>Combinar o multiplicar columnas de longitud diferente
@@ -193,7 +213,7 @@ EXECUTE sp_execute_external_script
 Para rellenar la trama de datos, R repite los elementos recuperados de RTestData tantas veces como sea necesario, hasta coincidir con el número de elementos de la matriz `df1`.
 
 **Resultado**
-    
+
 |*Col2*|*Col3*|
 |----|----|
 |1|1|
@@ -229,7 +249,7 @@ SELECT ReportingDate
 ```
 
 > [!NOTE]
-> 
+>
 > Puede usar cualquier versión de AdventureWorks o crear una consulta diferente con una base de datos propia. El punto es tratar de tratar algunos datos que contienen valores de texto, DateTime y numérico.
 
 Ahora, intente pegar esta consulta como entrada para el procedimiento almacenado.
@@ -262,25 +282,29 @@ STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M20
 STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 16950 16950
 ```
 
-+ La columna de fecha y hora se ha procesado con el tipo de datos de R, **POSIXct**.
-+ La columna de texto "Products" se ha identificado como un **factor**, lo que significa una variable de categoría. Los valores de cadena se consideran factores de forma predeterminada. Si pasa una cadena a R, se convierte en un entero para uso interno y luego se asigna de nuevo a la cadena en la salida.
+- La columna de fecha y hora se ha procesado con el tipo de datos de R, **POSIXct**.
+- La columna de texto "Products" se ha identificado como un **factor**, lo que significa una variable de categoría. Los valores de cadena se consideran factores de forma predeterminada. Si pasa una cadena a R, se convierte en un entero para uso interno y luego se asigna de nuevo a la cadena en la salida.
 
 ### <a name="summary"></a>Resumen
 
 Incluso en estos breves ejemplos, puede ver la necesidad de comprobar los efectos de la conversión de datos al pasar consultas SQL como entrada. Dado que R no admite algunos tipos de datos SQL Server, tenga en cuenta estas maneras de evitar errores:
 
-+ Pruebe los datos por adelantado y compruebe las columnas o valores del esquema que pueden ser un problema cuando se pasan a código de R.
-+ Especifique las columnas en el origen de datos de entrada individualmente, en lugar de usar `SELECT *`, y sepa cómo se va a tratar cada columna.
-+ Al preparar los datos de entrada, realice conversiones explícitas según sea necesario para evitar sorpresas.
-+ Evite pasar columnas de datos (como GUID o ROWGUID) que causan errores y no son útiles para el modelado.
+- Pruebe los datos por adelantado y compruebe las columnas o valores del esquema que pueden ser un problema cuando se pasan a código de R.
+- Especifique las columnas en el origen de datos de entrada individualmente, en lugar de usar `SELECT *`, y sepa cómo se va a tratar cada columna.
+- Al preparar los datos de entrada, realice conversiones explícitas según sea necesario para evitar sorpresas.
+- Evite pasar columnas de datos (como GUID o ROWGUID) que causan errores y no son útiles para el modelado.
 
 Para obtener más información sobre los tipos de datos admitidos y no admitidos, vea [bibliotecas y tipos de datos de R](../r/r-libraries-and-data-types.md).
 
 Para obtener información sobre el impacto en el rendimiento de la conversión en tiempo de ejecución de cadenas en factores numéricos, vea [SQL Server R Services el ajuste del rendimiento](../r/sql-server-r-services-performance-tuning.md).
 
-## <a name="next-step"></a>Paso siguiente
+## <a name="next-steps"></a>Pasos siguientes
 
-En la siguiente guía de inicio rápido, aprenderá a aplicar funciones de R a los datos de SQL Server.
+Para obtener información sobre cómo escribir funciones avanzadas de R en SQL Server, siga esta guía de inicio rápido:
 
 > [!div class="nextstepaction"]
-> [Inicio rápido: Uso de funciones de R con datos de SQL Server](quickstart-r-functions.md)
+> [Escritura de funciones avanzadas de R con SQL Server Machine Learning Services](quickstart-r-functions.md)
+
+Para obtener más información acerca de SQL Server Machine Learning Services, consulte:
+
+- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)

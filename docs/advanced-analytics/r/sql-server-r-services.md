@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 973c09be9cff6e66043b056e1a772ab8974cebb4
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957491"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149924"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>¿Qué es SQL Server los servicios de R 2016?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,8 +81,8 @@ Puede usar los paquetes y marcos de código abierto, además de los paquetes de 
 
 1. Escritura del primer script de R
 
-    + Inicio rápido: [Ejecutar un script "Hello World" en R](../tutorials/quickstart-r-run-using-tsql.md)
-    + Inicio rápido: [Crear un modelo predictivo en R](../tutorials/quickstart-r-create-predictive-model.md)
+    + Inicio rápido: [Crear y ejecutar scripts de R simples en SQL Server](../tutorials/quickstart-r-create-script.md)
+    + Inicio rápido: [Crear y entrenar un modelo predictivo en R](../tutorials/quickstart-r-train-score-model.md)
     + Tutorial: [Uso de R en T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md): Explorar datos, realizar ingeniería de características, entrenar e implementar modelos y realizar predicciones (serie de cinco partes)
     + Tutorial: [Usar r Services en herramientas de r](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explorar datos, crear gráficos y trazados, realizar ingeniería de características, entrenar e implementar modelos y realizar predicciones (serie de seis partes)
 

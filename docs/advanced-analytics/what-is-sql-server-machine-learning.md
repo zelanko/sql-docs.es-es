@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d60445d52a8a78fb7924d82338162e4719f45681
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276665"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149938"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>¿Qué es SQL Server Machine Learning Services (Python y R)?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,8 +95,8 @@ Para obtener más información acerca de los paquetes que se instalan con Machin
 
 1. Escribir el primer script de Python o R
 
-    + Inicio rápido: Ejecutar un script "Hello World" [en Python](tutorials/quickstart-python-run-using-t-sql.md) o [en R](tutorials/quickstart-r-run-using-tsql.md)
-    + Inicio rápido: Creación de un modelo predictivo [en Python](tutorials/quickstart-python-train-score-in-tsql.md) o [en R](tutorials/quickstart-r-create-predictive-model.md)
+    + Inicio rápido: [Crear y ejecutar scripts de R simples en SQL](tutorials/quickstart-r-create-script.md)
+    + Inicio rápido: [Crear y entrenar un modelo predictivo en R](tutorials/quickstart-r-train-score-model.md)
     + Tutorial: [Usar Python en T-SQL](tutorials/sqldev-in-database-python-for-sql-developers.md): Explorar datos, realizar ingeniería de características, entrenar e implementar modelos y realizar predicciones (serie de cinco partes)
     + Tutorial: [Uso de R en T-SQL](tutorials/sqldev-in-database-r-for-sql-developers.md): Explorar datos, realizar ingeniería de características, entrenar e implementar modelos y realizar predicciones (serie de cinco partes)
     + Tutorial: [Use Machine Learning Services en herramientas de R](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): Explorar datos, crear gráficos y trazados, realizar ingeniería de características, entrenar e implementar modelos y realizar predicciones (serie de seis partes)

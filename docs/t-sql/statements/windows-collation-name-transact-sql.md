@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80c777fad7bbe9e6680b8baa826bc5acdf65730a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051431"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874467"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nombre de intercalación de Windows (Transact-SQL)
 
@@ -79,7 +79,7 @@ Al omitir esta opción se especifica que no se distinguen tipos de ancho, **KS**
 **UTF8**  
 - **Se aplica a**: A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
-- Especifica la codificación UTF-8 que se usará para los tipos de datos aptos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
+- Especifica la codificación UTF-8 que se va a usar para los tipos de datos válidos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Especifica el criterio de ordenación binario compatible con versiones anteriores que se va a utilizar.
@@ -139,9 +139,9 @@ En la tabla siguiente se muestran todas las intercalaciones de Windows admitidas
 |Amárico (Etiopía)|Latin1_General_100_|No disponible|
 |Armenio (Armenia)|Cyrillic_General_100_|No disponible|
 |Asamés (India)|Assamese_100_ <sup>1</sup>|No disponible|
+|Bangla (Bangladés)|Bengali_100_<sup>1</sup>|No disponible|
 |Baskir (Rusia)|Bashkir_100_|No disponible|
 |Vasco (España)|Latin1_General_100_|No disponible|
-|Bengalí (Bangladés)|Bengali_100_<sup>1</sup>|No disponible|
 |Bengali (India)|Bengali_100_<sup>1</sup>|No disponible|
 |Bosnio (cirílico, Bosnia-Herzegovina)|Bosnian_Cyrillic_100_|No disponible|
 |Bosnio (latino, Bosnia-Herzegovina)|Bosnian_Latin_100_|No disponible|
@@ -226,7 +226,7 @@ En la tabla siguiente se muestran todas las intercalaciones de Windows admitidas
 |Galés (Reino Unido)|Welsh_100_|No disponible|
 |Wolof (Senegal)|French_100_|No disponible|
 |Xhosa/isiXhosa (Sudáfrica)|Latin1_General_100_|No disponible|
-|Yakuto (Rusia)|Yakut_100_|No disponible|
+|Sakha (Rusia)|Yakut_100_|No disponible|
 |Yi (RPC)|Latin1_General_100_|No disponible|
 |Yoruba (Nigeria)|Latin1_General_100_|No disponible|
 |Zulú/isiZulu (Sudáfrica)|Latin1_General_100_|No disponible|
@@ -235,9 +235,9 @@ En la tabla siguiente se muestran todas las intercalaciones de Windows admitidas
 |Desusado, no disponible en el nivel de servidor en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores|Lithuanian_Classic|Lithuanian_Classic|
 |Desusado, no disponible en el nivel de servidor en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores|Macedonian|Macedonian|
 
-<sup>1</sup>Las intercalaciones exclusivas de Unicode de Windows solo se pueden aplicar a datos de nivel de columna o de nivel de expresión. No se pueden utilizar como intercalaciones de base de datos o de servidor.
+<sup>1</sup> Las intercalaciones exclusivas de Unicode de Windows solo se pueden aplicar a datos de nivel de columna o de nivel de expresión. No se pueden utilizar como intercalaciones de base de datos o de servidor.
 
-<sup>2</sup>Al igual que la intercalación Chino (Taiwán), Chino (Macao) usa las reglas de chino simplificado; a diferencia de Chino (Taiwán), usa la página de códigos 950.
+<sup>2</sup>Al igual que la intercalación Chino (Taiwán), Chino (Macao) usa las reglas de Chino simplificado; a diferencia de Chino (Taiwán), usa la página de códigos 950.
 
 ## <a name="see-also"></a>Consulte también
 

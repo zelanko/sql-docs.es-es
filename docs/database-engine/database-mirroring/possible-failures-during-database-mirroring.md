@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b1a6778dd969f751fff51c54d9148b3cd0e5bf5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d8530425db1353a22365b0de165619f6e8eee74
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009953"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874281"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Posibles errores durante la creación de reflejo de la base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "68009953"
   
 -   Errores de red, como tiempos de espera de vínculos TCP, paquetes que se han dañado o se han quitado o paquetes que están en un orden incorrecto.  
   
--   Un sistema operativo, servidor o base de datos que no responden.  
+-   Un sistema operativo, un servidor o una base de datos que no responde.  
   
 -   Se ha agotado el tiempo de espera de un servidor de Windows.  
   

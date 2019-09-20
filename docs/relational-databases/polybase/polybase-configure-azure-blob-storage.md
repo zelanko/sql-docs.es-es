@@ -8,18 +8,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: d9c17199ec6477b59ad4fdf4e4e670bf0b5e5a9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7ac4cda37a211c73b9895bdface7e6ade56ad11
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020231"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874838"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurar PolyBase para acceder a datos externos en Azure Blob Storage
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En el artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en Hadoop.
+En el artículo se explica cómo usar PolyBase en una instancia de SQL Server para consultar datos externos en Azure Blob Storage.
 
 ## <a name="prerequisites"></a>Prerequisites
 

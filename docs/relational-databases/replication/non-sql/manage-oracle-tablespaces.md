@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e132bea4e0926719092d9a7055735210e2b5908b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6320d7192d2493486779a1b6ac433f78a45114ca
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942754"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276539"
 ---
 # <a name="manage-oracle-tablespaces"></a>Administrar espacios de tabla de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "67942754"
   
 -   Use [sp_changearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Para utilizar **sp_changearticle**, especifique lo siguiente:  
   
-    -   El nombre del publicador de Oracle para el parámetro **@publisher** .  
+    -   El nombre del publicador de Oracle para el parámetro **\@publisher**.  
   
-    -   El nombre de la publicación de Oracle para el parámetro **@publication** .  
+    -   El nombre de la publicación de Oracle para el parámetro **\@publication**.  
   
-    -   El nombre del artículo para el parámetro **@article** .  
+    -   El nombre del artículo para el parámetro **\@article**.  
   
-    -   Un valor de espacio de tabla para el parámetro **@property** .  
+    -   Un valor de "espacio de tabla" para el parámetro **\@property**.  
   
-    -   El nombre del espacio de tabla para el parámetro **@value** .  
+    -   El nombre del espacio de tabla para el parámetro **\@value**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

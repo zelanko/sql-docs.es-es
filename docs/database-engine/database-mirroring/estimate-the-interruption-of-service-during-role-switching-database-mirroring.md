@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e90fcec386868a87ccca9faaf349dcb1a4064aff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997861"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874178"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Calcular la interrupción del servicio durante la conmutación de roles (creación de reflejo de la base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67997861"
 -   En el caso de la conmutación por error manual, el único factor es el tiempo necesario para realizar la conmutación por error de la base de datos una vez que se emite el comando de conmutación por error.  
   
 ## <a name="error-detection"></a>Detección de errores  
- El tiempo que necesita el sistema para detectar un error depende del tipo de error; por ejemplo, un error de red se detecta casi al instante, mientras que la detección de un servidor que no responde tarda 10 segundos de forma predeterminada, ya que ése es el tiempo de espera predeterminado.  
+ El tiempo que necesita el sistema para detectar un error depende del tipo de error; por ejemplo, un error de red se detecta casi al instante, mientras que la detección de un servidor que no responde tarda 10 segundos (con el tiempo de espera predeterminado).  
   
  Para obtener información sobre los errores que pueden causar un error durante una sesión de creación de reflejo de la base de datos y detección del tiempo de espera en modo de seguridad alta con conmutación automática por error, vea [Posibles errores durante la creación de reflejo de la base de datos](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md).  
   

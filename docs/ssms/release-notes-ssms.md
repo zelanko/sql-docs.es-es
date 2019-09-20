@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 07/31/2019
-ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 09/04/2019
+ms.openlocfilehash: 7f9195b2ec4cfd80d16f37884ce27e920580463c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122992"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874551"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas de la versión de SQL Server Management Studio (SSMS)
 
@@ -107,9 +107,13 @@ SSMS 18.2 es la versión de disponibilidad general (GA) más reciente de SSMS. S
 
 - SSMS 18.0 rediseña las incidencias al cambiar entre varias ventanas de consulta. Consulte [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042). Una solución para esta incidencia es deshabilitar la aceleración de hardware en **Herramientas** > **Opciones**.
 
-- Existe una limitación en el tamaño de los datos que ve en los resultados de SSMS que se muestran en la cuadrícula, el texto o el archivo.
+- Existe una limitación del tamaño de los datos que ve en los resultados de SSMS que se muestran en la cuadrícula, el texto o el archivo.
 
-Puede hacer referencia a [UserVoice](https://feedback.azure.com/forums/908035-sql-server) para otras incidencias conocidas y para proporcionar comentarios al equipo del producto. 
+- Hay un problema con la recepción de un error al eliminar una instancia de Azure SQL Database en el Explorador de objetos, pero en realidad se realiza correctamente. La tarea muestra un mensaje de error inexacto.
+
+- El idioma predeterminado para los inicios de sesión de SQL puede mostrarse como Árabe en el cuadro de diálogo Propiedades de inicio de sesión, con independencia del idioma predeterminado real establecido para el inicio de sesión. Para ver el idioma predeterminado real para un inicio de sesión determinado, use T-SQL para seleccionar el valor **default_language_name** del inicio de sesión en **master.sys.server_principles**.
+
+Puede hacer referencia a [UserVoice](https://feedback.azure.com/forums/908035-sql-server) para otras incidencias conocidas y para proporcionar comentarios al equipo del producto.
 
 ## <a name="previous-ssms-releases"></a>Versiones de SSMS anteriores
 

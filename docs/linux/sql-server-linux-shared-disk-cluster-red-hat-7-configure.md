@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810983"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809778"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración del clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
@@ -275,7 +275,7 @@ En este momento, ambas instancias de SQL Server están configuradas para ejecut
 
    > Si usa otro firewall que no tiene una configuración de alta disponibilidad integrada, deberán abrirse los puertos siguientes para que Pacemaker pueda comunicarse con otros nodos del clúster.
    >
-   > * TCP: puertos 2224, 3121 y 21064
+   > * TCP: puertos 2224, 3121, 21064
    > * UDP: puerto 5405
 
 1. Instale paquetes de Pacemaker en cada nodo.
@@ -308,6 +308,10 @@ En este momento, ambas instancias de SQL Server están configuradas para ejecut
    sudo yum install mssql-server-ha
    ```
 
+## <a name="configure-fencing-agent"></a>Configuración del agente de barrera
+
+Un dispositivo STONITH proporciona un agente de barrera. En [Configuración de Pacemaker en Red Hat Enterprise Linux en Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices) se proporciona un ejemplo de cómo crear un dispositivo STONITH para este clúster en Azure. Modifique las instrucciones para el entorno.
+
 ## <a name="create-the-cluster"></a>Creación del clúster 
 
 1. En uno de los nodos, cree el clúster.
@@ -316,15 +320,6 @@ En este momento, ambas instancias de SQL Server están configuradas para ejecut
    sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
    sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
-   ```
-
-   > El complemento de alta disponibilidad de RHEL incluye agentes de barrera para VMWare y KVM. Las barreras deben deshabilitarse en los demás hipervisores. No se recomienda deshabilitar los agentes de barrera en entornos de producción. A partir del período de tiempo, no hay ningún agente de barrera para los entornos de nube o de Hyper-V. Si está ejecutando una de estas configuraciones, debe deshabilitar las barreras. \**No se recomienda hacerlo en un sistema de producción.* *
-
-   El siguiente comando deshabilita los agentes de barrera.
-
-   ```bash
-   sudo pcs property set stonith-enabled=false
-   sudo pcs property set start-failure-is-fatal=false
    ```
 
 2. Configure los recursos de clúster para SQL Server, el sistema de archivos y los recursos de IP virtual e inserte la configuración en el clúster. Necesita la siguiente información:
@@ -388,7 +383,7 @@ En este momento, ambas instancias de SQL Server están configuradas para ejecut
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-* Guía [Clústeres partiendo de cero](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) de Pacemaker
+* Guía [Cluster from Scratch](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) (Clústeres partiendo de cero) de Pacemaker
 
 ## <a name="next-steps"></a>Pasos siguientes
 

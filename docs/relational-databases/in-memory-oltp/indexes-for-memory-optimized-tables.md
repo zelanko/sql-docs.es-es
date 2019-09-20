@@ -1,7 +1,7 @@
 ---
 title: Índices de tablas con optimización para memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2019
+ms.date: 09/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f283868f180764f5b3276cce9678de075f3d0483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050213"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929697"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Índices de las tablas con optimización para memoria
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Todas las tablas optimizadas para memoria deben tener como mínimo un índice porque son los índices los que conectan las filas. En una tabla optimizada para memoria, todos los índices también son optimizados para memoria. Hay varias formas de diferenciar un índice en un índice optimizado para memoria de un índice tradicional en una tabla basada en disco:  
+Todas las tablas optimizadas para memoria deben tener como mínimo un índice porque son los índices los que conectan las filas. En una tabla optimizada para memoria, todos los índices también son optimizados para memoria. Hay varias formas de diferenciar un índice en una tabla optimizada para memoria de un índice tradicional en una tabla basada en disco:  
 
 - Las filas de datos no se almacenan en páginas, por lo que no existe ninguna colección de páginas o extensiones, ni unidades de asignación o particiones a las que se pueda hacer referencia para obtener todas las páginas de una tabla. Existe el concepto de páginas de índice para uno de los tipos de índices disponibles, pero se almacenan de una manera distinta a los índices para las tablas basadas en disco. No acumulan el tipo tradicional de fragmentación dentro de una página, por lo que no tienen ningún factor de relleno.
 - Los cambios que se realizan en los índices de las tablas optimizadas para memoria durante la manipulación de los datos nunca se escriben en el disco. Solo las filas de datos, y los cambios en los datos, se escriben en el registro de transacciones. 
@@ -59,6 +59,7 @@ Para declararse con el valor predeterminado de DURABILITY = SCHEMA\_AND_DATA, la
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
     ```
+
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tienen un límite de 8 índices por tabla optimizada para memoria o tipo de tabla. A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], ya no hay un límite para el número de índices específicos para tablas optimizadas para memoria y tipos de tabla.
   

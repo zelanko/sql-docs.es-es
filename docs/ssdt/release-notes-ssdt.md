@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af4c8c43dfa3e7153b6ecb9e42301677247845d
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531028"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874892"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas de la versión de SQL Server Data Tools (SSDT)
 
@@ -304,7 +304,7 @@ _SSDT para Visual Studio 2017._
 
 Visual Studio 2017 (15.5.1) es la misma versión que la 15.5.0 excepto por las siguientes correcciones de errores del instalador:
 
-1.  Se ha corregido un problema que provocaba que el instalador se bloquease en el proceso posterior a la instalación de SQL Server Integration Services.
+1.  Se ha corregido un problema que provocaba que el instalador dejase de responder después de la instalación de SQL Server Integration Services.
 2.  Se ha corregido un problema que provocaba que el programa de instalación produjera un error con el mensaje siguiente: "La operación de metarchivo solicitada no es compatible (0x800707D3)".
 
 Además de estas dos correcciones de errores, todavía se aplican los siguientes detalles de la versión 15.5.0 a la versión 15.5.1.
@@ -497,7 +497,7 @@ _SSDT para Visual Studio 2015._
 - Se ha corregido un problema que consiste en que ChangeSource en el origen de datos de estructura no conserva los cambios de expresión de contexto
 - Se ha corregido un problema que hacía que los errores de expresión de M pudieran provocar errores en la actualización del modelo sin que apareciera mensaje de error
 - Se ha corregido un problema de cierre de SSDT con el error "La compilación se debe detener para que la solución se pueda cerrar"
-- Se ha corregido un problema que hacía que VS pareciera bloquearse al establecer el modo de suplantación incorrecto en el modelo del nivel de compatibilidad 1400 
+- Se ha corregido un problema que hacía que VS pareciera dejar de responder al establecer el modo de suplantación incorrecto en el modelo del nivel de compatibilidad 1400 
 - La propiedad de filas de detalles ahora solo se serializa en JSON si no está vacía (cambio con respecto al comportamiento predeterminado)
 - El controlador OLEDB de Oracle ahora está disponible en la lista del modo de consulta directa tabular
 - La adición de expresiones de M en modelos tabulares de compatibilidad 1400 ahora aparece o se actualiza en el explorador de modelos tabulares (TME)
@@ -844,7 +844,7 @@ SSDT Tabular ahora incluye una instancia de SSAS interna que SSDT Tabular inicia
 * Se ha corregido un problema con el cuadro de diálogo de las propiedades del proyecto de SSDT AS para que se delimite correctamente cuando se cambie su tamaño en el ajuste con valores altos de PPP.
 * Se ha corregido un problema en los proyectos SSDT AS que podría haber provocado un error al actualizar determinados modelos con las tablas pegadas.
 * Se ha corregido un problema en SSDT AS por el que la acción de pegar filas de hojas completas desde Excel resultaba lenta y creaba muchas columnas no deseadas.
-* Se ha corregido un problema en SSDT AS por el que analizar y resaltar grandes expresiones de DataTable resultaba muy lento o producía un bloqueo.
+* Se ha corregido un problema en SSDT AS por el que las operaciones de análisis y resaltado de grandes expresiones de DataTable resultaban muy lentas o parecían dejar de responder.
 * Se ha corregido un problema en SSDT AS para agregar valores de KPI y medidas a la perspectiva actual seleccionada en el editor.
 * Se ha corregido un problema en SSDT por el que la importación de datos en el proyecto de AS desde SQL Azure no admitía tipos de esquemas distintos a "dbo".
 

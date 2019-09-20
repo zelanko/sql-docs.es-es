@@ -10,18 +10,18 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b04e7ffb9a1f1a00035b04994869c55d8173ad2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba47ee7f719763cce2d2ac4502d8c2c9bd8693d3
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909296"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70910822"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importar documentos JSON en SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-En este tema se describe cómo importar archivos JSON en SQL Server. Actualmente, hay muchos documentos JSON almacenados en archivos. Las aplicaciones registran información en archivos JSON, los sensores generan información que se almacena en archivos JSON, etc. Es importante ser capaz de leer los datos JSON almacenados en archivos, cargar los datos en SQL Server y analizarlos.
+En este artículo se describe cómo importar archivos JSON en SQL Server. Actualmente, hay muchos documentos JSON almacenados en archivos. Las aplicaciones registran información en archivos JSON, los sensores generan información que se almacena en archivos JSON, etc. Es importante ser capaz de leer los datos JSON almacenados en archivos, cargar los datos en SQL Server y analizarlos.
 
 ## <a name="import-a-json-document-into-a-single-column"></a>Importar un documento JSON en una sola columna
 
@@ -139,9 +139,7 @@ SELECT value
  CROSS APPLY OPENJSON(BulkColumn)
 ```
 
-### <a name="example-2"></a>Ejemplo 2
-
-OPENROWSET lee un solo valor de texto del archivo, lo devuelve como BulkColumn y lo pasa a la función OPENJSON. OPENJSON itera a través de la matriz de objetos JSON de la matriz BulkColumn y devuelve un libro en cada fila, con formato JSON:
+La función OPENROWSET anterior lee un solo valor de texto del archivo. OPENROWSET devuelve el valor como BulkColumn y pasa BulkColumn a la función OPENJSON. OPENJSON itera a través de la matriz de objetos JSON de la matriz BulkColumn y devuelve un libro en cada fila. Cada fila tiene formato JSON, como se muestra a continuación.
 
 ```json
 {"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", ... }
@@ -150,7 +148,7 @@ OPENROWSET lee un solo valor de texto del archivo, lo devuelve como BulkColumn y
 {"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", ... }
 ```
 
-### <a name="example-3"></a>Ejemplo 3
+### <a name="example-2"></a>Ejemplo 2
 
 La función OPENJSON puede analizar el contenido JSON y transformarlo en una tabla o un conjunto de resultados. En el ejemplo siguiente se carga el contenido, se analiza el JSON cargado y se devuelven los cinco campos como columnas:
 

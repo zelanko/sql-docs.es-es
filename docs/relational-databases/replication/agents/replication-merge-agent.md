@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 27de402dfe659be7c6adc28504f4d17ddc1e4620
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97b36ba7e90aeaa32a0d073b972f06a9fc336750
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085953"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846737"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -179,7 +179,7 @@ replmerg [-?]
   
  **- ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Para restringir la carga, use **@subscriber_upload_options** de **sp_addmergearticle** en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Para restringir la carga, use **\@subscriber_upload_options** de **sp_addmergearticle** en su lugar.  
   
  Especifica el tipo de intercambio de datos durante la sincronización, que puede ser uno de los siguientes:  
   
@@ -320,7 +320,7 @@ replmerg [-?]
  Especifica el número de subprocesos de origen que el Agente de mezcla utiliza para enumerar los cambios desde el origen. El origen es el Suscriptor durante la carga y el Publicador durante la descarga. El valor predeterminado es **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Es el número máximo de segundos que el Agente de mezcla espera cuando el número de procesos de mezcla simultáneos en ejecución ha alcanzado el límite establecido por la propiedad **@max_concurrent_merge** de **sp_addmergepublication**. Si se alcanza el número máximo de segundos y el Agente de mezcla todavía está esperando, se cerrará. Un valor de 0 significa que el agente espera indefinidamente, aunque puede cancelarse.  
+ Es el número máximo de segundos que el Agente de mezcla espera cuando el número de procesos de mezcla simultáneos en ejecución ha alcanzado el límite establecido por la propiedad **\@max_concurrent_merge** de **sp_addmergepublication**. Si se alcanza el número máximo de segundos y el Agente de mezcla todavía está esperando, se cerrará. Un valor de 0 significa que el agente espera indefinidamente, aunque puede cancelarse.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Es la ruta de acceso a la base de datos Jet (archivo .mdb) si **SubscriberType** es **2** (permite una conexión a una base de datos Jet sin un nombre del origen de datos ODBC (DSN)).  

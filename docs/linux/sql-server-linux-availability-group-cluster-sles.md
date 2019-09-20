@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68003561"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809830"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clústeres de SLES para grupos de disponibilidad de SQL Server
 
@@ -187,7 +187,7 @@ Después de agregar todos los nodos, compruebe si necesita ajustar no-quorum-pol
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>Establecimiento de la propiedad cluster-recheck-interval
 
-`cluster-recheck-interval` indica el intervalo de sondeo en el que el clúster comprueba los cambios en los parámetros de recursos, las restricciones u otras opciones del clúster. Si una réplica deja de funcionar, el clúster intenta reiniciarla en un intervalo que depende de los valores `failure-timeout` y `cluster-recheck-interval`. Por ejemplo, si `failure-timeout` se establece en 60 segundos y `cluster-recheck-interval` se establece en 120 segundos, el reinicio se intenta en un intervalo entre 60 y 120 segundos. Se recomienda establecer el valor de failure-timeout en 60 segundos y el de cluster-recheck-interval en un valor superior a 60 segundos. No se recomienda establecer cluster-recheck-interval en un valor menor.
+`cluster-recheck-interval` indica el intervalo de sondeo por el que el clúster comprueba los cambios en los parámetros de recursos, las restricciones u otras opciones del clúster. Si una réplica se interrumpe, el clúster intenta reiniciarla en un intervalo que depende de los valores `failure-timeout` y `cluster-recheck-interval`. Por ejemplo, si `failure-timeout` se establece en 60 segundos y `cluster-recheck-interval` se establece en 120 segundos, el reinicio se intenta en un intervalo mayor de 60 segundos pero menor de 120 segundos. Se recomienda establecer el valor de failure-timeout en 60 segundos y el de cluster-recheck-interval en un valor superior a 60 segundos. No se recomienda establecer cluster-recheck-interval en un valor menor.
 
 Para actualizar el valor de la propiedad en `2 minutes`, ejecute:
 
@@ -196,7 +196,7 @@ crm configure property cluster-recheck-interval=2min
 ```
 
 > [!IMPORTANT] 
-> Si ya dispone de un recurso de grupo de disponibilidad administrado por un clúster de Pacemaker, tenga en cuenta que todas las distribuciones que usan el paquete más reciente de Pacemaker (1.1.18 -11.el7) introducen un cambio de comportamiento para el valor de clúster start-failure-is-fatal cuando su valor es false. Este cambio afecta al flujo de trabajo de la conmutación por error. Si una réplica principal deja de funcionar, se espera que el clúster conmute por error a una de las réplicas secundarias disponibles. En su lugar, los usuarios observarán que el clúster sigue intentando iniciar la réplica principal que ha experimentado el error. Si esa réplica principal no vuelve a activarse (por ejemplo, debido a un corte de luz permanente), el clúster nunca conmutará por error a otra réplica secundaria disponible. Debido a este cambio, la recomendación de configurar start-failure-is-fatal ya no es válida y es necesario revertir a su valor predeterminado de `true`. Además, el recurso AG debe actualizarse para incluir la propiedad `failover-timeout`. 
+> Si ya dispone de un recurso de grupo de disponibilidad administrado por un clúster de Pacemaker, tenga en cuenta que todas las distribuciones que usan el paquete más reciente de Pacemaker (1.1.18 -11.el7) introducen un cambio de comportamiento para el valor de clúster start-failure-is-fatal cuando su valor es false. Este cambio afecta al flujo de trabajo de la conmutación por error. Si una réplica principal deja de funcionar, se espera que el clúster conmute por error a una de las réplicas secundarias disponibles. En su lugar, los usuarios observan que el clúster sigue intentando iniciar la réplica principal que ha experimentado el error. Si esa réplica principal no vuelve a activarse (debido a un corte de luz permanente), el clúster nunca conmuta por error a otra réplica secundaria disponible. Debido a este cambio, la recomendación de configurar start-failure-is-fatal ya no es válida y es necesario revertir a su valor predeterminado de `true`. Además, el recurso de grupo de disponibilidad debe actualizarse para incluir la propiedad `failover-timeout`. 
 >
 >Para actualizar el valor de la propiedad a `true`, ejecute:
 >
@@ -220,7 +220,11 @@ Mediante la configuración de un recurso, la barrera de nivel de recursos garant
 
 La barrera de nivel de nodo garantiza que un nodo no ejecute ningún recurso. Para ello, se restablece el nodo, cuya implementación en Pacemaker se denomina STONITH (que significa "disparar al otro nodo en la cabeza"). Pacemaker admite una gran variedad de dispositivos de barrera, como una fuente de alimentación ininterrumpida o tarjetas de interfaz de administración para servidores.
 
-Para obtener más información, vea [Clústeres de Pacemaker desde cero](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [Barreras y Stonith](https://clusterlabs.org/doc/crm_fencing.html) y [Documentación de la alta disponibilidad de SUSE: barreras y STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Para obtener más información, vea:
+
+- [Clústeres de Pacemaker desde cero](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)
+- [Barreras y STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+- [Documentación de la alta disponibilidad de SUSE: barreras y STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)
 
 En el momento de la inicialización del clúster, STONITH se deshabilita si no se detecta ninguna configuración. Para habilitarlo posteriormente, se puede ejecutar el comando siguiente:
 
@@ -230,7 +234,6 @@ sudo crm configure property stonith-enabled=true
   
 >[!IMPORTANT]
 >La deshabilitación de STONITH es solo para propósitos de prueba. Si tiene previsto usar Pacemaker en un entorno de producción, debe planear una implementación de STONITH basada en su entorno y mantenerla habilitada. SUSE no proporciona agentes de barrera para ningún entorno de nube (incluido Azure) ni Hyper-V. En consecuencia, el proveedor del clúster no admite la ejecución de clústeres de producción en estos entornos. Estamos trabajando en una solución para este vacío para incorporarla en futuras versiones.
-
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>Configuración de los recursos de clúster para SQL Server
 
@@ -305,15 +308,15 @@ commit
 ```
 
 ### <a name="add-ordering-constraint"></a>Adición de una restricción de ordenación
-La restricción de ubicación tiene implícita una restricción de ordenación. Así, la restricción mueve el recurso de IP virtual antes de mover el recurso de grupo de disponibilidad. La secuencia de eventos predeterminada es la siguiente: 
+La restricción de ubicación tiene una restricción de orden implícita. Mueve el recurso de dirección IP virtual antes de mover el recurso de grupo de disponibilidad. La secuencia de eventos predeterminada es la siguiente: 
 
 1. El usuario emite la migración de recursos al maestro del grupo de disponibilidad desde el nodo 1 al nodo 2.
 2. El recurso de IP virtual se detiene en el nodo 1.
-3. El recurso de IP virtual se inicia en el nodo 2. Llegados a este punto, la dirección IP apunta temporalmente al nodo 2, mientras que el nodo 2 sigue siendo una réplica secundaria previa a la conmutación por error. 
+3. El recurso de dirección IP virtual se inicia en el nodo 2. Llegados a este punto, la dirección IP apunta temporalmente al nodo 2, mientras que el nodo 2 sigue siendo una réplica secundaria previa a la conmutación por error. 
 4. El maestro del grupo de disponibilidad en el nodo 1 se degrada a esclavo.
 5. El esclavo del grupo de disponibilidad en el nodo 2 asciende a maestro. 
 
-Para evitar que la dirección IP apunte temporalmente al nodo con la réplica secundaria previa a la conmutación por error, agregue una restricción de ordenación. Para agregar una restricción de ordenación, ejecute el siguiente comando en un nodo: 
+Para evitar que la dirección IP apunte temporalmente al nodo con la réplica secundaria previa a la conmutación por error, agregue una restricción de ordenación. Para agregar una restricción de orden, ejecute el siguiente comando en un nodo: 
 
 ```bash
 crm crm configure \

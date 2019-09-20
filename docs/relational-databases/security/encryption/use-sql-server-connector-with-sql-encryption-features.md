@@ -1,7 +1,7 @@
 ---
 title: Usar el Conector de SQL Server con características de cifrado de SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329263"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929744"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Use SQL Server Connector with SQL Encryption Features (Usar el conector de SQL Server con características de cifrado de SQL)
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ ms.locfileid: "68329263"
 > [!NOTE]  
 >  Las versiones 1.0.0.440 y anteriores se han reemplazado y ya no se admiten en entornos de producción. Actualice a la versión 1.0.1.0 o posterior visitando el [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=45344) y con las instrucciones de la sección "Actualización del conector de SQL Server" de la página [Conector de SQL Server, apéndice](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
   
-## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Cifrado de datos transparente con una clave asimétrica desde el Almacén de claves de Azure  
- Después de completar las partes I a IV del tema Setup Steps for Extensible Key Management Using the Azure Key Vault (Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure), use la clave del Almacén de claves de Azure para cifrar la clave de cifrado de la base de datos con TDE.  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Cifrado de datos transparente con una clave asimétrica desde el Almacén de claves de Azure
+
+Después de completar las partes I a IV del tema Setup Steps for Extensible Key Management Using the Azure Key Vault (Pasos de instalación de Administración extensible de claves con el Almacén de claves de Azure), use la clave del Almacén de claves de Azure para cifrar la clave de cifrado de la base de datos con TDE. Para más información sobre cómo girar claves mediante PowerShell, vea [Rotación del protector de Cifrado de datos transparente (TDE) mediante PowerShell](/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation).
+ 
 Necesitará crear una credencial y un inicio de sesión, además de una clave de cifrado de base de datos, que cifrará los datos y registros de la base de datos. Para cifrar una base de datos, es necesario tener el permiso **CONTROL** en la base de datos. En el siguiente gráfico se muestra la jerarquía de la clave de cifrado al usar el Almacén de claves de Azure.  
   
  ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  

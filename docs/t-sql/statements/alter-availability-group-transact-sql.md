@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcec50b2ddda2b8ddaef8135aee52cf54c1ae07b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d3caeed2e7c57dfd4a3e993872034b066f56737
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066033"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874520"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -209,7 +209,7 @@ ALTER AVAILABILITY GROUP group_name
  Los valores FAILURE_CONDITION_LEVEL y HEALTH_CHECK_TIMEOUT definen una *directiva flexible de conmutación por error* para un grupo dado. Esta directiva flexible de conmutación por error proporciona mayor control sobre las condiciones que deben causar una conmutación por error automática. Para obtener más información, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *milliseconds*  
- Especifica el tiempo de espera (en milisegundos) para que el procedimiento almacenado del sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) devuelva información de mantenimiento del servidor antes de que el clúster de WSFC suponga que la instancia del servidor está inactiva o bloqueada. HEALTH_CHECK_TIMEOUT se establece en el nivel de grupo, pero solo se aplica a las réplicas de disponibilidad que tienen configurado el modo de confirmación sincrónica con conmutación automática por error (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Además, un tiempo de espera de comprobación de estado puede desencadenar una conmutación automática por error solamente si las réplicas principal y secundaria están configuradas para el modo de conmutación automática por error (FAILOVER_MODE **=** AUTOMATIC) y la réplica secundaria está sincronizada actualmente con la réplica principal.  
+ Especifica el tiempo de espera (en milisegundos) para que el procedimiento almacenado del sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) devuelva información de mantenimiento del servidor antes de que el clúster de WSFC asuma que la instancia del servidor es lenta o no responde. HEALTH_CHECK_TIMEOUT se establece en el nivel de grupo, pero solo se aplica a las réplicas de disponibilidad que tienen configurado el modo de confirmación sincrónica con conmutación automática por error (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  Además, un tiempo de espera de comprobación de estado puede desencadenar una conmutación automática por error solamente si las réplicas principal y secundaria están configuradas para el modo de conmutación automática por error (FAILOVER_MODE **=** AUTOMATIC) y la réplica secundaria está sincronizada actualmente con la réplica principal.  
   
  El valor predeterminado de HEALTH_CHECK_TIMEOUT es 30000 milisegundos (30 segundos). El valor mínimo es 15000 milisegundos (15 segundos) y el valor máximo es 4294967295 milisegundos.  
   

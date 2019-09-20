@@ -3,19 +3,19 @@ title: Extensión de SQL Server 2019 (versión preliminar)
 titleSuffix: Azure Data Studio
 description: Extensión de SQL Server 2019 (versión preliminar) para Azure Data Studio
 ms.custom: seodec18
-ms.date: 08/15/2019
+ms.date: 09/11/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494041"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878615"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
 
@@ -29,9 +29,9 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar) descargue 
 
    |Plataforma|Descargar|Fecha de la versión|Versión
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|15 de agosto de 2019 |0.15.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|15 de agosto de 2019 |0.15.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|15 de agosto de 2019 |0.15.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|11 de septiembre de 2019 |0.16.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|11 de septiembre de 2019 |0.16.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|11 de septiembre de 2019 |0.16.0
 
 1. En Azure Data Studio, elija **Install Extension from VSIX Package** (Instalar extensión desde el paquete VSIX) en el menú **Archivo** y seleccione el archivo .vsix descargado.
 
@@ -42,6 +42,10 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar) descargue 
 1. Después de recargar, la extensión instalará las dependencias. El progreso, que podría tardar varios minutos, puede verse en la ventana Salida.
 
 1. Una vez finalizada la instalación de las dependencias, cierre y vuelva a abrir Azure Data Studio. El tipo de conexión **SQL Server big data cluster** (Clúster de macrodatos de SQL Server) no estará disponible mientras no reinicie Azure Data Studio.
+
+## <a name="changes-in-release-016"></a>Cambios en la versión 0.16
+* Asistente para crear tablas externas:
+  * Se ha mejorado el control de errores al cargar tablas y vistas en la página de asignación de objetos.
 
 ## <a name="changes-in-release-015"></a>Cambios en la versión 0.15
 * Asistente para crear tablas externas:
@@ -96,7 +100,7 @@ Entre otras mejoras y correcciones se incluyen las siguientes:
 
 #### <a name="known-issues"></a>Problemas conocidos
 * Al abrir un cuaderno, aparece el cuadro de diálogo para instalar Python. Si se cancela esta instalación, las listas desplegables Kernels y Adjuntar a no mostrarán los valores esperados. La solución consiste en completar la instalación de Python.
-* Cuando se abre un cuaderno con un kernel que no es compatible, las listas desplegables Kernels y _Adjuntar a_ harán que Azure Data Studio se bloquee. Tendrá que cerrar Azure Data Studio y asegurarse de usar un kernel compatible (Python3, Spark | R, Spark | Scala, PySpark, PySpark3).
+* Cuando se abre un cuaderno con un kernel que no es compatible, las listas desplegables Kernels y _Adjuntar a_ harán que Azure Data Studio deje de responder. Tendrá que cerrar Azure Data Studio y asegurarse de usar un kernel compatible (Python3, Spark | R, Spark | Scala, PySpark, PySpark3).
 * Se produce un error en el vínculo de la interfaz de usuario de Spark al usar PySpark3 u otros kernels de Spark en el punto de conexión de SQL Server. Como solución alternativa, haga clic en la interfaz de usuario de Spark en el panel, o bien conéctese mediante el tipo de conexión del clúster de macrodatos de SQL Server, ya que tendrá el hipervínculo correcto de la interfaz de usuario de Spark.
 
 ### <a name="extensibility-improvements"></a>Mejoras en la extensibilidad

@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c1a7e35c2c2a9428eb700b8429270874176d570a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 423ad16effc6d4ed216b8b1f295731ded432a8fe
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089849"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846543"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Deshabilitar la copia de seguridad administrada de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se explica cómo deshabilitar o pausar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en el nivel de la base de datos y de la instancia.  
   
 ##  <a name="DatabaseDisable"></a> Deshabilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para una base de datos  
- Puede deshabilitar la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mediante el procedimiento almacenado del sistema [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). El parámetro *@enable_backup* se usa para habilitar y deshabilitar las configuraciones de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] de una base de datos específica, donde 1 habilita y 0 deshabilita los valores de configuración.  
+ Puede deshabilitar la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mediante el procedimiento almacenado del sistema [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md). El parámetro *\@enable_backup* se usa para habilitar y deshabilitar las configuraciones de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para una base de datos específica, donde 1 habilita y 0 deshabilita los valores de configuración.  
   
-#### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>Para deshabilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para una base de datos específica:  
+#### <a name="to-disable-includess_smartbackupincludesss-smartbackup-mdmd-for-a-specific-database"></a>Para deshabilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para una base de datos específica:  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -32,18 +32,20 @@ ms.locfileid: "68089849"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-```  
+```sql
 EXEC msdb.managed_backup.sp_backup_config_basic  
                 @database_name = 'TestDB'   
                 ,@enable_backup = 0;  
-GO  
-  
-```  
+GO
+```
+
+> [!NOTE]
+> Es posible que también tenga que establecer el parámetro `@container_url` en función de la configuración.
   
 ##  <a name="DatabaseAllDisable"></a> Deshabilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para todas las bases de datos de la instancia  
  El siguiente procedimiento es válido cuando se desea deshabilitar la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] de todas las bases de datos que tienen habilitado [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en la instancia.  Las opciones de configuración como la dirección URL de almacenamiento, la retención y la credencial de SQL permanecerán en los metadatos y se pueden usar si [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se habilita posteriormente para la base de datos. Si solo quiere pausar los servicios de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] temporalmente, puede usar el modificador principal que se explica en las siguientes secciones de este tema.  
   
-#### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-for-all-the-databases"></a>Para deshabilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para todas las bases de datos:  
+#### <a name="to-disable-includess_smartbackupincludesss-smartbackup-mdmd-for-all-the-databases"></a>Para deshabilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para todas las bases de datos:  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -51,7 +53,7 @@ GO
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. El ejemplo siguiente identifica si [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está configurado en el nivel de instancia y en todas las bases de datos habilitadas para [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en la instancia, y ejecuta el procedimiento almacenado del sistema **sp_backup_config_basic** para deshabilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
-```  
+```sql
 -- Create a working table to store the database names  
 Declare @DBNames TABLE  
   
@@ -100,18 +102,17 @@ SELECT db_name
   
  Para revisar la configuración predeterminada de todas las bases de datos en la instancia, utilice la siguiente consulta:  
   
-```  
+```sql
 Use msdb;  
 GO  
 SELECT * FROM managed_backup.fn_backup_db_config (NULL);  
 GO  
-  
 ```  
   
 ##  <a name="InstanceDisable"></a> Deshabilitar la configuración predeterminada de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] de la instancia  
- La configuración predeterminada en el nivel de instancia se aplica a todas las nuevas bases de datos creadas en esa instancia.  Si ya no necesita la configuración predeterminada, puede deshabilitarla mediante el procedimiento almacenado del sistema **managed_backup.sp_backup_config_basic** con el parámetro *@database_name* establecido en NULL. Al deshabilitarla, no se quita las otras opciones de configuración como la dirección URL de almacenamiento, el valor de retención o el nombre de la credencial de SQL. Estas opciones se utilizarán si [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se habilita para la instancia posteriormente.  
+ La configuración predeterminada en el nivel de instancia se aplica a todas las nuevas bases de datos creadas en esa instancia.  Si ya no necesita la configuración predeterminada, puede deshabilitarla mediante el procedimiento almacenado del sistema **managed_backup.sp_backup_config_basic** con el parámetro *\@database_name* establecido en NULL. Al deshabilitarla, no se quita las otras opciones de configuración como la dirección URL de almacenamiento, el valor de retención o el nombre de la credencial de SQL. Estas opciones se utilizarán si [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se habilita para la instancia posteriormente.  
   
-#### <a name="to-disable-includesssmartbackupincludesss-smartbackup-mdmd-default-configuration-settings"></a>Para deshabilitar la configuración predeterminada de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :  
+#### <a name="to-disable-includess_smartbackupincludesss-smartbackup-mdmd-default-configuration-settings"></a>Para deshabilitar la configuración predeterminada de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -119,17 +120,16 @@ GO
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     EXEC msdb.managed_backup.sp_backup_config_basic  
                     @enable_backup = 0;  
-    GO  
-  
+    GO
     ```  
   
 ##  <a name="InstancePause"></a> Pause [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en el nivel de instancia  
- Puede haber ocasiones en que deba detener temporalmente los servicios de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] durante un breve período.  El procedimiento almacenado del sistema **managed_backup.sp_backup_master_switch** permite deshabilitar el servicio de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en el nivel de instancia.  El mismo procedimiento almacenado se utiliza para reanudar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. El parámetro @state se utiliza para definir si [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] debe desactivarse o activarse.  
+ Puede haber ocasiones en que deba detener temporalmente los servicios de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] durante un breve período.  El procedimiento almacenado del sistema **managed_backup.sp_backup_master_switch** permite deshabilitar el servicio de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en el nivel de instancia.  El mismo procedimiento almacenado se utiliza para reanudar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. El parámetro \@state se usa para definir si [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se debe desactivar o activar.  
   
-#### <a name="to-pause-includesssmartbackupincludesss-smartbackup-mdmd-services-using-transact-sql"></a>Para pausar los servicios de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con Transact-SQL:  
+#### <a name="to-pause-includess_smartbackupincludesss-smartbackup-mdmd-services-using-transact-sql"></a>Para pausar los servicios de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con Transact-SQL:  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -137,15 +137,14 @@ GO
   
 3.  Copie y pegue el ejemplo siguiente en la ventana de consulta y, a continuación, haga clic en **Ejecutar**.  
   
-```  
+```sql
 Use msdb;  
 GO  
 EXEC managed_backup.sp_backup_master_switch @new_state=0;  
-Go  
-  
+Go
 ```  
   
-#### <a name="to-resume-includesssmartbackupincludesss-smartbackup-mdmd-using-transact-sql"></a>Para reanudar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con Transact-SQL  
+#### <a name="to-resume-includess_smartbackupincludesss-smartbackup-mdmd-using-transact-sql"></a>Para reanudar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con Transact-SQL  
   
 1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -153,12 +152,11 @@ Go
   
 3.  Copie y pegue el ejemplo siguiente en la ventana de consulta y, a continuación, haga clic en **Ejecutar**.  
   
-```  
+```sql
 Use msdb;  
 Go  
 EXEC managed_backup.sp_backup_master_switch @new_state=1;  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte también  

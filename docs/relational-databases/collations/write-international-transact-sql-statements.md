@@ -18,24 +18,25 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eb6cf7d397bc8fdc8ab37d17e830ad2b373882e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cbc237ad0df16dbb854fb5bd062d7d37375294f
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140817"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913547"
 ---
 # <a name="write-international-transact-sql-statements"></a>Escribir instrucciones Transact-SQL internacionales
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Las bases de datos y las aplicaciones de bases de datos que utilizan instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] obtendrán una mayor portabilidad de un idioma a otro, o admitirán varios idiomas, si se siguen estas directrices:  
 
--   A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], use:
-    -   Los tipos de datos **char**, **varchar** y **varchar(max)** con una intercalación compatible con [ UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8).
-    -   Los tipos de datos **nchar**, **nvarchar** y **nvarchar(max)** con una intercalación habilitada para [caracteres complementarios](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters).      
+-   A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], use:
+    -   Los tipos de datos **char**, **varchar** y **varchar(max)** con una intercalación compatible con [ UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) y los datos se codifican con UTF-8.
+    -   Los tipos de datos **nchar**, **nvarchar** y **nvarchar(max)** con una intercalación habilitada para [caracteres complementarios (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), y los datos se codifican con UTF-16. El uso de una intercalación que no sea de SC da como resultado la codificación de los datos mediante UCS-2.      
 
     Esto evita problemas de conversión de página de códigos. Para otras consideraciones, consulte [Diferencias de almacenamiento entre UTF-8 y UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], reemplace todos los usos de los tipos de datos **char**, **varchar** y **varchar(max)** por **nchar**, **nvarchar** y **nvarchar(max)** . Esto evita problemas de conversión de página de códigos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], reemplace todos los usos de los tipos de datos **char**, **varchar** y **varchar(max)** por **nchar**, **nvarchar** y **nvarchar(max)** . Si usa una intercalación habilitada para [caracteres complementarios (SC)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), los datos se codifican con UTF-16. El uso de una intercalación que no sea de SC da como resultado la codificación de los datos mediante UCS-2. Esto evita problemas de conversión de página de códigos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
+
     > [!IMPORTANT]
     > El tipo de datos **text** está en desuso y no debe usarse en nuevos trabajos de desarrollo. Planee la conversión de datos de tipo **text** a **varchar (max)** .
   

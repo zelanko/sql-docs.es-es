@@ -1,7 +1,7 @@
 ---
 title: SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps (Pasos de instalación de Administración extensible de claves de SQL Server TDE mediante Azure Key Vault) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2018
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 3d9b28b1723b5c984446be09336b24ff5e2d2bb0
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316648"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929711"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps (Pasos de instalación de Administración extensible de claves de SQL Server TDE mediante Azure Key Vault)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -342,7 +342,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
   
 5.  **Abra la clave del almacén de claves de Azure en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     Si ha importado una clave asimétrica como se ha descrito anteriormente en la Parte II, abra la clave proporcionando el nombre de esta en el siguiente script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+     Tanto si ha creado una clave como si ha importado una clave asimétrica como se describe en la Parte II, tendrá que abrir la clave. Para abrir la clave, proporcione el nombre de la clave en el script [!INCLUDE[tsql](../../../includes/tsql-md.md)] siguiente.  
   
     -   Reemplace `CONTOSO_KEY` con el nombre que le gustaría tener en la clave de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

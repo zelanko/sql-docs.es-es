@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81dbaedcb67b7e641e00c37ebb27e35fb2fceca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e174785891c30b7a4c6df240f446fe630a21e0c
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134571"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211254"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurar el Agente SQL Server para que use el Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,16 @@ ms.locfileid: "68134571"
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
+  > [!NOTE]
+  > El Agente SQL de Instancia administrada siempre se configura para usar Correo electrónico de base de datos, por lo que este contenido no es aplicable en Instancia administrada. En Instancia administrada necesita tener un perfil que se debe llamar **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** para enlazar el Agente SQL con Correo electrónico de base de datos. 
+  
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   [Habilitar Correo electrónico de base de datos](../../relational-databases/database-mail/configure-database-mail.md).  
   
 -    [Crear una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md) para la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea usar.  
   
--   [Crear un perfil de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-profile.md) para uso de la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y agregar el usuario al rol **DatabaseMailUserRole** de la base de datos **msdb** .  
+-   [Crear un perfil de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-profile.md) para uso de la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y agregar el usuario al rol **DatabaseMailUserRole** de la base de datos **msdb** .
   
 -   Establecer el perfil como perfil predeterminado de la base de datos **msdb** .  
   
@@ -64,7 +67,7 @@ ms.locfileid: "68134571"
   
 -   En la lista **Sistema de correo** , seleccione **Correo electrónico de base de datos**.  
   
--   En la lista **Perfil de correo**, seleccione un perfil de correo para el Correo electrónico de base de datos.  
+-   En la lista **Perfil de correo**, seleccione un perfil de correo para el Correo electrónico de base de datos. 
   
 -   Reinicie el Agente SQL Server.  
   

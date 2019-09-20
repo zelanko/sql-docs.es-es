@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7f57ec339ffd1deed54fb780361792bee46d9126
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 990d79e60a0be87588604d76786980c2520d6f53
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013652"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70910785"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Tenga en cuenta las siguientes instrucciones al realizar actualizaciones de serv
   
 -   Conmute por error el AG siempre a una instancia de una réplica secundaria de confirmación sincrónica. Si realiza la conmutación por error en una instancia de una réplica secundaria de confirmación asincrónica, las bases de datos serán vulnerables a la pérdida de datos. Asimismo, el movimiento de datos se suspenderá automáticamente hasta que lo reanude de forma manual.  
   
--   No actualice la instancia de la réplica principal antes de actualizar cualquier otra instancia de una réplica secundaria. Una réplica principal actualizada ya no puede entregar registrar a ninguna réplica secundaria cuya instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aún no haya sido actualizada a la misma versión. Cuando el movimiento de datos a una réplica secundaria se suspenda, no puede producirse la conmutación por error automática para dicha réplica y las bases de datos de disponibilidad son vulnerables ante la pérdida de datos.  
+-   No actualice la instancia de la réplica principal antes de actualizar cualquier otra instancia de una réplica secundaria. Una réplica principal actualizada ya no puede entregar registrar a ninguna réplica secundaria cuya instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] aún no haya sido actualizada a la misma versión. Cuando el movimiento de datos a una réplica secundaria se suspenda, no puede producirse la conmutación por error automática para dicha réplica y las bases de datos de disponibilidad son vulnerables ante la pérdida de datos. Esto también se aplica durante una actualización gradual en la que se ha conmutado por error manualmente desde una versión principal anterior a una versión principal nueva. Por tanto, después de actualizar la versión principal anterior, es posible que deba reanudar la sincronización.
   
 -   Ante de conmutar por error un AG, compruebe que el estado de sincronización del destino de la conmutación sea SINCRONIZADO.  
 

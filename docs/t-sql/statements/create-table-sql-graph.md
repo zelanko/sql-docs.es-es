@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (SQL Graph) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/04/2017
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -32,12 +32,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc76bc81bc1f8573430bec9cdeba62b04e25167f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116952"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846721"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,44 @@ Crea una tabla de SQL Graph como una tabla `NODE` o `EDGE`.
 ```  
 CREATE TABLE   
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    ( { <column_definition> } [ ,...n ] )   
+    ( { <column_definition> } 
+       | <computed_column_definition>
+       | <column_set_definition>
+       | [ <table_constraint> ] [ ,... n ]
+       | [ <table_index> ] }
+          [ ,...n ]
+    )   
     AS [ NODE | EDGE ]
-[ ; ]  
+    [ ON { partition_scheme_name ( partition_column_name )
+           | filegroup
+           | "default" } ]
+[ ; ] 
+
+< table_constraint > ::=
+[ CONSTRAINT constraint_name ]
+{
+    { PRIMARY KEY | UNIQUE }
+        [ CLUSTERED | NONCLUSTERED ]
+        (column [ ASC | DESC ] [ ,...n ] )
+        [
+            WITH FILLFACTOR = fillfactor
+           |WITH ( <index_option> [ , ...n ] )
+        ]
+        [ ON { partition_scheme_name (partition_column_name)
+            | filegroup | "default" } ]
+    | FOREIGN KEY
+        ( column [ ,...n ] )
+        REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]
+        [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
+        [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
+        [ NOT FOR REPLICATION ]
+    | CONNECTION
+        ( { node_table TO node_table } 
+          [ , {node_table TO node_table }]
+          [ , ...n ]
+        )
+        [ ON DELETE { NO ACTION | CASCADE } ]
+    | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
 ```  
   
   
@@ -69,7 +104,7 @@ En este documento solo se enumeran los argumentos pertenecientes a SQL Graph. Pa
  *schema_name*    
  Es el nombre del esquema al que pertenece la nueva tabla.  
   
- *table_name*    
+ *table_name*      
  Es el nombre de la tabla de nodo o perimetral. Los nombres de las tablas deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). *table_name* puede contener un máximo de 128 caracteres, excepto para los nombres de tablas temporales locales (nombres precedidos de un único signo de número, #), que no pueden superar los 116 caracteres.  
   
  NODE   
@@ -77,6 +112,15 @@ En este documento solo se enumeran los argumentos pertenecientes a SQL Graph. Pa
 
  EDGE  
  Crea una tabla perimetral.  
+ 
+ *table_constraint*   
+ Especifica las propiedades de una restricción PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION o CHECK, o bien una definición DEFAULT agregada a una tabla.
+ 
+ ON { esquema_de_partición | grupo_de_archivos | "default" }    
+ Especifica el esquema de partición o el grupo de archivos en que se almacena la tabla. Si se especifica esquema_de_partición, la tabla será una tabla con particiones cuyas particiones se almacenan en un conjunto de uno o más grupos de archivos especificados en esquema_de_partición. Si se especifica grupo_de_archivos, la tabla se almacena en el grupo de archivos indicado. El grupo de archivos debe existir en la base de datos. Si se especifica "default", o bien si ON no se especifica en ninguna parte, la tabla se almacena en el grupo de archivos predeterminado. El mecanismo de almacenamiento de una tabla según se especifica en CREATE TABLE no se puede modificar posteriormente.
+
+ ON {esquema_de_partición | grupo_de_archivos | "default"}    
+ También se puede especificar en una restricción PRIMARY KEY o UNIQUE. Estas restricciones crean índices. Si se especifica grupo_de_archivos, el índice se almacena en el grupo de archivos con nombre. Si se especifica "default", o bien si ON no se especifica en ninguna parte, el índice se almacena en el mismo grupo de archivos que la tabla. Si la restricción PRIMARY KEY o UNIQUE crea un índice clúster, las páginas de datos de la tabla se almacenan en el mismo grupo de archivos que el índice. Si se especifica CLUSTERED o la restricción crea un índice agrupado, y se especifica un valor esquema_de_partición distinto del valor esquema_de_partición o grupo_de_archivos de la definición de tabla, o viceversa, únicamente se respeta la definición de restricción y se omite el resto.
   
 ## <a name="remarks"></a>Notas  
 No se admite la creación de una tabla temporal como una tabla de nodo o perimetral.  
@@ -86,6 +130,8 @@ No se admite la creación de una tabla de nodo o perimetral como una tabla tempo
 No se admite Stretch Database para una tabla de nodo o perimetral.
 
 Las tablas de nodo o perimetrales no pueden ser tablas externas (no hay compatibilidad de PolyBase con las tablas de Graph). 
+
+No se puede modificar un nodo de gráfico o una tabla perimetral sin particiones en una tabla de nodo de gráfico o una tabla perimetral con particiones. 
   
  
 ## <a name="examples"></a>Ejemplos  
@@ -119,7 +165,8 @@ En el ejemplo siguiente se muestra cómo se crean tablas `EDGE`.
 ```
 
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Consulte también 
+ [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Procesamiento de gráficos con SQL Server 2017)

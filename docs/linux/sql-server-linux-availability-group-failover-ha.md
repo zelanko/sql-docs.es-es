@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027218"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304849"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Conmutación por error del grupo de disponibilidad Always On en Linux
 
@@ -43,7 +43,7 @@ Conmute por error de forma manual en dos pasos.
 
    En segundo lugar, [quite la restricción de ubicación](#removeLocConstraint).
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">Paso 1. Conmutar por error de forma manual al mover el recurso de un grupo de disponibilidad
+#### <a name="manualMove"></a> Paso 1. Conmutar por error de forma manual al mover el recurso de un grupo de disponibilidad
 
 Para conmutar por error de forma manual el recurso de un grupo de disponibilidad denominado *ag_cluster* a un nodo de clúster denominado *nodeName2*, ejecute el comando adecuado para su distribución:
 
@@ -62,7 +62,7 @@ Para conmutar por error de forma manual el recurso de un grupo de disponibilidad
 >[!IMPORTANT]
 >Después de conmutar por error de forma manual un recurso, necesita quitar una restricción de ubicación que se agregará automáticamente.
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> Paso 2. Quitar la restricción de ubicación
+#### <a name="removeLocConstraint"> </a> Paso 2. Quitar la restricción de ubicación
 
 Durante una conmutación por error manual, el comando `move` de `pcs` o el comando `migrate` de `crm` agregan una restricción de ubicación para el recurso que se aplicará en el nuevo nodo de destino. Para ver la nueva restricción, ejecute el comando siguiente después de mover manualmente el recurso:
 

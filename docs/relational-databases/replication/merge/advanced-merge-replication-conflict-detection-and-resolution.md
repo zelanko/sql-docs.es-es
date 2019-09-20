@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae61bdd59202db73b404bf2c639c2f1cee98e81f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08379ce20bfc58c0d6c17256ff8810421334cf1c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058115"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874862"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Replicación de mezcla avanzada: detección y resolución de conflictos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,8 @@ ms.locfileid: "68058115"
 ## <a name="conflict-resolution"></a>Resolución de conflictos  
  Una vez detectado un conflicto, el Agente de mezcla inicia el solucionador de conflictos seleccionado y lo utiliza para determinar el ganador. La fila ganadora se aplica en el publicador y en el suscriptor, y los datos de la fila perdedora se escriben en una tabla de conflictos. Los conflictos se resuelven inmediatamente después de ejecutarse el solucionador, a menos que seleccione solucionar los conflictos de forma interactiva.  
 
-Resolución de conflictos de replicación de mezcla [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Resolución de conflictos de replicación de mezcla  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   Cuando un publicador y un suscriptor se conectan y se produce la sincronización, el Agente de mezcla detecta si existen conflictos. Si se detectan conflictos, el Agente de mezcla utiliza un solucionador de conflictos para determinar qué datos se aceptarán y se propagarán a otros sitios.  
   
 > [!NOTE]  

@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d9d6f1f0bdf1a0e38bf26fdc18bc91c5825ca412
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 65438f911246038cee272763e19be12b5860b463
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653041"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911197"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notas de la versión preliminar de SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -44,7 +44,11 @@ Encontrará información completa sobre la compatibilidad y la administración d
 
 - **Problema e impacto en el cliente**: No hay ningún contenido sin conexión disponible para SQL Server 2019 (15.x).
 
-## <a name="hardware-and-software-requirements"></a>Requisitos de hardware y software
+## <a name="build-number"></a>Número de compilación
+
+El número de compilación de SQL Server 2019 RC en Windows, Linux y contenedores es `15.0.1900.25`.  El número de compilación de SQL Server 2019 RC usado en clústeres de macrodatos es `15.0.1900.47`.
+
+## <a name="hardware-and-software-requirements"></a>Requisitos de hardware y de software
 
 - **Problema e impacto en el cliente**: Los requisitos de hardware y software aún están en revisión y no son definitivos para la versión del producto.
 
@@ -129,6 +133,16 @@ Encontrará información completa sobre la compatibilidad y la administración d
 - **Solución**: None
 
 - **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] versión candidata para lanzamiento
+
+## <a name="master-data-service-notification-email-contains-broken-link"></a>El correo electrónico de notificación de Master Data Services contiene un vínculo roto
+
+- **Problema e impacto en el cliente**: El correo electrónico de notificación de Master Data Services (MDS) contiene un vínculo roto. El vínculo navega a una página que devuelve un error similar al mensaje siguiente:
+
+   `The view 'Index' or its master was not found or no view engine supports the searched locations.`
+
+- **Solución**: Abra el portal de MDS y vaya al recurso manualmente.
+
+- **Se aplica a**: Versión candidata para lanzamiento de SQL Server 2019.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

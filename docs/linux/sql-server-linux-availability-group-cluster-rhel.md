@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 086138fc1df6245de33b348c529e56e606c3ddc9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7e401a53b07d5a71ccafb38f6edb2f80bcf1e274
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027325"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70910810"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configuración de clústeres de RHEL para grupos de disponibilidad de SQL Server
 
@@ -35,7 +35,7 @@ En las siguientes secciones se siguen los pasos necesarios para configurar un cl
 
 ## <a name="roadmap"></a>Plan de desarrollo
 
-Los pasos necesarios para crear un grupo de disponibilidad en servidores Linux de alta disponibilidad son diferentes a los exigidos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describen los pasos de alto nivel: 
+Los pasos necesarios para crear un grupo de disponibilidad en servidores con Linux de alta disponibilidad son distintos de los exigidos en un clúster de conmutación por error de Windows Server. En la lista siguiente, se describen los pasos generales: 
 
 1. [Configure SQL Server en los nodos del clúster](sql-server-linux-setup.md).
 
@@ -46,7 +46,7 @@ Los pasos necesarios para crear un grupo de disponibilidad en servidores Linux d
    La manera de configurar un administrador de recursos de clúster depende de la distribución específica de Linux. 
 
    >[!IMPORTANT]
-   >Para la alta disponibilidad, los entornos de producción requieren un agente de barrera, como STONITH. En las demostraciones de esta documentación no se usan agentes de barrera. Las demostraciones solo son para pruebas y validación. 
+   >Para alcanzar una alta disponibilidad, los entornos de producción necesitan un agente de barrera (por ejemplo, STONITH). En los ejemplos de esta documentación, no se usan agentes de barrera. Los ejemplos solo se proporcionan con fines de prueba y validación.
    
    >Un clúster de Linux usa barreras para devolver el clúster a un estado conocido. La forma de configurar las barreras depende de la distribución y del entorno. Actualmente, las barreras no están disponibles en algunos entornos de nube. Para obtener más información, vea [Directivas de soporte para clústeres de alta disponibilidad de RHEL: plataformas de virtualización](https://access.redhat.com/articles/29440).
 
@@ -104,6 +104,8 @@ Una vez configurado Pacemaker, use `pcs` para interactuar con el clúster. Ejecu
 
 Para admitir la configuración del clúster, los proveedores de clústeres de Pacemaker requieren que se habilite STONITH y que se configure un dispositivo de barrera. STONITH corresponde a "shoot the other node in the head", que en español sería algo como "disparar al otro nodo en la cabeza". Si el administrador de recursos de clúster no puede determinar el estado de un nodo o de un recurso de un nodo, las barreras devuelven al clúster a un estado conocido.
 
+Un dispositivo STONITH proporciona un agente de barrera. En [Configuración de Pacemaker en Red Hat Enterprise Linux en Azure](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices) se proporciona un ejemplo de cómo crear un dispositivo STONITH para este clúster en Azure. Modifique las instrucciones para el entorno.
+
 Mediante la configuración de un recurso, la barrera de nivel de recurso garantiza que los datos no se dañen en caso de interrupción. Por ejemplo, puede usar la barrera de nivel de recurso para marcar el disco de un nodo como obsoleto cuando el vínculo de comunicación se interrumpe. 
 
 La barrera de nivel de nodo garantiza que un nodo no ejecute ningún recurso. Esto se hace mediante el restablecimiento del nodo. Pacemaker admite una gran variedad de dispositivos de barrera. Los ejemplos incluyen un sistema de alimentación ininterrumpida o tarjetas de interfaz de administración para servidores.
@@ -114,16 +116,16 @@ Para obtener información sobre STONITH y las barreras, vea los siguientes artí
 * [Barreras y STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Complemento de alta disponibilidad de Red Hat con Pacemaker: barreras](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
-Dado que la configuración de la barrera de nivel de nodo depende en gran medida del entorno, deshabilítela para este tutorial (se puede configurar más adelante). El siguiente script deshabilita la barrera de nivel de nodo:
+>[!NOTE]
+>Dado que la configuración de la barrera de nivel de nodo depende en gran medida del entorno, deshabilítela para este tutorial (se puede configurar más adelante). El siguiente script deshabilita la barrera de nivel de nodo:
+>
+>```bash
+>sudo pcs property set stonith-enabled=false
+>``` 
+>
+>La deshabilitación de STONITH es solo con fines de prueba. Si tiene previsto usar Pacemaker en un entorno de producción, necesita planear una implementación de STONITH basada en su entorno y mantenerla habilitada.
 
-```bash
-sudo pcs property set stonith-enabled=false
-```
-  
->[!IMPORTANT]
->La deshabilitación de STONITH es solo con fines de prueba. Si tiene previsto usar Pacemaker en un entorno de producción, debe planear una implementación de STONITH basada en el entorno y mantenerla habilitada. RHEL no proporciona agentes de barrera para ningún entorno de nube (incluido Azure) ni Hyper-V. En consecuencia, el proveedor de clústeres no admite la ejecución de clústeres de producción en estos entornos. Se trabaja en una solución para este vacío para incorporarla en futuras versiones.
-
-## <a name="set-cluster-property-cluster-recheck-interval"></a>Establecimiento de la propiedad de clúster cluster-recheck-interval
+## <a name="set-cluster-property-cluster-recheck-interval"></a>Establecer la propiedad del clúster cluster-recheck-interval
 
 `cluster-recheck-interval` indica el intervalo de sondeo por el que el clúster comprueba los cambios en los parámetros de recursos, las restricciones u otras opciones del clúster. Si una réplica se interrumpe, el clúster intenta reiniciarla en un intervalo que depende de los valores `failure-timeout` y `cluster-recheck-interval`. Por ejemplo, si `failure-timeout` se establece en 60 segundos y `cluster-recheck-interval` se establece en 120 segundos, el reinicio se intenta en un intervalo mayor de 60 segundos pero menor de 120 segundos. Se recomienda establecer el valor de failure-timeout en 60 segundos y el de cluster-recheck-interval en un valor superior a 60 segundos. No se recomienda establecer cluster-recheck-interval en un valor menor.
 
@@ -155,7 +157,7 @@ Para obtener información sobre las propiedades de clúster de Pacemaker, vea [P
 
 [!INCLUDE [SQL-Create-SQL-Login](../includes/ss-linux-cluster-pacemaker-create-login.md)]
 
-## <a name="create-availability-group-resource"></a>Creación de un recurso de grupo de disponibilidad
+## <a name="create-availability-group-resource"></a>Crear un recurso de grupo de disponibilidad
 
 Para crear el recurso de grupo de disponibilidad, use el comando `pcs resource create` y establezca las propiedades del recurso. El siguiente comando crea un recurso `ocf:mssql:ag` de tipo maestro/esclavo para el grupo de disponibilidad con el nombre `ag1`.
 
@@ -169,7 +171,7 @@ sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeou
 
 ## <a name="create-virtual-ip-resource"></a>Creación de un recurso de dirección IP virtual
 
-Para crear el recurso de dirección IP virtual, ejecute el siguiente comando en un nodo. Use una dirección IP estática disponible de la red. Reemplace la dirección IP entre `<10.128.16.240>` por una dirección IP válida.
+Para crear el recurso de dirección IP virtual, ejecute el comando siguiente en un nodo. Use una dirección IP estática disponible de la red. Reemplace la dirección IP entre `<10.128.16.240>` por una dirección IP válida.
 
 ```bash
 sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
@@ -177,7 +179,7 @@ sudo pcs resource create virtualip ocf:heartbeat:IPaddr2 ip=<10.128.16.240>
 
 No hay ningún nombre de servidor virtual equivalente en Pacemaker. Para usar una cadena de conexión que apunte a un nombre de servidor de cadena en lugar de a una dirección IP, registre la dirección de recurso de dirección IP virtual y el nombre de servidor virtual deseado en DNS. En el caso de las configuraciones de recuperación ante desastres, registre el nombre de servidor virtual deseado y la dirección IP con los servidores DNS en el sitio principal y en el sitio de recuperación ante desastres.
 
-## <a name="add-colocation-constraint"></a>Incorporación de una restricción de ubicación
+## <a name="add-colocation-constraint"></a>Agregar una restricción de ubicación
 
 Casi todas las decisiones de un clúster de Pacemaker, por ejemplo elegir dónde se debe ejecutar un recurso, se toman mediante la comparación de puntuaciones. Las puntuaciones se calculan por recurso. El administrador de recursos de clúster elige el nodo con la puntuación más alta para un recurso determinado. Si un nodo tiene una puntuación negativa para un recurso, el recurso no se puede ejecutar en ese nodo.
 
@@ -189,9 +191,9 @@ Para garantizar que los recursos de réplica principal y dirección IP virtual s
 sudo pcs constraint colocation add virtualip ag_cluster-master INFINITY with-rsc-role=Master
 ```
 
-## <a name="add-ordering-constraint"></a>Incorporación de una restricción de orden
+## <a name="add-ordering-constraint"></a>Agregar una restricción de ordenación
 
-La restricción de ubicación tiene una restricción de orden implícita. Mueve el recurso de dirección IP virtual antes de mover el recurso de grupo de disponibilidad. De forma predeterminada, la secuencia de eventos es:
+La restricción de ubicación tiene una restricción de orden implícita. Mueve el recurso de dirección IP virtual antes de mover el recurso de grupo de disponibilidad. La secuencia de eventos predeterminada es la siguiente:
 
 1. El usuario emite `pcs resource move` a la réplica principal del grupo de disponibilidad desde el nodo 1 al nodo 2.
 1. El recurso de dirección IP virtual se detiene en el nodo 1.

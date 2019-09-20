@@ -16,12 +16,12 @@ ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 90c09b0d6c2d4c8e2a3c4fa7288d7a2ef2451ce0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ede5586c8ea7fab69360c12394834fa681eb113c
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769861"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846559"
 ---
 # <a name="delete-a-publication"></a>Eliminar una publicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ ms.locfileid: "68769861"
   
     -   Para eliminar una publicación, ejecute [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) en la base de datos de publicación del publicador.  
   
-    -   Para eliminar todas las publicaciones de una base de datos publicada y quitar todos sus objetos de replicación, ejecute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) en el publicador. Especifique el valor de **tran** para **@type** . (Opcional) Si no se puede tener acceso al distribuidor, o bien si el estado de la base de datos es sospechoso o está sin conexión, especifique un valor de **1** para **@force** . (Opcional) Especifique el nombre de la base de datos para **@dbname** si [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no se ejecuta en la base de datos de publicación.  
+    -   Para eliminar todas las publicaciones de una base de datos publicada y quitar todos sus objetos de replicación, ejecute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) en el publicador. Especifique un valor de **tran** para **\@type**. (Opcional) Si no se puede tener acceso al distribuidor, o bien si el estado de la base de datos es sospechoso o está sin conexión, especifique un valor de **1** para **\@force**. (Opcional) Especifique el nombre de la base de datos para **\@dbname** si [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no se ejecuta en la base de datos de publicación.  
   
         > [!NOTE]  
-        >  Especificar un valor de **1** para **@force** puede dejar los objetos de publicación relacionados con replicación en la base de datos.  
+        >  Especificar un valor de **1** para **\@force** puede dejar objetos de publicación relacionados con la replicación en la base de datos.  
   
 2.  (Opcional) Si esta base de datos no tiene otras publicaciones, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) para deshabilitar la publicación de la base de datos actual mediante la replicación transaccional o de instantáneas.  
   
@@ -75,10 +75,10 @@ ms.locfileid: "68769861"
   
     -   Para eliminar una publicación, ejecute [sp_dropmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md) en la base de datos de publicación del publicador.  
   
-    -   Para eliminar todas las publicaciones de una base de datos publicada y quitar todos sus objetos de replicación, ejecute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) en el publicador. Especifique el valor de **merge** para **@type** . (Opcional) Si no se puede tener acceso al distribuidor, o bien si el estado de la base de datos es sospechoso o está sin conexión, especifique un valor de **1** para **@force** . (Opcional) Especifique el nombre de la base de datos para **@dbname** si [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no se ejecuta en la base de datos de publicación.  
+    -   Para eliminar todas las publicaciones de una base de datos publicada y quitar todos sus objetos de replicación, ejecute [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) en el publicador. Especifique el valor de **merge** para **\@type**. (Opcional) Si no se puede tener acceso al distribuidor, o bien si el estado de la base de datos es sospechoso o está sin conexión, especifique un valor de **1** para **\@force**. (Opcional) Especifique el nombre de la base de datos para **\@dbname** si [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) no se ejecuta en la base de datos de publicación.  
   
         > [!NOTE]  
-        >  Especificar un valor de **1** para **@force** puede dejar los objetos de publicación relacionados con replicación en la base de datos.  
+        >  Especificar un valor de **1** para **\@force** puede dejar objetos de publicación relacionados con la replicación en la base de datos.  
   
 2.  (Opcional) Si esta base de datos no tiene otras publicaciones, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) para deshabilitar la publicación de la base de datos actual con la replicación de mezcla.  
   

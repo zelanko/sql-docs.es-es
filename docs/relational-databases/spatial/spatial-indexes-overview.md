@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a19d934fcc8b6d190b762b170117722fe4e29b6e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 7d1425b23b98ac0a81aaa0e6e848b405f06cc086
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190414"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929820"
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -172,7 +172,7 @@ ms.locfileid: "70190414"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- La ilustración siguiente muestra una vista esquemática del proceso de descomposición de tres pasos. En las pirámides, las líneas de puntos representan los límites de las cuatro facetas de cada pirámide. Los pasos 1 y 2 muestran el elipsoide geodésico, usando una línea horizontal verde para representar la línea de longitud ecuatorial y una serie de líneas verticales verdes para representar varias líneas de latitud. El paso 1 muestra las pirámides proyectándose sobre los dos hemisferios. El paso 2 muestra las pirámides aplanándose. El paso 3 muestra las pirámides aplanadas, una vez que se han combinado para formar un plano, mostrando varias líneas de longitud proyectadas. Observe que estas líneas proyectadas se ponen rectas y varían en longitud, dependiendo de dónde se encuentra en las pirámides.  
+ La ilustración siguiente muestra una vista esquemática del proceso de descomposición de tres pasos. En las pirámides, las líneas de puntos representan los límites de las cuatro facetas de cada pirámide. En los pasos 1 y 2 se muestra el elipsoide geodésico, con una línea horizontal de color verde para representar la línea de latitud ecuatorial y una serie de líneas verticales de color verde para representar varias líneas de longitud. El paso 1 muestra las pirámides proyectándose sobre los dos hemisferios. El paso 2 muestra las pirámides aplanándose. El paso 3 muestra las pirámides aplanadas, una vez que se han combinado para formar un plano, mostrando varias líneas de longitud proyectadas. Observe que estas líneas proyectadas se ponen rectas y varían en longitud, dependiendo de dónde se encuentra en las pirámides.  
   
  ![Proyección de la elipsoide en un plano](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Proyección de la elipsoide en un plano")  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4d0c3b205b457b35d39e8e2648661c1de5e494fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1506c13655187ad29d27f96f5fa1b73d01f67620
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132197"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846824"
 ---
 # <a name="save-trace-results-to-a-file"></a>Guardar los resultados de un seguimiento en un archivo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68132197"
   
 -   Optimizar las consultas  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guarda los resultados de seguimiento en un archivo cuando se ha especificado una ruta de acceso y un nombre de archivo para el argumento **@tracefile** del procedimiento almacenado **sp_trace_create**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guarda los resultados de seguimiento en un archivo cuando se han especificado una ruta de acceso y un nombre de archivo para el argumento **\@tracefile** del procedimiento almacenado **sp_trace_create**.  
   
 > [!NOTE]  
 >  Si hay especificada una ruta de acceso al procedimiento almacenado **sp_trace_create** para guardar el archivo de seguimiento, el directorio debe ser accesible para el servidor. También debe tener presente que si un directorio local está especificado con **sp_trace_create**, se trata de un directorio local en el equipo servidor.  

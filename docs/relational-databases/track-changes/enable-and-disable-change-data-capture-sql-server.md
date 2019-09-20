@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcd857c9a493528b5759d83dd3b89924a2c22f74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e46578c4d06d430a037a6af066903faa7a6a8e1
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058092"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846529"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar y deshabilitar la captura de datos modificados (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -74,11 +74,11 @@ GO
   
  **Columns in the source table to be captured**.  
   
- De forma predeterminada, todas las columnas de la tabla de origen se identifican como columnas capturadas. Si solo es necesario realizar el seguimiento de un subconjunto de las columnas, por ejemplo, por motivos de privacidad o de rendimiento, use el parámetro *@captured_column_list* para especificar el subconjunto de columnas.  
+ De forma predeterminada, todas las columnas de la tabla de origen se identifican como columnas capturadas. Si solo es necesario realizar el seguimiento de un subconjunto de las columnas, por ejemplo, por motivos de privacidad o de rendimiento, use el parámetro *\@captured_column_list* para especificar el subconjunto de columnas.  
   
  **Un grupo de archivos para contener la tabla de cambio.**  
   
- De forma predeterminada, la tabla de cambios se encuentra en el grupo de archivos predeterminado de la base de datos. Los propietarios de base de datos que quieran controlar la ubicación de las tablas de cambios individuales pueden usar el parámetro *@filegroup_name* para especificar un grupo de archivos determinado para la tabla de cambios asociada a la instancia de captura. El grupo de archivos con nombre debe existir previamente. Generalmente, se recomienda que las tablas de cambios se coloquen en un grupo de archivos independiente de las tablas de origen. Consulte la plantilla **Habilitar una tabla que especifique un opción de grupo de archivos** para ver un ejemplo que muestra el uso del parámetro *@filegroup_name* .  
+ De forma predeterminada, la tabla de cambios se encuentra en el grupo de archivos predeterminado de la base de datos. Los propietarios de base de datos que quieran controlar la ubicación de las tablas de cambios individuales pueden usar el parámetro *\@filegroup_name* para especificar un grupo de archivos determinado para la tabla de cambios asociada a la instancia de captura. El grupo de archivos con nombre debe existir previamente. Generalmente, se recomienda que las tablas de cambios se coloquen en un grupo de archivos independiente de las tablas de origen. Vea la plantilla **Habilitar una tabla que especifica la opción de grupo de archivos** para obtener un ejemplo en el que se muestra el uso del parámetro *\@filegroup_name*.  
   
 ```sql  
 -- =========  
@@ -100,7 +100,7 @@ GO
   
  La finalidad del rol con nombre es controlar el acceso a los datos de cambios. El rol especificado puede ser un rol fijo de servidor existente o un rol de base de datos. Si el rol especificado aún no existe, se crea automáticamente un rol de base de datos con ese nombre. Los miembros del rol **sysadmin** o **db_owner** tienen acceso total a los datos de las tablas de cambios. Los demás usuarios deben tener el permiso SELECT en todas las columnas capturadas de la tabla de origen. Además, cuando se especifica un rol, los usuarios que no sean miembros del rol **sysadmin** o **db_owner** también deben ser miembros del rol especificado.  
   
- Si prefiere no usar un rol de acceso, debe establecer explícitamente el valor NULL en el parámetro *@role_name* . Vea la plantilla **Enable a Table Without Using a Gating Role** para obtener un ejemplo de cómo habilitar una tabla sin un rol de acceso.  
+ Si no quiere usar un rol de acceso, debe establecer explícitamente el parámetro *\@role_name* en NULL. Vea la plantilla **Enable a Table Without Using a Gating Role** para obtener un ejemplo de cómo habilitar una tabla sin un rol de acceso.  
   
 ```sql  
 -- =========  
@@ -121,9 +121,9 @@ GO
   
  Una instancia de captura siempre incluirá una función con valores de tabla para devolver todas las entradas de la tabla de cambios que se produjeron dentro de un intervalo definido. Esta función se denomina anexando el nombre de la instancia de captura a "cdc.fn_cdc_get_all_changes_". Para obtener más información, vea [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md).  
   
- Si el parámetro *@supports_net_changes* está establecido en 1, también se genera una función net changes para la instancia de captura. Esta función devuelve solo un cambio por cada fila distinta que haya cambiado en el intervalo especificado en la llamada. Para obtener más información, vea [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+ Si el parámetro *\@supports_net_changes* está establecido en 1, también se genera una función net changes para la instancia de captura. Esta función devuelve solo un cambio por cada fila distinta que haya cambiado en el intervalo especificado en la llamada. Para obtener más información, vea [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
- Para poder usar las consultas net changes, la tabla de origen debe tener una clave principal o un índice único que identifique las filas de forma única. Si se usa un índice único, el nombre del índice se debe especificar con el parámetro *@index_name* . Las columnas definidas en la clave principal o índice único deben estar incluidas en la lista de columnas de origen que se van a capturar.  
+ Para poder usar las consultas net changes, la tabla de origen debe tener una clave principal o un índice único que identifique las filas de forma única. Si se usa un índice único, el nombre del índice se debe especificar con el parámetro *\@index_name*. Las columnas definidas en la clave principal o índice único deben estar incluidas en la lista de columnas de origen que se van a capturar.  
   
  Vea la plantilla **Enable a Table for All and Net Changes Queries** para obtener un ejemplo que muestre la creación de una instancia de captura con ambas funciones de consulta.  
   
@@ -142,7 +142,7 @@ GO
 ```  
   
 > [!NOTE]
->  Si la captura de datos modificados está habilitada en una tabla con una clave principal existente y el parámetro *@index_name* no se usa para identificar un índice único alternativo, la característica de captura de datos modificados usará la clave principal. Los cambios subsiguientes en la clave principal no se permitirán sin deshabilitar primero la captura de datos modificados para la tabla. Esto es así independientemente de si se solicitó compatibilidad con las consultas net changes cuando se configuró la captura de datos modificados. Si no hay ninguna clave principal en una tabla en el momento en que se habilita para la captura de datos modificados, la captura de datos modificados omite la incorporación posterior de una clave principal. Dado que la captura de datos modificados no utilizará ninguna clave principal que se cree una vez habilitada la tabla, las columnas de clave y la clave se pueden quitar sin restricciones.  
+>  Si la captura de datos modificados está habilitada en una tabla con una clave principal existente y el parámetro *\@index_name* no se usa para identificar un índice único alternativo, la característica de captura de datos modificados usará la clave principal. Los cambios subsiguientes en la clave principal no se permitirán sin deshabilitar primero la captura de datos modificados para la tabla. Esto es así independientemente de si se solicitó compatibilidad con las consultas net changes cuando se configuró la captura de datos modificados. Si no hay ninguna clave principal en una tabla en el momento en que se habilita para la captura de datos modificados, la captura de datos modificados omite la incorporación posterior de una clave principal. Dado que la captura de datos modificados no utilizará ninguna clave principal que se cree una vez habilitada la tabla, las columnas de clave y la clave se pueden quitar sin restricciones.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>Deshabilitar la captura de datos modificados para una tabla  
  Los miembros del rol fijo de base de datos **db_owner** pueden quitar una instancia de captura para las tablas de origen individuales usando el procedimiento almacenado **sys.sp_cdc_disable_table**. Para saber si una tabla de origen está habilitada para la captura de datos modificados, examine la columna **is_tracked_by_cdc** en la vista de catálogo **sys.tables** . Si no hay ninguna tabla habilitada para la base de datos después de que tenga lugar la deshabilitación, también se quitarán los trabajos de captura de datos modificados.  

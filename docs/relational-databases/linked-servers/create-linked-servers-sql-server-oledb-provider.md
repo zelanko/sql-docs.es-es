@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pmasl
 ms.author: pelopes
 manager: rothj
-ms.openlocfilehash: 577de413c318f1f1e442ad86009a0237671e9104
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.openlocfilehash: 166b55c70cc9b7d1337128b12b78a8ec1f4a1032
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68301361"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929655"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Consultas distribuidas de Microsoft SQL Server: Conectividad OLE DB
 
@@ -479,7 +479,7 @@ A continuación se muestran los pasos más generales en el proveedor para el esc
 
 1. SQL Server crea un objeto `Command` a partir del objeto `Session` mediante `IDBCreateCommand::CreateCommand`.
 
-9. Si la opción de configuración del servidor `Remote Query Timeout` se establece en un valor >` 0, SQL Server sets the DBPROP_COMMANDTIMEOUT property on the `Command` object to the same value by using `ICommandProperties::SetProperties`; ` se debe llamar a ICommand::SetCommandText` para establecer el texto del comando en la cadena de Transact-SQL generada.
+9. Si la opción de configuración del servidor `Remote Query Timeout` se establece en un valor menor que 0, SQL Server establece la propiedad `DBPROP_COMMANDTIMEOUT` del objeto `Command` en el mismo valor mediante `ICommandProperties::SetProperties`; se debe llamar a `ICommand::SetCommandText` para establecer el texto del comando en la cadena de Transact-SQL generada.
 
 10. SQL Server llama a `ICommandPrepare::Prepare` para preparar el comando. Si el proveedor no admite esta interfaz, SQL Server continúa con el paso 4.
 
@@ -744,7 +744,7 @@ comparison-operator ::= `< \| >` \| `<= \| >`= \| = \| `<>`
 
 `ORDER BY clause`
 
-order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\...
+order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\..
 
 sort-specification ::= { \| column-name } \[ASC \| DESC\]
 
@@ -786,7 +786,7 @@ base-table-identifier ::= user-defined-name
 
 column-identifier ::= user-defined-name
 
-user-defined-name ::= letter\[digit \| letter \| _\]\...
+user-defined-name ::= letter\[digit \| letter \| _\]\..
 
 unsigned-integer ::= {digit}...
 

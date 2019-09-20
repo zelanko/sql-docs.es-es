@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 056110966ece8e344320b73890dbead9d513230b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c10b97116cfde197a332d873fba5a807a2eb4ce9
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68085723"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910794"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalación de las herramientas de línea de comandos sqlcmd y bcp de SQL Server en Linux
 
@@ -197,7 +197,7 @@ brew install mssql-tools
 
 ## <a id="docker"></a> Docker
 
-Las herramientas de línea de comandos de SQL Server se incluyen en la imagen de Docker. Si se asocia a la imagen con un símbolo del sistema interactivo, puede ejecutar las herramientas de forma local.
+Si [ejecuta SQL Server en un contenedor de Docker](quickstart-install-connect-docker.md), las herramientas de línea de comandos de SQL Server ya están incluidas en la imagen de contenedor de SQL Server para Linux. Si adjunta un contenedor en ejecución con un shell de Bash interactivo, puede ejecutar las herramientas de forma local.
 
 ## <a name="offline-installation"></a>Instalación sin conexión
 

@@ -1,7 +1,7 @@
 ---
 title: Sugerencias de consulta (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 09/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e319fb56760f78df56105873f26a9bbec004dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902003"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228403"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -216,19 +216,19 @@ Para más información, vea [WITH common_table_expression &#40;Transact-SQL&#41;
 NO_PERFORMANCE_SPOOL    
  **Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Impide que se agregue un operador de cola de impresión a planes de consulta (excepto a los planes en los que se requiere que la cola de impresión garantice una semántica de actualización válida). En algunos escenarios, el operador de cola de impresión puede reducir el rendimiento. Por ejemplo, la cola de impresión usa tempdb, y puede producirse la contención de tempdb si se ejecutan muchas consultas simultáneas con las operaciones de cola de impresión.  
+Impide que se agregue un operador de cola de impresión a planes de consulta (excepto a los planes en los que se requiere que la cola de impresión garantice una semántica de actualización válida). En algunos escenarios, el operador de cola de impresión puede reducir el rendimiento. Por ejemplo, la cola de impresión usa tempdb, y se puede producir la contención de tempdb si se ejecutan muchas consultas simultáneas con las operaciones de cola de impresión.  
   
-OPTIMIZE FOR ( _@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@nombre\_de variable_ { UNKNOWN | = _constante\_literal }_ [ **,** ..._n_ ] )     
 Indica al optimizador de consultas que utilice un valor concreto para una variable local cuando la consulta se compila y optimiza. El valor se utiliza solo durante la optimización de la consulta y no durante la ejecución de la misma.  
   
-_@variable\_name_  
+_\@nombre\_de variable_  
 Es el nombre de una variable local que se utiliza en una consulta, a la que se puede asignar un valor para utilizarlo con la sugerencia de consulta OPTIMIZE FOR.  
   
 _UNKNOWN_  
 Indica al optimizador de consultas que use datos estadísticos en lugar del valor inicial para determinar el valor de una variable local durante la optimización de la consulta.  
   
 _literal\_constant_  
-Es un valor constante literal al que se asigna _@variable\_name_ para su uso con la sugerencia de consulta OPTIMIZE FOR. _literal\_constant_ se usa solo durante la optimización de la consulta y no como el valor de _@variable\_name_ durante la ejecución de dicha consulta. _literal\_constant_ puede tener cualquier tipo de datos de sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se pueda expresar como una constante literal. El tipo de datos de _literal\_constant_ debe convertirse de forma implícita al tipo de datos al que _@variable\_name_ hace referencia en la consulta.  
+Es un valor constante literal al que se asigna _\@nombre\_de variable_ para su uso con la sugerencia de consulta OPTIMIZE FOR. _constante\_literal_ se usa solo durante la optimización de la consulta y no como el valor de _\@nombre\_de variable_ durante la ejecución de la consulta. _literal\_constant_ puede tener cualquier tipo de datos de sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se pueda expresar como una constante literal. El tipo de datos de _constante\_literal_ se debe convertir de forma implícita al tipo de datos al que _\@nombre\_de variable_ hace referencia en la consulta.  
   
 OPTIMIZE FOR puede contrarrestar el comportamiento de detección de parámetros predeterminado del optimizador. Use también OPTIMIZE FOR para crear guías de plan. Para más información, vea [Volver a compilar un procedimiento almacenado](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
@@ -327,7 +327,7 @@ Puede consultar la lista de todos los nombres de USE HINT compatibles mediante l
 > [!IMPORTANT] 
 > Algunas sugerencias USE HINT pueden entrar en conflicto con las marcas de seguimiento habilitadas a nivel global o de sesión, o con las opciones de configuración con ámbito de base de datos. En este caso, la sugerencia de nivel de consulta (USE HINT) siempre tiene prioridad. Si una sugerencia USE HINT entra en conflicto con otra sugerencia de consulta o una marca de seguimiento habilitada en el nivel de consulta (por ejemplo, mediante QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generará un error al intentar ejecutar la consulta. 
 
- USE PLAN N **'** _xml\_plan_ **'**      
+USE PLAN N"_xml\_plan_"  
  Fuerza al optimizador de consultas a usar un plan de consulta existente en una consulta especificada por **'** _xml\_plan_ **'** . USE PLAN no puede especificarse con las instrucciones INSERT, UPDATE, MERGE ni DELETE.  
   
 TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Aplica la sugerencia de la tabla especificada a la tabla o vista que corresponde a _exposed\_object\_name_. Se recomienda usar una sugerencia de tabla como una sugerencia de consulta únicamente en el contexto de una [guía de plan](../../relational-databases/performance/plan-guides.md).  
@@ -366,7 +366,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
 Puede especificar las sugerencias de tabla INDEX, FORCESCAN, y FORCESEEK como sugerencias de consulta para una consulta que no tenga ninguna sugerencia de tabla existente. También puede utilizarlas para reemplazar las sugerencias INDEX, FORCESCAN o FORCESEEK existentes en la consulta, respectivamente. 
 
-Las sugerencias de tabla distintas de INDEX, FORCESCAN y FORCESEEK no están permitidas como sugerencias de consulta, a menos que la consulta ya tenga una cláusula WITH que especifique la sugerencia de tabla. En este caso, también debe especificarse una sugerencia coincidente como sugerencia de consulta. Especifique la sugerencia coincidente como sugerencia de consulta mediante TABLE HINT en la cláusula OPTION. Esta especificación conserva la semántica de la consulta. Por ejemplo, si la consulta contiene la sugerencia de tabla NOLOCK, la cláusula OPTION del parámetro **@hints** de la guía de plan también debe contener la sugerencia NOLOCK. Vea el ejemplo K. 
+Las sugerencias de tabla distintas de INDEX, FORCESCAN y FORCESEEK no están permitidas como sugerencias de consulta, a menos que la consulta ya tenga una cláusula WITH que especifique la sugerencia de tabla. En este caso, también debe especificarse una sugerencia coincidente como sugerencia de consulta. Especifique la sugerencia coincidente como sugerencia de consulta mediante TABLE HINT en la cláusula OPTION. Esta especificación conserva la semántica de la consulta. Por ejemplo, si la consulta contiene la sugerencia de tabla NOLOCK, la cláusula OPTION del parámetro **\@hints** de la guía de plan también debe contener la sugerencia NOLOCK. Vea el ejemplo K. 
 
 Se produce el error 8072 en un par de escenarios. Uno es cuando especifica una sugerencia de tabla distinta de INDEX, FORCESCAN o FORCESEEK mediante TABLE HINT en la cláusula OPTION sin una sugerencia de consulta coincidente. El segundo escenario es al revés. Este error indica que la cláusula OPTION puede hacer que la semántica de la consulta cambie y se produzca un error en la consulta.  
   

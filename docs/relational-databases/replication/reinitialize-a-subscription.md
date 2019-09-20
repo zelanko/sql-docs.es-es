@@ -15,12 +15,12 @@ ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e38cd74e9f916484c804890686e2a3b03d9ec64c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768572"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846506"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinicializar una suscripción
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,19 +103,19 @@ ms.locfileid: "68768572"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Para reinicializar una suscripción de extracción a una publicación transaccional  
   
-1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md). Especifique **@publisher** , **@publisher_db** y **@publication** . Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
+1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md). Especifique **\@publisher**, **\@publisher_db** y **\@publication**. Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
   
 2.  (Opcional) Inicie el Agente de distribución en el suscriptor para sincronizar la suscripción. Para obtener más información, consulte [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>Para reinicializar una suscripción de inserción a una publicación transaccional  
   
-1.  En el publicador, ejecute [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md). Especifique **@publication** , **@subscriber** y **@destination_db** . Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
+1.  En el publicador, ejecute [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md). Especifique **\@publication**, **\@subscriber** y **\@destination_db**. Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
   
 2.  (Opcional) Inicie el Agente de distribución en el distribuidor para sincronizar la suscripción. Para obtener más información, consulte [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Para reinicializar una suscripción de extracción a una publicación de combinación  
   
-1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md). Especifique **@publisher** , **@publisher_db** y **@publication** . Para cargar los cambios del Suscriptor antes de que se produzca la reinicialización, especifique un valor **true** para **@upload_first** . Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de mezcla.  
+1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md). Especifique **\@publisher**, **\@publisher_db** y **\@publication**. Para cargar los cambios del Suscriptor antes de que se produzca la reinicialización, especifique un valor de **true** para **\@upload_first**. Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de mezcla.  
   
     > [!IMPORTANT]  
     >  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
@@ -124,7 +124,7 @@ ms.locfileid: "68768572"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>Para reinicializar una suscripción de inserción a una publicación de combinación  
   
-1.  En el publicador, ejecute [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md). Especifique **@publication** , **@subscriber** y **@subscriber_db** . Para cargar los cambios del Suscriptor antes de que se produzca la reinicialización, especifique un valor **true** para **@upload_first** . Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
+1.  En el publicador, ejecute [sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md). Especifique **\@publication**, **\@subscriber** y **\@subscriber_db**. Para cargar los cambios del Suscriptor antes de que se produzca la reinicialización, especifique un valor de **true** para **\@upload_first**. Esto marca la suscripción para reinicializarla la próxima vez que se ejecute el Agente de distribución.  
   
     > [!IMPORTANT]  
     >  Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.  
@@ -133,7 +133,7 @@ ms.locfileid: "68768572"
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>Para establecer la directiva de reinicialización al crear una nueva publicación de combinación  
   
-1.  En el publicador de la base de datos de publicación, ejecute [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), especificando uno de los valores siguientes para **@automatic_reinitialization_policy** :  
+1.  En el publicador de la base de datos de publicación, ejecute [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md), y especifique uno de los valores siguientes para **\@automatic_reinitialization_policy**:  
   
     -   **1** : los cambios se cargan en el suscriptor antes de que una suscripción se reinicialice automáticamente según lo requiera un cambio a la publicación.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "68768572"
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>Para cambiar la directiva de reinicialización para una publicación de combinación existente  
   
-1.  En el publicador de la base de datos de publicación, ejecute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando **automatic_reinitialization_policy** para **@property** y uno de los siguientes valores para **@value** :  
+1.  En el publicador de la base de datos de publicación, ejecute [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), y especifique **automatic_reinitialization_policy** para **\@property** y uno de los valores siguientes para **\@value**:  
   
     -   **1** : los cambios se cargan en el suscriptor antes de que una suscripción se reinicialice automáticamente según lo requiera un cambio a la publicación.  
   

@@ -17,12 +17,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 635cdf4b698659ca85c343331425500c88c74759
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b7418f2f38bd853d462727c2fac65d08e0bd1e8d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769847"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846667"
 ---
 # <a name="manage-identity-columns"></a>Administrar columnas de identidad
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,27 +97,27 @@ ms.locfileid: "68769847"
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Para habilitar la administración automática de intervalos de identidad al definir artículos para una publicación transaccional  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Si la tabla de origen que va a publicar tiene una columna de identidad, especifique un valor de **auto** para **@identityrangemanagementoption** , el intervalo de valores de identidad asignados al Publicador para **@pub_identity_range** , el intervalo de valores de identidad asignados a cada Suscriptor para **@identity_range** y el porcentaje de valores de identidad totales usados antes de que se asigne un nuevo intervalo de identidad para **@threshold** . Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Si la tabla de origen que se va a publicar tiene una columna de identidad, especifique un valor de **auto** para **\@identityrangemanagementoption**, el intervalo de valores de identidad asignados al Publicador para **\@pub_identity_range**, el intervalo de valores de identidad asignados a cada Suscriptor para **\@identity_range** y el porcentaje de valores de identidad totales usados antes de que se asigne un nuevo intervalo de identidad para **\@threshold**. Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Asegúrese de que el tipo de datos de la columna de identidad es lo bastante grande como para admitir el intervalo total de identidades que se están asignando a todos los Suscriptores.  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>Para deshabilitar la administración automática de intervalos de identidad al definir artículos para una publicación transaccional  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique un valor de **manual** para **@identityrangemanagementoption** . Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique un valor de **manual** para **\@identityrangemanagementoption**. Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Asigne intervalos para identificar las columnas de artículo en el Suscriptor para evitar la generación de conflictos para actualizar los Suscriptores. Para obtener más información, vea la sección sobre cómo asignar intervalos para la administración manual de intervalos de identidad en el tema [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>Para habilitar la administración automática de intervalos de identidad al definir artículos para una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Si la tabla de origen que va a publicar tiene una columna de identidad, especifique un valor de **auto** para **@identityrangemanagementoption** , el intervalo de valores de identidad asignados a una suscripción de servidor para **@pub_identity_range** , el intervalo de valores de identidad asignados al Publicador y cada suscripción de cliente para **@identity_range** y el porcentaje de valores de identidad totales usados antes de que se asigne un nuevo intervalo de identidad para **@threshold** . Para obtener más información sobre cuándo se asignan los nuevos intervalos de identidad, vea Asignar intervalos de identidad en el tema [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md). Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Si la tabla de origen que se va a publicar tiene una columna de identidad, especifique un valor de **auto** para **\@identityrangemanagementoption**, el intervalo de valores de identidad asignados a una suscripción de servidor para **\@pub_identity_range**, el intervalo de valores de identidad asignados al Publicador y cada suscripción de cliente para **\@identity_range**, y el porcentaje de valores de identidad totales usados antes de que se asigne un nuevo intervalo de identidad para **\@threshold**. Para obtener más información sobre cuándo se asignan los nuevos intervalos de identidad, vea Asignar intervalos de identidad en el tema [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md). Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../../../relational-databases/replication/publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Asegúrese de que el tipo de datos de la columna de identidad es lo bastante grande como para admitir el intervalo total de identidades que se están asignando a todos los Suscriptores, particularmente para los Suscriptores con suscripciones de servidor.  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>Para deshabilitar la administración automática de intervalos de identidad al definir artículos para una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique uno de los valores siguientes para **@identityrangemanagementoption** :  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique uno de los valores siguientes para **\@identityrangemanagementoption**:  
   
     -   **manual** : los intervalos de identidad deben estar asignados manualmente para actualizar los Suscriptores.  
   
@@ -133,9 +133,9 @@ ms.locfileid: "68769847"
   
 2.  Si el valor de **identityrangemanagementoption** en el conjunto de resultados es **1**, cambie la configuración de la siguiente manera:  
   
-    -   Para cambiar los intervalos de identidad asignados, ejecute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **identity_range** o **pub_identity_range** para **@property** y el nuevo valor del intervalo para **@value** .  
+    -   Para cambiar los intervalos de identidad asignados, ejecute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **identity_range** o **pub_identity_range** para **\@property** y el nuevo valor del intervalo para **\@value**.  
   
-    -   Para cambiar el umbral en el que los nuevos intervalos están asignados, ejecute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **threshold** para **@property** y el nuevo valor umbral para **@value** .  
+    -   Para cambiar el umbral en el que los nuevos intervalos están asignados, ejecute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **threshold** para **\@property** y el nuevo valor umbral para **\@value**.  
   
 #### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-merge-publication"></a>Para cambiar la configuración de administración automática de intervalos de identidad para un artículo existente en una publicación de combinación  
   
@@ -143,11 +143,11 @@ ms.locfileid: "68769847"
   
 2.  Si el valor de **identity_support** en el conjunto de resultados es **1**, cambie la configuración de la siguiente manera:  
   
-    -   Para cambiar los intervalos de identidad asignados, ejecute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **identity_range** o **pub_identity_range** para **@property** y el nuevo valor del intervalo para **@value** .  
+    -   Para cambiar los intervalos de identidad asignados, ejecute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **identity_range** o **pub_identity_range** para **\@property** y el nuevo valor del intervalo para **\@value**.  
   
-    -   Para cambiar el umbral en el que los nuevos intervalos están asignados, ejecute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **threshold** para **@property** y el nuevo valor umbral para **@value** . Para obtener más información sobre cuándo se asignan los nuevos intervalos de identidad, vea Asignar intervalos de identidad en el tema [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
+    -   Para cambiar el umbral en el que los nuevos intervalos están asignados, ejecute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **threshold** para **\@property** y el nuevo valor umbral para **\@value**. Para obtener más información sobre cuándo se asignan los nuevos intervalos de identidad, vea Asignar intervalos de identidad en el tema [Replicar columnas de identidad](../../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-    -   Para deshabilitar la administración automática de intervalos de identidad, ejecute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **identityrangemanagementoption** para **@property** y **manual** o **none** para **@value** .  
+    -   Para deshabilitar la administración automática de intervalos de identidad, ejecute [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **identityrangemanagementoption** para **\@property** y **manual** o **none** para **\@value**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   

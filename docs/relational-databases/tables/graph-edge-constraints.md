@@ -1,7 +1,7 @@
 ---
 title: Restricciones perimetrales de grafos | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 5c0f7ea57a36c4d264bec5c70e745b36a319bbc8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731054"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70873884"
 ---
 # <a name="edge-constraints"></a>Restricciones perimetrales
 
@@ -48,6 +48,14 @@ Imagínese que tiene los nodos `Product` y `Customer` en su gráfico y usa el pe
 ### <a name="indexes-on-edge-constraints"></a>Índices en las restricciones perimetrales
 
 La creación de una restricción perimetral no crea automáticamente un índice en las columnas `$from_id` y `$to_id` de la tabla perimetral. Se recomienda crear manualmente un índice en un par de columnas `$from_id` y `$to_id` si tiene consultas de búsqueda de puntos o una carga de trabajo OLTP.
+
+### <a name="on-delete-referential-actions-on-edge-constraints"></a>Acciones referenciales ON DELETE en restricciones perimetrales
+Las acciones en cascada en una restricción perimetral permiten a los usuarios definir las acciones que toma el motor de base de datos cuando un usuario elimina los nodos, a los que se conecta el perímetro especificado. Se pueden definir las acciones referenciales siguientes:  
+*NO ACTION*   
+El motor de base de datos genera un error al intentar eliminar un nodo que tiene perímetros conectados.  
+
+*CASCADE*   
+Cuando se elimina un nodo de la base de datos, se eliminan los perímetros conectados.  
 
 ## <a name="working-with-edge-constraints"></a>Trabajo con restricciones perimetrales
 
@@ -80,7 +88,35 @@ GO
 CREATE TABLE bought
    (
       PurchaseCount INT
-         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE NO ACTION
+   )
+   AS EDGE;
+   ```
+
+#### <a name="defining-referential-actions-on-a-new-edge-table"></a>Definición de acciones referenciales en una tabla perimetral nueva 
+
+En el ejemplo siguiente se crea una restricción perimetral en la tabla perimetral **bought** y se define la acción referencial ON DELETE CASCADE. 
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Customer
+   (
+      ID INTEGER PRIMARY KEY
+      ,CustomerName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE Product
+   (
+      ID INTEGER PRIMARY KEY
+      ,ProductName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE bought
+   (
+      PurchaseCount INT
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE CASCADE
    )
    AS EDGE;
    ```
@@ -248,6 +284,7 @@ DROP CONSTRAINT EC_BOUGHT;
 
 Para modificar una restricción perimetral mediante Transact-SQL, deberá eliminar la restricción perimetral existente y, a continuación, volver a crearla con la nueva definición.
 
+
 ### <a name="view-edge-constraints"></a>Visualización de restricciones perimetrales
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
@@ -302,4 +339,8 @@ WHERE EC.parent_object_id = object_id('bought');
 
 ## <a name="related-tasks"></a>Tareas relacionadas
 
+[CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)  
+[ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+
 Para información sobre la tecnología de grafos en SQL Server, consulte el artículo sobre el [procesamiento de gráficos con SQL Server y Azure SQL Database](../graphs/sql-graph-overview.md?view=sql-server-2017).
+

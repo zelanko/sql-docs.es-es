@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ffd608faf64818a7acd9e38d9c502f575be6716a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: ccc96ecf7dccede236616e4680243116b8492d6b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653059"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70309935"
 ---
 ## <a name="enabled-deployment-scenarios"></a>Escenarios de implementación habilitados
 
@@ -13,7 +13,7 @@ La versión candidata para lanzamiento (RC) de SQL Server 2019 permite los escen
 - Instalación simultánea. Instale instancias de SQL Server 2019 RC con instancias de SQL Server 2012 a SQL Server 2017 u otras instancias de SQL Server 2019 CTP 3.0 o superior.
    >[!NOTE]
    >Aunque la instalación simultánea no se bloquea con SQL Server 2008 y 2008 R2, no hay versiones del sistema operativo Windows que se admitan habitualmente entre ellas y SQL Server 2019.
-- Actualización local. Actualice las instancias de SQL Server 2019 RC desde instancias de SQL Server 2012 a SQL Server 2017 y SQL Server CTP 3.0. No se admite la actualización desde una instancia de SQL Server 2019 CTP inferior a la versión 3.0; se debe realizar una instalación nueva.
+- Actualización local. Actualice a SQL Server 2019 RC desde instancias de SQL Server 2012 a SQL Server 2017 y SQL Server CTP 3.0. No se admite la actualización desde una instancia de SQL Server 2019 CTP inferior a la versión 3.0; se debe realizar una instalación nueva.
    >[!NOTE]
    >Aunque la instalación local desde SQL Server 2008 y 2008 R2 no se bloquea, no hay versiones del sistema operativo Windows que se admitan habitualmente entre ellas y SQL Server 2019.
 

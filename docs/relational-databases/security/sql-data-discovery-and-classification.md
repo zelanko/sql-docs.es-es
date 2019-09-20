@@ -8,15 +8,15 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 06/25/2019
+ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
-ms.openlocfilehash: c3d3d0b2a6a2410b4f49e52a77a42d76e87868f7
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: ef05b068c016cdea00e813f5dbff174494440a19
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670585"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929787"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Clasificación y detección de datos de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ Los metadatos de clasificación para *Tipos de información* y *Etiquetas de con
 
 Se puede acceder a los metadatos mediante la vista de catálogo de propiedades extendidas [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
 
-En el ejemplo de código siguiente se devuelven todas las columnas clasificadas con sus clasificaciones correspondientes:
+Para SQL Server 2017, en el ejemplo de código siguiente se devuelven todas las columnas clasificadas con sus clasificaciones correspondientes:
 
 ```sql
 SELECT
@@ -141,7 +141,7 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-O en SQL Server 2019:
+En SQL Server 2019:
 ```sql
 SELECT 
     schema_name(O.schema_id) AS schema_name,

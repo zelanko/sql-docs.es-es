@@ -24,6 +24,7 @@ helpviewer_keywords:
 - user instance timeout
 - sp_dropalias
 - COMPUTE
+- SSL
 - WITH APPEND
 - sys.database_principal_aliases
 - sp_dboption
@@ -33,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 99a7b94a45b1baf0ffbf1a491a0387ef11108ebd
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: c93aa484caf1ae6a2b7582c00f8fd6223fcf35e5
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494081"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874196"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>Funcionalidad del motor de base de datos no incluida en SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,6 +55,8 @@ ms.locfileid: "69494081"
 - No se incluye el subsistema Active X. En su lugar, use scripts de PowerShell o la línea de comandos.
 
 - Parámetros de inicio **-h** y **-g**. Para más información, consulte [Opciones de inicio del servicio de motor de base de datos](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014).
+
+- Ya no se incluye el cifrado de Capa de sockets seguros (SSL). En su lugar use Seguridad de la capa de transporte (TLS). Para más información, vea [Habilitación de conexiones cifradas en el motor de base de datos](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).
   
 ## <a name="previous-versions"></a>Versiones anteriores  
   

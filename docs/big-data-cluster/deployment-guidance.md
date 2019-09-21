@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878719"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174270"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Cómo realizar la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] implementación en Kubernetes
 
@@ -148,7 +148,7 @@ Las siguientes variables de entorno se usan para la configuración de seguridad 
 | **CONTROLLER_PASSWORD** | Obligatorio |Contraseña del administrador del clúster. |
 | **MSSQL_SA_PASSWORD** | Obligatorio |Contraseña del usuario de SA de la instancia maestra de SQL. |
 | **KNOX_PASSWORD** | Obligatorio |La contraseña del usuario **raíz** Knox. Tenga en cuenta que en una configuración de autenticación básica solo el usuario compatible con Knox es **root**.|
-| **ACCEPT_EULA**| Obligatorio para el primer uso de `azdata`| No requiere ningún valor. Cuando se establece como una variable de entorno, aplica el CLUF a SQL Server y `azdata`. Si no se establece como variable de entorno, puede incluir `--accept-eula` en el primer uso del comando `azdata`.|
+| **ACCEPT_EULA**| Obligatorio para el primer uso de `azdata`| Establézcalo en "sí". Cuando se establece como una variable de entorno, aplica el CLUF a SQL Server y `azdata`. Si no se establece como variable de entorno, puede incluir `--accept-eula=yes` en el primer uso del comando `azdata`.|
 | **DOCKER_USERNAME** | Opcional | Nombre de usuario para acceder a las imágenes de contenedor en caso de que se almacenen en un repositorio privado. Consulte el tema [Implementaciones sin conexión](deploy-offline.md) para obtener más información sobre cómo usar un repositorio privado de Docker para la implementación del clúster de macrodatos.|
 | **DOCKER_PASSWORD** | Opcional |Contraseña para acceder al repositorio privado anterior. |
 
@@ -161,6 +161,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell

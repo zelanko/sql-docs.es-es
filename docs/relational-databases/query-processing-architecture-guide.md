@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 309d97c52130eeb3477952cb70446c20787351cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929800"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096935"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -728,7 +728,7 @@ Los valores de parámetros se examinan durante la compilación o la recompilaci�
 -  Consultas enviadas mediante sp_executesql 
 -  Consultas preparadas
 
-Para obtener más información sobre cómo solucionar problemas de exámenes de parámetros incorrectos, vea [Troubleshoot queries with parameter-sensitive query execution plan issues](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues) (Solución de problemas de consultas con un plan de ejecución de consultas sensible a parámetros).
+Para obtener más información sobre cómo solucionar problemas de exámenes de parámetros incorrectos, vea [Troubleshoot queries with parameter-sensitive query execution plan issues](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems) (Solución de problemas de consultas con un plan de ejecución de consultas sensible a parámetros).
 
 > [!NOTE]
 > En el caso de las consultas que usan la sugerencia `RECOMPILE`, se examinan tanto los valores de parámetro como los valores actuales de las variables locales. Los valores examinados (de los parámetros y las variables locales) son los que existen en el lote justo antes de la instrucción con la sugerencia `RECOMPILE`. En concreto, en el caso de los parámetros, no se examinan los valores que aparecieron con la llamada de invocación del lote.

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff1027a3a791ef0151e61982445cafff7be40329
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fc0cde616bc03be4a984d8de518770b490e4a89a
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715422"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199343"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Tutoriales del lenguaje SQL Server R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,8 @@ En este artículo se describen los tutoriales del lenguaje R para el análisis e
 
 | Vínculo | Descripción |
 |------|-------------|
-| [Inicio rápido: Uso de R en T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md) | En la primera de las guías de inicio rápido se ilustra la sintaxis básica para llamar a una función de R mediante un editor de consultas de T-SQL, como SQL Server Management Studio. |
-| [Tutorial: Obtenga información sobre análisis de R en base de datos para científicos de datos](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Para los desarrolladores de R nuevos en SQL Server, en este tutorial se explica cómo realizar tareas comunes de ciencia de datos en SQL Server. Cargar y visualizar datos, entrenar y guardar un modelo para SQL Server y usar el modelo para el análisis predictivo. |
+| [Inicio rápido: Crear y ejecutar scripts de R simples](quickstart-r-create-script.md) | En la primera de las guías de inicio rápido se ilustra la sintaxis básica para llamar a una función de R mediante un editor de consultas de T-SQL, como SQL Server Management Studio. |
+| [Tutorial: Obtenga información sobre análisis de R en base de datos para científicos de datos](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | En el caso de los desarrolladores de R nuevos en SQL Server, en este tutorial se explica cómo realizar tareas comunes de ciencia de datos en SQL Server. Cargar y visualizar datos, entrenar y guardar un modelo para SQL Server y usar el modelo para el análisis predictivo. |
 | [Tutorial: Obtenga información sobre análisis de R en base de datos para desarrolladores de SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Cree e implemente una solución completa de R, [!INCLUDE[tsql](../../includes/tsql-md.md)] con solo herramientas. Se centra en mover una solución a producción. Aprenderá cómo ajustar el código de R en un procedimiento almacenado, guardar un modelo de R en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y realizar llamadas con parámetros al modelo de R para la predicción. |
 | [Tutorial: Análisis detallado de RevoScalepR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Obtenga información sobre cómo usar las funciones de los paquetes RevoScaleR. Mueva los datos entre R y SQL Server, y cambie los contextos de cálculo para adaptarse a una tarea determinada. Cree modelos y trazados, y muévalos entre el entorno de desarrollo y el servidor de base de datos. |
 

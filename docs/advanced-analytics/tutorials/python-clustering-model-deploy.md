@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00ce4893cfe96fcf115227cc5a7fd38085584dda
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: eef8a0f0f11e6d9085a1685145e4c6815979470d
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294380"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199355"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutorial: Implementación de un modelo en Python para clasificar los clientes con SQL Server Machine Learning Services
 
@@ -172,7 +172,7 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 Puede cambiar el valor de **c. Cluster** para devolver las direcciones de correo electrónico de los clientes de otros clústeres.
 
-## <a name="clean-up-resources"></a>Limpieza de recursos
+## <a name="clean-up-resources"></a>Limpiar recursos
 
 Cuando haya terminado este tutorial, puede eliminar la base de datos tpcxbb_1gb de SQL Server.
 
@@ -186,7 +186,7 @@ En la cuarta parte de esta serie de tutoriales, ha completado estos pasos:
 
 Para obtener más información sobre el uso de Python en SQL Server Machine Learning Services, consulte:
 
-* [Inicio rápido: Ejecutar un script de Python "Hello World" en SQL Server Machine Learning Services](quickstart-python-run-using-t-sql.md)
+* [Inicio rápido: Crear y ejecutar scripts de Python simples con SQL Server Machine Learning Services](quickstart-python-create-script.md)
 * [Otros tutoriales de Python para SQL Server Machine Learning Services](sql-server-python-tutorials.md)
 * [Instalación de paquetes de Python con sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)
 

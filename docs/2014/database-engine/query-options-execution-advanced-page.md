@@ -12,12 +12,12 @@ manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 4530d07ceb284f6f7c5a795836b979e846562f40
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118102"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199324"
 ---
 # <a name="query-options-execution-advanced-page"></a>Opciones de ejecución de consulta (página Avanzadas)
 
@@ -58,11 +58,11 @@ ms.locfileid: "71118102"
 
 **Mostrar la hora de finalización** Permite imprimir la hora en que se completó la ejecución de la consulta después de los resultados de la consulta o en la pestaña mensajes.
 
-**Protocolo de atestación de VBS enclaves para Always Encrypted** Permite establecer un protocolo de atestación para la seguridad basada en la virtualización (VBS) enclaves que usa Always Encrypted con enclaves seguro. 
+**Protocolo de atestación de VBS enclaves para Always Encrypted** Permite establecer un protocolo de atestación para la seguridad basada en la virtualización (VBS) enclaves que usa Always Encrypted con enclaves seguro.
 
-  Los protocolos de atestación admitidos actualmente son:
+Los protocolos de atestación admitidos actualmente son:
 
-  * Servicio de protección de host: un protocolo de atestación que usa el servicio de protección de host de Windows (HGS).
+* Servicio de protección de host: un protocolo de atestación que usa el servicio de protección de host de Windows (HGS).
 
 Para obtener más información, consulte [Always Encrypted con seguridad enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) y la [atestación de enclave segura](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation).
 

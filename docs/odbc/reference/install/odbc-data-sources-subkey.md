@@ -1,7 +1,7 @@
 ---
 title: Subclave de orígenes de datos ODBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,26 +14,28 @@ helpviewer_keywords:
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2a1d0c506c4a4b33d7138378032947821d4e9f3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d6d54d1fc7c7742bf94e91d7370f356e28b5624
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093990"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207687"
 ---
-# <a name="odbc-data-sources-subkey"></a>Subclave de orígenes de datos de ODBC
-Los valores bajo la subclave de orígenes de datos ODBC enumeran los orígenes de datos. El formato de estos valores es como se muestra en la tabla siguiente.  
-  
-|Name|Tipo de datos|Datos|  
-|----------|---------------|----------|  
-|*data-source-name*|REG_SZ|*driver-description*|  
-  
- El *nombre del origen de datos* valor está definido por el programa de administración (que normalmente se solicita al usuario para él), y *descripción del controlador* definido por el programador del controlador (suele ser el nombre de la DBMS asociado con el controlador).  
-  
- Por ejemplo, supongamos que tres se han definido los orígenes de datos: Inventario, que usa SQL Server; Nómina, que usa dBASE; y personal, que usa archivos de texto en formato. Los valores bajo la subclave de orígenes de datos ODBC podrían ser como sigue:  
-  
-```  
-Inventory : REG_SZ : SQL Server  
-Payroll : REG_SZ : dBASE  
-Personnel : REG_SZ : Text  
+# <a name="odbc-data-sources-subkey"></a>Subclave de orígenes de datos ODBC
+
+Los valores de la `ODBC Data Sources` subclave enumeran los orígenes de datos. El formato de estos valores se muestra en la tabla siguiente.
+
+| NOMBRE | Tipo de datos | Datos |
+| :--- | :-------- | :--- |
+| *data-source-name* | REG_SZ | *driver-description* |
+| &nbsp; | &nbsp; | &nbsp; |
+
+El valor del *nombre del origen de datos* se define mediante el programa de administración (que normalmente solicita el usuario) y el desarrollador del controlador define la descripción del *controlador* (normalmente es el nombre del DBMS asociado con el controlador).
+
+Por ejemplo, supongamos que se han definido tres orígenes de datos: Inventario, que utiliza SQL Server; Payroll, que utiliza dBASE; y personal, que utiliza archivos de texto con formato. Los valores de la `ODBC Data Sources` subclave pueden ser los siguientes:
+
+```console
+Inventory : REG_SZ : SQL Server
+Payroll : REG_SZ : dBASE
+Personnel : REG_SZ : Text
 ```

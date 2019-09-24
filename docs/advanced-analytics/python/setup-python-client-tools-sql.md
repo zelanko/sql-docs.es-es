@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 87c05fafb122e292c45033bb019548c84df44de0
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634538"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199480"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configuración de un cliente de ciencia de datos para el desarrollo de Python en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Tanto si es un desarrollador de Python nuevo en SQL como si es un desarrollador 
 
 Para el desarrollo de Python, puede usar cuadernos de Jupyter, que se incluyen en la distribución Anaconda instalada por SQL Server. En este artículo se explica cómo iniciar cuadernos de Jupyter Notebook para que pueda ejecutar el código de Python de forma local y remota en SQL Server.
 
-SSMS es una descarga independiente, útil para crear y ejecutar procedimientos almacenados en SQL Server, incluidos aquellos que contienen código Python. Casi cualquier código Python que escriba en cuadernos de Jupyter Notebook se puede incrustar en un procedimiento almacenado. Puede recorrer otras guías de inicio rápido para obtener información sobre [SSMS y Embedded Python](../tutorials/quickstart-python-verify.md).
+SSMS es una descarga independiente, útil para crear y ejecutar procedimientos almacenados en SQL Server, incluidos aquellos que contienen código Python. Casi cualquier código Python que escriba en cuadernos de Jupyter Notebook se puede incrustar en un procedimiento almacenado. Puede recorrer otras guías de inicio rápido para obtener información sobre [SSMS y Embedded Python](../tutorials/quickstart-python-create-script.md).
 
 ## <a name="1---install-python-packages"></a>1-instalación de paquetes de Python
 
@@ -305,4 +305,4 @@ Ahora puede importar los módulos **revoscalepy**, **microsoftml**o **azureml** 
 Ahora que tiene herramientas y una conexión operativa a SQL Server, amplíe sus conocimientos mediante la ejecución de las guías de inicio rápido de Python con [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 > [!div class="nextstepaction"]
-> [Inicio rápido: Compruebe que Python existe en SQL Server](../tutorials/quickstart-python-verify.md)
+> [Inicio rápido: Crear y ejecutar scripts de Python simples con SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)

@@ -1,74 +1,88 @@
 ---
-title: Novedades de Analytics Platform System - un almacén de datos de escalabilidad horizontal
-description: Vea cuáles son las novedades de Microsoft Analytics Platform System, una aplicación de escalabilidad horizontal en el entorno local que hospeda el almacenamiento de datos paralelos de MPP de SQL Server.
+title: 'Novedades de Analytics Platform System: un almacenamiento de datos de escalado horizontal'
+description: Vea las novedades de Microsoft Analytics Platform System, un dispositivo local de escalado horizontal que hospeda MPP SQL Server almacenamiento de datos paralelos.
 author: mzaman1
+manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 78b2b0e7fd05bbfa430c7a8939378091850537ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d0ff3861912270091b6a63cbd3fd7b2e8e0e481
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67959802"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227107"
 ---
-# <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacén de datos MPP de escalabilidad horizontal
-Vea cuáles son las novedades en las últimas actualizaciones de dispositivo de Microsoft Analytics Platform System (APS). APS es una aplicación de escalabilidad horizontal en el entorno local que hospeda el almacenamiento de datos paralelos de MPP de SQL Server. 
+# <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacenamiento de datos MPP de escalabilidad horizontal
+Vea las novedades de las últimas actualizaciones del dispositivo para Microsoft Analytics Platform System (AP). APS es un dispositivo local de escalado horizontal que hospeda MPP SQL Server almacenamiento de datos paralelos. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.5"></a>
+## <a name="aps-cu75"></a>APS CU 7.5
+Fecha de lanzamiento: septiembre 2019
+
+### <a name="alter-external-data-source"></a>Modificar origen de datos externo
+Los clientes podrán modificar la definición del origen de datos externo con la actualización CU 7.5. Los clientes con la alta disponibilidad del nodo de nombre de Hadoop ahora pueden modificar el origen de datos para cambiar los argumentos cuando se produce una conmutación por error. En el caso de los APS, solo se pueden cambiar la ubicación, RESOURCE_MANAGER_LOCATION y CREDENTIAL. Vea [ALTER external Data Source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) para obtener más información.
+
+### <a name="cdh-515-and-516-support-with-polybase"></a>Compatibilidad con CDH 5,15 y 5,16 con polybase
+Polybase en APS con la actualización CU 7.5 admite ahora CDH 5,15 y 5,16 versiones de la distribución de Hadoop desde Cloudera. Use la opción 6 para las versiones de CDH 5. x. 
+
+### <a name="try_convert-and-try_cast-support"></a>Compatibilidad con Try_Convert y Try_Cast
+CU 7.5 APS ahora admite las funciones TSQL [TRY_CAST](https://docs.microsoft.com/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-2017) y [TRY_CONVERT](https://docs.microsoft.com/sql/t-sql/functions/try-convert-transact-sql?view=sql-server-2017) . Ambas funciones devuelven un valor convertido al tipo de datos especificado si la conversión se realiza correctamente; de lo contrario, devuelve NULL.
+
 <a name="h2-aps-cu7.4"></a>
 ## <a name="aps-cu74"></a>APS CU7.4
-Fecha de publicación: mayo de 2019
+Fecha de lanzamiento: 2019 de mayo
 
-### <a name="loading-large-rows-with-dwloader"></a>Carga de filas grandes con dwloader
-A partir de APS CU7.4, los clientes podrán usar un nuevo dwloader para cargar las filas en las tablas que son mayores de 32 KB (32.768 bytes). El nuevo dwloader es compatible con el modificador -l que toma un valor entero entre 32768 y 33554432 (en bytes) para cargar filas mayores que 32 KB. Use esta opción solo cuando se cargan filas grandes (mayores que 32 KB) como este modificador asignará más memoria en el cliente y el servidor y puede ralentizar la carga. Puede descargar el nuevo dwloader desde [sitio de descarga](https://www.microsoft.com/download/details.aspx?id=57472).  
+### <a name="loading-large-rows-with-dwloader"></a>Cargar filas grandes con dwloader
+A partir de APS CU 7.4, los clientes podrán usar un nuevo dwloader para cargar filas en tablas de más de 32 KB (32.768 bytes). El nuevo dwloader admite el modificador-l que toma un valor entero entre 32768 y 33554432 (en bytes) para cargar filas de más de 32 KB. Use esta opción solo cuando se carguen grandes filas (más de 32 KB), ya que este modificador asignará más memoria en el cliente y en el servidor y puede ralentizar las cargas. Puede descargar el nuevo dwloader desde el [sitio de descarga](https://www.microsoft.com/download/details.aspx?id=57472).  
 
-### <a name="hdp-30-and-31-support-with-polybase"></a>HDP 3.0 y 3.1 de soporte técnico con PolyBase
-PolyBase en puntos de acceso ahora admite HDP 3.0 y 3.1 con esta actualización. Utilice la opción 7 para las versiones HDP 3.x. Para obtener más información, consulte [conectividad de PolyBase](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql) página.
+### <a name="hdp-30-and-31-support-with-polybase"></a>Compatibilidad con HDP 3,0 y 3,1 con polybase
+Polybase en APS ahora admite HDP 3,0 y 3,1 con esta actualización. Use la opción 7 para las versiones de HDP 3. x. Para obtener más información, consulte la página de [conectividad de polybase](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql) .
 
-### <a name="utf16-file-support-with-polybase"></a>Compatibilidad con archivos de UTF16 con PolyBase
-PolyBase ahora admite la lectura de archivos de texto delimitado en codificación UTF16 (LE). Consulte [crear formato de archivo externo](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql) para obtener información detallada del programa de instalación. 
+### <a name="utf16-file-support-with-polybase"></a>Compatibilidad con archivos UTF16 con polybase
+Polybase admite ahora la lectura de archivos de texto delimitados que están en la codificación UTF16 (LE). Vea [Create external File Format](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql) para obtener información detallada sobre la instalación. 
 
 <a name="h2-aps-cu7.3"></a>
 ## <a name="aps-cu73"></a>APS CU7.3
-Fecha de publicación: diciembre de 2018
+Fecha de lanzamiento: diciembre 2018
 
 ### <a name="common-subexpression-elimination"></a>Eliminación de subexpresiones comunes
-APS CU7.3 mejora el rendimiento de consultas con la eliminación de subexpresiones comunes en el optimizador de consultas SQL. La mejora de la mejora de las consultas de dos maneras. La primera ventaja es la capacidad de identificar y eliminar, las expresiones ayudan a reducir el tiempo de compilación de SQL. La ventaja de segundo y lo más importante es las operaciones de movimiento de datos para estas subexpresiones redundantes se eliminan, por tanto, el tiempo de ejecución para las consultas se convierte en más rápido. Puede encontrar una explicación detallada de esta característica [aquí](common-sub-expression-elimination.md).
+APS CU 7.3 mejora el rendimiento de las consultas con una eliminación común de subexpresiones en el optimizador de consultas de SQL. La mejora mejora las consultas de dos maneras. La primera ventaja es que la capacidad de identificar y eliminar estas expresiones ayuda a reducir el tiempo de compilación de SQL. La segunda ventaja y más importante son las operaciones de movimiento de datos para estas subexpresiones redundantes que se eliminan, por lo que el tiempo de ejecución de las consultas es más rápido. [Aquí](common-sub-expression-elimination.md)puede encontrar una explicación detallada de esta característica.
 
-### <a name="aps-informatica-connector-for-informatica-1020-published"></a>Conector de Informatica APS Informatica 10.2.0 publicado
-Hemos publicado una nueva versión de conectores de Informatica para puntos de acceso que funciona con Informatica versión 10.2.0 y 10.2.0 revisión 1. Los nuevos conectores pueden descargarse desde [sitio de descarga](https://www.microsoft.com/download/details.aspx?id=57472).
+### <a name="aps-informatica-connector-for-informatica-1020-published"></a>AP Informatica Connector for Informatica 10.2.0 Published
+Hemos publicado una nueva versión de los conectores de Informatica para APS que funciona con la versión de Informatica 10.2.0 y 10.2.0 revisión 1. Los nuevos conectores se pueden descargar desde el [sitio de descarga](https://www.microsoft.com/download/details.aspx?id=57472).
 
 #### <a name="supported-versions"></a>Versiones admitidas
 
-| Versión APS | Informatica PowerCenter | Controlador |
+| Versión de APS | Informatica PowerCenter | Controlador |
 |:---|:---|:---|
-| APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
-| APS 2016 y versiones posteriores | 10.2.0, 10.2.0 1 revisión | SQL Server Native Client 11.x |
+| APS 2016 | 9.6.1 | SQL Server Native Client 11. x |
+| APS 2016 y versiones posteriores | 10.2.0, 10.2.0 revisión 1 | SQL Server Native Client 11. x |
 
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
-Fecha de publicación: octubre de 2018
+Fecha de lanzamiento: 2018 de octubre
 
-### <a name="support-for-tls-12"></a>Compatibilidad con TLS 1.2
-APS CU7.2 es compatible con TLS 1.2. Equipo cliente para puntos de acceso y puntos de acceso ahora se puede establecer comunicación entre nodos para comunicarse solo a través de TLS 1.2. Herramientas como SSDT, SSIS y Dwloader instalado en los equipos cliente configurados para comunicarse solo a través de TLS 1.2, ahora pueden conectarse a puntos de acceso con TLS 1.2. De forma predeterminada, los puntos de acceso será compatible con todas las versiones TLS (1.0, 1.1 y 1.2) para compatibilidad con versiones anteriores. Si desea establecer su dispositivo APS para usar TLS 1.2 de forma estricta, puede hacerlo mediante el cambio de configuración del registro. 
+### <a name="support-for-tls-12"></a>Compatibilidad con TLS 1,2
+APS CU 7.2 admite TLS 1,2. El equipo cliente para la comunicación entre nodos APS y APS ahora se puede establecer para comunicarse solo a través de TLS 1.2. Las herramientas como SSDT, SSIS y Dwloader instaladas en equipos cliente que están configurados para comunicarse solo a través de TLS 1,2 pueden conectarse ahora a APS mediante TLS 1,2. De forma predeterminada, APS es compatible con todas las versiones de TLS (1,0, 1,1 y 1,2) por compatibilidad con versiones anteriores. Si desea establecer el dispositivo APS para usar estrictamente TLS 1,2, puede hacerlo cambiando la configuración del registro. 
 
-Para obtener más información, consulte [configurar TLS 1.2 en AP](configure-tls12-aps.md).
+Para obtener más información, consulte [configuración de TLS 1.2 en APS](configure-tls12-aps.md).
 
-### <a name="hadoop-encryption-zone-support-for-polybase"></a>Compatibilidad de zona de cifrado de Hadoop para PolyBase
-Ahora, PolyBase puede comunicarse con las zonas de cifrado de Hadoop. Vea los cambios de configuración de puntos de acceso que son necesarios en [configurar la seguridad de Hadoop](polybase-configure-hadoop-security.md#encryptionzone).
+### <a name="hadoop-encryption-zone-support-for-polybase"></a>Compatibilidad de la zona de cifrado de Hadoop con polybase
+Polybase ahora puede comunicarse con zonas de cifrado de Hadoop. Consulte cambios de configuración de APS necesarios en [configuración](polybase-configure-hadoop-security.md#encryptionzone)de la seguridad de Hadoop.
 
-### <a name="insert-select-maxdop-options"></a>Opciones de maxdop INSERT-Select
-Hemos agregado un [modificador de característica](appliance-feature-switch.md) que le permite seleccionar la configuración de maxdop mayor que 1 para las operaciones insert-select. Ahora puede establecer la configuración de maxdop en 0, 1, 2 o 4. El valor predeterminado es 1.
+### <a name="insert-select-maxdop-options"></a>Insertar-seleccionar opciones de maxdop
+Hemos agregado un [modificador de características](appliance-feature-switch.md) que le permite elegir una configuración de maxdop mayor que 1 para las operaciones de inserción y selección. Ahora puede establecer el valor de maxdop en 0, 1, 2 o 4. El valor predeterminado es 1.
 
 > [!IMPORTANT]  
-> Aumento de maxdop a veces puede dar lugar en las operaciones más lentas o errores de interbloqueo. Si esto sucede, cambie la configuración a maxdop 1 y vuelva a intentar la operación.
+> Al aumentar maxdop, a veces pueden producirse operaciones más lentas o errores de interbloqueo. Si esto ocurre, vuelva a cambiar la configuración a maxdop 1 y reintente la operación.
 
-### <a name="columnstore-index-health-dmv"></a>Estado del índice de almacén de columnas DMV
-Puede ver la información de estado de índice de almacén de columnas mediante **dm_pdw_nodes_db_column_store_row_group_physical_stats** dmv. Utilice la siguiente vista para determinar la fragmentación y decidir cuándo se debe volver a generar o reorganizar un índice de almacén de columnas.
+### <a name="columnstore-index-health-dmv"></a>DMV de mantenimiento de índice de almacén de columnas
+Puede ver la información de mantenimiento del índice de almacén de columnas mediante la DMV **dm_pdw_nodes_db_column_store_row_group_physical_stats** . Utilice la siguiente vista para determinar la fragmentación y decidir cuándo volver a generar o reorganizar un índice de almacén de columnas.
 
 ```sql
 create view dbo.vCS_rg_physical_stats
@@ -95,85 +109,85 @@ select *
 from cte;
 ```
 
-### <a name="polybase-date-range-increase-for-orc-and-parquet-files"></a>Aumento de intervalo de fecha de PolyBase para archivos ORC y Parquet
-Leer, importar y exportar tipos de datos de fecha mediante PolyBase ahora admiten fechas antes 1970-01-01 y después 2038-01-20 para los tipos de archivo ORC y Parquet.
+### <a name="polybase-date-range-increase-for-orc-and-parquet-files"></a>Aumento del intervalo de fechas de polybase para los archivos ORC y parquet
+La lectura, importación y exportación de tipos de datos de fecha con polybase admite ahora fechas anteriores a 1970-01-01 y posteriores a 2038-01-20 para los tipos de archivo ORC y parquet.
 
 ### <a name="ssis-destination-adapter-for-sql-server-2017-as-target"></a>Adaptador de destino de SSIS para SQL Server 2017 como destino
-Nuevo adaptador de destino de APS SSIS que admite SQL Server 2017 como destino de implementación puede descargarse desde [sitio de descarga](https://www.microsoft.com/download/details.aspx?id=57472).
+El nuevo adaptador de destino de SSIS de APS que admite SQL Server 2017 como destino de implementación se puede descargar desde el [sitio de descarga](https://www.microsoft.com/download/details.aspx?id=57472).
 
 <a name="h2-aps-cu7.1"></a>
 ## <a name="aps-cu71"></a>APS CU7.1
-Fecha de lanzamiento: julio de 2018
+Fecha de lanzamiento: 2018 de julio
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>Los comandos DBCC no consumen espacios de simultaneidad (cambio de comportamiento)
-APS admite un subconjunto de T-SQL [comandos DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) como [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Anteriormente, estos comandos consumiría un [espacio de simultaneidad](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) reduciendo el número de cargas y consultas de usuario que se puede ejecutar. El `DBCC` comandos ahora se ejecutan en una cola local que no consumen una ranura de simultaneidad de usuario mejora el rendimiento general de la ejecución de consulta.
+APS admite un subconjunto de [comandos DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) de T-SQL, como [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Anteriormente, estos comandos consumirían una [ranura de simultaneidad](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) que redujo el número de cargas o consultas de usuario que podrían ejecutarse. Los `DBCC` comandos se ejecutan ahora en una cola local que no consume un espacio de simultaneidad de usuarios que mejora el rendimiento general de la ejecución de consultas.
 
-### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Reemplaza algunas llamadas de metadatos con los objetos de catálogo
-Uso de los objetos de catálogo para las llamadas de metadatos en lugar de usar SMO ha mostrado mejora del rendimiento en puntos de acceso. A partir de CU7.1, ahora algunas de estas llamadas metadatos utilizan los objetos de catálogo predeterminada. Este comportamiento puede desactivarse por [modificador de característica](appliance-feature-switch.md) si los clientes que usan las consultas de metadatos surgen algún problema.
+### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Reemplaza algunas llamadas de metadatos por objetos de catálogo
+El uso de objetos de catálogo para llamadas de metadatos en lugar de usar SMO ha mostrado la mejora del rendimiento en APS. A partir de CU 7.1, algunas de estas llamadas de metadatos ahora usan objetos de catálogo de forma predeterminada. Este comportamiento se puede desactivar por el [modificador de características](appliance-feature-switch.md) si los clientes que usan consultas de metadatos se ejecutan en cualquier problema.
 
-### <a name="bug-fixes"></a>Corrección de errores
-Hemos actualizado a SQL Server 2016 SP2 CU2 con CU7.1 APS. La actualización corrige algunos problemas que se describen a continuación.
+### <a name="bug-fixes"></a>Correcciones de errores
+Hemos actualizado a SQL Server 2016 SP2 CU2 con APS CU 7.1. La actualización corrige algunos problemas que se describen a continuación.
 
 | Título | Descripción |
 |:---|:---|
-| **Interbloqueo potencial de motor de tupla** |La actualización corrige una posibilidad eterno de interbloqueo en un subproceso en segundo plano distribuido transacciones y la tupla motriz. Después de instalar CU7.1, los clientes que utilizaron TF634 para detener el motor de tupla como parámetro de inicio de SQL Server o la marca de seguimiento global pueden quitarla con seguridad. | 
-| **Se produce un error en determinadas consultas lag/lead** |Algunas consultas en tablas CCI con funciones anidadas lag/lead que lo haría con error se ha corregido con esta actualización. | 
+| **Posible interbloqueo del Movedor de tupla** |La actualización corrige una posibilidad prolongada de un interbloqueo en una transacción distribuida y un subproceso en segundo plano de tupla. Después de instalar CU 7.1, los clientes que usaban TF634 para detener el motor de tupla como SQL Server parámetro de inicio o marca de seguimiento global pueden quitarlo de forma segura. | 
+| **Se produce un error en una consulta de intervalo o de adelanto** |Algunas consultas en tablas de CCI con funciones de retardo o de inicialización anidadas que generarían un error ahora se corrigen con esta actualización. | 
 
 
 <a name="h2-aps-au7"></a>
 ## <a name="aps-au7"></a>APS AU7
-Fecha de publicación: mayo de 2018
+Fecha de lanzamiento: 2018 de mayo
 
-APS 2016 es un requisito previo para actualizar a AU7. Los siguientes son las nuevas características de APS AU7:
+APS 2016 es un requisito previo para actualizar a AU7. A continuación se muestran nuevas características de APS AU7:
 
-### <a name="auto-create-and-auto-update-statistics"></a>Automático: creación y actualización automática de estadísticas
-APS AU7 crea y actualiza las estadísticas automáticamente, de forma predeterminada. Para actualizar la configuración de estadísticas, los administradores pueden usar un nuevo elemento de menú de conmutador de característica en el [Configuration Manager](appliance-configuration.md#CMTasks). El [modificador de característica](appliance-feature-switch.md) controla la auto-create, la actualización automática y el comportamiento de actualización asincrónica de estadísticas. También puede actualizar la configuración de las estadísticas con la [ALTER DATABASE (almacenamiento de datos paralelos)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) instrucción.
+### <a name="auto-create-and-auto-update-statistics"></a>Creación automática y actualización automática de estadísticas
+APS AU7 crea y actualiza automáticamente las estadísticas de forma predeterminada. Para actualizar la configuración de las estadísticas, los administradores pueden usar un nuevo elemento de menú de modificador de características en el [Configuration Manager](appliance-configuration.md#CMTasks). El [modificador de características](appliance-feature-switch.md) controla el comportamiento de la creación automática, la actualización automática y la actualización asincrónica de las estadísticas. También puede actualizar la configuración de las estadísticas con la instrucción [ALTER DATABASE (almacenamiento de datos paralelos)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) .
 
 ### <a name="t-sql"></a>T-SQL
-Seleccione @var ahora se admite. Para obtener más información, consulte [seleccione una variable local](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
+Ahora @var se admite Select. Para obtener más información, vea [seleccionar variable local](/sql/t-sql/language-elements/select-local-variable-transact-sql) . 
 
-Ahora se admiten las sugerencias de consulta HASH y el grupo de pedidos. Para obtener más información, consulte [Hints(Transact-SQL) - consulta](/sql/t-sql/queries/hints-transact-sql-query)
+Ahora se admiten las sugerencias de consulta HASH y el grupo de pedidos. Para obtener más información, vea [sugerencias (Transact-SQL)-Query](/sql/t-sql/queries/hints-transact-sql-query)
 
-### <a name="feature-switch"></a>Modificador de característica
-APS AU7 presenta el modificador de característica en [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled y DmsProcessStopMessageTimeoutInSeconds ahora son opciones configurables que los administradores pueden cambiar.
+### <a name="feature-switch"></a>Modificador de características
+APS AU7 introduce el modificador de características en [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled y DmsProcessStopMessageTimeoutInSeconds son ahora opciones configurables que los administradores pueden cambiar.
 
 ### <a name="known-issues"></a>Problemas conocidos
-Con el software AU7 de APS, se proporciona una actualización de BIOS de Intel que corrige un problema que se describe como *ataques de canal lateral de ejecución especulativa*. Los ataques tienen como objetivo aprovechar lo que se denomina *vulnerabilidades Spectre y Meltdown*. Aunque se empaquetan junto con puntos de acceso, la actualización del BIOS se instala manualmente y no como parte de la instalación del software AU7 APS.
+Con el software APS AU7, se proporciona una actualización del BIOS de Intel que corrige un problema descrito como *ataques de canal lateral de ejecución especulativa*. Los ataques tienen como objetivo aprovechar lo que se denomina *Spectre y Meltdown vulnerabilidades*. Aunque se empaqueta junto con APS, la actualización del BIOS se instala manualmente y no como parte de la instalación del software APS AU7.
 
-Microsoft aconseja todos los clientes para instalar la actualización del BIOS. Microsoft ha medido el efecto de sombreado de dirección Virtual (KVAS) de Kernel, direccionamiento indirecto de tabla de página de Kernel (KPTI) y mitigación de predicción de ramas indirecta (IBP) en diversas cargas de trabajo SQL en diversos entornos. Las medidas encontraron una degradación significativa en algunas cargas de trabajo. En función de los resultados, la recomendación es que pruebe el efecto de rendimiento de la habilitación de la actualización del BIOS antes de implementarlos en un entorno de producción. Consulte las instrucciones de SQL Server [aquí](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
+Microsoft recomienda que todos los clientes instalen el BIOS actualizado. Microsoft ha medido el efecto del sombreado de la dirección virtual del kernel (KVAS), el direccionamiento indirecto de la tabla de páginas del kernel (KPTI) y la mitigación de predicción de rama indirecta (IBP) en varias cargas de trabajo de SQL en varios entornos. Las medidas han detectado una degradación significativa en algunas cargas de trabajo. En función de los resultados, se recomienda probar el efecto de rendimiento de habilitar la actualización del BIOS antes de implementarla en un entorno de producción. Consulte la guía de SQL Server [aquí](https://support.microsoft.com/help/4073225/guidance-protect-sql-server-against-spectre-meltdown).
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
 <a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
-En esta sección se describe las nuevas características de APS 2016 AU6.
+En esta sección se describen las nuevas características de APS 2016-AU6.
 
 ### <a name="sql-server-2016"></a>SQL Server 2016
 
-APS AU6 se ejecuta en la versión más reciente de SQL Server 2016 y usa el nivel de compatibilidad de base de datos 130 de forma predeterminada. SQL Server 2016 habilita la compatibilidad con nuevas características, como:
+APS AU6 se ejecuta en la versión más reciente SQL Server 2016 y usa el nivel de compatibilidad de base de datos predeterminado 130. SQL Server 2016 habilita la compatibilidad con nuevas características, como:
 
-- Índices secundarios para los índices de almacén de columnas agrupado.
-- Protocolo Kerberos para PolyBase.
+- Índices secundarios para los índices de almacén de columnas en clúster.
+- Kerberos para polybase.
 
 ### <a name="t-sql"></a>T-SQL
-APS AU6 es compatible con estas mejoras de compatibilidad de Transact-SQL.  Estos elementos adicionales del lenguaje facilitan la migración desde SQL Server y otros orígenes de datos. 
+APS AU6 admite estas mejoras de compatibilidad con T-SQL.  Estos elementos adicionales del lenguaje facilitan la migración desde SQL Server y otros orígenes de datos. 
 
-- [Intercalaciones de SQL de nivel de columna][] ahora son compatibles, además de las intercalaciones de Windows.
-- [Índices no clúster en índices de almacén de columnas agrupado][] mejorar el rendimiento de las consultas que buscan valores específicos en el índice de almacén de columnas agrupado. 
-- [SELECCIONE... EN][] 
-- [sp_spaceused()][] muestra el espacio en disco utilizado o reservadas en una tabla o una base de datos.
-- [Tablas anchas][] compatibilidad es igual que SQL Server 2016. El límite anterior de 32 KB para el tamaño de fila ya no existe. 
+- Ahora se admiten las [intercalaciones de SQL de nivel de columna][] , además de las intercalaciones de Windows.
+- Los [Índices no clúster en índices de almacén de columnas agrupados][] mejoran el rendimiento de las consultas que buscan valores específicos en el índice de almacén de columnas agrupado. 
+- [SELECCIONE... DENTRO][] 
+- [sp_spaceused ()][] muestra el espacio en disco utilizado o reservado en una tabla o base de datos.
+- La compatibilidad con [tablas anchas][] es igual que SQL Server 2016. Ya no existe el límite anterior de 32 K para el tamaño de la fila. 
 
 **Tipos de datos**
 
-- [Varchar (max)][], [nvarchar (max)][] y [varbinary (max)][]. Estos tipos de datos LOB tienen un tamaño máximo de 2 GB. Para cargar estos objetos utilizan [bcp (utilidad)][]. PolyBase y dwloader no admite actualmente estos tipos de datos. 
-- [SYSNAME][]
+- [VARCHAR (Max)][], [nvarchar (Max)][] y [varbinary (Max)][]. Estos tipos de datos LOB tienen un tamaño máximo de 2 GB. Para cargar estos objetos, utilice la [utilidad BCP][]. Polybase y dwloader no admiten estos tipos de datos actualmente. 
+- [PREDETERMINADO][]
 - [UNIQUEIDENTIFIER][]
-- [NUMERIC][] y tipos de datos DECIMAL.
+- Tipos de datos [NUMERIC][] y decimales.
 
 **Funciones de ventana**
 
-- [ROWS o RANGE][] en la cláusula OVER de la instrucción SELECT.
+- [Filas o intervalo][] en la cláusula over de la instrucción SELECT.
 - [FIRST_VALUE][]
 - [LAST_VALUE][]
 - [CUME_DIST][]
@@ -181,7 +195,7 @@ APS AU6 es compatible con estas mejoras de compatibilidad de Transact-SQL.  Esto
 
 **Funciones de seguridad**
 
-- [Checksum()][] y [BINARY_CHECKSUM()][]
+- [CHECKSUM()][] y [BINARY_CHECKSUM()][]
 - [HAS_PERMS_BY_NAME()][]
 
 **Funciones adicionales**
@@ -189,32 +203,32 @@ APS AU6 es compatible con estas mejoras de compatibilidad de Transact-SQL.  Esto
 - [NEWID()][]
 - [RAND()][]
 
-### <a name="polybasehadoop-enhancements"></a>Mejoras de PolyBase/Hadoop
+### <a name="polybasehadoop-enhancements"></a>Mejoras de polybase y Hadoop
 
-- Compatibilidad con Hortonworks HDP 2.4 y 2.5 de HDP
+- Compatibilidad con Hortonworks HDP 2,4 y HDP 2,5
 - Compatibilidad con Kerberos a través de credenciales con ámbito de base de datos
-- Compatibilidad con credenciales con Blobs de Azure Storage
+- Compatibilidad con credenciales con blobs Azure Storage
 
-### <a name="install-and-upgrade-enhancements"></a>Instalación y mejoras de actualización
+### <a name="install-and-upgrade-enhancements"></a>Mejoras en la instalación y la actualización
 
-**Las actualizaciones de arquitectura empresarial** actualizar el dispositivo existente para APS AU6 instala las actualizaciones de controlador, que incluyen revisiones de seguridad y el firmware más reciente. 
+**Actualizaciones de arquitectura de empresa** La actualización del dispositivo existente a APS AU6 instala las últimas actualizaciones de firmware y controlador, que incluyen revisiones de seguridad. 
 
-Una nueva aplicación de HPE o DELL incluye todas las actualizaciones más recientes plus:
+Un nuevo dispositivo de HPE o DELL incluye todas las actualizaciones más recientes más:
 
-- Compatibilidad con procesadores de última generación (Broadwell)
-- Actualizar a DDR4 DIMM
-- Rendimiento mejorado de DIMM
+- Compatibilidad con el procesador de última generación (Broadwell)
+- Actualización de DDR4 DIMMs
+- Rendimiento de DIMM mejorado
 
-**Integración**
+**Integrar**
 
-- Compatibilidad con el nombre de dominio completo (FQDN) totalmente permite configurar una confianza de dominio para el dispositivo. 
-- Para usar FQDN, deberá realizar una actualización completa y darse de alta durante la actualización. 
+- La compatibilidad con el nombre de dominio completo (FQDN) permite configurar una confianza de dominio en el dispositivo. 
+- Para usar el FQDN, debe realizar una actualización completa y participar durante la actualización. 
 
-**Menor tiempo de inactividad** instalando o actualizando a AU6 APS es más rápido y requiere menos tiempo de inactividad que en versiones anteriores. Para reducir el tiempo de inactividad, la instalación o actualización: 
+**Tiempo de inactividad reducido** La instalación o actualización a APS AU6 es más rápida y requiere menos tiempo de inactividad que las versiones anteriores. Para reducir el tiempo de inactividad, instale o actualice: 
 
- - Optimiza la aplicación de actualizaciones WSUS con una imagen que contiene todas las actualizaciones hasta junio de 2016
- - Aplica las actualizaciones de seguridad con las actualizaciones de firmware y controlador
- - Coloca las revisiones más recientes y la utilidad de comprobación de dispositivo (PAV) en el dispositivo para que estén listas para instalar sin necesidad de descargarlos.
+ - Simplifica la aplicación de actualizaciones de WSUS mediante el uso de una imagen que contiene todas las actualizaciones hasta el 2016 de junio
+ - Aplica las actualizaciones de seguridad con las actualizaciones del firmware y del controlador
+ - Coloca las revisiones más recientes y la utilidad de comprobación de dispositivos (PAV) en el dispositivo para que estén listas para instalarse sin necesidad de descargarlas.
 
 ::: moniker-end
 
@@ -227,19 +241,19 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [database compatibility level 130]: ../t-sql/statements/alter-database-transact-sql-compatibility-level.md
 [Intercalaciones de SQL de nivel de columna]: ~/relational-databases/collations/collation-and-unicode-support.md
 
-[Índices no clúster en índices de almacén de columnas agrupado]:/sql/t-sql/statements/create-index-transact-sql
+[Índices no clúster en índices de almacén de columnas agrupados]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR (MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
 [NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
-[SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[SELECCIONE... EN]:/sql/t-sql/queries/select-into-clause-transact-sql
-[sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
+[PREDETERMINADO]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
+[SELECCIONE... DENTRO]:/sql/t-sql/queries/select-into-clause-transact-sql
+[sp_spaceused ()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Tablas anchas]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
-[bcp (utilidad)]:/sql/tools/bcp-utility
+[utilidad BCP]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
 [NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
-[ROWS o RANGE]:/sql/t-sql/queries/select-over-clause-transact-sql
+[FILAS o intervalo]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
 [CUME_DIST]:/sql/t-sql/functions/cume-dist-transact-sql

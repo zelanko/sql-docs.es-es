@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68811040"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -132,7 +132,7 @@ ms.locfileid: "68811040"
   
  Un índice no clúster de almacén de columnas proporciona una manera de tener un índice de almacén de columnas para ejecutar consultas de análisis al tiempo que se realizan operaciones de solo lectura en la tabla original.  
   
- ![Índice de almacén de columnas] no agrupado (../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Índice de almacén de columnas") no agrupado  
+ ![Índice de almacén de columnas no agrupado](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Índice de almacén de columnas no agrupado")  
   
  Índice clúster de almacén de columnas  
  Un *clustered columnstore index* es el almacenamiento físico para toda la tabla y es el único índice de la tabla. El índice clúster se puede actualizar. Puede realizar operaciones de inserción, eliminación y actualización del índice y puede cargar datos de forma masiva en el índice.  

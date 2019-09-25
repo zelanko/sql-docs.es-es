@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69633638"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configuración de un cliente de ciencia de datos para el desarrollo de R en SQL Server

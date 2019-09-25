@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b7b091c6e963af043533bfe362a801d7d4c91f2
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493875"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definir una relación de varios a varios
@@ -35,7 +35,7 @@ ms.locfileid: "69493875"
   
 1.  Abra el Diseñador de vistas del origen de datos para la vista del origen de datos **Adventure Works DW 2012** .  
   
-2.  Haga clic con el botón secundario en cualquier lugar del panel **organizador** de diagramas, `Internet Sales Order Reasons` haga clic en **nuevo diagrama**y especifique como nombre de este nuevo diagrama.  
+2.  Haga clic con el botón secundario en cualquier lugar del panel **organizador de diagramas** , `Internet Sales Order Reasons` haga clic en **nuevo diagrama**y especifique como nombre de este nuevo diagrama.  
   
 3.  Arrastre la tabla **InternetSales** al panel **Diagrama** desde el panel **Tablas** .  
   
@@ -105,7 +105,7 @@ ms.locfileid: "69493875"
   
 7.  En la lista **Columna de nombre** , seleccione **SalesReasonName**.  
   
-8.  Haga clic en **Next**.  
+8.  Haga clic en **Siguiente**.  
   
 9. En la página **Seleccionar los atributos de la dimensión** , el atributo **Sales Reason Key** se selecciona automáticamente porque es el atributo clave. Active la casilla situada junto al atributo **sales Reason Reason Type** , cambie su nombre a `Sales Reason Type`y, a continuación, haga clic en **siguiente**.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "69493875"
   
 12. En el panel **atributos** del diseñador de dimensiones para la dimensión **sales Reason** , seleccione **sales Reason Key**y, a continuación, cambie la propiedad **Name** en el ventana Propiedades a`Sales Reason.`  
   
-13. En el panel jerarquías del diseñador de dimensiones, cree una jerarquía de usuario **sales reasons** que `Sales Reason Type` contenga el nivel y el nivel **sales Reason** , en ese orden.  
+13. En el panel **jerarquías** del diseñador de dimensiones, cree una jerarquía de usuario **sales reasons** que `Sales Reason Type` contenga el nivel y el nivel **sales Reason** , en ese orden.  
   
 14. En el ventana Propiedades, defina `All Sales Reasons` como el valor de la propiedad **AllMemberName** de la jerarquía sales reasons.  
   

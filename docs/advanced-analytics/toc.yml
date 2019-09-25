@@ -47,26 +47,22 @@
   items:
     - name: Python
       items:
-        - name: Comprobación de que Python existe en SQL Server
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: Hola mundo en Python y SQL
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: Control de entradas y salidas
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Estructuras de datos de Python y SQL
+        - name: Creación de scripts de Python
+          href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+        - name: Control de tipos de datos y objetos
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: Entrenamiento y uso del primer modelo
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+        - name: Entrenamiento y puntuación de un modelo
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
         - name: Creación de scripts de R
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: Entrenamiento y puntuación de un modelo
-          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
         - name: Control de tipos de datos y objetos
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
         - name: Escritura de funciones de R
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
+        - name: Entrenamiento y puntuación de un modelo
+          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: Tutoriales
   items:
     - name: Python

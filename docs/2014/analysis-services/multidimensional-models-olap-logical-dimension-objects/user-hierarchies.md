@@ -26,16 +26,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1192deaa556dd8546d0d9fbf17d5ff79335173a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68887828"
 ---
 # <a name="user-hierarchies"></a>Jerarquías de usuario
   Las jerarquías definidas por el usuario son jerarquías definidas por el usuario de atributos que [!INCLUDE[msCoName](../../includes/msconame-md.md)] se utilizan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar los miembros de una dimensión en estructuras jerárquicas y proporcionar rutas de navegación en un cubo. Por ejemplo, en la tabla siguiente se define una tabla de dimensiones para una dimensión de tiempo. La tabla de dimensiones admite tres atributos denominados Year, Quarter y Month.  
   
-|Year|Trimestre|Mes|  
+|Year|Trimestre|Month|  
 |----------|-------------|-----------|  
 |1999|Trimestre 1|Jan|  
 |1999|Trimestre 1|Feb|  
@@ -80,7 +80,7 @@ ms.locfileid: "68887828"
  El nivel Province se rellena con miembros asociados a otros miembros en el nivel CountryRegion y los miembros del nivel City se asocian a sus miembros correspondientes en el nivel Province. Sin embargo, puesto que el miembro Vatican City del nivel CountryRegion no tiene miembros asociados en el nivel Province, los miembros se deben asociar desde el nivel City directamente al miembro Vatican City en el nivel CountryRegion. Debido a los cambios, la jerarquía de la dimensión es ahora irregular. El elemento primario de la ciudad Vatican City es el país o región Vatican City, que no se encuentra en el nivel inmediatamente superior al miembro Vatican City del nivel City. Para más información, vea [Jerarquías desiguales](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Jerarquías de elementos primarios y secundarios  
- Las jerarquías de elementos primarios y secundarios para dimensiones se definen mediante un atributo especial, llamado atributo primario, para determinar cómo se relacionan entre sí los miembros. Un atributo primario describe una *relación que hace referencia a sí misma*o una *autocombinación*dentro de una tabla principal de dimensiones. Las jerarquías de elementos primarios y secundarios se construyen a partir de un único atributo primario. A una jerarquía de elementos primarios y secundarios solo se le asigna un nivel, puesto que los niveles presentes en la jerarquía se extraen de las relaciones de elementos primarios y secundarios entre los miembros asociados al atributo primario. El esquema de dimensiones de una jerarquía de elementos primarios y secundarios depende de la relación que hace referencia a sí misma presente en la tabla principal de dimensiones. Por ejemplo, en el diagrama siguiente se muestra la tabla principal de dimensión de biomorgan [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] en la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos de ejemplo.  
+ Las jerarquías de elementos primarios y secundarios para dimensiones se definen mediante un atributo especial, llamado atributo primario, para determinar cómo se relacionan entre sí los miembros. Un atributo primario describe una *relación que hace referencia a sí misma*o una *autocombinación*dentro de una tabla principal de dimensiones. Las jerarquías de elementos primarios y secundarios se construyen a partir de un único atributo primario. A una jerarquía de elementos primarios y secundarios solo se le asigna un nivel, puesto que los niveles presentes en la jerarquía se extraen de las relaciones de elementos primarios y secundarios entre los miembros asociados al atributo primario. El esquema de dimensiones de una jerarquía de elementos primarios y secundarios depende de la relación que hace referencia a sí misma presente en la tabla principal de dimensiones. Por ejemplo, en el diagrama siguiente se muestra la tabla principal de dimensión de **biomorgan** en la [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos de ejemplo.  
   
  ![Combinación con referencia automática en la tabla de Biomorgan](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/dimorganization.gif "Combinación con referencia automática en la tabla de Biomorgan")  
   
@@ -90,7 +90,7 @@ ms.locfileid: "68887828"
   
  La profundidad de una jerarquía de elementos primarios y secundarios puede variar entre sus ramas jerárquicas. En otras palabras, una jerarquía de elementos primarios y secundarios se considera una jerarquía desequilibrada.  
   
- A diferencia de las jerarquías definidas por el usuario, en las que el número de niveles de la jerarquía determina el número de niveles que se mostrarán a los usuarios finales, una jerarquía de elementos primarios y secundarios se define con el único nivel de una jerarquía de atributo, y los valores de este único nivel generan los diversos niveles que ven los usuarios finales. El número de niveles mostrados depende del contenido de las columnas de la tabla de dimensiones, que almacenan las claves de miembro y las claves principales. El número de niveles puede variar cuando cambian los datos de las tablas de dimensiones. Para obtener más información, vea jerarquía de elementos primarios y [secundarios](../multidimensional-models/parent-child-dimension.md)y [atributos en jerarquías](../multidimensional-models/parent-child-dimension-attributes.md)de elementos primarios y secundarios.  
+ A diferencia de las jerarquías definidas por el usuario, en las que el número de niveles de la jerarquía determina el número de niveles que se mostrarán a los usuarios finales, una jerarquía de elementos primarios y secundarios se define con el único nivel de una jerarquía de atributo, y los valores de este único nivel generan los diversos niveles que ven los usuarios finales. El número de niveles mostrados depende del contenido de las columnas de la tabla de dimensiones, que almacenan las claves de miembro y las claves principales. El número de niveles puede variar cuando cambian los datos de las tablas de dimensiones. Para obtener más información, vea jerarquía de elementos [primarios y secundarios](../multidimensional-models/parent-child-dimension.md)y [atributos en jerarquías de elementos primarios y secundarios](../multidimensional-models/parent-child-dimension-attributes.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Crear jerarquías definidas por el usuario](../multidimensional-models/user-defined-hierarchies-create.md)   

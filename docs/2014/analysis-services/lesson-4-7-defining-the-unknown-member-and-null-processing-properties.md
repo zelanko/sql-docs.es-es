@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0d97b7fea9557e1ce462fcc540e51a1ee4b0228
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493920"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definir las propiedades de miembro desconocido y de procesamiento de valores NULL
@@ -175,7 +175,7 @@ ms.locfileid: "69493920"
   
      Observe que todos los componentes de ensamblado ahora aparecen en el nivel **Product Name** , como se muestra en la ilustración siguiente.  
   
-     ![Nivel de nombre del producto que muestra los componentes] del ensamblado (../../2014/tutorials/media/l4-assemblycomponents-1.gif "Nivel de nombre del producto que muestra los componentes") del ensamblado  
+     ![Nivel de nombre del producto que muestra los componentes del ensamblado](../../2014/tutorials/media/l4-assemblycomponents-1.gif "Nivel de nombre del producto que muestra los componentes del ensamblado")  
   
 ## <a name="next-lesson"></a>Lección siguiente  
  [Lección 5: Definir relaciones entre dimensiones y grupos de medida](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  

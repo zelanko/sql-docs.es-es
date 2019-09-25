@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1fe1521f2eebaa4413b49c315f17a6b1b6a5914
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68887939"
 ---
 # <a name="dimension-relationships"></a>Relaciones de dimensión
@@ -40,13 +40,13 @@ ms.locfileid: "68887939"
   
  ![Diagrama lógico, relación de dimensión a la que se hace referencia](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension1.gif "Diagrama lógico, relación de dimensión a la que se hace referencia")  
   
- Una relación de dimensión de referencia representa la relación entre tablas de dimensiones y una tabla de hechos en un diseño de esquema de copo de nieve. Cuando las tablas de dimensiones se conectan en un esquema de copo de nieve, es posible definir una única dimensión mediante columnas de varias tablas, o bien, definir dimensiones independientes basadas en las tablas de dimensiones independientes y, a continuación, definir un vínculo entre ellas mediante la configuración de la relación de dimensión de referencia. En la ilustración siguiente se muestra una tabla de hechos denominada **InternetSales**y dos tablas de dimensiones denominadas **Customer** y Geography, en un esquema de copo de nieve.  
+ Una relación de dimensión de referencia representa la relación entre tablas de dimensiones y una tabla de hechos en un diseño de esquema de copo de nieve. Cuando las tablas de dimensiones se conectan en un esquema de copo de nieve, es posible definir una única dimensión mediante columnas de varias tablas, o bien, definir dimensiones independientes basadas en las tablas de dimensiones independientes y, a continuación, definir un vínculo entre ellas mediante la configuración de la relación de dimensión de referencia. En la ilustración siguiente se muestra una tabla de hechos denominada **InternetSales**y dos tablas de dimensiones denominadas **Customer** y **Geography**, en un esquema de copo de nieve.  
   
  ![Esquema lógico, relación de dimensión a la que se hace referencia](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdim-schema1.gif "Esquema lógico, relación de dimensión a la que se hace referencia")  
   
- Puede crear una dimensión con la tabla **Customer** como la tabla principal de dimensiones y la tabla Geography incluida como una tabla relacionada. Entonces se define una relación normal entre la dimensión y el grupo de medida InternetSales.  
+ Puede crear una dimensión con la tabla **Customer** como la tabla principal de dimensiones y la tabla **Geography** incluida como una tabla relacionada. Entonces se define una relación normal entre la dimensión y el grupo de medida InternetSales.  
   
- Como alternativa, puede crear dos dimensiones relacionadas con el grupo de medida InternetSales: una dimensión basada en la tabla **Customer** y una dimensión basada en la tabla Geography. A continuación, puede relacionar la dimensión geográfica con el grupo de medida InternetSales mediante una relación de dimensión de referencia por medio de la dimensión de cliente. En este caso, cuando los hechos del grupo de medida InternetSales están influenciados por la dimensión geográfica, los hechos están influenciados por Customer y Geography. Si el cubo contiene un segundo grupo de medida denominado Reseller Sales, no podrá dimensionar los hechos del grupo de medida Reseller Sales por Geography, dado que no existiría relación entre Reseller Sales y Geography.  
+ Como alternativa, puede crear dos dimensiones relacionadas con el grupo de medida InternetSales: una dimensión basada en la tabla **Customer** y una dimensión basada en la tabla **Geography** . A continuación, puede relacionar la dimensión geográfica con el grupo de medida InternetSales mediante una relación de dimensión de referencia por medio de la dimensión de cliente. En este caso, cuando los hechos del grupo de medida InternetSales están influenciados por la dimensión geográfica, los hechos están influenciados por Customer y Geography. Si el cubo contiene un segundo grupo de medida denominado Reseller Sales, no podrá dimensionar los hechos del grupo de medida Reseller Sales por Geography, dado que no existiría relación entre Reseller Sales y Geography.  
   
  No hay ningún límite con respecto al número de dimensiones de referencia que se pueden encadenar, como se muestra en la siguiente ilustración.  
   

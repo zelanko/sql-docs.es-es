@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493892"
 ---
 # <a name="defining-named-sets"></a>Definir conjuntos con nombre
@@ -36,7 +36,7 @@ ms.locfileid: "69493892"
   
      En el panel **Organizador de script** , observe el icono único que diferencia un conjunto con nombre de un comando de script o de un miembro calculado.  
   
-4.  En la pestaña metadatos del **panel herramientas de cálculo** ,expanda producto `Members`, categoría, y, a continuación, expanda **todos los productos**.  
+4.  En la **pestaña metadatos** del **panel herramientas de cálculo** , expanda **producto** `Members`, **categoría**, y, a continuación, expanda **todos los productos**.  
   
     > [!NOTE]  
     >  Si no puede ver los metadatos en el panel **Herramientas de cálculo** , haga clic en **Volver a conectar** en la barra de herramientas. Si esto no funciona, puede que tenga que procesar el cubo o iniciar la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "69493892"
   
      Ahora que ha definido el primer conjunto para la expresión de conjunto EXISTS, está listo para agregar el segundo conjunto: el conjunto de miembros de la dimensión reseller que contiene el mayor número de empleados.  
   
-7.  En la pestaña metadatos del panel **herramientas de cálculo** , expanda **número de empleados** en la dimensión reseller, expanda `Members`y, a continuación, expanda **todos los revendedores**.  
+7.  En la pestaña **metadatos** del **panel herramientas de cálculo** , expanda **número de empleados** en la dimensión reseller, expanda `Members`y, a continuación, expanda **todos los revendedores**.  
   
      Observe que los miembros de esta jerarquía de atributo no están agrupados.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "69493892"
   
 11. Cuando la implementación haya finalizado correctamente, vaya al Diseñador de cubos del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial y, a continuación, haga clic en **Volver a conectar** en la barra de herramientas de la pestaña **Cálculos** .  
   
-12. En la pestaña metadatos del **panel herramientas de cálculo** , expanda **número de empleados** en la dimensión **reseller** , expanda `Members`y, a continuación, expanda **todos los revendedores**.  
+12. En la pestaña **metadatos** del panel **herramientas de cálculo** , expanda **número de empleados** en la dimensión **reseller** , expanda `Members`y, a continuación, expanda **todos los revendedores**.  
   
      Observe que los miembros de esta jerarquía de atributos están contenidos ahora en cinco grupos, numerados de 0 a 4. Para ver el número de un grupo, pause el puntero sobre ese grupo para ver un recuadro informativo. Para el intervalo `2 -17`, el recuadro informativo debe contener `[Reseller].[Number of Employees].&[0]`.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493892"
   
      La siguiente imagen muestra el panel de las **expresiones** de `[Large Resellers]` cálculo para el conjunto con nombre.  
   
-     ![Panel de expresiones de cálculo para [distribuidores grandes]](../../2014/tutorials/media/l6-named-set-02.gif "Panel de expresiones de cálculo para [distribuidores grandes]")  
+     ![Panel de expresiones de cálculo para [distribuidores grandes]] (../../2014/tutorials/media/l6-named-set-02.gif "Panel de expresiones de cálculo para [distribuidores grandes]")  
   
 14. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Vista de script**y, a continuación, revise los dos conjuntos con nombre que acaba de agregar al script de cálculo.  
   
@@ -117,19 +117,19 @@ ms.locfileid: "69493892"
   
 5.  Expanda la dimensión Product y, a continuación, agregue Category y Subcategory al área de fila, como se muestra en la ilustración siguiente.  
   
-     ![Miembros del atributo Subcategoría](../../2014/tutorials/media/l6-named-set-03.gif "Miembros del atributo Subcategoría")  
+     ![Miembros del atributo Subcategoría] (../../2014/tutorials/media/l6-named-set-03.gif "Miembros del atributo Subcategoría")  
   
 6.  En el panel **Metadatos** , en la dimensión **Product** , arrastre **Core Products** el área de filtro.  
   
      Observe que solo el miembro **Bike** del atributo **Category** y los miembros de las subcategorías **Bike** permanecen en el cubo. Esto se debe a que se usa el conjunto con nombre **Core Products** para definir un subcubo. Este subcubo limita los miembros del atributo **Category** en la dimensión **Product** del subcubo a los miembros del conjunto con nombre **Core Products** , tal como se muestra en la ilustración siguiente.  
   
-     ![Miembros del conjunto con nombre Core Product](../../2014/tutorials/media/l6-named-set-04.gif "Miembros del conjunto con nombre Core Product")  
+     ![Miembros del conjunto con nombre Core Product] (../../2014/tutorials/media/l6-named-set-04.gif "Miembros del conjunto con nombre Core Product")  
   
 7.  En el panel **Metadatos** , expanda **Distribuidor**y agregue **Grandes distribuidores** al área de filtro.  
   
      Observe que la medida Importe de datos del distribuidor del panel Datos solo muestra importes de venta para los grandes distribuidores de bicicletas. Observe también que el panel Filtro muestra ahora los dos conjuntos con nombre que se utilizan para definir este subcubo en particular, tal como muestra la siguiente imagen.  
   
-     ![Panel de filtro que contiene dos conjuntos con nombre](../../2014/tutorials/media/l6-named-set-05.gif "Panel de filtro que contiene dos conjuntos con nombre")  
+     ![Panel de filtro que contiene dos conjuntos con nombre] (../../2014/tutorials/media/l6-named-set-05.gif "Panel de filtro que contiene dos conjuntos con nombre")  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Lección 7: Definición de KPI clave &#40;de indicadores de rendimiento&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  

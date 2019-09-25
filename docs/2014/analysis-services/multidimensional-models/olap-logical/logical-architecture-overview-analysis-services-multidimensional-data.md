@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68889611"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Información general de arquitectura lógica (Analysis Services - Datos multidimensionales)
@@ -101,7 +101,7 @@ ms.locfileid: "68889611"
 |Nivel Route Category en la dimensión Route|nonground,ground|RouteDimensionTable|Route_Category|Nonground|  
 |Atributo Route en la dimensión Route|air,sea,road,rail|RouteDimensionTable|Ruta|Sea|  
 |Atributo Hemisphere en la dimensión Source|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|  
-|Atributo Continent en la dimensión Source|Africa,Asia,AustraliaEurope,N. America,S. América|SourceDimensionTable|Continente|Europa|  
+|Atributo Continent en la dimensión Source|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continente|Europe|  
 |Atributo Half en la dimensión Time|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Atributo Quarter en la dimensión Time|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Trimestre|3rd quarter|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "68889611"
   
  En la tabla anterior, cada fila tiene los mismos valores para las columnas **RouteKey**, **SourceKey**y **TimeKey** , lo que indica que estas filas contribuyen a la misma celda del cubo.  
   
- En este ejemplo se representa un cubo muy sencillo, en donde el cubo tiene un solo grupo de medida y todas las tablas de dimensiones se combinan en la tabla de hechos en un esquema en estrella. Otro esquema común es el esquema de copo de nieve, en el que una o más tablas de dimensiones se combinan con otra tabla de dimensiones, en lugar de combinarse directamente con la tabla de hechos. **Tema relacionado:** [Dimensiones &#40;Analysis Services:&#41;datos](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)multidimensionales.  
+ En este ejemplo se representa un cubo muy sencillo, en donde el cubo tiene un solo grupo de medida y todas las tablas de dimensiones se combinan en la tabla de hechos en un esquema en estrella. Otro esquema común es el esquema de copo de nieve, en el que una o más tablas de dimensiones se combinan con otra tabla de dimensiones, en lugar de combinarse directamente con la tabla de hechos. **Tema relacionado:** [Dimensiones &#40;Analysis Services: datos&#41;multidimensionales](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
  Este ejemplo contiene una sola tabla de hechos. Cuando un cubo tiene varias tablas de hechos, las medidas de cada tabla de hechos se organizan en grupos de medida y un grupo de medida se relaciona con un determinado conjunto de dimensiones mediante relaciones de dimensiones definidas. Estas relaciones se definen mediante la especificación de las tablas participantes en la vista del origen de datos y la granularidad de la relación. **Tema relacionado:** [Relaciones de dimensión](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   

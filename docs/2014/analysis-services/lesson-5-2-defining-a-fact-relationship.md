@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493862"
 ---
 # <a name="defining-a-fact-relationship"></a>Definir una relación de hechos
@@ -51,7 +51,7 @@ ms.locfileid: "69493862"
   
 7.  En la lista **Columna de nombre** , seleccione **SalesOrderLineNumber**.  
   
-8.  Haga clic en **Next**.  
+8.  Haga clic en **Siguiente**.  
   
 9. En la página **Seleccionar tablas relacionadas** , desactive las casillas que aparecen al lado de todas las tablas y, después, haga clic en **Siguiente**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "69493862"
   
 13. En el menú **Archivo** , haga clic en **Guardar todo**.  
   
-14. En el panel **atributos** del diseñador de dimensiones para la dimensión **Internet sales Order** details, seleccione **sales Order Number**y, a continuación, cambie la propiedad **Name** en el ventana Propiedades a`Item Description.`  
+14. En el panel **atributos** del diseñador de dimensiones para la dimensión **Internet sales Order Details** , seleccione **sales Order Number**y, a continuación, cambie la propiedad **Name** en el ventana Propiedades a`Item Description.`  
   
 15. En la celda de la propiedad **NameColumn** , haga clic en el botón examinar **(...)** . En el cuadro de diálogo **Columna de nombre** , seleccione **Product** en la lista **Tabla de origen** , seleccione **EnglishProductName** en **Columna de origen**y, después, haga clic en **Aceptar**.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69493862"
   
 17. Cambie la propiedad **nombre** del nuevo atributo **sales Order Number** por `Order Number`y cambie la propiedad **OrderBy** a **key**.  
   
-18. En el panel jerarquías, cree una jerarquía de usuarios de pedidos de ventas por `Order Number` **Internet** que contenga los niveles de **Descripción del elemento** y en ese orden.  
+18. En el panel **jerarquías** , cree una jerarquía de usuarios de pedidos de ventas por `Order Number` **Internet** que contenga los niveles de **Descripción del elemento** y en ese orden.  
   
 19. En el panel **Atributos** , seleccione **Internet Sales Order Details**y luego revise el valor de la propiedad **StorageMode** en la ventana Propiedades.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "69493862"
   
      Observe que la dimensión de cubo **Internet Sales Order Details** está configurada automáticamente con una relación de hechos, como indica el icono único.  
   
-2.  Haga clic en el botón Examinar ( **...** ) de la celda **Descripción del elemento** , en la intersección del grupo de medida **Internet sales** y la dimensión **Internet sales Order** details, para revisar las propiedades de la relación de hechos.  
+2.  Haga clic en el botón Examinar ( **...** ) de la celda **Descripción del elemento** , en la intersección del grupo de medida **Internet sales** y la dimensión **Internet sales Order Details** , para revisar las propiedades de la relación de hechos.  
   
      Se abre el cuadro de diálogo **Definir relación** . Observe que no puede configurar ninguna de las propiedades.  
   

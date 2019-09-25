@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70978404"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Supervisar SQL Server Machine Learning Services mediante vistas de administración dinámica (DMV)
@@ -40,7 +40,7 @@ Para obtener más información general sobre las DMV, consulte [vistas de admini
 
 Se pueden usar las siguientes vistas de administración dinámica al supervisar cargas de trabajo de machine learning en SQL Server. Para consultar las DMV, necesita `VIEW SERVER STATE` el permiso en la instancia.
 
-| Vista de administración dinámica | Type | Descripción |
+| Vista de administración dinámica | Tipo | Descripción |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Ejecución | Devuelve una fila para cada cuenta de trabajo activa que ejecuta un script externo. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Ejecución | Devuelve una fila por cada tipo de solicitud de script externo. |

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: julieMSFT
+author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 4627118daa91305dc905eb5f306e6bd2fcc1b91c
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903612"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163895"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -229,11 +229,13 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
 
 > [!NOTE]
 > El gráfico anterior puede presentar distintas formas para planes de consulta específicos, con los significados siguientes para cada estado posible:<br />  
+> 
 > |Forma|Significado|  
 > |-------------------|-------------|
 > |Circle|Consulta completada (ejecución normal finalizada correctamente)|
 > |Square|Cancelado (ejecución del cliente iniciada anulada)|
 > |Triangle|Error (ejecución de excepción anulada)|
+> 
 > Además, el tamaño de la forma refleja el recuento de la ejecución de consulta dentro del intervalo de tiempo especificado, aumentando de tamaño con un número mayor de ejecuciones.  
 
 -   Se puede concluir que a la consulta le falta un índice la ejecución óptima. Esta información aparece en el plan de ejecución de la consulta. Cree el índice que falta y compruebe el rendimiento de la consulta mediante el Almacén de consultas.  
@@ -306,9 +308,9 @@ FROM sys.database_query_store_options;
   
  Si el problema continúa, significa que los datos del Almacén de consultas siguen dañados en el disco.
  
- A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], el Almacén de consultas se puede recuperar si se ejecuta el procedimiento **sp_query_store_consistency_check** almacenado en la base de datos afectada. Para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tendrá que borrar los datos del Almacén de consultas, como se muestra a continuación.
+ A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], el Almacén de consultas se puede recuperar si se ejecuta el procedimiento **sp_query_store_consistency_check** almacenado en la base de datos afectada. El Almacén de consultas debe deshabilitarse antes de intentar la operación de recuperación. Para [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tendrá que borrar los datos del Almacén de consultas, como se muestra a continuación.
  
- Si esto no ha solucionado el problema, puede intentar borrar el Almacén de consultas antes de solicitar el modo de lectura y escritura.  
+ Si la recuperación no se realizó correctamente, puede intentar borrar el Almacén de consultas antes de establecer el modo de lectura y escritura.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -337,7 +339,7 @@ FROM sys.database_query_store_options;
 |Personalizado|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce un modo de captura PERSONALIZADO en el comando `ALTER DATABASE SET QUERY_STORE`. Cuando se habilita, una nueva configuración de la directiva de captura del Almacén de consultas incluye más configuraciones del Almacén para optimizar la recopilación de datos en un servidor específico.<br /><br />Las nuevas opciones de configuración personalizadas definen lo que ocurre durante el umbral de tiempo de la directiva de captura interna: un límite de tiempo durante el que se evalúan las condiciones configurables y, si alguna de ellas es verdadera, la consulta puede registrarse en el Almacén de consultas. Para obtener más información, vea [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 
 > [!NOTE]
-> Los cursores, las consultas dentro de los procedimientos almacenados y las consultas compiladas de forma nativa siempre se capturan cuando el modo de captura de consultas se establece en Todo, Automático o Personalizado.
+> Los cursores, las consultas dentro de los procedimientos almacenados y las consultas compiladas de forma nativa siempre se capturan cuando el modo de captura de consultas se establece en Todo, Automático o Personalizado. Para capturar consultas compiladas de forma nativa, habilite la recopilación de estadísticas por consulta mediante [sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md). 
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>Conservación de los datos más relevantes en el Almacén de consultas  
  Configure el Almacén de consultas para que contenga solo los datos pertinentes y para que se ejecute continuamente proporcionando una magnífica experiencia de solución de problemas con un impacto mínimo en la carga de trabajo normal.  

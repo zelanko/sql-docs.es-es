@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
+ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938882"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038875"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +165,7 @@ OR ALTER
   
  Si una vista depende de una tabla o vista que se ha quitado, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un mensaje de error si alguien trata de utilizar la vista. Si se crea una nueva tabla o vista y la estructura de la tabla no cambia con respecto a la tabla base anterior para sustituir a la eliminada, se puede volver a utilizar la vista. Si cambia la estructura de la nueva tabla o vista, es necesario eliminar la vista y volver a crearla.  
   
- Si una vista no se crea con la cláusula SCHEMABINDING, debe ejecutarse [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) cuando se realicen cambios en los objetos subyacentes de la vista que afecten a la definición de ésta. De lo contrario, la vista podría producir resultados inesperados en las consultas.  
+ Si una vista no se crea con la cláusula SCHEMABINDING, ejecute [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) cuando se realicen cambios en los objetos subyacentes de la vista que afecten a la definición de ésta. De lo contrario, la vista podría producir resultados inesperados en las consultas.  
   
  Cuando se crea una vista, la información sobre ella se almacena en estas vistas de catálogo: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) y [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). El texto de la instrucción CREATE VIEW se almacena en la vista de catálogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
@@ -245,11 +245,11 @@ FROM Tn;
   
 1.  La `list` de selección  
   
-    -   Todas las columnas de las tablas miembro deben seleccionarse en la lista de columnas de la definición de la vista.  
+    -   En la lista de columnas de la definición de vistas, seleccione todas las columnas en las tablas miembro.  
   
-    -   Las columnas que se encuentren en la misma posición ordinal de cada `select list` deben ser del mismo tipo, incluidas las intercalaciones. No es suficiente que las columnas sean de tipos implícitamente convertibles, como sucede normalmente con UNION.  
+    -   Asegúrese de que las columnas que se encuentren en la misma posición ordinal de cada `select list` son del mismo tipo, incluidas las intercalaciones. No es suficiente que las columnas sean de tipos implícitamente convertibles, como sucede normalmente con UNION.  
   
-         Además, al menos una columna (por ejemplo `<col>`) debe aparecer en todas las listas de selección en la misma posición ordinal. Esta columna `<col>` debe definirse de tal forma que las tablas miembro `T1, ..., Tn` tengan restricciones CHECK `C1, ..., Cn` definidas en `<col>`, respectivamente.  
+         Además, al menos una columna (por ejemplo `<col>`) debe aparecer en todas las listas de selección en la misma posición ordinal. Defina `<col>` de manera que las tablas miembro `T1, ..., Tn` tengan restricciones CHECK `C1, ..., Cn` definidas en `<col>`, respectivamente.  
   
          La restricción `C1` definida en la tabla `T1` debe tener el siguiente formato:  
   
@@ -280,7 +280,7 @@ FROM Tn;
   
     -   No puede ser una columna calculada, de identidad, predeterminada o **timestamp**.  
   
-    -   Si existe más de una restricción en la misma columna de una tabla miembro, el Motor de base de datos omite todas las restricciones y no las tiene en cuenta al determinar si la vista tiene particiones. Para cumplir las condiciones de la vista con particiones, solamente debe existir una restricción de partición en la columna de partición.  
+    -   Si existe más de una restricción en la misma columna de una tabla miembro, el Motor de base de datos omite todas las restricciones y no las tiene en cuenta al determinar si la vista tiene particiones. Para cumplir las condiciones de la vista con particiones, asegúrese de que solo hay una restricción de partición en la columna de partición.  
   
     -   No hay restricciones sobre la posibilidad de actualización de la columna de partición.  
   
@@ -301,9 +301,9 @@ FROM Tn;
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>Condiciones para la modificación de datos en vistas con particiones  
  Las siguientes restricciones se aplican a instrucciones que modifican datos en vistas con particiones:  
   
--   La instrucción INSERT debe proporcionar valores para todas las columnas de la vista, incluso si las tablas miembro subyacentes tienen una restricción DEFAULT para esas columnas o si admiten valores NULL. En las columnas de la tabla miembro con definiciones DEFAULT, las instrucciones no pueden usar explícitamente la palabra clave DEFAULT.  
+-   La instrucción INSERT proporciona valores para todas las columnas de la vista, incluso si las tablas miembro subyacentes tienen una restricción DEFAULT para esas columnas o si admiten valores NULL. En las columnas de la tabla miembro con definiciones DEFAULT, las instrucciones no pueden usar explícitamente la palabra clave DEFAULT.  
   
--   El valor que se va a insertar en la columna de partición debe cumplir al menos una de las restricciones subyacentes; en caso contrario, la acción de inserción provocará un error con una infracción de restricción.  
+-   El valor que se va a insertar en la columna de partición cumple al menos una de las restricciones subyacentes; en caso contrario, la acción de inserción provocará un error con una infracción de restricción.  
   
 -   Las instrucciones UPDATE no pueden especificar la palabra clave DEFAULT como valor de la cláusula SET, aunque la columna tenga definido un valor DEFAULT en la tabla miembro correspondiente.  
   
@@ -325,7 +325,7 @@ FROM Tn;
   
 -   Se iniciará una transacción distribuida para garantizar la atomicidad en todos los nodos a los que afecta la actualización.  
   
--   La opción XACT_ABORT SET debe establecerse en ON para que las instrucciones INSERT, UPDATE o DELETE funcionen.  
+-   Establezca la opción XACT_ABORT SET en ON para que funcionen las instrucciones INSERT, UPDATE o DELETE.  
   
 -   Cualquier columna de las tablas remotas de tipo **smallmoney** a la que se haga referencia en una vista con particiones se asignará como **money**. Por lo tanto, las columnas correspondientes (en la misma posición ordinal de la lista de selección) de las tablas locales deben ser también de tipo **money**.  
   
@@ -340,7 +340,7 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>Consideraciones acerca de la replicación  
  Para crear vistas con particiones en tablas miembro implicadas en la replicación, deben tenerse en cuenta las consideraciones siguientes:  
   
--   Si las tablas subyacentes intervienen en la replicación de mezcla o en la replicación transaccional con suscripciones de actualización, la columna **uniqueidentifier** también debe incluirse en la lista de selección.  
+-   Si las tablas subyacentes intervienen en la replicación de mezcla o en la replicación transaccional con suscripciones de actualización, asegúrese de que la columna **uniqueidentifier** también se incluye en la lista de selección. 
   
      Las acciones INSERT que se ejecutan en la vista con particiones deben proporcionar un valor NEWID() para la columna **uniqueidentifier**. Las acciones UPDATE en la columna **uniqueidentifier** deben proporcionar NEWID() como valor, puesto que no se puede usar la palabra clave DEFAULT.  
   

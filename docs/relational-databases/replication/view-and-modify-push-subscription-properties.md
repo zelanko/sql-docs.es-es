@@ -18,12 +18,12 @@ ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6647af394964f0b8ef88fd6cb9909ac0ef9bfbdf
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 84e3655fac042e213ad82ac02fb39969b4993026
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769229"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174234"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Ver y modificar las propiedades de una suscripción de inserción
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,23 +64,23 @@ ms.locfileid: "68769229"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para ver las propiedades de una suscripción de inserción a una publicación transaccional o de instantáneas  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Especifique **@publication** , **@subscriber** y el valor **all** para **@article** .  
+1.  En la base de datos de publicación del publicador, ejecute [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Especifique **\@publication**, **\@subscriber** y el valor **all** para **\@article**.  
   
-2.  En la base de datos de publicación del publicador, ejecute [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), especificando **@subscriber** .  
+2.  En la base de datos de publicación del publicador, ejecute [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), especificando **\@subscriber**.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para modificar las propiedades de una suscripción de inserción a una publicación transaccional o de instantáneas  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md), especificando **@subscriber** y los parámetros de las propiedades del suscriptor que se vayan a cambiar.  
+1.  En la base de datos de publicación del publicador, ejecute [sp_changesubscriber](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md), y especifique **\@subscriber** y los parámetros de las propiedades del suscriptor que se vayan a cambiar.  
   
-2.  En la base de datos de publicación del publicador, ejecute [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md). Especifique **@publication** , **@subscriber** , **@destination_db** , el valor **all** para **@article** , la propiedad de suscripción que se está cambiando como **@property** y el nuevo valor como **@value** . Esto cambia la configuración de seguridad para la suscripción de inserción.  
+2.  En la base de datos de publicación del publicador, ejecute [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md). Especifique **\@publication**, **\@subscriber**, **\@destination_db**, el valor **all** para **\@article**, la propiedad de suscripción que se va a cambiar como **\@property** y el nuevo valor como **\@value**. Esto cambia la configuración de seguridad para la suscripción de inserción.  
   
-3.  (Opcional) Para cambiar las propiedades del paquete de Servicios de transformación de datos (DTS) de una suscripción, ejecute [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) en la base de datos de suscripciones del suscriptor. Especifique el identificador del trabajo del Agente de distribución para **@jobid** y las siguientes propiedades del paquete DTS:  
+3.  (Opcional) Para cambiar las propiedades del paquete de Servicios de transformación de datos (DTS) de una suscripción, ejecute [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md) en la base de datos de suscripciones del suscriptor. Especifique el identificador del trabajo del Agente de distribución para **\@jobid** y las siguientes propiedades del paquete DTS:  
   
-    -   **@dts_package_name**  
+    -   **\@dts_package_name**  
   
-    -   **@dts_package_password**  
+    -   **\@dts_package_password**  
   
-    -   **@dts_package_location**  
+    -   **\@dts_package_location**  
   
      De esta forma se cambian las propiedades del paquete DTS de una suscripción.  
   
@@ -89,13 +89,13 @@ ms.locfileid: "68769229"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Para ver o las propiedades de una suscripción de inserción a una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md). Especifique **@publication** y **@subscriber** .  
+1.  En la base de datos de publicación del publicador, ejecute [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md). Especifique **\@publication** y **\@subscriber**.  
   
-2.  En el publicador, ejecute [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md), especificando **@subscriber** .  
+2.  En el publicador, ejecute [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md) y especifique **\@subscriber**.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Para cambiar las propiedades de una suscripción de inserción a una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md). Especifique **@publication** , **@subscriber** , **@subscriber_db** , la propiedad de suscripción que se está cambiando como **@property** y el nuevo valor como **@value** .  
+1.  En la base de datos de publicación del publicador, ejecute [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md). Especifique **\@publication**, **\@subscriber**, **\@subscriber_db**, la propiedad de suscripción que se va a cambiar como **\@property** y el nuevo valor como **\@value**.  
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
   

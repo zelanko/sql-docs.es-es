@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3249d8ffddeec75ae576cc2bbdd9478982029758
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 1b9411f3b8740d1e70f668d903b0b18b7016653d
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69609079"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71150002"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Instalar SQL Server desde el símbolo del sistema
 
@@ -244,7 +244,7 @@ Use las instrucciones siguientes para desarrollar comandos de instalación que t
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **Obligatorio cuando /SECURITYMODE=SQL**|Especifica la contraseña de la cuenta **SA** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **Opcional**|Especifica el modo de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Si no se proporciona este parámetro, se admite el modo de autenticación solamente de Windows.<br /><br /> Valor admitido: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **Opcional**|Especifica el directorio de los archivos de copia de seguridad.<br /><br /> Valor predeterminado:`<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Opcional**|Especifica la configuración de la intercalación para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> El valor predeterminado se basa en la configuración regional del sistema operativo Windows. Para obtener más información, vea [Configuración de intercalación en el programa de instalación](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx).|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **Opcional**|Especifica la configuración de la intercalación para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> La configuración de instalación predeterminada depende de la configuración regional del sistema operativo (SO). Las intercalaciones de nivel de servidor se pueden cambiar durante la instalación o modificando la configuración regional del SO antes de la instalación. La intercalación predeterminada se establece en la versión más antigua disponible que esté asociada a cada configuración regional concreta. Esto se debe a motivos de compatibilidad con versiones anteriores. Por consiguiente, esta no es siempre la intercalación recomendada. Para aprovechar al máximo las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cambie la configuración de instalación predeterminada para que use las intercalaciones de Windows. Por ejemplo, para la configuración regional del sistema operativo **Inglés (Estados Unidos)** (página de códigos 1252), la intercalación predeterminada durante la instalación es **SQL_LATIN1_GENERAL_CP1_CI_AS** y se puede cambiar a la intercalación de Windows homóloga más cercana: **Latin1_General_100_CI_AS_SC**. <br /><br />Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **Opcional**|Agrega el usuario actual al rol fijo de servidor **sysadmin** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El parámetro /ADDCURRENTUSERASSQLADMIN se puede usar al instalar las ediciones Express o cuando se usa /Role=ALLFeatures_WithDefaults. Para obtener más información, vea /ROLE a continuación.<br /><br /> El uso de /ADDCURRENTUSERASSQLADMIN es opcional, pero /ADDCURRENTUSERASSQLADMIN o /SQLSYSADMINACCOUNTS es obligatorio. Valores predeterminados:<br /><br /> **Verdadero** para las ediciones de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]<br /><br /> **False** en todas las demás|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **Obligatorio**|Especifica la cuenta de inicio del servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [Obligatorio](#Accounts)|Especifica la contraseña de SQLSVCACCOUNT.|  

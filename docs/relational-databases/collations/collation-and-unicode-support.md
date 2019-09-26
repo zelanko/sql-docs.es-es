@@ -1,7 +1,7 @@
 ---
 title: Compatibilidad con la intercalación y Unicode | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-author: stevestein
+author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bda35d5c393eaa1e4503cb487ed19b281686364
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908405"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149913"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,11 @@ Para hacer el mejor uso posible de la compatibilidad con la intercalación en [!
     
 ##  <a name="Terms"></a> Términos de intercalación    
     
--   [Intercalación](#Collation_Defn)    
+-   [Intercalación](#Collation_Defn) 
+
+    - [Conjuntos de intercalación](#Collation_sets)
+    
+    - [Niveles de intercalación](#Collation_levels)
     
 -   [Configuración regional](#Locale_Defn)    
     
@@ -70,21 +74,67 @@ Las opciones asociadas con una intercalación son la distinción de mayúsculas 
 |Distinguir acentos (\_AS)|Distingue entre caracteres acentuados y no acentuados. Por ejemplo, 'a' no es igual a 'ấ'. Si esta opción no está seleccionada, la intercalación no distinguirá acentos. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera las versiones acentuadas y no acentuadas de las letras como letras idénticas a efectos de ordenación. Puede seleccionar explícitamente no distinguir acentos especificando \_AI.|    
 |Distinguir kana (\_KS)|Distingue entre dos tipos de caracteres kana japoneses: Hiragana y Katakana. Si esta opción no está seleccionada, la intercalación no distinguirá los caracteres kana. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera los caracteres Hiragana y Katakana como caracteres iguales a efectos de ordenación. La omisión de esta opción es el único método para especificar Kana-insensibilidad.|    
 |Distinguir ancho (\_WS)|Distingue entre caracteres de ancho total y ancho medio. Si no se activa esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que la representación de ancho completo y de ancho medio del mismo carácter son idénticas para la ordenación. La omisión de esta opción es el único método para especificar no distinción de ancho.|    
-|Distinguir selector de variación (\_VSS) | Distingue distintos selectores de variación ideográfica en las intercalaciones del japonés Japanese_Bushu_Kakusu_140 y Japanese_XJIS_140, introducidas por primera vez en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Una secuencia de variación consta de un carácter base y de un selector de variación adicional. Si no se selecciona la opción \_VSS, la intercalación no distinguirá el selector de variación y este no se tendrá en cuenta en la comparación. Es decir, SQL Server considera que los caracteres que se basan en el mismo carácter base con diferentes selectores de variación son idénticos con fines de ordenación. Consulte también  [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/)(Base de datos de variaciones ideográficas de Unicode). <br/><br/> Las intercalaciones que distinguen selectores de variación (\_VSS) no se admiten en los índices de búsqueda de texto completo. Los índices de búsqueda de texto completo solo admiten opciones que distinguen acentos (\_AS), que distinguen kana (\_KS) y que distinguen ancho (\_WS). Los motores XML y CLR de SQL Server no admiten selectores de variación (\_VSS).
-|UTF-8 (\_UTF8)|Permite que los datos con codificación UTF-8 se almacenen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se selecciona esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el formato de codificación distinto de Unicode de forma predeterminada para los tipos de datos aplicables.| 
+|Distinguir selector de variación (\_VSS)|Distingue distintos selectores de variación ideográfica en las intercalaciones del japonés **Japanese_Bushu_Kakusu_140** y **Japanese_XJIS_140**, introducidas en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Una secuencia de variación consta de un carácter base y de un selector de variación adicional. Si no se selecciona la opción \_VSS, la intercalación no distinguirá el selector de variación y este no se tendrá en cuenta en la comparación. Es decir, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera que los caracteres que se basan en el mismo carácter base con diferentes selectores de variación son idénticos con fines de ordenación. Vea también [Unicode Ideographic Variation Database](https://www.unicode.org/reports/tr37/) (Base de datos de variaciones ideográficas de Unicode).<br/><br/> Las intercalaciones que distinguen selectores de variación (\_VSS) no se admiten en los índices de búsqueda de texto completo. Los índices de búsqueda de texto completo solo admiten opciones que distinguen acentos (\_AS), que distinguen kana (\_KS) y que distinguen ancho (\_WS). Los motores XML y CLR de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admiten selectores de variación (\_VSS).|      
+|Binario (\_BIN) <sup>1</sup>|Ordena y compara datos de las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] basándose en los patrones de bits definidos para cada carácter. El orden binario distingue entre mayúsculas y minúsculas, y acentos. El orden binario es también el más rápido. Para más información, vea la sección [Intercalaciones binarias](#Binary-collations) de esta página.|      
+|Punto de código binario (\_BIN2) <sup>1</sup> | Ordena y compara datos de las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según los puntos de código Unicode de datos Unicode. Para datos que no son Unicode, el punto de código binario usará comparaciones idénticas para órdenes binarios.<br/><br/> La ventaja de usar un criterio de ordenación de punto de código binario es que no es necesaria ninguna reordenación de los datos en aplicaciones que comparan los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordenados. Por consiguiente, el criterio de ordenación de punto de código binario proporciona un desarrollo más simple de las aplicaciones y posibles aumentos en el rendimiento. Para más información, vea la sección [Intercalaciones binarias](#Binary-collations) de esta página.|
+|UTF-8 (\_UTF8)|Permite que los datos con codificación UTF-8 se almacenen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se selecciona esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el formato de codificación distinto de Unicode de forma predeterminada para los tipos de datos aplicables. Para más información, vea la sección [Compatibilidad con UTF-8](#utf8) en esta página.| 
+
+<sup>1</sup> Si están seleccionadas las opciones Binario o Punto de código binario, las opciones Distinguir mayúsculas de minúsculas (\_CS), Distinguir acentos (\_AS), Distinguir kana (\_KS) y Distinguir ancho (\WS) no estarán disponibles.      
+
+#### <a name="examples-of-collation-options"></a>Ejemplos de opciones de intercalación
+Cada intercalación se combina como serie de sufijos para definir distinción entre mayúsculas y minúsculas, acentos, ancho o Kana. En estos ejemplos se describe el comportamiento del criterio de ordenación de diversas combinaciones de sufijos.
+
+|Sufijo de intercalación de Windows|Descripción del orden|
+|------------|-----------------| 
+|\_BIN <sup>1</sup>|Orden binario.|
+|\_BIN2 <sup>1</sup> <sup>2</sup>|Criterio de ordenación Punto de código binario.|
+|\_CI_AI <sup>2</sup>|No distingue mayúsculas de minúsculas, ni acentos, ni Kana y ni ancho.|
+|\_CI_AI_KS <sup>2</sup>|No distingue mayúsculas de minúsculas, ni acentos, ni ancho pero sí distingue Kana.|
+|\_CI_AI_KS_WS <sup>2</sup>|No distingue mayúsculas de minúsculas, ni acentos, pero sí distingue Kana y ancho.|
+|\_CI_AI_WS <sup>2</sup>|No distingue mayúsculas de minúsculas, ni acentos, ni Kana pero sí distingue ancho.|
+|\_CI_AS <sup>2</sup>|No distingue mayúsculas de minúsculas, ni Kana ni ancho, pero sí acentos.|
+|\_CI_AS_KS <sup>2</sup>|No distingue mayúsculas de minúsculas, ni ancho, pero sí acentos y Kana.|
+|\_CI_AS_KS_WS <sup>2</sup>|No distingue mayúsculas de minúsculas, pero sí distingue acentos, Kana y ancho.|
+|\_CI_AS_WS <sup>2</sup>|No distingue entre mayúsculas y minúsculas, ni Kana, pero sí acentos y ancho.|
+|\_CS_AI <sup>2</sup>|Distingue mayúsculas de minúsculas, pero no distingue acentos, ni Kana, ni ancho.|
+|\_CS_AI_KS <sup>2</sup>|Distingue mayúsculas de minúsculas y Kana, pero no distingue acentos ni ancho.|
+|\_CS_AI_KS_WS <sup>2</sup>|Distingue mayúsculas de minúsculas, Kana y ancho, pero no distingue acentos.|
+|\_CS_AI_WS <sup>2</sup>|Distingue mayúsculas de minúsculas y ancho, pero no distingue Kana ni acentos.|
+|\_CS_AS <sup>2</sup>|Distingue mayúsculas de minúsculas y acentos, pero no distingue Kana ni ancho.|
+|\_CS_AS_KS <sup>2</sup>|Distingue mayúsculas de minúsculas, acento y Kana, pero no distingue ancho.|
+|\_CS_AS_KS_WS <sup>2</sup>|Distingue mayúsculas de minúsculas, acentos, Kana y ancho.|
+|\_CS_AS_WS <sup>2</sup>|Distingue mayúsculas de minúsculas, acentos y ancho, pero no distingue Kana.|
+
+<sup>1</sup> Si están seleccionadas las opciones Binario o Punto de código binario, las opciones Distinguir mayúsculas de minúsculas (\_CS), Distinguir acentos (\_AS), Distinguir kana (\_KS) y Distinguir ancho (\_WS) no estarán disponibles.    
+
+<sup>2</sup> La adición de la opción UTF-8 (\_UTF8) permite codificar datos Unicode mediante UTF-8. Para más información, vea la sección [Compatibilidad con UTF-8](#utf8) en esta página. 
+
+### <a name="Collation_sets"></a> Conjuntos de intercalación
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes conjuntos de intercalación:    
+
+-  [Intercalaciones de Windows](#Windows-collations)
+
+-  [Intercalaciones binarias](#Binary-collations)
+
+-  [Intercalaciones de SQL Server](#SQL-collations)
     
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes conjuntos de intercalación:    
-    
-#### <a name="windows-collations"></a>intercalaciones de Windows    
+#### <a name="Windows-collations"></a> Intercalaciones de Windows    
 Las intercalaciones de Windows definen reglas para almacenar los datos de caracteres que se basan en una configuración regional del sistema Windows asociada. En una intercalación de Windows, la comparación de datos no Unicode se implementa con el mismo algoritmo que la de los datos Unicode. Las reglas de intercalación básicas de Windows especifican qué alfabeto o idioma se utilizan cuando se aplica un orden de diccionario, y la página de códigos que se usa para almacenar los datos de caracteres que no son Unicode. Tanto la ordenación Unicode y como la ordenación no Unicode son compatibles con comparaciones de cadenas de una determinada versión de Windows. De este modo se proporciona coherencia entre los tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y también se ofrece a los programadores la posibilidad de ordenar las cadenas de sus aplicaciones usando las mismas reglas que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).    
     
-#### <a name="binary-collations"></a>Intercalaciones binarias    
-Las intercalaciones binarias ordenan los datos según la secuencia de valores codificados definidos por la configuración regional y el tipo de datos. Distinguen entre mayúsculas y minúsculas. Una intercalación binaria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define la configuración regional y la página de códigos ANSI que se usa. Esto exige un criterio de ordenación binario. Dado que son relativamente simples, las intercalaciones binarias ayudan a mejorar el rendimiento de la aplicación. En los tipos de datos no Unicode, las comparaciones de datos se basan en los puntos de código que se definen en la página de códigos ANSI. En tipos de datos Unicode, las comparaciones de datos dependen de los puntos de código Unicode. En intercalaciones binarias de tipos de datos Unicode, la configuración regional no se tiene en cuenta a la hora de ordenar los datos. Por ejemplo, Latin_1_General_BIN y Japanese_BIN producen resultados de orden idénticos cuando se usan en datos Unicode.    
+#### <a name="Binary-collations"></a> Intercalaciones binarias    
+Las intercalaciones binarias ordenan los datos según la secuencia de valores codificados definidos por la configuración regional y el tipo de datos. Distinguen entre mayúsculas y minúsculas. Una intercalación binaria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define la configuración regional y la página de códigos ANSI que se usa. Esto exige un criterio de ordenación binario. Dado que son relativamente simples, las intercalaciones binarias ayudan a mejorar el rendimiento de la aplicación. En los tipos de datos no Unicode, las comparaciones de datos se basan en los puntos de código que se definen en la página de códigos ANSI. En tipos de datos Unicode, las comparaciones de datos dependen de los puntos de código Unicode. En intercalaciones binarias de tipos de datos Unicode, la configuración regional no se tiene en cuenta a la hora de ordenar los datos. Por ejemplo, **Latin_1_General_BIN** y **Japanese_BIN** producen resultados de orden idénticos cuando se usan en datos Unicode. Para obtener más información, vea [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md).   
     
-Hay dos tipos de intercalaciones binarias en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; las intercalaciones **BIN** antiguas y las intercalaciones **BIN2** nuevas. En una intercalación **BIN2** todos los caracteres se ordenan de acuerdo a sus puntos de código. En una intercalación **BIN** solamente el primer carácter se ordena de acuerdo al punto de código y el resto de ellos se ordenan según sus valores de byte. (Dado que la plataforma de Intel tiene una arquitectura "litte endian", los caracteres de codificación Unicode siempre se intercambian por bytes).    
+Hay dos tipos de intercalaciones binarias en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
+
+-  Las intercalaciones **BIN** heredadas, que han realizado una comparación de punto de código a punto de código incompleta para los datos Unicode. Estas intercalaciones binarias heredadas comparaban el primer carácter como WCHAR, seguido de una comparación byte a byte. En una intercalación **BIN** solamente el primer carácter se ordena de acuerdo al punto de código y el resto de ellos se ordenan según sus valores de byte.
+
+-  Las intercalaciones **BIN2** más recientes, que implementan la comparación pura de punto de código. En una intercalación **BIN2** todos los caracteres se ordenan de acuerdo a sus puntos de código. Como la plataforma de Intel tiene una arquitectura "little endian", los caracteres de codificación Unicode siempre se intercambian por bytes.     
     
-#### <a name="sql-server-collations"></a>Intercalaciones de SQL Server    
-Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_\*) son compatibles en cuanto al criterio de ordenación con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las reglas de ordenación alfabética de datos no Unicode son incompatibles con cualquier rutina de ordenación suministrada por los sistemas operativos Windows. Sin embargo, la ordenación de datos Unicode es compatible con una versión especial de las reglas de ordenación de Windows. Como las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan reglas de comparación diferentes para los datos Unicode y para los que no son Unicode, ve resultados diferentes en las comparaciones de los mismos datos, dependiendo del tipo de datos subyacente. Para obtener más información, vea [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).    
+#### <a name="SQL-collations"></a> Intercalaciones de SQL Server    
+Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_\*) son compatibles en cuanto al criterio de ordenación con las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las reglas de ordenación alfabética de datos no Unicode son incompatibles con cualquier rutina de ordenación suministrada por los sistemas operativos Windows. Sin embargo, la ordenación de datos Unicode es compatible con una versión especial de las reglas de ordenación de Windows. Como las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usan reglas de comparación diferentes para los datos Unicode y para los que no son Unicode, ve resultados diferentes en las comparaciones de los mismos datos, dependiendo del tipo de datos subyacente. Para obtener más información, vea [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md). 
+
+Durante la configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción de intercalación de instalación predeterminada viene determinada por la configuración regional del sistema operativo (SO). Las intercalaciones de nivel de servidor se pueden cambiar durante la instalación o modificando la configuración regional del SO antes de la instalación. La intercalación predeterminada se establece en la versión más antigua disponible que esté asociada a cada configuración regional concreta. Esto se debe a motivos de compatibilidad con versiones anteriores. Por consiguiente, esta no es siempre la intercalación recomendada. Para aprovechar al máximo las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cambie la configuración de instalación predeterminada para que use las intercalaciones de Windows. Por ejemplo, para la configuración regional del sistema operativo **Inglés (Estados Unidos)** (página de códigos 1252), la intercalación predeterminada durante la instalación es **SQL_LATIN1_GENERAL_CP1_CI_AS** y se puede cambiar a la intercalación de Windows homóloga más cercana: **Latin1_General_100_CI_AS_SC**.
     
 > [!NOTE]    
 > Al actualizar una instancia en idioma inglés de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se puede especificar la compatibilidad de las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL_\*) con las instancias existentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se define durante la instalación, asegúrese de especificar con cuidado la configuración de la intercalación cuando se cumple lo siguiente:    
@@ -92,14 +142,257 @@ Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 > -   El código de la aplicación depende del comportamiento de las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores.    
 > -   Se deben almacenar datos de caracteres que reflejen varios idiomas.    
     
- Se admite el establecimiento de intercalaciones en los siguientes niveles de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    
-    
-#### <a name="server-level-collations"></a>Intercalaciones de nivel de servidor   
-La intercalación predeterminada de servidor se establece durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y también se convierte en la intercalación predeterminada de las bases de datos del sistema y de todas las bases de datos del usuario. Observe que las intercalaciones exclusivas de Unicode no pueden seleccionarse durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque no se admiten como intercalaciones de nivel de servidor.    
+### <a name="Collation_levels"></a> Niveles de intercalación
+Se admite el establecimiento de intercalaciones en los siguientes niveles de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:    
+
+-  [Intercalaciones de nivel de servidor](#Server-level-collations)
+
+-  [Intercalaciones de nivel de base de datos](#Database-level-collations)
+
+-  [Intercalaciones de nivel de columna](#Column-level-collations)
+
+-  [Intercalaciones de nivel de expresión](#Expression-level-collations)
+
+#### <a name="Server-level-collations"></a> Intercalaciones de nivel de servidor   
+La intercalación predeterminada de servidor se determina durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y también se convierte en la intercalación predeterminada de las bases de datos del sistema y de todas las bases de datos del usuario. 
+
+En esta tabla se muestran las designaciones predeterminadas de intercalación determinadas por la configuración regional del sistema operativo (SO), incluidos los respectivos identificadores de código de idioma (LCID) de Windows y SQL:
+
+|Configuración regional de Windows|LCID de Windows|LCID de SQL|Intercalación predeterminada|
+|---------------|---------|---------|---------------|
+|Afrikáans (Sudáfrica)|0x0436|0x0409|Latin1_General_CI_AS|
+|Albanés (Albania)|0x041c|0x041c|Albanian_CI_AS|
+|Alsaciano (Francia)|0x0484|0x0409|Latin1_General_CI_AS|
+|Amárico (Etiopía)|0x045e|0x0409|Latin1_General_CI_AS|
+|Árabe (Argelia)|0x1401|0x0401|Arabic_CI_AS|
+|Árabe (Bahréin)|0x3c01|0x0401|Arabic_CI_AS|
+|Árabe (Egipto)|0x0c01|0x0401|Arabic_CI_AS|
+|Árabe (Iraq)|0x0801|0x0401|Arabic_CI_AS|
+|Árabe (Jordania)|0x2c01|0x0401|Arabic_CI_AS|
+|Árabe (Kuwait)|0x3401|0x0401|Arabic_CI_AS|
+|Árabe (Líbano)|0x3001|0x0401|Arabic_CI_AS|
+|Árabe (Libia)|0x1001|0x0401|Arabic_CI_AS|
+|Árabe (Marruecos)|0x1801|0x0401|Arabic_CI_AS|
+|Árabe (Omán)|0x2001|0x0401|Arabic_CI_AS|
+|Árabe (Qatar)|0x4001|0x0401|Arabic_CI_AS|
+|Árabe (Arabia Saudí)|0x0401|0x0401|Arabic_CI_AS|
+|Árabe (Siria)|0x2801|0x0401|Arabic_CI_AS|
+|Árabe (Túnez)|0x1c01|0x0401|Arabic_CI_AS|
+|Árabe (E. A. U.)|0x3801|0x0401|Arabic_CI_AS|
+|Árabe (Yemen)|0x2401|0x0401|Arabic_CI_AS|
+|Armenio (Armenia)|0x042b|0x0419|Latin1_General_CI_AS|
+|Asamés (India)|0x044d|0x044d|No disponible en el nivel de servidor|
+|Azerí (cirílico, Azerbaiyán)|0x082c|0x082c|Obsoleta, no disponible en el nivel de servidor|
+|Azerí (Azerbaiyán, alfabeto latino)|0x042c|0x042c|Obsoleta, no disponible en el nivel de servidor|
+|Baskir (Rusia)|0x046d|0x046d|Latin1_General_CI_AI|
+|Vasco (España)|0x042d|0x0409|Latin1_General_CI_AS|
+|Bielorruso (Bielorrusia)|0x0423|0x0419|Cyrillic_General_CI_AS|
+|Bengalí (Bangladés)|0x0845|0x0445|No disponible en el nivel de servidor|
+|Bengali (India)|0x0445|0x0439|No disponible en el nivel de servidor|
+|Bosnio (cirílico, Bosnia-Herzegovina)|0x201a|0x201a|Latin1_General_CI_AI|
+|Bosnio (latino, Bosnia-Herzegovina)|0x141a|0x141a|Latin1_General_CI_AI|
+|Bretón (Francia)|0x047e|0x047e|Latin1_General_CI_AI|
+|Búlgaro (Bulgaria)|0x0402|0x0419|Cyrillic_General_CI_AS|
+|Catalán (España)|0x0403|0x0409|Latin1_General_CI_AS|
+|Chino (Hong Kong ZAE, RPC)|0x0c04|0x0404|Chinese_Taiwan_Stroke_CI_AS|
+|Chinese (Macao SAR)|0x1404|0x1404|Latin1_General_CI_AI|
+|Chino (Macao)|0x21404|0x21404|Latin1_General_CI_AI|
+|Chino (RPC)|0x0804|0x0804|Chinese_PRC_CI_AS|
+|Chino (RPC)|0x20804|0x20804|Chinese_PRC_Stroke_CI_AS|
+|Chinese (Singapore)|0x1004|0x0804|Chinese_PRC_CI_AS|
+|Chinese (Singapore)|0x21004|0x20804|Chinese_PRC_Stroke_CI_AS|
+|Chino (Taiwán)|0x30404|0x30404|Chinese_Taiwan_Bopomofo_CI_AS|
+|Chino (Taiwán)|0x0404|0x0404|Chinese_Taiwan_Stroke_CI_AS|
+|Corso (Francia)|0x0483|0x0483|Latin1_General_CI_AI|
+|Croata (Bosnia y Herzegovina, latino)|0x101a|0x041a|Croatian_CI_AS|
+|Croata (Croacia)|0x041a|0x041a|Croatian_CI_AS|
+|Checo (República Checa)|0x0405|0x0405|Czech_CI_AS|
+|Danés (Dinamarca)|0x0406|0x0406|Danish_Norwegian_CI_AS|
+|Dari (Afganistán)|0x048c|0x048c|Latin1_General_CI_AI|
+|Divehi (Maldivas)|0x0465|0x0465|No disponible en el nivel de servidor|
+|Neerlandés (Bélgica)|0x0813|0x0409|Latin1_General_CI_AS|
+|Neerlandés (Países Bajos)|0x0413|0x0409|Latin1_General_CI_AS|
+|Inglés (Australia)|0x0c09|0x0409|Latin1_General_CI_AS|
+|Inglés (Belice)|0x2809|0x0409|Latin1_General_CI_AS|
+|Inglés (Canadá)|0x1009|0x0409|Latin1_General_CI_AS|
+|Inglés (Caribe)|0x2409|0x0409|Latin1_General_CI_AS|
+|Inglés (India)|0x4009|0x0409|Latin1_General_CI_AS|
+|Inglés (Irlanda)|0x1809|0x0409|Latin1_General_CI_AS|
+|Inglés (Jamaica)|0x2009|0x0409|Latin1_General_CI_AS|
+|Inglés (Malasia)|0x4409|0x0409|Latin1_General_CI_AS|
+|Inglés (Nueva Zelanda)|0x1409|0x0409|Latin1_General_CI_AS|
+|Inglés (Filipinas)|0x3409|0x0409|Latin1_General_CI_AS|
+|Inglés (Singapur)|0x4809|0x0409|Latin1_General_CI_AS|
+|Inglés (Sudáfrica)|0x1c09|0x0409|Latin1_General_CI_AS|
+|Inglés (Trinidad y Tobago)|0x2c09|0x0409|Latin1_General_CI_AS|
+|Inglés (Reino Unido)|0x0809|0x0409|Latin1_General_CI_AS|
+|Spanish (Traditional Sort) - Spain|0x0409|0x0409|SQL_Latin1_General_CP1_CI_AS|
+|Inglés (Zimbabue)|0x3009|0x0409|Latin1_General_CI_AS|
+|Estonio (Estonia)|0x0425|0x0425|Estonian_CI_AS|
+|Feroés (Islas Feroe)|0x0438|0x0409|Latin1_General_CI_AS|
+|Filipino (Filipinas)|0x0464|0x0409|Latin1_General_CI_AS|
+|Finés (Finlandia)|0x040b|0x040b|Finnish_Swedish_CI_AS|
+|Francés (Bélgica)|0x080c|0x040c|French_CI_AS|
+|Francés (Canadá)|0x0c0c|0x040c|French_CI_AS|
+|Francés (Francia)|0x040c|0x040c|French_CI_AS|
+|Francés (Luxemburgo)|0x140c|0x040c|French_CI_AS|
+|Francés (Mónaco)|0x180c|0x040c|French_CI_AS|
+|Francés (Suiza)|0x100c|0x040c|French_CI_AS|
+|Frisón (Países Bajos)|0x0462|0x0462|Latin1_General_CI_AI|
+|Gallego (España)|0x0456|0x0409|Latin1_General_CI_AS|
+|Georgiano (Georgia)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
+|Georgiano (Georgia)|0x0437|0x0419|Latin1_General_CI_AS|
+|Alemán (alfabetización de libreta de teléfonos, DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
+|Alemán (Austria)|0x0c07|0x0409|Latin1_General_CI_AS|
+|Alemán (Alemania)|0x0407|0x0409|Latin1_General_CI_AS|
+|Alemán (Liechtenstein)|0x1407|0x0409|Latin1_General_CI_AS|
+|Alemán (Luxemburgo)|0x1007|0x0409|Latin1_General_CI_AS|
+|Alemán (Suiza)|0x0807|0x0409|Latin1_General_CI_AS|
+|Griego (Grecia)|0x0408|0x0408|Greek_CI_AS|
+|Groenlandés (Groenlandia)|0x046f|0x0406|Danish_Norwegian_CI_AS|
+|Gujarati (India)|0x0447|0x0439|No disponible en el nivel de servidor|
+|Hausa (Nigeria, latino)|0x0468|0x0409|Latin1_General_CI_AS|
+|Hebreo (Israel)|0x040d|0x040d|Hebrew_CI_AS|
+|Hindi (India)|0x0439|0x0439|No disponible en el nivel de servidor|
+|Húngaro (Hungría)|0x040e|0x040e|Hungarian_CI_AS|
+|Húngaro técnico|0x1040e|0x1040e|Hungarian_Technical_CI_AS|
+|Islandés (Islandia)|0x040f|0x040f|Icelandic_CI_AS|
+|Igbo (Nigeria)|0x0470|0x0409|Latin1_General_CI_AS|
+|Indonesio (Indonesia)|0x0421|0x0409|Latin1_General_CI_AS|
+|Inuktitut (Canadá, latino)|0x085d|0x0409|Latin1_General_CI_AS|
+|Inuktitut (silábico, Canadá)|0x045d|0x045d|Latin1_General_CI_AI|
+|Irlandés (Irlanda)|0x083c|0x0409|Latin1_General_CI_AS|
+|Italiano (Italia)|0x0410|0x0409|Latin1_General_CI_AS|
+|Italiano (Suiza)|0x0810|0x0409|Latin1_General_CI_AS|
+|Japonés (Japón XJIS)|0x0411|0x0411|Japanese_CI_AS|
+|Japonés (Japón)|0x040411|0x40411|Latin1_General_CI_AI|
+|Canarés (India)|0x044b|0x0439|No disponible en el nivel de servidor|
+|Kazajo (Kazajistán)|0x043f|0x043f|Kazakh_90_CI_AS|
+|Jemer (Camboya)|0x0453|0x0453|No disponible en el nivel de servidor|
+|Quiché (Guatemala)|0x0486|0x0c0a|Modern_Spanish_CI_AS|
+|Kinyarwanda (Ruanda)|0x0487|0x0409|Latin1_General_CI_AS|
+|Konkani (India)|0x0457|0x0439|No disponible en el nivel de servidor|
+|Coreano (Orden del diccionario coreano)|0x0412|0x0412|Korean_Wansung_CI_AS|
+|Kirguizo (Kirguizistán)|0x0440|0x0419|Cyrillic_General_CI_AS|
+|Lao (R.D.P. de Laos)|0x0454|0x0454|No disponible en el nivel de servidor|
+|Letón (Letonia)|0x0426|0x0426|Latvian_CI_AS|
+|Lituano (Lituania)|0x0427|0x0427|Lithuanian_CI_AS|
+|Bajo sorbio (Alemania)|0x082e|0x0409|Latin1_General_CI_AS|
+|Luxemburgués (Luxemburgo)|0x046e|0x0409|Latin1_General_CI_AS|
+|Macedonio (Macedonia, ARYM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Malayo (Brunéi Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
+|Malayo (Malasia)|0x043e|0x0409|Latin1_General_CI_AS|
+|Malayalam (India)|0x044c|0x0439|No disponible en el nivel de servidor|
+|Maltés (Malta)|0x043a|0x043a|Latin1_General_CI_AI|
+|Maorí (Nueva Zelanda)|0x0481|0x0481|Latin1_General_CI_AI|
+|Mapuche (Chile)|0x047a|0x047a|Latin1_General_CI_AI|
+|Maratí (India)|0x044e|0x0439|No disponible en el nivel de servidor|
+|Mohawk (Canadá)|0x047c|0x047c|Latin1_General_CI_AI|
+|Mongol (Mongolia)|0x0450|0x0419|Cyrillic_General_CI_AS|
+|Mongol (RPC)|0x0850|0x0419|Cyrillic_General_CI_AS|
+|Nepalí (Nepal)|0x0461|0x0461|No disponible en el nivel de servidor|
+|Noruego (Bokmål, Noruega)|0x0414|0x0414|Latin1_General_CI_AI|
+|Noruego (nynorsk, Noruega)|0x0814|0x0414|Latin1_General_CI_AI|
+|Occitano (Francia)|0x0482|0x040c|French_CI_AS|
+|Oriya (India)|0x0448|0x0439|No disponible en el nivel de servidor|
+|Pashto (Afganistán)|0x0463|0x0463|No disponible en el nivel de servidor|
+|Persa (Irán)|0x0429|0x0429|Latin1_General_CI_AI|
+|Polaco (Polonia)|0x0415|0x0415|Polish_CI_AS|
+|Portugués (Brasil)|0x0416|0x0409|Latin1_General_CI_AS|
+|Portugués (Portugal)|0x0816|0x0409|Latin1_General_CI_AS|
+|Punjabí (India)|0x0446|0x0439|No disponible en el nivel de servidor|
+|Quechua (Bolivia)|0x046b|0x0409|Latin1_General_CI_AS|
+|Quechua (Ecuador)|0x086b|0x0409|Latin1_General_CI_AS|
+|Quechua (Perú)|0x0c6b|0x0409|Latin1_General_CI_AS|
+|Rumano (Rumanía)|0x0418|0x0418|Romanian_CI_AS|
+|Romanche (Suiza)|0x0417|0x0417|Latin1_General_CI_AI|
+|Ruso (Rusia)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|Sami (inari, Finlandia)|0x243b|0x083b|Latin1_General_CI_AI|
+|Sami (Lule, Noruega)|0x103b|0x043b|Latin1_General_CI_AI|
+|Sami (lule, Suecia)|0x143b|0x083b|Latin1_General_CI_AI|
+|Sami (septentrional, Finlandia)|0x0c3b|0x083b|Latin1_General_CI_AI|
+|Sami (septentrional, Noruega)|0x043b|0x043b|Latin1_General_CI_AI|
+|Sami (septentrional, Suecia)|0x083b|0x083b|Latin1_General_CI_AI|
+|Sami (skolt, Finlandia)|0x203b|0x083b|Latin1_General_CI_AI|
+|Sami (meridional, Noruega)|0x183b|0x043b|Latin1_General_CI_AI|
+|Sami (meridional, Suecia)|0x1c3b|0x083b|Latin1_General_CI_AI|
+|Sánscrito (India)|0x044f|0x0439|No disponible en el nivel de servidor|
+|Serbio (cirílico, Bosnia-Herzegovina)|0x1c1a|0x0c1a|Latin1_General_CI_AI|
+|Serbio (latino, Bosnia-Herzegovina)|0x181a|0x081a|Latin1_General_CI_AI|
+|Serbio (cirílico, Serbia)|0x0c1a|0x0c1a|Latin1_General_CI_AI|
+|Serbio (latino, Serbia)|0x081a|0x081a|Latin1_General_CI_AI|
+|Sesotho sa Leboa/sotho septentrional (Sudáfrica)|0x046c|0x0409|Latin1_General_CI_AS|
+|Setswana/tswana (Sudáfrica)|0x0432|0x0409|Latin1_General_CI_AS|
+|Cingalés (Sri Lanka)|0x045b|0x0439|No disponible en el nivel de servidor|
+|Eslovaco (Eslovaquia)|0x041b|0x041b|Slovak_CI_AS|
+|Esloveno (Eslovenia)|0x0424|0x0424|Slovenian_CI_AS|
+|Español (Argentina)|0x2c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Bolivia)|0x400a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Chile)|0x340a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Colombia)|0x240a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Costa Rica)|0x140a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (República Dominicana)|0x1c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Ecuador)|0x300a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (El Salvador)|0x440a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Guatemala)|0x100a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Honduras)|0x480a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (México)|0x080a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Nicaragua)|0x4c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Panamá)|0x180a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Paraguay)|0x3c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Perú)|0x280a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Puerto Rico)|0x500a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (España)|0x0c0a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (España, tradicional)|0x040a|0x040a|Traditional_Spanish_CI_AS|
+|Español (Estados Unidos)|0x540a|0x0409|Latin1_General_CI_AS|
+|Español (Uruguay)|0x380a|0x0c0a|Modern_Spanish_CI_AS|
+|Español (Venezuela)|0x200a|0x0c0a|Modern_Spanish_CI_AS|
+|Swahili (Kenia)|0x0441|0x0409|Latin1_General_CI_AS|
+|Sueco (Finlandia)|0x081d|0x040b|Finnish_Swedish_CI_AS|
+|Sueco (Suecia)|0x041d|0x040b|Finnish_Swedish_CI_AS|
+|Sirio (Siria)|0x045a|0x045a|No disponible en el nivel de servidor|
+|Tayiko (Tayikistán)|0x0428|0x0419|Cyrillic_General_CI_AS|
+|Tamazight (latino, Argelia)|0x085f|0x085f|Latin1_General_CI_AI|
+|Tamil (India)|0x0449|0x0439|No disponible en el nivel de servidor|
+|Tatar (Rusia)|0x0444|0x0444|Cyrillic_General_CI_AS|
+|Telugu (India)|0x044a|0x0439|No disponible en el nivel de servidor|
+|Tailandés (Tailandia)|0x041e|0x041e|Thai_CI_AS|
+|Tibetano (RPC)|0x0451|0x0451|No disponible en el nivel de servidor|
+|Turco (Turquía)|0x041f|0x041f|Turkish_CI_AS|
+|Turcomano (Turkmenistán)|0x0442|0x0442|Latin1_General_CI_AI|
+|Uigur (RPC)|0x0480|0x0480|Latin1_General_CI_AI|
+|Ucraniano (Ucrania)|0x0422|0x0422|Ukrainian_CI_AS|
+|Alto sorbio (Alemania)|0x042e|0x042e|Latin1_General_CI_AI|
+|Urdú (Pakistán)|0x0420|0x0420|Latin1_General_CI_AI|
+|Uzbeko (cirílico, Uzbekistán)|0x0843|0x0419|Cyrillic_General_CI_AS|
+|Uzbeko (Uzbekistán, latín)|0x0443|0x0443|Uzbek_Latin_90_CI_AS|
+|Vietnamita (Vietnam)|0x042a|0x042a|Vietnamese_CI_AS|
+|Galés (Reino Unido)|0x0452|0x0452|Latin1_General_CI_AI|
+|Wolof (Senegal)|0x0488|0x040c|French_CI_AS|
+|Xhosa/isiXhosa (Sudáfrica)|0x0434|0x0409|Latin1_General_CI_AS|
+|Yakuto (Rusia)|0x0485|0x0485|Latin1_General_CI_AI|
+|Yi (RPC)|0x0478|0x0409|Latin1_General_CI_AS|
+|Yoruba (Nigeria)|0x046a|0x0409|Latin1_General_CI_AS|
+|Zulú/isiZulu (Sudáfrica)|0x0435|0x0409|Latin1_General_CI_AS|
+
+> [!NOTE]
+> Las intercalaciones exclusivas de Unicode no pueden seleccionarse durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque no se admiten como intercalaciones de nivel de servidor.    
     
 Después de que una intercalación se haya asignado al servidor, no puede cambiar la intercalación excepto exportando todos los objetos y datos de base de datos, recompilando la base de datos **master** e importando todos los objetos y datos de base de datos. En lugar de cambiar la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar la intercalación deseada en el momento de crear una base de datos o una columna de base de datos.    
+
+Para consultar la intercalación del servidor de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use la función `SERVERPROPERTY`:
+
+```sql
+SELECT CONVERT(varchar, SERVERPROPERTY('collation'));
+```
+
+Para consultar todas las intercalaciones disponibles del servidor, utilice la siguiente función integrada de `fn_helpcollations()`:
+
+```sql
+SELECT * FROM sys.fn_helpcollations();
+```
     
-#### <a name="database-level-collations"></a>Intercalaciones de nivel de base de datos    
+#### <a name="Database-level-collations"></a> Intercalaciones de base de datos    
 Cuando se crea una base de datos, se puede usar la cláusula COLLATE de la instrucción CREATE DATABASE para especificar la intercalación predeterminada de la base de datos. Si no se especifica ninguna intercalación, se asigna a la base de datos la intercalación de servidor.    
     
 No puede cambiar la intercalación de base de datos del sistema excepto cambiando la intercalación del servidor.    
@@ -109,11 +402,31 @@ La intercalación de base de datos se usa para todos los metadatos de la base de
 > [!NOTE]
 > No se puede cambiar la intercalación después de crear la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
+La intercalación de una base de datos de usuario se puede cambiar con una instrucción `ALTER DATABASE` similar a esta:
 
-#### <a name="column-level-collations"></a>Intercalaciones de columna    
+```sql
+ALTER DATABASE myDB COLLATE Greek_CS_AI;
+```
+
+> [!IMPORTANT]
+> La alteración de la intercalación de nivel de base de datos no afecta a las intercalaciones de columna o de nivel de expresión.
+
+La intercalación actual de una base de datos se puede recuperar con una instrucción similar a la siguiente:
+
+```sql
+SELECT CONVERT (VARCHAR(50), DATABASEPROPERTYEX('database_name','collation'));
+```
+
+#### <a name="Column-level-collations"></a> Intercalaciones de columna    
 Cuando cree o altere una tabla, puede especificar intercalaciones para cada columna de cadena de caracteres mediante la cláusula COLLATE. Si no se especifica una intercalación, a la columna se le asigna la intercalación predeterminada de la base de datos.    
+
+La intercalación de una columna se puede cambiar con una instrucción `ALTER TABLE` similar a esta:
+
+```sql
+ALTER TABLE myTable ALTER COLUMN mycol NVARCHAR(10) COLLATE Greek_CS_AI;
+```
     
-#### <a name="expression-level-collations"></a>Intercalaciones de nivel de expresión    
+#### <a name="Expression-level-collations"></a> Intercalaciones de expresión    
 Las intercalaciones de nivel de expresión se establecen cuando se ejecuta una instrucción y afectan al modo en que se devuelve un conjunto de resultados. Esto permite que los resultados de la ordenación ORDER BY sean específicos de la configuración regional. Utilice una cláusula COLLATE como la siguiente para implementar intercalaciones de nivel de expresión:    
     
 ```sql    
@@ -130,24 +443,40 @@ Una configuración regional es un conjunto de información que está asociado a 
  El criterio de ordenación especifica cómo se ordenan los valores de datos. Esto afecta a los resultados de la comparación de los datos. Los datos se ordenan con las intercalaciones, y se pueden optimizar mediante los índices.    
     
 ##  <a name="Unicode_Defn"></a> Compatibilidad con Unicode    
-Unicode es un estándar que permite asignar puntos de código con caracteres. Puesto que se ha diseñado para cubrir todos los caracteres de todos los idiomas del mundo, no es preciso usar páginas de códigos diferentes para controlar los distintos juegos de caracteres. 
-   
-Las páginas de códigos que un cliente usa se determinan en la configuración del sistema operativo. Para establecer las páginas de códigos del cliente en los sistemas operativos Windows, use **Configuración regional** en el Panel de control.    
+Unicode es un estándar que permite asignar puntos de código con caracteres. Puesto que se ha diseñado para cubrir todos los caracteres de todos los idiomas del mundo, no es preciso usar páginas de códigos diferentes para controlar los distintos juegos de caracteres.
 
-Hay limitaciones significativas asociadas a los tipos de datos no Unicode. Esto se debe a que un equipo no Unicode se limita a usar una única página de códigos. Podría experimentar una ganancia en el rendimiento mediante Unicode porque se requieren menos conversiones de páginas de códigos. Las intercalaciones Unicode deben seleccionarse de forma individual en el nivel de expresión, base de datos o columna porque no se admiten en el nivel de servidor.    
-   
-Al mover los datos de un servidor a un cliente, los controladores de cliente anteriores podrían no reconocer la intercalación del servidor. Esto puede ocurrir al mover los datos de un servidor Unicode a un cliente no Unicode. La mejor opción podría ser actualizar el sistema operativo cliente para que las intercalaciones del sistema subyacentes se actualicen. Si el cliente tiene instalado software cliente de base de datos, se puede considerar la posibilidad de aplicar a dicho software una actualización de servicio.    
-    
-> [!TIP]
-> También puede intentar utilizar una intercalación diferente para los datos del servidor. Elija una intercalación que se asigne a una página de códigos en el cliente.    
+### <a name="unicode-basics"></a>Conceptos básicos de Unicode
+El almacenamiento de datos en varios idiomas dentro de una misma base de datos es difícil de controlar cuando solo se usan datos de tipo carácter y páginas de códigos. También es difícil encontrar una página de códigos para la base de datos que pueda almacenar todos los caracteres específicos de cada idioma. Además, es difícil asegurar la traducción adecuada de los caracteres especiales cuando éstos se leen o se actualizan desde clientes diferentes que usan páginas de códigos diferentes. Las bases de datos que admiten clientes internacionales siempre deberían usar tipos de datos Unicode en vez de tipos de datos no Unicode.
 
+Por ejemplo, imaginemos que una base de datos de clientes en Norteamérica tiene que administrar tres idiomas:
+
+-  Nombres y direcciones en español para México
+-  Nombres y direcciones en francés para Quebec
+-  Nombres y direcciones en inglés para el resto de Canadá y para Estados Unidos
+
+Cuando use solo columnas con caracteres y páginas de códigos, hay que prestar atención para asegurarse de que la base de datos esté instalada con una página de códigos que controle los caracteres de los tres idiomas. También que prestar atención para asegurar la adecuada traducción de los caracteres de uno de los idiomas cuando éstos se lean en clientes que tengan una página de códigos para otro idioma.
+   
+> [!NOTE]
+> Las páginas de códigos que un cliente usa se determinan en la configuración del sistema operativo (SO). Para establecer las páginas de códigos del cliente en los sistemas operativos Windows, use **Configuración regional** en el Panel de control.    
+
+Sería difícil elegir una página de códigos para los tipos de datos de carácter que admita todos los caracteres que precisa una audiencia mundial.
+La forma más fácil de administrar los datos de caracteres en las bases de datos internacionales es usar siempre un tipo de datos que admita Unicode. 
+
+### <a name="unicode-data-types"></a>Tipos de datos Unicode
 Si almacena datos de caracteres que reflejan varios idiomas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use tipos de datos Unicode (**nchar**, **nvarchar** y **ntext**) en lugar de tipos de datos que no sean Unicode (**char**, **varchar** y **text**). 
 
 > [!NOTE]
 > Para los tipos de datos Unicode, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] puede representar hasta 65 535 caracteres mediante UCS-2, o el intervalo completo de Unicode (1 114 111 caracteres) si se usan caracteres adicionales. Para obtener más información sobre cómo habilitar caracteres adicionales, consulte [Caracteres adicionales](#Supplementary_Characters).
 
 Como alternativa, a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si se usa una intercalación compatible con UTF-8 (\_UTF8), los tipos de datos anteriores que no son Unicode (**char** y **varchar**) se convierten en tipos de datos Unicode (UTF-8). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] no cambia el comportamiento de tipos de datos Unicode (UTF-16) que existieran antes (**nchar**, **nvarchar** y **ntext**). Consulte [Diferencias de almacenamiento entre UTF-8 y UTF-16](#storage_differences) para más información.
-       
+
+### <a name="unicode-considerations"></a>Consideraciones de Unicode
+Hay limitaciones significativas asociadas a los tipos de datos no Unicode. Esto se debe a que un equipo no Unicode se limita a usar una única página de códigos. Podría experimentar una ganancia en el rendimiento mediante Unicode porque se requieren menos conversiones de páginas de códigos. Las intercalaciones Unicode deben seleccionarse de forma individual en el nivel de expresión, base de datos o columna porque no se admiten en el nivel de servidor.    
+
+Al mover los datos de un servidor a un cliente, los controladores de cliente anteriores podrían no reconocer la intercalación del servidor. Esto puede ocurrir al mover los datos de un servidor Unicode a un cliente no Unicode. La mejor opción podría ser actualizar el sistema operativo cliente para que las intercalaciones del sistema subyacentes se actualicen. Si el cliente tiene instalado software cliente de base de datos, se puede considerar la posibilidad de aplicar a dicho software una actualización de servicio.    
+    
+> [!TIP]
+> También puede intentar utilizar una intercalación diferente para los datos del servidor. Elija una intercalación que se asigne a una página de códigos en el cliente.    
 Para usar las intercalaciones UTF-16 disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a \_) a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo intercalaciones de Windows), puede seleccionar una de las intercalaciones de caracteres adicionales ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SC) o una de las intercalaciones de la versión 140.    
  
 Para usar las intercalaciones UTF- 8 disponibles en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo intercalaciones de Windows), debe seleccionar las intercalaciones compatibles con la codificación UTF-8 (\_UTF8).
@@ -162,11 +491,11 @@ Para usar las intercalaciones UTF- 8 disponibles en [!INCLUDE[sql-server-2019](.
     
 -   La marca UTF8 no se puede aplicar a:    
     -   Intercalaciones de la versión 90 que no son compatibles con caracteres adicionales (\_SC) o la distinción de selector de variación (\_VSS)    
-    -   Intercalaciones binarias BIN o BIN2<sup>2</sup>    
-    -   Intercalaciones SQL\*  
+    -   Intercalaciones binarias BIN o BIN2 <sup>2</sup>    
+    -   Intercalaciones SQL\_*  
     
-<sup>1</sup> A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 reemplazó la intercalación UTF8_BIN2 por Latin1_General_100_BIN2_UTF8.     
-<sup>2</sup> Hasta con [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. 
+<sup>1</sup> A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 reemplazó la intercalación **UTF8_BIN2** por **Latin1_General_100_BIN2_UTF8**.        
+<sup>2</sup> Hasta con [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3.    
     
 Para evaluar completamente los problemas relacionados con el uso de tipos de datos Unicode y no Unicode, pruebe su escenario para cuantificar las diferencias de rendimiento en su entorno. Se recomienda normalizar la intercalación que se usa en los sistemas de una organización e implementar servidores y clientes Unicode siempre que sea posible.    
     
@@ -226,7 +555,12 @@ En la siguiente tabla se compara el comportamiento de algunas funciones de caden
 |[Hacer coincidir un carácter comodín](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Carácter comodín - caracteres no coincidentes](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Se admiten caracteres adicionales para todas las operaciones de caracteres comodín.|No se admiten caracteres adicionales para estas operaciones de caracteres comodín. Se admiten otros operadores de caracteres comodín.|    
     
 ## <a name="GB18030"></a> Compatibilidad con GB18030    
-GB18030 es un estándar independiente que se usa en la República Popular China para codificar caracteres chinos. En GB18030, los caracteres pueden tener una longitud de 1, 2 o 4 bytes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite caracteres de codificación GB18030, reconociéndolos en el momento de su entrada en un servidor procedentes de una aplicación del lado cliente y convirtiéndolos y almacenándolos de forma nativa como caracteres Unicode. Una vez almacenados en el servidor, se tratan como caracteres Unicode en las operaciones siguientes. Puede usar cualquier intercalación china, preferentemente la más reciente: la versión 100. Todas las intercalaciones de nivel _100 admiten la ordenación lingüística con caracteres GB18030. Si los datos incluyen caracteres suplementarios (pares suplentes), puede usar las intercalaciones SC disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para mejorar la búsqueda y la clasificación.    
+GB18030 es un estándar independiente que se usa en la República Popular China para codificar caracteres chinos. En GB18030, los caracteres pueden tener una longitud de 1, 2 o 4 bytes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite caracteres de codificación GB18030, reconociéndolos en el momento de su entrada en un servidor procedentes de una aplicación del lado cliente y convirtiéndolos y almacenándolos de forma nativa como caracteres Unicode. Una vez almacenados en el servidor, se tratan como caracteres Unicode en las operaciones siguientes. 
+
+Puede usar cualquier intercalación china, preferentemente la más reciente: la versión 100. Todas las intercalaciones de nivel \_100 admiten la ordenación lingüística con caracteres GB18030. Si los datos incluyen caracteres suplementarios (pares suplentes), puede usar las intercalaciones SC disponibles en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para mejorar la búsqueda y la clasificación.    
+
+> [!NOTE]
+> Asegúrese de que las herramientas de cliente, como [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], usan la fuente Dengxian para mostrar correctamente las cadenas que contienen caracteres con codificación GB18030.
     
 ## <a name="Complex_script"></a> Compatibilidad con escritura compleja    
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede admitir la entrada, el almacenamiento, el cambio, y la visualización de escrituras complejas. Entre los ejemplos de escritura compleja se encuentran los siguientes tipos:    
@@ -255,7 +589,7 @@ Estas intercalaciones se admiten en los índices, las tablas optimizadas para me
 <a name="ctp23"></a>
 
 ## <a name="utf8"></a> Compatibilidad con UTF-8
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta compatibilidad total con la codificación de caracteres UTF-8 ampliamente utilizada como codificación de importación o exportación, y como intercalación de columna o base de datos para los datos de cadena. UTF-8 se permite en los tipos de datos **char** y **varchar**, y se habilita al crear o cambiar la intercalación de un objeto a una intercalación con el sufijo `UTF8`. Por ejemplo, de `LATIN1_GENERAL_100_CI_AS_SC` a `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. 
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta compatibilidad total con la codificación de caracteres UTF-8 ampliamente utilizada como codificación de importación o exportación, y como intercalación de columna o base de datos para los datos de cadena. UTF-8 se permite en los tipos de datos **char** y **varchar**, y se habilita al crear o cambiar la intercalación de un objeto a una intercalación con el sufijo `UTF8`. Por ejemplo, **LATIN1_GENERAL_100_CI_AS_SC** para **LATIN1_GENERAL_100_CI_AS_SC_UTF8**. 
 
 UTF-8 solo está disponible para las intercalaciones de Windows que admiten caracteres adicionales, tal y como se presentó en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. **nchar** y **nvarchar** permiten solo codificación UCS-2 o UTF-16 y permanecen sin cambios.
 
@@ -309,7 +643,9 @@ Para otras consideraciones, consulte [Escribir instrucciones Transact-SQL intern
 ["Migración de las prácticas recomendadas de SQL Server a Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890) - Ya no se mantiene   
 [Sitio web de Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)   
 [Unicode estándar](http://www.unicode.org/standard/standard.html)     
-[Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+[Compatibilidad de UTF-8 con OLE DB Driver for SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)      
+[Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)        
+[Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)     
 Blog [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928) (Presentación de la compatibilidad de UTF-8 con SQL Server)       
     
 ## <a name="see-also"></a>Consulte también    

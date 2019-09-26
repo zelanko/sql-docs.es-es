@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176357"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118190"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,9 @@ ms.locfileid: "70176357"
 - Puede hacer copias de seguridad en varios blobs en bloques para obtener el mejor rendimiento de copia de seguridad y restauración, y admite la copia de seguridad de bases de datos más grandes.
 - La opción de [blob en bloques](https://azure.microsoft.com/pricing/details/storage/blobs/) es más económica que la de [blob en páginas](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
 
-Cuando hace una copia de seguridad en blob en bloques, el tamaño máximo de bloque que puede especificar es de 4 MB. El tamaño máximo de un archivo de blob en bloques único es de 4 MB * 50 000 = 195 GB. Si la base de datos es mayor que 195 GB, se recomienda lo siguiente:
+La copia de seguridad de una base de datos grande en el almacenamiento de blobs está sujeta a las limitaciones enumeradas en el apartado sobre [diferencias, limitaciones y problemas conocidos de T-SQL de la instancia administrada](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+
+ Si la base de datos es demasiado grande, puede:
 - Usar la compresión de copia de seguridad
 - Hacer una copia de seguridad en varios blobs en bloques
 

@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009381"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149978"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar SQL Server desde el Asistente para la instalación (programa de instalación)
 
@@ -132,7 +132,11 @@ Esto no se aplica a [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
     > [!NOTE]
     > A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], active la casilla **Conceder el privilegio de realización de tareas de mantenimiento de volumen al servicio Motor de base de datos de SQL Server** para permitir que la cuenta de servicio de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pueda usar [inicialización instantánea de archivos de bases de datos](../../relational-databases/databases/database-instant-file-initialization.md).
   
-     Use la página **Configuración del servidor - Intercalación** para especificar intercalaciones no predeterminadas para [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+1. Use la página **Configuración del servidor - Intercalación** para especificar intercalaciones no predeterminadas para [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].    
+
+   La configuración de instalación predeterminada depende de la configuración regional del sistema operativo (SO). Las intercalaciones de nivel de servidor se pueden cambiar durante la instalación o modificando la configuración regional del SO antes de la instalación. La intercalación predeterminada se establece en la versión más antigua disponible que esté asociada a cada configuración regional concreta. Esto se debe a motivos de compatibilidad con versiones anteriores. Por consiguiente, esta no es siempre la intercalación recomendada. Para aprovechar al máximo las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cambie la configuración de instalación predeterminada para que use las intercalaciones de Windows. Por ejemplo, para la configuración regional del sistema operativo **Inglés (Estados Unidos)** (página de códigos 1252), la intercalación predeterminada durante la instalación es **SQL_LATIN1_GENERAL_CP1_CI_AS** y se puede cambiar a la intercalación de Windows homóloga más cercana: **Latin1_General_100_CI_AS_SC**.
+
+   Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 1. Use la página **Configuración del Motor de base de datos- Configuración del servidor** para especificar las siguientes opciones:  
   

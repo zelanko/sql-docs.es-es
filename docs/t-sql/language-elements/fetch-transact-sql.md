@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d8c31adb0dff16b84e4c606dc3b5479a43a1092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075213"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174286"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ FETCH
  LAST  
  Devuelve la última fila del cursor y la convierte en la fila actual.  
   
- ABSOLUTE { *n*| @*nvar*}  
- Si *n* o @*nvar* es positivo, se devuelve la fila *n* desde el principio del cursor y la fila devuelta se convierte en la nueva fila actual. Si *n* o @*nvar* es negativo, se devuelve la fila *n* antes del final del cursor y la fila devuelta se convierte en la nueva fila actual. Si *n* o @*nvar* es 0, no se devuelve ninguna fila. *n* debe ser una constante de tipo entero y @*nvar* debe ser **smallint**, **tinyint** o **int**.  
+ ABSOLUTE { *n*| \@*nvar*}  
+ Si *n* o \@*nvar* es positivo, se devuelve la fila *n* desde el principio del cursor y la fila devuelta se convierte en la nueva fila actual. Si *n* o \@*nvar* es negativo, se devuelve la fila *n* antes del final del cursor y la fila devuelta se convierte en la nueva fila actual. Si *n* o \@*nvar* es 0, no se devuelve ninguna fila. *n* debe ser una constante de tipo entero y \@*nvar* debe ser **smallint**, **tinyint** o **int**.  
   
- RELATIVE { *n*| @*nvar*}  
- Si *n* o @*nvar* es positivo, se devuelve la fila *n* posterior a la fila actual y la fila devuelta se convierte en la nueva fila actual. Si *n* o @*nvar* es negativo, se devuelve la fila *n* anterior a la fila actual y la fila devuelta se convierte en la nueva fila actual. Si *n* o @*nvar* es 0, se devuelve la fila actual. Si `FETCH RELATIVE` se especifica con *n* o @*nvar* se establece en números negativos o 0 en la primera operación de captura que se realiza en un cursor, no se devuelven filas. *n* debe ser una constante de tipo entero y @*nvar* debe ser **smallint**, **tinyint** o **int**.  
+ RELATIVE { *n*| \@*nvar*}  
+ Si *n* o \@*nvar* es positivo, se devuelve la fila *n* posterior a la fila actual y la fila devuelta se convierte en la nueva fila actual. Si *n* o \@*nvar* es negativo, se devuelve la fila *n* anterior a la fila actual y la fila devuelta se convierte en la nueva fila actual. Si *n* o \@*nvar* es 0, se devuelve la fila actual. Si `FETCH RELATIVE` se especifica con *n* o \@*nvar* se establece en números negativos o 0 en la primera operación de captura que se realiza en un cursor, no se devuelven filas. *n* debe ser una constante de tipo entero y \@*nvar* debe ser **smallint**, **tinyint** o **int**.  
   
  GLOBAL  
  Especifica que *cursor_name* hace referencia a un cursor global.  

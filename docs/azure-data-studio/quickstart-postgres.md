@@ -3,26 +3,26 @@ title: 'Inicio rápido: Conexión a PostgreSQL y consulta'
 titleSuffix: Azure Data Studio
 description: En este inicio rápido se muestra cómo usar Azure Data Studio para conectarse a PostgreSQL y ejecutar una consulta
 ms.custom: seodec18
-ms.date: 03/19/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959468"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127250"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conexión a PostgreSQL y consulta con [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 En este inicio rápido se muestra cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a Postgres y luego usar instrucciones SQL para crear la base de datos *tutorialdb* y consultarla.
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Para completar este inicio rápido, necesitará [!INCLUDE[name-sos](../includes/name-sos-short.md)], la extensión PostgreSQL para [!INCLUDE[name-sos](../includes/name-sos-short.md) y acceder a un servidor PostgreSQL.
+Para completar este inicio rápido, necesitará [!INCLUDE[name-sos](../includes/name-sos-short.md)], la extensión PostgreSQL para [!INCLUDE[name-sos](../includes/name-sos-short.md)] y acceder a un servidor PostgreSQL.
 
 - [Instale [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
 - [Instale la extensión PostgreSQL para Azure Data Studio](postgres-extension.md).

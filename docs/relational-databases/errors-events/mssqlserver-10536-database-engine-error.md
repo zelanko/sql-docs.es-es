@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 9f97b41f-0ef8-4ad2-aec0-906a5d7522ba
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ace2712cd53b1b0371bd9deeb4191308a1393de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85901c0fc1a720849cb93f7392ade34ff1db35e0
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060647"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174280"
 ---
-# <a name="mssqlserver10536"></a>MSSQLSERVER_10536
+# <a name="mssqlserver_10536"></a>MSSQLSERVER_10536
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalles  
@@ -30,10 +30,10 @@ ms.locfileid: "68060647"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|PG_TOO_MANY_STMTS|  
-|Texto del mensaje|No se puede crear la Guía de plan '%.\*ls' porque el lote o módulo correspondiente al especificado **@plan_handle** contiene más de 1000 instrucciones válidas. Cree una guía de plan para cada instrucción en el lote o módulo especificando un valor **statement_start_offset** para cada instrucción.|  
+|Texto del mensaje|No se puede crear la guía de plan '%.\*ls' porque el lote o módulo correspondiente al **\@plan_handle** especificado contiene más de 1000 instrucciones válidas. Cree una guía de plan para cada instrucción en el lote o módulo especificando un valor **statement_start_offset** para cada instrucción.|  
   
 ## <a name="explanation"></a>Explicación  
-El lote o módulo correspondiente al elemento **@plan_handle** especificado contiene más de 1000 instrucciones válidas.  
+El lote o módulo correspondiente al **\@plan_handle** especificado contiene más de 1000 instrucciones válidas.  
   
 ## <a name="user-action"></a>Acción del usuario  
 Cree una guía de plan para cada instrucción en el lote o módulo especificando un valor **statement_start_offset** para cada instrucción.  

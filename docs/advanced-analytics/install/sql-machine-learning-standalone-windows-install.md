@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f9835bae00aab15ee902dfe77dcf211eb412bc96
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715847"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271951"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Instalación de Machine Learning Server (independiente) o R Server (independiente) mediante el programa de instalación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -214,16 +214,16 @@ No se instala un IDE de desarrollo como parte del programa de instalación de. P
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Los desarrolladores de r pueden empezar a trabajar con algunos ejemplos sencillos y aprender los aspectos básicos de cómo funciona R con SQL Server. Para el siguiente paso, consulte los vínculos siguientes:
+Los desarrolladores de R pueden empezar con algunos ejemplos sencillos y conocer los aspectos básicos del funcionamiento de R con SQL Server. Para conocer el siguiente paso, vea los vínculos siguientes:
 
-+ [Tutorial: Ejecutar R en T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: Análisis en base de datos para desarrolladores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Ejecutar R en T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Tutorial: Análisis en base de datos para desarrolladores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Los desarrolladores de Python pueden aprender a usar Python con SQL Server siguiendo estos tutoriales:
+Los desarrolladores de Python pueden aprender a usar Python con SQL Server con estos tutoriales:
 
-+ [Tutorial: Ejecución de Python en T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutorial: Ejecutar Python en T-SQL](../tutorials/run-python-using-t-sql.md)
 + [Tutorial: Análisis en base de datos para desarrolladores de Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
-Para ver ejemplos de aprendizaje automático basados en escenarios del mundo real, consulte tutoriales de [machine learning](../tutorials/machine-learning-services-tutorials.md).
+Para obtener ejemplos de Machine Learning basados en escenarios del mundo real, vea los [tutoriales sobre Machine Learning](../tutorials/machine-learning-services-tutorials.md).

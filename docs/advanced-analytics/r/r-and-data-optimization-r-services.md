@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a65afba9455fb475b760439e92ad8d4d38a70be8
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a8143bae69e85ecf0056dcb9433707a681a69077
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715655"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271893"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Rendimiento de R Services: optimización de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ Hay dos maneras de lograr la paralelización con R en SQL Server:
 
     Si el script de R se puede ejecutar en paralelo, y si la consulta SQL se puede ejecutar en paralelo, el motor de base de datos crea varios procesos paralelos. El número máximo de procesos que se pueden crear es igual al valor **de grado máximo de paralelismo** (MAXDOP) de la instancia. A continuación, todos los procesos ejecutan el mismo script, pero reciben solo una parte de los datos.
     
-    Por lo tanto, este método no es útil con los scripts que deben ver todos los datos, como al entrenar un modelo. Pero resulta útil al realizar tareas como la predicción por lotes en paralelo. Para obtener más información sobre el uso del `sp_execute_external_script`paralelismo con, vea la sección **sugerencias avanzadas: procesamiento en paralelo** del [uso de código de R en Transact-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
+    Por lo tanto, este método no es útil con los scripts que deben ver todos los datos, como al entrenar un modelo. Pero resulta útil al realizar tareas como la predicción por lotes en paralelo. Para obtener más información sobre el uso del `sp_execute_external_script`paralelismo con, vea la sección **sugerencias avanzadas: procesamiento en paralelo** del [uso de código de R en Transact-SQL](../tutorials/quickstart-r-create-script.md).
 
 -   **Use numTasks = 1.** Al usar funciones **RX** en un contexto de cálculo de SQL Server, establezca el valor del parámetro _numTasks_ en el número de procesos que desea crear. El número de procesos creados nunca puede ser superior a **MAXDOP**; sin embargo, el número real de procesos creados viene determinado por el motor de base de datos y puede ser menor que el solicitado.
 

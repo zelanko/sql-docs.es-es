@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a255b70b71f29f9cc28e4022ecfdf2741f9a838d
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715810"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271884"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Instalación de SQL Server R Services de 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -255,9 +255,9 @@ El proceso de instalación y administración de paquetes de R es diferente en SQ
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Los desarrolladores de r pueden empezar a trabajar con algunos ejemplos sencillos y aprender los aspectos básicos de cómo funciona R con SQL Server. Para el siguiente paso, consulte los vínculos siguientes:
+Los desarrolladores de R pueden empezar con algunos ejemplos sencillos y conocer los aspectos básicos del funcionamiento de R con SQL Server. Para conocer el siguiente paso, vea los vínculos siguientes:
 
-+ [Tutorial: Ejecutar R en T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutorial: Análisis en base de datos para desarrolladores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutorial: Ejecutar R en T-SQL](../tutorials/quickstart-r-create-script.md)
++ [Tutorial: Análisis en base de datos para desarrolladores de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Para ver ejemplos de aprendizaje automático basados en escenarios del mundo real, consulte tutoriales de [machine learning](../tutorials/machine-learning-services-tutorials.md).
+Para obtener ejemplos de Machine Learning basados en escenarios del mundo real, vea los [tutoriales sobre Machine Learning](../tutorials/machine-learning-services-tutorials.md).

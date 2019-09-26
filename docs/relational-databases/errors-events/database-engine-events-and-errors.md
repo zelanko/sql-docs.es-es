@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77c095ac35d9b3068882be81d0ddf6293904f8bb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810333"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127359"
 ---
 # <a name="database-engine-errors"></a>Errores del motor de base de datos
 
@@ -4999,7 +4999,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   11297   |   16  |   No  |   Se recibió un mensaje dañado. El desplazamiento del segmento de datos de variable privada es incorrecto.   |
 |   11298   |   16  |   No  |   Se recibió un mensaje dañado. El desplazamiento del segmento de datos de variable pública es incorrecto.    |
 |   11299   |   10  |   No  |   Se recibió un mensaje dañado. Un mensaje sin secuencia tenía un número de secuencia distinto de cero. Esto ocurrió en el mensaje con el id. de conversación '%.*ls', el iniciador %d y el número de secuencia de mensaje %I64d. |
-|   11300   |   10  |   Sí |   Error al confirmar una operación readonly o TEMPDB XDES. Se va a cerrar el servidor.    |
+|   11300   |   10  |   Sí |   Error al confirmar una operación readonly o TEMPDB XDES. Se va a cerrar el servidor.   |
 |   11301   |   10  |   Sí |   Error al realizar la notificación de la transacción para el evento %p del objeto %d. |
 |   11302   |   10  |   Sí |   Error al revertir. Se va a cerrar la base de datos (ubicación: %d).   |
 |   11303   |   10  |   Sí |   Error al liberar el espacio de registro reservado: %ls espacio %I64d, código %d, estado %d. |

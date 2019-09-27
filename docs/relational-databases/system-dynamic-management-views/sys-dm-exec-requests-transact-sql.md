@@ -20,12 +20,12 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0180d8087b556ea32728ef8924681bb65ec7ea2
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: fbd23a685507b62529477d6ef92dbbbd1980c5c1
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611435"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326168"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -100,7 +100,7 @@ Devuelve información acerca de cada solicitud que se está ejecutando en [!INCL
 ## <a name="remarks"></a>Comentarios 
 Para ejecutar código situado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, en procedimientos almacenados extendidos y consultas distribuidas), se tiene que ejecutar un subproceso fuera del control del programador no preferente. Para hacerlo, un trabajador se cambia al modo preferente. Los valores de tiempo que devuelve esta vista de administración dinámica no incluyen el tiempo transcurrido en modo preferente.
 
-Al ejecutar solicitudes paralelas en [modo](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)de fila [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , asigna un subproceso de trabajo para coordinar los subprocesos de trabajo responsables de completar las tareas asignadas. En esta DMV solo el subproceso de coordinador es visible para la solicitud. Las columnasReads, writes, **logical_reads**y ROW_COUNT **no** se actualizan para el subproceso de coordinador. Las columnas **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**y **granted_query_memory** solo se **actualizan** para el subproceso de coordinador. Para obtener más información, vea la guía de arquitectura de subprocesos [y tareas](../../relational-databases/thread-and-task-architecture-guide.md).
+Al ejecutar solicitudes paralelas en [modo](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)de fila [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , asigna un subproceso de trabajo para coordinar los subprocesos de trabajo responsables de completar las tareas asignadas. En esta DMV solo el subproceso de coordinador es visible para la solicitud. Las columnas **Reads**, **writes**, **logical_reads**y **ROW_COUNT** **no se actualizan** para el subproceso de coordinador. Las columnas **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**y **granted_query_memory** solo se **actualizan** para el subproceso de coordinador. Para obtener más información, vea la [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Permisos
 Si el usuario tiene `VIEW SERVER STATE` permiso en el servidor, el usuario verá todas las sesiones en ejecución en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; de lo contrario, el usuario solo verá la sesión actual. `VIEW SERVER STATE`no se puede conceder `sys.dm_exec_requests` en [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , por lo que siempre está limitado a la conexión actual.
@@ -190,4 +190,4 @@ GO
 - [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
 - [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
 - [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text &#40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+- [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

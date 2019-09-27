@@ -22,30 +22,30 @@ ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 429075f01018abbe39b13f46b79a30aa95c5c2db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44664805dc9b728ecbd48acbf38c4565601c631a
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097861"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326145"
 ---
-# <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
+# <a name="sysdm_exec_compute_nodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Contiene información acerca de los nodos que se usa con la administración de datos de PolyBase. Muestra una fila por cada nodo.  
+  Contiene información acerca de los nodos usados con la administración de datos de polybase. Muestra una fila por nodo.  
   
- Utilice esta DMV para ver la lista de todos los nodos del clúster de escalabilidad horizontal con su rol, el nombre y la dirección IP.  
+ Use esta DMV para ver la lista de todos los nodos del clúster de escalabilidad horizontal con su rol, el nombre y la dirección IP.  
   
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|compute_node_id|**int**|Identificador numérico único asociado al nodo. Clave para esta vista.|Único en clúster de escalabilidad horizontal, independientemente del tipo.|  
-|type|**nvarchar(32)**|Tipo del nodo.|'COMPUTE', 'PRINCIPAL'|  
+|compute_node_id|**int**|Identificador numérico único asociado al nodo. Clave para esta vista.|Único en todo el clúster de escalado horizontal, independientemente del tipo.|  
+|type|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ', ' HEAD '|  
 |name|**nvarchar(32)**|Nombre lógico del nodo.|Cualquier cadena de longitud adecuada.|  
-|address|**nvarchar(32)**|Dirección de P de este nodo.|Intervalo de direcciones IP|  
+|address|**nvarchar(32)**|Dirección IP de este nodo.|Intervalo de direcciones IP|  
   
 ## <a name="see-also"></a>Vea también  
- [Solución de problemas con las vistas de administración dinámica de PolyBase](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Solución de problemas de polybase con vistas de administración dinámica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vistas de administración dinámica relacionadas con la base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Vistas &#40;de administración dinámica relacionadas con bases de datos TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

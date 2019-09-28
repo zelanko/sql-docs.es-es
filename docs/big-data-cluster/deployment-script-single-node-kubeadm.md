@@ -1,7 +1,7 @@
 ---
 title: Implementación con un script de bash en un clúster de kubeadm de un solo nodo
 titleSuffix: SQL Server big data clusters
-description: Use un script de implementación de Bash para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] implementar un en un clúster de kubeadm de un solo nodo.
+description: Use un script de implementación de Bash para implementar un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] en un clúster de kubeadm de un solo nodo.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652342"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341840"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>Implementación con un script de bash en un clúster de kubeadm de un solo nodo
 
@@ -34,7 +34,7 @@ En este tutorial, usará un script de implementación de bash de ejemplo para im
 - Actualice los paquetes existentes mediante los comandos siguientes para asegurarse de que la imagen del sistema operativo está actualizada.
 
    ``` bash
-   sudo apt update&&apt upgrade -y
+   sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 
@@ -85,4 +85,4 @@ El script [Cleanup-BDC.sh](https://raw.githubusercontent.com/microsoft/sql-serve
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para empezar a usar los clústeres de Big Data, [consulte Tutorial: Cargar datos de ejemplo en un clúster](tutorial-load-sample-data.md)de macrodatos de SQL Server.
+Para empezar a usar los clústeres de Big Data, consulte @no__t 0Tutorial: Carga de datos de ejemplo en un SQL Server clúster de macrodatos @ no__t-0.

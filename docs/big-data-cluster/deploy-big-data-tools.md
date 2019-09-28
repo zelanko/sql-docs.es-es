@@ -1,7 +1,7 @@
 ---
 title: Instalación de herramientas de macrodatos
 titleSuffix: SQL Server big data clusters
-description: Obtenga información sobre cómo instalar las herramientas [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] usadas con (versión preliminar).
+description: Obtenga información sobre cómo instalar las herramientas que se usan con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd036dfe33ab538d3d845e73f45e804052a9903
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: cbb34d5cd209281a5c97d819c7741503d234ad2d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238698"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342024"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalación de las herramientas de macrodatos de SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describen las herramientas de cliente que se deben instalar para crear, administrar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] y usar (versión preliminar). En la siguiente sección se proporciona una lista de herramientas y vínculos a instrucciones de instalación. Antes de implementar un clúster de macrodatos, configure las herramientas marcadas como obligatorias en Windows o Linux.
+En este artículo se describen las herramientas de cliente que se deben instalar para crear, administrar y usar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar). En la siguiente sección se proporciona una lista de herramientas y vínculos a instrucciones de instalación. Antes de implementar un clúster de macrodatos, configure las herramientas marcadas como obligatorias en Windows o Linux.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -32,7 +32,7 @@ En la tabla siguiente se indican herramientas comunes de clúster de macrodatos 
 |---|---|---|---|
 | **python** | Sí | Python es un lenguaje de programación de alto nivel, interpretado y orientado a objetos con semántica dinámica. Muchas partes de los clústeres de macrodatos para SQL Server usan Python. | [Instalación de Python](#python)|
 | **azdata** | Sí | Herramienta de línea de comandos para instalar y administrar un clúster de macrodatos. | [Instalar](deploy-install-azdata.md) |
-| **kubectl**<sup>1</sup> | Sí | Herramienta de línea de comandos para supervisar el clúster de Kubernetes subyacente ([Más información](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **kubectl**<sup>1</sup> | Sí | Herramienta de línea de comandos para supervisar el clúster de Kubernetes subyacente ([Más información](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio-SQL Server candidato de versión comercial 2019 (RC)** | Sí | Herramienta gráfica multiplataforma para consultar SQL Server. | [Instalar](#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc) |
 | **Extensión SQL Server 2019** | Sí | Extensión para Azure Data Studio que admite la conexión al clúster de macrodatos. Además proporciona un asistente para la virtualización de datos. | [Instalar](../azure-data-studio/sql-server-2019-extension.md) |
 | **CLI de Azure**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para administrar servicios de Azure. Se usa con implementaciones de clústeres de macrodatos de AKS ([Más información](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Instalar](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
@@ -216,4 +216,4 @@ Después de configurar las herramientas, implemente un clúster de macrodatos de
 - [Inicio rápido: Implementación de un clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)](quickstart-big-data-cluster-deploy.md)
 - [Cómo realizar la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] implementación en Kubernetes](deployment-guidance.md)
 
-Para obtener más información sobre los clústeres de Big Data, vea [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+Para obtener más información sobre los clústeres de Big Data, consulte [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

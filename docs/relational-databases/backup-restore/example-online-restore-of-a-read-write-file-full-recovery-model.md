@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0dbeda81-1464-44ba-9011-914900096368
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a078dbb7547eea3aff98d69d925ef9168c843825
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5193d8e84cc3277d8c0031ab4a8f3c4f31845090
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089726"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341855"
 ---
 # <a name="example-online-restore-of-a-read-write-file-full-recovery-model"></a>Ejemplo: Restauración en línea de un archivo de lectura/escritura (modelo de recuperación completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "68089726"
     RESTORE LOG adb FROM log_backup1 WITH NORECOVERY;  
     RESTORE LOG adb FROM log_backup2 WITH NORECOVERY;  
     RESTORE LOG adb FROM log_backup3 WITH NORECOVERY;  
-    RESTORE LOG adb WITH RECOVERY;  
+    RESTORE DATABASE adb WITH RECOVERY;  
     ```  
   
      Ahora el archivo `a1` está en línea.  

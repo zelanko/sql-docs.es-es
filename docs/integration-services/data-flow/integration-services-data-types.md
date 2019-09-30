@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eab2401dc3cb85dfeaedc22b406f1da73c112127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941469"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292415"
 ---
 # <a name="integration-services-data-types"></a>Tipos de datos de Integration Services
 
@@ -109,7 +109,7 @@ ms.locfileid: "67941469"
 ### <a name="converting-datetime-data-types"></a>Convertir tipos de datos de fecha y hora  
  Puede cambiar el tipo de datos en una columna con los datos de fecha/hora para extraer la parte de la fecha o la hora de los datos. En las tablas siguientes se muestran listas de los resultados de cambiar de un tipo de datos de fecha y hora a otro.  
   
-#### <a name="converting-from-dtfiletime"></a>Convertir a partir de DT_FILETIME  
+#### <a name="converting-from-dt_filetime"></a>Convertir a partir de DT_FILETIME  
   
 |Convertir DT_FILETIME a|Resultado|  
 |-----------------------------|------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "67941469"
 |DT_DBTIMESTAMP2|Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos DT_DBTIMESTAMP2 puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Establece en cero el campo de zona horaria del tipo de datos DT_DBTIMESTAMPOFFSET.<br /><br /> Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos DT_DBTIMESTAMPOFFSET puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdate"></a>Convertir a partir de DT_DATE  
+#### <a name="converting-from-dt_date"></a>Convertir a partir de DT_DATE  
   
 |Convertir DT_DATE a|Resultado|  
 |-------------------------|------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "67941469"
 |DT_DBTIMESTAMP2|Convierte el tipo de datos.|  
 |DT_DBTIMESTAMPOFFSET|Establece en cero el campo de zona horaria del tipo de datos DT_DBTIMESTAMPOFFSET.|  
   
-#### <a name="converting-from-dtdbdate"></a>Convertir a partir de DT_DBDATE  
+#### <a name="converting-from-dt_dbdate"></a>Convertir a partir de DT_DBDATE  
   
 |Convertir DT_DBDATE a|Resultado|  
 |---------------------------|------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "67941469"
 |DT_DBTIMESTAMP2|Establece en cero los campos de hora del tipo de datos DT_DBTIMESTAMP.|  
 |DT_DBTIMESTAMPOFFSET|Establece en cero los campos de hora y el campo de zona horaria del tipo de datos DT_DBTIMESTAMPOFFSET.|  
   
-#### <a name="converting-from-dtdbtime"></a>Convertir a partir de DT_DBTIME  
+#### <a name="converting-from-dt_dbtime"></a>Convertir a partir de DT_DBTIME  
   
 |Convertir DT_DBTIME a|Resultado|  
 |---------------------------|------------|  
@@ -161,7 +161,7 @@ ms.locfileid: "67941469"
 |DT_DBTIMESTAMP2|Establece el campo de fecha del tipo de datos DT_DBTIMESTAMP2 en la fecha actual.|  
 |DT_DBTIMESTAMPOFFSET|Establece el campo de fecha y el campo de zona horaria del tipo de datos DT_DBTIMESTAMPOFFSET en la fecha actual y en cero respectivamente.|  
   
-#### <a name="converting-from-dtdbtime2"></a>Convertir a partir de DT_DBTIME2  
+#### <a name="converting-from-dt_dbtime2"></a>Convertir a partir de DT_DBTIME2  
   
 |Convertir DT_DBTIME2 a|Resultado|  
 |----------------------------|------------|  
@@ -174,7 +174,7 @@ ms.locfileid: "67941469"
 |DT_DBTIMESTAMP2|Establece el campo de fecha del tipo de datos DT_DBTIMESTAMP2 en la fecha actual.<br /><br /> Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos DT_DBTIMESTAMP2 puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Establece el campo de fecha y el campo de zona horaria del tipo de datos DT_DBTIMESTAMPOFFSET en la fecha actual y en cero respectivamente.<br /><br /> Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos DT_DBTIMESTAMPOFFSET puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para obtener más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>Convertir a partir de DT_DBTIMESTAMP  
+#### <a name="converting-from-dt_dbtimestamp"></a>Convertir a partir de DT_DBTIMESTAMP  
   
 |Convertir DT_DBTIMESTAMP a|Resultado|  
 |--------------------------------|------------|  
@@ -187,7 +187,7 @@ ms.locfileid: "67941469"
 |DT_DBTIMESTAMP2|Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos DT_DBTIMESTAMP2 puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Establece en cero el campo de zona horaria del tipo de datos DT_DBTIMESTAMPOFFSET.<br /><br /> Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos DT_DBTIMESTAMPOFFSET puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para obtener más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>Convertir a partir de DT_DBTIMESTAMP2  
+#### <a name="converting-from-dt_dbtimestamp2"></a>Convertir a partir de DT_DBTIMESTAMP2  
   
 |Convertir DT_DBTIMESTAMP2 a|Resultado|  
 |---------------------------------|------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "67941469"
 |DT_DBTIMESTAMP2|Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos de destino DT_DBTIMESTAMP2 puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Establece en cero el campo de zona horaria del tipo de datos DT_DBTIMESTAMPOFFSET.<br /><br /> Quita el valor de fracciones de segundo cuando su escala es mayor que el número de dígitos de fracciones de segundo que el tipo de datos DT_DBTIMESTAMPOFFSET puede contener. Después de quitar el valor de fracciones de segundo, genera un informe sobre este truncamiento de datos. Para obtener más información, vea [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>Convertir a partir de DT_DBTIMESTAMPOFFSET  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>Convertir a partir de DT_DBTIMESTAMPOFFSET  
   
 |Convertir DT_DBTIMESTAMPOFFSET a|Resultado|  
 |--------------------------------------|------------|  

@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 515e0501e86d81a34cd9e0f14d720ba3024b241c
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149913"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251088"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ Las opciones asociadas con una intercalación son la distinción de mayúsculas 
 |Punto de código binario (\_BIN2) <sup>1</sup> | Ordena y compara datos de las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según los puntos de código Unicode de datos Unicode. Para datos que no son Unicode, el punto de código binario usará comparaciones idénticas para órdenes binarios.<br/><br/> La ventaja de usar un criterio de ordenación de punto de código binario es que no es necesaria ninguna reordenación de los datos en aplicaciones que comparan los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ordenados. Por consiguiente, el criterio de ordenación de punto de código binario proporciona un desarrollo más simple de las aplicaciones y posibles aumentos en el rendimiento. Para más información, vea la sección [Intercalaciones binarias](#Binary-collations) de esta página.|
 |UTF-8 (\_UTF8)|Permite que los datos con codificación UTF-8 se almacenen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no se selecciona esta opción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el formato de codificación distinto de Unicode de forma predeterminada para los tipos de datos aplicables. Para más información, vea la sección [Compatibilidad con UTF-8](#utf8) en esta página.| 
 
-<sup>1</sup> Si están seleccionadas las opciones Binario o Punto de código binario, las opciones Distinguir mayúsculas de minúsculas (\_CS), Distinguir acentos (\_AS), Distinguir kana (\_KS) y Distinguir ancho (\WS) no estarán disponibles.      
+<sup>1</sup> Si están seleccionadas las opciones Binario o Punto de código binario, las opciones Distinguir mayúsculas de minúsculas (\_CS), Distinguir acentos (\_AS), Distinguir kana (\_KS) y Distinguir ancho (\_WS) no estarán disponibles.      
 
 #### <a name="examples-of-collation-options"></a>Ejemplos de opciones de intercalación
 Cada intercalación se combina como serie de sufijos para definir distinción entre mayúsculas y minúsculas, acentos, ancho o Kana. En estos ejemplos se describe el comportamiento del criterio de ordenación de diversas combinaciones de sufijos.

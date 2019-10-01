@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745444"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682036"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurar las opciones de implementación de los recursos y servicios de clúster
 
@@ -576,7 +576,7 @@ Para deshabilitar el contenedor que ejecuta ElasticSearch para que se ejecute en
 }
 ```
 
-Puede modificar manulomente el archivo **control. JSON** y agregar la sección anterior a la **especificación**, o bien puede crear un archivo **de revisión elasticsearch-patch. JSON** como el siguiente y usar la CLI de **azdata** para aplicar revisiones al archivo **config. JSON** :
+Puede modificar manullly edite el archivo **control. JSON** y agregar la sección anterior a la **especificación**, o bien puede crear un archivo **de revisión elasticsearch-patch. JSON** como el siguiente y usar la CLI de **azdata** para revisar el archivo **control. JSON** :
 
 ```json
 {

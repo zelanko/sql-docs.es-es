@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7036a88ddb2940a16593806cfe1ec679653e30d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294998"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688298"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configuración de Kubernetes en varios equipos para implementaciones de clústeres de macrodatos de SQL Server
 
@@ -33,6 +33,9 @@ Vea también [este](deployment-script-single-node-kubeadm.md) tema para obtener 
    - 8 CPU
    - 64 GB de memoria
    - 100 GB de almacenamiento
+ 
+> [!Important] 
+> Antes de iniciar la implementación del clúster de Big Data, asegúrese de que los relojes estén sincronizados en todos los nodos de Kubernetes de destino de la implementación. El clúster de macrodatos tiene propiedades de estado integradas para varios servicios que son sensibles al tiempo y los sesgos de reloj pueden dar lugar a un estado incorrecto.
 
 ## <a name="prepare-the-machines"></a>Preparar los equipos
 

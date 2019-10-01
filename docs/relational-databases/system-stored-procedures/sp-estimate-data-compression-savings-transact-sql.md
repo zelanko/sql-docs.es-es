@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 447f3cf0f304fb167b85ba49f5a8a583f08cd912
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059302"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682136"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "70059302"
   Devuelve el tamaño actual del objeto solicitado y calcula el tamaño del objeto para el estado de compresión solicitado. La compresión se puede evaluar para tablas enteras o partes de tablas. Esto incluye montones, índices clúster, índices no clúster, índices de almacén de columnas, vistas indizadas y particiones de tablas e índices. Los objetos se pueden comprimir mediante la compresión de archivo de fila, página, almacén de columnas o almacén de columnas. Si la tabla, índice o partición ya están comprimidos, puede utilizar este procedimiento para calcular el tamaño de la tabla, del índice o de la partición en caso de que se volviera a comprimir.  
   
 > [!NOTE]
-> La compresión y **sp_estimate_data_compression_savings** no están disponibles en todas las [!INCLUDE[msCoName](../../includes/msconame-md.md)]ediciones de. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> La compresión y **sp_estimate_data_compression_savings** no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] @ no__t-2. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Para calcular el tamaño del objeto, en caso de que se use el valor de compresión solicitado, el procedimiento almacenado prueba el objeto de origen y carga los datos en una tabla e índice equivalentes creados en tempdb. La tabla o índice creados en tempdb se comprimen al valor solicitado y se calcula el ahorro estimado de la compresión.  
   
@@ -55,21 +55,21 @@ sp_estimate_data_compression_savings
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @schema_name=] '*schema_name*'  
+ [@schema_name =] '*schema_name*'  
  Es el nombre del esquema de la base de datos que contiene la tabla o vista indizada. *schema_name* es de **tipo sysname**. Si *schema_name* es null, se usa el esquema predeterminado del usuario actual.  
   
- [ @object_name=] '*object_name*'  
+ [@object_name =] '*object_name*'  
  Es el nombre de la tabla o vista indizada en la que está el índice. *object_name* es **sysname**.  
   
- [ @index_id=]  
- Es el identificador del índice. el valor de la siguiente es **int**y puede ser uno de los valores siguientes: el número de identificación de un índice, null o 0 si *object_id* es un montón. Para obtener información de todos los índices de una tabla base o vista, especifique NULL. Si especifica NULL, también debe especificar NULL para *partition_number*.  
+ [@index_id =] por debajo  
+ Es el identificador del índice. el valor de la *siguiente es* **int**y puede ser uno de los valores siguientes: el número de identificación de un índice, null o 0 si *object_id* es un montón. Para obtener información de todos los índices de una tabla base o vista, especifique NULL. Si especifica NULL, también debe especificar NULL para *partition_number*.  
   
- [ @partition_number=] *partition_number*  
+ [@partition_number =] *partition_number*  
  Es el número de partición en el objeto. *partition_number* es de **tipo int**y puede tener uno de los valores siguientes: el número de partición de un índice o montón, null o 1 para un índice o montón sin particiones.  
   
  Para especificar la partición, también puede especificar la función [$Partition](../../t-sql/functions/partition-transact-sql.md) . Para obtener información sobre todas las particiones del objeto propietario, especifique NULL.  
   
- [ @data_compression=] '*data_compression*'  
+ [@data_compression =] '*data_compression*'  
  Es el tipo de compresión que se va a evaluar. *data_compression* puede ser uno de los siguientes valores: NINGUNO, fila, página, almacén de columnas o COLUMNSTORE_ARCHIVE.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -92,9 +92,9 @@ sp_estimate_data_compression_savings
 ## <a name="remarks"></a>Comentarios  
  Use `sp_estimate_data_compression_savings` para calcular el ahorro que se puede producir al habilitar una tabla o partición para la compresión de archivo de fila, página, almacén de columnas o almacén de columnas. Por ejemplo, si el tamaño medio de una fila se puede reducir un 40 por ciento, potencialmente también se puede reducir el tamaño del objeto en un 40 por ciento. Es posible que no consiga ahorrar espacio, ya que depende del factor de relleno y del tamaño de la fila. Por ejemplo, si tiene una fila de 8.000 bytes de longitud y reduce su tamaño en un 40 por ciento, puede ajustar solo una fila en una página de datos. No se obtiene ningún ahorro.  
   
- Si los resultados de la `sp_estimate_data_compression_savings` ejecución indican que la tabla va a crecer, esto significa que muchas filas de la tabla usan casi toda la precisión de los tipos de datos, y la adición de la pequeña sobrecarga necesaria para el formato comprimido es mayor que el ahorro de presi. En este caso excepcional, no habilite la compresión.  
+ Si los resultados de ejecutar `sp_estimate_data_compression_savings` indican que la tabla crecerá, eso quiere decir que muchas filas de la tabla utilizan prácticamente toda la precisión en los tipos de datos y la adición de la mínima sobrecarga necesaria para el formato comprimido es mayor que el ahorro obtenido por la compresión. En este caso excepcional, no habilite la compresión.  
   
- Si una tabla está habilitada para la compresión `sp_estimate_data_compression_savings` , use para calcular el tamaño medio de la fila si se descomprime la tabla.  
+ Si una tabla está habilitada para compresión, utilice `sp_estimate_data_compression_savings` para estimar el tamaño medio de la fila si se descomprime la tabla.  
   
  Durante esta operación, se adquiere un bloqueo con intención compartida (IS) en la tabla. Si no se puede obtener un bloqueo (IS), se bloqueará el procedimiento. La tabla se examina bajo el nivel de aislamiento READ COMMITTED.  
   
@@ -103,13 +103,16 @@ sp_estimate_data_compression_savings
  Si no existe el identificador de índice o la partición, no se devolverá ningún resultado.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere `SELECT` el permiso en la tabla.  
+ Debe tener un permiso de `SELECT` sobre la tabla.  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Antes de SQL Server 2019, este procedimiento no se aplicaba a los índices de almacén de columnas y, por lo tanto, no aceptó los parámetros de compresión de datos de almacén de columnas y COLUMNSTORE_ARCHIVE.  A partir de SQL Server 2019, los índices de almacén de columnas se pueden usar como un objeto de origen para la estimación y como un tipo de compresión solicitado.
 
+ > [!IMPORTANT]
+ > Cuando se habilitan los [metadatos de tempdb optimizados para memoria](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], no se admite la creación de índices de almacén de columnas en tablas temporales. Debido a esta limitación, sp_estimate_data_compression_savings no es compatible con los parámetros de compresión de datos de almacén de columnas y COLUMNSTORE_ARCHIVE cuando se habilitan los metadatos de TempDB optimizados para memoria.
+
 ## <a name="considerations-for-columnstore-indexes"></a>Consideraciones sobre los índices de almacén de columnas
- A partir [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]de `sp_estimate_compression_savings` , admite la estimación de la compresión de archivo de almacén de columnas y de almacén de columnas. A diferencia de la compresión de página y fila, la aplicación de la compresión de almacén de columnas a un objeto requiere la creación de un nuevo índice de almacén de columnas. Por esta razón, al usar las opciones de almacén de columnas y COLUMNSTORE_ARCHIVE de este procedimiento, el tipo del objeto de origen proporcionado al procedimiento determina el tipo de índice de almacén de columnas usado para la estimación del tamaño comprimido. En la tabla siguiente se muestran los objetos de referencia que se usan para calcular el ahorro de compresión para @data_compression cada tipo de objeto de origen cuando el parámetro se establece en el almacén de columnas o en COLUMNSTORE_ARCHIVE.
+ A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], `sp_estimate_compression_savings` admite la estimación de la compresión del almacén de columnas y del almacén de columnas. A diferencia de la compresión de página y fila, la aplicación de la compresión de almacén de columnas a un objeto requiere la creación de un nuevo índice de almacén de columnas. Por esta razón, al usar las opciones de almacén de columnas y COLUMNSTORE_ARCHIVE de este procedimiento, el tipo del objeto de origen proporcionado al procedimiento determina el tipo de índice de almacén de columnas usado para la estimación del tamaño comprimido. En la tabla siguiente se muestran los objetos de referencia que se usan para calcular el ahorro de compresión para cada tipo de objeto de origen cuando el parámetro @data_compression se establece en el almacén de columnas o en COLUMNSTORE_ARCHIVE.
 
  |Objeto de origen|Objeto de referencia|
  |-----------------|---------------|
@@ -122,7 +125,7 @@ sp_estimate_data_compression_savings
 > [!NOTE]  
 > Al estimar la compresión de almacén de columnas de un objeto de origen de almacén (índice clúster, índice no clúster o montón), si hay alguna columna en el objeto de origen que tenga un tipo de datos no admitido en un índice de almacén de columnas, sp_estimate_compression_savings producirá un error.
 
- Del mismo modo, `@data_compression` cuando el parámetro se `NONE`establece `ROW`en, `PAGE` o y el objeto de origen es un índice de almacén de columnas, en la tabla siguiente se describen los objetos de referencia usados.
+ Del mismo modo, cuando el parámetro `@data_compression` se establece en `NONE`, `ROW` o `PAGE` y el objeto de origen es un índice de almacén de columnas, en la tabla siguiente se describen los objetos de referencia usados.
 
  |Objeto de origen|Objeto de referencia|
  |-----------------|---------------|
@@ -146,7 +149,7 @@ GO
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Procedimientos &#40;almacenados de motor de base de datos TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Motor de base de datos procedimientos &#40;almacenados de Transact-&#41;SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Implementación de la compresión Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

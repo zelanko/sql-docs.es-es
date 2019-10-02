@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce1182decfb5afe63e43aa527d89d1ebc44d179a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a08973bcfadb88750129fd440eeabb3f69bb2ddb
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895727"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707725"
 ---
-# <a name="bcpcolfmt"></a>bcp_colfmt
+# <a name="bcp_colfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -56,7 +56,7 @@ RETCODE bcp_colfmt (
  *eUserDataType*  
  Es el tipo de datos de esta columna del archivo de usuario. Si es distinto del tipo de datos de la columna correspondiente en la tabla de base de datos (*idxServerColumn*), la copia masiva convierte los datos si es posible.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo la compatibilidad con tokens de tipo de datos SQLXML y SQLUDT en el *eUserDataType* parámetro.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] incorporó la compatibilidad con los tokens de tipo de datos SQLXML y SQLUDT en el parámetro *eUserDataType* .  
   
  Los tokens de tipo de datos de *en sqlncli.h enumeran el parámetro* eUserDataType [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no los enumeradores de tipos de datos C de ODBC. Por ejemplo, puede especificar una cadena de caracteres, tipo SQL_C_CHAR de ODBC, utilizando el tipo SQLCHARACTER específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -141,10 +141,10 @@ RETCODE bcp_colfmt (
   
  La función [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) se puede utilizar para conservar la especificación de formato.  
   
-## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>Compatibilidad de bcp_colfmt con las características mejoradas de fecha y hora  
- Para obtener información acerca de los tipos utilizados con el *eUserDataType* parámetro para los tipos de fecha y hora, vea [cambios de copia masiva para tipos mejorada de fecha y hora &#40;OLE DB y ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+## <a name="bcp_colfmt-support-for-enhanced-date-and-time-features"></a>Compatibilidad de bcp_colfmt con las características mejoradas de fecha y hora  
+ Para obtener información sobre los tipos utilizados con el parámetro *eUserDataType* para los tipos de fecha y hora, vea [cambios de copia masiva para tipos &#40;de fecha y&#41;hora mejorados OLE DB y ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Para obtener más información, consulte [mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, vea [mejoras &#40;de fecha y&#41;hora ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones de copia masiva](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

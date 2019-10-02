@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895549"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707465"
 ---
-# <a name="bcpgettypename"></a>bcp_gettypename
+# <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -67,15 +67,15 @@ RETCODE bcp_gettypename (
 |**SQLDATETIME**|Antes o después|**datetime**|  
 |**SQLBITN**|Antes o después|**bit-null**|  
 |**SQLBIT**|Antes o después|**bit**|  
-|**SQLBIGCHAR**|No|**char**|  
-|**SQLCHARACTER**|No|**char**|  
-|**SQLBIGVARCHAR**|No|**varchar**|  
+|**SQLBIGCHAR**|Sin|**char**|  
+|**SQLCHARACTER**|Sin|**char**|  
+|**SQLBIGVARCHAR**|Sin|**varchar**|  
 |**SQLVARCHAR**|Sin|**varchar**|  
 |**SQLTEXT**|Antes o después|**texto**|  
 |**SQLBIGBINARY**|Sin|**binario**|  
 |**SQLBINARY**|Sin|**Binario**|  
-|**SQLBIGVARBINARY**|Sin|**varbinary**|  
-|**SQLVARBINARY**|No|**varbinary**|  
+|**SQLBIGVARBINARY**|Sin|**Varbinary**|  
+|**SQLVARBINARY**|Sin|**Varbinary**|  
 |**SQLIMAGE**|Antes o después|**Image**|  
 |**SQLINTN**|Antes o después|**int-null**|  
 |**SQLDATETIMN**|Antes o después|**datetime-null**|  
@@ -87,10 +87,10 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|Antes o después|**Min**|  
 |**SQLAOPMAX**|Antes o después|**Max**|  
 |**SQLDATETIM4**|Antes o después|**smalldatetime**|  
-|**SQLMONEY4**|Antes o después|**smallmoney**|  
-|**SQLFLT4**|Antes o después|**real**|  
+|**SQLMONEY4**|Antes o después|**Smallmoney**|  
+|**SQLFLT4**|Antes o después|**Impuestos**|  
 |**SQLUNIQUEID**|Antes o después|**uniqueidentifier**|  
-|**SQLNCHAR**|Sin|**nchar**|  
+|**SQLNCHAR**|Sin|**Nchar**|  
 |**SQLNVARCHAR**|Sin|**Nvarchar**|  
 |**SQLNTEXT**|Antes o después|**Ntext**|  
 |**SQLVARIANT**|Antes o después|**sql_variant**|  
@@ -108,10 +108,10 @@ RETCODE bcp_gettypename (
 |**SQLXML**|Sí|**Xml**|  
 |**SQLUDT**|Antes o después|**Udt**|  
   
-## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename admite las características mejoradas de fecha y hora  
- Se describen los valores de parámetro de token para los tipos de fecha y hora en la columna "Tipo en sqlncli.h" de la tabla en [cambios de copia masiva para tipos mejorada de fecha y hora &#40;OLE DB y ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). El valor devuelto está en la fila correspondiente de la columna " Tipo de almacenamiento de archivo".  
+## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename admite las características mejoradas de fecha y hora  
+ Los valores de los parámetros de token para los tipos de fecha y hora se describen en la columna "Type in SQLNCLI. h" de la tabla en [cambios de copia masiva &#40;para los tipos&#41;de fecha y hora mejorados OLE DB y ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). El valor devuelto está en la fila correspondiente de la columna " Tipo de almacenamiento de archivo".  
   
- Para obtener más información, consulte [mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información, vea [mejoras &#40;de fecha y&#41;hora ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones de copia masiva](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

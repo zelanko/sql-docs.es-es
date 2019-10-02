@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc379866c2d36ae4e84c284526b8cd5ad2fb931c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54b6f04dcc622cc5b8702d03d78a94e30e61fd7e
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987708"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707581"
 ---
-# <a name="bcpwritefmt"></a>bcp_writefmt
+# <a name="bcp_writefmt"></a>bcp_writefmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -53,7 +53,7 @@ RETCODE bcp_writefmt (
 ## <a name="remarks"></a>Comentarios  
  El archivo de formato especifica el formato de los datos de un archivo de datos creado mediante copia masiva. Las llamadas a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) y [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) definen el formato del archivo de datos. **bcp_writefmt** guarda esta definición en el archivo al que se hace referencia en *szFormatFile*. Para obtener más información, vea [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
   
- Para obtener más información sobre la estructura de **bcp** archivos de formato de datos, vea [importar y exportar datos de forma masiva con la utilidad bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
+ Para obtener más información acerca de la estructura de los archivos de formato de datos **BCP** , vea [importar y exportar datos en &#40;bloque&#41;con la utilidad BCP SQL Server](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  Para cargar un archivo de formato guardado, use [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md).  
   

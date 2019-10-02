@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 820dadee39c4d68455b8c609b512a6504eb5fbad
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 9e8f4103511085bd834d9970e399604c7082ec0b
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154425"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708597"
 ---
 # <a name="azdata-bdc-spark-session"></a>azdata bdc spark session
 
@@ -22,7 +22,7 @@ ms.locfileid: "70154425"
 
 Este artículo es un artículo de referencia para **azdata**. 
 
-## <a name="commands"></a>Comandos:
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata bdc spark session create](#azdata-bdc-spark-session-create) | Cree una sesión de Spark.
@@ -52,7 +52,7 @@ azdata bdc spark session create [--session-kind -k]
 ### <a name="examples"></a>Ejemplos
 Crear una sesión.
 ```bash
-azdata spark session create --session-kind pyspark
+azdata bdc spark session create --session-kind pyspark
 ```
 ### <a name="optional-parameters"></a>Parámetros opcionales
 #### `--session-kind -k`
@@ -102,7 +102,7 @@ azdata bdc spark session list
 ### <a name="examples"></a>Ejemplos
 Enumere todas las sesiones activas.
 ```bash
-azdata spark session list
+azdata bdc spark session list
 ```
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
@@ -124,7 +124,7 @@ azdata bdc spark session info --session-id -i
 ### <a name="examples"></a>Ejemplos
 Obtener la información de la sesión con el identificador 0.
 ```bash
-azdata spark session info --session-id 0
+azdata bdc spark session info --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -149,7 +149,7 @@ azdata bdc spark session log --session-id -i
 ### <a name="examples"></a>Ejemplos
 Obtener el registro de la sesión con el identificador 0.
 ```bash
-azdata spark session log --session-id 0
+azdata bdc spark session log --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -174,7 +174,7 @@ azdata bdc spark session state --session-id -i
 ### <a name="examples"></a>Ejemplos
 Obtener el estado de la sesión con el identificador 0.
 ```bash
-azdata spark session state --session-id 0
+azdata bdc spark session state --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -199,7 +199,7 @@ azdata bdc spark session delete --session-id -i
 ### <a name="examples"></a>Ejemplos
 Eliminar una sesión.
 ```bash
-azdata spark session delete --session-id 0
+azdata bdc spark session delete --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -212,7 +212,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 

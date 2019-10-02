@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6b88e9931ab7575e46f6179680ad721ce40dea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ea8cb10227ccebe10e350ce82b0887eb8a8bacf
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895508"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707521"
 ---
-# <a name="bcpmoretext"></a>bcp_moretext
+# <a name="bcp_moretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -46,7 +46,7 @@ RETCODE bcp_moretext (
  Es el identificador de la conexión ODBC habilitada para la copia masiva.  
   
  *cbData*  
- Es el número de bytes de datos se copian a SQL Server de los datos al que hace referencia *pData*. Un valor de SQL_NULL_DATA indica NULL.  
+ Es el número de bytes de datos que se copian en SQL Server a partir de los datos a los que se hace referencia en *pdata*. Un valor de SQL_NULL_DATA indica NULL.  
   
  *pData*  
  Es un puntero al fragmento de datos compatible, largo y de longitud variable que se va a enviar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,19 +55,19 @@ RETCODE bcp_moretext (
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función puede utilizarse junto con [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) y [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) long, copiar los valores de datos de longitud variable a SQL Server en un número de fragmentos más pequeños. **bcp_moretext** puede utilizarse con columnas que tienen los siguientes tipos de datos de SQL Server: **texto**, **ntext**, **imagen**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , tipo definido por el usuario (UDT) y XML. **bcp_moretext** admite conversiones de datos, los datos proporcionados deben coincidir con el tipo de datos de la columna de destino.  
+ Esta función se puede usar junto con [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) y [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) para copiar valores de datos largos y de longitud variable en SQL Server en varios fragmentos más pequeños. **bcp_moretext** se puede usar con columnas que tienen los siguientes tipos de datos SQL Server: **Text**, **ntext**, **Image**, **VARCHAR (Max)** , **nvarchar (Max)** , **varbinary (Max)** , tipo definido por el usuario (UDT) y XML. **bcp_moretext** no admite conversiones de datos, los datos proporcionados deben coincidir con el tipo de datos de la columna de destino.  
   
- Si **bcp_bind** se denomina con un valor no NULL *pData* parámetro para los tipos de datos que son compatibles con **bcp_moretext**, **bcp_sendrow** envía el valor de datos completo, independientemente de longitud. Si es, sin embargo, **bcp_bind** tiene un valor nulo *pData* parámetro para los tipos de datos admitidos, **bcp_moretext** puede utilizarse para copiar los datos inmediatamente después de una devolución correcta de **bcp_sendrow** que indica que se han procesado las columnas enlazadas con datos presentes.  
+ Si se llama a **bcp_bind** con un parámetro *pdata* no NULL para los tipos de datos admitidos por **bcp_moretext**, **bcp_sendrow** envía el valor de datos completo, independientemente de la longitud. Sin embargo, si **bcp_bind** tiene un parámetro *pdata* null para los tipos de datos admitidos, **bcp_moretext** puede usarse para copiar datos inmediatamente después de una devolución correcta de **bcp_sendrow** que indica que las columnas enlazadas con datos están presentes. se han procesado.  
   
- Si usas **bcp_moretext** para enviar una columna de tipo de datos admitidos en una fila, debe también usarla para enviar todas las demás columnas de tipo de datos admitidos en la fila. No se puede omitir ninguna columna. Los tipos de datos admitidos son SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT y SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY y SQLVARBINARY también pertenecen a esta categoría si la columna es de tipo varchar (max), nvarchar (max) o varbinary (max), respectivamente.  
+ Si utiliza **bcp_moretext** para enviar una columna de tipo de datos compatible en una fila, también debe utilizarla para enviar todas las demás columnas de tipos de datos compatibles de la fila. No se puede omitir ninguna columna. Los tipos de datos admitidos son SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT y SQLXML. SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY y SQLVARBINARY también pertenecen a esta categoría si la columna es de tipo varchar (max), nvarchar (max) o varbinary (max), respectivamente.  
   
- Al llamar a **bcp_bind** o [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) establece la longitud total de todos los elementos de datos que se copiarán en la columna de SQL Server. Intento de envío de SQL Server más bytes que los especificados en la llamada a **bcp_bind** o **bcp_collen** genera un error. Este error se producirá, por ejemplo, en una aplicación que usa **bcp_collen** para establecer la longitud de los datos disponibles para un servidor SQL **texto** , a continuación, llama la columna a 4500, **bcp_moretext** cinco veces mientras se indicando en cada llamada que la longitud del búfer los datos de 1000 bytes de longitud.  
+ Al llamar a **bcp_bind** o [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) , se establece la longitud total de todas las partes de datos que se van a copiar en la columna SQL Server. Un intento de enviar SQL Server más bytes de los especificados en la llamada a **bcp_bind** o **bcp_collen** genera un error. Este error surgiría, por ejemplo, en una aplicación que usaba **bcp_collen** para establecer la longitud de los datos disponibles para una SQL Server columna de **texto** en 4500 y, a continuación, se llamaba **bcp_moretext** cinco veces mientras se indica en cada llamada que el búfer de datos la longitud era de 1000 bytes.  
   
- Si una fila copiada contiene más de una columna larga, de longitud variable, **bcp_moretext** envía primero sus datos a la más baja columna seguido de la siguiente con el número ordinal más bajo número ordinal de columna y así sucesivamente. Es importante una configuración correcta de la longitud total de datos esperados. No hay ninguna manera de indicar, fuera de la configuración de longitud, que la copia masiva ha recibido todos los datos de una columna.  
+ Si una fila copiada contiene más de una columna de longitud variable larga, **bcp_moretext** primero envía sus datos a la columna con el número ordinal más bajo, seguida de la siguiente columna con un número ordinal más bajo, y así sucesivamente. Es importante una configuración correcta de la longitud total de datos esperados. No hay ninguna manera de indicar, fuera de la configuración de longitud, que la copia masiva ha recibido todos los datos de una columna.  
   
- Cuando **var(max)** los valores se envían al servidor mediante bcp_sendrow y bcp_moretext, no es necesario llamar a bcp_collen para establecer la longitud de columna. En su lugar, únicamente para estos tipos, el valor termina con bcp_sendrow que realiza la llamada con una longitud de cero.  
+ Cuando los valores **var (Max)** se envían al servidor mediante bcp_sendrow y bcp_moretext, no es necesario llamar a bcp_collen para establecer la longitud de la columna. En su lugar, solo para estos tipos, el valor se termina llamando a bcp_sendrow con una longitud de cero.  
   
- Una aplicación suele llamar a **bcp_sendrow** y **bcp_moretext** dentro de bucles para enviar un número de filas de datos. Aquí tiene un resumen de cómo hacer esto para una tabla que contiene dos **texto** columnas:  
+ Normalmente, una aplicación llama a **bcp_sendrow** y **bcp_moretext** en bucles para enviar varias filas de datos. A continuación se muestra un esquema de cómo hacerlo en una tabla que contiene dos columnas de **texto** :  
   
 ```  
 while (there are still rows to send)  

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 272a633a347f767145476e770e2d9b64b7470e49
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 31368eab4f3cdd10c6d54456823120bcd1637c5a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153083"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708449"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
@@ -22,7 +22,7 @@ ms.locfileid: "70153083"
 
 Este artículo es un artículo de referencia para **azdata**. 
 
-## <a name="commands"></a>Comandos:
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata bdc spark statement list](#azdata-bdc-spark-statement-list) | Enumera todas las instrucciones de la sesión de Spark correspondiente.
@@ -38,7 +38,7 @@ azdata bdc spark statement list --session-id -i
 ### <a name="examples"></a>Ejemplos
 Enumera todas las instrucciones de la sesión.
 ```bash
-azdata spark statement list --session-id 0
+azdata bdc spark statement list --session-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -63,7 +63,7 @@ azdata bdc spark statement create --session-id -i
 ### <a name="examples"></a>Ejemplos
 Ejecuta una instrucción.
 ```bash
-azdata spark statement create --session-id 0 --code "2+2"
+azdata bdc spark statement create --session-id 0 --code "2+2"
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -90,7 +90,7 @@ azdata bdc spark statement info --session-id -i
 ### <a name="examples"></a>Ejemplos
 Obtiene información de instrucción de la sesión con identificador 0 e identificador de instrucción 0.
 ```bash
-azdata spark statement info --session-id 0 --statement-id 0
+azdata bdc spark statement info --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -117,7 +117,7 @@ azdata bdc spark statement cancel --session-id -i
 ### <a name="examples"></a>Ejemplos
 Cancela una instrucción.
 ```bash
-azdata spark statement cancel --session-id 0 --statement-id 0
+azdata bdc spark statement cancel --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--session-id -i`
@@ -132,7 +132,7 @@ Muestre este mensaje de ayuda y salga.
 #### `--output -o`
 Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
+Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/).
 #### `--verbose`
 Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 

@@ -1,5 +1,5 @@
 ---
-title: Las funciones de copia de forma masiva | Documentos de Microsoft
+title: Funciones de copia masiva | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - functions [ODBC]
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4e448675621b77fc79089e651daa5c822a5b87e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ce1ee4536769ea1531a11ca3d57f049310ade042
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099419"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707594"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>Extensiones del controlador de SQL Server: funciones de copia masiva
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68099419"
 
   Conectividad abierta de bases de datos (ODBC) es una interfaz de programación de aplicaciones Win32 de Microsoft que las aplicaciones utilizan para obtener acceso a los datos de orígenes de datos ODBC. En la referencia del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no se documentan todas las llamadas a funciones de ODBC. Solo se describen las funciones que tienen parámetros o comportamientos específicos del controlador cuando se utilizan con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se ajusta a la especificación de ODBC 3.51. Para obtener una referencia completa de ODBC 3.51, descargue el SDK de Microsoft Data Access Components desde el [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173), o ver el [referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) en línea.  
+ El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se ajusta a la especificación de ODBC 3.51. Para obtener una referencia completa de ODBC 3,51, descargue el SDK de Microsoft Data Access Components del [Centro para desarrolladores de acceso a datos y almacenamiento](https://go.microsoft.com/fwlink?linkid=4173)o vea la [Referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) en línea.  
  
  La extensión de la API de copia masiva específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite que las aplicaciones cliente agreguen filas de datos a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rápidamente o las extraigan de ella.  Al utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, puede hacer referencia a las funciones de copia masiva (BCP) de SQLNCLI11.LIB y SQLNCLI.H.  
   
@@ -75,6 +75,6 @@ ms.locfileid: "68099419"
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de controlador de SQL Server](https://msdn.microsoft.com/library/1043bc93-965d-4939-bd1c-21e9d8d3e9ac)   
- [Realizar operaciones de copia masiva &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [Realizar operaciones &#40;de copia masiva ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

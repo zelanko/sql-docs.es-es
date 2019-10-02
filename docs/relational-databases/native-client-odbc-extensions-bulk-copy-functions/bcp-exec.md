@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_exec function
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7d6ce92fe3ca3a4fb2c6209a01b3eee6b575b0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 85fc18ed18f157b47d9fd7b654cda4bf25e608ec
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895606"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707688"
 ---
-# <a name="bcpexec"></a>bcp_exec
+# <a name="bcp_exec"></a>bcp_exec
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -57,7 +57,7 @@ RETCODE bcp_exec (
   
  **bcp_exec** es la única función de copia masiva que es probable que quede pendiente durante un período de tiempo indeterminado. Por lo tanto, es la única función de copia masiva que admite el modo asincrónico. Para establecer el modo asincrónico, utilice [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para establecer SQL_ATTR_ASYNC_ENABLE en SQL_ASYNC_ENABLE_ON antes de llamar a **bcp_exec**. Para comprobar si se ha completado, llame a **bcp_exec** con los mismos parámetros. Si la copia masiva no se ha completado todavía, **bcp_exec** devuelve SUCCEED_ASYNC. También devuelve en *pnRowsProcessed* un recuento del estado del número de filas enviadas al servidor. Las filas enviadas al servidor no se confirman hasta que se alcanza el final de un lote.  
   
- Para obtener información sobre una separación de cambio de copia masiva a partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], consulte [realizar operaciones de copia masiva &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Para obtener información sobre un cambio importante en la copia masiva a partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], vea [realizar operaciones &#40;de&#41;copia masiva ODBC](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo, se muestra cómo utilizar **bcp_exec**:  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 76bb0b64f0a3405a20b9b05c8cb1e18d6ab242a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1bc96e1eaf22c304a4751bb39c40319da2f16659
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118940"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314541"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 *ciphertext*  
 Una variable de tipo **varbinary** que contiene los datos cifrados con la clave.  
   
-**@ciphertext**  
+**\@ciphertext**  
 Una variable de tipo **varbinary** que contiene los datos cifrados con la clave.  
   
  *add_authenticator*  
@@ -55,7 +55,7 @@ Indica si el proceso de cifrado original incluía, y cifraba, un autenticador ju
  *authenticator*  
 Los datos que se usaron como base para la generación del autenticador. Debe coincidir con el valor que se proporcionó a [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *autenticador* tiene un tipo de datos **sysname**.  
 
-**@authenticator**  
+**\@authenticator**  
 Una variable que contiene datos a partir de los que se genera un autenticador. Debe coincidir con el valor que se proporcionó a [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* tiene un tipo de datos **sysname**.  
 
 ## <a name="return-types"></a>Tipos devueltos  

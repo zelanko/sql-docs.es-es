@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878615"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326030"
 ---
-# <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
+# <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Extensión de SQL Server 2019 (versión preliminar) para Azure Data Studio
 
-La extensión de SQL Server 2019 (versión preliminar) proporciona compatibilidad en versión preliminar con las nuevas características y herramientas que se distribuyen para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esto incluye compatibilidad en versión preliminar con [clústeres de macrodatos de SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), una [experiencia de cuadernos](../big-data-cluster/notebooks-guidance.md) integrada y un [Asistente para crear tablas externas](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json) de PolyBase.
+La extensión de SQL Server 2019 (versión preliminar) para Azure Data Studio proporciona compatibilidad en versión preliminar con las nuevas características y herramientas que se distribuyen para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esto incluye compatibilidad en versión preliminar con [clústeres de macrodatos de SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), una [experiencia de cuadernos](../big-data-cluster/notebooks-guidance.md) integrada y un [Asistente para crear tablas externas](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json) de PolyBase.
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Instalación de la extensión de SQL Server 2019 (versión preliminar)
 
@@ -143,58 +143,3 @@ Se han agregado a esta versión varias mejoras de ayuda a los extensores.
 * Se ha bloqueado el uso del Asistente para crear datos externos si PolyBase no está habilitado o no se ejecuta en el servidor de destino.
 * Se han realizado correcciones ortográficas y de nomenclatura relacionadas con SQL Server 2019 y la creación de datos externos.
 * Se ha eliminado un gran número de errores de la consola de depuración de Azure Data Studio.
-
-##  <a name="sql-server-2019-big-data-cluster-support"></a>Compatibilidad con clústeres de macrodatos de SQL Server 2019
-
-* Haga clic en **Agregar conexión** en el *Explorador de objetos* y elija **SQL Server big data cluster** (Clúster de macrodatos de SQL Server) como tipo de conexión.
-
-   > [!TIP]
-   > Si no ve el tipo de conexión **SQL Server big data cluster** (Clúster de macrodatos de SQL Server), reinicie Azure Data Studio.
-
-* Escriba el nombre de host o la dirección IP del punto de conexión del clúster, más el nombre de usuario y la contraseña que use para conectarse.
-* Opcionalmente, incluya un nombre para mostrar que sea descriptivo en el campo **Nombre**.
-* Después de hacer clic en **Conectar**, ya puede iniciar tareas comunes desde el panel, examinar **HDFS** en el Explorador de objetos y ejecutar tareas en contexto desde allí.
-* Para enviar un trabajo de Spark al clúster, haga clic con el botón derecho en el nodo de servidor en el *Explorador de objetos* y elija **Submit Spark Job** (Enviar trabajo de Spark) para que aparezca el cuadro de diálogo de envío.
-* Para abrir un cuaderno, consulte la sección siguiente.
-
-Para obtener más información, consulte [Clústeres de macrodatos](../big-data-cluster/big-data-cluster-overview.md).
-
-
-## <a name="azure-data-studio-notebooks"></a>Cuadernos de Azure Data Studio
-
-* Abra un cuaderno de una de las siguientes maneras:
-  * Abra un nuevo cuaderno desde la *paleta de comandos*.
-  * Abra el árbol del Explorador de objetos de HDFS para un clúster de macrodatos de SQL Server 2019 y después:
-    * Haga clic con el botón derecho en el nodo del servidor y seleccione **New Jupyter Notebook** (Nuevo cuaderno de Jupyter).
-    * Haga clic con el botón derecho en un archivo CSV y elija **Analyze in Notebook** (Analizar en Notebook).
-  * Abra un archivo .ipynb existente desde el menú **Archivo** o el explorador de archivos *(los archivos .ipynb deben actualizarse a la versión 4 o posterior para que se carguen correctamente)* .
-* Seleccione un kernel. Para la ejecución de un cuaderno local, elija Python 3. Para la ejecución remota, seleccione PySpark o Spark | Scala.
-* Elija un punto de conexión de clúster de macrodatos de SQL Server al que conectarse si se ejecuta de forma remota (esto no es necesario para el desarrollo local con Python 3).
-* Agregue código o celdas de Markdown con los botones del encabezado del cuaderno. Elimine celdas con el icono de papelera situado a la izquierda de cada celda.
-* Ejecute celdas con el botón de reproducción para las celdas de código y alterne la edición y la vista previa de Markdown con el icono de ojo.
-
-## <a name="polybase-create-external-table-wizard"></a>Asistente para crear tablas externas de PolyBase
-
-* En una instancia de SQL Server 2019, puede abrir el *Asistente para crear tablas externas* de tres maneras:
-  * Haga clic con el botón derecho en un servidor, seleccione **Administrar**, haga clic en la pestaña de SQL Server 2019 (versión preliminar) y elija **Create External Table** (Crear una tabla externa).
-  * Con una instancia de SQL Server 2019 seleccionada en el *Explorador de objetos*, abra el *Asistente para crear tablas externas* con la *paleta de comandos*.
-  * Haga clic con el botón derecho en una base de datos de SQL Server 2019 en el *Explorador de objetos* y elija **Create External Table** (Crear una tabla externa).
-* En esta versión de la extensión, se pueden crear tablas externas para acceder a tablas remotas de SQL Server y Oracle.
-
-  > [!NOTE]
-  > Aunque la funcionalidad de tabla externa es una característica de SQL 2019, puede que la instancia remota de SQL Server ejecute una versión anterior de SQL Server.
-
-* Elija si va a acceder a SQL Server o a Oracle en la primera página del asistente y continúe.
-* Se le pedirá que cree una clave maestra de base de datos si todavía no se ha creado una (se bloquearán las contraseñas con una complejidad insuficiente).
-* Cree una conexión de origen de datos y una credencial con nombre para el servidor remoto.
-* Elija los objetos que se van a asignar a la nueva tabla externa.
-* Elija **Generar script** o **Crear** para finalizar el asistente.
-* Después de crear la tabla externa, aparece inmediatamente en el árbol de objetos de la base de datos donde se creó.
-
-
-## <a name="known-issues"></a>Problemas conocidos
-
-* Si no se guarda la contraseña al crear una conexión, es posible que algunas acciones como enviar un trabajo de Spark no se realicen correctamente.
-* Los cuadernos .ipynb existentes deben actualizarse a la versión 4 o superior para que se cargue el contenido en el visor.
-* La ejecución del comando **Reinstall Notebook Dependencies** (Reinstalar dependencias de Notebook) puede mostrar dos tareas en la vista tareas, una de las cuales produce un error. Esto no hace que se produzca un error en la instalación.
-* Si selecciona **Agregar nueva conexión** en un cuaderno y hace clic en cancelar, se mostrará la opción **Seleccionar conexión**, incluso si ya estaba conectado.

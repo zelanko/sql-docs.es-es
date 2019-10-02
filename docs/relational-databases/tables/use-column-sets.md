@@ -14,12 +14,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc1a13d0ed05560558e0386ea051d3a9aaa85f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140367"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326140"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de columnas
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68140367"
   
  Considere la posibilidad de usar los conjuntos de columnas cuando una tabla contenga un gran número de columnas y resulte complicado realizar cualquier operación con ellas. Las aplicaciones pueden experimentar ciertas mejoras de rendimiento si realizan la selección e inserción de datos usando los conjuntos de columnas en tablas que contienen muchas columnas. Sin embargo, es posible que se reduzca el rendimiento de los conjuntos de columnas si se definen muchos índices en las columnas de la tabla. Esto es debido a que aumenta la cantidad de memoria necesaria para un plan de ejecución.  
   
- Para definir un conjunto de columnas, use las palabras clave *<nombreDeConjuntoDeColumnas>* FOR ALL_SPARSE_COLUMN de las instrucciones [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+ Para definir un conjunto de columnas, use las palabras clave *<column_set_name>* FOR ALL_SPARSE_COLUMN de las instrucciones [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="guidelines-for-using-column-sets"></a>Directrices para usar conjuntos de columnas  
  Cuando use conjuntos de columnas, tenga en cuenta las directrices siguientes:  
@@ -91,14 +91,14 @@ ms.locfileid: "68140367"
 -   Las columnas dispersas que contienen valores NULL se omiten en la representación XML del conjunto de columnas.  
   
 > [!WARNING]  
->  Al agregar un conjunto de columnas, cambia el comportamiento de las consultas SELECT *. La consulta devolverá el conjunto de columnas como una columna XML, pero no devolverá las columnas dispersas individuales. Los diseñadores de esquemas y los desarrolladores deben tener cuidado de no alterar el comportamiento de las aplicaciones existentes.  
+>  Al agregar un conjunto de columnas, cambia el comportamiento de las consultas `SELECT *`. La consulta devolverá el conjunto de columnas como una columna XML, pero no devolverá las columnas dispersas individuales. Los diseñadores de esquemas y los desarrolladores deben tener cuidado de no alterar el comportamiento de las aplicaciones existentes.  
   
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Insertar o modificar datos en un conjunto de columnas  
  La manipulación de los datos de una columna dispersa se puede llevar a cabo usando el nombre de las columnas individuales, o bien haciendo referencia al nombre del conjunto de columnas y especificando sus valores usando el formato XML de dicho conjunto. Las columnas dispersas pueden aparecer en cualquier orden en la columna XML.  
   
  Cuando se insertan o actualizan valores de columnas dispersas usando el conjunto de columnas XML, los valores que se insertan en las columnas dispersas subyacentes se convierten de manera implícita desde el tipo de datos **xml** . En el caso de columnas numéricas, un valor en blanco en el XML para la columna numérica se convierte en una cadena vacía. Esto hace que se inserte un cero en la columna numérica, tal y como se muestra en el ejemplo siguiente.  
   
-```  
+```sql  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
 GO  
 INSERT t(cs) VALUES ('<i/>');  
@@ -109,7 +109,7 @@ GO
   
  En este ejemplo, no se ha especificado ningún valor para la columna `i`, pero se ha insertado el valor `0` .  
   
-## <a name="using-the-sqlvariant-data-type"></a>Usar el tipo de datos sql_variant  
+## <a name="using-the-sql_variant-data-type"></a>Usar el tipo de datos sql_variant  
  El tipo de datos **sql_variant** puede almacenar varios tipos de datos distintos, como **int**, **char**y **date**. Los conjuntos de columnas generan la información sobre el tipo de datos, como la escala, la precisión y la información de configuración regional que se asocia a un valor **sql_variant** , como atributos en la columna XML generada. Si intenta proporcionar estos atributos en una instrucción XML generada de forma personalizada como una entrada para una operación de inserción o de actualización en un conjunto de columnas, algunos de dichos atributos son obligatorios y a otros se les asigna un valor predeterminado. En la tabla siguiente se enumeran los tipos de datos y los valores predeterminados que genera el servidor cuando no se proporciona el valor.  
   
 |Tipo de datos|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|Longitud máxima|Precisión|Escala|  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  Esta tabla solo tiene cinco columnas para facilitar su visualización y lectura.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -166,7 +166,7 @@ GO
 ### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. Insertar datos en una tabla usando los nombres de las columnas dispersas  
  En los ejemplos siguientes se insertan dos filas en la tabla creada en el ejemplo A. Estos ejemplos utilizan los nombres de las columnas dispersas y no hacen referencia al conjunto de columnas.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, ProductionSpecification, ProductionLocation)  
 VALUES (1, 'Tire Spec 1', 'AXZZ217', 27);  
 GO  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. Insertar datos en una tabla usando el nombre del conjunto de columnas  
  En el ejemplo siguiente se inserta una tercera fila en la tabla creada en el ejemplo A. Esta vez no se utilizan los nombres de las columnas dispersas. En su lugar, se utiliza el nombre del conjunto de columnas y la operación de inserción proporciona los valores para dos de las cuatro columnas dispersas en formato XML.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, SpecialPurposeColumns)  
 VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>');  
 GO  
@@ -188,24 +188,23 @@ GO
 ### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Observar los resultados de un conjunto de columnas al usar SELECT *  
  En el ejemplo siguiente se seleccionan todas las columnas de la tabla que contiene un conjunto de columnas. Devuelve una columna XML con los valores combinados de las columnas dispersas. No devuelve las columnas dispersas de forma individual.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>`  
-  
- `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation> 
+ ```
   
 ### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. Observar los resultados de seleccionar el conjunto de columnas por nombre  
  Dado que el departamento de producción no está interesado en los datos de marketing, en este ejemplo se agrega una cláusula `WHERE` para restringir la salida. El ejemplo usa el nombre del conjunto de columnas.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns  
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -213,16 +212,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1     Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
-  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>  
+ ```
+ 
 ### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. Observar los resultados de seleccionar columnas dispersas por nombre  
  Si una tabla contiene un conjunto de columnas, también se puede consultar dicha tabla usando los nombres de columna individuales, tal y como se muestra en el ejemplo siguiente.  
   
-```  
+```sql  
 SELECT DocID, Title, ProductionSpecification, ProductionLocation   
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -230,16 +229,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        ProductionSpecification ProductionLocation`  
-  
- `1     Tire Spec 1  AXZZ217                 27`  
-  
- `3     Tire Spec 2  AXW9R411                38`  
-  
+ ```
+ DocID  Title        ProductionSpecification ProductionLocation`  
+ 1      Tire Spec 1  AXZZ217                 27`  
+ 3      Tire Spec 2  AXW9R411                38`  
+ ```
+ 
 ### <a name="g-updating-a-table-by-using-a-column-set"></a>G. Actualizar una tabla usando un conjunto de columnas  
  En el ejemplo siguiente se actualiza el tercer registro con nuevos valores para las dos columnas dispersas que usa la fila.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification><ProductionLocation>38</ProductionLocation>'  
 WHERE DocID = 3 ;  
@@ -251,7 +250,7 @@ GO
   
  En el ejemplo siguiente se actualiza el tercer registro, pero solo se especifica el valor de una de las dos columnas rellenadas. La segunda columna, `ProductionLocation` , no está incluida en la instrucción `UPDATE` y se actualiza a NULL.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification>'  
 WHERE DocID = 3 ;  

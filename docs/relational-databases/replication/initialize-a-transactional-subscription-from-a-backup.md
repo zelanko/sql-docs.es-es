@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3e0848a5452ad7cdb189b00c5ed90a6ad1cb8a1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 466598ca9e7846b3b5ffbeef17987cd61233ec7a
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127872"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251097"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Inicializar una suscripción transaccional desde una copia de seguridad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68127872"
 2.  Para una nueva publicación, ejecute [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **true** para **allow_initialize_from_backup**. Para obtener más información, vea [Crear una suscripción](../../relational-databases/replication/publish/create-a-publication.md).  
   
     > [!WARNING]  
-    >  Para evitar perder los datos del suscriptor, al utilizar **sp_addpublication** con `@allow_initialize_from_backup = N'true'`, utilice siempre `@immediate_sync = N'true'`.  
+    >  Para evitar perder los datos del suscriptor, al utilizar **sp_addpublication** o **sp_changepublication** con `@allow_initialize_from_backup = N'true'`, utilice siempre `@immediate_sync = N'true'`.  
   
 3.  Cree una copia de seguridad de la base de datos de publicación con la instrucción [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   

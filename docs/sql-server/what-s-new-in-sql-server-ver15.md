@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096887"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326185"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -77,11 +77,12 @@ El [Archivo de anuncios de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md
 |Compilación reanudable en línea de índices de almacén de filas | Vea [Realización de operaciones de índice en línea](../relational-databases/indexes/perform-index-operations-online.md). |
 | &nbsp; | &nbsp; |
 
-### <a name="in-memory-databases"></a>En bases de datos de memoria
+### <a name="in-memory-database"></a>Base de datos en memoria
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
-|Control de DDL para el grupo de búferes híbrido |Con el [grupo de búferes híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md), se accede directamente a las páginas de base de datos ubicadas en archivos de base de datos presentes en un dispositivo de memoria persistente (PMEM) cuando sea necesario.|
+|Grupo de búferes híbrido| Nueva característica del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], en que se accede directamente a las páginas de base de datos ubicadas en archivos de base de datos presentes en un dispositivo de memoria persistente (PMEM) cuando sea necesario. Vea [Grupo de búferes híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md).|
+|Metadatos `tempdb` optimizados para memoria| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una nueva característica que forma parte de la familia de características [Base de datos en memoria](../relational-databases/in-memory-database.md), metadatos `tempdb` optimizados para memoria, que quita este cuello de botella de forma eficaz y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de `tempdb`. En [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], las tablas del sistema implicadas en la administración de metadatos de la tabla temporal del sistema se pueden mover a tablas optimizadas para memoria no duraderas y sin bloqueos temporales. Consulte [Metadatos `tempdb` optimizados para memoria](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 | &nbsp; | &nbsp; |
 
 ### <a name="unicode-support"></a>Compatibilidad con Unicode
@@ -99,13 +100,6 @@ El [Archivo de anuncios de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md
 |Compatibilidad con la codificación de caracteres UTF-8|Compatibilidad de caracteres UTF-8 con tablas externas. Vea [Compatibilidad con la intercalación y Unicode](../relational-databases/collations/collation-and-unicode-support.md).|
 | &nbsp; | &nbsp; |
 
-### <a name="server-settings"></a>Configuración del servidor
-
-|Nueva característica o actualización | Detalles |
-|:---|:---|
-|Grupo de búferes híbrido| Nueva característica del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], en que se accede directamente a las páginas de base de datos ubicadas en archivos de base de datos presentes en un dispositivo de memoria persistente (PMEM) cuando sea necesario. Vea [Grupo de búferes híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md).|
-| &nbsp; | &nbsp; |
-
 ### <a name="performance-monitoring"></a>Supervisión de rendimiento
 
 |Nueva característica o actualización | Detalles |
@@ -117,6 +111,7 @@ El [Archivo de anuncios de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md
 |`sys.dm_exec_query_plan_stats` |La nueva DMF devuelve el equivalente del último plan de ejecución real conocido para la mayoría de las consultas. Vea [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).|
 |`LAST_QUERY_PLAN_STATS` | Nueva configuración de ámbito de base de datos para habilitar `sys.dm_exec_query_plan_stats`. Vea [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |`query_post_execution_plan_profile` | El evento extendido recopila el equivalente de un plan de ejecución real en función de la generación de perfiles ligera, a diferencia de `query_post_execution_showplan`, que utiliza la generación de perfiles estándar. Vea [Infraestructura de generación de perfiles de consultas](../relational-databases/performance/query-profiling-infrastructure.md).|
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | La nueva DMF devuelve información sobre una página de una base de datos. Consulte [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md).|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>Extensiones de lenguaje
@@ -147,7 +142,6 @@ El [Archivo de anuncios de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md
 |Regulación de recursos| El tipo de datos del valor configurable para la opción `REQUEST_MAX_MEMORY_GRANT_PERCENT` de `CREATE WORKLOAD GROUP` y `ALTER WORKLOAD GROUP` se ha cambiado de "integer" a "float" para permitir un mayor control granular de los límites de la memoria. Consulte [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) y [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md).|
 |Recompilaciones reducidas para cargas de trabajo| Mejora el uso de tablas temporales en varios ámbitos. Vea [Recompilaciones reducidas para cargas de trabajo](../relational-databases/tables/tables.md#ctp23). |
 |Escalabilidad de puntos de control indirectos |Vea [Escalabilidad mejorada de puntos de control indirectos](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23).|
-|Metadatos `tempdb` optimizados para memoria| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduce una nueva característica que forma parte de la familia de características [Base de datos en memoria](../relational-databases/in-memory-database.md), metadatos `tempdb` optimizados para memoria, que quita este cuello de botella de forma eficaz y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de `tempdb`. En [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], las tablas del sistema implicadas en la administración de metadatos de la tabla temporal del sistema se pueden mover a tablas optimizadas para memoria no duraderas y sin bloqueos temporales. Consulte [Metadatos `tempdb` optimizados para memoria](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 |Actualizaciones de PFS simultáneas|[Las páginas PFS](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125) son páginas especiales dentro de un archivo de base de datos que SQL Server usa para ayudar a localizar espacio libre al asignar espacio para un objeto. La contención de bloqueos temporales de página en las páginas PFS es algo que normalmente se asocia con [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d), pero también se puede producir en las bases de datos de usuario cuando hay muchos subprocesos de asignación de objetos simultáneos. Esta mejora cambia la manera en que se administra la simultaneidad con las actualizaciones de PFS para que puedan actualizarse en un bloqueo temporal compartido, en lugar de un bloqueo exclusivo. Este comportamiento está activado de forma predeterminada en todas las bases de datos (incluida `tempdb`) a partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].|
 |Comentarios de concesión de memoria del modo de fila |Se expande en la característica de comentarios de concesión de memoria de modo de proceso por lotes al ajustar los tamaños de concesión de memoria tanto para los operadores del modo de proceso por lotes como del modo de fila. Esto puede corregir automáticamente las concesiones excesivas que dan lugar a la pérdida de memoria y a una reducción de la simultaneidad, y corregir las concesiones de memoria insuficientes que causan derrames costosos en el disco. Consulte [Comentarios de concesión de memoria del modo de fila](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). |
 |Compilación diferida de variables de tabla|Mejora la calidad del plan y el rendimiento general de las consultas que hacen referencia a las variables de tabla. Durante la optimización y la compilación inicial, esta característica propaga las estimaciones de cardinalidad que se basan en los recuentos de filas de variables de tabla reales. Esta información precisa del recuento de filas optimiza las operaciones del plan de bajada. Consulte [Compilación diferida de variables de tabla](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation). |

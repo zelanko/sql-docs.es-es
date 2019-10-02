@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b8956be43328bba679eef2d1fb4304cc4b4
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: b17fe334b1261d463e8389564912e48b7553dc7f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929686"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326102"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -396,7 +396,7 @@ No puede usar cursores ni desencadenadores en una tabla con un índice clúster 
 Limitaciones específicas de **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**  
 Estas limitaciones solo se aplican a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. En esta versión se presentaron los índices clúster de almacén de columnas actualizables. Los índices no clúster de almacén de consultas seguían siendo de solo lectura.  
 
--   Seguimiento de cambios. No se puede usar el seguimiento de cambios con los índices no clúster de almacén de columnas (NCCI) porque son de solo lectura. Sí funciona con los índices clúster de almacén de columnas (CCI).  
+-   Seguimiento de cambios. No se puede usar el seguimiento de cambios con índices de almacén de columnas.  
 -   Captura de datos modificados. No se puede usar la captura de datos modificados con los índices no clúster de almacén de columnas (NCCI) porque son de solo lectura. Sí funciona con los índices clúster de almacén de columnas (CCI).  
 -   Secundario legible. No se puede acceder a un índice clúster de almacén de columnas (CCI) desde un secundario legible de un grupo de disponibilidad Always On legible.  Puede acceder a un índice no clúster de almacén de columnas (NCCI) desde un secundario legible.  
 -   Conjuntos de resultados activos múltiples (MARS). [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usa MARS para las conexiones de solo lectura a las tablas con un índice de almacén de columnas. Pero [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] no es compatible con MARS para operaciones simultáneas de lenguaje de manipulación de datos (DML) en una tabla con un índice de almacén de columnas. Cuando ocurre esto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] termina las conexiones y anula las transacciones.  

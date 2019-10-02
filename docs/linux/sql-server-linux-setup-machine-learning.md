@@ -1,31 +1,37 @@
 ---
-title: Instalación de SQL Server Machine Learning Services (R, Python) en Linux
-description: Aprenda a instalar SQL Server Machine Learning Services (R, Python) en Red Hat, Ubuntu y SUSE.
+title: Instalación de SQL Server Machine Learning Services (Python, R) en Linux
+description: 'Obtenga información sobre cómo instalar SQL Server Machine Learning Services (Python y R) en Linux: Red Hat, Ubuntu y SUSE.'
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
-ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.openlocfilehash: b3d2fb6c05a078e222a68e8de8998d4edff3c1a8
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913560"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271973"
 ---
-# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>Instalación de SQL Server Machine Learning Services (R, Python) en Linux
+# <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Instalación de SQL Server Machine Learning Services (Python y R) en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-A partir de esta versión preliminar de SQL Server 2019, [SQL Server Machine Learning Services](../advanced-analytics/index.yml) se puede ejecutar en sistemas operativos Linux. Siga los pasos de este artículo para instalar las extensiones de Machine Learning correspondientes a R y Python.
+En este artículo se explica cómo instalar[SQL Server Machine Learning Services](../advanced-analytics/index.yml) en Linux. Puede usar Machine Learning Services para ejecutar scripts de Python y R en la base de datos.
 
-Machine Learning y las extensiones de programación son un complemento del motor de base de datos. Aunque puede [instalar el motor de base de datos y Machine Learning Services simultáneamente](#install-all), lo mejor es instalar y configurar el motor de base de datos de SQL Server primero para poder resolver cualquier problema antes de agregar más componentes. 
+Se admiten las distribuciones siguientes de Linux:
 
-La ubicación del paquete de las extensiones de R y Python está en los repositorios de origen de SQL Server Linux. Si ya ha configurado repositorios de origen para la instalación del motor de base de datos, puede ejecutar los comandos de instalación de paquetes **mssql-mlservices** usando el mismo registro de repositorio.
+- Red Hat Enterprise Linux (RHEL)
+- SUSE Linux Enterprise Server (SLES)
+- Ubuntu
+
+Machine Learning Services son un complemento de características para el motor de base de datos. Aunque puede [instalar el motor de base de datos y Machine Learning Services simultáneamente](#install-all), lo mejor es instalar y configurar el motor de base de datos de SQL Server primero para poder resolver cualquier problema antes de agregar más componentes. 
+
+La ubicación del paquete de las extensiones de Python y R está en los repositorios de origen de SQL Server Linux. Si ya ha configurado repositorios de origen para la instalación del motor de base de datos, puede ejecutar los comandos de instalación de paquetes **mssql-mlservices** usando el mismo registro de repositorio.
 
 Machine Learning Services también se admite en contenedores de Linux. No proporcionamos contenedores pregenerados con Machine Learning Services, pero puede crear uno a partir de los contenedores de SQL Server mediante [una plantilla de ejemplo disponible en GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -52,8 +58,8 @@ Los comandos para quitar paquetes aparecen recogidos en la siguiente tabla.
 
 | Plataforma  | Comandos de eliminación de paquetes | 
 |-----------|----------------------------|
-| RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
-| SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
+| Red Hat   | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
+| SUSE  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
 | Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
@@ -74,7 +80,7 @@ En cada conjunto de instrucciones de instalación específico del sistema operat
 
 2. Ejecute los comandos de instalación mediante los administradores de paquetes y la sintaxis del sistema operativo: 
 
-   + [RedHat](#RHEL)
+   + [Red Hat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
@@ -128,7 +134,7 @@ dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 ```
 
-#### <a name="mro-on-rhel"></a>MRO en RHEL
+#### <a name="mro-on-red-hat"></a>MRO en Red Hat
 
 ```bash
 # Import the Microsoft repository key
@@ -143,6 +149,7 @@ rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rp
 # Update packages on your system (optional)
 yum update
 ```
+
 #### <a name="mro-on-suse"></a>MRO en SUSE
 
 ```bash
@@ -531,7 +538,7 @@ Existe paridad entre Linux y Windows para la [regulación de recursos](../t-sql/
 
 Los desarrolladores de R pueden empezar con algunos ejemplos sencillos y conocer los aspectos básicos del funcionamiento de R con SQL Server. Para conocer el siguiente paso, vea los vínculos siguientes:
 
-+ [Tutorial: Ejecutar R en T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutorial: Ejecutar R en T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
 + [Tutorial: Análisis en base de datos para desarrolladores de R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Los desarrolladores de Python pueden aprender a usar Python con SQL Server con estos tutoriales:

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47ab25b42800eaf668f2b258cf51608e6d66e580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15f8ca09a12e90db4c9493b9283793f6e9677934
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014471"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250985"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +268,7 @@ ms.locfileid: "68014471"
   
 -   **Número máximo de grupos de disponibilidad y bases de datos de disponibilidad por equipo:** El número real de bases de datos y grupos de disponibilidad que puede colocar en un equipo (equipo físico o máquina virtual) depende del hardware y de la carga de trabajo, pero no hay ningún límite impuesto. Microsoft ha probado hasta 10 grupos de disponibilidad y 100 bases de datos por máquina física, pero este no es un límite vinculante. Según la especificación de hardware en el servidor y la carga de trabajo, puede poner un mayor número de bases de datos y grupos de disponibilidad en una instancia de SQL Server. Los signos de sistemas sobrecargados pueden incluir, pero no limitarse a los siguientes: agotamiento de subprocesos de trabajo, tiempos de respuesta lentos para vistas del sistema del grupo de disponibilidad y DMV de AlwaysOn o volcados del sistema del distribuidor detenidos. Asegúrese de comprobar minuciosamente el entorno con una carga de trabajo similar a la que usará en producción para asegurarse de que puede controlar la capacidad de carga de trabajo máxima con sus contratos de nivel de servicio de aplicación. Cuando evalúe los contratos de nivel de servicio, no olvide tener en cuenta la carga en condiciones de error además de los tiempos de respuesta esperados.  
   
--   **No use el Administrador de clústeres de conmutación por error para manipular grupos de disponibilidad:**  
+-   **No use el Administrador de clústeres de conmutación por error para manipular grupos de disponibilidad**. El estado de una Instancia de clúster de conmutación por error (FCI) de SQL Server se comparte entre SQL Server y el Clúster de conmutación por error de Windows (WSFC), y SQL Server mantiene información de estado sobre las instancias más detallada que de la que se ocupa el clúster. El modelo de administración supone que SQL Server debe impulsar las transacciones y se encarga de mantener la vista de estado del clúster sincronizada con la vista de estado de SQL Server. Si el estado del clúster cambia fuera de SQL Server, es posible que el estado no esté sincronizado entre WSFC y SQL Server, lo que puede provocar un comportamiento impredecible.
   
      Por ejemplo:  
   

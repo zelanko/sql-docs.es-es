@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228403"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207742"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,8 @@ Sugerencias de consulta especifica que en toda la consulta se deben utilizar las
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE PLAN N'xml_plan'  
+  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
@@ -148,7 +149,7 @@ Especifica que todas las operaciones de combinación se realicen mediante LOOP J
 Si especifica una sugerencia de combinación en la cláusula FROM de la misma consulta para un par de tablas específico, esta sugerencia de combinación tendrá prioridad en la combinación de las dos tablas. Las sugerencias de consulta, sin embargo, todavía se deben respetar. La sugerencia de combinación para el par de tablas solo puede restringir la selección de los métodos de combinación permitidos en la sugerencia de consulta. Para obtener más información, vea [Sugerencias de combinación &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-join.md).  
   
 EXPAND VIEWS  
-Especifica que las vistas indexadas se expanden. También especifica que el optimizador de consultas no considerará ninguna vista indexada como sustitución de ninguna parte de la consulta. Una vista se expande cuando la definición de la vista reemplaza el nombre de la vista en el texto de la consulta.  
+Especifica que las vistas indexadas se expanden. También especifica que el optimizador de consultas no considerará ninguna vista indexada como reemplazo de ninguna parte de la consulta. Una vista se expande cuando la definición de la vista reemplaza el nombre de la vista en el texto de la consulta.  
   
 Esta sugerencia de consulta virtualmente no permite el uso directo de vistas indizadas ni índices en vistas indizadas en el plan de consulta.  
   
@@ -179,7 +180,7 @@ Fuerza al optimizador de consultas a aumentar el umbral estimado para volver a c
 Al especificar KEEP PLAN, se asegura de que no se volverá a compilar una consulta con tanta frecuencia cuando se producen varias actualizaciones en una tabla.  
   
 KEEPFIXED PLAN  
-Exige al optimizador de consultas que no compilar de nuevo una consulta debido a cambios en las estadísticas. Al especificar KEEPFIXED PLAN, se asegura de que una consulta solo se vuelve a compilar si el esquema de las tablas subyacentes cambia o si **sp_recompile** se ejecuta en estas tablas.  
+Fuerza al optimizador de consultas a no compilar de nuevo una consulta debido a cambios en las estadísticas. Al especificar KEEPFIXED PLAN, se asegura de que una consulta solo se vuelve a compilar si el esquema de las tablas subyacentes cambia o si **sp_recompile** se ejecuta en estas tablas.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
 **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -235,7 +236,7 @@ OPTIMIZE FOR puede contrarrestar el comportamiento de detección de parámetros 
 OPTIMIZE FOR UNKNOWN  
 Indica al optimizador de consultas que use datos estadísticos en lugar de los valores iniciales para todas las variables locales al compilar y optimizar la consulta. Esta optimización incluye los parámetros creados mediante parametrización forzada.  
   
-Si usa OPTIMIZE FOR @variable_name = _literal\_constant_ y OPTIMIZE FOR UNKNOWN en la misma sugerencia de consulta, el optimizador de consultas usará el valor _literal\_constant_ especificado para un valor determinado. El optimizador de consultas usará y UNKNOWN para los valores de las variables restantes. Los valores se usan solo durante la optimización de la consulta y no durante la ejecución de la misma.  
+Si usa OPTIMIZE FOR @variable_name = _literal\_constant_ y OPTIMIZE FOR UNKNOWN en la misma sugerencia de consulta, el optimizador de consultas usará el valor _literal\_constant_ especificado para un valor determinado. El optimizador de consultas usará UNKNOWN para los valores de las variables restantes. Los valores se usan solo durante la optimización de la consulta y no durante la ejecución de la misma.  
   
 PARAMETERIZATION { SIMPLE | FORCED }     
 Especifica las reglas de parametrización que aplica el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se compila la consulta.  
@@ -244,7 +245,7 @@ Especifica las reglas de parametrización que aplica el optimizador de consultas
 > La sugerencia de consulta PARAMETERIZATION solo se puede especificar en una guía de plan para invalidar la configuración actual de la opción SET de base de datos PARAMETERIZATION. No se puede especificar directamente en una consulta.    
 > Para más información, vea [Especificar el comportamiento de parametrización de consultas por medio de guías de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
-SIMPLE indica al optimizador de consultas para que intente la parametrización simple. FORCED indica al optimizador de consultas que intente la parametrización forzada. Para más información, vea [Parametrización forzada en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) y [Parametrización simple en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
+SIMPLE indica al optimizador de consultas que intente la parametrización simple. FORCED indica al optimizador de consultas que intente la parametrización forzada. Para más información, vea [Parametrización forzada en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) y [Parametrización simple en la guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
 
 RECOMPILE  
 Indica a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que genere un plan nuevo y temporal para la consulta y descarte de inmediato ese plan una vez que se completa la ejecución de la consulta. El plan de consulta generado no reemplaza un plan almacenado en caché cuando la misma consulta se ejecuta sin la sugerencia RECOMPILE. Sin especificar RECOMPILE, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena en la memoria caché planes de consulta y los reutiliza. Al compilar los planes de consulta, la sugerencia de consulta RECOMPILE utiliza los valores actuales de cualquier variable local en la consulta. Si la consulta está dentro de un procedimiento almacenado, los valores actuales se pasan a cualquier parámetro.  
@@ -264,7 +265,7 @@ Proporciona una o varias sugerencias adicionales para el procesador de consultas
 Se admiten los siguientes nombres de sugerencia:    
  
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
-   Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan de consulta mediante la suposición de contención simple en lugar de la suposición de contención de base predeterminada para las combinaciones en el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) del [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versiones más recientes. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+   Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan de consulta mediante la hipótesis de contención simple en lugar de la hipótesis de contención de base predeterminada para las combinaciones en el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versiones más recientes. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan con una selectividad mínima al estimar predicados AND para que los filtros tengan en cuenta la correlación. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 cuando se usa con el modelo de estimación de cardinalidad de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones anteriores, y tiene un efecto similar cuando se usa la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 con el modelo de estimación de cardinalidad de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versiones posteriores.
 *  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"       
@@ -303,7 +304,7 @@ Se admiten los siguientes nombres de sugerencia:
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
    Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones anteriores. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 o a la opción `LEGACY_CARDINALITY_ESTIMATION = ON` de [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- Exige el comportamiento del optimizador de consultas en un nivel de consulta. Este comportamiento se produce como si la consulta se compilara con nivel de compatibilidad de base de datos _n_, donde _n_ es un nivel de compatibilidad de base de datos compatible. Consulte [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) para ver una lista de los valores admitidos actualmente para _n_. **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
+ Fuerza el comportamiento del optimizador de consultas en un nivel de consulta. Este comportamiento se produce como si la consulta se compilara con nivel de compatibilidad de base de datos _n_, donde _n_ es un nivel de compatibilidad de base de datos compatible. Consulte [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) para ver una lista de los valores admitidos actualmente para _n_. **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
    > [!NOTE]
    > La sugerencia QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n no invalida la configuración de la estimación de cardinalidad heredada o predeterminada, si se fuerza a través de la configuración con ámbito de base de datos, marca de seguimiento u otra sugerencia de consulta como QUERYTRACEON.   
@@ -327,8 +328,8 @@ Puede consultar la lista de todos los nombres de USE HINT compatibles mediante l
 > [!IMPORTANT] 
 > Algunas sugerencias USE HINT pueden entrar en conflicto con las marcas de seguimiento habilitadas a nivel global o de sesión, o con las opciones de configuración con ámbito de base de datos. En este caso, la sugerencia de nivel de consulta (USE HINT) siempre tiene prioridad. Si una sugerencia USE HINT entra en conflicto con otra sugerencia de consulta o una marca de seguimiento habilitada en el nivel de consulta (por ejemplo, mediante QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generará un error al intentar ejecutar la consulta. 
 
-USE PLAN N"_xml\_plan_"  
- Fuerza al optimizador de consultas a usar un plan de consulta existente en una consulta especificada por **'** _xml\_plan_ **'** . USE PLAN no puede especificarse con las instrucciones INSERT, UPDATE, MERGE ni DELETE.  
+<a name="use-plan"></a> USE PLAN N"_xml\_plan_"  
+ Fuerza al optimizador de consultas a usar un plan de consulta existente en una consulta especificada por **"** _xml\_plan_ **"** . USE PLAN no puede especificarse con las instrucciones INSERT, UPDATE, MERGE ni DELETE.  
   
 TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Aplica la sugerencia de la tabla especificada a la tabla o vista que corresponde a _exposed\_object\_name_. Se recomienda usar una sugerencia de tabla como una sugerencia de consulta únicamente en el contexto de una [guía de plan](../../relational-databases/performance/plan-guides.md).  
   

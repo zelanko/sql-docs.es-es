@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1006e7cb677ec6d06af633191b10ab1f341ef1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020788"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227136"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Actualización del trasvase de registros a SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Al actualizar desde una configuración de trasvase de registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nueva versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , un nuevo service pack de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o una actualización acumulativa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la actualización de los servidores de trasvase de registros en el orden adecuado conservará la solución de recuperación ante desastres de trasvase de registros.  
+  Al actualizar desde una configuración de trasvase de registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una nueva versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un nuevo service pack de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una actualización acumulativa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la actualización de los servidores de trasvase de registros en el orden adecuado conservará la solución de recuperación ante desastres de trasvase de registros.  
   
 > [!NOTE]  
 >  La[compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md) se incluyó en [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]. Una configuración de trasvase de registros actualizada usa la opción de configuración de nivel de seguridad **Compresión de copia de seguridad predeterminada** para controlar si se emplea la compresión de copia de seguridad para los archivos de copia de seguridad del registro de transacciones. El comportamiento de la compresión de las copias de seguridad de registros se puede especificar para cada configuración de trasvase de registros. Para obtener más información, vea [Configurar el trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  

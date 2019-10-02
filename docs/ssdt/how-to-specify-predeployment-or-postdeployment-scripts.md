@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1531bffd50bb14838e74b5315c30a870563f86f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035009"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199296"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Procedimientos: Especificación de scripts anteriores o posteriores a la implementación
-Los scripts anteriores y posteriores a la implementación ejecutan instrucciones de Transact\-SQL antes y después del script de implementación principal, que se genera a partir del proyecto de base de datos. Un proyecto solo puede tener un script anterior a la implementación y un script posterior a la implementación. Estos scritps se pueden usar para muchos propósitos. Por ejemplo:  
+Los scripts anteriores y posteriores a la implementación ejecutan instrucciones de Transact\-SQL antes y después del script de implementación principal, que se genera a partir del proyecto de base de datos. El script anterior a la implementación no se ejecutará al actualizar los destinos de los resultados de la comparación de esquemas en Visual Studio. Un proyecto solo puede tener un script anterior a la implementación y un script posterior a la implementación. Estos scritps se pueden usar para muchos propósitos. Por ejemplo:  
   
 -   Un script anterior a la implementación puede copiar datos de una tabla que se vaya a convertir en una tabla temporal antes de volver a dar formato a los datos y aplicarlos a la tabla modificada en un script posterior a la implementación.  
   
@@ -30,7 +30,7 @@ BEGIN
     DELETE FROM [dbo].[MyReferenceTable]  
 END  
 ```  
-  
+
 ## <a name="to-add-and-modify-a-pre--or-post-deployment-script"></a>Para agregar un script anterior o posterior a la implementación  
   
 1.  En el **Explorador de soluciones**, expanda el proyecto de base de datos para mostrar la carpeta Scripts.  

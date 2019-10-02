@@ -24,12 +24,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 564edb184c5b9d56159c6b931557daf85beeb295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117717"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342003"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  Es un valor entero que especifica la ubicación donde comienzan la eliminación y la inserción. Si *start* es negativo o cero, se devuelve una cadena de tipo NULL. Si *start* es mayor que el primer valor de *character_expression*, se devuelve una cadena de tipo NULL. *start* puede ser de tipo **bigint**.  
   
  *length*  
- Es un entero que especifica el número de caracteres que se elimina. Si *length* es negativo, se devuelve una cadena de tipo NULL. Si *length* es mayor que el primer parámetro *character_expression*, se produce una eliminación hasta el último carácter del último *character_expression*.  Si *length* es cero, se produce una inserción delante del primer carácter en la cadena. *length* puede ser de tipo **bigint**.
+ Es un entero que especifica el número de caracteres que se elimina. Si *length* es negativo, se devuelve una cadena de tipo NULL. Si *length* es mayor que el primer parámetro *character_expression*, se produce una eliminación hasta el último carácter del último *character_expression*.  Si *length* es cero, la inserción se produce en la ubicación *start* y no se elimina ningún carácter. *length* puede ser de tipo **bigint**.
 
  *replaceWith_expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos de caracteres. *character_expression* puede ser una constante, una variable o una columna de datos binarios o de caracteres. Esta expresión reemplaza los caracteres *legth* de *character_expression*, empezando por *start*. Si se proporciona `NULL` como *replaceWith_expression*, los caracteres se quitan sin insertar nada.   

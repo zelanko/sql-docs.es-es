@@ -2,7 +2,7 @@
 title: Inserción de UDF escalares en bases de datos de Microsoft SQL | Microsoft Docs
 description: Característica Inserción de UDF escalar para mejorar el rendimiento de las consultas que llaman a UDF escalares en SQL Server (2018 y versiones posteriores) y Azure SQL Database.
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030334"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299138"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
@@ -154,7 +154,8 @@ Una UDF escalar de T-SQL se puede insertar si se cumplen todas las condiciones s
 - La UDF usa la cláusula `EXECUTE AS CALLER` (el comportamiento predeterminado si no se especifica la cláusula `EXECUTE AS`).
 - La UDF no hace referencia a variables de tabla ni a parámetros con valores de tabla.
 - La consulta que invoca una UDF escalar no hace referencia a una llamada a la UDF escalar en su cláusula `GROUP BY`.
-- La consulta que invoca una UDF escalar en su lista de selección con la cláusula `DISTINCT` no hace referencia a una llamada a la UDF escalar en su cláusula `ORDER BY`.
+- La consulta que invoca una UDF escalar en su lista de selección con la cláusula `DISTINCT` no contiene la cláusula `ORDER BY`.
+- La UDF no se utiliza en la cláusula `ORDER BY`.
 - La UDF no se compila de forma nativa (se admite la interoperabilidad).
 - La UDF no se usa en una columna calculada ni en una definición de restricción CHECK.
 - La UDF no hace referencia a tipos definidos por el usuario.

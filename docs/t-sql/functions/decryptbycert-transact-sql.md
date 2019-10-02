@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: febf3a874ba0632c90117d52e74ce31926bfbbc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118950"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314530"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Una variable de tipo **varbinary** que contiene los datos cifrados con el certif
 La contraseña que se usa para cifrar la clave privada del certificado. *cert_password* debe tener un formato de datos Unicode.  
   
  @cert_password  
-Una variable de tipo **nchar** o **nvarchar** que contiene la contraseña que se usa para cifrar la clave privada del certificado. *@cert_password* debe tener un formato de datos Unicode.  
+Una variable de tipo **nchar** o **nvarchar** que contiene la contraseña que se usa para cifrar la clave privada del certificado. *\@cert_password* debe tener un formato de datos Unicode.  
 
 ## <a name="return-types"></a>Tipos devueltos  
 **varbinary**, con un tamaño máximo de 8 000 bytes.  

@@ -1,6 +1,6 @@
 ---
 title: Documentación de SQL Server | Microsoft Docs
-ms.date: 08/08/2019
+ms.date: 09/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
-monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 580b54e761e3d728496d4fede2c758c378bcedd7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>= aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sql-server-previousversions||=sqlallproducts-allversions
+ms.openlocfilehash: 098f27712b99fd5606aeb367b284f3f5201b68e7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284593"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299128"
 ---
 # <a name="sql-server-documentation"></a>Documentación de SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server es una pieza fundamental de la plataforma de datos de Microsoft. SQL Server es líder del sector de sistemas de administración de bases de datos operativas (ODBMS). Esta documentación ayuda a instalar, configurar y usar SQL Server en Windows y Linux. El contenido incluye ejemplos descentralizados, ejemplos de código y vídeos. Para temas sobre el lenguaje de SQL Server, consulte [Referencia del lenguaje](../t-sql/language-reference.md).
@@ -113,6 +113,27 @@ SQL Server 2014 y versiones anteriores, incluido SQL Server 2005, disponen de do
 |![Servicios de replicación](../sql-server/media/replication-services.png "Servicios de replicación")|**[Replicación](../relational-databases/replication/sql-server-replication.md)**<br /><br /> La replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos de una base de datos a otra, para luego sincronizar ambas bases de datos con el fin de mantener su coherencia. La replicación permite distribuir datos a diferentes ubicaciones y a usuarios remotos o móviles mediante redes de área local y de área extensa, conexiones de acceso telefónico, conexiones inalámbricas e Internet.|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) proporciona una solución de limpieza de datos controlada por conocimiento. DQS permite generar una base de conocimiento y usarla para realizar tareas de corrección de datos y eliminación de datos duplicados, usando medios asistidos por ordenador e interactivos. Puede usar servicios de consulta de datos basados en la nube y puede generar una solución de administración de datos que integra DQS con SQL Server Integration Services y Master Data Services.|
 |![Master Data Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] es la solución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la administración de datos maestros. Una solución basada en [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ayuda a asegurarse de que los informes y los análisis se basan en la información correcta. Con [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se crea un repositorio central de los datos maestros y se mantiene un registro auditable y protegible de los mismos a medida que van cambiando con el tiempo.|
+| &nbsp; | &nbsp; |
+
+## <a name="other-members-of-the-sql-server-family"></a>Otros miembros de la familia de SQL Server
+
+| Nombre | Raíz de dirección URL https |
+| :--- | :------------- |
+| Base de datos única de Azure SQL Database | [https://docs.microsoft.com/azure/sql-database/](/azure/sql-database/) |
+| Instancia administrada de Azure SQL Database | [https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance](/azure/sql-database/sql-database-managed-instance) |
+| SQL Server en una máquina virtual (VM) | [https://docs.microsoft.com/azure/virtual-machines/windows/sql/](/azure/virtual-machines/windows/sql/) |
+| SQL Data Warehouse | [https://docs.microsoft.com/azure/sql-data-warehouse/](/azure/sql-data-warehouse/) |
+| Sistema de la plataforma de análisis (APS) | [https://docs.microsoft.com/sql/analytics-platform-system/](../analytics-platform-system/index.md) <br/><br/> _Nota:_ APS hospeda [Almacenamiento de datos paralelo (PDW)](../analytics-platform-system/parallel-data-warehouse-overview.md) de SQL Server, que es el software que ejecuta el almacenamiento de datos de procesamiento paralelo masivo (MPP). |
+| SQL Server en Linux | [https://docs.microsoft.com/sql/linux/](../linux/index.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="cousins-of-sql-server"></a>Primos de SQL Server
+
+| Nombre | Raíz de dirección URL https |
+| :--- | :------------- |
+| Base de datos de PostgreSQL | [https://docs.microsoft.com/azure/postgresql/](/azure/postgresql/) |
+| Base de datos de MySQL | [https://docs.microsoft.com/azure/mysql/](/azure/mysql/) |
+| NoSQL: &nbsp; Azure Cosmos DB | [https://docs.microsoft.com/azure/cosmos-db/](/azure/cosmos-db/) |
 | &nbsp; | &nbsp; |
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"

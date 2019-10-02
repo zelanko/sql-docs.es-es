@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0462829430f75f51764ffd318953f175ef857ab0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 804f8c1f2f7c59edec2c4e40c7d47f99ac71b5e7
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139157"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314550"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  *Asym_Key_ID*  
  Es el identificador de una clave asimétrica en la base de datos actual. *Asym_Key_ID* es **int**.  
   
- **@plaintext**  
+ **\@plaintext**  
  Variable de tipo **nvarchar**, **char**, **varchar** o **nchar** que contiene datos que se firmarán con la clave asimétrica.  
   
  *password*  

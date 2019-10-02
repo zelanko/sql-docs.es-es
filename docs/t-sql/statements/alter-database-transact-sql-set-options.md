@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1214bde9a4c36a928f21c43b63c067cbb7bd0340
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163921"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227179"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL)
 
@@ -3041,7 +3041,9 @@ Si se cumplen todos los requisitos siguientes, el conjunto de resultados almacen
 1. Hay una coincidencia exacta entre la nueva consulta y la anterior que ha generado el almacenamiento en caché del conjunto de resultados.
 1. No hay cambios de datos ni esquema en las tablas a partir de las que se ha generado el conjunto de resultados almacenado.  
 
-Una vez activado el almacenamiento en caché del conjunto de resultados de una base de datos, se almacenan en caché los resultados de todas las consultas hasta que la caché está llena, excepto las consultas con funciones no deterministas como DateTime.Now().   Las consultas con grandes conjuntos de resultados (por ejemplo, > 1 millón de filas) pueden experimentar un rendimiento más lento durante la primera ejecución mientras se crea la caché de resultados.
+Una vez activado el almacenamiento en caché del conjunto de resultados de una base de datos, se almacenan en caché los resultados de todas las consultas hasta que la caché está llena, excepto las consultas con funciones no deterministas como DateTime.Now() y las que devuelven datos con un tamaño de fila mayor de 64 KB.   
+
+Las consultas con grandes conjuntos de resultados (por ejemplo, > 1 millón de filas) pueden experimentar un rendimiento más lento durante la primera ejecución mientras se crea la caché de resultados.
 
 **<snapshot_option> ::=**        
 

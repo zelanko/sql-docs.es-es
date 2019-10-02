@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a2e4fd4583b7e43c04e03e6450c1fb958cf064b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874320"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314497"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexiones cifradas en el motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,10 @@ Si usa [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[
   
 2. Complete el **Asistente para exportación de certificados**y guarde el archivo del certificado en una ubicación adecuada.  
   
-## <a name="to-configure-the-server-to-force-encrypted-connections"></a>Para configurar el servidor para forzar conexiones cifradas  
+## <a name="to-configure-the-server-to-force-encrypted-connections"></a>Para configurar el servidor para forzar conexiones cifradas
+
+> [!IMPORTANT]
+> La cuenta de servicio de SQL Server debe tener permisos de lectura en el certificado que se usa para forzar el cifrado en el servidor de SQL Server. En el caso de una cuenta de servicio sin privilegios, será necesario agregar permisos de lectura al certificado. Si no lo hace, se puede producir un error en el reinicio del servicio SQL Server.
   
 1. En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<instancia de servidor>_ y, después, seleccione **Propiedades**.  
   

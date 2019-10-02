@@ -1,5 +1,5 @@
 ---
-title: Virtualización de datos externos en SQL Server 2019 CTP 2.0 | Microsoft Docs
+title: Virtualización de datos externos en SQL Server 2019 | Microsoft Docs
 description: En esta página se detallan los pasos para usar al Asistente para crear tablas externas para orígenes de datos relacionales
 author: Abiola
 ms.author: aboke
@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7d2abf18c7442a8f57448532e5211fc5c60e1ea7
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418767"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341835"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Uso del Asistente para tablas externas con orígenes de datos relacionales
 
-Uno de los escenarios clave de SQL Server 2019 CTP 2.0 es la posibilidad de virtualizar datos. Este proceso permite que los datos permanezcan en su ubicación original. Puede *virtualizar* los datos de una instancia de SQL Server para que se puedan consultar como cualquier otra tabla de SQL Server. Este proceso minimiza la necesidad de procesos ETL. Este proceso es posible gracias a los conectores de PolyBase. Para obtener más información sobre la virtualización de datos, vea [Introducción a PolyBase](polybase-guide.md).
+Uno de los escenarios clave de SQL Server 2019 es la posibilidad de virtualizar datos. Este proceso permite que los datos permanezcan en su ubicación original. Puede *virtualizar* los datos de una instancia de SQL Server para que se puedan consultar como cualquier otra tabla de SQL Server. Este proceso minimiza la necesidad de procesos ETL. Este proceso es posible gracias a los conectores de PolyBase. Para obtener más información sobre la virtualización de datos, vea [Introducción a PolyBase](polybase-guide.md).
 
 ## <a name="start-the-external-table-wizard"></a>Iniciar el Asistente para tablas externas
 
@@ -44,10 +44,7 @@ En este paso, se crea una clave maestra de base de datos. Es necesario crear una
 ![Creación de la clave maestra de una base de datos](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> Si ya tiene una clave maestra de base de datos, los campos de entrada están restringidos y puede omitir este paso. Seleccione **Siguiente** para continuar.
-
-> [!NOTE]
-> Si no elige una contraseña segura, el asistente lo hace en el último paso. Este es un problema conocido.
+> Si ya tiene una clave maestra de base de datos, este paso se omitirá automáticamente.
 
 ## <a name="enter-external-data-source-credentials"></a>Especificar credenciales de origen de datos externo
 

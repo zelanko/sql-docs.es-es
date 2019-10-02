@@ -90,7 +90,7 @@ Entre las entradas `sp_execute_external_script` del procedimiento almacenado se 
 | @language | define la extensión del lenguaje para llamar, en este caso, Python |
 | @script | define los comandos que se pasan al tiempo de ejecución de Python<br>Todo el script de Python debe incluirse en este argumento, como texto Unicode. También puede Agregar el texto a una variable de tipo **nvarchar** y, después, llamar a la variable. |
 | @input_data_1 | datos devueltos por la consulta, pasados al tiempo de ejecución de Python, que devuelve los datos que se van a SQL Server como una trama de datos. |
-|CON CONJUNTOS DE RESULTADOS | la cláusula define el esquema de la tabla de datos devuelta para SQL Server, en este caso, se agrega "Hola mundo" como nombre de columna e **int** para el tipo de datos. |
+|WITH RESULT SETS | la cláusula define el esquema de la tabla de datos devuelta para SQL Server, en este caso, se agrega "Hola mundo" como nombre de columna e **int** para el tipo de datos. |
 
 El comando genera el siguiente texto:
 

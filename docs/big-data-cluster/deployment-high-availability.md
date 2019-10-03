@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 307697f43fc1c2615f212ae5f433485814dd62d0
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 4053ac15309b821a9cf50cf067ad459256369418
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874703"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823577"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Implementación de SQL Server clúster de Big Data con alta disponibilidad
 
@@ -86,6 +86,11 @@ En los pasos siguientes se muestra cómo crear un archivo de revisión que inclu
 
     ```bash
     azdata bdc config patch -c custom-aks/bdc.json --patch-file patch.json
+    ```
+1. Iniciar la implementación del clúster con el perfil de configuración de clúster creado anteriormente
+
+    ```bash
+    azdata bdc create --config-profile custom-aks --accept-eula yes
     ```
 
 ## <a name="connect-to-sql-server-databases"></a>Conexión a bases de datos de SQL Server
@@ -181,7 +186,7 @@ Para ciertas operaciones como establecer configuraciones de nivel de servidor o 
     ALTER AVAILABILITY GROUP containedag ADD DATABASE sales
     ```
 
-## <a name="known-limitations"></a>Limitaciones conocidas
+## <a name="known-limitations"></a>Restricciones conocidas
 
 Estos son los problemas conocidos y las limitaciones de los grupos de disponibilidad de SQL Server maestro en el clúster de macrodatos:
 

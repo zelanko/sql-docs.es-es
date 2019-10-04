@@ -14,15 +14,15 @@ helpviewer_keywords:
 - databases [Reporting Services], connections
 - security [Reporting Services], database connections
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6258ecd22d45195ad00c617e53c7ce9f9416315c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096188"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952632"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)
   Cada instancia del servidor de informes requiere una conexión a la base de datos del servidor de informes que almacena informes, modelos de informe, orígenes de datos compartidos, recursos y metadatos administrados por el servidor. La conexión inicial se puede crear durante la instalación de un servidor de informes si va a instalar la configuración predeterminada. En la mayoría de los casos, también puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar la conexión una vez completada la instalación. Puede modificar la conexión en cualquier momento para cambiar el tipo de cuenta o restablecer las credenciales. Para obtener instrucciones paso a paso sobre cómo crear la base de datos y configurar la conexión, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "66096188"
   
  La base de datos del servidor de informes es un componente interno, al que solo tiene acceso el servidor de informes. El servidor de informes utiliza exclusivamente las credenciales y la información de conexión que se especifique para la base de datos del servidor de informes. Los usuarios que solicitan los informes no requieren permisos de bases de datos o un inicio de sesión de base de datos para la base de datos del servidor de informes.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa `System.Data.SqlClient` para conectarse a la [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda la base de datos del servidor de informes. Si usa una instancia local de [!INCLUDE[ssDE](../../includes/ssde-md.md)], el servidor de informes establecerá la conexión utilizando la memoria compartida. Si usa un servidor de bases de datos remoto para la base de datos del servidor de informes, es posible que tenga que habilitar las conexiones remotas según la edición que utilice. Si está usando la edición Enterprise Edition, las conexiones remotas están habilitadas para TCP/IP de forma predeterminada.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa `System.Data.SqlClient` para conectarse al @no__t 2 que hospeda la base de datos del servidor de informes. Si usa una instancia local de [!INCLUDE[ssDE](../../includes/ssde-md.md)], el servidor de informes establecerá la conexión utilizando la memoria compartida. Si usa un servidor de bases de datos remoto para la base de datos del servidor de informes, es posible que tenga que habilitar las conexiones remotas según la edición que utilice. Si está usando la edición Enterprise Edition, las conexiones remotas están habilitadas para TCP/IP de forma predeterminada.  
   
  Para comprobar que la instancia acepta conexiones remotas, haga clic sucesivamente en **Inicio**, **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**, **Administrador de configuración de SQL Server**y, luego, compruebe que el protocolo TCP/IP está habilitado para cada servicio.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66096188"
 ### <a name="storing-database-connection-information"></a>Almacenar información de conexión a la base de datos  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena y cifra la información de conexión en los siguientes valores del archivo RSreportserver.config. Debe utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o la utilidad rsconfig para crear valores cifrados para esta configuración.  
   
- No todos los valores se establecen para todos los tipos de conexión. Si configura la conexión con los valores predeterminados (es decir, con las cuentas de servicio para realizar la conexión), <`LogonUser`>, <`LogonDomain`>, y <`LogonCred`> estarán vacíos, como se indica a continuación:  
+ No todos los valores se establecen para todos los tipos de conexión. Si configura la conexión con los valores predeterminados (es decir, con las cuentas de servicio para realizar la conexión), < `LogonUser` >, < `LogonDomain` > y < `LogonCred` estará vacío, como se indica a continuación:  
   
 ```  
 <Dsn></Dsn>  

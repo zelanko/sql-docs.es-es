@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.databasesetup.F1
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 577145b2a844a95480d8e250a87cce0a15877e20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095715"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952310"
 ---
 # <a name="database-ssrs-native-mode"></a>Base de datos (Modo nativo de SSRS)
   Utilice la página Base de datos para crear y configurar las bases de datos del servidor de informes que permiten el almacenamiento interno de una o varias instancias del servidor de informes. Si va a configurar un servidor de informes para usar una base de datos del servidor de informes remota, debe emplear el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para crear la base de datos.  
@@ -31,23 +31,23 @@ ms.locfileid: "66095715"
  Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y haga clic en **Base de datos** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opciones  
- **Nombre de SQL Server**  
+ **Nombre del SQL Server**  
  En Base de datos del servidor de informes actual, **Nombre de SQL Server** especifica el nombre de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que ejecuta la base de datos del servidor de informes. Puede utilizar una instancia predeterminada o con nombre en un equipo local o remoto.  
   
  **Database Name**  
  Especifica el nombre de la base de datos del servidor de informes que almacena los datos del servidor.  
   
  **Modo de servidor de informes**  
- Indica si la base de datos del servidor de informes admite el modo nativo o el modo integrado de SharePoint. Para obtener más información, consulte [Reporting Services Report Server](../../../2014/reporting-services/reporting-services-report-server.md).  
+ Indica si la base de datos del servidor de informes admite el modo nativo o el modo integrado de SharePoint. Para obtener más información, vea [Reporting Services servidor de informes](../../../2014/reporting-services/reporting-services-report-server.md).  
   
  **Cambiar base de datos**  
  Inicie un asistente que le guíe por todos los pasos requeridos para crear o seleccionar una base de datos del servidor de informes.  
   
  **Tipo de credencial**  
- Especifica las credenciales que utiliza el servidor de informes para conectarse a la base de datos de servidor de informes. Los tipos de credenciales que puede especificar incluyen la cuenta de servicio, un usuario del dominio de Windows, un usuario local de Windows o un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información acerca de cómo seleccionar credenciales, vea [configurar una conexión de base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Especifica las credenciales que utiliza el servidor de informes para conectarse a la base de datos de servidor de informes. Los tipos de credenciales que puede especificar incluyen la cuenta de servicio, un usuario del dominio de Windows, un usuario local de Windows o un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre cómo seleccionar credenciales, vea [configurar una conexión &#40;de base&#41;de datos del servidor de informes SSRS Configuration Manager](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nombre de usuario**  
- Especifica una cuenta de usuario de dominio, si está utilizando credenciales de Windows, o un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si usa credenciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si está usando credenciales de Windows, especifíquelas en este formato:  *\<dominio >\\< cuenta\>* .  
+ Especifica una cuenta de usuario de dominio, si está utilizando credenciales de Windows, o un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si usa credenciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si usa credenciales de Windows, especifíquelo con este formato: *\<domain > \\ < cuenta @ no__t-3*.  
   
  **Contraseña**  
  Especifica la contraseña de la cuenta.  
@@ -57,7 +57,7 @@ ms.locfileid: "66095715"
   
 ## <a name="see-also"></a>Vea también  
  [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Temas de Ayuda de F1 de administrador de configuración de Reporting Services &#40;modo nativo de SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Administrador de configuración de Reporting Services temas &#40;de ayuda de F1 en&#41;el modo nativo de SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Configuración avanzada de varios sitios Web (modo nativo de SSRS) | Microsoft Docs
+title: Configuración avanzada de varios sitios web (modo nativo de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 01ed7ed806cc064b05180347fa41905b57c4c98e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096826"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952671"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuración avanzada de varios sitios web (Modo nativo de SSRS)
   Utilice este cuadro de diálogo para crear y administrar las direcciones URL que se usan para tener acceso a un servidor de informes o al Administrador de informes. El cuadro de diálogo **Configuración avanzada de varios sitios web** se utiliza para crear direcciones URL adicionales y direcciones URL personalizadas que incluyen un nombre de encabezado de host, o para especificar una dirección IP en el formato de IPv4 o IPv6.  
@@ -40,12 +40,12 @@ ms.locfileid: "66096826"
   
 -   **127.0.0.1** se utilizan para tener acceso al host local. Admite la administración local en el equipo del servidor de informes. Si selecciona solo este valor, únicamente los usuarios que hayan iniciado sesión de forma local en el equipo servidor de informes tendrán acceso a la aplicación.  
   
--   *Nnn.nnn.nnn.nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa direccionamiento IPv6, la dirección IP será un valor de 128 bits de 8 campos de 4 bytes similar al siguiente formato: \<encabezado >:*nnnn:nnnn:nnnn:nnnn*.  
+-   *Nnn.nnn.nnn.nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa el direccionamiento IPv6, la dirección IP será un valor de 128 bits de campos de 8 4 bytes similar al siguiente formato: \<header >:*nnnn: nnnn: nnnn: nnnn*.  
   
      Si tiene varias tarjetas, verá una dirección IP para cada una. Si selecciona solo este valor, limitará el acceso de la aplicación únicamente a la dirección IP (y a cualquier nombre de host que un servidor de nombres de dominio asigne a esa dirección). No puede utilizar el host local para tener acceso a un servidor de informes y no puede utilizar las direcciones IP de otras tarjetas de adaptadores de red que estén instalados en el equipo del servidor de informes.  
   
  **Puerto**  
- Especifica el puerto en el que el servidor de informes supervisa las solicitudes. El puerto predeterminado es 80. Si utiliza el puerto 80, no tiene que incluirlo en la dirección URL. Si utiliza cualquier otro número de puerto, siempre debe incluir en la dirección URL (por ejemplo, http://localhost:8181/reports).  
+ Especifica el puerto en el que el servidor de informes supervisa las solicitudes. El puerto predeterminado es 80. Si utiliza el puerto 80, no tiene que incluirlo en la dirección URL. Si utiliza cualquier otro número de puerto, siempre debe incluirlo en la dirección URL (por ejemplo, http://localhost:8181/reports).  
   
  **Encabezado de host**  
  Si ya tiene definido un encabezado de host en un servidor de nombres de dominio que se resuelva como su equipo, puede especificar ese encabezado de host en una dirección URL que configure para el acceso al servidor de informes.  
@@ -62,7 +62,7 @@ ms.locfileid: "66096826"
   
  Para utilizar esta opción debe tener instalado un certificado. También debe modificar la opción de configuración UrlRoot del archivo RSReportServer.config de manera que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Emitido a**  
+ **Emitido para**  
  Muestra el nombre del equipo para el que se creó el certificado.  
   
  **Agregar**  

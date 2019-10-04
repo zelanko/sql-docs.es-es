@@ -1,5 +1,5 @@
 ---
-title: (Modo nativo de SSRS) de la cuenta de servicio | Microsoft Docs
+title: Cuenta de servicio (modo nativo de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,22 +9,22 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092180"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952395"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Cuenta de servicio (Modo nativo de SSRS)
   Utilice la página Cuenta de servicio para especificar la cuenta con la que se ejecuta el servicio del servidor de informes. Esta cuenta se configura inicialmente durante la instalación. Puede modificarla si desea cambiar la cuenta o la contraseña. El servicio web del servidor de informes, el Administrador de informes y la aplicación de procesamiento en segundo plano se ejecutan todos con la identidad del servicio que especifique en esta página.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- La cuenta que especifica para el servicio Servidor de informes necesita permiso de acceso al Registro, a los archivos de programa del servidor de informes y a la base de datos del servidor de informes. Todos los permisos se configuran automáticamente para la cuenta cuando se usa el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para establecer la cuenta. Si usa la cuenta de servicio para conectarse a la base de datos del servidor de informes, el Administrador de configuración crea un inicio de sesión de base de datos para la cuenta y configura los permisos de base de datos asignando la cuenta a RSExecRole en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia que hospeda el base de datos de servidor de informes. La base de datos del servidor de informes es el único almacén de datos en el que un servidor de informes escribe. La cuenta de servicio no requiere permisos a cualquier otro almacén de datos.  
+ La cuenta que especifica para el servicio Servidor de informes necesita permiso de acceso al Registro, a los archivos de programa del servidor de informes y a la base de datos del servidor de informes. Todos los permisos se configuran automáticamente para la cuenta cuando se usa el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para establecer la cuenta. Si usa la cuenta de servicio para conectarse a la base de datos del servidor de informes, el Configuration Manager crea un inicio de sesión de base de datos para la cuenta y configura los permisos de base de datos asignando la cuenta a RSExecRole en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda el informe. base de datos de servidor. La base de datos del servidor de informes es el único almacén de datos en el que un servidor de informes escribe. La cuenta de servicio no requiere permisos a cualquier otro almacén de datos.  
   
  Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y seleccione el vínculo en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66092180"
  Seleccione **Servicio de red**, **Sistema local**o **Servicio local** en la lista. Solo se recomienda **Servicio de red** ; sin embargo, puede configurar la cuenta para utilizar cualquier cuenta que esté disponible.  
   
  **Usar otra cuenta**  
- Seleccione esta opción para especificar una cuenta de usuario de Windows. Puede escribir una cuenta de usuario de Windows local o una cuenta de usuario de dominio. Especifique una cuenta de dominio con este formato:  *\<dominio >\\< usuario\>* . Especifique una cuenta de usuario de Windows local en este formato:  *\<nombre_equipo >\\< usuario\>* . Solo puede seleccionar una cuenta existente; no puede crear cuentas nuevas en Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Seleccione esta opción para especificar una cuenta de usuario de Windows. Puede escribir una cuenta de usuario de Windows local o una cuenta de usuario de dominio. Especifique una cuenta de dominio en este formato: *\<domain > \\ < usuario @ no__t-3*. Especifique una cuenta de usuario local de Windows con este formato: *\<computer nombre > \\ < usuario @ no__t-3*. Solo puede seleccionar una cuenta existente; no puede crear cuentas nuevas en Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  El límite máximo es 20 caracteres para la cuenta.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66092180"
  Si cambia el tipo de cuenta (por ejemplo, reemplazando una cuenta de Windows por otra o una cuenta integrada por una cuenta de dominio de Windows), se le pedirá que cree una copia de seguridad de la clave de cifrado. La copia de seguridad se restaurará automáticamente cuando seleccione la cuenta nueva.  
   
 > [!NOTE]  
->  El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pregunta si se desea realizar una copia de seguridad y restaurar la clave de cifrado cada vez que se modifica la cuenta del servicio. Estos pasos son necesarios para asegurar que los datos cifrados permanecen disponibles para el servidor de informes. Para obtener más información acerca de estas acciones, consulte [las claves de cifrado &#40;modo nativo de SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
+>  El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pregunta si se desea realizar una copia de seguridad y restaurar la clave de cifrado cada vez que se modifica la cuenta del servicio. Estos pasos son necesarios para asegurar que los datos cifrados permanecen disponibles para el servidor de informes. Para obtener más información acerca de estas acciones, consulte [claves &#40;de cifrado de SSRS en modo&#41;nativo](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
- Además, si tiene un servidor de informes que está configurado para ejecutarse en modo integrado de SharePoint y cambia la cuenta de servicio mediante el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , debe abrir también Administración central de SharePoint y usar la página [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **de** para volver a aplicar la configuración del servidor de informes y de la instancia. Este paso permitirá el acceso de la nueva cuenta de servicio a las bases de datos de SharePoint, lo que es necesario para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con una tecnología o producto de SharePoint. Para obtener más información acerca de cómo conceder acceso a la base de datos en Administración Central de SharePoint, vea [configuración y administración de un servidor de informes &#40;Reporting Services SharePoint Mode&#41; ](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) y [ Instalación en modo de SharePoint de Reporting Services &#40;SharePoint 2010 y SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+ Además, si tiene un servidor de informes que está configurado para ejecutarse en modo integrado de SharePoint y cambia la cuenta de servicio mediante el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , debe abrir también Administración central de SharePoint y usar la página [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **de** para volver a aplicar la configuración del servidor de informes y de la instancia. Este paso permitirá el acceso de la nueva cuenta de servicio a las bases de datos de SharePoint, lo que es necesario para integrar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con una tecnología o producto de SharePoint. Para obtener más información sobre cómo conceder acceso a bases de datos en administración central de SharePoint, vea [configuración y &#40;administración de un&#41; servidor de informes Reporting Services el modo de SharePoint](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) y [Reporting Services modo de SharePoint Instalación &#40;de SharePoint 2010 y SharePoint&#41;2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
 ## <a name="choosing-an-account"></a>Elegir una cuenta  
  Para obtener los mejores resultados, especifique una cuenta que tenga permisos de conexión de red, con acceso a los controladores de dominio de la red y a servidores SMTP corporativos o puertas de enlace. En la tabla siguiente se resumen las cuentas y se proporcionan recomendaciones para utilizarlas.  
@@ -73,6 +73,6 @@ ms.locfileid: "66092180"
 ## <a name="see-also"></a>Vea también  
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
- [Temas de Ayuda de F1 de administrador de configuración de Reporting Services &#40;modo nativo de SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Administrador de configuración de Reporting Services temas &#40;de la ayuda F1 modo nativo de SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cuentas de dominio necesarias para la granja de SharePoint (Asesor de actualizaciones) | Microsoft Docs
+title: Cuentas de dominio necesarias para la granja de servidores de SharePoint (Asesor de actualizaciones) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3e6d9802eafeea7babdcf23a3e8ea0f6b732e308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4079ea4213d7ecbec0165c32c82b3449bbb5aee
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095511"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952511"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>Cuentas de dominio necesarias para una granja de servidores de SharePoint (Asesor de actualizaciones)
   Los productos de SharePoint que están configurados para un entorno de una granja requieren el uso de cuentas de dominio.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo de SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** @no__t el modo de SharePoint.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRS](../../includes/ssrs.md)]  
@@ -35,15 +35,15 @@ ms.locfileid: "66095511"
  "El servidor de informes se está ejecutando en la cuenta de servicio NT AUTHORITY\NETWORK integrada, lo que no se admite en una instalación de granja de SharePoint. Vuelva a configurar el servidor de informes para que se ejecute en una cuenta de dominio."  
   
 ## <a name="corrective-action"></a>Acción correctora  
- Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y versiones anteriores, utilice el Administrador de configuración de Reporting Services para cambiar la cuenta asignada como cuenta de servicio del servidor de informes.  
+ En el caso de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y versiones anteriores, utilice el Administrador de configuración de Reporting Services para cambiar la cuenta asignada como cuenta de servicio del servidor de informes.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>Para cambiar la cuenta de servicio del Administrador de configuración  
   
-1.  Desde el **iniciar** menú, seleccione **todos los programas**y, a continuación, haga clic en **Microsoft SQL Server 2008 R2**.  
+1.  En el menú **Inicio** , seleccione **todos los programas**y, a continuación, haga clic en **Microsoft SQL Server 2008 R2**.  
   
-2.  Seleccione **herramientas de configuración**y, a continuación, haga clic en **Reporting Services Configuration Manager**.  
+2.  Seleccione **herramientas de configuración**y, a continuación, haga clic en **Administrador de configuración de Reporting Services**.  
   
-3.  En el Administrador de configuración, seleccione el **cuenta de servicio** ficha.  
+3.  En Configuration Manager, seleccione la pestaña **cuenta de servicio** .  
   
 4.  Seleccione **usar otra cuenta** y escriba las credenciales de una cuenta de dominio.  
   

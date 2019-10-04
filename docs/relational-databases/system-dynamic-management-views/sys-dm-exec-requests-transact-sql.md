@@ -1,10 +1,10 @@
 ---
 title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
-ms.author: sstein
+ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbd23a685507b62529477d6ef92dbbbd1980c5c1
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326168"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923775"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -47,7 +47,7 @@ Devuelve información acerca de cada solicitud que se está ejecutando en [!INCL
 |database_id|**smallint**|Identificador de la base de datos en la que se ejecuta la solicitud. No admite valores NULL.|  
 |user_id|**int**|Identificador del usuario que envió la solicitud. No admite valores NULL.|  
 |connection_id|**uniqueidentifier**|Identificador de la conexión a la que ha llegado la solicitud. Acepta valores NULL.|  
-|blocking_session_id|**smallint**|Id. de la sesión que bloquea la solicitud. Si esta columna es NULL, la solicitud no está bloqueada o la información de la sesión de bloqueo no está disponible (o no puede ser identificada).<br /><br /> -2 = El recurso de bloqueo es propiedad de una transacción distribuida huérfana.<br /><br /> -3 = El recurso de bloqueo es propiedad de una transacción de recuperación diferida.<br /><br /> -4 = No se pudo determinar el identificador de sesión del propietario del bloqueo temporal a causa de transiciones internas de estado de dicho bloqueo.|  
+|blocking_session_id|**smallint**|Id. de la sesión que bloquea la solicitud. Si esta columna es NULL o es igual a 0, la solicitud no está bloqueada o la información de sesión de la sesión de bloqueo no está disponible (o no se puede identificar).<br /><br /> -2 = El recurso de bloqueo es propiedad de una transacción distribuida huérfana.<br /><br /> -3 = El recurso de bloqueo es propiedad de una transacción de recuperación diferida.<br /><br /> -4 = No se pudo determinar el identificador de sesión del propietario del bloqueo temporal a causa de transiciones internas de estado de dicho bloqueo.|  
 |wait_type|**nvarchar(60)**|Si la solicitud está actualmente bloqueada, esta columna devuelve el tipo de espera. Acepta valores NULL.<br /><br /> Para obtener información sobre los tipos de esperas, vea [Sys. &#40;DM _ _OS_WAIT_STATS&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Si la solicitud está actualmente bloqueada, esta columna devuelve la duración en milisegundos de la espera actual. No admite valores NULL.|  
 |last_wait_type|**nvarchar(60)**|Si esta solicitud se ha bloqueado anteriormente, esta columna devuelve el tipo de la última espera. No admite valores NULL.|  
@@ -77,7 +77,7 @@ Devuelve información acerca de cada solicitud que se está ejecutando en [!INCL
 |ansi_padding|**bit**|1 = El valor de ANSI_PADDING es ON para la solicitud.<br /><br /> De lo contrario, es 0.<br /><br /> No admite valores NULL.|  
 |ansi_nulls|**bit**|1 = El valor de ANSI_NULLS es ON para la solicitud. De lo contrario, es 0.<br /><br /> No admite valores NULL.|  
 |concat_null_yields_null|**bit**|1 = El valor de CONCAT_NULL_YIELDS_NULL es ON para la solicitud. De lo contrario, es 0.<br /><br /> No admite valores NULL.|  
-|transaction_isolation_level|**smallint**|Nivel de aislamiento con el que se creó la transacción para esta solicitud. No admite valores NULL.<br /><br /> 0 = Unspecified<br /><br /> 1 = ReadUncomitted<br /><br /> 2 = ReadCommitted<br /><br /> 3 = Repeatable<br /><br /> 4 = Serializable<br /><br /> 5 = Snapshot|  
+|transaction_isolation_level|**smallint**|Nivel de aislamiento con el que se creó la transacción para esta solicitud. No admite valores NULL.<br /> 0 = Unspecified<br /> 1 = ReadUncomitted<br /> 2 = ReadCommitted<br /> 3 = Repeatable<br /> 4 = Serializable<br /> 5 = Snapshot|  
 |lock_timeout|**int**|Tiempo de espera de bloqueo en milisegundos para esta solicitud. No admite valores NULL.|  
 |deadlock_priority|**int**|Valor de DEADLOCK_PRIORITY para la solicitud. No admite valores NULL.|  
 |row_count|**bigint**|Número de filas que esta solicitud ha devuelto al cliente. No admite valores NULL.|  
@@ -96,6 +96,7 @@ Devuelve información acerca de cada solicitud que se está ejecutando en [!INCL
 |is_resumable |**bit** |**Se aplica a**: desde [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica si la solicitud es una operación de índice reanudable. |  
 |page_resource |**Binary(8** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Representación hexadecimal de 8 bytes del recurso de página si la `wait_resource` columna contiene una página. Para obtener más información, vea [Sys. fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|**Se aplica a**: Hiperescala Azure SQL Database<br /><br /> Número de lecturas del servidor de páginas realizadas por esta solicitud. No admite valores NULL.|  
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>Comentarios 
 Para ejecutar código situado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, en procedimientos almacenados extendidos y consultas distribuidas), se tiene que ejecutar un subproceso fuera del control del programador no preferente. Para hacerlo, un trabajador se cambia al modo preferente. Los valores de tiempo que devuelve esta vista de administración dinámica no incluyen el tiempo transcurrido en modo preferente.
@@ -125,14 +126,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>b. Buscar todos los bloqueos que mantiene un lote en ejecución
 
-En el ejemplo siguiente se consulta **Sys. DM _ _exec_requests** para buscar el lote interesante `transaction_id` y copiar su desde la salida.
+En el ejemplo siguiente se consulta **Sys. DM _ _exec_requests** para buscar el lote interesante y copiar su `transaction_id` de la salida.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-A continuación, para buscar información de bloqueo, use `transaction_id` el copiado con la función del sistema **Sys. DM _ _tran_locks**.  
+A continuación, para buscar información de bloqueo, use el `transaction_id` copiado con la función del sistema **Sys. DM _ _tran_locks**.  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

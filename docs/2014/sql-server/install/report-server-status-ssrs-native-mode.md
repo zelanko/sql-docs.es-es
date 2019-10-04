@@ -1,5 +1,5 @@
 ---
-title: Informar del estado del servidor (modo nativo de SSRS) | Microsoft Docs
+title: Estado del servidor de informes (modo nativo de SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,31 +9,31 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serverstatus.F1
 ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 52291c866e00100280c63253ef36b31bd8763948
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15a177080792eb26273399f41aad577962885376
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428987"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952457"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Estado del servidor de informes (Modo nativo de SSRS)
   Utilice esta página para ver información sobre la instancia del servidor de informes a la que está conectado actualmente. Esta página es la página de inicio para la configuración del servidor de informes. Hay páginas adicionales disponibles para configurar las direcciones URL, la cuenta de servicio, la base de datos del servidor de informes, la distribución del correo electrónico del servidor de informes, una implementación que permita una ampliación con varios servidores y las claves de cifrado.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes. Para obtener más información, consulte [Reporting Services Configuration Manager &#40;SUPR&#41;](reporting-services-configuration-manager-native-mode.md).  
+ Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes. Para obtener más información, [vea &#40;administrador de configuración de Reporting Services&#41;del](reporting-services-configuration-manager-native-mode.md).  
   
 > [!TIP]  
->  El[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool.exe) se instala con un nivel de privilegios "highestAvailable". Este comportamiento es así por diseño. El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precisa la comunicación con las API WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una parte de la comunicación WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere un nivel superior o administrativo de privilegios.  
+>  El Configuration Manager @ no__t-0 (RSConfigTool. exe) se instala con un nivel de privilegios "highestAvailable". Este comportamiento es así por diseño. El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precisa la comunicación con las API WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una parte de la comunicación WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere un nivel superior o administrativo de privilegios.  
   
- Si se conecta al servidor de informes y todos los vínculos de página están deshabilitados, compruebe que se ha iniciado el servicio del servidor de informes. El **informar del estado del servicio:** Debe ser "iniciado". También puede usar la aplicación de consola Servicios en Herramientas administrativas para comprobar el estado del servicio.  
+ Si se conecta al servidor de informes y todos los vínculos de página están deshabilitados, compruebe que se ha iniciado el servicio del servidor de informes. **Estado del servicio de informes:** Debe ser "Started". También puede usar la aplicación de consola Servicios en Herramientas administrativas para comprobar el estado del servicio.  
   
 ## <a name="options"></a>Opciones  
- **SQL Server Instance**  
- Muestra información sobre la instancia del servidor de informes a la que está conectado actualmente. Los nombres de instancia del servidor de informes se basan en las instancias con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La instancia predeterminada es MSSQLSERVER. Una instancia con nombre será un valor que especifique durante la instalación. Para obtener más información acerca de las instancias, vea [trabajar con varias versiones e instancias de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+ **Instancia de SQL Server**  
+ Muestra información sobre la instancia del servidor de informes a la que está conectado actualmente. Los nombres de instancia del servidor de informes se basan en las instancias con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La instancia predeterminada es MSSQLSERVER. Una instancia con nombre será un valor que especifique durante la instalación. Para obtener más información acerca de las instancias, vea [trabajar con varias versiones e instancias de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) en los libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  En SQL Server Express con Advanced Services, la instancia predeterminada es SQLEXPRESS.  
@@ -68,11 +68,11 @@ ms.locfileid: "66428987"
  Inicia el servicio Servidor de informes. Es necesario reiniciar el servicio tras algunos cambios de configuración (por ejemplo, al reconfigurar el servidor de informes después de un cambio de nombre de equipo). Si reconfigura las reservas de direcciones URL, el servicio se reiniciará automáticamente. Es necesario reiniciar para que los cambios se reconozcan.  
   
  **Detener**  
- Detiene el servicio Servidor de informes. Al detener el servicio, se detiene el funcionamiento del servidor de informes. Para obtener más información, consulte [iniciar y detener el servicio del servidor de informes](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
+ Detiene el servicio Servidor de informes. Al detener el servicio, se detiene el funcionamiento del servidor de informes. Para obtener más información, vea [iniciar y detener el servicio del servidor de informes en los](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Temas de Ayuda de F1 de administrador de configuración de Reporting Services &#40;modo nativo de SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Administrador de configuración de Reporting Services &#40;SUPR&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
+ [Administrador de configuración de Reporting Services temas &#40;de ayuda de F1 en&#41;el modo nativo de SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Administrador de configuración de Reporting Services &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

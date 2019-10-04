@@ -2,19 +2,19 @@
 title: Requisitos de hardware y software para Analysis Services Server en modo de SharePoint (SQL Server 2014) | Microsoft Docs
 ms.prod: sql-server-2014
 ms.technology: database-engine
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 55727331dc9716501eae60e42b4299862f41d5f7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 58ed4735bf44e1afe62fdc3a8ed64385087c03df
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892185"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952469"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Requisitos de hardware y software para el servidor de Analysis Services en modo de SharePoint (SQL Server 2014)
 
@@ -34,9 +34,9 @@ ms.locfileid: "68892185"
 ##  <a name="bkmk_sqllicense"></a>Licencias de SQL Server  
  Para obtener más información acerca de las licencias de SQL Server, vea lo siguiente:  
   
--   [SQL Server hoja](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) de los licencias de 2014 (https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
+-   [Hoja de SQL Server de licencias de 2014](https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf) (https://download.microsoft.com/download/6/6/F/66FF3259-1466-4BBA-A505-2E3DA5B2B1FA/SQL_Server_2014_Licensing_Datasheet.pdf).  
   
--   [Cómo comprar: SQL Server admiten](https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2) los modelos de https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2) licencias (.  
+-   @no__t 0How para comprar: Los modelos de licencias de SQL Server admiten @ no__t-0 (https://www.microsoft.com/licensing/product-licensing/sql-server-2014?activetab=sql-server-2014-pivot%3aprimaryr2).  
   
 ##  <a name="bkmk_ssas__sharepoint_2013"></a>Analysis Services instala en SharePoint 2013  
  Si instala el servidor de Analysis Services en modo de SharePoint en un servidor independiente, los requisitos mínimos del sistema se basan en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en lugar de basarse en los requisitos de SharePoint Server.  

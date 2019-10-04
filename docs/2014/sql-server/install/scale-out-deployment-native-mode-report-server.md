@@ -1,5 +1,5 @@
 ---
-title: (Servidor de informes de modo nativo) de la implementación escalada | Microsoft Docs
+title: Implementación escalada (servidor de informes en modo nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092431"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952424"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implementación escalada horizontalmente (servidor de informes en modo nativo)
   Use la página **Implementación escalada** del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para ver el estado de inicialización de una implementación escalada o para unir un servidor de informes a una implementación escalada. *Implementación escalada* se refiere a dos o más instancias de un servidor de informes que comparten una sola base de datos de servidor de informes.  
@@ -37,7 +37,7 @@ ms.locfileid: "66092431"
  Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y seleccione **Implementación escalada** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opciones  
- **Nombre de SQL Server**  
+ **Nombre del SQL Server**  
  Especifique el nombre de la sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda la base de datos del servidor de informes.  
   
  **Database Name**  
@@ -63,7 +63,7 @@ ms.locfileid: "66092431"
   
      En un servidor de informes que ya forme parte de una implementación escalada, puede utilizar esta página para agregar o quitar nodos.  
   
- **inicializar**  
+ **Inicia**  
  Haga clic en **Inicializar** para agregar un servidor de informes a la implementación escalada. Este paso permite configurar un servidor de informes para usar una clave simétrica en una base de datos de servidor de informes compartida. Utilice la opción **Inicializar** para agregar una instancia del servidor de informes a una implementación de ampliación horizontal.  
   
  Una instancia del servidor de informes está disponible solo si se ha configurado previamente una conexión con la base de datos compartida del servidor de informes. Además, debe realizar la inicialización desde un servidor de informes ya inicializado para utilizar la base de datos del servidor de informes.  
@@ -73,7 +73,7 @@ ms.locfileid: "66092431"
   
  Como precaución, asegúrese de crear una copia de seguridad de la clave simétrica antes de quitarla. Una vez que haya quitado las claves de cifrado del último servidor de informes de la lista, especifique los nuevos requisitos para la siguiente inicialización del servidor de informes para dicha base de datos. El nuevo requisito es que, tras inicializar un servidor de informes, debe restaurar una copia de seguridad de la clave simétrica. La restauración de la clave simétrica es necesaria si desea tener acceso a los datos cifrados alojados actualmente en la base de datos del servidor de informes.  
   
- Si ya no necesita los datos cifrados o si no tiene una copia de seguridad de la clave, debe eliminar los datos cifrados. Para obtener más información, consulte [las claves de cifrado &#40;modo nativo de SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
+ Si ya no necesita los datos cifrados o si no tiene una copia de seguridad de la clave, debe eliminar los datos cifrados. Para obtener más información, consulte [claves &#40;de cifrado&#41;en modo nativo de SSRS](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

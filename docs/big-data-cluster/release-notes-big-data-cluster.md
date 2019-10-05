@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión
 titleSuffix: SQL Server big data clusters
-description: En este artículo se describen las actualizaciones más recientes y [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] los problemas conocidos de (versión preliminar).
+description: En este artículo se describen las actualizaciones más recientes y los problemas conocidos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 758e87a0c74df695c06cb0f0005f6a19d8978625
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988093"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974395"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>Notas de la versión de clústeres de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se enumeran las actualizaciones y los problemas conocidos de las [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]versiones más recientes de.
+En este artículo se enumeran las actualizaciones y los problemas conocidos de las versiones más recientes de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 ## <a id="rc"></a>Candidato de versión comercial (agosto)
 
@@ -31,13 +31,13 @@ En las secciones siguientes se describen las nuevas características y los probl
 |Nueva característica o actualización | Detalles |
 |:---|:---|
 |SQL Server Always On grupo de disponibilidad |Al implementar un clúster de macrodatos de SQL Server, puede configurar la implementación para crear un grupo de disponibilidad que proporcione:<br/><br/>-Alta disponibilidad <br/><br/>-Escalado horizontal de lectura <br/><br/>-Escalado horizontal de la inserción de datos en el grupo de datos<br/><br>Consulte [implementación con alta disponibilidad](../big-data-cluster/deployment-high-availability.md). |
-|`azdata` |Instalación simplificada para la herramienta con el [Administrador de instalación](./deploy-install-azdata-linux-package.md)<br/><br/>[`azdata notebook`Command](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`Command](./reference-azdata-bdc-status.md) |
+|`azdata` |Instalación simplificada para la herramienta con el [Administrador de instalación](./deploy-install-azdata-linux-package.md)<br/><br/>[comando `azdata notebook`](./reference-azdata-notebook.md)<br/><br/>[comando `azdata bdc status`](./reference-azdata-bdc-status.md) |
 |Azure Data Studio|[Descargue la versión candidata para lanzamiento de Azure Data Studio](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc).<br/><br/>Se han agregado cuadernos de solución de problemas a través de SQL Server guía 2019 de Jupyter.<br/><br/>Experiencia de inicio de sesión de controlador agregada.<br/><br/>Se ha agregado el panel del controlador para ver los puntos de conexión de servicio, ver el estado de mantenimiento del clúster y acceder a los cuadernos de solución de problemas.<br/><br/>Rendimiento de edición/salida de celda del Bloc de notas mejorado.|
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conocidos
 
-* SQL Server 2019 los clústeres de macrodatos Release Candidate la `15.0.1900.47`actualización del número de compilación es.
+* SQL Server 2019 clústeres de macrodatos Release Candidate la actualización del número de compilación es `15.0.1900.47`.
 
 * El perfil de implementación "kubeadm-Prod" no se admite en los clústeres de macrodatos de SQL Server 2019 Release Candidate con el número de compilación anterior. En su lugar, use el perfil "kubeadm-dev-test" para las implementaciones de Kubeadm.
 
@@ -49,7 +49,7 @@ En las siguientes secciones se describen las nuevas características y los probl
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
-|Versión preliminar pública |Antes de CTP 3.2, el clúster de macrodatos de SQL Server estaba disponible para los usuarios pioneros registrados. Esta versión permite a todo el mundo experimentar las características de los clústeres de macrodatos de SQL Server. <br/><br/> Consulte Introducción [a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md).|
+|Versión preliminar pública |Antes de CTP 3.2, el clúster de macrodatos de SQL Server estaba disponible para los usuarios pioneros registrados. Esta versión permite a todo el mundo experimentar las características de los clústeres de macrodatos de SQL Server. <br/><br/> Consulte Introducción [a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md).|
 |`azdata` |CTP 3.2 presenta `azdata`: una utilidad de línea de comandos escrita en Python que permite a los administradores de clústeres arrancar y administrar el clúster de macrodatos mediante las API REST. `azdata` reemplaza a `mssqlctl`. Vea [Instalación de `azdata`](deploy-install-azdata.md). |
 |PolyBase |Los nombres de las columnas de la tabla externa ahora se usan para consultar orígenes de datos ODBC, SQL Server, Oracle, Teradata y MongoDB. En versiones anteriores de CTP, las columnas del origen de datos externos se enlazaban solo en la posición ordinal y los nombres especificados en la definición de la tabla externa no se usaban. |
 |Actualización de niveles de HDFS |Presentamos la funcionalidad de actualización de niveles de HDFS, gracias a la que se puede actualizar un montaje existente a la instantánea más reciente de los datos remotos. Vea [Niveles de HDFS](hdfs-tiering.md) |
@@ -169,7 +169,7 @@ En las secciones siguientes se describen los problemas conocidos y las limitacio
 
 #### <a name="kibana-logs-dashboards"></a>Paneles de registros Kibana
 
-- Entre Aris CTP 3.0 y 3.1, la versión de Kibana se actualizó de 6.3.1 a 7.0.1.  Esto ha hecho que el explorador Microsoft Edge no sea compatible con Kibana. Los usuarios verán una página en blanco al cargar la versión actual de los paneles de Kibana en Microsoft Edge. Consulte [aquí]( https://www.elastic.co/support/matrix#matrix_browse) los exploradores compatibles con Kibana.rs 
+- Entre CTP 3,0 y 3,1, la versión de Kibana se actualizó de 6.3.1 a 7.0.1.  Esto ha hecho que el explorador Microsoft Edge no sea compatible con Kibana. Los usuarios verán una página en blanco al cargar la versión actual de los paneles de Kibana en Microsoft Edge. Consulte [aquí]( https://www.elastic.co/support/matrix#matrix_browse) para ver los exploradores compatibles con Kibana.
 
 
 ## <a id="ctp30"></a> CTP 3.0 (mayo)
@@ -498,9 +498,9 @@ En las siguientes secciones se describen las nuevas características y los probl
 
 | Nueva característica o actualización | Detalles |
 | :---------- | :------ |
-| Envío de trabajos de Spark en clústeres de macrodatos en IntelliJ. | [Envío de trabajos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark en IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| CLI comunes para la implementación de la aplicación y la administración de clústeres. | [Cómo implementar una aplicación en[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
-| Extensión de VS Code para implementar aplicaciones en un clúster de macrodatos. | [Cómo usar VS Code para implementar aplicaciones en[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
+| Envío de trabajos de Spark en clústeres de macrodatos en IntelliJ. | [Envío de trabajos de Spark en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| CLI comunes para la implementación de la aplicación y la administración de clústeres. | [Cómo implementar una aplicación en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| Extensión de VS Code para implementar aplicaciones en un clúster de macrodatos. | [Cómo usar VS Code para implementar aplicaciones en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | Cambios en el uso del comando de la herramienta **azdata**. | Para obtener más información, vea los [problemas conocidos con azdata](#azdatactp23). |
 | Uso de Sparklyr en clústeres de macrodatos | [Uso de Sparklyr en clústeres de macrodatos de SQL Server 2019](sparklyr-from-RStudio.md) |
 | Montaje de almacenamiento externo compatible con HDFS en clústeres de macrodatos con **niveles de HDFS**. | Vea [Niveles de HDFS](hdfs-tiering.md). |
@@ -616,7 +616,7 @@ Si usa kubeadm para implementar Kubernetes en varios equipos, el portal de admin
 
 En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 2.2.
 
-### <a name="new-features"></a>Características nuevas
+### <a name="new-features"></a>Nuevas características
 
 - Portal de administración del clúster al que se accede con `/portal` (**https://\<ip-address\>:30777/portal**).
 - El nombre de servicio del grupo maestro ha cambiado de `service-master-pool-lb` y `service-master-pool-nodeport` a `endpoint-master-pool`.
@@ -685,7 +685,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 2.1.
 
-### <a name="new-features"></a>Características nuevas
+### <a name="new-features"></a>Nuevas características
 
 - [Implementación de aplicaciones de Python y R](big-data-cluster-create-apps.md) en un clúster de macrodatos.
 - Nueva versión de **azdata** e imágenes actualizadas. 
@@ -693,7 +693,7 @@ En las siguientes secciones se describen las nuevas características y los probl
 
 ### <a name="known-issues"></a>Problemas conocidos
 
-En las secciones siguientes se proporcionan problemas [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] conocidos de en CTP 2,1.
+En las secciones siguientes se proporcionan problemas conocidos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en CTP 2,1.
 
 #### <a name="deployment"></a>Implementación
 
@@ -749,7 +749,7 @@ En las secciones siguientes se proporcionan problemas [!INCLUDE[big-data-cluster
 
 En las siguientes secciones se describen las nuevas características y los problemas conocidos de los clústeres de macrodatos en SQL Server 2019 CTP 2.0.
 
-### <a name="new-features"></a>Características nuevas
+### <a name="new-features"></a>Nuevas características
 
 - Experiencia de implementación sencilla con la herramienta de administración de azdata
 - Experiencia nativa de Notebook en Azure Data Studio
@@ -768,7 +768,7 @@ En las siguientes secciones se describen las nuevas características y los probl
 
 ### <a name="known-issues"></a>Problemas conocidos
 
-En las secciones siguientes se proporcionan problemas [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] conocidos de en CTP 2,0.
+En las secciones siguientes se proporcionan problemas conocidos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en CTP 2,0.
 
 #### <a name="deployment"></a>Implementación
 
@@ -818,4 +818,4 @@ En las secciones siguientes se proporcionan problemas [!INCLUDE[big-data-cluster
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]acerca de, vea [¿Qué es [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+Para obtener más información acerca de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consulte [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

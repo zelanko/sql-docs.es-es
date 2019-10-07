@@ -17,12 +17,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c9e96d5ebbe71273204b39ed5d387ecab598654a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764358"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710967"
 ---
 # <a name="change-publication-and-article-properties"></a>Cambiar las propiedades de la publicación y de los artículos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "68764358"
 |Descripción|Procedimiento almacenado|Propiedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Quitar un artículo|**sp_droparticle**|Todos los parámetros|Los artículos se pueden quitar antes de crear las suscripciones. Utilizando procedimientos almacenados es posible quitar una suscripción a un artículo; utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], es necesario quitar, volver a crear y sincronizar toda la suscripción. Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
-|Cambiar un filtro de columna|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
+|Cambiar un filtro de columna|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Agregar un filtro de fila|**sp_articlefilter**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
-|Quitar un filtro de fila|**sp_articlefilter**|**@article**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
-|Cambiar un filtro de fila|**sp_articlefilter**|**@filter_clause**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
+|Quitar un filtro de fila|**sp_articlefilter**|`@article`|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
+|Cambiar un filtro de fila|**sp_articlefilter**|`@filter_clause`|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Cambiar un filtro de fila|**sp_changearticle**|**filter**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Cambiar las opciones del esquema|**sp_changearticle**|**schema_option**|Nueva instantánea.|  
 |Cambie el modo de controlar las tablas en el suscriptor antes de aplicar la instantánea.|**sp_changearticle**|**pre_creation_cmd**|Nueva instantánea.|  
@@ -58,7 +58,7 @@ ms.locfileid: "68764358"
 |Cambiar los comandos UPDATE, INSERT o DELETE|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Cambiar el nombre de la tabla de destino|**sp_changearticle**|**dest_table**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Cambiar el propietario de la tabla de destino (esquema)|**sp_changearticle**|**destination_owner**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
-|Cambiar las asignaciones de tipos de datos (se aplica solo a publicaciones de Oracle)|**sp_changearticlecolumndatatype**|**@type**<br /><br /> **@length**<br /><br /> **@precision**<br /><br /> **@scale**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
+|Cambiar las asignaciones de tipos de datos (se aplica solo a publicaciones de Oracle)|**sp_changearticlecolumndatatype**|`@type` <br /><br /> `@length` <br /><br /> `@precision`<br /><br /> `@scale`|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Propiedades de la publicación para replicación de mezcla  
   
@@ -72,7 +72,7 @@ ms.locfileid: "68764358"
 |Cambiar el script anterior o posterior a la instantánea|**sp_changemergepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nueva instantánea (también requerida si cambia el contenido del script ).<br /><br /> Se requiere la reinicialización para aplicar el nuevo script en el suscriptor.|  
 |Agregar un filtro de combinación o un registro lógico|**sp_addmergefilter**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Quitar un filtro de combinación o un registro lógico|**sp_dropmergefilter**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
-|Cambiar un filtro de combinación o un registro lógico|**sp_changemergefilter**|**@property**<br /><br /> **@value**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
+|Cambiar un filtro de combinación o un registro lógico|**sp_changemergefilter**|`@property`<br /><br /> `@value`|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Deshabilitar el uso de filtros con parámetros (habilitar los filtros con parámetros no requiere ninguna acción especial)|**sp_changemergepublication**|Un valor de **false** para **dynamic_filters**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Habilitar o deshabilitar el uso de particiones precalculadas|**sp_changemergepublication**|**use_partition_groups**|Nueva instantánea.|  
 |Habilitar o deshabilitar la optimización de particiones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]|**sp_changemergepublication**|**keep_partition_changes**|Reinicialice las suscripciones.|  
@@ -86,7 +86,7 @@ ms.locfileid: "68764358"
 |Quitar un artículo que tiene el último filtro con parámetros de la publicación|**sp_dropmergearticle**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Quitar un artículo que es primario en un filtro de combinación o registro lógico (esto tiene como efecto secundario la desaparición de la combinación)|**sp_dropmergearticle**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Quitar un artículo en las demás circunstancias|**sp_dropmergearticle**|Todos los parámetros|Nueva instantánea.|  
-|Incluir un filtro de columna que no se publicó anteriormente|**sp_mergearticlecolumn**|**@column**<br /><br /> **@operation**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
+|Incluir un filtro de columna que no se publicó anteriormente|**sp_mergearticlecolumn**|`@column`<br /><br /> `@operation`|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Agregar, quitar o cambiar un filtro de fila|**sp_changemergearticle**|**subset_filterclause**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.<br /><br /> Si se agrega, quita o modifica un filtro con parámetros, los cambios pendientes en el suscriptor no se pueden cargar en el publicador durante la reinicialización. Si desea cargar los cambios pendientes, sincronice todas las suscripciones antes de cambiar el filtro.<br /><br /> Si un artículo no participa en ninguno de los filtros de combinación, puede quitar el artículo y agregarlo de nuevo con un filtro de fila diferente. De este modo no será necesario reinicializar toda la suscripción. Para obtener información sobre cómo agregar y quitar artículos, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Cambiar las opciones del esquema|**sp_changemergearticle**|**schema_option**|Nueva instantánea.|  
 |Cambiar el seguimiento de columnas al seguimiento de filas (Cambiar el seguimiento de filas al seguimiento de columnas no requiere ninguna acción especial)|**sp_changemergearticle**|Un valor de **false** para **column_tracking**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  

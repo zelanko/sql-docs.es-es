@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 927b3366c609eae4d98787ead646e8b613bfdcba
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154655"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687390"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y características admitidas de SQL Server 2017 en Linux
 
@@ -161,15 +161,15 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
 |Característica|Enterprise|Estándar|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
-|Conexión de administración dedicada|Sí|Sí|Sí|Sí, con marca de seguimiento|Sí, con marca de seguimiento|   
+|Conexión de administración dedicada|Sí|Sí|Sí|Sí, con marca de seguimiento|   
 |Compatibilidad con PowerShell scripting|Sí|Sí|Sí|Sí| 
 |Compatibilidad con las operaciones de componentes de aplicación de capa de datos: extracción, implementación, actualización, eliminación|Sí|Sí|Sí|Sí| 
-|Automatización de directivas (comprobar en la programación y cambio)|Sí|Sí|Sí|No|No|   
-|Recopilador de datos de rendimiento|Sí|Sí|Sí|No|No| 
-|Informes de rendimiento estándar|Sí|Sí|Sí|No|No| 
-|Guías del plan y congelación del plan para las guías del plan|Sí|Sí|Sí|No|No|   
+|Automatización de directivas (comprobar en la programación y cambio)|Sí|Sí|Sí|No|  
+|Recopilador de datos de rendimiento|Sí|Sí|Sí|No|
+|Informes de rendimiento estándar|Sí|Sí|Sí|No|
+|Guías del plan y congelación del plan para las guías del plan|Sí|Sí|Sí|No| 
 |Consulta directa de vistas indexadas (mediante la sugerencia NOEXPAND)|Sí|Sí|Sí|Sí| 
-|Mantenimiento automático de vistas indexadas|Sí|Sí|Sí|No|No| 
+|Mantenimiento automático de vistas indexadas|Sí|Sí|Sí|No|
 |Vistas distribuidas con particiones|Sí|No|No|No| 
 |Operaciones indizadas en paralelo|Sí|No|No|No|  
 |Uso automático de vistas indexadas por el optimizador de consultas|Sí|No|No|No| 
@@ -188,10 +188,10 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Funciones MERGE y UPSERT|Sí|Sí|Sí|Sí|   
 |Tipos de datos de fecha y hora|Sí|Sí|Sí|Sí|  
 |Compatibilidad para internacionalización|Sí|Sí|Sí|Sí| 
-|Búsqueda de texto completo y semántica|Sí|Sí|Sí|Sí|No| 
-|Especificación de idioma en la consulta|Sí|Sí|Sí|Sí|No|   
-|Service Broker (mensajería)|Sí|Sí|No (solo cliente)|No (solo cliente)|No (solo cliente)|   
-|Transact-SQL, extremos|Sí|Sí|Sí|No|No| 
+|Búsqueda de texto completo y semántica|Sí|Sí|Sí|Sí|
+|Especificación de idioma en la consulta|Sí|Sí|Sí|Sí|
+|Service Broker (mensajería)|Sí|Sí|No (solo cliente)|No (solo cliente)|
+|Transact-SQL, extremos|Sí|Sí|Sí|No|
 |Gráfico|Sí|Sí|Sí|Sí|  
 
 

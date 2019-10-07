@@ -11,12 +11,12 @@ keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 622d086c110bbf321534371d6b5547cadf9cbfd8
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: 82daddf2589970c415a53ca756599ac892be1a35
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68697285"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713206"
 ---
 # <a name="install-sql-server-powershell-module"></a>Instalación de un módulo de SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ Las versiones anteriores del módulo **SqlServer** *estaban incluidas* en SQL Se
 
 Las versiones preliminares del módulo pueden estar disponibles con mayor frecuencia: vea la sección al final de esta página para obtener información sobre cómo descargar esas versiones del módulo.
 
-Para instalar el módulo **SqlServer** desde la Galería de PowerShell, inicie una sesión de [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) y use los siguientes comandos. Si le surgen problemas durante la instalación, consulte la [documentación de instalación de módulos](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module) y la [referencia de instalación de módulos](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
+Para instalar el módulo **SqlServer** desde la Galería de PowerShell, inicie una sesión de [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) y use los siguientes comandos. Si le surgen problemas durante la instalación, consulte la [documentación de instalación de módulos](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1) y la [referencia de instalación de módulos](https://docs.microsoft.com/powershell/module/powershellget/Install-Module).
 
 Para instalar el módulo **SqlServer**:
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: 2f98607ce8544a913ace04bbc70aa578d1090557
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492847"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923787"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Buscar y visualizar informes en el portal web (Generador de informes y SSRS)
   El Administrador de informes es una herramienta basada en Web que incluye características para la visualización y administración de informes. Forma parte de la instalación del servidor de informes. Para abrir el Administrador de informes, escriba su dirección URL en una ventana del explorador. Para obtener información sobre los requisitos del explorador, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Para obtener más información sobre cómo se podría configurar en su servidor de informes una dirección URL del Administrador de informes URL, póngase en contacto con el administrador del sistema. Para obtener más información, vea [Configurar el Administrador de informes &#40;modo nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  

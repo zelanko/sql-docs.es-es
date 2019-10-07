@@ -1,20 +1,20 @@
 ---
 title: Virtualización de datos externos en SQL Server 2019 CTP 2.0 | Microsoft Docs
 description: En esta página se detallan los pasos para usar al Asistente para crear tablas externas para un archivo CSV
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: df014d179faa5321e3f4e472045eb64a9e9894be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6a8ce50e4e359c8ce8dc2b0015300f9a7afb88d1
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041142"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710607"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Uso del Asistente para tablas externas con archivos CSV
 

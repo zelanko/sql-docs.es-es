@@ -11,12 +11,12 @@ ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 author: Jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ffea82cc9abdd016ec63771510109046e7da5ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb1c7dc1571371b12f759e31cfb508f63f05a530
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092227"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713253"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Tabla temporal y variable de tabla más rápidas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ En tercer lugar, en el código T-SQL general:
   
   
   
-## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. Escenario: La variable de tabla puede ser MEMORY_OPTIMIZED=ON  
+## <a name="d-scenario-table-variable-can-be-memory_optimizedon"></a>D. Escenario: La variable de tabla puede ser MEMORY_OPTIMIZED=ON  
   
   
 Una variable de tabla tradicional representa una tabla de la base de datos tempdb. Para un rendimiento mucho más rápido, puede optimizar la memoria de la variable de tabla.  
@@ -298,7 +298,7 @@ go
 ```  
 
 
-El script siguiente crea el grupo de archivos y configura los valores recomendados de la base de datos: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
+El script siguiente crea el grupo de archivos y configura los valores recomendados de la base de datos: [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
   
 Para obtener más información sobre `ALTER DATABASE ... ADD` para FILE y FILEGROUP, vea:  
   

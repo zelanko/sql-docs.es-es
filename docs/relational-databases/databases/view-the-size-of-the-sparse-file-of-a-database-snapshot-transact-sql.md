@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ad89273416373b2c5c93f4d830c5f07d64beaa84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2e66a523fbc82d163c24b52f8c2289cdd38fd6f
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127050"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816721"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Ver el tamaño del archivo disperso de una instantánea de base de datos (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,11 @@ ms.locfileid: "68127050"
   
 1.  En la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Select the **is_sparse** column from either **sys.database_files** in the database snapshot or from **sys.master_files**. The value indicates whether the file is a sparse file, as follows:  
+     Seleccione la columna **is_sparse** de **sys.database_files** en la instantánea de base de datos o de **sys.master_files**. El valor indica si el archivo es un archivo disperso, de la manera siguiente:  
   
-     1 = File is a sparse file.  
+     1 = El archivo es un archivo disperso.  
   
-     0 = File is not a sparse file.  
+     0 = El archivo no es un archivo disperso.  
   
 ## <a name="find-out-the-actual-size-of-a-sparse-file"></a>Calcular el tamaño real de un archivo disperso  
   

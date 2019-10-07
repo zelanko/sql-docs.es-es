@@ -6,14 +6,14 @@ ms.technology: polybase
 ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ef6fd0b1015cd9dfc072600e9c4a4d8b0bf9e520
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f075ae6e8392b0eae2bb78da588c43f3a5c438b0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062335"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710632"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar PolyBase para obtener acceso a datos externos en Hadoop
 

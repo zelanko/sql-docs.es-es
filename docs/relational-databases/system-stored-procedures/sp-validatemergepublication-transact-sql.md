@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f14b74786b70a280f4b3576537ab89041e0eb6a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119371"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006095"
 ---
-# <a name="spvalidatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
+# <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Realiza una validación en toda la publicación en la que se validan una sola vez todas las suscripciones (anónimas, de inserción y de extracción). Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -38,15 +38,15 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication=** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+ [ **\@publication =** ] **'***publicación***'**  
+ Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @level = ] level` Es el tipo de validación que se realizará. *nivel* es **tinyint**, no tiene ningún valor predeterminado. Puede ser uno de estos valores.  
+`[ @level = ] level` es el tipo de validación que se va a realizar. *LEVEL* es de **tinyint**y no tiene ningún valor predeterminado. Puede ser uno de estos valores.  
   
 |Valor de nivel|Descripción|  
 |-----------------|-----------------|  
 |**1**|Validación solo del recuento de filas|  
-|**2**|Validación del recuento de filas y de la suma de comprobación. Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]suscriptores, se establece automáticamente en **3**.|  
+|**2**|Validación del recuento de filas y de la suma de comprobación. Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Subscribers, se establece automáticamente en **3**.|  
 |**3**|Este es el valor recomendado.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -56,11 +56,11 @@ sp_validatemergepublication [@publication=] 'publication'
  **sp_validatemergepublication** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar **sp_validatemergepublication**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_validatemergepublication**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Validar datos replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
+ [Transact &#40;-SQL de sp_validatemergesubscription&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

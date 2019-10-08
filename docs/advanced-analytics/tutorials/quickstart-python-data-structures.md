@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: En esta guía de inicio rápido, aprenderá a trabajar con tipos de datos y objetos de datos en Python y SQL Server con SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3606072fefa9b74adcfdb914d02e4e82c11e0eb
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-ms.translationtype: MT
+ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199434"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006058"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>Inicio rápido: Control de tipos de datos y objetos mediante Python en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ SQL Server se basa en el paquete **pandas** de Python, que es ideal para trabaja
 
 Entre los conceptos que debe conocer por adelantado se incluyen:
 
-+ Una trama de datos es una tabla con _varias_ columnas.
-+ Una sola columna de una trama de datos es un objeto de tipo lista denominado serie.
-+ Un valor único de una trama de datos se denomina celda y se obtiene acceso a ella por índice.
+- Una trama de datos es una tabla con _varias_ columnas.
+- Una sola columna de una trama de datos es un objeto de tipo lista denominado serie.
+- Un valor único de una trama de datos se denomina celda y se obtiene acceso a ella por índice.
 
 ¿Cómo se expondría el resultado único de un cálculo como una trama de datos, si un Data. Frame requiere una estructura tabular? Una respuesta es representar el valor escalar único como una serie, que se convierte fácilmente en una trama de datos. 
 
@@ -203,11 +203,12 @@ Ahora se mostrarán los valores específicos de dos series de resultados matemá
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-A continuación, creará un modelo predictivo con Python en SQL Server.
+Para obtener información sobre cómo escribir funciones avanzadas de Python en SQL Server, siga esta guía de inicio rápido:
 
 > [!div class="nextstepaction"]
-> [Crear y puntuar un modelo predictivo en Python](quickstart-python-train-score-model.md)
+> [Escritura de funciones avanzadas de Python con SQL Server Machine Learning Services](quickstart-python-functions.md)
 
-Para obtener más información acerca de SQL Server Machine Learning Services, consulte:
+Para obtener más información sobre el uso de Python en SQL Server Machine Learning Services, consulte los siguientes artículos:
 
+- [Crear y puntuar un modelo predictivo en Python](quickstart-python-train-score-model.md)
 - [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)

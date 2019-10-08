@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Cree y ejecute scripts de Python simples en una instancia de SQL Server con SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6f7fe62f746a8f6e74ebdf9f766b76c0edc720a
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: ecf99f1ae70cf44b32955ae164dbe3017bdf5f24
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71204302"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006119"
 ---
 # <a name="quickstart-create-and-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Inicio rápido: Crear y ejecutar scripts de Python simples con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ print(c, d)
 
 1. Abra una nueva ventana de consulta en **SQL Server Management Studio** conectado a la instancia de SQL Server.
 
-1. Pase el script de Python completo al `sp_execute_external_script` procedimiento almacenado.
+1. Pase el script de Python completo al procedimiento almacenado `sp_execute_external_script`.
 
-   El script se pasa a través `@script` del argumento. Todo lo que `@script` se encuentra dentro del argumento debe ser un código Python válido.
+   El script se pasa a través del argumento `@script`. Todo lo que se encuentra dentro del argumento `@script` debe ser código Python válido.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -83,7 +83,7 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-Entre las entradas `sp_execute_external_script` del procedimiento almacenado se incluyen:
+Las entradas del procedimiento almacenado `sp_execute_external_script` incluyen:
 
 | | |
 |-|-|
@@ -100,7 +100,7 @@ El comando genera el siguiente texto:
 
 ## <a name="use-inputs-and-outputs"></a>Usar entradas y salidas
 
-De forma predeterminada `sp_execute_external_script` , acepta un único conjunto de datos como entrada, que normalmente se proporciona en forma de consulta SQL válida. A continuación, devuelve una sola trama de datos de Python como salida.
+De forma predeterminada, `sp_execute_external_script` acepta un único conjunto de datos como entrada, que normalmente se proporciona en forma de consulta SQL válida. A continuación, devuelve una sola trama de datos de Python como salida.
 
 Por ahora, vamos a usar las variables de entrada y salida predeterminadas de `sp_execute_external_script`: **InputDataSet** y **OutputDataSet**.
 
@@ -120,7 +120,7 @@ Por ahora, vamos a usar las variables de entrada y salida predeterminadas de `sp
     GO
     ```
 
-1. Use la `SELECT` instrucción para consultar la tabla.
+1. Use la instrucción `SELECT` para consultar la tabla.
   
     ```sql
     SELECT *
@@ -131,7 +131,7 @@ Por ahora, vamos a usar las variables de entrada y salida predeterminadas de `sp
 
     ![Contenido de la tabla PythonTestData](./media/select-pythontestdata.png)
 
-1. Ejecute el siguiente script de Python. Recupera los datos de la tabla mediante la instrucción, `SELECT` los pasa a través del tiempo de ejecución de Python y devuelve los datos como una trama de datos. La `WITH RESULT SETS` cláusula define el esquema de la tabla de datos devuelta para SQL, agregando el nombre de columna *NewColName*.
+1. Ejecute el siguiente script de Python. Recupera los datos de la tabla mediante la instrucción `SELECT`, los pasa a través del tiempo de ejecución de Python y devuelve los datos como una trama de datos. La cláusula `WITH RESULT SETS` define el esquema de la tabla de datos devuelta para SQL, agregando el nombre de columna *NewColName*.
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -155,7 +155,7 @@ Por ahora, vamos a usar las variables de entrada y salida predeterminadas de `sp
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    Tenga en cuenta que Python distingue entre mayúsculas y minúsculas. Las variables de entrada y salida que se usan en el script de Python (**SQL_out**, **SQL_in**) deben coincidir `@input_data_1_name` con `@output_data_1_name`los nombres definidos con y, incluido el uso de mayúsculas y minúsculas.
+    Tenga en cuenta que Python distingue entre mayúsculas y minúsculas. Las variables de entrada y salida que se usan en el script de Python (**SQL_out**, **SQL_in**) deben coincidir con los nombres definidos con `@input_data_1_name` y `@output_data_1_name`, incluido el uso de mayúsculas y minúsculas.
 
    > [!TIP]
    > Solo se puede pasar un conjunto de datos de entrada como parámetro y solo puede devolver un conjunto de datos. Sin embargo, puede llamar a otros conjuntos de valores desde el código de Python y puede devolver resultados de otros tipos además del conjunto de elementos. También puede agregar la palabra clave OUTPUT a cualquier parámetro para que se devuelva con los resultados.
@@ -177,7 +177,7 @@ Por ahora, vamos a usar las variables de entrada y salida predeterminadas de `sp
 
    **Resultado**
 
-   ![Resultados de la @script consulta mediante como entrada](./media/python-data-generated-output.png)
+   ![Resultados de la consulta mediante @script como entrada](./media/python-data-generated-output.png)
 
 > [!NOTE]
 > Python usa espacios iniciales para agrupar instrucciones. Por tanto, cuando el script de Python desincrustado abarca varias líneas, como en el script anterior, no intente aplicar sangría a los comandos de Python para que estén en línea con los comandos SQL. Por ejemplo, este script producirá un error:
@@ -231,7 +231,7 @@ for i in pip.get_installed_distributions():
 GO
 ```
 
-El resultado es de `pip.get_installed_distributions()` en Python y se devuelve `STDOUT` como mensajes.
+La salida procede de `pip.get_installed_distributions()` en Python y se devuelve como mensajes `STDOUT`.
 
 **Resultado**
 
@@ -254,12 +254,13 @@ toolz 0.8.2
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para crear un modelo de aprendizaje automático con Python en SQL Server, siga esta guía de inicio rápido:
+Para obtener información sobre cómo usar las estructuras de datos al usar Python en SQL Server Machine Learning Services, siga esta guía de inicio rápido:
 
 > [!div class="nextstepaction"]
-> [Crear y puntuar un modelo predictivo en Python con SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
+> [Control de tipos de datos y objetos mediante Python en SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
-Para obtener más información sobre SQL Server Machine Learning Services, consulte los siguientes artículos.
+Para obtener más información sobre el uso de Python en SQL Server Machine Learning Services, consulte los siguientes artículos:
 
-- [Control de tipos de datos y objetos mediante Python en SQL Server Machine Learning Services](quickstart-python-data-structures.md)
+- [Escritura de funciones avanzadas de Python con SQL Server Machine Learning Services](quickstart-python-functions.md)
+- [Crear y puntuar un modelo predictivo en Python con SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
 - [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)

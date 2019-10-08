@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Cree un modelo predictivo simple en Python mediante SQL Server Machine Learning Services y, a continuación, predicte un resultado con nuevos datos.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad067e81bdb132d7958451d711e49ca57e308bac
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 504b37002bedf0e73cfefe0aeb36faf2cca45bfe
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71204292"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006015"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Inicio rápido: Crear y puntuar un modelo predictivo en Python con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. El p
 Al completar esta guía de inicio rápido, aprenderá lo siguiente:
 
 > [!div class="checklist"]
-> * Cómo insertar código Python en un procedimiento almacenado
-> * Cómo pasar entradas al código mediante entradas en el procedimiento almacenado
-> * Cómo se usan los procedimientos almacenados para poner en funcionamiento los modelos
+> - Cómo insertar código Python en un procedimiento almacenado
+> - Cómo pasar entradas al código mediante entradas en el procedimiento almacenado
+> - Cómo se usan los procedimientos almacenados para poner en funcionamiento los modelos
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -87,9 +87,9 @@ En este paso, creará un procedimiento almacenado que genera un modelo para pred
 
 En este paso, ejecutará el procedimiento para ejecutar el código incrustado, creando un modelo entrenado y serializado como una salida. 
 
-Los modelos que se almacenan para su reutilización en SQL Server se serializan como una secuencia de bytes y se almacenan en una columna VARBINARY (MAX) en una tabla de base de datos. Una vez que se crea, entrena, serializa y guarda el modelo en una base de datos, se puede llamar mediante otros procedimientos o mediante la función de [T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) de predicción en las cargas de trabajo de puntuación.
+Los modelos que se almacenan para su reutilización en SQL Server se serializan como una secuencia de bytes y se almacenan en una columna VARBINARY (MAX) en una tabla de base de datos. Una vez que se crea, entrena, serializa y guarda el modelo en una base de datos, se puede llamar mediante otros procedimientos o mediante la función de [T-SQL de predicción](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) en las cargas de trabajo de puntuación.
 
-1. Ejecute el siguiente script para ejecutar el procedimiento. La instrucción específica para ejecutar un procedimiento almacenado se encuentra `EXECUTE` en la cuarta línea.
+1. Ejecute el siguiente script para ejecutar el procedimiento. La instrucción específica para ejecutar un procedimiento almacenado es `EXECUTE` en la cuarta línea.
 
    Este script concreto elimina un modelo existente con el mismo nombre ("Bayes naive") para dejar espacio para los nuevos creados al ejecutar de nuevo el mismo procedimiento. Sin la eliminación del modelo, se produce un error que indica que el objeto ya existe. El modelo se almacena en una tabla denominada **iris_models**, aprovisionada al crear la base de datos **irissql** .
 
@@ -117,9 +117,9 @@ Los modelos que se almacenan para su reutilización en SQL Server se serializan 
 
 ## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>Crear y ejecutar un procedimiento almacenado para generar predicciones
 
-Ahora que ha creado, entrenado y guardado un modelo, continúe con el paso siguiente: crear un procedimiento almacenado que genere predicciones. Para ello, debe llamar `sp_execute_external_script` a para ejecutar un script de Python que carga el modelo serializado y proporciona nuevas entradas de datos para puntuar.
+Ahora que ha creado, entrenado y guardado un modelo, continúe con el paso siguiente: crear un procedimiento almacenado que genere predicciones. Para ello, debe llamar a `sp_execute_external_script` para ejecutar un script de Python que carga el modelo serializado y proporciona nuevas entradas de datos para puntuar.
 
-1. Ejecute el código siguiente para crear el procedimiento almacenado que realiza la puntuación. En tiempo de ejecución, este procedimiento cargará un modelo binario, `[1,2,3,4]` utilizará columnas como entradas y `[0,5,6]` especificará columnas como salida.
+1. Ejecute el código siguiente para crear el procedimiento almacenado que realiza la puntuación. En tiempo de ejecución, este procedimiento cargará un modelo binario, utilizará columnas `[1,2,3,4]` como entradas y especificará las columnas `[0,5,6]` como salida.
 
    ```sql
    CREATE PROCEDURE predict_species (@model VARCHAR(100))
@@ -166,11 +166,11 @@ Ahora que ha creado, entrenado y guardado un modelo, continúe con el paso sigui
 
    Los resultados son las predicciones 150 sobre las especies que usan características floral como entradas. Para la mayoría de las observaciones, la especie de predicción coincide con la especie real.
 
-   Este ejemplo se ha simplificado mediante el uso del conjunto de resultados de iris de Python para entrenamiento y puntuación. Un enfoque más típico implicaría la ejecución de una consulta SQL para obtener los datos nuevos y pasarlo a Python `InputDataSet`como.
+   Este ejemplo se ha simplificado mediante el uso del conjunto de resultados de iris de Python para entrenamiento y puntuación. Un enfoque más típico implicaría la ejecución de una consulta SQL para obtener los datos nuevos y pasarlo a Python como `InputDataSet`.
 
 ## <a name="conclusion"></a>Conclusión
 
-En este ejercicio, aprendió a crear procedimientos almacenados dedicados a diferentes tareas, donde cada procedimiento almacenado usaba el procedimiento `sp_execute_external_script` almacenado del sistema para iniciar un proceso de Python. Las entradas del proceso de Python se pasan `sp_execute_external` a como parámetros. El propio script de Python y las variables de datos en una base de datos de SQL Server se pasan como entradas.
+En este ejercicio, aprendió a crear procedimientos almacenados dedicados a diferentes tareas, donde cada procedimiento almacenado usaba el procedimiento almacenado del sistema `sp_execute_external_script` para iniciar un proceso de Python. Las entradas del proceso de Python se pasan a `sp_execute_external` como parámetros. El propio script de Python y las variables de datos en una base de datos de SQL Server se pasan como entradas.
 
 Por lo general, solo debe planear el uso de SSMS con código Python pulido, o código de Python sencillo que devuelve la salida basada en filas. Como herramienta, SSMS admite lenguajes de consulta como T-SQL y devuelve conjuntos de filas planas. Si el código genera una salida visual como un dispersión o histograma, necesita una herramienta o una aplicación de usuario final que pueda representar la imagen.
 
@@ -181,11 +181,6 @@ Del mismo modo, también puede aprovechar las características de reabastecimien
 Una ventaja final es que los procesos se pueden modificar mediante parámetros. En este ejercicio, el código de Python que creó el modelo (denominado "Bayes naive" en este ejemplo) se pasó como una entrada a un segundo procedimiento almacenado que llama al modelo en un proceso de puntuación. En este ejercicio solo se usa un modelo, pero puede imaginarse cómo la parametrización del modelo en una tarea de puntuación haría que ese script sea más útil.
 
 ## <a name="next-steps"></a>Pasos siguientes
-
-Para obtener información sobre el control de los tipos de datos de Python en SQL Server, siga esta guía de inicio rápido:
-
-> [!div class="nextstepaction"]
-> [Control de tipos de datos y objetos mediante Python en SQL Server Machine Learning Services](quickstart-python-data-structures.md)
 
 Para obtener más información acerca de SQL Server Machine Learning Services, consulte:
 

@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: En esta guía de inicio rápido, aprenderá a trabajar con tipos de datos y objetos de datos en R y SQL Server con SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 0e490821194e909643e5307e833f093363cb9558
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149959"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006013"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>Inicio rápido: Administrar tipos de datos y objetos mediante R en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ En realidad, la única columna de tres valores se convierte en una matriz de una
 |120|130|140|150|
 |1200|1300|1400|1500|
 
-Sin embargo, tenga en cuenta lo que sucede cuando se cambia el `y`tamaño de la matriz.
+Sin embargo, tenga en cuenta lo que sucede cuando se cambia el tamaño de la matriz `y`.
 
 ```sql
 execute sp_execute_external_script
@@ -197,7 +197,7 @@ Esta vez, R devuelve un solo valor como resultado.
 
 R proporciona una gran flexibilidad para trabajar con vectores de diferentes tamaños y para combinar estas estructuras de tipo columna en tramas de datos. Las listas de vectores se pueden parecer a una tabla, pero no siguen todas las reglas que rigen las tablas de base de datos.
 
-Por ejemplo, el siguiente script define una matriz numérica de longitud 6 y la almacena en la variable de R `df1`. A continuación, la matriz numérica se combina con los enteros de la tabla RTestData, que contiene tres (3) valores para crear una nueva trama de datos `df2`,.
+Por ejemplo, el siguiente script define una matriz numérica de longitud 6 y la almacena en la variable de R `df1`. A continuación, la matriz numérica se combina con los enteros de la tabla RTestData, que contiene tres (3) valores para crear una nueva trama de datos, `df2`.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -305,6 +305,7 @@ Para obtener información sobre cómo escribir funciones avanzadas de R en SQL S
 > [!div class="nextstepaction"]
 > [Escritura de funciones avanzadas de R con SQL Server Machine Learning Services](quickstart-r-functions.md)
 
-Para obtener más información acerca de SQL Server Machine Learning Services, consulte:
+Para obtener más información sobre el uso de R en SQL Server Machine Learning Services, consulte los siguientes artículos:
 
+- [Crear y puntuar un modelo predictivo en R con SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
 - [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)

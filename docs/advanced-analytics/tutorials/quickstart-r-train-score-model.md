@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: Cree un modelo predictivo simple en R mediante SQL Server Machine Learning Services y, a continuación, prediga un resultado con nuevos datos.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5aad027f84bc1116aa57c6b0bc0d7b0893519c36
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150338"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005977"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Inicio rápido: Crear y puntuar un modelo predictivo en R con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Para crear el modelo, debe crear los datos de origen para el entrenamiento, crea
    );
    ```
 
-1. Inserte los datos del conjunto `mtcars`de datos integrado.
+1. Inserte los datos del conjunto de datos integrado `mtcars`.
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -72,11 +72,11 @@ Para crear el modelo, debe crear los datos de origen para el entrenamiento, crea
    ```
 
    > [!TIP]
-   > El runtime de R incluye muchos conjuntos de datos, pequeños y grandes. Para obtener una lista de los conjuntos de valores instalados con R `library(help="datasets")` , escriba desde un símbolo del sistema de r.
+   > El runtime de R incluye muchos conjuntos de datos, pequeños y grandes. Para obtener una lista de los conjuntos de valores instalados con R, escriba `library(help="datasets")` desde un símbolo del sistema de R.
 
 ### <a name="create-and-train-the-model"></a>Crear y entrenar el modelo
 
-Los datos de velocidad del automóvil contienen dos columnas, numéricas:`hp`potencia () y`wt`Weight (). A partir de estos datos, creará un modelo lineal generalizado (GLM) que calcula la probabilidad de que un vehículo se haya equipado con una transmisión manual.
+Los datos de velocidad del automóvil contienen dos columnas, numéricas: potencia (`hp`) y peso (`wt`). A partir de estos datos, creará un modelo lineal generalizado (GLM) que calcula la probabilidad de que un vehículo se haya equipado con una transmisión manual.
 
 Para compilar el modelo, debe definir la fórmula dentro del código de R y pasar los datos como un parámetro de entrada.
 
@@ -98,7 +98,7 @@ END;
 GO
 ```
 
-- El primer argumento de `glm` es el parámetro de *fórmula* , que `am` define como dependiente `hp + wt`de.
+- El primer argumento de `glm` es el parámetro de *fórmula* , que define `am` como dependiente de `hp + wt`.
 - Los datos de entrada se almacenan en la variable `MTCarsData`, que se rellena con la consulta SQL. Si no asigna un nombre específico a los datos de entrada, el nombre predeterminado de la variable sería _InputDataSet_.
 
 ### <a name="store-the-model-in-the-sql-database"></a>Almacenar el modelo en la base de datos SQL
@@ -201,7 +201,7 @@ En el script anterior se realizan los pasos siguientes:
 - Use la función `predict` con los argumentos adecuados para el modelo y proporcione los nuevos datos de entrada.
 
 > [!NOTE]
-> En el ejemplo, la `str` función se agrega durante la fase de prueba para comprobar el esquema de datos devuelto desde R. Puede quitar la instrucción más adelante.
+> En el ejemplo, se agrega la función `str` durante la fase de prueba para comprobar el esquema de los datos que se devuelven desde R. Puede quitar la instrucción más adelante.
 >
 > Los nombres de columna utilizados en el script de R no se pasan necesariamente a la salida del procedimiento almacenado. Aquí se usa la cláusula WITH RESULTs para definir algunos nombres de columna nuevos.
 
@@ -213,12 +213,6 @@ También es posible usar la instrucción [PREDICT (Transact-SQL)](../../t-sql/qu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener información sobre el control de los tipos de datos de R en SQL Server, siga esta guía de inicio rápido:
+Para obtener más información acerca de SQL Server Machine Learning Services, consulte:
 
-> [!div class="nextstepaction"]
-> [Administrar tipos de datos y objetos mediante R en SQL Server Machine Learning Services](quickstart-r-data-types-and-objects.md)
-
-Para obtener más información sobre SQL Server Machine Learning Services, consulte los siguientes artículos.
-
-- [Escritura de funciones avanzadas de R con SQL Server Machine Learning Services](quickstart-r-functions.md)
 - [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)

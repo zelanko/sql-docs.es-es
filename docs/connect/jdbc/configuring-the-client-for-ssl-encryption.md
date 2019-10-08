@@ -1,33 +1,33 @@
 ---
-title: Configuración del cliente para el cifrado SSL | Microsoft Docs
+title: Configuración del cliente para el cifrado | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 50c1a24dfbfb925cbda961f8a566e0d1bcd26bdf
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 123e847e01c07ab04bf5be97593af838abfdc4bd
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028201"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713286"
 ---
-# <a name="configuring-the-client-for-ssl-encryption"></a>Configuración del cliente para el cifrado SSL
+# <a name="configuring-the-client-for-encryption"></a>Configuración del cliente para el cifrado
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] o el cliente tienen que validar que el servidor es el correcto y que una entidad de certificación en la que el cliente confía ha emitido su certificado. Para validar el certificado de servidor, se debe proporcionar material de confianza en el momento de la conexión. Además, el emisor del certificado de servidor debe ser una entidad de certificación en la que el cliente confíe.  
   
- En este tema se describe primero cómo proporcionar el material de confianza en el equipo cliente. A continuación se describe cómo importar un certificado de servidor al almacén de confianza del equipo cliente cuando una entidad de certificación privada emita la instancia del certificado de Capa de sockets seguros (SSL) de SQL Server.  
+ En este tema se describe primero cómo proporcionar el material de confianza en el equipo cliente. A continuación se describe cómo importar un certificado de servidor al almacén de confianza del equipo cliente cuando una entidad de certificación privada emita la instancia del certificado de seguridad de la capa de transporte (TLS) de SQL Server.  
   
- Para obtener más información sobre cómo validar el certificado de servidor, vea la sección Validar un certificado SSL de servidor en [Descripción de la compatibilidad con SSL](../../connect/jdbc/understanding-ssl-support.md).  
+ Para obtener más información sobre cómo validar el certificado de servidor, vea la sección Validar un certificado TLS de servidor en [Descripción de la compatibilidad con cifrado](../../connect/jdbc/understanding-ssl-support.md).  
   
 ## <a name="configuring-the-client-trust-store"></a>Configurar el almacén de confianza de cliente 
- La validación del certificado de servidor requiere que se suministre material de confianza en el momento de la conexión utilizando explícitamente las propiedades de conexión **trustStore** y **trustStorePassword**, o el almacén de confianza predeterminado de la máquina virtual Java (JVM) subyacente de forma implícita. Para más información sobre cómo establecer las propiedades **trustStore** y **trustStorePassword** en una cadena de conexión, vea [Conectar con el cifrado SSL](../../connect/jdbc/connecting-with-ssl-encryption.md).  
+ La validación del certificado de servidor requiere que se suministre material de confianza en el momento de la conexión utilizando explícitamente las propiedades de conexión **trustStore** y **trustStorePassword**, o el almacén de confianza predeterminado de la máquina virtual Java (JVM) subyacente de forma implícita. Para obtener más información sobre cómo establecer las propiedades **trustStore** y **trustStorePassword** en una cadena de conexión, vea [Conexión con el cifrado](../../connect/jdbc/connecting-with-ssl-encryption.md).  
   
  Si la propiedad **trustStore** no se ha especificado o se ha establecido en null, el [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se basará en el proveedor de seguridad subyacente de JVM, la Extensión de sockets seguros de Java (SunJSSE, Java Secure Socket Extension). El proveedor de SunJSSE proporciona un TrustManager predeterminado, que se utiliza para validar los certificados X.509 que devuelve SQL Server con el material de confianza que se proporciona en un almacén de confianza.  
   
@@ -53,9 +53,9 @@ java -Djavax.net.ssl.trustStorePassword=storePassword
  Además, puede configurar y administrar los archivos de almacenes de confianza como "\<java-home>/lib/security/jssecacerts" y "\<java-home>/lib/security/cacerts". Para ello, utilice la utilidad JAVA "keytool" que se instala con el Entorno de tiempo de ejecución de Java (JRE, Java Runtime Environment). Para obtener más información sobre la utilidad "keytool", consulte la documentación de keytool en el sitio web de Sun Microsystems.  
   
 ### <a name="importing-the-server-certificate-to-trust-store"></a>Importar el certificado de servidor al almacén de confianza  
- Durante el protocolo de enlace SSL, el servidor envía su certificado de clave pública al cliente. El emisor de un certificado de clave pública se conoce como entidad de certificación (CA, Certificate Authority). El cliente tiene que asegurarse de que la entidad de certificación es una de aquellas en las que el cliente confía. Para ello, hay que saber de antemano la clave pública de las CA de confianza. Normalmente, la JVM incluye un conjunto predefinido de entidades de certificación de confianza.  
+ Durante el protocolo de enlace TLS, el servidor envía su certificado de clave pública al cliente. El emisor de un certificado de clave pública se conoce como entidad de certificación (CA, Certificate Authority). El cliente tiene que asegurarse de que la entidad de certificación es una de aquellas en las que el cliente confía. Para ello, hay que saber de antemano la clave pública de las CA de confianza. Normalmente, la JVM incluye un conjunto predefinido de entidades de certificación de confianza.  
   
- Si una entidad de certificación privada emite la instancia del certificado SSL de SQL Server, debe agregar el certificado de la entidad de certificación a la lista de certificados de confianza en el almacén de confianza del equipo cliente.  
+ Si una entidad de certificación privada emite la instancia del certificado TLS de SQL Server, debe agregar el certificado de la entidad de certificación a la lista de certificados de confianza en el almacén de confianza del equipo cliente.  
   
  Para ello, use la utilidad JAVA "keytool" que se instala con JRE. El símbolo del sistema siguiente muestra cómo utilizar la utilidad "keytool" para importar un certificado de un archivo:  
   
@@ -84,7 +84,5 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
 9. Haga clic en Siguiente y, a continuación, haga clic en Finalizar para exportar el certificado.  
   
 ## <a name="see-also"></a>Vea también  
- [Empleo de cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)   
- [Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
-  
-  
+ [Uso de cifrado](../../connect/jdbc/using-ssl-encryption.md)   
+ [Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)

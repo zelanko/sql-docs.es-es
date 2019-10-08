@@ -1,26 +1,34 @@
 ---
-title: Instalación de SQL Server Reporting Services (2017 y posterior) | Microsoft Docs
-ms.date: 12/20/2017
+title: Instalar SQL Server Reporting Services | Microsoft Docs
+ms.date: 10/02/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d636086c909d1d486040df6fc8d31cfea57c4f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502690"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952741"
 ---
-# <a name="install-sql-server-reporting-services-2017-and-later"></a>Instalación de SQL Server Reporting Services (2017 y posterior)
+# <a name="install-sql-server-reporting-services"></a>Instalar SQL Server Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 La instalación de SQL Server Reporting Services implica componentes de servidor para almacenar elementos de informe, informes de representación y procesamiento de suscripción, así como otros servicios de informes. 
 
-Para descargar SQL Server 2017 Reporting Services, vaya al [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=55252).
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+Descargue [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) desde el Centro de descarga de Microsoft.
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Descargue [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) desde el Centro de descarga de Microsoft.
+
+::: moniker-end
 
 > [!NOTE]
 > ¿Busca Power BI Report Server? Vea [Instalar Power BI Report Server](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/).
@@ -40,34 +48,24 @@ La instalación de un servidor de informes es sencilla. Solo se necesitan unos c
 
 2. Seleccione **Instalar Reporting Services**.
 
-    ![Instalar Reporting Services](media/install-reporting-services/report-server-install.png)
-
 3. Elija una edición para instalar y luego seleccione **Siguiente**.
-
-    ![Elegir edición](media/install-reporting-services/report-server-install-edition.png)
 
     Si quiere una edición gratuita, elija Evaluation o Developer en la lista desplegable.
 
     ![Ediciones Evaluation o Developer](media/install-reporting-services/report-server-install-edition-select.png)
 
-    De lo contrario, especifique una clave de producto. [Busque la clave de producto de SQL Server 2017 Reporting Services](find-reporting-services-product-key-ssrs.md).
+    De lo contrario, especifique una clave de producto. [Busque la clave de producto de SQL Server Reporting Services](find-reporting-services-product-key-ssrs.md).
 
 4. Lea y acepte los términos y condiciones de licencia y luego seleccione **Siguiente**.
 
 5. Debe tener un motor de base de datos disponible para almacenar la base de datos del servidor de informes. Seleccione **Siguiente** para instalar solo el servidor de informes.
 
-    ![No se necesita la base de datos para instalar](media/install-reporting-services/report-server-install-db-engine.png)
-
 6. Especifique la ubicación de instalación del servidor de informes. Seleccione **Instalar** para continuar.
-
-    ![Especificar la ruta de instalación](media/install-reporting-services/report-server-install-file-path.png)
 
     > [!NOTE]
     > La ruta de acceso predeterminada es C:\Archivos de programa\Microsoft SQL Server Reporting Services.
 
 7. Después de una instalación correcta, seleccione **Configurar el servidor de informes** para iniciar el Administrador de configuración de Reporting Services.
-
-    ![Configurar el servidor de informes](media/install-reporting-services/report-server-install-configure.png)
 
 ## <a name="configuration-your-report-server"></a>Configuración del servidor de informes
 

@@ -1,28 +1,28 @@
 ---
-title: Conectarse con cifrado SSL | Microsoft Docs
+title: Conectar con el cifrado | Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5ccbd9db2ae39113ca157651bdc6dc1486307419
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: cff4228404690147d97a44f6f5dd43b1a180153c
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028153"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713295"
 ---
-# <a name="connecting-with-ssl-encryption"></a>Conexión con cifrado SSL
+# <a name="connecting-with-encryption"></a>Conexión con cifrado
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  En los ejemplos de este artículo se describe cómo usar propiedades de cadena de conexión que permiten a las aplicaciones usar el cifrado de Capa de sockets seguros (SSL) en una aplicación Java. Para más información sobre estas nuevas propiedades de cadena de conexión, como **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** y **hostNameInCertificate**, vea [Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
+  En los ejemplos de este artículo se describe cómo usar propiedades de cadena de conexión que permiten a las aplicaciones usar el cifrado de seguridad de la capa de transporte (TLS) en una aplicación Java. Para más información sobre estas nuevas propiedades de cadena de conexión, como **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** y **hostNameInCertificate**, vea [Establecer las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
   
- Cuando la propiedad **encrypt** se establece en **true** y la propiedad **trustServerCertificate** se establece en **true**, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] no validará el certificado SSL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto suele ser necesario para permitir conexiones en entornos de prueba, por ejemplo, cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo tiene un certificado autofirmado.  
+ Cuando la propiedad **encrypt** se establece en **true** y la propiedad **trustServerCertificate** se establece en **true**, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] no validará el certificado TLS de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esto suele ser necesario para permitir conexiones en entornos de prueba, por ejemplo, cuando la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo tiene un certificado autofirmado.  
   
  En el ejemplo de código siguiente se muestra cómo establecer la propiedad **trustServerCertificate** en una cadena de conexión:  
   
@@ -33,9 +33,9 @@ String connectionUrl =
      "encrypt=true;trustServerCertificate=true";  
 ```  
   
- Cuando la propiedad **encrypt** se establece en **true** y la propiedad **trustServerCertificate** se establece en **false**, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] validará el certificado SSL de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Validar el certificado de servidor es una parte del protocolo de enlace de SSL y asegurarse de que el servidor es el apropiado al que hay que conectarse. Para validar el certificado de servidor, se debe suministrar material de confianza en el momento de la conexión, ya sea mediante el uso explícito de las propiedades de conexión **trustStore** y **trustStorePassword**, o mediante el uso implícito del almacén de confianza predeterminado de la máquina virtual Java (JVM) subyacente.  
+ Cuando la propiedad **encrypt** se establece en **true** y la propiedad **trustServerCertificate** se establece en **false**, [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] validará el certificado TLS de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Validar el certificado de servidor es una parte del protocolo de enlace de TLS y asegurarse de que el servidor es el apropiado al que hay que conectarse. Para validar el certificado de servidor, se debe suministrar material de confianza en el momento de la conexión, ya sea mediante el uso explícito de las propiedades de conexión **trustStore** y **trustStorePassword**, o mediante el uso implícito del almacén de confianza predeterminado de la máquina virtual Java (JVM) subyacente.  
   
- La propiedad **trustStore** especifica la ruta de acceso (incluido el nombre de archivo) del archivo trustStore de certificado, que contiene la lista de certificados en los que el cliente confía. La propiedad **trustStorePassword** especifica la contraseña que se usa para comprobar la integridad de los datos de trustStore. Para obtener más información sobre el uso del almacén de confianza predeterminado de JVM, consulte [configuración del cliente para el cifrado SSL](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
+ La propiedad **trustStore** especifica la ruta de acceso (incluido el nombre de archivo) del archivo trustStore de certificado, que contiene la lista de certificados en los que el cliente confía. La propiedad **trustStorePassword** especifica la contraseña que se usa para comprobar la integridad de los datos de trustStore. Para obtener más información sobre el uso del almacén de confianza predeterminado de JVM, consulte [configuración del cliente para el cifrado](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
   
  En el ejemplo de código siguiente se muestra cómo establecer las propiedades **trustStore** y **trustStorePassword** en una cadena de conexión:  
   
@@ -63,9 +63,8 @@ String connectionUrl =
 > [!NOTE]  
 >  También puede establecer el valor de las propiedades de conexión mediante los métodos **establecedores** adecuados que proporciona la clase [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Si la propiedad **Encrypt** está establecida en **true** y la propiedad **trustServerCertificate** está establecida en **false** y el nombre del servidor de la cadena de conexión no coincide con el nombre del servidor en el certificado SSL, se mostrará el siguiente error: emitido: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. A partir de la versión 7,2, el controlador admite la coincidencia de patrones de caracteres comodín en la etiqueta del extremo izquierdo del nombre del servidor en el certificado SSL.
-## <a name="see-also"></a>Vea también  
- [Empleo de cifrado SSL](../../connect/jdbc/using-ssl-encryption.md)   
- [Protección de las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  
-  
-  
+ Si la propiedad **Encrypt** está establecida en **true** y la propiedad **trustServerCertificate** está establecida en **false** y el nombre del servidor de la cadena de conexión no coincide con el nombre del servidor en el certificado TLS, se mostrará el siguiente error: `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. A partir de la versión 7,2, el controlador admite la coincidencia de patrones de caracteres comodín en la etiqueta del extremo izquierdo del nombre del servidor en el certificado TLS.
+
+## <a name="see-also"></a>Vea también
+
+ [Usar el cifrado](../../connect/jdbc/using-ssl-encryption.md) que [protege las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)

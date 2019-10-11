@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f3689bdad636d7df4281975167984425a8049aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000626"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682059"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Precisión, escala y longitud (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ La precisión es el número de dígitos de un número. La escala es el número d
   
 En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la precisión máxima predeterminada de los tipos de datos **numéricos** y **decimales** es 38. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el valor máximo predeterminado es 28.
   
-La longitud de un tipo de datos numérico es el número de bytes utilizados para almacenar el número. La longitud para una cadena de caracteres o tipo de datos Unicode es el número de caracteres. La longitud de los tipos de datos **binary**, **varbinary** e **image** es el número de bytes. Por ejemplo, un tipo de datos **int** que puede contener 10 dígitos se almacena en 4 bytes y no acepta puntos decimales. El tipo de datos **int** tiene una precisión de 10, una longitud de 4 y una escala de 0.
+La longitud de un tipo de datos numérico es el número de bytes utilizados para almacenar el número. Para varchar y char, la longitud de una cadena de caracteres es el número de bytes. Para nvarchar y nchar, la longitud de una cadena de caracteres es el número de pares de bytes. La longitud de los tipos de datos **binary**, **varbinary** e **image** es el número de bytes. Por ejemplo, un tipo de datos **int** que puede contener 10 dígitos se almacena en 4 bytes y no acepta puntos decimales. El tipo de datos **int** tiene una precisión de 10, una longitud de 4 y una escala de 0.
   
-Cuando se concatenan dos expresiones **char**, **varchar**, **binary** o **varbinary**, la longitud de la expresión resultante es la suma de las longitudes de las dos expresiones de origen, hasta 8000 caracteres.
+Cuando se concatenan dos expresiones **char**, **varchar**, **binary** o **varbinary**, la longitud de la expresión resultante es la suma de las longitudes de las dos expresiones de origen, hasta 8000 bytes.
   
-Cuando se concatenan dos expresiones **nchar** o **nvarchar**, la longitud de la expresión resultante es la suma de las longitudes de las dos expresiones de origen, hasta 4000 caracteres.
+Cuando se concatenan dos expresiones **nchar** o **nvarchar**, la longitud de la expresión resultante es la suma de las longitudes de las dos expresiones de origen, hasta 4000 pares de bytes.
   
 Cuando se comparan dos expresiones del mismo tipo de datos pero de distintas longitudes mediante UNION, EXCEPT o INTERSECT, la longitud resultante es la longitud mayor de las dos expresiones.
   

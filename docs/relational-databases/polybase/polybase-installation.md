@@ -8,14 +8,14 @@ helpviewer_keywords:
 - PolyBase, installation
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: aboke
+ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 8416a144a6b7c0e34526af3111ab6b4aad343652
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 7823f9e76207802b7f05a21ccd11b5de1fa9d18d
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326177"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961966"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
 
@@ -155,7 +155,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 ## <a id="enable"></a> Habilitar PolyBase
 
-Tras la instalación, se debe habilitar PolyBase para acceder a sus características. Para conectarse a SQL Server 2019 CTP 2.0, debe habilitar PolyBase tras la instalación. Use el siguiente comando de Transact-SQL.
+Tras la instalación, se debe habilitar PolyBase para acceder a sus características. Use el siguiente comando de Transact-SQL. Las instancias de SQL 2019 implementadas durante la instalación del Clúster de macrodatos tienen esta opción habilitada de forma predeterminada.
 
 
 ```sql

@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17c69ca2ecb09f734f5d2018baea299d282917ed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71283818"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680977"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>Lección 1-8: Anotación y formato del paquete de la lección 1 
 
@@ -55,7 +55,7 @@ En esta tarea, se usan las características de formato de [!INCLUDE[ssNoVersion]
   
     Para ajustar el texto en el cuadro de anotación, coloque el cursor donde quiera empezar una nueva línea y presione **Intro**.  
   
-    Si no agrega texto al cuadro de anotación, desaparecerá al hacer clic fuera del cuadro.  
+    Si no agrega texto al cuadro de anotación, desaparecerá al hacer clic fuera del cuadro.  Debido a este comportamiento, si quiere pegar texto en el cuadro de anotación, cópielo al Portapapeles antes de seleccionar Agregar anotación. 
   
 ## <a name="go-to-next-task"></a>Ir a la tarea siguiente
 [Paso 9: Prueba del paquete de la lección 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  

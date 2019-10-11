@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25357798ed5a0340b46e787ad041ae6d9f19d7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903100"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710307"
 ---
 # <a name="configure-web-synchronization"></a>Configurar sincronización web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "67903100"
   
      Para obtener más información acerca de los permisos que necesitan los agentes, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
--   Especifique la misma cuenta de dominio que utiliza el Agente de mezcla cuando especifique una cuenta y una contraseña en la página **Información del servidor web** del Asistente para nueva suscripción o cuando especifique valores para los parámetros **@internet_url** y **@internet_login** de [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Esta cuenta debe tener permisos de lectura en el recurso compartido de la instantánea.  
+-   Especifique la misma cuenta de dominio que usa el Agente de mezcla cuando especifique una cuenta y una contraseña en la página **Información del servidor web** del Asistente para nueva suscripción o cuando especifique valores para los parámetros `@internet_url` y `@internet_login` de [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Esta cuenta debe tener permisos de lectura en el recurso compartido de la instantánea.  
   
 -   Cada publicación debe utilizar un directorio virtual independiente para IIS.  
   

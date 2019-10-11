@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c0168db6a35606f3495d66eae87a0671672a6e99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3dee5b4c6522afd93591d1e8aa0c94052d41d9bd
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140138"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711068"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Filtros con parámetros: filtros de fila con parámetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "68140138"
   
      También es posible anular esta función con un valor distinto del nombre del suscriptor o el distribuidor. Generalmente, las aplicaciones invalidan esta función con valores más significativos, como el nombre o el indentificador de un vendedor. Para obtener más información, vea la sección "Invalidar el valor de HOST_NAME_NAME()" en este mismo tema.  
   
- El valor que devuelve la función del sistema se compara con la columna especificada en la tabla que está filtrando y se descargan los datos apropiados al suscriptor. Esta comparación se lleva a cabo al inicializar la suscripción (para que la instantánea inicial contenga únicamente los datos correctos) y cada vez que se sincroniza la suscripción. De manera predeterminada, si un cambio en el publicador hace que se mueva una fila fuera de una partición, esta fila se elimina en el suscriptor (este comportamiento se controla con el parámetro **@allow_partition_realignment** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
+ El valor que devuelve la función del sistema se compara con la columna especificada en la tabla que está filtrando y se descargan los datos apropiados al suscriptor. Esta comparación se lleva a cabo al inicializar la suscripción (para que la instantánea inicial contenga únicamente los datos correctos) y cada vez que se sincroniza la suscripción. De manera predeterminada, si un cambio en el publicador hace que se mueva una fila fuera de una partición, esta fila se elimina en el suscriptor (este comportamiento se controla con el parámetro `@allow_partition_realignment` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)).  
   
 > [!NOTE]  
 >  Cuando se realizan comparaciones para los filtros con parámetros, se utiliza siempre la intercalación de base de datos. Por ejemplo, si la intercalación de base de datos no distingue entre mayúsculas y minúsculas, pero la intercalación de tabla o columna sí lo hace, la comparación no distinguirá entre mayúsculas y minúsculas.  
   
-### <a name="filtering-with-susersname"></a>Filtrar con SUSER_SNAME()  
+### <a name="filtering-with-suser_sname"></a>Filtrar con SUSER_SNAME()  
  Considere la **tabla Employee** en la base de datos de ejemplo [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] . Esta tabla incluye la columna **LoginID**, que contiene el inicio de sesión de cada empleado en la forma '*dominio\inicioDeSesión*'. Para filtrar esta tabla con el fin de que los empleados reciban únicamente los datos relacionados con ellos, especifique la cláusula de filtro:  
   
 ```  
@@ -62,7 +62,7 @@ LoginID = SUSER_SNAME()
   
  Por ejemplo, el valor para uno de los empleados es 'adventure-works\john5'. Cuando el Agente de mezcla se conecta al publicador, utiliza el nombre de inicio de sesión especificado al crear la suscripción (en este caso, 'adventure-works\john5'). A continuación, el Agente de mezcla compara el valor devuelto por SUSER_SNAME() con los valores de la tabla y descarga únicamente la fila que contiene el valor 'adventure-works\john5' en la columna **LoginID** .  
   
-### <a name="filtering-with-hostname"></a>Filtrar con HOST_NAME()  
+### <a name="filtering-with-host_name"></a>Filtrar con HOST_NAME()  
  Considere la tabla **HumanResources.Employee** . Suponga que esta tabla contiene una columna **ComputerName** con el nombre del equipo de cada empleado en formato '*nombre_tipoDeEquipo*'. Para filtrar esta tabla con el fin de que los empleados reciban únicamente los datos relacionados con ellos, especifique la cláusula de filtro:  
   
 ```  
@@ -82,7 +82,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 > [!IMPORTANT]  
 >  El valor de la función HOST_NAME() se puede reemplazar; por lo tanto, no es posible utilizar filtros que incluyan HOST_NAME() para controlar el acceso a particiones de datos. Para controlar el acceso a particiones de datos, utilice SUSER_SNAME(), SUSER_SNAME() en combinación con HOST_NAME(), o utilice filtros de fila estáticos.  
   
-#### <a name="overriding-the-hostname-value"></a>Reemplazar el valor de HOST_NAME()  
+#### <a name="overriding-the-host_name-value"></a>Reemplazar el valor de HOST_NAME()  
  Como se indicó anteriormente, HOST_NAME() devuelve, de manera predeterminada, el nombre del equipo que se está conectando a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cuando se utilizan filtros con parámetros, es frecuente reemplazar este valor con otro suministrado al crear una suscripción. A continuación, la función HOST_NAME() devuelve el valor que se ha especificado en vez del nombre del equipo.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  Por ejemplo, a la empleada Pamela Ansman-Wolfe se le ha asignado el identificador 280. Especifique el valor de identificador de empleado (280 en este ejemplo) como valor de HOST_NAME() al crear una suscripción para esta empleada. Cuando el Agente de mezcla se conecte al publicador, comparará el valor devuelto por HOST_NAME() con los valores de la tabla y descargará únicamente la fila que contiene el valor 280 en la columna **EmployeeID** .  
   
 > [!IMPORTANT]
->  La función HOST_NAME() devuelve un valor **nchar** , por lo que debe usar CONVERT si la columna de la cláusula del filtro es de tipo de datos numérico, como en el ejemplo anterior. Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de los filtros de fila con parámetros, como `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En su lugar, se recomienda usar el método que se muestra en el ejemplo: `EmployeeID = CONVERT(int,HOST_NAME())`. Esta cláusula puede usare para el parámetro **@subset_filterclause** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), pero generalmente no se puede usar en el Asistente para nueva publicación (el asistente ejecuta la cláusula del filtro para validarlo, pero no lo logra porque el nombre del equipo no se puede convertir a **int**). Si usa el Asistente para nueva publicación, se recomienda especificar `CONVERT(nchar,EmployeeID) = HOST_NAME()` en el asistente y, a continuación, usar [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) para cambiar la cláusula a `EmployeeID = CONVERT(int,HOST_NAME())` antes de crear una instantánea de la publicación.  
+>  La función HOST_NAME() devuelve un valor **nchar** , por lo que debe usar CONVERT si la columna de la cláusula del filtro es de tipo de datos numérico, como en el ejemplo anterior. Por motivos de rendimiento, se recomienda no aplicar funciones a los nombres de columna en las cláusulas de los filtros de fila con parámetros, como `CONVERT(nchar,EmployeeID) = HOST_NAME()`. En su lugar, se recomienda usar el método que se muestra en el ejemplo: `EmployeeID = CONVERT(int,HOST_NAME())`. Esta cláusula se puede usar para el parámetro `@subset_filterclause` de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), pero generalmente no se puede usar en el Asistente para nueva publicación (el asistente ejecuta la cláusula de filtro para validarlo, pero no lo logra porque el nombre del equipo no se puede convertir a **int**). Si usa el Asistente para nueva publicación, se recomienda especificar `CONVERT(nchar,EmployeeID) = HOST_NAME()` en el asistente y, a continuación, usar [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) para cambiar la cláusula a `EmployeeID = CONVERT(int,HOST_NAME())` antes de crear una instantánea de la publicación.  
   
  **Para reemplazar el valor de HOST_NAME()**  
   
@@ -103,7 +103,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: especifique un valor en la página **Valores de HOST\_NAME\(\)** del Asistente para nueva suscripción. Para obtener más información sobre la creación de suscripciones, vea [Suscribirse a publicaciones](../../../relational-databases/replication/subscribe-to-publications.md).  
   
--   Programación [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicación: especifique un valor para el parámetro **@hostname** de [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (para suscripciones de inserción) o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (para suscripciones de extracción).  
+-   Programación [!INCLUDE[tsql](../../../includes/tsql-md.md)] de replicación: especifique un valor para el parámetro `@hostname` de [sp_addmergesubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) (para suscripciones de inserción) o [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (para suscripciones de extracción).  
   
 -   Agente de mezcla: especifique un valor para el parámetro **-Hostname** en la línea de comandos o a través de un perfil de agente. Para obtener más información acerca del Agente de mezcla, vea [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md). Para obtener más información acerca de los perfiles de agente, vea [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

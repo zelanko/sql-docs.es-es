@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a66a95a1b2f0561d7598c5a6e400641833e5a221
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e3de9c6652de3ddd8d80bbc2d09b003acfe5220
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115171"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710688"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Resolución de conflictos para la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "68115171"
   
  Los datos de conflictos están disponibles en el Visor de conflictos de replicación durante el tiempo especificado como período de retención de conflictos (con un valor predeterminado de 14 días). Para configurar el período de retención de conflictos:  
   
--   Especifique un valor de retención para el parámetro **@conflict_retention** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
+-   Especifique un valor de retención para el parámetro `@conflict_retention` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).  
   
--   Especifique un valor de **conflict_retention** para el parámetro **@property** y un valor de retención para el parámetro **@value** de [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
+-   Especifique un valor de **conflict_retention** para el parámetro `@property` y un valor de retención para el parámetro `@value` de [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md).  
   
  De manera predeterminada, la información del conflicto se almacena:    
 -   En el publicador y en el suscriptor, si el nivel de compatibilidad de la publicación es igual o superior a 90RTM.   
@@ -76,7 +76,7 @@ ms.locfileid: "68115171"
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="view-conflict-information"></a>Visualización de la información de conflictos
-Cuando se resuelve un conflicto en la replicación de mezcla, los datos de la fila que falta se escriben en una tabla de conflictos. Estos datos de conflicto se pueden ver mediante programación usando los procedimientos almacenados de replicación. Para más información, consulte [Detección y resolución de conflictos de replicación de mezcla avanzada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+Cuando se resuelve un conflicto en la replicación de mezcla, los datos de la fila que falta se escriben en una tabla de conflictos. Estos datos de conflicto se pueden ver mediante programación usando los procedimientos almacenados de replicación. Para más información, consulte [Replicación de mezcla avanzada: detección y resolución de conflictos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 1.  En la base de datos de publicación del publicador, ejecute [sp_helpmergepublication](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md). Tenga en cuenta los valores de las siguientes columnas en el conjunto de resultados:  
   
@@ -85,9 +85,9 @@ Cuando se resuelve un conflicto en la replicación de mezcla, los datos de la fi
     -   **decentralized_conflicts** : 1 indica que las filas de conflicto están almacenadas en el Suscriptor y 0 indica que las filas de conflicto no están almacenadas en el Suscriptor.  
   
         > [!NOTE]  
-        >  El comportamiento del registro de conflictos de una publicación de combinación se establece usando el parámetro **@conflict_logging** de [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). El uso del parámetro **@centralized_conflicts** ha quedado desusado.  
+        >  El comportamiento del registro de conflictos de una publicación de combinación se establece mediante el parámetro `@conflict_logging` de [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). El uso del parámetro `@centralized_conflicts` ha quedado en desuso.  
   
-     La tabla siguiente describe los valores de estas columnas basados en el valor especificado para **@conflict_logging** .  
+     En la tabla siguiente se describen los valores de estas columnas en función del valor especificado para `@conflict_logging`.  
   
     |Valor @conflict_logging|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
@@ -95,13 +95,13 @@ Cuando se resuelve un conflicto en la replicación de mezcla, los datos de la fi
     |**suscriptor**|0|1|  
     |**ambos**|1|1|  
   
-2.  En el publicador de la base de datos de publicación o en el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Especifique un valor para **@publication** para devolver únicamente información de conflicto para los artículos que pertenecen a una publicación concreta. Esto devuelve información de la tabla de conflictos para los artículos con conflictos. Tenga en cuenta el valor de **conflict_table** para cualquier artículo de interés. Si el valor de **conflict_table** para un artículo es NULL, basta con que elimine los conflictos que se han producido en este artículo.  
+2.  En el publicador de la base de datos de publicación o en el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Especifique un valor para `@publication` a fin de devolver únicamente información de conflicto para los artículos que pertenecen a una publicación concreta. Esto devuelve información de la tabla de conflictos para los artículos con conflictos. Tenga en cuenta el valor de **conflict_table** para cualquier artículo de interés. Si el valor de **conflict_table** para un artículo es NULL, basta con que elimine los conflictos que se han producido en este artículo.  
   
 3.  (Opcional) Revise las filas de conflicto para los artículos de interés. Según los valores de **centralized_conflicts** y **decentralized_conflicts** del paso 1, realice una de las siguientes operaciones:  
   
-    -   En la base de datos de publicación del publicador, ejecute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Especifique una tabla de conflictos para el artículo (del paso 1) para **@conflict_table** . (Opcional) Especifique un valor de **@publication** para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve datos de fila y otra información para la fila perdedora.  
+    -   En la base de datos de publicación del publicador, ejecute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Especifique una tabla de conflictos para el artículo (del paso 1) para `@conflict_table`. (Opcional) Especifique un valor de `@publication` para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve datos de fila y otra información para la fila perdedora.  
   
-    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Especifique una tabla de conflictos para el artículo (del paso 1) para **@conflict_table** . Esto devuelve datos de fila y otra información para la fila perdedora.  
+    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Especifique una tabla de conflictos para el artículo (del paso 1) para `@conflict_table`. Esto devuelve datos de fila y otra información para la fila perdedora.  
   
 ## <a name="conflict-where-delete-failed"></a>Conflicto de error de eliminación   
   
@@ -112,15 +112,15 @@ Cuando se resuelve un conflicto en la replicación de mezcla, los datos de la fi
     -   **decentralized_conflicts** : 1 indica que las filas de conflicto están almacenadas en el Suscriptor y 0 indica que las filas de conflicto no están almacenadas en el Suscriptor.  
   
         > [!NOTE]  
-        >  El comportamiento del registro de conflictos de una publicación de combinación se establece usando el parámetro **@conflict_logging** de [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). El uso del parámetro **@centralized_conflicts** ha quedado desusado.  
+        >  El comportamiento del registro de conflictos de una publicación de combinación se establece mediante el parámetro `@conflict_logging` de [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). El uso del parámetro `@centralized_conflicts` ha quedado en desuso.  
   
-2.  En el publicador de la base de datos de publicación o en el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Especifique un valor para **@publication** para devolver únicamente información de tabla de conflictos para los artículos que pertenecen a una publicación concreta. Esto devuelve información de la tabla de conflictos para los artículos con conflictos. Tenga en cuenta el valor de **source_object** para cualquier artículo de interés. Si el valor de **conflict_table** para un artículo es NULL, basta con que elimine los conflictos que se han producido en este artículo.  
+2.  En el publicador de la base de datos de publicación o en el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md). Especifique un valor para `@publication` a fin de devolver únicamente información de tabla de conflictos para los artículos que pertenecen a una publicación concreta. Esto devuelve información de la tabla de conflictos para los artículos con conflictos. Tenga en cuenta el valor de **source_object** para cualquier artículo de interés. Si el valor de **conflict_table** para un artículo es NULL, basta con que elimine los conflictos que se han producido en este artículo.  
   
 3.  (Opcional) Revise la información de conflictos para conflictos de eliminación. Según los valores de **centralized_conflicts** y **decentralized_conflicts** del paso 1, realice una de las siguientes operaciones:  
   
-    -   En la base de datos de publicación del publicador, ejecute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Especifique el nombre de la tabla de origen (del paso 1) en la que el conflicto se produjo para **@source_object** . (Opcional) Especifique un valor de **@publication** para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve elimine la información de eliminación de conflictos almacenada en el publicador.  
+    -   En la base de datos de publicación del publicador, ejecute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Especifique el nombre de la tabla de origen (del paso 1) en la que el conflicto se ha producido para `@source_object`. (Opcional) Especifique un valor de `@publication` para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve elimine la información de eliminación de conflictos almacenada en el publicador.  
   
-    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Especifique el nombre de la tabla de origen (del paso 1) en la que el conflicto se produjo para **@source_object** . (Opcional) Especifique un valor de **@publication** para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve elimine la información de eliminación de conflictos almacenada en el suscriptor.  
+    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Especifique el nombre de la tabla de origen (del paso 1) en la que el conflicto se ha producido para `@source_object`. (Opcional) Especifique un valor de `@publication` para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve elimine la información de eliminación de conflictos almacenada en el suscriptor.  
   
 ## <a name="see-also"></a>Consulte también  
  [Detección y resolución de conflictos de replicación de mezcla avanzada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 490f67e48d9cb5a578162d12523e2bb39bc1908d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7629c25264f0b45d68e29e947b1d5c40d02707e7
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132002"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041184"
 ---
-# <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
+# <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Este procedimiento envía un testigo de seguimiento al registro de transacciones del publicador y empieza el proceso de seguimiento de las estadísticas de latencia. La información se registra cuando el token de seguimiento se escribe en el registro de transacciones, cuando lo recoge el Agente de registro del LOG y cuando lo aplica el Agente de distribución. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación. Para más información, consulte [Medir la latencia y validar las conexiones de la replicación transaccional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
@@ -41,11 +41,11 @@ sp_posttracertoken [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación para el que se va a medir la latencia. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` es el nombre de la publicación para la que se está midiendo la latencia. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @tracer_token_id = ] _tracer_token_idOUTPUT` Es el identificador del token de seguimiento insertado. *tracer_token_id* es **int** con un valor predeterminado es NULL y es un parámetro de salida. Este valor puede utilizarse para ejecutar [sp_helptracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) o [sp_deletetracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) sin ejecutar primero [sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
+`[ @tracer_token_id = ] _tracer_token_id OUTPUT` es el identificador del token de seguimiento insertado. *tracer_token_id* es de **tipo int** y su valor predeterminado es NULL y es un parámetro de salida. Este valor se puede usar para ejecutar [sp_helptracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) o [sp_deletetracertokenhistory &#40;de Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) sin ejecutar primero [sp_helptracertokens &#40;Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
   
-`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null y no se debe especificar para una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
+`[ @publisher = ] 'publisher'` especifica un publicador que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* es de **tipo sysname, su**valor predeterminado es NULL y no se debe especificar para un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -57,7 +57,7 @@ sp_posttracertoken [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-posttracertoken-trans_1.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o el **db_owner** rol fijo de base de datos se puede ejecutar **sp_posttracertoken**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_posttracertoken**.  
   
 ## <a name="see-also"></a>Vea también  
  [Medir la latencia y validar las conexiones de la replicación transaccional](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  

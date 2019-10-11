@@ -1,10 +1,10 @@
 ---
 title: Integration Services (SSIS), proyectos y soluciones | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2016
+ms.date: 09/20/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d31bad0e0438ec331f674124e907fd098b2cefd7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296178"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680985"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Integration Services (SSIS), proyectos y soluciones
 
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para el desarrollo de paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residen en los proyectos. Para crear y trabajar con proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , debe instalar el entorno de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Para obtener más información, vea [Instalar Integration Services](../integration-services/install-windows/install-integration-services.md).  
+Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] residen en los proyectos. Para crear y trabajar con proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], debe instalar [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). Para más información, vea [Instalar Integration Services](../integration-services/install-windows/install-integration-services.md).  
   
- Al crear un proyecto nuevo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el cuadro de diálogo **Nuevo proyecto** incluye una plantilla **Proyecto de Integration Services** . Esta plantilla de proyecto crea un proyecto nuevo que contiene un único paquete.  
+ Al crear un proyecto nuevo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el cuadro de diálogo **Nuevo proyecto** incluye una plantilla **Proyecto de Integration Services** . Esta plantilla de proyecto crea un proyecto nuevo que contiene un único paquete.
   
 ## <a name="projects-and-solutions"></a>Proyectos y soluciones  
  Los proyectos se almacenan en soluciones. Primero se crea una solución y luego se agrega un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] a la solución. Si no existe solución, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] crea automáticamente una cuando se crea el proyecto. Una solución puede contener varios proyectos de tipos diferentes.  
@@ -65,40 +64,46 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
 ## <a name="folders-in-integration-services-projects"></a>Carpetas en proyectos de Integration Services  
  El diagrama siguiente muestra las carpetas en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- ![Carpetas en un proyecto de Integration Services](../integration-services/media/solutionexplorer.gif "Folders in an Integration Services project")  
+![ssis-solution-explorer.png](media/ssis-solution-explorer.png)
   
  La tabla siguiente describe las carpetas que aparecen en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 |Carpeta|Descripción|  
-|------------|-----------------|  
+|------------|-----------------|
+|Administradores de conexión|Contiene Administradores de conexiones de proyecto. Para más información, vea [Conexiones de Integration Services (SSIS)](../integration-services/connection-manager/integration-services-ssis-connections.md).|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] .|Contiene paquetes. Para obtener más información, vea [Paquetes de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-packages.md).|  
+|Elementos de paquete|Contiene elementos de paquete que se pueden volver a usar o importar. Para más información, vea [Reutilización del flujo de control en paquetes mediante el uso de elementos del paquete de flujo de control](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).
 |Varios|Contiene archivos que no son archivos de paquete.|  
   
 ## <a name="files-in-integration-services-projects"></a>Archivos en proyectos de Integration Services  
- Cuando se agrega un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nuevo o existente a una solución, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] crea archivos de proyecto que tienen las extensiones .dtproj, .dtproj.user y .database.  
+ Cuando se agrega un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nuevo o existente a una solución, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] crea archivos de proyecto que tienen las extensiones .dtproj, .dtproj.user, .database y Project.params. 
   
 -   El archivo *.dtproj contiene información sobre las configuraciones del proyecto y elementos tales como paquetes.  
   
 -   El archivo *.dtproj.user contiene información sobre sus preferencias para trabajar con el proyecto.  
   
--   El archivo *.database contiene información que [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] requiere para abrir el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+-   El archivo *.database contiene información que [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] requiere para abrir el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .
+
+-   El archivo Project.params contiene información sobre los [parámetros del proyecto](integration-services-ssis-package-and-project-parameters.md).
   
 ## <a name="version-targeting-in-integration-services-projects"></a>Versión de destino en proyectos de Integration Services  
- En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], puede crear, mantener y ejecutar paquetes que tienen como destino SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
+ En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], puede crear, mantener y ejecutar paquetes que tienen como destino SQL Server 2017, SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
- En el Explorador de soluciones, haga clic con el botón derecho en un proyecto de Integration Services y seleccione **Propiedades** para abrir las páginas de propiedades del proyecto. En la pestaña **General** de **Propiedades de configuración**, seleccione la propiedad **TargetServerVersion** y luego elija SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
+ En el Explorador de soluciones, haga clic con el botón derecho en un proyecto de Integration Services y seleccione **Propiedades** para abrir las páginas de propiedades del proyecto. En la pestaña **General** de **Propiedades de configuración**, seleccione la propiedad **TargetServerVersion** y luego elija SQL Server 2017, SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
   
  ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
- 
+
 ## <a name="create-a-new-integration-services-project"></a>Crear un proyecto de Integration Services  
   
 1.  Abra [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  En el menú **Archivo** , seleccione **Nuevo**y haga clic en **Proyecto**.  
   
-3.  En el cuadro de diálogo **Nuevo proyecto** , en el panel **Plantillas** , seleccione la plantilla **Proyecto de Integration Services** .  
+3.  En el cuadro de diálogo **Nuevo proyecto**, seleccione **Inteligencia empresarial** y después la plantilla **Proyecto de Integration Services**.  
   
-     La plantilla **Proyecto de Integration Services** crea un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene un único paquete vacío.  
+     La plantilla **Proyecto de Integration Services** crea un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene un único paquete vacío.
+
+  ![ssis-ssdt-new-project.png](media/ssis-ssdt-new-project.png)
   
 4.  Si lo desea, modifique el nombre y la ubicación del proyecto.  
   
@@ -113,16 +118,6 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
     > **NOTA:** Para ver y cambiar el complemento de control de código fuente seleccionado y para configurar el entorno de control de código fuente, haga clic en **Opciones** en el menú **Herramientas** y, después, expanda el nodo **Control de código fuente**.  
   
 8.  Haga clic en **Aceptar** para agregar la solución al **Explorador de soluciones** y agregue el proyecto a la solución.  
-  
-## <a name="choose-the-target-version-of-a-project-and-its-packages"></a>Para elegir la versión de destino de un proyecto y sus paquetes  
-  
-1.  En el Explorador de soluciones, haga clic con el botón derecho en un proyecto de Integration Services y seleccione **Propiedades** para abrir las páginas de propiedades del proyecto.  
-  
-2.  En la pestaña **General** de **Propiedades de configuración**, seleccione la propiedad **TargetServerVersion** y luego elija SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
-  
-     ![Propiedad TargetServerVersion en el cuadro de diálogo de propiedades del proyecto](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
-  
- Puede crear, mantener y ejecutar paquetes cuyo destino es SQL Server 2016, SQL Server 2014 o SQL Server 2012.  
 
 ## <a name="import-an-existing-project-with-the-import-project-wizard"></a>Importación de un proyecto existente con el Asistente para importar proyectos
   
@@ -142,9 +137,9 @@ Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] resid
   
 8.  Haga clic en **Siguiente** para cambiar a la página **Seleccionar origen** .  
   
-9. Si va a importar desde un archivo **.ispac** , escriba la ruta de acceso con el nombre de archivo incluido en el cuadro de texto **Ruta de acceso** . Haga clic en **Examinar** para navegar hasta la carpeta donde desea almacenar la solución, escriba el nombre del archivo en el cuadro de texto **Nombre de archivo** y haga clic en **Abrir**.  
+9. Si va a importar desde un archivo **.ispac**, escriba la ruta de acceso con el nombre de archivo incluido en el cuadro de texto **Ruta de acceso**. Haga clic en **Examinar** para navegar hasta la carpeta donde desea almacenar la solución, escriba el nombre del archivo en el cuadro de texto **Nombre de archivo** y haga clic en **Abrir**.  
   
-     Si está efectuando una importación desde un **Catálogo de Integration Services**, escriba el nombre de la instancia de base de datos en el cuadro de texto **Nombre del servidor** o haga clic en **Examinar** y seleccione la instancia de base de datos que contiene el catálogo.  
+     Si va a importar desde un **Catálogo de Integration Services**, escriba el nombre de la instancia de base de datos en el cuadro de texto **Nombre del servidor**, o bien haga clic en **Examinar** y seleccione la instancia de base de datos que contiene el catálogo.  
   
      Haga clic en **Examinar** junto al cuadro de texto **Ruta de acceso** , expanda la carpeta del catálogo, seleccione el proyecto que desea importar y haga clic en **Aceptar**.  
   
@@ -217,5 +212,9 @@ Puede copiar objetos dentro de un proyecto de [!INCLUDE[ssISnoversion](../includ
   
 4.  Haga clic con el botón derecho en el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y luego haga clic en **Pegar**.  
   
-     Los elementos se copian automáticamente en la carpeta correcta. Si copia elementos en el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que no son paquetes, estos elementos se copian a la carpeta **Varios** .  
-     
+     Los elementos se copian automáticamente en la carpeta correcta. Si copia elementos al proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que no son paquetes, estos elementos se copian en la carpeta **Varios**.  
+
+## <a name="next-steps"></a>Pasos siguientes
+
+- Descargue e instale [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).
+- [Tutorial de SSIS: Crear un paquete ETL sencillo](ssis-how-to-create-an-etl-package.md)

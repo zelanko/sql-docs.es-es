@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 8bbc7670f3a4d6d8a017e7284c5a661d38594f08
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251055"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823569"
 ---
 # <a name="hybrid-buffer-pool"></a>Grupo de búferes híbrido
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,8 @@ El grupo de búferes híbrido se establece de forma predeterminada en habilitado
 En el ejemplo siguiente se devuelve el estado actual de la configuración del sistema del grupo de búferes híbrido de una instancia de SQL Server.
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 El ejemplo siguiente devuelve dos tablas:
@@ -95,9 +93,9 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>Procedimientos recomendados para el grupo de búferes híbrido
 
-No se recomienda habilitar el grupo de búferes híbrido en instancias con menos de 16 GB de RAM.
-
 Al dar formato al dispositivo PMEM en Windows, use el tamaño de unidad de asignación más grande disponible para NTFS (2 MB en Windows Server 2019) y asegúrese de que el dispositivo se ha formateado para DAX (DirectAccess).
+
+Para obtener un rendimiento óptimo, habilite [Páginas bloqueadas en memoria](./enable-the-lock-pages-in-memory-option-windows.md) en Windows.
 
 Los tamaños de archivo deben ser múltiplo de 2 MB (el módulo de 2 MB debe ser igual a cero).
 

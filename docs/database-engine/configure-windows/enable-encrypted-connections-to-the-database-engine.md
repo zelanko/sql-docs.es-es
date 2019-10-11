@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314497"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708517"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexiones cifradas en el motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ Para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cargue un cer
 
 - El certificado se debe crear mediante la opción **KeySpec** de **AT_KEYEXCHANGE**. Por lo general, la propiedad de uso de clave del certificado (**KEY_USAGE**) incluye también el cifrado de clave (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
 
-- La propiedad **Asunto** del certificado debe indicar que el nombre común (CN) es el mismo que el nombre del host o nombre de dominio completo (FQDN) del servidor. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un clúster de conmutación por error, el nombre común debe coincidir con el del host o FQDN del servidor virtual, y los certificados se deben aprovisionar en todos los nodos del clúster de conmutación por error.
+- La propiedad **Asunto** del certificado debe indicar que el nombre común (CN) es el mismo que el nombre del host o nombre de dominio completo (FQDN) del servidor. Si se usa el nombre de host, se debe especificar el sufijo DNS en el certificado. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en un clúster de conmutación por error, el nombre común debe coincidir con el del host o FQDN del servidor virtual, y los certificados se deben aprovisionar en todos los nodos del clúster de conmutación por error.
 
 - [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) admiten los certificados comodín. SNAC ha quedado en desuso y se ha reemplazado por [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) y [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md). Es posible que otros clientes no admitan los certificados comodín. Para más información, vea la documentación del cliente y [KB 258858](http://support.microsoft.com/kb/258858).       
   El certificado comodín no se puede seleccionar con el Administrador de configuración de SQL Server. Para usar un certificado comodín, debe editar la clave del Registro `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` y escribir la huella digital del certificado, sin espacios en blanco, en el valor **Certificado**.  

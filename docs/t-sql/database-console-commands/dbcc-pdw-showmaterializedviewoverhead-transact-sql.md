@@ -12,12 +12,12 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ddbb104690c4ded69b1c15628e2f509644c11cb3
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 000ba97314d3d2c7efaf75a42e91b4843e69733d
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809873"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682060"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql-preview"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL) (versión preliminar)
 
@@ -44,15 +44,17 @@ Es el nombre de la vista materializada.
 
 ## <a name="remarks"></a>Notas
 
-A medida que se modifican las tablas subyacentes de una vista materializada, todos los cambios incrementales de las tablas base se mantienen para la vista materializada.  La selección a partir de una vista materializada incluye el análisis de la estructura del almacén de columnas agrupado para la vista materializada y la aplicación de estos cambios incrementales.   Si es el número de cambios incrementales mantenidos es elevado, el rendimiento de la selección se degradará.  Los usuarios pueden volver a generar la vista materializada para crear de nuevo la estructura del almacén de columnas agrupado y consolidar todos los cambios incrementales en las tablas base.
-  
+Para mantener las vistas materializadas actualizadas con cambios en los datos de las tablas base, el motor de almacenamiento de datos agrega filas de seguimiento a cada vista afectada para reflejar los cambios. La selección a partir de una vista materializada incluye el análisis del índice de almacén de columnas agrupado de la vista y la aplicación de cualquier cambio incremental.  Las filas de seguimiento (TOTAL_ROWS-BASE_VIEW_ROWS) no se eliminarán hasta que los usuarios vuelvan a generar la vista materializada.  
+
+El valor overhead_ratio se calcula como TOTAL_ROWS/MAX(1, BASE_VIEW_ROWS).  Si es alto, el rendimiento de SELECT se degradará.  Los usuarios pueden volver a generar la vista materializada para reducir su proporción de sobrecarga.
+
 ## <a name="permissions"></a>Permisos  
   
 Necesita el permiso VIEW DATABASE STATE.  
 
-## <a name="example"></a>Ejemplo  
+## <a name="examples"></a>Ejemplos  
 
-Este ejemplo devuelve el espacio diferencial utilizado para una vista materializada.
+### <a name="a-this-example-returns-the-overhead-ratio-of-a-materialized-view"></a>A. En este ejemplo se devuelve la proporción de sobrecarga de una vista materializada.
 
 ```sql
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( "dbo.MyIndexedView" )
@@ -66,15 +68,82 @@ Salida:
 
 </br>
 
-|OBJECT_ID |BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|4567|0|0|0,0|
+### <a name="b-this-example-shows-how-the-materialized-view-overhead-increases-as-data-changes-in-base-tables"></a>B. Este ejemplo se muestra cómo aumenta la sobrecarga de la vista materializada a medida que cambian los datos en las tablas base
 
-</br>
+Creación de una tabla
+```sql
+CREATE TABLE t1 (c1 int NOT NULL, c2 int not null, c3 int not null)
+```
+Inserción de cinco filas en t1
+```sql
+INSERT INTO t1 VALUES (1, 1, 1)
+INSERT INTO t1 VALUES (2, 2, 2) 
+INSERT INTO t1 VALUES (3, 3, 3) 
+INSERT INTO t1 VALUES (4, 4, 4) 
+INSERT INTO t1 VALUES (5, 5, 5) 
+```
+Creación de vistas materializadas MV1
+```sql
+CREATE materialized view MV1 
+WITH (DISTRIBUTION = HASH(c1))  
+AS
+SELECT c1, count(*) total_number 
+FROM dbo.t1 where c1 < 3
+GROUP BY c1  
+```
+La selección desde la vista materializada devuelve dos filas.
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+Compruebe la sobrecarga de la vista materializada antes de realizar cualquier cambio en los datos de la tabla base.
+```sql
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+Salida:
 
 |OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
-|--------|--------|--------|--------|
-|789|0|2|2.0|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1,00000000000000000 |
+
+Actualice la tabla base.  Esta consulta actualiza 100 veces al mismo valor la misma columna de la misma fila.  El contenido de la vista materializada no cambia.
+```sql
+DECLARE @p int
+SELECT @p = 1
+WHILE (@p < 101)
+BEGIN
+UPDATE t1 SET c1 = 1 WHERE c1 = 1
+SELECT @p = @p+1
+END  
+```
+
+La selección de la vista materializada devuelve el mismo resultado que antes.  
+
+|c1|total_number|
+|--------|--------| 
+|1|1| 
+|2|1|
+
+A continuación se muestra el resultado de DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1").  Se agregan 100 filas a la vista materializada (total_row-base_view_rows) y aumenta su valor overhead_ratio. 
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|102 |51,00000000000000000 |
+
+Después de volver a generar la vista materializada, se eliminan todas las filas de seguimiento de los cambios de datos incrementales y se reduce la proporción de sobrecarga de la vista.  
+
+```sql
+ALTER MATERIALIZED VIEW dbo.MV1 REBUILD
+go
+DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ("dbo.mv1")
+```
+Salida
+
+|OBJECT_ID|BASE_VIEW_ROWS|TOTAL_ROWS|OVERHEAD_RATIO|
+|--------|--------|--------|--------|  
+|587149137|2|2 |1,00000000000000000 |
 
 ## <a name="see-also"></a>Vea también
 

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c5150cc40fa8d2cecee02a9d3339eea0c1bf740
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01809f0d4eb494d58f035d23846025578aada7c7
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083711"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251263"
 ---
-# <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
+# <a name="syssp_rda_reauthorize_db-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Restaura la conexión autenticada entre una base de datos local habilitada para Stretch y la base de datos remoto.  
+  Restaura la conexión autenticada entre una base de datos local habilitada para Stretch y la base de datos remota.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,29 +38,29 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @credential = *@credential*  
- Es la credencial asociada con la base de datos local habilitada para Stretch.  
+ @credential = *\@credential*  
+ Es la credencial con ámbito de base de datos asociada con la base de datos habilitada para Stretch local.  
   
- @with_copy = *@with_copy*  
- Especifica si se debe realizar una copia de los datos remotos y conectarse a la copia (recomendada). *@with_copy* es de tipo bit.  
+ @with_copy = *\@with_copy*  
+ Especifica si se debe hacer una copia de los datos remotos y conectarse a la copia (recomendado). *\@with_copy* es bit.  
   
- @azure_servername = *@azure_servername*  
- Especifica el nombre del servidor de Azure que contiene los datos remotos. *@azure_servername* es de tipo sysname.  
+ @azure_servername = *\@azure_servername*  
+ Especifica el nombre del servidor de Azure que contiene los datos remotos. *\@azure_servername es de* tipo sysname.  
   
- @azure_databasename = *@azure_databasename*  
- Especifica el nombre de la base de datos de Azure que contiene los datos remotos. *@azure_databasename* es de tipo sysname.  
+ @azure_databasename = *\@azure_databasename*  
+ Especifica el nombre de la base de datos de Azure que contiene los datos remotos. *\@azure_databasename es de* tipo sysname.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o > 0 (error)  
   
 ## <a name="permissions"></a>Permisos  
- Se requieren permisos db_owner.  
+ Requiere permisos db_owner.  
   
 ## <a name="remarks"></a>Comentarios  
- Al ejecutar [sys.sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectarse a la base de datos de Azure remota, esta operación restablece automáticamente el modo de consulta LOCAL_AND_REMOTE, que es el comportamiento predeterminado para Stretch Database. Es decir, las consultas devuelven los resultados de datos locales y remotos.  
+ Al ejecutar [Sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos remota de Azure, esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado para Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo restaura la conexión autenticada entre una base de datos local habilitada para Stretch y la base de datos remoto. Realiza una copia de los datos remotos (recomendados) y se conecta a la nueva copia.  
+ En el ejemplo siguiente se restaura la conexión autenticada entre una base de datos local habilitada para Stretch y la base de datos remota. Realiza una copia de los datos remotos (recomendado) y se conecta a la nueva copia.  
   
 ```sql  
 DECLARE @credentialName nvarchar(128);   

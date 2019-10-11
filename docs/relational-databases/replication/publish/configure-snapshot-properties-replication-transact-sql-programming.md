@@ -15,12 +15,12 @@ ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4b77902b69ccfd286537a985fc561b120291552c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ec6f229ded9e9a77b6164ba9c91bee9cf8070fd7
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769933"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710924"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurar propiedades de instantáneas (programación de la replicación con Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,39 +28,39 @@ ms.locfileid: "68769933"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>Para configurar propiedades de instantáneas al crear una instantánea o una publicación transaccional  
   
-1.  En el publicador, ejecute [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Especifique un nombre de publicación para **@publication** , el valor **snapshot** o **continuous** para **@repl_freq** y uno o más de los siguientes parámetros relacionados con instantáneas:  
+1.  En el publicador, ejecute [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Especifique un nombre de publicación para `@publication`, el valor **snapshot** o **continuous** para `@repl_freq`, y uno o más de los parámetros siguientes relacionados con instantáneas:  
   
-    -   **@alt_snapshot_folder** - especifique una ruta si a la instantánea de esta publicación se tiene acceso desde esa ubicación en lugar o además de desde la carpeta predeterminada para instantáneas.    
-    -   **@compress_snapshot** - especifique el valor **true** si los archivos de instantáneas de la carpeta de instantáneas están comprimidos en el formato de archivo CAB de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .    
-    -   **@pre_snapshot_script** - especifique el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
-    -   **@post_snapshot_script** - especifique el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
-    -   **@snapshot_in_defaultfolder** - especifique el valor **false** si la instantánea únicamente está disponible en una ubicación que no es la predeterminada.  
+    -   `@alt_snapshot_folder`: especifique una ruta de acceso si a la instantánea de esta publicación se accede desde esa ubicación en lugar de o además de desde la carpeta predeterminada para instantáneas.    
+    -   `@compress_snapshot`: especifique un valor de **true** si los archivos de instantánea de la carpeta de instantáneas están comprimidos en el formato de archivo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CAB.    
+    -   `@pre_snapshot_script`: especifique el nombre de archivo y la ruta de acceso completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
+    -   `@post_snapshot_script`: especifique el nombre de archivo y la ruta de acceso completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
+    -   `@snapshot_in_defaultfolder`: especifique un valor de **false** si la instantánea solo está disponible en una ubicación que no es la predeterminada.  
   
      Para obtener más información acerca de la creación de publicaciones, vea [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>Para configurar propiedades de instantáneas al crear una publicación de combinación  
   
-1.  En el publicador, ejecute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique un nombre de publicación para **@publication** , el valor **snapshot** o **continuous** para **@repl_freq** y uno o más de los siguientes parámetros relacionados con instantáneas:  
+1.  En el publicador, ejecute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique un nombre de publicación para `@publication`, el valor **snapshot** o **continuous** para `@repl_freq`, y uno o más de los parámetros siguientes relacionados con instantáneas:  
   
-    -   **@alt_snapshot_folder** - especifique una ruta si a la instantánea de esta publicación se tiene acceso desde esa ubicación en lugar o además de desde la carpeta predeterminada para instantáneas.    
-    -   **@compress_snapshot** - especifique el valor **true** si los archivos de instantáneas de la carpeta de instantáneas están comprimidos en el formato de archivo CAB.   
-    -   **@pre_snapshot_script** - especifique el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
-    -   **@post_snapshot_script** - especifique el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
-    -   **@snapshot_in_defaultfolder** - especifique el valor **false** si la instantánea únicamente está disponible en una ubicación que no es la predeterminada.  
+    -   **alt_snapshot_folder**: especifique una ruta de acceso si a la instantánea de esta publicación se accede desde esa ubicación en lugar o además de desde la carpeta predeterminada para instantáneas.    
+    -   `@compress_snapshot`: especifique un valor de **true** si los archivos de instantánea de la carpeta de instantáneas están comprimidos en el formato de archivo CAB.   
+    -   `@pre_snapshot_script`: especifique el nombre de archivo y la ruta de acceso completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
+    -   `@post_snapshot_script`: especifique el nombre de archivo y la ruta de acceso completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
+    -   `@snapshot_in_defaultfolder`: especifique un valor de **false** si la instantánea solo está disponible en una ubicación que no es la predeterminada.  
   
 2.  Para obtener más información acerca de la creación de publicaciones, vea [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>Para modificar las propiedades de instantánea de una instantánea o de una publicación transaccional existente  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Especifique el valor **1** para **@force_invalidate_snapshot** y uno de los valores siguientes para **@property** :  
+1.  En la base de datos de publicación del publicador, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Especifique un valor de **1** para `@force_invalidate_snapshot` y uno de los valores siguientes para `@property`:  
   
-    -   **alt_snapshot_folder** - especifique también una nueva ruta a la carpeta de instantáneas alternativa para **@value** .    
-    -   **compress_snapshot** - especifique también el valor **true** o **false** para **@value** para indicar si los archivos de instantáneas de la carpeta de instantáneas alternativa están comprimidos en el formato de archivo CAB.    
-    -   **pre_snapshot_script** - especifique también para **@value** el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
-    -   **post_snapshot_script** - especifique también para **@value** el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
+    -   **alt_snapshot_folder**: especifique también una nueva ruta de acceso a la carpeta de instantáneas alternativa para `@value`.    
+    -   **compress_snapshot**: especifique también un valor de **true** o **false** para `@value` a fin de indicar si los archivos de instantánea de la carpeta de instantáneas alternativa están comprimidos en el formato de archivo CAB.    
+    -   **pre_snapshot_script**: especifique también para `@value` el nombre de archivo y la ruta de acceso completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
+    -   **post_snapshot_script**: especifique también para `@value` el nombre de archivo y la ruta de acceso completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
     -   **snapshot_in_defaultfolder** - especifique también el valor **true** o **false** para indicar si la instantánea está disponible únicamente en una ubicación que no es la predeterminada.  
   
-2.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md). Especifique **@publication** y uno o más de los parámetros de credenciales de seguridad o de programación que se están cambiando.  
+2.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md). Especifique `@publication` y uno o más de los parámetros de credenciales de seguridad o de programación que se van a cambiar.  
   
     > [!IMPORTANT]  
     >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
@@ -69,12 +69,12 @@ ms.locfileid: "68769933"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>Para modificar las propiedades de instantánea de una publicación de combinación existente  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique el valor **1** para **@force_invalidate_snapshot** y uno de los valores siguientes para **@property** :  
+1.  En la base de datos de publicación del publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique un valor de **1** para `@force_invalidate_snapshot` y uno de los valores siguientes para `@property**`:  
   
-    -   **alt_snapshot_folder** - especifique también una nueva ruta a la carpeta de instantáneas alternativa para **@value** .    
-    -   **compress_snapshot** - especifique también el valor **true** o **false** para **@value** para indicar si los archivos de instantáneas de la carpeta de instantáneas alternativa están comprimidos en el formato de archivo CAB.    
-    -   **pre_snapshot_script** - especifique también para **@value** el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
-    -   **post_snapshot_script** - especifique también para **@value** el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
+    -   **alt_snapshot_folder**: especifique también una nueva ruta de acceso a la carpeta de instantáneas alternativa para `@value`.    
+    -   **compress_snapshot**: especifique también un valor de **true** o **false** para `@value` a fin de indicar si los archivos de instantánea de la carpeta de instantáneas alternativa están comprimidos en el formato de archivo CAB.    
+    -   **pre_snapshot_script**: especifique también para `@value` el nombre de archivo y la ruta de acceso completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
+    -   **post_snapshot_script**: especifique también para `@value` el nombre de archivo y la ruta de acceso completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
     -   **snapshot_in_defaultfolder** - especifique también el valor **true** o **false** para indicar si la instantánea está disponible únicamente en una ubicación que no es la predeterminada.  
   
 2.  Ejecute el [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) desde el símbolo del sistema o inicie el trabajo del Agente de instantáneas para generar una nueva instantánea. Para más información, consulte [Crear y aplicar la instantánea inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  

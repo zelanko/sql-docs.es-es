@@ -21,12 +21,12 @@ ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b3d561e331cae739514b2e38c5c885653c44ce46
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 87c3a091e4a6ce3ef9462e6e0d730bcea56c18bc
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768354"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710714"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Desactivación y expiración de las suscripciones
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68768354"
  Para establecer períodos de retención, vea [Establecer el período de expiración para las suscripciones](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Establecer el período de retención de distribución para las publicaciones transaccionales &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) y [Configurar la publicación y la distribución](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
 ## <a name="transactional-replication"></a>replicación transaccional  
- La replicación transaccional utiliza el período máximo de retención de distribución (el parámetro **@max_distretention** de [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) y el período de retención de la publicación (el parámetro **@retention** de [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
+ La replicación transaccional usa el período máximo de retención de distribución (el parámetro `@max_distretention` de [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) y el período de retención de la publicación (el parámetro `@retention` de [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
   
 -   Si una suscripción no se sincroniza dentro del período máximo de retención de distribución (el valor predeterminado es de 72 horas) y existen cambios en la base de datos de distribución que no se han entregado al suscriptor, el trabajo **Limpieza de la distribución** que se ejecuta en el distribuidor marcará la suscripción como desactivada. Debe reinicializarse la suscripción.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68768354"
      Si una suscripción de inserción expira, se quita completamente, pero esto no sucede con las suscripciones de extracción. Debe limpiar las suscripciones de extracción en el suscriptor. Para más información, consulte [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Replicación de mezcla  
- La replicación de mezcla utiliza el período de retención de la publicación (los parámetros de **@retention** y **@retention_period_unit** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Cuando una suscripción expira, debe reinicializarse, porque se quitan los metadatos de la suscripción. Los suscripciones que no se reinicializan se quitan con el trabajo **Limpieza de suscripciones expiradas** que se ejecuta en el publicador. De forma predeterminada, este trabajo se ejecuta diariamente; quita todas las suscripciones de inserción que no se han sincronizado una vez transcurrido el doble de tiempo del período de retención de la publicación. Por ejemplo:  
+ La replicación de mezcla usa el período de retención de la publicación (los parámetros `@retention` y `@retention_period_unit` de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Cuando una suscripción expira, debe reinicializarse, porque se quitan los metadatos de la suscripción. Los suscripciones que no se reinicializan se quitan con el trabajo **Limpieza de suscripciones expiradas** que se ejecuta en el publicador. De forma predeterminada, este trabajo se ejecuta diariamente; quita todas las suscripciones de inserción que no se han sincronizado una vez transcurrido el doble de tiempo del período de retención de la publicación. Por ejemplo:  
   
 -   Su una publicación tiene un período de retención de 14 días, una suscripción puede expirar si no se ha sincronizado en 14 días.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68768354"
   
     -   La replicación no puede limpiar metadatos en las bases de datos de suscripciones y publicaciones hasta que se haya alcanzado el período de retención. Tenga cuidado al especificar un valor elevado para el período de retención, ya que puede afectar negativamente al rendimiento de la replicación. Se recomienda utilizar un valor bajo si puede prever con exactitud que todos los suscriptores se sincronizarán con regularidad dentro del período establecido.  
   
-    -   Es posible especificar que las suscripciones no expiren nunca (el valor 0 para **@retention** ), pero se recomienda que no utilice este valor, porque los metadatos no se podrán limpiar.  
+    -   Es posible especificar que las suscripciones no expiren nunca (un valor de 0 para `@retention`), pero no se recomienda usar este valor, porque los metadatos no se podrán limpiar.  
   
 -   El período de retención de cualquier republicador debe establecerse en un valor igual o menor que el período de retención establecido en el publicador original. También debe utilizar los mismos valores de retención de la publicación para todos los publicadores y sus asociados de sincronización alternativos. El uso de valores distintos puede conducir a la no convergencia. Si necesita cambiar el valor de retención de la publicación, vuelva a inicializar el suscriptor a fin de evitar la no convergencia de los datos.  
   

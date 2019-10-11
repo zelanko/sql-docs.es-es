@@ -1,5 +1,5 @@
 ---
-title: Ruta de acceso (Transact-SQL) | Microsoft Docs
+title: PathName (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140580"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251950"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve la ruta de acceso de un objeto binario grande (BLOB) FILESTREAM. La API OpenSqlFilestream usa esta ruta de acceso para devolver un identificador que una aplicación puede usar para trabajar con los datos BLOB mediante las API de Win32. PathName es de solo lectura.  
+  Devuelve la ruta de acceso de un objeto binario grande (BLOB) FILESTREAM. La API de OpenSqlFilestream usa esta ruta de acceso para devolver un identificador que una aplicación puede usar para trabajar con los datos del BLOB mediante el uso de las API de Win32. PathName es de solo lectura.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,12 +40,12 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="arguments"></a>Argumentos  
  *column_name*  
- Es el nombre de columna de un **varbinary (max)** columna FILESTREAM. *column_name* debe ser un nombre de columna. No puede ser una expresión ni el resultado de una instrucción CAST o CONVERT.  
+ Es el nombre de columna de una columna FileStream de tipo **varbinary (Max)** . *column_name* debe ser un nombre de columna. No puede ser una expresión ni el resultado de una instrucción CAST o CONVERT.  
   
- Solicitar el valor de PathName para una columna de cualquier otro tipo de datos o para un **varbinary (max)** columnthat no tiene el atributo de almacenamiento FILESTREAM se producirá un error de tiempo de compilación de consulta.  
+ La solicitud del nombreruta para una columna de cualquier otro tipo de datos o de un columnthat **varbinary (Max)** no tiene el atributo de almacenamiento FileStream producirá un error en tiempo de compilación de la consulta.  
   
- *@option*  
- Un entero [expresión](../../t-sql/language-elements/expressions-transact-sql.md) que define cómo se debe dar formato el componente de servidor de la ruta de acceso. *@option* puede ser uno de los siguientes valores. El valor predeterminado es 0.  
+ *@no__t 1option*  
+ [Expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero que define cómo se debe dar formato al componente de servidor de la ruta de acceso. *\@option* puede ser uno de los valores siguientes. El valor predeterminado es 0.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -54,11 +54,11 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 |2|Devuelve la ruta de acceso al servidor completa, por ejemplo: `\\ServerName.MyDomain.com\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
   
  *use_replica_computer_name*  
- Un valor de bit que define cómo se debe devolver el nombre del servidor en un grupo de disponibilidad Always On.  
+ Un valor de bit que define cómo se debe devolver el nombre del servidor en un Always On grupo de disponibilidad.  
   
  Cuando la base de datos no pertenece a un grupo de disponibilidad Always On, se omite el valor de este argumento. El nombre del equipo siempre se usa en la ruta.  
   
- Cuando la base de datos pertenece a una disponibilidad Always On de grupo, a continuación, el valor de *use_replica_computer_name* tiene el siguiente efecto en la salida de la **PathName** función:  
+ Cuando la base de datos pertenece a un grupo de disponibilidad de Always On, el valor de *use_replica_computer_name* tiene el efecto siguiente en la salida de la función **PathName** :  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

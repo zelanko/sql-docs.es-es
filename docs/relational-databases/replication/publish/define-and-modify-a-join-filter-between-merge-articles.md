@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4155bdd03dfc809eee26e505cb842404524cbe59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d695ccd9545c6bc839edcc1b0644c1f1a4d84ab8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907807"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710901"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definir y modificar un filtro de combinación entre artículos de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "67907807"
   
 2.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) para definir uno o más artículos relacionados, también conocidos como artículos secundarios, para la publicación. Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-3.  En la base de datos de publicación del publicador, ejecute [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Especifique **@publication** , un nombre único de este filtro para **@filtername** , el nombre del artículo secundario creado en el paso 2 para **@article** , el nombre del artículo primario con el que se combina para **@join_articlename** y uno de los valores siguientes para **@join_unique_key** :  
+3.  En la base de datos de publicación del publicador, ejecute [sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md). Especifique `@publication`, un nombre único de este filtro para `@filtername`, el nombre del artículo secundario creado en el paso 2 para `@article`, el nombre del artículo primario con el que se combina para `@join_articlename` y uno de los valores siguientes para `@join_unique_key`:  
   
     -   **0** - indica una combinación de varios a uno o de varios a varios entre los artículos primarios y secundarios.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "67907807"
      Esto define un filtro de combinación entre los dos artículos.  
   
     > [!CAUTION]  
-    >  Establezca **@join_unique_key** en **1** solamente si tiene una restricción en la columna de combinación de la tabla subyacente del artículo primario que garantice su unicidad. Si **@join_unique_key** se establece en **1** de manera incorrecta, se puede producir una no convergencia de datos.  
+    >  Establezca `@join_unique_key` en **1** solo si tiene una restricción en la columna de combinación de la tabla subyacente del artículo primario que garantice su unicidad. Si `@join_unique_key` se establece en **1** de manera incorrecta, se puede producir una no convergencia de datos.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  En este ejemplo se define un artículo para una publicación de combinación, donde el artículo de tabla `SalesOrderDetail` se filtra respecto a la tabla `SalesOrderHeader` que se filtra a su vez con un filtro de fila estático. Para más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31e3101499ff046d6741dbbc7b86fdf196deec3e
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096929"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713267"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configuración de transacciones distribuidas para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,8 @@ En una transacción distribuida, las aplicaciones cliente funcionan con Microsof
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] no impide las transacciones distribuidas de bases de datos en un grupo de disponibilidad, aun cuando el grupo de disponibilidad no esté configurado para transacciones distribuidas. Pero cuando un grupo de disponibilidad no está configurado para transacciones distribuidas, hay ocasiones en las que la conmutación por error puede que no se efectúe correctamente. En concreto, es posible que la nueva instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] de réplica principal no pueda obtener el resultado de la transacción de DTC. Para que la instancia de [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] pueda obtener el resultado de las transacciones dudosas de DTC tras la conmutación por error, configure el grupo de disponibilidad para que admita transacciones distribuidas. 
 
+DTC no interviene en el procesamiento de grupos de disponibilidad a menos que una base de datos también sea miembro de un clúster de conmutación por error. Dentro de un grupo de disponibilidad, la coherencia entre las réplicas se mantiene mediante la lógica del grupo de disponibilidad: La principal no completará la confirmación ni reconocerá la confirmación en el autor de la llamada hasta que la secundaria haya reconocido que ha conservado las entradas de registro en el almacenamiento duradero. Solo entonces la principal declarará que la transacción se ha completado. En el modo asincrónico, no se espera el reconocimiento por parte de la réplica secundaria, y hay una posibilidad explícita de que se pierda una pequeña cantidad de datos.
+
 ## <a name="prerequisites"></a>Prerequisites
 
 Antes de configurar un grupo de disponibilidad que admita transacciones distribuidas, debe cumplir los siguientes requisitos previos:
@@ -50,6 +52,8 @@ Antes de configurar un grupo de disponibilidad que admita transacciones distribu
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>Crear un grupo de disponibilidad que admita transacciones distribuidas
 
 Configure un grupo de disponibilidad que admita transacciones distribuidas. Establezca el grupo de disponibilidad para permitir que cada base de datos se registre como un administrador de recursos. En este artículo se explica cómo configurar un grupo de disponibilidad de manera que cada base de datos sea un administrador de recursos en DTC.
+
+
 
 Puede crear un grupo de disponibilidad que admita transacciones distribuidas en [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] o una versión posterior. Para crear un grupo de disponibilidad que admita transacciones distribuidas, incluya `DTC_SUPPORT = PER_DB` en la definición de dicho grupo de disponibilidad. Con el siguiente script se crea un grupo de disponibilidad que admite transacciones distribuidas. 
 

@@ -15,12 +15,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0129290734cfc374ab8b563fab14692a7b59fe6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1737524acd1397a30299e7c5147ae9a6cb10efc6
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893310"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173687"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Compatibilidad con Nombre de la entidad de seguridad del servicio (SPN) en conexiones cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "68893310"
  El nuevo comportamiento de conexión lo implementa el cliente; por lo tanto, no es específico de una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Servidores vinculados y delegación  
- Cuando se crean servidores vinculados, el parámetro **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) puede usarse para especificar los SPN del servidor y del asociado de conmutación por error. Las ventajas de hacer esto son las mismas de especificar los SPN en las cadenas de conexión de cliente: Es más sencillo y confiable establecer conexiones que usen la autenticación Kerberos.  
+ Cuando se crean servidores vinculados, el parámetro **\@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) puede usarse para especificar los SPN del servidor y del asociado de conmutación por error. Las ventajas de hacer esto son las mismas de especificar los SPN en las cadenas de conexión de cliente: Es más sencillo y confiable establecer conexiones que usen la autenticación Kerberos.  
   
  La delegación con servidores vinculados requiere la autenticación Kerberos.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "68893310"
   
 -   Seguridad: ¿El SPN especificado revela información protegida?  
   
--   Solidez Para habilitar el uso de los SPN predeterminados, la cuenta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio en la que se ejecuta la instancia de debe tener privilegios suficientes para actualizar el Active Directory en el KDC.  
+-   Solidez Para habilitar el uso de los SPN predeterminados, la cuenta de servicio en la que se ejecuta la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe tener privilegios suficientes para actualizar el Active Directory en el KDC.  
   
--   Comodidad y transparencia de Ubicación: ¿Cómo afectará a los SPN de una aplicación si su base de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se mueve a otra instancia? Esto se aplica tanto al servidor principal como a su asociado de conmutación por error si se usa la creación de reflejo de la base de datos. Si un servidor cambia, ¿significa que deben modificarse los SPN?, ¿cómo afectará esto a las aplicaciones?, ¿se administrarán los cambios?  
+-   Comodidad y transparencia de Ubicación: ¿Cómo afectará a los SPN de una aplicación si su base de datos se mueve a otra instancia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]? Esto se aplica tanto al servidor principal como a su asociado de conmutación por error si se usa la creación de reflejo de la base de datos. Si un servidor cambia, ¿significa que deben modificarse los SPN?, ¿cómo afectará esto a las aplicaciones?, ¿se administrarán los cambios?  
   
 ## <a name="specifying-the-spn"></a>Especificar el SPN  
  Un SPN puede especificarse en cuadros de diálogo y en el código. En esta sección se muestra cómo especificar un SPN.  

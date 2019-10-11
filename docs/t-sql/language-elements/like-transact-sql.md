@@ -31,12 +31,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: ad327f07e37778a7a3369f8fa3a7ecaa1504e6f2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68122177"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816820"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,7 +192,7 @@ GO
 |LIKE 'abc[def]'|abcd, abce y abcf|  
   
 ## <a name="pattern-matching-with-the-escape-clause"></a>Operación de búsqueda de coincidencias de patrón con la cláusula ESCAPE  
- Se pueden buscar cadenas de caracteres que incluyan uno o más caracteres comodín especiales. Por ejemplo, la tabla discounts de una base de datos customers puede almacenar valores de descuento que incluyan un signo de porcentaje (%). Para buscar el signo de porcentaje como carácter en lugar de como carácter comodín, deben suministrarse la palabra clave ESCAPE y el carácter de escape. Supongamos que una base de datos de ejemplo contiene una columna denominada comment que contiene el texto 30%. Para buscar filas que contengan la cadena 30% en cualquier parte de la columna de comentarios, especifique una cláusula WHERE como esta: `WHERE comment LIKE '%30!%%' ESCAPE '!'`. Si no se especifican ESCAPE y el carácter de escape, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] devolverá las filas con la cadena 30.  
+ Se pueden buscar cadenas de caracteres que incluyan uno o más caracteres comodín especiales. Por ejemplo, la tabla discounts de una base de datos customers puede almacenar valores de descuento que incluyan un signo de porcentaje (%). Para buscar el signo de porcentaje como carácter en lugar de como carácter comodín, deben suministrarse la palabra clave ESCAPE y el carácter de escape. Supongamos que una base de datos de ejemplo contiene una columna denominada comment que contiene el texto 30%. Para buscar filas que contengan la cadena 30% en cualquier parte de la columna de comentarios, especifique una cláusula WHERE como esta: `WHERE comment LIKE '%30!%%' ESCAPE '!'`. Si no se especifican ESCAPE y el carácter de escape, [!INCLUDE[ssDE](../../includes/ssde-md.md)] devolverá las filas con la cadena 30.  
   
  Si no hay ningún carácter después de un carácter de escape en el patrón de LIKE, el patrón no es válido y LIKE devuelve FALSE. Si el carácter posterior a un carácter de escape no es un carácter comodín, el carácter de escape se descarta y el carácter que sigue al escape se trata como un carácter normal del patrón. Estos caracteres afectan a los caracteres comodín del signo de porcentaje (%), carácter de subrayado (_) y corchete de apertura ([) cuando se encuentran entre corchetes dobles ([ ]). Los caracteres de escape pueden usarse dentro de corchetes dobles ([ ]), y se pueden aplicar caracteres de escape al símbolo de intercalación (^), guión (-) y corchete de cierre (]).  
   

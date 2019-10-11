@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 466598ca9e7846b3b5ffbeef17987cd61233ec7a
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 7a0282d1b9f2aa63e89d5246d37210a2b088ad35
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251097"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710300"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Inicializar una suscripción transaccional desde una copia de seguridad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "71251097"
   
     -   Si el valor es **1**, la publicación admite esta funcionalidad.  
   
-    -   Si el valor es **0**, ejecute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **allow_initialize_from_backup** para **@property** y un valor de **true** para **@value** .  
+    -   Si el valor es **0**, ejecute [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **allow_initialize_from_backup** para `@property` y un valor de **true** para `@value`.  
   
 2.  Para una nueva publicación, ejecute [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) en el Publicador de la base de datos de publicación. Especifique un valor de **true** para **allow_initialize_from_backup**. Para obtener más información, vea [Crear una suscripción](../../relational-databases/replication/publish/create-a-publication.md).  
   
@@ -48,23 +48,23 @@ ms.locfileid: "71251097"
   
 5.  En la base de datos de publicación del publicador, ejecute el procedimiento almacenado [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Especifique los parámetros siguientes:  
   
-    -   **@sync_type** - un valor de **initialize with backup**.  
+    -   `@sync_type`: un valor de **initialize with backup**.  
   
-    -   **@backupdevicetype** - el tipo de dispositivo de copia de seguridad: **logical** (predeterminado), **disk**o **tape**.  
+    -   `@backupdevicetype`: el tipo de dispositivo de copia de seguridad: **logical** (predeterminado), **disk** o **tape**.  
   
-    -   **@backupdevicename** - dispositivo de copia de seguridad físico o lógico que se usará para la restauración.  
+    -   `@backupdevicename`: el dispositivo de copia de seguridad físico o lógico que se va a usar para la restauración.  
   
          Para una unidad lógica, especifique el nombre del dispositivo de copia de seguridad especificado cuando se usó **sp_addumpdevice** para crear el dispositivo.  
   
          Para un dispositivo físico, especifique una ruta de acceso y un nombre de archivo completos, como `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\BACKUP\Mybackup.dat'` o `TAPE = '\\.\TAPE0'`.  
   
-    -   (Opcional) **@password** - una contraseña que se proporcionó cuando se creó el conjunto de copia de seguridad.  
+    -   (Opcional) `@password`: una contraseña que se ha proporcionado al crear el conjunto de copia de seguridad.  
   
-    -   (Opcional) **@mediapassword** - una contraseña que se proporcionó cuando se dio formato al conjunto de medios.  
+    -   (Opcional) `@mediapassword`: una contraseña que se ha proporcionado al dar formato al conjunto de medios.  
   
-    -   (Opcional) **@fileidhint** - el identificador para el conjunto de copia de seguridad que se va a restaurar. Por ejemplo, **1** indica el primer conjunto de copia de seguridad del medio de copia de seguridad y **2** indica el segundo conjunto de copia de seguridad.  
+    -   (Opcional) `@fileidhint`: el identificador para el conjunto de copia de seguridad que se va a restaurar. Por ejemplo, **1** indica el primer conjunto de copia de seguridad del medio de copia de seguridad y **2** indica el segundo conjunto de copia de seguridad.  
   
-    -   (Opcional para los dispositivos de cinta) **@unload** - especifica un valor de **1** (predeterminado) si la cinta debe descargarse de la unidad una vez completada la restauración y **0** si no debe descargarse.  
+    -   (Opcional para los dispositivos de cinta) `@unload`: especifique un valor de **1** (predeterminado) si la cinta se debe descargar de la unidad una vez completada la restauración y de **0** si no se debe descargar.  
   
 6.  (Opcional) Para una suscripción de extracción, ejecute [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) y [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) en el suscriptor de la base de datos de suscripción. Para obtener más información, consulte [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md).  
   

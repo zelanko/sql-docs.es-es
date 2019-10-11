@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326030"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961960"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Extensión de SQL Server 2019 (versión preliminar) para Azure Data Studio
 
-La extensión de SQL Server 2019 (versión preliminar) para Azure Data Studio proporciona compatibilidad en versión preliminar con las nuevas características y herramientas que se distribuyen para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esto incluye compatibilidad en versión preliminar con [clústeres de macrodatos de SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), una [experiencia de cuadernos](../big-data-cluster/notebooks-guidance.md) integrada y un [Asistente para crear tablas externas](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json) de PolyBase.
+La extensión de SQL Server 2019 (versión preliminar) para Azure Data Studio proporciona compatibilidad en versión preliminar con las nuevas características y herramientas que se distribuyen para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. La compatibilidad incluye compatibilidad en versión preliminar con [clústeres de macrodatos de SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), una [experiencia de cuadernos](../big-data-cluster/notebooks-guidance.md) integrada y un [Asistente para crear tablas externas](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json) de PolyBase.
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Instalación de la extensión de SQL Server 2019 (versión preliminar)
 
@@ -65,7 +65,7 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar) descargue 
 * Asistente para crear tablas externas:
   * Compatibilidad con la creación de una tabla externa mediante el origen de datos externos existente.
   * Mejoras de rendimiento en el asistente.
-  * Control mejorado de los nombres de objeto con caracteres especiales (en algunos casos, provocaban errores en el asistente).
+  * Control mejorado de los nombres de objeto con caracteres especiales En algunos casos, provocaban errores en el asistente
   * Mejoras de confiabilidad para la página de asignación de objetos.
   * Se han quitado las bases de datos del sistema ("DWConfiguration", "DWDiagnostics", "DWQueue") de la lista desplegable de bases de datos.
   * Compatibilidad para establecer el nombre del objeto con formato de archivo externo en el Asistente para **crear tablas externas a partir de archivos CSV**.
@@ -82,15 +82,15 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar) descargue 
 
 ## <a name="release-notes-v0102"></a>Notas de la versión (v0.10.2)
 ### <a name="sql-server-2019-support"></a>Compatibilidad con SQL Server 2019
-Se ha actualizado la compatibilidad con SQL Server 2019. Al conectarse a una instancia de clúster de macrodatos de SQL Server, aparecerá una nueva carpeta _Data Services_ en el árbol del explorador. Dispone de puntos de inicio para acciones como abrir un nuevo cuaderno en la conexión, enviar trabajos de Spark y trabajar con HDFS. Tenga en cuenta que, para algunas acciones como _crear datos externos_ en un archivo o carpeta de HDFS, se debe instalar la extensión de _SQL Server 2019 (versión preliminar)_ .
+Se ha actualizado la compatibilidad con SQL Server 2019. Después de conectarse a una instancia de clúster de macrodatos de SQL Server, aparece una nueva carpeta _Data Services_ en el árbol del explorador. La carpeta dispone de puntos de inicio para acciones como abrir un nuevo cuaderno en la conexión, enviar trabajos de Spark y trabajar con HDFS. Para algunas acciones, como _crear datos externos_ en un archivo o carpeta de HDFS, se debe instalar la extensión de _SQL Server 2019 (versión preliminar)_ .
 
 ### <a name="notebook-support"></a>Compatibilidad con Notebook
 En esta versión hemos realizado actualizaciones considerables en la interfaz de usuario de Notebook. Nuestro objetivo consistía en facilitar la lectura de los cuadernos que se comparten con usted. Esto conllevaba, entre otras cosas, quitar todos los cuadros de contorno alrededor de las celdas (a menos que se seleccionen o que se mueva el puntero por encima), agregar compatibilidad con el desplazamiento del puntero para facilitar las acciones de nivel de celda sin necesidad de seleccionar una celda y aclarar el estado de ejecución mediante la adición de un recuento de ejecuciones, y un botón animado para _detener la ejecución_. También hemos agregado métodos abreviados de teclado para _nuevo cuaderno_ (`Ctrl+Shift+N`), _ejecutar celda_ (`F5`), _nueva celda de código_ (`Ctrl+Shift+C`) y _nueva celda de texto_ (`Ctrl+Shift+T`). En un futuro intentaremos que todas las acciones clave se puedan iniciar mediante métodos abreviados, por lo que no dude en comentarnos qué echa en falta.
 
 Entre otras mejoras y correcciones se incluyen las siguientes:
-* La extensión de _SQL Server 2019 (versión preliminar)_ ahora solicita que se seleccione un directorio de instalación para las dependencias de Python. Además, ya no incluye Python en `.vsix file`, lo que reduce el tamaño total de la extensión. Las dependencias de Python son necesarias para admitir los kernels de Spark y Python3, por lo que es necesario instalar esta extensión para usarlos.
+* La extensión _SQL Server 2019 (versión preliminar)_ ahora solicita a los usuarios que seleccionen un directorio de instalación para las dependencias de Python. Además, ya no incluye Python en `.vsix file`, lo que reduce el tamaño total de la extensión. Las dependencias de Python admiten kernels de Spark y Python3.
 * Se ha agregado compatibilidad con el inicio de un nuevo cuaderno desde la línea de comandos. Si se inicia con los argumentos `--command=notebook.command.new --server=myservername`, debería abrirse un nuevo cuaderno y conectarse a este servidor.
-* Se han realizado correcciones en el rendimiento de los cuadernos con gran longitud de código en las celdas. Si las celdas de código superan las 250 líneas, se les agregará una barra de desplazamiento.
+* Se han realizado correcciones en el rendimiento de los cuadernos con gran longitud de código en las celdas. Si las celdas de código superan las 250 líneas, se agrega una barra de desplazamiento.
 * Se ha mejorado la compatibilidad con el archivo .ipynb. Ahora se admite la versión 3 o posterior. Tenga en cuenta que, al guardar los archivos, se actualizará a la versión 4 o superior.
 * Ahora que el visor de Notebook integrado es estable, se ha quitado la configuración de usuario `notebook.enabled`.
 * Ahora se admite el tema de contraste alto con una serie de correcciones en el diseño de objetos en este caso.

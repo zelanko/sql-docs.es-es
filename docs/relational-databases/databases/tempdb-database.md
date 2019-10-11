@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: f75bbb285ea99eba41accc76851db997c54d1027
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326116"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708254"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
 
@@ -219,7 +219,7 @@ Para obtener más información sobre la mejora del rendimiento en tempdb, consul
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Metadatos tempdb optimizados para memoria
 
-La contención de metadatos tempdb ha sido históricamente un cuello de botella en la escalabilidad para muchas cargas de trabajo que se ejecutan en SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nueva característica que forma parte de la familia de características [Base de datos en memoria](../in-memory-database.md), metadatos tempdb optimizados para memoria, que quita este cuello de botella de forma eficaz y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de tempdb. En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], las tablas del sistema implicadas en la administración de metadatos de la tabla temporal del sistema se pueden mover a tablas optimizadas para memoria no duraderas y sin bloqueos temporales.  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nueva característica que forma parte de la familia de características [Base de datos en memoria](../in-memory-database.md), metadatos tempdb optimizados para memoria, que quita este cuello de botella de forma eficaz y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de tempdb. En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], las tablas del sistema implicadas en la administración de metadatos de la tabla temporal se pueden mover a tablas optimizadas para memoria no duraderas y sin bloqueos temporales. Para poder participar en esta nueva característica, use el siguiente script:
+La contención de metadatos tempdb ha sido históricamente un cuello de botella en la escalabilidad para muchas cargas de trabajo que se ejecutan en SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nueva característica que forma parte de la familia de características [Base de datos en memoria](../in-memory-database.md), metadatos tempdb optimizados para memoria, que quita este cuello de botella de forma eficaz y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de tempdb. En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], las tablas del sistema implicadas en la administración de metadatos de la tabla temporal del sistema se pueden mover a tablas optimizadas para memoria no duraderas y sin bloqueos temporales. Para poder participar en esta nueva característica, use el siguiente script:
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -244,7 +244,8 @@ Esta implementación presenta algunas limitaciones que cabe tener en cuenta:
     COMMIT TRAN
     ```
 3. Las consultas en tablas optimizadas para memoria no admiten las sugerencias de bloqueo y aislamiento, por lo que las consultas en vistas de catálogo tempdb optimizadas para memoria no respetarán dichas sugerencias. Como sucede con otras vistas de catálogo del sistema en SQL Server, todas las transacciones realizadas en vistas del sistema estarán en aislamiento READ COMMITTED (o, en este caso, READ COMMITTED SNAPSHOT).
-4. Los [índices de almacén de columnas](../indexes/columnstore-indexes-overview.md) no se pueden crear en tablas temporales cuando los metadatos tempdb optimizados para memoria estén habilitados.
+4. Los [índices de almacén de columnas](../indexes/columnstore-indexes-overview.md) no se pueden crear en tablas temporales cuando los metadatos de TempDB optimizados para memoria están habilitados.
+5. Debido a la limitación en los índices de almacén de columnas, no se admite el uso del procedimiento almacenado del sistema sp_estimate_data_compression_savings con el parámetro de compresión de datos COLUMNSTORE o COLUMNSTORE_ARCHIVE cuando se habilitan los metadatos de TempDB optimizados para memoria.
 
 > [!NOTE] 
 > Estas limitaciones solo se aplican al hacer referencia a vistas del sistema tempdb. Si lo desea, puede crear una tabla temporal en la misma transacción al acceder a una tabla optimizada para memoria en una base de datos de usuario.

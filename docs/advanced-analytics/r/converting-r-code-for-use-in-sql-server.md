@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 536be600d319335173dbf112ec2d8f67cc7bf14b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 713c5cc8de5daecec77ff984a22f85b220ece2a2
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715745"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251345"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Conversión del código R para su ejecución en instancias de SQL Server (en la base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Sin embargo, el código podría requerir cambios sustanciales si se aplica algun
 
 + Use bibliotecas de R que tengan acceso a la red o que no se puedan instalar en SQL Server.
 + El código realiza llamadas independientes a orígenes de datos fuera de SQL Server, como hojas de cálculo de Excel, archivos de recursos compartidos y otras bases de datos. 
-+ Desea ejecutar el código en el *@script* parámetro de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) y también parametrizar el procedimiento almacenado.
++ Desea ejecutar el código en el parámetro *\@script* de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) y parametrizar también el procedimiento almacenado.
 + La solución original incluye varios pasos que pueden ser más eficaces en un entorno de producción si se ejecutan de forma independiente, como la preparación de datos o la ingeniería de características, y el entrenamiento del modelo, la puntuación o los informes.
 + Para mejorar el rendimiento, puede cambiar las bibliotecas, usar la ejecución en paralelo o descargar algún procesamiento para SQL Server. 
 
@@ -56,9 +56,9 @@ Sin embargo, el código podría requerir cambios sustanciales si se aplica algun
 
 + Haga una lista de comprobación de posibles problemas de tipos de datos.
 
-    SQL Server Machine Learning Services admiten todos los tipos de datos de R. Sin embargo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , admite una mayor variedad de tipos de datos que R. Por lo tanto, se realizan algunas conversiones implícitas de tipos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos al enviar datos a R y viceversa. Es posible que tenga que convertir explícitamente algunos datos. 
+    SQL Server Machine Learning Services admiten todos los tipos de datos de R. Sin embargo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite una mayor variedad de tipos de datos que R. Por lo tanto, se realizan algunas conversiones implícitas de tipos de datos al enviar datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a R y viceversa. Es posible que tenga que convertir explícitamente algunos datos. 
 
-    Se admiten valores NULL. Sin embargo, R utiliza `na` la construcción de datos para representar un valor que falta, que es similar a un valor null.
+    Se admiten valores NULL. Sin embargo, R utiliza la construcción de datos `na` para representar un valor que falta, que es similar a un valor null.
 
 + Considere la posibilidad de eliminar la dependencia de los datos que R no puede usar; por ejemplo, los tipos de datos ROWID y GUID de SQL Server no pueden ser consumidos por R y generar errores.
 
@@ -72,7 +72,7 @@ El modo en que cambie el código dependerá de si desea enviar el código de R d
 
 + Al ejecutar R en un procedimiento almacenado, puede pasar por varias entradas **escalares** . Para los parámetros que desee usar en la salida, agregue la palabra clave **Output** . 
 
-    Por ejemplo, la siguiente entrada `@model_name` escalar contiene el nombre del modelo, que también se genera en su propia columna en los resultados:
+    Por ejemplo, la entrada escalar siguiente `@model_name` contiene el nombre del modelo, que también se genera en su propia columna en los resultados:
 
     ```sql
     EXEC sp_execute_external_script @model_name="DefaultModel" OUTPUT, @language=N'R', @script=N'R code here'
@@ -92,7 +92,7 @@ El modo en que cambie el código dependerá de si desea enviar el código de R d
 
     Por ejemplo, para insertar los datos en una tabla, debe usar la cláusula **with Result Set** para especificar el esquema.
 
-    También se requiere el esquema de salida si el script de R usa `@parallel=1`el argumento. El motivo es que SQL Server puede crear varios procesos para ejecutar la consulta en paralelo, con los resultados recopilados al final. Por lo tanto, el esquema de salida debe estar preparado antes de que se puedan crear los procesos paralelos.
+    También se requiere el esquema de salida si el script de R usa el argumento `@parallel=1`. El motivo es que SQL Server puede crear varios procesos para ejecutar la consulta en paralelo, con los resultados recopilados al final. Por lo tanto, el esquema de salida debe estar preparado antes de que se puedan crear los procesos paralelos.
     
     En otros casos, puede omitir el esquema de resultados mediante la opción **con conjuntos de resultados sin definir**. Esta instrucción devuelve el DataSet desde el script de R sin asignar un nombre a las columnas ni especificar los tipos de datos de SQL.
 
@@ -106,7 +106,7 @@ El modo en que cambie el código dependerá de si desea enviar el código de R d
 
 + Ejecute todas las consultas de antemano y revise los planes de consulta de SQL Server para identificar las tareas que se pueden realizar en paralelo.
 
-    Si la consulta de entrada puede ejecutarse en paralelo `@parallel=1` , establézcala como parte de los argumentos de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). 
+    Si la consulta de entrada puede ejecutarse en paralelo, establezca `@parallel=1` como parte de los argumentos en [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). 
 
     Por lo general, el procesamiento en paralelo con este indicador es posible siempre que SQL Server pueda trabajar con tablas con particiones o distribuir una consulta entre varios procesos y agregar los resultados al final. Normalmente, el procesamiento en paralelo con este indicador no es posible si entrena modelos mediante algoritmos que requieren que se lean todos los datos o si necesita crear agregados.
 
@@ -159,7 +159,7 @@ El modo en que cambie el código dependerá de si desea enviar el código de R d
 
 + Ajuste las funciones de predicción y puntuación en procedimientos almacenados para el acceso directo a las aplicaciones.
 
-### <a name="other-resources"></a>Otros recursos:
+### <a name="other-resources"></a>Otros recursos
 
 Para ver ejemplos de cómo se puede implementar una solución de R en SQL Server, consulte estos ejemplos:
 

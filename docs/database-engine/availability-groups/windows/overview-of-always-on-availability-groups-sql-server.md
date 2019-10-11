@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 702b0423e54258f8afe49f5c7a39734d5570f8df
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742929"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974378"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>Información general de los grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68742929"
   
  Existen tres formas de conmutación por error: automática, manual y forzada (con posible pérdida de datos). La forma o formas de conmutación por error admitidas por una réplica secundaria dependen de su modo de disponibilidad y, para el modo de confirmación sincrónica, del modo de conmutación por error de la réplica principal y la réplica secundaria de destino, del siguiente modo.  
   
--   El modo de confirmación sincrónica admite dos formas de conmutación por error: *conmutación por error manual planeada* y *conmutación por error automática*, si la réplica secundaria de destino está sincronizada actualmente con el avt1. La compatibilidad con estas formas de conmutación por error depende de la *propiedad del modo de conmutación por error* en los asociados de conmutación por error. Si el modo de conmutación por error se establece en "manual” en la réplica principal o la réplica secundaria, solo se admite la conmutación por error manual para esa réplica secundaria. Si el modo de conmutación por error se establece en “automático” en las réplicas principal y secundaria, se admiten la conmutación por error manual y automática en esa réplica secundaria.  
+-   El modo de confirmación sincrónica admite dos formas de conmutación por error: *conmutación por error manual planeada* y *conmutación por error automática*, si la réplica secundaria de destino está sincronizada actualmente con la réplica principal. La compatibilidad con estas formas de conmutación por error depende de la *propiedad del modo de conmutación por error* en los asociados de conmutación por error. Si el modo de conmutación por error se establece en "manual” en la réplica principal o la réplica secundaria, solo se admite la conmutación por error manual para esa réplica secundaria. Si el modo de conmutación por error se establece en “automático” en las réplicas principal y secundaria, se admiten la conmutación por error manual y automática en esa réplica secundaria.  
   
     -   **Conmutación por error manual planeada** (sin pérdida de datos)  
   

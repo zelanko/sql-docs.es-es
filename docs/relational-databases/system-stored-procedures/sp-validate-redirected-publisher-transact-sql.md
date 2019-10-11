@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dc600aeabd1c988c0f9a6768da7fd0f0d280552b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119415"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252053"
 ---
-# <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
+# <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Comprueba que el host actual de la base de datos de publicación admite la replicación. Debe ejecutarse desde una base de datos de distribución. Este procedimiento se llama **sp_get_redirected_publisher**.  
+  Comprueba que el host actual de la base de datos de publicación admite la replicación. Debe ejecutarse desde una base de datos de distribución. **Sp_get_redirected_publisher**llama a este procedimiento.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,11 +40,11 @@ ms.locfileid: "68119415"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @original_publisher = ] 'original_publisher'` El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicó originalmente la base de datos. *original_publisher* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @original_publisher = ] 'original_publisher'` nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicó originalmente la base de datos. *original_publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'` El nombre de la base de datos que se está publicando. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` nombre de la base de datos que se está publicando. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'` Especifica el destino de la redirección cuando **sp_redirect_publisher** se llamó para el par publicador/base de datos. *redirected_publisher* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @redirected_publisher = ] 'redirected_publisher'` el destino de la redirección especificada cuando se llamó a **sp_redirect_publisher** para el par publicador/base de datos. *redirected_publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -53,14 +53,14 @@ ms.locfileid: "68119415"
  Ninguno.  
   
 ## <a name="remarks"></a>Comentarios  
- Si no existe ninguna entrada para el publicador y la base de datos de publicación, **sp_validate_redirected_publisher** devuelve null en el parámetro de salida *@redirected_publisher* . Si existe una entrada, esta se devuelve en el parámetro de salida en ambos casos: correcto y error.  
+ Si no existe ninguna entrada para el publicador y la base de datos de publicación, **sp_validate_redirected_publisher** devuelve null en el parámetro de salida *\@redirected_publisher*. Si existe una entrada, esta se devuelve en el parámetro de salida en ambos casos: correcto y error.  
   
- Si la validación es correcta, **sp_validate_redirected_publisher** devuelve una indicación de éxito.  
+ Si la validación se realiza correctamente, **sp_validate_redirected_publisher** devuelve una indicación de éxito.  
   
  Si la validación no se realiza correctamente, se producen errores que describen el motivo.  
   
 ## <a name="permissions"></a>Permisos  
- Autor de la llamada debe ser un miembro de la **sysadmin** rol fijo de servidor, el **db_owner** rol fijo de base de datos para la base de datos de distribución o un miembro de una lista de acceso de publicación para una publicación definida asociado a la base de datos del publicador.  
+ El autor de la llamada debe ser miembro del rol fijo de servidor **sysadmin** , del rol fijo de base de datos **db_owner** para la base de datos de distribución o de un miembro de una lista de acceso a la publicación para una publicación definida asociada a la base de datos del publicador.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

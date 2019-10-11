@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419611"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961791"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -51,7 +51,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 <table_option> ::=
     {
-        <cci_option> --default for Azure SQL Data Warehouse
+       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
@@ -63,8 +64,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )
 
-<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
-  
 <data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
@@ -165,7 +164,7 @@ Crea una o varias particiones de tabla. Estas particiones son segmentos de tabla
 
 ### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Opción de índice de almacén de columnas agrupado ordenado (versión preliminar para Azure SQL Data Warehouse)
 
-El índice de almacén de columnas agrupado es el valor predeterminado para crear tablas en Azure SQL Data Warehouse.  La especificación ORDER predeterminada es la de las claves COMPOUND.  La ordenación siempre será en orden ascendente. Si se especifica ninguna cláusula ORDER, el almacén de columnas no se ordenará. Debido al proceso de ordenación, una tabla con índice de almacén de columnas en clúster ordenado puede experimentar tiempos de carga de datos más largos que con índices de almacén de columnas en clúster no ordenados. Si necesita más espacio en tempdb al cargar datos, puede reducir la cantidad de datos por inserción.
+El índice de almacén de columnas agrupado (CCI) es el valor predeterminado para crear tablas en Azure SQL Data Warehouse.  Los datos de un CCI no se ordenan antes de comprimirse en segmentos de almacén de columnas.  Al crear un CCI con ORDER, los datos se ordenan antes de agregarse a los segmentos de índice y el rendimiento de las consultas se puede mejorar. Consulte [Optimización del rendimiento con el índice de almacén de columnas agrupado ordenado](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci) para obtener más información.  
 
 Los usuarios pueden consultar la columna column_store_order_ordinal en sys.index_columns para obtener las columnas en las que se ordena una tabla y la secuencia del orden.  
 
@@ -379,17 +378,6 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> C. Crear un índice de almacén de columnas agrupado ordenado
-
-En el ejemplo siguiente muestra cómo crear un índice de almacén de columnas agrupado ordenado. El índice está ordenado por el valor SHIPDATE.
-
-```sql
-CREATE TABLE Lineitem  
-WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
-AS  
-SELECT * FROM ext_Lineitem
-```
-
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>Ejemplos de tablas temporales
 
@@ -432,11 +420,22 @@ WITH
   )  
 ;  
 ```  
- 
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> E. Creación de un índice ordenado de almacén de columnas agrupado
+
+En el ejemplo siguiente muestra cómo crear un índice de almacén de columnas agrupado ordenado. El índice está ordenado por el valor SHIPDATE.
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
+
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>Ejemplos de distribución de la tabla
 
-### <a name="RoundRobin"></a> E. Creación de una tabla ROUND_ROBIN  
+### <a name="RoundRobin"></a> F. Creación de una tabla ROUND_ROBIN  
  En el ejemplo siguiente se crea una tabla ROUND_ROBIN con tres columnas y sin particiones. Los datos se reparten entre todas las distribuciones. La tabla se crea con un CLUSTERED COLUMNSTORE INDEX, lo que proporciona mejor rendimiento y compresión de datos que un montón o un índice de almacén de filas en clúster.  
   
 ```sql
@@ -449,7 +448,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> F. Creación de una tabla distribuida de hash
+### <a name="HashDistributed"></a> G. Creación de una tabla distribuida de hash
 
  En el ejemplo siguiente se crea la misma tabla que el ejemplo anterior. Pero para esta tabla, las filas se distribuyen (en la columna `id`) en lugar de propagarse de forma aleatoria como una tabla ROUND_ROBIN. La tabla se crea con un CLUSTERED COLUMNSTORE INDEX, lo que proporciona mejor rendimiento y compresión de datos que un montón o un índice de almacén de filas en clúster.  
   
@@ -467,7 +466,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> G. Creación de una carpeta replicada  
+### <a name="Replicated"></a> H. Creación de una carpeta replicada  
  En el ejemplo siguiente se crea una tabla replicada similar a los ejemplos anteriores. Las tablas replicadas se copian por completo en cada nodo de ejecución. Con esta copia en cada nodo de ejecución, se reduce el movimiento de datos para las consultas. Este ejemplo se crea con un ÍNDICE AGRUPADO, lo que proporciona una mejor compresión de datos que un montón. Un montón no puede contener filas suficientes para lograr una buena compresión del ÍNDICE DE ALMACÉN DE COLUMNAS AGRUPADO.  
   
 ```sql
@@ -487,7 +486,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Ejemplos de particiones de tabla
 
-###  <a name="PartitionedTable"></a> H. Creación de una tabla con particiones
+###  <a name="PartitionedTable"></a> I. Creación de una tabla con particiones
 
  En el ejemplo siguiente se crea la misma tabla que en el ejemplo A, con la adición de la partición RANGE LEFT en la columna `id`. Especifica cuatro valores de límite de partición, lo que da como resultado cinco particiones.  
   
@@ -522,7 +521,7 @@ WITH
 - Partición 4: 30 <= col < 40
 - Partición 5: 40 <= col  
   
-### <a name="OnePartition"></a> I. Creación de una tabla con particiones con una partición
+### <a name="OnePartition"></a> J. Creación de una tabla con particiones con una partición
 
  En el ejemplo siguiente se crea una tabla con particiones con una partición. No especifica ningún valor de límite, lo que da como resultado una partición.  
   
@@ -539,7 +538,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. Creación de una tabla con particiones de fecha
+### <a name="DatePartition"></a> K. Creación de una tabla con particiones de fecha
 
  En el ejemplo siguiente se crea una tabla denominada `myTable`, con la partición en una columna `date`. Al usar RANGE RIGHT y fechas para los valores de límite, en cada partición se coloca un mes de datos.  
   

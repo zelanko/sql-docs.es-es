@@ -18,12 +18,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c10566cca9c92dc54efdd4f0f4248b087b670ea
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: bc4ed369b51187a86e9436e6612522d6707a3d54
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122970"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682044"
 ---
 # <a name="compatibility-certification"></a>Certificación de compatibilidad
 
@@ -48,7 +48,12 @@ La posibilidad de afectar negativamente a la funcionalidad y el rendimiento son 
 -  En lo que se refiere al comportamiento de [!INCLUDE[tsql](../../includes/tsql-md.md)], cualquier cambio significa que una aplicación debe volver a certificarse para que sea correcta. Sin embargo, la configuración del [nivel de compatibilidad de la base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) proporciona compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo para la base de datos especificada, no para todo el servidor. Mantener el nivel de compatibilidad de la base de datos tal y como está garantiza que las consultas de las aplicaciones existentes sigan mostrando el mismo comportamiento antes y después de una actualización de [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Para obtener más información sobre los niveles de compatibilidad y comportamiento de [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [Usar el nivel de compatibilidad para la compatibilidad con versiones anteriores](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).
 
 -  En lo que se refiere al rendimiento, dado que las mejoras en el optimizador de consultas se introducen con cada versión, se podrían esperar diferencias en los planes de consulta entre distintas versiones de [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Las diferencias de los planes de consulta en el ámbito de una actualización normalmente se traducen en un riesgo cuando es posible que algunos cambios puedan ser perjudiciales para determinada consulta o carga de trabajo. A su vez, este riesgo es una motivación para la recertificación, que puede retrasar las actualizaciones y plantear problemas relativos al ciclo de vida y el soporte técnico. 
-   La mitigación de los riesgos de actualización es el motivo por el que las mejoras del optimizador de consultas se canalizan en el nivel de compatibilidad predeterminado de una nueva versión. La certificación de compatibilidad incluye la **protección de las formas de los planes de consulta**: el principio de mantener el nivel de compatibilidad de la base de datos tal cual inmediatamente después de una actualización de [!INCLUDE[ssde_md](../../includes/ssde_md.md)] significa que el modelo de optimización de consultas utilizado para crear planes de consulta en la nueva versión es el mismo que antes de la actualización. Para obtener más información sobre la protección de las formas de los planes de consulta, vea [Usar el nivel de compatibilidad para la compatibilidad con versiones anteriores](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).
+   La mitigación de los riesgos de actualización es el motivo por el que las mejoras del optimizador de consultas se canalizan en el nivel de compatibilidad predeterminado de una nueva versión. La certificación de compatibilidad incluye la **protección de las formas de los planes de consulta**: el principio de mantener el nivel de compatibilidad de la base de datos tal cual inmediatamente después de una actualización de [!INCLUDE[ssde_md](../../includes/ssde_md.md)] significa que el modelo de optimización de consultas usado para crear planes de consulta en la nueva versión es el mismo que antes de la actualización y que la forma del plan de consulta no debe cambiar. 
+   
+   > [!NOTE]
+   > **La forma del plan de consulta** hace referencia a la representación visual de los distintos operadores que componen un plan de consulta. Esto incluye operadores como búsquedas, exámenes, combinaciones y ordenaciones, así como las conexiones entre ellos que indican el flujo de datos y el orden de las operaciones. El optimizador de consultas determina la forma del plan de consulta. Para más información, vea la [Guía de arquitectura de procesamiento de consulta](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements).
+   
+   Para más información, vea [Uso de niveles de compatibilidad para la compatibilidad con versiones anteriores](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#using-compatibility-level-for-backward-compatibility).
    
 Siempre y cuando la aplicación no necesite aprovechar las mejoras que solo están disponibles en un nivel de compatibilidad de base de datos superior, es un enfoque válido para actualizar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y mantener el nivel de compatibilidad de base de datos anterior, sin necesidad de volver a certificar una aplicación. Para obtener más información, consulte [Actualizaciones del motor de base de datos y niveles de compatibilidad](#compatibility-levels-and-database-engine-upgrades), más adelante en este artículo.
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045644"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687368"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "68045644"
 |Columnas en GROUP BY y ORDER BY||Limitado solo por el número de bytes||  
 |Columnas o expresiones en una instrucción GROUP BY WITH CUBE o WITH ROLLUP||10||  
 |Columnas por clave de índice||32|Si la tabla contiene uno o varios índices XML, la clave de agrupación en clústeres de la tabla de usuario estará limitada a 31 columnas, ya que la columna XML se agrega a la clave de agrupación en clústeres del índice XML principal. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede incluir columnas sin clave en un índice no agrupado para evitar la limitación de un máximo de 32 columnas de clave. Para más información, consulte [Create Indexes with Included Columns](../relational-databases/indexes/create-indexes-with-included-columns.md).|  
-|Columnas por clave externa||32||  
-|Columnas por clave principal||32||  
-|Columnas por tabla no ancha||1,024||  
-|Columnas por tabla ancha||30,000||  
-|Columnas por instrucción SELECT||4,096||  
-|Columnas por instrucción INSERT||4,096||  
+|Columnas por clave externa o clave principal||32||  
+|Columnas por instrucción `INSERT`||4,096||  
+|Columnas por instrucción `SELECT`||4,096||  
+|Columnas por tabla||1,024|Las tablas que contienen conjuntos de columnas dispersas incluyen hasta 30 000 columnas. Vea [Conjuntos de columnas dispersas](../relational-databases/tables/use-column-sets.md).|  
+|Columnas por instrucción `UPDATE`||4,096|En los [conjuntos de columnas dispersas](../relational-databases/tables/use-column-sets.md) se aplican distintos límites.|  
+|Columnas por vista||1,024||  
 |Conexiones por cliente||Valor máximo de conexiones configuradas||  
 |Tamaño de la base de datos||524 272 terabytes||  
 |Bases de datos por instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
@@ -99,7 +99,6 @@ ms.locfileid: "68045644"
 |Estadísticas en columnas no indizadas||30,000|| 
 |Tablas por instrucción SELECT||Limitado solo por los recursos disponibles||  
 |Desencadenadores por tabla||Limitado por el número de objetos de la base de datos|Los objetos de base de datos incluyen objetos como tablas, vistas, procedimientos almacenados, funciones definidas por el usuario, desencadenadores, reglas, valores predeterminados y restricciones. La suma de todos estos objetos en una base de datos no puede superar 2.147.483.647.|  
-|Columnas por instrucción UPDATE (tablas anchas)||4096||  
 |Conexiones de usuario||32,767||  
 |índices XML||249||  
   

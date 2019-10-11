@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7af80b51c651bd98fd2ac143ac0631901828b6fb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771280"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251245"
 ---
-# <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
+# <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Determina si se va a llamar a un procedimiento almacenado o un desencadenador definido por el usuario en el contexto de un desencadenador de replicación que se utiliza para suscripciones de actualización inmediata. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación o en el suscriptor de la base de datos de suscripciones.  
@@ -39,10 +39,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **[@tabid =** ] '*tabid*'  
+ [ **@tabid =** ] '*tabid*'  
  Es el identificador de objeto de la tabla en la que se comprueba si hay desencadenadores de actualización inmediata. *tabid* es de **tipo int** y no tiene ningún valor predeterminado.  
   
- salida de [ **@trigger_op =** ] '*trigger_output_parameters*'  
+ [ **@trigger_op =** ] salida '*trigger_output_parameters*'  
  Especifica si el parámetro de salida va a devolver el tipo de desencadenador desde el que se le llama. *trigger_output_parameters* es **Char (10)** y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
@@ -52,10 +52,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**Resguardo**|Desencadenador DELETE.|  
 |NULL (predeterminado)||  
   
-`[ @fonpublisher = ] fonpublisher`Especifica la ubicación donde se ejecuta el procedimiento almacenado. *fonpublisher* es de **bit**y su valor predeterminado es 0. Si es 0, la ejecución está en el suscriptor y si es 1, la ejecución está en el publicador.  
+`[ @fonpublisher = ] fonpublisher` especifica la ubicación donde se ejecuta el procedimiento almacenado. *fonpublisher* es de **bit**y su valor predeterminado es 0. Si es 0, la ejecución está en el suscriptor y si es 1, la ejecución está en el publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- El valor 0 indica que el procedimiento almacenado no se llama en el contexto de un desencadenador de actualización inmediata. 1 indica que se llama en el contexto de un desencadenador de actualización inmediata y es el tipo de desencadenador que se devuelve *@trigger_op* en.  
+ El valor 0 indica que el procedimiento almacenado no se llama en el contexto de un desencadenador de actualización inmediata. 1 indica que se llama en el contexto de un desencadenador de actualización inmediata y es el tipo de desencadenador que se devuelve en *\@trigger_op*.  
   
 ## <a name="remarks"></a>Comentarios  
  **sp_check_for_sync_trigger** se utiliza en la replicación de instantáneas y en la replicación transaccional.  

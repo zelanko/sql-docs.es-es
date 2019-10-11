@@ -4,16 +4,16 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5b75a57e233882540208a428e94f6aca139cd946
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: e71fc7c603ad5ca975a3e55ee1bbd41601b85387
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307620"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816773"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurar PolyBase para acceder a datos externos en SQL Server
 
@@ -39,42 +39,42 @@ En esta sección se utilizan los siguientes comandos de Transact-SQL:
 - [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
 - [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1.  Cree una credencial de ámbito de base de datos para acceder al origen MongoDB.
+1. Cree una credencial de ámbito de base de datos para acceder al origen de SQL Server. En el ejemplo siguiente se crea una credencial para el origen de datos externo con `IDENTITY = 'username'` y `SECRET = 'password'`.
 
     ```sql
-    /*  specify credentials to external data source
-    *  IDENTITY: user name for external source.  
-    *  SECRET: password for external source.
-    */
-    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials   
-    WITH IDENTITY = 'username', Secret = 'password';
+    CREATE DATABASE SCOPED CREDENTIAL SqlServerCredentials
+    WITH IDENTITY = 'username', SECRET = 'password';
     ```
 
-1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). En el ejemplo siguiente:
+
+   - Se crea un origen de datos externo denominado `SQLServerInstance`.
+   - Se identifica el origen de datos externo (`LOCATION = '<vendor>://<server>[:<port>]'`). En el ejemplo, se apunta a una instancia predeterminada de SQL Server.
+   - Se identifica si el cálculo se debe insertar en el origen (`PUSHDOWN`). `PUSHDOWN` es `ON` de forma predeterminada.
+
+   Por último, en el ejemplo se usa la credencial creada antes.
 
     ```sql
-    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
-    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-    *  CREDENTIAL: the database scoped credential, created above.
-    */
     CREATE EXTERNAL DATA SOURCE SQLServerInstance
-    WITH ( LOCATION = 'sqlserver://SqlServer',
-    -- PUSHDOWN = ON | OFF,
-    CREDENTIAL = SQLServerCredentials);
+        WITH ( LOCATION = 'sqlserver://SqlServer',
+        PUSHDOWN = ON,
+        CREDENTIAL = SQLServerCredentials);
     ```
 
-1. **Opcional:** Cree estadísticas en una tabla externa.
+1. Opcionalmente, cree estadísticas en una tabla externa.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+  Para obtener un rendimiento óptimo de las consultas, cree estadísticas en las columnas de tabla externa, sobre todo las que se usan para combinaciones, filtros y agregados.
 
-    We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
-
-    ```sql
-    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;
-    ```
+  ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY)
+    WITH FULLSCAN;
+  ```
 
 >[!IMPORTANT] 
 >Una vez que se haya creado un origen de datos externos, se puede usar el comando [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) para crear una tabla consultable a través de ese origen.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 
 ## <a name="sql-server-connector-compatible-types"></a>Tipos compatibles con el Conector de SQL Server
 

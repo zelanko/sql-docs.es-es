@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 275ac725c0bde283fa45feccd4479c95cc71126b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: b707b2b31c15c565353f0ff581ca1f4d7308a25b
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296396"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951941"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Elegir un origen de datos (Asistente para importación y exportación de SQL Server)
 
@@ -28,7 +28,7 @@ ms.locfileid: "71296396"
 Para más información sobre los orígenes de datos que puede usar, vea [¿Qué orígenes de datos y destinos puedo usar?](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)
 
 > [!NOTE]
-> El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza SQL Server Integration Services (SSIS). Por lo tanto, las mismas limitaciones que se aplican a SSIS, también se aplican al asistente.  Por ejemplo, las columnas ErrorCode y ErrorColumn, que se agregan de forma predeterminada, como se describe en [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).
+> El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa SQL Server Integration Services (SSIS). Por lo tanto, las mismas limitaciones que se aplican a SSIS, también se aplican al asistente.  Por ejemplo, las columnas ErrorCode y ErrorColumn, que se agregan de forma predeterminada, como se describe en [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md).
 
 ## <a name="screen-shot-of-the-choose-a-data-source-page"></a>Captura de pantalla de la página Seleccionar un origen de datos 
 En la imagen siguiente, se muestra la primera parte de la página **Seleccionar un origen de datos** del asistente. El resto de la página tiene un número variable de opciones que dependen del origen de datos que elija aquí.

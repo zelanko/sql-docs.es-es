@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 60dbabcadaf5108572eaba6361fab28eaf0f49b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bef63c267bdf5b7d0c2603ed7a93af329d1992c
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046140"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251972"
 ---
-# <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
+# <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Agrega un evento de auditoría definido por el usuario a la **USER_DEFINED_AUDIT_GROUP**. Si **USER_DEFINED_AUDIT_GROUP** no está habilitado, **sp_audit_write** se omite.  
+  Agrega un evento de auditoría definido por el usuario a **USER_DEFINED_AUDIT_GROUP**. Si **USER_DEFINED_AUDIT_GROUP** no está habilitado, **sp_audit_write** se omite.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Argumentos  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Un parámetro definido por el usuario y registrado en el **user_defined_event_id** columna del registro de auditoría. *@user_defined_event_id* es de tipo **smallint**.  
+ Parámetro definido por el usuario y registrado en la columna **user_defined_event_id** del registro de auditoría. *\@user_defined_event_id es de* tipo **smallint**.  
   
  `[ @succeeded = ] succeeded`  
- Parámetro pasado por el usuario para indicar si el evento se realizó correctamente o no. Aparece en la columna "succeeded" del registro de auditoría. `@succeeded` es **bits**.  
+ Parámetro pasado por el usuario para indicar si el evento se realizó correctamente o no. Aparece en la columna "succeeded" del registro de auditoría. `@succeeded` es **bit**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
  Es el texto definido por el usuario y registrado en la nueva columna user_defined_event_id column del registro de auditoría. `@user_defined_information` es **nvarchar (4000)** .  
@@ -56,10 +56,10 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  Los errores los producen parámetros de entrada incorrectos o errores al escribir en el registro de auditoría de destino.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando el **USER_DEFINED_AUDIT_GROUP** se agrega a una especificación de auditoría de servidor o una especificación de auditoría de base de datos, el evento desencadenado por **sp_audit_write** se incluirán en el registro de auditoría.  
+ Cuando se agrega **USER_DEFINED_AUDIT_GROUP** a una especificación de auditoría de servidor o a una especificación de auditoría de base de datos, el evento desencadenado por **sp_audit_write** se incluirá en el registro de auditoría.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **pública** rol de base de datos.  
+ Requiere la pertenencia al rol de base de datos **Public** .  
   
 ## <a name="examples"></a>Ejemplos  
   

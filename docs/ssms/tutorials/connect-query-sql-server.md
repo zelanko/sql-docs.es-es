@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 105bcea172a91496c664578befc33f022b5c8d9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256715"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708331"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Tutorial: Conexión a una instancia de SQL Server y realización de consultas con SQL Server Management Studio (SSMS)
 
@@ -109,9 +109,10 @@ En esta sección creará una tabla en la base de datos TutorialDB recién creada
    ![Cambiar la base de datos](media/connect-query-sql-server/changedb.png)
 
 2. Pegue el siguiente fragmento de código de T-SQL en la ventana de consulta, selecciónelo y, después, seleccione **Ejecutar** (o presione F5 en el teclado).  
-   Puede reemplazar el texto existente de la ventana de consulta o anexarlo al final. Si quiere ejecutarlo todo en la ventana de consulta, seleccione **Ejecutar**. Si quiere ejecutar una parte del texto, resalte esa parte y seleccione **Ejecutar**.  
+   Puede reemplazar el texto existente de la ventana de consulta o anexarlo al final. Si quiere ejecutarlo todo en la ventana de consulta, seleccione **Ejecutar**. Si ha anexado el texto, querrá ejecutar solo la parte del texto, así que resáltela y, después, seleccione **Ejecutar**.  
   
    ```sql
+   USE [TutorialDB]
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL

@@ -1,5 +1,5 @@
 ---
-title: Cambiar el nombre de los inicios de sesión que coincidan con nombres de rol fijo de servidor | Microsoft Docs
+title: Cambiar el nombre de inicios de sesión que coinciden con nombres de roles fijos de servidor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d983f514f7cc0185021de40f153d78fd6e4dd112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092878"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278216"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Cambiar el nombre de los inicios de sesión que coinciden con nombres de roles fijos de servidor
   El Asesor de actualizaciones ha detectado uno o más nombres de inicio de sesión definidos por el usuario que coinciden con los nombres de los roles fijos del servidor. Los nombres de roles fijos de servidor están reservados. Cambie el nombre del inicio de sesión antes de actualizar.  
@@ -60,10 +60,10 @@ ms.locfileid: "66092878"
   
 2.  Elimine los inicios de sesión.  
   
-3.  Use la **sp_addlogin** procedimiento del sistema para crear nuevos inicios de sesión. Especifique el SID devuelto en el paso 1 en el **@sid** parámetro para cada inicio de sesión correspondiente.  
+3.  Utilice el procedimiento del sistema **sp_addlogin** para crear nuevos inicios de sesión. Especifique el SID devuelto en el paso 1 en el parámetro **\@sid** para cada inicio de sesión correspondiente.  
   
 ## <a name="see-also"></a>Vea también  
- [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
+ [Motor de base de datos problemas de actualización](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Asesor &#91;de actualizaciones de SQL Server 2014 nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -20,12 +20,12 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 822f4fea2764c6420da731845e8defc05807d3cf
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261659"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289352"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,9 +82,8 @@ ms.locfileid: "72261659"
  Cuando se señala a un trabajador que espera en un evento, el trabajador se coloca al principio de la cola de ejecutables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que suceda esto 1.000 veces en una fila; después, el trabajador se coloca al final de la cola. Mover un trabajador al final de la cola tiene algunas implicaciones sobre el rendimiento.  
   
 ## <a name="permissions"></a>Permisos
-
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere @no__t permiso-1.   
-En los niveles Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos. En los niveles estándar y básico de @no__t 0, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En los niveles Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos. En los niveles estándar y básico de @no__t 0, requiere la pertenencia al rol `Server Admin` o una cuenta @no__t 2.   
 
 ## <a name="examples"></a>Ejemplos  
  Puede utilizar la siguiente consulta para saber cuánto tiempo se ha estado ejecutando un trabajador en un estado SUSPENDED o RUNNABLE.  
@@ -137,6 +136,6 @@ SELECT
  En la salida, si `w_runnable` y `w_suspended` son iguales, indica el tiempo que el trabajador está en el estado SUSPENDED. De lo contrario, `w_runnable` representa el tiempo que ha pasado el trabajador en el estado RUNNABLE. En la salida, la sesión `52` está en estado `SUSPENDED` durante `35,094` milisegundos.  
   
 ## <a name="see-also"></a>Vea también  
- [SQL Server &#40;vistas de administración dinámica relacionadas con el sistema operativo&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
- [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)      (Guía de arquitectura de procesamiento de consultas)  
- [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md)    
+[SQL Server &#40;vistas de administración dinámica relacionadas con el sistema operativo&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)      (Guía de arquitectura de procesamiento de consultas)  
+[Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md)    

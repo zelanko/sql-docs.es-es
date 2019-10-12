@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b7be2bb99a92794ed8c1b5971edca47522c2552
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941934"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278115"
 ---
-# <a name="sppolybasejoingroup-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
+# <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Agrega una instancia de SQL Server como un nodo de proceso a un grupo de PolyBase para el cálculo de escalabilidad horizontal.  
+  Agrega una instancia de SQL Server como un nodo de proceso a un grupo de polybase para el cálculo de escalado horizontal.  
   
- La instancia de SQL Server debe tener la [PolyBase](../../relational-databases/polybase/polybase-guide.md) característica instalada.  PolyBase permite la integración de orígenes de datos que no son de SQL Server, como Hadoop y Azure storage blob. Vea también [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+ La instancia de SQL Server debe tener instalada la característica [polybase](../../relational-databases/polybase/polybase-guide.md) .  Polybase permite la integración de orígenes de datos que no son de SQL Server, como Hadoop y Azure BLOB Storage. Vea también [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,14 +40,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *@head_node_address* = N'*head_node_address*'  
- El nombre del equipo que hospeda el nodo principal de SQL Server del grupo de escalado horizontal de PolyBase. *@head_node_address* es nvarchar (255).  
+ *\@head_node_address* = N '*head_node_address*'  
+ Nombre del equipo que hospeda el SQL Server nodo principal del grupo de escalado horizontal de polybase. *\@head_node_address* es nvarchar (255).  
   
- *@dms_control_channel_port* = dms_control_channel_port  
- El puerto donde se ejecuta el canal de control para el nodo principal de servicio de movimiento de datos de PolyBase. *@dms_control_channel_port* es un __int16 sin signo. El valor predeterminado es **16450**.  
+ *\@dms_control_channel_port* = dms_control_channel_port  
+ Puerto en el que se está ejecutando el canal de control del nodo principal Movimiento de datos de PolyBase servicio. *\@dms_control_channel_port* es un __int16 sin signo. El valor predeterminado es **16450**.  
   
- *@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- El nombre de la instancia de SQL Server de nodo principal en el grupo de escalabilidad horizontal de PolyBase. *@head_node_sql_server_instance_name* es nvarchar(16).  
+ *\@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ Nombre del nodo principal SQL Server instancia en el grupo de escalado horizontal de polybase. *\@head_node_sql_server_instance_name* es nvarchar (16).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -56,10 +56,10 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
  Requiere el permiso CONTROL SERVER.  
   
 ## <a name="remarks"></a>Comentarios  
- Después de ejecutar el procedimiento almacenado, apagar el motor de PolyBase y reinicie el servicio de movimiento de datos de PolyBase en el equipo. Para comprobar la ejecute la DMV siguiente en el nodo principal: **sys.dm_exec_compute_nodes**.  
+ Después de ejecutar el procedimiento almacenado, apague el motor de polybase y reinicie el servicio Movimiento de datos de PolyBase en el equipo. Para comprobar, ejecute la siguiente DMV en el nodo principal: **Sys. DM _ _exec_compute_nodes**.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo se une el equipo actual como un nodo de proceso a un grupo de PolyBase.  El nombre del nodo principal es **HST01** y el nombre de la instancia de SQL Server en el nodo principal es **MSSQLSERVER**.  
+ En el ejemplo se une el equipo actual como un nodo de proceso a un grupo de polybase.  El nombre del nodo principal es **HST01** y el nombre de la instancia de SQL Server en el nodo principal es **MSSQLSERVER**.  
   
 ```  
 EXEC sp_polybase_join_group N'HST01', 16450, N'MSSQLSERVER'   

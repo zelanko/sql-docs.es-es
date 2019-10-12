@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b1450dc8304c2e8d3db5a6fa8b2153f951e70bde
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98796b89486ce59b289c83a74e5c466a6522b557
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083614"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278321"
 ---
-# <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
+# <a name="syssp_rda_set_query_mode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Especifica si las consultas en la base de datos habilitadas para Stretch actual y sus tablas devuelven datos locales y remotos (el valor predeterminado) o únicamente los datos locales.  
+  Especifica si las consultas realizadas en la base de datos habilitada para Stretch actual y en sus tablas devuelven datos locales y remotos (el valor predeterminado) o solo los datos locales.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,38 +39,38 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @mode = ] *@mode*  
- Es uno de los siguientes valores.  
+ [@mode =] *@no__t 2mode*  
+ Es uno de los valores siguientes.  
   
--   **DESHABILITADO** producirá un error en todas las consultas en tablas habilitadas para Stretch.  
+-   **Deshabilitado** Se produce un error en todas las consultas en tablas habilitadas para Stretch.  
   
--   **LOCAL_ONLY** las consultas en tablas habilitadas para Stretch devuelven únicamente los datos locales.  
+-   **LOCAL_ONLY** Las consultas realizadas en tablas habilitadas para Stretch solo devuelven datos locales.  
   
--   **LOCAL_AND_REMOTE** las consultas en tablas habilitadas para Stretch devuelven datos locales y remotos. Éste es el comportamiento predeterminado.  
+-   **LOCAL_AND_REMOTE** Las consultas en tablas habilitadas para Stretch devuelven datos locales y remotos. Éste es el comportamiento predeterminado.  
   
- [ @force = ]  *@force*  
- Es un valor de bits opcional que puede establecer en 1 si desea cambiar el modo de consulta sin validación.  
+ [@force =]  *@no__t 2force*  
+ Es un valor de bit opcional que se puede establecer en 1 si se desea cambiar el modo de consulta sin validación.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o > 0 (error)  
   
 ## <a name="permissions"></a>Permisos  
- Se requieren permisos db_owner.  
+ Requiere permisos db_owner.  
   
 ## <a name="remarks"></a>Comentarios  
- Los siguientes procedimientos almacenados extendidos también establecer el modo de consulta para una base de datos habilitadas para Stretch.  
+ Los siguientes procedimientos almacenados extendidos también establecen el modo de consulta para una base de datos habilitada para Stretch.  
   
 -   **sp_rda_deauthorize_db**  
   
-     Después de ejecutar **sp_rda_deauthorize_db** , producirá un error en todas las consultas en tablas y bases de datos habilitadas para Stretch. Es decir, el modo de consulta está establecido en deshabilitado. Para salir de este modo, realice una de las siguientes acciones.  
+     Después de ejecutar **sp_rda_deauthorize_db** , se producirá un error en todas las consultas de bases de datos y tablas habilitadas para Stretch. Es decir, el modo de consulta se establece en Disabled. Para salir de este modo, realice una de las siguientes acciones.  
   
-    -   Ejecute [sys.sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectarse a la base de datos de Azure remota. Esta operación restablece automáticamente el modo de consulta LOCAL_AND_REMOTE, que es el comportamiento predeterminado para Stretch Database. Es decir, las consultas devuelven los resultados de datos locales y remotos.  
+    -   Ejecute la [instrucción de &#40;Transact-SQL&#41; de sys. sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectarse a la base de datos remota de Azure. Esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado de Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
   
-    -   Ejecute [sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) con el argumento LOCAL_ONLY para permitir que las consultas continúan ejecutándose con solo los datos locales.  
+    -   Ejecute [Sys. sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) con el argumento LOCAL_ONLY para permitir que las consultas sigan ejecutándose solo con datos locales.  
   
 -   **sp_rda_reauthorize_db**  
   
-     Al ejecutar [sys.sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectarse a la base de datos de Azure remota, esta operación restablece automáticamente el modo de consulta LOCAL_AND_REMOTE, que es el comportamiento predeterminado para Stretch Database. Es decir, las consultas devuelven los resultados de datos locales y remotos.  
+     Al ejecutar el [sp_rda_reauthorize_db &#40;de Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectarse a la base de datos remota de Azure, esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado de stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
   
 ## <a name="see-also"></a>Vea también  
  [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   

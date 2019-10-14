@@ -7,13 +7,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 04/26/2019
-ms.openlocfilehash: 86f3d1834212ff17125abc9a124eb10d3f7e9be5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 10/09/2019
+ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264979"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239379"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)
 
@@ -105,6 +105,13 @@ Puede especificar una cuenta de usuario de Windows para la conexión del servido
 #### <a name="using-a-sql-server-login"></a>Usar un inicio de sesión de SQL Server
 
 Puede especificar un solo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse a la base de datos del servidor de informes. Si utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la base de datos del servidor de informes se encuentra en un equipo remoto, utilice IPSEC para contribuir a proteger la transmisión de datos entre los servidores. Si utiliza un inicio de sesión de base de datos, debe actualizar la conexión a la base de datos del servidor de informes cada vez que cambie la contraseña o la cuenta.  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Cuando se usa una Instancia administrada de Azure SQL para hospedar bases de datos de Reporting Services 2019, la compatibilidad se limita al uso de SQL Server credenciales de inicio de sesión para la conexión.
+
+::: moniker-end
 
 ### <a name="database-permissions"></a>Permisos para la base de datos
 

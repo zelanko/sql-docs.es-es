@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 560e752e5559b0e79a4f123443d200ca70532ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63221966"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041058"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Instalar SQL Server con la configuración de estado deseado de PowerShell
 
@@ -28,7 +28,7 @@ ms.locfileid: "63221966"
 
 Lo peor es que ya se tambalea su confianza en la totalidad de la instalación. "¿Qué más he olvidado?" podría preguntarse.
 
-Obtenga información sobre [Desired State Configuration (DSC) de PowerShell](https://docs.microsoft.com/powershell/dsc/overview). Con DSC, se crea una plantilla de configuración que se puede volver a usar en cientos y miles de servidores. En función de la compilación, es posible que tenga que ajustar algunos de los parámetros de configuración. Pero eso no es un problema importante porque puede conservar toda la configuración estándar. Elimina la posibilidad de que se olvide de escribir un parámetro importante.
+Obtenga información sobre [Desired State Configuration (DSC) de PowerShell](/powershell/scripting/dsc/overview/overview). Con DSC, se crea una plantilla de configuración que se puede volver a usar en cientos y miles de servidores. En función de la compilación, es posible que tenga que ajustar algunos de los parámetros de configuración. Pero eso no es un problema importante porque puede conservar toda la configuración estándar. Elimina la posibilidad de que se olvide de escribir un parámetro importante.
 
 En este artículo se analiza la instalación inicial de una instancia independiente de SQL Server 2017 en Windows Server 2016 mediante el recurso de DSC **SqlServerDsc**. Tener conocimientos previos de DSC es útil ya que no se describirá el funcionamiento de DSC.
 
@@ -213,7 +213,7 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 
 ## <a name="see-also"></a>Vea también
 
-[Información general sobre la configuración de estado deseado de Windows PowerShell](https://docs.microsoft.com/powershell/dsc/overview)
+[Información general sobre la configuración de estado deseado de Windows PowerShell](/powershell/scripting/dsc/overview/overview)
 
 [Instalación de SQL Server desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 

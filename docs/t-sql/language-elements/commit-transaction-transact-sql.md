@@ -29,12 +29,12 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dccb751fa7ea88a0dfa6d47c6a1f4058871f48e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ef49eaecad32c4564fb75d05df1a20ff12c15f3
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140279"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278104"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ COMMIT [ TRAN | TRANSACTION ]
  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo omite. *transaction_name* especifica un nombre de transacción asignado por una instrucción BEGIN TRANSACTION anterior. *transaction_name* debe cumplir con las reglas para identificadores, pero no puede superar los 32 caracteres. *transaction_name* indica a los programadores a qué instrucción BEGIN TRANSACTION anidada está asociada la instrucción COMMIT TRANSACTION.  
   
- *@tran_name_variable*  
+ *\@tran_name_variable*  
  **SE APLICA A:** SQL Server y Azure SQL Database  
  
 Se trata del nombre de una variable definida por el usuario que contiene un nombre de transacción válido. La variable se debe declarar con un tipo de datos char, varchar, nchar o nvarchar. Si se pasan más de 32 caracteres a la variable, solo se usarán 32 caracteres; el resto de los caracteres se truncarán.  

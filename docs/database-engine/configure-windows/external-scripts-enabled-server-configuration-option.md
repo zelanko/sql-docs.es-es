@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 424268eb32eb3430e2e4eb8450abfb3471f51701
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3f47352cc82ac831ebcd64548baa24423490094f
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011757"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006048"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Opción de configuración del servidor external scripts enabled
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Debe habilitar la opción de script externo habilitado antes de poder ejecutar u
 
     Instale la característica **Extensiones de análisis avanzado** durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para habilitar la ejecución de los scripts de R. El lenguaje R se instala de manera predeterminada.
 
-+ Para [[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
++ Para [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
 
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] usa la misma arquitectura que en SQL Server 2016, pero es compatible con el lenguaje Python.
 

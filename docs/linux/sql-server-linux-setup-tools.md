@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: c10b97116cfde197a332d873fba5a807a2eb4ce9
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70910794"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041248"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalación de las herramientas de línea de comandos sqlcmd y bcp de SQL Server en Linux
 
@@ -219,7 +219,7 @@ Si [ejecuta SQL Server en un contenedor de Docker](quickstart-install-connect-do
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 
-1. **Mueva los paquetes descargados a la máquina Linux**. Si ha usado otra máquina para descargar los paquetes, una manera de trasladarlos a la máquina Linux es con el comando **scp**.
+1. **Mueva los paquetes descargados a la máquina Linux**. Si ha usado otro equipo para descargar los paquetes, una manera de trasladarlos al equipo Linux es con el comando **scp**.
 
 1. **Instale los paquetes**: Instale los paquetes **mssql-toolds** y **msodbc**. Si obtiene algún error de dependencia, ignórelo hasta el siguiente paso.
 

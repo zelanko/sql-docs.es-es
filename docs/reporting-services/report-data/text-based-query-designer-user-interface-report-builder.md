@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 318f1bae413dad632f5cd93ebefde0cc7cfd4d29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd76ce7d20349301d3bfeb70b4ed1c24325cbdc
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500121"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251207"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
   Use el diseñador de consultas basado en texto para especificar una consulta mediante el lenguaje de consulta admitido por el origen de datos, para ejecutar la consulta y para ver los resultados en tiempo de diseño. Puede especificar varias sintaxis de consulta, comandos o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] para extensiones de procesamiento de datos personalizadas, y consultas que se especifican como expresiones. Dado que el generador de consultas basado en texto no procesa previamente la consulta y puede acomodar todo tipo de sintaxis de consulta, es la herramienta de generación de consultas predeterminada para varios tipos de orígenes de datos.  
@@ -87,8 +87,8 @@ uspGetWhereUsedProductID
   
 |||  
 |-|-|  
-|*@StartProductID*|820|  
-|*@CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@CheckDate*|20010115|  
   
  Para la fecha especificada, el conjunto de resultados muestra una lista de 13 identificadores del producto que utilizaron el número de componente especificado.  
   

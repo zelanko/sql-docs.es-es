@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: a22cf1c2da261805309c8ac223a8535afbcd34d1
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: e7a3d7b7f67abae251041ff2b702d93b60228958
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152736"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173147"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Notas de la versión de Microsoft ODBC Driver para SQL Server en Linux y macOS
 
@@ -35,6 +35,19 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## <a name="1742-october-2019"></a>17.4.2, octubre de 2019
+
+| Característica agregada | Detalles |
+| :------------ | :------ |
+| Compatibilidad con puntos de conexión de Azure Key Vault adicionales | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
+| Compatibilidad con la configuración de la versión de clasificación de datos | Vea [Clasificación de datos](../data-classification.md#bkmk-version). |
+| Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+**Problema conocido:**
+
+Cuando se usa Always Encrypted con enclaves y Azure Key Vault seguros, las longitudes de las rutas de acceso de clave impares pueden provocar errores de comprobación de la firma de CMK. Si se produce este problema, pruebe a cambiar la longitud de la ruta de clave en un carácter cambiando el nombre de la clave AKV.
+
 ## <a name="174-august-2019"></a>17.4, agosto de 2019
 
 | Característica agregada | Detalles |

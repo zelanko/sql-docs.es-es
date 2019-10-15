@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3b27070e3edb81f548e37f76459b6ac828f2646
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65576001"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278230"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega a recursos compartidos de archivos en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incorpora una extensión de entrega a recursos compartidos de archivos que permite entregar un informe a una carpeta. Esta extensión está disponible de forma predeterminada y no requiere configuración adicional. Para que la entrega de archivos sea satisfactoria, debe establecer permisos de escritura en la carpeta compartida. La cuenta que requiere permisos de escritura puede ser credenciales configuradas en la suscripción o una **cuenta de recurso compartido** configurada para el servidor de informes. Para obtener más información sobre la cuenta del recurso compartido de archivos, vea [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Además, los usuarios que necesitan acceso a los informes deben tener permisos de lectura en la carpeta compartida.  
@@ -72,7 +72,7 @@ ms.locfileid: "65576001"
   
  **Sobrescribir:** se pueden especificar opciones de sobrescritura a fin de volver a utilizar el mismo nombre de archivo para cada entrega de informe o para crear un archivo nuevo. Para sobrescribir el archivo, debe utilizar el mismo nombre de archivo y la misma extensión.  
   
- Un método alternativo para crear archivos exclusivos para cada entrega consiste en incluir una marca de tiempo en el nombre del archivo. Para ello, agregue la variable **@timestamp** al nombre del archivo (por ejemplo, *CompanySales@timestamp* ). De este modo, el nombre del archivo será exclusivo por definición, por lo que no se sobrescribirá nunca.  
+ Un método alternativo para crear archivos exclusivos para cada entrega consiste en incluir una marca de tiempo en el nombre del archivo. Para ello, agregue la variable **\@timestamp** al nombre del archivo (por ejemplo, *CompanySales@timestamp* ). De este modo, el nombre del archivo será exclusivo por definición, por lo que no se sobrescribirá nunca.  
   
  La imagen siguiente es un ejemplo de la configuración de una suscripción configurada para la entrega a recursos compartidos de archivos.  
   

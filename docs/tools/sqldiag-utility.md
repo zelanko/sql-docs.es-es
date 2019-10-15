@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5df0001449d5ec1d2fded885fb932436a313bbfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eadacbf0e3137cf22c9a870783da41a046c86fb
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986296"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251369"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag , utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,10 +112,10 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** no anexa la salida a la carpeta de salida actual cuando se inicia. Solo puede sobrescribir la carpeta de salida predeterminada (opción 1) o cambiar el nombre de la carpeta (opción 2) y, a continuación, escribir la salida en la nueva carpeta de salida predeterminada denominada SQLDIAG.  
   
- **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *\@machinelistfile*  
  Invalida los equipos especificados en el archivo de configuración. De forma predeterminada, el archivo de configuración es SQLDiag.Xml, o se establece con el parámetro **/I** . Al especificar más de un equipo, separe cada nombre de equipo con un espacio.  
   
- Con *@machinelistfile* se especifica un nombre de archivo de la lista de equipos que se va a almacenar en el archivo de configuración.  
+ Con *\@machinelistfile* se especifica un nombre de archivo de la lista de máquinas que se va a almacenar en el archivo de configuración.  
   
  **/C** _file_compression_type_  
  Establece el tipo de compresión de archivo que se usa en los archivos de la carpeta de salida de **SQLdiag** . Opciones disponibles:  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63041794"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252141"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (Generador de informes)
 En este tutorial, agregará un parámetro a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que los lectores del informe puedan filtrar los datos del informe para uno o más valores. 
@@ -142,9 +142,9 @@ Al agregar un parámetro de consulta a una consulta, el Generador de informes cr
     WHERE StoreID = (@StoreID)  
     ```  
   
-    Se abre el cuadro de diálogo **de** limita los datos recuperados al identificador del almacén que se especifica mediante el parámetro de consulta *@StoreID* .  
+    La cláusula **WHERE** limita los datos recuperados al identificador del almacén que se especifica mediante el parámetro de consulta *\@StoreID*.  
   
-4.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). Se abre el cuadro de diálogo **Definir parámetros de consulta** y se le pide un valor para el parámetro de consulta *@StoreID* .  
+4.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). Se abre el cuadro de diálogo **Definir parámetros de consulta** y se le pide un valor para el parámetro de consulta *\@StoreID*.  
   
 5.  En **Valor de parámetro**, escriba **200**.  
   
@@ -156,7 +156,7 @@ Al agregar un parámetro de consulta a una consulta, el Generador de informes cr
   
 8.  En el panel Datos de informe, expanda la carpeta **Parámetros** .  
   
-Tenga en cuenta que ahora hay un parámetro de informe denominado *@StoreID* y un panel Parámetros donde puede diseñar los parámetros del informe.   
+Tenga en cuenta que ahora hay un parámetro de informe denominado *\@StoreID* y un panel Parámetros donde puede diseñar los parámetros del informe.   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -169,7 +169,7 @@ Después de crear un parámetro de informe, puede ajustar los valores predetermi
   
 De manera predeterminada, el parámetro que ha creado tiene el tipo de datos **Texto**. Como el identificador de almacén es un entero, puede cambiar el tipo de datos a Entero.  
   
-1.  En el panel Datos de informe debajo del nodo **Parámetros** , haga clic con el botón derecho en *@StoreID* y luego haga clic en **Propiedades del parámetro**.  
+1.  En el panel Datos de informe debajo del nodo **Parámetros**, haga clic con el botón derecho en *\@StoreID* y, luego, haga clic en **Propiedades del parámetro**.  
   
 2.  En **Pedir datos**, escriba **¿Identificador del almacén?** Este texto aparece en la barra de herramientas del visor de informes al ejecutar el informe.  
   
@@ -179,7 +179,7 @@ De manera predeterminada, el parámetro que ha creado tiene el tipo de datos **T
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Haga clic en **Ejecutar** para obtener la vista previa del informe. El visor de informes muestra **Store Identifier?** para *@StoreID* .  
+6.  Haga clic en **Ejecutar** para obtener la vista previa del informe. El visor de informes muestra el aviso **¿Identificador del almacén?** para *\@StoreID*.  
   
 7.  En la barra de herramientas del visor de informes, al lado de Store ID, escriba **200**y, después, haga clic en **Ver informe**.  
   
@@ -220,7 +220,7 @@ Después de crear un conjunto de datos para proporcionar los valores disponibles
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Para proporcionar los valores disponibles para un parámetro desde un conjunto de datos  
   
-1.  En el panel Datos de informe, haga clic con el botón derecho en el parámetro *@StoreID* y luego haga clic en **Propiedades del parámetro**.  
+1.  En el panel Datos de informe, haga clic con el botón derecho en el parámetro *StoreID\@ y, después, haga clic en* **Propiedades del parámetro**.  
   
 2.  Haga clic en **Valores disponibles**y luego haga clic en **Obtener valores de una consulta**.  
   
@@ -253,7 +253,7 @@ Puede especificar un valor predeterminado para cada parámetro de modo que el in
   
 1.  Cambie a la vista de diseño.  
   
-2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID* y luego haga clic en **Propiedades del parámetro**.  
+2.  En el panel Datos de informe, haga clic con el botón derecho en *StoreID\@ y, luego, haga clic en* **Propiedades del parámetro**.  
   
 3.  Haga clic en **Valores predeterminados**y, después, haga clic en **Obtener valores de una consulta**.  
   
@@ -265,13 +265,13 @@ Puede especificar un valor predeterminado para cada parámetro de modo que el in
   
 7.  Obtenga una vista previa del informe.  
   
-For *@StoreID* , el visor de informes muestra el valor "Contoso North America Online Store", porque es el primer valor del conjunto de resultados del conjunto de datos **Almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
+Para *\@StoreID*, el visor de informes muestra el valor "Contoso North America Online Store", porque es el primer valor del conjunto de resultados del conjunto de datos **Almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Para especificar un valor predeterminado personalizado  
   
 1.  Cambie a la vista de diseño.  
   
-2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID* y haga clic en **Propiedades del parámetro**.  
+2.  En el panel Datos de informe, haga clic con el botón derecho en *StoreID\@ y, luego, haga clic en* **Propiedades del parámetro**.  
   
 3.  Haga clic en **Valores predeterminados** > **Especificar valores** > **Agregar**. Se agrega una nueva fila de valor.  
   
@@ -281,7 +281,7 @@ For *@StoreID* , el visor de informes muestra el valor "Contoso North America On
   
 6.  Obtenga una vista previa del informe.  
   
-For *@StoreID* , el visor de informes muestra "Contoso Catalog Store", porque es el nombre para mostrar del identificador de almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
+Para *\@StoreID*, el visor de informes muestra "Contoso Catalog Store", porque es el nombre para mostrar del identificador de almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
   
 ## <a name="NameValue"></a>4d. Buscar un par Nombre/Valor  
 Un conjunto de datos podría contener el identificador y el campo de nombre correspondiente. Si solo tiene un identificador, puede buscar el nombre correspondiente en un conjunto de datos que haya creado y que tenga pares de nombre/valor.  
@@ -323,7 +323,7 @@ Si los lectores del informe tienen preguntas sobre un informe, resulta útil sab
   
 2.  Haga clic con el botón derecho en el pie de página > **Insertar** > **Cuadro de texto**. Arrastre el cuadro de texto junto al cuadro de texto que tiene la marca de tiempo. Agarre el controlador lateral del cuadro de texto y expanda el ancho.  
   
-3.  En el panel Datos de informe, arrastre el parámetro *@StoreID* al cuadro de texto. El cuadro de texto presenta `[@StoreID]`.  
+3.  En el panel Datos de informe, arrastre el parámetro *\@StoreID* al cuadro de texto. El cuadro de texto presenta `[@StoreID]`.  
   
 4.  Para mostrar la etiqueta de parámetro, haga clic en el cuadro de texto hasta que el cursor de inserción aparezca después de la expresión existente, escriba un espacio y, a continuación, arrastre otra copia del parámetro en el panel Datos de informe al cuadro de texto. El cuadro de texto presenta `[@StoreID] [@StoreID]`.  
   
@@ -371,7 +371,7 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
 1.  Cambie a la vista de diseño.  
   
-2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID* y haga clic en **Propiedades del parámetro**.  
+2.  En el panel Datos de informe, haga clic con el botón derecho en *StoreID\@ y, luego, haga clic en* **Propiedades del parámetro**.  
   
 3.  Seleccione **Permitir varios valores**.  
   

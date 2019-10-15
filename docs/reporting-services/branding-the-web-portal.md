@@ -8,12 +8,12 @@ description: En este artículo obtendrá información sobre cómo modificar la a
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65429cd58796d27025a929e95c6682449e456425
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199413"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251911"
 ---
 # <a name="branding-the-web-portal"></a>Personalización de marca del portal web
 
@@ -75,7 +75,7 @@ Por ejemplo, si el archivo colors.json tiene los siguientes valores:
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-El resultado procesado buscaría la variable de LESS **@primaryButtonBg** y vería que está asignada a una propiedad de JSON llamada **primary**, que en este ejemplo es #009900. Por lo tanto, generaría el CSS correcto.  
+La salida procesada buscaría la variable de LESS **\@primaryButtonBg** y vería que está asignada a una propiedad de JSON llamada **primary**, que en este ejemplo es #009900. Por lo tanto, generaría el CSS correcto.  
   
     .btn-primary {   
         color:#ffffff;   

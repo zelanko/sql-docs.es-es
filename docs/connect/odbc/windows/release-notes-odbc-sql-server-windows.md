@@ -11,12 +11,12 @@ ms.reviewer: v-jizho2, v-chojas, genemi
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: d6eebce61ede6e1e3dd76028a653a00ffa06990e
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702753"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041159"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Notas de la versión de ODBC a SQL Server en Windows
 
@@ -43,6 +43,16 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## <a name="1742-october-2019"></a>17.4.2, octubre de 2019
+
+| Característica agregada | Detalles |
+| :------------ | :------ |
+| Compatibilidad con puntos de conexión de Azure Key Vault adicionales | Consulte [Uso de Always Encrypted con ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
+| Compatibilidad con la configuración de la versión de clasificación de datos | Vea [Clasificación de datos](../data-classification.md#bkmk-version). |
+| El controlador instalará ahora la biblioteca de autenticación de Azure Active Drirectory (Adal. dll) que se usa para la autenticación en Azure | |
+| Correcciones de errores. | Vea [Correcciones de errores](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="174-july-2019"></a>17.5, julio de 2019
 

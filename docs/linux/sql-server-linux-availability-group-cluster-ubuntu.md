@@ -184,7 +184,7 @@ sudo apt-get install mssql-server-ha
 
 ## <a name="create-availability-group-resource"></a>Crear un recurso de grupo de disponibilidad
 
-Para crear el recurso de grupo de disponibilidad, use el comando `pcs resource create` y establezca las propiedades del recurso. El comando siguiente crea un recurso del tipo maestro/esclavo de `ocf:mssql:ag` para el grupo de disponibilidad con el nombre `ag1`. 
+Para crear el recurso de grupo de disponibilidad, use el comando `pcs resource create` y establezca las propiedades del recurso. El comando siguiente crea un recurso del tipo principal/secundario de `ocf:mssql:ag` para el grupo de disponibilidad con el nombre `ag1`. 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s --master meta notify=true

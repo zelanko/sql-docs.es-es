@@ -159,7 +159,7 @@ Para obtener información sobre las propiedades de clúster de Pacemaker, vea [P
 
 ## <a name="create-availability-group-resource"></a>Crear un recurso de grupo de disponibilidad
 
-Para crear el recurso de grupo de disponibilidad, use el comando `pcs resource create` y establezca las propiedades del recurso. El siguiente comando crea un recurso `ocf:mssql:ag` de tipo maestro/esclavo para el grupo de disponibilidad con el nombre `ag1`.
+Para crear el recurso de grupo de disponibilidad, use el comando `pcs resource create` y establezca las propiedades del recurso. El siguiente comando crea un recurso `ocf:mssql:ag` de tipo principal/secundario para el grupo de disponibilidad con el nombre `ag1`.
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
@@ -202,7 +202,7 @@ La restricción de ubicación tiene una restricción de orden implícita. Mueve 
    >[!NOTE]
    >En este punto, la dirección IP apunta temporalmente al nodo 2, mientras que el nodo 2 sigue siendo una réplica secundaria previa a la conmutación por error. 
    
-1. La réplica principal del grupo de disponibilidad del nodo 1 se degrada a esclavo.
+1. La réplica principal del grupo de disponibilidad del nodo 1 se degrada a secundario.
 1. La réplica secundaria del grupo de disponibilidad del nodo 2 se asciende a principal. 
 
 Para evitar que la dirección IP apunte temporalmente al nodo con la réplica secundaria previa a la conmutación por error, agregue una restricción de orden. 

@@ -313,8 +313,8 @@ La restricción de ubicación tiene una restricción de orden implícita. Mueve 
 1. El usuario emite la migración de recursos al maestro del grupo de disponibilidad desde el nodo 1 al nodo 2.
 2. El recurso de IP virtual se detiene en el nodo 1.
 3. El recurso de dirección IP virtual se inicia en el nodo 2. Llegados a este punto, la dirección IP apunta temporalmente al nodo 2, mientras que el nodo 2 sigue siendo una réplica secundaria previa a la conmutación por error. 
-4. El maestro del grupo de disponibilidad en el nodo 1 se degrada a esclavo.
-5. El esclavo del grupo de disponibilidad en el nodo 2 asciende a maestro. 
+4. El maestro del grupo de disponibilidad en el nodo 1 se degrada a principal/secundario.
+5. El principal/secundario del grupo de disponibilidad en el nodo 2 asciende a maestro. 
 
 Para evitar que la dirección IP apunte temporalmente al nodo con la réplica secundaria previa a la conmutación por error, agregue una restricción de ordenación. Para agregar una restricción de orden, ejecute el siguiente comando en un nodo: 
 

@@ -48,7 +48,7 @@ ms.locfileid: "71952581"
   
 5.  Cuando el sistema pida que cree una copia de seguridad de la clave simétrica, escriba un nombre de archivo y una ubicación para la copia de seguridad, escriba una contraseña para bloquear y desbloquear el archivo y haga clic en **Aceptar**.  
   
-6.  Si el servidor de informes utiliza la cuenta de servicio para conectarse a su base de datos, la información de la conexión se actualizará para utilizar la nueva cuenta o contraseña. Para actualizar la información de la conexión se requiere que se conecte a la base de datos. Si aparece el cuadro de diálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Database Connection** dialog box appears, enter credentials that have permission to connect to the database, and then click **OK**.  
+6.  Si el servidor de informes utiliza la cuenta de servicio para conectarse a su base de datos, la información de la conexión se actualizará para utilizar la nueva cuenta o contraseña. Para actualizar la información de la conexión se requiere que se conecte a la base de datos. Si aparece el cuadro de diálogo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **de** , escriba las credenciales que tengan permiso para conectarse a la base de datos y haga clic en **Aceptar**.  
   
 7.  Cuando el sistema pida confirmación para restaurar la clave simétrica, escriba la contraseña que especificó en el paso 5 y haga clic en **Aceptar**.  
   

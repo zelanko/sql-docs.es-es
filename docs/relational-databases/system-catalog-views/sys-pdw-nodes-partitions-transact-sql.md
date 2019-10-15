@@ -12,48 +12,48 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ce680a0648b7641249d5fba6b7d0fa493deebd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001148"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305229"
 ---
-# <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
+# <a name="syspdw_nodes_partitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contiene una fila para cada partición de todas las tablas y la mayoría de los tipos de índices en una [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] base de datos. Todas las tablas e índices contienen al menos una partición, si se crean particiones de forma explícita.  
+  Contiene una fila para cada partición de todas las tablas y la mayoría de los tipos de índices en una base de datos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Todas las tablas e índices contienen al menos una partición, tanto si se crean particiones explícitamente como si no.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|partition_id|`bigint`|identificador de la partición. Es único en una base de datos.|  
-|object_id|`int`|identificador del objeto al que pertenece esta partición. Todas las tablas o vistas se componen al menos de una partición.|  
-|index_id|`int`|Id. del índice dentro del objeto al que pertenece esta partición.|  
-|partition_number|`int`|Número de partición basado en uno en el índice o el montón propietario. Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], el valor de esta columna es 1.|  
-|hobt_id|`bigint`|Id. del montón de datos o el árbol b que contiene las filas de esta partición.|  
-|rows|`bigint`|Número aproximado de filas de esta partición. |  
-|data_compression|`int`|Indica el estado de compresión para cada partición:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|`nvarchar(60)`|Indica el estado de compresión para cada partición. Los valores posibles son NONE, ROW y PAGE.|  
-|pdw_node_id|`int`|Identificador único de un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
+|partition_id|**bigint**|identificador de la partición. Es único en una base de datos.|  
+|object_id|**int**|identificador del objeto al que pertenece esta partición. Todas las tablas o vistas se componen al menos de una partición.|  
+|index_id|**int**|identificador del índice dentro del objeto al que pertenece esta partición.|  
+|partition_number|**int**|Número de partición basado en uno en el índice o el montón propietario. Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], el valor de esta columna es 1.|  
+|hobt_id|**bigint**|IDENTIFICADOR de la montículo o árbol B de datos (HoBT) que contiene las filas de esta partición.|  
+|rows|**bigint**|Número aproximado de filas de esta partición. |  
+|data_compression|**int**|Indica el estado de compresión para cada partición:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
+|data_compression_desc|**nvarchar(60)**|Indica el estado de compresión para cada partición. Los valores posibles son NONE, ROW y PAGE.|  
+|pdw_node_id|**int**|Identificador único de un nodo [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso CONTROL SERVER.  
+ Requiere el permiso `CONTROL SERVER`.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
-### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Ejemplo A: Mostrar las filas de cada partición dentro de cada distribución 
+### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Ejemplo A: Mostrar filas en cada partición de cada distribución 
 
-Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**Se aplica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
-Para mostrar el número de filas de cada partición dentro de cada distribución, utilice [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
+Para mostrar el número de filas de cada partición dentro de cada distribución, use [DBCC PDW_SHOWPARTITIONSTATS (PDW de SQL Server)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
-### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Ejemplo B: Usa las vistas del sistema para ver las filas de cada partición de cada distribución de una tabla
+### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Ejemplo B: Utiliza las vistas del sistema para ver las filas de cada una de las distribuciones de una tabla
 
-Se aplica a: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+**Se aplica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 Esta consulta devuelve el número de filas de cada partición de cada distribución de la tabla `myTable`.  
  
-```  
+```sql  
 SELECT o.name, pnp.index_id, pnp.partition_id, pnp.rows,   
     pnp.data_compression_desc, pnp.pdw_node_id  
 FROM sys.pdw_nodes_partitions AS pnp  
@@ -70,7 +70,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>Vea también  
- [SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d1a093364192e3bab32a2fa0234c7198d8e0f3ff
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771429"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304825"
 ---
-# <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
+# <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
     
@@ -43,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @filename = ] 'file_name'`Es la cadena que especifica la ruta de acceso completa, incluido el nombre de archivo, en la que se guarda una copia del archivo de datos (. MDF). *el nombre de archivo* es **nvarchar (260)** y no tiene ningún valor predeterminado.  
+`[ @filename = ] 'file_name'` es la cadena que especifica la ruta de acceso completa, incluido el nombre de archivo, en la que se guarda una copia del archivo de datos (. MDF). *el nombre de archivo* es **nvarchar (260)** y no tiene ningún valor predeterminado.  
   
-`[ @temp_dir = ] 'temp_dir'`Es el nombre del directorio que contiene los archivos temporales. *temp_dir* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Si es null, [!INCLUDE[msCoName](../../includes/msconame-md.md)] se utilizará el directorio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos predeterminado. El directorio debe tener espacio suficiente para contener un archivo que tenga el tamaño de todos los archivos de la base de datos del suscriptor combinados.  
+`[ @temp_dir = ] 'temp_dir'` es el nombre del directorio que contiene los archivos temporales. *temp_dir* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Si es NULL, se utilizará el directorio de datos predeterminado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El directorio debe tener espacio suficiente para contener un archivo que tenga el tamaño de todos los archivos de la base de datos del suscriptor combinados.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`Es una marca booleana opcional que especifica si se sobrescribirá o no un archivo existente con el mismo nombre especificado **@filename** en. *overwrite_existing_file*es de **bit**y su valor predeterminado es **0**. Si es **1**, sobrescribe el archivo especificado por **@filename** , si existe. Si es **0**, se produce un error en el procedimiento almacenado si el archivo existe y el archivo no se sobrescribe.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` es una marca booleana opcional que especifica si se sobrescribirá o no un archivo existente con el mismo nombre especificado en **\@filename**. *overwrite_existing_file*es de **bit**y su valor predeterminado es **0**. Si es **1**, sobrescribe el archivo especificado por **\@filename**, si existe. Si es **0**, se produce un error en el procedimiento almacenado si el archivo existe y el archivo no se sobrescribe.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

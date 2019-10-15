@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 821d4127-3ce5-4474-8561-043404a20d81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dce44e2045b7d3031058ffd976b01bdd53801c48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2503e5d3b94b5bc73d9bf2427e0162ba2eda2fe
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085142"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304902"
 ---
-# <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
+# <a name="sp_help_spatial_geography_index_xml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve el nombre y valor para un conjunto especificado de propiedades sobre un **geography** índice espacial. Puede decidir devolver un conjunto básico de propiedades o todas las propiedades del índice.  
+  Devuelve el nombre y el valor de un conjunto especificado de propiedades sobre un índice espacial de **geografía** . Puede decidir devolver un conjunto básico de propiedades o todas las propiedades del índice.  
   
  Los resultados se devuelven en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
   
@@ -45,10 +45,10 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Consulte [procedimientos almacenan de argumentos y propiedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Vea [argumentos y propiedades de procedimientos almacenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="properties"></a>Propiedades  
- Consulte [procedimientos almacenan de argumentos y propiedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Vea [argumentos y propiedades de procedimientos almacenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Permisos  
  El usuario debe tener asignado un rol PUBLIC para tener acceso al procedimiento. Requiere el permiso READ ACCESS en el servidor y el objeto.  
@@ -57,9 +57,9 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  Las propiedades que contienen valores NULL están incluidas en el conjunto que se devuelve.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa `sp_help_spatial_geography_index_xml` para investigar el índice espacial **SIndx_SpatialTable_geography_col2** definido en la tabla **geography_col** para el ejemplo de consulta determinado en  **@qs** . En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
+ En el ejemplo siguiente se usa `sp_help_spatial_geography_index_xml` para investigar el índice espacial **SIndx_SpatialTable_geography_col2** definido en la tabla **geography_col** para el ejemplo de consulta determinado en **\@QS**. En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
   
- Un [XQuery](../../xquery/xquery-basics.md) , a continuación, se ejecuta en el conjunto de resultados que devuelve una propiedad concreta.  
+ Después, se ejecuta una consulta [XQuery](../../xquery/xquery-basics.md) en el conjunto de resultados, que devuelve una propiedad concreta.  
   
 ```  
 declare @qs geography  
@@ -69,9 +69,9 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- Similar a [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), este procedimiento almacenado proporciona acceso mediante programación más sencillo a las propiedades de un **geography** índice espacial y notifica el conjunto de resultados en XML.  
+ De forma similar a [sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md), este procedimiento almacenado proporciona acceso mediante programación más sencillo a las propiedades de un índice espacial de **geografía** y notifica el conjunto de resultados en XML.  
   
- Cuadro de límite de un **geography** es toda la tierra.  
+ El rectángulo de selección de una **geografía** es toda la tierra.  
   
 ## <a name="requirements"></a>Requisitos  
   

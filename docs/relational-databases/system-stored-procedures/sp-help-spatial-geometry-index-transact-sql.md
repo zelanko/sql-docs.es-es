@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 054c6e51747cdc6764ce99672f041b4e65746f30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2e5d935fc3d6db5d243ec4b76841f13a60e5a11
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085108"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304853"
 ---
-# <a name="sphelpspatialgeometryindex-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
+# <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve los nombres y valores para un conjunto especificado de propiedades sobre un **geometría** índice espacial. El resultado se devuelve en un formato de tabla. Puede decidir devolver un conjunto básico de propiedades o todas las propiedades del índice.  
+  Devuelve los nombres y valores para un conjunto especificado de propiedades sobre un índice espacial de **geometría** . El resultado se devuelve en un formato de tabla. Puede decidir devolver un conjunto básico de propiedades o todas las propiedades del índice.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Consulte [procedimientos almacenan de argumentos y propiedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Vea [argumentos y propiedades de procedimientos almacenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
- Consulte [procedimientos almacenan de argumentos y propiedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Vea [argumentos y propiedades de procedimientos almacenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Permisos  
  El usuario debe tener asignado un rol PUBLIC para tener acceso al procedimiento. Requiere el permiso READ ACCESS en el servidor y el objeto.  
@@ -54,7 +54,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  Las propiedades que contienen valores NULL están incluidas en el conjunto que se devuelve.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa `sp_help_spatial_geometry_index` para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en la tabla **geometry_col** para el ejemplo de consulta determinado en **@qs** . En este ejemplo se devuelven solo las propiedades básicas del índice especificado.  
+ En el ejemplo siguiente se usa `sp_help_spatial_geometry_index` para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en la tabla **geometry_col** para el ejemplo de consulta determinado en **\@QS**. En este ejemplo se devuelven solo las propiedades básicas del índice especificado.  
   
 ```  
 declare @qs geometry  

@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 032ecf59a3ffba4a7a7a6f4739c92b688858d501
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a82a3bedf78eb69dfc4a1736e212164341077601
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768870"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304974"
 ---
-# <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
+# <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Desinstala el distribuidor. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos, excepto la de distribución.  
@@ -38,13 +38,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @no_checks = ] no_checks`Indica si se deben comprobar los objetos dependientes antes de quitar el distribuidor. *no_checks* es de **bit**y su valor predeterminado es 0.  
+`[ @no_checks = ] no_checks` indica si se deben comprobar los objetos dependientes antes de quitar el distribuidor. *no_checks* es de **bit**y su valor predeterminado es 0.  
   
  Si es **0**, **sp_dropdistributor** comprueba para asegurarse de que se han quitado todos los objetos de publicación y distribución, además del distribuidor.  
   
  Si es **1**, **sp_dropdistributor** quita todos los objetos de publicación y distribución antes de desinstalar el distribuidor.  
   
-`[ @ignore_distributor = ] ignore_distributor`Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es de **bit**y su valor predeterminado es **0**.  
+`[ @ignore_distributor = ] ignore_distributor` indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es de **bit**y su valor predeterminado es **0**.  
   
  Si es **0**, **sp_dropdistributor** se conecta al distribuidor y quita todos los objetos de replicación. Si **sp_dropdistributor** no puede conectarse al distribuidor, se produce un error en el procedimiento almacenado.  
   
@@ -56,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>Comentarios  
  **sp_dropdistributor** se utiliza en todos los tipos de replicación.  
   
- Si existen otros objetos de publicador o de distribución en el servidor, **@no_checks** se produce un error en **sp_dropdistributor** a menos que se establezca en **1**.  
+ Si existen otros objetos de publicador o de distribución en el servidor, se produce un error en **sp_dropdistributor** a menos que **\@no_checks** se establezca en **1**.  
   
  Este procedimiento almacenado se debe ejecutar después de quitar la base de datos de distribución mediante la ejecución de **sp_dropdistributiondb**.  
   

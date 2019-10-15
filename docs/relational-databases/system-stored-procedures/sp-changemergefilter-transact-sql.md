@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e0c38af1089a1d59c9964e39aecca6b1773a8e22
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124892"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304947"
 ---
-# <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
+# <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cambia algunas propiedades del filtro de mezcla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
@@ -43,15 +43,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` es el nombre del artículo. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @filtername = ] 'filtername'` Es el nombre del filtro actual. *filtername* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @filtername = ] 'filtername'` es el nombre actual del filtro. *filtername* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @property = ] 'property'` Es el nombre de la propiedad que se va a cambiar. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @property = ] 'property'` es el nombre de la propiedad que se va a cambiar. *Property* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @value = ] 'value'` Es el nuevo valor para la propiedad especificada. *valor*es **nvarchar (1000)** , no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'` es el nuevo valor de la propiedad especificada. el *valor*es **nvarchar (1000)** y no tiene ningún valor predeterminado.  
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
@@ -66,17 +66,17 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|La combinación se hace sobre una clave exclusiva.|  
 ||**false**|La combinación no se hace sobre una clave exclusiva.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, con un valor predeterminado de **0**.  
   
- **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válido. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
+ **0** especifica que los cambios en el artículo de mezcla no hacen que la instantánea no sea válida. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
- **1** significa que los cambios realizados en el artículo de mezcla pueden invalidar la instantánea no es válido y, si hay suscripciones existentes que requieran una nueva instantánea, concede el permiso necesario para marcar como obsoleta la instantánea existente y generado una nueva.  
+ **1** significa que los cambios en el artículo de mezcla pueden hacer que la instantánea no sea válida y, si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para que la instantánea existente se marque como obsoleta y se genere una nueva instantánea.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
   
- **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
+ **0** especifica que los cambios en el artículo de mezcla no harán que se reinicialice la suscripción. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
   
- **1** significa que los cambios en el artículo de mezcla hará que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  
+ **1** significa que los cambios en el artículo de mezcla harán que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de la suscripción.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -84,12 +84,12 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>Comentarios  
  **sp_changemergefilter** se utiliza en la replicación de mezcla.  
   
- Para cambiar el filtro de un artículo de mezcla es preciso recrear la instantánea, si ya existe. Esto se realiza estableciendo la **@force_invalidate_snapshot** a **1**. Asimismo, si hay suscripciones para este artículo, es necesario reinicializarlas. Esto se hace estableciendo el **@force_reinit_subscription** a **1**.  
+ Para cambiar el filtro de un artículo de mezcla es preciso recrear la instantánea, si ya existe. Esto se realiza estableciendo el **@no__t 1force_invalidate_snapshot** en **1**. Asimismo, si hay suscripciones para este artículo, es necesario reinicializarlas. Esto se hace estableciendo el **@no__t 1force_reinit_subscription** en **1**.  
   
  Para utilizar registros lógicos, la publicación y los artículos deben satisfacer una serie de requisitos. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_changemergefilter**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_changemergefilter**.  
   
 ## <a name="see-also"></a>Vea también  
  [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

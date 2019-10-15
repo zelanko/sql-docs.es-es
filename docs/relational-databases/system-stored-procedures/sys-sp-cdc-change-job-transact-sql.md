@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f5973382b7a09080fa990b0807deb01660ce0d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4bd906f9a359a73a15d89a4cb60b6646a2abe53a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106532"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305066"
 ---
-# <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
+# <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifica la configuración de un trabajo de captura o de limpieza de captura de datos de cambio en la base de datos actual. Para ver la configuración actual de un trabajo, consulte el [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) de tabla o usar [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
+  Modifica la configuración de un trabajo de captura o de limpieza de captura de datos de cambio en la base de datos actual. Para ver la configuración actual de un trabajo, consulte la tabla [dbo. CDC _jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) o use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,37 +47,37 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_type = ] 'job_type'` Tipo de trabajo para modificar. *job_type* es **nvarchar (20)** con un valor predeterminado es 'capture'. Las entradas válidas son 'capture' y 'cleanup'.  
+`[ @job_type = ] 'job_type'` tipo de trabajo que se va a modificar. *job_type* es de tipo **nvarchar (20)** y su valor predeterminado es ' Capture '. Las entradas válidas son 'capture' y 'cleanup'.  
   
-`[ @maxtrans ] = max_trans_` Número máximo de transacciones para procesar en cada ciclo de examen. *max_trans* es **int** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. Si se especifica, el valor debe ser un entero positivo.  
+`[ @maxtrans ] = max_trans_` número máximo de transacciones para procesar en cada ciclo de examen. *max_trans* es de **tipo int** y su valor predeterminado es null, lo que indica que no hay ningún cambio para este parámetro. Si se especifica, el valor debe ser un entero positivo.  
   
- *max_trans* solo es válida para los trabajos de captura.  
+ *max_trans* solo es válido para los trabajos de captura.  
   
-`[ @maxscans ] = max_scans_` Número máximo de ciclos de examen que se ejecutarán para extraer todas las filas del registro. *max_scans* es **int** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
+@no__t el número máximo de ciclos de recorrido que se ejecutarán para extraer todas las filas del registro. *max_scans* es de **tipo int** y su valor predeterminado es null, lo que indica que no hay ningún cambio para este parámetro.  
   
- *max_scan* solo es válida para los trabajos de captura.  
+ *max_scan* solo es válido para los trabajos de captura.  
   
-`[ @continuous ] = continuous_` Indica si el trabajo de captura se ejecutará continuamente (1), o solo una vez (0). *continua* es **bit** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
+`[ @continuous ] = continuous_` indica si el trabajo de captura debe ejecutarse continuamente (1) o solo una vez (0). *Continuous* es de **bit** con un valor predeterminado de NULL, que indica que no hay ningún cambio para este parámetro.  
   
- Cuando *continua* = 1, el [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) examina el registro de trabajo y procesa hasta (*max_trans* \* *max_scans*) transacciones. A continuación, espera a que el número de segundos especificado en *polling_interval* antes de comenzar el recorrido del registro siguiente.  
+ Cuando *Continuous* = 1, el trabajo [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) examina el registro y procesa hasta (*max_trans* \* *max_scans*). Después, espera el número de segundos especificado en *polling_interval* antes de comenzar el siguiente examen del registro.  
   
- Cuando *continua* = 0, el **sp_cdc_scan** hasta que se ejecuta trabajo *max_scans* recorridos del registro, procesando hasta *max_trans* transacciones durante cada examen y, a continuación, sale.  
+ Cuando *Continuous* = 0, el trabajo **sp_cdc_scan** se ejecuta hasta *max_scans* exámenes del registro, procesando hasta *max_trans* transacciones durante cada examen y después se cierra.  
   
- Si **@continuous** se cambia de 1 a 0, **@pollinginterval** automáticamente se establece en 0. Un valor especificado para **@pollinginterval** distinto de 0 se omite.  
+ Si **\@continuous** se cambia de 1 a 0, **\@pollinginterval** se establece automáticamente en 0. Se omite un valor especificado para **\@pollinginterval** distinto de 0.  
   
- Si **@continuous** se omite o se establece explícitamente en NULL y **@pollinginterval** se establece explícitamente en un valor mayor que 0, **@continuous** automáticamente se establece en 1.  
+ Si se omite **\@continuous** o se establece explícitamente en NULL y **\@pollinginterval** se establece explícitamente en un valor mayor que 0, **\@continuous** se establece automáticamente en 1.  
   
- *continua* solo es válida para los trabajos de captura.  
+ *Continuous* solo es válido para los trabajos de captura.  
   
-`[ @pollinginterval ] = polling_interval_` Número de segundos entre ciclos de examen del registro. *polling_interval* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
+`[ @pollinginterval ] = polling_interval_` número de segundos entre los ciclos de recorrido del registro. *polling_interval* es de tipo **BIGINT** y su valor predeterminado es null, lo que indica que no hay ningún cambio para este parámetro.  
   
- *polling_interval* es válido sólo para la captura de los trabajos cuando *continua* está establecido en 1.  
+ *polling_interval* solo es válido para los trabajos de captura cuando *Continuous* está establecido en 1.  
   
-`[ @retention ] = retention_` Número de minutos que las filas de cambios es se retendrán en tablas de cambios. *retención* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. El valor máximo es 52494800 (100 años). Si se especifica, el valor debe ser un entero positivo.  
+`[ @retention ] = retention_` número de minutos que las filas de cambio se conservarán en las tablas de cambios. la *retención* es **BIGINT** con un valor predeterminado de NULL, que indica que no hay ningún cambio para este parámetro. El valor máximo es 52494800 (100 años). Si se especifica, el valor debe ser un entero positivo.  
   
- *retención* solo es válida para los trabajos de limpieza.  
+ la *retención* solo es válida para los trabajos de limpieza.  
   
-`[ @threshold = ] 'delete threshold'` Número máximo de entradas de eliminación que se pueden eliminar con una única instrucción en la limpieza. *eliminar umbral* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. *eliminar umbral* solo es válida para los trabajos de limpieza.  
+`[ @threshold = ] 'delete threshold'` número máximo de entradas de eliminación que se pueden eliminar mediante una única instrucción en la limpieza. el *umbral de eliminación* es **BIGINT** y su valor predeterminado es null, lo que indica que no hay ningún cambio para este parámetro. el *umbral de eliminación* solo es válido para los trabajos de limpieza.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -86,19 +86,19 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  None  
   
 ## <a name="remarks"></a>Comentarios  
- Si se omite un parámetro, el valor asociado en el [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) no se actualiza la tabla. Un parámetro establecido explícitamente en NULL se trata como si se omitiese el parámetro.  
+ Si se omite un parámetro, el valor asociado en la tabla [dbo. CDC _jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) no se actualiza. Un parámetro establecido explícitamente en NULL se trata como si se omitiese el parámetro.  
   
  Si se especifica un parámetro que no es válido para el tipo de trabajo, la instrucción generará un error.  
   
- Los cambios realizados en un trabajo no surtirán efecto hasta que se detenga el trabajo con [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) y reiniciar mediante el uso de [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md).  
+ Los cambios en un trabajo no surtirán efecto hasta que el trabajo se detenga mediante [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) y se reinicie con [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer a la **db_owner** rol fijo de base de datos.  
+ Requiere la pertenencia al rol fijo de base de datos **db_owner** .  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-changing-a-capture-job"></a>A. Cambiar un trabajo de captura  
- El siguiente ejemplo se actualiza el `@job_type`, `@maxscans`, y `@maxtrans` parámetros de un trabajo de captura en el `AdventureWorks2012` base de datos. El resto de parámetros válidos para un trabajo captura, `@continuous` y `@pollinginterval`, se omiten; sus valores no se modifican.  
+ En el ejemplo siguiente se actualizan los parámetros `@job_type`, `@maxscans` y `@maxtrans` de un trabajo de captura en la base de datos `AdventureWorks2012`. El resto de parámetros válidos para un trabajo captura, `@continuous` y `@pollinginterval`, se omiten; sus valores no se modifican.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>b. Cambiar un trabajo de limpieza  
- En el siguiente ejemplo se actualiza un trabajo de limpieza en la base de datos `AdventureWorks2012`. Todos los parámetros válidos para este tipo de trabajo, excepto **@threshold** , se especifican. El valor de **@threshold** no se modifica.  
+ En el siguiente ejemplo se actualiza un trabajo de limpieza en la base de datos `AdventureWorks2012`. Se especifican todos los parámetros válidos para este tipo de trabajo, excepto **@threshold** . El valor de **@threshold** no se modifica.  
   
 ```  
 USE AdventureWorks2012;  

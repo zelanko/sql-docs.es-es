@@ -1,5 +1,5 @@
 ---
-title: Sys.partitions (Transact-SQL) | Microsoft Docs
+title: Sys. partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 661a37b4136202b9a83b863535670a88a3f100dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d56671fd3c1dbd38cc2ff4bc4d9f4331e5484b91
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102183"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305027"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contiene una fila por cada partición de todas las tablas y la mayoría de los tipos de índices de la base de datos. Tipos de índices especiales como texto completo, espacial y XML no se incluyen en esta vista. Todas las tablas e índices de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contienen al menos una partición, ya sea explícita o no.  
+  Contiene una fila por cada partición de todas las tablas y la mayoría de los tipos de índices de la base de datos. En esta vista no se incluyen los tipos de índice especiales, como texto completo, espacial y XML. Todas las tablas e índices de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contienen al menos una partición, ya sea explícita o no.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "68102183"
 |object_id|**int**|Indica el identificador del objeto al que pertenece esta partición. Todas las tablas o vistas se componen al menos de una partición.|  
 |index_id|**int**|Indica el identificador del índice dentro del objeto al que pertenece esta partición.<br /><br /> 0 = montón<br />1 = índice clúster<br />2 o superior = índice no clúster|  
 |partition_number|**int**|Es un número de partición basado en uno en el índice o el montón propietario. Para las tablas y los índices sin particiones, el valor de esta columna es 1.|  
-|hobt_id|**bigint**|Indica el identificador del montón de datos o el árbol b que contiene las filas de esta partición.|  
+|hobt_id|**bigint**|Indica el identificador de la montículo o árbol B de datos (HoBT) que contiene las filas de esta partición.|  
 |rows|**bigint**|Indica el número aproximado de filas de esta partición.|  
 |filestream_filegroup_id|**smallint**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica el identificador del grupo de archivos FILESTREAM almacenado en esta partición.|  
 |data_compression|**tinyint**|Indica el estado de compresión para cada partición:<br /><br /> 0 = NONE <br />1 = ROW <br />2 = PAGE <br />3 = ALMACÉN DE COLUMNAS: **Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />4 = COLUMNSTORE_ARCHIVE: **Se aplica a**: de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> **Nota:** Los índices de texto completo se comprimirán en cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c9bf5675-eafc-4d71-bfdb-da963384fa0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5118392bff90cc9f58cdda66ace40b0b68f612a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73bb564880cae238cdbaa7e3c13a1f18ab95dc99
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085152"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304877"
 ---
-# <a name="sphelpspatialgeographyindex-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
+# <a name="sp_help_spatial_geography_index-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve los nombres y valores para un conjunto especificado de propiedades sobre un **geography** índice espacial. El resultado se devuelve en un formato de tabla. Puede decidir devolver un conjunto básico de propiedades o todas las propiedades del índice.  
+  Devuelve los nombres y valores para un conjunto especificado de propiedades sobre un índice espacial de **geografía** . El resultado se devuelve en un formato de tabla. Puede decidir devolver un conjunto básico de propiedades o todas las propiedades del índice.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +42,10 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Consulte [procedimientos almacenan de argumentos y propiedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Vea [argumentos y propiedades de procedimientos almacenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="properties"></a>Propiedades  
- Consulte [procedimientos almacenan de argumentos y propiedades de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
+ Vea [argumentos y propiedades de procedimientos almacenados de índice espacial](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
 ## <a name="permissions"></a>Permisos  
  El usuario debe tener asignado un rol PUBLIC para tener acceso al procedimiento. Requiere el permiso READ ACCESS en el servidor y el objeto.  
@@ -53,7 +53,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa `sp_help_spatial_geography_index` para investigar el **geography** índice espacial **SIndx_SpatialTable_geography_col2** definido en la tabla **geography_col** para el ejemplo de consulta determinado en **@qs** . En este ejemplo se devuelven solo las propiedades básicas del índice especificado.  
+ En el ejemplo siguiente se usa `sp_help_spatial_geography_index` para investigar el índice espacial **Geography** **SIndx_SpatialTable_geography_col2** definido en la tabla **geography_col** para el ejemplo de consulta determinado en **\@qs**. En este ejemplo se devuelven solo las propiedades básicas del índice especificado.  
   
 ```  
 declare @qs geography  
@@ -61,7 +61,7 @@ declare @qs geography
 exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geography_col2', 0, @qs;  
 ```  
   
- Cuadro de límite de un **geography** instancia es toda la tierra.  
+ El rectángulo de selección de una instancia de **Geography** es toda la tierra.  
   
 ## <a name="requirements"></a>Requisitos  
   

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9181cfc0203bc9c37b5c8eece8d742d628e4bba5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044431"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305216"
 ---
-# <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
+# <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El Correo electrónico de base de datos tiene dos colas: la de correo y la de estado. En la cola de correo se almacenan los elementos de correo que están a la espera de ser enviados. En la de estado se almacena el estado de los elementos ya enviados. Este procedimiento almacenado permite ver el estado de las colas de correo o estado. Si el parámetro **@queue_type** no se especifica, el procedimiento almacenado devuelve una fila para cada una de las colas.  
+  El Correo electrónico de base de datos tiene dos colas: la de correo y la de estado. En la cola de correo se almacenan los elementos de correo que están a la espera de ser enviados. En la de estado se almacena el estado de los elementos ya enviados. Este procedimiento almacenado permite ver el estado de las colas de correo o estado. Si no se especifica el parámetro **\@queue_type** , el procedimiento almacenado devuelve una fila por cada una de las colas.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,7 +39,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @queue_type = ] 'queue_type'` Argumento opcional elimina los mensajes de correo electrónico del tipo especificado como el *queue_type*. *queue_type* es **nvarchar(6)** no tiene ningún valor predeterminado. Las entradas válidas son **correo** y **estado**.  
+el argumento opcional `[ @queue_type = ] 'queue_type'` elimina los mensajes de correo electrónico del tipo especificado como *queue_type*. *queue_type* es de tipo **nvarchar (6)** y no tiene ningún valor predeterminado. Las entradas válidas son **mail** y **status**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -48,17 +48,17 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**queue_type**|**nvarchar(6)**|Tipo de cola. Los valores posibles son **correo** y **estado**.|  
+|**queue_type**|**nvarchar(6)**|Tipo de cola. Los valores posibles son **mail** y **status**.|  
 |**length**|**int**|Número de elementos de correo de la cola especificada.|  
-|**state**|**nvarchar(64)**|Estado del monitor. Los valores posibles son **inactivo** (cola está inactiva), **NOTIFIED** (cola ha sido una notificación de recepción que se produzca), y **RECEIVES_OCCURRING** (cola está recibiendo).|  
-|**last_empty_rowset_time**|**FECHA Y HORA**|Fecha y hora en que la cola estuvo vacía por última vez. En formato de hora militar y zona horaria GMT.|  
-|**last_activated_time**|**FECHA Y HORA**|Fecha y hora en que la cola se activó por última vez. En formato de hora militar y zona horaria GMT.|  
+|**state**|**nvarchar(64)**|Estado del monitor. Los valores posibles son **INactivos** (la cola está inactiva), se **notifican** (se ha notificado a la cola que se ha recibido) y **RECEIVES_OCCURRING** (la cola está recibiendo).|  
+|**last_empty_rowset_time**|**DATETIME**|Fecha y hora en que la cola estuvo vacía por última vez. En formato de hora militar y zona horaria GMT.|  
+|**last_activated_time**|**DATETIME**|Fecha y hora en que la cola se activó por última vez. En formato de hora militar y zona horaria GMT.|  
   
 ## <a name="remarks"></a>Comentarios  
- Al solucionar problemas de correo electrónico de base de datos, utilice **sysmail_help_queue_sp** para ver cuántos elementos hay en la cola, se activa el estado de la cola y por última vez.  
+ Al solucionar problemas Correo electrónico de base de datos, use **sysmail_help_queue_sp** para ver cuántos elementos hay en la cola, el estado de la cola y cuándo se activó por última vez.  
   
 ## <a name="permissions"></a>Permisos  
- De forma predeterminada, solo los miembros de la **sysadmin** rol fijo de servidor puede tener acceso a este procedimiento.  
+ De forma predeterminada, solo los miembros del rol fijo de servidor **sysadmin** pueden obtener acceso a este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve las colas de correo y estado.  

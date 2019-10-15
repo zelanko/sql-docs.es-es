@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4b0d4fb1f3c233ad8e7eedf91802da35fbbb1d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909074"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304749"
 ---
-# <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
+# <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra la configuración del Correo electrónico de base de datos.  
@@ -40,30 +40,30 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@parameter_name** =] **'***parameter_name***'**  
- Nombre del parámetro de configuración que se va a recuperar. Cuando se especifica, se devuelve el valor de la opción de configuración en el **@parameter_value** parámetro de salida. Cuando no hay ninguna **@parameter_name** se especifica, este procedimiento almacenado devuelve un conjunto que contiene todos los valores de configuración de correo electrónico de base de datos en la instancia de resultados.  
+ Nombre del parámetro de configuración que se va a recuperar. Cuando se especifica, el valor de la opción de configuración se devuelve en el parámetro de salida **\@parameter_value** . Cuando no se especifica ningún **\@parameter_name** , este procedimiento almacenado devuelve un conjunto de resultados que contiene todas las opciones de configuración de correo electrónico de base de datos en la instancia.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Cuando no hay ninguna **@parameter_name** se especifica, se devuelve un conjunto de resultados con las siguientes columnas.  
+ Cuando no se especifica ningún **\@parameter_name** , devuelve un conjunto de resultados con las columnas siguientes.  
   
 ||||  
 |-|-|-|  
 |Nombre de columna|Tipo de datos|Descripción|  
-|**paramName**|**nvarchar(256)**|El nombre del parámetro de configuración.|  
-|**ParamValue**|**nvarchar(256)**|Valor del parámetro de configuración.|  
+|**paramName**|**nvarchar(256)**|Nombre del parámetro de configuración.|  
+|**parámetro ParamValue**|**nvarchar(256)**|Valor del parámetro de configuración.|  
 |**description**|**nvarchar(256)**|Descripción del parámetro de configuración.|  
   
 ## <a name="remarks"></a>Comentarios  
- El procedimiento almacenado **sysmail_help_configure_sp** se enumeran las opciones de configuración de correo electrónico de base de datos actuales para la instancia.  
+ El procedimiento almacenado **sysmail_help_configure_sp** muestra la configuración actual de correo electrónico de base de datos de la instancia.  
   
- Cuando un **@parameter_name** se especifica, pero no se proporciona ningún parámetro de salida para **@parameter_value** , este procedimiento almacenado no genera ninguna salida.  
+ Cuando se especifica un **\@parameter_name** , pero no se proporciona ningún parámetro de salida para **\@parameter_value**, este procedimiento almacenado no genera ninguna salida.  
   
- El procedimiento almacenado **sysmail_help_configure_sp** está en el **msdb** de base de datos y que pertenece el **dbo** esquema. Se debe invocar el procedimiento con un nombre de tres partes si la base de datos actual no es **msdb**.  
+ El procedimiento almacenado **sysmail_help_configure_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe invocar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
 ## <a name="permissions"></a>Permisos  
- Permisos de ejecución de este procedimiento de forma predeterminada a los miembros de la **sysadmin** rol fijo de servidor.  
+ Los permisos de ejecución para este procedimiento tienen como valor predeterminado los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo se muestra la lista de parámetros de configuración del Correo electrónico de base de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -89,6 +89,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>Vea también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Procedimientos almacenados de correo electrónico de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Procedimientos &#40;almacenados de correo electrónico de base de datos TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

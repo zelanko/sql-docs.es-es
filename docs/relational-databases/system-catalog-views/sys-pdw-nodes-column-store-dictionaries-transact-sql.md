@@ -12,33 +12,33 @@ ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a588d23d5e3e7f9cb314342a739ceb8e051ca2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 618a92cfd0f1602753b9fcfd61ac232eff5cecd4
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059379"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305186"
 ---
-# <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
+# <a name="syspdw_nodes_column_store_dictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Contiene una fila para cada diccionario que se usa en los índices de almacén de columnas. Los diccionarios se usan para codificar algunos tipos de datos (no todos), por tanto no todas las columnas en un índice de almacén de columnas tienen diccionarios. Un diccionario puede ser un diccionario primario, para todos los segmentos, y posiblemente para otros diccionarios que se usan para un subconjunto de los segmentos de la columna.  
+  Contiene una fila para cada diccionario utilizado en los índices de almacén de columnas. Los diccionarios se usan para codificar algunos tipos de datos (no todos), por tanto no todas las columnas en un índice de almacén de columnas tienen diccionarios. Un diccionario puede ser un diccionario primario, para todos los segmentos, y posiblemente para otros diccionarios que se usan para un subconjunto de los segmentos de la columna.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Indica el identificador de partición. Es único en una base de datos.|  
-|**hobt_id**|**bigint**|Identificador del montón o el índice de árbol b (hobt) para la tabla que contiene este índice de almacén de columnas.|  
+|**hobt_id**|**bigint**|IDENTIFICADOR del índice de montículo o árbol B (HoBT) de la tabla que tiene este índice de almacén de columnas.|  
 |**column_id**|**int**|Identificador de la columna de almacén de columnas.|  
 |**dictionary_id**|**int**|Identificador del diccionario.|  
 |**version**|**int**|Versión del formato de diccionario.|  
-|**type**|**int**|Tipo de diccionario:<br /><br /> 1 - diccionario que contiene de hash **int** valores<br /><br /> 2 - no utilizado<br /><br /> 3 - diccionario de hash que contiene los valores de cadena<br /><br /> 4 - diccionario que contiene de hash de **float** valores|  
+|**Tipo**|**int**|Tipo de diccionario:<br /><br /> 1: Diccionario hash que contiene valores **int**<br /><br /> 2: no se usa<br /><br /> 3: Diccionario hash que contiene valores de cadena<br /><br /> 4: Diccionario hash que contiene valores **float**|  
 |**last_id**|**int**|El último identificador de datos del diccionario.|  
 |**entry_count**|**bigint**|Número de entradas en el diccionario.|  
 |**on_disc_size**|**bigint**|Tamaño del diccionario en bytes.|  
-|**pdw_node_id**|**int**|Identificador único de un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
+|**pdw_node_id**|**int**|Identificador único de un nodo [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso VIEW SERVER STATE.  
+ Requiere el permiso `VIEW SERVER STATE`.  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

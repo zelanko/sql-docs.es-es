@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5426210ad558e776dd2ad92246bc526ebf37c2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934766"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008456"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Actualización o revisión de bases de datos replicadas
 
@@ -104,7 +104,7 @@ En estos pasos se describe el orden en que se deben actualizar los servidores de
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>Pasos para la migración en paralelo del distribuidor a Windows Server 2012 R2
-Si está planeando la actualización de la instancia de SQL Server a SQL 2016 (o una versión superior) y el sistema operativo actual es Windows 2008 (o 2008 R2), tendrá que realizar una actualización en paralelo del sistema operativo a Windows Server 2012 R2 o superior. El motivo de esta actualización intermedia del sistema operativo es que no se puede instalar SQL Server 2016 en una instancia Windows Server 2008/2008 R2, y Windows Server 2008/20008 R2 no admite las actualizaciones locales para los clústeres de conmutación por error. Los pasos siguientes se pueden realizar en una instancia de SQL Server independiente, o bien en una instancia de clúster de conmutación por error Always On (FCI).
+Si está planeando la actualización de la instancia de SQL Server a SQL Server 2016 (o una versión superior) y el sistema operativo actual es Windows 2008 (o 2008 R2), tendrá que realizar una actualización en paralelo del sistema operativo a Windows Server R2 o superior. El motivo de esta actualización intermedia del sistema operativo es que no se puede instalar SQL Server 2016 en una instancia Windows Server 2008/2008 R2, y Windows Server 2008/20008 R2 no admite las actualizaciones locales directamente a Windows Server 2016. Aunque es posible realizar una actualización local de Windows Server 2008/2008 R2 a Windows Server 2012 y, luego, a Windows Server 2016, por lo general no se recomienda hacerlo debido al tiempo de inactividad y a la mayor complejidad, lo que impide una ruta de reversión sencilla. Una actualización en paralelo es la única ruta de actualización disponible para las instancias de SQL Server que participan en un clúster de conmutación por error.  Los pasos siguientes se pueden realizar en una instancia de SQL Server independiente, o bien en una instancia de clúster de conmutación por error Always On (FCI).
 
 1. Configure una instancia nueva de SQL Server (independiente o de clúster de conmutación por error Always On), con la misma edición y versión que el distribuidor en Windows Server 2012 R2/2016 con otro clúster de Windows y el nombre FCI de SQL Server o el nombre de host independiente. Tendrá que mantener la misma estructura de directorios del distribuidor anterior para asegurarse de que los archivos ejecutables de los agentes de replicación, las carpetas de replicación y las rutas de acceso de los archivos de base de datos se encuentran en la misma ruta de acceso en el entorno nuevo. Esto reducirá los pasos necesarios posteriores a la migración o actualización.
 1. Asegúrese de que la replicación está sincronizada y, después, cierre todos los agentes de replicación. 

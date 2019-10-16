@@ -17,20 +17,22 @@ ms.assetid: 8ec8c71e-5fc1-443a-92da-136ee3fc7f88
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e5a258436c521eec380114a42e68c3f20b75fd9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d06c62167071f8044d6c732efbbb5c4590e3a37
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025003"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289313"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operaciones de índice en paralelo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  En este tema se define el grado máximo de paralelismo y se explica cómo modificar este valor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. En los equipos multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise o superior, las instrucciones de índice pueden usar varios procesadores para realizar las operaciones de examen, ordenación e indización asociadas a la instrucción de índice, al igual que hacen otras consultas. El número de procesadores utilizados para ejecutar una sola instrucción de índice viene determinado por la opción de configuración [Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) , la carga de trabajo actual y las estadísticas de índices. La opción max degree of parallelism determina el número máximo de procesadores que se utilizarán en la ejecución de planes paralelos. Si [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detecta que el sistema está ocupado, el grado de paralelismo de la operación de índice se reduce automáticamente antes de comenzar la ejecución de la instrucción. [!INCLUDE[ssDE](../../includes/ssde-md.md)] también puede reducir el grado de paralelismo si la columna de clave inicial de un índice sin particiones tiene un número limitado de valores distintos o la frecuencia de cada valor distinto varía significativamente.  
+En este tema se define el grado máximo de paralelismo y se explica cómo modificar este valor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+
+En los sistemas multiprocesador que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise o superior, las instrucciones de índice pueden usar varios procesadores (CPU) para realizar las operaciones de examen, ordenación e indización asociadas a la instrucción de índice, al igual que hacen otras consultas. El número de CPU que se usan para ejecutar una sola instrucción de índice viene determinado por la opción de configuración del servidor [Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md), la carga de trabajo actual y las estadísticas de índices. La opción max degree of parallelism determina el número máximo de procesadores que se utilizarán en la ejecución de planes paralelos. Si [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detecta que el sistema está ocupado, el grado de paralelismo de la operación de índice se reduce automáticamente antes de comenzar la ejecución de la instrucción. [!INCLUDE[ssDE](../../includes/ssde-md.md)] también puede reducir el grado de paralelismo si la columna de clave inicial de un índice sin particiones tiene un número limitado de valores distintos o la frecuencia de cada valor distinto varía significativamente. Para obtener más información, consulte [Guía de arquitectura de procesamiento de consulta](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing). 
   
 > [!NOTE]  
->  Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea Características compatibles con las ediciones de SQL Server 2016.  
+> Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  **En este tema**  
   
@@ -62,24 +64,22 @@ ms.locfileid: "68025003"
   
 -   La ejecución de índices en paralelo y la opción de índice MAXDOP se aplican a las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes:  
   
-    -   CREATE INDEX  
+    -   [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  
   
-    -   ALTER INDEX REBUILD  
+    -   [ALTER INDEX (…) REBUILD](../../t-sql/statements/alter-index-transact-sql.md)  
   
-    -   DROP INDEX (esta opción solo se aplica a los clúster)  
+    -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (Solo se aplica a los índices agrupados).  
   
-    -   ALTER TABLE ADD (índice) CONSTRAINT  
+    -   [ALTER TABLE ADD (índice) CONSTRAINT](../../t-sql/statements/alter-table-table-constraint-transact-sql.md) 
   
-    -   ALTER TABLE DROP (índice clúster) CONSTRAINT  
+    -   [ALTER TABLE DROP (índice agrupado) CONSTRAINT](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)   
   
--   La opción de índice MAXDOP no se puede especificar en la instrucción ALTER INDEX REORGANIZE.  
+-   La opción de índice MAXDOP no se puede especificar en la instrucción `ALTER INDEX (...) REORGANIZE`.  
   
--   Los requisitos de memoria de las operaciones de índices con particiones que requieren ordenación pueden ser mayores si el optimizador de consultas aplica grados de paralelismo a la operación de generación. Cuanto mayores sean los grados de paralelismo, mayor será el requisito de memoria. Para obtener más información, consulte [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+-   Los requisitos de memoria de las operaciones de índices con particiones que requieren ordenación pueden ser mayores si el Optimizador de consultas aplica grados de paralelismo a la operación de generación. Cuanto mayores sean los grados de paralelismo, mayor será el requisito de memoria. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
-###  <a name="Security"></a> Seguridad  
-  
-####  <a name="Permissions"></a> Permisos  
- Requiere el permiso ALTER en la tabla o la vista.  
+###  <a name="Security"></a> <a name="Permissions"></a> Permisos  
+ Debe tener un permiso de `ALTER` sobre la tabla o vista.  
   
 ##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68025003"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     /*Alters the IX_ProductVendor_VendorID index on the Purchasing.ProductVendor table so that, if the server has eight or more processors, the Database Engine will limit the execution of the index operation to eight or fewer processors.  
@@ -133,7 +133,7 @@ ms.locfileid: "68025003"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     CREATE INDEX IX_ProductVendor_NewVendorID   
@@ -141,7 +141,12 @@ ms.locfileid: "68025003"
     WITH (MAXDOP=8);  
     GO  
     ```  
-  
- Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
+ 
+## <a name="see-also"></a>Vea también
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)   (Guía de arquitectura de procesamiento de consultas)  
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)     
+[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     
+[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)      
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)      
+[ALTER TABLE table_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)       
+[ALTER TABLE index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md)    

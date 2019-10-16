@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1d510ad8d52aedb46cf591712467c22c0929c42e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051260"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278164"
 ---
 # <a name="query-method-xml-data-type"></a>query() (método de tipo de datos xml)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Es una cadena, una expresión XQuery, que consulta nodos XML como, por ejemplo, 
 En esta sección se muestran ejemplos de cómo usar el método query() del tipo de datos **xml**.  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. Usar el método query() con una variable de tipo xml  
-El ejemplo siguiente declara una variable **@myDoc** de tipo **xml** y le asigna una instancia XML. Luego se usa el método **query()** para especificar una expresión XQuery en el documento.  
+En el ejemplo siguiente se declara una variable **\@myDoc** de tipo **xml** y se le asigna una instancia XML. Luego se usa el método **query()** para especificar una expresión XQuery en el documento.  
   
 La consulta recupera el elemento secundario <`Features`> del elemento <`ProductDescription`>:  
   

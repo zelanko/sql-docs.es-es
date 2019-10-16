@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b9443f1c33a89dd5eb51c143f23e65c2a12e3d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119141"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278195"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -150,7 +150,7 @@ sirve como valor predeterminado. Después de establecer DATEFIRST, use esta inst
 ## <a name="year-month-and-day-datepart-arguments"></a>Argumentos de datepart year, month y day  
 Los valores devueltos para DATEPART (**year**, *date*), DATEPART (**month**, *date*) y DATEPART (**day**, *date*) son los mismos que los que devuelven las funciones [YEAR](../../t-sql/functions/year-transact-sql.md), [MONTH](../../t-sql/functions/month-transact-sql.md) y [DAY](../../t-sql/functions/day-transact-sql.md), respectivamente.
   
-## <a name="isoweek-datepart"></a>ISO_WEEK datepart  
+## <a name="iso_week-datepart"></a>ISO_WEEK datepart  
 ISO 8601 incluye el sistema ISO de fecha-semana, un sistema de numeración para las semanas. Cada semana se asocia al año en el que cae el jueves. Por ejemplo, la semana 1 de 2004 (2004W01) abarcaba del lunes 29 de diciembre de 2003 al domingo 4 de enero de 2004. En las regiones y países europeos normalmente se usa este estilo de numeración. En las regiones y países que no son europeos normalmente no se usa.
 
 Nota: El número más alto de la semana en un año puede ser 52 o 53.
@@ -194,7 +194,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-Si *date* se especifica como variable o columna de tabla, y el tipo de datos de esa variable o columna no tiene especificado *datepart*, `DATEPART` devuelve el error 9810. En este ejemplo, la variable *@t* tiene un tipo de datos **time**. Se produce un error en el ejemplo porque el año de la parte de fecha no es válido para el tipo de datos **time**:
+Si *date* se especifica como variable o columna de tabla, y el tipo de datos de esa variable o columna no tiene especificado *datepart*, `DATEPART` devuelve el error 9810. En este ejemplo, la variable *\@t* tiene un tipo de datos **time**. Se produce un error en el ejemplo porque el año de la parte de fecha no es válido para el tipo de datos **time**:
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

@@ -1,6 +1,6 @@
 ---
 title: Especificaciones de capacidad máxima para SQL Server | Microsoft Docs
-ms.date: 11/06/2017
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687368"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008438"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,8 @@ ms.locfileid: "71687368"
 |Bloqueos por conexión||Máximo de bloqueos por servidor||  
 |Bloqueos por instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||Limitado solo por la memoria|Este valor sirve para asignaciones de bloqueo estático. Los bloqueos dinámicos están limitados solo por la memoria.|  
 |Niveles de procedimientos almacenados anidados||32|Si un procedimiento almacenado tiene acceso a más de 64 bases de datos o a más de 2 bases de datos en intercalación, recibirá un error.|  
-|Subconsultas anidadas||32||  
+|Subconsultas anidadas||32||    
+|Transacciones anidadas||4 294 967 296||     
 |Niveles de desencadenadores anidados||32||  
 |Índices no clúster por tabla||999||  
 |Número de expresiones distintas en la cláusula GROUP BY cuando existe alguna de las siguientes opciones: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP||32||  

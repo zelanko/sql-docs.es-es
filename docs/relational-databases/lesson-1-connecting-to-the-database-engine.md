@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 549b8d9e18db73cb91c9707ac51f2db52d368d0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ab78eab73526568736dea8c4aef1525b2607c93
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073736"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72162558"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al Motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Las bases de datos de ejemplo y los ejemplos no están incluidos en [!INCLUDE[ss
 1.  Inicie una sesión en Windows como miembro del grupo Administradores y abra [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
 2.  En el cuadro de diálogo **Conectar con el servidor** , haga clic en **Cancelar**.  
 3.  Si Servidores registrados no aparece, en el menú **Ver** , haga clic en **Servidores registrados**.
-4.  Con **Motor de base de datos** seleccionado en la barra de herramientas Servidores registrados, expanda **Motor de base de datos**, haga clic con el botón derecho en **Grupos de servidores locales**, seleccione **Tareas**y, después, haga clic en **Registrar servidores locales**. Se muestran todas las instancias de [!INCLUDE[ssDE](../includes/ssde-md.md)] instaladas en el equipo. La instancia predeterminada no tiene nombre y aparece como el nombre del equipo. Una instancia con nombre aparece como el nombre del equipo seguido de una barra inversa (\\) y del nombre de la instancia. En [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], la instancia se denomina *<nombre_equipo>* \sqlexpress, a no ser que se haya cambiado el nombre durante la instalación.  
+4.  Con **Motor de base de datos** seleccionado en la barra de herramientas Servidores registrados, expanda **Motor de base de datos**, haga clic con el botón derecho en **Grupos de servidores locales**, seleccione **Tareas**y, después, haga clic en **Registrar servidores locales**. Expanda **Grupos de servidores locales** para ver todas las instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] instalado en el equipo mostrado. La instancia predeterminada no tiene nombre y aparece como el nombre del equipo. Una instancia con nombre aparece como el nombre del equipo seguido de una barra inversa (\\) y del nombre de la instancia. En [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], la instancia se denomina *<nombre_equipo>* \sqlexpress, a no ser que se haya cambiado el nombre durante la instalación.  
 
 [!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

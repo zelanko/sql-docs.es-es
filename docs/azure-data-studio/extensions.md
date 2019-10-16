@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: e114c4991d5f3df10537e459263b49152c466f99
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.date: 10/03/2019
+ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
+ms.sourcegitcommit: cf268c4e39edf00a8552466e9440e79e6a5d0084
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70274824"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72166706"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>Ampliación de la funcionalidad de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -26,9 +26,11 @@ Las extensiones las proporciona el equipo de Azure Data Studio (Microsoft), así
 
 ## <a name="add-azure-data-studio-extensions"></a>Incorporación de extensiones de Azure Data Studio
 
-1. Para abrir el administrador de extensiones y acceder a las extensiones disponibles, seleccione el icono de extensiones, o bien seleccione **Extensiones** en el menú **Ver**.\
-    También puede acceder rápidamente al administrador de extensiones si presiona `Ctrl+Shift+X` (Windows/Linux) o `Command+Shift+X` (Mac).\
+1. Para acceder a las extensiones disponibles, seleccione el icono Extensiones o **Extensiones** en el menú **Ver**.
+
     ![Icono del Administrador de extensiones](media/extensions/extension-manager-icon.png)
+
+    También puede acceder rápidamente al administrador de extensiones si presiona `Ctrl+Shift+X` (Windows/Linux) o `Command+Shift+X` (Mac).
 
 2. Seleccione una extensión disponible para ver sus detalles.
     ![Detalles de la extensión](media/extensions/extension-details.png)
@@ -36,6 +38,8 @@ Las extensiones las proporciona el equipo de Azure Data Studio (Microsoft), así
 3. Seleccione la extensión que quiera e **instálela**.
 
 4. Una vez instalada, seleccione **Recargar** para habilitar la extensión en Azure Data Studio (solo es necesario cuando se instala una extensión por primera vez).
+
+Si tiene problemas para acceder al Administrador de extensiones en Azure Data Studio, puede descargar la extensión que necesita en nuestra [Wiki de GitHub](https://github.com/microsoft/azuredatastudio/wiki/List-of-Extensions).
 
 
 ## <a name="access-installed-azure-data-studio-extensions"></a>Acceso a las extensiones instaladas de Azure Data Studio

@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016853"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251533"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Inicio rápido: Eventos extendidos en SQL Server
 
@@ -410,7 +410,7 @@ En el **Explorador de objetos**de SSMS, puede hacer clic con el botón derecho e
 Existen incontables escenarios para el uso eficaz de los eventos extendidos. En los siguientes artículos se proporcionan escenarios de ejemplo que implican los bloqueos que se han realizado durante las consultas.
 
 
-En los siguientes artículos se describen escenarios específicos para las sesiones de eventos que tienen como objetivo la evaluación de los bloqueos. En los artículos también se muestran algunas técnicas avanzadas, como el uso de **@dbid** y el de `EXECUTE (@YourSqlString)`dinámico:
+En los siguientes artículos se describen escenarios específicos para las sesiones de eventos que tienen como objetivo la evaluación de los bloqueos. En los artículos también se muestran algunas técnicas avanzadas, como el uso de **\@dbid** y el de `EXECUTE (@YourSqlString)` dinámico:
 
 - [Buscar los objetos que han obtenido más bloqueos](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - En este escenario se usa package0.histogram de destino, que procesa los datos de eventos sin procesar antes de mostrárselos.

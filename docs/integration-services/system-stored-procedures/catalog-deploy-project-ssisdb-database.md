@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 77ddbd16decffcf5250fbd1de6ba087e9647f0ec
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71281170"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251324"
 ---
 # <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (base de datos de SSISDB)
 
@@ -72,7 +72,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   Un parámetro hace referencia a un objeto que no existe, un parámetro intenta crear un objeto que ya existe o un parámetro no es válido por algún otro motivo  
   
--   El valor del parámetro *@project_name* no coincide con el nombre del proyecto en el archivo de implementación.  
+-   El valor del parámetro *\@project_name* no coincide con el nombre del proyecto en el archivo de implementación.  
   
 -   El usuario no tiene permisos suficientes  
   

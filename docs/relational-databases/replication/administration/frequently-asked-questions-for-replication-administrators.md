@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7553b584a37685fd7fb9455423e55c27c8343e72
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710391"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041199"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Preguntas más frecuentes para administradores de replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,14 +116,14 @@ ms.locfileid: "71710391"
 ## <a name="logins-and-object-ownership"></a>Inicios de sesión y propiedad de los objetos  
   
 ### <a name="are-logins-and-passwords-replicated"></a>¿Se replican las contraseñas y los inicios de sesión?  
- No. Puede crear un paquete DTS para transferir inicios de sesión y contraseñas de un publicador a uno o varios suscriptores.  
+ No. Puede crear un paquete SSIS para transferir inicios de sesión y contraseñas de un publicador a uno o varios suscriptores.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>¿Qué esquemas se replican y cómo?  
  A partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *esquema* tiene dos significados:  
   
--   La definición de un objeto, como una instrucción CREATE TABLE. De manera predeterminada, la replicación copia las definiciones de todos los objetos replicados en el suscriptor.  
+-   La definición de un objeto, como una instrucción `CREATE TABLE`. De manera predeterminada, la replicación copia las definiciones de todos los objetos replicados en el suscriptor.  
   
--   El espacio de nombres dentro del que se crea un objeto: \<Base de datos>.\<Esquema>.\<Objeto>. Los esquemas se definen mediante la instrucción CREATE SCHEMA.  
+-   El espacio de nombres dentro del que se crea un objeto: \<Base de datos>.\<Esquema>.\<Objeto>. Los esquemas se definen con la instrucción `CREATE SCHEMA`.  
   
 -   La replicación tiene el siguiente comportamiento predeterminado en el Asistente para nueva publicación con respecto a los esquemas y a la propiedad de objetos:  
   
@@ -178,7 +178,7 @@ ms.locfileid: "71710391"
  Existen varios mecanismos para volver a generar índices. Todos ellos se pueden utilizar sin necesidad de tener en cuenta consideraciones especiales para replicación, con la siguiente excepción: las claves principales son necesarias en las tablas de las publicaciones transaccionales, por lo que no se pueden quitar y volver a crear claves principales en dichas tablas.  
   
 ### <a name="how-do-i-add-or-change-indexes-on-publication-and-subscription-databases"></a>¿Cómo se agregan o cambian índices en bases de datos de suscripciones y publicaciones?  
- Se pueden agregar índices en el publicador o los suscriptores sin consideraciones especiales en cuanto a replicación (tenga en cuenta que los índices pueden afectar al rendimiento). CREATE INDEX y ALTER INDEX no se replican, por lo que si agrega o cambia un índice, por ejemplo en el publicador, deberá realizar la misma adición o cambio en el suscriptor si desea que quede reflejado ahí.  
+ Se pueden agregar índices en el publicador o los suscriptores sin consideraciones especiales en cuanto a replicación (tenga en cuenta que los índices pueden afectar al rendimiento). `CREATE INDEX` y `ALTER INDEX` no se replican, por lo que si agrega o cambia un índice, por ejemplo en el publicador, deberá realizar la misma adición o cambio en el suscriptor si desea que quede reflejado ahí.  
   
 ### <a name="how-do-i-move-or-rename-files-for-databases-involved-in-replication"></a>¿Cómo se mueven o cambian de nombre los archivos de las bases de datos que participan en la replicación?  
  En versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], mover o cambiar de nombre los archivos de base de datos exigía separar y volver a adjuntar la base de datos. Puesto que una base de datos replicada no se puede separar, la replicación tenía que quitarse de estas bases de datos primero. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se pueden mover o cambiar de nombre los archivos sin separar y volver a adjuntar la base de datos, sin efecto alguno en la replicación. Para más información sobre mover y cambiar el nombre de los archivos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
@@ -187,7 +187,7 @@ ms.locfileid: "71710391"
  Primero, quite el artículo de la publicación mediante [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<Publicación>** , y después quítelo de la base de datos mediante `DROP <Object>`. No se pueden quitar artículos de publicaciones transaccionales o de instantáneas después de que se hayan agregado suscripciones; es preciso quitar primero las suscripciones. Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>¿Cómo se agregan o quitan columnas de una tabla publicada?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite una amplia variedad de cambios de esquema en objetos publicados, lo que incluye agregar y quitar columnas. Por ejemplo, ejecute ALTER TABLE... DROP COLUMN en el publicador y la instrucción se replica en los suscriptores y, a continuación, se ejecuta para quitar la columna. Los suscriptores que ejecutan versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] admiten agregar y quitar columnas a través de los procedimientos almacenados [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) y [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite una amplia variedad de cambios de esquema en objetos publicados, lo que incluye agregar y quitar columnas. Por ejemplo, ejecute `ALTER TABLE … DROP COLUMN` en el publicador y la instrucción se replica en los suscriptores y, a continuación, se ejecuta para quitar la columna. Los suscriptores que ejecutan versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] admiten agregar y quitar columnas a través de los procedimientos almacenados [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) y [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Mantenimiento de la replicación  
   

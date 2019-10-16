@@ -17,16 +17,16 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 5ee4fc6502b9d31d9ccade786c5cc0129c61da22
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: fc0eb0e3e8cd6a095a6f30f44ee08c520db19e45
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860547"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289297"
 ---
 # <a name="compare-execution-plans"></a>Comparación de los planes de ejecución
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-En este tema se describe cómo comparar las similitudes y diferencias entre los planes de ejecución gráficos reales usando la función Comparación de planes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
+En este tema se describe cómo comparar las similitudes y diferencias entre los planes de ejecución gráficos reales usando la función Comparación de planes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta característica está disponible a partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v16.
   
 > [!NOTE]
 > Los planes de ejecución reales se generan tras ejecutar las consultas o los lotes del [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por este motivo, un plan de ejecución real contiene información de tiempo de ejecución, como el número de filas real, las métricas de uso real de recursos o las advertencias en tiempo de ejecución (si las hubiera). Para obtener más información, vea [Mostrar un plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md).

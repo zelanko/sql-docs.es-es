@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6cb2cf4bae18604d77c8644f18efd32702b8197
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211297"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252189"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "70211297"
  WAITFOR  
  Especifica que la instrucción GET CONVERSATION GROUP espera a que llegue un mensaje a la cola en caso de no haber ningún mensaje.  
   
- *@conversation_group_id*  
+ *\@conversation_group_id*  
  Es una variable que se utiliza para almacenar el Id. de grupo de conversación devuelto por la instrucción GET CONVERSATION GROUP. La variable debe ser de tipo **uniqueidentifier**. Si no está disponible ningún grupo de conversación, la variable se establece en NULL.  
   
  FROM  
@@ -72,7 +72,7 @@ ms.locfileid: "70211297"
  Es el nombre de la cola de la que se obtiene el grupo de conversación.  
   
  TIMEOUT *tiempo_de_espera*  
- Especifica el tiempo, en milisegundos, que espera Service Broker a que llegue un mensaje a la cola. Esta cláusula solo se puede usar con la cláusula WAITFOR. Si una instrucción que usa WAITFOR no incluye esta cláusula o *tiempo_de_espera* es -1, el tiempo de espera es ilimitado. Si se agota el tiempo de espera, GET CONVERSATION GROUP establece la variable *@conversation_group_id* en NULL.  
+ Especifica el tiempo, en milisegundos, que espera Service Broker a que llegue un mensaje a la cola. Esta cláusula solo se puede usar con la cláusula WAITFOR. Si una instrucción que usa WAITFOR no incluye esta cláusula o *tiempo_de_espera* es -1, el tiempo de espera es ilimitado. Si se agota el tiempo de espera, GET CONVERSATION GROUP establece la variable *\@conversation_group_id* en NULL.  
   
 ## <a name="remarks"></a>Notas  
   

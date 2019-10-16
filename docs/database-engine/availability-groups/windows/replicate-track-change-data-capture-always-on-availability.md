@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8eef8241d5c8413f3722f11854074d415399165b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2faa46529ea44ce348c382877d39d780cb22572b
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014342"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251962"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicación, seguimiento de cambios y captura de datos modificados - Grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "68014342"
     ```  
   
     > [!NOTE]  
-    >  Se deben crear los trabajos en todos los destinos posibles de conmutación por error antes de la conmutación por error y marcarlos como deshabilitados hasta que la réplica de disponibilidad de un host se convierta en la nueva réplica principal. Los trabajos de CDC que se ejecutan en la base de datos principal anterior también deben estar deshabilitados cuando la base de datos local se convierte en una base de datos secundaria. Para deshabilitar y habilitar trabajos, use la opción *@enabled* del procedimiento [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Para obtener más información sobre cómo crear trabajos de CDC, vea [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT).  
+    >  Se deben crear los trabajos en todos los destinos posibles de conmutación por error antes de la conmutación por error y marcarlos como deshabilitados hasta que la réplica de disponibilidad de un host se convierta en la nueva réplica principal. Los trabajos de CDC que se ejecutan en la base de datos principal anterior también deben estar deshabilitados cuando la base de datos local se convierte en una base de datos secundaria. Para deshabilitar y habilitar trabajos, use la opción *\@enabled* de [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md). Para obtener más información sobre cómo crear trabajos de CDC, vea [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT).  
   
 -   **Agregar roles de CDC a una réplica de la base de datos principal de AlwaysOn**  
   
@@ -155,7 +155,7 @@ ms.locfileid: "68014342"
   
      Se puede usar el nombre de agente de escucha del grupo de disponibilidad o el nombre de nodo explícito para buscar la réplica secundaria. Si se emplea el nombre de agente de escucha del grupo de disponibilidad, el acceso se dirigirá a cualquier réplica secundaria adecuada.  
   
-     Cuando se utiliza **sp_addlinkedserver** para crear un servidor vinculado con el fin de acceder al elemento secundario, el parámetro *@datasrc* se usa para el nombre de agente de escucha de grupo de disponibilidad o el nombre del servidor explícito. Por su parte, el parámetro *@provstr* se usa para especificar la intención de solo lectura.  
+     Cuando se utiliza **sp_addlinkedserver** para crear un servidor vinculado con el fin de acceder al elemento secundario, el parámetro *\@datasrc* se utiliza para el nombre de agente de escucha del grupo de disponibilidad o el nombre de servidor explícito. Por su parte, el parámetro *\@provstr* se utiliza para especificar la intención de solo lectura.  
   
     ```sql  
     EXEC sp_addlinkedserver   

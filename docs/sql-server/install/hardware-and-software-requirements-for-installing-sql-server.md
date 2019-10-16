@@ -44,12 +44,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54f2bdb3d844a8e5aab947f19f7905173b2cb04f
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 79818fa5cb41b27a15d531f22a21b86c10cb018a
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419573"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008471"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware y software para instalar SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -274,7 +274,14 @@ La siguiente tabla muestra qué ediciones de SQL Server 2016 y 2017 son compati
 -   Una vez instalado en un equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no puede cambiar el equipo de un controlador de dominio a un miembro de dominio. Debe desinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de cambiar el equipo host a un miembro de dominio.   
 -   Las instancias del clúster de conmutación por error de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se admiten si los nodos de clúster son controladores de dominio.   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se admite en un controlador de dominio de solo lectura. El programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede crear grupos de seguridad ni suministrar cuentas de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un controlador de dominio de solo lectura. En este escenario, se producirá un error de instalación. 
+
+  > [!NOTE]
+  > Esta restricción también se aplica a las instalaciones en nodos de miembros de dominio.
+
 - Una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se admite en un entorno donde solo se puede acceder a un controlador de dominio de solo lectura. 
+
+  > [!NOTE]
+  > Esta restricción también se aplica a las instalaciones en nodos de miembros de dominio.
   
 ## <a name="see-also"></a>Consulte también  
  [Planear una instalación de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   

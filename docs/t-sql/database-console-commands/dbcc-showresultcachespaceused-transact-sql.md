@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476304"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174658"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -42,7 +42,12 @@ El tamaño máximo de la caché del conjunto de resultados es 1 TB por base de 
 - cada 48 horas si el conjunto de resultados no se ha usado.
 - cuando la caché del conjunto de resultados se acerca al tamaño máximo.
 
-Los usuarios pueden vaciar manualmente la caché del conjunto de resultados de una base de datos desactivando dicha caché o con el comando `DBCC DROPRESULTSETCACHE`.   El hecho de poner en pausa una base de datos no vaciará la caché del conjunto de resultados.  
+Para vaciar manualmente la caché del conjunto de resultados de una base de datos, los usuarios pueden usar una de estas opciones:
+
+- Desactivar la característica de caché del conjunto de resultados para la base de datos.
+- Ejecutar `DBCC DROPRESULTSETCACHE` mientras está conectado a la base de datos. 
+
+El hecho de poner en pausa una base de datos no vaciará la caché del conjunto de resultados.  
 
 ## <a name="permissions"></a>Permisos
 

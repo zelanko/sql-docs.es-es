@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ae7aa810e58cf7e21a4045e0c408c76e8754a620
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298824"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251987"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Crear la función para recuperar los datos modificados
 
@@ -80,7 +80,7 @@ ms.locfileid: "71298824"
 > [!NOTE]  
 >  Para más información sobre la sintaxis de este procedimiento almacenado y sus parámetros, vea [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md).  
   
- El procedimiento almacenado siempre genera una función de contenedor para devolver todos los cambios de cada instancia de captura. Si se ha establecido el parámetro *@supports_net_changes* al crear la instancia de captura, el procedimiento almacenado también generará una función de contenedor para devolver los cambios netos de cada instancia de captura aplicable.  
+ El procedimiento almacenado siempre genera una función de contenedor para devolver todos los cambios de cada instancia de captura. Si se estableció el parámetro *\@supports_net_changes* al crear la instancia de captura, el procedimiento almacenado también generará una función de contenedor para devolver los cambios netos de cada instancia de captura aplicable.  
   
  El procedimiento almacenado devuelve un conjunto de resultados con dos columnas:  
   
@@ -112,7 +112,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Entender y usar las funciones creadas por el procedimiento almacenado  
- Para recorrer de forma sistemática la escala de tiempo de los datos modificados capturados, las funciones de contenedor generadas esperan que el parámetro *@end_time* de un intervalo sea el parámetro *@start_time* del intervalo siguiente. Cuando se sigue esta convención, las funciones de contenedor generadas pueden realizar las tareas siguientes:  
+ Para recorrer de manera sistemática la escala de tiempo de los datos de cambios capturados, las funciones de contenedor generadas esperan que el parámetro *\@end_time* de un intervalo sea el parámetro *\@start_time* del intervalo subsiguiente. Cuando se sigue esta convención, las funciones de contenedor generadas pueden realizar las tareas siguientes:  
   
 -   Asignar los valores de fecha y hora a los valores LSN que se usan internamente.  
   
@@ -130,7 +130,7 @@ deallocate #hfunctions
   
 -   Valor de fecha y hora de inicio, y valor de fecha y hora de finalización del intervalo. Aunque las funciones de contenedor usan valores de fecha y hora como los puntos inicial y final del intervalo de consulta, las funciones de captura de datos modificados usan dos valores LSN como dichos puntos.  
   
--   El filtro de filas. Para las funciones de contenedor y las funciones de captura de datos modificados, el parámetro *@row_filter_option* es el mismo. Para más información, vea [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) y [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
+-   El filtro de filas. Para las funciones de contenedor y las funciones de captura de datos modificados, el parámetro *\@row_filter_option* es el mismo. Para más información, vea [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) y [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md).  
   
  El conjunto de resultados devuelto por las funciones de contenedor incluye los datos siguientes:  
   
@@ -138,7 +138,7 @@ deallocate #hfunctions
   
 -   Una columna denominada __CDC_OPERATION que usa un campo de uno o dos caracteres para identificar la operación que está asociada a la fila. Los valores válidos para este campo son los siguientes: "I" para insertar, "D" para eliminar, "UO" para actualizar valores antiguos y "UN" para actualizar valores nuevos.  
   
--   Marcas de actualización, si las pide, que aparecen como columnas de bits después del código de operación y en el orden especificado en el parámetro *@update_flag_list* . El nombre de estas columnas se obtiene anexando “_uflag” al nombre de columna asociado.  
+-   Marcas de actualización, si las pide, que aparecen como columnas de bits después del código de operación y en el orden especificado en el parámetro *\@update_flag_list*. El nombre de estas columnas se obtiene anexando “_uflag” al nombre de columna asociado.  
   
  Si el paquete llama a una función de contenedor que consulta todos los cambios, dicha función también devolverá las columnas __CDC_STARTLSN y \__CDC_SEQVAL. Estas dos columnas se convierten en la primera y en la segunda columna, respectivamente, del conjunto de resultados. La función de contenedor también ordena el conjunto de resultados basándose en estas dos columnas.  
   

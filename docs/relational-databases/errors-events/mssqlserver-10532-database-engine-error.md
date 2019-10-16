@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fa07d4adada303c9e1b2470879574f554992bf36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 050f1c4e1c47458e513e02d16eb3ea6dc7e842a8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060759"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005988"
 ---
-# <a name="mssqlserver10532"></a>MSSQLSERVER_10532
+# <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalles  
@@ -30,13 +30,13 @@ ms.locfileid: "68060759"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|PG_NO_ELIGIBLE_STMT|  
-|Texto del mensaje|No se puede crear la guía de plan '%.\*ls' porque el lote o módulo especificado por **@plan_handle** no contiene una instrucción válida para una guía de plan. Especifique un valor distinto para **@plan_handle** .|  
+|Texto del mensaje|No se puede crear la guía de plan "%.\*ls", porque el lote o módulo especificado por **\@plan_handle** no contiene una instrucción válida para una guía de plan. Especifique un valor distinto para **\@plan_handle**.|  
   
 ## <a name="explanation"></a>Explicación  
-El lote o módulo especificado por **@plan_handle** no contiene una instrucción válida para una guía de plan.  
+El lote o módulo especificado por **\@plan_handle** no contiene una instrucción válida para una guía de plan.  
   
 ## <a name="user-action"></a>Acción del usuario  
-Especifique un valor distinto para **@plan_handle** .  
+Especifique un valor distinto para **\@plan_handle**.  
   
 ## <a name="see-also"></a>Consulte también  
 [Guías de plan](~/relational-databases/performance/plan-guides.md)  

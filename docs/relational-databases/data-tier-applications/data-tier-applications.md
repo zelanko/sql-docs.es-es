@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d01bb0a6d61220daa49b60dce1cb173f344d9f84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076743"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278288"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68076743"
 ## <a name="benefits-of-data-tier-applications"></a>Ventajas de las aplicaciones de capa de datos  
  El ciclo de vida de la mayoría de las aplicaciones de base de datos implica a los desarrolladores y administradores de bases de datos (DBA) que comparten e intercambian scripts y notas de integración ad hoc para las actividades de actualización y mantenimiento de aplicaciones. Aunque esto es aceptable para un pequeño número de bases de datos, deja de ser rápidamente escalable una vez que las bases de datos aumentan en número, tamaño y complejidad.  
   
- Un DAC es una herramienta de productividad y administración del ciclo de vida de las bases de datos que permite el desarrollo declarativo de las mismas para simplificar la implementación y la administración. Un desarrollador puede crear una base de datos en un proyecto de base de datos de herramientas de datos de SQL Server y generar después la base de datos en un DACPAC para la entrega a un DBA. El DBA puede implementar la DAC utilizando SQL Server Management Studio para una instancia de producción o de pruebas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. También puede utilizar el DACPAC para actualizar una base de datos implementada anteriormente mediante SQL Server Management Studio. Para completar el ciclo de vida, el DBA puede extraer la base de datos en un DACPAC y entregarla a un desarrollador para que refleje los ajustes de producción de o pruebas o para que habilite los cambios de diseño de base de datos posteriores en respuesta a los cambios de la aplicación.  
+ Un DAC es una herramienta de productividad y administración del ciclo de vida de las bases de datos que permite el desarrollo declarativo de las mismas para simplificar la implementación y la administración. Un desarrollador puede crear una base de datos en un proyecto de base de datos de SQL Server Data Tools y generar después la base de datos en un DACPAC para la entrega a un DBA. El DBA puede implementar la DAC utilizando SQL Server Management Studio para una instancia de producción o de pruebas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. También puede utilizar el DACPAC para actualizar una base de datos implementada anteriormente mediante SQL Server Management Studio. Para completar el ciclo de vida, el DBA puede extraer la base de datos en un DACPAC y entregarla a un desarrollador para que refleje los ajustes de producción de o pruebas o para que habilite los cambios de diseño de base de datos posteriores en respuesta a los cambios de la aplicación.  
   
  La ventaja de una implementación controlada por DAC en un ejercicio controlado por script es que la herramienta ayuda al DBA identificar y validar los comportamientos de bases de datos de origen y destino diferentes. Durante las actualizaciones, la herramienta advierte al DBA cuando la actualización puede provocar una pérdida de datos y también proporciona un plan de actualización. El DBA puede evaluar el plan y utilizar luego la herramienta para continuar con la actualización.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68076743"
   
 -   Para que una base de datos de SQL Server sea tratada como una DAC, debe estar registrada, ya sea de forma explícita mediante una operación de usuario, o bien de forma implícita mediante una de las operaciones de DAC. Cuando se registra una base de datos, la versión de DAC y otras propiedades se registran como parte de los metadatos de la base de datos. A la inversa, también es posible no registrar una base de datos que esté sin sus propiedades de DAC.  
   
--   En general, las herramientas de DAC pueden leer archivos DACPAC generados por herramientas de DAC en versiones anteriores de SQL Server y también pueden implementar DACPAC en versiones anteriores de SQL Server. Sin embargo, las herramientas de DAC de versiones anteriores no pueden leer archivos de DACPAC generados por herramientas de DAC en versiones posteriores. Concretamente:  
+-   En general, las herramientas de DAC pueden leer archivos DACPAC generados por herramientas de DAC en versiones anteriores de SQL Server y también pueden implementar DACPAC en versiones anteriores de SQL Server. Sin embargo, las herramientas de DAC de versiones anteriores no pueden leer archivos de DACPAC generados por herramientas de DAC en versiones posteriores. Concretamente:  
   
     -   Las operaciones DAC se introdujeron en SQL Server 2008 R2. Además de las bases de datos de SQL Server 2008 R2, las herramientas admiten la generación de archivos de DACPAC de bases de datos de SQL Server 2008, SQL Server 2005 y SQL Server 2000.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68076743"
   
 -   Un DACPAC es un archivo de Windows con una extensión .dacpac. El archivo admite un formato abierto que consta de varias secciones XML que representan detalles del origen de DACPAC, los objetos de la base de datos y otras características. Un usuario experto puede desempaquetar el archivo mediante la utilidad DacUnpack.exe que se proporciona con el producto para inspeccionar cada sección de forma más minuciosa.  
   
--   El usuario debe ser miembro del rol dbmanager o tener asignados permisos CREATE DATABASE para crear una base de datos, incluida la creación de una base de datos para implementar un paquete DAC. El usuario debe ser miembro del rol dbmanager, o tener asignados permisos DROP DATABASE para quitar una base de datos.  
+-   El usuario debe ser miembro del rol **dbmanager** o tener asignados permisos **CREATE DATABASE** para crear una base de datos, incluida la creación de una base de datos para implementar un paquete DAC. El usuario debe ser miembro del rol **dbmanager**, o tener asignados permisos **DROP DATABASE** para quitar una base de datos.  
   
 ## <a name="dac-tools"></a>Herramientas de DAC  
  Un DACPAC se puede utilizar sin problemas con las herramientas que se proporcionan con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Estas herramientas abordan los requisitos de los diferentes usuarios que utilizan un DACPAC como unidad de interoperabilidad.  
@@ -97,7 +97,6 @@ ms.locfileid: "68076743"
   
 ## <a name="bacpac"></a>BACPAC  
  Un BACPAC es un archivo de Windows con una extensión .bacpac que encapsula el esquema y los datos de una base de datos. El caso de uso principal de un BACPAC es mover una base de datos de un servidor a otro (o [migrar una base de datos de un servidor local a la nube](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)) y almacenar una base de datos existente en un formato abierto.  
-  
  Similar al DACPAC, el formato de archivo BACPAC es abierto: el contenido del esquema del BACPAC es idéntico al del DACPAC. Los datos de un BACPAC se almacenan en formato JSON.  
   
  DACPAC y BACPAC son similares pero se dirigen a escenarios diferentes. Un DACPAC está dirigido a la captura y la implementación del esquema, incluida la actualización de una base de datos existente. El caso de uso principal de un BACPAC es implementar un esquema estrictamente definido en entornos de implementación, pruebas y producción. Y también a la inversa: capturar el esquema de producción y aplicarlo a entornos de pruebas y desarrollo.  

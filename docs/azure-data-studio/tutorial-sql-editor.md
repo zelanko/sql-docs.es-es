@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959011"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278247"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: usar el editor de Transact-SQL para crear objetos de la base de datos ([!INCLUDE[name-sos](../includes/name-sos-short.md)])
 
@@ -31,9 +31,9 @@ En este tutorial, obtendrá información sobre cómo usar [!INCLUDE[name-sos-sho
 
 ## <a name="prerequisites"></a>Prerequisites
 
-En este tutorial se requiere la instancia de SQL Server o Azure SQL Database *TutorialDB*. Para crear la base de datos *TutorialDB*, complete alguno de los siguientes inicios rápidos:
+En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete alguno de los siguientes inicios rápidos:
 
-- [Conectarse y consultar con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Conectarse y consultar SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Conectarse a una instancia de Azure SQL Database y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
@@ -54,7 +54,7 @@ En este tutorial se requiere la instancia de SQL Server o Azure SQL Database *Tu
 
    ![widget de búsqueda rápida](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Edite la columna **Correo electrónico** de la primera fila, escriba *orlando0@adventure-works.com* y, después, presione **Entrar** para guardar los cambios.
+1. Edite la columna **Correo electrónico** en la primera fila, escriba *orlando0\@adventure-works.com* y presione **ENTRAR** para guardar el cambio.
 
    ![editar datos](./media/tutorial-sql-editor/edit-data.png)
 
@@ -182,7 +182,7 @@ Se creará el procedimiento almacenado y, en el panel de **RESULTADOS**, se most
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Usar los resultados de una consulta guardada como JSON para probar el procedimiento almacenado setCustomer
 
-El procedimiento almacenado *setCustomer* creado en la sección anterior necesita que se pasen datos JSON al parámetro *@json_val* . En esta sección, se muestra cómo obtener código JSON con el formato correcto para pasarlo al parámetro con el fin de probar el procedimiento almacenado.
+El procedimiento almacenado *setCustomer* creado en la sección anterior necesita que se pasen datos JSON al parámetro *\@json_val*. En esta sección, se muestra cómo obtener código JSON con el formato correcto para pasarlo al parámetro con el fin de probar el procedimiento almacenado.
 
 1. En la barra lateral **SERVIDORES**, haga clic con el botón derecho en la tabla *dbo.Customers* y seleccione **SELECT TOP 1000 Rows** (SELECCIONAR PRIMERAS 100 filas).
 

@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2532e7c2a173441cf804cdc5bdcd9be8e69bb135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988463"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251929"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configuración de la replicación con grupos de disponibilidad Always On
 
@@ -32,7 +32,7 @@ ms.locfileid: "67988463"
   
  La base de datos de distribución no se puede colocar en un grupo de disponibilidad con SQL Server 2012 y SQL Server 2014. Se admite poner la base de datos de distribución en un grupo de disponibilidad con SQL Server 2016 y superior. Para más información, consulte [Configurar la base de datos de distribución en un grupo de disponibilidad](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
-1.  Configure la distribución en el distribuidor. Si se usan procedimientos almacenados para la configuración, ejecute **sp_adddistributor**. Use el parámetro de *@password* para identificar la contraseña que se utilizará cuando un publicador remoto se conecte al distribuidor. También se necesitará la contraseña de cada publicador remoto cuando el distribuidor remoto está configurado.  
+1.  Configure la distribución en el distribuidor. Si se usan procedimientos almacenados para la configuración, ejecute **sp_adddistributor**. Use el parámetro de *\@password* para identificar la contraseña que se utilizará cuando un publicador remoto se conecte al distribuidor. También se necesitará la contraseña de cada publicador remoto cuando el distribuidor remoto está configurado.  
   
     ```  
     USE master;  

@@ -13,12 +13,12 @@ ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fa2f5a4694b8f8f9f59a5663d996777d0c78df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db274ccde27abf92617e0eadf95b1971e740705a
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986658"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251296"
 ---
 # <a name="using-the-query-store-with-in-memory-oltp"></a>Uso del almacén de consultas con OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Sin embargo, existen algunos aspectos específicos que los usuarios deben tener 
   
 -   Cuando se habilita el almacén de consultas, se recopilan de manera predeterminada las consultas, los planes y las estadísticas de tiempo de compilación. Pero no se activa la recopilación de estadísticas de runtime, a menos que la habilite explícitamente con [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
--   Al establecer *@new_collection_value* en 0, el almacén de consultas dejará de recopilar estadísticas en tiempo de ejecución para el procedimiento afectado o para toda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Al establecer *\@new_collection_value* en 0, el almacén de consultas dejará de recopilar estadísticas en tiempo de ejecución para el procedimiento afectado o para toda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   El valor configurado con [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) no se conserva. Asegúrese de comprobar y volver a configurar la recopilación de estadísticas después de reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

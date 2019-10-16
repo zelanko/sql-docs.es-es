@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952754"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251357"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL)
 
@@ -3029,18 +3029,36 @@ ON
 especifica que los conjuntos de resultados de consultas devueltos de esta base de datos se almacenarán en caché en el almacenamiento de Azure SQL Data Warehouse.
 
 OFF        
-especifica que los conjuntos de resultados de consultas devueltos de esta base de datos no se almacenarán en caché en el almacenamiento de Azure SQL Data Warehouse. Los usuarios pueden ver si una consulta se ejecutó con un acierto o un fallo de caché de resultados realizando una consulta a sys.pdw_request_steps con un valor de request_id específico.   Si hay un acierto de caché, el resultado de la consulta tendrá un único paso con los siguientes detalles:
-
-|**Nombre de columna** |**Operador** |**Value** |
-|----|----|----|
-| operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-comando|Like|%DWResultCacheDb%|
-| | |
+especifica que los conjuntos de resultados de consultas devueltos de esta base de datos no se almacenarán en caché en el almacenamiento de Azure SQL Data Warehouse. 
 
 ### <a name="remarks"></a>Notas
-Este comando debe ejecutarse mientras se está conectado a la base de datos `master`.  Los cambios realizados a esta configuración de base de datos se aplicarán inmediatamente.  Los costos de almacenamiento se aplican mediante el almacenamiento en caché de conjuntos de resultados de consultas. Después de deshabilitar el almacenamiento en caché de resultados para una base de datos, la caché de resultados que persistía anteriormente se eliminará inmediatamente del almacenamiento de Azure SQL Data Warehouse. Se ha incorporado una nueva columna, is_result_set_caching_on, en [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) para mostrar la configuración de almacenamiento en caché de resultados de una base de datos.  
+Este comando debe ejecutarse mientras se está conectado a la base de datos `master`.  Los cambios realizados a esta configuración de base de datos se aplicarán inmediatamente.  Los costos de almacenamiento se aplican mediante el almacenamiento en caché de conjuntos de resultados de consultas. Después de deshabilitar el almacenamiento en caché de resultados para una base de datos, la caché de resultados que persistía anteriormente se eliminará inmediatamente del almacenamiento de Azure SQL Data Warehouse. 
+
+Ejecute este comando para comprobar la configuración del almacenamiento en caché del conjunto de resultados de una base de datos.  Si el almacenamiento en caché del conjunto de resultados está activado, is_result_set_caching_on devolverá 1.
+
+```sql
+
+SELECT name, is_result_set_caching_on FROM sys.databases 
+WHERE name = <'Your_Database_Name'>
+
+```
+
+Ejecute este comando para comprobar si se ejecutó una consulta con un acierto o un error de caché de resultados.  Si se produce un acierto de caché, result_cache_hit devolverá 1. 
+
+```sql
+
+SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+WHERE request_id = <'Your_Query_Request_ID'>
+
+```
+
+Una vez que el almacenamiento en caché del conjunto de resultados esté activado para una base de datos, los resultados se almacenan en caché para todas las consultas hasta que se llene la memoria caché, excepto en el caso de estas consultas:
+
+- Las consultas que usan funciones no deterministas, como DateTime.Now(). 
+- Las consultas que usan funciones definidas por el usuario.
+- Las consultas que devuelven datos con tamaños de fila mayores que 64 KB.   
+
+Las consultas con grandes conjuntos de resultados (por ejemplo, > 1 millón de filas) pueden experimentar un rendimiento más lento durante la primera ejecución mientras se crea la caché de resultados.
 
 Si se cumplen todos los requisitos siguientes, el conjunto de resultados almacenado en caché se vuelve a usar para una consulta:
 
@@ -3048,9 +3066,6 @@ Si se cumplen todos los requisitos siguientes, el conjunto de resultados almacen
 1. Hay una coincidencia exacta entre la nueva consulta y la anterior que ha generado el almacenamiento en caché del conjunto de resultados.
 1. No hay cambios de datos ni esquema en las tablas a partir de las que se ha generado el conjunto de resultados almacenado.  
 
-Una vez activado el almacenamiento en caché del conjunto de resultados de una base de datos, se almacenan en caché los resultados de todas las consultas hasta que la caché está llena, excepto las consultas con funciones no deterministas como DateTime.Now() y las que devuelven datos con un tamaño de fila mayor de 64 KB.   
-
-Las consultas con grandes conjuntos de resultados (por ejemplo, > 1 millón de filas) pueden experimentar un rendimiento más lento durante la primera ejecución mientras se crea la caché de resultados.
 
 **<snapshot_option> ::=**         
 **Se aplica a**: Azure SQL Data Warehouse (versión preliminar)

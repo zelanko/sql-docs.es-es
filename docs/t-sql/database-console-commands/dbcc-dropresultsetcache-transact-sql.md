@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e0f4646d6c67931bbbede9b44b97a52251b1b024
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a46f94c1a6c490e157dfb0b90b2b5297afb6526f
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809912"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174869"
 ---
 # <a name="dbcc-dropresultsetcache--transact-sql"></a>DBCC DROPRESULTSETCACHE  (Transact-SQL)
 
@@ -37,7 +37,15 @@ DBCC DROPRESULTSETCACHE
 ## <a name="permissions"></a>Permisos
 
 Requiere pertenencia al rol fijo de servidor DB_OWNER.
-  
+
+## <a name="remarks"></a>Notas
+
+Este comando vacía la caché del conjunto de resultados para todas las consultas.  
+
+Al desactivar la característica de caché del conjunto de resultados para una base de datos, también se eliminan todos los resultados almacenados en caché.  
+
+Al pausar una base de datos habilitada con almacenamiento en caché del conjunto de resultados, no se eliminarán los resultados almacenados en caché.  
+
 ## <a name="see-also"></a>Vea también
 
 [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>

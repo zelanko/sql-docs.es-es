@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9d174dab31e6a3f508d3d3858b87844854f6ee7e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161335"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252218"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -69,8 +69,7 @@ ms.locfileid: "70161335"
 > [!IMPORTANT]  
 >  Mientras el cambio de contexto al usuario de la base de datos esté activo, cualquier intento de acceso a recursos fuera de la base de datos provocará que la instrucción genere errores. Esto incluye instrucciones USE *database*, consultas distribuidas y consultas que hacen referencia a otra base de datos que usa identificadores de tres o cuatro partes.  
   
- **'** *name* **'**  
- Es un nombre válido de inicio de sesión o de usuario. *name* debe ser miembro del rol fijo de servidor **sysadmin** o existir como entidad de seguridad en [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) o [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) respectivamente.  
+ "*name*" es un nombre de usuario o de inicio de sesión válido. *name* debe ser miembro del rol fijo de servidor **sysadmin** o existir como entidad de seguridad en [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) o [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) respectivamente.  
   
  *name* se puede especificar como una variable local.  
   
@@ -83,10 +82,10 @@ ms.locfileid: "70161335"
   
  Para más información sobre cómo volver al contexto anterior, vea [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
- COOKIE INTO * *@***varbinary_variable*  
- Especifica que el contexto de ejecución solo se puede revertir al contexto anterior si la llamada a la instrucción REVERT WITH COOKIE contiene el valor de * *@***varbinary_variable* correcto. [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa la cookie a *@***varbinary_variable*. La opción **COOKIE INTO** solo se puede usar en el nivel ad hoc.  
+ COOKIE INTO @*varbinary_variable*  
+ Especifica que el contexto de ejecución solo se puede revertir al contexto anterior si la llamada a la instrucción REVERT WITH COOKIE contiene el valor de @*varbinary_variable* correcto. [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa la cookie a @*varbinary_variable*. La opción **COOKIE INTO** solo se puede usar en el nivel ad hoc.  
   
- **@** *varbinary_variable* es **varbinary(8000)** .  
+ @*varbinary_variable* es **varbinary(8000)** .  
   
 > [!NOTE]  
 >  El parámetro **OUTPUT** de la cookie está documentado actualmente como **varbinary(8000)** , que es la longitud máxima correcta. Pero la implementación actual devuelve **varbinary(100)** . Las aplicaciones deben reservar **varbinary(8000)** para que la aplicación siga funcionando correctamente si el tamaño de retorno de la cookie aumenta en una versión futura.  
@@ -95,7 +94,7 @@ ms.locfileid: "70161335"
  Cuando se usa dentro de un módulo, especifica que las instrucciones dentro del módulo se ejecutan en el contexto del autor de llamada del módulo.
 Cuando se utiliza fuera de un módulo, la instrucción no tiene ninguna acción.
  > [!NOTE]  
->  Esta opción no está disponible en SQL Datawarehouse.  
+>  Esta opción no está disponible en SQL Data Warehouse.  
   
 ## <a name="remarks"></a>Notas  
  El cambio en el contexto de ejecución continúa efectivo hasta que sucede algo de lo siguiente:  

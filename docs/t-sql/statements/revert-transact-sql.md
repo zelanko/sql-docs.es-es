@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082398"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252172"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ REVERT
   
 ## <a name="arguments"></a>Argumentos  
  WITH COOKIE = @*varbinary_variable*  
- Especifica la cookie que se creó en la instrucción independiente [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) correspondiente. *@varbinary_variable* es **varbinary(100)** .  
+ Especifica la cookie que se creó en la instrucción independiente [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) correspondiente. *\@varbinary_variable* es **varbinary(100)** .  
   
 ## <a name="remarks"></a>Notas  
  REVERT se puede especificar en un módulo, por ejemplo, en un procedimiento almacenado o una función definida por el usuario, o como una instrucción independiente. Cuando se especifica en un módulo, REVERT solo se aplica a las instrucciones EXECUTE AS definidas en el módulo. Por ejemplo, el siguiente procedimiento almacenado emite una instrucción `EXECUTE AS` seguida de una instrucción `REVERT`.  
@@ -77,9 +77,9 @@ EXECUTE dbo.usp_myproc;
  Cuando se especifica como una instrucción independiente, REVERT se aplica a las instrucciones EXECUTE AS definidas en un lote o sesión. REVERT no tiene efecto si la instrucción EXECUTE AS correspondiente contiene la cláusula WITH NO REVERT. En este caso, el contexto de ejecución permanece efectivo hasta que se quita la sesión.  
   
 ## <a name="using-revert-with-cookie"></a>Usar REVERT WITH COOKIE  
- La instrucción EXECUTE AS que se usa para establecer el contexto de ejecución de una sesión puede incluir la cláusula opcional WITH NO REVERT COOKIE = @*variable_varbinary*. Cuando se ejecuta esta instrucción, [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa la cookie a @*variable_varbinary*. El contexto de ejecución que establece esa instrucción se puede volver al contexto anterior solo si la llamada a la instrucción REVERT WITH COOKIE = @*varbinary_variable* contiene el valor *@varbinary_variable* correcto.  
+ La instrucción EXECUTE AS que se usa para establecer el contexto de ejecución de una sesión puede incluir la cláusula opcional WITH NO REVERT COOKIE = @*variable_varbinary*. Cuando se ejecuta esta instrucción, [!INCLUDE[ssDE](../../includes/ssde-md.md)] pasa la cookie a @*variable_varbinary*. El contexto de ejecución que establece esa instrucción se puede revertir al contexto anterior solo si la llamada a la instrucción REVERT WITH COOKIE = @*varbinary_variable* contiene el valor *\@varbinary_variable* correcto.  
   
- Este mecanismo es útil en un entorno donde se utiliza la agrupación de conexiones. La agrupación de conexiones es el mantenimiento de un grupo de base de datos que reutilizan las aplicaciones entre varios usuarios finales. Puesto que el valor pasado a *@varbinary_variable* solo lo conoce el llamador de la instrucción EXECUTE AS (en este caso, la aplicación), el llamador puede garantizar que el usuario final que llama a la aplicación no puede cambiar el contexto de ejecución que establece. Después de volver el contexto de ejecución, la aplicación puede cambiar el contexto a otra entidad de seguridad.  
+ Este mecanismo es útil en un entorno donde se utiliza la agrupación de conexiones. La agrupación de conexiones es el mantenimiento de un grupo de base de datos que reutilizan las aplicaciones entre varios usuarios finales. Puesto que el valor pasado a *\@varbinary_variable* solo lo conoce el llamador de la instrucción EXECUTE AS (en este caso, la aplicación), el llamador puede garantizar que el usuario final que llama a la aplicación no puede cambiar el contexto de ejecución que establece. Después de volver el contexto de ejecución, la aplicación puede cambiar el contexto a otra entidad de seguridad.  
   
 ## <a name="permissions"></a>Permisos  
  No se requieren permisos.  

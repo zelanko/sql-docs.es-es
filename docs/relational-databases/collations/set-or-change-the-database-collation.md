@@ -1,7 +1,7 @@
 ---
 title: Establecer o cambiar la intercalación de base de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,19 +13,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3411477bbb183c7b9585f0cb93afde0b2bfebc6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140845"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289346"
 ---
 # <a name="set-or-change-the-database-collation"></a>Establecer o cambiar la intercalación de base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   En este tema se describe cómo establecer y cambiar la intercalación de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si no se especifica ninguna intercalación, se utiliza la del servidor.  
  
 > [!NOTE]
-> No se puede cambiar la intercalación después de crear la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+> La intercalación no se puede modificar con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] una vez que se creó la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Solo se puede modificar a través de [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
  **En este tema**  
   
@@ -51,30 +51,28 @@ ms.locfileid: "68140845"
   
 -   Si la intercalación especificada o la intercalación usada por el objeto al que se hace referencia utiliza una página de códigos no admitida por Windows, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra un error.  
 
--   No se puede cambiar la intercalación después de crear la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+-   La intercalación no se puede modificar con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] una vez que se creó la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Solo se puede modificar a través de [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
--   Puede buscar los nombres de intercalación admitidos en [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) y [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md), o puede usar la función del sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
+Puede buscar los nombres de intercalación admitidos en [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) y [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md), o puede usar la función del sistema [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) .  
   
--   Al modificar la intercalación de la base de datos también se cambian los siguientes elementos:  
+Al modificar la intercalación de la base de datos también se cambian los siguientes elementos:  
   
-    -   Todas las columnas **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** de las tablas del sistema se cambian a la nueva intercalación.  
+-   Todas las columnas **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** de las tablas del sistema se cambian a la nueva intercalación.  
   
-    -   Todos los valores devueltos escalares y parámetros **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** existentes para los procedimientos almacenados y las funciones definidas por el usuario se cambian a la nueva intercalación.  
+-   Todos los valores devueltos escalares y parámetros **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** existentes para los procedimientos almacenados y las funciones definidas por el usuario se cambian a la nueva intercalación.  
   
-    -   Los tipos de datos del sistema **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** y todos los tipos de datos definidos por el usuario basados en estos tipos de datos del sistema se cambian a la nueva intercalación predeterminada.  
+-   Los tipos de datos del sistema **char**, **varchar**, **text**, **nchar**, **nvarchar**o **ntext** y todos los tipos de datos definidos por el usuario basados en estos tipos de datos del sistema se cambian a la nueva intercalación predeterminada.  
   
--   Para cambiar la intercalación de cualquier objeto nuevo creado en una base de datos de usuario, utilice la cláusula COLLATE de la instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Esta instrucción no modifica la intercalación de las columnas de ninguna de las tablas definidas por el usuario existentes. Para modificarlas, utilice la cláusula COLLATE de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+Para cambiar la intercalación de cualquier objeto nuevo creado en una base de datos de usuario, utilice la cláusula `COLLATE` de la instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Esta instrucción **no modifica** la intercalación de las columnas de ninguna de las tablas definidas por el usuario existentes. Para modificarlas, use la cláusula `COLLATE` de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- CREATE DATABASE  
- Requiere el permiso CREATE DATABASE en la base de datos **maestra** , o los permisos CREATE ANY DATABASE o ALTER ANY DATABASE.  
+ Para crear una base de datos, requiere el permiso `CREATE DATABASE` en la base de datos **maestra**, o bien requiere `CREATE ANY DATABASE` o el permiso `ALTER ANY DATABASE`.  
   
- ALTER DATABASE  
- Requiere el permiso ALTER en la base de datos.  
+ Para cambiar la intercalación de una base de datos existente, requiere el permiso `ALTER` en la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
@@ -113,7 +111,6 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 #### <a name="to-change-the-database-collation"></a>Para cambiar la intercalación de base de datos  
@@ -136,7 +133,6 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>Consulte también  

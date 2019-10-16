@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 246f450a1782a6f00e32ce725c244915dc95054c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e40e69691834faffa2a112d81d9006e8cc602845
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138359"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041212"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Uso del servicio Azure Blob Storage con SQL Server 2016
 
@@ -73,12 +73,12 @@ Para crear una directiva en el contenedor y generar una clave de firma de acceso
   
 1.  Abra la ventana de PowerShell o Windows PowerShell ISE (consulte los requisitos de versión anteriores).  
   
-2.  Edite y ejecute el siguiente script:  
+2.  Edite y ejecute el script siguiente:  
   
     ```powershell
     # Define global variables for the script  
     $prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
-    $subscriptionID=='<your subscription ID>'   # the ID  of subscription name you will use  
+    $subscriptionID = '<your subscription ID>'   # the ID  of subscription name you will use  
     $locationName = '<a data center location>'  # the data center region you will use  
     $storageAccountName= $prefixName + 'storage' # the storage account name you will create or use  
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  

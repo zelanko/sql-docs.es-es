@@ -1,5 +1,5 @@
 ---
-title: 'Tarea 4: Configurar reglas de dominio | Microsoft Docs'
+title: 'Tarea 4: establecer reglas de dominio | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489078"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381742"
 ---
-# <a name="task-4-setting-domain-rules"></a>Tarea 4: Configuración de reglas de dominio
-  En esta tarea, creará una regla para el **correo electrónico de contacto** dominio para comprobar si la dirección de correo electrónico termina con **@adventure-works.com** . Vea el tema [Crear una regla de dominio](https://msdn.microsoft.com/library/hh510397.aspx) para obtener más detalles sobre la página.  
+# <a name="task-4-setting-domain-rules"></a>Tarea 4: configurar reglas de dominio
+  En esta tarea, creará una regla para el dominio de **correo electrónico de contacto** para comprobar si la dirección de correo electrónico termina con **@no__t 2adventure-Works.com**. Vea el tema [Crear una regla de dominio](https://msdn.microsoft.com/library/hh510397.aspx) para obtener más detalles sobre la página.  
   
 1.  Haga clic en **Correo electrónico de contacto** en la lista **Dominio**.  
   
 2.  Cambie a la pestaña **Reglas de dominio** en el panel derecho.  
   
-     ![Agregue un nuevo botón de barra de herramientas de regla de dominio](../../2014/tutorials/media/et-settingdomainrules-01.jpg "agregar un nuevo botón de barra de herramientas de regla de dominio")  
+     ![Botón de la barra de herramientas agregar nueva regla de dominio](../../2014/tutorials/media/et-settingdomainrules-01.jpg "Botón de la barra de herramientas agregar nueva regla de dominio")  
   
 3.  En el panel derecho, haga clic en el botón **Agregar una nueva regla de dominio** de la barra de herramientas (vea la imagen) para agregar una regla.  
   
@@ -32,33 +32,33 @@ ms.locfileid: "65489078"
   
 5.  En el panel **Generar una regla** , haga clic en la **flecha abajo**y seleccione **El valor termina por**.  
   
-6.  Tipo **@adventure-works.com** en el cuadro de texto y presione **ficha**. Puede agregar más condiciones si hace clic en el botón **Agregar una nueva condición a la cláusula seleccionada** de la barra de herramientas del panel **Generar una regla** .  
+6.  Escriba **\@adventure-Works.com** en el cuadro de texto y presione **Tab**. Puede agregar más condiciones si hace clic en el botón **Agregar una nueva condición a la cláusula seleccionada** de la barra de herramientas del panel **Generar una regla** .  
   
-     ![Regla de validación de correo electrónico](../../2014/tutorials/media/et-settingdomainrules-02.jpg "regla de validación de correo electrónico")  
+     ![Regla de validación de correo electrónico](../../2014/tutorials/media/et-settingdomainrules-02.jpg "Regla de validación de correo electrónico")  
   
 7.  Haga clic en el botón **Ejecutar la regla de dominio seleccionada en los datos de prueba** de la barra de herramientas del panel derecho para probar la regla con datos de ejemplo.  
   
-     ![Ejecutar la regla de dominio en el botón de barra de herramientas de datos de prueba](../../2014/tutorials/media/et-settingdomainrules-03.jpg "ejecutar la regla de dominio en el botón de barra de herramientas de datos de prueba")  
+     ![Botón de la barra de herramientas ejecutar la regla de dominio en los datos de prueba](../../2014/tutorials/media/et-settingdomainrules-03.jpg "Botón de la barra de herramientas ejecutar la regla de dominio en los datos de prueba")  
   
 8.  En el cuadro de diálogo **Probar regla de dominio** , haga clic en el botón **Agrega un nuevo término de prueba para la regla de dominio** de la barra de herramientas.  
   
-     ![Probar cuadro de diálogo regla de dominio](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Probar cuadro de diálogo regla de dominio")  
+     ![Cuadro de diálogo probar regla de dominio](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Cuadro de diálogo probar regla de dominio")  
   
-9. Tipo **frank7@adventure-works.com** (un valor válido) en el **correo electrónico de contacto** columna.  
+9. Escriba **frank7\@adventure-works.com** (un valor válido) en la columna **correo electrónico de contacto** .  
   
-10. Repita los dos pasos anteriores para agregar **joe2@adventure-work.com** (no un valor no válido de ').  
+10. Repita los dos pasos anteriores para agregar **joe2\@adventure-work.com** (un valor no válido sin ') '.  
   
 11. Haga clic en el último botón (**Probar la regla de dominio en todos los términos**) de la barra de herramientas para probar los datos de entrada con la regla.  
   
-     ![Probar la regla de dominio en el botón de barra de herramientas de todos los términos](../../2014/tutorials/media/et-settingdomainrules-05.jpg "probar la regla de dominio en el botón de barra de herramientas de todos los términos")  
+     ![Botón de la barra de herramientas probar la regla de dominio en todos los términos](../../2014/tutorials/media/et-settingdomainrules-05.jpg "Botón de la barra de herramientas probar la regla de dominio en todos los términos")  
   
 12. Observe que la primera entrada se muestra como un elemento válido y el segundo como un elemento no válido.  
   
-     ![Probar los resultados de la regla de dominio](../../2014/tutorials/media/et-settingdomainrules-06.jpg "probar los resultados de la regla de dominio")  
+     ![Resultados de la regla de dominio de prueba](../../2014/tutorials/media/et-settingdomainrules-06.jpg "Resultados de la regla de dominio de prueba")  
   
 13. Haga clic en **Cerrar** para cerrar el cuadro de diálogo **Probar regla de dominio** .  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 5: Relaciones basadas en términos de configuración](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [Tarea 5: Configurar relaciones basadas en términos](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

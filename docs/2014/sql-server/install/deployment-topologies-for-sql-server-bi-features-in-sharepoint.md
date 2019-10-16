@@ -121,7 +121,7 @@ ms.locfileid: "71952639"
 ###  <a name="bkmk_powerpivot_ssrs_sharepoint2013_1server"></a>PowerPivot para SharePoint 2013 y Reporting Services implementación de un solo servidor  
  Una implementación en un solo servidor es útil para realizar pruebas, pero no se recomienda en implementaciones de producción.  
   
- ![Implementación de servidor de SSAS y SSRS en modo de SharePoint]en modo(../../../2014/sql-server/install/media/as-and-rs-1server-deployment.gif "de SharePoint SSAS y SSRS implementación de servidor 1")  
+ ![Implementación de servidor de SSAS y SSRS en modo de SharePoint en modo](../../../2014/sql-server/install/media/as-and-rs-1server-deployment.gif "de SharePoint SSAS y SSRS implementación de servidor 1")  
   
 |||  
 |-|-|  

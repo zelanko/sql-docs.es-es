@@ -1,22 +1,22 @@
 ---
-ms.openlocfilehash: a3016d22680ed051a16f80e6f5ff768689d654b6
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 01525143197146f8d4c34734d7333d651d93b840
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68212335"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72451833"
 ---
 ## <a name="info_tipmediainfo-tippng-get-help"></a>![info_tip](../media/info-tip.png) Obtener ayuda
 
-- [UserVoice - ¿Alguna sugerencia para mejorar SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
-- [Instalación y actualización - Foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Data Tools - Foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
-- [Transact-SQL - Foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
-- [Seguridad de SQL Server: foro de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
-- [DBA Stack Exchange (etiqueta sql-server): formule preguntas sobre SQL Server](https://dba.stackexchange.com/questions/tagged/sql-server)
-- [stack Overflow (etiqueta sql-server) también cuenta con algunas respuestas sobre el desarrollo de SQL](https://stackoverflow.com/questions/tagged/sql-server) 
-- [Reddit: debate general sobre SQL Server](https://www.reddit.com/r/SQLServer/)
+- [UserVoice: ¿Tiene sugerencias para mejorar SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
+- [Configuración y actualización: Foros de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
+- [SQL Server Data Tools: Foros de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=ssdt&filter=alltypes&sort=lastpostdesc)
+- [Transact-SQL: Foros de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
+- [Seguridad de SQL Server: Foros de MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
+- [Stack Exchange de DBA (etiqueta sql-server): Preguntas sobre SQL Server](https://dba.stackexchange.com/questions/tagged/sql-server)
+- [Stack Overflow (etiqueta sql-server): Respuestas a preguntas de desarrollo de SQL](https://stackoverflow.com/questions/tagged/sql-server) 
+- [Reddit: Debate general sobre SQL Server](https://www.reddit.com/r/SQLServer/)
 - [Información y términos de licencia de Microsoft SQL Server](https://www.microsoft.com/download/details.aspx?id=39299)
 - [Opciones de soporte técnico para usuarios profesionales](https://support.microsoft.com/gp/support-options-for-business)
 - [Contacto con Microsoft](https://support.microsoft.com/gp/contactus81?Audience=Commercial)
-- [Todas las formas de obtener ayuda](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)
+- [Comentarios y ayuda adicional sobre SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)

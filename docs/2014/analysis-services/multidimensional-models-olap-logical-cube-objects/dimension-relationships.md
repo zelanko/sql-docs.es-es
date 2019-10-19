@@ -21,14 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1fe1521f2eebaa4413b49c315f17a6b1b6a5914
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68887939"
 ---
-# <a name="dimension-relationships"></a>Relaciones de dimensión
-  El uso de la dimensión define las relaciones entre una dimensión de cubo y los grupos de medida de un cubo. Una dimensión de cubo es una instancia de una dimensión de base de datos que se utiliza en un cubo específico. Un cubo puede y suele tener dimensiones de cubo que no están directamente relacionadas con un grupo de medida, pero que podrían estar indirectamente relacionadas con el grupo de medida a través de otra dimensión o grupo de medida. Cuando se agrega una dimensión de base de datos o un grupo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] medida a un cubo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intenta determinar el uso de la dimensión examinando las relaciones entre las tablas de dimensiones y las tablas de hechos en la vista del origen de datos del cubo y examinando las relaciones entre los atributos de las dimensiones. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] establece automáticamente la configuración del uso de la dimensión para las relaciones que puede detectar.  
+# <a name="dimension-relationships"></a>Relaciones de dimensiones
+  El uso de la dimensión define las relaciones entre una dimensión de cubo y los grupos de medida de un cubo. Una dimensión de cubo es una instancia de una dimensión de base de datos que se utiliza en un cubo específico. Un cubo puede y suele tener dimensiones de cubo que no están directamente relacionadas con un grupo de medida, pero que podrían estar indirectamente relacionadas con el grupo de medida a través de otra dimensión o grupo de medida. Cuando se agrega una dimensión de base de datos o un grupo de medida a un cubo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intenta determinar el uso de las dimensiones examinando las relaciones entre las tablas de dimensiones y las tablas de hechos en la vista del origen de datos del cubo y examinando las relaciones entre los atributos de las dimensiones. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] establece automáticamente la configuración del uso de la dimensión para las relaciones que puede detectar.  
   
  Una relación entre una dimensión y un grupo de medida consta de las tablas de dimensiones y hechos que participan en la relación y un atributo de granularidad que especifica la granularidad de la dimensión del grupo de medida concreto.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68887939"
  Para obtener más información sobre las relaciones referenciadas, vea [definir una relación referenciada y propiedades de la relación referenciadas](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="fact-dimension-relationships"></a>Relaciones de dimensión de hechos  
- Las dimensiones de hechos, más conocidas como dimensiones degeneradas, son dimensiones estándar que se crean a partir de columnas de atributos de tablas de hechos en lugar de columnas de atributos de tablas de dimensiones. Los datos útiles de dimensiones algunas veces se almacenan en una tabla de hechos para reducir la duplicación. Por ejemplo, en el diagrama siguiente se muestra la tabla de hechos FactResellerSales [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] de la base de datos de ejemplo.  
+ Las dimensiones de hechos, más conocidas como dimensiones degeneradas, son dimensiones estándar que se crean a partir de columnas de atributos de tablas de hechos en lugar de columnas de atributos de tablas de dimensiones. Los datos útiles de dimensiones algunas veces se almacenan en una tabla de hechos para reducir la duplicación. Por ejemplo, en el diagrama siguiente se muestra la tabla de hechos **FactResellerSales** de la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)].  
   
  ![Las columnas de la tabla de hechos pueden admitir dimensiones](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-factdim.gif "Las columnas de la tabla de hechos pueden admitir dimensiones")  
   
@@ -76,14 +76,14 @@ ms.locfileid: "68887939"
   
  ![Relación de dimensiones de esquemas de varios a varios](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-many-dimension1.gif "Relación de dimensiones de esquemas de varios a varios")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir una relación de varios a varios entre una dimensión y una tabla de hechos.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir una relación de varios a varios entre una dimensión y una tabla de hechos.  
   
 > [!NOTE]  
 >  Para admitir una relación de dimensión de varios a varios, la vista del origen de datos debe haber establecido una relación de clave externa entre todas las tablas implicadas, tal y como se muestra en el diagrama anterior. De lo contrario, no podrá seleccionar el grupo de medida intermedio correcto cuando establezca la relación en la pestaña **uso de dimensiones** del diseñador de dimensiones.  
   
  Para obtener más información sobre las relaciones de varios a varios, vea [definir una relación de varios a varios y propiedades de la relación de varios a varios](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "63035084"
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
@@ -55,31 +55,31 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **-verboselevel** _level_  
  Especifica el nivel de mensajes agregados al historial de trasvase de registros. *level* es uno de los siguientes enteros:  
   
-|level|Descripción|  
+|level|Description|  
 |-----------|-----------------|  
 |0|No se obtienen mensajes de depuración ni de seguimiento.|  
 |1|Se obtienen mensajes de control de errores.|  
 |2|Se obtienen mensajes de control de errores y advertencias.|  
-|**3**|Se obtienen mensajes de control de errores, advertencias e informativos. Este es el valor predeterminado.|  
+|**3**|Se obtienen mensajes de control de errores, advertencias e informativos. Es el valor predeterminado.|  
 |4|Se obtienen todos los mensajes de depuración y traza.|  
   
  **-logintimeout** _timeout_value_  
- Especifica la cantidad de tiempo asignado al intento de iniciar sesión en la instancia del servidor antes de que se agote el tiempo de espera del intento. El valor predeterminado es 15 segundos. *timeout_value* es de tipo **int** _._  
+ Especifica la cantidad de tiempo asignada para intentar iniciar sesión en la instancia del servidor antes de que se agote el tiempo de espera del intento. El valor predeterminado es 15 segundos. *timeout_value* es de tipo **int** _._  
   
  **-querytimeout** _timeout_value_  
- Especifica la cantidad de tiempo asignado para iniciar la operación especificada antes de que se agote el tiempo de espera. El valor predeterminado es sin tiempo de espera. *timeout_value* es de tipo **int** _._  
+ Especifica la cantidad de tiempo asignada para iniciar la operación especificada antes de que se agote el tiempo de espera del intento. El valor predeterminado es sin tiempo de espera. *timeout_value* es de tipo **int** _._  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Notas  
  Se recomienda que use los trabajos de copia de seguridad, copia y restauración para realizar la copia de seguridad, copia y restauración cuando sea posible. Para iniciar estos trabajos desde una operación por lotes u otra aplicación, llame al procedimiento almacenado [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) .  
   
  El historial de trasvase de registros creado por **sqllogship** se combina con el historial creado por los trabajos de copia de seguridad, copia y restauración de trasvase de registros. Si tiene previsto usar **sqllogship** repetidamente para realizar operaciones de copia de seguridad, copia y restauración para una configuración de trasvase de registros, considere la posibilidad de deshabilitar los trabajos de trasvase de registros correspondientes. Para obtener más información, consulte [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
  La aplicación **sqllogship** , sqllogship. exe, se instala en el directorio X:\Archivos de Programa\microsoft SQL Server\120\Tools\Binn  
   
-## <a name="permissions"></a>Permisos  
+## <a name="permissions"></a>Permissions  
  **sqllogship** usa la autenticación de Windows. La cuenta de la autenticación de Windows donde se ejecuta el comando requiere acceso al directorio de Windows y permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El requisito depende de si el comando **sqllogship** especifica la opción **-backup**, **-copy**o **-restore** .  
   
-|Opción|Acceso al directorio|Permisos|  
+|Opción|Acceso al directorio|Permissions|  
 |------------|----------------------|-----------------|  
 |**-backup**|Requiere acceso de lectura/escritura al directorio de copia de seguridad.|Requiere los mismos permisos que la instrucción BACKUP. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).|  
 |**-copy**|Requiere acceso de lectura al directorio de copia de seguridad y acceso de escritura al directorio de copia.|Requiere los mismos permisos que el procedimiento almacenado [sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) .|  
@@ -88,7 +88,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 > [!NOTE]  
 >  Para conocer las rutas de acceso de los directorios de copia de seguridad y copia, puede ejecutar el procedimiento almacenado **sp_help_log_shipping_secondary_database** o examinar la tabla **log_shipping_secondary** en **msdb**. Las rutas de acceso al directorio de copia de seguridad y al de destino se encuentran en las columnas **backup_source_directory** y **backup_destination_directory** respectivamente.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-primary-databases-transact-sql)   
  [log_shipping_secondary &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/log-shipping-secondary-transact-sql)   

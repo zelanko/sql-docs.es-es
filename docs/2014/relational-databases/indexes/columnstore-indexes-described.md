@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68811040"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -90,7 +90,7 @@ ms.locfileid: "68811040"
   
 -   Necesita almacenamiento adicional para almacenar una copia de las columnas en el índice.  
   
--   Se actualiza regenerando el índice o modificando las particiones. No se puede actualizar mediante las operaciones DML como inserción, actualización y eliminación.  
+-   Se actualiza regenerando el índice o cambiando las particiones dentro y fuera. No se actualiza mediante el uso de las operaciones DML, como INSERT, Update y DELETE.  
   
 -   Se puede combinar con otros índices de la tabla.  
   
@@ -125,19 +125,19 @@ ms.locfileid: "68811040"
   
 -   Cada sector de columna se comprime junto y se almacena en un medio físico.  
   
- ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+ ![Segmento de columna](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "segmento de columna")  
   
  índice no clúster de almacén de columnas  
  Un *nonclustered columnstore index* es un índice de solo lectura creado sobre un índice clúster o una tabla del montón existente. Contiene una copia de un subconjunto de columnas, hasta incluir todas las columnas de la tabla. La tabla es de solo lectura mientras contiene un índice no clúster de almacén de columnas.  
   
  Un índice no clúster de almacén de columnas proporciona una manera de tener un índice de almacén de columnas para ejecutar consultas de análisis al tiempo que se realizan operaciones de solo lectura en la tabla original.  
   
- ![Índice de almacén de columnas no agrupado](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "Índice de almacén de columnas no agrupado")  
+ ![Índice de almacén de columnas no agrupado](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "índice no clúster de almacén de columnas")  
   
  Índice clúster de almacén de columnas  
  Un *clustered columnstore index* es el almacenamiento físico para toda la tabla y es el único índice de la tabla. El índice clúster se puede actualizar. Puede realizar operaciones de inserción, eliminación y actualización del índice y puede cargar datos de forma masiva en el índice.  
   
- ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+ ![Índice de almacén de columnas agrupado](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Índice clúster de almacén de columnas")  
   
  Para reducir la fragmentación de los segmentos de columna y mejorar el rendimiento, el índice de almacén de columnas puede almacenar temporalmente algunos datos en una tabla de almacén de filas, denominada almacén delta, así como un árbol B de los identificadores de las filas eliminadas. Las operaciones del almacén delta se administran en segundo plano. Para devolver los resultados correctos de la consulta, el índice clúster de almacén de columnas combina los resultados de la consulta tanto del almacén de columnas como del almacén delta.  
   
@@ -155,12 +155,12 @@ ms.locfileid: "68811040"
   
  ![Cargar datos en un índice de almacén de columnas](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Cargar datos en un índice de almacén de columnas")  
   
- Una tabla con un índice no clúster de almacén de columnas es de solo lectura hasta que se quita o se deshabilita el índice. Para actualizar la tabla y el índice no clúster de almacén de columnas puede intercambiar las particiones. También puede deshabilitar el índice, actualizar la tabla y regenerar el índice.  
+ Una tabla con un índice no clúster de almacén de columnas es de solo lectura hasta que se quita o se deshabilita el índice. Para actualizar la tabla y el índice de almacén de columnas no agrupado, puede cambiar las particiones dentro y fuera. También puede deshabilitar el índice, actualizar la tabla y, a continuación, volver a generar el índice.  
   
  Para obtener más información, vea [Using Nonclustered Columnstore Indexes](indexes.md)  
   
 ###  <a name="dataload_cci"></a>Cargar datos en un índice de almacén de columnas agrupado  
- ![Carga en un índice agrupado de almacén de columnas](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Carga en un índice agrupado de almacén de columnas")  
+ ![Carga en un índice de almacén de columnas agrupado](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Carga en un índice de almacén de columnas agrupado")  
   
  Como se muestra en el diagrama, para cargar datos en un índice clúster de almacén de columnas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   

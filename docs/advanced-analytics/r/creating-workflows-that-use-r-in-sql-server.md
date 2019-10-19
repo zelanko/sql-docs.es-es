@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68715173"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Creación de flujos de trabajo de SSIS y SSRS con R en SQL Server
@@ -32,9 +32,9 @@ Los ejemplos de este artículo son principalmente de R y SSIS, pero los concepto
 
 Los flujos de trabajo de ciencia de datos son tremendamente iterativos y conllevan una enorme transformación de los datos, como los ajustes de escala, las agregaciones, el cálculo de probabilidades y cambiar los atributos de nombre y combinarlos. Los científicos de datos están acostumbrados a realizar muchas de estas tareas en R, Python u otro lenguaje. Pero ejecutar estos flujos de trabajo con datos empresariales requiere una integración perfecta con procesos y herramientas de ETL.
 
-Dado [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] que le permite ejecutar operaciones complejas en R a través de Transact-SQL y procedimientos almacenados, puede integrar las tareas de ciencia de datos con los procesos ETL existentes. En lugar de realizar una cadena de tareas con un uso intensivo de la memoria, la preparación de los datos se puede [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] optimizar [!INCLUDE[tsql](../../includes/tsql-md.md)]con las herramientas más eficaces, incluidos y. 
+Dado que [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] le permite ejecutar operaciones complejas en R a través de Transact-SQL y procedimientos almacenados, puede integrar las tareas de ciencia de datos con los procesos ETL existentes. En lugar de realizar una cadena de tareas con un uso intensivo de la memoria, la preparación de los datos se puede optimizar con las herramientas más eficaces, como [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
-A continuación se muestran algunas ideas sobre cómo automatizar el procesamiento de datos y las canalizaciones [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]de modelado mediante:
+A continuación se muestran algunas ideas sobre cómo automatizar las canalizaciones de modelado y procesamiento de datos mediante [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
 + Extraer datos de orígenes locales o en la nube para generar datos de entrenamiento 
 + Compilar y ejecutar modelos de R o Python como parte de un flujo de trabajo de integración de datos
@@ -45,7 +45,7 @@ A continuación se muestran algunas ideas sobre cómo automatizar el procesamien
 
 ## <a name="ssis-example"></a>Ejemplo de SSIS
 
-El ejemplo siguiente se origina en una publicación de blog de MSDN retirada ahora creada por Jimmy Wong en esta dirección URL:`https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
+El ejemplo siguiente se origina en una publicación de blog de MSDN retirada ahora creada por Jimmy Wong en esta dirección URL: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
 En este ejemplo se muestra cómo automatizar tareas mediante SSIS. Cree procedimientos almacenados con R incrustado mediante SQL Server Management Studio y, a continuación, ejecute esos procedimientos almacenados desde [ejecutar tareas de T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) en un paquete SSIS.
 
@@ -91,7 +91,7 @@ insert into ssis_iris("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Widt
 exec dbo.load_iris;
 ```
 
-![Insertar datos](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "Insertar datos")
+![Insertar datos](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "Inserción de datos")
 
 ### <a name="generate-a-model"></a>Generar un modelo
 
@@ -183,7 +183,7 @@ exec predict_species_length 'rxLinMod';
 
 En el diseñador SSIS, presione F5 para ejecutar el paquete. Debería ver un resultado similar al de la captura de pantalla siguiente.
 
-![F5 para ejecutar en modo de](../media/create-workflows-using-r-in-sql-server/ssis-exec-F5-run.png "F5 para ejecutar en modo de")
+![F5 para ejecutar en modo de depuración](../media/create-workflows-using-r-in-sql-server/ssis-exec-F5-run.png "F5 para ejecutar en modo de depuración")
 
 <a name="bkmk_ssrs"></a> 
 
@@ -191,13 +191,13 @@ En el diseñador SSIS, presione F5 para ejecutar el paquete. Debería ver un res
 
 Aunque R puede crear gráficos y visualizaciones interesantes, no se integra bien con orígenes de datos externos, lo que significa que cada gráfico o grafo debe generarse individualmente. El uso compartido también puede ser difícil.
 
-Mediante el [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]uso de, puede ejecutar operaciones complejas en R [!INCLUDE[tsql](../../includes/tsql-md.md)] a través de procedimientos almacenados, que se pueden usar fácilmente en una gran variedad de herramientas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de informes empresariales, entre las que se incluyen y Power BI.
+Mediante el uso de [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], puede ejecutar operaciones complejas en R a través de [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimientos almacenados, que se pueden usar fácilmente en una variedad de herramientas de informes empresariales, incluidas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y Power BI.
 
 ### <a name="ssrs-example"></a>Ejemplo de SSRS
 
 [R Graphics Device for Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/) (Dispositivo gráfico de R para Microsoft Reporting Services [SSRS])
 
-Este proyecto de CodePlex proporciona el código para ayudarle a crear un elemento de informe personalizado que representa la salida de gráficos de R como una imagen que se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puede usar en los informes.  Mediante el elemento de informe personalizado se puede:
+Este proyecto de CodePlex proporciona el código para ayudarle a crear un elemento de informe personalizado que representa la salida de gráficos de R como una imagen que se puede usar en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] informes.  Mediante el elemento de informe personalizado se puede:
 
 + Publicar gráficos y trazados creados con el dispositivo gráfico de R en paneles de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 

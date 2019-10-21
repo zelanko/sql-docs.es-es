@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "71713180"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Supervisar SQL Server Machine Learning Services mediante vistas de administración dinámica (DMV)
@@ -38,17 +38,17 @@ Para obtener más información general sobre las DMV, consulte [vistas de admini
 
 ## <a name="dynamic-management-views"></a>Vistas de administración dinámica
 
-Se pueden usar las siguientes vistas de administración dinámica al supervisar cargas de trabajo de machine learning en SQL Server. Para consultar las DMV, necesita `VIEW SERVER STATE` el permiso en la instancia.
+Se pueden usar las siguientes vistas de administración dinámica al supervisar cargas de trabajo de machine learning en SQL Server. Para consultar las DMV, necesita `VIEW SERVER STATE` permiso en la instancia.
 
-| Vista de administración dinámica | Tipo | Descripción |
+| Vista de administración dinámica | Type | Description |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Ejecución | Devuelve una fila para cada cuenta de trabajo activa que ejecuta un script externo. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Ejecución | Devuelve una fila por cada tipo de solicitud de script externo. |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Ejecución | Devuelve una fila por contador de rendimiento que se mantiene en el servidor. Si usa la condición `WHERE object_name LIKE '%External Scripts%'`de búsqueda, puede usar esta información para ver cuántos scripts se ejecutaron, qué scripts se ejecutaban con qué modo de autenticación o cuántas llamadas de R o Python se emitieron en la instancia en general. |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | Ejecución | Devuelve una fila por contador de rendimiento que se mantiene en el servidor. Si usa la condición de búsqueda `WHERE object_name LIKE '%External Scripts%'`, puede usar esta información para ver cuántos scripts se ejecutaron, qué scripts se ejecutaban con qué modo de autenticación o cuántas llamadas de R o Python se emitieron en la instancia en general. |
 | [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | regulador de recursos | Devuelve información sobre el estado actual del grupo de recursos externos en Resource Governor, la configuración actual de los grupos de recursos y las estadísticas del grupo de recursos. |
 | [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | regulador de recursos | Devuelve información de afinidad de CPU acerca de la configuración actual del grupo de recursos externos en Resource Governor. Devuelve una fila por programador en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] donde cada programador está asignado a un determinado procesador. Use esta vista para supervisar la condición de un programador o identificar tareas descontroladas. |
 
-Para obtener información acerca [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] de la supervisión de instancias, vea [vistas de catálogo](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) y [Resource Governor vistas de administración dinámica relacionadas](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
+Para obtener información acerca de la supervisión de instancias de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], vea [vistas de catálogo](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) y [Resource Governor vistas de administración dinámica relacionadas](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md).
 
 ## <a name="settings-and-configuration"></a>Configuración y configuración
 
@@ -78,7 +78,7 @@ WHERE name = 'external scripts enabled';
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| columna | Description |
 |--------|-------------|
 | IsMLServicesInstalled | Devuelve 1 si se ha instalado SQL Server Machine Learning Services para la instancia de. De lo contrario, devuelve 0. |
 | ExternalScriptsEnabled | Devuelve 1 si los scripts externos están habilitados para la instancia de. De lo contrario, devuelve 0. |
@@ -106,7 +106,7 @@ ON s.session_id = r.session_id;
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| columna | Description |
 |--------|-------------|
 | session_id | Identifica la sesión asociada a cada conexión principal activa. |
 | blocking_session_id | Id. de la sesión que bloquea la solicitud. Si esta columna es NULL, la solicitud no está bloqueada o la información de la sesión de bloqueo no está disponible (o no puede ser identificada). |
@@ -142,7 +142,7 @@ ORDER BY language, counter_name;
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| columna | Description |
 |--------|-------------|
 | language | Nombre del lenguaje de script externo registrado. |
 | counter_name | Nombre de una función de script externo seleccionada. |
@@ -164,13 +164,13 @@ WHERE object_name LIKE '%External Scripts%'
 
 **Sys. DM _ _os_performance_counters** genera los siguientes contadores de rendimiento para los scripts externos:
 
-| Contador | Descripción |
+| Contador | Description |
 |---------|-------------|
 | Ejecuciones totales | Número de procesos externos iniciados por llamadas locales o remotas. |
-| Ejecuciones en paralelo | Número de veces que un script incluyó la  _\@especificación paralela_ y que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pudo generar y usar un plan de consulta paralelo. |
+| Ejecuciones en paralelo | Número de veces que un script incluyó la especificación de _\@parallel_ y que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] pudo generar y usar un plan de consulta paralelo. |
 | Ejecuciones de streaming | Número de veces que se ha invocado la característica de streaming. |
 | Ejecuciones CC de SQL | Número de scripts externos ejecutados en los que se creó una instancia de la llamada de forma remota y se usó SQL Server como el contexto de cálculo. |
-| Autenticación implícita. Inicios de sesión | Número de veces que se realizó una llamada de bucle invertido ODBC mediante autenticación implícita; es decir, el [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ejecutó la llamada en nombre del usuario que envía la solicitud de script. |
+| Autenticación implícita. inicios de sesión | Número de veces que se realizó una llamada de bucle invertido ODBC mediante autenticación implícita; es decir, el [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ejecutó la llamada en nombre del usuario que envía la solicitud de script. |
 | Tiempo total de ejecución (ms) | Tiempo transcurrido entre la llamada y la finalización de la llamada. |
 | Errores de ejecución | Número de veces que los scripts han generado errores. Este recuento no incluye errores de R o Python. |
 
@@ -192,7 +192,7 @@ FROM sys.dm_os_sys_info;
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| columna | Description |
 |--------|-------------|
 | physical_memory_kb | La cantidad total de memoria física en el equipo. |
 | committed_kb | Memoria asignada en kilobytes (KB) en el administrador de memoria. No incluye la memoria reservada del administrador de memoria. |
@@ -200,7 +200,7 @@ La consulta devuelve las columnas siguientes:
 
 ## <a name="memory-configuration"></a>Configuración de la memoria
 
-Ver información sobre la configuración de memoria máxima en porcentaje de SQL Server y grupos de recursos externos. Si SQL Server se está ejecutando con el valor predeterminado de `max server memory (MB)`, se considera como 100% de la memoria del sistema operativo.
+Ver información sobre la configuración de memoria máxima en porcentaje de SQL Server y grupos de recursos externos. Si SQL Server se está ejecutando con el valor predeterminado de `max server memory (MB)`, se considera un 100% de la memoria del sistema operativo.
 
 ![Salida de la consulta de configuración de memoria](media/dmv-memory-configuration.png "Salida de la consulta de configuración de memoria")
 
@@ -221,9 +221,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| columna | Description |
 |--------|-------------|
-| name | Nombre del grupo de recursos externos o SQL Server. |
+| NAME | Nombre del grupo de recursos externos o SQL Server. |
 | max_memory_percent | Memoria máxima que SQL Server o el grupo de recursos externos puede usar. |
 
 ## <a name="resource-pools"></a>Grupos de recursos de servidor
@@ -246,9 +246,9 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 La consulta devuelve las columnas siguientes:
 
-| columna | Descripción |
+| columna | Description |
 |--------|-------------|
-| pool_name | Nombre del grupo de recursos de servidor. SQL Server los grupos de recursos tienen el `SQL Server` prefijo y los grupos de recursos externos `External Pool`tienen el prefijo.
+| pool_name | Nombre del grupo de recursos de servidor. SQL Server los grupos de recursos tienen el prefijo `SQL Server` y los grupos de recursos externos tienen el prefijo `External Pool`.
 | total_cpu_usage_hours | El uso acumulado de la CPU en milisegundos desde que se restablecieron las estadísticas del regulador de recursos. |
 | read_io_completed_total | El total de operaciones de E/S de lectura completadas desde que se restablecieron las estadísticas del regulador de recursos. |
 | write_io_completed_total | El total de operaciones de E/S de escritura completadas desde que se restablecieron las estadísticas del regulador de recursos. |
@@ -275,10 +275,10 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 Las columnas devueltas son:
 
-| columna | Descripción |
+| columna | Description |
 |--------|-------------|
 | Paquete | Nombre del paquete instalado. |
-| `Version` | Versión del paquete. |
+| Version | Versión del paquete. |
 | Depende | Enumera los paquetes de los que depende el paquete instalado. |
 | Licencia | Licencia para el paquete instalado. |
 | LibPath | Directorio en el que puede encontrar el paquete. |
@@ -301,11 +301,11 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 Las columnas devueltas son:
 
-| columna | Descripción |
+| columna | Description |
 |--------|-------------|
 | Paquete | Nombre del paquete instalado. |
-| `Version` | Versión del paquete. |
-| Location | Directorio en el que puede encontrar el paquete. |
+| Version | Versión del paquete. |
+| Ubicación | Directorio en el que puede encontrar el paquete. |
 
 ## <a name="next-steps"></a>Pasos siguientes
 

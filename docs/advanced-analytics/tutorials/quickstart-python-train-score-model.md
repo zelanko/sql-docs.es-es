@@ -10,19 +10,19 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb564d7dc8564b31a90a09f53aedaba953519f76
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: cfaf672abd7c68e396b5049ced2d812a43d27d48
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313672"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542131"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Inicio rápido: Crear y puntuar un modelo predictivo en Python con SQL Server Machine Learning Services
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Inicio rápido: crear y puntuar un modelo predictivo en Python con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En esta guía de inicio rápido, creará y entrenará un modelo predictivo mediante Python, guardará el modelo en una tabla en la instancia de SQL Server y, a continuación, usará el modelo para predecir valores de datos nuevos con [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. El primero usa el conjunto de datos de flores de iris clásico y genera un modelo Bayes Naive para predecir una especie de iris basada en las características de la flor. El segundo procedimiento es para puntuar: llama al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en nuevos datos. Al colocar el código en un procedimiento almacenado, otros procedimientos almacenados y aplicaciones cliente pueden volver a usar las operaciones, volver a utilizarlas y llamarlas.
+Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. El primero usa el conjunto de datos de flores de iris clásico y genera un modelo Bayes Naive para predecir una especie de iris basada en las características de la flor. El segundo procedimiento es para puntuar: llama al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en nuevos datos. Al colocar el código de Python en un procedimiento almacenado de SQL, las operaciones se incluyen en SQL, son reutilizables y se pueden llamar desde otros procedimientos almacenados y aplicaciones cliente.
 
 Al completar esta guía de inicio rápido, aprenderá lo siguiente:
 
@@ -31,7 +31,7 @@ Al completar esta guía de inicio rápido, aprenderá lo siguiente:
 > - Cómo pasar entradas al código mediante entradas en el procedimiento almacenado
 > - Cómo se usan los procedimientos almacenados para poner en funcionamiento los modelos
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - Esta guía de inicio rápido requiere acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con el idioma de Python instalado.
 
@@ -43,7 +43,9 @@ Al completar esta guía de inicio rápido, aprenderá lo siguiente:
 
 En este paso, creará un procedimiento almacenado que genera un modelo para predecir los resultados.
 
-1. Abra una nueva ventana de consulta en SSMS conectada a la base de datos **irissql** . 
+1. Abra SSMS, conéctese a la instancia de SQL Server y abra una nueva ventana de consulta.
+
+1. Conéctese a la base de datos irissql.
 
     ```sql
     USE irissql
@@ -111,7 +113,7 @@ Los modelos que se almacenan para su reutilización en SQL Server se serializan 
 
     **Resultado**
 
-    | model_name  | model |
+    | model_name  | modelo |
     |---|-----------------|
     | Bayes naive | 0x800363736B6C6561726E2E6E616976655F62617965730A... | 
 

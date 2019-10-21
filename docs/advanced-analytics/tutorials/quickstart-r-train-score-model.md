@@ -10,24 +10,31 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 9acfe1e546c332801e9a5c1a7d97758053d9a0f4
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005977"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542124"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Inicio rápido: Crear y puntuar un modelo predictivo en R con SQL Server Machine Learning Services
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Inicio rápido: crear y puntuar un modelo predictivo en R con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En esta guía de inicio rápido, creará y entrenará un modelo predictivo con R, guardará el modelo en una tabla en la instancia de SQL Server y, a continuación, usará el modelo para predecir valores de datos nuevos con [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-El modelo que usará en esta guía de inicio rápido es un modelo lineal generalizado simple (GLM) que predice la probabilidad de que un vehículo se haya equipado con una transmisión manual. Usará el conjunto de **mtcars** que se incluye con R.
+Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. La primera usa el conjunto de **mtcars** que se incluye con R y genera un modelo lineal generalizado simple (GLM) que predice la probabilidad de que un vehículo se haya equipado con una transmisión manual. El segundo procedimiento es para puntuar: llama al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en nuevos datos. Al colocar el código de R en un procedimiento almacenado de SQL, las operaciones se incluyen en SQL, son reutilizables y se pueden llamar desde otros procedimientos almacenados y aplicaciones cliente.
 
 > [!TIP]
-> Si necesita un actualizador en modelos lineales, pruebe este tutorial, en el que se describe el proceso de ajuste de un modelo mediante rxLinMod:  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model) (Ajuste de modelos lineales)
+> Si necesita un actualizador en modelos lineales, pruebe este tutorial, en el que se describe el proceso de ajuste de un modelo con rxLinMod: [ajuste de modelos lineales](/machine-learning-server/r/how-to-revoscaler-linear-model) .
 
-## <a name="prerequisites"></a>Requisitos previos
+Al completar esta guía de inicio rápido, aprenderá lo siguiente:
+
+> [!div class="checklist"]
+> - Cómo incrustar código de R en un procedimiento almacenado
+> - Cómo pasar entradas al código mediante entradas en el procedimiento almacenado
+> - Cómo se usan los procedimientos almacenados para poner en funcionamiento los modelos
+
+## <a name="prerequisites"></a>Prerequisites
 
 - Esta guía de inicio rápido requiere acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con el lenguaje R instalado.
 
@@ -41,7 +48,7 @@ Para crear el modelo, debe crear los datos de origen para el entrenamiento, crea
 
 ### <a name="create-the-source-data"></a>Crear el origen de datos
 
-1. Abra **SQL Server Management Studio** y conéctese a su instancia de SQL Server.
+1. Abra SSMS, conéctese a la instancia de SQL Server y abra una nueva ventana de consulta.
 
 1. Cree una tabla para guardar los datos de entrenamiento.
 
@@ -98,7 +105,7 @@ END;
 GO
 ```
 
-- El primer argumento de `glm` es el parámetro de *fórmula* , que define `am` como dependiente de `hp + wt`.
+- El primer argumento para `glm` es el parámetro de *fórmula* , que define `am` como dependiente de `hp + wt`.
 - Los datos de entrada se almacenan en la variable `MTCarsData`, que se rellena con la consulta SQL. Si no asigna un nombre específico a los datos de entrada, el nombre predeterminado de la variable sería _InputDataSet_.
 
 ### <a name="store-the-model-in-the-sql-database"></a>Almacenar el modelo en la base de datos SQL
@@ -124,7 +131,7 @@ A continuación, almacene el modelo en una base de datos SQL para que pueda usar
    ```
 
    > [!TIP]
-   > Si ejecuta este código por segunda vez, obtendrá este error: "Infracción de la restricción de clave principal... No se puede insertar una clave duplicada en el objeto DBO. stopping_distance_models ". Una opción para evitar este error consiste en actualizar el nombre de cada nuevo modelo. Por ejemplo, podría cambiar el nombre por algo más descriptivo e incluir el tipo de modelo, el día en que lo creó, etc.
+   > Si ejecuta este código por segunda vez, recibirá este error: "infracción de la restricción de clave principal... No se puede insertar una clave duplicada en el objeto DBO. stopping_distance_models ". Una opción para evitar este error consiste en actualizar el nombre de cada nuevo modelo. Por ejemplo, podría cambiar el nombre por algo más descriptivo e incluir el tipo de modelo, el día en que lo creó, etc.
 
      ```sql
      UPDATE GLM_models
@@ -201,7 +208,7 @@ En el script anterior se realizan los pasos siguientes:
 - Use la función `predict` con los argumentos adecuados para el modelo y proporcione los nuevos datos de entrada.
 
 > [!NOTE]
-> En el ejemplo, se agrega la función `str` durante la fase de prueba para comprobar el esquema de los datos que se devuelven desde R. Puede quitar la instrucción más adelante.
+> En el ejemplo, se agrega la función `str` durante la fase de prueba para comprobar el esquema de datos devuelto desde R. Puede quitar la instrucción más adelante.
 >
 > Los nombres de columna utilizados en el script de R no se pasan necesariamente a la salida del procedimiento almacenado. Aquí se usa la cláusula WITH RESULTs para definir algunos nombres de columna nuevos.
 

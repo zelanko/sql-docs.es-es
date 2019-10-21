@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493779"
 ---
 # <a name="defining-and-browsing-translations"></a>Definir y examinar traducciones
@@ -40,9 +40,9 @@ ms.locfileid: "69493779"
   
      Aparecerá otra columna de idioma en la que definirá las traducciones de francés.  
   
-5.  En la fila del objeto **Caption** de la dimensión **Date** , escriba `Fecha` en la columna de traducción **Español (España)** y `Temps` en la columna de traducción **francés (Francia)** .  
+5.  En la fila del objeto **Caption** de la dimensión **Date** , escriba `Fecha` en la columna de traducción **español (España)** y `Temps` en la columna de traducción **francés (Francia)** .  
   
-6.  En la fila del objeto de **título** del atributo **Month Name** , `Mes del Año` escriba en la columna de traducción **Español (España)** y `Mois d'Année` en la columna de traducción **francés (Francia)** .  
+6.  En la fila del objeto **Caption** del atributo **Month Name** , escriba `Mes del Año` en la columna de traducción **español (España)** y `Mois d'Année` en la columna de traducción **francés (Francia)** .  
   
      Tenga en cuenta que al escribir estas traducciones, aparece un botón de puntos suspensivos ( **...** ). Si hace clic en estos puntos suspensivos podrá especificar una columna en la tabla subyacente que proporciona traducciones para cada miembro de la jerarquía de atributo.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "69493779"
   
 2.  En la barra de herramientas de la pestaña **Traducciones** , haga clic en el botón **Nueva traducción** .  
   
-     Aparecerá una lista de idiomas en el cuadro de diálogo **Seleccionar idioma**.  
+     Aparecerá una lista de idiomas en el cuadro de diálogo **Seleccionar idioma** .  
   
 3.  Seleccione **Español (España)** y, después, haga clic en **Aceptar**.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "69493779"
   
      Aparecerá otra columna de idioma en la que definirá las traducciones de francés.  
   
-5.  En la fila del objeto **Caption** de la dimensión **Date** , escriba `Fecha` en la columna de traducción **Español (España)** y `Temps` en la columna de traducción **francés (Francia)** .  
+5.  En la fila del objeto **Caption** de la dimensión **Date** , escriba `Fecha` en la columna de traducción **español (España)** y `Temps` en la columna de traducción **francés (Francia)** .  
   
-6.  En la fila del objeto **Caption** del grupo de **medida Internet sales** , `Ventas del lnternet` escriba en la columna de traducción **Español (España)** y `Ventes D'Internet` en la columna de traducción **francés (Francia)** .  
+6.  En la fila del objeto **Caption** del grupo de medida **Internet Sales** , escriba `Ventas del lnternet` en la columna de traducción **español (España)** y `Ventes D'Internet` en la columna de traducción **francés (Francia)** .  
   
-7.  En la fila del objeto **Caption** de la medida Internet sales-Sales amount, `Cantidad de las Ventas del Internet` escriba en la columna de traducción **Español (España)** y `Quantité de Ventes d'Internet` en la columna de traducción **francés (Francia)** .  
+7.  En la fila del objeto **Caption** de la medida Internet sales-Sales amount, escriba `Cantidad de las Ventas del Internet` en la columna de traducción **Español (españa)** y `Quantité de Ventes d'Internet` en la columna de traducción **francés (Francia)** .  
   
      Los pasos de este procedimiento ilustran el proceso de definición de traducciones de metadatos para objetos de cubos.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "69493779"
   
 5.  En la barra de herramientas, seleccione **Español (España)** en la lista **Idioma** .  
   
-     Observe que los elementos del panel de metadatos se vuelven a rellenar. Una vez que los elementos del panel de metadatos se vuelvan a rellenar, observe cómo la medida Internet Sales-Sales Amount ya no aparece en la carpeta para mostrar Venta por Internet. En su lugar, aparece en español en una nueva carpeta para mostrar `Ventas del lnternet`denominada, como se muestra en la siguiente imagen.  
+     Observe que los elementos del panel de metadatos se vuelven a rellenar. Una vez que los elementos del panel de metadatos se vuelvan a rellenar, observe cómo la medida Internet Sales-Sales Amount ya no aparece en la carpeta para mostrar Venta por Internet. En su lugar, aparece en español en una nueva carpeta para mostrar denominada `Ventas del lnternet`, como se muestra en la siguiente imagen.  
   
-     ![Panel](../../2014/tutorials/media/l9-translations-6.gif " de metadatos rellenado Panel") de metadatos rellenado  
+     ![Panel de metadatos rellenado](../../2014/tutorials/media/l9-translations-6.gif "Panel de metadatos rellenado")  
   
-6.  En el panel metadatos, haga clic `Cantidad de las Ventas del Internet` con el botón secundario y seleccione **Agregar a consulta**.  
+6.  En el panel metadatos, haga clic con el botón derecho en `Cantidad de las Ventas del Internet` y seleccione **Agregar a consulta**.  
   
-7.  En el panel metadatos, `Fecha`expanda y fecha **. Calendar Date**, haga clic con el botón secundario en fecha **. Calendar Date**y, a continuación, seleccione **Agregar a filtro**.  
+7.  En el panel metadatos, expanda `Fecha` y fecha **. Calendar Date**, haga clic con el botón secundario en fecha **. Calendar Date**y, a continuación, seleccione **Agregar a filtro**.  
   
 8.  En el panel **Filtro** , seleccione **CY 2007** como expresión de filtro.  
   
@@ -123,11 +123,11 @@ ms.locfileid: "69493779"
      Observe que los nombres de los meses aparecen ahora en francés y que el nombre de la medida aparece ahora también en francés.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 10: Definir roles administrativos](lesson-10-defining-administrative-roles.md)  
+ [Lección 10: definir roles administrativos](lesson-10-defining-administrative-roles.md)  
   
-## <a name="see-also"></a>Vea también  
- [Traducciones de dimensiones](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
- [Traducciones de cubo](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
+## <a name="see-also"></a>Ver también  
+ @No__t_1 de [traducciones de dimensiones](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  
+ [Traducciones de cubos](multidimensional-models-olap-logical-cube-objects/cube-translations.md)    
  [Traducciones &#40;Analysis Services&#41;](translations-analysis-services.md)  
   
   

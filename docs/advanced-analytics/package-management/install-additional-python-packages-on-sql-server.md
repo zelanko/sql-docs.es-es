@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 90bc0d33b00f77f942dd736ff1e1904f5d2e7396
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 2e3452a6aad04d0d524e4eb0e6bd473fd39a2bf7
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276461"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542151"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Instalación de paquetes de Python con sqlmlutils
 
@@ -25,9 +25,9 @@ En este artículo se describe cómo usar las funciones del paquete [**sqlmlutils
 Para obtener más información sobre la ubicación del paquete y las rutas de instalación, vea [obtener información de paquetes de Python](../package-management/python-package-information.md).
 
 > [!NOTE]
-> No se recomienda `pip install` el comando estándar de Python para agregar paquetes de Python en SQL Server. En su lugar, use **sqlmlutils** como se describe en este artículo.
+> No se recomienda usar el comando estándar de Python `pip install` para agregar paquetes de Python en SQL Server. En su lugar, use **sqlmlutils** como se describe en este artículo.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 + Debe tener [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) instalado con la opción de idioma de Python.
 
@@ -58,9 +58,9 @@ Para obtener más información sobre la ubicación del paquete y las rutas de in
 
 Para usar **sqlmlutils**, primero debe instalarlo en el equipo cliente que usa para conectarse a SQL Server.
 
-1. Descargue el archivo zip de **sqlmlutils** más https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist reciente desde el equipo cliente. No descomprima el archivo.
+1. Descargue el archivo zip de **sqlmlutils** más reciente de https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist en el equipo cliente. No descomprima el archivo.
 
-1. Abra un **símbolo del sistema** y ejecute el siguiente comando para instalar el paquete **sqlmlutils** . Reemplace la ruta de acceso completa al archivo zip de **sqlmlutils** que descargó; en este ejemplo se `c:\temp\sqlmlutils_0.6.0.zip`da por supuesto que el archivo descargado es.
+1. Abra un **símbolo del sistema** y ejecute el siguiente comando para instalar el paquete **sqlmlutils** . Reemplace la ruta de acceso completa al archivo zip de **sqlmlutils** que descargó; en este ejemplo se da por supuesto que el archivo descargado está `c:\temp\sqlmlutils_0.6.0.zip`.
 
    ```console
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
@@ -76,11 +76,11 @@ Si el equipo cliente que usa para conectarse a SQL Server tiene acceso a Interne
 
 1. En el equipo cliente, Abra **Python** o un entorno de Python.
 
-1. Use los comandos siguientes para instalar el paquete **de herramientas de texto** . Sustituya su propia información de conexión de base de datos de SQL Server.
+1. Use los comandos siguientes para instalar el paquete **de herramientas de texto** . Sustituya su propia información de conexión de base de datos SQL Server (si no utiliza la autenticación de Windows, agregue `uid` y `pwd` parámetros).
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 
@@ -90,25 +90,25 @@ Si el equipo cliente que usa para conectarse a SQL Server no tiene conexión a I
 
 #### <a name="on-a-computer-with-internet-access"></a>En un equipo con acceso a Internet
 
-1. Abra un **símbolo del sistema** y ejecute el siguiente comando para crear una carpeta local que contenga el paquete **de herramientas de texto** . En este ejemplo se crea `c:\temp\text-tools`la carpeta.
+1. Abra un **símbolo del sistema** y ejecute el siguiente comando para crear una carpeta local que contenga el paquete **de herramientas de texto** . En este ejemplo se crea la carpeta `c:\temp\text-tools`.
 
    ```console
    pip download text-tools -d c:\temp\text-tools
    ```
 
-1. Copie la `text-tools` carpeta en el equipo cliente. En el ejemplo siguiente se da por supuesto `c:\temp\packages\text-tools`que lo copió en.
+1. Copie la carpeta `text-tools` en el equipo cliente. En el ejemplo siguiente se da por supuesto que lo copió en `c:\temp\packages\text-tools`.
 
 #### <a name="on-the-client-computer"></a>En el equipo cliente
 
 Use **sqlmlutils** para instalar cada paquete (archivo WHL) que encuentre en la carpeta local que ha creado **PIP** . No importa en qué orden se instalan los paquetes.
 
-En este ejemplo, **Text-Tools** no tiene dependencias, por lo que solo hay un archivo de `text-tools` la carpeta que se va a instalar. Por el contrario, un paquete como **scikit-Plot** tiene 11 dependencias, por lo que encontraría 12 archivos en la carpeta (el paquete **scikit-Plot** y los 11 paquetes dependientes) y debe instalar cada uno de ellos.
+En este ejemplo, **Text-Tools** no tiene dependencias, por lo que solo hay un archivo de la carpeta `text-tools` que se va a instalar. Por el contrario, un paquete como **scikit-Plot** tiene 11 dependencias, por lo que encontraría 12 archivos en la carpeta (el paquete **scikit-Plot** y los 11 paquetes dependientes) y debe instalar cada uno de ellos.
 
-Ejecute el siguiente script de Python. Sustituya su propia información de conexión de base de datos de SQL Server y la ruta de acceso y el nombre de archivo reales del paquete. Repita la `sqlmlutils.SQLPackageManager` instrucción para cada archivo de paquete de la carpeta.
+Ejecute el siguiente script de Python. Sustituya la ruta de acceso y el nombre de archivo reales del paquete y su propia información de conexión de base de datos SQL Server (si no usa la autenticación de Windows, agregue `uid` y `pwd` parámetros). Repita la instrucción `sqlmlutils.SQLPackageManager` para cada archivo de paquete de la carpeta.
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
 sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
 ```
 

@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3b5a55ec16c7dfa2f16dbae62674a475fb39c5d7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: f8ce5c7bcf12a2431c2de779912d2e309c628cb1
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70275674"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542144"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalar nuevos paquetes de R con sqlmlutils
 
@@ -23,9 +23,9 @@ ms.locfileid: "70275674"
 En este artículo se describe cómo usar las funciones del paquete [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) para instalar nuevos paquetes de R en una instancia de SQL Server Machine Learning Services o SQL Server R Services. Los paquetes que se instalan se pueden usar en scripts de R que se ejecutan en la base de datos mediante la instrucción T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) .
 
 > [!NOTE]
-> No se recomienda `install.packages` el comando de r estándar para agregar paquetes de r en SQL Server. En su lugar, use **sqlmlutils** como se describe en este artículo.
+> No se recomienda el comando estándar de R `install.packages` para agregar paquetes de R en SQL Server. En su lugar, use **sqlmlutils** como se describe en este artículo.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - Instale [R](https://www.r-project.org) y [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) en el equipo cliente que usa para conectarse a SQL Server. Puede usar cualquier IDE de R para ejecutar scripts, pero en este artículo se da por supuesto que RStudio.
 
@@ -50,7 +50,7 @@ El paquete **sqlmlutils** depende del paquete **RODBCext** y **RODBCext** depend
 
 Si el equipo cliente tiene acceso a Internet, puede descargar e instalar **sqlmlutils** y sus paquetes dependientes en línea.
 
-1. Descargue el archivo zip de **sqlmlutils** más https://github.com/Microsoft/sqlmlutils/tree/master/R/dist reciente desde el equipo cliente. No descomprima el archivo.
+1. Descargue el archivo zip de **sqlmlutils** más reciente de https://github.com/Microsoft/sqlmlutils/tree/master/R/dist en el equipo cliente. No descomprima el archivo.
 
 1. Abra un **símbolo del sistema** y ejecute los siguientes comandos para instalar los paquetes **sqlmlutils** y **RODBCext**. Reemplace la ruta de acceso completa al archivo zip de **sqlmlutils** que ha descargado (en este ejemplo se da por supuesto que el archivo está en la carpeta de documentos). El paquete **RODBCext** se encuentra en línea e instalado.
 
@@ -72,7 +72,7 @@ En un equipo con acceso a Internet:
 
 1. Instale **miniCRAN**. Consulte [instalación de miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) para obtener más información.
 
-1. En RStudio, ejecute el siguiente script de R para crear un repositorio local del paquete **RODBCext**. En este ejemplo se crea el repositorio en `c:\downloads\rodbcext`la carpeta.
+1. En RStudio, ejecute el siguiente script de R para crear un repositorio local del paquete **RODBCext**. En este ejemplo se crea el repositorio en la carpeta `c:\downloads\rodbcext`.
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -100,16 +100,16 @@ En un equipo con acceso a Internet:
 
    ::: moniker-end
 
-   Para el `Rversion` valor, use la versión de R instalada en SQL Server. Para comprobar la versión instalada, use el siguiente comando de T-SQL.
+   Para el valor `Rversion`, use la versión de R instalada en SQL Server. Para comprobar la versión instalada, use el siguiente comando de T-SQL.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. Descargue el archivo zip de **sqlmlutils** más https://github.com/Microsoft/sqlmlutils/tree/master/R/dist reciente de (no descomprima el archivo). Por ejemplo, descargue el archivo en `c:\downloads\sqlmlutils_0.7.1.zip`.
+1. Descargue el archivo zip de **sqlmlutils** más reciente de https://github.com/Microsoft/sqlmlutils/tree/master/R/dist (no descomprima el archivo). Por ejemplo, descargue el archivo en `c:\downloads\sqlmlutils_0.7.1.zip`.
 
-1. Copie toda la carpeta del repositorio de`c:\downloads\rodbcext`RODBCext () y el archivo zip`c:\downloads\sqlmlutils_0.7.1.zip`de **sqlmlutils** () en el equipo cliente. Por ejemplo, cópielos en la carpeta `c:\temp\packages` del equipo cliente.
+1. Copie la carpeta del repositorio **RODBCext** completa (`c:\downloads\rodbcext`) y el archivo zip **sqlmlutils** (`c:\downloads\sqlmlutils_0.7.1.zip`) en el equipo cliente. Por ejemplo, cópielos en la carpeta `c:\temp\packages` en el equipo cliente.
 
 En el equipo cliente que usa para conectarse a SQL Server, abra un símbolo del sistema y ejecute los siguientes comandos para instalar **RODBCext** y, a continuación, **sqlmlutils**.
 
@@ -128,15 +128,13 @@ Si el equipo cliente que usa para conectarse a SQL Server tiene acceso a Interne
 
 1. En el equipo cliente, abra RStudio y cree un nuevo archivo de **script de R** .
 
-1. Use el siguiente script de R para instalar el paquete de **glue** mediante **sqlmlutils**. Sustituya su propia información de conexión de base de datos de SQL Server.
+1. Use el siguiente script de R para instalar el paquete de **glue** mediante **sqlmlutils**. Sustituya su propia información de conexión de base de datos SQL Server (si no utiliza la autenticación de Windows, agregue `uid` y `pwd` parámetros).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -151,7 +149,7 @@ Consulte [instalación de miniCRAN](create-a-local-package-repository-using-mini
 
 En un equipo con acceso a Internet:
 
-1. Ejecute el siguiente script de R para crear un repositorio local para el **pegado**. En este ejemplo se crea la carpeta `c:\downloads\glue`Repository en.
+1. Ejecute el siguiente script de R para crear un repositorio local para el **pegado**. En este ejemplo se crea la carpeta del repositorio en `c:\downloads\glue`.
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -180,28 +178,26 @@ En un equipo con acceso a Internet:
    ::: moniker-end
 
 
-   Para el `Rversion` valor, use la versión de R instalada en SQL Server. Para comprobar la versión instalada, use el siguiente comando de T-SQL.
+   Para el valor `Rversion`, use la versión de R instalada en SQL Server. Para comprobar la versión instalada, use el siguiente comando de T-SQL.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. Copie toda la carpeta del repositorio de`c:\downloads\glue`adherencia () en el equipo cliente. Por ejemplo, cópielo en la carpeta `c:\temp\packages\glue`.
+1. Copie toda la carpeta del repositorio de **adherencia** (`c:\downloads\glue`) en el equipo cliente. Por ejemplo, cópielo en la carpeta `c:\temp\packages\glue`.
 
 En el equipo cliente:
 
 1. Abra RStudio y cree un nuevo archivo de **script de R** .
 
-1. Use el siguiente script de R para instalar el paquete de **glue** mediante **sqlmlutils**. Sustituya su propia información de conexión de base de datos de SQL Server.
+1. Use el siguiente script de R para instalar el paquete de **glue** mediante **sqlmlutils**. Sustituya su propia información de conexión de base de datos SQL Server (si no utiliza la autenticación de Windows, agregue `uid` y `pwd` parámetros).
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
    localRepo = "c:/temp/packages/glue"
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos=paste0("file:///",localRepo))

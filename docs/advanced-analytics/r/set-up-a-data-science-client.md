@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69633638"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configuración de un cliente de ciencia de datos para el desarrollo de R en SQL Server
@@ -51,7 +51,7 @@ Los paquetes de R de Microsoft están disponibles en varios productos y servicio
 
 3. Cree una variable de entorno del sistema MKL_CBWR para garantizar una salida coherente en los cálculos de la biblioteca de kernels matemáticos (MKL) de Intel.
 
-  + En el panel de control, haga clic en sistema **y seguridad** >  > **configuración** > avanzada del sistema**variables de entorno**.
+  + En el panel de control, haga clic en **sistema y seguridad**  > **sistema**  > **Configuración avanzada del sistema**  > **variables de entorno**.
   + Cree una nueva variable del sistema denominada **MKL_CBWR**con un valor establecido en **auto**.
 
 ## <a name="2---locate-executables"></a>2-buscar ejecutables
@@ -108,7 +108,7 @@ En los pasos siguientes se da por supuesto la base de datos de demostración, [N
 
 1. Abra **RGUI** en la estación de trabajo del cliente. Por ejemplo, vaya a `~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` y haga doble clic en **RGui. exe** para iniciarlo.
 
-2. RevoScaleR se carga automáticamente. Confirme que RevoScaleR está operativo ejecutando este comando:`print(Revo.version)`
+2. RevoScaleR se carga automáticamente. Confirme que RevoScaleR está operativo ejecutando este comando: `print(Revo.version)`
 
 3. Escriba el script de demostración que se ejecuta en el servidor remoto. Debe modificar el siguiente script de ejemplo para incluir un nombre válido para una instancia de SQL Server remota. Esta sesión se inicia como una sesión local, pero la función **rxSummary** se ejecuta en la instancia de SQL Server remota.
 
@@ -128,7 +128,7 @@ En los pasos siguientes se da por supuesto la base de datos de demostración, [N
 
   **Resultados:**
 
-  Este script se conecta a una base de datos del servidor remoto, proporciona una consulta, crea una instrucción `cc` de contexto de proceso para la ejecución remota de código y, a continuación, proporciona la función RevoScaleR **rxSummary** para devolver un resumen estadístico de la consulta. resultados.
+  Este script se conecta a una base de datos del servidor remoto, proporciona una consulta, crea un contexto de cálculo `cc` instrucción para la ejecución remota de código y, a continuación, proporciona la función RevoScaleR **rxSummary** para devolver un resumen estadístico de los resultados de la consulta.
 
   ```R
     Call:
@@ -185,7 +185,7 @@ En los pasos siguientes se da por supuesto la base de datos de demostración, [N
 
   En la captura de pantalla siguiente se muestra el resultado del gráfico de entrada y dispersión.
 
-   ![Gráfico de dispersión en RGUI](media/rclient-setup-scatterplot.png "Datos de demostración del gráfico de dispersión en Nueva York Taxi")
+   ![Gráfico de dispersión en RGUI](media/rclient-setup-scatterplot.png "Datos de demostración del gráfico de dispersión en Nueva York taxi")
 
 <a name="install-ide"></a>
 
@@ -201,7 +201,7 @@ Al usar [RStudio](https://www.rstudio.com/), puede configurar el entorno para us
 
 1. Compruebe las versiones del paquete de R instaladas en SQL Server. Para obtener más información, vea [obtener información de paquetes de R](../package-management/r-package-information.md).
 
-1. Instale Microsoft R Client o una de las opciones de servidor independiente para agregar RevoScaleR y otros paquetes de R, incluida la distribución de R base usada por la instancia de SQL Server. Elija una versión en el mismo nivel o inferior (los paquetes son compatibles con versiones anteriores) que proporciona las mismas versiones de paquete que en el servidor. Para obtener información sobre la versión, consulte el mapa de versión de este artículo: [Actualice los componentes de R y Python](../install/upgrade-r-and-python.md).
+1. Instale Microsoft R Client o una de las opciones de servidor independiente para agregar RevoScaleR y otros paquetes de R, incluida la distribución de R base usada por la instancia de SQL Server. Elija una versión en el mismo nivel o inferior (los paquetes son compatibles con versiones anteriores) que proporciona las mismas versiones de paquete que en el servidor. Para obtener información sobre la versión, consulte el mapa de versión de este artículo: [actualización de los componentes de R y Python](../install/upgrade-r-and-python.md).
 
 1. En RStudio, [actualice la ruta de acceso de r](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R) para que apunte al entorno de r que proporciona RevoScaleR, Microsoft R Open y otros paquetes de Microsoft. 
 
@@ -229,9 +229,9 @@ En este ejemplo se usa Visual Studio 2017 Community Edition, con la carga de tra
 
 2. El panel izquierdo contiene una lista de plantillas preinstaladas. Haga clic en **r**y seleccione **proyecto de r**. En el cuadro **nombre** , escriba `dbtest` y haga clic en **Aceptar**. 
 
-  Visual Studio crea una nueva carpeta de proyecto y un archivo de script `Script.R`predeterminado,. 
+  Visual Studio crea una nueva carpeta de proyecto y un archivo de script predeterminado, `Script.R`. 
 
-3. Escriba `.libPaths()` en la primera línea del archivo de script y, a continuación, presione Ctrl + entrar.
+3. Escriba `.libPaths()` en la primera línea del archivo de script y, a continuación, presione CTRL + entrar.
 
   La ruta de acceso de la biblioteca de R actual debe aparecer en la ventana **R interactivo** . 
 
@@ -244,5 +244,5 @@ En este ejemplo se usa Visual Studio 2017 Community Edition, con la carga de tra
 
 Dos tutoriales diferentes incluyen ejercicios para que pueda practicar el cambio del contexto de proceso de local a una instancia de SQL Server remota.
 
-+ [Tutorial: Uso de funciones de RevoScaleR R con datos de SQL Server](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [Tutorial: uso de las funciones de RevoScaleR R con datos de SQL Server](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [Tutorial integral de ciencia de datos](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

@@ -1,7 +1,7 @@
 ---
 title: Uso de PIVOT y UNPIVOT | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559415"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305179"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM: uso de PIVOT y UNPIVOT
 
@@ -153,7 +153,7 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-Los valores únicos devueltos por la columna `EmployeeID` se convierten en campos en el conjunto de resultados finales. Como tal, hay una columna para cada número de `EmployeeID` especificado en la cláusula dinámica: en este caso los empleados `164`, `198`, `223`, `231` y `233`. La columna `PurchaseOrderID` se utiliza como columna de valores, respecto a la que se ordenan las columnas del resultado final, denominadas columnas de agrupamiento. En este caso, las columnas de agrupamiento se agregan mediante la función `COUNT`. Tenga presente que aparece un mensaje de advertencia que indica que los valores NULL que aparecen en la columna `PurchaseOrderID` no se tuvieron en cuenta cuando se contabilizó `COUNT` para cada empleado.  
+Los valores únicos devueltos por la columna `EmployeeID` se convierten en campos en el conjunto de resultados finales. Como tal, hay una columna para cada número de `EmployeeID` especificado en la cláusula dinámica: en este caso los empleados `250`, `251`, `256`, `257` y `260`. La columna `PurchaseOrderID` se utiliza como columna de valores, respecto a la que se ordenan las columnas del resultado final, denominadas columnas de agrupamiento. En este caso, las columnas de agrupamiento se agregan mediante la función `COUNT`. Tenga presente que aparece un mensaje de advertencia que indica que los valores NULL que aparecen en la columna `PurchaseOrderID` no se tuvieron en cuenta cuando se contabilizó `COUNT` para cada empleado.  
   
 > [!IMPORTANT]  
 >  Cuando se usan funciones de agregado con `PIVOT`, la presencia de valores NULL en la columna de valores no se tiene en cuenta cuando se calcula una agregación.  

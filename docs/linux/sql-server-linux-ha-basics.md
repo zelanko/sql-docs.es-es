@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809956"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586754"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Conceptos básicos sobre disponibilidad de SQL Server en implementaciones de Linux
 
@@ -76,7 +76,7 @@ También se puede usar Samba, que es la variante de Linux del Bloque de mensajes
 
 También se pueden usar recursos compartidos de SMB basados en Windows; no es necesario que los recursos compartidos de SMB estén basados en Linux, siempre y cuando la parte del cliente de Samba esté configurada correctamente en el servidor Linux que hospeda [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] y el recurso compartido tenga el acceso adecuado. En el caso de los entornos mixtos, esto sería una manera de aprovechar la infraestructura existente para las implementaciones de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basadas en Linux.
 
-Algo importante es que la versión de Samba implementada debe ser compatible con SMB 3.0. Cuando se agregó compatibilidad con SMB en [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], era necesario que todos los recursos compartidos admitieran SMB 3.0. Si se usa Samba para el recurso compartido y no Windows Server, dicho recurso compartido basado en Samba debe usar Samba 4.0 o posterior e, idealmente, la versión 4.3 o posterior, que admite SMB 3.1.1. Una buena fuente de información sobre SMB y Linux es [SMB3 en Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
+Algo importante es que la versión de Samba implementada debe ser compatible con SMB 3.0. Cuando se agregó compatibilidad con SMB en [!INCLUDE[sssql11-md](../includes/sssql11-md.md)], era necesario que todos los recursos compartidos admitieran SMB 3.0. Si se usa Samba para el recurso compartido y no Windows Server, dicho recurso compartido basado en Samba debe usar Samba 4.0 o posterior e, idealmente, la versión 4.3 o posterior, que admite SMB 3.1.1. Una buena fuente de información sobre SMB y Linux es [SMB3 en Samba](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf).
 
 Por último, usar un recurso compartido de Network File System (NFS) es una opción. El uso de NFS no es una opción en las implementaciones de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] basadas en Windows; solo se puede usar en implementaciones basadas en Linux.
 

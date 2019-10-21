@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 948604fbd548a2fb614fd4a671f512c4a4890d52
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
+ms.openlocfilehash: 58ae65590f99d7fc330adca7f1db1898b8874571
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72245583"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586728"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Actualizaciones más recientes de Microsoft SQL Server
 
@@ -49,7 +49,7 @@ Cada uno de estos vínculos proporciona información sobre todos los productos y
 |Resultado de |SP4 [(KB 2463332)](http://support.microsoft.com/kb/2463332)|N/D|N/D|N/D|[Instalación de SQL Server 2005](https://msdn.microsoft.com/en-us/library/ms143516(sql.90).aspx)|
 |SQL Server 2000|SP4 [(KB 290211)](http://support.microsoft.com/kb/290211)|N/D|N/D|N/D|[Instalación de SQL Server 2000](https://technet.microsoft.com/en-us/library/aa197941(sql.80).aspx)|
 
-**Aprenda a probar las actualizaciones:**  [Prueba y desarrollo de hojas de ruta de compatibilidad para las aplicaciones de ISV (PDF)](http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-85-48-files/0827.testing-and-developing-supportability-roadmaps-for-isv-applications.pdf)
+**Aprenda a probar las actualizaciones:**  [Prueba y desarrollo de hojas de ruta de compatibilidad para las aplicaciones de ISV (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ### <a name="knowledge-base"></a>Base de conocimiento
 

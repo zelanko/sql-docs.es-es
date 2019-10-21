@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 23201d2c05e9bdb5196319fba49955bb67afd29a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7dcb81e48ddd4861e3f89547280b372df4c56ec3
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134820"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359540"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implementar una aplicación de capa de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ Más información sobre algunas de las páginas del asistente:
  **Guardar informe:** seleccione este botón para guardar el informe de implementación en un archivo HTML. El archivo notifica el estado de cada acción, incluidos todos los errores generados por cualquiera de las acciones. La carpeta predeterminada es la carpeta SQL Server Management Studio\DAC Packages de la carpeta Documentos de su cuenta de Windows.  
   
   
-##  <a name="deploy-a-dac-using-powershell"></a>Implementación de una DAC mediante PowerShell  
+##  <a name="using-powershell"></a>Usar PowerShell  
   
 1.  Cree un objeto SMO Server y establézcalo en la instancia en la que desea implementar la DAC.  
   
@@ -144,19 +144,18 @@ Más información sobre algunas de las páginas del asistente:
 6.  Use el método **DacStore.Install** para implementar la DAC.  
   
 7.  Cierra la secuencia de archivos usada para leer el archivo de paquete DAC.  
+
+En el siguiente ejemplo se implementa la DAC denominada MyApplication en una instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)], mediante una definición de DAC de un paquete de MyApplication.dacpac.  
   
-## <a name="powershell-examples"></a>Ejemplos de PowerShell  
- En el siguiente ejemplo se implementa la DAC denominada MyApplication en una instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)], mediante una definición de DAC de un paquete de MyApplication.dacpac.  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Load the DAC package file.  
 $dacpacPath = "C:\MyDACs\MyApplication.dacpac"  
@@ -164,14 +163,14 @@ $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCre
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   
 ## Subscribe to the DAC deployment events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Deploy the DAC and create the database.  
 $dacName  = "MyApplication"  
 $evaluateTSPolicy = $true  
-$deployProperties = New-Object Microsoft.SqlServer.Management.Dac.DatabaseDeploymentProperties($serverconnection,$dacName)  
-$dacstore.Install($dacType, $deployProperties, $evaluateTSPolicy)  
+$deployProperties = New-Object Microsoft.SqlServer.Management.Dac.DatabaseDeploymentProperties($serverConnection,$dacName)  
+$dacStore.Install($dacType, $deployProperties, $evaluateTSPolicy)  
 $fileStream.Close()  
 ```  
   

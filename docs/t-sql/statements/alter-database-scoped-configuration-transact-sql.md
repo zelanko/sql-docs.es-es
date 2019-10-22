@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261014"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589994"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -114,7 +114,7 @@ Especifique un identificador de plan de consulta para borrar un plan de consulta
 
 MAXDOP **=** {\<valor> | PRIMARY } **\<valor>**
 
-Especifica el valor predeterminado **Grado máximo de paralelismo (MAXDOP)** que se debe usar para las instrucciones. 0 es el valor predeterminado e indica que en su lugar se usará la configuración del servidor. En el ámbito de la base de datos, MAXDOP reemplaza (a menos que se establezca en 0) el **grado máximo de paralelismo** establecido en el nivel de servidor mediante sp_configure. Las sugerencias de consulta aún pueden reemplazar el valor MAXDOP con ámbito de base de datos con el fin de optimizar las consultas específicas que requieran otra configuración. Todas estas configuraciones están limitadas por el valor MAXDOP establecido para el [grupo de cargas de trabajo]().
+Especifica el valor predeterminado **Grado máximo de paralelismo (MAXDOP)** que se debe usar para las instrucciones. 0 es el valor predeterminado e indica que en su lugar se usará la configuración del servidor. En el ámbito de la base de datos, MAXDOP reemplaza (a menos que se establezca en 0) el **grado máximo de paralelismo** establecido en el nivel de servidor mediante sp_configure. Las sugerencias de consulta aún pueden reemplazar el valor MAXDOP con ámbito de base de datos con el fin de optimizar las consultas específicas que requieran otra configuración. Todas estas configuraciones están limitadas por el valor MAXDOP establecido para el [grupo de cargas de trabajo](create-workload-group-transact-sql.md).
 
 Puede utilizar la opción MAXDOP para limitar el número de procesadores utilizados en la ejecución de planes paralelos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considera los planes de ejecución en paralelo para las consultas, las operaciones de lenguaje de definición de datos (DDL) de índice, la inserción en paralelo, la modificación de columna en línea, la colección de estadísticas en paralelo y el rellenado de cursor estático y controlado por conjuntos de claves.
 

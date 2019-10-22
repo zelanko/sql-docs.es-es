@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fc8925b4257631561b6b68ed144becbadece639
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 7ddf814a849dfd0272f87dec2e2d7650c557d0be
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383784"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545083"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio
 
@@ -32,12 +32,12 @@ Con Visual Studio 2019, la funcionalidad necesaria para habilitar Analysis Serv
 Si ya tiene una licencia para Visual Studio 2019:
 
 - Para proyectos de SQL Database, instale el almacenamiento de datos y la carga de procesamiento para Visual Studio
-- Para Analysis Services, Integration Services o proyectos de Reporting Services, instale las extensiones adecuadas de Marketplace.
+- Para proyectos de Analysis Services, Integration Services o Reporting Services, instale las [extensiones](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) adecuadas de Marketplace.
 
 Si aún no tiene una licencia para Visual Studio 2019:
 
 - Instalación de [Visual Studio Community 2019](https://visualstudio.microsoft.com/downloads/)
-- Instale la extensión de Analysis Services, Integration Services o Reporting Services, según corresponda.
+- Instale las [extensiones](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) de Analysis Services, Integration Services o Reporting Services, según corresponda.
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>Cambios en SSDT para Visual Studio 2017
 

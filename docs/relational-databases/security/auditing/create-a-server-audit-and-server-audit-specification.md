@@ -1,7 +1,7 @@
 ---
 title: Creación de una auditoría de servidor y una especificación de auditoría de servidor, utilizando | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5eefebaf1d68a29a654bb407c46ad5871164d2d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095192"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517977"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Crear una auditoría de servidor y una especificación de auditoría de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "68095192"
      Especifica el número de archivos de auditoría que se crearán, hasta 2.147.483.647. Esta opción solo está disponible si se desactiva la casilla **Ilimitado** .  
   
      **Tamaño máximo del archivo**  
-     Especifica el tamaño máximo de un archivo de auditoría en megabytes (MB), gigabytes (GB) o terabytes (TB). Puede especificar entre 1024 MB y 2.147.483.647 TB. La activación de la casilla **Ilimitado** no pone un límite en el tamaño del archivo. La especificación de un valor inferior a 1024 MB producirá y devolverá un error. La casilla **Ilimitado** está activada de forma predeterminada.  
+     Especifica el tamaño máximo de un archivo de auditoría en megabytes (MB), gigabytes (GB) o terabytes (TB). Puede especificar un número hasta 2 147 483 647 TB. La activación de la casilla **Ilimitado** no pone un límite en el tamaño del archivo. La casilla **Ilimitado** está activada de forma predeterminada.  
   
      Casilla**Reservar espacio en disco**  
      Especifica que se debe preasignar una cantidad de espacio en disco igual al tamaño máximo de archivo especificado. Este valor solo se puede utilizar si la casilla **Ilimitado** en **Tamaño máximo del archivo** no está activada. Esta casilla no está activada de forma predeterminada.  

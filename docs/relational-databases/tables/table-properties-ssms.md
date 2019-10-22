@@ -17,12 +17,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f54ff6306e3a4b2066a05ded891f4b8e6e98f99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ad8e6a73ee20a98f9dd97d8220a592c8c1600b2e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016223"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305004"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -75,9 +75,8 @@ ms.locfileid: "68016223"
  AUTO  
  Esta opción permite al [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] seleccionar la granularidad de la escala de bloqueo que sea adecuada para el esquema de tabla.  
   
--   Si la tabla tiene particiones, se permitirá la extensión de bloqueo en la granularidad de árbol b (HoBT) o montón. Una vez realizada la extensión del bloqueo hasta el nivel de HoBT, el bloqueo no se extenderá a la granularidad de TABLE más adelante.  
-  
--   Si la tabla no tiene particiones, la extensión del bloqueo se aplicará a la granularidad de TABLE.  
+- Si la tabla tiene particiones, se permitirá la extensión de bloqueo en la granularidad de árbol b (HoBT) o montón. En otras palabras, se permitirá la escalación al nivel de partición. Una vez realizada la extensión del bloqueo hasta el nivel de HoBT, el bloqueo no se extenderá a la granularidad de TABLE más adelante.
+- Si la tabla no tiene particiones, la extensión del bloqueo se aplica a la granularidad de TABLE. 
   
  TABLE  
  La extensión de bloqueo se aplicará a la granularidad de nivel de tabla, independientemente de que la tabla tenga o no particiones. TABLE es el valor predeterminado.  

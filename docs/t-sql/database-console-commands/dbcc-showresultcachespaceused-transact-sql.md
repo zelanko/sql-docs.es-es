@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: 0a8e9207e22a0e9bb4fbb75d872697fc9d2ff76e
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72174658"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452829"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -25,7 +25,7 @@ ms.locfileid: "72174658"
 
 Muestra el espacio de almacenamiento utilizado en la caché de un conjunto de resultados para una base de datos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de Azure.
   
-![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,18 +36,6 @@ DBCC SHOWRESULTCACHESPACEUSED
 ## <a name="remarks"></a>Notas
 
 El comando `DBCC SHOWRESULTCACHESPACEUSED` no toma ningún parámetro y devuelve el espacio usado por la base de datos donde se ejecuta.
-
-El tamaño máximo de la caché del conjunto de resultados es 1 TB por base de datos.  Azure SQL Data Warehouse extrae automáticamente las entradas de la caché del conjunto de resultados:
-
-- cada 48 horas si el conjunto de resultados no se ha usado.
-- cuando la caché del conjunto de resultados se acerca al tamaño máximo.
-
-Para vaciar manualmente la caché del conjunto de resultados de una base de datos, los usuarios pueden usar una de estas opciones:
-
-- Desactivar la característica de caché del conjunto de resultados para la base de datos.
-- Ejecutar `DBCC DROPRESULTSETCACHE` mientras está conectado a la base de datos. 
-
-El hecho de poner en pausa una base de datos no vaciará la caché del conjunto de resultados.  
 
 ## <a name="permissions"></a>Permisos
 
@@ -65,6 +53,7 @@ Requiere el permiso VIEW SERVER STATE.
 
 ## <a name="see-also"></a>Vea también
 
+[Ajuste del rendimiento con almacenamiento en caché de los resultados](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

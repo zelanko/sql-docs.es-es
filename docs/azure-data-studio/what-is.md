@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
-ms.openlocfilehash: a7fbde0a4dab0becdaa9fb7b59221e57fd81c59e
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.date: 10/15/2019
+ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822616"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545054"
 ---
 # <a name="what-is-azure-data-studio"></a>¿Qué es Azure Data Studio?
 
@@ -68,6 +68,7 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 - Puede ejecutar la mayoría de las tareas administrativas mediante el terminal integrado con sqlcmd o PowerShell.
 - Tiene una necesidad mínima de las experiencias del asistente.
 - No necesita realizar una configuración administrativa profunda.
+- Quiero 
 
 **Use SQL Server Management Studio si:**
 - Dedica la mayor parte del tiempo a las tareas de administración de bases de datos.
@@ -117,6 +118,8 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Resultados a texto||Sí|
 |Visor espacial||Sí|
 |SQLCMD||Sí|
+|Cuaderno|Sí||
+|Guardar consulta como fragmento de código|Sí||
 
 ### <a name="operating-system-support"></a>Sistemas operativos admitidos
 
@@ -139,6 +142,7 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Copia de seguridad o restauración|Sí|Sí|
+|Compatibilidad con clúster de macrodatos|Sí||
 |Importación de archivos planos|Vista previa|Sí|
 |Agente SQL|Vista previa|Sí|
 |SQL Profiler|Vista previa|Sí|
@@ -160,6 +164,7 @@ Para obtener información sobre las extensiones, vea [Crear extensiones](extensi
 |Template Explorer||Sí|
 |Evaluación de vulnerabilidad||Sí|
 |Administración de XEvent||Sí|
+|Integración de la API SQL Assessment||Sí|
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -1,7 +1,7 @@
 ---
 title: Compatibilidad con la intercalación y Unicode | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -27,14 +27,14 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918956"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688736"
 ---
-# <a name="collation-and-unicode-support"></a>Collation and Unicode Support
+# <a name="collation-and-unicode-support"></a>Compatibilidad con la intercalación y Unicode
   Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcionan propiedades de distinción entre mayúsculas y minúsculas, acentos y reglas de ordenación para los datos. Las intercalaciones que se usan con tipos de datos de caracteres como `char` y `varchar` dictan la página de códigos y los caracteres correspondientes que se pueden representar para ese tipo de datos. Si va a instalar una instancia nueva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurar una copia de seguridad de la base de datos o conectar el servidor a bases de datos cliente, es importante conocer los requisitos de configuración regional, el criterio de ordenación y la distinción entre mayúsculas y minúsculas y acentos de los datos con los que se va a trabajar. Para ver una lista de las intercalaciones disponibles en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
   
  Al seleccionar una intercalación para un servidor, base de datos, columna o expresión, se están asignando ciertas características a los datos que afectarán a los resultados de muchas operaciones de la base de datos. Por ejemplo, cuando se crea una consulta con ORDER BY, el criterio de ordenación del conjunto de resultados puede depender de la intercalación que se aplica a la base de datos o que se dicta en una cláusula COLLATE en el nivel de expresión de la consulta.  
@@ -49,11 +49,11 @@ ms.locfileid: "62918956"
   
  Las opciones asociadas con una intercalación son la distinción de mayúsculas y minúsculas, la distinción de acentos, la distinción de tipos de kana, la distinción de ancho. Estas opciones se especifican anexándolas al nombre de intercalación. Por ejemplo, la intercalación `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` es una intercalación con distinción de mayúsculas y minúsculas, distinción de acentos, distinción de tipos de kana y distinción de ancho. En la tabla siguiente se describe el comportamiento asociado a estas opciones.  
   
-|Opción|Descripción|  
+|Opción|Description|  
 |------------|-----------------|  
 |Distinguir mayúsculas de minúsculas (_CS)|Distingue entre letras mayúsculas y minúsculas. Si se selecciona, las letras minúsculas se ordenan por delante de sus versiones en mayúsculas. Si esta opción no está seleccionada, la intercalación no distinguirá mayúsculas de minúsculas. Es decir, que SQL Server considera las versiones mayúscula y minúscula de las letras como letras idénticas para fines de ordenación. Puede seleccionar explícitamente no distinguir entre mayúsculas y minúsculas especificando _CI.|  
-|Distinguir acentos (_AS)|Distingue entre caracteres acentuados y no acentuados. Por ejemplo, 'a 'no es igual a'???'. Si esta opción no está seleccionada, la intercalación no distinguirá los acentos. Es decir, que SQL Server considera las versiones acentuadas y no acentuadas de las letras como letras idénticas para fines de ordenación. Puede seleccionar explícitamente no distinguir acentos especificando _AI.|  
-|Distinguir kana (_KS)|Distingue entre dos tipos de caracteres kana japoneses: Hiragana y Katakana. Si esta opción no está seleccionada, la intercalación no distinguirá los caracteres kana. Es decir, que SQL Server considera los caracteres Hiragana y Katakana como caracteres iguales para la ordenación. La omisión de esta opción es el único método para especificar Kana-insensibilidad.|  
+|Distinguir acentos (_AS)|Distingue entre caracteres acentuados y no acentuados. Por ejemplo, "a" no es igual a "&#x1EA5;". Si esta opción no está seleccionada, la intercalación no distinguirá los acentos. Es decir, que SQL Server considera las versiones acentuadas y no acentuadas de las letras como letras idénticas para fines de ordenación. Puede seleccionar explícitamente no distinguir acentos especificando _AI.|  
+|Distinguir kana (_KS)|Distingue entre los dos tipos de caracteres Kana japoneses: Hiragana y Katakana. Si esta opción no está seleccionada, la intercalación no distinguirá los caracteres kana. Es decir, que SQL Server considera los caracteres Hiragana y Katakana como caracteres iguales para la ordenación. La omisión de esta opción es el único método para especificar Kana-insensibilidad.|  
 |Distinguir ancho (_WS)|Distingue entre caracteres de ancho total y ancho medio. Si no se activa esta opción, SQL Server considera que la representación de ancho completo y de ancho medio del mismo carácter son idénticas para la ordenación. La omisión de esta opción es el único método para especificar no distinción de ancho.|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes conjuntos de intercalación:  
@@ -144,7 +144,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ##  <a name="Supplementary_Characters"></a> Caracteres complementarios  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proporciona tipos de datos, como `nchar` y `nvarchar` para almacenar datos Unicode. Estos tipos de datos codifican el texto en un formato denominado *UTF-16*. Unicode Consortium asigna a cada carácter un punto de código único, que es un valor en el intervalo comprendido entre 0x0000 y 0x10FFFF. Los caracteres que se usan con más frecuencia tienen valores de punto de código que se ajustarán a una palabra de 16 bits en memoria y en disco, pero los caracteres con valores de punto de código mayores que 0xFFFF requieren dos palabras de 16 bits consecutivas. Estos caracteres se denominan *caracteres adicionales*y las dos palabras de 16 bits consecutivas, *pares suplentes*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona tipos de datos como `nchar` y `nvarchar` para almacenar datos Unicode. Estos tipos de datos codifican el texto en un formato denominado *UTF-16*. Unicode Consortium asigna a cada carácter un punto de código único, que es un valor en el intervalo comprendido entre 0x0000 y 0x10FFFF. Los caracteres que se usan con más frecuencia tienen valores de punto de código que se ajustarán a una palabra de 16 bits en memoria y en disco, pero los caracteres con valores de punto de código mayores que 0xFFFF requieren dos palabras de 16 bits consecutivas. Estos caracteres se denominan *caracteres adicionales*y las dos palabras de 16 bits consecutivas, *pares suplentes*.  
   
  Si utiliza caracteres adicionales:  
   
@@ -216,8 +216,8 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  [Sitio web de Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
-## <a name="see-also"></a>Consulte también  
- [Intercalaciones de bases de datos independientes](../databases/contained-database-collations.md)   
+## <a name="see-also"></a>Ver también  
+ [Contained Database Collations](../databases/contained-database-collations.md)   
  [Elegir un idioma al crear un índice de texto completo](../search/choose-a-language-when-creating-a-full-text-index.md)   
  [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
   

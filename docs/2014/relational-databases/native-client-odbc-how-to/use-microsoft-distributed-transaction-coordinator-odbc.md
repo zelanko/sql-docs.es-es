@@ -1,7 +1,7 @@
 ---
-title: Utilice Microsoft Distributed Transaction Coordinator (ODBC) | Microsoft Docs
+title: Usar Microsoft Coordinador de transacciones distribuidas (ODBC) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
@@ -12,12 +12,12 @@ ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 739d87c7a590489a2dd263535356b0b520a4a9b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 425f9fc0b7637aab1869130a2830c2f3c134fe7d
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200227"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688701"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Usar Microsoft DTC (Coordinador de transacciones distribuidas) (ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "63200227"
   
 1.  Conéctese a MS DTC utilizando la función OLE DtcGetTransactionManager de MS DTC. Para obtener información acerca de MS DTC, vea Microsoft DTC (Coordinador de transacciones distribuidas).  
   
-2.  Llame a SQL DriverConnect una vez para cada Microsoft?? SQL Server??? conexión que va a establecer.  
+2.  Llame a SQL DriverConnect una vez para cada conexión Microsoft SQL Server que desee establecer.  
   
 3.  Llame a la función OLE ITransactionDispenser::BeginTransaction de MS DTC para iniciar una transacción MS DTC y obtener un objeto Transaction que represente la transacción.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63200227"
 > [!NOTE]  
 >  También puede llamar a [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) y [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) sucesivamente para cada servidor SQL Server en lugar de llamarlos tal y como se sugería anteriormente en los pasos 4 y 5.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Realizar transacciones &#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

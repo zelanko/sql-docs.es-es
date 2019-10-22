@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: a51b0a3da9fda396b23f6ddcf9121fe7a30ec202
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251397"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542213"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 
@@ -40,11 +40,7 @@ Use SSMS para consultar, diseñar y administrar bases de datos y almacenes de da
 
 SSMS es gratuito.
 
-## <a name="download-ssms-1831"></a>Descargar SSMS 18.3.1
-
-**SSMS 18.3.1 ya está disponible y es la versión de disponibilidad general (GA) más reciente de *SQL Server Management Studio* que ofrece compatibilidad con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
-
-**[Descargar SQL Server Management Studio 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)**
+## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[Descargar SSMS](https://aka.ms/ssmsfullsetup)
 
 SSMS 18.3.1 es la versión de disponibilidad general (GA) más reciente de SSMS. Si tiene instalada una versión anterior de disponibilidad general de SSMS 18, se actualizará a la versión 18.3.1 al instalar SSMS 18.3.1. Si tiene instalada una *versión preliminar* anterior de SSMS 18.x, deberá desinstalarla antes de instalar SSMS 18.3.1.
 
@@ -59,6 +55,9 @@ Si tiene comentarios o sugerencias, o quiere informar de alguna incidencia, la m
 La instalación de SSMS 18.x no actualiza ni reemplaza las versiones 17.x de SSMS ni las anteriores. SSMS 18.x se instala en paralelo con versiones anteriores de modo que ambas versiones estén disponibles para su uso.
 
 Si un equipo contiene instalaciones en paralelo de SSMS, compruebe si inicia la versión correcta para sus necesidades específicas. La versión más reciente tiene la etiqueta **Microsoft SQL Server Management Studio 18**
+
+> [!Note]
+> Si accede a esta página desde una versión de idioma que no es el inglés y quiere ver el contenido más actualizado, visite esta página en [inglés](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15). Puede descargar distintos idiomas en el sitio de la versión en inglés seleccionando [available languages](#available-languages-ssms-1831) (idiomas disponibles).
 
 ## <a name="available-languages-ssms-1831"></a>Idiomas disponibles (SSMS 18.3.1)
 
@@ -76,7 +75,7 @@ SQL Server Management Studio 18.3.1:
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Clasificación de datos | Agregue información de clasificación de datos a la interfaz de usuario de propiedades de columna (*Tipo de información*, *Id. de tipo de información*, *Etiqueta de confidencialidad* e *Id. de etiqueta de confidencialidad* no se exponen en la interfaz de usuario de SSMS). |
 | Intellisense/Editor | Se ha actualizado la compatibilidad con las características agregadas recientemente a SQL Server 2019 (por ejemplo, "ALTER SERVER CONFIGURATION"). |
-| Integration Services | Se ha agregado un nuevo elemento de menú de selección `Tools > Migrate to Azure > Configure Azure-enabled DTExec` que invocará las ejecuciones de paquetes SSIS en Azure-SSIS Integration Runtime como actividades de Ejecutar paquetes SSIS en canalizaciones de ADF. |
+| Integration Services | Se ha agregado un nuevo elemento de menú de selección `Tools > Migrate to Azure > Configure Azure-enabled DTExec` que invoca las ejecuciones de paquetes de servicios de integración (SSIS) en Azure-SSIS Integration Runtime como actividades de Ejecutar paquetes SSIS en canalizaciones de ADF. |
 | SMO/Generación de Script | Se ha agregado compatibilidad con la generación de script de la restricción UNIQUE de Azure SQL Data Warehouse. |
 | SMO/Generación de Script | Clasificación de datos: se ha agregado compatibilidad con la versión 10 de SQL (SQL 2008) y versiones posteriores.  - Se ha agregado el nuevo atributo de sensibilidad "clasificar" para la versión 15 de SQL (SQL 2019) y versiones posteriores y para Azure SQL DB. |
 

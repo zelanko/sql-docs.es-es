@@ -13,12 +13,12 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e7a186efb5da3ef509f3ada02e301d0777ffd2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 062e84a5ff0874353a40236ea6ce56c325dfa6ab
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895367"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517965"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutorial: Configuración de la replicación (de mezcla) entre un servidor y clientes móviles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Para completar este tutorial, necesita tener SQL Server, SQL Server Management S
    - Cualquier edición de SQL Server, excepto SQL Server Express o SQL Server Compact. Estas ediciones no pueden ser publicadores de replicación.   
    - La base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Con el objeto de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada.  
   
-- En el servidor de suscriptor (destino), instale cualquier edición de SQL Server, excepto para [!INCLUDE[ssEW](../../includes/ssew-md.md)]. La publicación creada en este tutorial no es compatible con [!INCLUDE[ssEW](../../includes/ssew-md.md)]. 
+- En el servidor de suscriptor (destino), instale cualquier edición de SQL Server, excepto SQL Server Express o SQL Server Compact. La publicación que se crea en este tutorial no es compatible con SQL Server Express ni con SQL Server Compact. 
 
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).

@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 729443d2e9a9758a6ebedb15ac981e945128fa17
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e780d6afaddc5ac3af0e87e6b629fb39c987879
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002821"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305033"
 ---
-# <a name="mssqlserver137"></a>MSSQLSERVER_137
+# <a name="mssqlserver_137"></a>MSSQLSERVER_137
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalles  
@@ -33,13 +33,13 @@ ms.locfileid: "68002821"
 |Texto del mensaje|Debe declarar la variable escalar "%.*ls".|  
   
 ## <a name="explanation"></a>Explicación  
-Este error se produce cuando una variable se utiliza en un script SQL sin declararla primero. En el siguiente ejemplo, se devuelve el error 137 para las instrucciones SET y SELECT porque no se ha declarado **@mycol** .  
+Este error se produce cuando una variable se utiliza en un script SQL sin declararla primero. En el ejemplo siguiente se devuelve el error 137 para las instrucciones SET y SELECT porque no se ha declarado **\@mycol**.  
   
 SET @mycol = 'ContactName'  
   
 SELECT @mycol  
   
-Una de las causas más complicadas de este error incluye el uso de una variable que se declara fuera de la instrucción EXECUTE. Por ejemplo, la variable **@mycol** especificada en la instrucción SELECT es local para la instrucción SELECT; por tanto, está fuera de la instrucción EXECUTE.  
+Una de las causas más complicadas de este error incluye el uso de una variable que se declara fuera de la instrucción EXECUTE. Por ejemplo, la variable **\@mycol** especificada en la instrucción SELECT es local en la instrucción SELECT; por tanto, está fuera de la instrucción EXECUTE.  
   
 USE AdventureWorks2012;  
   

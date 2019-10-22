@@ -8,22 +8,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: b98980837f6dce2ebd9f39be142b816f37f16cd8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c6d5789092ea2bbfc6fd9a8bb20cc7d078eaf6de
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077404"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545047"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Uso de Visual Studio para crear bases de datos para SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) convierte Visual Studio en un eficaz entorno de desarrollo y administración del ciclo de vida de bases de datos (DLM) para SQL Server en Linux. Puede desarrollar, compilar, probar y publicar la base de datos desde un proyecto controlado por código fuente, igual que desarrolla el código de la aplicación.
+SQL Server Data Tools (SSDT) convierte Visual Studio en un eficaz entorno de desarrollo y administración del ciclo de vida de bases de datos (DLM) para SQL Server en Linux. Puede desarrollar, compilar, probar y publicar la base de datos desde un proyecto controlado por código fuente. Como si desarrollara el código de aplicación.
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Instalación de Visual Studio y SQL Server Data Tools
 
-1. Si aún no ha instalado Visual Studio en el equipo Windows, [Descarga e instalación de Visual Studio]. Si no tiene una licencia de Visual Studio, Visual Studio Community Edition es un IDE gratuito con todas las características para estudiantes, código abierto y desarrolladores individuales.
+1. Si aún no ha instalado Visual Studio en el equipo Windows, [descargue e instale Visual Studio](https://visualstudio.microsoft.com/downloads/). Si no tiene una licencia de Visual Studio, Visual Studio Community Edition es un IDE gratuito con todas las características para estudiantes, código abierto y desarrolladores individuales.
 
 2. Durante la instalación de Visual Studio, seleccione **Personalizada** en la opción **Elija el tipo de instalación**. Haga clic en **Siguiente**.
 
@@ -101,16 +101,16 @@ SQL Server en Linux es compatible con la versión SSDT 17.0 RC o posterior.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/publish-result.png" alt="publish result" style="width: 480px;"/>
 
-Ha creado correctamente una base de datos nueva en la instancia de SQL Server en Linux y ha aprendido los aspectos básicos del desarrollo de una base de datos con un proyecto de base de datos controlado por código fuente.
+Ha creado correctamente una base de datos nueva en la instancia de SQL Server en Linux y ha obtenido información sobre los aspectos básicos del desarrollo de una base de datos con un proyecto de base de datos controlado por código fuente.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Si no está familiarizado con T-SQL, vea [Tutorial: Escribir instrucciones Transact-SQL] y [Referencia de Transact-SQL (motor de base de datos)].
+Si no está familiarizado con T-SQL, vea [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-Para obtener más información sobre el desarrollo de una base de datos con SQL Data Tools, vea los [documentos de MSDN sobre SSDT]
+Para obtener más información sobre el desarrollo de una base de datos con SQL Data Tools, consulte los artículos siguientes.
 
-[Descarga e instalación de Visual Studio]: https://www.visualstudio.com/downloads/
-[Download and Install SSDT]:https://aka.ms/ssdt-download
-[Documentos de MSDN sobre SSDT]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Tutorial: Escribir instrucciones Transact-SQL]: https://msdn.microsoft.com/library/ms365303.aspx
-[Referencia de Transact-SQL (motor de base de datos)]: https://msdn.microsoft.com/library/bb510741.aspx
+* [Descarga e instalación de Visual Studio](https://www.visualstudio.com/downloads/)
+* [Descarga e instalación de SSDT](https://aka.ms/ssdt-download)
+* [Documentos de MSDN sobre SSDT](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
+* [Tutorial: Escribir instrucciones Transact-SQL](https://msdn.microsoft.com/library/ms365303.aspx)
+* [Referencia de Transact-SQL (motor de base de datos)](https://msdn.microsoft.com/library/bb510741.aspx)

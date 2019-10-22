@@ -11,12 +11,12 @@ ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fc5b7c3d5c8fd1ad1c050ea2f50c55d4a0d1120f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991127"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586762"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Creación de un recurso DTC agrupado para un grupo de disponibilidad Always On
 
@@ -26,7 +26,7 @@ Este tema le guiará a través de una configuración completa de un recurso DTC 
 
 En el tutorial se crea un recurso DTC agrupado y los grupos de disponibilidad de SQL Server para adaptarlos a los requisitos de [DTC agrupado para grupos de disponibilidad de SQL Server](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md).
 
-El tutorial usa scripts de PowerShell y Transact-SQL (T-SQL).  Muchos de los scripts de T-SQL requieren que la opción **Modo SQLCMD** esté habilitada.  Para más información sobre la opción **Modo SQLCMD**, vea [Habilitar scripting SQLCMD en el Editor de consultas](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  El módulo de PowerShell **FailoverClusters** debe importarse.  Para más información sobre la importación de un módulo de PowerShell, consulte [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)(Importación de un módulo de PowerShell).  Este tutorial se basa en lo siguiente:
+El tutorial usa scripts de PowerShell y Transact-SQL (T-SQL).  Muchos de los scripts de T-SQL requieren que la opción **Modo SQLCMD** esté habilitada.  Para más información sobre la opción **Modo SQLCMD**, vea [Habilitar scripting SQLCMD en el Editor de consultas](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  El módulo de PowerShell **FailoverClusters** debe importarse.  Para obtener más información sobre la importación de un módulo de PowerShell, vea [Importación de un módulo de PowerShell](/powershell/scripting/developer/module/importing-a-powershell-module).  Este tutorial se basa en lo siguiente:
 - Se han cumplido todos los requisitos de [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
 - El dominio es `contoso.lab`.
 - El usuario tiene el permiso para crear objetos de equipo en la UO donde se creará el recurso de nombre de red de DTC.

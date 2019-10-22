@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027343"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305280"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Unión de SQL Server en un host de Linux a un dominio de Active Directory
 
@@ -197,9 +197,9 @@ Siga los pasos siguientes para unir un host de SQL Server a un dominio de Active
    ```
 
    > [!NOTE]
-   > - Si **id user@contoso.com** devuelve `No such user`, asegúrese de que el servicio SSSD se ha iniciado correctamente mediante la ejecución del comando `sudo systemctl status sssd`. Si el servicio se está ejecutando y sigue viendo el error, intente habilitar el registro detallado para SSSD. Para obtener más información, vea la documentación de Red Hat para [solucionar problemas de SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
+   > - Si el comando **id user\@contoso.com** devuelve `No such user`, asegúrese de que el servicio SSSD se ha iniciado correctamente mediante la ejecución del comando `sudo systemctl status sssd`. Si el servicio se está ejecutando y sigue viendo el error, intente habilitar el registro detallado para SSSD. Para obtener más información, vea la documentación de Red Hat para [solucionar problemas de SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting).
    >
-   > - Si **kinit user@CONTOSO.COM** devuelve `KDC reply did not match expectations while getting initial credentials`, asegúrese de que ha especificado el dominio Kerberos en mayúsculas.
+   > - Si el comando **kinit user\@CONTOSO.COM** devuelve `KDC reply did not match expectations while getting initial credentials`, asegúrese de que ha especificado el dominio en mayúsculas.
 
 Para obtener más información, vea la documentación de Red Hat para [detectar y unir dominios de identidad](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html).
 

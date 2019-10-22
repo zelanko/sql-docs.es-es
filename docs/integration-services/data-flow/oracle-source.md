@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7444c5710663eb601aa3c8ce2287869a8083f814
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553210"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545071"
 ---
 # <a name="oracle-source"></a>Origen de Oracle
 
@@ -54,7 +54,7 @@ Las propiedades personalizadas del origen de Oracle son las siguientes. Todas la
 |AccessMode|Integer (enumeración)|Modo que se usa para tener acceso a la base de datos. Los valores posibles son **Nombre de tabla** y **Comando SQL**. El valor predeterminado es **Nombre de tabla**.|
 |BatchSize|Integer|Tamaño de lote para la carga masiva. Es el número de registros extraídos como matriz. <br>Esta propiedad solo se establece mediante el **Editor avanzado**.|
 |DefaultCodePage|Integer|La página de códigos que se usa cuando el origen de datos no tiene información de página de códigos. <br>Esta propiedad solo se establece mediante el **Editor avanzado**.|
-|PreFetchCount|Integer|El número de filas capturadas previamente (lectura previa). <br>Esta propiedad solo se establece mediante el **Editor avanzado**.|
+|PreFetchCount|Integer|El número de filas capturadas previamente. <br>Esta propiedad solo se establece mediante el **Editor avanzado**.|
 |SqlCommand|String|Comando SQL que se va a ejecutar cuando AccessMode se establece en SQL Command.|
 |TableName|String|El nombre de la tabla con los datos que se van a usar cuando AccessMode esté establecido en Nombre de tabla.|
 

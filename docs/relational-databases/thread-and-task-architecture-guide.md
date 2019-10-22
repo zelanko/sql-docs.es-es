@@ -14,12 +14,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 08efd7847fba1ad0b4df10d3a761475c735ceca8
+ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
 ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289377"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305199"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guía de arquitectura de subprocesos y tareas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Los subprocesos permiten a las aplicaciones complejas hacer más eficaz el uso d
 ## <a name="sql-server-task-scheduling"></a>Programación de tareas de SQL Server
 En el ámbito de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], una **solicitud** es la representación lógica de una consulta o lote. Una solicitud también representa las operaciones requeridas por los subprocesos del sistema, como el punto de control o el escritor de registros. Las solicitudes existen en varios estados a lo largo de su duración y pueden acumular esperas cuando no están disponibles los recursos necesarios para ejecutar la solicitud, como [bloqueos](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md#locks) o [bloqueos temporales](../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md#latches). Para más información sobre los estados de la solicitud, consulte [sys.dm_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).
 
-Una **tarea** representa la unidad de trabajo que se debe completar para satisfacer la solicitud. Se pueden asignar una o varias tareas a una solicitud única. Las solicitudes paralelas tendrán varias tareas activas que se ejecutan de manera simultánea y no en serie. Una solicitud que se ejecuta en serie solo tendrá una tarea activa en un momento dado. Las tareas existen en varios estados a lo largo de su duración. Para más información sobre los estados de la tarea, consulte [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Las tareas con un estado SUSPENDIDO están a la espera de que los recursos necesarios para ejecutar la tarea estén disponibles. Para más información sobre las tareas en espera, consulte [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
+Una **tarea** representa la unidad de trabajo que se debe completar para satisfacer la solicitud. Se pueden asignar una o varias tareas a una solicitud única. Las solicitudes paralelas tendrán varias tareas activas que se ejecutan de manera simultánea y no en serie. Una solicitud que se ejecuta en serie solo tendrá una tarea activa en un momento dado. Las tareas existen en varios estados a lo largo de su duración. Para más información sobre los estados de la tarea, consulte [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Las tareas con un estado SUSPENDED están a la espera de que los recursos necesarios para ejecutar la tarea estén disponibles. Para más información sobre las tareas en espera, consulte [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
 Un **subproceso de trabajo** de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], también conocido como trabajo o subproceso, es una representación lógica de un subproceso de sistema operativo. Cuando se ejecutan solicitudes en serie, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] generará un trabajo para ejecutar la tarea activa. Cuando se ejecutan solicitudes en serie en [modo de fila](../relational-databases/query-processing-architecture-guide.md#execution-modes), [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna un trabajo para coordinar los trabajos secundarios responsables de completar las tareas que tienen asignadas. El número de subprocesos de trabajo generados para cada tarea depende de:
 -   Si la solicitud es válida para el paralelismo según lo determinado por el optimizador de consultas.

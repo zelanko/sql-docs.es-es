@@ -1,7 +1,7 @@
 ---
 title: Definición de la serialización de datos XML | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -18,12 +18,12 @@ ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 759c0200c644913e21262c914957cfa1dcbada5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39f3ccc462fb063ecb314b1e9968dcfa8a095cbb
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637583"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688885"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir la serialización de datos XML
   Cuando el tipo de datos xml se convierte de manera explícita o implícita a un tipo SQL binario o de cadena, el contenido del tipo de datos xml se serializa de acuerdo con las reglas que se describen en este tema.  
@@ -33,11 +33,11 @@ ms.locfileid: "62637583"
   
  Por ejemplo:  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 0xFFFE3C0094032F003E00  
@@ -47,25 +47,25 @@ select CAST(CAST(N'<??/>' as XML) as VARBINARY(MAX))
   
  Por ejemplo:  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as NVARCHAR(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
-<??/>  
+<Δ/>  
 ```  
   
  Si el tipo SQL de destino es VARCHAR o NCHAR, el resultado se serializa en la codificación que corresponda a la página de códigos de intercalación de la base de datos, sin marca de orden de bytes ni declaración XML. Si el tipo de destino es demasiado pequeño o el valor no se puede asignar a la página de códigos de intercalación de destino, se genera un error.  
   
  Por ejemplo:  
   
-```  
-select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))  
+```sql
+select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
 ```  
   
- Esto puede producir un error, si la página de códigos de la intercalación actual no puede representar el carácter Unicode??, o se representará en la codificación específica.  
+ Esto puede producir un error si la página de códigos de la intercalación actual no puede representar el carácter &#x10300;Unicode, o bien se representará en la codificación específica.  
   
  Cuando se devuelven los resultados XML al cliente, los datos se envían codificados como UTF-16. Después, el proveedor del lado cliente expondrá los datos de acuerdo con sus reglas de API.  
   
@@ -89,36 +89,36 @@ select CAST(CAST(N'<??/>' as XML) as VARCHAR(MAX))
   
  Por ejemplo:  
   
-```  
+```sql
 declare @u NVARCHAR(50)  
 set @u = N'<a a="  
     '+NCHAR(0xD800)+NCHAR(0xDF00)+N'>">   '+NCHAR(0xA)+N'</a>'  
 select CAST(CONVERT(XML,@u,1) as NVARCHAR(50))  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 <a a="  
-    ????>">     
+    𐌀>">     
 </a>  
 ```  
   
  Si no quiere aplicar la regla de protección del último espacio en blanco, puede usar la opción explícita de CONVERT 1 al convertir el tipo **xml** en un tipo de cadena o binario. Por ejemplo, para evitar la creación de entidades, tiene las opciones siguientes:  
   
-```  
+```sql
 select CONVERT(NVARCHAR(50), CONVERT(XML, '<a>   </a>', 1), 1)  
 ```  
   
  Tenga en cuenta que [query() (método de tipo de datos xml)](/sql/t-sql/xml/query-method-xml-data-type) genera una instancia de tipo de datos xml. Por tanto, se crearán entidades para cualquier resultado del método **query()** que se convierta en un tipo binario o de cadena de acuerdo con las reglas previamente descritas. Si se quieren obtener los valores de cadena sin creación de entidades, en su lugar debe usarse [value() (método del tipo de datos xml)](/sql/t-sql/xml/value-method-xml-data-type) . A continuación se ofrece un ejemplo de uso del método **query()** :  
   
-```  
+```sql
 declare @x xml  
 set @x = N'<a>This example contains an entitized char: <.</a>'  
 select @x.query('/a/text()')  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 This example contains an entitized char: <.  
@@ -126,11 +126,11 @@ This example contains an entitized char: <.
   
  A continuación se ofrece un ejemplo de uso del método **value()** :  
   
-```  
+```sql
 select @x.value('(/a/text())[1]', 'nvarchar(100)')  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 This example contains an entitized char: <.  
@@ -141,7 +141,7 @@ This example contains an entitized char: <.
   
  Por ejemplo, el valor 1.34e1 de tipo xs:double se serializa como 13.4, como se observa en el ejemplo siguiente:  
   
-```  
+```sql
 declare @x xml  
 set @x =''  
 select CAST(@x.query('1.34e1') as nvarchar(50))  
@@ -149,7 +149,7 @@ select CAST(@x.query('1.34e1') as nvarchar(50))
   
  Se obtiene el valor de cadena 13.4.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Reglas de conversión de tipos en XQuery](/sql/xquery/type-casting-rules-in-xquery)   
  [CAST y CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   

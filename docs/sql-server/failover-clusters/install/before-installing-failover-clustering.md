@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e30bc0e3dd0402d4b62ac55a897268c021507560
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063987"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517942"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar los clústeres de conmutación por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Antes de instalar un clúster de conmutación por error de SQL Server, debe seleccionar el hardware y el sistema operativo en el que se ejecutará SQL Server. También deberá configurar el servicio de clústeres de conmutación por error de Windows Server (WSFC), así como revisar la red, la seguridad y las consideraciones relativas al resto del software que se ejecutará en los clústeres de conmutación por error.  
   
- Si un clúster de Windows tiene una unidad de disco local y esa misma letra de unidad se usa también en uno o varios nodos del clúster como una unidad compartida, no puede instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en esa unidad.  
+ Si un clúster de Windows tiene una unidad de disco local y esa misma letra de unidad se usa también en uno o varios nodos del clúster como una unidad compartida, no puede instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en esa unidad. Esta restricción se aplica tanto a instancias de clúster de conmutación por error de SQL Server como a instancias independientes en un servidor que forma parte de una instancia de clúster de conmutación por error de Windows.
   
  También puede consultar los temas siguientes para obtener más información sobre los conceptos, las características y las tareas de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

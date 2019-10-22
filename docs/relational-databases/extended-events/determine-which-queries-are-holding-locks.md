@@ -1,7 +1,7 @@
 ---
 title: Determinar las consultas que mantienen bloqueos | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,26 +17,26 @@ ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 413e395a865245b4e4a6c3c7705e654e6855c245
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7f6bdf2ed730330e03068473e5db9f82015caacc
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021898"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589980"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>Determinar las consultas que mantienen bloqueos
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  A menudo, los administradores de bases de datos necesitan identificar el origen de bloqueos que reducen el rendimiento de la base de datos.  
+A menudo, los administradores de bases de datos necesitan identificar el origen de bloqueos que reducen el rendimiento de la base de datos.  
   
- Por ejemplo: está sospechando que el bajo rendimiento del servidor puede ser debido a los bloqueos. Al consultar sys.dm_exec_requests, encuentra varias sesiones en un modo suspendido y con un tipo de espera que indica que un bloqueo es el recurso por el que se está esperando.  
+Por ejemplo: está sospechando que el bajo rendimiento del servidor puede ser debido a los bloqueos. Al consultar sys.dm_exec_requests, encuentra varias sesiones en un modo suspendido y con un tipo de espera que indica que un bloqueo es el recurso por el que se está esperando.  
   
- Al realizar la consulta sys.dm_tran_locks los resultados muestran que existen muchos bloqueos pendientes, pero las sesiones a las que se permitió usar los bloqueos no tienen ninguna solicitud activa que aparezca en sys.dm_exec_requests.  
+Al realizar la consulta sys.dm_tran_locks los resultados muestran que existen muchos bloqueos pendientes, pero las sesiones a las que se permitió usar los bloqueos no tienen ninguna solicitud activa que aparezca en sys.dm_exec_requests.  
   
- Este ejemplo demuestra un método para determinar la consulta que obtiene el bloqueo, el plan de la consulta y la pila de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el momento de obtención del bloqueo. Este ejemplo también muestra cómo el destino del emparejamiento se utiliza en una sesión de Extended Events.  
+Este ejemplo demuestra un método para determinar la consulta que obtiene el bloqueo, el plan de la consulta y la pila de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el momento de obtención del bloqueo. Este ejemplo también muestra cómo el destino del emparejamiento se utiliza en una sesión de Extended Events.  
   
- Para realizar esta tarea debe usar el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y llevar a cabo el siguiente procedimiento.  
+Para realizar esta tarea debe usar el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y llevar a cabo el siguiente procedimiento.  
   
 > [!NOTE]  
 >  En este ejemplo se utiliza la base de datos de AdventureWorks.  
@@ -45,7 +45,7 @@ ms.locfileid: "68021898"
   
 1.  En el Editor de consultas, emita las instrucciones siguientes.  
   
-    ```  
+    ```sql
     -- Perform cleanup.   
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='FindBlockers')  
         DROP EVENT SESSION FindBlockers ON SERVER  
@@ -88,12 +88,11 @@ ms.locfileid: "68021898"
     --  
     ALTER EVENT SESSION FindBlockers ON SERVER  
     STATE = START  
-  
     ```  
   
 2.  Después de la ejecución de una carga de trabajo en el servidor, emita las instrucciones siguientes en el Editor de consultas para buscar consultas que aún mantengan bloqueos.  
   
-    ```  
+    ```sql
     --  
     -- The pair matching targets report current unpaired events using   
     -- the sys.dm_xe_session_targets dynamic management view (DMV)  
@@ -150,11 +149,17 @@ ms.locfileid: "68021898"
   
 3.  Después de identificar los problemas, quite cualquier tabla temporal y la sesión de evento.  
   
-    ```  
+    ```sql
     DROP TABLE #unmatched_locks  
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
-  
+
+> [!NOTE]
+> El ejemplo de código de Transact-SQL anterior se ejecuta en SQL Server local, pero es posible que _no se ejecute bien en Azure SQL Database._ Las partes principales del ejemplo que afectan directamente a los eventos, como `ADD EVENT sqlserver.lock_acquired`, funcionan también en Azure SQL Database. Sin embargo, los elementos preliminares, como `sys.server_event_sessions`, se deben editar en sus homólogos de Azure SQL Database, como `sys.database_event_sessions`, para que se ejecute el ejemplo.
+> Para obtener más información acerca de estas pequeñas diferencias entre SQL Server local y Azure SQL Database, consulte los siguientes artículos:
+> - [Eventos extendidos en Azure SQL Database](/azure/sql-database/sql-database-xevent-db-diff-from-svr#transact-sql-differences)
+> - [Objetos del sistema que admiten eventos extendidos](xevents-references-system-objects.md)
+
 ## <a name="see-also"></a>Consulte también  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   

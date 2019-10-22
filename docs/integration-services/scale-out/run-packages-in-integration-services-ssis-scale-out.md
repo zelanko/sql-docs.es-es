@@ -12,12 +12,12 @@ author: haoqian
 ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 25dc76122c8b4d1e68df4e83e3e1bd01d6f51890
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092633"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305074"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ejecutar paquetes en la escalabilidad horizontal de Integration Services (SSIS)
 
@@ -65,7 +65,7 @@ Tras implementar los paquetes en el servidor de Integration Services, puede ejec
 
 1.  Cree las ejecuciones.
 
-    Llame a `[catalog].[create_execution]` para cada paquete. Establezca el parámetro **@runinscaleout** en `True`. Si no se permite a todos los equipos de trabajo de escalabilidad horizontal ejecutar el paquete, establezca el parámetro **@useanyworker** en `False`. Para obtener más información sobre este procedimiento almacenado y el parámetro **@useanyworker** , consulte [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
+    Llame a `[catalog].[create_execution]` para cada paquete. Establezca el parámetro  **\@runinscaleout** en `True`. Si no se permite a todos los equipos de trabajo de Escalabilidad horizontal ejecutar el paquete, establezca el parámetro **\@useanyworker** en `False`. Para obtener más información sobre este procedimiento almacenado y el parámetro **\@useanyworker**, consulte [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
 2. Establezca los parámetros de ejecución.
 
@@ -77,7 +77,7 @@ Tras implementar los paquetes en el servidor de Integration Services, puede ejec
 
 4. Inicie las ejecuciones.
 
-    Llame a `[catalog].[start_execution]`. Establezca el parámetro **@retry_count** para definir el número de veces que se volverá a intentar ejecutar un paquete en caso de error.
+    Llame a `[catalog].[start_execution]`. Establezca el parámetro **\@retry_count** para definir el número de veces que se volverá a intentar ejecutar un paquete en caso de error.
     
 ### <a name="example"></a>Ejemplo
 En el ejemplo siguiente se ejecutan dos paquetes, `package1.dtsx` y `package2.dtsx`, en escalabilidad horizontal con un trabajo de escalabilidad horizontal.  
@@ -118,7 +118,7 @@ Para establecer el modo de ejecución predeterminado para los paquetes en **Esca
 
 2.  En el cuadro de diálogo **Propiedades del catálogo**, establezca **Modo de ejecución predeterminado de todo el servidor** en **Escalabilidad horizontal**.
 
-Una vez que haya establecido este modo de ejecución predeterminado, ya no tendrá que especificar el parámetro **@runinscaleout** al llamar al procedimiento almacenado `[catalog].[create_execution]`. Los paquetes se ejecutan en escalabilidad horizontal de forma automática. 
+Una vez que haya establecido este modo de ejecución predeterminado, ya no tendrá que especificar el parámetro **\@runinscaleout** al llamar al procedimiento almacenado `[catalog].[create_execution]`. Los paquetes se ejecutan en escalabilidad horizontal de forma automática. 
 
 ![Modo de ejecución](media/exe-mode.PNG)
 

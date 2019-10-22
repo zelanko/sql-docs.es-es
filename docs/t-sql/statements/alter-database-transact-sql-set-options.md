@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 62074eb9c621c2243a079a21ae9bbcba66c930cd
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251357"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586707"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL)
 
@@ -3051,20 +3051,8 @@ SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
-
-Una vez que el almacenamiento en caché del conjunto de resultados esté activado para una base de datos, los resultados se almacenan en caché para todas las consultas hasta que se llene la memoria caché, excepto en el caso de estas consultas:
-
-- Las consultas que usan funciones no deterministas, como DateTime.Now(). 
-- Las consultas que usan funciones definidas por el usuario.
-- Las consultas que devuelven datos con tamaños de fila mayores que 64 KB.   
-
-Las consultas con grandes conjuntos de resultados (por ejemplo, > 1 millón de filas) pueden experimentar un rendimiento más lento durante la primera ejecución mientras se crea la caché de resultados.
-
-Si se cumplen todos los requisitos siguientes, el conjunto de resultados almacenado en caché se vuelve a usar para una consulta:
-
-1. El usuario que ejecuta la consulta tiene acceso a todas las tablas a las que se hace referencia en la consulta.
-1. Hay una coincidencia exacta entre la nueva consulta y la anterior que ha generado el almacenamiento en caché del conjunto de resultados.
-1. No hay cambios de datos ni esquema en las tablas a partir de las que se ha generado el conjunto de resultados almacenado.  
+### <a name="permissions"></a>Permisos
+Para establecer la opción RESULT_SET_CACHING, un usuario necesita un inicio de sesión principal de nivel de servidor (el que crea el proceso de aprovisionamiento), o bien ser miembro del rol de la base de datos de `dbmanager`.  
 
 
 **<snapshot_option> ::=**         
@@ -3085,10 +3073,7 @@ Este comando debe ejecutarse mientras se está conectado a la base de datos `mas
 
 En una base de datos con la opción READ_COMMITTED_SNAPSHOT habilitada, las consultas pueden experimentar un rendimiento más lento debido al examen de versiones si hay varias versiones de los datos. Las transacciones de larga duración también pueden provocar un aumento del tamaño de la base de datos. Esta incidencia se produce si estas transacciones cambian los datos que bloquean la limpieza de la versión.  
 
-## <a name="permissions"></a>Permisos
-
-Para establecer la opción RESULT_SET_CACHING, un usuario necesita un inicio de sesión principal de nivel de servidor (el que crea el proceso de aprovisionamiento), o bien ser miembro del rol de la base de datos de `dbmanager`.  
-
+### <a name="permissions"></a>Permisos
 Para establecer la opción READ_COMMITTED_SNAPSHOT, un usuario necesita el permiso ALTER en la base de datos.
 
 ## <a name="examples"></a>Ejemplos
@@ -3119,26 +3104,6 @@ SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Comprobación del acierto de caché y fallo de caché de conjunto de resultados para una consulta
-
-```sql
-If
-(SELECT step_index  
-FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
-SELECT 1 as is_cache_hit  
-ELSE
-SELECT 0 as is_cache_hit;
-```
-
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Comprobación de todas las consultas con aciertos de caché de conjunto de resultados
-
-```sql
-SELECT *  
-FROM sys.dm_pdw_request_steps  
-WHERE command like '%DWResultCacheDb%' and step_index = 0;
-```
-
 ### <a name="enable-the-read_committed_snapshot-option-for-a-database"></a>Habilitación de la opción Read_Committed_Snapshot para una base de datos
 
 ```sql
@@ -3148,6 +3113,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>Vea también
 
+- [Ajuste del rendimiento con almacenamiento en caché de los resultados](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

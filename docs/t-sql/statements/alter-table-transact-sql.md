@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 44c5a4c9a39f60616574a479637d3ab97230784c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823619"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304850"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -806,7 +806,7 @@ Especifica los métodos permitidos de extensión de bloqueo para una tabla.
 AUTO  
 Esta opción permite a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] seleccionar la granularidad de la extensión de bloqueo que sea adecuada para el esquema de tabla.
 
-- Si la tabla tiene particiones, la extensión del bloqueo se permite en la partición. Una vez realizada la extensión del bloqueo hasta el nivel de la partición, el bloqueo no se extiende a la granularidad de TABLE más adelante.
+- Si la tabla tiene particiones, se permitirá la extensión de bloqueo en la granularidad de árbol b (HoBT) o montón. En otras palabras, se permitirá la escalación al nivel de partición. Una vez realizada la extensión del bloqueo hasta el nivel de HoBT, el bloqueo no se extenderá a la granularidad de TABLE más adelante.
 - Si la tabla no tiene particiones, la extensión del bloqueo se aplica a la granularidad de TABLE.
 
 TABLE  

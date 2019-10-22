@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: d841f7aa8a5aacfa684b984791a15128b306ab1d
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: a0bf701395723b1d21efea38f969024a1921c3f6
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109764"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545076"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (versión preliminar)
 
@@ -52,7 +52,7 @@ En este artículo se explica la instrucción CREATE MATERIALIZED VIEW AS SELECT 
 
 Una vista materializada conserva los datos devueltos por la consulta de la definición de la vista y se actualiza automáticamente a medida que cambian los datos en las tablas subyacentes.   Mejora el rendimiento de las consultas complejas (normalmente, las consultas con combinaciones y agregaciones) al tiempo que ofrece operaciones de mantenimiento sencillo.   Con su función de correspondencia automática del plan de ejecución, no es necesario que se haga referencia a una vista materializada en la consulta para que el optimizador tenga en cuenta la vista con fines de sustitución.  Gracias a ello, los ingenieros de datos pueden implementar vistas materializadas como un mecanismo para mejorar el tiempo de respuesta de las consultas, sin necesidad de cambiarlas.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -111,8 +111,8 @@ Cuando se usan los agregados MIN/MAX en la lista SELECT de la definición de la 
 Una vista materializada en Azure Data Warehouse es muy similar a una vista indizada de SQL Server.  Comparte casi las mismas restricciones que la vista indizada (consulte [Crear vistas indizadas](/sql/relational-databases/views/create-indexed-views) para obtener más información), salvo que una vista materializada admite las funciones de agregado.   Existen consideraciones adicionales para una vista materializada.  
  
 La vista materializada solo admite CLUSTERED COLUMNSTORE INDEX. 
- 
-Una vista materializada se puede quitar mediante DROP VIEW.  Puede usar ALTER MATERIALIZED VIEW para deshabilitar o volver a generar una vista materializada.   
+
+Una vista materializada no puede hacer referencia a otras vistas.  
  
 Las vistas materializadas se pueden crear en tablas con particiones.  Se admiten operaciones SPLIT/MERG en las tablas a las que se hace referencia en las vistas materializadas.  No se admite SWITCH en las tablas a las que se hace referencia en las vistas materializadas. Si se intentara realizar esta operación, el usuario verá el error `Msg 106104, Level 16, State 1, Line 9`.
  
@@ -129,6 +129,8 @@ ALTER TABLE SWITCH no se admite en las tablas a las que se hace referencia en la
 Las vistas materializadas, una vez creadas, son visibles dentro de SQL Server Management Studio en la carpeta de vistas de la instancia de Azure SQL Data Warehouse.
 
 Los usuarios pueden ejecutar [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) y [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) para determinar el espacio consumido por una vista materializada.  
+
+Una vista materializada se puede quitar mediante DROP VIEW.  Puede usar ALTER MATERIALIZED VIEW para deshabilitar o volver a generar una vista materializada.   
 
 El plan de EXPLAIN y el plan de ejecución estimado gráfico en SQL Server Management Studio pueden mostrar si una vista materializada se tiene en cuenta por el optimizador de consultas para la ejecución de las consultas. y el plan de ejecución estimado gráfico en SQL Server Management Studio pueden mostrar si una vista materializada se tiene en cuenta por el optimizador de consultas para la ejecución de las consultas.
 

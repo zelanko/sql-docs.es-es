@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974249"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304953"
 ---
 # <a name="hierarchical-data-sql-server"></a>Datos jerárquicos (SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Ejemplo usando una transacción serializable  
- El tipo de datos **Org_BreadthFirst** garantiza que se use una búsqueda de rango al determinar **@last_child** . Además de otros casos de error, es posible que una aplicación quiera comprobar una infracción de clave duplicada después de que la inserción indique un intento de agregar varios empleados con el mismo identificador y, por lo tanto, es necesario volver a calcular **@last_child** . En el código siguiente se calcula el nuevo valor de nodo dentro de una transacción serializable:  
+ El índice **Org_BreadthFirst** garantiza que se use una búsqueda de rango al determinar **\@last_child**. Además de otros casos de error, es posible que una aplicación quiera comprobar una infracción de clave duplicada después de que la inserción indique un intento de agregar varios empleados con el mismo identificador y, por lo tanto, sea necesario volver a calcular **\@last_child**. En el código siguiente se calcula el nuevo valor de nodo dentro de una transacción serializable:  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -512,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> Mover los subárboles  
- Otra operación común es mover subárboles. El procedimiento siguiente toma el subárbol de **@oldMgr** y lo convierte (incluido **@oldMgr** ) en un subárbol de **@newMgr** .  
+ Otra operación común es mover subárboles. El procedimiento siguiente toma el subárbol de **\@oldMgr** y lo convierte (incluido **\@oldMgr**) en un subárbol de **\@newMgr**.  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

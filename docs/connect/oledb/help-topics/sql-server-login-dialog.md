@@ -1,8 +1,8 @@
 ---
-title: Cuadro de diálogo de inicio de sesión SQL Server (OLE DB) | Microsoft Docs
+title: SQL Server cuadro de diálogo de inicio de sesión (OLE DB) | Microsoft Docs
 description: Uso del cuadro de diálogo de inicio de sesión de SQL Server
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,37 +10,37 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: 4735ead33dc7c3a6d633e3b23ff1da97eeae4962
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d35c339798b4385cb903d8a4a83f13184bbf4db3
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62853265"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381751"
 ---
 # <a name="sql-server-login-dialog-box"></a>Cuadro de diálogo de inicio de sesión de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Cuando intenta conectarse sin especificar suficiente información, el controlador OLE DB muestra el **el inicio de sesión de SQL Server** cuadro de diálogo.
+Cuando intenta conectarse sin especificar suficiente información, el OLE DB controlador muestra el cuadro de diálogo **SQL Server inicio de sesión** .
 
 > [!NOTE]  
-> Diálogo de inicio de sesión de SQL Server comportamiento se controla mediante el `DBPROP_INIT_PROMPT` propiedad de inicialización. Para obtener más información, vea:
+> La propiedad de inicialización de `DBPROP_INIT_PROMPT` controla SQL Server comportamiento de petición de diálogo de inicio de sesión. Para obtener más información, vea:
 > - [Propiedades de inicialización y autorización](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [Guía del programador OLE DB](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [Guía del programador de OLE DB](https://go.microsoft.com/fwlink/?linkid=2067702)
 
-![Captura de pantalla del cuadro de diálogo de inicio de sesión SQL Server](../media/sql-server-login-dialog.png)
+![Captura de pantalla de SQL Server cuadro de diálogo de inicio de sesión](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>Opciones
 |Opción|Descripción|
 |---   |---        |
-|Servidor|El nombre de una instancia de SQL Server en la red. Seleccione un nombre de servidor\instancia de la lista, o escriba el nombre de servidor\instancia en el cuadro **Servidor**. Opcionalmente, se puede crear un alias de servidor en el equipo cliente mediante el **Administrador de configuración de SQL Server** y escribir ese nombre en el cuadro **Servidor**. <br/><br/>Puede escribir "(local)" si está utilizando el mismo equipo que SQL Server. Después puede establecer conexión con una instancia local de SQL Server, incluso si ejecuta una versión que no está en red de SQL Server.<br/><br/>Para obtener más información acerca de los nombres de servidor para los distintos tipos de redes, consulte [instalación de SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541).|
-|Modo de autenticación|Puede seleccionar las opciones de autenticación siguientes en la lista desplegable:<br/><ul><li>`Windows Authentication:` Autenticación de SQL Server con las credenciales de cuenta de Windows del usuario que ha iniciado sesión actualmente.</li><li>`SQL Server Authentication:` Autenticación de SQL Server mediante el identificador de inicio de sesión y la contraseña.</li><li>`Active Directory - Integrated:` Autenticación integrada con las credenciales de cuenta de Windows del usuario que ha iniciado sesión actualmente.</li><li>`Active Directory - Password:` Autenticación de Active Directory con Id. de inicio de sesión y la contraseña.</li></ul>|
+|Servidor|El nombre de una instancia de SQL Server en la red. Seleccione un nombre de servidor\instancia de la lista, o escriba el nombre de servidor\instancia en el cuadro **Servidor**. Opcionalmente, se puede crear un alias de servidor en el equipo cliente mediante el **Administrador de configuración de SQL Server** y escribir ese nombre en el cuadro **Servidor**. <br/><br/>Puede escribir "(local)" si está utilizando el mismo equipo que SQL Server. Después puede establecer conexión con una instancia local de SQL Server, incluso si ejecuta una versión que no está en red de SQL Server.<br/><br/>Para obtener más información acerca de los nombres de servidor para diferentes tipos de redes, consulte [SQL Server instalación](https://go.microsoft.com/fwlink/?linkid=2067541).|
+|Modo de autenticación|Puede seleccionar las siguientes opciones de autenticación en la lista desplegable:<br/><ul><li>`Windows Authentication:` la autenticación en SQL Server mediante las credenciales de la cuenta de Windows del usuario que ha iniciado sesión actualmente.</li><li>`SQL Server Authentication:` la autenticación mediante el identificador de inicio de sesión y la contraseña.</li><li>`Active Directory - Integrated:` la autenticación integrada con una identidad de Azure Active Directory. Este modo también se puede usar para la autenticación de Windows en SQL Server.</li><li>`Active Directory - Password:` la autenticación de ID. de usuario y contraseña con una identidad de Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` la autenticación interactiva con una identidad de Azure Active Directory. Este modo es compatible con Azure multi-factor Authentication (MFA).</li></ul>|
 |Dirección SPN del servidor|Si utiliza una conexión de confianza, puede especificar un nombre principal de servicio (SPN) para el servidor.|
-|Id. de inicio de sesión|Especifica el identificador de inicio de sesión que se usará para la conexión. El cuadro de texto Id. de inicio de sesión está habilitado sólo si `Authentication Mode` está establecido en `SQL Server Authentication` o `Active Directory - Password`.|
-|Contraseña|Especifica la contraseña utilizada para la conexión. El cuadro de texto de contraseña solo está habilitado si `Authentication Mode` está establecido en `SQL Server Authentication` o `Active Directory - Password`.|
+|Id. de inicio de sesión|Especifica el identificador de inicio de sesión que se va a usar para la conexión. El cuadro de texto ID. de inicio de sesión solo está habilitado si `Authentication Mode` está establecido en `SQL Server Authentication`, `Active Directory - Password` o `Active Directory - Universal with MFA support`.|
+|Contraseña|Especifica la contraseña usada para la conexión. El cuadro de texto contraseña solo está habilitado si `Authentication Mode` está establecido en `SQL Server Authentication` o `Active Directory - Password`.|
 |Opciones|Muestra u oculta el grupo **Opciones**. El botón **Opciones** está habilitado si hay un valor en **Servidor**.|
-|Cambio de contraseñas|Cuando está activada, permite **nueva contraseña** y **Confirmar nueva contraseña** cuadros de texto.|
+|Cambio de contraseñas|Al activar esta opción, se habilitan los cuadros de texto **nueva** contraseña y **confirmar nueva contraseña** .|
 |Contraseña nueva|Especifica la nueva contraseña.|
 |Confirmar nueva contraseña|Especifica la nueva contraseña por segunda vez para la confirmación.|
 |Base de datos|Seleccione o escriba la base de datos predeterminada que se va a utilizar en la conexión. Este valor invalida la base de datos predeterminada especificada para el inicio de sesión en el servidor. Si no se especifica ninguna base de datos, la conexión utiliza la base de datos predeterminada especificada para el inicio de sesión en el servidor.|
@@ -49,12 +49,12 @@ Cuando intenta conectarse sin especificar suficiente información, el controlado
 |Idioma|Especifica el idioma nacional que se va a utilizar para los mensajes de sistema de SQL Server. El equipo que ejecuta SQL Server debe tener instalado el idioma. Este valor invalida el idioma predeterminado especificado para el inicio de sesión en el servidor. Si no se especifica ningún idioma, la conexión utiliza el idioma predeterminado especificado para el inicio de sesión en el servidor.|
 |Application Name|Especifica el nombre de aplicación que se va a almacenar en la columna **program_name** de la fila para esta conexión en **sys.sysprocesses**.|
 |Id. de estación de trabajo|Especifica el identificador de la estación de trabajo que se va a almacenar en la columna **hostname** de la fila para esta conexión en **sys.sysprocesses**.|
-|Utilizar cifrado de alta seguridad para los datos|Cuando está activada, se cifrarán los datos que se pasan a través de la conexión.|
-|Certificado de servidor de confianza|Cuando está activada, se validará el certificado del servidor. Certificado del servidor debe tener el nombre de host correcto del servidor y emitido por una entidad de certificación de confianza.|
+|Utilizar cifrado de alta seguridad para los datos|Cuando esta opción está activada, se cifrarán los datos que se pasan a través de la conexión.|
+|Certificado de servidor de confianza|Cuando esta opción está activada, se validará el certificado del servidor. El certificado del servidor debe tener el nombre de host correcto del servidor y emitido por una entidad de certificación de confianza.|
 
 > [!NOTE]  
-> Cuando se usa `Windows Authentication` o `SQL Server Authentication` modos, **certificado de servidor de confianza** se considera solamente cuando el **utilizar cifrado de alta seguridad para datos** está habilitada.
+> Al usar los modos `Windows Authentication` o `SQL Server Authentication`, el **certificado de servidor de confianza** solo se tiene en cuenta cuando está habilitada la opción **usar cifrado seguro para datos** .
 
 ## <a name="next-steps"></a>Pasos siguientes
-- [Autenticarse en Azure Active Directory](../features/using-azure-active-directory.md) con el controlador de OLE DB.
-- Información de conexión de conjunto con [Universal Data Link (UDL)](data-link-pages.md).
+- [Autentique en Azure Active Directory](../features/using-azure-active-directory.md) mediante el controlador de OLE DB.
+- Establezca la información de conexión mediante el [vínculo de datos universal (UdL)](data-link-pages.md).

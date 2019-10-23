@@ -8,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c0fcc2172cca192c8c7580450ab50b4416f9ec2d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a0eb869cf19f128515951421efddc229aa785cdd
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154182"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72451834"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Historial de controladores para Microsoft SQL Server
 
@@ -39,7 +39,7 @@ Hay tres generaciones distintas de proveedores de OLE DB de Microsoft para SQL S
 
 ## <a name="adonet"></a>ADO.NET
 
-ADO.NET se presentó con el marco de Microsoft .NET y se sigue mejorando y manteniendo. Es un componente básico de la plataforma de Microsoft .NET. Para obtener más información, consulte [ADO.net de Microsoft para obtener SQL Server](ado-net/microsoft-ado-net-for-sql-server.md).
+ADO.NET se presentó con el marco de Microsoft .NET y se sigue mejorando y manteniendo. Es un componente básico de la plataforma de Microsoft .NET. Para obtener más información, consulte [ADO.net de Microsoft para obtener SQL Server](ado-net/microsoft-ado-net-sql-server.md).
 
 ## <a name="jdbc"></a>JDBC
 
@@ -71,8 +71,8 @@ Microsoft/Windows Data Access Components (MDAC/WDAC) se suministran con y son co
 
 Para los fines de este documento, puede dividir la pila de MDAC/WDAC en los componentes siguientes, en función de la tecnología y los productos:
 
-* **ADO** (incluidos ADOMD y ADOX)
-* **OLE DB** (incluidos OLE DB Core Services, SQL Server OLE DB proveedor, el proveedor de OLE DB de Oracle, el proveedor de OLE DB para controladores ODBC, el proveedor de formas de datos y el proveedor de datos remotos)
+* **ADO** (incluido ADOMD y Adox)
+* **OLE DB** (incluidos OLE DB Core Services, SQL Server proveedor de OLE DB, proveedor de OLE DB de Oracle, proveedor de OLE DB para controladores ODBC, proveedor de formas de datos y proveedor de datos remotos)
 * **ODBC** (incluido el administrador de controladores ODBC, el controlador ODBC de SQL y el controlador ODBC para Oracle)
 
 ### <a name="mdacwdac-components"></a>Componentes de MDAC/WDAC
@@ -108,7 +108,7 @@ Estos componentes todavía se admiten en la versión actual de MDAC/WDAC, pero p
 * **MSDADS:** Con el proveedor de OLE DB de Microsoft para el modelado de datos (MSDADS), puede crear relaciones jerárquicas entre las claves, los campos o los conjuntos de filas en una aplicación. No se han realizado mejoras importantes en las características desde MDAC 2,1. Este proveedor está en desuso. Microsoft recomienda que utilice XML, en lugar de MSDADS.
 * **Oracle ODBC y oracle OLE DB:** El controlador ODBC de Microsoft para Oracle (Oracle ODBC) y Proveedor OLE DB de Microsoft para Oracle (Oracle OLE DB) proporcionan acceso a los servidores de bases de datos de Oracle. Se compilan con Oracle Call Interface (OCI) versión 7 y proporcionan compatibilidad completa con Oracle 7. Además, utiliza la emulación de Oracle 7 para proporcionar compatibilidad limitada con las bases de datos de Oracle 8. Oracle ya no admite aplicaciones que usan llamadas de la versión 7 de OCI. Estas tecnologías están en desuso. Si usa orígenes de datos de Oracle, debe migrar al controlador y al proveedor proporcionados por Oracle.
 * **RDS:** Data Services remoto (RDS) es un mecanismo propietario de Microsoft para obtener acceso a objetos de conjunto de registros de ADO remotos a través de Internet o de una intranet. RDS está en desuso; no se han realizado mejoras de características importantes en RDS desde MDAC 2,1. Microsoft ha lanzado el .NET Framework, que tiene amplias funcionalidades de SOAP y reemplaza los componentes de RDS. Todos los componentes de servidor RDS se quitarán del sistema operativo después de Windows 7.
-* **JRO:** Los objetos de replicación de jet (JRO) están en desuso. JRO se utiliza en ADO con bases de*datos Jet (. mdb) para crear y comprimir bases de datos Jet (. mdb) y realizar la administración de la replicación de jet. MDAC 2,7 será la última versión. JRO no estará disponible en el sistema operativo Windows de 64 bits. JRO no es compatible con el formato de archivo de Microsoft Access*2007 (. accdb).
+* **JRO:** Los objetos de replicación de jet (JRO) están en desuso. JRO se utiliza en ADO con bases de datos Jet ( *. mdb) para crear y comprimir bases de datos Jet (. mdb) y realizar la administración de la replicación de jet. MDAC 2,7 será la última versión. JRO no estará disponible en el sistema operativo Windows de 64 bits. JRO no es compatible con el formato de archivo de Microsoft Access 2007 (* . accdb).
 * **compatibilidad con ODBC de 16 bits:** Si usa aplicaciones de 16 bits, debe migrar a una aplicación de 32 bits. la funcionalidad de 16 bits está en desuso y se quita de los sistemas operativos de 64 bits. Para obtener más información, vea el [artículo de Knowledge Base 896458](https://support.microsoft.com/kb/896458).
 * **Proveedor simple OleDb (MSDAOSP):** OLEDB simple Provider ofrece un marco para compilar rápidamente OLE DB proveedores a través de datos simples. MSDAOSP está en desuso.
 * **Biblioteca de cursores ODBC:** La biblioteca de cursores ODBC (ODBCCR32. dll) proporciona cursores de datos limitados del lado cliente. La biblioteca de cursores ODBC está en desuso; la aplicación puede usar implementaciones de cursor de servidor como reemplazo.

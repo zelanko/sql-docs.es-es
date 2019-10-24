@@ -1,5 +1,5 @@
 ---
-title: Secuencias de comandos | Documentos de Microsoft
+title: Scripting | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f10289e099a0c3b6400b71d972c6f749ffb76ff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158784"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781928"
 ---
-# <a name="scripting"></a>Scripting
-  El objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios o el método `Script` en objetos individuales controlan el scripting en SMO. El <xref:Microsoft.SqlServer.Management.Smo.Scripter> objeto controla la asignación de relaciones de dependencia para objetos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+# <a name="scripting"></a>Generación de script
+  El objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios o el método `Script` en objetos individuales controlan el scripting en SMO. El objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> controla la asignación fuera de las relaciones de dependencia para los objetos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  La generación avanzada de script utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios es un proceso de tres fases:  
   
@@ -31,7 +31,7 @@ ms.locfileid: "63158784"
   
 3.  Generación de script  
   
- La fase de detección utiliza el objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. Dada una lista de URN de objetos, el método <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> devuelve un objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> para los objetos en la lista URN. El valor booleano *fParents* parámetro se utiliza para seleccionar si los elementos primarios o secundarios del objeto especificado son para su detección. El árbol de dependencia se puede modificar en esta fase.  
+ La fase de detección utiliza el objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. Dada una lista de URN de objetos, el método <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> devuelve un objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> para los objetos en la lista URN. El parámetro Boolean *fParents* se usa para seleccionar si se deben detectar los elementos primarios o secundarios del objeto especificado. El árbol de dependencia se puede modificar en esta fase.  
   
  En la fase de generación de lista, el árbol se pasa y se devuelve la lista resultante. Esta lista de objetos aparece en orden de scripting y se puede manipular.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "63158784"
  En la tercera y última fase, se genera un script con la lista especificada y las opciones de scripting. El resultado se devuelve como un objeto de sistema <xref:System.Collections.Specialized.StringCollection>. En esta fase los nombres de objeto dependientes se extraen a continuación de la colección Elementos del objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> y de propiedades como <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> y <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un&#35; proyecto de Visual C SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
  Este ejemplo de código requiere una instrucción `Imports` para el espacio de nombres System.Collections.Specialized. Inserte esto con las otras instrucciones Imports, antes de cualquier declaración en la aplicación.  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.SqlServer.Management.Common  
 Imports System.Collections.Specialized  
@@ -53,7 +53,7 @@ Imports System.Collections.Specialized
 ## <a name="scripting-out-the-dependencies-for-a-database-in-visual-basic"></a>Generar script de las dependencias de una base de datos en Visual Basic  
  En este ejemplo de código se muestra cómo detectar las dependencias y cómo recorrer en iteración la lista para mostrar los resultados.  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:Microsoft.SqlServer.ConnectionInfo.dll   
@@ -101,7 +101,7 @@ End Class
 ## <a name="scripting-out-the-dependencies-for-a-database-in-visual-c"></a>Generar script de las dependencias de una base de datos en Visual C#  
  En este ejemplo de código se muestra cómo detectar las dependencias y cómo recorrer en iteración la lista para mostrar los resultados.  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:Microsoft.SqlServer.ConnectionInfo.dll   
@@ -149,7 +149,7 @@ public class A {
 ## <a name="scripting-out-the-dependencies-for-a-database-in-powershell"></a>Scripting de las dependencias de una base de datos en PowerShell  
  En este ejemplo de código se muestra cómo detectar las dependencias y cómo recorrer en iteración la lista para mostrar los resultados.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\default  
   
@@ -160,7 +160,6 @@ $scrp.Options.WithDependencies = $true
 $scrp.Options.IncludeIfNotExists = $true  
   
 # Set the path context to the tables in AdventureWorks2012.  
-  
 CD Databases\AdventureWorks2012\Tables  
   
 foreach ($Item in Get-ChildItem)  
@@ -168,5 +167,3 @@ foreach ($Item in Get-ChildItem)
  $scrp.Script($Item)  
  }  
 ```  
-  
-  

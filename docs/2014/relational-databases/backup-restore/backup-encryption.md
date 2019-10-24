@@ -10,12 +10,12 @@ ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6e007dfaf2e14b488fb538f6b0c0ad958988a4c0
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 177eef6f6280e236106f9ec67684e4a15ef479a3
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154845"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783083"
 ---
 # <a name="backup-encryption"></a>Cifrado de copia de seguridad
   Este tema proporciona información general sobre las opciones de cifrado para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Incluye detalles del uso, los beneficios y las prácticas recomendadas para el cifrado durante la copia de seguridad.  
@@ -28,12 +28,12 @@ ms.locfileid: "70154845"
   
 -   **Algoritmo de cifrado:** los algoritmos de cifrado admitidos son: AES 128, AES 192, AES 256 y Triple DES  
   
--   **Sistema de cifrado:** un certificado o clave asimétrica  
+-   **Sistema de cifrado:** un certificado o una clave asimétrica  
   
 > [!CAUTION]  
 >  Es muy importante realizar una copia de seguridad del certificado o la clave asimétrica, y preferiblemente en una ubicación diferente de la que se usó para cifrar el archivo de copia de seguridad. Sin el certificado o la clave asimétrica, no puede restaurar la copia de seguridad, lo que deja inutilizable el archivo de copia de seguridad.  
   
- **Restaurar la copia de seguridad cifrada:** la restauración de SQL Server no necesita que se especifiquen parámetros de cifrado durante la restauración. Requiere que el certificado o la clave simétrica utilizada para cifrar el archivo de copia de seguridad esté disponible en la instancia en la que está realizando la restauración. La cuenta de usuario que realiza la restauración debe tener permisos de `VIEW DEFINITION` en el certificado o la clave. Si restaura la copia de seguridad cifrada en una instancia diferente, debe asegurarse de que el certificado esté disponible en esa instancia.  
+ **Restaurar la copia de seguridad cifrada:** la restauración de SQL Server no requiere que se especifiquen parámetros de cifrado durante la restauración. Requiere que el certificado o la clave simétrica utilizada para cifrar el archivo de copia de seguridad esté disponible en la instancia en la que está realizando la restauración. La cuenta de usuario que realiza la restauración debe tener permisos de `VIEW DEFINITION` en el certificado o la clave. Si restaura la copia de seguridad cifrada en una instancia diferente, debe asegurarse de que el certificado esté disponible en esa instancia.  
   
  Si va a restaurar una copia de seguridad desde una base de datos cifrada TDE, el certificado TDE debe estar disponible en la instancia en la que va a restaurar.  
   
@@ -50,10 +50,10 @@ ms.locfileid: "70154845"
 5.  Puede integrar las claves de cifrado con los proveedores de Administración extensible de claves (EKM).  
   
   
-##  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="Prerequisites"></a> Prerequisites  
  Estos son los requisitos previos para cifrar una copia de seguridad:  
   
-1.  **Creación de una clave maestra de base datos para la base de datos maestra:** La clave maestra de base de datos es una clave simétrica que se utiliza para proteger las claves privadas de certificados y las claves asimétricas presentes en la base de datos. Para obtener más información, vea [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1.  **Crear una clave maestra de base de datos para la base de datos maestra:** la clave maestra de base de datos es una clave simétrica que se usa para proteger las claves privadas de certificados y las claves asimétricas presentes en la base de datos. Para obtener más información, vea [SQL Server y claves de cifrado de base de datos &#40;motor de base de datos&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 2.  Cree un certificado o clave asimétrica para utilizarla en el cifrado de copia de seguridad. Para obtener más información sobre cómo crear un certificado, vea [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql). Para obtener más información sobre cómo crear una clave asimétrica, vea [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql).  
   
@@ -88,12 +88,12 @@ ms.locfileid: "70154845"
   
 1.  [Copia de seguridad de la base de datos &#40;página Opciones de copia de seguridad&#41;](back-up-database-backup-options-page.md) En la página **Opciones de copia de seguridad**, puede seleccionar **Cifrado** y especificar el algoritmo de cifrado y el certificado o la clave asimétrica que va a usar para el cifrado.  
   
-2.  [Usar el Asistente para planes de mantenimiento](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Al seleccionar una tarea de copia de seguridad, en la pestaña **Opciones** de la página **Definir la tarea de copia de seguridad**, puede seleccionar **Cifrado de copia de seguridad** y especificar el algoritmo de cifrado y el certificado o la clave que se usarán para el cifrado.  
+2.  [Usar el Asistente para planes de mantenimiento](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) Al seleccionar una tarea de copia de seguridad, en la pestaña **Opciones** de la página **Definir la tarea de copia de seguridad** , puede seleccionar **Cifrado de copia de seguridad**y especificar el algoritmo de cifrado y el certificado o la clave que se usarán para el cifrado.  
   
 ### <a name="using-transact-sql"></a>Usar Transact SQL:  
  La siguiente es una instrucción Transact-SQL de ejemplo para cifrar el archivo de copia de seguridad:  
   
-```  
+```sql
 BACKUP DATABASE [MYTestDB]  
 TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
 WITH  
@@ -104,8 +104,7 @@ WITH
    SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
-GO  
-  
+GO
 ```  
   
  Para obtener la sintaxis completa de la instrucción Transact-SQL, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
@@ -113,12 +112,9 @@ GO
 ### <a name="using-powershell"></a>Usar PowerShell  
  En este ejemplo se crean las opciones de cifrado y se usan como valor de parámetro en el cmdlet **Backup-SqlDatabase** para crear una copia de seguridad cifrada.  
   
-```  
-C:\PS>$encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorType ServerCertificate -EncryptorName "BackupCert"  
-```  
-  
-```  
-C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
+```powershell
+$encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorType ServerCertificate -EncryptorName "BackupCert"  
+Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
 ```  
   
 ##  <a name="RecommendedPractices"></a> Prácticas recomendadas  
@@ -132,13 +128,13 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
-|Tema y tarea|Descripción|  
+|Tema y tarea|Description|  
 |-----------------|-----------------|  
 |[Crear una copia de seguridad cifrada](create-an-encrypted-backup.md)|Describe los pasos básicos necesarios para crear una copia de seguridad cifrada|  
 |[SQL Server de la copia de seguridad administrada en Azure: configuración de retención y almacenamiento](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describe los pasos básicos necesarios para configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] con las opciones de cifrado especificadas.|  
 |[Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Proporciona un ejemplo de creación de una copia de seguridad cifrada protegida por claves en el almacén de claves de Azure.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md)  
   
   

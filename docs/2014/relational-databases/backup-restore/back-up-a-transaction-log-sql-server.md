@@ -14,12 +14,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0479b16e7cc767b8e036a9632c0e9c80177c7837
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78472cf0a270ffbb83ddf744956e7d2c5a1a1f64
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62877345"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783123"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Realizar copia de seguridad de un registro de transacciones (SQL Server)
   En este tema se describe cómo realizar una copia de seguridad de un registro de transacciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
@@ -34,7 +34,7 @@ ms.locfileid: "62877345"
   
      [Seguridad](#Security)  
   
--   **Realizar copias de seguridad de un registro de transacciones, utilizando:**  
+-   **Para realizar una copia de seguridad de un registro de transacciones, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62877345"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -66,13 +66,13 @@ ms.locfileid: "62877345"
   
  Los problemas de propiedad y permisos del archivo físico del dispositivo de copia de seguridad pueden interferir con una operación de copia de seguridad. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder leer y escribir en el dispositivo y la cuenta en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de escritura. En cambio, [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), que agrega una entrada para un dispositivo de copia de seguridad en las tablas del sistema, no comprueba los permisos de acceso a los archivos. Es posible que estos problemas con el archivo físico del dispositivo de copia de seguridad no aparezcan hasta que se tenga acceso al recurso físico, al intentar la copia de seguridad o la restauración.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-back-up-a-transaction-log"></a>Para realizar una copia de seguridad de un registro de transacciones  
   
-1.  Después de conectarse a la instancia apropiada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol de servidores.  
+1.  Tras conectarse a la instancia adecuada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
-2.  Expanda **Bases de datos**y, en función de la base de datos, seleccione la base de datos de un usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
+2.  Expanda **Bases de datos**y, dependiendo de la base de datos, seleccione una base de datos de usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
   
 3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y haga clic en **Copia de seguridad**. Aparece el cuadro de diálogo **Copia de seguridad de base de datos** .  
   
@@ -82,10 +82,10 @@ ms.locfileid: "62877345"
   
 6.  En el cuadro de lista **Tipo de copia de seguridad** , seleccione **Registro de transacciones**.  
   
-7.  También puede seleccionar **Copia de seguridad de solo copia** para crear una copia de seguridad de solo copia. Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente de la secuencia de copias de seguridad convencionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+7.  También puede seleccionar **Copia de seguridad de solo copia** para crear un copia de seguridad de solo copia. Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente de la secuencia de copias de seguridad convencionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
     > [!NOTE]  
-    >  Cuando la opción **Diferencial** está seleccionada, no se puede crear una copia de seguridad de solo copia.  
+    >  Cuando la opción **Diferencial** está seleccionada, no puede crear una copia de seguridad de solo copia.  
   
 8.  Acepte el nombre del conjunto de copia de seguridad predeterminado sugerido en el cuadro de texto **Nombre** o especifique otro nombre.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "62877345"
   
 16. Si va a realizar copias de seguridad en una unidad de cinta (según se haya especificado en la sección **Destino** de la página **General** ), la opción **Descargar la cinta después de realizar la copia de seguridad** está activa. Al hacer clic en esta opción se activa la opción **Rebobinar la cinta antes de descargar** .  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y las versiones posteriores admiten la [compresión de copia de seguridad](backup-compression-sql-server.md). De forma predeterminada, el hecho de que se comprima una copia de seguridad depende del valor de la opción de configuración del servidor **backup-compression default** . Pero, independientemente del valor predeterminado actual de nivel de servidor, puede comprimir una copia de seguridad si activa **Comprimir copia de seguridad**e impedir la compresión si activa **No comprimir copia de seguridad**.  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y las versiones posteriores admiten la [compresión de copia de seguridad](backup-compression-sql-server.md). De forma predeterminada, el hecho de que se comprima una copia de seguridad depende del valor de la opción de configuración del servidor **Compresión de copia de seguridad predeterminada** . Pero, independientemente del valor predeterminado actual de nivel de servidor, puede comprimir una copia de seguridad si activa **Comprimir copia de seguridad**e impedir la compresión si activa **No comprimir copia de seguridad**.  
   
      **Para ver el valor predeterminado actual de la compresión de copia de seguridad**  
   
@@ -180,18 +180,15 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
   
-1.  Utilice el cmdlet `Backup-SqlDatabase` y especifique `Log` como el valor del parámetro `-BackupAction`.  
+Utilice el cmdlet `Backup-SqlDatabase` y especifique `Log` como el valor del parámetro `-BackupAction`.  
   
-     En el ejemplo siguiente se crea una copia de seguridad de registro de la base de datos `MyDB` en la ubicación de copia de seguridad predeterminada de la instancia de servidor `Computer\Instance`.  
+En el ejemplo siguiente se crea una copia de seguridad de registro de la base de datos `MyDB` en la ubicación de copia de seguridad predeterminada de la instancia de servidor `Computer\Instance`.  
   
-    ```  
-    --Enter this command at the PowerShell command prompt, C:\PS>  
+    ```powershell
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Log  
     ```  
   
- **Para configurar y usar el proveedor de SQL Server PowerShell**  
-  
--   [Proveedor de SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md)  
+Para configurar y usar el proveedor de SQL Server PowerShell, vea [proveedor de SQL Server PowerShell](../../powershell/sql-server-powershell-provider.md).
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -201,10 +198,8 @@ GO
   
 -   [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [Planes de mantenimiento](../maintenance-plans/maintenance-plans.md)   
  [Copias de seguridad de archivos completas &#40;SQL Server&#41;](full-file-backups-sql-server.md)  
-  
-  

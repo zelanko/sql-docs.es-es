@@ -1,5 +1,5 @@
 ---
-title: Utilizar archivos y grupos de archivos para almacenar datos | Documentos de Microsoft
+title: Usar grupos de archivos y archivos para almacenar datos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: efeb2de880834723f37755a47618ece97d31af65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 270df8181fe42f48619736ba858dc0c16d9e30c7
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270744"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781813"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Utilizar grupos de archivos y archivos para almacenar datos
   Los archivos de datos se utilizan para almacenar los archivos de base de datos. Los archivos de datos se subdividen en grupos de archivos. El objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tiene una propiedad <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A> que hace referencia a un objeto <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>. Cada objeto <xref:Microsoft.SqlServer.Management.Smo.FileGroup> en esa colección tiene una propiedad <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A>. Esta propiedad hace referencia a una colección <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection> que contiene todos los archivos de datos que pertenecen a la base de datos. Un grupo de archivos se utiliza principalmente para agrupar los archivos que se utilizan para almacenar un objeto de la base de datos. Una razón para expandir un objeto de la base de datos en varios archivos es que puede mejorar el rendimiento, sobre todo si los archivos están almacenados en unidades de disco diferentes.  
@@ -29,7 +29,7 @@ ms.locfileid: "63270744"
  Cada base de datos que se crea automáticamente tiene un grupo de archivos denominado "Principal" y un archivo de datos con el mismo nombre que la base de datos. Se pueden agregar archivos y grupos adicionales a las recopilaciones.  
   
 ## <a name="examples"></a>Ejemplos  
- Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un&#35; proyecto de Visual C SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-basic"></a>Agregar grupos de archivos y archivos de datos a una base de datos en Visual Basic  
  El grupo de archivos principal y el archivo de datos se crean automáticamente con valores de propiedad predeterminados. En el ejemplo de código se especifican algunos valores de propiedad que puede utilizar. De lo contrario, se utilizan los valores de propiedad predeterminados.  
@@ -39,7 +39,7 @@ ms.locfileid: "63270744"
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-c"></a>Agregar grupos de archivos y archivos de datos a una base de datos en Visual C#  
  El grupo de archivos principal y el archivo de datos se crean automáticamente con valores de propiedad predeterminados. En el ejemplo de código se especifican algunos valores de propiedad que puede utilizar. De lo contrario, se utilizan los valores de propiedad predeterminados.  
   
-```  
+```csharp
 {  
             Server srv = new Server();  
             //Reference the AdventureWorks2012 database.   
@@ -62,7 +62,7 @@ ms.locfileid: "63270744"
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-powershell"></a>Agregar grupos de archivos y archivos de datos a una base de datos en PowerShell  
  El grupo de archivos principal y el archivo de datos se crean automáticamente con valores de propiedad predeterminados. En el ejemplo de código se especifican algunos valores de propiedad que puede utilizar. De lo contrario, se utilizan los valores de propiedad predeterminados.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\default\Databases\  
   
@@ -91,7 +91,7 @@ $df1.Create()
 ## <a name="creating-altering-and-removing-a-log-file-in-visual-c"></a>Crear, modificar y quitar un archivo de registro en Visual C#  
  En el ejemplo de código se crea un objeto <xref:Microsoft.SqlServer.Management.Smo.LogFile>, se cambia una de las propiedades y, a continuación, se quita el objeto de la base de datos.  
   
-```  
+```csharp
 //Connect to the local, default instance of SQL Server.   
             Server srv = new Server();  
             //Reference the AdventureWorks2012 database.   
@@ -105,18 +105,17 @@ $df1.Create()
             lf1.Growth = 6;  
             //Run the Create method to create the log file on the instance of SQL Server.   
             lf1.Create();  
-            //Alter the growth percentage.   
+            //Alter the growth percentage.
             lf1.Growth = 7;  
             lf1.Alter();  
-            //Remove the log file.   
-            lf1.Drop();  
-  
+            //Remove the log file.
+            lf1.Drop();
 ```  
   
 ## <a name="creating-altering-and-removing-a-log-file-in-powershell"></a>Crear, modificar y quitar un archivo de registro en PowerShell  
  En el ejemplo de código se crea un objeto <xref:Microsoft.SqlServer.Management.Smo.LogFile>, se cambia una de las propiedades y, a continuación, se quita el objeto de la base de datos.  
   
-```  
+```powershell
 #Load the assembly containing the enums used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlEnum")  
   
@@ -148,12 +147,9 @@ $lf1.Create()
 #Alter a value and drop the log file  
 $lf1.Growth = 7.0  
 $lf1.Alter()  
-$lf1.Drop()  
-  
+$lf1.Drop()
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Archivos y grupos de archivos de base de datos](../../databases/database-files-and-filegroups.md)  
-  
-  

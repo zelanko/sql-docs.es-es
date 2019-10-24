@@ -12,12 +12,12 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5f7b7b6e12e6905492a1ea7d48a75ebc6be0e689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e37dcf69a09d92236e0b8f4f97cb99541f1c7532
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101037"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783251"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Cambiar la extensión de entrega predeterminada de Reporting Services
   Puede modificar las opciones de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para cambiar la extensión de entrega predeterminada que aparece en la lista **Entregado por** de una página de definición de suscripción. Por ejemplo, puede modificar la configuración de modo que cuando los usuarios creen una nueva suscripción, la entrega de recurso compartido de archivos se seleccione de forma predeterminada en lugar de la entrega por correo electrónico. También puede cambiar el orden en que se muestran las extensiones de entrega en la interfaz de usuario.  
@@ -33,7 +33,7 @@ ms.locfileid: "66101037"
   
  La siguiente es la sección predeterminada de **RSReportServer.config** que controla la extensión de entrega predeterminada y el orden en que se muestran en el Administrador de informes. Tenga en cuenta que el correo electrónico aparece en primer lugar en el archivo y se establece como valor predeterminado.  
   
-```  
+```xml
 <DeliveryUI>  
      <Extension Name="Report Server Email" Type="Microsoft.ReportingServices.EmailDeliveryProvider.EmailDeliveryProviderControl,ReportingServicesEmailDeliveryProvider">  
           <DefaultDeliveryExtension>True</DefaultDeliveryExtension>  
@@ -85,9 +85,9 @@ ms.locfileid: "66101037"
   
      Cuando se lee la configuración, se escribe el siguiente evento en el registro de eventos de Windows.  
   
-     **Id. de evento:** 109  
+     **Identificador del evento:** 109  
   
-     **Origen:** Servicio de Windows del servidor de informes (nombre de instancia)  
+     **Origen:** Servicio Servidor de informes de Windows (nombre de instancia)  
   
      Se ha modificado el archivo RSReportServer.config  
   
@@ -100,22 +100,20 @@ ms.locfileid: "66101037"
   
 2.  Puede omitir este paso si ya conoce el nombre de su aplicación de servicio de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Use el PowerShell siguiente a la lista de las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en la granja de SharePoint.  
   
-    ```  
-    get-sprsserviceapplication | format-list *  
+    ```powershell
+    Get-SPRSServiceApplication | Format-List *  
     ```  
   
 3.  Ejecute el PowerShell siguiente para comprobar la extensión de entrega predeterminada actual para la aplicación de servicio "ssrsapp" de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
+    ```powershell
+    $app = Get-SPRSServiceApplication | Where {$_.name -Like "ssrsapp*"};
+    Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
-    $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
   
-    ```  
-  
-## <a name="see-also"></a>Vea también  
- [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
- [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>Ver también  
+ @No__t_1 del [archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
+ @No__t_1 del [archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  
  [Entrega a recursos compartidos de archivos en Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Entrega por correo electrónico en Reporting Services](e-mail-delivery-in-reporting-services.md)   
- [Configurar un servidor de informes para la entrega de correo electrónico &#40;Administrador de configuración de SSRS&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
-  
-  
+ [Configurar un servidor de informes para la &#40;entrega de correo electrónico en SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

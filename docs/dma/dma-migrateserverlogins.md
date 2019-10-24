@@ -1,8 +1,8 @@
 ---
-title: Migrar los inicios de sesión de SQL Server con Data Migration Assistant | Microsoft Docs
-description: Obtenga información sobre cómo migrar los inicios de sesión de SQL Server con Data Migration Assistant
+title: Migre SQL Server inicios de sesión con Data Migration Assistant | Microsoft Docs
+description: Obtenga información sobre cómo migrar inicios de sesión de SQL Server con Data Migration Assistant
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,44 +13,47 @@ helpviewer_keywords:
 - Data Migration Assistant, login migration
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
-ms.openlocfilehash: 84740f9787a7244228ef16af139a9e0b18ffb3a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.author: jtoland
+ms.openlocfilehash: 265ab37c47956400baa759b73838c7f2e66cc83e
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054702"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783273"
 ---
-# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migrar los inicios de sesión de SQL Server con Data Migration Assistant
+# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migre SQL Server inicios de sesión con Data Migration Assistant
 
-En este artículo se proporciona información general de migrar los inicios de sesión de SQL Server mediante Data Migration Assistant. 
+En este artículo se proporciona información general sobre la migración de inicios de sesión de SQL Server mediante Data Migration Assistant.
 
-## <a name="which-logins-are-migrated"></a>Se migran los inicios de sesión
+> [!IMPORTANT]
+> Este tema se aplica a escenarios en los que se realizan actualizaciones de SQL Server en versiones posteriores del producto local o en SQL Server en Azure Virtual Machines.
 
-- Puede migrar los inicios de sesión basados en una entidad de seguridad de Windows (por ejemplo, un usuario de dominio o un grupo de dominio de Windows). También puede migrar los inicios de sesión que se crean en función de la autenticación de SQL, también denominada inicios de sesión de SQL Server.
+## <a name="which-logins-are-migrated"></a>Qué inicios de sesión se migran
 
-- Asistente para migración de datos no admite actualmente los inicios de sesión asociados con un certificado de seguridad independiente (inicios de sesión asignados a certificado), una clave asimétrica independiente (inicios de sesión asignados a clave asimétrica) y los inicios de sesión asignados a las credenciales.
+- Puede migrar los inicios de sesión en función de una entidad de seguridad de Windows (como un usuario de dominio o un grupo de dominio de Windows). También puede migrar los inicios de sesión creados en función de la autenticación de SQL, también denominada inicios de sesión de SQL Server.
 
-- Asistente para migración de datos no mover el **sa** principios de inicio de sesión y servidor con nombres incluidos entre signos de número dobles (\#\#), que son solo para uso interno.
+- Actualmente, Data Migration Assistant no admite los inicios de sesión asociados a un certificado de seguridad independiente (inicios de sesión asignados a certificados), una clave asimétrica independiente (inicios de sesión asignados a la clave asimétrica) e inicios de sesión asignados a las credenciales.
 
-- De forma predeterminada, Data Migration Assistant selecciona todos los inicios de sesión completos para migrar. Si lo desea, puede seleccionar inicios de sesión específicos para migrar. Cuando Data Migration Assistant migra todos los inicios de sesión completos, la asignación de usuario de inicio de sesión permanece intacta en las bases de datos que se migran. 
+- Data Migration Assistant no mueve el inicio de sesión **SA** y los principios del servidor con nombres delimitados por marcas hash dobles (\# \#), que solo son para uso interno.
 
-  Si va a migrar los inicios de sesión específicos, asegúrese de seleccionar los inicios de sesión que se asignan a los usuarios de una o varias de las bases de datos seleccionadas para la migración.
+- De forma predeterminada, Data Migration Assistant selecciona todos los inicios de sesión calificados que se van a migrar. Opcionalmente, puede seleccionar inicios de sesión específicos para migrar. Cuando Data Migration Assistant migra todos los inicios de sesión calificados, la asignación de usuario de inicio de sesión permanece intacta en las bases de datos que se migran.
 
-- Como parte de la migración de inicio de sesión, Data Migration Assistant también mueve los roles de servidor definido por el usuario y agrega los permisos de nivel de servidor a los roles de servidor definido por el usuario. El propietario de la función se establecerá en **sa** principal.
+  Si tiene previsto migrar inicios de sesión específicos, asegúrese de seleccionar los inicios de sesión asignados a uno o más usuarios en las bases de datos seleccionadas para la migración.
+
+- Como parte de la migración de inicio de sesión, Data Migration Assistant también mueve roles de servidor definidos por el usuario y agrega permisos de nivel de servidor a los roles de servidor definidos por el usuario. El propietario del rol se establecerá en **SA** principal.
 
 ## <a name="during-and-after-migration"></a>Durante y después de la migración
 
-- Como parte de la migración de inicio de sesión, Data Migration Assistant asigna los permisos a los elementos protegibles en el destino de SQL Server tal y como aparecen en el origen de SQL Server. 
+- Como parte de la migración de inicio de sesión, Data Migration Assistant asigna los permisos a elementos protegibles en el SQL Server de destino tal y como existen en el SQL Server de origen.
 
-  Si el inicio de sesión ya existe en el destino de SQL Server, Data Migration Assistant migra solo los permisos asignados a los elementos protegibles y no volver a crear el inicio de sesión completa.
+  Si el inicio de sesión ya existe en el SQL Server de destino, Data Migration Assistant migra solo los permisos asignados a elementos protegibles y no volverá a crear el inicio de sesión completo.
 
-- Asistente para migración de datos hace que sea el mejor esfuerzo para asignar el inicio de sesión a los usuarios de base de datos si el inicio de sesión ya existe en el servidor de destino.
+- Data Migration Assistant hace el mejor esfuerzo para asignar el inicio de sesión a los usuarios de la base de datos si el inicio de sesión ya existe en el servidor de destino.
 
-- Se recomienda que revise los resultados de la migración para comprender el estado general de la migración de inicio de sesión y las acciones posteriores a la migración recomendadas.
+- Se recomienda revisar los resultados de la migración para comprender el estado general de la migración de inicio de sesión y las acciones posteriores a la migración recomendadas.
 
 ## <a name="resources"></a>Recursos
 
 [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 
-[Asistente para la migración de datos: Opciones de configuración](../dma/dma-configurationsettings.md)
+[Data Migration Assistant: opciones de configuración](../dma/dma-configurationsettings.md)

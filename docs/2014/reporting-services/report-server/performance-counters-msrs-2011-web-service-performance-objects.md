@@ -1,5 +1,5 @@
 ---
-title: Contadores de rendimiento para el servicio Web de MSRS 2014 y objetos de rendimiento de MSRS 2014 Windows Service (modo nativo) | Microsoft Docs
+title: Contadores de rendimiento para los objetos de rendimiento del servicio Web de MSRS 2014 y el servicio de Windows de MSRS 2014 (modo nativo) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 248adc8dcbf3f3c016ff861be124ccde9e461db5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3acf02dff2d0d699a6d4dfe271d0aed8419683a
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66103712"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782822"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>Contadores de rendimiento para los objetos de rendimiento de MSRS 2014 Web Service y MSRS 2014 Windows Service (modo nativo)
   En este tema se describen los contadores de rendimiento para los objetos de rendimiento `MSRS 2014 Web Service` y `MSRS 2014 Windows Service`.  
@@ -30,26 +30,26 @@ ms.locfileid: "66103712"
 > [!NOTE]  
 >  Estos objetos de rendimiento supervisan los eventos en el servidor de informes local. Si ejecuta un servidor de informes en una implementación escalada, los recuentos se aplican al servidor actual y no a la implementación escalada.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo nativo  
   
  Los objetos de rendimiento están disponibles en el Monitor de rendimiento de Windows (**Perfmon.exe**). Para más información, consulte la documentación de Windows, [Generar perfiles en tiempo de ejecución](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- Para obtener información relacionada con los contadores de rendimiento del modo de SharePoint, vea [contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y los objetos de rendimiento del modo de SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
+ Para obtener información relacionada con los contadores de rendimiento en modo de SharePoint, vea [contadores de rendimiento para el modo SharePoint de msrs 2014 Web Service y el &#40;modo sharepoint&#41;de MSRS 2014 Windows Service](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)SharePoint Mode.  
   
  **En este tema:**  
   
--   [Contadores de rendimiento de MSRS 2014 Web Service](#bkmk_webservice)  
+-   [Contadores de rendimiento del servicio Web de MSRS 2014](#bkmk_webservice)  
   
 -   [Contadores de rendimiento de MSRS 2014 Windows Service](#bkmk_windowsservice)  
   
 -   [Usar cmdlets de PowerShell para devolver listas](#bkmk_powershell)  
   
-##  <a name="bkmk_webservice"></a> Contadores de rendimiento de MSRS 2014 Web Service  
+##  <a name="bkmk_webservice"></a>Contadores de rendimiento del servicio Web de MSRS 2014  
  El objeto de rendimiento `MSRS 2014 Web Service` supervisa el rendimiento del servidor de informes. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento del servidor de informes que se suele iniciar mediante operaciones interactivas de visualización de informes. Cuando se configura este contador, se puede aplicar a todas las instancias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o se pueden seleccionar instancias concretas. Estos contadores se restablecen siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.  
   
  En la tabla siguiente se enumeran los contadores que se incluyen con el objeto de rendimiento `MSRS 2014 Web Service`.  
   
-|Contador|Descripción|  
+|Contador|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sesiones activas. Este contador proporciona un recuento acumulativo de todas las sesiones del explorador que se generan a partir de las ejecuciones de informes, independientemente de si todavía están o no activas.<br /><br /> El contador se reduce cuando se quitan registros de sesiones. De forma predeterminada, las sesiones se quitan después de diez minutos de inactividad.|  
 |`Cache Hits/Sec`|Número de solicitudes por segundo para informes en memoria caché. Las solicitudes son para informes que se vuelven a representar, no de solicitudes para informes procesados directamente desde la memoria caché. (Vea `Total Cache Hits` más adelante en este tema).|  
@@ -74,12 +74,12 @@ ms.locfileid: "66103712"
 |`Total Reports Executed`|Número total de informes que se han ejecutado correctamente después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.|  
 |`Total Requests`|Número total de solicitudes efectuadas al servidor de informes después del inicio del servicio. Este contador se restablece siempre que [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] detiene el servicio web del servidor de informes.|  
   
-##  <a name="bkmk_windowsservice"></a> Contadores de rendimiento de MSRS 2014 Windows Service  
+##  <a name="bkmk_windowsservice"></a>Contadores de rendimiento de MSRS 2014 Windows Service  
  El objeto de rendimiento `MSRS 2014 Windows Service` supervisa el servicio servidor de informes de Windows. Este objeto de rendimiento incluye una colección de contadores que se usan para realizar el seguimiento del procesamiento de informes que se inicia mediante operaciones programadas. Entre las operaciones programadas se incluyen la suscripción y la entrega, las instantáneas de ejecución de informes y el historial del informe. Cuando se configura este contador, se puede aplicar a todas las instancias de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] o se pueden seleccionar instancias concretas.  
   
  En la tabla siguiente se enumeran los contadores que se incluyen con el objeto de rendimiento `MSRS 2014 Windows Service`.  
   
-|Contador|Descripción|  
+|Contador|Description|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sesiones activas almacenadas en la base de datos del servidor de informes. Este contador proporciona un recuento acumulativo de todas las sesiones del explorador que se pueden utilizar generadas a partir de suscripciones de informes, independientemente de si todavía están o no activas.|  
 |`Cache Flushes/Sec`|Número de vaciados de memoria caché por segundo.|  
@@ -114,21 +114,19 @@ ms.locfileid: "66103712"
 |`Total Snapshot Updates`|Número total de actualizaciones de instantánea de ejecución de informes.|  
   
 ##  <a name="bkmk_powershell"></a> Usar cmdlets de PowerShell para devolver listas  
- ![Contenido relacionado con PowerShell](../media/rs-powershellicon.jpg "PowerShell related content")El script de Windows PowerShell siguiente devuelve los conjuntos de contadores en los que CounterSetName comienza con "msr":  
+ ![Contenido relacionado con PowerShell](../media/rs-powershellicon.jpg "Contenido relacionado con PowerShell") El siguiente script de Windows PowerShell devuelve los conjuntos de contadores en los que CounterSetName comienza con "MSR":  
   
-```  
-get-counter -listset msr*  
+```powershell
+Get-Counter -ListSet msr*  
 ```  
   
  El siguiente script de Windows PowerShell devuelve la lista de contadores de rendimiento para CounterSetName.  
   
-```  
-(get-counter -listset "MSRS 2014 Windows Service").paths  
+```powershell
+(Get-Counter -ListSet "MSRS 2014 Windows Service").Paths  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Supervisar el rendimiento del servidor de informes](monitoring-report-server-performance.md)   
- [Contadores de rendimiento para el modo de SharePoint de MSRS 2014 Web Service y los objetos de rendimiento del modo de SharePoint de MSRS 2014 Windows Service &#40;el modo de SharePoint&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Contadores de rendimiento para los &#40;objetos&#41; de rendimiento de modo SharePoint de MSRS 2014 Web Service y MSRS 2014 Windows Service](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md) SharePoint en modo SharePoint    
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  
-  
-  

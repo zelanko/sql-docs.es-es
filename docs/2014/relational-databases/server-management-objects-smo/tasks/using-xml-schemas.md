@@ -1,5 +1,5 @@
 ---
-title: Uso de esquemas XML | Microsoft Docs
+title: Usar esquemas XML | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.assetid: 9d04de01-efeb-4b2d-8c28-3234bc7ff2f3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f65643152bb069c703fe3a63e58ad669f3d3e322
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aee91cdab8ff5404ebb333a81cad91297a99f17
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626868"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781942"
 ---
 # <a name="using-xml-schemas"></a>Utilizar esquemas XML
   La programación XML en SMO se limita a proporcionar tipos de datos XML, espacios de nombres XML y la indización simple en columnas de tipo de datos XML.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Proporciona almacenamiento nativo para instancias de documentos XML. Los esquemas XML le permiten definir tipos de datos XML complejos, que se pueden utilizar para validar los documentos XML para asegurar la integridad de los datos. El esquema XML se define en el objeto <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection>.  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona almacenamiento nativo para las instancias de documentos XML. Los esquemas XML le permiten definir tipos de datos XML complejos, que se pueden utilizar para validar los documentos XML para asegurar la integridad de los datos. El esquema XML se define en el objeto <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un&#35; proyecto de Visual C SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-an-xml-schema-in-visual-basic"></a>Crear un esquema XML en Visual Basic  
  En este ejemplo de código se muestra cómo crear un esquema XML utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection>. La propiedad <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection.Text%2A>, que define la colección de esquemas XML, contiene varias comillas dobles. Estas comillas se reemplazan por la cadena `chr(34)`.  
@@ -35,7 +35,7 @@ ms.locfileid: "62626868"
 ## <a name="creating-an-xml-schema-in-visual-c"></a>Crear un esquema XML en Visual C#  
  En este ejemplo de código se muestra cómo crear un esquema XML utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection>. La propiedad <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection.Text%2A>, que define la colección de esquemas XML, contiene varias comillas dobles. Estas comillas se reemplazan por la cadena `chr(34)`.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv = default(Server);  
@@ -56,10 +56,10 @@ ms.locfileid: "62626868"
 ## <a name="creating-an-xml-schema-in-powershell"></a>Crear un esquema XML en PowerShell  
  En este ejemplo de código se muestra cómo crear un esquema XML utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection>. La propiedad <xref:Microsoft.SqlServer.Management.Smo.XmlSchemaCollection.Text%2A>, que define la colección de esquemas XML, contiene varias comillas dobles. Estas comillas se reemplazan por la cadena `chr(34)`.  
   
-```  
+```powershell
 #Get a server object which corresponds to the default instance replace LocalMachine with the physical server  
 cd \sql\LocalHost  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Reference the AdventureWorks database.  
 $db = $srv.Databases["AdventureWorks2012"]  
@@ -77,5 +77,3 @@ $xsc.Text = "<schema xmlns=" + $dq + "http://www.w3.org/2001/XMLSchema" + $dq + 
 #Create the XML schema collection on the instance of SQL Server.  
 $xsc.Create()  
 ```  
-  
-  

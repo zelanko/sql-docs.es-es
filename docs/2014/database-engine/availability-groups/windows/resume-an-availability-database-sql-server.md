@@ -17,12 +17,12 @@ ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b85a2b6e7d574c1752eba84d1bfc2bce8dbafc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788722"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782918"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Reanudar una base de datos de disponibilidad (SQL Server)
   Puede reanudar una base de datos de disponibilidad suspendida en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. La reanudación de una base de datos suspendida coloca la base de datos en el estado SYNCHRONIZING. La reanudación de la base de datos principal también reanuda cualquiera de las bases de datos secundarias suspendidas como resultado de suspender la base de datos principal. Si una base de datos secundaria se suspende localmente en la instancia de servidor que hospeda la réplica secundaria, esa base de datos secundaria se debe reanudar localmente. Una vez que una base de datos secundaria y la base de datos principal correspondiente están en el estado SYNCHRONIZING, se reanuda la sincronización de datos en la base de datos secundaria.  
@@ -48,12 +48,12 @@ ms.locfileid: "62788722"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Un comando RESUME realiza la devolución en cuanto haya sido aceptado por la réplica que hospeda la base de datos de destino, pero la reanudación real de la base de datos se produce de forma asincrónica.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="Prerequisites"></a> Prerequisites  
   
 -   Debe estar conectado a la instancia de servidor que hospeda la base de datos que se va a reanudar.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62788722"
   
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para reanudar una base de datos secundaria**  
   
 1.  En el Explorador de objetos, conéctese a la instancia de servidor que hospeda la réplica de disponibilidad en la que desea reanudar una base de datos y expanda el árbol.  
@@ -94,7 +94,8 @@ ms.locfileid: "62788722"
      ALTER DATABASE *nombre_base_de_datos* SET HADR RESUME  
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
- **Para reanudar una base de datos secundaria**  
+
+### <a name="to-resume-a-secondary-database"></a>Para reanudar una base de datos secundaria
   
 1.  Cambie el directorio (`cd`) a la instancia de servidor que hospeda la réplica cuya base de datos desea reanudar. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  
   
@@ -102,9 +103,8 @@ ms.locfileid: "62788722"
   
      Por ejemplo, el comando siguiente reanuda la sincronización de datos para la base de datos de disponibilidad `MyDb3` en el grupo de disponibilidad `MyAg`.  
   
-    ```  
-    Resume-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    ```powershell
+    Resume-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
     ```  
   
     > [!NOTE]  
@@ -112,13 +112,11 @@ ms.locfileid: "62788722"
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+-   [Proveedor de PowerShell de SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Suspender una base de datos de disponibilidad &#40;SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  
+## <a name="see-also"></a>Ver también  
+ [Información general de &#40;grupos de disponibilidad AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  

@@ -16,12 +16,12 @@ ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c9bc55a6a5af15d6d21c4d3e7d74e2dc8296e84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6d4943bf3884933cd60e1c0ef51a54771ee00af
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211485"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782766"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
   En este tema se describe cómo eliminar el contenido del registro de historial de trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]u Objetos de administración de SQL Server.  
@@ -40,12 +40,12 @@ ms.locfileid: "68211485"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-clear-the-job-history-log"></a>Para borrar el registro del historial de trabajos  
   
@@ -73,7 +73,7 @@ ms.locfileid: "68211485"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     -- example removes the history for a job named NightlyBackups.  
     USE msdb ;  
     GO  
@@ -83,7 +83,7 @@ ms.locfileid: "68211485"
     GO  
     ```  
   
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
  **Para borrar el registro del historial de trabajos**  
   
  Use el método `PurgeJobHistory` de la clase `JobServer` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  

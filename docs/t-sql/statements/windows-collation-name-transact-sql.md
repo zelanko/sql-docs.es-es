@@ -139,7 +139,7 @@ En la tabla siguiente se muestran todas las intercalaciones de Windows admitidas
 |Amárico (Etiopía)|Latin1_General_100_|No disponible|
 |Armenio (Armenia)|Cyrillic_General_100_|No disponible|
 |Asamés (India)|Assamese_100_ <sup>1</sup>|No disponible|
-|Bangla (Bangladés)|Bengali_100_<sup>1</sup>|No disponible|
+|Bengalí (Bangladés)|Bengali_100_<sup>1</sup>|No disponible|
 |Baskir (Rusia)|Bashkir_100_|No disponible|
 |Vasco (España)|Latin1_General_100_|No disponible|
 |Bengali (India)|Bengali_100_<sup>1</sup>|No disponible|
@@ -188,7 +188,7 @@ En la tabla siguiente se muestran todas las intercalaciones de Windows admitidas
 |Noruego (nynorsk, Noruega)|Norwegian_100_|No disponible|
 |Occitano (Francia)|French_100_|No disponible|
 |Odia (India)|Indic_General_100_<sup>1</sup>|No disponible|
-|Pashto (Afganistán)|Pashto_100_<sup>1</sup>|No disponible|
+|Pastún (Afganistán)|Pashto_100_<sup>1</sup>|No disponible|
 |Persa (Irán)|Persian_100_|No disponible|
 |Punjabí (India)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
 |Quechua (Bolivia)|Latin1_General_100_|No disponible|

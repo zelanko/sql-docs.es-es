@@ -12,20 +12,20 @@ ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d201b20e0bdfd213c62c060250b5674589ab91cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30c5c1a0593c6287cca48b4e241854b4145f4518
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62519329"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782318"
 ---
 # <a name="creating-altering-and-removing-rules"></a>Crear, modificar y quitar reglas
   En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Rule> representa las reglas. La propiedad <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A>, que es una cadena de texto que contiene una expresión de condición que utiliza operadores o predicados, como IN, LIKE o BETWEEN, define la regla. Una regla no puede hacer referencia a columnas u otros objetos de base de datos. Se pueden incluir funciones integradas que no hagan referencia a objetos de base de datos.  
   
- La definición en la propiedad <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> debe contener una variable que haga referencia al valor de datos escrito. Se puede usar cualquier nombre o símbolo para representar el valor al crear la regla, pero el primer carácter debe ser el \@ símbolos.  
+ La definición en la propiedad <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> debe contener una variable que haga referencia al valor de datos escrito. Se puede utilizar cualquier nombre o símbolo para representar el valor cuando se crea la regla, pero el primer carácter debe ser el \@ símbolo.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un&#35; proyecto de Visual C SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-rule-in-visual-basic"></a>Crear, modificar y quitar una regla en Visual Basic  
  En este ejemplo de código se muestra cómo crear una regla, cómo adjuntarla a una columna, cómo modificar las propiedades del objeto <xref:Microsoft.SqlServer.Management.Smo.Rule>, cómo desasociar la regla de la columna y, por último, cómo quitarla.  
@@ -39,7 +39,7 @@ ms.locfileid: "62519329"
   
  La instrucción `Dim` para el objeto <xref:Microsoft.SqlServer.Management.Smo.Rule> se especifica con la ruta completa del ensamblado para evitar la ambigüedad con un objeto <xref:Microsoft.SqlServer.Management.Smo.Rule> en el ensamblado System.Data.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -72,32 +72,28 @@ ms.locfileid: "62519329"
   
  La instrucción `Dim` para el objeto <xref:Microsoft.SqlServer.Management.Smo.Rule> se especifica con la ruta completa del ensamblado para evitar la ambigüedad con un objeto <xref:Microsoft.SqlServer.Management.Smo.Rule> en el ensamblado System.Data.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-# Define a Rule object variable by supplying the parent database, name and schema in the constructor.   
-$ru = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Rule `  
--argumentlist $db, "TestRule", "Production"  
+# Define a Rule object variable by supplying the parent database, name and schema in the constructor.
+$ru = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Rule -argumentlist $db, "TestRule", "Production"  
   
-#Set the TextHeader and TextBody properties to define the rule.   
+#Set the TextHeader and TextBody properties to define the rule.
 $ru.TextHeader = "CREATE RULE [Production].[TestRule] AS"  
 $ru.TextBody = "@value BETWEEN GETDATE() AND DATEADD(year,4,GETDATE())"  
   
-#Create the rule on the instance of SQL Server.   
+#Create the rule on the instance of SQL Server.
 $ru.Create()  
   
-# Bind the rule to a column in the Product table by supplying the table, schema, and   
-# column as arguments in the BindToColumn method.   
+# Bind the rule to a column in the Product table by supplying the table, schema, and column as arguments in the BindToColumn method.
 $ru.BindToColumn("Product", "SellEndDate", "Production")  
   
-#Unbind from the column before removing the rule from the database.   
+#Unbind from the column before removing the rule from the database.
 $ru.UnbindFromColumn("Product", "SellEndDate", "Production")  
 $ru.Drop()  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  <xref:Microsoft.SqlServer.Management.Smo.Rule>  
-  
-  

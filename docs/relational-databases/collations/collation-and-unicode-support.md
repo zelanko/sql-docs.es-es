@@ -291,7 +291,7 @@ En la tabla siguiente se muestran las designaciones predeterminadas de intercala
 |Noruego (nynorsk, Noruega)|0x0814|0x0414|Latin1_General_CI_AI|
 |Occitano (Francia)|0x0482|0x040c|French_CI_AS|
 |Oriya (India)|0x0448|0x0439|No disponible en el nivel de servidor|
-|Pashto (Afganistán)|0x0463|0x0463|No disponible en el nivel de servidor|
+|Pastún (Afganistán)|0x0463|0x0463|No disponible en el nivel de servidor|
 |Persa (Irán)|0x0429|0x0429|Latin1_General_CI_AI|
 |Polaco (Polonia)|0x0415|0x0415|Polish_CI_AS|
 |Portugués (Brasil)|0x0416|0x0409|Latin1_General_CI_AS|

@@ -1,5 +1,5 @@
 ---
-title: Uso de particiones de índice de tabla e | Microsoft Docs
+title: Usar particiones de tablas e índices | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73a106a4e17ea770517c7662dfecd98fe58e36b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 936f037852f39f24690e1cb9af3f63a2cfa2a613
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270736"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781829"
 ---
 # <a name="using-table-and-index-partitioning"></a>Utilizar particiones de tabla e índice
   Los datos se pueden almacenar usando los algoritmos de almacenamiento proporcionados por [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). Las particiones pueden hacer que las tablas y los índices grandes sean más escalables y fáciles de administrar.  
@@ -33,7 +33,7 @@ ms.locfileid: "63270736"
  Cada objeto <xref:Microsoft.SqlServer.Management.Smo.Table> y <xref:Microsoft.SqlServer.Management.Smo.Index> especifica qué esquema de partición utiliza en la propiedad <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> y especifica las columnas en <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>.  
   
 ## <a name="example"></a>Ejemplo  
- Para el siguiente ejemplo de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para el siguiente ejemplo de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un&#35; proyecto de Visual C SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>Configurar un esquema de partición para una tabla en Visual Basic  
  En el ejemplo de código se muestra cómo crear una función de partición y un esquema de partición para la tabla `TransactionHistory` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Las particiones se dividen por fecha con la intención de separar los registros anteriores de la tabla `TransactionHistoryArchive` .  
@@ -43,7 +43,7 @@ ms.locfileid: "63270736"
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Configurar un esquema de partición para una tabla en Visual C#  
  En el ejemplo de código se muestra cómo crear una función de partición y un esquema de partición para la tabla `TransactionHistory` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Las particiones se dividen por fecha con la intención de separar los registros anteriores de la tabla `TransactionHistoryArchive` .  
   
-```  
+```csharp
 {   
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
@@ -112,7 +112,7 @@ $T.GetType()
 #Add a partition function parameter that specifies the function uses a DateTime range type.  
 $pfp =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.PartitionFunctionParameter -argumentlist $pf, $T  
   
-#Specify the three dates that divide the data into four partitions.   
+#Specify the three dates that divide the data into four partitions.
 #Create an array of type object to hold the partition data  
 $val = "1/1/2003"."1/1/2004","1/1/2005"  
 $pf.RangeValues = $val  
@@ -124,7 +124,7 @@ $pf.Create()
 $ps = New-Object -TypeName Microsoft.SqlServer.Management.SMO.PartitionScheme -argumentlist $db, "TransHistPS"  
 $ps.PartitionFunction = "TransHistPF"  
   
-#add the filegroups to the scheme   
+#add the filegroups to the scheme
 $ps.FileGroups.Add("PRIMARY")  
 $ps.FileGroups.Add("Second")  
 $ps.FileGroups.Add("Third")  
@@ -134,7 +134,5 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)  
-  
-  

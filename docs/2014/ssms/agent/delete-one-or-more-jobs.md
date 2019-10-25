@@ -16,26 +16,26 @@ ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e777fc76a49e7d4ec645133808787e25a702348f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62523513"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783256"
 ---
 # <a name="delete-one-or-more-jobs"></a>Eliminar uno o más trabajos
   En este tema se describe cómo eliminar trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]u Objetos de administración de SQL Server.  
   
  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Security"></a> Seguridad  
  Solo podrá eliminar los trabajos que posea, a menos que sea miembro del rol fijo de servidor **sysadmin** .  
   
  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-delete-a-job"></a>Para eliminar un trabajo  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62523513"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -78,15 +78,10 @@ ms.locfileid: "62523513"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_delete_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql).  
-  
+ Para obtener más información, [vea &#40;SP_DELETE_JOB Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql).  
 
-  
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
- **Para eliminar varios trabajos**  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+
+### <a name="to-delete-multiple-jobs"></a>Para eliminar varios trabajos
   
  Utilice la clase `JobCollection` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-
-  
-  

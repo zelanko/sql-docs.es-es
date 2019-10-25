@@ -1,7 +1,7 @@
 - name: Programación para interactuar con SQL Server
   href: ../connect/homepage-sql-connection-programming.md
 - name: Bienvenida a SQL Server >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 - name: Controladores de SQL Server
   href: ../connect/sql-connection-libraries.md
 - name: Historial de controladores de SQL Server

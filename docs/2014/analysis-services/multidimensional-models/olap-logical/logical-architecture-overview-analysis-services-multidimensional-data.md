@@ -13,12 +13,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: b4eea3e75ed57dcf69c8d8c5bcaedf3aef1fa9f5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68889611"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797642"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Información general de arquitectura lógica (Analysis Services - Datos multidimensionales)
   Analysis Services funciona en un modo de implementación de servidor que determina la arquitectura de memoria y el entorno en tiempo de ejecución utilizados por diferentes tipos de modelos de Analysis Services. Determina el modo de servidor durante la instalación. El **modo multidimensional y de minería de datos** admite OLAP tradicional y minería de datos. El **modo tabular** admite modelos tabulares. El **modo integrado de SharePoint** hace referencia a una instancia de Analysis Services que se instaló como PowerPivot para SharePoint, que se usa para cargar y consultar modelos de datos de Excel o PowerPivot dentro de un libro de.  
@@ -26,9 +26,9 @@ ms.locfileid: "68889611"
  En este tema se explica la arquitectura básica de Analysis Services cuando se usa en modo Multidimensional y Minería de datos. Para obtener más información sobre otros modos, vea [modelado &#40;tabular SSAS tabular&#41; ](../../tabular-models/tabular-models-ssas.md) y [comparar soluciones &#40;tabulares y&#41;multidimensionales SSAS](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).  
   
 ## <a name="basic-architecture"></a>Arquitectura básica  
- Una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] puede contener varias bases de datos y una base de datos puede tener al mismo tiempo objetos OLAP y objetos de minería de datos. Las aplicaciones conectan una instancia especificada de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y una base de datos especificada. Un equipo servidor puede hospedar varias instancias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Las instancias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se denominan "\<ServerName > \\ < InstanceName \>". En la ilustración siguiente se muestran todas las relaciones mencionadas entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos.  
+ Una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] puede contener varias bases de datos y una base de datos puede tener al mismo tiempo objetos OLAP y objetos de minería de datos. Las aplicaciones conectan una instancia especificada de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y una base de datos especificada. Un equipo servidor puede hospedar varias instancias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Las instancias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se denominan "\<ServerName >\\< InstanceName\>". En la ilustración siguiente se muestran todas las relaciones mencionadas entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos.  
   
- ![Relaciones de objetos de ejecución de AMO](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "Relaciones de objetos de ejecución de AMO")  
+ ![Relaciones de objetos de ejecución de AMO](../../dev-guide/media/amo-runningobjects.gif "Relaciones de objetos de ejecución de AMO")  
   
  Las clases básicas son el conjunto mínimo de objetos necesario para generar un cubo. Este conjunto mínimo de objetos incluye una dimensión, un grupo de medida y una partición. La agregación es opcional.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68889611"
 ## <a name="example"></a>Ejemplo  
  El cubo Imports contiene dos medidas, Packages y Last, y tres dimensiones relacionadas, Route, Source y Time.  
   
- ![Ejemplo de cubo 1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Ejemplo de cubo 1")  
+ ![Ejemplo de cubo 1](../../dev-guide/media/cubeintro1.gif "Ejemplo de cubo 1")  
   
  Los valores alfanuméricos más pequeños que están alrededor del cubo son los miembros de las dimensiones. Los miembros de ejemplo son ground (miembro de la dimensión Route), Africa (miembro de la dimensión Source) y 1st quarter (miembro de la dimensión Time).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68889611"
 ### <a name="aggregates"></a>Agregados  
  Los usuarios corporativos de un cubo pueden determinar el valor de cualquier medida para los miembros de cada dimensión, con independencia del nivel del miembro de la dimensión, ya que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] agrega valores a los niveles superiores según sea necesario. Por ejemplo, los valores de medida de la ilustración anterior se pueden agregar en función de una jerarquía de calendario estándar mediante el uso de la jerarquía de tiempo de calendario en la dimensión de tiempo, tal como se muestra en el diagrama siguiente.  
   
- ![Diagrama de medidas organizadas a lo largo de la dimensión de tiempo](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "Diagrama de medidas organizadas a lo largo de la dimensión de tiempo")  
+ ![Diagrama de medidas organizadas a lo largo de la dimensión de tiempo](../../dev-guide/media/cubeintro2.gif "Diagrama de medidas organizadas a lo largo de la dimensión de tiempo")  
   
  Además de agregar medidas mediante una sola dimensión, se pueden agregar medidas mediante combinaciones de miembros de dimensión diferentes. Esto permite a los usuarios corporativos evaluar las medidas en varias dimensiones al mismo tiempo. Por ejemplo, si un usuario corporativo desea analizar las importaciones trimestrales que han llegado por aire desde Eastern Hemisphere y Western Hemisphere, puede emitir una consulta del cubo para recuperar el siguiente conjunto de datos.  
   

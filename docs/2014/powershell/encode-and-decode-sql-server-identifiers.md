@@ -10,21 +10,21 @@ ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46dbf6654b557d612bac6dd2b2a79da114603414
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775060"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797767"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificar y descodificar identificadores de SQL Server
   Los identificadores delimitados de SQL Server a veces contienen caracteres no admitidos en las rutas de acceso de Windows PowerShell. Estos caracteres se pueden especificar codificando sus valores hexadecimales.  
   
 1.  **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions)  
   
-2.  **Para procesar los caracteres especiales:**  [Codificar un identificador](#EncodeIdent), [descodificar un identificador](#DecodeIdent)  
+2.  **Para procesar los caracteres especiales:**  [Codificar un identificador](#EncodeIdent), [Descodificar un identificador](#DecodeIdent)  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  Los caracteres que no se permiten en los nombres de ruta de Windows PowerShell se pueden representar, o codificar, como el carácter "%" seguido del valor hexadecimal del modelo de bits que representa el carácter, como en " **%** xx". La codificación siempre se puede usar para controlar los caracteres que no se admiten en las rutas de Windows PowerShell.  
   
  El cmdlet **Encode-SqlName** toma como entrada un identificador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Genera una cadena con todos los caracteres que no son admitidos por el lenguaje de Windows PowerShell codificados con "%xx". El cmdlet **Decode-SqlName** toma como entrada un identificador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] codificado y devuelve el identificador original.  
@@ -55,7 +55,7 @@ Set-Location Table%3ATest
   
  También puede usar **Encode-SqlName** para compilar un nombre admitido por Windows PowerShell:  
   
-```  
+```powershell
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
@@ -67,13 +67,11 @@ Set-Location (Encode-SqlName "Table:Test")
 ### <a name="examples-decoding"></a>Ejemplos (descodificación)  
  Este ejemplo devuelve “Table:Test”:  
   
-```  
+```powershell
 Decode-SqlName "Table%3ATest"  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Identificadores de SQL Server en PowerShell](sql-server-identifiers-in-powershell.md)   
  [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

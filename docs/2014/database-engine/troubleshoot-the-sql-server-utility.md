@@ -1,5 +1,5 @@
 ---
-title: Solución de problemas de la utilidad de SQL Server | Microsoft Docs
+title: Solucione los problemas del Utilidad de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,22 +10,22 @@ ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62842531"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797781"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Solucionar problemas de la Utilidad de SQL Server
-  Se pueden citar como ejemplos de solución de problemas de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la resolución de una operación que no ha podido inscribir una instancia de SQL Server con un UCP, la resolución de un error de recopilación de datos que crea iconos deshabilitados en la vista de lista de instancias administradas de un UCP, la mitigación de cuellos de botella de rendimiento o la resolución de problemas de mantenimiento de recursos. Para obtener más información sobre cómo mitigar problemas de mantenimiento de recursos identificados por un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, vea [solucionar problemas de mantenimiento de recursos de SQL Server &#40;utilidad de SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  Se pueden citar como ejemplos de solución de problemas de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la resolución de una operación que no ha podido inscribir una instancia de SQL Server con un UCP, la resolución de un error de recopilación de datos que crea iconos deshabilitados en la vista de lista de instancias administradas de un UCP, la mitigación de cuellos de botella de rendimiento o la resolución de problemas de mantenimiento de recursos. Para obtener más información sobre cómo mitigar los problemas de estado de los recursos identificados por un UCP [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [solución de problemas de SQL Server Resource Health &#40;utilidad de SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Error de una operación de inscripción de una instancia de SQL Server en una Utilidad de SQL Server  
  Si se conecta con la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscribirse mediante la Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , y especifica una cuenta de proxy que pertenece a un dominio de Active Directory que no es el dominio en el que está el UCP, la validación de la instancia será correcta, pero se produce un error en la operación de inscripción con un mensaje de error parecido a este:  
   
  Se ha producido una excepción al ejecutar una instrucción o lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
   
- Información adicional:  No se pudo obtener información sobre el grupo o usuario de Windows NT '\<Nombrededominio\nombredecuenta >', código de error 0 x 5. (Microsoft SQL Server, Error: 15404)  
+ Información adicional: no se ha podido obtener información sobre el grupo o usuario '\<nombreDeDominio\nombreDeCuenta>' de Windows NT, código de error 0x5. (Microsoft SQL Server, Error: 15404)  
   
  Este problema sucede en el siguiente escenario de ejemplo:  
   
@@ -35,11 +35,11 @@ ms.locfileid: "62842531"
   
 3.  La instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscribirse en la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] también es miembro de "Domain_1."  
   
-4.  Durante la operación de inscripción, conéctese a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscribirse usando "sa". Especifique una cuenta de proxy de "Domain_2."  
+4.  Durante la operación de inscripción, conéctese a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscribirse usando "SA". Especifique una cuenta de proxy de "Domain_2."  
   
 5.  La validación se realiza correctamente, pero se produce un error de inscripción.  
   
- Es la solución para este problema, el ejemplo anterior, para conectarse a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscribirse en el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilidad usando "sa" y proporcione una cuenta de proxy de "Domain_1."  
+ La solución para este problema, usando el ejemplo anterior, es conectarse a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscribirse en la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante "SA" y proporcionar una cuenta de proxy de "Domain_1".  
   
 ## <a name="failed-wmi-validation"></a>Error de validación de WMI  
  Si WMI no se configura correctamente en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], las operaciones de creación de UCP y de inscripción de instancia administrada muestran una advertencia, pero no se bloquea la operación. Además, si cambia la configuración de la cuenta del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma que que Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no tenga permiso en las clases WMI necesarias, la recopilación de datos en la instancia administrada afectada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se carga en el UCP. Esto genera iconos deshabilitados en el UCP.  
@@ -48,9 +48,9 @@ ms.locfileid: "62842531"
   
  Los mensajes de error simplificados son:  
   
- Ejecución del comando se detuvo porque la variable del shell "ErrorActionPreference" está establecida en Stop: Acceso denegado.  
+ La ejecución del comando se detuvo porque la variable del shell "ErrorActionPreference" esa establecida en Stop: Access denied.  
   
- ERROR: \<Fecha y hora (MM/DD/AAAA HH: mm:) >: Excepción detectada al recopilar propiedades de la cpu.  Se podría haber producido un error en una consulta WMI.  ADVERTENCIA.  
+ ERROR: \<fecha y hora (MM/DD/AAAA HH: MM: SS) >: excepción detectada al recopilar las propiedades de la CPU.  Se podría haber producido un error en una consulta WMI.  ADVERTENCIA.  
   
  Para resolver este problema, compruebe la configuración siguiente:  
   
@@ -102,7 +102,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Si se produjo un error de recopilación de datos o de carga de datos debido a problemas de tiempo de espera, actualice la función dbo.fn_sysutility_mi_get_collect_script() de la base de datos MSDB. Especialmente, en la función "Invoke-BulkCopyCommand()" agregue una línea:  
   
-    ```  
+    ```
     $bulkCopy.BulkCopyTimeout=180  
     ```  
   
@@ -114,9 +114,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  En el **Explorador de objetos**de SSMS, expanda el nodo **Seguridad** y el nodo **Credenciales** .  
   
-    2.  Haga doble clic en **UtilityAgentProxyCredential_\<GUID >** y seleccione **propiedades**.  
+    2.  Haga clic con el botón derecho en **UtilityAgentProxyCredential_\<GUID >** y seleccione **propiedades**.  
   
-    3.  En el cuadro de diálogo Propiedades de credencial, actualice las credenciales según sea necesario para la **UtilityAgentProxyCredential_\<GUID >** credencial.  
+    3.  En el cuadro de diálogo Propiedades de credenciales, actualice las credenciales según sea necesario para la credencial **UtilityAgentProxyCredential_\<GUID >** .  
   
     4.  Haga clic en **Aceptar** para confirmar el cambio.  
   
@@ -124,13 +124,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Se debería iniciar el servicio SQL Server Browser en el UCP y se debería configurar para que se iniciara automáticamente. Si su organización impide el uso del servicio SQL Server Browser, siga los siguientes pasos para permitir que a una instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se conecte al UCP:  
   
-    1.  En la barra de tareas de Windows en la instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic en **iniciar**, a continuación, haga clic en **ejecutar...** .  
+    1.  En la barra de tareas de Windows de la instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic en **Inicio**y, a continuación, en **Ejecutar..** ..  
   
     2.  Escriba "cliconfg.exe" en el espacio proporcionado y, a continuación, haga clic en **Aceptar**.  
   
     3.  Si se le solicita que permita el inicio del ejecutable de la utilidad de configuración del cliente SQL ("SQL Client Configuration Utility EXE"), haga clic en "**Continuar**".  
   
-    4.  En el **herramienta de red de cliente de SQL Server** cuadro de diálogo, seleccione el **Alias** y, después, haga clic en **agregar...** .  
+    4.  En el cuadro de diálogo **herramienta de red de cliente de SQL Server** , seleccione la pestaña **alias** y, a continuación, haga clic en **Agregar..** ..  
   
     5.  En el cuadro de diálogo **Agregar configuración de biblioteca de red** :  
   
@@ -164,8 +164,6 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     5.  Si la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ya se ha inscrito con el UCP antes de agregar al usuario a este grupo, reinicie el servicio del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [Solucionar problemas de estado de recursos de SQL Server &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)  
-  
-  
+ [Solucionar problemas de estado de recursos de SQL Server &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

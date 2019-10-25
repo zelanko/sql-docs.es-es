@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620597"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542184"
 ---
 # <a name="url-access-parameter-reference"></a>Referencia de parámetros de acceso URL
   Puede usar los siguientes parámetros como parte de una dirección URL para configurar la apariencia de los informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Los parámetros más comunes se muestran en esta sección. Los parámetros distinguen entre mayúsculas y minúsculas y empiezan con el prefijo de parámetro *rs:* si se dirige al servidor de informes y *rc:* si se dirige a un Visor HTML. También puede especificar parámetros que son específicos de dispositivos o extensiones de representación. Para obtener más información sobre parámetros específicos del dispositivo, vea [Especificar la configuración de la información del dispositivo en una dirección URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
   
 > [!IMPORTANT]  
->  En un servidor de informes en modo SharePoint, es importante que la dirección URL incluya la sintaxis de proxy de `_vti_bin` para enrutar la solicitud a través de SharePoint y el proxy HTTP de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . El proxy aporta el contexto que la solicitud HTTP necesita para garantizar la correcta ejecución del informe para los servidores de informes en modo SharePoint. Para obtener ejemplos, vea [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md).  
+>  En un servidor de informes en modo SharePoint, es importante que la dirección URL incluya la sintaxis de proxy de `_vti_bin` para enrutar la solicitud a través de SharePoint y el proxy HTTP de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . El proxy aporta el contexto que la solicitud HTTP necesita para garantizar la correcta ejecución del informe de los servidores de informes en modo SharePoint. Para obtener ejemplos, vea [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md).  
 >   
 >  Para obtener información sobre cómo incluir parámetros de informe en una dirección URL y algunos ejemplos, vea [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md).  
   

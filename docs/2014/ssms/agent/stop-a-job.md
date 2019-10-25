@@ -14,12 +14,12 @@ ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f334834ff1deecebbc719ec71fb8348c13e4f68e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245807"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798154"
 ---
 # <a name="stop-a-job"></a>Stop a Job
   En este tema se describe cómo detener un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un trabajo es una serie especificada de acciones que realiza el Agente SQL Server.  
@@ -38,7 +38,7 @@ ms.locfileid: "63245807"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63245807"
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-stop-a-job"></a>Para detener un trabajo  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63245807"
   
 ##  <a name="TSQL"></a> Usar Transact-SQL  
   
-#### <a name="to-stop-a-job"></a>Para detener un trabajo  
+### <a name="to-stop-a-job"></a>Para detener un trabajo  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63245807"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     -- stops a job named Weekly Sales Data Backup  
     USE msdb ;  
     GO  
@@ -79,11 +79,10 @@ ms.locfileid: "63245807"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_stop_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
+ Para obtener más información, [vea &#40;SP_STOP_JOB Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
   
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
- **Para detener un trabajo**  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+
+### <a name="to-stop-a-job"></a>Para detener un trabajo
   
  Llame al método `Stop` de la clase `Job` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

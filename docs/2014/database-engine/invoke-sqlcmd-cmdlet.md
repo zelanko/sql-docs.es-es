@@ -15,12 +15,12 @@ ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6aff97c8bee8fe8ccc469c2ee57bc94466e1e31
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064705"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797860"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>cmdlet Invoke-Sqlcmd
   **Invoke-Sqlcmd** es un cmdlet de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que ejecuta scripts que contienen instrucciones de los lenguajes ([!INCLUDE[tsql](../includes/tsql-md.md)] y XQuery) y comandos admitidos por la utilidad **sqlcmd**.  
@@ -30,40 +30,40 @@ ms.locfileid: "66064705"
   
  Aquí se muestra un ejemplo en el que se llama a Invoke-Sqlcmd para ejecutar una consulta simple, similar a especificar **sqlcmd** con las opciones **-Q** y **-S** :  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
  Aquí se muestra un ejemplo en el que se llama a **Invoke-Sqlcmd**, donde se especifica un archivo de entrada y se canaliza la salida a un archivo. Esto es similar a especificar **sqlcmd** con las opciones **-i** y **-o** :  
   
-```  
-Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -filePath "C:\MyFolder\TestSQLCmd.rpt"  
+```powershell
+Invoke-Sqlcmd -InputFile "C:\MyFolder\TestSQLCmd.sql" | Out-File -FilePath "C:\MyFolder\TestSQLCmd.rpt"  
 ```  
   
  Este es un ejemplo del uso de una matriz de Windows PowerShell para pasar varias variables de scripting de **sqlcmd** a **Invoke-Sqlcmd**. El escape de los caracteres "$" que identifican las variables de scripting de **sqlcmd** en la instrucción SELECT se ha realizado mediante el carácter de escape de acento invertido "`" de PowerShell:  
   
-```  
+```powershell
 $MyArray = "MyVar1 = 'String1'", "MyVar2 = 'String2'"  
 Invoke-Sqlcmd -Query "SELECT `$(MyVar1) AS Var1, `$(MyVar2) AS Var2;" -Variable $MyArray  
 ```  
   
  En este ejemplo se muestra cómo usar el proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell para ir a una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]y después usar el cmdlet **Get-Item** de Windows PowerShell para recuperar el objeto del servidor SMO de la instancia y pasarlo a **Invoke-Sqlcmd**:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\MyInstance  
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance (Get-Item .)  
 ```  
   
  El parámetro -Query es posicional y no es necesario asignarle un nombre. Si la primera cadena que se pasa a **Invoke-Sqlcmd**: no tiene nombre, se trata como el parámetro -Query.  
   
-```  
+```powershell
 Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
 ```  
   
 ## <a name="path-context-in-invoke-sqlcmd"></a>Contexto de la ruta de acceso en Invoke-Sqlcmd  
  Si no utiliza el parámetro -Database, el contexto de base de datos para Invoke-Sqlcmd se establece mediante la ruta de acceso que está activa cuando se llama al cmdlet.  
   
-|Path|Contexto de base de datos|  
+|ruta de acceso|Contexto de base de datos|  
 |----------|----------------------|  
 |Empieza con una unidad diferente de SQLSERVER:|La base de datos predeterminada para el identificador de inicio de sesión en la instancia predeterminada del equipo local.|  
 |SQLSERVER:\SQL|La base de datos predeterminada para el identificador de inicio de sesión en la instancia predeterminada del equipo local.|  
@@ -74,14 +74,14 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
   
  Por ejemplo, suponga que la base de datos predeterminada para su cuenta de Windows en la instancia predeterminada del equipo local es master (maestra). Entonces, los comandos siguientes devolverían master:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL  
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
   
  Los comandos siguientes devolverían [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]:  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Person.Person  
 Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"  
 ```  
@@ -97,23 +97,23 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
   
  **Invoke-Sqlcmd** no muestra mensajes, como la salida de las instrucciones PRINT, a menos que se especifique el parámetro común de Windows PowerShell **-Verbose** . Por ejemplo:  
   
-```  
+```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
 ```  
   
  No todos los parámetros de **sqlcmd** son necesarios en un entorno de PowerShell. Por ejemplo, Windows PowerShell da formato a toda la salida de los cmdlets, de modo que los parámetros de **sqlcmd** que especifican las opciones de formato no se implementan en **Invoke-Sqlcmd**. En la siguiente tabla se muestra la relación entre los parámetros de **Invoke-Sqlcmd** y las opciones de **sqlcmd** :  
   
-|Descripción|Opción sqlcmd|Parámetro de Invoke-Sqlcmd|  
+|Description|Opción sqlcmd|Parámetro de Invoke-Sqlcmd|  
 |-----------------|-------------------|------------------------------|  
 |Nombre de servidor e instancia.|-S|-ServerInstance|  
 |Base de datos inicial que se utilizará.|-d|-Database|  
 |Ejecutar la consulta especificada y salir.|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-P|-Password|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-p|-Password|  
 |Definición de variable.|-V|-Variable|  
 |Consultar el intervalo de tiempo de espera.|-T|-QueryTimeout|  
 |Detener la ejecución cuando se produce un error.|-b|-AbortOnError|  
-|Conexión de administrador dedicada.|-A|-DedicatedAdministratorConnection|  
+|Conexión de administrador dedicada.|-a|-DedicatedAdministratorConnection|  
 |Deshabilitar comandos interactivos, script de inicio y variables de entorno.|-X|-DisableCommands|  
 |Deshabilitar la sustitución de variables.|-X|-DisableVariables|  
 |Nivel de gravedad mínimo que se ha de notificar.|-v|-SeverityLevel|  
@@ -135,20 +135,18 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Delimitador de columnas.|-S|Ningún parámetro.|  
 |Controlar los encabezados de salida|-H|Ningún parámetro.|  
 |Especificar los caracteres de control.|-k|Ningún parámetro.|  
-|Ancho de presentación de longitud fija.|-Y|Ningún parámetro.|  
-|Ancho de presentación de longitud variable.|-Y|Ningún parámetro.|  
+|Ancho de presentación de longitud fija.|-y|Ningún parámetro.|  
+|Ancho de presentación de longitud variable.|-y|Ningún parámetro.|  
 |Entrada de eco.|-E|Ningún parámetro.|  
 |Habilitar los identificadores entre comillas.|-i|Ningún parámetro.|  
 |Quitar los espacios finales.|-w|Ningún parámetro.|  
 |Enumerar instancias.|-l|Ningún parámetro.|  
-|Dar formato al resultado como Unicode.|-u|Ningún parámetro.|  
+|Dar formato al resultado como Unicode.|-U|Ningún parámetro.|  
 |Imprimir las estadísticas.|-P|Ningún parámetro.|  
 |Fin del comando.|-c|Ningún parámetro.|  
 |Conectar con la autenticación de Windows.|-E|Ningún parámetro.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Utilizar los cmdlets del motor de base de datos](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
  [sqlcmd (utilidad)](../tools/sqlcmd-utility.md)   
  [Usar la utilidad sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
-  
-  

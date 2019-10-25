@@ -18,18 +18,18 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62792085"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797652"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Preparar manualmente una base de datos secundaria para un grupo de disponibilidad (SQL Server)
-  En este tema se describe cómo preparar una base de datos secundaria de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell. Preparar una base de datos secundaria requiere dos pasos: (1) restaurar una copia de seguridad de base de datos reciente de la base de datos principal y las copias de seguridad de registros subsiguientes en cada instancia del servidor que hospeda la réplica secundaria, utilizando RESTORE WITH NORECOVERY y (2) unir la base de datos restaurada al grupo de disponibilidad.  
+  En este tema se describe cómo preparar una base de datos secundaria de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell. La preparación de una base de datos secundaria requiere dos pasos: (1) restaurar una copia de seguridad reciente de la base de datos principal y las copias de seguridad del registro subsiguientes en cada instancia del servidor que hospeda la réplica secundaria utilizando RESTORE WITH NORECOVERY, y (2) unir la base de datos restaurada al grupo de disponibilidad.  
   
 > [!TIP]  
->  Si no tiene una configuración de trasvase de registros, es posible que pueda convertir la base de datos principal de trasvase de registros junto con una o varias de sus bases de datos secundarias en una base de datos principal AlwaysOn y una o varias bases de datos secundarias AlwaysOn. Para obtener más información, consulte [requisitos previos para migrar de trasvase de registros a grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
+>  Si no tiene una configuración de trasvase de registros, es posible que pueda convertir la base de datos principal de trasvase de registros junto con una o varias de sus bases de datos secundarias en una base de datos principal AlwaysOn y una o varias bases de datos secundarias AlwaysOn. Para obtener más información, consulte [requisitos previos para la migración desde el trasvase de &#40;registros&#41;a grupos de disponibilidad AlwaysOn SQL Server](prereqs-migrating-log-shipping-to-always-on-availability-groups.md).  
   
 -   **Antes de empezar:**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62792085"
   
 -   **Seguimiento:** [Después de preparar una base de datos secundaria](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos y restricciones  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62792085"
   
  Cuando la base de datos que se va a restaurar no existe en la instancia de servidor, la instrucción RESTORE requiere permisos CREATE DATABASE. Para obtener más información, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 > [!NOTE]  
 >  Si las rutas de acceso de archivos de copia de seguridad y restauración son idénticas entre la instancia del servidor que hospeda la réplica principal y cada instancia que hospeda la réplica secundaria, debe poder crear bases de datos secundarias con el [Asistente para nuevo grupo de disponibilidad](use-the-availability-group-wizard-sql-server-management-studio.md), el [Asistente para agregar una réplica al grupo de disponibilidad](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)o el [Asistente para agregar una base de datos al grupo de disponibilidad](availability-group-add-database-to-group-wizard.md).  
@@ -94,7 +94,7 @@ ms.locfileid: "62792085"
   
 3.  En la instancia del servidor que hospeda la réplica secundaria, restaure la copia de seguridad completa de la base de datos principal (y opcionalmente una copia de seguridad diferencial) seguida de las copias de seguridad del registro subsiguientes.  
   
-     En la página **Opciones de RESTORE DATABASE**, seleccione **Dejar la base de datos no operativa y no revertir transacciones no confirmadas. Pueden restaurarse registros de transacciones adicionales. (RESTORE WITH NORECOVERY)** .  
+     En la página **Opciones de RESTORE DATABASE** , seleccione **Dejar la base de datos no operativa y no revertir transacciones no confirmadas. Pueden restaurarse registros de transacciones adicionales. (RESTORE WITH NORECOVERY)** .  
   
      Si las rutas de acceso de archivos de la base de datos principal y la base de datos secundaria difieren, por ejemplo, si la base de datos principal se encuentra en la unidad "F:" pero la instancia de servidor que hospeda la réplica secundaria no tiene unidad "F:", incluya la opción MOVE en la cláusula WITH.  
   
@@ -112,11 +112,11 @@ ms.locfileid: "62792085"
   
  **Para crear una copia de seguridad del registro**  
   
--   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
+-   [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
  **Para restaurar copias de seguridad**  
   
--   [Restaurar una copia de seguridad de base de datos &#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+-   [Restaurar una copia de &#40;seguridad de base de datos SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [Restaurar una copia de seguridad diferencial de la base de datos &#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62792085"
   
 1.  Para utilizar la base de datos [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] , modifíquela para que utilice el modelo de recuperación completa:  
   
-    ```  
+    ```sql
     USE master;  
     GO  
     ALTER DATABASE MyDB1   
@@ -166,7 +166,7 @@ ms.locfileid: "62792085"
   
      En la instancia del servidor que hospeda la réplica principal (`INSTANCE01`), cree una copia de seguridad completa de la base de datos principal del modo siguiente:  
   
-    ```  
+    ```sql
     BACKUP DATABASE MyDB1   
         TO DISK = 'C:\MyDB1.bak'   
         WITH FORMAT  
@@ -181,7 +181,7 @@ ms.locfileid: "62792085"
   
          En el equipo que hospeda la réplica secundaria, restaure la copia de seguridad completa del siguiente modo:  
   
-        ```  
+        ```sql
         RESTORE DATABASE MyDB1   
             FROM DISK = 'C:\MyDB1.bak'   
             WITH NORECOVERY  
@@ -197,7 +197,7 @@ ms.locfileid: "62792085"
   
          Por ejemplo, el siguiente comando restaura una copia de seguridad de una base de datos principal que reside en el directorio de datos de la instancia predeterminada de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], C:\Archivos de programa\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. La operación de restauración de base de datos debe mover la base de datos al directorio de datos de una instancia remota de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] denominada (*AlwaysOn1*), que hospeda la réplica secundaria en otro nodo de clúster. Allí, los archivos de registro y datos se restauran en el directorio *C:\Program Files\Microsoft SQL Server\MSSQL12.ALWAYSON1\MSSQL\DATA* . La operación de restauración usa WITH NORECOVERY para la base de datos secundaria en la base de datos de restauración.  
   
-        ```  
+        ```sql
         RESTORE DATABASE MyDB1  
           FROM DISK='C:\MyDB1.bak'  
          WITH NORECOVERY,   
@@ -210,7 +210,7 @@ ms.locfileid: "62792085"
   
 5.  Una vez restaurada la copia de seguridad completa, debe crearse una copia de seguridad del registro en la base de datos principal. Por ejemplo, la siguiente instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] realiza una copia de seguridad del registro en un archivo de copia de seguridad denominado *E:\MyDB1_log.bak*:  
   
-    ```  
+    ```sql
     BACKUP LOG MyDB1   
       TO DISK = 'E:\MyDB1_log.bak'   
     GO  
@@ -220,7 +220,7 @@ ms.locfileid: "62792085"
   
      Por ejemplo, la siguiente instrucción de [!INCLUDE[tsql](../../../includes/tsql-md.md)] restaura el primer registro de *C:\MyDB1.bak*:  
   
-    ```  
+    ```sql
     RESTORE LOG MyDB1   
       FROM DISK = 'E:\MyDB1_log.bak'   
         WITH FILE=1, NORECOVERY  
@@ -231,7 +231,7 @@ ms.locfileid: "62792085"
   
      Por ejemplo, la siguiente instrucción de [!INCLUDE[tsql](../../../includes/tsql-md.md)] restaura dos registros adicionales de *E:\MyDB1_log.bak*:  
   
-    ```  
+    ```sql
     RESTORE LOG MyDB1   
       FROM DISK = 'E:\MyDB1_log.bak'   
         WITH FILE=2, NORECOVERY  
@@ -260,31 +260,28 @@ ms.locfileid: "62792085"
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+-   [Proveedor de PowerShell de SQL Server](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="ExamplePSscript"></a> Ejemplo de comando y script de copias de seguridad y restauración  
  Los siguientes comandos de PowerShell realizan una copia de seguridad del registro de transacciones y una copia de seguridad completa de la base de datos en un recurso compartido de red y restauran las copias de seguridad de ese recurso compartido. En este ejemplo se supone que la ruta de acceso de archivo en que se restaura la base de datos es la misma que la ruta de acceso de archivo en que se creo la copia de seguridad de la base de datos.  
   
-```  
+```powershell
 # Create database backup  
 Backup-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -ServerInstance "SourceMachine\Instance"  
 # Create log backup  
 Backup-SqlDatabase -Database "MyDB1" -BackupAction "Log" -BackupFile "\\share\backups\MyDB1.trn" -ServerInstance "SourceMachine\Instance"  
-# Restore database backup   
+# Restore database backup
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
-# Restore log backup   
-Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"  
-  
+# Restore log backup
+Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de preparar una base de datos secundaria  
- Para completar la configuración de la base de datos secundaria, debe unir la base de datos que se acaba de restaurar al grupo de disponibilidad. Para obtener más información, vea [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
+##  <a name="FollowUp"></a> Seguimiento: después de preparar una base de datos secundaria  
+ Para completar la configuración de la base de datos secundaria, debe unir la base de datos que se acaba de restaurar al grupo de disponibilidad. Para obtener más información, vea [Join a Secondary Database to an Availability Group &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Ver también  
+ [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Argumentos RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Solución de problemas de una operación de agregar archivos con error &#40;grupos de disponibilidad AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
-  
-  
+ [Solucionar problemas de una operación &#40;Add-File grupos de disponibilidad AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

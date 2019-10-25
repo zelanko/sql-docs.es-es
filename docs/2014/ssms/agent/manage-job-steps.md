@@ -24,12 +24,12 @@ ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 395b2ea5647560b141d93ef2ba4e1a26b81b042a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893131"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798220"
 ---
 # <a name="manage-job-steps"></a>Administrar pasos de trabajo
   Los pasos de trabajo son acciones que el trabajo realiza en una base de datos o en un servidor. Cada trabajo debe estar formado por un paso, como mínimo. Los pasos de trabajo pueden ser:  
@@ -75,7 +75,7 @@ ms.locfileid: "68893131"
   
 -   El código de salida del proceso que se devuelve si el comando se ha ejecutado correctamente.  
   
--   El comando que se debe ejecutar. Para ejecutar un comando del sistema operativo, se trata simplemente del propio comando. Para un programa externo, este es el nombre del programa y sus argumentos, por ejemplo: **C:\Archivos de programa\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   El comando que se debe ejecutar. Para ejecutar un comando del sistema operativo, se trata simplemente del propio comando. En un programa externo, es el nombre del programa y los argumentos para el programa, por ejemplo: **C:\Archivos de programa\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  Debe proporcionar la ruta de acceso completa del archivo ejecutable si éste no se encuentra en un directorio especificado en la ruta de acceso del sistema o la ruta de acceso del usuario con el que se ejecuta el paso de trabajo.  
@@ -101,7 +101,7 @@ ms.locfileid: "68893131"
   
 -   El archivo de script de PowerShell que se desea abrir.  
   
- El subsistema PowerShell del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abre una sesión PowerShell y carga los complementos PowerShell de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El script de PowerShell usado como comando del paso de trabajo puede hacer referencia los cmdlets y al proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Para más información sobre cómo escribir scripts de PowerShell mediante los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ El subsistema de PowerShell del agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abre una sesión de PowerShell y carga los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. El script de PowerShell que se usa como comando de paso de trabajo puede hacer referencia al proveedor de PowerShell de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a los cmdlets. Para más información sobre cómo escribir scripts de PowerShell mediante los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>Pasos de trabajo de scripts ActiveX  
   
@@ -128,8 +128,7 @@ oServer.LoginSecure = True
 oServer.Connect "(local)"  
 'Disconnect and destroy the server object  
 oServer.DisConnect  
-Set oServer = nothing  
-  
+Set oServer = nothing
 ```  
   
 ## <a name="replication-job-steps"></a>Pasos de trabajos de replicación  
@@ -199,20 +198,18 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**Descripción**|**Tema**|  
+|**Description**|**Tema**|  
 |Describe cómo crear un paso de trabajo con un programa ejecutable.|[Crear un paso de trabajo CmdExec](create-a-cmdexec-job-step.md)|  
 |Describe cómo restablecer los permisos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Configurar un usuario para crear y administrar trabajos del Agente SQL Server](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Describe cómo crear un paso de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|Describe cómo definir opciones para los pasos de trabajo Transact-SQL del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Microsoft.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
+|Describe cómo definir opciones para los pasos de trabajo Transact-SQL del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Microsoft.|[Definir opciones de pasos de trabajo de Transact-SQL](define-transact-sql-job-step-options.md)|  
 |Describe cómo crear un paso de trabajo de script ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|Describe cómo crear y definir pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan comandos y consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
+|Describe cómo crear y definir pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan comandos y consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Crear un paso de trabajo de Analysis Services](create-an-analysis-services-job-step.md)|  
 |Describe la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar si se produce un error durante la ejecución del trabajo.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
 |Describe cómo ver detalles de pasos de trabajo en el cuadro de diálogo Propiedades de paso de trabajo.|[Ver información de pasos de trabajo](view-job-step-information.md)|  
-|Describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Delete a Job Step Log](delete-a-job-step-log.md)|  
+|Describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Eliminar un registro de paso de trabajo](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>Vea también  
- [DBO. sysjobstepslogs &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+## <a name="see-also"></a>Ver también  
+ [dbo. sysjobstepslogs &#40;Transact-SQL&#41; ](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Crear trabajos](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
-  
-  

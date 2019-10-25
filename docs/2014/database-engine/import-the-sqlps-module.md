@@ -10,21 +10,21 @@ ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 303d4cb75ad678ddd0c0f49e204566fc8a0d2c2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34859c0c516c61a73e31dbf752ab274188c6343a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064729"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797871"
 ---
 # <a name="import-the-sqlps-module"></a>Importar el módulo SQLPS
   El método recomendado para administrar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde PowerShell consiste en importar el módulo `sqlps` en un entorno de Windows PowerShell 2.0. El módulo carga y registra los complementos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y los ensamblados de administración.  
   
-1.  **Antes de comenzar:**  [Seguridad](#Security)  
+1.  **Before You Begin:**  [Security](#Security)  
   
 2.  **Para cargar el módulo:**  [Cargar el módulo sqlps](#LoadSqlps)  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  Después de importar el módulo de `sqlps` en Windows PowerShell, a continuación puede:  
   
 -   Ejecutar interactivamente comandos de Windows PowerShell.  
@@ -44,7 +44,8 @@ ms.locfileid: "66064729"
  De forma predeterminada, Windows PowerShell se ejecuta con la directiva de ejecución de scripting establecida en **Restricted**, lo que evita la ejecución de cualquier script de Windows PowerShell. Para cargar el módulo `sqlps`, puede usar el cmdlet `Set-ExecutionPolicy` para habilitar la ejecución de scripts firmados o de cualquier script. Ejecute solo scripts de orígenes de confianza y proteja todos los archivos de entrada y salida usando los permisos NTFS adecuados. Para obtener más información sobre cómo habilitar scripts de Windows PowerShell, vea cómo [ejecutar scripts de Windows PowerShell](https://docs.microsoft.com/powershell/scripting/setup/starting-windows-powershell?view=powershell-6#how-to-enable-windows-powershell-ise-on-earlier-releases-of-windows).  
   
 ##  <a name="LoadSqlps"></a> Cargar el módulo sqlps  
- **Para cargar el módulo sqlps en Windows PowerShell**  
+
+### <a name="to-load-the-sqlps-module-in-windows-powershell"></a>Para cargar el módulo sqlps en Windows PowerShell
   
 1.  Use el cmdlet `Set-ExecutionPolicy` para establecer la directiva de ejecución de script apropiada.  
   
@@ -53,18 +54,13 @@ ms.locfileid: "66064729"
 ### <a name="example-powershell"></a>Ejemplo (PowerShell)  
  En este ejemplo se carga el módulo de `sqlps` con la comprobación de nombre desactivada.  
   
-```  
+```powershell
 ## Import the SQL Server Module.  
   
 Import-Module "sqlps" -DisableNameChecking  
-  
 ```  
-  
 
-  
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [Proveedor de PowerShell de SQL Server](../powershell/sql-server-powershell-provider.md)   
  [Usar los cmdlets del motor de base de datos](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
-  
-  

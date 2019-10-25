@@ -10,15 +10,15 @@ ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: b69c6193720dd9975c364f5f4d729bba1e35d821
-ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
+ms.openlocfilehash: 758c76bf243af66157aa06f761df010a1e086a91
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "71952519"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798350"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>Instalar el modo de SharePoint de Reporting Services para SharePoint 2010
-  Los procedimientos de este tema le guían en la instalación de un único servidor del servidor de informes de Reporting Services en modo de SharePoint. Los pasos incluyen la ejecución del Asistente de instalación de SQL Server así como tareas de configuración adicionales que usan Administración central de SharePoint 2010. El tema también se puede usar para procedimientos individuales para una instalación existente, como crear una nueva aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obtener información sobre cómo agregar servidores [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] adicionales a una granja de servidores existente, consulte [Agregar un servidor de &#40;informes adicional a un&#41; conjunto de escalado horizontal de SSRS](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) y [Agregar un front-end web de Reporting Services adicional a una granja](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)de servidores.  
+  Los procedimientos de este tema le guían en la instalación de un único servidor del servidor de informes de Reporting Services en modo de SharePoint. Los pasos incluyen la ejecución del Asistente de instalación de SQL Server así como tareas de configuración adicionales que usan Administración central de SharePoint 2010. El tema también se puede usar para procedimientos individuales para una instalación existente, como crear una nueva aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obtener información sobre cómo agregar más servidores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una granja de servidores existente, consulte [Agregar un servidor &#40;de informes adicional a&#41; una granja de servidores de informes de SSRS](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) y [Agregar un front-end web de Reporting Services adicional a una granja](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)de servidores.  
   
 ||  
 |-|  
@@ -27,7 +27,7 @@ ms.locfileid: "71952519"
  Una instalación de servidor único resulta de utilidad en los escenarios de desarrollo y pruebas pero no se recomienda en entornos de producción.  
   
 > [!NOTE]  
->  Para obtener información sobre la actualización y la instalación en modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] existente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
+>  Para obtener información sobre la actualización y la instalación del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] existente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 
   
@@ -142,20 +142,20 @@ ms.locfileid: "71952519"
   
 4.  Ejecute el siguiente comando de PowerShell para instalar el servicio de SharePoint. Si el comando se completa correctamente, muestra una nueva línea en el shell de administración. No se devuelve ningún mensaje al shell de administración cuando el comando se completa correctamente:  
   
-    ```  
+    ```powershell
     Install-SPRSService  
     ```  
   
 5.  Ejecute el siguiente comando de PowerShell para instalar el proxy del servicio:  
   
-    ```  
+    ```powershell
     Install-SPRSServiceProxy  
     ```  
   
 6.  Ejecute el siguiente comando de PowerShell para iniciar el servicio o vea en las notas siguientes las indicaciones para iniciar el servicio de Administración Central de SharePoint:  
   
-    ```  
-    get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
+    ```powershell
+    Get-SPServiceInstance -All | Where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
     ```  
   
  También puede iniciar el servicio de Administración central de SharePoint en lugar de ejecutar el tercer comando de PowerShell. Los siguientes pasos también son útiles para comprobar que el servicio se está ejecutando.  
@@ -168,9 +168,7 @@ ms.locfileid: "71952519"
   
     > [!NOTE]  
     >  Si el servicio Reporting Services permanece en el estado **iniciando** y no cambia a **iniciado**, compruebe que el servicio ' administración de SharePoint 2010 ' está iniciado en Windows Administrador del servidor.  
-  
 
-  
 ##  <a name="bkmk_create_serrviceapplication"></a>Crear una aplicación de servicio de Reporting Services  
  En esta sección se proporcionan los pasos para crear una aplicación de servicio y una descripción de las propiedades, si está revisando una aplicación de servicio existente.  
   
@@ -201,12 +199,12 @@ ms.locfileid: "71952519"
   
 11. El proceso de creación de la aplicación de servicio podría tardar varios minutos en completarse. Cuando se complete, verá un mensaje de confirmación y un vínculo a una página **Aprovisionar suscripciones y alertas** . Complete el paso de aprovisionamiento si desea utilizar las características de alertas y las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para más información, vea [Aprovisionar suscripciones y alertas para aplicaciones de servicio SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
- ![Contenido relacionado con PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell") Para obtener información sobre el uso de PowerShell para crear una aplicación de servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [para crear una aplicación de servicio de Reporting Services mediante PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
+ ![Contenido relacionado con PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Contenido relacionado con PowerShell") Para obtener información sobre el uso de PowerShell para crear una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [para crear una aplicación de servicio de Reporting Services con PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
   
 
   
 ##  <a name="bkmk_powerview"></a>Active la característica Power View colección de sitios.  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una característica del complemento [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] @ no__t-2 para [!INCLUDE[msCoName](../../includes/msconame-md.md)] @ no__t-4 Enterprise Edition, es una característica de colección de sitios. La característica se activa automáticamente para colecciones de sitios raíz y se crean las colecciones de sitios tras instalar el complemento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si tiene previsto utilizar [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], compruebe que la característica está activada.  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una característica de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]complemento[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition, es una característica de colección de sitios. La característica se activa automáticamente para colecciones de sitios raíz y se crean las colecciones de sitios tras instalar el complemento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si tiene previsto utilizar [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], compruebe que la característica está activada.  
   
  Si instala el complemento de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint 2010 después de instalar el producto de SharePoint 2010, la característica de integración del servidor de informes y la característica de integración de la vista avanzada se activarán únicamente para colecciones de sitios raíz. Para las demás colecciones de sitios, active manualmente las características.  
   
@@ -251,5 +249,3 @@ ms.locfileid: "71952519"
  [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [Características admitidas por las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
-  
-  

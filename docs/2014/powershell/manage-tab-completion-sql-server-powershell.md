@@ -10,17 +10,17 @@ ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec946a26c898c4ed66bd60e1ad71e69c008766df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e759e521d62def1f253ab5ef6423c29fb7fa2b4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922956"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797785"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Administrar la finalización mediante tabulador (SQL Server PowerShell)
   Los complementos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell presentan tres variables (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems` y `$SqlServerIncludeSystemObjects`) para controlar la finalización mediante el tabulador de Windows PowerShell. La finalización mediante el tabulador reduce la cantidad de texto que se debe escribir al devolver las tablas de elementos cuyos nombres empiezan por la cadena que está escribiendo.  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  Con la finalización mediante el tabulador de PowerShell, cuando se ha escrito parte de una ruta de acceso o nombre de cmdlet, se puede presionar la tecla Tab para obtener una lista de los elementos cuyos nombres coincidan con lo que ya se ha escrito. Se puede seleccionar a continuación el elemento que desee en la lista sin tener que escribir el resto del nombre.  
   
  Si está trabajando en una base de datos que tiene muchos objetos, las listas para finalización mediante tabulador pueden llegar a ser muy grandes. Algunos tipos de objeto de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , como las vistas, también tienen una gran cantidad de objetos de sistema.  
@@ -42,14 +42,12 @@ ms.locfileid: "62922956"
 ### <a name="example-powershell"></a>Ejemplo (PowerShell)  
  En el ejemplo siguiente se establecen las tres variables y se enumeran sus valores:  
   
-```  
+```powershell
 $SqlServerMaximumTabCompletion = 20  
 $SqlServerMaximumChildItems = 10  
 $SqlServerIncludeSystemObjects = $False  
 dir variable:sqlserver*  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

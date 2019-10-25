@@ -1,5 +1,5 @@
 ---
-title: Crear, modificar y eliminar las claves externas | Documentos de Microsoft
+title: Crear, modificar y quitar claves externas | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f8c7474d645de0ba8b8c94beed44ee7c02d33de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63021878"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796960"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Crear, modificar y eliminar las claves externas
   En los objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), el objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> representa las claves externas.  
@@ -27,7 +27,7 @@ ms.locfileid: "63021878"
  Las columnas que representan la clave externa se muestran en la propiedad de objeto `Columns` del objeto <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>. La propiedad <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> que se encuentra en la tabla especificada en la propiedad <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> representa la clave principal a la que hace referencia la clave externa.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un&#35; proyecto de Visual C SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Crear, modificar y quitar una clave externa en Visual Basic  
  En este ejemplo de código se muestra cómo crear una relación de clave externa entre una o varias columnas de una tabla y una columna de clave principal de otra tabla.  
@@ -37,7 +37,7 @@ ms.locfileid: "63021878"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-c"></a>Crear, modificar y quitar una clave externa en Visual C#  
  En este ejemplo de código se muestra cómo crear una relación de clave externa entre una o varias columnas de una tabla y una columna de clave principal de otra tabla.  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -66,7 +66,7 @@ ms.locfileid: "63021878"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-powershell"></a>Crear, modificar y quitar una clave externa en PowerShell  
  En este ejemplo de código se muestra cómo crear una relación de clave externa entre una o varias columnas de una tabla y una columna de clave principal de otra tabla.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
@@ -92,7 +92,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Ejemplo: Las claves externas, claves principales y columnas de restricción Unique  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>Ejemplo: claves externas, claves principales y columnas de restricción UNIQUE  
  Este ejemplo explica cómo:  
   
 -   Buscar una clave externa en un objeto existente.  
@@ -103,7 +103,7 @@ $fk.Create()
   
  La versión de C# de este ejemplo:  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -198,7 +198,7 @@ public class A {
   
  La versión de Visual Basic de este ejemplo:  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -291,5 +291,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

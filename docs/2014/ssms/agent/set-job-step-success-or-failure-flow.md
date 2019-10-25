@@ -15,12 +15,12 @@ ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c592964e5da7503c39b97db1f332a9420a1b53f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e9412ee0bd2be7b44dff2a06bd674abee0da34a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033737"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798166"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
   Al crear trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede especificar la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realizará si se produce un error durante la ejecución de un trabajo. Tras la resolución correcta o errónea de cada paso del trabajo, determine la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debería realizar. A continuación, utilice el siguiente procedimiento para configurar la lógica del flujo de las acciones de los pasos de trabajo mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -37,12 +37,12 @@ ms.locfileid: "63033737"
   
      [objetos de administración de SQL Server](#SMO)  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>Para establecer el flujo con éxito o con errores de los pasos de un trabajo  
   
@@ -80,7 +80,7 @@ ms.locfileid: "63033737"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -92,11 +92,10 @@ ms.locfileid: "63033737"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Para obtener más información, [vea &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
- **Para establecer el flujo con éxito o con errores de los pasos de un trabajo**  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+
+### <a name="to-set-job-step-success-or-failure-flow"></a>Para establecer el flujo con éxito o con errores de los pasos de un trabajo
   
  Utilice la clase `JobStep` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

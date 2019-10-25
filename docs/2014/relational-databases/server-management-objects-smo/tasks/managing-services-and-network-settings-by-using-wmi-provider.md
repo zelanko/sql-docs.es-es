@@ -1,5 +1,5 @@
 ---
-title: Administración de servicios y la configuración de red mediante el uso de proveedor WMI | Microsoft Docs
+title: Administrar servicios y configuración de red mediante el proveedor WMI | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226212"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796629"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Administrar servicios y configuración de red utilizando el proveedor WMI
   El proveedor WMI es una interfaz publicada que la Consola de administración de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MMC) utiliza para administrar los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y protocolos de red. En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> representa el proveedor WMI.  
@@ -30,7 +30,7 @@ ms.locfileid: "63226212"
 ## <a name="example"></a>Ejemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- Para los programas que utilizan el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de WMI, debe incluir el `Imports` instrucción para calificar el espacio de nombres WMI. Inserte la instrucción después de las demás instrucciones `Imports`, antes de cualquier declaración de la aplicación, como:  
+ En el caso de los programas que utilizan el proveedor WMI de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe incluir la instrucción `Imports` para certificar el espacio de nombres WMI. Inserte la instrucción después de las demás instrucciones `Imports`, antes de cualquier declaración de la aplicación, como:  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63226212"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-visual-basic"></a>Habilitar un protocolo de servidor usando una cadena URN en Visual Basic  
  En este ejemplo de código se muestra cómo identificar un protocolo de servidor usando un objeto URN y, a continuación, se muestra cómo habilitar el protocolo.  
   
-```  
+```vb
 'This program must run with administrator privileges.  
         'Declare the ManagedComputer WMI interface.  
         Dim mc As New ManagedComputer()  
@@ -68,7 +68,7 @@ ms.locfileid: "63226212"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-powershell"></a>Habilitar un protocolo de servidor usando una cadena URN en PowerShell  
  En este ejemplo de código se muestra cómo identificar un protocolo de servidor usando un objeto URN y, a continuación, se muestra cómo habilitar el protocolo.  
   
-```  
+```powershell
 #This example shows how to identify a server protocol using a URN object, and then enable the protocol  
 #This program must run with administrator privileges.  
   
@@ -95,7 +95,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-visual-c"></a>Iniciar y detener un servicio en Visual c#  
  En el ejemplo de código se muestra cómo se detiene e inicia una instancia de SQL Server.  
   
-```  
+```csharp
 {   
    //Declare and create an instance of the ManagedComputer   
    //object that represents the WMI Provider services.   
@@ -139,7 +139,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-powershell"></a>Iniciar y detener un servicio en PowerShell  
  En el ejemplo de código se muestra cómo se detiene e inicia una instancia de SQL Server.  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlWmiManagement")  
   
@@ -172,11 +172,8 @@ $svc.Refresh()
 $svc.ServiceState  
 }  
 $svc.ServiceState  
-"Service" + $svc.Name + "is now started"  
-  
+"Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Conceptos del proveedor WMI de administración de configuración](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
-  
-  

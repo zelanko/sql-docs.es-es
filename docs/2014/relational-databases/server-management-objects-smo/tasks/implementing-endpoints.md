@@ -1,5 +1,5 @@
 ---
-title: Implementar extremos | Documentos de Microsoft
+title: Implementación de extremos | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: f8674dbb-9bc0-488f-9def-e9e0ce1ddf86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88f1d38f1769659842757d535309c6e42d70a289
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 042bc1cfe2ccf09580d052b1a4bc045d03fc81ee
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63158745"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796836"
 ---
 # <a name="implementing-endpoints"></a>Implementar extremos
   Un extremo es un servicio que puede escuchar originalmente las solicitudes. SMO admite varios tipos de extremos utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint>. Puede crear un servicio de extremos que administre un tipo específico de carga útil, que utiliza un protocolo concreto, creando una instancia de un objeto <xref:Microsoft.SqlServer.Management.Smo.Endpoint> y estableciendo sus propiedades.  
@@ -49,7 +49,7 @@ ms.locfileid: "63158745"
  Si se ha creado el extremo y se ha definido totalmente, se puede conceder, revocar y denegar el acceso a los usuarios de la base de datos, grupos, roles e inicio de sesión.  
   
 ## <a name="example"></a>Ejemplo  
- Para el siguiente ejemplo de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para el siguiente ejemplo de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) y [crear un&#35; proyecto de Visual C SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-basic"></a>Crear un servicio de extremo de creación de reflejo de base de datos en Visual Basic  
  En el ejemplo de código se muestra cómo crear un extremo de creación de reflejo de base de datos en SMO. Esto es necesario antes de crear un espejo de la base de datos. Utilice <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> y otras propiedades en el objeto <xref:Microsoft.SqlServer.Management.Smo.Database> para crear un espejo de la base de datos.  
@@ -59,7 +59,7 @@ ms.locfileid: "63158745"
 ## <a name="creating-a-database-mirroring-endpoint-service-in-visual-c"></a>Crear un servicio de extremo de creación de reflejo de base de datos en Visual C#  
  En el ejemplo de código se muestra cómo crear un extremo de creación de reflejo de base de datos en SMO. Esto es necesario antes de crear un espejo de la base de datos. Utilice <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> y otras propiedades en el objeto <xref:Microsoft.SqlServer.Management.Smo.Database> para crear un espejo de la base de datos.  
   
-```  
+```csharp
 {  
             //Set up a database mirroring endpoint on the server before   
         //setting up a database mirror.   
@@ -86,10 +86,10 @@ ms.locfileid: "63158745"
 ## <a name="creating-a-database-mirroring-endpoint-service-in-powershell"></a>Crear un servicio de extremo de creación de reflejo de la base de datos en PowerShell  
  En el ejemplo de código se muestra cómo crear un extremo de creación de reflejo de base de datos en SMO. Esto es necesario antes de crear un espejo de la base de datos. Utilice <xref:Microsoft.SqlServer.Management.Smo.Database.IsMirroringEnabled%2A> y otras propiedades en el objeto <xref:Microsoft.SqlServer.Management.Smo.Database> para crear un espejo de la base de datos.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
-$srv = get-item default  
+$srv = Get-Item default  
   
 #Get a new endpoint to congure and add  
 $ep = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Endpoint -argumentlist $srv,"Mirroring_Endpoint"  
@@ -111,7 +111,5 @@ $ep.Start()
 $ep.EndpointState;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
-  
-  

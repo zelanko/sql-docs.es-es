@@ -15,12 +15,12 @@ ms.assetid: 8c7ef3b3-c06d-4a27-802d-ed329dc86ef3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b044fb7b3b8dd0cc0586cc9908daab8f0a2b6424
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a00b07bb54d30d4e1db49cf2db70dec8286b27e0
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189521"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798291"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
   Puede crear una programación para los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]u Objetos de administración de SQL Server.  
@@ -37,12 +37,12 @@ ms.locfileid: "68189521"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-schedule"></a>Para crear una programación  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68189521"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     -- creates a schedule named RunOnce.   
     -- The schedule runs one time, at 23:30 on the day that the schedule is created.  
     USE msdb ;  
@@ -88,11 +88,9 @@ ms.locfileid: "68189521"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql).  
+ Para obtener más información, [vea &#40;SP_ADD_SCHEDULE Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql).  
   
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
  **Para crear una programación**  
   
  Utilice la clase `JobSchedule` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

@@ -15,12 +15,12 @@ ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4be66faa119b4e89c05ffae149bc7a518323055c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c64c70965d00967e0cac254cf4d26f6ce25ec5f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226153"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796793"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Conceder, revocar y denegar permisos
   El objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> se utiliza para asignar un conjunto de permisos o un permiso de servidor individual al objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Para los permisos en el nivel de servidor, el cesionario hace referencia a un inicio de sesión. Se hace una lista de los inicios de sesión autenticados por Windows como nombres de usuario de Windows. Cuando este ejemplo de código se ejecuta, revoca el permiso del cesionario y comprueba se ha quitado con el método <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  
@@ -28,12 +28,12 @@ ms.locfileid: "63226153"
  Los permisos de bases de datos y permisos de objetos de bases de datos pueden asignarse de igual forma utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> y el objeto <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un proyecto de Visual Basic SMO en Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un&#35; proyecto de Visual C SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Conceder permisos de servidor en Visual Basic  
  En este ejemplo de código se conceden los permisos Crear extremo y Modificar cualquier extremo al inicio de sesión especificado y, a continuación, se enumeran y se muestran los permisos. Se revoca uno de los permisos y se enumeran los permisos de nuevo a continuación. En este ejemplo se supone que el inicio de sesión especificado tiene los permisos especificados para comenzar.  
   
-```  
+```vb
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -112,7 +112,7 @@ End Class
 ## <a name="granting-server-permissions-in-visual-c"></a>Conceder permisos de servidor en Visual C#  
  En este ejemplo de código se conceden los permisos Crear extremo y Modificar cualquier extremo al inicio de sesión especificado y, a continuación, se enumeran y se muestran los permisos. Se revoca uno de los permisos y se enumeran los permisos de nuevo a continuación. En este ejemplo se supone que el inicio de sesión especificado tiene los permisos especificados para comenzar.  
   
-```  
+```csharp
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -192,7 +192,7 @@ public class A {
 ## <a name="granting-server-permissions-in-powershell"></a>Conceder permisos de servidor en PowerShell  
  En este ejemplo de código se conceden los permisos Crear extremo y Modificar cualquier extremo al inicio de sesión especificado y, a continuación, se enumeran y se muestran los permisos. Se revoca uno de los permisos y se enumeran los permisos de nuevo a continuación. En este ejemplo se supone que el inicio de sesión especificado tiene los permisos especificados para comenzar.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  
@@ -251,7 +251,5 @@ foreach ( $spi in $spis)
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Jerarquía de permisos &#40;motor de base de datos&#41;](../../security/permissions-hierarchy-database-engine.md)  
-  
-  

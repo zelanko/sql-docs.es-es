@@ -1,5 +1,5 @@
 ---
-title: Iniciar, detener, pausar, reanudar, reiniciar el motor de base de datos, el Agente SQL Server o el servicio SQL Server Browser | Microsoft Docs
+title: Iniciar, detener, pausar, reanudar, reiniciar el servicio de Motor de base de datos, Agente SQL Server o SQL Server Browser | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -40,14 +40,14 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808754"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797945"
 ---
-# <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser
+# <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service
   En este tema se describe cómo iniciar, comandos de detener, comandos de pausar, comandos de reanudar o reiniciar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], comandos de el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser mediante el uso del Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , comandos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], comandos de **net** desde un símbolo del sistema, comandos de [!INCLUDE[tsql](../../includes/tsql-md.md)], comandos de or PowerShell.  
   
 -   **Antes de empezar:**  
@@ -70,7 +70,7 @@ ms.locfileid: "62808754"
   
     -   [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Services"></a> ¿Qué es el servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , el servicio Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser?  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son programas ejecutables que funcionan como un servicio de Windows. Los programas que se ejecutan como servicio de Windows pueden seguir funcionando sin mostrar actividad alguna en la pantalla del equipo.  
@@ -117,13 +117,13 @@ ms.locfileid: "62808754"
 ####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, solo los miembros del grupo local de administradores pueden iniciar, detener, pausar, reanudar o reiniciar un servicio. Para conceder la capacidad de administrar servicios a usuarios que no son administradores, vea [CÓMO: Conceder a los usuarios derechos para administrar servicios en la familia Windows Server 2003](https://support.microsoft.com/kb/325349). El proceso es similar en las demás versiones de Windows.  
   
- Deteniendo el [!INCLUDE[ssDE](../../includes/ssde-md.md)] utilizando el [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` comando debe pertenecer a la **sysadmin** o **serveradmin** roles fijos de servidor y no es transferible.  
+ Detener el [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante el comando [!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN` requiere la pertenencia a los roles fijos de servidor **sysadmin** o **ServerAdmin** , y no es transferible.  
   
 ##  <a name="SSCMProcedure"></a> Usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>Para iniciar, detener, pausar, reanudar o reiniciar una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
-1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, por último, **Administrador de configuración de SQL Server**.  
+1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, haga clic en **Administrador de configuración de SQL Server**.  
   
 2.  Si aparece el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Sí**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "62808754"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-includessnoversionincludesssnoversion-mdmd-browser-or-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>Para iniciar, detener, pausar, reanudar o reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser o una instancia de Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, por último, **Administrador de configuración de SQL Server**.  
+1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, haga clic en **Administrador de configuración de SQL Server**.  
   
 2.  Si aparece el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Sí**.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62808754"
 5.  Haga clic en **Aceptar** para cerrar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  El Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede pausar.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El agente no se puede pausar.  
   
 ##  <a name="SSMSProcedure"></a> Usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio  
   
@@ -180,7 +180,7 @@ ms.locfileid: "62808754"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     -o bien-  
+     \- O bien -  
   
      **net start MSSQLSERVER**  
   
@@ -190,7 +190,7 @@ ms.locfileid: "62808754"
   
      **net start "SQL Server (** *instancename* **)"**  
   
-     -o bien-  
+     \- O bien -  
   
      **net start MSSQL$** *instancename*  
   
@@ -200,7 +200,7 @@ ms.locfileid: "62808754"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     -o bien-  
+     \- O bien -  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -213,7 +213,7 @@ ms.locfileid: "62808754"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     -o bien-  
+     \- O bien -  
   
      **net start SQLSERVERAGENT**  
   
@@ -223,7 +223,7 @@ ms.locfileid: "62808754"
   
      **net start "SQL Server Agent(** *instancename* **)"**  
   
-     -o bien-  
+     \- O bien -  
   
      **net start SQLAgent$** *instancename*  
   
@@ -235,7 +235,7 @@ ms.locfileid: "62808754"
   
      **net start "SQL Server Browser"**  
   
-     -o bien-  
+     \- O bien -  
   
      **net start SQLBrowser**  
   
@@ -264,7 +264,7 @@ ms.locfileid: "62808754"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- Para obtener más información sobre la `SHUTDOWN` instrucción, consulte [apagado &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
+ Para obtener más información sobre la instrucción `SHUTDOWN`, [vea &#40;Shutdown de Transact&#41;-SQL](/sql/t-sql/language-elements/shutdown-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
   
@@ -281,8 +281,7 @@ ms.locfileid: "62808754"
     ```powershell  
     # Get a reference to the ManagedComputer class.  
     CD SQLSERVER:\SQL\computername  
-    $Wmi = (get-item .).ManagedComputer  
-  
+    $Wmi = (Get-Item .).ManagedComputer
     ```  
   
 3.  Identifique el servicio que desea detener o iniciar. Elija una de las líneas siguientes. Reemplace `instancename` por el nombre de la instancia con nombre.  
@@ -338,8 +337,6 @@ ms.locfileid: "62808754"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Iniciar SQL Server con la configuración mínima](start-sql-server-with-minimal-configuration.md)   
  [Características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
-  
-  

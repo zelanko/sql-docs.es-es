@@ -1,18 +1,18 @@
 ---
 title: Descarga del controlador Microsoft OLE DB para SQL Server | Microsoft Docs
 description: Descarga del controlador Microsoft OLE DB para SQL Server
-ms.date: 05/13/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c2a784a291bb7517f1c4a2cf867306388849f21f
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.openlocfilehash: dc0ee4de32be9cf146b4e185d5e973972dbc0fd2
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822722"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381844"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Descarga del controlador Microsoft OLE DB para SQL Server
 
@@ -22,7 +22,7 @@ ms.locfileid: "66822722"
 
 La siguiente versión del controlador de Microsoft OLE DB para SQL Server está disponible para su descarga:
 
-- [Controlador Microsoft OLE DB 18.2.2 para SQL Server](https://go.microsoft.com/fwlink/?linkid=871294)
+- [Controlador Microsoft OLE DB 18.3.0 para SQL Server](https://go.microsoft.com/fwlink/?linkid=871294)
 
 ## <a name="see-also"></a>Vea también
 

@@ -21,17 +21,17 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc4d75a6af4441d2030a71306801449ee74a6a02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a2628bc5d098c32fc63d4a80bcf4c7b403a82a0
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579977"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359408"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publicar informes en un servidor de informes
   Después de diseñar y probar un informe o un conjunto de informes, puede usar las características de implementación integradas en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para publicar los informes en un servidor de informes. Puede publicar informes individuales en un proyecto del servidor de informes que puede incluir varios informes y orígenes de datos. Publicar un proyecto del servidor de informes es la manera más fácil de publicar varios informes. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa el término *implementación*en lugar del término *publicación*. Las dos condiciones son intercambiables.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] proporciona las configuraciones de proyecto para administrar la publicación de informes. La configuración especifica la ubicación del servidor de informes, la versión de SQL Server Reporting Services instalada en el servidor de informes, si los orígenes de datos publicados en el servidor de informes se sobrescriben y otras opciones. Por ejemplo, la configuración "Debug" puede publicar en un servidor distinto de la configuración de "lanzamiento". Además de utilizar las configuraciones que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] proporciona, puede crear otras adicionales.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] proporciona las configuraciones de proyecto para administrar la publicación de informes. La configuración especifica la ubicación del servidor de informes, la versión de SQL Server Reporting Services instalada en el servidor de informes, si los orígenes de datos publicados en el servidor de informes se sobrescriben y otras opciones. Por ejemplo, la configuración "Depurar" puede publicar en un servidor distinto que la configuración "Versión". Además de utilizar las configuraciones que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] proporciona, puede crear otras adicionales.  
  
 ## <a name="requirements-to-publish"></a>Requisitos para publicar
 El permiso se determina a través de la seguridad basada en roles que define el administrador del servidor de informes. Normalmente, las operaciones de publicación se conceden a través del **rol Publicador**.  

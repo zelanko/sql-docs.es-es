@@ -14,12 +14,12 @@ ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c375c8776f7c33b445676e45ce70839353d469f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211329"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798180"
 ---
 # <a name="start-a-job"></a>Start a Job
   En este tema se describe cómo iniciar la ejecución de un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server.  
@@ -38,14 +38,14 @@ ms.locfileid: "68211329"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
-#### <a name="to-start-a-job"></a>Para iniciar un trabajo  
+### <a name="to-start-a-job"></a>Para iniciar un trabajo  
   
 1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, después, expándala.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68211329"
   
 ##  <a name="TSQL"></a> Usar Transact-SQL  
   
-#### <a name="to-start-a-job"></a>Para iniciar un trabajo  
+### <a name="to-start-a-job"></a>Para iniciar un trabajo  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -69,7 +69,7 @@ ms.locfileid: "68211329"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     -- starts a job named Weekly Sales Data Backup.    
     USE msdb ;  
     GO  
@@ -78,11 +78,10 @@ ms.locfileid: "68211329"
     GO  
     ```  
   
- Para más información, vea [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
+ Para obtener más información, vea [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql).  
   
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
- **Para iniciar un trabajo**  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+
+### <a name="to-start-a-job"></a>Para iniciar un trabajo
   
  Llame al método `Start` de la clase `Job` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

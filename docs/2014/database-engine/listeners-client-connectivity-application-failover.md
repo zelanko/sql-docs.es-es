@@ -1,5 +1,5 @@
 ---
-title: Los agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de aplicación (SQL Server) | Microsoft Docs
+title: Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de aplicaciones (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,12 +17,12 @@ ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62774798"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797843"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación (SQL Server)
   Este tema contiene información acerca de las consideraciones de conectividad del cliente de [!INCLUDE[ssHADR](../includes/sshadr-md.md)] y la funcionalidad de conmutación por error de aplicaciones.  
@@ -84,7 +84,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Puede seguir eligiendo hacer referencia directamente a la instancia de SQL Server de las réplicas principal o secundaria en lugar de utilizar el nombre del servidor del agente de escucha del grupo de disponibilidad; sin embargo, si decide realizar esta acción, perderá la ventaja que supone dirigir automáticamente las nuevas conexiones a la réplica principal actual.  También perderá la ventaja del enrutamiento de solo lectura.  
   
 ##  <a name="ConnectToSecondary"></a> Usar un agente de escucha para conectarse a una réplica secundaria de solo lectura (enrutamiento de solo lectura)  
- El*enrutamiento de solo lectura* se refiere a la capacidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de enrutar las conexiones entrantes a un agente de escucha de grupo de disponibilidad a una réplica secundaria configurada para permitir las cargas de trabajo de solo lectura. Una conexión entrante que hace referencia al nombre de un agente de escucha del grupo de disponibilidad se puede enrutar automáticamente a una réplica de solo lectura si se cumple lo siguiente:  
+ El *enrutamiento de solo lectura* se refiere a la capacidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de enrutar las conexiones entrantes a un agente de escucha de grupo de disponibilidad a una réplica secundaria configurada para permitir las cargas de trabajo de solo lectura. Una conexión entrante que hace referencia al nombre de un agente de escucha del grupo de disponibilidad se puede enrutar automáticamente a una réplica de solo lectura si se cumple lo siguiente:  
   
 -   Al menos una réplica secundaria se establece para acceso de solo lectura, y cada réplica secundaria de solo lectura y la réplica principal se configuran para admitir el enrutamiento de solo lectura. Para obtener más información, vea [Para configurar réplicas de disponibilidad para el enrutamiento de solo lectura](#ConfigureARsForROR), más adelante en esta sección.  
   
@@ -118,7 +118,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- En este ejemplo de cadena de comparación, el cliente intenta conectarse a un agente de escucha del grupo de disponibilidad denominado `AGListener` en el puerto 1433 (también puede omitir el puerto si el agente de escucha del grupo de disponibilidad escucha en 1433).  La cadena de conexión tiene el `ApplicationIntent` propiedad establecida en `ReadOnly`, por lo que es un *cadena de conexión de intención de lectura*.  Sin este valor, el servidor no habría intentado un enrutamiento de solo lectura de la conexión.  
+ En este ejemplo de cadena de comparación, el cliente intenta conectarse a un agente de escucha del grupo de disponibilidad denominado `AGListener` en el puerto 1433 (también puede omitir el puerto si el agente de escucha del grupo de disponibilidad escucha en 1433).  La cadena de conexión tiene la propiedad `ApplicationIntent` establecida en `ReadOnly`, lo que lo convierte en una *cadena de conexión de intención de lectura*.  Sin este valor, el servidor no habría intentado un enrutamiento de solo lectura de la conexión.  
   
  La base de datos principal del grupo de disponibilidad procesa la solicitud de enrutamiento de solo lectura entrante e intenta localizar una réplica en línea de solo lectura que esté unida a la réplica principal y esté configurada para el enrutamiento de solo lectura.  El cliente recibe información de conexión del servidor de réplica principal y se conecta a la réplica de solo lectura identificada.  
   
@@ -172,7 +172,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; Mult
   
  Se debe configurar un certificado X.509 para cada nodo de servidor participante en el clúster de conmutación por error con una lista de todos los agentes de escucha del grupo de disponibilidad establecidos en el nombre alternativo del asunto del certificado.  
   
- Por ejemplo, si el WSFC tiene tres agentes de escucha del grupo de disponibilidad con los nombres `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`y `AG3_listener.Adventure-Works.com`, el nombre alternativo del asunto del certificado debe establecerse del modo siguiente:  
+ Por ejemplo, si el WSFC tiene tres agentes de escucha del grupo de disponibilidad con los nombres `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com` y `AG3_listener.Adventure-Works.com`, el nombre alternativo del asunto del certificado debe establecerse del modo siguiente:  
   
 ```  
 CN = ServerFQDN  
@@ -184,7 +184,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
   
  Utilice la herramienta de línea de comandos de Windows `setspn` para configurar el SPN.  Por ejemplo, para configurar un SPN para un grupo de disponibilidad denominado `AG1listener.Adventure-Works.com` hospedado en un conjunto de instancias de SQL Server configuradas para ejecutarse en la cuenta de dominio `corp/svclogin2`:  
   
-```  
+```cmd
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
@@ -192,7 +192,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
--   [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
+-   [SQL Server de conectividad &#40;de cliente de AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
 -   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
@@ -206,17 +206,15 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server guía de soluciones AlwaysOn para alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [Introducción al agente de escucha del grupo de la disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/16/introduction-to-the-availability-group-listener.aspx) (un blog del equipo de SQL Server AlwaysOn)  
   
--   [Blog del equipo de AlwaysOn SQL Server: El blog del equipo de AlwaysOn oficial SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
+-   [Blog del equipo de AlwaysOn SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
+## <a name="see-also"></a>Ver también  
+ [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)    
+ [SQL Server de conectividad &#40;de cliente de AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Secundarias activas: Las réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Secundarias activas: réplicas &#40;secundarias&#41; legibles grupos de disponibilidad AlwaysOn](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)
-  
-  

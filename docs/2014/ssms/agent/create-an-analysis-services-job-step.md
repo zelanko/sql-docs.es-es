@@ -12,12 +12,12 @@ ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e20e6f738e7dcfe4aab576cb042e2bf00107ce98
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 193805128ec3e557d219561bc29a93e9540fd5b1
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893396"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798254"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
   En este tema se describe cómo crear y definir los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que ejecutan comandos y consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server.  
@@ -36,7 +36,7 @@ ms.locfileid: "68893396"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68893396"
   
 -   Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Para crear un paso de trabajo de comando de Analysis Services  
   
@@ -106,9 +106,8 @@ ms.locfileid: "68893396"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
-  
-              -- Creates a job step that uses XMLA to create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database  
+    ```sql
+    -- Creates a job step that uses XMLA to create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -145,9 +144,8 @@ ms.locfileid: "68893396"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
-  
-              -- Creates a job step that uses MDX to return data  
+    ```sql
+    -- Creates a job step that uses MDX to return data  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -169,5 +167,3 @@ ms.locfileid: "68893396"
  **Para crear un paso de trabajo para script de PowerShell**  
   
  Utilice la clase `JobStep` con un lenguaje de programación que seleccione, por ejemplo XMLA o MDX. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

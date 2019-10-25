@@ -10,21 +10,21 @@ ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 705b1a8438e4d8d4d193c30d0237467ea977abda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87ed68cc3540075e0fd5d357182d709394f44455
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049508"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797501"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Configurar los valores de la propiedad FailureConditionLevel
   Utilice la propiedad FailureConditionLevel para establecer las condiciones para que la instancia de clúster de conmutación por error AlwaysOn (FCI) conmute por error o se reinicie. Los cambios en esta propiedad se aplican inmediatamente sin tener que reiniciar el servicio de Clúster de conmutación por error de Windows Server (WSFC) o el recurso FCI.  
   
--   **Antes de empezar:**  [Configuración de la propiedad FailureConditionLevel](#Restrictions), [seguridad](#Security)  
+-   **Antes de empezar:**  [Valores de propiedad FailureConditionLevel](#Restrictions), [Seguridad](#Security)  
   
 -   **Para configurar la propiedad FailureConditionLevel, mediante,** [PowerShell](#PowerShellProcedure), [Administrador de clústeres de conmutación por error](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Valores de propiedad FailureConditionLevel  
  Las condiciones de error se establecen en una escala creciente. Para los niveles 1 a 5, cada nivel incluye todas las condiciones de los niveles anteriores además de sus propias condiciones. Esto significa que con cada nivel, hay mayor probabilidad de que se produzca una conmutación por error o un reinicio.  Para obtener más información, vea la sección "Determinar los errores" del tema [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md) .  
@@ -36,26 +36,24 @@ ms.locfileid: "63049508"
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
   
-##### <a name="to-configure-failureconditionlevel-settings"></a>Para configurar los valores de FailureConditionLevel  
+### <a name="to-configure-failureconditionlevel-settings"></a>Para configurar los valores de FailureConditionLevel  
   
 1.  Inicie Windows PowerShell con derechos elevados mediante **Ejecutar como administrador**.  
   
 2.  Importe el módulo `FailoverClusters` para habilitar los cmdlets de clúster.  
   
-3.  Usar el `Get-ClusterResource` para encontrar el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] recursos, a continuación, usar `Set-ClusterParameter` cmdlet para establecer el **FailureConditionLevel** propiedad para una instancia de clúster de conmutación por error.  
+3.  Use el cmdlet `Get-ClusterResource` para buscar el recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, después, use `Set-ClusterParameter` cmdlet para establecer la propiedad **FailureConditionLevel** para una instancia de clúster de conmutación por error.  
   
 > [!TIP]  
 >  Cada vez que abre una nueva ventana de PowerShell, necesita importar el módulo `FailoverClusters`.  
-  
-### <a name="example-powershell"></a>Ejemplo (PowerShell)  
+
  En el ejemplo siguiente se cambia el valor de FailureConditionLevel en el recurso " [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] " de`SQL Server (INST1)`para la conmutación por error o el reinicio en caso de que se produzcan errores críticos en el servidor.  
   
 ```powershell  
 Import-Module FailoverClusters  
   
 $fci = "SQL Server (INST1)"  
-Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3  
-  
+Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 ```  
   
 ### <a name="related-content-powershell"></a>Contenido relacionado (PowerShell)  
@@ -67,7 +65,8 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 -   [Comandos de recursos de clúster y cmdlets equivalentes de Windows PowerShell](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
   
 ##  <a name="WSFC"></a> Usar el complemento Administrador de clústeres de conmutación por error  
- **Para configurar los valores de la propiedad FailureConditionLevel:**  
+
+### <a name="to-configure-failureconditionlevel-property-settings"></a>Para configurar los valores de la propiedad FailureConditionLevel
   
 1.  Abra el complemento Administrador de clústeres de conmutación por error.  
   
@@ -78,19 +77,18 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 4.  Seleccione la pestaña **Propiedades** , escriba el valor deseado para la propiedad **FaliureConditionLevel** y, a continuación, haga clic en **Aceptar** para aplicar el cambio.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
- **Para configurar los valores de la propiedad FailureConditionLevel:**  
+
+### <a name="to-configure-failureconditionlevel-property-settings"></a>Para configurar los valores de la propiedad FailureConditionLevel
   
  Con la instrucción [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] puede especificar el valor de la propiedad FailureConditionLevel.  
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  En el ejemplo siguiente se establece la propiedad FailureConditionLevel en 0, lo que indica que no se desencadenará automáticamente una conmutación por error o un reinicio si se produce algún error.  
   
-```  
+```sql
 ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel = 0;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)   
  [Failover Policy for Failover Cluster Instances](failover-policy-for-failover-cluster-instances.md)  
-  
-  

@@ -1,5 +1,5 @@
 ---
-title: Reglas de mantenimiento de PowerPivot - configurar | Microsoft Docs
+title: 'Reglas de estado de PowerPivot: configurar | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 180be5fee054ff1afff09191ee6a16707b712257
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd62e74083ec7e6ad8d55b9127376297567a4413
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071800"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797625"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Reglas de mantenimiento de PowerPivot - Configurar
   PowerPivot para SharePoint incluye reglas de mantenimiento de SharePoint que ayudan a supervisar y remediar problemas de configuración y disponibilidad del servidor. Las reglas de estado que se aplican a PowerPivot para SharePoint aparecen en la página Revisar las definiciones de la regla.  
@@ -28,24 +28,24 @@ ms.locfileid: "66071800"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **Nota:** Configuración de reglas de mantenimiento se configura por separado para la instancia de SQL Server Analysis Services y la aplicación de servicio PowerPivot. Siga las instrucciones de este tema para configurar reglas de estado para cada servicio. En una implementación de SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] solo usa la aplicación de servicio. Por tanto, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala distintos conjuntos de reglas de mantenimiento para las diferentes versiones de SharePoint. Vea la columna "versión" en el tema [referencia de reglas de mantenimiento &#40;PowerPivot para SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), o bien puede ejecutar el siguiente comando de Windows PowerShell para ver las reglas instaladas.  
+ **Nota** : la configuración de reglas de mantenimiento se establece de forma independiente para la instancia de SQL Server Analysis Services y la aplicación de servicio PowerPivot. Siga las instrucciones de este tema para configurar reglas de estado para cada servicio. En una implementación de SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] solo usa la aplicación de servicio. Por tanto, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala distintos conjuntos de reglas de mantenimiento para las diferentes versiones de SharePoint. Vea la columna "versión" en el tema [referencia &#40;de reglas de&#41;estado PowerPivot para SharePoint](health-rules-reference-power-pivot-for-sharepoint.md), o bien puede ejecutar el siguiente comando de Windows PowerShell para ver las reglas instaladas.  
   
-```  
-Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  
+```powershell
+Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -like "*power*"}  | Format-Table -Property * -AutoSize | Out-Default  
 ```  
   
  **En este tema:**  
   
- [Ver las reglas de mantenimiento de PowerPivot](#bkmk_view)  
+ [Ver las reglas de estado de PowerPivot](#bkmk_view)  
   
  [Configurar las reglas de estado que se usan para evaluar la estabilidad del servidor (SQL Server Analysis Services)](#bkmk_HR_SSAS)  
   
- [Configurar reglas de estado que se utilizan para evaluar la estabilidad de la aplicación (aplicación de servicio PowerPivot)](#bkmk_evaluate_application_stability)  
+ [Configurar las reglas de estado que se usan para evaluar la estabilidad de la aplicación (aplicación de servicio PowerPivot)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Debe ser administrador de la aplicación de servicio para cambiar las propiedades de configuración de la instancia de Analysis Services y de la aplicación de servicio PowerPivot.  
   
-##  <a name="bkmk_view"></a> Ver las reglas de mantenimiento de PowerPivot  
+##  <a name="bkmk_view"></a>Ver las reglas de estado de PowerPivot  
   
 1.  En Administración central de SharePoint, haga clic en **Supervisión**y, en la sección **Analizador de mantenimiento** , haga clic en **Revisar las definiciones de la regla**.  
   
@@ -64,7 +64,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  En la parte superior de la página, seleccione el servidor de la granja de SharePoint que tenga una instancia de Analysis Services (en la ilustración siguiente, el nombre del servidor es AW-SRV033). **SQL Server Analysis Services** aparecerá en la lista de servicios.  
   
-     ![Captura de pantalla de administrar servicios en la página servidor](../media/ssas-centraladmin-servicesonserver.gif "captura de pantalla de administrar servicios en la página del servidor")  
+     ![Captura de pantalla de la página Administrar servicios en el servidor](../media/ssas-centraladmin-servicesonserver.gif "Captura de pantalla de la página Administrar servicios en el servidor")  
   
 3.  Haga clic en **SQL Server Analysis Services**.  
   
@@ -73,49 +73,49 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Asignación de recursos de CPU insuficiente (el valor predeterminado es 80%)  
      Se desencadena esta regla de estado si los recursos de CPU que utiliza el proceso de servidor de Analysis Services (msmdsrv.exe) permanecen en el 80% o por encima más de cuatro horas (lo que especifique el valor del intervalo de recopilación de datos).  
   
-     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página: **PowerPivot: Analysis Services no tiene suficientes recursos de CPU para realizar las operaciones solicitadas.**  
+     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **PowerPivot: Analysis Services no tiene suficientes recursos de CPU para realizar las operaciones solicitadas**.  
   
      Recursos de CPU en el sistema insuficientes (el valor predeterminado es 90%)  
      Esta regla de estado se desencadena si los recursos de CPU del servidor permanecen en el 90% o por encima más de cuatro horas (según se especifique en el valor del intervalo de recopilación de datos). La utilización global de la CPU se mide como parte del algoritmo de equilibrio de carga basado en el estado que supervisa el uso de la CPU como medida del estado del servidor.  
   
-     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página: **PowerPivot: En general, el uso de CPU es demasiado alto.**  
+     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **PowerPivot: el uso total de la CPU es demasiado alto**.  
   
      Umbral insuficiente de memoria (el valor predeterminado es 5%)  
      En un servidor de aplicaciones SharePoint, una instancia de SQL Server Analysis Services siempre debe tener una pequeña cantidad de memoria en reserva sin usar. Dado que el servidor está enlazado a memoria en la mayoría de sus operaciones, el servidor se ejecuta mejor si no se ejecuta hasta el final del límite superior. El 5% de la memoria sin usar se calcula como un porcentaje de la memoria asignada a Analysis Services. Por ejemplo, si tiene 200 GB de memoria total y a Analysis Services se le asigna el 80% (o 160 GB), el 5% de la memoria sin usar es el 5% de 160 GB (u 8 GB).  
   
-     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página: **PowerPivot: Analysis Services no tiene suficiente memoria para realizar las operaciones solicitadas.**  
+     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **PowerPivot: Analysis Services no tiene suficientes memoria para realizar las operaciones solicitadas**.  
   
      Número máximo de conexiones (el valor predeterminado es 100)  
      Esta regla de estado se desencadena si el número de conexiones a la instancia de Analysis Services permanece en 100 conexiones o más durante más de cuatro horas (según especifique el valor del intervalo de recopilación de datos). Este valor predeterminado es arbitrario (no se basa en las especificaciones de hardware del servidor o en la actividad del usuario) de modo que podría elevar o disminuir el valor según la capacidad del servidor y la actividad de los usuarios en el entorno.  
   
-     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página: **PowerPivot: El número elevado de conexiones indica que se deben implementar más servidores para administrar la carga actual.**  
+     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **PowerPivot: el número elevado de conexiones indica que se deben implementar más servidores para tratar la carga actual**.  
   
      Espacio en disco insuficiente (el valor predeterminado es 5%)  
-     El espacio en disco se utiliza para almacenar en caché los datos PowerPivot cada vez que se solicita una base de datos. Esta regla permite saber cuándo está empezando a quedar poco espacio en disco. De forma predeterminada, esta regla de estado se desencadena cuando el espacio en disco es menor del 5% en la unidad de disco donde se encuentra la carpeta de copia de seguridad. Para obtener más información sobre el uso de disco, consulte [configurar el uso de espacio de disco &#40;PowerPivot para SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
+     El espacio en disco se utiliza para almacenar en caché los datos PowerPivot cada vez que se solicita una base de datos. Esta regla permite saber cuándo está empezando a quedar poco espacio en disco. De forma predeterminada, esta regla de estado se desencadena cuando el espacio en disco es menor del 5% en la unidad de disco donde se encuentra la carpeta de copia de seguridad. Para obtener más información sobre el uso de disco, vea [configurar &#40;el&#41;uso del espacio en disco PowerPivot para SharePoint](configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
-     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página: **PowerPivot: Queda poco espacio en disco en la unidad donde se almacena en caché los datos PowerPivot.**  
+     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **PowerPivot: el espacio en disco está empezando a agotarse en la unidad en la que los datos PowerPivot se almacenan en caché**.  
   
      Intervalo de recopilación de datos (en horas)  
      Puede especificar el período de recopilación de datos utilizado para calcular los números que se usan para desencadenar reglas de estado. Aunque el sistema se supervise constantemente, los umbrales usados para desencadenar advertencias de la regla de estado se calculan con los datos que se generaron en un intervalo predefinido. El intervalo predeterminado es de cuatro horas. El servidor recupera los datos del sistema y de uso durante las cuatro horas anteriores para evaluar el número de conexiones de usuario, el uso de espacio en disco y la tasa de utilización de la CPU y la memoria.  
   
-##  <a name="bkmk_evaluate_application_stability"></a> Configurar reglas de estado que se utilizan para evaluar la estabilidad de la aplicación (aplicación de servicio PowerPivot)  
+##  <a name="bkmk_evaluate_application_stability"></a>Configurar las reglas de estado que se usan para evaluar la estabilidad de la aplicación (aplicación de servicio PowerPivot)  
   
 1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  En la página Aplicación de servicio, haga clic en **Aplicación de servicio PowerPivot**.  
   
-     ![Página de la captura de pantalla de la aplicación](../media/ssas-centraladmin-app.gif "página de la captura de pantalla de la aplicación")  
+     ![Captura de pantalla de la página de la aplicación servicio](../media/ssas-centraladmin-app.gif "Captura de pantalla de la página de la aplicación servicio")  
   
 3.  Se muestra el Panel de administración de PowerPivot. Haga clic en **Configurar las opciones de aplicación de servicio** , en la lista **Acciones** para abrir la página de configuración de la aplicación de servicio.  
   
-     ![Captura de pantalla de panel, se centran en la lista de acciones](../media/ssas-centraladmin-actionslist.gif "captura de pantalla de panel, se centran en la lista de acciones")  
+     ![Captura de pantalla del panel, centrarse en la lista de acciones](../media/ssas-centraladmin-actionslist.gif "Captura de pantalla del panel, centrarse en la lista de acciones")  
   
 4.  En Configuración de reglas de estado, modifique los valores siguientes:  
   
      Ratio entre carga y conexión (el valor predeterminado es 20%)  
      Esta regla de estado se desencadena si el número de eventos de carga es alto en relación con el número de eventos de conexión, lo que indica que el servidor podría estar descargando las bases de datos demasiado rápidamente o que la configuración de la reducción de caché es excesiva.  
   
-     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página: **PowerPivot: La proporción de eventos de carga para las conexiones es demasiado alta.**  
+     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **PowerPivot: la proporción de eventos de carga y conexiones es demasiado alto**.  
   
      Intervalo de recopilación de datos (el valor predeterminado es 4 horas)  
      Puede especificar el período de recopilación de datos utilizado para calcular los números que se usan para desencadenar reglas de estado. Aunque el sistema se supervise constantemente, los umbrales usados para desencadenar advertencias de la regla de estado se calculan con los datos que se generaron en un intervalo predefinido. El intervalo predeterminado es de cuatro horas. El servidor recupera los datos de uso y del sistema recopilados durante las cuatro horas anteriores para evaluar la proporción entre la carga y la colección.  
@@ -123,12 +123,10 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      Comprobar si hay actualizaciones del archivo PowerPivot Management Dashboard.xlsx (el valor predeterminado es 5 días)  
      El archivo PowerPivot Management Dashboard.xlsx es un origen de datos que usan los informes en el Panel de administración de PowerPivot. En una configuración de servidor predeterminada, el archivo .xlsx se actualiza diariamente, utilizando los datos de uso recopilados por SharePoint y el Servicio de Sistema de PowerPivot. En el caso de que el archivo no esté actualizado, una regla de estado lo notifica como problema. De forma predeterminada, la regla se desencadena si la marca de tiempo del archivo no ha cambiado durante 5 días.  
   
-     Para obtener más información acerca de la recopilación de datos de uso, consulte [configurar la recolección de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+     Para obtener más información sobre la recopilación de datos de uso, vea [configurar &#40;la recopilación de datos de uso para PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
-     Esta opción de configuración corresponde a la siguiente definición de regla en el **revisar los problemas y soluciones** página: **PowerPivot: Datos de uso no se actualizan con la frecuencia esperada.**  
+     Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **PowerPivot: los datos de uso no se actualizan con la frecuencia prevista**.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar el uso de espacio en disco &#40;PowerPivot para SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)   
+## <a name="see-also"></a>Ver también  
+ [Configurar el uso &#40;del espacio&#41; en disco PowerPivot para SharePoint](configure-disk-space-usage-power-pivot-for-sharepoint.md)   
  [Panel de administración de PowerPivot y datos de uso](power-pivot-management-dashboard-and-usage-data.md)  
-  
-  

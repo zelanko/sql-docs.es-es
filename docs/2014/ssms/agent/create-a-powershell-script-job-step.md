@@ -15,14 +15,14 @@ ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08a27fd6edbfa93fd76ae99186e2425e5279e8aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6375229899c1bfe8f175771e55fdd821fc232166
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211463"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798301"
 ---
-# <a name="create-a-powershell-script-job-step"></a>Crear un paso de trabajo para script de PowerShell
+# <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
   En este tema se describe cómo crear y definir un paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecute un script de PowerShell en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **En este tema**  
@@ -39,12 +39,12 @@ ms.locfileid: "68211463"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-powershell-script-job-step"></a>Para crear un paso de trabajo para script de PowerShell  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68211463"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     -- creates a PowerShell job step that finds the processes that use more than 1000 MB of memory and kills them  
     USE msdb;  
     GO  
@@ -88,11 +88,9 @@ ms.locfileid: "68211463"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
+ Para obtener más información, [vea &#40;SP_ADD_JOBSTEP Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
  **Para crear un paso de trabajo para script de PowerShell**  
   
  Utilice la clase `JobStep` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell.  
-  
-  

@@ -20,12 +20,12 @@ ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1fe1521f2eebaa4413b49c315f17a6b1b6a5914
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68887939"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797621"
 ---
 # <a name="dimension-relationships"></a>Relaciones de dimensiones
   El uso de la dimensión define las relaciones entre una dimensión de cubo y los grupos de medida de un cubo. Una dimensión de cubo es una instancia de una dimensión de base de datos que se utiliza en un cubo específico. Un cubo puede y suele tener dimensiones de cubo que no están directamente relacionadas con un grupo de medida, pero que podrían estar indirectamente relacionadas con el grupo de medida a través de otra dimensión o grupo de medida. Cuando se agrega una dimensión de base de datos o un grupo de medida a un cubo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intenta determinar el uso de las dimensiones examinando las relaciones entre las tablas de dimensiones y las tablas de hechos en la vista del origen de datos del cubo y examinando las relaciones entre los atributos de las dimensiones. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] establece automáticamente la configuración del uso de la dimensión para las relaciones que puede detectar.  
@@ -38,11 +38,11 @@ ms.locfileid: "68887939"
 ## <a name="reference-dimension-relationships"></a>Relaciones de dimensión de referencia  
  Hay una relación de dimensión de referencia entre una dimensión de cubo y un grupo de medida cuando la columna de clave de la dimensión se combina indirectamente con la tabla de hechos mediante una clave de otra tabla de dimensiones, como se muestra en la siguiente ilustración.  
   
- ![Diagrama lógico, relación de dimensión a la que se hace referencia](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension1.gif "Diagrama lógico, relación de dimensión a la que se hace referencia")  
+ ![Diagrama lógico, relación de dimensión a la que se hace referencia](../../analysis-services/dev-guide/media/as-refdimension1.gif "Diagrama lógico, relación de dimensión a la que se hace referencia")  
   
  Una relación de dimensión de referencia representa la relación entre tablas de dimensiones y una tabla de hechos en un diseño de esquema de copo de nieve. Cuando las tablas de dimensiones se conectan en un esquema de copo de nieve, es posible definir una única dimensión mediante columnas de varias tablas, o bien, definir dimensiones independientes basadas en las tablas de dimensiones independientes y, a continuación, definir un vínculo entre ellas mediante la configuración de la relación de dimensión de referencia. En la ilustración siguiente se muestra una tabla de hechos denominada **InternetSales**y dos tablas de dimensiones denominadas **Customer** y **Geography**, en un esquema de copo de nieve.  
   
- ![Esquema lógico, relación de dimensión a la que se hace referencia](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdim-schema1.gif "Esquema lógico, relación de dimensión a la que se hace referencia")  
+ ![Esquema lógico, relación de dimensión a la que se hace referencia](../../analysis-services/dev-guide/media/as-refdim-schema1.gif "Esquema lógico, relación de dimensión a la que se hace referencia")  
   
  Puede crear una dimensión con la tabla **Customer** como la tabla principal de dimensiones y la tabla **Geography** incluida como una tabla relacionada. Entonces se define una relación normal entre la dimensión y el grupo de medida InternetSales.  
   
@@ -50,14 +50,14 @@ ms.locfileid: "68887939"
   
  No hay ningún límite con respecto al número de dimensiones de referencia que se pueden encadenar, como se muestra en la siguiente ilustración.  
   
- ![Diagrama lógico, relación de dimensión a la que se hace referencia](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension2.gif "Diagrama lógico, relación de dimensión a la que se hace referencia")  
+ ![Diagrama lógico, relación de dimensión a la que se hace referencia](../../analysis-services/dev-guide/media/as-refdimension2.gif "Diagrama lógico, relación de dimensión a la que se hace referencia")  
   
  Para obtener más información sobre las relaciones referenciadas, vea [definir una relación referenciada y propiedades de la relación referenciadas](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="fact-dimension-relationships"></a>Relaciones de dimensión de hechos  
  Las dimensiones de hechos, más conocidas como dimensiones degeneradas, son dimensiones estándar que se crean a partir de columnas de atributos de tablas de hechos en lugar de columnas de atributos de tablas de dimensiones. Los datos útiles de dimensiones algunas veces se almacenan en una tabla de hechos para reducir la duplicación. Por ejemplo, en el diagrama siguiente se muestra la tabla de hechos **FactResellerSales** de la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)].  
   
- ![Las columnas de la tabla de hechos pueden admitir dimensiones](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-factdim.gif "Las columnas de la tabla de hechos pueden admitir dimensiones")  
+ ![Las columnas de la tabla de hechos pueden admitir dimensiones](../../analysis-services/dev-guide/media/as-factdim.gif "Las columnas de la tabla de hechos pueden admitir dimensiones")  
   
  La tabla contiene información sobre atributos no solo para cada línea de un pedido emitido por un distribuidor, sino sobre el propio pedido. Los atributos rodeados por un círculo en el diagrama anterior identifican la información de la tabla **FactResellerSales** que podría usarse como atributos en una dimensión. En este caso, dos piezas adicionales de información, el número de seguimiento del transportista y el número de orden de compra emitido por el distribuidor están representados por las columnas de atributo CarrierTrackingNumber y CustomerPONumber. Esta información es interesante; por ejemplo, los usuarios deberían estar interesados en ver la información agregada, como el costo total del producto, para todos los pedidos que se envían con un solo número de seguimiento. Sin embargo, sin una dimensión no se pueden organizar ni agregar datos para estos dos atributos.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68887939"
 ## <a name="many-to-many-dimension-relationships"></a>Relaciones de dimensión varios a varios  
  En la mayoría de dimensiones, cada hecho se combina con un solo miembro de la dimensión y un único miembro de la dimensión puede asociarse a varios hechos. En terminología de bases de datos relacionales, esto se conoce como relación de uno a varios. No obstante, suele resultar útil combinar un único hecho con varios miembros de dimensión. Por ejemplo, un cliente de un banco podría tener varias cuentas (cuenta corriente, libreta de ahorro, tarjetas de crédito y cuentas de inversión) y una cuenta también puede tener varios propietarios. La dimensión de cliente creada a partir de estas relaciones tendrá varios miembros relacionados con una única transacción de cuenta.  
   
- ![Relación de dimensiones de esquemas de varios a varios](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-many-dimension1.gif "Relación de dimensiones de esquemas de varios a varios")  
+ ![Relación de dimensiones de esquemas de varios a varios](../../analysis-services/dev-guide/media/as-many-dimension1.gif "Relación de dimensiones de esquemas de varios a varios")  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir una relación de varios a varios entre una dimensión y una tabla de hechos.  
   

@@ -10,12 +10,12 @@ ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fcc82b03ff6d44e8c7c85088f625feb6bd8102f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc19a1813e81847912ac43f607cead8423850af5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66108356"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796369"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Administrar una aplicación de servicio de SharePoint para Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se administran desde Administración central de SharePoint. Las páginas Administración y Propiedades permiten actualizar la configuración de la aplicación de servicio así como las tareas de administración comunes.  
@@ -43,7 +43,7 @@ ms.locfileid: "66108356"
   
 2.  Haga clic junto al nombre de la aplicación de servicio o en la columna **tipo** (para seleccionar toda la columna) y después haga clic en **Propiedades** en la cinta de opciones de SharePoint.  
   
- Para obtener más información sobre las propiedades de la aplicación de servicio, consulte [paso 3: Crear una aplicación de servicio de Reporting Services](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
+ Para obtener más información acerca de las propiedades de la aplicación del servicio, vea [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
   
 ##  <a name="bkmk_openpages"></a> Para abrir las páginas de Administración de aplicaciones y servicios  
  Para abrir las páginas de administración de una aplicación de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , haga lo siguiente:  
@@ -69,7 +69,7 @@ ms.locfileid: "66108356"
   
 ###  <a name="bkmk_report_settings_section"></a> Configuración del informe  
   
-|Parámetro|Comentarios|  
+|Configuración|Comentarios|  
 |-------------|--------------|  
 |Tiempo de espera de imágenes externas|El valor predeterminado es 600 segundos.|  
 |Compresión de instantáneas|El valor predeterminado es SQL.|  
@@ -80,7 +80,7 @@ ms.locfileid: "66108356"
   
 ###  <a name="bkmk_session_settings_section"></a> Configuración de la sesión  
   
-|Parámetro|Comentarios|  
+|Configuración|Comentarios|  
 |-------------|--------------|  
 |Tiempo de espera de sesión|El valor predeterminado es 600 segundos.|  
 |Usar cookies de sesión|El valor predeterminado es TRUE.|  
@@ -88,7 +88,7 @@ ms.locfileid: "66108356"
   
 ###  <a name="bkmk_logging_settings_section"></a> Configuración del sistema para registro  
   
-|Parámetro|Comentarios|  
+|Configuración|Comentarios|  
 |-------------|--------------|  
 |Habilitar el registro de la ejecución|El valor predeterminado es TRUE.<br /><br /> Especifique si el servidor de informes genera registros de seguimiento y el número de días que debe guardarse el registro. . Los registros se almacenan en el equipo del servidor de informes, en la carpeta \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Se inicia un nuevo archivo de registro cada vez que se reinicia el servicio. Para obtener más información acerca de los archivos de registro, vea [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).|  
 |Días de almacenamiento del registro de ejecución|El valor predeterminado es 60 días.|  
@@ -97,7 +97,7 @@ ms.locfileid: "66108356"
   
 ###  <a name="bkmk_security_settings_section"></a> Configuración de seguridad  
   
-|Parámetro|Comentarios|  
+|Configuración|Comentarios|  
 |-------------|--------------|  
 |Habilitar la seguridad integrada|El valor predeterminado es TRUE.<br /><br /> Especifica si puede realizarse una conexión a un origen de datos de informe con el token de seguridad de Windows del usuario que solicitó el informe.|  
 |Habilitar la definición de informe de carga|El valor predeterminado es TRUE.|  
@@ -106,7 +106,7 @@ ms.locfileid: "66108356"
   
 ###  <a name="bkmk_client_settings_section"></a> Configuración de cliente  
   
-|Parámetro|Comentarios|  
+|Configuración|Comentarios|  
 |-------------|--------------|  
 |Habilitar la descarga del Generador de informes|El valor predeterminado es TRUE.<br /><br /> Especifica si los clientes pueden ver el botón para descargar la aplicación del Generador de informes.|  
 |URL de inicio del Generador de informes|Especifique una dirección URL personalizada si el servidor de informes no utiliza la dirección URL predeterminada del Generador de informes. Este valor es opcional. Si no especifica un valor, se usará la dirección URL predeterminada, que inicia el Generador de informes. Para iniciar el Generador de informes 3.0 como aplicación ClickOnce, especifique el valor siguiente: http://\<nombreDeEquipo>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0.application.|  
@@ -117,7 +117,7 @@ ms.locfileid: "66108356"
 ##  <a name="bkmk_managejobs"></a> Administrar trabajos  
  Puede ver y eliminar los trabajos en ejecución, por ejemplo, los que las suscripciones de informe y las suscripciones controladas por datos crean. La página no se usa para administrar suscripciones sino los trabajos que una suscripción desencadena. Para obtener un ejemplo de suscripción programada para ejecutarse una vez a la hora, generará un trabajo una vez a la hora que aparece en la página **Administrar trabajos** .  
   
- ![Administrar trabajos en ejecución](media/ssrs-manage-jobs.gif "Administrar trabajos en ejecución")  
+ ![administrar trabajos en ejecución](media/ssrs-manage-jobs.gif "administrar trabajos en ejecución")  
   
 ##  <a name="bkmk_keymgt"></a> Administración de claves  
  En la tabla siguiente se muestran las páginas de administración de claves.  
@@ -125,7 +125,7 @@ ms.locfileid: "66108356"
 > [!IMPORTANT]  
 >  Cambiar periódicamente la clave de cifrado de Reporting Services es una práctica recomendada de seguridad. El momento recomendado para cambiar la clave es el inmediatamente posterior a una actualización de versión principal de Reporting Services. Si se cambia la clave después de una actualización se minimiza la interrupción del servicio adicional que ocasiona el cambio de la clave de cifrado de Reporting Services fuera del ciclo de actualización.  
   
-|Página|Descripción|  
+|Página|Description|  
 |----------|-----------------|  
 |Copia de seguridad de clave de cifrado|1) Escriba una contraseña en los cuadros **Contraseña** y **Confirmar contraseña** , y haga clic en **Exportar**. Verá una advertencia si la contraseña especificada no satisface los requisitos de complejidad de la directiva de dominio.<br /><br /> 2) Se le pedirá una ubicación para guardar el archivo de claves. Considere la posibilidad de almacenar el archivo de claves en un equipo distinto del que ejecuta [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. El nombre de archivo predeterminado es el mismo que el de la aplicación de servicio.|  
 |Restaurar clave de cifrado|1) Escriba o busque el archivo de claves en el cuadro **Ubicación del archivo** .<br /><br /> 2) En el cuadro **Contraseña** , escriba la contraseña que ha usado para realizar la copia de seguridad del archivo de cifrado.<br /><br /> 3) Haga clic en **Aceptar**.|  
@@ -149,11 +149,11 @@ ms.locfileid: "66108356"
   
  A continuación, se ofrece un ejemplo de comando de PowerShell para devolver la lista de aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con la propiedad UEAccount:  
   
-```  
-Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
+```powershell
+Get-SPRSServiceApplication | Select typename, name, service, ueaccountname  
 ```  
   
- Para más información, vea [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+ Para obtener más información, vea [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ### <a name="options"></a>Opciones  
  **Especificar una cuenta de ejecución**  

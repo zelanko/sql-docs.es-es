@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f21a974ee9beeeba8b50914092704f1879c5f501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65575562"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305045"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega por correo electrónico en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega de correo electrónico que permite enviar por correo electrónico un informe a grupos o usuarios individuales. Para distribuir un informe por correo electrónico, debe 1) configurar el servidor de informes para la entrega de correo electrónico y 2) definir una suscripción estándar o una suscripción controlada por datos. Una suscripción única no puede entregar varios informes en un solo mensaje de correo electrónico. Sin embargo, se pueden crear varias suscripciones.  
@@ -41,9 +41,9 @@ ms.locfileid: "65575562"
   
 -   Enviar una notificación en la línea Asunto: de un mensaje de correo electrónico. De forma predeterminada, la línea Asunto: de la definición de suscripción incluye las variables siguientes que se reemplazan con información específica del informe cuando se procesa la suscripción:  
   
-     **@ReportName** especifica el nombre del informe.  
+     **\@ReportName** especifica el nombre del informe.  
   
-     **@ExecutionTime** especifica cuándo se ejecutó el informe.  
+     **\@ExecutionTime** especifica cuándo se ha ejecutado el informe.  
   
      Puede combinar estas variables con texto estático o modificar el texto de la línea Asunto: para cada suscripción.  
   

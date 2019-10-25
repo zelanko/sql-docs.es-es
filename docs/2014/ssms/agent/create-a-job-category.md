@@ -14,12 +14,12 @@ ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d904f82c793acf6135f600e1ed5392bda96e1bb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07b942ad64043f93f014a54246b42ef5375ade97
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856120"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798276"
 ---
 # <a name="create-a-job-category"></a>Crear una categoría de trabajo
   En este tema se describe cómo crear una categoría de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -28,7 +28,7 @@ ms.locfileid: "62856120"
   
  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Las categorías multiservidor existen solo en los servidores maestros. Solo hay una categoría de trabajo predeterminada disponible en un servidor maestro: [**Sin categoría (Multiservidor)** ]. Cuando se descarga un trabajo multiservidor, su categoría se cambia a **Trabajos del servidor principal** en el servidor de destino.  
@@ -36,9 +36,7 @@ ms.locfileid: "62856120"
 ###  <a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-
-  
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-job-category"></a>Para crear una categoría de trabajo  
   
@@ -58,10 +56,8 @@ ms.locfileid: "62856120"
   
 8.  En el cuadro de diálogo **Administrar categorías de trabajo**_server_name_ , haga clic en **Actualizar** para asegurarse de que la nueva categoría de trabajo esté activa. Si todo se busca conforme a lo esperado, cierre este cuadro de diálogo.  
   
- Para obtener más información sobre estos cuadros de diálogo, vea [categorías de trabajo: Administrar categorías de trabajo](job-categories-manage-job-categories.md) y [propiedades de las categorías y la nueva categoría de trabajo del trabajo](job-categories-properties-new-job-category.md).  
-  
- 
-  
+ Para obtener más información sobre estos cuadros de diálogo, vea categorías de trabajos [: administrar categorías de trabajo](job-categories-manage-job-categories.md) y [propiedades de categorías de trabajos y nueva categoría de trabajo](job-categories-properties-new-job-category.md).  
+
 ##  <a name="TSQL"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-job-category"></a>Para crear una categoría de trabajo  
@@ -72,7 +68,7 @@ ms.locfileid: "62856120"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     -- creates a local job category named AdminJobs   
     USE msdb ;  
     GO  
@@ -83,15 +79,9 @@ ms.locfileid: "62856120"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_add_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql).  
-  
+ Para obtener más información, [vea &#40;SP_ADD_CATEGORY Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql).  
 
-  
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
  **Para crear una categoría de trabajo**  
   
  Llame a la clase `JobCategory` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para el código de ejemplo, consulte [Programar tareas administrativas automáticas en el Agente SQL Server](sql-server-agent.md).  
-  
- 
-  
-  

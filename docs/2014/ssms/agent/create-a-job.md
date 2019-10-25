@@ -13,12 +13,12 @@ ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed3c7cf100d0105d393bb8c22bbc0d38d2e9de26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7126b01fcaee1a0ab3f7776cc54e6eb0dbe2774d
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63131519"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798311"
 ---
 # <a name="create-a-job"></a>Crear un trabajo
   En este tema se describe cómo crear un trabajo del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server (SMO).  
@@ -39,7 +39,7 @@ ms.locfileid: "63131519"
   
      [objetos de administración de SQL Server](#SMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -61,7 +61,7 @@ ms.locfileid: "63131519"
 ####  <a name="Permissions"></a> Permisos  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-sql-server-agent-job"></a>Para crear un trabajo del Agente SQL Server  
   
@@ -71,17 +71,17 @@ ms.locfileid: "63131519"
   
 3.  Haga clic con el botón derecho en la carpeta **Trabajos** y, después, seleccione **Nuevo trabajo...** .  
   
-4.  En el cuadro de diálogo **Nuevo trabajo** , en la página **General** , modifique las propiedades generales del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo y el nuevo trabajo &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  En el cuadro de diálogo **Nuevo trabajo** , en la página **General** , modifique las propiedades generales del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo y &#40;página&#41; general del nuevo trabajo](../../integration-services/general-page-of-integration-services-designers-options.md) .  
   
-5.  En la página **Pasos** , organice los pasos de trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: nuevo trabajo &#40;página pasos&#41;](job-properties-new-job-steps-page.md)  
+5.  En la página **Pasos** , organice los pasos de trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: &#40;página&#41; nuevos pasos de trabajo](job-properties-new-job-steps-page.md)  
   
-6.  En la página **Programaciones** , organice las programaciones del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;página de programaciones&#41;](job-properties-new-job-schedules-page.md)  
+6.  En la página **Programaciones** , organice las programaciones del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: &#40;página&#41; nuevas programaciones de trabajos.](job-properties-new-job-schedules-page.md)  
   
-7.  En la página **Alertas** , organice las alertas del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;página de alertas&#41;](job-properties-new-job-alerts-page.md)  
+7.  En la página **Alertas** , organice las alertas del trabajo. Para obtener más información sobre las opciones disponibles en esta página, consulte [propiedades del trabajo: &#40;página&#41; nuevas alertas de trabajo](job-properties-new-job-alerts-page.md)  
   
-8.  En la página **Notificaciones** , establezca las acciones que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar cuando se complete el trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;página notificaciones&#41;](job-properties-new-job-notifications-page.md).  
+8.  En la página **Notificaciones** , establezca las acciones que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar cuando se complete el trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: &#40;página&#41;nuevas notificaciones de trabajo](job-properties-new-job-notifications-page.md).  
   
-9. En la página **Destinos** , administre los servidores de destino del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;tiene como destino de la página&#41;](job-properties-new-job-targets-page.md).  
+9. En la página **Destinos** , administre los servidores de destino del trabajo. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: &#40;página&#41;nuevos destinos del trabajo](job-properties-new-job-targets-page.md).  
   
 10. Cuando termine, haga clic en **Aceptar**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "63131519"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
     EXEC dbo.sp_add_job  
@@ -134,9 +134,9 @@ ms.locfileid: "63131519"
   
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
-##  <a name="SMOProcedure"></a> Usar objetos de administración de SQL Server  
+##  <a name="SMOProcedure"></a>Usar Objetos de administración de SQL Server  
  **Para crear un trabajo del Agente SQL Server**  
   
  Llame al método `Create` de la clase `Job` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para el código de ejemplo, consulte [Programar tareas administrativas automáticas en el Agente SQL Server](sql-server-agent.md).  

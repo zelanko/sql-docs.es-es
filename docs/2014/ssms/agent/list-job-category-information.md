@@ -10,15 +10,15 @@ ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac903ecb951e98e29dcd6521f8c9623f8cc62768
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68189140"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798210"
 ---
 # <a name="list-job-category-information"></a>Mostrar información de categorías de trabajo
-  Cómo mostrar información de categoría de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)] u objetos de administración de SQL Server.  
+  Cómo Mostrar información de categorías de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o Objetos de administración de SQL Server.  
 
   
 ##  <a name="Security"></a> Seguridad  
@@ -35,7 +35,7 @@ ms.locfileid: "68189140"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     -- returns information about jobs that are administered locally  
     USE msdb ;  
     GO  
@@ -45,13 +45,10 @@ ms.locfileid: "68189140"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_help_category &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql).  
+ Para obtener más información, [vea &#40;SP_HELP_CATEGORY Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-help-category-transact-sql).  
   
   
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
  **Para mostrar información de categorías de trabajo**  
   
- Utilice la clase `JobCategory` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell. Para obtener más información, consulte [SQL Server Management Objects &#40;SMO&#41; Programming Guide](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  
-  
-  
-  
+ Utilice la clase `JobCategory` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell. Para obtener más información, [vea &#40;objetos de administración de SQL Server&#41; guía de programación de SMO](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md).  

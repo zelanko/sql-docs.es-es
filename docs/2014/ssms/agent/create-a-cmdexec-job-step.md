@@ -12,12 +12,12 @@ ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 896a3d19345805d5468f3ec238ae5e75be34daba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ba283ef2ff426521c881f733bc29465eebc0c76
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68211473"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798159"
 ---
 # <a name="create-a-cmdexec-job-step"></a>Create a CmdExec Job Step
   En este tema se explica cómo crear y definir un paso de trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que usa un programa ejecutable o un comando del sistema operativo mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server.  
@@ -36,7 +36,7 @@ ms.locfileid: "68211473"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Security"></a> Seguridad  
  De forma predeterminada, solo los miembros del rol fijo de servidor **sysadmin** pueden crear pasos de trabajo CmdExec. Estos pasos de trabajo se ejecutan en el contexto de la cuenta de servicio de Agente SQL Server salvo que el usuario **sysadmin** cree una cuenta de proxy. Los usuarios que no sean miembros del rol **sysadmin** pueden crear pasos de trabajo CmdExec si disponen de acceso a la cuenta de proxy CmdExec.  
@@ -44,7 +44,7 @@ ms.locfileid: "68211473"
 ####  <a name="Permissions"></a> Permisos  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Usar SQL Server Management Studio  
+##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-cmdexec-job-step"></a>Para crear un paso de trabajo de CmdExec  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68211473"
   
 ##  <a name="TSQL"></a> Usar Transact-SQL  
   
-#### <a name="to-create-a-cmdexec-job-step"></a>Para crear un paso de trabajo de CmdExec  
+### <a name="to-create-a-cmdexec-job-step"></a>Para crear un paso de trabajo de CmdExec  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68211473"
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
-    ```  
+    ```sql
     -- creates a job step that uses CmdExec  
     USE msdb;  
     GO  
@@ -90,11 +90,10 @@ ms.locfileid: "68211473"
     GO  
     ```  
   
- Para obtener más información, consulte [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+ Para obtener más información, [vea &#40;SP_ADD_JOBSTEP Transact-&#41; SQL](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
-##  <a name="SMO"></a> Usar objetos de administración de SQL Server  
- **Para crear un paso de trabajo de CmdExec**  
+##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
+
+### <a name="to-create-a-cmdexec-job-step"></a>Para crear un paso de trabajo de CmdExec
   
  Utilice la clase `JobStep` mediante un lenguaje de programación que elija, como Visual Basic, Visual C# o PowerShell.  
-  
-  

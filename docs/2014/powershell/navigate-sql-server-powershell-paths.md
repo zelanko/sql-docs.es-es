@@ -10,22 +10,22 @@ ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a5d9f7119730a904dd760f43d001f1a7734f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762094"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797812"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar por las rutas de acceso de SQL Server PowerShell
   El proveedor de PowerShell de [!INCLUDE[ssDE](../includes/ssde-md.md)] expone el conjunto de objetos de una instancia de SQL Server en una estructura similar a una ruta de acceso del archivo. Puede usar los cmdlets de Windows PowerShell para navegar por la ruta de acceso del proveedor y crear las unidades personalizadas para acortar la ruta de acceso que tiene que escribir.  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  Windows PowerShell implementa cmdlets para navegar por la estructura de ruta de acceso que representa la jerarquía de objetos compatible con un proveedor de PowerShell. Cuando ha navegado a un nodo de la ruta de acceso, puede usar otros cmdlets para realizar operaciones básicas en el objeto actual. Dado que los cmdlets se usan con frecuencia, tienen alias canónicos cortos. También hay un conjunto de alias que asigna los cmdlets a comandos del símbolo del sistema similares, y otro conjunto para los comandos shell de UNIX.  
   
  El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un subconjunto de los cmdlets de proveedor, que se muestran en la tabla siguiente.  
   
-|cmdlet|Alias canónico|Alias de cmd|Alias de shell de UNIX|Descripción|  
+|Cmdlet|Alias canónico|Alias de cmd|Alias de shell de UNIX|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Obtiene el nodo actual.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|Cambia el nodo actual.|  
@@ -61,7 +61,7 @@ ms.locfileid: "62762094"
 ### <a name="alias-example-powershell"></a>Ejemplo de Alias (PowerShell)  
  Por ejemplo, puede usar uno de los conjuntos de cmdlets o alias siguientes para recuperar una lista de las instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibles para navegar a la carpeta SQLSERVER:\SQL y solicitar la lista de elementos secundarios de la misma:  
   
-```  
+```powershell
 ## Shows using the full cmdet name.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
@@ -80,7 +80,8 @@ ls
 ```  
   
 ## <a name="use-get-childitem"></a>Uso de Get-ChildItem  
- **Devuelve información mediante Get-Childitem**  
+
+### <a name="return-information-by-using-get-childitem"></a>Devuelve información mediante Get-Childitem
   
 1.  Navegue hasta el nodo para el que desea obtener una lista de childrem  
   
@@ -89,14 +90,13 @@ ls
 ### <a name="get-childitem-example-powershell"></a>Ejemplo de Get-ChildItem (PowerShell)  
  Estos ejemplos muestran la información devuelta por Get-Childitem para varios nodos en una ruta de acceso del proveedor de SQL Server.  
   
-```  
+```powershell
 ## Return the current computer and any computer  
 ## to which you have made a SQL or WMI connection.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
   
 ## List the instances of the Database Engine on the local computer.  
-  
 Set-Location SQLSERVER:\SQL\localhost  
 Get-ChildItem  
   
@@ -112,7 +112,8 @@ Get-ChildItem -force
 ```  
   
 ## <a name="create-a-custom-drive"></a>Crea una unidad personalizada  
- **Cree y use una unidad personalizada**  
+
+### <a name="create-and-use-a-custom-drive"></a>Cree y use una unidad personalizada
   
 1.  Use `New-PSDrive` para definir una unidad personalizada. Use el parámetro de `Root` para especificar la ruta de acceso representada por el nombre de la unidad personalizada.  
   
@@ -121,7 +122,7 @@ Get-ChildItem -force
 ### <a name="custom-drive-example-powershell"></a>Ejemplo de unidad personalizada (PowerShell)  
  Este ejemplo crea una unidad virtual denominada AWDB que asigna al nodo de una copia implementada de la base de datos de ejemplo de AdventureWorks2012. La unidad virtual se usa para navegar a una tabla de la base de datos.  
   
-```  
+```powershell
 ## Create a new virtual drive.  
 New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
   
@@ -129,10 +130,8 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
  [Trabajar con rutas acceso de SQL Server PowerShell](work-with-sql-server-powershell-paths.md)   
  [Convertir URN en rutas de acceso del proveedor de SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

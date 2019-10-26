@@ -10301,8 +10301,12 @@
               href: linux/sql-server-linux-release-notes-2019.md
             - name: SQL Server 2017
               href: linux/sql-server-linux-release-notes.md
-        - name: Ediciones y características admitidas
-          href: linux/sql-server-linux-editions-and-components-2017.md
+        - name: Ediciones y características
+          items:
+            - name: SQL Server 2019
+              href: linux/sql-server-linux-editions-and-components-2019.md
+            - name: SQL Server 2017
+              href: linux/sql-server-linux-editions-and-components-2017.md
         - name: P+F
           href: linux/sql-server-linux-faq.md
     - name: Tutoriales rápidos

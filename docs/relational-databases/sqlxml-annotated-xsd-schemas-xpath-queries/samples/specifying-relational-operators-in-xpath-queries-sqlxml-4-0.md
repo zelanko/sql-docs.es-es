@@ -1,5 +1,5 @@
 ---
-title: Especificar operadores relacionales en consultas XPath (SQLXML 4.0) | Microsoft Docs
+title: Especificar operadores relacionales en consultas XPath (SQLXML 4,0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,29 +16,29 @@ ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cc16364c9a1d587de00311ee7f8931b82cd6283
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 180962ac5afae577625415d94cb9beda65f9537a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027054"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909440"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores relacionales en consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En los siguientes ejemplos se muestra cómo especificar operadores relacionales en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  En los siguientes ejemplos se muestra cómo especificar operadores relacionales en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado &#40;para&#41;XPath ejemplos SQLXML 4,0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-specify-relational-operator"></a>A. Especificar un operador relacional  
- Esta consulta XPath devuelve los elementos secundarios de la  **\<cliente >** elemento donde el **CustomerID** valor del atributo es "1" y que cualquier elemento secundario  **\<orden >** elementos contienen una  **\<OrderDetail >** secundario con un **OrderQty** atributo con un valor mayor que 3:  
+ Esta consulta XPath devuelve los elementos secundarios del elemento **\<Customer >** donde el valor del atributo **CustomerID** es "1" y donde cualquier **orden de\<** secundario que > elementos contengan un **\<OrderDetail >** secundario con un atributo **OrderQty** con un valor mayor que 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- El predicado especificado en los filtros de corchetes la  **\<cliente >** elementos. Solo el  **\<cliente >** elementos que tengan al menos una  **\<OrderDetail >** descendiente del secundario con un valor de atributo OrderQty mayor que 3 se devuelven.  
+ El predicado especificado en los corchetes filtra los elementos del **> del cliente\<** . Solo se devuelven los elementos **> cliente\<** que tienen al menos un **\<OrderDetail >** terciario con un valor de atributo OrderQty mayor que 3.  
   
- El **secundarios** es el eje predeterminado. Por lo tanto, la consulta puede especificarse como:  
+ El eje **secundario** es el valor predeterminado. Por lo tanto, la consulta puede especificarse como:  
   
 ```  
 /Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
@@ -46,7 +46,7 @@ ms.locfileid: "68027054"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (SpecifyRelationalA.xml) y guárdela en el mismo directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -66,9 +66,7 @@ ms.locfileid: "68027054"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     For more information, see [Using ADO to Execute SQLXML 4.0 Queries](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el conjunto de resultados de ejecución de la plantilla:  
   
@@ -83,24 +81,24 @@ ms.locfileid: "68027054"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>b. Especificar el operador relacional de la consulta XPath y usar una función booleana para comparar el resultado  
- Esta consulta devuelve todos los  **\<orden >** elementos secundarios del nodo de contexto que tienen un **SalesPersonID** atributo el valor que es menor que 270:  
+ Esta consulta devuelve todos los elementos secundarios de **\<Order >** del nodo de contexto que tienen un valor de atributo **SalesPersonID** inferior a 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
 ```  
   
- Un acceso directo a la **atributo** eje (@) se pueden especificar y porque el **secundarios** es el eje predeterminado, puede omitirse de la consulta:  
+ Se puede especificar un acceso directo al eje de **atributo** (@) y, puesto que el eje **secundario** es el predeterminado, se puede omitir en la consulta:  
   
 ```  
 /Customer/Order[(@SalesPersonID < 270)=true()]  
 ```  
   
 > [!NOTE]  
->  Cuando se especifica esta consulta en una plantilla, el < debe codificada por entidad porque el < carácter tiene un significado especial en un documento XML. En una plantilla, use `<` para especificar el < carácter.  
+>  Cuando se especifica esta consulta en una plantilla, el carácter de < debe ser una entidad codificada porque el carácter < tiene un significado especial en un documento XML. En una plantilla, use `<` para especificar el carácter de <.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (SpecifyRelationalB.xml) y guárdela en el directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -120,7 +118,7 @@ ms.locfileid: "68027054"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Este es el conjunto parcial de resultados de ejecución de la plantilla:  
   

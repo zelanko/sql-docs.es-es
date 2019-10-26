@@ -14,17 +14,17 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c6c99edd1d52e3175dcd8793bd4bf7afcd605b7
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148333"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909040"
 ---
-# <a name="scripting"></a>Scripting
+# <a name="scripting"></a>Generación de script
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  El scripting en SMO se controla mediante <xref:Microsoft.SqlServer.Management.Smo.Scripter> el objeto y sus objetos secundarios, o el método de **script** en objetos individuales. El <xref:Microsoft.SqlServer.Management.Smo.Scripter> objeto controla la asignación fuera de las relaciones de dependencia para los objetos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)]una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  El scripting en SMO se controla mediante el objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios, o el método de **script** en objetos individuales. El objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> controla la asignación fuera de las relaciones de dependencia para los objetos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  La generación avanzada de script utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios es un proceso de tres fases:  
   
@@ -33,8 +33,6 @@ ms.locfileid: "70148333"
 2.  Generación de lista  
   
 3.  Generación de script  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  La fase de detección utiliza el objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. Dada una lista de URN de objetos, el método <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> devuelve un objeto <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> para los objetos en la lista URN. El parámetro Boolean *fParents* se usa para seleccionar si se deben detectar los elementos primarios o secundarios del objeto especificado. El árbol de dependencia se puede modificar en esta fase.  
   
@@ -47,7 +45,7 @@ ms.locfileid: "70148333"
 ## <a name="example"></a>Ejemplo  
  Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto&#35; de Visual C SMO en Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- Este ejemplo de código requiere una instrucción Imports para el espacio de nombres System. Collections. Specialized. Inserte esto con las otras instrucciones Imports, antes de cualquier declaración en la aplicación.  
+ Este ejemplo de código requiere una instrucción **Imports** para el espacio de nombres System. Collections. Specialized. Inserte esto con las otras instrucciones Imports, antes de cualquier declaración en la aplicación.  
   
 ```  
 Imports Microsoft.SqlServer.Management.Smo  

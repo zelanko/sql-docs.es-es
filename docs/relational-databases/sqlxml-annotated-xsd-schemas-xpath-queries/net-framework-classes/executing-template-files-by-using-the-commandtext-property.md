@@ -1,5 +1,5 @@
 ---
-title: Ejecutar archivos de plantilla con la propiedad CommandText | Documentos de Microsoft
+title: Ejecutar archivos de plantilla mediante la propiedad CommandText | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1cb0e0a39f0814051dbd5f2ce009526dd8558f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0992424ed4253bb783ad5713239e213cd2b86278
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934255"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909727"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Ejecutar archivos de plantilla utilizando la propiedad CommandText
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En este ejemplo se muestra cómo se pueden especificar archivos de plantilla que están compuestos de consultas SQL o XPath utilizando el CommandTextproperty. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como valor. En el ejemplo siguiente, se especifica la propiedad CommandType como SqlXmlCommandType.TemplateFile.  
+  En este ejemplo se muestra cómo se pueden especificar los archivos de plantilla que están compuestos de consultas SQL o XPath mediante el uso de CommandTextproperty. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como valor. En el ejemplo siguiente, la propiedad CommandType se especifica como SqlXmlCommandType. TemplateFile.  
   
  La aplicación de ejemplo ejecuta esta plantilla:  
   
@@ -81,7 +81,7 @@ class Test
   
 2.  Guarde la plantilla XML (TemplateFile.xml) que se proporciona en este ejemplo en una carpeta.  
   
-3.  Guarde el código C# (DocSample.cs) que se proporciona en este ejemplo en la misma carpeta donde se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
+3.  Guarde el C# código (DocSample.CS) que se proporciona en este ejemplo en la misma carpeta en la que se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
   
 4.  Compile el código. Para compilar el código en el símbolo del sistema, use:  
   
@@ -93,9 +93,7 @@ class Test
   
 5.  En el símbolo del sistema, ejecute DocSample.exe.  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- Si se pasa un parámetro a una plantilla, el nombre del parámetro debe comenzar con arroba (@); Por ejemplo, p.Name= "\@ContactID", donde p es un objeto SqlXmlParameter.  
+ Si pasa un parámetro a una plantilla, el nombre del parámetro debe comenzar con arroba (@); por ejemplo, p.Name = "\@ContactID", donde p es un objeto SqlXmlParameter.  
   
  Ésta es la plantilla actualizada que toma un parámetro.  
   

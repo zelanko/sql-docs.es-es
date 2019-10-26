@@ -16,18 +16,18 @@ ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3422f785cb57254695d0960b27d03604a4af6101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 26a2cea817c7e1ca7855b48512f4bf645cf4dcc3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934300"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908498"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Aplicar una transformación XSL (clases administradas de SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   En este ejemplo se ejecuta una consulta SQL en la base de datos AdventureWorks. La transformación XSL se aplica al resultado de la consulta para generar una tabla de dos columnas con los nombres y los apellidos de los empleados.  
   
- El xslpath, propiedad del objeto SqlXmlCommand se utiliza para especificar el archivo XSL y su ruta de acceso de directorio.  
+ La propiedad XslPath del objeto SqlXmlCommand se usa para especificar el archivo XSL y su ruta de acceso de directorio.  
   
 > [!NOTE]  
 >  En el código, debe proporcionar el nombre de la instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  
@@ -110,8 +110,6 @@ class Test
      Esto crea una aplicación ejecutable (DocSample.exe).  
   
 4.  En el símbolo del sistema, ejecute DocSample.exe.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="applying-an-xsl-transformation-in-the-net-framework"></a>Aplicar una transformación XSL en .NET Framework  
  En lugar de aplicar una transformación XSL en el nivel intermedio, tal y como se ha descrito previamente, puede aplicar una transformación XSL en el cliente (en .NET Framework). El siguiente código C# revisado muestra cómo se aplica la transformación XSL en .NET Framework.  

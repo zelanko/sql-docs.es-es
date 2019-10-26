@@ -1,5 +1,5 @@
 ---
-title: Utilizar ADO para ejecutar SQLXML 4.0 consultas | Microsoft Docs
+title: Usar ADO para ejecutar consultas SQLXML 4,0 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2b5f8ce7f2b7e0fab2da5eed698fadfb9538c12
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 642e98a743585226d984c378607b83a7ad432d92
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135328"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909131"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizar ADO para ejecutar consultas SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68135328"
   
  Como alternativa, puede ejecutar consultas y utilizar SQLXML 4.0 con las aplicaciones basadas en COM si aprovecha las extensiones SQLXML a Objetos de datos ActiveX (ADO) que se introdujeron por primera vez en Microsoft Data Access Components (MDAC) 2.6 y versiones posteriores.  
   
- En este tema muestra cómo utilizar SQLXML y ADO como parte de una aplicación de Visual Basic Scripting Edition (VBScript) (un script con la extensión de nombre de archivo .vbs). También se proporcionan los procedimientos de configuración iniciales que le ayudarán a volver a crear y probar ejemplos de consulta de la documentación de SQLXML 4.0.  
+ En este tema se muestra cómo usar SQLXML y ADO como parte de una aplicación Visual Basic Scripting Edition (VBScript) (un script con la extensión de nombre de archivo. vbs). También se proporcionan los procedimientos de configuración iniciales que le ayudarán a volver a crear y probar ejemplos de consulta de la documentación de SQLXML 4.0.  
   
 ## <a name="creating-the-sqlxml-40-test-script"></a>Crear el script de prueba de SQLXML 4.0  
  En este procedimiento, crea un archivo VBScript (.vbs), Sqlxml4test.vbs, que se puede utilizar para ejecutar consultas SQLXML aprovechando las extensiones ADO de SQLXML en ADO 2.6 y versiones posteriores.  
@@ -107,8 +107,6 @@ ms.locfileid: "68135328"
   
 5.  Siga las instrucciones de la sección siguiente sobre cómo utilizar el script de prueba de SQLXML 4.0.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="using-the-sqlxml-40-test-script"></a>Utilizar el script de prueba de SQLXML 4.0  
  El procedimiento siguiente describe cómo utilizar los archivos Sqlxml4test.vbs probar las consultas de ejemplo incluidas en esta documentación.  
   
@@ -116,14 +114,14 @@ ms.locfileid: "68135328"
   
 1.  Compruebe tal como se indica a continuación que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client está instalado:  
   
-    1.  Desde el **iniciar** menú, elija **configuración**y, a continuación, haga clic en **Panel de Control**.  
+    1.  En el menú **Inicio** , seleccione **configuración**y, a continuación, haga clic en **Panel de control**.  
   
-    2.  En el Panel de Control, abra **agregar o quitar programas**  
+    2.  En el panel de control, Abra **Agregar o quitar programas** .  
   
-    3.  En la lista de programas actualmente instalados, compruebe que **Microsoft SQL Server Native Client** aparece en la lista.  
+    3.  En la lista de programas instalados actualmente, compruebe que **Microsoft SQL Server Native Client** aparece en la lista.  
   
         > [!NOTE]  
-        >  Si necesita instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vea [instalar SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
+        >  Si necesita instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consulte Instalación de [SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 2.  Compruebe que la versión de MDAC instalada en el equipo cliente es la versión 2.6 o posterior. Si necesita comprobar información de versión de MDAC, puede utilizar la herramienta MDAC Component Checker, que se proporciona como descarga gratuita en el sitio web de Microsoft (www.microsoft.com). Para obtener más información, busque "MDAC Component Checker" en el sitio web de Microsoft.  
   

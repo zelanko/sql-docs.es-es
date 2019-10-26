@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: efbd753b40159afcca81b8922e8ef2842d22e5e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 155f59426e8167d5d888f3890089dd4b2ea3bf7c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067718"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909683"
 ---
-# <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
+# <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Configura información principal, agrega vínculos al monitor local y remoto y crea trabajos de copia y restauración en el servidor secundario de la base de datos principal especificada.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,70 +53,68 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @primary_server = ] 'primary_server'` El nombre de la instancia principal de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración de trasvase de registros. *primary_server* es **sysname** y no puede ser NULL.  
+`[ @primary_server = ] 'primary_server'` el nombre de la instancia principal del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración del trasvase de registros. *primary_server* es de **tipo sysname** y no puede ser null.  
   
-`[ @primary_database = ] 'primary_database'` Es el nombre de la base de datos en el servidor principal. *primary_database* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @primary_database = ] 'primary_database'` es el nombre de la base de datos del servidor principal. *primary_database* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @backup_source_directory = ] 'backup_source_directory'` El directorio donde se almacenan los archivos de copia de seguridad del registro de transacciones desde el servidor principal. *backup_source_directory* es **nvarchar (500)** y no puede ser NULL.  
+`[ @backup_source_directory = ] 'backup_source_directory'` el directorio donde se almacenan los archivos de copia de seguridad del registro de transacciones del servidor principal. *backup_source_directory* es de tipo **nvarchar (500)** y no puede ser null.  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'` El directorio en el servidor secundario que se copiarán los archivos de copia de seguridad. *backup_destination_directory* es **nvarchar (500)** y no puede ser NULL.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` el directorio del servidor secundario donde se copian los archivos de copia de seguridad. *backup_destination_directory* es de tipo **nvarchar (500)** y no puede ser null.  
   
-`[ @copy_job_name = ] 'copy_job_name'` El nombre que se usará para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente que se va a crear para copiar las copias de seguridad del registro de transacciones en el servidor secundario. *copy_job_name* es **sysname** y no puede ser NULL.  
+`[ @copy_job_name = ] 'copy_job_name'` el nombre que se va a utilizar para el trabajo del agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a crear para copiar las copias de seguridad del registro de transacciones en el servidor secundario. *copy_job_name* es de **tipo sysname** y no puede ser null.  
   
-`[ @restore_job_name = ] 'restore_job_name'` Es el nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente en el servidor secundario que restaura las copias de seguridad a la base de datos secundaria. *restore_job_name* es **sysname** y no puede ser NULL.  
+`[ @restore_job_name = ] 'restore_job_name'` es el nombre del trabajo del agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servidor secundario que restaura las copias de seguridad en la base de datos secundaria. *restore_job_name* es de **tipo sysname** y no puede ser null.  
   
-`[ @file_retention_period = ] 'file_retention_period'` El período de tiempo, en minutos, que se conserva un archivo de copia de seguridad en el servidor secundario en la ruta de acceso especificada por el @backup_destination_directory parámetro antes de eliminarse. *history_retention_period* es **int**, su valor predeterminado es null. Si se especifica ninguno, se usará un valor de 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` el período de tiempo, en minutos, que se conserva un archivo de copia de seguridad en el servidor secundario en la ruta de acceso especificada por el parámetro @backup_destination_directory antes de eliminarse. *history_retention_period* es de **tipo int**y su valor predeterminado es NULL. Si no se especifica ninguno, se usará un valor de 14420.  
   
-`[ @monitor_server = ] 'monitor_server'` Es el nombre del servidor de supervisión. *Monitor_server* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
+`[ @monitor_server = ] 'monitor_server'` es el nombre del servidor de supervisión. *Monitor_server* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Modo de seguridad utilizado para conectarse al servidor de supervisión.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` el modo de seguridad usado para conectarse al servidor de supervisión.  
   
  1 = Autenticación de Windows.  
   
  0 = Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *monitor_server_security_mode* es **bit** y no puede ser NULL.  
+ *monitor_server_security_mode* es de **bit** y no puede ser null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'` Es el nombre de usuario de la cuenta utilizada para tener acceso el servidor de supervisión.  
+`[ @monitor_server_login = ] 'monitor_server_login'` es el nombre de usuario de la cuenta usada para obtener acceso al servidor de supervisión.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'` Es la contraseña de la cuenta utilizada para tener acceso el servidor de supervisión.  
+`[ @monitor_server_password = ] 'monitor_server_password'` es la contraseña de la cuenta utilizada para tener acceso al servidor de supervisión.  
   
-`[ @copy_job_id = ] 'copy_job_id' OUTPUT` El identificador asociado con el trabajo de copia en el servidor secundario. *copy_job_id* es **uniqueidentifier** y no puede ser NULL.  
+`[ @copy_job_id = ] 'copy_job_id' OUTPUT` el identificador asociado con el trabajo de copia en el servidor secundario. *copy_job_id* es de tipo **uniqueidentifier** y no puede ser null.  
   
-`[ @restore_job_id = ] 'restore_job_id' OUTPUT` El identificador asociado con el trabajo de restauración en el servidor secundario. *restore_job_id* es **uniqueidentifier** y no puede ser NULL.  
+`[ @restore_job_id = ] 'restore_job_id' OUTPUT` el identificador asociado con el trabajo de restauración en el servidor secundario. *restore_job_id* es de tipo **uniqueidentifier** y no puede ser null.  
   
-`[ @secondary_id = ] 'secondary_id' OUTPUT` El identificador para el servidor secundario en la configuración de trasvase de registros. *secondary_id* es **uniqueidentifier** y no puede ser NULL.  
+`[ @secondary_id = ] 'secondary_id' OUTPUT` el ID. del servidor secundario en la configuración del trasvase de registros. *secondary_id* es de tipo **uniqueidentifier** y no puede ser null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
-## <a name="remarks"></a>Comentarios  
- **sp_add_log_shipping_secondary_primary** se debe ejecutar desde la **maestro** base de datos en el servidor secundario. Este procedimiento almacenado hace lo siguiente:  
+## <a name="remarks"></a>Notas  
+ **sp_add_log_shipping_secondary_primary** se debe ejecutar desde la base de datos **maestra** en el servidor secundario. Este procedimiento almacenado hace lo siguiente:  
   
 1.  Genera un Id. secundario para el servidor principal y la base de datos principal especificados.  
   
-2.  ocurre lo siguiente:  
+2.  Hace lo siguiente:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    1.  Agrega una entrada para el Id. secundario en **log_shipping_secondary** utilizando los argumentos proporcionados.  
+    1.  Agrega una entrada para el identificador secundario en **log_shipping_secondary** con los argumentos proporcionados.  
   
     2.  Crea un trabajo de copia para el Id. secundario que está deshabilitado.  
   
-    3.  Establece el identificador de trabajo de copia en el **log_shipping_secondary** entrada para el Id. de trabajo del trabajo de copia.  
+    3.  Establece el identificador del trabajo de copia en la entrada **log_shipping_secondary** en el ID. de trabajo del trabajo de copia.  
   
     4.  Crea un trabajo de restauración para el Id. secundario que está deshabilitado.  
   
-    5.  Establecer el Id. de trabajo de restauración en el **log_shipping_secondary** entrada para el Id. de trabajo del trabajo de restauración.  
+    5.  Establezca el identificador del trabajo de restauración en la entrada **log_shipping_secondary** en el ID. de trabajo del trabajo de restauración.  
   
-## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
+## <a name="permissions"></a>Permissions  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En este ejemplo se muestra cómo utilizar el **sp_add_log_shipping_secondary_primary** procedimiento almacenado para configurar la información de la base de datos principal [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el servidor secundario.  
+ En este ejemplo se muestra el uso del procedimiento almacenado **sp_add_log_shipping_secondary_primary** para configurar la información de la base de datos principal [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el servidor secundario.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -135,7 +133,7 @@ EXEC master.dbo.sp_add_log_shipping_secondary_primary
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

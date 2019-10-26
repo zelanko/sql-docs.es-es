@@ -13,12 +13,12 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f30acc0027c2456ff0194280c28a0ef97c1383a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fec568cae05e791d3d1263fddabdf695fd879bcb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110333"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907609"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Capturar columnas mediante IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68110333"
 3.  Ejecute IRow::GetColumns () para capturar una o más columnas de la fila resultante. Si desea buscar el tamaño de columna real antes de capturar los datos, establezca pData de DBCOLUMNACCESS en NULL. La llamada a IRow::GetColumns() solo devuelve el ancho de columna. Otra llamada a IRow::GetColumns() capturará los datos.  
   
 4.  Ejecute IRow::GetColumns() hasta obtener acceso a todas las columnas que necesita. Se debe tener acceso a las columnas en secuencia.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo se utiliza la interfaz IRow para permitir el acceso directo a las columnas de una sola fila del conjunto de resultados. Este ejemplo muestra:  
@@ -522,7 +520,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Temas de procedimientos de OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

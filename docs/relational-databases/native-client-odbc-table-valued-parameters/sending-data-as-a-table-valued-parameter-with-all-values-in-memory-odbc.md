@@ -1,5 +1,5 @@
 ---
-title: Enviar datos como un parámetro con valores de tabla con todos los valores de memoria (ODBC) | Documentos de Microsoft
+title: Enviar datos como un parámetro con valores de tabla con todos los valores en memoria (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf7d8b166a06d2b4c9973cf310b90f693ba1c6c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a95e676ff7d5d39358638727e317116aa05687f1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129133"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907360"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Enviar datos como un parámetro con valores de tabla con todos los valores en memoria (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  En este tema se describe cómo enviar datos a un procedimiento almacenado como un parámetro con valores de tabla cuando todos los valores están en memoria. Para obtener otro ejemplo que muestra los parámetros con valores de tabla, vea [usar parámetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  En este tema se describe cómo enviar datos a un procedimiento almacenado como un parámetro con valores de tabla cuando todos los valores están en memoria. Para ver otro ejemplo en el que se muestran los parámetros con valores de tabla, vea [ &#40;usar&#41;parámetros con valores de tabla ODBC](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Requisito previo  
  En este procedimiento se supone que se ha ejecutado el siguiente [!INCLUDE[tsql](../../includes/tsql-md.md)] en el servidor:  
@@ -90,7 +90,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  La segunda fase del enlace de parámetros consiste en enlazar las columnas para el parámetro con valores de tabla. En primer lugar, se establece el foco en el ordinal del parámetro con valores de tabla. A continuación, las columnas del valor de tabla están enlazadas mediante SQLBindParameter de la misma manera como lo serían si fueran parámetros del procedimiento almacenado, pero con ordinales de columna para ParameterNumber. Si hubiera más parámetros con valores de tabla, se establecería el foco en cada una de ellas y se enlazarían sus columnas. Finalmente, el foco del parámetro se restablece en 0.  
+3.  La segunda fase del enlace de parámetros consiste en enlazar las columnas para el parámetro con valores de tabla. En primer lugar, se establece el foco en el ordinal del parámetro con valores de tabla. A continuación, las columnas del valor de tabla se enlazan utilizando SQLBindParameter de la misma manera que si fueran parámetros del procedimiento almacenado, pero con ordinales de columna para ParameterNumber. Si hubiera más parámetros con valores de tabla, se establecería el foco en cada una de ellas y se enlazarían sus columnas. Finalmente, el foco del parámetro se restablece en 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -124,14 +124,12 @@ from @Items
   
 5.  Llame al procedimiento:  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     ```  
     // Call the procedure.  
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Ejemplos de programación de parámetros con valores de tabla ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

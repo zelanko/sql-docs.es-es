@@ -1,5 +1,5 @@
 ---
-title: Crear un transacciones distribuidas | Microsoft Docs
+title: Crear transacciones distribuidas | Microsoft Docs
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
@@ -17,12 +17,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc61ad955be287faad20289245ca4520efcd4bbd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 537537ef2f3dd07a27ffcb4d092be2f8719f6ee1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913174"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907375"
 ---
 # <a name="create-a-distributed-transaction"></a>Crear una transacción distribuida
 
@@ -35,46 +35,44 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-Una transacción distribuida se puede crear para los distintos sistemas de Microsoft SQL de maneras diferentes.
+Se puede crear una transacción distribuida para diferentes sistemas de Microsoft SQL de diferentes maneras.
 
-## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>Controlador ODBC llama a MSDTC para SQL Server local
+## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>El controlador ODBC llama a MSDTC para SQL Server local
 
-El Coordinador de transacciones distribuidas de Microsoft (MSDTC) permite a las aplicaciones ampliar o _distribuir_ una transacción entre dos o más instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La transacción distribuida funciona incluso cuando las dos instancias se hospedan en equipos independientes.
+Microsoft Coordinador de transacciones distribuidas (MSDTC) permite a las aplicaciones extender o _distribuir_ una transacción en dos o más instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La transacción distribuida funciona incluso cuando las dos instancias se hospedan en equipos independientes.
 
-MSDTC está instalado para Microsoft SQL Server local, pero no está disponible para el servicio de nube de Microsoft Azure SQL Database.
+MSDTC se instala para Microsoft SQL Server local, pero no está disponible para el servicio en la nube Azure SQL Database de Microsoft.
 
-MSDTC es llamado por el controlador de SQL Server Native Client para conectividad abierta de base de datos (ODBC), cuando su C++ programa administra una transacción distribuida. El controlador ODBC de Native Client tiene un administrador de transacciones que sea compatible con el Abrir grupo Distributed transacción procesamiento (DTP) estándar XA. Se requiere este cumplimiento por MSDTC. Por lo general, todos los comandos de administración de transacciones se envían a través de este controlador ODBC de Native Client. La secuencia es la siguiente:
+El controlador de SQL Server Native Client llama a MSDTC para conectividad abierta de bases de datos (ODBC) C++ , cuando el programa administra una transacción distribuida. El controlador ODBC de Native Client tiene un administrador de transacciones que es compatible con el estándar XA de Open Group Distributed Transaction Processing (DTP). MSDTC requiere este cumplimiento. Normalmente, todos los comandos de administración de transacciones se envían a través de este controlador ODBC de Native Client. La secuencia es la siguiente:
 
-1. Su C++ aplicación ODBC de Native Client comienza una transacción mediante una llamada a [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), con el modo de confirmación automática desactivado.
+1. La C++ aplicación ODBC de Native Client inicia una transacción mediante una llamada a [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), con el modo de confirmación automática desactivado.
 
 2. La aplicación actualiza algunos datos en SQL Server X en el equipo A.
 
 3. La aplicación actualiza algunos datos en SQL Server Y en el equipo B.
-    - Si una actualización en SQL Server Y se produce un error, se revierten todas las actualizaciones no confirmadas en ambas instancias de SQL Server.
+    - Si se produce un error en una actualización en SQL Server Y, se revierten todas las actualizaciones no confirmadas en ambas instancias de SQL Server.
 
-4. Por último, la aplicación finaliza la transacción mediante una llamada [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md), con las opciones SQL_COMMIT o SQL_ROLLBACK.
+4. Por último, la aplicación finaliza la transacción mediante una llamada a [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md), con la opción SQL_COMMIT o SQL_ROLLBACK.
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-_(1)_  MSDTC puede invocarse sin ODBC. En tal caso, MSDTC, se convierte en el Administrador de transacciones y la aplicación ya no utiliza **SQLEndTran**.
+_(1)_ MSDTC se puede invocar sin ODBC. En tal caso, MSDTC se convierte en el administrador de transacciones y la aplicación ya no usa **SQLEndTran**.
 
 ### <a name="only-one-distributed-transaction"></a>Solo una transacción distribuida
 
-Suponga que su C++ aplicación ODBC de Native Client se da de alta en una transacción distribuida. A continuación la aplicación da de alta en una segunda transacción distribuida. En este caso, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client deja la transacción distribuida original y se inscribe en la nueva transacción distribuida.
+Supongamos C++ que la aplicación ODBC de Native Client se ha dado de alta en una transacción distribuida. Después, la aplicación se da de alta en una segunda transacción distribuida. En este caso, el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client deja la transacción distribuida original y se da de alta en la nueva transacción distribuida.
 
-Para obtener más información, consulte [referencia del programador de DTC](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
+Para obtener más información, vea [Referencia del programador de DTC](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
 
-## <a name="c-alternative-for-sql-database-in-the-cloud"></a>C#alternativa para la base de datos de SQL en la nube
+## <a name="c-alternative-for-sql-database-in-the-cloud"></a>C#alternativa para SQL Database en la nube
 
-MSDTC no se admite para Azure SQL Database o Azure SQL Data Warehouse.
+MSDTC no es compatible con Azure SQL Database ni con Azure SQL Data Warehouse.
 
-Sin embargo, se puede crear una transacción distribuida para la base de datos SQL al tener su C# programa utilice la clase de .NET [System.Transactions.TransactionScope](/dotnet/api/system.transactions.transactionscope).
+Sin embargo, se puede crear una transacción distribuida para SQL Database haciendo C# que el programa use la clase .net [System. Transactions. TransactionScope](/dotnet/api/system.transactions.transactionscope).
 
 ### <a name="other-programming-languages"></a>Otros lenguajes de programación
 
-La siguiente es posible que otros lenguajes de programación no ofrece ninguna compatibilidad para las transacciones distribuidas con el servicio de base de datos de SQL:
+Los siguientes lenguajes de programación podrían no proporcionar compatibilidad con las transacciones distribuidas con el servicio de SQL Database:
 
-- Nativo C++ que usan los controladores ODBC
+- Nativa C++ que usa controladores ODBC
 - Servidor vinculado mediante Transact-SQL
 - Controladores JDBC
 

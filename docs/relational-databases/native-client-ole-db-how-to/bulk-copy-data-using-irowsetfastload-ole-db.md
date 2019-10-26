@@ -1,5 +1,5 @@
 ---
-title: Copia masiva de datos mediante IRowsetFastLoad (OLE DB) | Documentos de Microsoft
+title: Copiar datos masiva con IRowsetFastLoad (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57d166dd4f08ef46a87b1dc467453056ad88d84c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8d3d095e038f296ffbaf908798bcdc7f9bfe6d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68106745"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906660"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copiar datos de forma masiva mediante IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68106745"
 
   En este ejemplo se muestra el uso de IRowsetFastLoad para la copia masiva de los registros en una tabla.  
   
- El consumidor notifica a SQLOLEDB su necesidad de realizar una copia masiva estableciendo la propiedad SSPROP_ENABLEFASTLOAD específica del proveedor SQLOLEDB en VARIANT_TRUE. Con la propiedad establecida en el origen de datos, el consumidor crea una sesión SQLOLEDB. La nueva sesión permite al usuario tener acceso a **IRowsetFastLoad**.  
+ El consumidor notifica a SQLOLEDB su necesidad de realizar una copia masiva estableciendo la propiedad SSPROP_ENABLEFASTLOAD específica del proveedor SQLOLEDB en VARIANT_TRUE. Con la propiedad establecida en el origen de datos, el consumidor crea una sesión SQLOLEDB. La nueva sesión permite al consumidor acceder a **IRowsetFastLoad**.  
   
  Hay disponible un ejemplo completo donde se muestra el uso de **IRowsetFastLoad** para la copia masiva de los registros en una tabla. En este ejemplo, se agregan 10 registros a la tabla **IRFLTable**. Es necesario crear la tabla **IRFLTable** en la base de datos.  
   
@@ -44,17 +44,15 @@ ms.locfileid: "68106745"
   
 2.  Establezca la propiedad de origen de datos SSPROP_ENABLEFASTLOAD específica del proveedor SQLOLEDB en VARIANT_TRUE. Con esta propiedad establecida en VARIANT_TRUE, la nueva sesión permite el acceso del consumidor a **IRowsetFastLoad**.  
   
-3.  Crear una sesión que solicite la **IOpenRowset** interfaz.  
+3.  Cree una sesión que solicite la interfaz **IOpenRowset** .  
   
 4.  Llame a **IOpenRowset::OpenRowset** para abrir un conjunto de filas que incluya todas las filas de la tabla (donde los datos se copiarán mediante una operación de copia masiva).  
   
-5.  Realice los enlaces necesarios y cree un descriptor de acceso mediante **IAccessor:: CreateAccessor**.  
+5.  Realice los enlaces necesarios y cree un descriptor de acceso con **IAccessor:: CreateAccessor**.  
   
 6.  Configure el búfer de memoria desde el que los datos se copiarán en la tabla.  
   
-7.  Llame a **IRowsetFastLoad:: insertRow** para la copia masiva de los datos en la tabla.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+7.  Llame a **IRowsetFastLoad:: InsertRow** para realizar una copia masiva de los datos de en la tabla.  
 
 ## <a name="example"></a>Ejemplo  
  En este ejemplo, se agregan 10 registros a la tabla IRFLTable. Es necesario crear la tabla IRFLTable en la base de datos. Este ejemplo no es compatible con IA64.  

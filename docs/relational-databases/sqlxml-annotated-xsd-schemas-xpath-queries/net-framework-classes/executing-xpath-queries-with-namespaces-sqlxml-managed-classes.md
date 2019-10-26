@@ -1,5 +1,5 @@
 ---
-title: Ejecutar consultas XPath con espacios de nombres (clases administradas de SQLXML) | Documentos de Microsoft
+title: Ejecutar consultas XPath con espacios de nombres (clases administradas de SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,26 +19,26 @@ ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc54797e5f423b277e1cd3ffc3fbb77e588cca11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 884ea584ec54425d6d0ed2d134e9181cd4d56678
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934159"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909217"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Ejecutar consultas XPath con espacios de nombres (clases administradas de SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Las consultas XPath pueden incluir espacios de nombres. Si los elementos de esquema son espacios de nombres calificados (usan un espacio de nombres de destino), las consultas XPath que se realicen en el esquema deben especificar el espacio de nombres.  
   
- Dado que no se admite el uso del carácter comodín (*) en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, debe especificar la consulta XPath mediante un prefijo de espacio de nombres. Para resolver el prefijo, utilice la propiedad de los espacios de nombres para especificar el enlace de espacio de nombres.  
+ Dado que no se admite el uso del carácter comodín (*) en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, debe especificar la consulta XPath mediante un prefijo de espacio de nombres. Para resolver el prefijo, use la propiedad namespaces para especificar el enlace del espacio de nombres.  
   
- En el ejemplo siguiente, la consulta XPath especifica los espacios de nombres con el carácter comodín (\*) y las funciones de XPath local-name() y espacio. Esta consulta XPath devuelve todos los elementos donde el nombre local es **empleado** y el espacio de nombres URI es **urn: myschema:Contacts**:  
+ En el ejemplo siguiente, la consulta XPath especifica espacios de nombres mediante el carácter comodín (\*) y las funciones XPath de nombre local () y espacio de nombres-URI (). Esta consulta XPath devuelve todos los elementos en los que el nombre local es **Employee** y el URI de espacio de nombres es **urn: @ Schema: Contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- En SQLXML 4.0, especifique esta consulta XPath con un prefijo de espacio de nombres. Un ejemplo es **x: contacto**, donde **x** es el prefijo de espacio de nombres. Fíjese en el siguiente esquema XSD:  
+ En SQLXML 4.0, especifique esta consulta XPath con un prefijo de espacio de nombres. Un ejemplo es **x:contact**, donde **x** es el prefijo del espacio de nombres. Fíjese en el siguiente esquema XSD:  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -56,7 +56,7 @@ ms.locfileid: "67934159"
   
  Dado que en este esquema se define el espacio de nombres de destino, una consulta XPath (como "Employee") en este esquema debe incluir el espacio de nombres.  
   
- La aplicación de ejemplo C# siguiente ejecuta una consulta XPath en el esquema XSD anterior (MySchema.xml). Para resolver el prefijo, especifique el enlace de espacio de nombres mediante el uso de la propiedad de los espacios de nombres del objeto SqlXmlCommand.  
+ La aplicación de ejemplo C# siguiente ejecuta una consulta XPath en el esquema XSD anterior (MySchema.xml). Para resolver el prefijo, especifique el enlace de espacio de nombres mediante la propiedad namespaces del objeto SqlXmlCommand.  
   
 > [!NOTE]  
 >  En el código, debe suministrarse el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  
@@ -98,7 +98,7 @@ class Test
   
 1.  Guarde el esquema XSD (MySchema.xml) que se proporciona en este ejemplo en una carpeta.  
   
-2.  Guarde el código C# (DocSample.cs) que se proporciona en este ejemplo en la misma carpeta donde se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
+2.  Guarde el C# código (DocSample.CS) que se proporciona en este ejemplo en la misma carpeta en la que se almacena el esquema. (Si almacena los archivos en otra carpeta, tendrá que modificar el código y especificar la ruta de acceso al directorio adecuada para el esquema de asignación).  
   
 3.  Compile el código. Para compilar el código en el símbolo del sistema, use:  
   
@@ -109,6 +109,4 @@ class Test
      Esto crea una aplicación ejecutable (DocSample.exe).  
   
 4.  En el símbolo del sistema, ejecute DocSample.exe.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

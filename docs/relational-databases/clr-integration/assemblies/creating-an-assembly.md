@@ -1,5 +1,5 @@
 ---
-title: Creación de un ensamblado | Microsoft Docs
+title: Crear un ensamblado | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87416b9cea3aee133493f93f97c9ccf11823cde7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9493567f33cf07dbfa9ae4f19d037a7db6157eda
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027929"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907400"
 ---
 # <a name="creating-an-assembly"></a>Crear un ensamblado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   El ensamblado al que se llama o se hace referencia se creó en la misma base de datos.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Especificar la seguridad al crear ensamblados  
- Al crear un ensamblado en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos, puede especificar uno de tres niveles distintos de seguridad en el que se puede ejecutar el código: **SEGURO**, **EXTERNAL_ACCESS**, o **UNSAFE**. Cuando se ejecuta la instrucción **CREATE ASSEMBLY** , se realizan determinadas comprobaciones en el ensamblado de código que pueden provocar que el ensamblado no se registre en el servidor. Para obtener más información, vea el ejemplo de suplantación en [CodePlex](https://msftengprodsamples.codeplex.com/).  
+ Al crear un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , puede especificar uno de los tres niveles distintos de seguridad en los que puede ejecutarse el código: **SAFE**, **EXTERNAL_ACCESS**o **UNSAFE**. Cuando se ejecuta la instrucción **CREATE ASSEMBLY** , se realizan determinadas comprobaciones en el ensamblado de código que pueden provocar que el ensamblado no se registre en el servidor. Para obtener más información, vea el ejemplo de suplantación en [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **SAFE** es el conjunto de permisos predeterminado y funciona en la mayoría de los escenarios. Para especificar un nivel de seguridad determinado, debe modificar la sintaxis de la instrucción CREATE ASSEMBLY tal y como se indica a continuación:  
   
@@ -69,7 +69,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  Cuando el código de un ensamblado se ejecuta con el conjunto de permisos **SAFE** , solo puede realizar tareas de cálculo y acceso a datos en el servidor a través del proveedor administrado en proceso.  
   
-### <a name="creating-externalaccess-and-unsafe-assemblies"></a>Crear ensamblados EXTERNAL_ACCESS y UNSAFE  
+### <a name="creating-external_access-and-unsafe-assemblies"></a>Crear ensamblados EXTERNAL_ACCESS y UNSAFE  
  **EXTERNAL_ACCESS** se usa en escenarios en los que el código necesita tener acceso a recursos fuera del servidor, como archivos, la red, el Registro y variables de entorno. Cuando el servidor obtiene acceso a un recurso externo, suplanta el contexto de seguridad del usuario que llama al código administrado.  
   
  **UNSAFE** se usa en escenarios en los que no puede comprobarse la seguridad de un ensamblado o el ensamblado requiere acceso adicional a recursos restringidos, como la API Win32 de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
@@ -79,8 +79,6 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  El ensamblado está firmado con un nombre seguro o firmado mediante Authenticode con un certificado. Este nombre seguro (o certificado) se crea dentro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como una clave asimétrica (o certificado) y dispone de un inicio de sesión correspondiente con permiso **EXTERNAL ACCESS ASSEMBLY** (para ensamblados de acceso externo) o permiso **UNSAFE ASSEMBLY** (para ensamblados no seguros).  
   
 2.  El propietario de la base de datos (DBO) dispone de permiso **EXTERNAL ACCESS ASSEMBLY** (para los ensamblados **EXTERNAL ACCESS** ) o **UNSAFE ASSEMBLY** (para los ensamblados **UNSAFE** ), y la [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) de base de datos está establecida en **ON**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Las dos condiciones indicadas anteriormente también se comprueban en el momento de carga del ensamblado (que incluye la ejecución). Para cargar el ensamblado debe cumplirse al menos una de las condiciones.  
   
@@ -131,11 +129,11 @@ WITH PERMISSION_SET = UNSAFE;
   
  Para obtener más información sobre los permisos de cada configuración, vea [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
-## <a name="see-also"></a>Vea también  
- [Administrar ensamblados de integración de CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+## <a name="see-also"></a>Ver también  
+ [Administrar ensamblados de integración CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [Modificar un ensamblado](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [Quitar un ensamblado](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
- [Seguridad de acceso del código de integración de CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+   de [seguridad de acceso del código de integración CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
  [Propiedad de base de datos TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
  [Permitir llamadores de confianza parcial](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7cc47e0543139fde3bc43e0f3cc66641ba8f455d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d0bd62fe3462441d4eab9d3d89bce20cf1144131
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045810"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909555"
 ---
-# <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
+# <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cambia la configuración de la base de datos secundaria.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -51,54 +51,52 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @restore_delay = ] 'restore_delay'` La cantidad de tiempo, en minutos, que el servidor secundario espera antes de restaurar un archivo de copia de seguridad determinado. *restore_delay* es **int** y no puede ser NULL. El valor predeterminado es 0.  
+`[ @restore_delay = ] 'restore_delay'` la cantidad de tiempo, en minutos, que el servidor secundario espera antes de restaurar un archivo de copia de seguridad determinado. *restore_delay* es de **tipo int** y no puede ser null. El valor predeterminado es 0.  
   
-`[ @restore_all = ] 'restore_all'` Si se establece en 1, el servidor secundario restaura todas las copias de seguridad de registro de transacciones disponibles cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haber restaurado un archivo. *restore_all* es **bit** y no puede ser NULL.  
+`[ @restore_all = ] 'restore_all'` si se establece en 1, el servidor secundario restaura todas las copias de seguridad del registro de transacciones disponibles cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haber restaurado un archivo. *restore_all* es de **bit** y no puede ser null.  
   
-`[ @restore_mode = ] 'restore_mode'` El modo de restauración de la base de datos secundaria.  
+`[ @restore_mode = ] 'restore_mode'` el modo de restauración para la base de datos secundaria.  
   
  0 = Restaurar registro con NORECOVERY.  
   
- 1 = Restaurar registro con STANDBY.  
+ 1 = restaurar registro con STANDBY.  
   
- *restaurar* es **bit** y no puede ser NULL.  
+ *restore* es de **bit** y no puede ser null.  
   
-`[ @disconnect_users = ] 'disconnect_users'` Si se establece en 1, los usuarios se desconecta de la base de datos secundaria cuando se realiza una operación de restauración. Valor predeterminado = 0. *disconnect_users* es **bit** y no puede ser NULL.  
+`[ @disconnect_users = ] 'disconnect_users'` si se establece en 1, los usuarios se desconectarán de la base de datos secundaria cuando se realice una operación de restauración. Valor predeterminado = 0. *disconnect_users* es de **bit** y no puede ser null.  
   
-`[ @block_size = ] 'block_size'` El tamaño, en bytes, que se usa como el tamaño de bloque para el dispositivo de copia de seguridad. *block_size* es **int** con un valor predeterminado de -1.  
+`[ @block_size = ] 'block_size'` el tamaño, en bytes, que se utiliza como tamaño de bloque para el dispositivo de copia de seguridad. *BLOCK_SIZE* es de **tipo int** y su valor predeterminado es-1.  
   
-`[ @buffer_count = ] 'buffer_count'` El número total de búferes utilizados por la operación de copia de seguridad o restauración. *buffer_count* es **int** con un valor predeterminado de -1.  
+`[ @buffer_count = ] 'buffer_count'` el número total de búferes utilizados por la operación de copia de seguridad o restauración. *buffer_count* es de **tipo int** y su valor predeterminado es-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'` El tamaño, en bytes, de la entrada máxima o la solicitud de salida emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el dispositivo de copia de seguridad. *max_transfersize* es **int** y puede ser NULL.  
+`[ @max_transfer_size = ] 'max_transfer_size'` el tamaño, en bytes, de la solicitud de entrada o salida máxima que emite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al dispositivo de copia de seguridad. *max_transfersize* es de **tipo int** y puede ser null.  
   
-`[ @restore_threshold = ] 'restore_threshold'` El número de minutos permitido entre las operaciones de restauración antes de que se genera una alerta. *restore_threshold* es **int** y no puede ser NULL.  
+`[ @restore_threshold = ] 'restore_threshold'` el número de minutos que pueden transcurrir entre las operaciones de restauración antes de que se genere una alerta. *restore_threshold* es de **tipo int** y no puede ser null.  
   
-`[ @threshold_alert = ] 'threshold_alert'` Es la alerta que se genera cuando se supera el umbral de restauración. *threshold_alert* es **int**, su valor predeterminado es 14420.  
+`[ @threshold_alert = ] 'threshold_alert'` es la alerta que se generará cuando se supere el umbral de restauración. *threshold_alert* es de **tipo int**y su valor predeterminado es 14420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Especifica si va a una alerta se genera cuando *restore_threshold*se supera. 1 = habilitadas; 0 = deshabilitadas. *threshold_alert_enabled* es **bit** y no puede ser NULL.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` especifica si se generará una alerta cuando se supere *restore_threshold*. 1 = habilitadas; 0 = deshabilitadas. *threshold_alert_enabled* es de **bit** y no puede ser null.  
   
-`[ @history_retention_period = ] 'history_retention_period'` Es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es **int**. Si se especifica ninguno, se usará un valor de 1440.  
+`[ @history_retention_period = ] 'history_retention_period'` es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es de **tipo int**. Si no se especifica ninguno, se usará un valor de 1440.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
-## <a name="remarks"></a>Comentarios  
- **sp_change_log_shipping_secondary_database** se debe ejecutar desde la **maestro** base de datos en el servidor secundario. Este procedimiento almacenado hace lo siguiente:  
+## <a name="remarks"></a>Notas  
+ **sp_change_log_shipping_secondary_database** se debe ejecutar desde la base de datos **maestra** en el servidor secundario. Este procedimiento almacenado hace lo siguiente:  
   
-1.  Cambia la configuración de la **log_shipping_secondary_database** registra según sea necesario.  
+1.  Cambia la configuración de los registros de **log_shipping_secondary_database** según sea necesario.  
   
-2.  Cambia el registro de monitor local en **log_shipping_monitor_secondary** en el servidor secundario utilizando los argumentos proporcionados, si es necesario.  
+2.  Cambia el registro de supervisión local en **log_shipping_monitor_secondary** en el servidor secundario utilizando los argumentos proporcionados, si es necesario.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor puede ejecutar este procedimiento.  
+## <a name="permissions"></a>Permissions  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En este ejemplo se muestra cómo utilizar **sp_change_log_shipping_secondary_database** para actualizar los parámetros de la base de datos secundaria de la base de datos **LogShipAdventureWorks**.  
+ En este ejemplo se muestra el uso de **sp_change_log_shipping_secondary_database** para actualizar los parámetros de la base de datos secundaria para la base de datos **LogShipAdventureWorks**.  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_secondary_database   
@@ -112,7 +110,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ,  @history_retention_period = 14420;  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Ver también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

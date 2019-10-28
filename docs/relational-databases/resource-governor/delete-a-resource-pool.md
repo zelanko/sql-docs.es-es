@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb169478337e160c63ccd538c2d2f8120de8311f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd20f084aa682e7440a4ce2ea426a19141cbd0c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125027"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903937"
 ---
 # <a name="delete-a-resource-pool"></a>Eliminar un grupo de recursos de servidor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,10 +46,8 @@ ms.locfileid: "68125027"
   
 3.  En la ventana **Eliminar objeto** aparece el grupo de recursos de servidor en la lista **Objeto que se va a eliminar** . Para eliminar el grupo de recursos de servidor, haga clic en **Aceptar**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!NOTE]  
-    >  If the resource pool that you are trying to delete contains a workload group, this action will fail.  
+    >  Si el grupo de recursos de servidor que intenta eliminar contiene un grupo de cargas de trabajo, esta acción provocará un error.  
   
 ##  <a name="DelRPTSQL"></a> Eliminar un grupo de recursos de servidor mediante Transact-SQL  
  **Para eliminar un grupo de recursos de servidor mediante Transact-SQL**  

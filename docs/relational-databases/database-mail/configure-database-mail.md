@@ -39,12 +39,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7f57825d1c4458761724c2e02c243a32a89dc018
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c10388d5becdbcfbe32f3247855e3e421ea7eaa7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134579"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909497"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,8 +73,6 @@ ms.locfileid: "68134579"
 3.  Haga clic con el botón derecho en **Correo electrónico de base de datos**y haga clic en **Configurar Correo electrónico de base de datos**.  
   
 4.  Complete los cuadros de diálogo del asistente.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   [Página Asistente](#Welcome)  
   

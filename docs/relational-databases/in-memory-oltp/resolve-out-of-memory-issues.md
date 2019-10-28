@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2dd428c7f035cf73e679bbd6c47e78f1f745457
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111823"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908451"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memoria insuficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,8 +77,6 @@ Si el servidor tiene suficiente memoria física, pero todavía aparece este erro
   
 2.  [Tomar una acción correctora](#bkmk_takeCorrectiveAction)  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ###  <a name="bkmk_openDAC"></a> Abrir una DAC (conexión de administrador dedicada)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una conexión de administrador dedicada (DAC). La DAC permite a los administradores acceder a una instancia en ejecución del motor de base de datos de SQL Server para solucionar problemas en el servidor, aunque el servidor no responda a otras conexiones de cliente. DAC está disponible a través de la utilidad `sqlcmd` y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -101,7 +99,7 @@ Si el servidor tiene suficiente memoria física, pero todavía aparece este erro
   
 #### <a name="increase-available-memory"></a>Aumente la cantidad de memoria disponible  
   
-##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>Aumente el valor de MAX_MEMORY_PERCENT en el grupo de recursos de servidor  
+##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>Aumente el valor de MAX_MEMORY_PERCENT en el grupo de recursos de servidor  
  Si no ha creado un grupo de recursos de servidor con nombre para las tablas en memoria, debe hacerlo y enlazar las bases de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] al mismo. Vea el tema [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) para obtener instrucciones sobre cómo crear y enlazar sus bases de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] a un grupo de recursos.  
   
  Si la base de datos de [!INCLUDE[hek_2](../../includes/hek-2-md.md)] está enlazada a un grupo de recursos de servidor, es posible que pueda aumentar el porcentaje de memoria a la que puede tener acceso el grupo. Vea el subtema [Cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) para obtener instrucciones sobre cómo cambiar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT de un grupo de recursos.  

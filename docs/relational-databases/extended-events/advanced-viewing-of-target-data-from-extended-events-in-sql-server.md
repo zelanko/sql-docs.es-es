@@ -11,12 +11,12 @@ ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 030635af78475eebfa63169b712528b8beeafa38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0070948697c7aaed76330da233bdf3739f5b3e3a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021931"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909414"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)
 
@@ -164,7 +164,7 @@ La presentación de datos se actualiza en un intervalo que se puede especificar.
 
 
 
-### <a name="b4-view-xel-with-sysfnxefiletargetreadfile-function"></a>B.4 Ver .XEL con la función sys.fn_xe_file_target_read_file
+### <a name="b4-view-xel-with-sysfn_xe_file_target_read_file-function"></a>B.4 Ver .XEL con la función sys.fn_xe_file_target_read_file
 
 
 En un procesamiento por lotes, la siguiente función de sistema puede generar XML para los registros de un archivo .XEL:
@@ -180,8 +180,6 @@ Una vez que tenemos los datos de destino en SSMS, se pueden exportar a diversos 
 
 
 1. Mantenga el foco en la presentación de datos.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     - De repente, aparecerán una nueva barra de herramientas y un nuevo elemento de menú para eventos extendidos.
 

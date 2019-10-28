@@ -15,12 +15,12 @@ ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f98435c4c8813d6cf5f9b9d3f451b9be0bb8f284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bb42d6630d5dd4632a9674c2b783aa2059f80cda
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129530"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905798"
 ---
 # <a name="view-foreign-key-properties"></a>Ver las propiedades de clave externa
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -53,8 +53,6 @@ ms.locfileid: "68129530"
 1.  Abra en el Diseñador de tablas la tabla que contiene la clave externa que quiera ver; después, haga clic con el botón derecho en el Diseñador de tablas y elija **Relaciones** en el menú contextual.  
   
 2.  En el cuadro de diálogo **Relaciones de clave externa** , seleccione la relación con propiedades que desea ver.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Si las columnas de clave externa están relacionadas con una clave principal, las columnas de clave principal se identifican en el **Diseñador de tablas** mediante un símbolo de clave principal en el selector de fila.  
   

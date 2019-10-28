@@ -13,12 +13,12 @@ ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 792b605f4c85484a8cb6ab7987aeee2bd427c67a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cb88891354154ff987cedc31a56f56e4bf953532
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098275"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903892"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar y administrar archivos de sinónimos para búsquedas de texto completo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,8 +82,6 @@ Puede cambiar la ubicación y los nombres de un archivo de sinónimos cambiando 
 Una consulta del diccionario de sinónimos utiliza un diccionario de sinónimos específico del idioma y el diccionario de sinónimos global.
 1.  Primero, la consulta busca el archivo específico del idioma y lo carga para su procesamiento (a menos que ya esté cargado). La consulta se expande para incluir los sinónimos específicos del idioma especificados por las reglas de conjuntos de expansión y conjuntos de reemplazo en el archivo de diccionario de sinónimos. 
 2.  Estos pasos se repiten después para el diccionario de sinónimos global. Sin embargo, si un término ya forma parte de una coincidencia en el archivo de diccionario de sinónimos específico del idioma, el término es ilegible para coincidencias en el diccionario de sinónimos global.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> Estructura de un archivo de sinónimos  
  Cada archivo de sinónimos define un contenedor XML cuyo identificador es `Microsoft Search Thesaurus` y un comentario, `<!--` ... `-->`, que contiene un diccionario de sinónimos de ejemplo. El diccionario de sinónimos se define en un elemento `<thesaurus>` que contiene ejemplos de los elementos secundarios que definen la configuración de los signos diacríticos, los conjuntos de expansión y los conjuntos de reemplazo.

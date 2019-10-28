@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f2589588a2caa0c8a4132954b7897a7c128110d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072895"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909487"
 ---
 # <a name="filter-a-trace"></a>Filtrar un seguimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68072895"
 2.  Identifique los datos y las columnas de datos que contienen la información necesaria.  
   
 3.  Identifique un subconjunto de los datos que necesita y defina filtros basándose en ese subconjunto de datos.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Por ejemplo, puede que solo le interesen los eventos que tardan más de un tiempo determinado. Puede crear un seguimiento que incluya los eventos en los que el valor de la columna de datos **Duration** supere los 300 milisegundos. El seguimiento no incluirá los eventos que finalicen en menos de 300 milisegundos.  
   

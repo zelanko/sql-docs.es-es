@@ -3,16 +3,16 @@ title: Preguntas más frecuentes sobre SQL Server en Linux
 description: En este artículo se ofrecen respuestas a las preguntas más frecuentes sobre SQL Server en Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/10/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952633"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72929904"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Preguntas más frecuentes sobre SQL Server en Linux
 
@@ -32,7 +32,7 @@ En las secciones siguientes se proporcionan preguntas y respuestas comunes sobre
 
 1. **¿Es SQL Server en Linux igual que en Windows?**
 
-   El Motor de base de datos principal de SQL Server es el mismo en Linux que en Windows. Aun así, algunas características no se admiten actualmente en Linux. Para obtener una lista de las características que no se admiten en Linux, consulte las [características y servicios no admitidos](sql-server-linux-release-notes.md#Unsupported). Revise también los [problemas conocidos](sql-server-linux-release-notes.md#known-issues). A menos que se especifique en estas listas, se admiten en Linux otras características y servicios de SQL Server.
+   El Motor de base de datos principal de SQL Server es el mismo en Linux que en Windows. Aun así, algunas características no se admiten actualmente en Linux. Para obtener una lista de las características que no se admiten en Linux, consulte las [características y servicios no admitidos](sql-server-linux-editions-and-components-2019.md#Unsupported). Revise también los [problemas conocidos](sql-server-linux-release-notes.md#known-issues). A menos que se especifique en estas listas, se admiten en Linux otras características y servicios de SQL Server.
 
 1. **¿Cuál es la directiva de soporte técnico de SQL Server?**
 

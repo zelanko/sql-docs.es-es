@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0e10891c4627c881f9ef8f9cb9c9ae81b61c8f17
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: c3b599ac576a71438fb13505521eff24b6c7e3fc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846734"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907965"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Habilitar suscripciones actualizables para publicaciones transaccionales
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,7 @@ ms.locfileid: "70846734"
   
 2.  En la página **Seguridad del agente** , especifique la configuración de seguridad para el Agente de lectura de cola, el Agente de instantáneas y el Agente de registro del LOG. Para obtener más información acerca de los permisos necesarios para la cuenta con la que se ejecuta el Agente de lectura de cola, vea [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
 
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    > **NOTE:** The Queue Reader Agent is configured even if you use only immediate updating subscriptions.  
+    > **NOTA:** El Agente de lectura de cola se configura aunque solamente se utilicen suscripciones de actualización inmediata.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Al crear una publicación transaccional mediante programación con procedimientos almacenados de replicación, puede habilitar las suscripciones de actualización inmediatas o en cola.  

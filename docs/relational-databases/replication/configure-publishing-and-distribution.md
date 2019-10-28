@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: defa71e8650afc1ef96e750cbbeb7f7f52325272
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 67db54183f186ce5a116aada3e5f6b058abb9dc5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768684"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907115"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar la publicación y la distribución
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,8 +41,6 @@ Configure la distribución con el Asistente para nueva publicación o el Asisten
 2. Haga clic con el botón secundario en la carpeta **Replicación** y, a continuación, en **Configurar distribución**.
 
 3. Siga las indicaciones del Asistente para configurar la distribución: 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   - Seleccione un distribuidor. Para usar un distribuidor local, seleccione **ServerName, que actuará como su propio distribuidor. SQL Server creará una base de datos y un registro de distribución**. Para utilizar un distribuidor remoto, seleccione **Utilizar el siguiente servidor como distribuidor**y, a continuación, seleccione un servidor. El servidor ya debe estar configurado como distribuidor y el publicador debe estar habilitado para usar el distribuidor. Para más información, vea [Habilitar un publicador remoto en un distribuidor &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4795fd4ff2cc6c2c267e132062960ec492353cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f010b08f4e9bb7687d45175a70f8d619758e561
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138387"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906999"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Cadenas de propiedad y cambio de contexto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,6 @@ Para cumplir los requisitos de este escenario, el ejemplo se ha dividido en cuat
 2.  Creación de un procedimiento almacenado para obtener acceso a datos por pedido de compra.   
 3.  Acceso a los datos mediante un procedimiento almacenado.  
 4.  Restablecimiento del entorno.  
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Cada bloque de código incluido en este ejemplo se describe en línea. Para copiar el ejemplo completo, vea [Ejemplo completo](#CompleteExample) al final de este tutorial.
 

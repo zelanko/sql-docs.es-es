@@ -13,12 +13,12 @@ ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67af7654f2148f3d4e6409eb49701e58a194fa4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 588531a01a12dcec1a4832241e29dab38841f944
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091404"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906321"
 ---
 # <a name="delete-statistics"></a>Eliminar estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,8 +66,6 @@ ms.locfileid: "68091404"
 5.  Haga clic con el botón derecho en el objeto de estadísticas que quiera eliminar y, luego, seleccione **Eliminar**.  
   
 6.  En el cuadro de diálogo **Eliminar objeto** , asegúrese de que está seleccionada la estadística correcta y haga clic en **Aceptar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

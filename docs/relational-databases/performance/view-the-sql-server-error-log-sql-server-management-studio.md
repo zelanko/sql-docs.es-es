@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55f468ba-146c-4ab3-95cd-d35d051afd12
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 35bd9553376b7e8887271a0a51c023a0be95c4de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b626bb278025eb08cbbfdcc81724d8c82dd36ed
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986628"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907847"
 ---
 # <a name="view-the-sql-server-error-log-sql-server-management-studio"></a>Ver el registro de errores de SQL Server (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,6 @@ El registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
     ![View_SQLServer_Log_SSMS](../../relational-databases/performance/media/view-sqlserver-log-ssms.png) 
  
 5. Aparecerá el **Visor de archivos de registro** (puede tardar un momento) con una lista de los registros que puede ver.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   ## <a name="see-also"></a>Vea también
   Para obtener más información, consulte la publicación [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/) (Identificar la ubicación del archivo de registro de errores de SQL Server) de [MSSQLTips.com's](https://www.mssqltips.com/).

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7b39b4391780a8133dae199e39638a6db77d73aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64427c005dca0e7a69dcc73b953260429b325332
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083904"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908538"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -231,50 +231,48 @@ ms.locfileid: "68083904"
   
 12. Para ver los resultados en el visor del archivo de registro, en el **Explorador de objetos**, haga clic con el botón derecho en la carpeta **Planes de mantenimiento** o en el plan de mantenimiento específico y, luego, selecciones **Ver historial**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
+     Las opciones siguientes están disponibles en el cuadro de diálogo **Visor de archivos de registro -** _nombre\_servidor_.  
   
-     **Load Log**  
-     Open a dialog box where you can specify a log file to load.  
+     **Cargar registro**  
+     Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  
   
-     **Export**  
-     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
+     **Exportar**  
+     Abre un cuadro de diálogo que permite exportar la información que se muestra en la cuadrícula **Resumen de archivos de registro** a un archivo de texto.  
   
-     **Refresh**  
-     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
+     **Actualizar**  
+     Actualice la vista de los registros seleccionados. El botón **Actualizar** hace que se vuelvan a leer los registros seleccionados del servidor de destino al tiempo que se aplica una configuración de filtro.  
   
-     **Filter**  
-     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
+     **Filtro**  
+     Abre un cuadro de diálogo que permite especificar la configuración que se usa para filtrar el archivo de registro, como **Conexión**, **Fecha**u otros criterios de filtro de **General** .  
   
-     **Search**  
-     Search the log file for specific text. Searching with wildcard characters is not supported.  
+     **Buscar**  
+     Permite buscar texto específico en el archivo de registro. No se admite la búsqueda con caracteres comodín.  
   
-     **Stop**  
-     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
+     **Detener**  
+     Detiene la carga de las entradas del archivo de registro. Por ejemplo, puede utilizar esta opción si la carga de un archivo de registro remoto o sin conexión tarda mucho tiempo y solo desea ver las entradas más recientes.  
   
-     **Log file summary**  
-     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
+     **Resumen de archivos de registro**  
+     Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se aplica un filtro al registro, se mostrará el texto **Filtrar entradas del registro en:** \<criteriosDeFiltro>.  
   
      **Date**  
-     Displays the date of the event.  
+     Muestra la fecha del evento.  
   
      **Source**  
-     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
+     Muestra la característica de origen desde la que se crea el evento, como el nombre del servicio (MSSQLSERVER, por ejemplo). No aparece para todos los tipos de registro.  
   
-     **Message**  
-     Displays any messages associated with the event.  
+     **de mensaje**  
+     Muestra todos los mensajes asociados al evento.  
   
-     **Log Type**  
-     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
+     **Tipo de registro**  
+     Muestra el tipo de registro al que pertenece el evento. Todos los registros seleccionados aparecen en la ventana de resumen del archivo de registro.  
   
-     **Log Source**  
-     Displays a description of the source log in which the event is captured.  
+     **Origen del registro**  
+     Muestra una descripción del registro de origen en el que se captura el evento.  
   
-     **Selected row details**  
-     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
+     **Detalles de las filas seleccionadas**  
+     Seleccione una fila para mostrar detalles adicionales sobre la fila de evento seleccionada en la parte inferior de la página. Puede ordenar de nuevo las columnas arrastrándolas a nuevas ubicaciones de la cuadrícula. Puede modificar el tamaño de las columnas arrastrando las barras de separación de las columnas del encabezado de la cuadrícula hacia la izquierda o hacia la derecha. Haga doble clic en las barras de separación de las columnas del encabezado de la cuadrícula para ajustar automáticamente el tamaño de la columna al ancho del contenido.  
   
-     **Instance**  
-     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
+     **Instancia**  
+     Nombre de la instancia en que se produjo el evento. Esto se muestra como *nombre de equipo*\\*nombre de instancia*.  
   
   

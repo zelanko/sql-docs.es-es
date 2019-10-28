@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72518000"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909320"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
@@ -134,8 +134,6 @@ Como se ha mencionado antes, el plan de consulta ya no tiene un operador de func
 1. SQL Server ha inferido la combinación implícita entre `CUSTOMER` y `ORDERS`, y la ha convertido en explícita a través de un operador de combinación.
 2. SQL Server también ha inferido la cláusula `GROUP BY O_CUSTKEY on ORDERS` implícita y ha usado IndexSpool y StreamAggregate para implementarla.
 3. Ahora SQL Server usa el paralelismo de todos los operadores.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Según la complejidad de la lógica de la UDF, es posible que el plan de consulta resultante también aumente de tamaño y complejidad. Como se puede ver, las operaciones dentro de la UDF ahora ya no son una caja negra y, por tanto, el optimizador de consultas es capaz de calcular los costos de esas operaciones y optimizarlas. Además, como la UDF ya no está en el plan, la invocación iterativa de UDF se sustituye por un plan que evita totalmente la sobrecarga de la llamada de función.
 

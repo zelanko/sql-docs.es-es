@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6fa3223751de2b8b9019cd48473dc0b07d9d72d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b43793d8d43ca56d8001b986ecdb02af4b463e1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136878"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903953"
 ---
 # <a name="create-a-workload-group"></a>Crear un grupo de cargas de trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,8 +56,6 @@ ms.locfileid: "68136878"
 6.  Haga clic o doble clic en cualquier otra celda de la fila cuya configuración predeterminada desee cambiar, y especifique los nuevos valores.  
   
 7.  Haga clic en **Aceptar**para guardar los cambios.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="CreRPTSQL"></a> Crear un grupo de cargas de trabajo mediante Transact-SQL  
  **Para crear un grupo de cargas de trabajo utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

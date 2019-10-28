@@ -13,12 +13,12 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 577a716298727fad13a68ede37b330d461cc377b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116844"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903021"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introducción a los permisos de los motores de bases de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,8 +65,6 @@ ms.locfileid: "68116844"
 2.  Cree grupos de Windows que representen las unidades y las funciones de trabajo.  
   
 3.  Agregue los usuarios de Windows a los grupos de Windows.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>Si la persona que se conecta lo va a hacer a diversas bases de datos  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: 9eb3f9c071194941d76878a016fbcefa4f5fbe5c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118190"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908820"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -230,8 +230,6 @@ Puede realizar una copia de seguridad de una base de datos en una dirección URL
 
 > [!NOTE] 
 >  **Agregar** admite varios contenedores de almacenamiento y archivos de copia de seguridad para un conjunto de medios.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Al seleccionar **Dirección URL** como destino, ciertas opciones de la página **Opciones multimedia** están deshabilitadas.  Los temas siguientes tienen más información acerca del cuadro de diálogo Copia de seguridad de la base de datos:  
   

@@ -14,12 +14,12 @@ ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca38f321fa06434429b78606d5962cf8623955c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62346249b427f7a6d6162d2c09e22ce54b8b87df
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091492"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908609"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar el formato nativo para importar o exportar datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,8 +33,6 @@ El formato nativo mantiene los tipos de datos nativos de una base de datos. Est�
 1.  Exportación masiva de datos de una tabla de origen a un archivo de datos  
   
 2.  Importación masiva de datos de un archivo de datos a una tabla de destino  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 El uso del formato nativo entre tablas idénticas evita la conversión innecesaria de tipos de datos a y desde el formato de caracteres, lo que ahorra tiempo y espacio. No obstante, para obtener la velocidad de transferencia óptima, se realizan algunas comprobaciones relativas al formato de los datos. Para evitar problemas con los datos cargados, vea la siguiente lista de restricciones.  
 

@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac146dc20fbbf078a7f71dfdbe81b4489ea1849f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 410025552d46c22ddf168fb3521e1f92641e13b9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934118"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907078"
 ---
 # <a name="statistics"></a>Estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ Más concretamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cr
 
 En el diagrama siguiente se muestra un histograma con seis pasos. El área a la izquierda del primer valor límite superior es el primer paso.
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histograma") 
+![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
   
 En cada paso del histograma anterior:
 -   La línea gruesa representa el valor de límite superior (*range_high_key*) y el número de veces que tiene lugar (*equal_rows*).  
@@ -104,7 +104,7 @@ WHERE s.name like '_WA%'
 ORDER BY s.name;  
 ```  
   
-#### <a name="autoupdatestatistics-option"></a>Opción AUTO_UPDATE_STATISTICS  
+#### <a name="auto_update_statistics-option"></a>Opción AUTO_UPDATE_STATISTICS  
  Cuando está activada la opción automática de actualización de estadísticas, [AUTO_UPDATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics), el optimizador de consultas determina cuándo las estadísticas pueden quedar obsoletas y las actualiza cuando una consulta las usa. Las estadísticas se vuelven obsoletas después de que operaciones de inserción, actualización, eliminación o combinación cambien la distribución de los datos en la tabla o la vista indizada. El Optimizador de consultas determina cuándo las estadísticas pueden quedar obsoletas contando el número de modificaciones de datos desde la actualización más reciente de las estadísticas, comparando el número de modificaciones con respecto a un umbral. El umbral se basa en el número de filas de la tabla o la vista indizada.  
   
 * Hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un umbral basado en el porcentaje de filas modificadas. Esto es así independientemente del número de filas de la tabla. El umbral es el siguiente:
@@ -122,7 +122,7 @@ La opción AUTO_UPDATE_STATISTICS se aplica a los objetos de estadísticas cread
  
 Para obtener más información sobre el control de AUTO_UPDATE_STATISTICS, consulte [Controlar el comportamiento de Autostat (AUTO_UPDATE_STATISTICS) en SQL Server](https://support.microsoft.com/help/2754171).
   
-#### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC  
+#### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  La opción de actualización asincrónica de estadísticas [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) determina si el optimizador de consultas usa actualizaciones sincrónicas o asincrónicas de las estadísticas. La opción de actualización asincrónica de las estadísticas está desactivada de forma predeterminada y el optimizador de consultas actualiza las estadísticas sincrónicamente. La opción AUTO_UPDATE_STATISTICS_ASYNC se aplica a los objetos de estadísticas creados para índices y columnas únicas de los predicados de consulta, así como a las estadísticas creadas con la instrucción [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
  
  > [!NOTE]
@@ -161,8 +161,6 @@ Para obtener más información sobre el control de AUTO_UPDATE_STATISTICS, consu
 1.  El Optimizador de consultas crea las estadísticas para índices en tablas o vistas cuando se crea el índice. Estas estadísticas se crean en las columnas de clave del índice. Si el índice es un índice filtrado, el Optimizador de consultas crea las estadísticas filtradas en el mismo subconjunto de filas especificado para el índice filtrado. Para obtener más información sobre los índices filtrados, vea [Crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md) y [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 2.  El optimizador de consultas crea las estadísticas para las columnas únicas de predicados de consulta cuando [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) está activada.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 En la mayoría de las consultas, estos dos métodos de creación de estadísticas aseguran un plan de consulta de alta calidad; en unos casos, puede mejorar los planes de consulta creando estadísticas adicionales con la instrucción [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Estas estadísticas adicionales pueden capturar correlaciones estadísticas que el Optimizador de consultas no tiene en cuenta cuando crea estadísticas para índices o columnas únicas. Su aplicación podría tener las correlaciones estadísticas adicionales en los datos de la tabla que, si se calcula en un objeto de estadísticas, podrían habilitar el Optimizador de consultas para mejorar los planes de consulta. Por ejemplo, las estadísticas filtradas en un subconjunto de filas de datos o las estadísticas de varias columnas en columnas de predicado de consulta podrían mejorar el plan de consulta.  
   

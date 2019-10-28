@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2d9317dba8c319e9af4d3068e183b6639c28fe34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b26aba44ff43de115268dcafa5ecc51e3f13c02
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136942"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903950"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurar el regulador de recursos utilizando una plantilla
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68136942"
 5.  Para guardar los cambios que realice en la plantilla, haga clic en **Aceptar**.  
   
 6.  Para ejecutar la consulta, haga clic en **Ejecutar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   

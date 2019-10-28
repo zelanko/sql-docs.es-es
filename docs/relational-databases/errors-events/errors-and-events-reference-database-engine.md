@@ -1,7 +1,7 @@
 ---
 title: Referencia de errores y eventos de (motor de base de datos) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/03/2016
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4835e110d0feace4abaec408351351d863da7588
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: d9bf4de57b77e3f036cb842e53efe816de862559
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893150"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908687"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Referencia de errores y eventos del motor de base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68893150"
 |Recurso|Descripción|  
 |--------------|-----------------|  
 |[Comunidad de SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Este sitio contiene vínculos a grupos de noticias y foros supervisados por la comunidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También muestra orígenes de información de las comunidades, como blogs y sitios web. La comunidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es de gran utilidad para obtener respuesta a algunas preguntas, aunque la respuesta no se puede garantizar.|  
-|[Comunidad del Centro para programadores de SQL Server](/sql/sql-server/sql-server-technical-documentation)|El sitio se centra en los grupos de noticias, foros y otros recursos de la comunidad útiles para los programadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Comunidad del Centro para programadores de SQL Server](/sql/sql-server/index.yml)|El sitio se centra en los grupos de noticias, foros y otros recursos de la comunidad útiles para los programadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Ayuda y soporte técnico de Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|Puede utilizar este sitio web para abrir un caso con un profesional de soporte de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
   
   

@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 11628e5b490c30ef64329f6b9d06aee1b6c10fa9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846710"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908291"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Crear y aplicar la instantánea inicial
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -62,8 +62,6 @@ Para ver o modificar la ubicación de la carpeta de instantáneas predeterminada
     >  El Agente de instantáneas debe tener permisos de escritura para el directorio especificado y el Agente de distribución o de mezcla debe tener permisos de lectura. Si usa suscripciones de extracción, debe especificar un directorio compartido como ruta de acceso, según la convención de nomenclatura universal (UNC), por ejemplo \\\nombreDeEquipo\instantánea. Para obtener más información, vea [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-snapshot"></a>Creación de instantáneas
 De forma predeterminada, si se está ejecutando el Agente SQL Server, el Agente de instantáneas genera una instantánea inmediatamente después de que se cree una publicación con el Asistente para nueva publicación. A continuación, el Agente de distribución (para la replicación de instantáneas y transaccional) o el Agente de mezcla (para las suscripciones de mezcla) la aplican a todas las suscripciones. Las instantáneas también se pueden generar mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  

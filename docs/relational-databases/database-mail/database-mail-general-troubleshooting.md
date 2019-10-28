@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ea44a55a7c58e64f327a97943481dfd63289324
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 304306edc78229899b0660b99df6f6b78b60e6ca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228419"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906075"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>Pasos generales para solucionar problemas del Correo electrónico de base de datos 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,8 +55,6 @@ Debe ser miembro del rol fijo de servidor sysadmin para solucionar los problemas
     ```
 
 1. Para restaurar el procedimiento sp_configure a su estado predeterminado, que no muestra las opciones avanzadas, ejecute el código siguiente:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql 
     sp_configure 'show advanced', 0; 

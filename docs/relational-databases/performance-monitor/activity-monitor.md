@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 05a034bfb174ef3a1d7240bd1d8a3607e9001ddb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 184ead5d82ddad99e3fae781cd41b46569c1dead
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024845"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907486"
 ---
 # <a name="activity-monitor"></a>Monitor de actividad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,6 @@ En las columnas incluidas en los paneles **Procesos**, **Esperas de recursos**, 
 2.  Para ordenar una columna, haga clic en el nombre de la columna.  
   
 3.  Para filtrar por una o varias columnas, haga clic en la flecha de lista desplegable del encabezado de columna y, a continuación, seleccione un valor.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="more-information"></a>Más información  
    

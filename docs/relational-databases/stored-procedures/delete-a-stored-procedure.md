@@ -14,12 +14,12 @@ ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5e1b61b44ffcdee0f7449984311f732368578d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4fe8e498781f62d19edd8384e0252ad1b7df0202
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934063"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909097"
 ---
 # <a name="delete-a-stored-procedure"></a>Eliminar un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,8 +61,6 @@ ms.locfileid: "67934063"
 5.  Confirme que haya seleccionado el procedimiento correcto y haga clic en **Aceptar**.  
   
 6.  Quite las referencias al procedimiento de cualquier objeto y script dependientes.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para eliminar un procedimiento en el Editor de consultas**  

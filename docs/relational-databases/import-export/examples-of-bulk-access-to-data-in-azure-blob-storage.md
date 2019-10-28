@@ -1,7 +1,7 @@
 ---
 title: Ejemplos de acceso masivo a datos en Azure Blob Storage | Microsoft Docs
 ms.custom: ''
-ms.date: 09/30/2019
+ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8dc38f28726067614acb12cb8daff01cf1b39e02
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: a6874476fc7309a4bfed118bff76430bed395587
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974331"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798439"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Ejemplos de acceso masivo a datos en Azure Blob Storage
 
@@ -70,7 +70,10 @@ Después, la instrucción agrega `OPENROWSET` el nombre del contenedor (`week3`)
 SELECT * FROM OPENROWSET(
    BULK 'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
-   FORMAT = 'CSV') AS DataFile;
+   FORMAT = 'CSV',
+   FORMATFILE='invoices.fmt',
+   FORMATFILE_DATA_SOURCE = 'MyAzureInvoices'
+   ) AS DataFile;   
 ```
 
 Con `BULK INSERT`, use el contenedor y la descripción del archivo:
@@ -101,7 +104,10 @@ Después, la instrucción `OPENROWSET` no incluye el nombre del contenedor en la
 SELECT * FROM OPENROWSET(
    BULK 'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
-   FORMAT = 'CSV') AS DataFile;
+   FORMAT = 'CSV',
+   FORMATFILE='invoices.fmt',
+   FORMATFILE_DATA_SOURCE = 'MyAzureInvoices'
+   ) AS DataFile;
 ```
 
 Con `BULK INSERT`, no use el nombre del contenedor en la descripción del archivo:

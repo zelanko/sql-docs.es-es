@@ -14,12 +14,12 @@ ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e00c22ed3b7728d906ab2a143ca30f2eec8c7ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89b3ded4415983548402fa5ab955265b40a94f72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016278"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909877"
 ---
 # <a name="specify-default-values-for-columns"></a>Especificar valores predeterminados para las columnas
 
@@ -65,8 +65,6 @@ Puede usar el Explorador de objetos para especificar un valor predeterminado de 
    > Para especificar un valor predeterminado numérico, escriba el número. Para un objeto o función, escriba su nombre. Para un valor predeterminado alfanumérico escriba el valor entre comillas simples.
 
 4. En el menú **Archivo** , haga clic en **Guardar**_nombre de tabla_.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="TsqlProcedure"></a> Usar Transact-SQL para especificar un valor predeterminado
 

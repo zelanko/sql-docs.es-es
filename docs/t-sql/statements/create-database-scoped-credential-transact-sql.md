@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6ce28c96de9dc15214bf44344b4fc5e9b73632e
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 233068e84dca3d7d61e10867443cf30bbf942a59
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680846"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798361"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "71680846"
 
 Crea una credencial de base de datos. Una credencial de base de datos no está asignada a un usuario de base de datos o de inicio de sesión de servidor. La base de datos utiliza la credencial para acceder a la ubicación externa siempre que la base de datos realice una operación que requiera acceso.
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -123,7 +123,8 @@ Azure Data Lake Store usa una aplicación de Azure Active Directory para la aute
 -- Create a db master key if one does not already exist, using your own password.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD='<EnterStrongPasswordHere>';
 
--- Create a database scoped credential.CREATE DATABASE SCOPED CREDENTIAL ADL_User
+-- Create a database scoped credential.
+CREATE DATABASE SCOPED CREDENTIAL ADL_User
 WITH
     IDENTITY = '<client_id>@\<OAuth_2.0_Token_EndPoint>'
     SECRET = '<key>'

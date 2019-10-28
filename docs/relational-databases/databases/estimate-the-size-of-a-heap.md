@@ -17,12 +17,12 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 518319ff5ef16061e02575d522dd56633858df99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58d708811825fe42ca64c7e30f7e9ed0d92e62f3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934526"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909044"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar el tamaño de un montón
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,9 +83,7 @@ ms.locfileid: "67934526"
   
 8.  Calcule el espacio necesario para almacenar los datos en el montón (8192 bytes en total por página):  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Heap size (bytes) = 8192 x **_Num_Pages_**  
+     Tamaño del montón (bytes) = 8192 x **_Num_Pages_**  
   
  En este cálculo no se tiene en cuenta lo siguiente:  
   

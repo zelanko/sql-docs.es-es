@@ -14,12 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e40e69691834faffa2a112d81d9006e8cc602845
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: ea8d28fafe8b4812b3e2cfd55c03640e46cd7ab2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041212"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906963"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Uso del servicio Azure Blob Storage con SQL Server 2016
 
@@ -41,8 +41,6 @@ Para completar este tutorial, debe estar familiarizado con los conceptos de copi
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Descargue las [bases de datos de ejemplo de AdventureWorks2016](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 - Asigne la cuenta de usuario al rol [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) y conceda permisos [Modificar cualquier credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
-
-[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1\. Crear una directiva de acceso almacenada y un almacenamiento de acceso compartido
 

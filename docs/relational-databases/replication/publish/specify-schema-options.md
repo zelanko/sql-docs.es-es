@@ -16,12 +16,12 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b427d9cdf471133d78db71159041b03f8cddebf8
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: e2ac7116c1d7c402ac2b15e4168c64339da34998
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710839"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908117"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>Especificar opciones de esquema para la replicación de SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,8 +75,6 @@ ms.locfileid: "71710839"
 4.  Modifique las propiedades si es necesario y, a continuación, haga clic en **Aceptar**.  
   
 5.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Las opciones de esquema se especifican como un valor hexadecimal que es el resultado [| (OR bit a bit)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) de una o más opciones. Para obtener más información, vea [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) y [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).  

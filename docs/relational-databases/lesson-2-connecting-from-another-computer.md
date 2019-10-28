@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0240c3e4f9f58bfb453e2537695631d8be3aa793
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d1bffd38e1c604d5002f00cae0bcda9e4becf21
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073713"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909710"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conexión desde otro equipo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ Si tiene previsto conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde ot
   
     > [!NOTE]  
     > Debe reiniciar el servicio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] después de realizar los cambios en los protocolos de red; sin embargo, esto se completa en la siguiente tarea.  
-
-[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="port"></a>Configurar un puerto fijo  
 Para mejorar la seguridad, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]y Windows 7 activan el Firewall de Windows. Si desea conectarse a esta instancia desde otro equipo, debe abrir un puerto de comunicaciones en el firewall. La instancia predeterminada de [!INCLUDE[ssDE](../includes/ssde-md.md)] escucha en el puerto 1433; por tanto, no tiene que configurar un puerto fijo. No obstante, las instancias con nombre incluidas las de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] escuchan en puertos dinámicos. Para poder abrir un puerto en el firewall, debe configurar primero [!INCLUDE[ssDE](../includes/ssde-md.md)] para que escuche en un puerto específico conocido como puerto fijo o estático; de lo contrario, es posible que [!INCLUDE[ssDE](../includes/ssde-md.md)] escuche en un puerto distinto cada vez que se inicie. Para obtener más información sobre firewalls, la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al motor de base de datos, Analysis Services, Reporting Services e Integration Services, consulte [Configurar Firewall de Windows para permitir el acceso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

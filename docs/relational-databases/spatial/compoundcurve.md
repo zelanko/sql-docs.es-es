@@ -10,12 +10,12 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c840140008f56e492271d5792031e4e56233673
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a063a2a00ba67640b6a36a43abda2ea9eb45025d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048759"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909208"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68048759"
 1.  Debe contener al menos una instancia de **CircularString** o de **LineString** .  
   
 2.  La secuencia de instancias de **CircularString** o **LineString** debe ser continua.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Si una **CompoundCurve** contiene una secuencia de varias instancias de **CircularString** y **LineString** , el extremo final de cada instancia, salvo la última, debe ser el extremo inicial de la siguiente instancia de la secuencia. Esto significa que si el punto final de una instancia anterior de la secuencia es (4 3 7 2), el punto inicial para la instancia siguiente de la secuencia debe ser (4 3 7 2). Observe que los valores M (medida) y Z (elevación) para el punto también deben ser iguales. Si hay diferencia entre ambos puntos, se produce una excepción `System.FormatException` . Los puntos de una **CircularString** no tienen que tener valor Z o M. Si no se proporcionan valores Z o M para el punto final de la instancia anterior, el punto inicial de la instancia siguiente no puede incluir valores Z o M. Si el punto final para la secuencia anterior es (4 3), el punto inicial para la secuencia siguiente debe ser (4 3); no puede ser (4 3 7 2). Todos los puntos de una instancia **CompoundCurve** deben tener el mismo valor Z, o bien, ningún valor Z.  
   

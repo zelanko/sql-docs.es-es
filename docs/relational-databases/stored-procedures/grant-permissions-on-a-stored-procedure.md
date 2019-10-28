@@ -12,12 +12,12 @@ ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d662d90cf625921f2dc8eb9d1e7d45c14bb99406
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50a7df8f2c9479c957158e96f597655c72ac7b2c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934034"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909717"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>Conceder permisos para un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,8 +67,6 @@ ms.locfileid: "67934034"
 7.  Haga clic en **Examinar** para mostrar la lista de usuarios o de roles. Seleccione los usuarios o los roles a los que deben concederse los permisos.  
   
 8.  En la cuadrícula **Permisos explícitos** , seleccione los permisos que desea conceder al rol o al usuario especificados. Para obtener una descripción de los permisos, vea [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Al seleccionar **Conceder** , se indica que se concederá el permiso especificado al receptor. Al seleccionar **Grant With** , se indica que el receptor también podrá conceder el permiso especificado a otras entidades de seguridad.  
   

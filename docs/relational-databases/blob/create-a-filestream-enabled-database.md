@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 45a26647502841a87f6ba525e0296903cf64ef6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 033e90cbccbb6db9a454183ae982ed2a898c2054
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085417"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908762"
 ---
 # <a name="create-a-filestream-enabled-database"></a>crear una base de datos habilitada para FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,6 @@ ms.locfileid: "68085417"
     >  Para este script, debe existir el directorio C:\Data.  
   
 3.  Para generar la base de datos, haga clic en **Ejecutar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se crea una base de datos con el nombre de `Archive`. La base de datos contiene tres grupos de archivos: `PRIMARY`, `Arch1`y `FileStreamGroup1`. `PRIMARY` and `Arch1` son grupos de archivos normales que no pueden contener datos FILESTREAM. `FileStreamGroup1` es el grupo de archivos `FILESTREAM` .  

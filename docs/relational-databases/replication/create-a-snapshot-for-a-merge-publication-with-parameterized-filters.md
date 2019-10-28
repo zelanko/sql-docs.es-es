@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1ae8e8c1394372347f9e26bb7163f0e1cf0bf47e
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: a803d848d12965f7e0c0b167bf3a2f20a235ecdc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846755"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907388"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Crear una instantánea para una publicación de mezcla con filtros con parámetros
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +65,6 @@ Cuando se utilizan filtros de fila con parámetros en las publicaciones de combi
 1.  Crear una publicación de combinación con el Asistente para nueva publicación y especificar uno o varios filtros de fila con parámetros en la página **Agregar filtro** del asistente. Para más información, consulte [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 2.  Generar una instantánea del esquema para la publicación. De forma predeterminada, se genera una instantánea del esquema al completar el Asistente para nueva publicación, aunque también puede generar una instantánea del esquema desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-generate-a-schema-snapshot"></a>Para generar una instantánea del esquema  
   

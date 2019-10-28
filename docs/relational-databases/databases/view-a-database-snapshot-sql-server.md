@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 57df1a271d7c7694de048864f8b0db06223c4009
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f09f279c82a9fb28e259951be2bf78f9ca93aae
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127100"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907910"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>Ver una instantánea de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68127100"
 2.  Expanda **Bases de datos**.  
   
 3.  Expanda **Instantáneas de base de datos**y, a continuación, seleccione la instantánea que desee ver.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para ver una instantánea de base de datos**  

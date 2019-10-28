@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e3de9c6652de3ddd8d80bbc2d09b003acfe5220
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: db445d9c80c6a6e2552160dcff721c06d5c107e6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710688"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907788"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Resolución de conflictos para la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,8 +72,6 @@ ms.locfileid: "71710688"
     -   Seleccionar **Registrar los detalles de este conflicto** para registrar los datos del conflicto en un archivo. Para especificar la ubicación del archivo, elija el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón Examinar ( **...** ) y navegue al archivo apropiado. Haga clic en **Aceptar** para salir del cuadro de diálogo **Opciones** .  
   
 6.  Cierre el Visor de conflictos de replicación.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="view-conflict-information"></a>Visualización de la información de conflictos
 Cuando se resuelve un conflicto en la replicación de mezcla, los datos de la fila que falta se escriben en una tabla de conflictos. Estos datos de conflicto se pueden ver mediante programación usando los procedimientos almacenados de replicación. Para más información, consulte [Replicación de mezcla avanzada: detección y resolución de conflictos](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  

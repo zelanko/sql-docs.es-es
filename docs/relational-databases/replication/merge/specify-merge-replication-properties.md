@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 058e46441b22f5be5b0d63cf8e9a61dd6c75ef27
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8ae39654a19c73c71c602801b3aa5f594f7d0828
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71711045"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908156"
 ---
 # <a name="specify-merge-replication-properties"></a>Especificación de las propiedades de replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,6 @@ En la página **Artículos** del Asistente para nueva publicación, seleccione u
     -   **Solo descargar en suscriptor y prohibir cambios del suscriptor**    
     -   **Solo descargar en suscriptor y permitir cambios del suscriptor**    
 4.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="use-transact-sql"></a>Uso de Transact-SQL  
   

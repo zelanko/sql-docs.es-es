@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4b68ca111fc14682f5e11a6a865d15c0356a954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66526a14c6057be1c99b8690cd6df0db07c40a81
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995317"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905531"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover los valores XML usados con frecuencia con columnas calculadas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -172,8 +172,6 @@ WHERE    tblPropAuthor.propAuthor = 'David'
 2.  Cree un ensamblado y una función Transact-SQL definida por el usuario para iniciar la clase de CLR.  
   
 3.  Defina los desencadenadores insert, update y delete mediante la función definida por el usuario para mantener tablas de propiedades.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Para ello, primero deberá crear la función de transmisión por secuencias de CLR. El tipo de datos **xml** se expone como una clase administrada SqlXml en ADO.NET y admite el método **CreateReader()** que devuelve un XmlReader.  
   

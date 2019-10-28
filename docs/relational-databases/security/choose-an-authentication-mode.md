@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c7e5ead2cb159e41441d94b507b498bfca4c3d23
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfbd77901ab2a8a834fe5a9efc4c272845e02c87
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116777"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903141"
 ---
 # <a name="choose-an-authentication-mode"></a>Elegir un modo de autenticación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,9 +74,7 @@ ms.locfileid: "68116777"
   
 3.  En la aplicación **Configuración de seguridad local** , expanda **Configuración de seguridad**, expanda **Directivas de cuenta**y, a continuación, haga clic en **Directiva de contraseñas**.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The password policies are described in the results pane.  
+     Las directivas de contraseñas se describen en el panel de resultados.  
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>Desventajas de la autenticación de SQL Server  
   

@@ -25,12 +25,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e7a72be3cbf18cd2adf821f3310a1ea6801ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88f53ba0372b56fce72a23fe33790c822729d8d1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134768"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908489"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,6 @@ ms.locfileid: "68134768"
 1.  La importación crea una nueva DAC y la base de datos asociada mediante la definición de DAC almacenada en el archivo de exportación de la misma manera que una implementación de DAC crea una nueva DAC a partir de la definición de un archivo de paquete DAC.  
   
 2.  La importación masiva copia los datos del archivo de exportación.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="sql-server-utility"></a>Utilidad de SQL Server  
  Si importa una DAC en una instancia del motor de base de datos, la DAC importada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicaciones de capa de datos implementadas** details page.  

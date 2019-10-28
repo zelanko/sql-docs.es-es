@@ -16,12 +16,12 @@ ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e5ece02e70639ce91aeec72827838c9ad8d7ab8d
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 7fac24aec092ef65bb390d8df020999647f215c6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846705"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908272"
 ---
 # <a name="delete-a-push-subscription"></a>Eliminar una suscripción de inserción
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ ms.locfileid: "70846705"
 4.  Haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Eliminar**.  
   
 5.  En el cuadro de diálogo de confirmación, seleccione si desea conectarse al suscriptor para eliminar la información de suscripciones. Si desactiva la casilla **Conectar a suscriptor** , debe conectar al suscriptor posteriormente para eliminar la información.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-delete-a-push-subscription-at-the-subscriber"></a>Para eliminar una suscripción de inserción en el suscriptor  
   

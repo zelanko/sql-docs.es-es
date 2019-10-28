@@ -15,12 +15,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eac98b2d0b5e7ac8c0cd8f765d172333f5ba0a30
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: 621d3d701e1e815bac4d5028c3d78b00240bc293
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71341860"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908987"
 ---
 # <a name="copy-only-backups"></a>Copias de seguridad de solo copia
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,8 +49,6 @@ Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ss
 ### <a name="examples"></a>Ejemplos  
 ###  <a name="SSMSProcedure"></a> A. Usar SQL Server Management Studio  
 En este ejemplo, una copia de seguridad de solo copia de la base de datos `Sales` se realizará en el disco en la ubicación de copias de seguridad predeterminada.
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 1. En el **Explorador de objetos**, conéctese a una instancia del Motor de base de datos de SQL Server y expándala.
 

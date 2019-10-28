@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da064aa2e8cd8c32a96f52ad06ef29ed4e835997
-ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
+ms.openlocfilehash: 06ccedc97905180f75369d89fc7bc1ca49175c59
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71066890"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903868"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Crear una especificación de auditoría de servidor y de auditoría de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,6 @@ ms.locfileid: "71066890"
 2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría...** . Para obtener más información, consulte [Crear una auditoría de servidor y una especificación de auditoría de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Cuando termine de seleccionar opciones, haga clic en **Aceptar**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-create-a-database-level-audit-specification"></a>Para crear una especificación de auditoría de nivel de base de datos  
   

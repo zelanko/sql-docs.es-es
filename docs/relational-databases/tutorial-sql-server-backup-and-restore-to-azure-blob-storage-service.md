@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d04c2fb2fd405a582cb6c94b59bdca83ba3dbb5
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
+ms.openlocfilehash: cedb601d9a16bc7562463e78f2d1a6296b687f3d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72239437"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906978"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Inicio rápido: Copia de seguridad y restauración de SQL en el servicio Azure Blob Storage
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -29,9 +29,6 @@ Para completar este inicio rápido, debe estar familiarizado con los conceptos d
 - Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) o implemente una [instancia administrada](/azure/sql-database/sql-database-managed-instance-get-started) con conectividad establecida mediante una [máquina virtual de Azure SQL](/azure/sql-database/sql-database-managed-instance-configure-vm) o de [punto a sitio](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Asigne la cuenta de usuario al rol [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) y conceda permisos [Modificar cualquier credencial](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 
 ## <a name="create-azure-blob-container"></a>Creación de un contenedor de blobs de Azure
 Los contenedores proporcionan una agrupación de un conjunto de blobs. Todos los blobs deben estar en un contenedor. Una cuenta de almacenamiento puede contener un número ilimitado de contenedores, pero debe tener al menos uno. Un contenedor puede almacenar un número ilimitado de blobs. 

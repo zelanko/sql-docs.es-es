@@ -2,7 +2,7 @@
 title: Concepto de grupo de disponibilidad distribuido
 description: Un grupo de disponibilidad distribuido es un tipo especial de grupo de disponibilidad que abarca dos tipos distintos de grupo de disponibilidad. No es necesario que los grupos de disponibilidad que participan en un grupo de disponibilidad distribuido estén en la misma ubicación.
 ms.custom: seodec18
-ms.date: 07/31/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 93e95e52249a44c0ef7425d11f3400974e123f3f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702741"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907276"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidad distribuidos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Los grupos de disponibilidad distribuidos son una característica nueva que se incluyó en SQL Server 2016 como variante de la característica Grupos de disponibilidad AlwaysOn existente. En este artículo se aclaran algunos aspectos de los grupos de disponibilidad distribuidos y se complementa la [documentación de SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation) existente.
+Los grupos de disponibilidad distribuidos son una característica nueva que se incluyó en SQL Server 2016 como variante de la característica Grupos de disponibilidad AlwaysOn existente. En este artículo se aclaran algunos aspectos de los grupos de disponibilidad distribuidos y se complementa la [documentación de SQL Server](https://docs.microsoft.com/sql/sql-server/index.yml) existente.
 
 > [!NOTE]
 > "DAG" no es la abreviatura oficial de *grupo de disponibilidad distribuido*, porque esa abreviatura ya se usa para hacer referencia a la característica de grupo de disponibilidad de base de datos de Exchange. Esta característica de Exchange no tiene relación alguna con los grupos de disponibilidad de SQL Server ni con los grupos de disponibilidad distribuidos.

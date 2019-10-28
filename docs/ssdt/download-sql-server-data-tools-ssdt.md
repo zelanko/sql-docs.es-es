@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ddf814a849dfd0272f87dec2e2d7650c557d0be
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545083"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807445"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio
 
@@ -32,12 +32,12 @@ Con Visual Studio 2019, la funcionalidad necesaria para habilitar Analysis Serv
 Si ya tiene una licencia para Visual Studio 2019:
 
 - Para proyectos de SQL Database, instale el almacenamiento de datos y la carga de procesamiento para Visual Studio
-- Para proyectos de Analysis Services, Integration Services o Reporting Services, instale las [extensiones](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) adecuadas de Marketplace.
+- Para proyectos de Analysis Services, Integration Services o Reporting Services, instale las [extensiones](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) adecuadas de Marketplace.
 
 Si aún no tiene una licencia para Visual Studio 2019:
 
 - Instalación de [Visual Studio Community 2019](https://visualstudio.microsoft.com/downloads/)
-- Instale las [extensiones](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions) de Analysis Services, Integration Services o Reporting Services, según corresponda.
+- Instale las [extensiones](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions) de Analysis Services, Integration Services o Reporting Services, según corresponda.
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>Cambios en SSDT para Visual Studio 2017
 

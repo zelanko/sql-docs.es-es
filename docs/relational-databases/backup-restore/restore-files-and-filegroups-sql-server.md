@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 31f28bf80d03516051206f6e88de6f32de614bed
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 5398b371ea4c969fedf54502d160ebd183cc2bdb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278758"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908860"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Restaurar archivos y grupos de archivos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,8 +137,6 @@ ms.locfileid: "70278758"
     |**Restaurar como**|La ruta de acceso completa del archivo de base de datos que se va a restaurar. Para especificar un nuevo archivo de restauración, haga clic en el cuadro de texto y edite la ruta de acceso y el nombre de archivo que aparecen de forma predeterminada. El hecho de cambiar la ruta de acceso o el nombre de archivo de la columna **Restaurar como** equivale a utilizar la opción MOVE en una instrucción RESTORE de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
   
 11. El panel **Estado de recuperación** determina el estado de la base de datos después de la operación de restauración.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   **Revertir las transacciones no confirmadas para dejar la base de datos lista para su uso. No pueden restaurarse registros de transacciones adicionales. (RESTORE WITH RECOVERY)**  
   Recupera la base de datos. Éste es el comportamiento predeterminado. Elija esta opción únicamente si va a restaurar ahora todas las copias de seguridad necesarias. Esta opción es equivalente a especificar WITH RECOVERY en una instrucción RESTORE de [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

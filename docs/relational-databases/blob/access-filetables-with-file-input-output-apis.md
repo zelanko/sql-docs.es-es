@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: de6b89d8c561df851b3cbc8696283f1ed95489f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041199"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908774"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Obtener acceso a FileTables con API de entrada-salida de archivo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,8 +29,6 @@ ms.locfileid: "68041199"
 1.  El acceso de las API de E/S de archivos se inicia normalmente mediante la obtención de una ruta de acceso UNC lógica del archivo o directorio. Las aplicaciones pueden usar una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] con la función [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) para obtener la ruta de acceso lógica del archivo o directorio. Para más información, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 2.  A continuación la aplicación usa esta ruta de acceso lógica para obtener un identificador del archivo o directorio y hacer algo con el objeto. La ruta de acceso se puede pasar a cualquier función de API admitida, como CreateFile () o CreateDirectory (), para crear o abrir un archivo y obtener un identificador. El identificador se puede usar después para transmitir datos, enumerar u organizar directorios, obtener o establecer atributos de archivo, eliminar archivos o directorios, etc.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="create"></a> Crear los archivos y directorios de una FileTable  
  Un archivo o directorio se puede crear en una FileTable llamando a las API de E/S de archivos, como CreateFile o CreateDirectory.  

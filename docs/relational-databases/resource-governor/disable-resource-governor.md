@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 13016fa1baf3dd01f7e00c11a322f10ba720c57c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b746c7ed116627f8fe57cdb43724c619eeb5dd4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099245"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903926"
 ---
 # <a name="disable-resource-governor"></a>Deshabilitar el regulador de recursos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,8 +55,6 @@ ms.locfileid: "68099245"
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
   
 2.  Haga clic con el botón derecho en **Regulador de recursos**y, luego, haga clic en **Deshabilitar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="RGOffProp"></a> Deshabilitar el regulador de recursos mediante Propiedades del regulador de recursos  
  **Para deshabilitar el regulador de recursos mediante la página Propiedades del regulador de recursos**  

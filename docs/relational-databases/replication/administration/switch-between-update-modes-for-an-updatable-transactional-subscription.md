@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f621bf9839e5f0e36051461f144a4070ff715489
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 3082edc590aa05326f40f694cbaca3f8060a4b95
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710401"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909831"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Cambiar entre modos de actualización para una suscripción transaccional actualizable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +65,6 @@ ms.locfileid: "71710401"
 4.  En el cuadro de diálogo **Establecer método de actualización - \<suscriptor>: \<baseDatosDeSuscripción>** , seleccione **Actualización inmediata** o **Actualización en cola**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Para establecer el modo de actualización para una suscripción de extracción  
   

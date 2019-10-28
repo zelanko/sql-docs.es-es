@@ -17,12 +17,12 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16625dea87649bde97a854a507ab89831b7681e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113387"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909783"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Guardar un plan de ejecución en formato XML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,8 +71,6 @@ ms.locfileid: "68113387"
 5.  En el cuadro de diálogo **Guardar** **resultados** \<de la cuadrícula o texto>, en el cuadro **Guardar como tipo**, haga clic en **Todos los archivos (\*.\*)** .  
   
 6.  En el cuadro **Nombre de archivo**, proporcione un nombre con el formato \<nombre **>.sqlplan** y haga clic en **Guardar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Para guardar un plan de ejecución mediante las opciones de SQL Server Management Studio  
   

@@ -16,12 +16,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ded5b442a6a61ba1a6cf2c0313834cce85f674f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca2c6f4967368489e49014e7a97267cb64b9a235
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043190"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903172"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,8 +82,6 @@ Para actualizar correctamente la columna, haga lo siguiente:
 
 1. SELECCIONE los datos de fuera de la columna SSN y almacénelos como un conjunto de resultados en la aplicación. Esto permitirá que la aplicación (*controlador* del cliente) descifre la columna.
 2. INSERTE los datos desde el conjunto de resultados en SQL Server. 
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  >[!IMPORTANT]
  > En este escenario, los datos se descifrarán cuando se envíen al servidor, ya que la columna de destino es varchar normal que no acepta datos cifrados. 

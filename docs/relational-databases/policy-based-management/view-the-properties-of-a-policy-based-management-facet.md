@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be669093b3899744f8019eeb7c965b48dc4665bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50cdd9031d309a1bbfd6f4229749b5cc5de56125
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009179"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906873"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Ver las propiedades de una faceta de administración basada en directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,4 @@ ms.locfileid: "68009179"
 5.  Haga clic con el botón derecho en la faceta cuyas propiedades quiere ver y seleccione **Propiedades**. Para más información sobre las opciones disponibles en el cuadro de diálogo **Propiedades de faceta -** _nombre_de_faceta_, vea [Cuadro de diálogo Propiedades de faceta, página General](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md), [Cuadro de diálogo Propiedades de faceta, página Directivas dependientes](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md) y [Cuadro de diálogo Propiedades de faceta, página Condiciones dependientes](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Cuando termine, haga clic en **Cerrar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

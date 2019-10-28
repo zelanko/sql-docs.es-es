@@ -16,12 +16,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 43b5d4f59ae68f52968fc4aaa10a400e0d8f8ff3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 69072514931e7e449893124a8f192043b2bf87d7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769538"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908338"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar programaciones de sincronización
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,8 +71,6 @@ ms.locfileid: "68769538"
 2.  Si selecciona **\<Definir programación...>** , especifique una programación en el cuadro de diálogo **Propiedades de programación del trabajo** y, después, haga clic en **Aceptar**.  
   
 3.  Finalice el asistente.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-modify-a-synchronization-schedule-for-a-push-subscription-in-replication-monitor"></a>Para modificar una programación de sincronización para una suscripción de inserción en el Monitor de replicación  
   

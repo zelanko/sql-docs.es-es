@@ -16,12 +16,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35ab525e1420d5e8db2a63f4892d8e17a3673158
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0aeeeab2e90ebd90068be44f817cd6bd65af061
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139617"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907263"
 ---
 # <a name="modify-check-constraints"></a>Modificar restricciones CHECK
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,8 +73,6 @@ ms.locfileid: "68139617"
 5.  Haga clic en **Cerrar**.  
   
 6.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para modificar una restricción CHECK**  

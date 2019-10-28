@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add1b0fc86c5e43bedd1e3ebbf7921fb1e9847c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f16d6cd8cbc27e675da9f8153555dcaf9c99749f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058058"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909927"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
 
@@ -174,8 +174,6 @@ El recopilador de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 3. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Administración**y, a continuación, expanda **Recopilación de datos**. Haga clic con el botón derecho en **Recopilador de datos de rendimiento de CDC** y, después, haga clic en **Iniciar conjunto de recopilación de datos**.  
   
 4. En el almacenamiento de datos que configuró en el paso 1, busque la tabla custom_snapshots.cdc_log_scan_data. En esta tabla se proporciona una instantánea histórica de los datos de las sesiones de examen del registro. Estos datos se pueden utilizar para analizar la latencia, el rendimiento y otras medidas de rendimiento a lo largo del tiempo.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ScriptUpgrade"></a> Modo de actualización de script
 

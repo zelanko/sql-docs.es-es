@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 44ffa35051be66b6a3156991240becd2c93b1013
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f101051d924c1fca0bfbcd131ea8544ea4781e12
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040643"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909106"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Usar la búsqueda de texto completo con columnas XML
 
@@ -35,8 +35,6 @@ ms.locfileid: "68040643"
 1.  En primer lugar, filtre los valores XML que resulten de interés mediante una búsqueda de texto completo SQL.  
   
 2.  A continuación, realice una consulta en los valores XML que usen índice XML en la columna XML.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example-combining-full-text-search-with-xml-querying"></a>Ejemplo: Combinación de una búsqueda de texto completo con consultas XML  
  Una vez creado un índice de texto completo en la columna XML, la siguiente consulta comprueba que un valor XML contiene la palabra "custom" en el título de un libro:  

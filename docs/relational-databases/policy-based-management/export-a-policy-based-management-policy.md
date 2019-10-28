@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4203f082d093cae12dc546b083adc6e049d8799f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 241cd0e4ec225c6627bb47ff6a4312f42aba26d1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087389"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908629"
 ---
 # <a name="export-a-policy-based-management-policy"></a>Exportar una directiva de administración basada en directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +57,4 @@ ms.locfileid: "68087389"
 6.  En el cuadro de diálogo **Exportar directiva** , escriba la ruta de acceso y el nombre del archivo en la barra de direcciones. También puede buscar una ubicación adecuada para el archivo en el panel de navegación del cuadro de diálogo, y escribir el nombre del archivo XML en el cuadro **Nombre de archivo** .  
   
 7.  Cuando termine, haga clic en **Guardar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8e7ee336c9f81c8d4258e16cf09aa9ffec177e0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a97acba6af3cb960cf4d98d26d3f8da4805822da
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110958"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907987"
 ---
 # <a name="oracle-subscribers"></a>Suscriptores de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ ms.locfileid: "68110958"
     |Especificar la información de host para identificar las escuchas de base de datos|El host es el nombre o el alias de DNS del equipo donde se está ejecutando la escucha de Oracle, que normalmente es el mismo equipo donde reside la base de datos. En algunos protocolos, se debe proporcionar información adicional. Por ejemplo, si se selecciona TCP, se debe proporcionar el puerto donde se escuchan las solicitudes de conexión a la base de datos de destino. La configuración predeterminada de TCP utiliza el puerto 1521.|  
   
 3.  Cree una instantánea o una publicación transaccional, habilítela para suscriptores que no sean[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, después, cree una suscripción de inserción para el suscriptor. Para más información, consulte [Crear una suscripción para un suscriptor que no sea de SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="setting-directory-permissions"></a>Configurar permisos de directorio  
  A la cuenta con la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el distribuidor deben concederse permisos de lectura y ejecución para el directorio (y todos los subdirectorios) en el que esté instalado el software de red de cliente de Oracle.  

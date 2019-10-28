@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c6cf247d20cdc25fe18e5d263b62fd87b561b5b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69d5766b7431f1352b292306f595033a3070053b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055532"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909641"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,8 +25,6 @@ ms.locfileid: "68055532"
 1.  Crear y exportar un seguimiento de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
 2.  Crear un script de un nuevo conjunto de recopilación basado en un seguimiento exportado.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  El escenario para los procedimientos siguientes implica recopilar datos sobre cualquier procedimiento almacenado que requiera 80 milisegundos o más en completarse. Para completar estos procedimientos debería ser capaz de:  
   

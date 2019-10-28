@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f7ae7d1cddf05ce05c71c6a95f64266eae835aff
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152131"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909173"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de copia de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -208,8 +208,6 @@ GO
 1.  Quitar el dispositivo lógico de copia de seguridad original.  
   
 2.  Definir un nuevo dispositivo lógico de copia de seguridad que utilice el nombre de dispositivo lógico original pero que se asigne a un dispositivo de copia de seguridad físico distinto. Los dispositivos lógicos de copia de seguridad resultan muy útiles para identificar los dispositivos de copia de seguridad en cinta.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="MirroredMediaSets"></a> Conjuntos de medios de copia de seguridad reflejados  
  La creación de reflejos de los conjuntos de medios de copia de seguridad reduce el efecto de los errores de funcionamiento de los dispositivos de copia de seguridad. Los errores de funcionamiento son especialmente graves porque las copias de seguridad son el último recurso para evitar la pérdida de datos. A medida que aumenta el tamaño de una base de datos, aumentan las posibilidades de que un error de un dispositivo o medio de copia de seguridad provoque que no se pueda restaurar una copia de seguridad. La creación de reflejo de los medios de copia de seguridad aumenta la confiabilidad de las copias de seguridad al proporcionar redundancia para el dispositivo físico. Para obtener más información, vea [Conjuntos de medios de copia de seguridad reflejados &#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md).  

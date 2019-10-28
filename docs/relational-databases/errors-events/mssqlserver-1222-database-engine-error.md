@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: c5b1c2f4-f591-4cc1-aa17-204636a27f29
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f528c32dcaa0757802d9afe40dffb925a654d780
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 99add77f12934928a72354e40e87b5025bdd6ec7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116017"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908634"
 ---
-# <a name="mssqlserver1222"></a>MSSQLSERVER_1222
+# <a name="mssqlserver_1222"></a>MSSQLSERVER_1222
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>Detalles  
@@ -43,8 +43,6 @@ Realice las siguientes tareas para solucionar el problema:
 2.  Si la transacción sigue reteniendo el bloqueo, finalice la transacción si es necesario.  
   
 3.  Vuelva a ejecutar la consulta.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Si este error se produce con frecuencia, cambie el período de tiempo de espera de bloqueo o modifique las transacciones problemáticas para que mantengan el bloqueo durante menos tiempo.  
   

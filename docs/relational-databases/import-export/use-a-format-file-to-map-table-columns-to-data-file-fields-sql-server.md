@@ -14,12 +14,12 @@ ms.assetid: e7ee4f7e-24c4-4eb7-84d2-41e57ccc1ef1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7a1f0b614bd74e182ccca9333d1c92b018a51dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6530e51525b1fd1939b293001d99682d75e7a10e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062409"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908455"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,8 +78,6 @@ Consulte [Estructura de los archivos de formato no XML](../../relational-databas
 1.  Vuelva a organizar el orden de las filas del archivo de formato para que las filas se encuentren en el mismo orden que los datos de `myRemap.bcp`.
 2.  Asegúrese de que los valores del orden del campo del archivo de host son secuenciales.
 3.  Asegúrese de que hay un retorno de carro después de la última fila del archivo de formato.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Compare los cambios:     
 **Antes del**

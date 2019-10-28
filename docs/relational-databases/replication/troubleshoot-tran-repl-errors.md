@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769349"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907290"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solucionador de problemas: Búsqueda de errores con la replicación transaccional de SQL Server 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ Este proceso crea la publicación y la coloca en el estado de *sincronización*.
 1. Las transacciones se producen en los objetos que se replican y se marcan como "para replicación" en el registro de transacciones. 
 2. El Agente de registro del LOG examina el registro de transacciones y busca las transacciones marcadas "para replicación". Después, estas transacciones se guardan en la base de datos de distribución. 
 3. El Agente de distribución examina la base de datos de distribución mediante el subproceso de lectura. Después, con el subproceso de escritura, este agente se conecta al suscriptor para aplicar los cambios en él.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 En cualquier paso de este proceso se pueden producir errores. La búsqueda de esos errores puede ser el aspecto más complejo de la solución de problemas de sincronización. Afortunadamente, el uso del Monitor de replicación facilita este proceso. 
 

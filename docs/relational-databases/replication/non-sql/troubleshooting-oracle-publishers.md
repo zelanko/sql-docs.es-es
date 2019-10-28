@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3edd60a47ac4cebcdea3f70a0658ce837e3d63ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095655"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907955"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionar problemas de los publicadores de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,8 +78,6 @@ ms.locfileid: "68095655"
 2.  Emita el comando SQL `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`.  
   
 3.  Emita el comando SQL `DROP USER <replication_administrative_user_schema>``CASCADE;`.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>Aparece el error 21663 de SQL Server referente a la falta de una clave principal  
  Los artículos de las publicaciones transaccionales deben tener una clave principal válida. Si no tienen una clave principal válida, aparecerá el siguiente mensaje de error cuando intente agregar un artículo:  

@@ -24,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3115fa833f657236939200b262c862182d9117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132190"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903877"
 ---
 # <a name="populate-full-text-indexes"></a>Rellenar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,8 +207,6 @@ En algunos casos, la solicitud de un rellenado incremental produce un llenado co
     -   Para **eliminar** una programación existente, seleccione la programación existente y haga clic en **Eliminar**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="crawl"></a> Solución de errores en un rellenado de texto completo (rastreo)  
 Cuando se produce un error durante un rastreo, la función de registro de rastreo de la búsqueda de texto completo crea y mantiene un registro de rastreo, que es un archivo sin formato. Cada registro de rastreo se corresponde con un determinado catálogo de texto completo. De forma predeterminada, los registros de rastreo de una instancia determinada (en este ejemplo, la instancia predeterminada) se encuentran en la carpeta `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG`.

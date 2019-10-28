@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30b98cc763b1bfdd47a1d560639a9a6dff5cd49a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b71c6f867bcc03b220b99ac1e28e930dbe8ea89d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68112892"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907198"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML con tipo y XML sin tipo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -153,8 +153,6 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
     3.  Cualquier valor **xs:date** o **xs:dateTime** que sea menor que el 1 de enero del año 1 llevará a un error en tiempo de ejecución cuando el índice se regenere o se ejecute una XQuery, o instrucciones XML-DML, con el tipo de datos XML que contiene dicho valor.  
   
 2.  Cualquier año negativo en las facetas o valores predeterminados **xs:date** o **xs:dateTime** de una colección de esquemas XML se actualizará automáticamente al valor más pequeño permitido por el tipo base **xs:date** o **xs:dateTime** (por ejemplo, 0001-01-01T00:00:00.0000000Z para **xs:dateTime**).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Observe que todavía puede usar una instrucción SELECT de SQL para recuperar todo el tipo de datos XML, aun cuando contiene años negativos. Se recomienda que reemplace los años negativos por un año dentro del intervalo recientemente admitido o cambie el tipo del elemento o atributo a **xs:string**.  
   

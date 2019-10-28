@@ -19,12 +19,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 76f5014ec7a7c06496c3850354da528da89e67b2
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: ff07e2eaa15b76fe45a3f3ef7128a47e9415a4d1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846589"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908059"
 ---
 # <a name="view-and-modify-publication-properties"></a>Ver y modificar propiedades de publicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,8 +90,6 @@ ms.locfileid: "70846589"
 3.  Haga clic con el botón secundario en una publicación y, a continuación, haga clic en **Propiedades**.  
   
 4.  Modifique las propiedades si es necesario y, a continuación, haga clic en **Aceptar**.  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-and-modify-publication-properties-in-replication-monitor"></a>Para ver y modificar propiedades de una publicación en el Monitor de replicación  
   

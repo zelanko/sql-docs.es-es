@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 352aa27fd759c14677ed2b674045c55e2b9c0896
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76ad73aa54d05081827a99a5b14c5390a04f3782
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073001"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909267"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1073,8 +1073,6 @@ BEGIN TRANSACTION
   
 1.  Establezca una o dos de las opciones de base de datos (`READ_COMMITTED_SNAPSHOT` y `ALLOW_SNAPSHOT_ISOLATION`) en ON.  
 2.  Seleccione el nivel de aislamiento de transacción apropiado en una aplicación:  
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   Cuando el valor de la opción de base de datos `READ_COMMITTED_SNAPSHOT` sea ON, las transacciones que establezcan el nivel de aislamiento de lectura confirmada utilizarán las versiones de fila.  
     -   Cuando el valor de la opción de base de datos `ALLOW_SNAPSHOT_ISOLATION` sea ON, las transacciones podrán establecer el nivel de aislamiento de instantánea.  

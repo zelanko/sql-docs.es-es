@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c3085a6ab63278803523e383104ab6cfb9554833
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dc531cfeb3db8057353b11af64e5c843af4f7496
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137891"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909842"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>Eliminar una condición de administración basada en directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,4 @@ ms.locfileid: "68137891"
 5.  Haga clic con el botón derecho en la condición que quiera eliminar y, después, seleccione **Eliminar**.  
   
 6.  En el cuadro de diálogo **Eliminar objeto** , asegúrese de que está seleccionada la condición correcta y haga clic en **Aceptar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

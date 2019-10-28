@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1be170b2b32ed1529af98fa2b072749de8f1165c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97725acacdd4486ebd92a4424704288c5e4efd3e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946936"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907477"
 ---
 # <a name="delete-a-plan-guide"></a>Eliminar una guía de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,8 +52,6 @@ ms.locfileid: "67946936"
 3.  Haga clic con el botón derecho en la guía de plan que quiera eliminar y seleccione **Eliminar**.  
   
 4.  En el cuadro de diálogo **Eliminar objeto** , asegúrese de que está seleccionada la guía de plan correcta y haga clic en **Aceptar**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

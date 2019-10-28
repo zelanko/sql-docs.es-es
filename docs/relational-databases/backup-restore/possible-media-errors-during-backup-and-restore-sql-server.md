@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7ba9cba3a56a76fee51b6b21aec99f8019b59157
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79bfbeec5a22dd387b97977d12b95a0e232125aa
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033644"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908868"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Errores posibles de medios durante copia de seguridad y restauración (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ ms.locfileid: "68033644"
 2.  Aunque se incluyan sumas de comprobación de página, BACKUP genera una suma de comprobación de copia de seguridad independiente para las secuencias de copia de seguridad. Opcionalmente, las operaciones de restauración pueden utilizar la suma de comprobación de copia de seguridad para confirmar que la copia de seguridad no está dañada. La suma de comprobación de copia de seguridad se almacena en el medio de copia de seguridad y no en las páginas de la base de datos. La suma de comprobación de copia de seguridad se puede utilizar opcionalmente en el momento de la restauración.  
   
 3.  El conjunto de copia de seguridad se marca para indicar que contiene sumas de comprobación de copia de seguridad (en la columna **has_backup_checksums** de **msdb..backupset)** . Para obtener más información, vea [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Durante una operación de restauración, si hay sumas de comprobación de copia de seguridad en los medios de copia de seguridad, de forma predeterminada, las operaciones RESTORE y RESTORE VERIFYONLY comprueban las sumas de comprobación de copia de seguridad y las sumas de comprobación de página. Si no hay ninguna suma de comprobación de copia de seguridad, cualquiera de las dos operaciones de restauración continúa sin realizar ninguna comprobación; esto se debe a que, sin una suma de comprobación de copia de seguridad, la restauración no puede comprobar de forma confiable las sumas de comprobación de página.  
   

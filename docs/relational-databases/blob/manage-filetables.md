@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf28fc78055a2650c1f2ffa6ab13485bf9a71c15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022490"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908748"
 ---
 # <a name="manage-filetables"></a>Administrar FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,8 +114,6 @@ GO
 2.  El acceso no transaccional se habilita en el nivel de base de datos.  
   
 3.  Un directorio válido se ha especificado en la base de datos.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="BasicsEnabling"></a> Deshabilitar y volver a habilitar el espacio de nombres FileTable en el nivel de tabla  
  Si se deshabilita el espacio de nombres de FileTable, se deshabilitan todas las restricciones y los desencadenadores definidos por el sistema que se crearon con FileTable. Esto es útil en los casos en los que FileTable necesite reorganizarse a gran escala mediante operaciones [!INCLUDE[tsql](../../includes/tsql-md.md)] sin tener que aplicar la semántica de FileTable. Aunque estas operaciones pueden dejar FileTable en un estado incoherente, y pueden impedir volver a habilitar el espacio de nombres de FileTable.  

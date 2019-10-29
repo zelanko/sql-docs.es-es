@@ -149,7 +149,7 @@ En el Asistente para importación y exportación, lleve a cabo una de las siguie
 
 -   Si va a **importar** desde Excel, lleve a cabo una de las siguientes acciones:
 
-    -   Para usar una **hoja de cálculo** o un **rango con nombre**, en la página **	Especificar copia de tabla o consulta**, seleccione **Copiar los datos de una o varias tablas o vistas**. Luego, en la página **Seleccionar tablas y vistas de origen**, en la columna **Origen**, seleccione las hojas de cálculo y los rangos con nombre de origen.
+    -   Para usar una **hoja de cálculo** o un **rango con nombre**, en la página **Especificar copia de tabla o consulta**, seleccione **Copiar los datos de una o varias tablas o vistas**. Luego, en la página **Seleccionar tablas y vistas de origen**, en la columna **Origen**, seleccione las hojas de cálculo y los rangos con nombre de origen.
 
     -   Para usar un **rango sin nombre** que se especifique con su dirección, en la página **Especificar copia de tabla o consulta**, seleccione **Escribir una consulta para especificar los datos que se van a transferir**. Luego, en la página **Proporcionar una consulta de origen**, proporcione una consulta similar al ejemplo siguiente:
 

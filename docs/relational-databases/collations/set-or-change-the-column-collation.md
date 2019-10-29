@@ -37,7 +37,7 @@ ms.locfileid: "68140861"
     GO  
     ```  
   
--   Columnas en la tabla de origen capturadas[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Para obtener más información, vea [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información, vea [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 -   Usar la propiedad **Column.Collation** de Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO).  
   

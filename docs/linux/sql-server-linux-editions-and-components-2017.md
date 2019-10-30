@@ -1,6 +1,6 @@
 ---
 title: Ediciones y características admitidas de SQL Server 2017 en Linux
-ms.date: 09/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 927b3366c609eae4d98787ead646e8b613bfdcba
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 661d74060d9bb6f7097a5fe50291bdde23e0a591
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71687390"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72928907"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y características admitidas de SQL Server 2017 en Linux
 
@@ -40,10 +40,10 @@ En este artículo se proporcionan detalles de las características admitidas en 
 Los requisitos de instalación varían según las necesidades de las aplicaciones. Las distintas ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] han sido diseñadas para satisfacer los requisitos de rendimiento, tiempo de ejecución y precio propios de cada organización y cada persona. Los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que instale también dependen de sus necesidades concretas. Las secciones siguientes le servirán de ayuda para elegir la mejor opción entre las ediciones y los componentes disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 Para leer las notas de la versión más reciente e información sobre las novedades, vea lo siguiente:
-- [Notas de la versión de SQL Server en Linux](sql-server-linux-release-notes.md)
-- [Novedades de SQL Server en Linux](sql-server-linux-whats-new.md)
+- [Notas de la versión de SQL Server 2017 en Linux](sql-server-linux-release-notes.md)
+- [Novedades de SQL Server 2017 en Linux](sql-server-linux-whats-new.md)
 
-Para obtener una lista de las características de SQL Server no disponibles en Linux, vea [Características y servicios no admitidos](sql-server-linux-release-notes.md#Unsupported).
+Para obtener una lista de las características de SQL Server no disponibles en Linux, vea [Características y servicios no admitidos](#Unsupported).
 
 ### <a name="try-sql-server"></a>Pruebe SQL Server.    
     
@@ -209,14 +209,44 @@ Para obtener información sobre las características de Integration Services (SS
 |Tipos de datos planares y geodésicos|Sí|Sí|Sí|Sí| 
 |Bibliotecas espaciales avanzadas|Sí|Sí|Sí|Sí|   
 |Importación y exportación de formatos de datos espaciales estándar del sector|Sí|Sí|Sí|Sí|   
+## <a name="Unsupported"></a> Características y servicios no admitidos
 
+Las siguientes características y servicios no están disponibles para SQL Server 2017 en Linux. La compatibilidad de estas características se incrementará con el tiempo.
+
+| Área | Característica o servicio no admitido |
+|-----|-----|
+| **Motor de base de datos** | Replicación transaccional |
+| &nbsp; | Replicación de mezcla |
+| &nbsp; | Captura de datos modificados (vea Agente SQL Server) |
+| &nbsp; | Stretch DB |
+| &nbsp; | PolyBase |
+| &nbsp; | Consulta distribuida con conexiones de terceros |
+| &nbsp; | Servidores vinculados a orígenes de datos distintos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
+| &nbsp; | Procedimientos extendidos almacenados del sistema (XP_CMDSHELL, etc.) |
+| &nbsp; | Filetable, FILESTREAM |
+| &nbsp; | Ensamblados de CLR con el conjunto de permisos EXTERNAL_ACCESS o UNSAFE |
+| &nbsp; | Buffer Pool Extension |
+| **Agente SQL Server** |  Subsistemas: CmdExec, PowerShell, Agente de lectura de cola, SSIS, SSAS, SSRS |
+| &nbsp; | Trabajos |
+| &nbsp; | Agente de registro del LOG |
+| &nbsp; | Captura de datos modificados (CDC) |
+| &nbsp; | Copia de seguridad administrada |
+| **Alta disponibilidad** | Creación de reflejo de base de datos  |
+| **Seguridad** | Administración extensible de claves |
+| &nbsp; | Autenticación de AD para servidores vinculados | 
+| &nbsp; | Autenticación de AD para grupos de disponibilidad | 
+| **Servicios** | SQL Server Browser |
+| &nbsp; | SQL Server R Services |
+| &nbsp; | StreamInsight |
+| &nbsp; | Analysis Services |
+| &nbsp; | Reporting Services |
+| &nbsp; | Data Quality Services |
+| &nbsp; | Master Data Services |
   
-## <a name="next-steps"></a>Pasos siguientes 
+## <a name="next-steps"></a>Pasos siguientes
+ [Ediciones y características admitidas de SQL Server 2019 en Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Ediciones y características admitidas de SQL Server 2017 en Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Ediciones y características admitidas de SQL Server 2016 en Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [Ediciones y características admitidas de SQL Server 2014 en Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Instalación de SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
- [Especificaciones de producto para SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb) 
-
-  
-  
+ [Especificaciones de producto para SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)

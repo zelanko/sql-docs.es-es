@@ -22,7 +22,7 @@ ms.locfileid: "68140861"
 ---
 # <a name="set-or-change-the-column-collation"></a>Establecer o cambiar la intercalación de columnas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Puede invalidar la intercalación de base de datos para los datos **char**, **varchar**, **text**, **nchar**, **nvarchar**y **ntext** especificando una intercalación diferente para una columna específica de una tabla y utilizando una de las siguientes cláusulas:  
+  Puede invalidar la intercalación de base de datos para los datos **char**, **varchar**, **text**, **nchar**, **nvarchar**y **ntext** especificando una intercalación diferente para una columna específica de una tabla y utilizando una de las siguientes alternativas:  
   
 -   La cláusula COLLATE de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) y [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Por ejemplo:  
   
@@ -113,6 +113,6 @@ SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.
 ## <a name="see-also"></a>Consulte también  
  [Configurar o cambiar la intercalación del servidor](../../relational-databases/collations/set-or-change-the-server-collation.md)   
  [Establecer o cambiar la intercalación de base de datos](../../relational-databases/collations/set-or-change-the-database-collation.md)   
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

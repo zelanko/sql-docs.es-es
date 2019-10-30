@@ -21,15 +21,15 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa19a06d3743e91665ee2355eb5f6c380df413d
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: 358b08fe10f29d6a8aaec40f6a80e92c5950e7b7
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542235"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989508"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Devuelve información de un archivo de auditoría creado por una auditoría de servidor en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -53,17 +53,17 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<path > \\ \*** recopilar todos los archivos de auditoría de la ubicación especificada.  
   
-    -   **\<path > \LoginsAudit_{guid}** : recopila todos los archivos de auditoría que tienen el nombre y el par GUID especificados.  
+    -   **\<ruta de acceso > \LoginsAudit_{guid}** : recopila todos los archivos de auditoría que tienen el nombre y el par GUID especificados.  
   
-    -   **\<path > \LoginsAudit_{GUID}_00_29384.sqlaudit** : recopilar un archivo de auditoría específico.  
+    -   **\<ruta de acceso > \LoginsAudit_{GUID}_00_29384.sqlaudit** : recopilar un archivo de auditoría específico.  
   
- - **Azure SQL Database**:
+ - **Azure SQL Database o Azure SQL Data Warehouse**:
  
     Este argumento se usa para especificar una dirección URL de BLOB (incluido el punto de conexión de almacenamiento y el contenedor). Aunque no admite un carácter comodín de asterisco, puede usar un prefijo de nombre de archivo parcial (BLOB) (en lugar del nombre de BLOB completo) para recopilar varios archivos (BLOB) que comienzan con este prefijo. Por ejemplo:
  
-      - **\<Storage_endpoint \> / \<Container \> / \<ServerName \>** / 0DatabaseName 1 2: recopila todos los archivos de auditoría (BLOB) para la base de datos específica.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>** /: recopila todos los archivos de auditoría (BLOB) para la base de datos específica.    
       
-      - **\<Storage_endpoint \> / \<Container \> / \<ServerName \> / 0DatabaseName 1 2 3AuditName 4 5 6CreationDate 7 8 9FileName 0. Xel** : recopila un archivo de auditoría específico (BLOB).
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<FileName\>. Xel** : recopila un archivo de auditoría específico (BLOB).
   
 > [!NOTE]  
 >  Si se pasa una ruta de acceso sin un patrón de nombre de archivo, se producirá un error.  
@@ -86,7 +86,7 @@ fn_get_audit_file ( file_pattern,
 | Nombre de columna | Type | Description |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | Id. de la acción. No acepta valores NULL. |  
-| additional_information | **nvarchar(4000)** | La información única que se aplica exclusivamente a un evento se devuelve como XML. Este tipo de información está incluida en un pequeño número de acciones de auditoría.<br /><br /> Un nivel de pila de TSQL se mostrará en formato XML para las acciones que tienen asociada la pila de TSQL. El formato XML será:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indica el nivel de anidamiento actual del marco. El nombre del módulo se representa en formato de tres partes (nombreDeBaseDeDatos, nombreDeEsquema y nombreDeObjeto).  El nombre del módulo se analizará para escapar caracteres XML no válidos, como `'\<'`, `'>'`, `'/'` `'_x'`. Se les aplicará un carácter de escape como `_xHHHH\_`. HHHH representa el código UCS-2 hexadecimal de cuatro dígitos para el carácter.<br /><br /> Acepta valores NULL. Devuelve NULL si el evento no proporciona información adicional. |
+| additional_information | **nvarchar(4000)** | La información única que se aplica exclusivamente a un evento se devuelve como XML. Este tipo de información está incluida en un pequeño número de acciones de auditoría.<br /><br /> Un nivel de pila de TSQL se mostrará en formato XML para las acciones que tienen asociada la pila de TSQL. El formato XML será:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indica el nivel de anidamiento actual del marco. El nombre del módulo se representa en formato de tres partes (nombreDeBaseDeDatos, nombreDeEsquema y nombreDeObjeto).  El nombre del módulo se analizará para escapar caracteres XML no válidos, como `'\<'`, `'>'`, `'/'``'_x'`. Se les aplicará un carácter de escape como `_xHHHH\_`. HHHH representa el código UCS-2 hexadecimal de cuatro dígitos para el carácter.<br /><br /> Acepta valores NULL. Devuelve NULL si el evento no proporciona información adicional. |
 | affected_rows | **bigint** | **Se aplica a**: solo Azure SQL dB<br /><br /> Número de filas afectadas por la instrucción ejecutada. |  
 | application_name | **nvarchar(128)** | **Se aplica a**: Azure SQL DB + SQL Server (a partir de 2017)<br /><br /> Nombre de la aplicación cliente que ejecutó la instrucción que provocó el evento de auditoría |  
 | audit_file_offset | **bigint** | **Se aplica a**: solo SQL Server<br /><br /> Desplazamiento de búfer del archivo que contiene el registro de auditoría. No admite valores NULL. |  

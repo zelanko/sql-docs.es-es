@@ -13,12 +13,12 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d144129f296a1e5c131bdc90364e3e2a969d3bdc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54fe24ab5a9e07e5cc39e32462e5d412bb8f163b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048645"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907022"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,8 +65,6 @@ Para que una instancia de **MultiLineString** sea válida debe cumplir los sigui
 1.  Todas las instancias que forman la instancia de **MultiLineString** deben ser instancias válidas de **LineString** .  
   
 2.  Dos de las instancias de **LineString** que forman la instancia de **MultiLineString** pueden superponerse durante un intervalo. Las instancias de **LineString** solo pueden formar una intersección o tocarse una a la otra o a otra instancia de **LineString** en un número finito de puntos.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 En el ejemplo siguiente se muestran tres instancias válidas de **MultiLineString** y una instancia de **MultiLineString** que no es válida.  
   

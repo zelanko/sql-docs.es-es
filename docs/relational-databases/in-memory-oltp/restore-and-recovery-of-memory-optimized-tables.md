@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10a54ea4326c3fb3c1a9400568ac9aa7e904aa2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03974bc83cb9c7d9b6202f04db84ae96fe791eb3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111793"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908437"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauración y recuperación de tablas optimizadas para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia, ca
   
 3.  **Deshacer**. En esta fase, las transacciones no confirmadas se revierten.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="process-for-improving-load-time"></a>Proceso para reducir el tiempo de carga
 Cargar en memoria las tablas optimizadas para memoria puede afectar el rendimiento del objetivo de tiempo de recuperación (RTO). Para mejorar el tiempo de carga de los datos optimizados para memoria de los archivos delta y de datos, el motor de OLTP en memoria carga los archivos delta y de datos en paralelo como se indica a continuación:  
   
@@ -59,7 +57,7 @@ Cargar en memoria las tablas optimizadas para memoria puede afectar el rendimien
   
 -   **Transmitir los archivos de datos**. Una vez creado el filtro de mapas de delta, se leen los archivos de datos utilizando tantos subprocesos como CPU lógicas haya. Cada subproceso lee las filas de datos, comprueba el mapa de delta asociado e inserta una fila en la tabla solo si esa fila no se ha marcado como eliminada. Esta parte de la recuperación puede estar limitada por la CPU en algunos casos como se indica en este diagrama:  
   
-    ![Streaming de datos en tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Streaming de datos en tablas optimizadas para memoria")  
+    ![Streaming de datos a tablas optimizadas para memoria](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Streaming de datos a tablas optimizadas para memoria")  
   
 ## <a name="specific-cases-of-slow-load-times"></a>Casos específicos de tiempos de carga lentos
 Las tablas optimizadas para memoria se pueden cargar normalmente en memoria a la velocidad de E/S, pero cargar las filas de datos en memoria es, a veces, más lento. Los casos específicos son:  

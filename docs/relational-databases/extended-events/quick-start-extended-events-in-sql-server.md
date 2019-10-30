@@ -11,19 +11,19 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251533"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798432"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Inicio rápido: Eventos extendidos en SQL Server
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-Este artículo tiene como objetivo prestar ayuda al desarrollador de SQL que no está familiarizado con los eventos extendidos y que quiere crear una sesión de eventos en tan solo unos minutos. Mediante el uso de eventos extendidos, puede ver información sobre las operaciones internas del sistema de SQL y de su aplicación. Cuando crea una sesión de eventos extendidos, indica al sistema:
+Los eventos extendidos son un sistema ligero de supervisión de rendimiento que permite a los usuarios recopilar los datos necesarios para supervisar y solucionar problemas en SQL Server. Vea [Introducción a los eventos extendidos](extended-events.md) para obtener más información sobre la arquitectura de eventos extendidos.  Este artículo tiene como objetivo prestar ayuda al desarrollador de SQL que no está familiarizado con los eventos extendidos y que quiere crear una sesión de eventos en tan solo unos minutos. Mediante el uso de eventos extendidos, puede ver información sobre las operaciones internas del sistema de SQL y de su aplicación. Cuando crea una sesión de eventos extendidos, indica al sistema:
 
 - Las repeticiones que le interesan.
 - Cómo quiere que el sistema le notifique los datos.

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 568790caac848c0823c58bd004ffca8546650340
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278264"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930487"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
@@ -101,7 +101,7 @@ Esta es la versión de la actualización acumulativa 16 (CU16) de [!INCLUDE[ssS
 
 |Nueva característica o actualización | Detalles |
 |:---|:---|
-| Compatibilidad con MSDTC | Compatibilidad con Microsoft DTC (Coordinador de transacciones distribuidas) para SQL Server 2017. Para más información, vea [Procedimiento para configurar Microsoft DTC (Coordinador de transacciones distribuidas) en Linux](sql-server-linux-configure-msdtc.md). |
+| Compatibilidad con MSDTC | Compatibilidad con Microsoft DTC (Coordinador de transacciones distribuidas) para SQL Server 2017. Para más información, vea [Procedimiento para configurar Microsoft DTC (Coordinador de transacciones distribuidas) en Linux](sql-server-linux-configure-msdtc.md). |
 
 ### <a name="package-details"></a>Detalles del paquete
 
@@ -405,42 +405,6 @@ En la tabla siguiente, se muestran los detalles del paquete y las ubicaciones de
 | Paquete RPM de SLES | 14.0.1000.169-2 | [Paquete RPM del motor mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[Paquete RPM de alta disponibilidad](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[Paquete RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[Paquete RPM del Agente SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Paquete de Debian para Ubuntu 16.04 | 14.0.1000.169-2 | [Paquete de Debian del motor](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[Paquete de Debian de la búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[Paquete de Debian del Agente SQL Server](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[Paquete SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a name="Unsupported"></a> Características y servicios no admitidos
-
-Las siguientes características y servicios no están disponibles en Linux en el momento de la publicación de la versión de disponibilidad general. La compatibilidad de estas características se incrementará con el tiempo.
-
-| Área | Característica o servicio no admitido |
-|-----|-----|
-| **Motor de base de datos** | Replicación transaccional |
-| &nbsp; | Replicación de mezcla |
-| &nbsp; | Captura de datos modificados (vea Agente SQL Server) |
-| &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
-| &nbsp; | Consulta distribuida con conexiones de terceros |
-| &nbsp; | Servidores vinculados a orígenes de datos distintos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
-| &nbsp; | Procedimientos extendidos almacenados del sistema (XP_CMDSHELL, etc.) |
-| &nbsp; | Filetable, FILESTREAM |
-| &nbsp; | Ensamblados de CLR con el conjunto de permisos EXTERNAL_ACCESS o UNSAFE |
-| &nbsp; | Buffer Pool Extension |
-| **Agente SQL Server** |  Subsistemas: CmdExec, PowerShell, Agente de lectura de cola, SSIS, SSAS, SSRS |
-| &nbsp; | Trabajos |
-| &nbsp; | Agente de registro del LOG |
-| &nbsp; | Captura de datos modificados (CDC) |
-| &nbsp; | Copia de seguridad administrada |
-| **Alta disponibilidad** | Creación de reflejo de base de datos  |
-| **Seguridad** | Administración extensible de claves |
-| &nbsp; | Autenticación de AD para servidores vinculados | 
-| &nbsp; | Autenticación de AD para grupos de disponibilidad | 
-| &nbsp; | Herramientas de AD de terceros (Centrify, Vintela, PowerBroker) | 
-| **Servicios** | SQL Server Browser |
-| &nbsp; | SQL Server R Services |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
-| &nbsp; | Master Data Services |
-| &nbsp; | Coordinador de transacciones distribuidas (DTC) |
-
 ## <a name="known-issues"></a>Problemas conocidos
 
 En las secciones siguientes, se describen problemas conocidos con la versión de disponibilidad general de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] en Linux.
@@ -470,8 +434,6 @@ En las secciones siguientes, se describen problemas conocidos con la versión de
 - La base de datos maestra no se puede mover con la utilidad mssql-conf. Otras bases de datos del sistema se pueden mover con la utilidad mssql-conf.
 
 - Al restaurar una base de datos cuya copia de seguridad se ha realizado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Windows, tendrá que usar la cláusula **WITH MOVE** en la instrucción Transact-SQL.
-
-- Las transacciones distribuidas que necesitan el servicio Microsoft DTC (Coordinador de transacciones distribuidas) no se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ejecutándose en Linux. Los servidores vinculados de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se admiten, excepto si se usa DTC. Para obtener más información, vea [Las transacciones distribuidas que necesitan el servicio Microsoft DTC (Coordinador de transacciones distribuidas) no se admiten en SQL Server ejecutándose en Linux](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
 
 - Algunos algoritmos (conjuntos de cifrado) para TLS (Seguridad de la capa de transporte) no funcionan correctamente con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux. Esto causa errores de conexión al intentar conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], así como problemas al establecer conexiones entre réplicas en grupos de alta disponibilidad.
 

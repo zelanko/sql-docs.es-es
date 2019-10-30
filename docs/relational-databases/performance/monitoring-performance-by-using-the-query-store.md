@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e72ba4eed90fbd8218b9f0ed3942744fd75fcd90
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: f652fc8771162c81a7d86f0984eece90892e3cd3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163912"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909309"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "71163912"
 2.  En el cuadro de diálogo **Propiedades de la base de datos** , seleccione la página **Almacén de consultas** .  
   
 3.  En el cuadro **Modo de operación (solicitado)** seleccione **Lectura y escritura**.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="use-transact-sql-statements"></a>Uso de instrucciones Transact-SQL  
   
@@ -113,12 +111,12 @@ INNER JOIN sys.query_store_query_text AS Txt
 ##  <a name="Regressed"></a> Uso de la característica Consultas devueltas  
 Después de habilitar el Almacén de consultas, actualice la parte de la base de datos del panel del Explorador de objetos para agregar la sección **Almacén de consultas**.  
   
-![Árbol del Almacén de consultas de SQL Server 2016 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "SQL Server 2016 Query Store tree in SSMS Object Explorer")   ![Árbol del Almacén de consultas de SQL Server 2017 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "SQL Server 2017 Query Store tree in SSMS Object Explorer") 
+![Árbol de Almacén de consultas de SQL Server 2016 en Explorar de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore.PNG "Árbol de Almacén de consultas de SQL Server 2016 en Explorador de objetos de SSMS")   ![Árbol de Almacén de consultas de SQL Server 2017 en Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerquerystore_sql17.PNG "Árbol de Almacén de consultas de SQL Server 2017 en Explorador de objetos de SSMS") 
   
 Seleccione **Regressed Queries** (Consultas devueltas) para abrir el panel del mismo nombre **Regressed Queries** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. En el panel Regressed Queries (Consultas devueltas) se muestran las consultas y los planes del Almacén de consultas. Use los cuadros desplegables de la parte superior para filtrar las consultas en función de varios criterios: **Duración (ms)** (valor predeterminado), Tiempo de CPU (ms), Lecturas lógicas (KB), Escrituras lógicas (KB), Lecturas físicas (KB), Tiempo de CLR (ms), DOP, Consumo de memoria (KB), Recuento de filas, Memoria usada (KB), Memoria de base de datos temporal utilizada (KB) y Tiempo de espera (ms).  
 Seleccione un plan para ver el plan de consulta gráfica. Los botones están disponibles para ver la consulta de origen, forzar y no forzar un plan de consulta, alternar entre los formatos de cuadrícula y gráfico, comparar los planes seleccionados (si se ha seleccionado más de uno) y actualizar la pantalla.  
   
-![Consultas devueltas de SQL Server 2016 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "SQL Server 2016 Regressed Queries in SSMS Object Explorer")  
+![Consultas devueltas de SQL Server 2016 en Explorador de objetos de SSMS](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "Consultas devueltas de SQL Server 2016 en Explorador de objetos de SSMS")  
   
 Para aplicar un plan, seleccione una consulta y el plan y luego haga clic en **Force Plan**(Forzar plan). Solo puede forzar planes que se guardaron mediante la característica del plan de consulta y que todavía se conservan en la caché del plan de consulta.
 
@@ -129,11 +127,11 @@ En el Almacén de consultas, los tipos de espera se combinan en **categorías de
 
 Haga clic en **Estadísticas de espera de consulta** para abrir el panel **Estadísticas de espera de consulta** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 o superior. En el panel Estadísticas de espera de consulta se muestra un gráfico de barras que contiene las categorías de espera principales del Almacén de consultas. Use la lista desplegable de la parte superior para seleccionar un criterio de agregado para el tiempo de espera: avg, max, min, std dev y **total** (valor predeterminado).
 
- ![Estadísticas de espera de consulta de SQL Server 2017 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/query-store-waits.PNG "SQL Server 2017 Query Wait Statistics in SSMS Object Explorer")
+ ![Estadísticas de espera de consulta de SQL Server 2017 en Explorador de objetos de SSMS](../../relational-databases/performance/media/query-store-waits.PNG "Estadísticas de espera de consulta de SQL Server 2017 en Explorador de objetos de SSMS")
 
 Para seleccionar una categoría de espera, haga clic en la barra; se mostrará una vista de detalle de la categoría de espera seleccionada. Este gráfico de barras nuevo contiene las consultas que han contribuido a esa categoría de espera. 
   
- ![Vista detallada de Estadísticas de espera de consulta de SQL Server 2017 en el Explorador de objetos de SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "SQL Server 2017 Query Wait Statistics detail view in SSMS Object Explorer")
+ ![Vista de detalle de estadísticas de espera de consulta de SQL Server 2017 en Explorador de objetos de SSMS](../../relational-databases/performance/media/query-store-waits-detail.PNG "Vista de detalle de estadísticas de espera de consulta de SQL Server 2017 en Explorador de objetos de SSMS")
 
 Use el cuadro desplegable de la parte superior para filtrar las consultas según diversos criterios de tiempo de espera para la categoría de espera seleccionada: avg, max, min, std dev y **total** (valor predeterminado). Seleccione un plan para ver el plan de consulta gráfica. Los botones están disponibles para ver la consulta de origen, aplicar y eliminar la aplicación de un plan de consulta, y actualizar la pantalla.  
 

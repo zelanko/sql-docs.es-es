@@ -16,12 +16,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d53f088089ed348e01ae380e0f21dcca420fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140317"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796641"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Usar parámetros con valores de tabla (motor de base de datos)
 
@@ -57,6 +57,9 @@ Los parámetros con valores de tabla proporcionan más flexibilidad y, en alguno
 - Tienen establecimiento inflexible de tipos.
 - Permiten al cliente especificar un criterio de ordenación y claves únicas.
 - Se almacenan en caché como una tabla temporal cuando se usa en un procedimiento almacenado. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], los parámetros con valores de tabla también se almacenan en caché para las consultas con parámetros.
+
+## <a name="Permissions"></a> Permisos
+Para crear una instancia de un tipo de tabla definido por el usuario o llamar a un procedimiento almacenado con un parámetro con valores de tabla, el usuario debe tener el permiso EXECUTE en el tipo o en el esquema o la base de datos que contiene el tipo.
 
 ## <a name="Restrictions"></a> Restricciones
 

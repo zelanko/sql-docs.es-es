@@ -21,12 +21,12 @@ ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8348f5d0f77006697abec72b084b36cb7b24e1b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dee3fbbeced09ca66c42ab873ad2545655a1b72
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057944"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905549"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabajar con el seguimiento de cambios (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "68057944"
   
      En la ilustración siguiente se muestra cómo se usa CHANGETABLE(CHANGES ...) para obtener los cambios.  
   
-     ![Ejemplo de resultado de la consulta de seguimiento de cambios](../../relational-databases/track-changes/media/queryoutput.gif "Ejemplo de resultado de la consulta de seguimiento de cambios")  
+     ![Ejemplo de resultado de una consulta de seguimiento de cambios](../../relational-databases/track-changes/media/queryoutput.gif "Ejemplo de resultado de una consulta de seguimiento de cambios")  
   
  Función CHANGE_TRACKING_CURRENT_VERSION()  
  Se utiliza para obtener la versión actual que se utilizará la próxima vez que se consulten los cambios. Esta versión representa la versión de la última transacción confirmada.  
@@ -207,8 +207,6 @@ ON
   
 4.  Obtenga los cambios de la tabla SalesOrders mediante CHANGETABLE(CHANGES ...).  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Se están produciendo dos procesos en la base de datos que pueden afectar a los resultados que devuelven los pasos anteriores:  
   
 -   El proceso de limpieza se ejecuta en segundo plano y quita la información de seguimiento de cambios cuya antigüedad supere el período de retención especificado.  
@@ -267,6 +265,10 @@ COMMIT TRAN
   
  Para obtener más información sobre las transacciones de instantáneas, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
+#### <a name="cleanup-and-snapshot-isolation"></a>Limpieza y aislamiento de instantáneas   
+La habilitación del aislamiento de instantáneas y del seguimiento de cambios en la misma base de datos, o en dos bases de datos diferentes dentro de la misma instancia puede dar lugar a que el proceso de limpieza abandone las filas expiradas en sys.syscommittab cuando haya una transacción abierta en la base de datos con aislamiento de instantánea. Esto puede producirse cuando el proceso de limpieza de seguimiento de cambios tenga en cuenta una marca de límite inferior de toda la instancia (que es la versión de limpieza segura) al realizar la limpieza. Esto se hace para asegurarse de que el proceso de limpieza automática del seguimiento de cambios no quite las filas que pueda necesitar la transacción abierta en la base de datos que con el aislamiento de instantáneas habilitado. Mantenga el aislamiento de instantáneas confirmadas de lectura y las transacciones de aislamiento de instantáneas durante el menor tiempo posible para garantizar que las filas expiradas de sys.syscommittab se limpien a tiempo. 
+
+
 #### <a name="alternatives-to-using-snapshot-isolation"></a>Alternativas al uso del aislamiento de instantánea  
  Hay alternativas al uso del aislamiento de instantánea, pero exigen más trabajo para garantizar que se cumplan todos los requisitos de la aplicación. Para garantizar que el valor de *last_synchronization_version* sea válido y que el proceso de limpieza no quite los datos antes de que se obtengan los cambios, haga lo siguiente:  
   

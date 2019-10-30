@@ -27,12 +27,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 034e4c9ed8df53c6600896b4a5877f1b48a3288d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084079"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916016"
 ---
 # <a name="database-checkpoints-sql-server"></a>Puntos de comprobación de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Por motivos de rendimiento, [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza 
 > Las transacciones no confirmadas de larga ejecución aumentan el tiempo de recuperación para todos los tipos de puntos de comprobación.   
   
 ##  <a name="InteractionBwnSettings"></a> Interacción de las opciones TARGET_RECOVERY_TIME y "recovery interval"  
- En la tabla siguiente se resume la interacción entre la configuración de **sp_configure"** recovery interval **"** que afecta a todo el servidor y la configuración específica ALTER DATABASE ... TARGET_RECOVERY_TIME específico.  
+ En la tabla siguiente se resume la interacción entre la configuración de **sp_configure "** recovery interval **"** que afecta a todo el servidor y la configuración específica `ALTER DATABASE ... TARGET_RECOVERY_TIME`.  
   
 |target_recovery_time|"recovery interval"|Tipo de punto de comprobación usado|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -81,7 +81,7 @@ Después de un bloqueo del sistema, el periodo de tiempo necesario para recupera
 ###  <a name="PerformanceImpact"></a> Repercusión del intervalo de recuperación en el rendimiento de recuperación  
 En un sistema de procesamiento de transacciones en línea (OLTP) con transacciones cortas, la opción **recovery interval** es el factor principal que determina la duración de la recuperación. Pero la opción **recovery interval** no afecta al tiempo necesario para deshacer una transacción de ejecución prolongada. La recuperación de una base de datos con una transacción de ejecución prolongada puede tardar mucho más que lo especificado en el valor de **intervalo de recuperación**. 
  
-Por ejemplo, si una transacción de ejecución prolongada tardó dos horas en realizar actualizaciones antes de que se deshabilitara el servidor, la recuperación real tarda un tiempo considerablemente superior al valor de **recovery interval** para recuperar la transacción de ejecución prolongada. Para obtener más información sobre la repercusión de una transacción de ejecución prolongada en el tiempo de recuperación, vea [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+Por ejemplo, si una transacción de ejecución prolongada tardó dos horas en realizar actualizaciones antes de que se deshabilitara el servidor, la recuperación real tarda un tiempo considerablemente superior al valor de **recovery interval** para recuperar la transacción de ejecución prolongada. Para obtener más información sobre la repercusión de una transacción de ejecución prolongada en el tiempo de recuperación, vea [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md). Para más información sobre el proceso de recuperación, vea [Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
   
 Normalmente, los valores predeterminados proporciona un rendimiento de recuperación óptimo. No obstante, el cambio del intervalo de recuperación podría mejorar el rendimiento en las siguientes circunstancias:  
   
@@ -92,7 +92,6 @@ Normalmente, los valores predeterminados proporciona un rendimiento de recuperac
 Si decide aumentar la configuración **recovery interval** , es recomendable que lo haga gradualmente en pequeños incrementos y evaluando el efecto de cada aumento incremental en el rendimiento de recuperación. Este planteamiento es importante ya que a medida que aumenta la configuración **recovery interval** , se multiplica el tiempo que tarda en completarse la recuperación de la base de datos. Por ejemplo, si cambia **intervalo de recuperación** a 10 minutos, la recuperación tarda aproximadamente 10 veces más en completarse que cuando **intervalo de recuperación** se establece en 1 minuto.  
   
 ##  <a name="IndirectChkpt"></a> Puntos de comprobación indirectos
-  
 Los puntos de control indirectos, presentados en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], proporcionan una alternativa de nivel de base de datos configurable a los puntos de comprobación automáticos. Esto se puede configurar mediante la especificación de la opción de configuración de la base de datos **Tiempo de recuperación de destino**. Para obtener más información, vea [Cambiar el tiempo de recuperación de destino de una base de datos &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).
 Si se produce un bloqueo del sistema, los puntos de comprobación indirectos proporcionan un tiempo de recuperación más rápido y predecible que los puntos de comprobación automáticos. Los puntos de comprobación indirectos proporcionan las siguientes ventajas:  
   
@@ -111,7 +110,6 @@ Pero una carga de trabajo transaccional en línea en una base de datos que esté
 > Las bases de datos que se actualizan in situ o se restauraron a partir de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usarán el comportamiento de punto de comprobación automático anterior, a menos que explícitamente se modifique para usar el punto de comprobación indirecto.       
 
 ### <a name="ctp23"></a> Escalabilidad mejorada de puntos de control indirectos
-
 Antes de [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)], es posible que experimente errores de programador que no rinde cuando hay una base de datos que genera un gran número de páginas desfasadas, como `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]se presenta una mejor escalabilidad para los puntos de control indirectos, lo que debería evitar estos errores en las bases de datos con una gran carga de trabajo `UPDATE`/`INSERT`.
   
 ##  <a name="EventsCausingChkpt"></a> Puntos de comprobación internos  
@@ -129,7 +127,6 @@ Hay distintos componentes del servidor que generan puntos de comprobación inter
   
 -   Poner fuera de línea una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .      
   
-
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Para cambiar el intervalo de recuperación en una instancia de servidor**  
   
@@ -143,9 +140,7 @@ Hay distintos componentes del servidor que generan puntos de comprobación inter
   
 -   [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
-  
 ## <a name="see-also"></a>Vea también  
 [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
-[Arquitectura física del registro de transacciones](https://technet.microsoft.com/library/ms179355.aspx) (de los Libros en pantalla de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , pero sigue teniendo vigencia)       
-  
-  
+[Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
+ 

@@ -11,12 +11,12 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009490"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908023"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70009490"
   
 -   **Latencia de datos.** La implementación de ETL conlleva un retraso de tiempo a la hora de ejecutar los análisis. Por ejemplo, si el trabajo de ETL tiene lugar al final de cada día laborable, las consultas de análisis se ejecutarán en datos que llevan como mínimo un día de desfase. Para muchas empresas, este retraso es inaceptable porque el negocio depende de poder analizar los datos en tiempo real. Por ejemplo, para poder detectar fraudes, es preciso analizar los datos operativos en tiempo real.  
   
- ![información general del análisis operativo en tiempo real](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "información general del análisis operativo en tiempo real")  
+ ![información general de análisis operativos en tiempo real](../../relational-databases/indexes/media/real-time-operational-analytics-overview.png "información general de análisis operativos en tiempo real")  
   
  Los análisis operativos en tiempo real ofrecen una solución a estos retos.   
         No comportan ningún retraso cuando las cargas de trabajo OLTP y de análisis se ejecutan en la misma tabla subyacente.   En las situaciones en las que se pueden usar análisis en tiempo real, los costos y la complejidad se reducen enormemente, ya que se pone fin a la necesidad de realizar trabajos ETL o de adquirir y mantener un almacén de datos independiente.  
@@ -84,8 +84,6 @@ ms.locfileid: "70009490"
   
 3.  Esto es todo lo que hay que hacer.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
  Ya está listo para ejecutar análisis operativos en tiempo real, sin haber realizado ningún cambio en la aplicación.  Las consultas de análisis se ejecutarán en el índice de almacén de columnas y las operaciones OLTP seguirán ejecutándose en los índices de árbol b de OLTP. Las cargas de trabajo OLTP seguirán produciéndose, si bien con una ligera sobrecarga adicional para mantener el índice de almacén de columnas. Vea las optimizaciones de rendimiento en la siguiente sección.  
   
 ## <a name="blog-posts"></a>Entradas de blog  
@@ -122,7 +120,7 @@ ms.locfileid: "70009490"
 ### <a name="example-a-access-hot-data-from-btree-index-warm-data-from-columnstore-index"></a>Ejemplo A: acceso a datos activos del índice de árbol b y a datos semiactivos del índice de almacén de columnas  
  En este ejemplo se usa una condición filtrada (accountkey > 0) para establecer qué filas se van a incluir en el índice de almacén de columnas. El objetivo es diseñar la condición de filtrado y las consultas posteriores para acceder a los datos "activos" del índice de árbol b que cambian con frecuencia, así como para acceder a los datos "semiactivos" del índice de almacén de columnas, que son más estables.  
   
- ![Índices combinados para datos activos y semiactivos](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Índices combinados para datos activos y semiactivos")  
+ ![Índices combinados para datos activos y semiactivos](../../relational-databases/indexes/media/de-columnstore-warmhotdata.png "Índices combinados para datos activos y de acceso frecuente")  
   
 > [!NOTE]  
 >  El optimizador de consultas tendrá en cuenta (pero no siempre elegirá) el índice de almacén de columnas para el plan de consulta. Cuando el optimizador de consultas elige el índice de almacén de columnas filtrado, combina de forma transparente tanto las filas del índice de almacén de columnas como las filas que no cumplen con la condición de filtrado para permitir los análisis en tiempo real. Esto difiere de un índice filtrado no agrupado regular, que solo se puede usar en las consultas limitadas a las filas existentes en el índice.  

@@ -1,5 +1,5 @@
 ---
-title: Ediciones y características admitidas de SQL Server 2017 en Linux
+title: Ediciones y características admitidas de SQL Server 2019 en Linux
 ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: linux
@@ -21,33 +21,33 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.openlocfilehash: 661d74060d9bb6f7097a5fe50291bdde23e0a591
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: mikeray
+ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
 ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928907"
+ms.locfileid: "72954997"
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y características admitidas de SQL Server 2017 en Linux
+# <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Ediciones y características admitidas de SQL Server 2019 en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se proporcionan detalles de las características admitidas en las diversas ediciones de SQL Server 2017 en Linux. Para conocer las ediciones y las características admitidas de SQL Server en Windows, vea [SQL Server 2017 en Windows](../sql-server/editions-and-components-of-sql-server-2017.md).  
+En este artículo se proporcionan detalles de las características admitidas en las diversas ediciones de SQL Server 2019 en Linux. Para conocer las ediciones y las características admitidas de SQL Server en Windows, vea [SQL Server 2019 en Windows](../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
 Los requisitos de instalación varían según las necesidades de las aplicaciones. Las distintas ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] han sido diseñadas para satisfacer los requisitos de rendimiento, tiempo de ejecución y precio propios de cada organización y cada persona. Los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que instale también dependen de sus necesidades concretas. Las secciones siguientes le servirán de ayuda para elegir la mejor opción entre las ediciones y los componentes disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
 
 Para leer las notas de la versión más reciente e información sobre las novedades, vea lo siguiente:
-- [Notas de la versión de SQL Server 2017 en Linux](sql-server-linux-release-notes.md)
-- [Novedades de SQL Server 2017 en Linux](sql-server-linux-whats-new.md)
+- [Notas de la versión de SQL Server 2019 en Linux](sql-server-linux-release-notes-2019.md)
+- [Novedades de SQL Server 2019 en Linux](sql-server-linux-whats-new-2019.md)
 
 Para obtener una lista de las características de SQL Server no disponibles en Linux, vea [Características y servicios no admitidos](#Unsupported).
 
 ### <a name="try-sql-server"></a>Pruebe SQL Server.    
     
-[Descarga de SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
+[Descarga de SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019)
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Ediciones de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  En la siguiente tabla se describen las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
@@ -66,7 +66,7 @@ Puede instalar solo los componentes de cliente de [!INCLUDE[ssNoVersion](../incl
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>Componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
 
-SQL Server 2017 en Linux es compatible con el motor de base de datos de SQL Server. En la tabla siguiente se indican las características del motor de base de datos.   
+SQL Server 2019 en Linux es compatible con el motor de base de datos de SQL Server. En la tabla siguiente se indican las características del motor de base de datos.   
   
 |Componentes de servidor|Descripción|  
 |-----------------------|-----------------|  
@@ -209,17 +209,15 @@ Para obtener información sobre las características de Integration Services (SS
 |Tipos de datos planares y geodésicos|Sí|Sí|Sí|Sí| 
 |Bibliotecas espaciales avanzadas|Sí|Sí|Sí|Sí|   
 |Importación y exportación de formatos de datos espaciales estándar del sector|Sí|Sí|Sí|Sí|   
+
 ## <a name="Unsupported"></a> Características y servicios no admitidos
 
-Las siguientes características y servicios no están disponibles para SQL Server 2017 en Linux. La compatibilidad de estas características se incrementará con el tiempo.
+Las siguientes características y servicios no están disponibles para SQL Server 2019 en Linux. La compatibilidad de estas características se incrementará con el tiempo.
 
 | Área | Característica o servicio no admitido |
 |-----|-----|
-| **Motor de base de datos** | Replicación transaccional |
-| &nbsp; | Replicación de mezcla |
-| &nbsp; | Captura de datos modificados (vea Agente SQL Server) |
+| **Motor de base de datos** | Replicación de mezcla |
 | &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
 | &nbsp; | Consulta distribuida con conexiones de terceros |
 | &nbsp; | Servidores vinculados a orígenes de datos distintos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  |
 | &nbsp; | Procedimientos extendidos almacenados del sistema (XP_CMDSHELL, etc.) |
@@ -228,25 +226,28 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 | &nbsp; | Buffer Pool Extension |
 | **Agente SQL Server** |  Subsistemas: CmdExec, PowerShell, Agente de lectura de cola, SSIS, SSAS, SSRS |
 | &nbsp; | Trabajos |
-| &nbsp; | Agente de registro del LOG |
-| &nbsp; | Captura de datos modificados (CDC) |
 | &nbsp; | Copia de seguridad administrada |
 | **Alta disponibilidad** | Creación de reflejo de base de datos  |
 | **Seguridad** | Administración extensible de claves |
 | &nbsp; | Autenticación de AD para servidores vinculados | 
 | &nbsp; | Autenticación de AD para grupos de disponibilidad | 
 | **Servicios** | SQL Server Browser |
-| &nbsp; | SQL Server R Services |
+| &nbsp; | SQL Server R Services<sup>1</sup> |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master Data Services |
+
+<sup>1</sup> SQL Server R es compatible con SQL Server, pero SQL Server R Services como paquete independiente no lo es.
   
 ## <a name="next-steps"></a>Pasos siguientes
+ [Características compatibles con las ediciones de SQL Server 2017 en Linux](sql-server-linux-editions-and-components-2017.md)  
  [Ediciones y características admitidas de SQL Server 2019 en Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [Ediciones y características admitidas de SQL Server 2017 en Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [Ediciones y características admitidas de SQL Server 2016 en Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [Ediciones y características admitidas de SQL Server 2014 en Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [Instalación de SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [Especificaciones de producto para SQL Server](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+
+

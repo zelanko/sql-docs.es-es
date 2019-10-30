@@ -13,12 +13,12 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a33a45be38ad49b2ecef68fe64be21b94c08f85
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123211"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909815"
 ---
 # <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "70123211"
   
 -   Forzar el plan anterior del historial, si está confirmado que es mejor. Use el botón **Forzar plan** de **Consultas con regresión** para aplicar el plan seleccionado para la consulta.  
   
- ![consultaDeAlmacénDeUso1](../../relational-databases/performance/media/query-store-usage-1.png "consultaDeAlmacénDeUso1")  
+ ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
  Para obtener una descripción detallada del escenario, consulte el blog [Query Store: A flight data recorder for your database](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) (Almacén de consultas: Una caja negra de datos para la base de datos)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "70123211"
   
  La forma más sencilla de empezar a explorar es abrir **Principales consultas que consumen recursos** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. La interfaz de usuario se divide en tres paneles: un histograma con las consultas que consumen más recursos (a la izquierda), un resumen del plan para la consulta seleccionada (a la derecha) y un plan de consulta visual para el plan seleccionado (abajo). Haga clic en el botón **Configurar** para controlar la cantidad de consultas que quiere analizar y el intervalo de tiempo que le interesa. También puede elegir entre diferentes dimensiones de consumo de recursos (duración, CPU, memoria, E/S, número de ejecuciones) y la base (promedio, mínima, máxima, total, desviación estándar).  
   
- ![consultaDeAlmacénDeUso2](../../relational-databases/performance/media/query-store-usage-2.png "consultaDeAlmacénDeUso2")  
+ ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
  Eche un vistazo al resumen del plan a la derecha para analizar el historial de ejecuciones y conocer los distintos planes y sus correspondientes estadísticas en tiempo de ejecución. Use el panel inferior para examinar los distintos planes o compararlos visualmente poniéndolos uno al lado del otro (para ello, use el botón Comparar).  
   
@@ -66,8 +66,6 @@ Cuando identifique una consulta con un rendimiento deficiente, la acción depend
 4.  Asegúrese de que los índices usados por la consulta están desfragmentados.  
   
 5.  Considere si merece la pena volver a escribir una consulta costosa. Por ejemplo, puede aprovechar las ventajas de la parametrización de consultas y reducir el uso de SQL dinámico. Implemente una lógica óptima al leer los datos (aplique el filtrado de datos en la base de datos, no en la aplicación).  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="ab-testing"></a>Realizar pruebas A/B  
  Use el Almacén de consultas para comparar el rendimiento de una carga de trabajo antes y después del cambio de aplicación que tiene previsto realizar. La siguiente lista contiene ejemplos en los que se puede usar el Almacén de consultas para evaluar el impacto del cambio de entorno o aplicación en el rendimiento de la carga de trabajo:  
@@ -100,11 +98,11 @@ En cualquiera de estos escenarios es válido el siguiente flujo de trabajo:
   
 En la siguiente ilustración se muestra el análisis del Almacén de consultas (paso 4) cuando se crea un índice que falta. Abra el panel Resumen del plan en **Consultas que más recursos consumen** para obtener una vista de la consulta que debería verse afectada por la creación del índice:  
   
-![consultaDeAlmacénDeUso3](../../relational-databases/performance/media/query-store-usage-3.png "consultaDeAlmacénDeUso3")  
+![query-store-usage-3](../../relational-databases/performance/media/query-store-usage-3.png "query-store-usage-3")  
   
 También puede comparar los planes anterior y posterior a la creación del índice poniéndolos uno al lado del otro (con la opción de barra de herramientas "Comparar los planes de la consulta seleccionada en una ventana independiente" que está marcada con un cuadrado de color rojo en la barra de herramientas).  
   
-![consultaDeAlmacénDeUso4](../../relational-databases/performance/media/query-store-usage-4.png "consultaDeAlmacénDeUso4")  
+![query-store-usage-4](../../relational-databases/performance/media/query-store-usage-4.png "query-store-usage-4")  
   
 El plan anterior a la creación del índice (con el número 1, arriba) muestra una sugerencia de falta de índice y puede observar que Clustered Index Scan fue el operador más caro de la consulta (enmarcado en un rectángulo rojo).  
   
@@ -117,7 +115,7 @@ Antes de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], los usuarios corría
   
 A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], todos los cambios del optimizador de consultas están vinculados al [nivel de compatibilidad de la base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) más reciente, por lo que los planes no se cambian en el momento de la actualización, sino cuando un usuario cambia `COMPATIBILITY_LEVEL` a la versión más reciente. Esta función, junto con el Almacén de consultas, confiere al usuario un enorme control sobre el rendimiento de las consultas en el proceso de actualización. En la siguiente imagen se muestra el flujo de trabajo de actualización recomendado:  
   
-![consultaDeAlmacénDeUso5](../../relational-databases/performance/media/query-store-usage-5.png "consultaDeAlmacénDeUso5")  
+![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
 1.  Actualice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin cambiar el nivel de compatibilidad de la base de datos. No expone los últimos cambios del optimizador de consultas, pero sí las características más recientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluido el Almacén de consultas.  
   
@@ -141,7 +139,7 @@ Algunas cargas de trabajo no tienen consultas dominantes que se pueden ajustar p
   
  La vista **Consultas que más recursos consumen** ofrece una primera indicación de la naturaleza ad hoc de la carga de trabajo:  
   
-![consultaDeAlmacénDeUso6](../../relational-databases/performance/media/query-store-usage-6.png "consultaDeAlmacénDeUso6")  
+![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
 Use la métrica **Recuento de ejecuciones** para analizar si las consultas principales son ad hoc (para ello, debe ejecutar el almacén de consultas con `QUERY_CAPTURE_MODE = ALL`). En el diagrama anterior, puede ver que el 90 % de las **Consultas que más recursos consumen** se ejecuta solo una vez.  
   
@@ -158,7 +156,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
 Este es un posible resultado que puede obtener en el caso de cargas de trabajo con consultas ad hoc:  
   
-![consultaDeAlmacénDeUso7](../../relational-databases/performance/media/query-store-usage-7.png "consultaDeAlmacénDeUso7")  
+![query-store-usage-7](../../relational-databases/performance/media/query-store-usage-7.png "query-store-usage-7")  
   
 El resultado de la consulta muestra que, a pesar del gran número de planes y consultas en el Almacén de consultas, sus query_hash y query_plan_hash no son realmente diferentes. Una relación entre textos de consulta únicos y hashes de consulta únicos que esté muy por encima de 1 es indicativa de que esa carga de trabajo es una buena candidata para la parametrización, dado que la única diferencia entre las consultas es la constante literal (parámetro) que se proporciona como parte del texto de la consulta.  
   
@@ -200,7 +198,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION FORCED;
 
 Después de aplicar cualquiera de estos pasos, **Principales consultas que consumen recursos** mostrará una imagen distinta de la carga de trabajo.  
   
-![consultaDeAlmacénDeUso8](../../relational-databases/performance/media/query-store-usage-8.png "consultaDeAlmacénDeUso8")  
+![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
 En algunos casos, la aplicación puede generar una gran cantidad de consultas diferentes que no son aptas para la parametrización automática. En ese caso, verá un gran número de consultas en el sistema, pero la relación entre las consultas únicas y los `query_hash` únicos estará bastante próxima a 1.  
   

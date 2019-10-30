@@ -1,7 +1,7 @@
 ---
 title: Guía de arquitectura y administración de registros de transacciones de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/05/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8626b9b1a00d62273165706bda5b742eebab3251
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 7444659676f6f8270b5cc8013c872e492e0cd8c8
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874204"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916057"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Guía de arquitectura y administración de registros de transacciones de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70874204"
 
   
 ##  <a name="Logical_Arch"></a> Arquitectura lógica del registro de transacciones  
- El registro de transacciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funciona desde el punto de vista lógico como si fuese una cadena de entradas de registro. Cada entrada del registro está identificada por un número de flujo de registro (LSN, Log Sequence Number). Las nuevas entradas del registro se escriben al final lógico del registro con un LSN mayor que el de las entradas anteriores. Las entradas del registro se almacenan en la secuencia en la que se crean. Cada entrada del registro contiene el Id. de la transacción a la que pertenece. Por cada transacción, las entradas del registro asociadas a dicha transacción se vinculan individualmente en una cadena con punteros hacia atrás, para acelerar así la reversión de la transacción.  
+ El registro de transacciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funciona desde el punto de vista lógico como si fuese una cadena de entradas de registro. Cada entrada del registro está identificada por un número de flujo de registro (LSN, Log Sequence Number). Las nuevas entradas del registro se escriben al final lógico del registro con un LSN mayor que el de las entradas anteriores. Las entradas de registro se almacenan en una secuencia de serie a medida que se crean, de manera que si LSN2 es mayor que LSN1, el cambio descrito por la entrada de registro a la que hace referencia LSN2 se produce después del cambio descrito por la entrada de registro LSN1. Cada entrada del registro contiene el Id. de la transacción a la que pertenece. Por cada transacción, las entradas del registro asociadas a dicha transacción se vinculan individualmente en una cadena con punteros hacia atrás, para acelerar así la reversión de la transacción.  
   
  Los registros de modificaciones de datos registran la operación lógica llevada a cabo o las imágenes anterior y posterior de los datos modificados. La imagen anterior es una copia de los datos antes de llevar a cabo la operación; la imagen posterior es una copia de los datos después de haber realizado la operación.  
   
@@ -65,7 +65,9 @@ En el registro de transacciones se registran muchos tipos de operaciones. Entre 
   
  También se registran las operaciones de reversión. Cada transacción reserva espacio en el registro de transacciones para asegurarse de que existe suficiente espacio de registro para admitir una reversión provocada por una instrucción de reversión explícita o cuando se produce un error. La cantidad de espacio reservado depende de las operaciones realizadas en la transacción, pero normalmente equivale a la cantidad de espacio empleado para registrar cada operación. Este espacio reservado se libera cuando se completa la transacción.  
   
-<a name="minlsn"></a> La sección del archivo de registro a partir de la primera entrada de registro que debe estar presente para una reversión correcta en toda la base de datos hasta la última entrada de registro escrita se denomina parte activa del registro o *registro activo*. Esta es la sección del registro necesaria para una recuperación completa de la base de datos. No se puede truncar ninguna parte del registro activo. El número de secuencia de registro (LSN) de este primer registro se denomina **Número de secuencia de registro de recuperación mínimo (*MinLSN*)** .  
+<a name="minlsn"></a> La sección del archivo de registro a partir de la primera entrada de registro que debe estar presente para una reversión correcta en toda la base de datos hasta la última entrada de registro escrita se denomina parte activa del registro, *registro activo* o *final del registro*. Esta es la sección del registro necesaria para una [recuperación](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery) completa de la base de datos. No se puede truncar ninguna parte del registro activo. El número de secuencia de registro (LSN) de este primer registro se denomina **Número de secuencia de registro de recuperación mínimo (*MinLSN*)** . Para obtener más información sobre las operaciones admitidas por el registro de transacciones, vea el [registro de transacciones (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md).  
+
+Las copias de seguridad diferenciales y del registro posponen la base de datos restaurada a un momento posterior, correspondiente a un LSN superior. 
   
 ##  <a name="physical_arch"></a> Arquitectura física del registro de transacciones  
 El registro de transacciones de una base de datos está asignado a uno o varios archivos físicos. Conceptualmente, el archivo de registro es una cadena de entradas de registro. Físicamente, la secuencia de entradas del registro se almacena de forma eficaz en el conjunto de archivos físicos que implementa el registro de transacciones. Cada base de datos debe tener al menos un archivo de registro.  
@@ -230,15 +232,15 @@ En la ilustración siguiente se muestra una versión simplificada del final de u
 
 LSN 148 es la última entrada del registro de transacciones. En el momento en que se procesó el registro del punto de comprobación en LSN 147, Tran 1 se había confirmado y Tran 2 era la única transacción activa. Esto hace que la primera entrada del registro para Tran 2 sea la entrada de transacción activa más antigua del registro en el momento del último punto de comprobación. Esto convierte al registro de inicio del registro de transacciones para Tran 2, LSN 142, en el MinLSN.
 
-### <a name="long-running-transactions"></a>Transacciones de larga ejecución
-
-El registro activo debe incluir cada una de las partes de todas las transacciones no confirmadas. Una aplicación que inicia una transacción y no la confirma o la revierte impide que el motor de base de datos avance hacia el valor de MinLSN. Esto puede causar dos tipos de problemas:
+### <a name="long-running-transactions"></a>Transacciones de ejecución prolongada
+El registro activo debe incluir cada una de las partes de todas las transacciones no confirmadas. Una aplicación que inicia una transacción y no la confirma o la revierte impide que [!INCLUDE[ssde_md](../includes/ssde_md.md)] avance hacia el valor de MinLSN. Esto puede causar dos tipos de problemas:
 
 * Si se cierra el sistema después de que la transacción haya realizado un gran número de modificaciones no confirmadas, la fase de recuperación del siguiente reinicio puede durar bastante más que el tiempo especificado en la opción **recovery interval** .
 * Puede que el tamaño del registro aumente de forma considerable, porque no se puede truncar pasado el MinLSN. Esto ocurre incluso si la base de datos utiliza el modelo de recuperación simple, donde el registro de transacciones se suele truncar en cada punto de comprobación automático.
 
-### <a name="replication-transactions"></a>Transacciones de replicación
+A partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] y en [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], se puede evitar la recuperación de transacciones de ejecución prolongada y los problemas descritos anteriormente mediante la [recuperación acelerada de bases de datos](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
 
+### <a name="replication-transactions"></a>Transacciones de replicación
 El Agente de registro del LOG supervisa el registro de transacciones de cada base de datos configurada para la replicación transaccional y copia las transacciones marcadas para la replicación desde el registro de transacciones a la base de datos de distribución. El registro activo debe contener todas las transacciones marcadas para la replicación, pero que aún no se han entregado a la base de datos de distribución. Si estas transacciones no se replican puntualmente, pueden evitar el truncamiento del registro. Para obtener más información, consulte [Replicación transaccional](../relational-databases/replication/transactional/transactional-replication.md).
 
 ## <a name="see-also"></a>Vea también 
@@ -249,6 +251,7 @@ Se recomiendan los artículos y libros siguientes para obtener información adic
 [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
 [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)   
 [Establecer la opción de configuración del servidor Intervalo de recuperación](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[Recuperación acelerada de bases de datos](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [Descripción del registro y la recuperación en SQL Server por Paul Randal](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    

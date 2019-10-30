@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8188dd6b26b3eb81596394ce8b7947654b00df5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: cef051bcd3e7de6f381bba3f15f4e2e720f2a254
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294950"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807435"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Azure Feature Pack para Integration Services (SSIS)
 
@@ -27,8 +27,9 @@ ms.locfileid: "71294950"
 
 Feature Pack de SQL Server Integration Services (SSIS) para Azure es una extensión que proporciona los componentes que se muestran en esta página para que SSIS se conecte a los servicios de Azure, para transferir datos entre Azure y orígenes de datos locales, y para procesar los datos almacenados en Azure.
 
-[![Descargar Feature Pack de SSIS para Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **Descargar**
+[![Descargar Feature Pack de SSIS para Azure](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **Descargar**
 
+- Para SQL Server 2019 - [Feature Pack de Microsoft SQL Server 2019 Integration Services para Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - Para SQL Server 2017 - [Feature Pack de Microsoft SQL Server 2017 Integration Services para Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 - Para SQL Server 2016 - [Feature Pack de Microsoft SQL Server 2016 Integration Services para Azure](https://www.microsoft.com/download/details.aspx?id=49492)
 - Para SQL Server 2014 - [Feature Pack de Microsoft SQL Server 2014 Integration Services para Azure](https://www.microsoft.com/download/details.aspx?id=47366)
@@ -177,3 +178,16 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
+## <a name="release-notes"></a>Notas de la versión
+
+### <a name="version-1150"></a>Versión 1.15.0
+
+#### <a name="improvements"></a>Mejoras
+
+1. Adición de la operación de eliminación de carpeta/archivo en la tarea de archivo flexible
+1. Adición de la función de conversión de tipos de datos externos/de salida en el origen de archivo flexible
+
+#### <a name="bugfixes"></a>Correcciones
+
+1. En algunos casos, las conexiones de prueba no funcionan correctamente para Data Lake Storage Gen2 con el mensaje de error de tipo "Se intentó obtener acceso a un elemento como un tipo incompatible con la matriz".
+1. Devolución del soporte técnico para el emulador de Azure Storage

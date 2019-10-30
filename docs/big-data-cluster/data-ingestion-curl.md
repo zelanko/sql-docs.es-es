@@ -9,18 +9,22 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 729c3af97f98bafced482f7ead8ce85f93b55af3
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c65ce7fb6752240f0dd23a6dab195539146e7933
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652217"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049875"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Usar rizo para cargar datos en HDFS en[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Usar rizo para cargar datos en HDFS en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se explica cómo usar **rizo** para cargar datos en HDFS [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] en (versión preliminar).
+En este artículo se explica cómo usar **rizo** para cargar datos en HDFS en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar).
+
+## <a id="prereqs"></a> Prerequisites
+
+- [Cargar datos de ejemplo en un clúster de macrodatos](tutorial-load-sample-data.md)
 
 ## <a name="obtain-the-service-external-ip"></a>Obtener la dirección IP externa del servicio
 
@@ -45,18 +49,18 @@ Por ejemplo:
 
 ## <a name="list-a-file"></a>Enumeración de un archivo
 
-Para mostrar el archivo de **hdfs:///airlinedata**, use el siguiente comando de curl:
+Para mostrar el archivo en **HDFS:///product_review_data**, use el siguiente comando de rizo:
 
 ```bash
-curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
+curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>Colocación de un archivo local en HDFS
 
-Para colocar un nuevo archivo **test. csv** desde el directorio local en el directorio airlinedata, use el siguiente comando de curl (se requiere el parámetro **Content-Type**):
+Para colocar un nuevo archivo **Test. csv** desde el directorio local en el directorio product_review_data, use el siguiente comando de rizo (se requiere el parámetro **Content-Type** ):
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>Creación de un directorio

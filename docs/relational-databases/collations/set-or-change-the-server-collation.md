@@ -65,7 +65,7 @@ Si va a migrar bases de datos de SQL Server a Instancia administrada, compruebe 
 
 ## <a name="see-also"></a>Consulte también
 
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
+ [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
  [Establecer o cambiar la intercalación de base de datos](../../relational-databases/collations/set-or-change-the-database-collation.md)   
  [Establecer o cambiar la intercalación de columnas](../../relational-databases/collations/set-or-change-the-column-collation.md)   
  [Volver a generar bases de datos del sistema](../../relational-databases/databases/rebuild-system-databases.md)  

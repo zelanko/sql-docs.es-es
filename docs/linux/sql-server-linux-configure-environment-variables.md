@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476214"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807468"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configuración de opciones de SQL Server con variables de entorno en Linux
 
@@ -94,7 +94,7 @@ Puede usar diversas variables de entorno para configurar la versión preliminar 
 En este ejemplo se ejecuta `mssql-conf setup` con variables de entorno configuradas. Se especifican las siguientes variables de entorno:
 
 - **ACCEPT_EULA** acepta el contrato de licencia para el usuario final.
-- **MSSSQL_PID** especifica la edición para desarrolladores con licencia gratuita de SQL Server para su uso en entornos que no son de producción.
+- **MSSQL_PID** especifica la edición para desarrolladores con licencia gratuita de SQL Server para su uso en entornos que no son de producción.
 - **MSSQL_SA_PASSWORD** establece una contraseña segura.
 - **MSSQL_TCP_PORT** establece en 1234 el puerto TCP en el que escucha SQL Server.
 
@@ -107,7 +107,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 Este comando de Docker de ejemplo usa las siguientes variables de entorno para crear un contenedor de SQL Server:
 
 - **ACCEPT_EULA** acepta el contrato de licencia para el usuario final.
-- **MSSSQL_PID** especifica la edición para desarrolladores con licencia gratuita de SQL Server para su uso en entornos que no son de producción.
+- **MSSQL_PID** especifica la edición para desarrolladores con licencia gratuita de SQL Server para su uso en entornos que no son de producción.
 - **MSSQL_SA_PASSWORD** establece una contraseña segura.
 - **MSSQL_TCP_PORT** establece en 1234 el puerto TCP en el que escucha SQL Server. Esto significa que, en lugar de asignar el puerto 1433 (predeterminado) a un puerto de host, el puerto TCP personalizado se debe asignar con el comando `-p 1234:1234` en este ejemplo.
 

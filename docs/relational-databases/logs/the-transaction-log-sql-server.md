@@ -1,7 +1,7 @@
 ---
 title: El registro de transacciones (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b9f57b15f1a46aefad2387eb63b0d2cb14dbe38
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083937"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916029"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,24 +39,24 @@ Para obtener información sobre la arquitectura del registro de transacciones y 
  El registro de transacciones permite las siguientes operaciones:  
   
 -   Recuperación de transacciones individuales.  
--   Recuperación de todas las transacciones incompletas cuando se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   Recuperación de todas las transacciones incompletas cuando se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
 -   Puesta al día de una base de datos, un archivo, un grupo de archivos o una página restaurados hasta el momento exacto del error.  
 -   Permitir replicación transaccional.  
 -   Compatibilidad con soluciones de alta disponibilidad y recuperación ante desastres: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], creación de reflejo de la base de datos y trasvase de registros.
 
 ### <a name="individual-transaction-recovery"></a>Recuperación de transacciones individuales
-Si una aplicación emite una instrucción `ROLLBACK` o si el motor de base de datos detecta un error, como la pérdida de comunicación con un cliente, se usan los registros para revertir todas las modificaciones efectuadas por una transacción incompleta. 
+Si una aplicación emite una instrucción `ROLLBACK` o si [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta un error, como la pérdida de comunicación con un cliente, los registros se utilizan para revertir todas las modificaciones efectuadas por una transacción incompleta. 
 
 ### <a name="recovery-of-all-incomplete-transactions-when-includessnoversionincludesssnoversion-mdmd-is-started"></a>Recuperación de todas las transacciones incompletas cuando se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
-Si un servidor produce errores, las bases de datos pueden quedar en un estado en que algunas modificaciones no han llegado a escribirse desde la caché del búfer a los archivos de datos; estos pueden contener modificaciones como resultado de transacciones incompletas. Cuando se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se ejecuta la recuperación de todas las bases de datos. Todas las modificaciones del registro que no se hayan podido escribir en los archivos de datos se ponen al día. Las transacciones incompletas que se encuentren en el registro de transacciones se revierten para asegurar la integridad de la base de datos. 
+Si un servidor produce errores, las bases de datos pueden quedar en un estado en que algunas modificaciones no han llegado a escribirse desde la caché del búfer a los archivos de datos; estos pueden contener modificaciones como resultado de transacciones incompletas. Cuando se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se ejecuta la recuperación de todas las bases de datos. Todas las modificaciones del registro que no se hayan podido escribir en los archivos de datos se ponen al día. Las transacciones incompletas que se encuentren en el registro de transacciones se revierten para asegurar la integridad de la base de datos. Para más información, vea [Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="rolling-a-restored-database-file-filegroup-or-page-forward-to-the-point-of-failure"></a>Puesta al día de una base de datos, un archivo, un grupo de archivos o una página restaurados hasta el momento exacto del error
 Después de una pérdida de hardware o un error de disco que afecten a los archivos de base de datos, ésta se puede restaurar al punto del error. En primer lugar, restaure la última copia de seguridad completa de base de datos y la última copia de seguridad diferencial de base de datos y, después, restaure la secuencia de copias de seguridad del registro de transacciones al punto del error. 
 
-Según restaura cada copia de seguridad del registro, el motor de base de datos vuelve a aplicar todas las modificaciones incluidas en el registro para poner al día todas las transacciones. Cuando se restaura la última copia de seguridad, el motor de base de datos usa la información del registro para revertir todas las transacciones no completadas hasta ese momento. 
+Según restaura cada copia de seguridad del registro, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] vuelve a aplicar todas las modificaciones incluidas en el registro para poner al día todas las transacciones. Cuando se restaura la última copia de seguridad, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] utiliza la información del registro para revertir todas las transacciones no completadas hasta ese momento. Para más información, vea [Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="supporting-transactional-replication"></a>Permitir la replicación transaccional
-El Agente de registro del LOG supervisa el registro de transacciones de cada base de datos configurada para crear replicaciones transaccionales y copia las transacciones marcadas para la replicación desde el registro de transacciones a la base de datos de distribución. Para obtener más información, consulte [Cómo funciona la replicación transaccional](https://msdn.microsoft.com/library/ms151706.aspx).
+El Agente de registro del LOG supervisa el registro de transacciones de cada base de datos configurada para crear replicaciones transaccionales y copia las transacciones marcadas para la replicación desde el registro de transacciones a la base de datos de distribución. Para obtener más información, consulte [Cómo funciona la replicación transaccional](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Compatibilidad con las soluciones de alta disponibilidad y recuperación ante desastres
 Las soluciones de servidor en espera, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], creación de reflejo de la base de datos y trasvase de registros dependen en gran medida del registro de transacciones. 
@@ -67,12 +67,14 @@ En un **escenario de trasvase de registros**, el servidor principal envía el re
 
 En un **escenario de creación de reflejo de la base de datos**, las actualizaciones de una base de datos (la principal) se reproducen inmediatamente en una copia completa e independiente de la base de datos (la base de datos reflejada). La instancia de servidor principal envía de forma inmediata los registros a la instancia del servidor reflejado, que los aplica a la base de datos reflejada, poniéndola al día de forma continua. Para obtener más información, consulte [Creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-sql-server.md).
 
-##  <a name="Characteristics"></a>Transaction Log characteristics
-
+##  <a name="Characteristics"></a>Características del registro de transacciones
 Características del registro de transacciones de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]: 
 -  El registro de transacciones se implementa como un archivo o un grupo de archivos separado en la base de datos. La caché del registro se administra por separado respecto a la caché del búfer para las páginas de datos, lo cual da lugar a un código sencillo, rápido y sólido en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Para obtener más información, consulte [Arquitectura física del registro de transacciones](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).
+
 -  El formato de los registros y las páginas no tiene las restricciones de formato de las páginas de datos.
+
 -  El registro de transacciones se puede implementar en varios archivos. Si se establece el valor `FILEGROWTH` del registro, se puede definir que los archivos se expandan automáticamente. Esto reduce las posibilidades de quedarse sin espacio en el registro de transacciones, al mismo tiempo que se reduce el trabajo administrativo. Para obtener más información, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+
 -  El mecanismo para volver a utilizar el espacio de los archivos de registro es rápido y tiene un efecto mínimo en el rendimiento de las transacciones.
 
 Para obtener información sobre la arquitectura del registro de transacciones y los elementos internos, vea la [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
@@ -136,7 +138,7 @@ Cuando la replicación transaccional está habilitada, las operaciones `BULK INS
   
 -   Operaciones [SELECT INTO](../../t-sql/queries/select-into-clause-transact-sql.md).  
   
-Cuando la replicación transaccional está habilitada, las operaciones SELECT INTO se registran por completo en el modelo de recuperación optimizado para cargas masivas de registros.  
+Cuando la replicación transaccional está habilitada, las operaciones `SELECT INTO` se registran por completo en el modelo de recuperación optimizado para cargas masivas de registros.  
   
 -   Actualizaciones parciales de tipos de datos de valores grandes que usan la cláusula `.WRITE` de la instrucción [UPDATE](../../t-sql/queries/update-transact-sql.md) al insertar o anexar datos nuevos. Tenga en cuenta que el registro mínimo no se utiliza cuando se actualizan valores existentes. Para obtener más información sobre los tipos de datos de valores grandes, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
@@ -166,7 +168,9 @@ Cuando la replicación transaccional está habilitada, las operaciones SELECT IN
 **Realizar copia de seguridad de un registro de transacciones (modelo de recuperación completa)**  
   
 -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
-  
+
+-   [Realizar una copia de seguridad del registro de transacciones cuando la base de datos está dañada (SQL Server)](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)
+
 **Restaurar el registro de transacciones (modelo de recuperación completa)**  
   
 -   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
@@ -175,7 +179,8 @@ Cuando la replicación transaccional está habilitada, las operaciones SELECT IN
 [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)   
 [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md)   
 [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
-[Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+[Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
+[Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)      
 [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
 [Ver o cambiar las propiedades de una base de datos](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)   
 [Modelos de recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  

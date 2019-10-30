@@ -1,7 +1,7 @@
 ---
 title: Restauraciones por etapas (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8dfdfc8ea7d34975046545688cca3f34ed324311
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033652"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915998"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restauraciones por etapas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ ms.locfileid: "68033652"
      En la edición Enterprise, se puede restaurar y recuperar cualquier grupo de archivos secundario sin conexión mientras la base de datos permanece en línea. Si un determinado archivo de solo lectura está dañado o no es coherente con la base de datos, no necesita restauración. Para obtener más información, vea [Recuperar una base de datos sin restaurar los datos &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
 ### <a name="applying-log-backups"></a>Aplicar copias de seguridad de registros  
- Si un grupo de archivos de solo lectura ha sido de solo lectura desde antes de la creación de la copia de seguridad de archivos, no es necesario aplicar las copias de seguridad de registros al grupo de archivos y éstas se omiten en la restauración de archivos. Si el grupo de archivos es de lectura/escritura, debe aplicarse una cadena ininterrumpida de copias de seguridad de registros a la última recuperación completa o diferencial para actualizar el grupo de archivos al archivo de registro actual.  
+ Si un grupo de archivos de solo lectura ha sido de solo lectura desde antes de la creación de la copia de seguridad de archivos, no es necesario aplicar las copias de seguridad de registros al grupo de archivos y éstas se omiten en la restauración de archivos. Si el grupo de archivos es de lectura/escritura, debe aplicarse una cadena ininterrumpida de copias de seguridad de registros a la última recuperación completa o diferencial para actualizar el grupo de archivos al archivo de registro actual. Para más información sobre el proceso de recuperación, vea [Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
   
 ### <a name="examples"></a>Ejemplos  
   
@@ -173,13 +173,11 @@ ms.locfileid: "68033652"
   
 4.  Una copia de seguridad diferencial se realiza después de otras copias de seguridad restauradas en la secuencia de restauración por etapas original para restaurar los datos hasta el punto de recuperación original.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="see-also"></a>Consulte también  
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [Planear y realizar secuencias de restauración &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
-  
+ [Planear y realizar secuencias de restauración &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
+ [Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
   

@@ -11,12 +11,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e569d7676d363dc6526354ed6087a778fccce79d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9066f82c01dede49307cd38565f40f263d7ae76f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031633"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909567"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Administración de la retención de datos históricos en las tablas temporales con versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,19 +76,17 @@ ms.locfileid: "68031633"
   
 3.  En la ventana **Configuración de Azure** , proporcione las credenciales de inicio de sesión. Inicie sesión en Microsoft Azure o regístrese para obtener una cuenta. Seleccione la suscripción que va a usar y la región de Azure. Después, cree un nuevo servidor o seleccione un servidor existente. Haga clic en **Siguiente**.  
   
-     ![Creación de nuevo servidor de Azure: asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-4.png "Creación de nuevo servidor de Azure: asistente para Stretch Database")  
+     ![Creación de un nuevo Asistente para Stretch Database de servidor de Azure](../../relational-databases/tables/media/stretch-wizard-4.png "Creación de un nuevo Asistente para Stretch Server de servidor de Azure")  
   
 4.  En la ventana **Credenciales de seguridad** , proporcione una contraseña para la clave maestra de base de datos para proteger sus credenciales de base de datos de SQL Server de origen y haga clic en Siguiente.  
   
-     ![Página Credenciales de seguridad del asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página Credenciales de seguridad del asistente para Stretch Database")  
+     ![Página de credenciales seguras del Asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página de credenciales seguras del Asistente para Stretch Database")  
   
 5.  En la ventana **Seleccionar dirección IP** , proporcione el intervalo de direcciones IP para SQL Server para que el servidor de Azure se comunique con SQL Server (si selecciona un servidor existente para el ya existe una regla de firewall, simplemente haga clic en Siguiente aquí para usar la regla de firewall existente). Haga clic en **Siguiente** y, después, en **Finalizar** para habilitar Stretch Database y ajustar la tabla de historial temporal.  
   
-     ![Página Seleccionar dirección IP del asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Seleccionar dirección IP del asistente para Stretch Database")  
+     ![Página Seleccionar dirección IP del Asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Seleccionar dirección IP del Asistente para Stretch Database")  
   
 6.  Cuando se complete el asistente, compruebe que se haya habilitado el ajuste correctamente para la base de datos. Vea los iconos del Explorador de objetos que indican que se ha ajustado la base de datos.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **NOTA:** Si se produce un error en Habilitar base de datos para Stretch, revise el registro de errores. Un error común consiste en configurar incorrectamente la regla de firewall.  
   
@@ -181,7 +179,7 @@ COMMIT ;
   
  En la siguiente imagen se muestra la configuración inicial de la creación de particiones para mantener 6 meses de datos.  
   
- ![Creación de particiones](../../relational-databases/tables/media/partitioning.png "Creación de particiones")  
+ ![Partitioning](../../relational-databases/tables/media/partitioning.png "Particiones")  
   
 > **NOTA:** Vea las consideraciones de rendimiento con las particiones de tabla siguientes para las implicaciones de rendimiento de uso de la opción RANGE LEFT frente a la opción RANGE RIGHT al configurar la creación de particiones.  
   
@@ -190,7 +188,7 @@ A medida que pasa el tiempo, las nuevas filas de la tabla del historial se dirig
   
  La imagen siguiente muestra las tareas de mantenimiento periódico de la partición (vea los pasos detallados a continuación).  
   
- ![Creación de particiones2](../../relational-databases/tables/media/partitioning2.png "Creación de particiones2")  
+ ![Partitioning2](../../relational-databases/tables/media/partitioning2.png "Partitioning2")  
   
  Los pasos detallados para las tareas de mantenimiento periódico de la partición son:  
   
@@ -336,7 +334,7 @@ COMMIT TRANSACTION
   
  Primero se va a explicar visualmente el significado de las opciones RANGE LEFT y RANGE RIGHT:  
   
- ![Creación de particiones3](../../relational-databases/tables/media/partitioning3.png "Creación de particiones3")  
+ ![Partitioning3](../../relational-databases/tables/media/partitioning3.png "Partitioning3")  
   
  Si se define una función de partición como RANGE LEFT, los valores especificados son los límites superiores de las particiones. Cuando utilice la opción RANGE RIGHT, los valores especificados son los límites inferiores de las particiones. Cuando utilice la operación MERGE RANGE para quitar un límite de la definición de la función de partición, la implementación subyacente también quita la partición que contiene el límite. Si esa partición no está vacía, los datos se moverán a la partición que resulta de la operación MERGE RANGE.  
   
@@ -357,7 +355,7 @@ COMMIT TRANSACTION
   
  El siguiente diagrama muestra cómo debe organizarse la lógica de limpieza para una tabla única para reducir el impacto en las cargas de trabajo en ejecución.  
   
- ![DiagramaDeScriptsParaLaLimpiezaPersonalizada](../../relational-databases/tables/media/customcleanupscriptdiagram.png "DiagramaDeScriptsParaLaLimpiezaPersonalizada")  
+ ![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")  
   
  Estas son algunas directrices de alto nivel para implementar el proceso. Programe la lógica de limpieza para que se ejecute todos los días y realice la iteración sobre todas las tablas temporales que necesitan la limpieza de datos. Use el Agente SQL Server u otra herramienta para programar este proceso:  
   
@@ -498,7 +496,7 @@ El proceso de limpieza depende del diseño del índice de la tabla de historial.
 
 La tarea de limpieza del almacén de columnas agrupadas quita los grupos de filas completos a la vez (normalmente contiene 1 millón de filas cada uno), lo que es muy eficaz, especialmente cuando los datos de historial se generan a un ritmo alto.
 
-![Retención de almacén de columnas agrupadas](../../relational-databases/tables/media/cciretention.png "Retención de almacén de columnas agrupadas")
+![Retención de almacén de columnas agrupado](../../relational-databases/tables/media/cciretention.png "Retención de almacén de columnas agrupado")
 
 La excelente compresión de datos y la limpieza eficaz de la retención hacen que el índice de almacén de columnas agrupadas sea una elección perfecta en escenarios en los que la carga de trabajo genera rápidamente una gran cantidad de datos de historial. Este patrón es típico de las cargas de trabajo de procesamiento intensivo de transacciones que usan tablas temporales para el seguimiento de cambios y la auditoría, el análisis de tendencias o la ingesta de datos de IoT.
 

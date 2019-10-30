@@ -8,12 +8,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 81bfb5f4e2a69b065d8995823ee87fe9b913d11b
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710628"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906888"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Configuración de los grupos de escalado horizontal de PolyBase en Windows
 
@@ -41,8 +41,6 @@ Los pasos siguientes resumen el proceso de creación de un grupo de escalado hor
 
 5. Opcional. Quite un nodo de ejecución con [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 ## <a name="example-walk-through"></a>Tutorial de ejemplo
 
 En este tutorial se muestran los pasos necesarios para configurar un grupo de PolyBase con:  
@@ -67,7 +65,7 @@ En este tutorial se muestran los pasos necesarios para configurar un grupo de Po
   
 5. Una vez completada la instalación, ejecute **services.msc**. Compruebe que están ejecutando SQL Server, el motor de PolyBase y el servicio de movimiento de datos de PolyBase.
   
-   ![Servicios PolyBase](../../relational-databases/polybase/media/polybase-services.png "Servicios PolyBase")  
+   ![Servicios de PolyBase](../../relational-databases/polybase/media/polybase-services.png "Servicios de PolyBase")  
   
 ## <a name="select-one-sql-server-as-head-node"></a>Seleccione una instancia de SQL Server como nodo principal.  
   

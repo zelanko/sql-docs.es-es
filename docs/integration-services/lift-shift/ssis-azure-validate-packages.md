@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: e0d552c02131bd630c4ca828050278cd7f3105cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd6c55f439b9d95473c5e36ea88cc7c5e1fb555e
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122864"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915994"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Validación de paquetes de SQL Server Integration Services (SSIS) implementados en Azure
 
@@ -35,7 +35,7 @@ Para obtener más información sobre el asistente para implementación de paquet
 El asistente comprobará si determinados administradores de conexión tienen los siguientes problemas, que pueden hacer que no se produzca la conexión:
 - **Autenticación de Windows**. Si se usa la autenticación de Windows en una cadena de conexión, se generará una advertencia durante la validación. La autenticación de Windows requiere pasos de configuración adicionales. Para obtener más información, vea [Conexión a datos y a recursos compartidos de archivos con la autenticación de Windows](ssis-azure-connect-with-windows-auth.md).
 - **Ruta de acceso a archivos**. Si dentro de una cadena de conexión hay una ruta de acceso a archivo local codificada de forma rígida, como `C:\\...`, se generará una advertencia durante la validación. Es posible que se produzcan errores en paquetes que contengan una ruta de acceso absoluta.
-- **Ruta de acceso UNC**. Si dentro de una cadena de conexión hay una ruta de acceso UNC, se generará una advertencia durante la validación. Es posible que se produzcan errores en paquetes con una ruta de acceso UNC, normalmente debido a que la ruta de acceso UNC requiere autenticación de Windows para el acceso.
+- **Ruta de acceso UNC**. Si dentro de una cadena de conexión hay una ruta de acceso de UNC, se generará una advertencia durante la validación. Es posible que se produzcan errores en paquetes con una ruta de acceso UNC, normalmente debido a que la ruta de acceso UNC requiere autenticación de Windows para el acceso.
 - **Nombre de host**. Si dentro de una propiedad del servidor hay un nombre de host, en vez de una dirección IP, se generará una advertencia durante la validación. Es posible que se produzcan errores en paquetes con un nombre de host, normalmente debido a que la red virtual de Azure requiere una configuración de DNS correcta para admitir la resolución de nombres DNS.
 - **Proveedor o controlador**. Si un proveedor o controlador no se admite, se generará una advertencia durante la validación. Actualmente solo se admite un número reducido de proveedores y controladores integrados.
 

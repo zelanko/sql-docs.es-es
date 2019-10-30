@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ccaf0091472ed0b7c87dbb790228024d0224e91a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991690"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807428"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Descarga de copias de seguridad admitidas en las réplicas secundarias de un grupo de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "67991690"
   
 -   **BACKUP DATABASE** solo admite copias de seguridad completas de solo copia de bases de datos, archivos o grupos de archivos cuando se ejecuta en réplicas secundarias. Tenga en cuenta que las copias de seguridad de solo copia no afectan a la cadena de registros ni borran el mapa de bits diferencial.  
   
--   Las copias de seguridad diferenciales no se admiten en las réplicas secundarias.  
+-   Las copias de seguridad diferenciales no se admiten en las réplicas secundarias.
+
+-   Actualmente no se admiten copias de seguridad simultáneas, como la ejecución de una copia de seguridad del registro de transacciones en la réplica principal mientras se ejecuta una copia de seguridad de base de datos completa en la réplica secundaria. 
   
 -   **BACKUP LOG** solo admite copias de seguridad de registros periódicas (la opción COPY_ONLY no se admite para las copias de seguridad de registros en réplicas secundarias).  
   

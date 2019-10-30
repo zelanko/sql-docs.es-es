@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7823f9e76207802b7f05a21ccd11b5de1fa9d18d
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961966"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908669"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
 
@@ -69,7 +69,7 @@ Después de instalar PolyBase de forma independiente o en un grupo de escalado h
    
 3. En la página Selección de características, elija **PolyBase Query Service for External Data** (Servicio de consultas PolyBase para datos externos).  
 
-   ![Servicios PolyBase](../../relational-databases/polybase/media/install-wizard.png "Servicios PolyBase")  
+   ![Servicios de PolyBase](../../relational-databases/polybase/media/install-wizard.png "Servicios de PolyBase")  
    
    >[!NOTE]
    >SQL Server 2019 PolyBase ahora incluye una opción adicional, el **conector de Java para orígenes de datos HDFS**. Consulte las [características en vista previa (GB) de SQL Server](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/) para más información sobre esta característica.
@@ -90,8 +90,6 @@ Después de instalar PolyBase de forma independiente o en un grupo de escalado h
      Esta opción también habilita las conexiones de firewall de Microsoft DTC (Coordinador de transacciones distribuidas) y modifica la configuración del registro de Microsoft DTC.  
    
 6. En la página Configuración de PolyBase, especifique un intervalo de puertos con al menos seis puertos. El programa de instalación de SQL Server asigna los seis primeros puertos disponibles del intervalo.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > Después de la instalación, debe [habilitar la característica PolyBase](#enable).

@@ -1,7 +1,7 @@
 ---
 title: Recuperación a un número de secuencia de registro (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5973311723ae336ba6c801bfbcf82da2ec0c3bfc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46ab24ff86eb7a68e48f58e67f03a859d0c43aa7
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033561"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916043"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar a un número de secuencia de registro (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,17 +35,12 @@ ms.locfileid: "68033561"
  Puede usar un número de secuencia de registro (LSN) para definir el punto de recuperación de una operación de restauración. Sin embargo, esta es una característica especializada dirigida a los proveedores de herramientas y no es probable que tenga una utilidad general.  
   
 ##  <a name="LSNs"></a> Información general de los números de secuencia de registro  
- Los LSN se utilizan internamente durante una secuencia RESTORE para realizar el seguimiento del momento dado al que se restauran los datos. Al restaurar una copia de seguridad, los datos se restauran al LSN correspondiente al momento dado en que se efectuó la copia de seguridad. Las copias de seguridad diferenciales y del registro posponen la base de datos restaurada a un momento posterior, correspondiente a un LSN superior.  
-  
- Cada entrada del registro de transacción se identifica de forma exclusiva mediante un número de secuencia de registro (LSN). Los números LSN se ordenan de manera que si LSN2 es mayor que LSN1, el cambio descrito por la entrada de registro a la que hace referencia LSN2 se produce después del cambio descrito por la entrada de registro LSN.  
-  
- El LSN de una entrada de registro en la que se haya producido un evento importante puede resultar útil para generar secuencias de restauración válidas. Dado que los LSN se ordenan, pueden compararse para comprobar su igualdad y desigualdad (es decir, **\<** , **>** , **=** , **\<=** , **>=** ). Estas comparaciones son útiles para generar secuencias de restauración.  
+ Los LSN se utilizan internamente durante una secuencia RESTORE para realizar el seguimiento del momento dado al que se restauran los datos. Al restaurar una copia de seguridad, los datos se restauran al LSN correspondiente al momento dado en que se efectuó la copia de seguridad. Las copias de seguridad diferenciales y del registro posponen la base de datos restaurada a un momento posterior, correspondiente a un LSN superior. Para obtener más información sobre LSN, vea [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).  
   
 > [!NOTE]  
->  Los números LSN son valores con tipos de datos **numeric**(25,0). Las operaciones aritméticas (por ejemplo, la suma o la resta) carecen de importancia y no deben utilizarse con los LSN.  
-  
-  
-## <a name="viewing-lsns-used-by-backup-and-restore"></a>Ver LSN utilizados por las copias de seguridad y restauración  
+> Los números LSN son valores con tipos de datos **numeric**(25,0). Las operaciones aritméticas (por ejemplo, la suma o la resta) carecen de importancia y no deben utilizarse con los LSN.  
+ 
+## <a name="viewing-lsns-used-by-backup-and-restore"></a>Visualización de LSN utilizados por las copias de seguridad y restauración  
  El LSN de una entrada de registro en la que se produce un determinado evento de copias de seguridad y restauración puede visualizarse mediante uno o más de los siguientes métodos:  
   
 -   [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)  
@@ -59,7 +54,7 @@ ms.locfileid: "68033561"
 -   [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 > [!NOTE]  
->  Los LSN también aparecen en algunos textos de mensaje.  
+>  Los LSN también aparecen en algunos mensajes en el registro de errores.  
   
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Sintaxis de Transact-SQL para restaurar hasta un LSN  
  Con la instrucción [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , puede detenerse en el LSN o inmediatamente antes, como se indica a continuación:  
@@ -77,7 +72,7 @@ ms.locfileid: "68033561"
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se da por supuesto que se ha modificado la base de datos `AdventureWorks` para usar el modelo de recuperación completa.  
   
-```  
+```sql  
 RESTORE LOG AdventureWorks FROM DISK = 'c:\adventureworks_log.bak'   
 WITH STOPATMARK = 'lsn:15000000040000037'  
 GO  
@@ -99,7 +94,8 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
+ [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)     
+ [Información general sobre restauración y recuperación (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)       
+ [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

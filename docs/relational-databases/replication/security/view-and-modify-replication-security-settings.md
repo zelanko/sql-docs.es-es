@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2e0407382f1a0986add69a4b47e9cbb2eebc4d34
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 72ed98492db592ecd86d1c0490c652e604dcb589
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710742"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907981"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Ver y modificar la configuración de seguridad de la replicación
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,8 +71,6 @@ ms.locfileid: "71710742"
 4.  Los cuadros de diálogo **Propiedades del distribuidor: \<Distribuidor>** y **Propiedades de la base de datos de distribución: \<Base de datos>** . Para obtener más información acerca de cómo obtener acceso a estos cuadros de diálogo, vea [Ver y modificar las propiedades del distribuidor y del publicador](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
   
 5.  El cuadro de diálogo **Propiedades del publicador: \<Publicador>** . Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, [Ver y modificar las propiedades del distribuidor y del publicador](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>Para cambiar la contraseña de una cuenta utilizada por uno o varios agentes  
   
@@ -220,7 +218,7 @@ ms.locfileid: "71710742"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Para cambiar la configuración de seguridad para una suscripción de extracción de actualización inmediata  
   
-1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, haga clic en la fila **Conexión de publicador** y, después, haga clic en el botón de propiedades ( **…** ) de la fila.  
+1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, haga clic en la fila **Conexión de publicador** y después en el botón de propiedades ( **&#x2026;** ) de la fila.  
   
 2.  En el cuadro de diálogo **Escribir información de conexión** , seleccione una de las siguientes opciones:  
   

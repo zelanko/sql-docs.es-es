@@ -29,12 +29,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: e6c1f37c72ad1ad5d375f86463fe630400ecf4a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a3c1885d6796977ea48585858fa5d2a271e6a46
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102015"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798373"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 
@@ -42,12 +42,14 @@ ms.locfileid: "68102015"
 
   Comprueba el valor de identidad actual de la tabla especificada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y, si fuera necesario, lo cambia. También puede utilizar DBCC CHECKIDENT para establecer manualmente un nuevo valor de identidad actual para la columna de identidad.  
   
- ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
 ```console
-  
+
+-- Syntax for SQL Server and Azure SQL Database  
+
 DBCC CHECKIDENT
  (
     table_name  
@@ -55,7 +57,17 @@ DBCC CHECKIDENT
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```console
+-- Syntax for Azure SQL Data Warehouse
+DBCC CHECKIDENT   
+ (   
+    table_name  
+        [RESEED, new_reseed_value ]   
+)  
+[ WITH NO_INFOMSGS ]  
+
+```
 ## <a name="arguments"></a>Argumentos
 
  *table_name*  

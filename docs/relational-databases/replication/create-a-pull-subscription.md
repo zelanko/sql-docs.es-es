@@ -17,14 +17,22 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 259ff6d422788f302d05b435026839970b9f75db
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5dde30d826d5b6662a4f488aed7c3a1f21dd00b2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768658"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908430"
 ---
 # <a name="create-a-pull-subscription"></a>Crear una suscripción de extracción
+
+<!--
+2019-10-24 , GeneMi:
+This article .md file exists in the so-called "2016+" section of repo 'sql-docs-pr'.
+No article in 2016+ should ever have the moniker 'sql-server-2014' on its metadata line 'monikerRange:', I think.
+Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation deserves further investigation.
+-->
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   En este tema se describe cómo crear una suscripción de extracción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
@@ -64,8 +72,6 @@ ms.locfileid: "68768658"
 3.  Haga clic con el botón secundario en la publicación en la que desea crear una o varias suscripciones y, a continuación, haga clic en **Nuevas suscripciones**.  
   
 4.  Complete las páginas del Asistente para nuevas suscripciones.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-create-a-pull-subscription-from-the-subscriber"></a>Para crear una suscripción de extracción desde el suscriptor  
   
@@ -121,9 +127,9 @@ ms.locfileid: "68768658"
   
 2.  En el suscriptor, ejecute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Especifique **\@publisher**, **\@publisher_db**, **\@publication** y los parámetros siguientes:  
   
-    -   **\@subscriber_type** – especifique **local** para una suscripción de cliente y **global** para una suscripción de servidor.  
+    -   **\@subscriber_type**: especifique **local** para una suscripción de cliente y **global** para una suscripción de servidor.  
   
-    -   **\@subscription_priority** – Especifique una prioridad para la suscripción (**0,00** a **99,99**). Solo es necesario para las suscripciones de servidor.  
+    -   **\@subscription_priority**: especifique una prioridad para la suscripción (**0,00** a **99,99**). Solo es necesario para las suscripciones de servidor.  
   
          Para más información, consulte [Detección y resolución de conflictos de replicación de mezcla avanzada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

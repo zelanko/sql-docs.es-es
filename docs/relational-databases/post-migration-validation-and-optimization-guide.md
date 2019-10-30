@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 21cf6f634fd9caa40f3d5685372f24d09567ca2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006134"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909160"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guía de optimización y validación posterior a la migración
 
@@ -43,7 +43,7 @@ Para obtener más información sobre los cambios del optimizador de consultas in
 
 Cambie el [nivel de compatibilidad de la base de datos](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) a la versión de origen y siga el flujo de trabajo de actualización recomendado, tal como se muestra en la siguiente imagen:
 
-![consultaDeAlmacénDeUso5](../relational-databases/performance/media/query-store-usage-5.png "consultaDeAlmacénDeUso5")  
+![query-store-usage-5](../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
 
 Para obtener más información sobre este tema, consulte [Mantener la estabilidad del rendimiento al actualizar a SQL Server 2016](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade).
 
@@ -107,8 +107,6 @@ Algunos ejemplos de predicados que no son SARGable:
   -   Esto puede implicar la comparación de cualquier construcción de código definido por el usuario que se almacena en la base de datos (por ejemplo, procedimientos almacenados, vistas o funciones definidas por el usuario) con tablas del sistema que contienen información de tipos de datos usados en las tablas subyacentes (como [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. Si no se puede recorrer todo el código hasta el punto anterior, con la misma finalidad, cambie el tipo de datos en la tabla para que coincida con las declaraciones de variable o parámetro.
 3. Motivo de la utilidad de las siguientes construcciones:
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   -   Funciones que se usan como predicados;
   -   Búsquedas con caracteres comodín;

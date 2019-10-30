@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9173073074957d448be8bd28cf92b16f18f4e2f3
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: c37a0b953177d0e3d978607982da54c613a3d2a2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710777"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908240"
 ---
 # <a name="republish-data"></a>Volver a publicar datos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "71710777"
   
 6.  Inicialice las suscripciones.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 > [!NOTE]  
 >  Si utiliza la replicación de mezcla en una topología de republicación, todos los suscriptores de republicación deberán utilizar las suscripciones del servidor. Para obtener más información sobre los tipos de suscripción, vea [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md) (Suscribirse a publicaciones).  
   
  En la siguiente ilustración, tanto el publicador como el republicador actúan como sus propios distribuidores locales. Si estuvieran configurados para utilizar un distribuidor remoto, cada distribuidor tendría que estar en el mismo lado del vínculo de comunicaciones lento o costoso que su publicador. Los publicadores tienen que estar conectados con sus distribuidores remotos mediante vínculos de comunicaciones confiables y de alta velocidad.  
   
- ![Republishing data](../../relational-databases/replication/media/repl-06a.gif "Republishing data")  
+ ![Volver a publicar datos](../../relational-databases/replication/media/repl-06a.gif "Volver a publicar datos")  
   
  Cualquier servidor puede funcionar como publicador y suscriptor. Por ejemplo, observe el siguiente diagrama en el que la publicación de una tabla que existe en Londres se tiene que distribuir a cuatro ciudades diferentes de los Estados Unidos: Chicago, Nueva York, San Diego y Seattle. El servidor de Nueva York es el elegido para que se suscriba a la tabla publicada de Londres, porque el sitio de Nueva York cumple estas condiciones:  
   
@@ -57,7 +55,7 @@ ms.locfileid: "71710777"
   
 -   Hay buenas líneas de comunicación de red desde Nueva York a todos los demás sitios suscriptores de Estados Unidos.  
   
-     ![Volver a publicar datos en ubicaciones dispersas](../../relational-databases/replication/media/repl-06.gif "Volver a publicar datos en ubicaciones dispersas")  
+     ![Volver a publicar datos para ubicaciones dispersas](../../relational-databases/replication/media/repl-06.gif "Volver a publicar datos para ubicaciones dispersas")  
   
  La replicación es compatible con los casos de republicación que se muestran en la tabla siguiente.  
   

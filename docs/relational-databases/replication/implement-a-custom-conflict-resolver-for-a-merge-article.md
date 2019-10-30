@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b36d610912f518f0586739e0380e300efefbed40
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561138"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905115"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementación de un solucionador de conflictos personalizado para un artículo de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ ms.locfileid: "69561138"
      Este procedimiento almacenado utiliza los valores que pasa el Agente de mezcla a estos parámetros para implementar la lógica de resolución de conflictos personalizada. Debe devolver un conjunto de resultados de fila única que tenga una estructura idéntica a la tabla base y que contenga los valores de datos de la versión ganadora de la fila.  
   
 2.  Conceda permisos EXECUTE para el procedimiento almacenado a todos los inicios de sesión utilizados por los suscriptores para conectarse al publicador.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="use-a-custom-conflict-resolver-with-a-new-table-article"></a>Uso de un solucionador de conflictos personalizado con un nuevo artículo de tabla  
   

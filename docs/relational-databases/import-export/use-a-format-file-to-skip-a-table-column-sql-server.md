@@ -14,12 +14,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1e1c469b7864ed9a454cd8f18fa81903865be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024980"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909256"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Usar un archivo de formato para omitir una columna de tabla  (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +59,6 @@ Puede usar un archivo de formato no XML o uno XML para omitir una columna de tab
 
 2.   Modifique el archivo de formato predeterminado en un editor de texto.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 El archivo de formato modificado debe asignar cada campo existente a su columna correspondiente en la tabla de destino. También debe indicar qué columna o columnas de la tabla se deben omitir. 
 
 Por ejemplo, para importar en bloque datos de `myTestSkipCol2.dat` a la tabla `myTestSkipCol`, el archivo de formato debe asignar el primer campo de datos a `Col1`, omitir `Col2` y asignar el segundo campo a `Col3`.  
@@ -81,7 +79,7 @@ En el ejemplo anterior se crea un archivo de formato no XML, `myTestSkipCol_Defa
   
  En la siguiente captura de pantalla se muestran los valores de estos archivos de formato predeterminados de ejemplo. 
   
- ![archivo de formato no XML predeterminado para myTestSkipCol](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "archivo de formato no XML predeterminado para myTestSkipCol")  
+ ![archivo predeterminado de formato no XML para myTestSkipCol](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "archivo predeterminado de formato no XML para myTestSkipCol")  
   
 > [!NOTE]  
 >  Para obtener más información sobre los campos de archivo de formato, vea [Archivos de formato no XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  

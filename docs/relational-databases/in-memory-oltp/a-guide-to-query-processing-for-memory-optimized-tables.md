@@ -11,12 +11,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf133d6cfc07482b9d10505592b2ea402095c46c
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 4fb248183abf1511ed535740838b890225691fd0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811146"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908727"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ Plan de consulta para una combinación hash de tablas basadas en disco.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Procesamiento de consultas para las tablas basadas en disco  
  El siguiente diagrama muestra el flujo de procesamiento de consultas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las consultas ad hoc:  
   
- ![Canalización de procesamiento de consultas de SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Canalización de procesamiento de consultas de SQL Server.")  
+ ![Canalización de procesamiento de consultas de SQL Server](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Canalización de procesamiento de consultas de SQL Server")  
 Canalización de procesamiento de consultas de SQL Server  
   
  En este escenario:  
@@ -116,8 +116,6 @@ Canalización de procesamiento de consultas de SQL Server
 5.  Para cada operador de recorrido de tabla, búsqueda de índice y recorrido de índice, el motor de ejecución solicita las filas de las estructuras respectivas de índice y tabla de Access Methods.  
   
 6.  Access Methods recupera las filas de las páginas de datos e índices del grupo de búferes y carga las páginas del disco al grupo de búferes según sea necesario.  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  Para la primera consulta del ejemplo, el motor de ejecución solicita filas del índice agrupado en la tabla Customer y el índice no agrupado en la tabla Order de Access Methods. Access Methods atraviesa las estructuras de índice del árbol B para recuperar las filas solicitadas. En este caso, todas las filas se recuperan como las llamadas de plan para los recorridos de índice completos.  
   
@@ -164,7 +162,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  El plan estimado es el siguiente:  
   
- ![Plan de consulta para una combinación de tablas optimizadas para memoria.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "Plan de consulta para una combinación de tablas optimizadas para memoria.")  
+ ![Plan de consulta para una combinación de tablas con optimización para memoria.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "Plan de consulta para una combinación de tablas optimizadas para memoria.")  
 Plan de consulta para una combinación de tablas optimizadas para memoria.  
   
  Observe las siguientes diferencias con el plan para la misma consulta en las tablas basadas en disco (ilustración 1):  
@@ -296,7 +294,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Después de eliminar todas las filas menos una en la tabla Customer:  
   
- ![Estadísticas de columna y combinaciones. ](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Estadísticas de columna y combinaciones.")  
+ ![Combinaciones y estadísticas de columnas.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Combinaciones y estadísticas de columnas.")  
   
  Acerca de este plan de consulta:  
   
@@ -305,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   El examen de índice completo en IX_CustomerID se ha reemplazado por index seek. Esto provocó el examen de 5 filas en lugar de las 830 necesarias para el examen de índice completo.  
   
 ## <a name="see-also"></a>Consulte también  
- [Tablas con optimización para memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+ [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

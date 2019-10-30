@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aaa746be1453f874a77af6bbfdf318da0731623
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298274"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807414"
 ---
 # <a name="flexible-file-task"></a>Tarea de archivo flexible
 
@@ -35,7 +35,9 @@ La tarea de archivo flexible es un componente del [Feature Pack de SQL Server 
 Para agregar una tarea de archivo flexible a un paquete, arrástrela desde el cuadro de herramientas de SSIS al lienzo del diseñador. Después, haga doble clic en la tarea o haga clic con el botón derecho y seleccione **Editar**, para abrir el cuadro de diálogo **Flexible File Task Editor** (Editor de la tarea de archivo flexible).
 
 La propiedad **Operación** especifica la operación de archivo que se va a realizar.
-Actualmente solo se admite la operación de **copia**.
+Las operaciones admitidas actualmente son las siguientes:
+- Operación de **copia**
+- Operación de **eliminación**
 
 Para la operación de **copia**, están disponibles las propiedades siguientes.
 
@@ -48,6 +50,12 @@ Para la operación de **copia**, están disponibles las propiedades siguientes.
 - **DestinationConnection:** especifica el administrador de conexiones de destino.
 - **DestinationFolderPath:** especifica la ruta de acceso a la carpeta de destino.
 - **DestinationFileName:** especifica el nombre de archivo de destino.
+
+Para la operación de **eliminación**, están disponibles las propiedades siguientes.
+- **ConnectionType:** especifica el tipo del administrador de conexiones.
+- **Connection:** especifica el administrador de conexiones.
+- **FolderPath:** especifica la ruta de acceso a la carpeta.
+- **FileName:** especifica el nombre de archivo. Si se deja en blanco, se eliminará la carpeta. En Azure Blob Storage no se admite la eliminación de la carpeta.
 
 ***Notas sobre la configuración de permisos de la entidad de servicio***
 

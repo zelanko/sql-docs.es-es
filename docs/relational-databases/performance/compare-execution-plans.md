@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: fc0eb0e3e8cd6a095a6f30f44ee08c520db19e45
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289297"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907666"
 ---
 # <a name="compare-execution-plans"></a>Comparación de los planes de ejecución
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ Cuando se comparan dos planes de ejecución, las regiones del plan que **hacen b
 
 2.  Haga clic en un área en blanco del plan de ejecución y haga clic en **Comparar plan de presentación**. 
 
-    ![Haga clic con el botón derecho en Comparar plan de presentación](../../relational-databases/performance/media/plancomparisonmenuoption.png "Right-click Compare Showplan")   
+    ![Hacer clic con el botón secundario en Comparar plan de presentación](../../relational-databases/performance/media/plancomparisonmenuoption.png "Hacer clic con el botón secundario en Comparar plan de presentación")   
 
 3.  Elija el segundo archivo de plan de consulta con el que le gustaría comparar. El segundo archivo se abrirá para que pueda comparar los planes.
 
 4.  Los planes comparados abrirán una nueva ventana de forma predeterminada, con uno en la parte superior y otro en la parte inferior. La selección predeterminada será la primera aparición de un operador o un nodo que es común en los planes comparados, pero que muestra diferencias entre los planes. Todos los nodos y los operadores resaltados existen en ambos planes comparados. Seleccionar un operador resaltado en los planes superiores o izquierdos selecciona automáticamente el operador correspondiente en los planes inferiores o derechos. Seleccionar el operador de nodo raíz en cualquiera de los planes comparados (el nodo SELECT en la siguiente imagen), también selecciona el operador de nodo raíz correspondiente en el otro plan comparado.
 
-    ![Comparación de planes de dos archivos de planes guardados](../../relational-databases/performance/media/plancomparison-plans.png "Plan comparison of two saved plan files")  
+    ![Planeación de la comparación de dos archivos de plan guardados](../../relational-databases/performance/media/plancomparison-plans.png "Planeación de la comparación de dos archivos de plan guardados")  
 
      > [!TIP]
      > Para alternar la presentación de la comparación de planes de ejecución en paralelo, haga clic con el botón derecho en un área en blanco del plan de ejecución y seleccione **Cambiar orientación del divisor**.
@@ -71,30 +71,28 @@ Cuando se comparan dos planes de ejecución, las regiones del plan que **hacen b
 
 5.  También se abre una ventana de propiedades dual en el lado derecho, en el ámbito de la selección predeterminada. Las propiedades que existen en ambos operadores comparados pero tienen diferencias estarán precedidas por el signo *no igual* (&ne;) para facilitar la identificación.
 
-    ![Ventana Dual properties (Propiedades duales)](../../relational-databases/performance/media/plancomparison-properties.png "Dual properties window")  
+    ![Ventana de propiedades doble](../../relational-databases/performance/media/plancomparison-properties.png "Ventana de propiedades doble")  
 
 6.  La ventana de navegación de comparación **Análisis del plan de presentación** también se abre en la parte inferior. Hay tres pestañas disponibles:
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  En la pestaña **Opciones de la instrucción**, la selección predeterminada es *Resaltar operaciones similares* y el mismo nodo u operador resaltado en los planes comparados comparte el mismo patrón de color y línea. Navegue entre las áreas similares en planes comparados haciendo clic en un patrón lima. También puede resaltar las diferencias en los planes en lugar de las similitudes si selecciona *Highlight operations not matching similar segments* (Resaltar las operaciones que no coinciden con segmentos similares). 
     
        > [!NOTE]
        > De forma predeterminada, se omiten los nombres de base de datos al comparar los planes para permitir la comparación de planes que se capturan para las bases de datos que tienen nombres diferentes pero comparten el mismo esquema. Por ejemplo al comparar los planes de las bases de datos *ProdDB* y *TestDB*. Este comportamiento puede cambiarse con la opción *Ignorar el nombre de la base de datos al comparar operadores*.
 
-       ![Ventana Análisis del plan de presentación](../../relational-databases/performance/media/plancomparison-analysis.png "Showplan Analysis window") 
+       ![Ventana de análisis del plan de presentación](../../relational-databases/performance/media/plancomparison-analysis.png "Ventana de análisis del plan de presentación") 
 
     2.  La pestaña **Instrucción múltiple** es útil para comparar los planes con varias instrucciones, permitiendo que se compare el par de instrucciones correcto.
 
-        ![Varias instrucciones en un plan comparado](../../relational-databases/performance/media/plancomparison-multiple.png "Multiple statements in compared plan")  
+        ![Varias instrucciones en un plan comparado](../../relational-databases/performance/media/plancomparison-multiple.png "Varias instrucciones en un plan comparado")  
 
     3.  En la pestaña **Escenarios** puede encontrar un análisis automatizado de algunos de los aspectos más importantes que debe tener en cuenta relacionados con las diferencias de [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) (Estimación de cardinalidad) en los planes comparados. Para cada operador enumerado en el panel izquierdo, el panel derecho muestra detalles sobre el escenario en el vínculo *Para más información sobre este escenario, haga clic aquí* y se muestran los motivos posibles para explicar ese escenario. 
 
-        ![Diferentes filas calculadas](../../relational-databases/performance/media/plancomparison-scenarios.png "Different estimated rows")  
+        ![Diferentes filas calculadas](../../relational-databases/performance/media/plancomparison-scenarios.png "Diferentes filas calculadas")  
 
     Si esta ventana está cerrada, haga doble clic en un área en blanco de un plan comparado y seleccione **Opciones de comparación de planes de presentación** para volver a abrirla.
 
-    ![Opciones de comparación de plan](../../relational-databases/performance/media/plancomparison-options.png "Plan compare options")  
+    ![Opciones de comparación de planes](../../relational-databases/performance/media/plancomparison-options.png "Opciones de comparación de planes")  
 
 ## <a name="to-compare-execution-plans-in-query-store"></a>Para comparar los planes de ejecución en el Almacén de consultas
 
@@ -102,8 +100,8 @@ Cuando se comparan dos planes de ejecución, las regiones del plan que **hacen b
 
 2.  Combine el uso de la tecla MAYÚS y del mouse para seleccionar dos planes para la misma consulta. 
 
-    ![Seleccionar dos planes en el Almacén de consultas](../../relational-databases/performance/media/plancomparison-querystore.png "Select two plans in Query Store")   
+    ![Selección de dos planes en Almacén de consultas](../../relational-databases/performance/media/plancomparison-querystore.png "Selección de dos planes en Almacén de consultas")   
 
 3.  Use el botón **Compare the plans for the select query in a seperate window** (Comparar los planes de la consulta seleccionada en una ventana independiente) para iniciar la comparación de planes. Después, se aplican los pasos 4 al 6 de *Comparar los planes de ejecución*. 
 
-    ![Comparar planes de presentación en el Almacén de consultas](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Compare Showplan in Query Store") 
+    ![Comparación del plan de presentación en Almacén de consultas](../../relational-databases/performance/media/plancomparison-querystoreoption.png "Comparación del plan de presentación en Almacén de consultas") 

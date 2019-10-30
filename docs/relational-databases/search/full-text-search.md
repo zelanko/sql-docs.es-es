@@ -12,12 +12,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d17a2d0f2abb6324d1cb990dcf673458fb5205dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082763"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930273"
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
     ```  
     SELECT candidate_name,SSN   
     FROM candidates   
-    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division =DBA;  
+    WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division = 'DBA';  
     ```  
   
  Para obtener más información, vea [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
@@ -92,7 +92,7 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
   
  Estos dos procesos contienen los componentes de la arquitectura de búsqueda de texto completo. Estos componentes y sus relaciones se resumen en la ilustración siguiente. Los componentes se describen después de la ilustración.  
   
- ![arquitectura de búsqueda de texto completo](../../relational-databases/search/media/ifts-arch.gif "arquitectura de búsqueda de texto completo")  
+ ![arquitectura de la búsqueda de texto completo](../../relational-databases/search/media/ifts-arch.gif "arquitectura de la búsqueda de texto completo")  
 
 ###  <a name="sqlprocess"></a> Proceso de SQL Server  
  El proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa los componentes siguientes para la búsqueda de texto completo:  
@@ -111,7 +111,7 @@ Los índices de texto completo incluyen una o varias columnas basadas en caracte
 
     >[!NOTE]  
     >  En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, el motor de texto completo reside en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en lugar de en un servicio independiente. Al integrar el motor de texto completo en el motor de base de datos, se mejoró la capacidad de administración de texto completo, la optimización de consultas mixtas y el rendimiento total.  
- 
+
 -   **Escritor de índices (indizador).** El escritor de índices genera la estructura que se utiliza para almacenar los tokens indizados.  
   
 -   **Administrador del demonio de filtro.** El administrador del demonio de filtro es responsable de supervisar el estado del host de demonio de filtro del motor de texto completo.  

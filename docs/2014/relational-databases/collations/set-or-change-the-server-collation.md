@@ -50,7 +50,7 @@ ms.locfileid: "62918582"
 >  En lugar de cambiar la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar una intercalación predeterminada para cada nueva base de datos que cree.  
   
 ## <a name="see-also"></a>Vea también  
- [Collation and Unicode Support](collation-and-unicode-support.md)   
+ [Compatibilidad con la intercalación y Unicode](collation-and-unicode-support.md)   
  [Establecer o cambiar la intercalación de base de datos](set-or-change-the-database-collation.md)   
  [Establecer o cambiar la intercalación de columnas](set-or-change-the-column-collation.md)   
  [Volver a generar bases de datos del sistema](../databases/system-databases.md)  

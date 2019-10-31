@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: aba6990fbed5b24d63d4ab5c16e192718aeff305
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68714678"
@@ -73,7 +73,7 @@ Cree un procedimiento almacenado, *PredictTipBatchMode*, que genere varias predi
 
     + Use una instrucción SELECT para llamar al modelo almacenado desde una tabla SQL. El modelo se recupera de la tabla como datos **varbinary (Max)** , se almacena en la variable  _\@SQL lmodel2_, y se pasa como el parámetro *mod* al procedimiento almacenado del sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Los datos que se usan como entradas para la puntuación se definen como una consulta SQL y se almacenan como una cadena en la  _\@entrada_de variable de SQL. A medida que se recuperan datos de la base de datos, se almacenan en una trama de datos denominada *InputDataSet*, que es solo el nombre predeterminado para los datos de entrada en el procedimiento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) . puede definir otro nombre de variable si es necesario mediante el parámetro  *_\@input_data_1_name_* .
+    + Los datos que se usan como entradas para la puntuación se definen como una consulta SQL y se almacenan como una cadena en la  _\@entrada_de variable de SQL. A medida que se recuperan datos de la base de datos, se almacenan en una trama de datos denominada *InputDataSet*, que es solo el nombre predeterminado para los datos de entrada en el procedimiento [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) . puede definir otro nombre de variable si es necesario mediante el parámetro *_\@input_data_1_name_* .
 
     + Para generar las puntuaciones, el procedimiento almacenado llama a la función rxPredict de la biblioteca **RevoScaleR** .
 

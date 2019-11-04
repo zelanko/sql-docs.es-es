@@ -23,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cabd08fa2e4ba8797d5fe7fc5e4f623f24cda856
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e2100858c6f18a515db8ee4baf413853ee0a04b
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064579"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Deshabilita un desencadenador.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -87,7 +87,7 @@ Los ejemplos siguientes se describen en la base de datos AdventureWorks2012.
 ### <a name="a-disabling-a-dml-trigger-on-a-table"></a>A. Deshabilitar un desencadenador DML en una tabla  
  En el ejemplo siguiente se deshabilita el desencadenador `uAddress`, que se creó en la tabla `Address`.  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ```  
@@ -95,7 +95,7 @@ GO
 ### <a name="b-disabling-a-ddl-trigger"></a>B. Deshabilitar un desencadenador DDL  
  En el ejemplo siguiente se crea un desencadenador DDL `safety`, con ámbito en la base de datos, y después se deshabilita.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   

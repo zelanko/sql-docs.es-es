@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fc839390b89cb133bb51ae8c76552df1804c59b
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.openlocfilehash: d49b2489cc17388029a9e44cce415b4040fc035f
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783232"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049759"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -642,7 +642,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
  - [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)
  - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
  - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
- - [Tutorial: Migración de usuarios y grupos de Windows de SQL Server en el entorno local a la instancia administrada de Azure SQL Database mediante la sintaxis DDL de T-SQL](/azure/sql-database/sql-database-managed-instance-aad-migration-tutorial)
+ - [Tutorial: Migración de usuarios y grupos de Windows de SQL Server en el entorno local a la instancia administrada de Azure SQL Database mediante la sintaxis DDL de T-SQL](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

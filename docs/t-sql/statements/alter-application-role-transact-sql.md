@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 77bd1b9ccfb2eb93300c16a7fa7a99f87a4c0413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d39f716717fe517fb3274e4c5519606916afb7b
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066087"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064674"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Esta instrucción cambia el nombre, la contraseña o el esquema predeterminado de un rol de aplicación.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -79,7 +79,7 @@ ALTER APPLICATION ROLE application_role_name
 ### <a name="a-changing-the-name-of-application-role"></a>A. Cambiar el nombre de un rol de aplicación  
  En el ejemplo siguiente, se cambia el nombre del rol de aplicación de `weekly_receipts` a `receipts_ledger`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987Gbv8$76sPYY5m23' ,   
@@ -93,7 +93,7 @@ GO
 ### <a name="b-changing-the-password-of-application-role"></a>B. Cambiar la contraseña de un rol de aplicación  
  En el ejemplo siguiente, se cambia la contraseña del rol de aplicación `receipts_ledger`.  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH PASSWORD = '897yUUbv867y$200nk2i';  
 GO  
@@ -102,7 +102,7 @@ GO
 ### <a name="c-changing-the-name-password-and-default-schema"></a>C. Cambiar el nombre, la contraseña y el esquema predeterminado  
  En el ejemplo siguiente, se cambia el nombre, la contraseña y el esquema predeterminado del rol de aplicación `receipts_ledger` en la misma operación.  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH NAME = weekly_ledger,   
     PASSWORD = '897yUUbv77bsrEE00nk2i',   

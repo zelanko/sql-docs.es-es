@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e796155210017addb6801930903a5aa38df71e8
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141129"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064632"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea una función de agregado definida por el usuario con la implementación definida en una clase de un ensamblado en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para que [!INCLUDE[ssDE](../../includes/ssde-md.md)] enlace la función de agregado con su implementación, el ensamblado de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que contiene la implementación debe cargarse primero en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una instrucción CREATE ASSEMBLY.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -94,7 +94,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  En el ejemplo se crea un agregado `Concatenate`. Antes de crear el agregado, el ensamblado `StringUtilities.dll` se registra en la base de datos local.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SamplesPath nvarchar(1024)  

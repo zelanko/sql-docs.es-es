@@ -10,18 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 288d96a116412eea133e881f2d13b6b4ce5fddb6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2e2f782673f1f11ad42e7de09f137291e1bfdf3
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991294"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240754"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Generación y análisis de CLUSTER.LOG para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Como recurso de clúster de conmutación por error, existen las interacciones externas entre SQL Server, el Servicio de clúster de conmutación por error de Windows Server (WSFC) y el DLL del recurso de SQL Server (hadrres.dll), que no se pueden supervisar en SQL Server. El registro de WSFC, CLUSTER.LOG, puede diagnosticar problemas en el clúster de WSFC o en el DLL de recursos de SQL Server.  
-  
- En el diagrama siguiente se demuestra la relación entre aplicaciones como SQL Server y Windows Cluster Manager, que inician la creación, la destrucción o los cambios de estado de los recursos del grupo de disponibilidad.  
+  Como recurso de clúster de conmutación por error, existen las interacciones externas entre SQL Server, el Servicio de clúster de conmutación por error de Windows Server (WSFC) y el DLL del recurso de SQL Server (hadrres.dll), que no se pueden supervisar en SQL Server. El registro de WSFC, CLUSTER.LOG, puede diagnosticar problemas en el clúster de WSFC o en el DLL de recursos de SQL Server. 
   
 ## <a name="generate-cluster-log"></a>Generar el registro del clúster  
  Puede generar los registros del clúster de dos maneras:  

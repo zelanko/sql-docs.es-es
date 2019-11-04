@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaee3cdadacf57e410e27dc1f3e92f2c917f43ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e7dbdb8ea5a422b91f290478eeca4dfc9b21cbc
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902879"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064637"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea un nuevo contrato. Un contrato define los tipos de mensaje usados en una conversación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] y también determina qué lado de la conversación puede enviar mensajes de ese tipo. Cada conversación obedece a un contrato. El servicio iniciador especifica el contrato para la conversación cuando se inicia la conversación. El servicio de destino especifica los contratos que el servicio de destino acepta para conversaciones.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -98,7 +98,7 @@ CREATE CONTRACT contract_name
   
  En el siguiente ejemplo se crea un contrato de reembolso de gastos basándose en tres tipos de mensaje.  
   
-```  
+```sql  
 CREATE MESSAGE TYPE  
     [//Adventure-Works.com/Expenses/SubmitExpense]           
     VALIDATION = WELL_FORMED_XML ;           

@@ -10,12 +10,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cc2237ff2f7e7e5610a88288c386359c57937f90
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71296803"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049948"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (base de datos de SSISDB)
 
@@ -44,7 +44,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  Nombre del proyecto donde los parámetros residen. *project_name* es **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Nombre del paquete. Especifique el nombre del paquete para recuperar todos los parámetros de proyecto y los parámetros de un paquete concreto. Utilice NULL para recuperar todos los parámetros de proyecto y los parámetros de todos los paquetes. El parámetro *package_name* es de tipo **nvarchar(260)** .  
+ Nombre del paquete. Especifique el nombre del paquete para recuperar todos los parámetros de proyecto y los parámetros de un paquete concreto. El parámetro *package_name* es de tipo **nvarchar(260)** .  
   
  [ @reference_id = ] *reference_id*  
  Identificador único de una referencia de entorno. Este parámetro es opcional. *reference_id* es **bigint**.  

@@ -26,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9b0c03e6d4c7d938336d1287bd190433f7588ff2
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061063"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064561"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Crea un objeto de metadatos de clave maestra de columna en una base de datos. Una entrada de metadatos de la clave maestra de columna representa una clave, almacenada en un almacén de claves externo. La clave protege (cifra) claves de cifrado de columna al usar la característica [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Varias claves maestras de columna permiten la rotación de claves; cambie periódicamente la clave para mejorar la seguridad. Cree una clave maestra de columna en un almacén de claves y su objeto de metadatos relacionado en la base de datos mediante el Explorador de objetos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o PowerShell. Para más detalles, vea [Información general de administración de claves de Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -192,7 +192,7 @@ WITH (
   
 Cree una entrada de metadatos de la clave maestra de columna para una clave maestra de columna. Las aplicaciones cliente, que usan el proveedor MSSQL_CNG_STORE, obtienen acceso a la clave maestra de columna:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'MSSQL_CNG_STORE',    
@@ -202,7 +202,7 @@ WITH (
   
 Cree una entrada de metadatos de la clave maestra de columna para una clave maestra de columna. La clave maestra de columna está almacenada en Azure Key Vault para las aplicaciones cliente que usan el proveedor AZURE_KEY_VAULT para obtener acceso a la clave maestra de columna.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
@@ -212,7 +212,7 @@ WITH (
   
 Cree una entrada de metadatos de la clave maestra de columna para una clave maestra de columna. La clave maestra de columna está almacenada en un almacén de claves maestras de columna personalizado:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
@@ -222,7 +222,7 @@ WITH (
 ### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Crear una clave maestra de columna habilitada para enclaves  
 En el siguiente ejemplo se crea una entrada de metadatos de la clave maestra de columna para una clave maestra de columna habilitada para el enclave. La clave maestra de columna habilitada para el enclave está almacenada en el almacén de certificados para las aplicaciones cliente que usan el proveedor MSSQL_CERTIFICATE_STORE para obtener acceso a la clave maestra de columna:  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
      KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
@@ -233,7 +233,7 @@ WITH (
   
 Cree una entrada de metadatos de la clave maestra de columna para una clave maestra de columna habilitada para el enclave. La clave maestra de columna habilitada para el enclave está almacenada en Azure Key Vault para las aplicaciones cliente que usan el proveedor AZURE_KEY_VAULT para obtener acceso a la clave maestra de columna.  
   
-```  
+```sql  
 CREATE COLUMN MASTER KEY MyCMK  
 WITH (  
     KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  

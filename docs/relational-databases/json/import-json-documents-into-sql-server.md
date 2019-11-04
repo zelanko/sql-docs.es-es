@@ -1,7 +1,7 @@
 ---
 title: Importar documentos JSON en SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 10/28/2019
 ms.prod: sql
 ms.reviewer: genemi
 ms.technology: ''
@@ -10,12 +10,12 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba47ee7f719763cce2d2ac4502d8c2c9bd8693d3
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: a6a69047ca62f60cf071ac44e87bd741feea9b88
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70910822"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049888"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Importar documentos JSON en SQL Server
 
@@ -51,23 +51,6 @@ SELECT BulkColumn
 
 Después de cargar el contenido del archivo JSON, puede guardar el texto JSON en una tabla.
 
-## <a name="import-multiple-json-documents"></a>Importar varios documentos JSON
-
-Puede usar el mismo enfoque para cargar un conjunto de archivos JSON desde el sistema de archivos a una variable local de uno en uno. Supongamos que los archivos se llaman `book<index>.json`.
-  
-```sql
-DECLARE @i INT = 1
-DECLARE @json AS NVARCHAR(MAX)
-
-WHILE(@i < 10)
-BEGIN
-    SET @file = 'C:\JSON\Books\book' + cast(@i AS VARCHAR(5)) + '.json';
-    SELECT @json = BulkColumn FROM OPENROWSET (BULK (@file), SINGLE_CLOB) AS j
-    SELECT * FROM OPENJSON(@json) AS json
-    -- Optionally, save the JSON text in a table.
-    SET @i = @i + 1 ;
-END
-```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Importar documentos JSON desde Azure File Storage
 

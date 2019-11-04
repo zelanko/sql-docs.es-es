@@ -28,19 +28,19 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed1fb6d31d22f04657288e2c924316b891841946
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3789e894f08c4e34cb5ea8861d699f850e365f3
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061081"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064572"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Crea una clave de cifrado de columna con el conjunto inicial de valores, cifrados con las claves maestras de columna especificadas. Este cifrado es una operación de metadatos. Una clave de cifrado de columna puede tener hasta dos valores, lo que permite una rotación de claves maestras de columna. Es necesario crear una clave de cifrado de columna antes de que la característica [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) cifre cualquier columna de la base de datos. Las claves de cifrado de columna también se pueden crear mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Antes de crear una clave de cifrado de columna, es necesario definir una clave maestra de columna mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o la instrucción [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -94,7 +94,7 @@ Necesita el permiso **ALTER ANY COLUMN ENCRYPTION KEY**.
 ### <a name="a-creating-a-column-encryption-key"></a>A. Crear una clave de cifrado de columna  
 En este ejemplo se quita una clave de cifrado de columna denominada `MyCEK`.  
   
-```  
+```sql  
 CREATE COLUMN ENCRYPTION KEY MyCEK   
 WITH VALUES  
 (  
@@ -108,8 +108,8 @@ GO
 ### <a name="creating-a-column-encryption-key-with-two-values"></a>Creación de una clave de cifrado de columna con dos valores  
 En este ejemplo se crea una clave de cifrado de columna con dos valores denominada `TwoValueCEK`.  
   
-```  
-  
+```sql
+
 CREATE COLUMN ENCRYPTION KEY TwoValueCEK   
 WITH VALUES  
 (  

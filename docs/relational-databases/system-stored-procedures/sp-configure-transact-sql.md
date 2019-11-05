@@ -1,7 +1,7 @@
 ---
 title: sp_configure (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 22d8f61af08f183e10910544e42614769b9dafd9
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974354"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73536216"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "71974354"
 > [!NOTE]  
 > Para las opciones de configuración de nivel de base de datos, vea [ALTER DATABASE scoped Configuration &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Para configurar Soft-NUMA, consulte [SQL Server &#40;&#41;de Numa de software](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -87,6 +87,10 @@ RECONFIGURE
 ## <a name="remarks"></a>Comentarios  
  Utilice **sp_configure** para mostrar o cambiar la configuración de nivel de servidor. Para cambiar la configuración de la base de datos, utilice ALTER DATABASE. Para cambiar la configuración que afecta solo a la sesión de usuario actual, utilice la instrucción SET.  
   
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
+
 ## <a name="updating-the-running-configuration-value"></a>Actualizar el valor de configuración actual  
  Cuando se especifica un nuevo *valor* para una *opción*, el conjunto de resultados muestra este valor en la columna **config_value** . Inicialmente, este valor difiere del valor de la columna **run_value** , que muestra el valor de configuración que se está ejecutando actualmente. Para actualizar el valor de configuración en ejecución en la columna **run_value** , el administrador del sistema debe ejecutar reconfigure o reconfigure with override.  
   
@@ -102,7 +106,7 @@ RECONFIGURE
  El cambio también se escribe en el registro de errores de SQL Server.
   
 > [!NOTE]  
->  Si un *valor* especificado es demasiado alto para una opción, la columna **run_value** refleja el hecho de que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha establecido de forma predeterminada en la memoria dinámica en lugar de usar un valor de configuración que no es válido.  
+>  Si un *valor* especificado es demasiado alto para una opción, la columna **run_value** refleja el hecho de que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha establecido de forma predeterminada en la memoria dinámica en lugar de usar una configuración que no es válida.  
   
  Para obtener más información, vea [REconfigure &#40;Transact&#41;-SQL](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
@@ -125,7 +129,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- Este es el mensaje: "Opción de configuración" Mostrar opciones avanzadas "cambió de 0 a 1. Ejecute la instrucción RECONFIGURE para instalar".  
+ Este es el mensaje: "Se ha cambiado la opción de configuración 'show advanced options' de 0 a 1. Ejecute la instrucción RECONFIGURE para instalar".  
   
  Ejecute `RECONFIGURE` y muestre todas las opciones de configuración:  
   
@@ -134,7 +138,7 @@ RECONFIGURE;
 EXEC sp_configure;  
 ```  
   
-### <a name="b-changing-a-configuration-option"></a>b. Cambiar una opción de configuración  
+### <a name="b-changing-a-configuration-option"></a>B. Cambiar una opción de configuración  
  En el siguiente ejemplo se establece el `recovery interval` (intervalo de recuperación) del sistema en `3` minutos.  
   
 ```sql  
@@ -153,7 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- El resultado devuelve el nombre de opción seguido por los valores mínimo y máximo de la opción. **Config_value** es el valor que [!INCLUDE[ssDW](../../includes/ssdw-md.md)] utilizará cuando se complete la reconfiguración. El valor **run_value** es el valor que se está usando actualmente. Los valores **config_value** y **run_value** son normalmente los mismos, a menos que el valor se esté modificando.  
+ El resultado devuelve el nombre de opción seguido por los valores mínimo y máximo de la opción. **Config_value** es el valor que [!INCLUDE[ssDW](../../includes/ssdw-md.md)] usará cuando se complete la reconfiguración. El valor **run_value** es el valor que se está usando actualmente. Los valores **config_value** y **run_value** son normalmente los mismos, a menos que el valor se esté modificando.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. Lista de las opciones de configuración para un nombre de configuración  
   

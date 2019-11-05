@@ -1,6 +1,6 @@
 ---
 title: Almacenar datos cifrados del servidor de informes (Administrador de configuración de SSRS) | Microsoft Docs
-ms.date: 05/31/2016
+ms.date: 10/24/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a83f5812347dfc827795de747f9c8119e3ba6245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3277c1b96102ee6eb7145359c165c011a6724f1
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513297"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988420"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Claves de cifrado de SSRS: almacenar datos cifrados del servidor de informes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena valores cifrados en la base de datos del servidor de informes y en archivos de configuración. La mayoría de los valores cifrados son credenciales que se utilizan para obtener acceso a orígenes de datos externos que proporcionan datos para informes. En este tema se describen los valores que se cifran, la funcionalidad de cifrado usada en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y otros tipos de datos confidenciales almacenados que debe conocer.  
@@ -51,6 +51,8 @@ ms.locfileid: "62513297"
  La información de la base de datos del servidor de informes se cifra mediante una clave simétrica. Hay una clave simétrica única para cada base de datos del servidor de informes. Esta clave simétrica se cifra utilizando la clave pública de un par de claves asimétricas generadas por Windows. La clave privada se mantiene en la cuenta del servicio Servidor de informes de Windows.  
   
  En una implementación escalada del servidor de informes en la que varias instancias compartan la misma base de datos, todos los nodos del servidor de informes utilizarán una única clave simétrica. Cada nodo debe tener una copia de la clave simétrica compartida. Cuando se configura la implementación escalada, automáticamente se crea una copia de la clave simétrica para cada nodo. Cada nodo cifra su copia de la clave simétrica utilizando la clave pública de un par de claves específico para su cuenta de servicio de Windows. Para obtener más información sobre cómo se crea la clave simétrica para implementaciones escaladas y de una sola instancia, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ 
+ Además, a partir de 2019, la base de datos del servidor de informes se puede configurar con Cifrado de datos transparente en SQL Server para proporcionar protección adicional para los datos en reposo.
   
 > [!NOTE]  
 >  Cuando cambie la cuenta del servicio Servidor de informes de Windows, las claves asimétricas pueden dejar de ser válidas, lo que interrumpirá el funcionamiento del servidor. Para evitar que esto suceda, asegúrese de utilizar la herramienta de configuración de Reporting Services para modificar la configuración de la cuenta de servicio. Cuando utilice la herramienta de configuración, las claves se actualizarán automáticamente. Para obtener más información, vea [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  

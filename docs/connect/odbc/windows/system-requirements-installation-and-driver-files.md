@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8e7098cbd454b37e7de0a221c55b86194f883c3
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 6ab9a4035e3a714e6725f28f7e4e370bf3fd0119
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71250950"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73032986"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Requisitos del sistema, instalación y archivos del controlador
 
@@ -27,17 +27,17 @@ En este artículo se describen los controladores ODBC que se conectan a SQL Serv
 
 | Versión del controlador | Descripción del soporte técnico |
 | :------------- | :--------------------- |
-| ODBC driver 11 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Admite conexiones a SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]y [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. |
+| ODBC driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Admite conexiones a SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]y [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. |
 | ODBC driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows | Se puede instalar en un equipo que también tenga una o varias versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. |
-| ODBC driver 13 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Admite conexiones a SQL Server 2016, SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]y. [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] |
+| ODBC driver 13 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Admite conexiones a SQL Server 2016, SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]y [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]. |
 | ODBC driver 13,1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], <br/> Además de los anteriores para 13 | Admite SQL Server 2017. |
-| ODBC driver 17 for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Admite las mismas versiones de base de datos que 13,1. |
+| ODBC driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] | Admite las mismas versiones de base de datos que 13,1. |
 | Controlador ODBC 17 para SQL Server | Admite SQL Server 2019 a partir de la versión 17,3 del controlador. |
 | &nbsp; | &nbsp; |
 
 ### <a name="connection-string-details"></a>Detalles de la cadena de conexión
 
-El nombre del controlador que se especifica en una cadena de `ODBC Driver 11 for SQL Server` conexión `ODBC Driver 13 for SQL Server` es o (para 13 y 13,1) `ODBC Driver 17 for SQL Server`o.
+El nombre del controlador que especifique en una cadena de conexión es `ODBC Driver 11 for SQL Server` o `ODBC Driver 13 for SQL Server` (para 13 y 13,1) o `ODBC Driver 17 for SQL Server`.
 
 ## <a name="supported-operating-systems"></a>Sistemas operativos admitidos
 
@@ -46,7 +46,8 @@ Puede ejecutar aplicaciones con el controlador en los siguientes sistemas operat
 - Windows Server 2008 R2
 - Windows Server 2012
 - Windows Server 2012 R2
-- Windows Vista SP2 &nbsp; _(solo en el controlador ODBC 11)._
+- Windows Server 2016
+- Windows Vista SP2 &nbsp; _(solo el controlador ODBC 11)._
 - Windows 7
 - Windows 8
 - Windows 8.1
@@ -54,7 +55,7 @@ Puede ejecutar aplicaciones con el controlador en los siguientes sistemas operat
 
 ## <a name="installing-microsoft-odbc-driver-for-sql-server"></a>Instalación de Microsoft ODBC Driver for SQL Server
 
-El controlador se instala cuando se ejecuta `msodbcsql.msi` desde uno de los vínculos siguientes:
+El controlador se instala al ejecutar `msodbcsql.msi` desde uno de los vínculos siguientes:
 
 - [Descargar Microsoft ODBC Driver 17 for SQL Server en Windows](https://www.microsoft.com/download/details.aspx?id=56567)
 - [Descargar Microsoft ODBC Driver 13.1 for SQL Server en Windows](https://www.microsoft.com/download/details.aspx?id=53339)
@@ -100,13 +101,13 @@ msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }
 
 ## <a name="command-line-tools-sqlcmdexe-and-bcpexe"></a>Herramientas de línea de comandos: sqlcmd.exe y bcp.exe
 
-Las `bcp.exe` herramientas `sqlcmd.exe` y para su uso con el controlador se pueden descargar en [Microsoft utilidades de la línea de comandos 11 para SQL Server](https://www.microsoft.com/download/details.aspx?id=36433), [Microsoft utilidades de la línea de comandos 13 para SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)o [Microsoft utilidades de la línea de comandos 13,1 para SQL Server](https://www.microsoft.com/download/details.aspx?id=53591). El controlador es un requisito previo para instalar `sqlcmd.exe` y `bcp.exe`.
+Las herramientas de `bcp.exe` y `sqlcmd.exe` para su uso con el controlador se pueden descargar en [microsoft utilidades de la línea de comandos 11 para SQL Server](https://www.microsoft.com/download/details.aspx?id=36433), [Microsoft Utilidades de la línea de comandos 13 para SQL Server](https://www.microsoft.com/download/details.aspx?id=52680)o [Microsoft utilidades de la línea de comandos 13,1 para SQL Server ](https://www.microsoft.com/download/details.aspx?id=53591). El controlador es un requisito previo para instalar `sqlcmd.exe` y `bcp.exe`.
   
-`bcp.exe`y `sqlcmd.exe` se instalan en `110\Tools` la subcarpeta de `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` para la versión 11, `130\Tools` y para 13 y 13,1.
+`bcp.exe` y `sqlcmd.exe` se instalan en la subcarpeta `110\Tools` de `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC` para la versión 11 y `130\Tools` para 13 y 13,1.
 
 Las aplicaciones que utilizan funciones BCP deben especificar el controlador (con la misma versión que aparece en el archivo de encabezado) y la biblioteca usada para compilar la aplicación.  
 
-Por ejemplo, al compilar una aplicación ODBC `msodbcsql11.lib` con `msodbcsql.h`y, use "driver = {ODBC driver 11 for SQL Server}" en la cadena de conexión.
+Por ejemplo, al compilar una aplicación ODBC con `msodbcsql11.lib` y `msodbcsql.h`, use "DRIVER = {ODBC driver 11 for SQL Server}" en la cadena de conexión.
 
 ## <a name="components-of-the-microsoft-odbc-driver-for-includessnoversionincludesssnoversion-mdmd-on-windows"></a>Componentes de Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows
 

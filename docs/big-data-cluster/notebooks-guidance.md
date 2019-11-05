@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
 ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958297"
@@ -98,20 +98,20 @@ Una vez que la instalación se realiza correctamente, aparece una notificación 
 
 |Kernel|Descripción
 |:-----|:-----
-| Kernel de SQL | Escribe código SQL destinado a la base de datos relacional.
+| SQL Kernel | Escribe código SQL destinado a la base de datos relacional.
 |Kernel de PySpark3 y PySpark| Escribe código de Python mediante un proceso de Spark desde el clúster.
 |Kernel de Spark|Escribe código de Scala y R mediante un proceso de Spark desde el clúster.
-|Kernel de Python|Escribe código de Python para el desarrollo local.
+|Python Kernel|Escribe código de Python para el desarrollo local.
 
 `Attach to` proporciona el contexto para que el kernel se asocie. Si usa el kernel de SQL, puede `Attach to` cualquiera de las instancias de SQL Server.
 
 Si usa el kernel de Python3, `Attach to` es `localhost`. Puede usar este kernel para el desarrollo local de Python.
 
-Cuando esté conectado al clúster de macrodatos de SQL Server 2019, el elemento `Attach to` predeterminado es ese punto final del clúster y le permite enviar código de Python, Scala y R mediante el proceso de Spark del clúster.
+Cuando esté conectado al clúster de macrodatos de SQL Server 2019, el elemento `Attach to` predeterminado es ese punto final del clúster y le permite enviar código de Python, Scala y R mediante el proceso de Spark del clúster.
 
 ### <a name="code-cells-and-markdown-cells"></a>Celdas de código y celdas de Markdown
 
-Agregue una nueva celda de código al hacer clic en el comando **+Código** de la barra de herramientas.
+Agregue una nueva celda de código haciendo clic en el comando **+Código** de la barra de herramientas.
 
 Agregue una nueva celda de texto al hacer clic en el comando **+Texto** de la barra de herramientas.
 

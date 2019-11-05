@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278922"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989563"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar una base de datos a una nueva ubicación (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,25 +108,25 @@ ms.locfileid: "70278922"
 2.  Use la instrucción [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) para restaurar la copia de seguridad completa de la base de datos. De manera predeterminada, los archivos de datos y de registro se restauran en sus ubicaciones originales. Para cambiar la ubicación de una base de datos, use la opción MOVE para mover cada uno de los archivos de la base de datos y evitar conflictos con los archivos existentes.  
 
   A continuación se muestra la sintaxis básica de [!INCLUDE[tsql](../../includes/tsql-md.md)] para restaurar la base de datos en una ubicación nueva y con un nombre nuevo:  
-  
+  ```sql
   RESTORE DATABASE *new_database_name*  
   
   FROM *backup_device* [ ,...*n* ]  
   
   [ WITH  
+ 
+   {  
   
-  {  
+      [ **RECOVERY** | NORECOVERY ]  
   
-  [ **RECOVERY** | NORECOVERY ]  
+      [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
-  
-  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+      [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
   }  
   
   ;  
-  
+  ```
   > [!NOTE] 
   > Cuando prepare la reubicación de una base de datos en un disco diferente, compruebe si hay espacio suficiente e identifique cualquier posible conflicto con los archivos existentes. Para ello, se usa una instrucción [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) que especifica los mismos parámetros MOVE que tiene previsto usar en la instrucción RESTORE DATABASE.  
   

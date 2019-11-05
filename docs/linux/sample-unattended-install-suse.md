@@ -4,16 +4,16 @@ titleSuffix: SQL Server
 description: 'Ejemplo de script de SQL Server: instalación desatendida en SUSE Linux Enterprise Server'
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/02/2017
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: eb19357b739dbc52b3eb19cf2390f225e4205d6e
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67910452"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593514"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Ejemplo: Script de instalación desatendida de SQL Server para SUSE Linux Enterprise Server
 

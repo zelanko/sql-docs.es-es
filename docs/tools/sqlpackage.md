@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: a144a3c2eea75a90445ca5a3b13d756f4be4c503
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.openlocfilehash: 22d90b2f2eeb569f5c6ef587bdbcc98e252c8957
+ms.sourcegitcommit: 82b70c39550402a2b0b327db32bf5ecf88b50d3c
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70774206"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73033042"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -78,6 +78,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|DacApplicationName=(STRING)|Define el nombre de la aplicación que se va a guardar en los metadatos del DACPAC. El valor predeterminado es el nombre de la base de datos.|
 |**/p:**|DacMajorVersion = (INT32 ' 1 ')|Define la versión principal que se va a guardar en los metadatos del DACPAC.|
 |**/p:**|DacMinorVersion = (INT32 ' 0 ')|Define la versión secundaria que se va a guardar en los metadatos del DACPAC.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| Especifica el tiempo de expiración de bloqueo de la base de datos en segundos al ejecutar consultas en SQLServer. Use-1 para esperar indefinidamente.|
 |**/p:**|ExtractAllTableData = (BOOLEANO)|Indica si se extraen los datos de todas las tablas de usuario. Si es "true", se extraen los datos de todas las tablas de usuario y no se pueden especificar tablas de usuario individuales para la extracción de datos. Si es "false", especifique una o varias tablas de usuario de las que extraer datos.|
 |**/p:**|ExtractApplicationScopedObjectsOnly = (BOOLEANO ' true ')|Si se establece en true, solo se extraen los objetos con ámbito de aplicación para el origen especificado. Si se establece en false, se extraen todos los objetos para el origen especificado.|
 |**/p:**|ExtractReferencedServerScopedElements = (BOOLEANO ' true ')|Si se establece en true, se extraen los objetos de inicio de sesión, de auditoría de servidor y de credencial a los que hacen referencia los objetos de base de datos de origen.|
@@ -85,9 +86,10 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreExtendedProperties = (BOOLEANO)|Especifica si se deben omitir las propiedades extendidas.|
 |**/p:**|IgnorePermissions = (BOOLEANO ' true ')|Especifica si se deben omitir los permisos.|
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|Especifica si se omiten las relaciones entre usuarios e inicios de sesión.|
+|**/p:**|LongRunningCommandTimeout = (INT32)| Especifica el tiempo de espera del comando de larga duración en segundos al ejecutar consultas en SQL Server. Use 0 para esperar indefinidamente.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Especifica el tipo de almacenamiento de seguridad para el modelo de esquema que se usa durante la extracción.|
 |**/p:**|TableData=(STRING)|Indica la tabla de la que se extraerán los datos. Especifique el nombre de la tabla con o sin los corchetes que rodean las partes del nombre en el siguiente formato: schema_name. table_identifier.|
-|**/p:**| TempDirectoryForTableData = (cadena)|Especifica el directorio temporal que se usa para almacenar en búfer los datos de la tabla antes de que se escriban en el archivo de paquete.|
+|**/p:**| TempDirectoryForTableData = (cadena)|Especifica el directorio temporal que se usará para almacenar en búfer los datos de la tabla antes de escribirlos en el archivo de paquete.|
 |**/p:**|VerifyExtraction = (BOOLEANO)|Especifica si el archivo DACPAC que se extrajo debe comprobarse.|
 
 ## <a name="publish-parameters-properties-and-sqlcmd-variables"></a>Parámetros, propiedades y variables SQLCMD de publicación
@@ -139,6 +141,7 @@ Una operación de publicación de SqlPackage.exe actualiza incrementalmente el e
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Especifica los argumentos de colaborador de implementación adicionales para los colaboradores de implementación. Debe ser una lista de valores delimitada por punto y coma.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Especifica colaboradores de implementación adicionales que se deben ejecutar cuando se implementa el dacpac. Debe ser una lista delimitada por punto y coma de nombres completos o identificadores de los colaboradores de compilación.|
+|**/p:**|AdditionalDeploymentContributorPaths = (cadena)| Especifica las rutas de acceso para cargar colaboradores de implementación adicionales. Debe ser una lista de valores delimitada por punto y coma. | 
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|Esta propiedad se usa en la implementación de SqlClr para hacer que cualquier ensamblado de bloqueo se quite como parte del plan de implementación. De forma predeterminada, cualquier ensamblado de bloqueo o de referencia bloqueará la actualización de un ensamblado si el ensamblado de referencia tiene que quitarse.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Especifica si se intenta la acción a pesar de las posibles plataformas de SQL Server incompatibles.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|No bloquee la transferencia de datos en una tabla con Seguridad de nivel de fila si esta propiedad está establecida en true. El valor predeterminado es False.|
@@ -149,7 +152,7 @@ Una operación de publicación de SqlPackage.exe actualiza incrementalmente el e
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Especifica si la declaración de las variables SETVAR se incluyen entre comentarios en el script de publicación generado. Puede optar por esta opción si planea usar una herramienta como SQLCMD.EXE para especificar los valores de la línea de comandos al publicar.|
 |**/p:**|CompareUsingTargetCollation = (BOOLEANO)|Esta configuración determina la forma en que se trata la intercalación de la base de datos durante la implementación; de forma predeterminada, la intercalación de la base de datos de destino se actualizará si no coincide con la especificada por el origen. Cuando se ha establecido esta opción, se usará la intercalación de la base de datos (o servidor) de destino.|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|Especifica si la base de datos de destino debe actualizarse o si se va a quitar para volver a crearse al publicar en una base de datos.|
-|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;default} ' default ')|Define la edición de un Azure SQL Database.|
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;Datawarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;hiperscale&#124;default} "default")|Define la edición de un Azure SQL Database.|
 |**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')|Especifica el tiempo de expiración de bloqueo de la base de datos en segundos al ejecutar consultas en SQLServer. Use-1 para esperar indefinidamente.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Define el tamaño máximo en GB de una instancia de Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Define el nivel de rendimiento de una instancia de Azure SQL Database, como "P0" o "S1".|
@@ -269,9 +272,11 @@ Una acción de exportación de SqlPackage.exe exporta una base de datos activa d
 |Propiedad|Valor|Descripción|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32 ' 60 ')|Especifica el tiempo de espera de comando en segundos cuando se ejecutan consultas en SQL Server.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| Especifica el tiempo de expiración de bloqueo de la base de datos en segundos al ejecutar consultas en SQLServer. Use-1 para esperar indefinidamente.|
+|**/p:**|LongRunningCommandTimeout = (INT32)| Especifica el tiempo de espera del comando de larga duración en segundos al ejecutar consultas en SQL Server. Use 0 para esperar indefinidamente.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Especifica el tipo de almacenamiento de seguridad para el modelo de esquema que se usa durante la extracción.|
 |**/p:**|TableData=(STRING)|Indica la tabla de la que se extraerán los datos. Especifique el nombre de la tabla con o sin los corchetes que rodean las partes del nombre en el siguiente formato: schema_name. table_identifier.|
-|**/p:**|TempDirectoryForTableData = (cadena)|Especifica el directorio temporal que se usa para almacenar en búfer los datos de la tabla antes de que se escriban en el archivo de paquete.|
+|**/p:**|TempDirectoryForTableData = (cadena)|Especifica el directorio temporal que se usará para almacenar en búfer los datos de la tabla antes de escribirlos en el archivo de paquete.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Especifica la versión del motor de destino que se espera. Esto afecta a si se permiten los objetos admitidos por Azure SQL Database servidores con funcionalidades V12, como las tablas optimizadas para memoria, en el BacPac generado.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Especifica si los tipos de documentos de texto completo admitidos para Microsoft Azure SQL Database v12 deben comprobarse.|
   
@@ -307,11 +312,14 @@ Propiedades específicas de la acción de importación:
 |Propiedad|Valor|Descripción|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32 ' 60 ')|Especifica el tiempo de espera de comando en segundos cuando se ejecutan consultas en SQL Server.|
-|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;default} ' default ')|Define la edición de un Azure SQL Database.|
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;Datawarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;hiperscale&#124;default} "default")|Define la edición de un Azure SQL Database.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| Especifica el tiempo de expiración de bloqueo de la base de datos en segundos al ejecutar consultas en SQLServer. Use-1 para esperar indefinidamente.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Define el tamaño máximo en GB de una instancia de Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Define el nivel de rendimiento de una instancia de Azure SQL Database, como "P0" o "S1".|
 |**/p:**|ImportContributorArguments=(STRING)|Especifica los argumentos de colaborador de implementación para los colaboradores de implementación. Debe ser una lista de valores delimitada por punto y coma.|
 |**/p:**|ImportContributors=(STRING)|Especifica los colaboradores de implementación que se deben ejecutar cuando se importa el dacpac. Debe ser una lista delimitada por punto y coma de nombres completos o identificadores de los colaboradores de compilación.|
+|**/p:**|ImportContributorPaths = (cadena)|Especifica las rutas de acceso para cargar colaboradores de implementación adicionales. Debe ser una lista de valores delimitada por punto y coma. |
+|**/p:**|LongRunningCommandTimeout = (INT32)| Especifica el tiempo de espera del comando de larga duración en segundos al ejecutar consultas en SQL Server. Use 0 para esperar indefinidamente.|
 |**/p:**|Storage=({File&#124;Memory})|Especifica la forma en que se almacenan los elementos cuando se genera el modelo de base de datos. Por motivos de rendimiento, el valor predeterminado es InMemory. Cuando se trata de bases de datos grandes, se requiere almacenamiento respaldado por archivos.|
   
 ## <a name="deployreport-parameters-and-properties"></a>Parámetros y propiedades de DeployReport
@@ -360,6 +368,7 @@ Las acciones de informe **SqlPackage.exe** crean un informe XML de los cambios q
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Especifica los argumentos de colaborador de implementación adicionales para los colaboradores de implementación. Debe ser una lista de valores delimitada por punto y coma.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Especifica colaboradores de implementación adicionales que se deben ejecutar cuando se implementa el dacpac. Debe ser una lista delimitada por punto y coma de nombres completos o identificadores de los colaboradores de compilación.|
+|**/p:**|AdditionalDeploymentContributorPaths = (cadena)| Especifica las rutas de acceso para cargar colaboradores de implementación adicionales. Debe ser una lista de valores delimitada por punto y coma. | 
 |**/p:**|Ensamblados de AllowDropBlocking = (BOOLEANO)|Esta propiedad se usa en la implementación de SqlClr para hacer que cualquier ensamblado de bloqueo se quite como parte del plan de implementación. De forma predeterminada, cualquier ensamblado de bloqueo o de referencia bloqueará la actualización de un ensamblado si el ensamblado de referencia tiene que quitarse.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Especifica si se intenta la acción a pesar de las posibles plataformas de SQL Server incompatibles.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|No bloquee la transferencia de datos en una tabla con Seguridad de nivel de fila si esta propiedad está establecida en true. El valor predeterminado es False.|
@@ -370,7 +379,8 @@ Las acciones de informe **SqlPackage.exe** crean un informe XML de los cambios q
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Especifica si la declaración de las variables SETVAR se incluyen entre comentarios en el script de publicación generado. Puede optar por esta opción si planea usar una herramienta como SQLCMD.EXE para especificar los valores de la línea de comandos al publicar. |
 |**/p:**|CompareUsingTargetCollation = (BOOLEANO)|Esta configuración determina la forma en que se trata la intercalación de la base de datos durante la implementación; de forma predeterminada, la intercalación de la base de datos de destino se actualizará si no coincide con la especificada por el origen. Cuando se ha establecido esta opción, se usará la intercalación de la base de datos (o servidor) de destino. |
 |**/p:**|CreateNewDatabase=(BOOLEAN)|Especifica si la base de datos de destino debe actualizarse o si se va a quitar para volver a crearse al publicar en una base de datos. |
-|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;default} ' default ')|Define la edición de un Azure SQL Database. |
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;Datawarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;hiperscale&#124;default} "default")|Define la edición de un Azure SQL Database.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| Especifica el tiempo de expiración de bloqueo de la base de datos en segundos al ejecutar consultas en SQLServer. Use-1 para esperar indefinidamente.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Define el tamaño máximo en GB de una instancia de Azure SQL Database.|
 |**/p:**|DatabaseServiceObjective=(STRING)|Define el nivel de rendimiento de una instancia de Azure SQL Database, como "P0" o "S1". |
 |**/p:**|DeployDatabaseInSingleUserMode = (BOOLEANO)|Si se establece en True, la base de datos se establecerá en modo de usuario único antes de implementarse. |
@@ -429,7 +439,8 @@ Las acciones de informe **SqlPackage.exe** crean un informe XML de los cambios q
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|Especifica si las diferencias en el valor de la cláusula WITH NOCHECK para las claves externas se ignorarán o se actualizarán al publicar en una base de datos.| 
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|Incluir todos los elementos compuestos como parte de una única operación de publicación.|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|Especifica si las instrucciones transaccionales se deben usar siempre que sea posible al publicar en una base de datos.|
- |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Especifica que la acción de publicación debe quitar y volver a crear siempre un ensamblado en lugar de emitir una instrucción ALTER ASSEMBLY. |
+|**/p:**|LongRunningCommandTimeout = (INT32)| Especifica el tiempo de espera del comando de larga duración en segundos al ejecutar consultas en SQL Server. Use 0 para esperar indefinidamente.|
+|**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Especifica que la acción de publicación debe quitar y volver a crear siempre un ensamblado en lugar de emitir una instrucción ALTER ASSEMBLY. |
 |**/p:**|PopulateFilesOnFileGroups = (BOOLEANO ' true ')|Especifica si se crea también un nuevo archivo cuando se crea un nuevo FileGroup en la base de datos de destino. |
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Especifica si el esquema está registrado con el servidor de base de datos. 
 |**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Especifica si los colaboradores DeploymentPlanExecutor deben ejecutarse cuando se ejecutan otras operaciones.|
@@ -521,6 +532,7 @@ Las acciones del script **SqlPackage.exe** crean un script de actualización inc
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Especifica los argumentos de colaborador de implementación adicionales para los colaboradores de implementación. Debe ser una lista de valores delimitada por punto y coma.
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Especifica colaboradores de implementación adicionales que se deben ejecutar cuando se implementa el dacpac. Debe ser una lista delimitada por punto y coma de nombres completos o identificadores de los colaboradores de compilación.
+|**/p:**|AdditionalDeploymentContributorPaths = (cadena)| Especifica las rutas de acceso para cargar colaboradores de implementación adicionales. Debe ser una lista de valores delimitada por punto y coma. | 
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|Esta propiedad se usa en la implementación de SqlClr para hacer que cualquier ensamblado de bloqueo se quite como parte del plan de implementación. De forma predeterminada, cualquier ensamblado de bloqueo o de referencia bloqueará la actualización de un ensamblado si el ensamblado de referencia tiene que quitarse.
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Especifica si se intenta la acción a pesar de las posibles plataformas de SQL Server incompatibles.
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|No bloquee la transferencia de datos en una tabla con Seguridad de nivel de fila si esta propiedad está establecida en true. El valor predeterminado es False.
@@ -531,7 +543,8 @@ Las acciones del script **SqlPackage.exe** crean un script de actualización inc
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Especifica si la declaración de las variables SETVAR se incluyen entre comentarios en el script de publicación generado. Puede optar por esta opción si planea usar una herramienta como SQLCMD.EXE para especificar los valores de la línea de comandos al publicar.
 |**/p:**|CompareUsingTargetCollation = (BOOLEANO)|Esta configuración determina la forma en que se trata la intercalación de la base de datos durante la implementación; de forma predeterminada, la intercalación de la base de datos de destino se actualizará si no coincide con la especificada por el origen. Cuando se ha establecido esta opción, se usará la intercalación de la base de datos (o servidor) de destino.|
 |**/p:**|CreateNewDatabase=(BOOLEAN)|Especifica si la base de datos de destino debe actualizarse o si se va a quitar para volver a crearse al publicar en una base de datos.
-|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;default} ' default ')|Define la edición de un Azure SQL Database.
+|**/p:**|DatabaseEdition = ({Basic&#124;Standard&#124;Premium&#124;Datawarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;hiperscale&#124;default} "default")|Define la edición de un Azure SQL Database.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')| Especifica el tiempo de expiración de bloqueo de la base de datos en segundos al ejecutar consultas en SQLServer. Use-1 para esperar indefinidamente.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Define el tamaño máximo en GB de una instancia de Azure SQL Database.
 |**/p:**|DatabaseServiceObjective=(STRING)|Define el nivel de rendimiento de una instancia de Azure SQL Database, como "P0" o "S1".
 |**/p:**|DeployDatabaseInSingleUserMode = (BOOLEANO)|Si se establece en True, la base de datos se establecerá en modo de usuario único antes de implementarse.
@@ -548,7 +561,7 @@ Las acciones del script **SqlPackage.exe** crean un script de actualización inc
 |**/p:**|DropPermissionsNotInSource = (BOOLEANO)|Especifica si los permisos que no existen en el archivo de la instantánea de base de datos (.dacpac) se van a quitar de la base de datos de destino al publicar actualizaciones en una base de datos.|
 |**/p:**|DropRoleMembersNotInSource=(BOOLEAN)|Especifica si los miembros de rol que no se definieron en el archivo de la instantánea de base de datos (.dacpac) se van a quitar de la base de datos de destino al publicar actualizaciones en una base de datos.|
 |**/p:**|DropStatisticsNotInSource = (BOOLEANO ' true ')|Especifica si las estadísticas que no existen en el archivo de instantánea de base de datos (.dacpac) se descartarán de la base de datos de destino al publicar en una base de datos.|
-|**/p:**|ExcludeObjectType=(STRING)|Un tipo de objeto que se debe omitir durante la implementación. Los nombres de tipo de objeto válidos son Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
+|**/p:**|ExcludeObjectType=(STRING)|Un tipo de objeto que se debe omitir durante la implementación. Los nombres de tipo de objeto válidos son: Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|ExcludeObjectTypes=(STRING)|Lista delimitada por puntos y coma de tipos de objetos que se deben omitir durante la implementación. Los nombres de tipo de objeto válidos son: Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|GenerateSmartDefaults=(BOOLEAN)|Proporciona automáticamente un valor predeterminado cuando se actualiza una tabla que contiene datos con una columna que no admite valores NULL.
 |**/p:**|IgnoreAnsiNulls = (BOOLEANO ' true ')|Especifica si las diferencias en la configuración ANSI NULLS se deben ignorar o actualizar al publicar en una base de datos.
@@ -590,6 +603,7 @@ Las acciones del script **SqlPackage.exe** crean un script de actualización inc
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|Especifica si las diferencias en el valor de la cláusula WITH NOCHECK para las claves externas se ignorarán o se actualizarán al publicar en una base de datos.|
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|Incluir todos los elementos compuestos como parte de una única operación de publicación.|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|Especifica si las instrucciones transaccionales se deben usar siempre que sea posible al publicar en una base de datos.|
+|**/p:**|LongRunningCommandTimeout = (INT32)| Especifica el tiempo de espera del comando de larga duración en segundos al ejecutar consultas en SQL Server. Use 0 para esperar indefinidamente.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Especifica que la acción de publicación debe quitar y volver a crear siempre un ensamblado en lugar de emitir una instrucción ALTER ASSEMBLY.|
 |**/p:**|PopulateFilesOnFileGroups = (BOOLEANO ' true ')|Especifica si se crea también un nuevo archivo cuando se crea un nuevo FileGroup en la base de datos de destino.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Especifica si el esquema está registrado con el servidor de base de datos.|

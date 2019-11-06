@@ -1,45 +1,43 @@
 ---
 title: Guía para la implementación
-titleSuffix: SQL Server big data clusters
-description: Aprenda a implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar) en Kubernetes.
+titleSuffix: SQL Server Big Data Clusters
+description: Obtenga información sobre cómo implementar clústeres de macrodatos de SQL Server en Kubernetes.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66aeb6b6e13de8cc076d2ff1b4c77d4fadf2b94a
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 0437a637ef199fbef5b1914c65c6506533d906e9
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688313"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532049"
 ---
-# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Cómo realizar la [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] implementación en Kubernetes
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Procedimientos para implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-El clúster de macrodatos de SQL Server se implementa como contenedores de Docker en un clúster de Kubernetes. Esta es una introducción a los pasos de instalación y configuración:
+Un clúster de macrodatos de SQL Server se implementa como contenedores de Docker en un clúster de Kubernetes. Esta es una introducción a los pasos de instalación y configuración:
 
 - Configure un clúster de Kubernetes en una sola máquina virtual, un clúster de máquinas virtuales o en Azure Kubernetes Service (AKS).
-- Instale la herramienta de configuración de clúster **azdata** en el equipo cliente.
+- Instale la herramienta de configuración de clúster `azdata` en el equipo cliente.
 - Implemente un clúster de macrodatos de SQL Server en un clúster de Kubernetes.
-
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="install-sql-server-2019-big-data-tools"></a>Instalación de las herramientas de macrodatos de SQL Server 2019
 
 Antes de implementar un clúster de macrodatos de SQL Server 2019, [instale primero las herramientas de macrodatos](deploy-big-data-tools.md):
 
-- **azdata**
-- **kubectl**
-- **Azure Data Studio**
-- **Extensión de SQL Server 2019**
+- `azdata`
+- `kubectl`
+- Azure Data Studio
+- Extensión de SQL Server 2019 para Azure Data Studio
 
 ## <a id="prereqs"></a> Requisitos previos de Kubernetes
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]requiere una versión mínima de Kubernetes de al menos v 1.13 para el servidor y el cliente (kubectl).
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] requieren como mínimo la versión 1.13 de Kubernetes para el servidor y el cliente (kubectl).
 
 > [!NOTE]
 > Tenga en cuenta que las versiones de Kubernetes del cliente y el servidor deben ser la versión secundaria +1 o -1. Para obtener más información, consulte [Notas de la versión de Kubernetes y directiva de SKU de sesgo de versión](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
@@ -53,42 +51,62 @@ Puede optar por implementar Kubernetes de tres maneras:
 | Implementar Kubernetes en: | Descripción | Vínculo |
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | Un servicio de contenedor de Kubernetes administrado en Azure. | [Instrucciones](deploy-on-aks.md) |
-| **Varias máquinas (kubeadm)** | Un clúster de Kubernetes implementado en máquinas físicas o virtuales mediante **kubeadm**. | [Instrucciones](deploy-with-kubeadm.md) |
-| **Minikube** | Un clúster de Kubernetes de un solo nodo en una máquina virtual. | [Instrucciones](deploy-on-minikube.md) |
+| **Una o varias máquinas (`kubeadm`)** | Un clúster de Kubernetes implementado en máquinas físicas o virtuales mediante `kubeadm` | [Instrucciones](deploy-with-kubeadm.md) |
 
 > [!TIP]
 > También puede crear un script de la implementación de AKS y un clúster de macrodatos en un único paso. Para obtener más información, vea cómo realizar este procedimiento en un [script de Python](quickstart-big-data-cluster-deploy.md) o en un [cuaderno](deploy-notebooks.md) de Azure Data Studio.
 
 ### <a name="verify-kubernetes-configuration"></a>Comprobación de la configuración de Kubernetes
 
-Ejecute el comando **kubectl** para ver la configuración del clúster. Asegúrese de que kubectl apunta al contexto de clúster correcto.
+Ejecute el comando `kubectl` para ver la configuración del clúster. Asegúrese de que kubectl apunta al contexto de clúster correcto.
 
 ```bash
 kubectl config view
 ```
 
 > [!Important] 
-> Si va a implementar en un clúster de Kuberntes de varios nodos que ha arrancado con kubeadm, antes de iniciar la implementación del clúster de Big Data, asegúrese de que los relojes estén sincronizados en todos los nodos Kubernetes a los que se dirige la implementación. El clúster de macrodatos tiene propiedades de estado integradas para varios servicios que son sensibles al tiempo y los sesgos de reloj pueden dar lugar a un estado incorrecto.
+> Si va a implementar en un clúster de Kuberntes de varios nodos que ha arrancado mediante `kubeadm`, antes de iniciar la implementación del clúster de macrodatos, asegúrese de que los relojes estén sincronizados en todos los nodos de Kubernetes a los que se destina la implementación. El clúster de macrodatos tiene propiedades de estado integradas para varios servicios que son sensibles al tiempo y los sesgos de reloj pueden dar lugar a un estado incorrecto.
 
-Después de haber configurado el clúster de Kubernetes, puede continuar con la implementación de un nuevo clúster de macrodatos de SQL Server. Si va a actualizar desde una versión anterior, consulte [Cómo actualizar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deployment-upgrade.md).
+Después de haber configurado el clúster de Kubernetes, puede continuar con la implementación de un nuevo clúster de macrodatos de SQL Server. Si va a actualizar desde una versión anterior, vea [Procedimientos para actualizar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
 ## <a id="deploy"></a> Información general sobre la implementación
 
-La mayoría de la configuración del clúster de macrodatos se define en un archivo de configuración de implementación JSON. Puede usar un perfil de implementación predeterminado para AKS, `kubeadm`o `minikube`, o bien puede personalizar su propio archivo de configuración de implementación para usarlo durante la configuración. Por motivos de seguridad, la configuración de autenticación se pasa mediante variables de entorno.
+La mayoría de la configuración del clúster de macrodatos se define en un archivo de configuración de implementación JSON. Puede usar un perfil de implementación predeterminado para clústeres de AKS o Kubernetes creados con `kubeadm`, o bien puede personalizar un archivo de configuración de implementación propio para usarlo durante la instalación. Por motivos de seguridad, la configuración de autenticación se pasa mediante variables de entorno.
 
 En las secciones siguientes se proporcionan más detalles sobre cómo configurar las implementaciones del clúster de macrodatos, así como ejemplos de personalizaciones comunes. Además, puede editar en todo momento el archivo de configuración de implementación personalizado con un editor (por ejemplo, VS Code).
 
 ## <a id="configfile"></a> Configuraciones predeterminadas
 
-Las opciones de implementación del clúster de macrodatos se definen en archivos de configuración JSON. Puede iniciar la personalización de la implementación del clúster desde los perfiles de implementación integrados con la configuración predeterminada para entornos de desarrollo y pruebas:
+Las opciones de implementación del clúster de macrodatos se definen en archivos de configuración JSON. Puede iniciar la personalización de la implementación del clúster desde los perfiles de implementación integrados que están disponibles en `azdata`. 
+
+> [!NOTE]
+> Las imágenes de contenedor necesarias para la implementación de clústeres de macrodatos se hospedan en el Registro de contenedor de Microsoft (`mcr.microsoft.com`) en el repositorio `mssql/bdc`. De forma predeterminada, esta configuración ya está incluida en el archivo de configuración `control.json` en cada uno de los perfiles de implementación que se incluyen con `azdata`. Además, la etiqueta de imagen de contenedor de cada versión también se rellena previamente en el mismo archivo de configuración. Si necesita extraer las imágenes de contenedor en un registro de contenedor privado propio y modificar la configuración del repositorio o el registro de contenedores, siga las instrucciones del artículo [Instalación sin conexión](deploy-offline.md).
+
+Ejecute este comando para encontrar las plantillas disponibles:
+
+```
+azdata bdc config list -o table 
+```
+
+Por ejemplo, para la versión SQL Server 2019 RTM Servicing (GDR1), lo anterior devuelve:
+
+```
+Result
+----------------
+aks-dev-test
+aks-dev-test-ha
+kubeadm-dev-test
+kubeadm-prod
+```
 
 | Perfil de implementación | Entorno de Kubernetes |
 |---|---|
-| **aks-dev-test** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test** | Varias máquinas (kubeadm) |
-| **minikube-dev-test** | minikube |
+| `aks-dev-test` | Implementación de un clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)|
+| `aks-dev-test-ha` | Implemente un clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS). Los servicios críticos como la instancia maestra de SQL Server y el nodo de nombre de HDFS se configuran para lograr alta disponibilidad.|
+| `kubeadm-dev-test` | Implemente un clúster de macrodatos de SQL Server en un clúster de Kubernetes creado con kubeadm mediante una o varias máquinas virtuales o físicas.|
+| `kubeadm-prod`| Implemente un clúster de macrodatos de SQL Server en un clúster de Kubernetes creado con kubeadm mediante una o varias máquinas virtuales o físicas. Use esta plantilla para permitir que los servicios de clúster de macrodatos se integren con Active Directory. Los servicios críticos como la instancia maestra de SQL Server y el nodo de nombre de HDFS se implementan en una configuración de alta disponibilidad.  |
 
-Puede implementar un clúster de macrodatos al ejecutar **azdata bdc create**. Esto le pedirá que elija una de las configuraciones predeterminadas y después le guiará por la implementación.
+Puede implementar un clúster de macrodatos mediante la ejecución de `azdata bdc create`. Esto le pedirá que elija una de las configuraciones predeterminadas y después le guiará por la implementación.
 
 La primera vez que ejecute `azdata`, debe incluir `--accept-eula=yes` para aceptar el contrato de licencia para el usuario final (CLUF).
 
@@ -99,41 +117,41 @@ azdata bdc create --accept-eula=yes
 En este escenario, se le pide la configuración que no forme parte de la configuración predeterminada, como las contraseñas. 
 
 > [!IMPORTANT]
-> El nombre predeterminado del clúster de macrodatos es **mssql-cluster**. Es importante saberlo para ejecutar cualquiera de los comandos de **kubectl** que especifican el espacio de nombres de Kubernetes con el parámetro `-n`.
+> El nombre predeterminado del clúster de macrodatos es `mssql-cluster`. Es importante saberlo para ejecutar cualquiera de los comandos de `kubectl` que especifican el espacio de nombres de Kubernetes con el parámetro `-n`.
 
 ## <a id="customconfig"></a> Configuraciones personalizadas
 
-También puede personalizar su propio perfil de configuración de implementación. Puede hacerlo mediante los pasos siguientes:
+También es posible personalizar la implementación para acomodar las cargas de trabajo que planea ejecutar. Tenga en cuenta que no puede cambiar la escala (el número de réplicas) ni la configuración de almacenamiento para los servicios de clúster de macrodatos después de las implementaciones, por lo que debe planear cuidadosamente la configuración de implementación para evitar problemas de capacidad. Para personalizar la implementación, siga estos pasos:
 
-1. Comience con uno de los perfiles de implementación estándar que coincidan con su entorno de Kubernetes. Puede usar el comando **azdata bdc config list** para enumerarlos:
+1. Comience con uno de los perfiles de implementación estándar que coincidan con su entorno de Kubernetes. Puede usar el comando `azdata bdc config list` para enumerarlos:
 
    ```bash
    azdata bdc config list
    ```
 
-1. Para personalizar la implementación, cree una copia del perfil de implementación con el comando **azdata bdc config init**. Por ejemplo, el siguiente comando crea una copia de los archivos de configuración de implementación de **aks-dev-test** en un directorio de destino denominado `custom`:
+1. Para personalizar la implementación, cree una copia del perfil de implementación con el comando `azdata bdc config init`. Por ejemplo, el comando siguiente crea una copia de los archivos de configuración de implementación de `aks-dev-test` en un directorio de destino denominado `custom`:
 
    ```bash
    azdata bdc config init --source aks-dev-test --target custom
    ```
 
-   azdata
-   > Especifica un directorio que contiene los archivos de configuración, **BDC. JSON** y **control. JSON**, basados en el `--source` parámetro. `--target`
+   >[!TIP]
+   >`--target` especifica un directorio que contiene los archivos de configuración, `bdc.json` y `control.json`, en función del parámetro `--source`.
 
-1. Para personalizar la configuración del perfil de configuración de implementación, puede editar el archivo de configuración de implementación en una herramienta adecuada para editar archivos JSON, como VS Code. Para la automatización con scripts, también puede editar el perfil de implementación personalizado con el comando **azdata bdc config**. Por ejemplo, el comando siguiente modifica un perfil de implementación personalizado para cambiar el nombre del clúster implementado del valor predeterminado (**mssql-cluster**) a **test-cluster**:  
+1. Para personalizar la configuración del perfil de configuración de implementación, puede editar el archivo de configuración de implementación en una herramienta adecuada para editar archivos JSON, como VS Code. Para la automatización con scripts, también puede editar el perfil de implementación personalizado con el comando `azdata bdc config`. Por ejemplo, el comando siguiente modifica un perfil de implementación personalizado para cambiar el nombre del clúster implementado del valor predeterminado (`mssql-cluster`) a `test-cluster`:  
 
    ```bash
    azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
-   
+
    > [!TIP]
    > También puede pasar el nombre del clúster en el momento de la implementación con el parámetro *--name* del comando *azdata create bdc*. Los parámetros del comando tienen prioridad sobre los valores de los archivos de configuración.
-
+   >
    > Una herramienta útil para buscar rutas de acceso JSON es [JSONPath Online Evaluator](https://jsonpath.com/).
-
+   >
    Además de pasar pares clave-valor, también puede proporcionar valores JSON insertados o pasar archivos de revisión JSON. Para obtener más información, vea [Configuración de opciones de implementación para clústeres de macrodatos](deployment-custom-configuration.md).
 
-1. Después, pase el archivo de configuración personalizado a **azdata bdc create**. Tenga en cuenta que debe establecer las [variables de entorno](#env) necesarias; de lo contrario, se le pedirán los valores:
+1. Pase el archivo de configuración personalizado a `azdata bdc create`. Tenga en cuenta que debe establecer las [variables de entorno](#env) necesarias; de lo contrario, el terminal le solicitará los valores:
 
    ```bash
    azdata bdc create --config-profile custom --accept-eula yes
@@ -147,35 +165,29 @@ Las siguientes variables de entorno se usan para la configuración de seguridad 
 
 | Variable de entorno | Requisito |Descripción |
 |---|---|---|
-| **CONTROLLER_USERNAME** | Obligatorio |Nombre de usuario del administrador del clúster. |
-| **CONTROLLER_PASSWORD** | Obligatorio |Contraseña del administrador del clúster. |
-| **MSSQL_SA_PASSWORD** | Obligatorio |Contraseña del usuario de SA de la instancia maestra de SQL. |
-| **KNOX_PASSWORD** | Obligatorio |La contraseña del usuario **raíz** Knox. Tenga en cuenta que en una configuración de autenticación básica solo el usuario compatible con Knox es **root**.|
-| **ACCEPT_EULA**| Obligatorio para el primer uso de `azdata`| Establézcalo en "sí". Cuando se establece como una variable de entorno, aplica el CLUF a SQL Server y `azdata`. Si no se establece como variable de entorno, puede incluir `--accept-eula=yes` en el primer uso del comando `azdata`.|
-| **DOCKER_USERNAME** | Opcional | Nombre de usuario para acceder a las imágenes de contenedor en caso de que se almacenen en un repositorio privado. Consulte el tema [Implementaciones sin conexión](deploy-offline.md) para obtener más información sobre cómo usar un repositorio privado de Docker para la implementación del clúster de macrodatos.|
-| **DOCKER_PASSWORD** | Opcional |Contraseña para acceder al repositorio privado anterior. |
+| `AZDATA_USERNAME` | Obligatorio |El nombre de usuario para el administrador de clústeres de macrodatos de SQL Server. En la instancia maestra de SQL Server se crea un inicio de sesión de sysadmin con el mismo nombre. Como procedimiento de seguridad recomendado, la cuenta `sa` está deshabilitada. |
+| `AZDATA_PASSWORD` | Obligatorio |La contraseña para la cuenta de usuario que se ha creado antes. La misma contraseña se usa para el usuario `root`, que se utiliza para proteger la puerta de enlace Knox y HDFS. |
+| `ACCEPT_EULA`| Obligatorio para el primer uso de `azdata`| Establecido en "Sí". Cuando se establece como una variable de entorno, aplica el CLUF a SQL Server y `azdata`. Si no se establece como variable de entorno, puede incluir `--accept-eula=yes` en el primer uso del comando `azdata`.|
+| `DOCKER_USERNAME` | Opcional | Nombre de usuario para acceder a las imágenes de contenedor en caso de que se almacenen en un repositorio privado. Consulte el tema [Implementaciones sin conexión](deploy-offline.md) para obtener más información sobre cómo usar un repositorio privado de Docker para la implementación del clúster de macrodatos.|
+| `DOCKER_PASSWORD` | Opcional |Contraseña para acceder al repositorio privado anterior. |
 
-Estas variables de entorno se deben establecer antes de llamar a **azdata bdc create**. Si no se establece ninguna variable, se le pedirá que lo haga.
+Estas variables de entorno se deben establecer antes de llamar a `azdata bdc create`. Si no se establece ninguna variable, se le pedirá que lo haga.
 
 En el ejemplo siguiente se muestra cómo establecer las variables de entorno para Linux (Bash) y Windows (PowerShell):
 
 ```bash
-export CONTROLLER_USERNAME=admin
-export CONTROLLER_PASSWORD=<password>
-export MSSQL_SA_PASSWORD=<password>
-export KNOX_PASSWORD=<password>
+export AZDATA_USERNAME=admin
+export AZDATA_PASSWORD=<password>
 export ACCEPT_EULA=yes
 ```
 
 ```PowerShell
-SET CONTROLLER_USERNAME=admin
-SET CONTROLLER_PASSWORD=<password>
-SET MSSQL_SA_PASSWORD=<password>
-SET KNOX_PASSWORD=<password>
+SET AZDATA_USERNAME=admin
+SET AZDATA_PASSWORD=<password>
 ```
 
 > [!NOTE]
-> Debe usar el usuario **raíz** para la puerta de enlace Knox con la contraseña anterior. **raíz** es el único usuario que se admite en esta configuración de autenticación básica (nombre de usuario/contraseña). En el caso de SQL Server maestro, el nombre de usuario aprovisionado para usarse con la contraseña anterior es **SA**.
+> Debe utilizar el usuario `root` para la puerta de enlace de Knox con la contraseña anterior. `root` es el único usuario que se admite en esta configuración de autenticación básica (nombre de usuario y contraseña). Para la instancia maestra de SQL Server, el nombre de usuario aprovisionado que se va a usar con la contraseña anterior es `sa`.
 
 
 Después de establecer las variables de entorno, debe ejecutar `azdata bdc create` para desencadenar la implementación. En este ejemplo se usa el perfil de configuración de clúster creado anteriormente:
@@ -186,8 +198,8 @@ azdata bdc create --config-profile custom --accept-eula yes
 
 Tenga en cuenta las directrices siguientes:
 
-- Asegúrese de incluir la contraseña entre comillas dobles si contiene algún carácter especial. Puede establecer **MSSQL_SA_PASSWORD** en el valor que quiera, pero asegúrese de que la contraseña sea suficientemente compleja y no use los caracteres `!`, `&` ni `'`. Tenga en cuenta que los delimitadores de comillas dobles solo funcionan en los comandos de Bash.
-- El inicio de sesión de **SA** es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la configuración. Después de crear el contenedor de SQL Server, la variable de entorno **MSSQL_SA_PASSWORD** especificada se reconoce mediante la ejecución de `echo $MSSQL_SA_PASSWORD` en el contenedor. Por motivos de seguridad, cambie la contraseña de administrador del sistema según los procedimientos recomendados que se documentan [aquí](../linux/quickstart-install-connect-docker.md#sapassword).
+- Asegúrese de incluir la contraseña entre comillas dobles si contiene algún carácter especial. Puede establecer `AZDATA_PASSWORD` en el valor que quiera, pero asegúrese de que la contraseña sea suficientemente compleja y no use los caracteres `!`, `&` ni `'`. Tenga en cuenta que los delimitadores de comillas dobles solo funcionan en los comandos de Bash.
+- El inicio de sesión de `AZDATA_USERNAME` es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la configuración. Después de crear el contenedor de SQL Server, la variable de entorno `AZDATA_PASSWORD` especificada se reconoce mediante la ejecución de `echo $AZDATA_PASSWORD` en el contenedor. Por motivos de seguridad, cambie la contraseña como procedimiento recomendado.
 
 ## <a id="unattended"></a> Instalación desatendida
 
@@ -195,7 +207,7 @@ En una implementación desatendida, debe establecer todas las variables de entor
 
 ## <a id="monitor"></a> Supervisión de la implementación
 
-Durante el arranque del clúster, la ventana de comandos del cliente generará el estado de la implementación. Durante el proceso de implementación, debería ver una serie de mensajes en los que está esperando el pod del controlador:
+Durante el arranque del clúster, la ventana de comandos del cliente devuelve el estado de la implementación. Durante el proceso de implementación, debería ver una serie de mensajes en los que está esperando el pod del controlador:
 
 ```output
 Waiting for cluster controller to start.
@@ -209,7 +221,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> La implementación completa puede tardar mucho tiempo debido al tiempo necesario para descargar las imágenes de contenedor de los componentes del clúster de macrodatos. Pero no debería tardar muchas horas. Si tiene problemas con la implementación, consulte [supervisión y solución de problemas [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md).
+> La implementación completa puede tardar mucho tiempo debido al tiempo necesario para descargar las imágenes de contenedor de los componentes del clúster de macrodatos. Pero no debería tardar muchas horas. Si tiene problemas con la implementación, vea [Supervisión y solución de problemas de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](cluster-troubleshooting-commands.md).
 
 Cuando finalice la implementación, la salida le notificará que se ha realizado correctamente:
 
@@ -222,25 +234,28 @@ Cluster deployed successfully.
 
 ## <a id="endpoints"></a> Recuperación de puntos de conexión
 
-Una vez que el script de implementación se haya completado correctamente, puede usar los siguientes pasos para obtener las direcciones IP de los puntos de conexión externos del clúster de macrodatos.
+Una vez que el script de implementación se haya completado de forma correcta, puede seguir los pasos siguientes para obtener las direcciones de los puntos de conexión externos del clúster de macrodatos.
 
-1. Después de la implementación, busque la dirección IP del punto de conexión del controlador desde la salida estándar de la implementación o al examinar la salida de EXTERNAL-IP del siguiente comando de **kubectl**:
+1. Después de la implementación, busque la dirección IP del punto de conexión del controlador desde la salida estándar de la implementación o mediante el examen de la salida de EXTERNAL-IP del comando `kubectl` siguiente:
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > Si no ha cambiado el nombre predeterminado durante la implementación, use `-n mssql-cluster` en el comando anterior. **mssql-cluster** es el nombre predeterminado del clúster de macrodatos.
+   > Si no ha cambiado el nombre predeterminado durante la implementación, use `-n mssql-cluster` en el comando anterior. `mssql-cluster` es el nombre predeterminado del clúster de macrodatos.
 
-1. Inicie sesión en el clúster de macrodatos con [azdata login](reference-azdata.md). Establezca el parámetro **--controller-endpoint** en la dirección IP externa del punto de conexión del controlador.
+1. Inicie sesión en el clúster de macrodatos con [azdata login](reference-azdata.md). Establezca el parámetro `--endpoint` en la dirección IP externa del punto de conexión del controlador.
 
    ```bash
-   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
+   azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
    ```
 
-   Especifique el nombre de usuario y la contraseña que ha configurado para el controlador (CONTROLLER_USERNAME y CONTROLLER_PASSWORD) durante la implementación.
+   Especifique el nombre de usuario y la contraseña que ha configurado para el administrador del clúster de macrodatos (AZDATA_USERNAME y AZDATA_PASSWORD) durante la implementación.
 
+   > [!TIP]
+   > Si es el administrador del clúster de Kubernetes y tiene acceso al archivo de configuración del clúster (el archivo kube config), puede configurar el contexto actual para que apunte al clúster de Kubernetes de destino. En este caso, puede iniciar sesión con `azdata login -n <namespaceName>`, donde `namespace` es el nombre del clúster de macrodatos. Si no se especifican en el comando de inicio de sesión, se le solicitarán las credenciales.
+   
 1. Ejecute [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) para obtener una lista con una descripción de cada punto de conexión y los valores correspondientes de dirección IP y puerto. 
 
    ```bash
@@ -265,18 +280,10 @@ Una vez que el script de implementación se haya completado correctamente, puede
    Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
-También puede obtener todos los puntos de conexión de servicio implementados para el clúster si ejecuta el siguiente comando de **kubectl**:
+También puede obtener todos los puntos de conexión de servicio implementados para el clúster si ejecuta el comando `kubectl` siguiente:
 
 ```bash
 kubectl get svc -n <your-big-data-cluster-name>
-```
-
-### <a name="minikube"></a>Minikube
-
-Si usa minikube, debe ejecutar el siguiente comando para obtener la dirección IP a la que debe conectarse. Además de la dirección IP, especifique el puerto del punto de conexión al que debe conectarse.
-
-```bash
-minikube ip
 ```
 
 ## <a id="status"></a> Comprobación del estado del clúster
@@ -288,7 +295,7 @@ azdata bdc status show
 ```
 
 > [!TIP]
-> Para ejecutar los comandos de estado, primero necesita iniciar sesión con el comando **azdata login**, que se ha mostrado en la sección de puntos de conexión anterior.
+> Para ejecutar los comandos de estado, primero debe iniciar sesión con el comando `azdata login`, que se ha mostrado en la sección sobre puntos de conexión anterior.
 
 Este es un resultado de ejemplo de este comando:
 
@@ -362,13 +369,13 @@ Bdc: ready                                                                      
  appproxy        ready    healthy         ReplicaSet appproxy is healthy
 ```
 
-También puede obtener un estado más detallado con los siguientes comandos:
+También puede obtener un estado más detallado con los comandos siguientes:
 
-- el [Estado de control de BDC de azdata muestra](reference-azdata-bdc-control-status.md) el estado de mantenimiento de todos los componentes asociados al servicio de administración de control
+- [azdata bdc control status show](reference-azdata-bdc-control-status.md) devuelve el estado de mantenimiento de todos los componentes asociados al servicio de administración de control
 ```
 azdata bdc control status show
 ```
-Resultado de ejemplo:
+Salida del ejemplo:
 ```output
 Control: ready                                                                                                                                                                                                      Health Status:  healthy
  ===========================================================================================================================================================================================================================================
@@ -386,11 +393,11 @@ Control: ready                                                                  
  mgmtproxy       ready    healthy         ReplicaSet mgmtproxy is healthy
 ```
 
-- **azdata el estado SQL de BDC muestra** el estado de mantenimiento de todos los recursos que tienen un servicio de SQL Server
+- `azdata bdc sql status show` devuelve el estado de mantenimiento de todos los recursos que tienen un servicio de SQL Server
 ```
 azdata bdc sql status show
 ```
-Resultado de ejemplo:
+Salida del ejemplo:
 ```output
 Sql: ready                                                                                                                                                                                                          Health Status:  healthy
  ===========================================================================================================================================================================================================================================
@@ -405,9 +412,9 @@ Sql: ready                                                                      
 ```
 
 > [!IMPORTANT]
-> Cuando se usa el parámetro **--All,** la salida de estos comandos contiene las direcciones URL de los paneles Kibana y Grafana para un análisis más detallado.
+> Cuando se usa el parámetro `--all`, la salida de estos comandos contiene direcciones URL a los paneles de Kibana y Grafana para un análisis más detallado.
 
-Además de usar **azdata**, también puede utilizar Azure Data Studio para buscar información de los puntos de conexión y el estado. Para obtener más información sobre cómo ver el estado del clúster con **azdata** y Azure Data Studio, consulte [Procedimiento para ver el estado de un clúster de macrodatos](view-cluster-status.md).
+Además de usar `azdata`, también puede utilizar Azure Data Studio para buscar información de los puntos de conexión y el estado. Para obtener más información sobre cómo ver el estado del clúster con `azdata` y Azure Data Studio, vea [Procedimientos para ver el estado de un clúster de macrodatos](view-cluster-status.md).
 
 ## <a id="connect"></a> Conexión al clúster
 

@@ -1,24 +1,24 @@
 ---
-title: Creación y almacenamiento de claves maestras de columna (Always Encrypted) | Microsoft Docs
+title: Creación y almacenamiento de claves maestras de columna para Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 07/01/2016
+ms.date: 10/31/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
-author: VanMSFT
-ms.author: vanto
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: a090adbfbaae886ef11e848c1296d1d4e300521a
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72902961"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594439"
 ---
-# <a name="create-and-store-column-master-keys-always-encrypted"></a>Crear y almacenar claves maestras de columna (Always Encrypted)
+# <a name="create-and-store-column-master-keys-for-always-encrypted"></a>Creación y almacenamiento de claves maestras de columna para Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Las*claves maestras de columna* son claves que protegen las claves que se usan en Always Encrypted para cifrar las claves de cifrado de columnas. Las claves maestras de columna pueden almacenarse en un almacén de claves de confianza, y las claves deben ser accesibles a las aplicaciones que necesiten cifrar o descifrar datos y a las herramientas para configurar Always Encrypted y administrar las claves de Always Encrypted.
@@ -27,7 +27,7 @@ En este artículo se proporciona información para seleccionar un almacén de cl
 
 ## <a name="selecting-a-key-store-for-your-column-master-key"></a>Seleccionar un almacén de claves para la clave maestra de columna
 
-Always Encrypted admite varios almacenes de claves para almacenar las claves maestras de columna de Always Encrypted. Los almacenes de claves compatibles varían dependiendo de qué controlador y versión está usando.
+Always Encrypted admite varios almacenes de claves para almacenar las claves maestras de columna de Always Encrypted. Los almacenes de claves admitidos varían en función del controlador y la versión que se usen.
 
 Existen dos categorías de alto nivel de almacenes de claves para tener en cuenta: *Almacenes de claves locales*y *Almacenes de claves centralizados*.
 
@@ -35,28 +35,20 @@ Existen dos categorías de alto nivel de almacenes de claves para tener en cuent
 
 * **Almacenes de claves locales** : solo pueden usarse por aplicaciones en equipos que contengan el almacén de claves local. En otras palabras, necesita replicar el almacén de claves y la clave en cada equipo que ejecute la aplicación. Un ejemplo de un almacén de claves local es el Almacén de certificados de Windows. Al usar un almacén de claves local, necesita asegurarse de que el almacén de claves existe en cada equipo que hospeda la aplicación y que este contiene las claves maestras de columna que la aplicación necesita para tener acceso a los datos protegidos mediante Always Encrypted. Cuando aprovisiona una clave maestra de columna por primera vez, o cuando cambia (rota) la clave, necesita asegurarse de que la clave se implementa en todos los equipos que hospedan su aplicación.
 
-* **Almacenes de claves centralizados** : usan aplicaciones en varios equipos. Un ejemplo de un almacén de claves centralizado es el [Almacén de claves de Azure](https://azure.microsoft.com/services/key-vault/). Un almacén de claves centralizado normalmente facilita la administración de claves porque no necesita mantener varias copias de sus claves maestras de columna en varios equipos. Necesita asegurarse de que sus aplicaciones están configuradas para conectarse al almacén de claves centralizado.
+* **Almacenes de claves centralizados** : usan aplicaciones en varios equipos. Un ejemplo de un almacén de claves centralizado es el [Almacén de claves de Azure](https://azure.microsoft.com/services/key-vault/). Un almacén de claves centralizado normalmente facilita la administración de claves porque no necesita mantener varias copias de sus claves maestras de columna en varios equipos. Asegúrese de que las aplicaciones estén configuradas para conectarse al almacén de claves centralizado.
 
 ### <a name="which-key-stores-are-supported-in-always-encrypted-enabled-client-drivers"></a>¿Qué almacenes de clave son compatibles en los controladores cliente habilitados para Always Encrypted?
 
-Los controladores cliente habilitados para Always Encrypted son controladores cliente de SQL Server que tienen compatibilidad integrada para incorporar Always Encrypted en las aplicaciones cliente. Los controladores habilitados para Always Encrypted incluyen algunos proveedores integrados para los almacenes de claves conocidos. Tenga en cuenta que algunos controladores también le permiten implementar y registrar un proveedor personalizado de almacenamiento de claves maestras de columna, de forma que pueda usar cualquier almacén de claves aunque no exista un proveedor integrado para este. Al decidir entre un proveedor integrado y uno personalizado, tenga en cuenta que usar un proveedor integrado normalmente significa realizar un menor número de cambios en sus aplicaciones (en algunos casos, solo se necesita cambiar una cadena de conexión de la base de datos).
+Los controladores cliente habilitados para Always Encrypted son controladores cliente de SQL Server que tienen compatibilidad integrada para incorporar Always Encrypted en las aplicaciones cliente. Los controladores habilitados para Always Encrypted incluyen algunos proveedores integrados para los almacenes de claves conocidos. Algunos controladores también permiten implementar y registrar un proveedor personalizado de almacenamiento de claves maestras de columna, de forma que pueda usar cualquier almacén de claves aunque no exista un proveedor integrado para este. Al decidir entre un proveedor integrado y uno personalizado, tenga en cuenta que usar un proveedor integrado normalmente significa realizar un menor número de cambios en sus aplicaciones (en algunos casos, solo se necesita cambiar una cadena de conexión de la base de datos).
 
-Los proveedores integrados disponibles dependen de qué controlador, qué versión de controlador y qué sistema operativo esté seleccionado.  Consulte la documentación de Always Encrypted de su controlador determinado para conocer qué almacenes de claves son compatibles de fábrica y si su controlador admite proveedores personalizados del almacén de claves.
+Los proveedores integrados disponibles dependen de qué controlador, qué versión de controlador y qué sistema operativo esté seleccionado.  Consulte la documentación de Always Encrypted de su controlador específico para conocer qué almacenes de claves se admiten de fábrica y si su controlador permite el uso de proveedores personalizados del almacén de claves. Asimismo, consulte el artículo [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md).
 
-- [Develop Applications using Always Encrypted with the .NET Framework Data Provider for SQL Server (Desarrollar aplicaciones mediante Always Encrypted con el proveedor de datos .NET Framework para SQL Server).](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-
-
-### <a name="supported-tools"></a>Herramientas compatibles
-
-Puede usar [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) y el [módulo de SqlServer PowerShell](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) para configurar Always Encrypted y administrar las claves de Always Encrypted. Para obtener una lista de los almacenes de claves admiten estas herramientas, vea:
-
-- [Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-- [Configurar Always Encrypted con PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
-
+### <a name="which-key-stores-are-supported-in-sql-tools"></a>¿Qué almacenes de claves se admiten en las herramientas de SQL?
+SQL Server Management Studio y el módulo de PowerShell para SqlServer solo admiten las claves maestras de columna almacenadas en Azure Key Vault, el almacén de certificados de Windows y los almacenes de claves que proporcionan la API Cryptography Next Generation (CNG) o la API Cryptography (CAPI). 
 
 ## <a name="creating-column-master-keys-in-windows-certificate-store"></a>Crear claves maestras de columna en el Almacén de certificados de Windows    
 
-Una clave maestra de columna puede ser un certificado almacenado en el Almacén de certificados de Windows. Tenga en cuenta que un controlador habilitado para Always Encrypted no comprueba una fecha de expiración ni una cadena de entidad de certificación. Un certificado simplemente se usa como un par de claves que consta de una clave pública y una privada.
+Una clave maestra de columna puede ser un certificado almacenado en el Almacén de certificados de Windows. Un controlador habilitado para Always Encrypted no comprueba una fecha de expiración ni una cadena de entidad de certificación. Un certificado simplemente se usa como un par de claves que consta de una clave pública y una privada.
 
 Para que una clave maestra de columna sea válida, el certificado debe:
 * ser un certificado X.509.
@@ -82,7 +74,7 @@ $cert = New-SelfSignedCertificate -Subject "AlwaysEncryptedCert" -CertStoreLocat
 
 ### <a name="create-a-self-signed-certificate-using-sql-server-management-studio-ssms"></a>Crear un certificado autofirmado mediante SQL Server Management Studio (SSMS)
 
-Para obtener información, vea [Configure Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio)](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md).
+Para obtener más detalles, consulte [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 Para obtener un tutorial paso a paso que usa SSMS y almacena claves Always Encrypted en el Almacén de certificados de Windows, vea [Always Encrypted: protección de los datos confidenciales en Base de datos SQL con cifrado de base de datos y almacenamiento de las claves de cifrado en el almacén de certificados de Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/).
 
 
@@ -113,7 +105,7 @@ Para conceder al usuario el permiso de *lectura* para un certificado almacenado 
 
 El Almacén de claves de Azure ayuda a proteger los secretos y las claves criptográficas, y es una opción adecuada para almacenar claves maestras de columna para Always Encrypted (especialmente si sus aplicaciones se hospedan en Azure). Para crear una clave en el [Almacén de claves de Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/), necesita una [suscripción de Azure](https://azure.microsoft.com/free/) y un Almacén de claves de Azure.
 
-#### <a name="using-powershell"></a>Usar PowerShell
+### <a name="using-powershell"></a>Usar PowerShell
 
 En el ejemplo siguiente se crea un nuevo Almacén de claves de Azure y una clave y, después, se conceden permisos para el usuario deseado.
 
@@ -132,8 +124,9 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination HSM
 ```
 
-#### <a name="sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)
+### <a name="using-sql-server-management-studio-ssms"></a>Usar SQL Server Management Studio (SSMS)
 
+Para obtener más detalles sobre cómo crear una clave maestra de columna en Azure Key Vault con SSMS, consulte [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 Para obtener un tutorial paso a paso que usa SSMS y almacena claves Always Encrypted en un Almacén de claves de Azure, vea [Always Encrypted: protección de datos confidenciales en Base de datos SQL de Azure con cifrado de datos y almacenamiento de las claves de cifrado en el Almacén de claves de Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault).
 
 ### <a name="making-azure-key-vault-keys-available-to-applications-and-users"></a>Hacer que las claves del Almacén de claves de Azure estén disponibles para aplicaciones y usuarios
@@ -195,8 +188,7 @@ $cngKey = [System.Security.Cryptography.CngKey]::Create($cngAlgorithm, $cngKeyNa
 
 #### <a name="using-sql-server-management-studio"></a>Usar SQL Server Management Studio
 
-Vea [Provisioning Column Master using SQL Server Management Studio (SSMS) (Aprovisionar claves maestras de columna con SQL Server Management Studio (SSMS))](https://msdn.microsoft.com/library/mt757096.aspx#Anchor_2).
-
+Consulte [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Hacer que las claves CNG estén disponibles para aplicaciones y usuarios
 
@@ -206,7 +198,10 @@ Consulte la documentación de HSM y KSP sobre cómo configurar el KSP en un equi
 
 Una clave maestra de columna para Always Encrypted puede almacenarse en un almacén de claves que implemente la API de Cryptography (CAPI). Normalmente, un almacén de este tipo es un módulo de seguridad de hardware (HSM); un dispositivo físico que protege y administra las claves digitales y proporciona un procesamiento criptográfico. Los HSM normalmente aparecen en forma de una tarjeta de complemento o un dispositivo externo que se conecta directamente a un equipo (HSM local) o a un servidor de red.
 
-Para que un HSM esté disponible para las aplicaciones de un equipo determinado, debe instalarse y configurarse un proveedor de servicios criptográficos (CSP), que implementa CAPI, en el equipo. Un controlador cliente de Always Encrypted (un proveedor de almacenamiento de claves maestras de columna dentro del controlador) usa el CSP para cifrar y descifrar claves de cifrado de columnas, protegidas con una clave maestra de columna almacenada en el almacén de claves. Nota: CAPI es una API heredada en desuso. Si hay un KSP disponible para HSM, se debe usar en lugar de un CSP o CAPI.
+Para que un HSM esté disponible para las aplicaciones de un equipo determinado, debe instalarse y configurarse un proveedor de servicios criptográficos (CSP), que implementa CAPI, en el equipo. Un controlador cliente de Always Encrypted (un proveedor de almacenamiento de claves maestras de columna dentro del controlador) usa el CSP para cifrar y descifrar claves de cifrado de columnas, protegidas con una clave maestra de columna almacenada en el almacén de claves. 
+
+> [!NOTE]
+> CAPI es una API heredada en desuso. Si hay un KSP disponible para HSM, se debe usar en lugar de un CSP o CAPI.
 
 Un CSP debe admitir el algoritmo RSA para usarse con Always Encrypted.
 
@@ -220,25 +215,15 @@ Una clave maestra de columna debería ser una clave asimétrica (un par con una 
 Consulte la documentación de su HSM.
 
 #### <a name="using-sql-server-management-studio-ssms"></a>Usar SQL Server Management Studio (SSMS)
-Consulte la sección Aprovisionar claves maestras de columna en Configuring Always Encrypted using SQL Server Management Studio (Configurar Always Encrypted con SQL Server Management Studio).
+Consulte [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md).
 
- 
 ### <a name="making-cng-keys-available-to-applications-and-users"></a>Hacer que las claves CNG estén disponibles para aplicaciones y usuarios
-Consulte la documentación de HSM y CSP sobre cómo configurar el CSP en un equipo y cómo conceder acceso a usuarios y aplicaciones al HSM.
- 
+Consulte la documentación de HSM y CSP sobre cómo configurar CSP en una máquina y cómo conceder acceso a los usuarios y las aplicaciones a HSM.
  
 ## <a name="next-steps"></a>Next Steps  
+- [Aprovisionamiento de claves de Always Encrypted mediante SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
+- [Aprovisionamiento de claves de Always Encrypted mediante PowerShell](configure-always-encrypted-keys-using-powershell.md)
   
-- [Configure Always Encrypted Keys using PowerShell (Configurar claves Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [Rotar claves de Always Encrypted con PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [Configurar Always Encrypted con SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-  
-## <a name="additional-resources"></a>Recursos adicionales  
-
-- [Información general de administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Develop Applications using Always Encrypted with the .NET Framework Data Provider for SQL Server (Desarrollar aplicaciones mediante Always Encrypted con el proveedor de datos .NET Framework para SQL Server)](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted Blog (Blog de Always Encrypted)](https://blogs.msdn.microsoft.com/sqlsecurity/tag/always-encrypted/)
-    
-
+## <a name="see-also"></a>Consulte también 
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Información general sobre la administración de claves de Always Encrypted](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)  

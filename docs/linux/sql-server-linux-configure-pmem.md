@@ -4,29 +4,29 @@ description: Este artículo sirve de tutorial para configurar PMEM en Linux.
 author: briancarrig
 ms.author: brcarrig
 ms.reviewer: vanto
-ms.date: 11/06/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f9a5d8c6b2db65bd237f0a3a267638a8cc16b68
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923831"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531299"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Cómo configurar la memoria persistente (PMEM) para SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo se describe cómo configurar la memoria persistente (PMEM) para SQL Server en Linux. La compatibilidad con PMEM en Linux se incorporó en la versión preliminar de SQL Server 2019.
+En este artículo se describe cómo configurar la memoria persistente (PMEM) para SQL Server en Linux. La compatibilidad con PMEM en Linux se incorporó en SQL Server 2019.
 
 ## <a name="overview"></a>Información general
 
 SQL Server 2016 incorporó compatibilidad con DIMM no volátiles y una optimización denominada [Tail of the Log Caching on NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/) (Almacenamiento en caché del final del registro en NVDIMM). Estas optimizaciones reducen el número de operaciones necesarias para proteger un búfer de registro en un almacenamiento persistente. Esto aprovecha el acceso directo de Windows Server a un dispositivo de memoria persistente en modo DAX.
 
-La versión preliminar de SQL Server 2019 agrega compatibilidad con dispositivos de memoria persistente (PMEM) para Linux, con lo que se facilita la optimización total de los archivos de registro de transacciones y datos colocados en PMEM. La optimización se refiere al método de acceso al dispositivo de almacenamiento con operaciones `memcpy()` de espacio del usuario eficientes. En lugar de pasar por el sistema de archivos y la pila de almacenamiento, SQL Server aprovecha la compatibilidad con DAX en Linux para colocar datos directamente en los dispositivos, lo que reduce la latencia.
+SQL Server 2019 agrega compatibilidad con dispositivos de memoria persistente (PMEM) para Linux, con lo que se facilita la optimización total de los archivos de registro de transacciones y datos colocados en PMEM. La optimización se refiere al método de acceso al dispositivo de almacenamiento con operaciones `memcpy()` de espacio del usuario eficientes. En lugar de pasar por el sistema de archivos y la pila de almacenamiento, SQL Server aprovecha la compatibilidad con DAX en Linux para colocar datos directamente en los dispositivos, lo que reduce la latencia.
 
 ## <a name="enable-enlightenment-of-database-files"></a>Habilitación de la optimización de archivos de base de datos
 Para habilitar la optimización de archivos de base de datos en SQL Server en Linux, siga estos pasos:

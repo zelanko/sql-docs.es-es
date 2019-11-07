@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 08/21/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653527"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531227"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Instalación de Extensiones de lenguaje (Java) de SQL Server 2019 en Linux
 
@@ -29,9 +29,11 @@ La ubicación del paquete de las extensiones de Java está en los repositorios d
 
 Extensiones de lenguaje también se admite en contenedores de Linux. No se proporcionan contenedores preintegrados con Extensiones de lenguaje, pero puede crear uno a partir de los contenedores de SQL Server mediante [una plantilla de ejemplo disponible en GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-## <a name="uninstall-previous-ctp-version"></a>Desinstalación de una versión CTP anterior
+Las extensiones de lenguaje y [Machine Learning Services](../advanced-analytics/index.yml) se instalan de forma predeterminada en los clústeres de macrodatos de SQL Server. Si usa clústeres de macrodatos, no es necesario que siga los pasos de este artículo. Para obtener más información, vea [Uso de Machine Learning Services (Python y R) en clústeres de macrodatos](../big-data-cluster/machine-learning-services.md).
 
-La lista de paquetes ha cambiado con las últimas versiones CTP, lo que ha dado lugar a menos paquetes. Antes de instalar RC 1, se recomienda desinstalar la versión CTP para quitar todos los paquetes anteriores. La instalación en paralelo de varias versiones no se admite.
+## <a name="uninstall-preview-version"></a>Desinstalación de la versión preliminar
+
+Si ha instalado una versión preliminar, como Community Technical Preview (CTP) o Release Candidate (RC), se recomienda desinstalarla para quitar todos los paquetes anteriores antes de instalar SQL Server 2019. No se admite la instalación en paralelo de varias versiones. Además, la lista de paquetes ha cambiado en varias de las últimas versiones preliminares (CTP/RC).
 
 ### <a name="1-confirm-package-installation"></a>1. Confirmación de la instalación del paquete
 
@@ -41,7 +43,7 @@ Es posible que quiera comprobar la existencia de una instalación anterior como 
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-packages"></a>2. Desinstalación de paquetes anteriores de CTP
+### <a name="2-uninstall-previous-ctprc-packages"></a>2. Desinstalación de paquetes anteriores de CTP/RC
 
 Realice la desinstalación en el nivel de paquete más bajo. Los paquetes superiores que dependen de un paquete de nivel inferior se desinstalan automáticamente.
 
@@ -55,7 +57,7 @@ Los comandos para quitar paquetes aparecen en la tabla siguiente.
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-install-release-candidate-1-rc-1"></a>3. Instalación de la versión candidata para lanzamiento 1 (RC 1)
+### <a name="3-install-sql-server-2019"></a>3. Instalación de SQL Server 2019
 
 Realice la instalación en el nivel de paquete más alto, siguiendo las instrucciones de este artículo correspondientes a su sistema operativo.
 
@@ -286,12 +288,9 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-the-rc-1-release"></a>Limitaciones de la versión RC 1
-
-Extensiones de lenguaje y la extensibilidad de Java en Linux todavía están en desarrollo activo. Las siguientes características aún no están habilitadas en la versión preliminar.
+## <a name="limitations"></a>Limitaciones
 
 + En este momento, la autenticación implícita no está disponible en Linux, lo que significa que no se puede volver a conectar al servidor desde Java en curso para acceder a datos u otros recursos.
-
 
 ### <a name="resource-governance"></a>Regulación de recursos
 

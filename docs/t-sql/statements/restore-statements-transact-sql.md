@@ -1,7 +1,7 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
-ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
+ms.openlocfilehash: cd6b2c3cea9876091532a5da3cf15bdda1da2d8d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916175"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73530930"
 ---
 # <a name="restore-statements-transact-sql"></a>Instrucciones RESTORE (Transact-SQL)
 
@@ -345,7 +345,7 @@ RESTORE no se permite en una transacción explícita o implícita.
 
 Para restaurar una base de datos **maestra** dañada se usa un procedimiento especial. Para obtener más información, vea [Realizar copias de seguridad y restaurar bases de datos del sistema](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).
 
-Al restaurar una base de datos se borra la memoria caché del plan para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
+Al restaurar una base de datos se borra la memoria caché del plan de la base de datos que se está restaurando. Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. 
 
 Para restaurar una base de datos de disponibilidad, restaure primero la base de datos a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, a continuación, agréguela al grupo de disponibilidad
 
@@ -373,6 +373,10 @@ La instrucción RESTORE también se puede utilizar para realizar restauraciones 
 
 > [!NOTE]
 > Los catálogos de texto completo importados de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se tratan todavía como archivos de base de datos. Para estos, el procedimiento de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] para realizar la copia de seguridad de los catálogos de texto completo se sigue pudiendo aplicar, excepto en que ya no es necesario pausar y reanudar la operación de copia de seguridad. Para más información, vea [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](https://go.microsoft.com/fwlink/?LinkId=107381).
+
+### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
+
+[!INCLUDE [big-data-clusters-master-instance-ha-endpoint-requirement](../../includes/big-data-clusters-master-instance-ha-endpoint-requirement.md)]
 
 ## <a name="metadata"></a>Metadatos
 

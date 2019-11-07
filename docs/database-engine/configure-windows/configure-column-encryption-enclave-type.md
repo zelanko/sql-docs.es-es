@@ -1,5 +1,5 @@
 ---
-title: column encryption enclave type (opción de configuración del servidor) | Microsoft Docs
+title: Configuración del tipo de enclave como opción de configuración del servidor Always Encrypted | Microsoft Docs
 ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
@@ -10,31 +10,38 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ec0b088d7ed1f32661a9ca171eb5f889c09ae5d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012798"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593822"
 ---
-# <a name="column-encryption-enclave-type-server-configuration-option"></a>column encryption enclave type (opción de configuración del servidor)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Configuración del tipo de enclave como opción de configuración del servidor Always Encrypted
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-  Use la opción **column encryption enclave type** para habilitar o deshabilitar un enclave seguro para Always Encrypted.  Para obtener más información, consulte [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+En este artículo se describe cómo habilitar o deshabilitar un enclave seguro para Always Encrypted con enclaves seguros. Para más información, consulte [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
- En la tabla siguiente se enumeran los posibles valores de **column encryption enclave type**:  
+La opción de configuración del servidor relativa al **tipo de enclave de cifrado de columnas** controla el tipo de un enclave seguro que se usa para Always Encrypted. La opción se puede establecer con los siguientes valores:  
   
 |Valor|Descripción|  
-|-------------------|-----------------|  
+|-------------------|-----------------| 
 |0|**Sin enclave seguro**. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no inicializará el enclave seguro para Always Encrypted. Como resultado, la funcionalidad de Always Encrypted con enclaves seguros no estará disponible.|  
-|1|**Seguridad basada en la virtualización (VBS)** . El [!INCLUDE[ssDE](../../includes/ssde-md.md)] inicializará el enclave seguro (un enclave de memoria seguro de VBS) para Always Encrypted.|    
+|1|**Seguridad basada en la virtualización (VBS)** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] intentará inicializar un enclave de seguridad basada en la virtualización (VBS).
 
 > [!IMPORTANT]
-> Los cambios efectuados en la opción **column encryption enclave type** no surtirán efecto hasta que reinicie la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
-  
+> Los cambios efectuados en el **tipo de enclave de cifrado de columnas** no surtirán efecto hasta que se reinicie la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
    
+Puede comprobar el valor del tipo enclave configurado y el valor del tipo enclave actualmente en vigor mediante la vista [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md). 
+
+Para confirmar que un enclave del tipo (mayor que 0) actualmente en vigor se ha inicializado correctamente después del último reinicio de [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)], compruebe la vista [sys.dm_column_encryption_enclave (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md):
+ - Si la vista contiene exactamente una fila, el enclave está inicializado correctamente. 
+ - Si la vista no contiene ninguna fila, consulte en el registro de errores de SQL Server los errores de inicialización del enclave. Consulte [Ver el registro de errores de SQL Server (SQL Server Management Studio)](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md).
+
+Para obtener instrucciones paso a paso sobre cómo configurar un enclave de VBS, consulte [Configurar Always Encrypted con enclaves seguros en SQL Server](../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md#step-3-enable-always-encrypted-with-secure-enclaves-in-sql-server).
+
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se habilita el enclave seguro:  
+ En el ejemplo siguiente se habilita el enclave seguro y se establece el tipo enclave en VBS:
 
 ```sql  
 sp_configure 'column encryption enclave type', 1;  
@@ -52,9 +59,25 @@ RECONFIGURE;
 GO  
 ```  
 
+La consulta siguiente recupera el tipo de enclave configurado y el tipo de enclave que está actualmente en vigor:
+
+```sql  
+USE [master];
+GO
+SELECT
+[value]
+, CASE [value] WHEN 0 THEN 'No enclave' WHEN 1 THEN 'VBS' ELSE 'Other' END AS [value_description]
+, [value_in_use]
+, CASE [value_in_use] WHEN 0 THEN 'No enclave' WHEN 1 THEN 'VBS' ELSE 'Other' END AS [value_in_use_description]
+FROM sys.configurations
+WHERE [name] = 'column encryption enclave type'; 
+```  
+## <a name="next-steps"></a>Next Steps
+ [Administración de claves para Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)
+
 ## <a name="see-also"></a>Consulte también  
+ [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
-  
-  
+ [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys.dm_column_encryption_enclave (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-column-encryption-enclave.md)   

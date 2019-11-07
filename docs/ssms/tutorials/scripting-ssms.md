@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d4bf028163905763ae87f04e03c0a95ddf4abcaf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 36d3b90a9ac1e49af564323c86421216216522a9
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263362"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72988415"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Creación de scripts de objetos en SQL Server Management Studio
 
@@ -209,7 +209,7 @@ En esta sección se explica cómo crear scripts de [eventos extendidos](https://
 
 4. Expanda el nodo **Sesiones**.
 
-5. Haga clic con el botón derecho en la sesión extendida que le interese > **Generar script de sesión como** > **Nueva ventana del Editor de consultas**:
+5. Haga clic con el botón derecho en la sesión extendida que le interese, en **Incluir sesión como** > **CREATE To** > **Nueva ventana del Editor de consultas**:
 
     ![Sesión ampliada de Nueva ventana del Editor de consultas](media/scripting-ssms/scriptxevents.png)
 

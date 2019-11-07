@@ -5,24 +5,24 @@ description: Artículo de referencia para los comandos azdata bdc endpoint.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/28/2019
+ms.date: 11/04/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7dfbbf9c7b26fda5c426c6e2bf2915f2bb49926a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.openlocfilehash: 9f5f5c25def3408d9b8ed396536e34cc9b247a7a
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155251"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73531821"
 ---
 # <a name="azdata-bdc-endpoint"></a>azdata bdc endpoint
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-Este artículo es un artículo de referencia para **azdata**. 
+En el artículo siguiente se proporciona una referencia de los comandos de `sql` de la herramienta `azdata`. Para obtener más información sobre otros comandos de `azdata`, vea [Referencia de azdata](reference-azdata.md).
 
-## <a name="commands"></a>Comandos:
+## <a name="commands"></a>Comandos
 |     |     |
 | --- | --- |
 [azdata bdc endpoint list](#azdata-bdc-endpoint-list) | Enumera los puntos de conexión para el clúster de macrodatos.
@@ -30,25 +30,22 @@ Este artículo es un artículo de referencia para **azdata**.
 Enumera los puntos de conexión para el clúster de macrodatos.
 ```bash
 azdata bdc endpoint list [--endpoint-name -e] 
-                         
-```
-### <a name="optional-parameters"></a>Parámetros opcionales
+       ```
+### Optional Parameters
 #### `--endpoint-name -e`
-Nombre del punto de conexión del clúster de macrodatos.
-### <a name="global-arguments"></a>Argumentos globales
+Big data cluster endpoint name.
+### Global Arguments
 #### `--debug`
-Aumente el nivel de detalle de registro para mostrar todos los registros de depuración.
+Increase logging verbosity to show all debug logs.
 #### `--help -h`
-Muestre este mensaje de ayuda y salga.
+Show this help message and exit.
 #### `--output -o`
-Formato de salida.  Valores permitidos: json, jsonc, table y tsv.  Valor predeterminado: json.
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-Cadena de consulta de JMESPath. Para obtener más información y ejemplos, vea [http://jmespath.org/](http://jmespath.org/]).
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
 #### `--verbose`
-Aumente el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
+Increase logging verbosity. Use --debug for full debug logs.
 
-## <a name="next-steps"></a>Pasos siguientes
+## Next steps
 
-- Para obtener más información sobre otros comandos de **azdata**, vea la [Referencia de azdata](reference-azdata.md). 
-
-- Para obtener más información sobre cómo instalar la herramienta **azdata**, vea [Instalación de azdata para administrar clústeres de macrodatos de SQL Server 2019](deploy-install-azdata.md).
+For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](deploy-install-azdata.md).

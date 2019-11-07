@@ -1,5 +1,5 @@
 ---
-title: Migración de información confidencial protegida mediante Always Encrypted | Microsoft Docs
+title: Carga masiva de datos cifrados en columnas con Always Encrypted | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2015
 ms.prod: sql
@@ -10,28 +10,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff72a94df79c6f8fe7b8bb37caeb57587e44b034
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111673"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594167"
 ---
-# <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Migración de datos confidenciales protegidos mediante Always Encrypted
+# <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Carga masiva de datos cifrados en columnas con Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Para cargar datos cifrados sin tener que volver realizar comprobaciones de metadatos en el servidor durante las operaciones de copia masiva, cree el usuario con la opción **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Esta opción se ha diseñado para usarse con herramientas heredadas de versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] (por ejemplo, bcp.exe) o flujos de trabajo de extracción, transformación y carga (ETL) de terceros que no pueden usar Always Encrypted. De esta forma, el usuario puede mover de forma segura los datos cifrados de un conjunto de tablas, que contengan las columnas cifradas, a otro conjunto de tablas con columnas cifradas (en la misma base de datos o en otra diferente).  
+Para cargar datos cifrados sin tener que volver realizar comprobaciones de metadatos en el servidor durante las operaciones de copia masiva, cree el usuario con la opción **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** . Esta opción se ha diseñado para usarse con herramientas heredadas o flujos de trabajo de extracción, transformación y carga (ETL) de terceros que no pueden usar Always Encrypted. De esta forma, el usuario puede mover de forma segura los datos cifrados de un conjunto de tablas, que contengan las columnas cifradas, a otro conjunto de tablas con columnas cifradas (en la misma base de datos o en otra diferente).  
 
- ## <a name="the-allowencryptedvaluemodifications-option"></a>La opción ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
+ ## <a name="the-allow_encrypted_value_modifications-option"></a>La opción ALLOW_ENCRYPTED_VALUE_MODIFICATIONS  
  Tanto [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) como [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) tienen la opción ALLOW_ENCRYPTED_VALUE_MODIFICATIONS. Cuando el valor se establece en ON (la opción predeterminada es OFF), esta opción suprime las comprobaciones de metadatos criptográficos del servidor en operaciones de copia masiva, lo que permite al usuario copiar los datos de forma masiva entre tablas o bases de datos sin descifrar los datos.  
   
 ## <a name="data-migration-scenarios"></a>Escenarios de migración de datos  
 En la siguiente tabla se muestra la configuración recomendada adecuada para varios escenarios de migración.  
  
-![Migración de Always Encrypted](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "Migración de Always Encrypted")  
+![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
 
 ## <a name="bulk-loading-of-encrypted-data"></a>Carga masiva de datos cifrados  
 Utilice el siguiente proceso para cargar datos cifrados.  
@@ -42,7 +42,7 @@ Utilice el siguiente proceso para cargar datos cifrados.
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
    ```  
 
-2.  Ejecute la herramienta o aplicación de copia masiva que conectándose como ese usuario. Si la aplicación usa un controlador cliente con Always Encrypted habilitado, asegúrese de que la cadena de conexión del origen de datos no contiene **column encryption setting=enabled** para garantizar que los datos recuperados de las columnas cifradas permanecen cifrados. Para obtener más información, vea [Always Encrypted &#40;desarrollo de cliente&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)).  
+2.  Ejecute la herramienta o aplicación de copia masiva que conectándose como ese usuario. Si la aplicación usa un controlador cliente con Always Encrypted habilitado, asegúrese de que la cadena de conexión del origen de datos no contiene **column encryption setting=enabled** para garantizar que los datos recuperados de las columnas cifradas permanecen cifrados. Para obtener más información, consulte [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md).  
   
 3.  Vuelva a establecer el valor de la opción ALLOW_ENCRYPTED_VALUE_MODIFICATIONS en OFF. Por ejemplo:  
 
@@ -69,11 +69,15 @@ Utilice mediante esta opción cuentas de usuario designadas para cargas de traba
  
 En las herramientas o las aplicaciones de copia masiva que se ejecutan en periodos breves y que necesitan mover los datos cifrados sin descifrarlos, establezca el valor de la opción en ON inmediatamente antes de ejecutar la aplicación y revierta el valor a OFF justo después de ejecutar la operación.  
  
-No utilice esta opción para desarrollar nuevas aplicaciones. En su lugar, use un controlador de cliente (como ADO 4.6.1), que ofrece una API para suprimir las comprobaciones de metadatos criptográficos en una sola sesión.  
+No utilice esta opción para desarrollar nuevas aplicaciones. En su lugar, use un controlador de cliente que ofrezca una API para suprimir las comprobaciones de metadatos criptográficos para una sola sesión, como la opción AllowEncryptedValueModifications del proveedor de datos .NET Framework para SQL Server. Para más detalles, consulte [Copiar datos cifrados con SqlBulkCopy](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy). 
+
+## <a name="next-steps"></a>Next Steps
+- [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
+- [Desarrollo de aplicaciones con Always Encrypted](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>Consulte también  
-[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
-[ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
-[Always Encrypted &#40;motor de base de datos&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Asistente para Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-[Always Encrypted &#40;desarrollo de cliente&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Migración de datos a o desde columnas mediante Always Encrypted con el Asistente para importación y exportación de SQL Server](always-encrypted-migrate-using-import-export-wizard.md)
+- [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
+- [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
+

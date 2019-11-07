@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 10/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b28cde8935c3a2c4b25f20ef727358b918e6680
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 6b67218c4b2d48b3a99ad896105a2069f5d8bcde
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155654"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594484"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -397,9 +397,6 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
     | DEFAULT_LANGUAGE = language
 ```
 
-> [!IMPORTANT]
-> Los inicios de sesión de Azure AD para Instancia administrada de SQL Database están en **versión preliminar pública**. Esto se presentó con la sintaxis **FROM EXTERNAL PROVIDER**.
-
 ## <a name="arguments"></a>Argumentos
 
 *login_name*Cuando se usa con la cláusula **FROM EXTERNAL PROVIDER**, el inicio de sesión especifica la entidad de seguridad de Azure Active Directory (AD), que es un usuario, un grupo o una aplicación de Azure AD. En caso contrario, el inicio de sesión representa el nombre del inicio de sesión SQL que se ha creado.
@@ -423,12 +420,6 @@ SID **=** *sid* Se usa para volver a crear un inicio de sesión. Solo se aplica 
     - UserPrincipalName del objeto Azure AD para los usuarios de Azure AD.
     - DisplayName del objeto Azure AD para los grupos de Azure AD y las aplicaciones de Azure AD.
   - No se puede usar la opción **PASSWORD**.
-  - Actualmente, el primer inicio de sesión de Azure AD lo tiene que crear la cuenta de SQL Server estándar (que no sea de Azure AD) que sea `sysadmin` mediante la sintaxis anterior.
-  - Al crear un inicio de sesión de Azure AD mediante un administrador de Azure AD para la Instancia administrada de SQL Database, se produce el error siguiente:</br>
-      `Msg 15247, Level 16, State 1, Line 1
-      User does not have permission to perform this action.`
-  - Se trata de una limitación conocida de la **versión preliminar pública** y se corregirá en el futuro.
-  - Una vez creado el primer inicio de sesión de Azure AD, este puede crear otros inicios de sesión de Azure AD una vez que se le hayan concedido los permisos necesarios.
 - De forma predeterminada, cuando se omite la cláusula **FROM EXTERNAL PROVIDER**, se crea un inicio de sesión SQL convencional.
 - Los inicios de sesión de Azure AD son visibles en sys.server_principals, con el valor de columna de tipo establecido en **E** y type_desc establecido en **EXTERNAL_LOGIN** para los inicios de sesión asignados a usuarios de Azure AD, o bien con el valor de tipo de columna establecido en **X** y el valor type_desc establecido en **EXTERNAL_GROUP** para los inicios de sesión asignados a grupos de Azure AD.
 - Para obtener un script para transferir inicios de sesión, vea [Cómo transferir los inicios de sesión y las contraseñas entre instancias de SQL Server 2005 y SQL Server 2008](https://support.microsoft.com/kb/918992).
@@ -463,6 +454,7 @@ Después de crear un inicio de sesión, se puede conectar a una Instancia admini
 - Solo las entidades de seguridad de nivel de servidor de SQL (inicios de sesión) que formen parte del rol `sysadmin` pueden ejecutar las operaciones siguientes destinadas a entidades de seguridad de Azure AD:
   - EXECUTE AS USER
   - EXECUTE AS LOGIN
+- Los usuarios externos (invitados) que se han importado desde otro directorio de Azure AD no se pueden configurar directamente como administradores de Azure AD para la instancia administrada. En su lugar, debe unir a los usuarios externos a un grupo de Azure AD con seguridad habilitada y configurar este grupo como administrador de la instancia.
 
 ## <a name="examples"></a>Ejemplos
 

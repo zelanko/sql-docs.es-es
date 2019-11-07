@@ -1,7 +1,7 @@
 ---
-title: Extensión de Instancia administrada de Azure°SQL
+title: Extensión de instancia administrada de Azure SQL Database
 titleSuffix: Azure Data Studio
-description: Uso de Azure Data Studio con Instancia administrada de Azure SQL
+description: Uso de Azure Data Studio con una instancia administrada de Azure SQL
 ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alayu; sstein
@@ -11,90 +11,91 @@ ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: d443292fb091679d3d6a18d557a5a7aac464fdec
-ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
+ms.openlocfilehash: e5dc5cb87bcadda9600768d0840699f683492a54
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72041143"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594010"
 ---
-# <a name="managed-instance-support-for-azure-data-studio-preview"></a>Compatibilidad de Instancia administrada para Azure Data Studio (versión preliminar)
+# <a name="azure-sql-database-managed-instance-dashboard-for-azure-data-studio-preview"></a>Panel de instancias administradas de Azure SQL Database para Azure Data Studio (versión preliminar)
 
-Esta extensión le permite trabajar con [Instancia administrada de Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) en [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Esta extensión proporciona las características siguientes:
+La extensión de instancia administrada de Azure SQL Database proporciona un panel para trabajar con una [instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) en [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Esta extensión proporciona las características siguientes:
 
-- Mostrar las propiedades de Instancia administrada (núcleos virtuales, almacenamiento usado).
-- Supervisar el uso de la CPU y el almacenamiento en las últimas dos horas.
-- Mostrar recomendaciones de ajustes y advertencias de configuración.
-- Mostrar el estado de las réplicas de bases de datos.
-- Mostrar los registros de errores con filtros.
+- Muestra las propiedades de instancia administrada, incluidos los núcleos virtuales y el almacenamiento usado.
+- Supervisa el uso de CPU y de almacenamiento de las dos horas anteriores.
+- Muestra recomendaciones de ajustes y advertencias de configuración.
+- Muestra el estado de las réplicas de bases de datos.
+- Muestra los registros de errores con filtros.
 
-## <a name="installations"></a>Instalaciones
+## <a name="install"></a>Instalar
 
-Para instalar la versión oficial de la extensión de Instancia administrada, siga el procedimiento que se indica en la [documentación de Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
-En el panel Extensiones, busque la extensión "Instancia administrada" e instálela.  Recibirá notificaciones automáticamente sobre las futuras actualizaciones de la extensión.
+Puede instalar la versión oficial de esta extensión. Siga los pasos descritos en la [documentación de Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+En el panel **Extensiones**, busque "instancia administrada" e instálela ahí. Una vez que esté instalada, recibirá notificaciones automáticamente sobre las futuras actualizaciones de la extensión.
 
-Una vez que instale la extensión Instancia administrada, verá una pestaña `Managed Instance` en Azure Data Studio. En esta pestaña, puede encontrar información específica para Instancia administrada.
+Con la extensión instalada, verá la pestaña **Instancia administrada** en Azure Data Studio. Aquí puede encontrar información específica para su instancia administrada.
 
 ## <a name="properties"></a>Propiedades
 
-Esta extensión le permite ver las características técnicas de su Instancia administrada y el uso de ciertos recursos.
+Esta extensión muestra las características técnicas y el uso de algunos recursos de su instancia administrada.
 
-![Propiedades de Instancia administrada](media/azure-sql-mi-extension/ads-mi-tab1.png)
+[ ![Propiedades de la instancia administrada](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
-En la primera hoja, puede ver los detalles siguientes:
+En el panel superior se muestran los detalles siguientes:
 
-- Las **propiedades básicas**, como el número de núcleos virtuales disponibles, memoria, almacenamiento, nivel de servicio actual y generación de hardware, y las características de I/O, como las características de I/O o rendimiento de archivo o rendimiento de escritura de registros de instancia.
-- **Uso del almacenamiento SSD local**. En el nivel de servicio de uso general, solo los archivos **TEMPDB** se colocan de manera local, mientras que en el nivel crítico para la empresa, todos los archivos de base de datos se colocan en el almacenamiento SSD local. En esta sección, puede ver cuánto espacio del almacenamiento local usa la Instancia administrada.
-- **Uso de Azure Premium Disk Storage**: las bases de datos de usuario y sistema en el nivel de servicio de uso general se ubican en Azure Premium Storage. Aquí puede encontrar la cantidad de datos que usó y cuál es el almacenamiento restante y el número de archivos. Esta sección está vacía en el nivel de servicio crítico para la empresa.
-- El **uso de recursos** que le mostrará cuánto almacenamiento y CPU usó su instancia en las últimas dos horas. Aumente el tamaño de la instancia si ya está alcanzando el límite.
+- **Propiedades**. Obtenga información básica sobre su instancia administrada, incluidos los núcleos virtuales, la memoria y el almacenamiento disponibles. Conozca también su nivel de servicio actual, la generación de hardware y las características de E/S, como el rendimiento de escritura del registro de la instancia o las características de rendimiento de E/S de los archivos.
+- **Almacenamiento SSD local**. En el nivel de servicio de uso general, los archivos de **TempDB** se almacenan de forma local. En el nivel de servicio crítico para la empresa, _todos_ los archivos de base de datos se almacenan en unidades de estado sólido locales. En esta sección, puede ver cuánto espacio del almacenamiento local usa su instancia administrada.
+- **Azure Premium Disk Storage**. Si tiene el nivel de servicio de uso general, los archivos de base de datos del sistema y del usuario se almacenan en Azure Premium. En esta sección, puede ver la cantidad de datos usados, el número de archivos y el almacenamiento disponible. Esta sección está vacía en el nivel de servicio crítico para la empresa.
+- **Uso de los recursos**. Vea el porcentaje de almacenamiento y CPU que ha usado su instancia administrada durante las dos horas anteriores. De este modo, puede aumentar el tamaño de la instancia si está cerca del límite.
 
 ## <a name="recommendations"></a>Recomendaciones
 
-Esta extensión proporciona algunas recomendaciones y alertas que pueden ayudarlo a optimizar la Instancia administrada.
+Si selecciona el segundo panel en la pestaña **Instancia administrada**, obtendrá recomendaciones y alertas que le ayudarán a optimizar su instancia administrada.
 
-![Recomendaciones de Instancia administrada](media/azure-sql-mi-extension/ads-mi-tab2.png)
+[ ![Recomendaciones para la instancia administrada](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
-Algunas de las recomendaciones que se muestran en esta tabla son:
+Es posible que vea algunas de las siguientes recomendaciones:
 
-- Al llegar al límite de espacio de almacenamiento: debe eliminar los datos innecesarios o aumentar el tamaño de almacenamiento de la instancias, porque las bases de datos que alcanzan el límite de almacenamiento podrían no procesar ni siquiera las consultas de lectura.
-- Al llegar al límite de rendimiento de la instancia: si está cargando ~22 MB/s en GP o ~48 MB/s en BC, Instancia administrada limitará la carga para garantizar que se puedan realizar copias de seguridad.
-- Presión de memoria: una duración prevista de la página baja o una gran cantidad de estadísticas de espera `PAGEIOLATCH` podrían indicar que la instancia expulsa páginas de la memoria e intenta constantemente cargar más páginas del disco.
-- Límites del archivo de registro: si los registros están llegando a los [límites de I/O en el nivel de servicio de uso general](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), es posible que tenga que aumentar el tamaño de archivo para obtener un mejor rendimiento.
-- Límites del archivo de datos: si los archivos de datos están llegando a los [límites de I/O en el nivel de servicio de uso general](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), es posible que tenga que aumentar el tamaño de archivo para obtener un mejor rendimiento. Este problema podría generar presión de memoria y ralentizar las copias de seguridad.
-- Problemas de disponibilidad: un gran número de archivos de registro virtuales puede causar un impacto en el rendimiento y una posible recuperación de base de datos más prolongada en el nivel de servicio de uso general en caso de error en el proceso.
+- **Se está alcanzando el límite de espacio de almacenamiento**. Elimine los datos innecesarios o aumente el tamaño de almacenamiento de la instancia. Las bases de datos que alcanzan el límite de almacenamiento podrían no procesar, o incluso no leer, las consultas.
+- **Se está alcanzando el límite de rendimiento de la instancia**. Le informa cuando la carga está cerca del límite de su nivel de servicio: 22 MB/s para el nivel de servicio de uso general o 48 MB/s para el nivel de servicio crítico para la empresa. Tenga en cuenta que la instancia administrada limitará la carga para garantizar que se puedan realizar copias de seguridad.
+- **Presión de memoria**. Una baja duración prevista de la página o una gran cantidad de estadísticas de espera `PAGEIOLATCH` podrían indicar que la instancia expulsa páginas de la memoria e intenta constantemente cargar más páginas del disco.
+- **Límites del archivo de registro**. Si los archivos de registro están llegando a los [límites de E/S en el nivel de servicio de uso general](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), es posible que tenga que aumentar el tamaño del archivo de registro para obtener un mejor rendimiento.
+- **Límites de los archivos de datos**. Si sus archivos de datos están llegando a los [límites de E/S en el nivel de servicio de uso general](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), es posible que tenga que aumentar el tamaño del archivo para obtener un mejor rendimiento. Este problema podría generar presión de memoria y ralentizar las copias de seguridad.
+- **Problemas de disponibilidad**. Un gran número de archivos de registro virtuales puede afectar al rendimiento. Si se produce un error de proceso, estos problemas pueden dar lugar a una recuperación de bases de datos más larga en el nivel de servicio de uso general.
 
-Debe revisar periódicamente estas recomendaciones, investigar las causas principales y llevar a cabo acciones correctivas. La extensión de instancia administrada proporciona los scripts que se pueden ejecutar para mitigar algunos de los problemas detectados.
+Revise periódicamente estas recomendaciones, investigue las causas principales y tome medidas para corregir cualquier problema. La extensión de instancia administrada de Azure SQL Database proporciona scripts que puede ejecutar para mitigar algunos de los problemas detectados.
 
 ## <a name="replicas"></a>Réplicas
 
-La extensión de instancia administrada le permite ver el estado de las réplicas de base de datos en la Instancia administrada.
+El tercer panel de la pestaña **Instancia administrada** muestra el estado de las réplicas de base de datos en su instancia administrada.
 
-![Réplicas de instancia administrada](media/azure-sql-mi-extension/ads-mi-tab3.png)
+[ ![Réplicas de la instancia administrada](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
-En el nivel de servicio de uso general, cada base de datos tiene una única réplica (principal), mientras que en la instancia crítica para la empresa, cada base de datos tiene una réplica principal y tres réplicas secundarias (una se usa para cargas de trabajo de solo lectura). Aquí puede supervisar el proceso de sincronización y comprobar que todas las réplicas secundarias están sincronizadas con la réplica principal.
+En el nivel de servicio de uso general, cada base de datos tiene una única réplica (principal). En una instancia de nivel de servicio crítico para la empresa, cada base de datos tiene una réplica principal y tres secundarias, una de las cuales se usa para las cargas de trabajo de solo lectura. En el panel **Réplicas**, puede supervisar el proceso de sincronización y comprobar que todas las réplicas secundarias están sincronizadas con la réplica principal.
 
 ## <a name="logs"></a>Registros
 
-La extensión de instancia administrada muestra las últimas entradas del registro de errores de SQL más pertinentes.
+En el cuarto panel de **Instancia administrada** se muestran las entradas más recientes y relevantes del registro de errores de SQL.
 
-![Entradas de registro de Instancia administrada](media/azure-sql-mi-extension/ads-mi-tab4.png)
+[ ![Entradas de registro de la instancia administrada](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
-La Instancia administrada emite un gran número de entradas de registro y la mayoría de ellas son información del sistema/internas. Algunas entradas del registro muestran los nombres de las bases de datos físicas (valores `GUID`) en lugar de los nombres de las bases de datos lógicas reales.
+Aunque su instancia administrada genera un gran número de entradas de registro, la mayoría de ellas son internas o de información del sistema. Además, algunas entradas del registro muestran los nombres de las bases de datos físicas (valores `GUID`) en lugar de los nombres de las bases de datos lógicas reales.
 
-La extensión de instancia administrada filtra las entradas de registro innecesarias en función del [método Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506) y muestra los nombres de archivos lógicos reales en lugar de los nombres físicos.
+La extensión de instancia administrada de Azure SQL Database filtra las entradas de registro innecesarias según el [método Dimitri Furman](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). La extensión también muestra los nombres de los archivos lógicos reales en lugar de los nombres físicos.
 
 ## <a name="reporting-problems"></a>Informar de problemas
 
-Si tiene problemas con la extensión de instancia administrada, informe del problema en el [proyecto de extensión de GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues).
-
-## <a name="maintainers"></a>Mantenedores
-
-- [Jovan Popovic (MSFT)](https://github.com/jovanpop_msft) - [@jovanpop_msft](https://twitter.com/JovanPop_MSFT)
+Si tiene problemas con la extensión de instancia administrada de Azure SQL Database, vaya al [proyecto de extensión de GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) e informe del problema.
 
 ## <a name="code-of-conduct"></a>Código de conducta
 
 El proyecto ha adoptado el [Código de conducta de código abierto de Microsoft][conduct-code].
+
 Para obtener más información, vea las [Preguntas más frecuentes sobre el código de conducta][conduct-FAQ], o póngase en contacto con [opencode@microsoft.com][conduct-email] si tiene preguntas o comentarios.
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Para obtener más información, visite el [proyecto de GitHub](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/).
 
 [conduct-code]: http://opensource.microsoft.com/codeofconduct/
 [conduct-FAQ]: http://opensource.microsoft.com/codeofconduct/faq/

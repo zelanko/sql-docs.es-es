@@ -1,7 +1,7 @@
 ---
 title: ALTER USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2019
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d49b2489cc17388029a9e44cce415b4040fc035f
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: 66b96ee7f4c7cbd17133149a138a60296c5cb24d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049759"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593687"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -523,6 +523,9 @@ El nombre de un usuario asignado a un inicio de sesión de [!INCLUDE[ssNoVersion
 ### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-managed-instance"></a>Comentarios para usuarios de Windows en SQL en el entorno local migrados a la instancia administrada
 
 Estas notas se aplican a la autenticación como usuarios de Windows que se han federado y sincronizado con Azure AD.
+
+> [!NOTE]
+> La funcionalidad de administrador de Azure AD para la instancia administrada después de la creación ha cambiado. Para obtener más información, consulte [Nueva funcionalidad de administrador de Azure AD para MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 - La validación de los usuarios o grupos de Windows que se asignan a Azure AD se realiza de forma predeterminada a través de Graph API en todas las versiones de la sintaxis de ALTER USER usada para la migración.
 - Los usuarios locales con alias (use un nombre diferente de la cuenta de Windows original) conservarán el nombre con alias.

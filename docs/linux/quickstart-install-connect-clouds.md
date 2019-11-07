@@ -4,17 +4,17 @@ titleSuffix: SQL Server
 description: En este inicio rápido se muestra cómo ejecutar SQL Server en Linux en la nube que elija.
 author: VanMSFT
 ms.author: vanto
-ms.date: 10/25/2017
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 39cde4a4f3b4e970bfe1367432e986c48f55a975
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 402466ab44a5f3795c0031ecdaa33cb863279839
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67910524"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594556"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Inicio rápido: Ejecutar SQL Server en la nube
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
@@ -27,7 +27,7 @@ En este inicio rápido, instalará SQL Server en Red Hat Enterprise Linux (RHEL)
 ## <a name="amazon-web-services"></a>Amazon Web Services
 1.  Cree una AMI de Linux con al menos 2 GB de memoria desde Marketplace. 
     * [RHEL 7.3+](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
-    * [SLES v12 SP2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
+    * [SLES v12 SP2+](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
 1.  Conéctese a la AMI mediante SSH.
 1.  Siga el inicio rápido de la distribución de Linux que haya elegido: 
@@ -53,7 +53,7 @@ En este inicio rápido, instalará SQL Server en Red Hat Enterprise Linux (RHEL)
 ## <a name="google-cloud-platform"></a>Google Cloud Platform
 1.  Cree una imagen de Linux con al menos 2 GB de memoria desde Cloud Launcher. 
     * [RHEL 7.3+](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
-    * [SLES v12 SP2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
+    * [SLES v12 SP4](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)
 1.  Conéctese a la imagen mediante SSH.
 1.  Siga el inicio rápido de la distribución de Linux que haya elegido: 

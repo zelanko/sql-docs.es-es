@@ -1,6 +1,6 @@
 ---
-title: Método SetValue (clase ClientSettingsGeneralFlag) | Microsoft Docs
-ms.custom: ''
+title: Método SetValue (ClientSettingsGeneralFlag)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ea41844f5492174b67fedba6b9a2326af9a44eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3f5fce9c795591ca7f8af41762fc9e9438aba2b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089128"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660108"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>Método SetValue (clase ClientSettingsGeneralFlag)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ object.SetValue(Value)
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|*Valor*|Valor booleano que especifica el valor de la marca.|  
+|*Value*|Valor booleano que especifica el valor de la marca.|  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  

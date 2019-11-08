@@ -11,23 +11,22 @@ ms.assetid: 2225f6ab-a6cf-4c95-8291-2d2a13be7952
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29002e403b028f9f879782241588961a04007b65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 463044bbc0a4b930403ab5ba481bf54ffa05c8ee
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110099"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789921"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Enviar datos a FILESTREAM: ISequentialStream enlazado a ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   En este ejemplo se usa una interfaz ISequentialStream enlazada a un parámetro ICommandText para enviar entre 4 MB y 4 GB de datos a una columna de secuencia de archivos.  
   
- Para obtener más información sobre la característica filestream, vea [compatibilidad con FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Para obtener más información sobre la característica FileStream, vea [compatibilidad &#40;de&#41;FileStream OLE DB](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Ejemplo  
- Antes de compilar y ejecutar este ejemplo, habilitar la compatibilidad con FILESTREAM ([habilitar y configurar FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Antes de compilar y ejecutar este ejemplo, habilite la compatibilidad con FILESTREAM ([habilitar y configurar FileStream](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   

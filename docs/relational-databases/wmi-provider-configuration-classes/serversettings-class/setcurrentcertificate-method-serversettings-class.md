@@ -1,6 +1,6 @@
 ---
-title: Método SetCurrentCertificate (clase ServerSettings) | Microsoft Docs
-ms.custom: ''
+title: Método SetCurrentCertificate (ServerSettings)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70b0e71ad9bdd0bc4c0abb8c1ee0f57c08f818bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8c9539157207e458f6a5d7d587709a94dfdc4912
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052837"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659102"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>Método SetCurrentCertificate (clase ServerSettings)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,6 +51,6 @@ object.SetCurrentCertificate(SHA)
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuración de protocolos de red de servidor y bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

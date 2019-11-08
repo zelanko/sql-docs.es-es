@@ -18,16 +18,15 @@ ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ddd9e8d0fb8b5c22dc73d0a11b6257583be07a8
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: e7cf91baeb6771f0abb52fb5b8f4c4dc2bddafe0
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907520"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785283"
 ---
 # <a name="using-data-files-and-format-files"></a>Utilizar archivos de datos y archivos de formato
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   El programa de copia masiva más simple hace lo siguiente:  
   
@@ -39,23 +38,23 @@ ms.locfileid: "72907520"
   
  Para realizar la copia masiva del conjunto de resultados de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] en lugar de directamente de una tabla o vista:  
   
-1.  Llame a **bcp_init** para especificar la copia masiva, pero especifique NULL para el nombre de la tabla.  
+1.  Llame a **bcp_init** para especificar las copias masivas, pero especifique NULL para el nombre de la tabla.  
   
-2.  Llame a [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) con *EOPTION* establecido en BCPHINTS y *iValue* establecido en un puntero a una cadena de SQLTCHAR que contiene la instrucción de Transact-SQL.  
+2.  Llame a [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) con *EOPTION* establecido en BCPHINTS y *iValue* establecido en un puntero a una cadena SQLTCHAR que contiene la instrucción Transact-SQL.  
   
 3.  Llame a **bcp_exec** para ejecutar la operación de copia masiva.  
 
  La instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] puede ser cualquier instrucción que genere un conjunto de resultados. Se crea el archivo de datos que contiene el primer conjunto de resultados de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. La copia masiva omite cualquier conjunto de resultados tras la primera si la instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] genera varios conjuntos de resultados.  
   
- Para crear un archivo de datos en el que los datos de columna se almacenen en un formato diferente que en la tabla, llame a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) para especificar el número de columnas que se van a cambiar y, a continuación, llame a [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) para cada columna cuyo formato desee cambiar. Esto se hace después de llamar a **bcp_init** , pero antes de llamar a **bcp_exec**. **bcp_colfmt** especifica el formato en el que se almacenan los datos de la columna en el archivo de datos. Se puede usar cuando se realiza una copia masiva de dentro o fuera. También puede usar **bcp_colfmt** para establecer los terminadores de fila y de columna. Por ejemplo, si los datos no contienen caracteres de tabulación, puede crear un archivo delimitado por tabuladores utilizando **bcp_colfmt** para establecer el carácter de tabulación como el terminador de cada columna.  
+ Para crear un archivo de datos en el que los datos de columna se almacenen en un formato diferente que en la tabla, llame a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) para especificar el número de columnas que se van a cambiar y, a continuación, llame a [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) para cada columna cuyo formato desee cambiar. Esto se hace después de llamar a **bcp_init** pero antes de llamar a **bcp_exec**. **bcp_colfmt** especifica el formato en el que se almacenan los datos de la columna en el archivo de datos. Se puede usar cuando se realiza una copia masiva de dentro o fuera. También puede usar **bcp_colfmt** para establecer los terminadores de fila y de columna. Por ejemplo, si los datos no contienen caracteres de tabulación, puede crear un archivo delimitado por tabuladores mediante **bcp_colfmt** para establecer el carácter de tabulación como el terminador de cada columna.  
   
  Cuando se realiza una copia masiva y se usa **bcp_colfmt**, puede crear fácilmente un archivo de formato que describa el archivo de datos que ha creado llamando a [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) después de la última llamada a **bcp_colfmt**.  
   
- Cuando se realiza una copia masiva desde un archivo de datos descrito por un archivo de formato, se lee el archivo de formato mediante una llamada a [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) después de **bcp_init** , pero antes de **bcp_exec**.  
+ Cuando se realiza una copia masiva desde un archivo de datos descrito por un archivo de formato, se lee el archivo de formato mediante una llamada a [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) después de **bcp_init** pero antes de **bcp_exec**.  
   
  La función **bcp_control** controla varias opciones cuando la copia masiva se realiza en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un archivo de datos. **bcp_control** establece opciones, como el número máximo de errores antes de la finalización, la fila del archivo en el que se va a iniciar la copia masiva, la fila en la que se va a detener y el tamaño del lote.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Realizar operaciones &#40;de copia masiva ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

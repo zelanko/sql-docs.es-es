@@ -1,5 +1,5 @@
 ---
-title: Cómo se determinan los permisos (Master Data Services) | Microsoft Docs
+title: Cómo se determinan los permisos
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5b028625f1c236c96c39e75f08057f82fa852bd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d08d65d13aec3812003b8d7d70f700662a592d14
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945186"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729184"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Cómo se determinan los permisos (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "67945186"
   
  ![mds_conc_security_no_overlap](../master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>Paso 1: Se determinan los permisos de atributo efectivos.  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>Paso 1: se determinan los permisos de atributo efectivos.  
  En la siguiente lista se describe cómo se determinan los permisos de atributo efectivos:  
   
 -   Los permisos asignados a objetos de modelo determinan a qué atributos puede tener acceso un usuario.  
@@ -53,7 +53,7 @@ ms.locfileid: "67945186"
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Paso 2: Si se asignan los permisos de los miembros de una jerarquía, se determinan los permisos de miembros efectivos.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Paso 2: si se asignan los permisos de los miembros de una jerarquía, se determinan los permisos de miembros efectivos.  
  En la siguiente lista se describe cómo se determinan los permisos de los miembros de una jerarquía efectivos:  
   
 -   Los permisos asignados a los nodos de la jerarquía determinan a qué miembros puede tener acceso un usuario.  
@@ -68,8 +68,8 @@ ms.locfileid: "67945186"
   
  ![mds_conc_inheritance_hierarchy](../master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Paso 3: Se determina la intersección de los permisos de atributo y de miembro.  
- Si los permisos de atributo efectivos son diferentes que los permisos de miembro efectivos, los permisos se deben determinar para cada valor de atributo individual. Para obtener más información, consulte [Superponer permisos de modelo y de miembro &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Paso 3: se determina la intersección los permisos de atributo y de miembro.  
+ Si los permisos de atributo efectivos son diferentes que los permisos de miembro efectivos, los permisos se deben determinar para cada valor de atributo individual. Para obtener más información, consulte [Overlapping Model and Member Permissions &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Permisos asignados a varios grupos  
  Si un usuario pertenece a uno o más grupos y se asignan permisos al usuario y a los grupos, el flujo de trabajo se vuelve más complejo.  

@@ -1,5 +1,5 @@
 ---
-title: Editar y eliminar un índice (Master Data Services) | Microsoft Docs
+title: Editar y eliminar un índice
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 106a496bd1bd7acb0895de2bc41438ef76cbea1d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4855daea163d799d8f880dc74e5fee8d2a50c93
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086429"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728215"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Editar y eliminar un índice (Master Data Services)
 

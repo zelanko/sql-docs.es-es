@@ -1,6 +1,6 @@
 ---
-title: Propiedad Dependencies (clase SqlService) | Microsoft Docs
-ms.custom: ''
+title: Propiedad dependencies (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d904c67980f036240585f6a4b3053459d631d707
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 993c922562773648aac5460116ba6e343a72132f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929896"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659284"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Propiedad Dependencies (clase SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: cc02137e23c3871066c01ae1a7e9655232c349c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032902"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632745"
 ---
-# <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
+# <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve un conjunto de resultados que muestra los cambios que esperan para replicarse. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones y en el suscriptor de la base de datos de suscripciones.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  Este procedimiento proporciona una aproximación del número de cambios y las filas que están implicadas en ellos. Por ejemplo, el procedimiento recupera información del Editor o del Suscriptor, pero no de ambos al mismo tiempo. La información que está almacenada en el otro nodo podría producir un conjunto menor de cambios para sincronizar de lo que el procedimiento calcula.  
@@ -43,17 +43,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @destination_server **=** ] **'***destination_server***'**  
- Es el nombre del servidor donde se aplican los cambios replicados. *destination_server* es **sysname**, su valor predeterminado es NULL.  
+`[ @destination_server = ] 'destination_server'` es el nombre del servidor donde se aplican los cambios replicados. *destination_server* es de **tipo sysname y su**valor predeterminado es NULL.  
   
- [ @publication **=** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null. Cuando *publicación* se especifica, los resultados se limitan solo a la publicación especificada.  
+`[ @publication = ] 'publication'` es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica la *publicación* , los resultados solo se limitan a la publicación especificada.  
   
- [ @article **=** ] **'***artículo***'**  
- Es el nombre del artículo. *artículo* es **sysname**, su valor predeterminado es null. Cuando *artículo* se especifica, los resultados se limitan exclusivamente al artículo especificado.  
+`[ @article = ] 'article'` es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica *article* , los resultados solo se limitan al artículo especificado.  
   
- [ @show_rows **=** ] *show_rows*  
- Especifica si el conjunto de resultados contiene información más específica acerca de los cambios pendientes, con un valor predeterminado de **0**. Si un valor de **1** se especifica, el conjunto de resultados contiene las columnas is_delete y rowguid.  
+`[ @show_rows = ] 'show_rows'` especifica si el conjunto de resultados contiene información más específica sobre los cambios pendientes, con un valor predeterminado de **0**. Si se especifica el valor **1** , el conjunto de resultados contiene las columnas is_delete y ROWGUID.  
   
 ## <a name="result-set"></a>Tipo de cursor  
   
@@ -62,7 +58,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |destination_server|**sysname**|El nombre del servidor en el que se replican los cambios.|  
 |pub_name|**sysname**|Nombre de la publicación.|  
 |destination_db_name|**sysname**|El nombre de la base de datos en la que se replican los cambios.|  
-|is_dest_subscriber|**bit**|Indica que los cambios se replican en un suscriptor. Un valor de **1** indica que los cambios se replican a un suscriptor. **0** significa que los cambios se replican a un publicador.|  
+|is_dest_subscriber|**bit**|Indica que los cambios se replican en un suscriptor. Un valor de **1** indica que los cambios se replican en un suscriptor. **0** significa que los cambios se replican en un publicador.|  
 |article_name|**sysname**|Nombre del artículo de la tabla en la que se originaron los cambios.|  
 |pending_deletes|**int**|Número de eliminaciones a la espera de ser replicadas.|  
 |pending_ins_and_upd|**int**|Número de inserciones y actualizaciones a la espera de ser replicadas.|  
@@ -79,7 +75,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
  El resultado de sp_showpendingchanges no incluye las filas de la generación 0.  
   
- Cuando el artículo especificado para *artículo* no pertenece a la publicación especificada para *publicación,* se devuelve un recuento de 0 para pending_deletes y pending_ins_and_upd.  
+ Cuando un artículo especificado para el *artículo* no pertenece a la publicación especificada para su *publicación,* se devuelve un recuento de 0 para pending_deletes y pending_ins_and_upd.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor sysadmin o del rol fijo de base de datos db_owner pueden ejecutar sp_showpendingchanges.  

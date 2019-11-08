@@ -1,5 +1,5 @@
 ---
-title: Asistente para actualizar base de datos (Administrador de configuración de Master Data Services) | Microsoft Docs
+title: Asistente para actualizar base de datos
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 28330ba902b32f0b9622a3b8df0ca316848e1752
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102569"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728912"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Asistente para actualizar base de datos (Administrador de configuración de Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68102569"
 
   Utilice el **Asistente para actualizar base de datos** para actualizar una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="action"></a>.  
+## <a name="action"></a>Acción  
  Es la página de introducción del asistente. Haga clic en **Siguiente** para comenzar el proceso de actualizar la base de datos.  
   
 ## <a name="upgrade-review"></a>Revisión de actualización  

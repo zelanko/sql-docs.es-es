@@ -1,5 +1,5 @@
 ---
-title: Ejemplos de reglas de negocios (Master Data Services) | Microsoft Docs
+title: Ejemplos de reglas de negocios
 ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cd74d5e22547cee0383ed2222c1a31d848402974
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047463"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728698"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Ejemplos de reglas de negocios (Master Data Services)
 
@@ -60,7 +60,7 @@ Else
   
 Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio| Descripción    
 ---------|---------|---------|-----------  
-Producto     |  Producto       | DaysToManufacture |Especifica el intervalo de días de fabricación para la fabricación interna.          
+Product     |  Product       | DaysToManufacture |Especifica el intervalo de días de fabricación para la fabricación interna.          
 En la siguiente regla de negocio, si el valor del atributo InHouseManufacture cumple la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. De lo contrario, no se realiza ninguna acción.  
 ```  
 If  
@@ -76,7 +76,7 @@ Else
   
 Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|-------------  
-Producto     |Product         |Required fields| Especifica los atributos necesarios para los miembros de la entidad de producto.           
+Product     |Product         |Required fields| Especifica los atributos necesarios para los miembros de la entidad de producto.           
 En la siguiente regla de negocio, en todas las condiciones se realiza la `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Los valores de atributo no pueden ser NULL ni estar en blanco.  
 ```  
 If  
@@ -101,7 +101,7 @@ Else
   
 Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|-----------  
-Producto     | Producto        |  Std Cost| Requiere que el costo estándar sea mayor que 0.        
+Product     | Product        |  Std Cost| Requiere que el costo estándar sea mayor que 0.        
 En la siguiente regla de negocio, en todas las condiciones se aplica la `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
@@ -117,7 +117,7 @@ Else
   
 Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|------------  
-Producto     | Producto        | FG MSRP Cost|Especifica que, si el producto es un producto terminado, el MSRP (precio minorista sugerido por el fabricante) y los costos del distribuidor deben ser mayores que 0.           
+Product     | Product        | FG MSRP Cost|Especifica que, si el producto es un producto terminado, el MSRP (precio minorista sugerido por el fabricante) y los costos del distribuidor deben ser mayores que 0.           
   
 En la siguiente regla de negocio, si el valor del atributo FinishedGoodIndicator cumple la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
@@ -135,7 +135,7 @@ Else
   
 Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|------------  
-Producto     | Producto        |  Default Name| Especifica el nombre predeterminado del producto según los valores de los atributos Color y Class. Cuando el valor del atributo Color no es YLO y el atributo Class no es NA, el nombre predeterminado es Yellow NA.         
+Product     | Product        |  Default Name| Especifica el nombre predeterminado del producto según los valores de los atributos Color y Class. Cuando el valor del atributo Color no es YLO y el atributo Class no es NA, el nombre predeterminado es Yellow NA.         
 En la siguiente regla de negocio, si los atributos Color y Class no cumplen la condición de regla `is equal` , la `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the Name attribute.  
 ```  
 If  

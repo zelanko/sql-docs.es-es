@@ -1,5 +1,5 @@
 ---
-title: Crear una jerarquía derivada (Master Data Services) | Microsoft Docs
+title: Crear una jerarquía derivada
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fec653c4-11cc-46a2-8dd8-b605341ebb40
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1e793b9b5dfa78909bc74112580476c7d3074536
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0bedc60665318e2ffd89ebfc6387bbb0432989f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079673"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729577"
 ---
 # <a name="create-a-derived-hierarchy-master-data-services"></a>Crear una jerarquía derivada (Master Data Services)
 

@@ -1,5 +1,5 @@
 ---
-title: Permisos de colección (Master Data Services) | Microsoft Docs
+title: Permisos de colección
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e2e1dbbf51533e03d3e1f5a6930dd0a022cf215
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b55d028e90869f6b21d51348b97411fb6c965eb9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941110"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729640"
 ---
 # <a name="collection-permissions-master-data-services"></a>Permisos de colección (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "67941110"
 |**Lectura**|El usuario puede leer los miembros de las colecciones y los atributos de los miembros.|  
 |**Crear**|El usuario puede crear miembros de colecciones y asignar valores de atributos.|  
 |**Update**|El usuario puede actualizar los miembros de las colecciones, así como los atributos y relaciones.|  
-|**Eliminar**|El usuario puede eliminar miembros de colecciones.|  
+|**Delete**|El usuario puede eliminar miembros de colecciones.|  
 |**Denegar**|Denegar todo el acceso a los miembros de las colecciones.|  
   
  Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  

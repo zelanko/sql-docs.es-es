@@ -1,5 +1,5 @@
 ---
-title: Crear un índice (Master Data Services) | Microsoft Docs
+title: Creación de un índice
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 68b0ac877b812d78e3eddf433a08a87b8f9d45f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896860"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728423"
 ---
 # <a name="create-an-index-master-data-services"></a>Creación de un índice personalizado (Master Data Services)
 
@@ -52,20 +52,20 @@ ms.locfileid: "67896860"
   
 |Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
-|Status|El estado del índice.<br /><br /> Al hacer clic en **Guardar**, aparece la imagen ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización"), que indica que se está actualizando el índice.<br /><br /> Si hay errores al crear o editar un índice, aparecerá la imagen ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error").<br /><br /> En caso contrario, el estado será correcto y aparecerá la imagen ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto").|  
-|Name|Nombre de índice.|  
+|Estado|El estado del índice.<br /><br /> Al hacer clic en **Guardar**, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icon para actualizar el estado ") , que indica que el índice se está actualizando.<br /><br /> Si hay errores al crear o editar un índice, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icon para estado de error ") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icon para el estado correcto ") .|  
+|Nombre|Nombre de índice.|  
 |Is Unique|Especifica si el índice es único.|  
 |En atributos|Muestra los nombres para mostrar de los atributos en los que está definido el índice.|  
   
  Cuando se hace clic en un índice, se muestra la siguiente información.  
   
--   **Creado por**: nombre del usuario que ha creado el índice.  
+-   **Creado por:** Nombre del usuario que creó el índice.  
   
--   **El**: fecha y hora en que se ha creado el índice.  
+-   **El:** Fecha y hora en que se creó el índice.  
   
--   **Actualizado por**: nombre del usuario que ha actualizado el índice por última vez.  
+-   **Actualizado por:** Nombre del usuario que actualizó el índice por última vez.  
   
--   **El**: fecha y hora en que se ha actualizado el índice por última vez.  
+-   **El:** Fecha y hora en que se el índice se actualizó por última vez.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  [Editar y eliminar un índice &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  

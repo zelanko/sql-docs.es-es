@@ -1,5 +1,5 @@
 ---
-title: Editar modelo (Master Data Services) | Microsoft Docs
+title: Editar modelo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0eb25db76d1dd14d3eb715072683ee8c046c392b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89fa4dea57c4936a2d6a51e08f48668215ba53a2
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052069"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728212"
 ---
 # <a name="edit-model-master-data-services"></a>Editar modelo (Master Data Services)
 
@@ -54,7 +54,7 @@ ms.locfileid: "68052069"
   
 8.  Haga clic en **Guardar modelo**.  
   
- La columna **Estado** de la cuadrícula muestra el estado de la operación en el modelo. Al hacer clic en el botón **Guardar modelo**, se muestra la imagen ![Actualizar](../master-data-services/media/mds-model-status-updating.png "Actualizar"), que indica que se está actualizando el modelo. Si hay errores al crear o editar un modelo, se muestra la imagen ![Error](../master-data-services/media/mds-model-status-error.png "Error"). De lo contrario, el estado es correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
+ La columna **Estado** de la cuadrícula muestra el estado de la operación en el modelo. Al hacer clic en el botón **Guardar modelo** , se muestra la imagen de ![actualización](../master-data-services/media/mds-model-status-updating.png "Actualización") , que indica que el modelo se está actualizando. Si hay errores al crear o editar un modelo, se muestra la imagen de ![error](../master-data-services/media/mds-model-status-error.png "Error") . De lo contrario, el estado es Correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
   
 ## <a name="see-also"></a>Vea también  
  [Crear un modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   

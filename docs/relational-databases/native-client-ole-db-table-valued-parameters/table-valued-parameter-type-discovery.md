@@ -1,5 +1,5 @@
 ---
-title: Detección de tipos de parámetro con valores de tabla | Microsoft Docs
+title: Detección de tipos de parámetros con valores de tabla | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,22 +13,21 @@ ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d219631203c505ad2e0cac594b629c22032214fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92bd68e69cd3127bdb2dabd6b94b1097b47e48c4
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069622"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73788571"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>Detección de tipos de parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  El consumidor: es decir, la aplicación cliente mediante el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client: se puede detectar el tipo de cada parámetro de comando si el texto del comando que se asignó para el proveedor OLE DB. Después de conocer el tipo de un parámetro con valores de tabla, el consumidor puede detectar la información de metadatos de cada columna individual del parámetro con valores de tabla.  
+  El consumidor, es decir, la aplicación cliente que usa el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, puede detectar el tipo de cada parámetro de comando si se ha proporcionado el texto de comando al proveedor de OLE DB. Después de conocer el tipo de un parámetro con valores de tabla, el consumidor puede detectar la información de metadatos de cada columna individual del parámetro con valores de tabla.  
   
- La información de tipos de parámetros de procedimiento es compatible con ICommandWithParameters:: GetParameterInfo para la mayoría de los tipos de parámetro. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], con la introducción de los tipos definidos por el usuario y el tipo de datos **xml**, no bastaba con usar el método GetParameterInfo para este propósito porque no se podía proporcionar información de los tipos definidos por el usuario (nombre, esquema y catálogo) mediante ICommandWithParameters. Se definió una nueva interfaz, ISSCommandWithParameters, para proporcionar información de tipo extendido.  
+ La información de tipo de los parámetros de procedimiento es compatible con ICommandWithParameters:: GetParameterInfo para la mayoría de los tipos de parámetro. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], con la introducción de los tipos definidos por el usuario y el tipo de datos **xml**, no bastaba con usar el método GetParameterInfo para este propósito porque no se podía proporcionar información de los tipos definidos por el usuario (nombre, esquema y catálogo) mediante ICommandWithParameters. Se definió una nueva interfaz, ISSCommandWithParameters, para proporcionar información de tipo extendido.  
   
- Para los parámetros con valores de tabla, también se usa la interfaz ISSCommandWithParameters para detectar información detallada. El cliente llama a ISSCommandWithParameters::GetParameterInfo después de preparar el objeto de comando. Para los parámetros con valores de tabla, el proveedor establece el miembro *wType* de la estructura DBPARAMINFO en DBTYPE_TABLE. El campo *ulParamSize* de la estructura de DBPARAMINFO tiene un valor de ~0.  
+ En el caso de los parámetros con valores de tabla, también se usa la interfaz ISSCommandWithParameters para detectar información detallada. El cliente llama a ISSCommandWithParameters:: GetParameterInfo después de preparar el objeto de comando. Para los parámetros con valores de tabla, el proveedor establece el miembro *wType* de la estructura DBPARAMINFO en DBTYPE_TABLE. El campo *ulParamSize* de la estructura de DBPARAMINFO tiene un valor de ~0.  
   
  El consumidor solicitará después propiedades adicionales (el nombre de catálogo del tipo de parámetro con valores de tabla, el nombre de esquema del tipo de parámetro con valores de tabla, el nombre del tipo de parámetro con valores de tabla, el orden de las columnas y las columnas predeterminadas) mediante ISSCommandWithParameters::GetParameterProperties.  
   

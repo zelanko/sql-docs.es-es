@@ -1,5 +1,5 @@
 ---
-title: Ibcpsession (OLE DB) | Microsoft Docs
+title: 'IBCPSession:: BCPExec (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e63acff9459065a2daaeadcd1831e9a367322037
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f1f8fcec1e8f83207c0b4a6d3c4efa51496f12
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091042"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73764686"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Realiza la operación de copia masiva.  
   
@@ -38,7 +37,7 @@ HRESULT BCPExec(
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El método **BCPExec** copia los datos de un archivo de usuario en una tabla de base de datos o viceversa, en función del valor del parámetro *eDirection* usado con el método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
+ El método **BCPExec** copia los datos de un archivo de usuario en una tabla de base de datos o viceversa, en función del valor del parámetro *eDirection* utilizado con el método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) .  
   
  Antes de llamar a **BCPExec**, llame al método **BCPInit** con un nombre de archivo de usuario válido. Si no lo hace, se producirá un error. La única excepción es que una consulta vaya a utilizarse para una operación de salida de copia masiva. En ese caso, especifique NULL para el nombre de tabla en el método **BCPInit** y, a continuación, especifique la consulta mediante la opción BCP_OPTION_HINTS.  
   
@@ -71,7 +70,7 @@ HRESULT BCPExec(
  Se produjeron errores durante la operación de copia masiva y algunas filas no pudieron copiarse. El número de errores sigue siendo menor al número máximo de errores permitidos.  
   
 ## <a name="see-also"></a>Vea también  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [ &#40;OLE DB&#41; IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Realizar operaciones de copia masiva](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

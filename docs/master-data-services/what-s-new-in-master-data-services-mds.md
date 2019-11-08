@@ -1,5 +1,5 @@
 ---
-title: Novedades de Master Data Services (MDS) | Microsoft Docs
+title: Novedades
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810503"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727790"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novedades de Master Data Services (MDS)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68810503"
   
  Las mejoras de rendimiento permiten crear modelos más grandes, cargar datos de manera más eficaz y obtener un mejor rendimiento general. Esto incluye la mejora del rendimiento del complemento para Microsoft Excel, que se ha optimizado para reducir los tiempos de carga de datos y habilitar el complemento para administrar entidades mayores.  
   
- Para obtener más información sobre el complemento para Microsoft Excel, vea [Complemento Master Data Services para Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Para obtener más información sobre el complemento para Microsoft Excel, vea [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Se incluyen las siguientes mejoras de características.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68810503"
   
  Ahora es posible asignar explícitamente a un usuario el permiso de administrador en el nivel de modelo. Esto significa que si más adelante se le asignan permisos al usuario en el subárbol del modelo, como el nivel de entidad, no perderá el permiso de administrador.  
   
- En esta versión de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se proporcionan más niveles de permisos mediante la introducción de los siguientes permisos nuevos: Leer, Crear, Actualizar y Eliminar. Por ejemplo, un usuario que solo tenga el permiso de actualización, ahora puede actualizar los datos maestros sin crear ni eliminar los datos. Cuando se le concede a un usuario el permiso de creación, actualización y eliminación, se le asigna automáticamente el permiso de lectura. También puede combinar los permisos de lectura, creación, actualización y eliminación.  
+ En esta versión de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se proporcionan más niveles de permisos mediante la introducción de los siguientes permisos nuevos: lectura, creación, actualización y eliminación. Por ejemplo, un usuario que solo tenga el permiso de actualización, ahora puede actualizar los datos maestros sin crear ni eliminar los datos. Cuando se le concede a un usuario el permiso de creación, actualización y eliminación, se le asigna automáticamente el permiso de lectura. También puede combinar los permisos de lectura, creación, actualización y eliminación.  
   
  Cuando se actualiza a [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los permisos anteriores se convierten en permisos nuevos, tal como se muestra en la tabla siguiente.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68810503"
 |El usuario que instala originalmente [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] tiene el permiso de administrador del servidor.|El usuario tiene el permiso de función de superusuario.|  
 |El usuario tiene permisos de actualización en el nivel de modelo y ningún permiso en el subárbol de modelo, por lo que implícitamente es administrador del modelo.|El usuario tiene permisos explícitos de administrador en el nivel de modelo.|  
 |El usuario tiene permisos de solo lectura.|El usuario tiene permisos de acceso de lectura.|  
-|El usuario tiene permisos de actualización.|El usuario tiene los cuatro permisos de acceso: Crear, Actualizar, Eliminar y Leer.|  
+|El usuario tiene permisos de actualización.|El usuario tiene los cuatro permisos de acceso: creación, actualización, eliminación y lectura.|  
 |El usuario tiene permisos de denegación.|El usuario tiene permisos de denegación.|  
   
  Para más información sobre los permisos, consulte [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md).  
@@ -225,7 +225,7 @@ ms.locfileid: "68810503"
    
  **Actualización de los paquetes de implementación de modelos de ejemplo**  
   
- Los paquetes de ejemplo se han actualizado para admitir nuevos escenarios. Para más información, vea [Ejemplos de SQL Server: Paquetes de implementación de modelo (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
+ Los paquetes de ejemplo se han actualizado para admitir nuevos escenarios. Para más información, consulte [Ejemplos de SQL Server: paquetes de implementación de modelos (MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md).  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

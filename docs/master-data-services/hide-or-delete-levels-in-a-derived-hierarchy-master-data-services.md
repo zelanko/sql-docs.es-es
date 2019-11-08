@@ -1,5 +1,5 @@
 ---
-title: Ocultar o eliminar niveles en una jerarquía derivada (Master Data Services) | Microsoft Docs
+title: Ocultar o eliminar niveles en una jerarquía derivada
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b6ce19214332e2a4f2ec85735657e7e55906c44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b364213586b8f796101e099c1384cba9569f8ad9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945243"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728123"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>Ocultar o eliminar niveles en una jerarquía derivada (Master Data Services)
 

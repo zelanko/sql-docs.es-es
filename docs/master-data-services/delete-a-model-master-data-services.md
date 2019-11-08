@@ -1,5 +1,5 @@
 ---
-title: Eliminar un modelo (Master Data Services) | Microsoft Docs
+title: Eliminar un modelo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 23c5697b863646bac824b196696345566c06a747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65164c1732aefe6555aa19325a158793d07631a6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906454"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728355"
 ---
 # <a name="delete-a-model-master-data-services"></a>Eliminar un modelo (Master Data Services)
 
@@ -50,7 +50,7 @@ ms.locfileid: "67906454"
   
 6.  En el cuadro de diálogo de confirmación adicional, haga clic en **Aceptar**.  
   
- La columna **Estado** de la cuadrícula muestra el estado de la operación en el modelo. Al hacer clic en el botón **Guardar modelo**, se muestra la imagen ![Actualizar](../master-data-services/media/mds-model-status-updating.png "Actualizar"), que indica que se está actualizando el modelo. Si hay errores al crear o editar un modelo, se muestra la imagen ![Error](../master-data-services/media/mds-model-status-error.png "Error"). De lo contrario, el estado es correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
+ La columna **Estado** de la cuadrícula muestra el estado de la operación en el modelo. Al hacer clic en el botón **Guardar modelo** , se muestra la imagen de ![actualización](../master-data-services/media/mds-model-status-updating.png "Actualización") , que indica que el modelo se está actualizando. Si hay errores al crear o editar un modelo, se muestra la imagen de ![error](../master-data-services/media/mds-model-status-error.png "Error") . De lo contrario, el estado es Correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
   
 ## <a name="see-also"></a>Vea también  
  [Modelos &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   

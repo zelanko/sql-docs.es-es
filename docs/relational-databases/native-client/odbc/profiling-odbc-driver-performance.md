@@ -1,5 +1,5 @@
 ---
-title: Generación de perfiles de rendimiento del controlador ODBC | Microsoft Docs
+title: Generar perfiles del rendimiento del controlador ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,16 +20,15 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6e35918f266d6dcf77c559c7243e519a0ec95cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913148"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73760708"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Generar perfiles del rendimiento del controlador ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client puede generar perfiles de dos tipos de datos de rendimiento:  
   
@@ -45,7 +44,7 @@ ms.locfileid: "67913148"
   
 -   Conectándose a un origen de datos que especifique el registro.  
   
--   Una llamada a [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para establecer atributos específicos del controlador de ese control de la generación de perfiles.  
+-   Llamar a [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para establecer los atributos específicos del controlador que controlan la generación de perfiles.  
   
  Cada proceso de la aplicación obtiene su propia copia del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y los perfiles se generan de forma global para la combinación de una copia del controlador y un proceso de la aplicación. Cuando algo en la aplicación activa la generación de perfiles, el proceso de generación de perfiles registra información de todas las conexiones activas en el controlador de esa aplicación. Se incluyen incluso las conexiones que no llamaron específicamente para la generación de perfiles.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "67913148"
   
  Si una aplicación empieza a generar perfiles en un archivo de registro y una segunda aplicación intenta empezar a generar perfiles en el mismo archivo de registro, la segunda aplicación no puede registrar ningún dato de generación de perfiles. Si la segunda aplicación empieza a generar perfiles después de que la primera haya descargado su controlador, la segunda aplicación sobrescribirá el archivo de registro de la primera aplicación.  
   
- Si una aplicación se conecta a un origen de datos que tiene la generación de perfiles habilitada, el controlador devuelve SQL_ERROR si la aplicación llama a **SQLSetConnectOption** para iniciar el registro. Una llamada a **SQLGetDiagRec** , a continuación, devuelve lo siguiente:  
+ Si una aplicación se conecta a un origen de datos que tiene habilitada la generación de perfiles, el controlador devuelve SQL_ERROR si la aplicación llama a **SQLSetConnectOption** para iniciar el registro. Una llamada a **SQLGetDiagRec** devuelve lo siguiente:  
   
 ```  
 SQLState: 01000, pfNative = 0  
@@ -86,9 +85,9 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Número de instrucciones SELECT procesadas después de SQL_PERF_START.|  
 |SQLSelectRows|Número de filas seleccionadas después de SQL_PERF_START.|  
 |Transacciones|Número de transacciones de usuario después de SQL_PERF_START, incluidas las reversiones. Cuando una aplicación ODBC se ejecuta con SQL_AUTOCOMMIT_ON, cada comando se considera una transacción.|  
-|SQLPrepares|Número de [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) llamadas después de SQL_PERF_START.|  
-|ExecDirects|Número de **SQLExecDirect** llamadas después de SQL_PERF_START.|  
-|SQLExecutes|Número de **SQLExecute** llamadas después de SQL_PERF_START.|  
+|SQLPrepares|Número de llamadas a la [función SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) después de SQL_PERF_START.|  
+|ExecDirects|Número de llamadas **SQLExecDirect** después de SQL_PERF_START.|  
+|SQLExecutes|Número de llamadas **SQLExecute** después de SQL_PERF_START.|  
 |CursorOpens|Número de veces que el controlador ha abierto un cursor del servidor después de SQL_PERF_START.|  
 |CursorSize|Número de filas en los conjuntos de resultados abiertos por los cursores después de SQL_PERF_START.|  
 |CursorUsed|Número de filas recuperadas realmente mediante el controlador de los cursores después de SQL_PERF_START.|  
@@ -122,7 +121,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msNetworkServerTime|Cantidad acumulada de tiempo que el controlador ha pasado esperando respuestas del servidor.|  
   
 ## <a name="see-also"></a>Vea también  
- [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Generación de perfiles de temas de procedimientos de ODBC Driver Performance &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+   de [SQL Server Native Client &#40;ODBC&#41; ](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [Temas &#40;de procedimientos de generación de perfiles de rendimiento del controlador ODBC ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

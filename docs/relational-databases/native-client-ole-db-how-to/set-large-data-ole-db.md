@@ -13,16 +13,15 @@ ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b75d112900e9ff955da587fa76bf2bb6a7210abe
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5fd06c01ddbb92679bc728350850f487b1ad5db8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72904967"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73766048"
 ---
 # <a name="set-large-data-ole-db"></a>Establecer datos de gran tamaño (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   En este ejemplo, se muestra cómo establecer datos BLOB, crear una tabla, agregar un registro de ejemplo, capturar ese registro en el conjunto de filas y, después, establecer el valor del campo BLOB. Este ejemplo no es compatible con IA64.  
   
@@ -51,10 +50,10 @@ ms.locfileid: "72904967"
 
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descripción  
  Compile con ole32.lib oleaut32.lib y ejecute la siguiente lista de código C++. Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
-### <a name="code"></a>Code  
+### <a name="code"></a>código  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

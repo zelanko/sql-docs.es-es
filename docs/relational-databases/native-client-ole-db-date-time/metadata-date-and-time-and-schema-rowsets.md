@@ -13,16 +13,15 @@ ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21f72a13f8f5f7ac93b0f31716632c9280df5fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7290c9e7a55e27a829a943157e1b0bea00f42d2
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107013"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73773504"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Metadatos: fecha y hora y conjuntos de filas de esquema
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   En este tema se proporciona información sobre los conjuntos de filas COLUMNS y PROCEDURE_PARAMETERS. Esta información está relacionada con las mejoras realizadas en la fecha y la hora de OLE DB introducidas en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -32,11 +31,11 @@ ms.locfileid: "68107013"
 |Tipo de columna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
 |date|DBTYPE_DBDATE|Desactivar|0|  
-|time|DBTYPE_DBTIME2|Establecer|0..7|  
+|time|DBTYPE_DBTIME2|Establezca|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Desactivar|0|  
 |datetime|DBTYPE_DBTIMESTAMP|Desactivar|3|  
-|datetime2|DBTYPE_DBTIMESTAMP|Establecer|0..7|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Establecer|0..7|  
+|datetime2|DBTYPE_DBTIMESTAMP|Establezca|0..7|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Establezca|0..7|  
   
  En COLUMN_FLAGS, DBCOLUMNFLAGS_ISFIXEDLENGTH es siempre TRUE para los tipos de fecha y hora, y las marcas siguientes son siempre FALSE:  
   
@@ -60,21 +59,21 @@ ms.locfileid: "68107013"
   
  DBCOLUMNFLAGS_SS_ISVARIABLESCALE es solo válido cuando se conecta a un servidor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posteriores. DBCOLUMNFLAGS_SS_ISFIXEDSCALE no está definido cuando se conecta a servidores de nivel inferior.  
   
-## <a name="procedureparameters-rowset"></a>Conjunto de filas PROCEDURE_PARAMETERS  
+## <a name="procedure_parameters-rowset"></a>Conjunto de filas PROCEDURE_PARAMETERS  
  DATA_TYPE contiene los mismos valores que el conjunto de filas de esquema COLUMNS y TYPE_NAME contiene el tipo de servidor.  
   
  Se ha agregado una nueva columna, SS_DATETIME_PRECISION, para devolver la precisión del tipo como en la columna DATETIME_PRECISION, similar al conjunto de filas COLUMNS.  
   
-## <a name="providertypes-rowset"></a>Conjunto de filas PROVIDER_TYPES  
+## <a name="provider_types-rowset"></a>Conjunto de filas PROVIDER_TYPES  
  Para los tipos de fecha y hora se devuelven las siguientes filas:  
   
-|Tipo -><br /><br /> columna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo -><br /><br /> Columna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|'|'|'|'|'|'|  
-|LITERAL_SUFFIX|'|'|'|'|'|'|  
+|LITERAL_PREFIX|“|“|“|“|“|“|  
+|LITERAL_SUFFIX|“|“|“|“|“|“|  
 |CREATE_PARAMS|NULL|escala|NULL|NULL|escala|escala|  
 |IS_NULLABLE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
 |CASE_SENSITIVE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  

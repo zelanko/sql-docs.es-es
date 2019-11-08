@@ -1,5 +1,5 @@
 ---
-title: Editar un paquete de implementación de modelos | Microsoft Docs
+title: Editar un paquete de implementación de modelos
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 651ddeeebe7cb6896c50486aed673e02bf47b0e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 12cacedc8f195a965b7632760976008ba4b422b0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086469"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728224"
 ---
 # <a name="edit-a-model-deployment-package"></a>Editar un paquete de implementación de modelos
 
@@ -40,15 +40,15 @@ ms.locfileid: "68086469"
   
 2.  Ejecute ModelPackageEditor.exe.  
   
-3.  En el asistente del Editor de paquetes de modelo, haga clic en **Examinar**, desplácese a la carpeta que contiene los paquetes, seleccione un paquete y, a continuación, haga clic en **Abrir**. Haga clic en **Next**.  
+3.  En el asistente del Editor de paquetes de modelo, haga clic en **Examinar**, desplácese a la carpeta que contiene los paquetes, seleccione un paquete y, a continuación, haga clic en **Abrir**. Haga clic en **Siguiente**.  
   
-4.  Seleccione las entidades, jerarquías derivadas, vistas de suscripciones o reglas de negocios que desea implementar. Anule la selección de los elementos que no desea implementar. Haga clic en **Next**.  
+4.  Seleccione las entidades, jerarquías derivadas, vistas de suscripciones o reglas de negocios que desea implementar. Anule la selección de los elementos que no desea implementar. Haga clic en **Siguiente**.  
   
 5.  Compruebe la lista de elementos que va a implementar. Si desea realizar algún cambio, haga clic en **Atrás** y repita el paso 4.  
   
 6.  Haga clic en **Examinar**, desplácese a la carpeta en la que quiera guardar el paquete parcial y escriba el nombre de archivo de ese paquete (con la extensión .pkg). Haga clic en **Guardar**.  
   
-7.  Haga clic en **Finalizar**  
+7.  Haga clic en **Finalizar**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
   

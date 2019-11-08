@@ -1,6 +1,6 @@
 ---
-title: Visualización de relaciones varios a varios en jerarquías derivadas (Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: Visualización de relaciones varios a varios en jerarquías derivadas
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5d256603927a4c717b1f5d3203ea1ce3939771cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085652"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728948"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Visualización de relaciones varios a varios en jerarquías derivadas (Master Data Services)
 

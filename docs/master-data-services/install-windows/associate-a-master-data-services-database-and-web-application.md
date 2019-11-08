@@ -1,6 +1,6 @@
 ---
-title: Asociar una base de datos y una aplicación web de Master Data Services | Microsoft Docs
-ms.custom: ''
+title: Asociar una base de datos y una aplicación Web
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 78dda3464aab255834acffd16afd298021c40fd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 257928505c1aa95a61151f47c234469158761e89
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67945025"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728146"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Asociar una base de datos y una aplicación web de Master Data Services
 

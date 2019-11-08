@@ -1,5 +1,5 @@
 ---
-title: Cambiar el nombre de un grupo de atributos (Master Data Services) | Microsoft Docs
+title: Cambiar el nombre de un grupo de atributos
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d9f6905ea87c08460fe9faba22095a9ecaf0b308
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 115cb0011be22e482e6d8d8e032d8db21246bbd9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052098"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729705"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Cambiar el nombre de un grupo de atributos (Master Data Services)
 

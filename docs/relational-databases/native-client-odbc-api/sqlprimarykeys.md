@@ -1,5 +1,5 @@
 ---
-title: SQLPrimaryKeys | Documentos de Microsoft
+title: SQLPrimaryKeys | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,32 +14,31 @@ ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27eef998bf148e9503a415d8d38bceaecd497f38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2ee83335e00c3129d73c26db37d40af2375c410
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68131245"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786050"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Una tabla puede tener una o varias columnas que pueden actuar como identificadores de fila únicos, y las tablas creadas sin una restricción PRIMARY KEY devuelven un conjunto a SQLPrimaryKeys de resultados vacío. La función ODBC [SQLSpecialColumns](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md) candidatos para las tablas sin claves principales del identificador de fila de los informes.  
+  Una tabla puede tener una o varias columnas que pueden actuar como identificadores de fila únicos y las tablas creadas sin una restricción PRIMAry KEY devuelven un conjunto de resultados vacío a SQLPrimaryKeys. La función ODBC [SQLSpecialColumns](../../relational-databases/native-client-odbc-api/sqlspecialcolumns.md) informa de los candidatos de identificador de fila para las tablas sin claves principales.  
   
- SQLPrimaryKeys devuelve SQL_SUCCESS si existen o no valores para *CatalogName*, *SchemaName*, o *TableName* parámetros. SQLFetch devuelve SQL_NO_DATA cuando se usan valores no válidos en estos parámetros.  
+ SQLPrimaryKeys devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo*, *SchemaName*o *TableName* . SQLFetch devuelve SQL_NO_DATA cuando se usan valores no válidos en estos parámetros.  
   
- SQLPrimaryKeys se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar SQLPrimaryKeys en un cursor actualizable (dinámico o conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, que indica que se ha cambiado el tipo de cursor.  
+ SQLPrimaryKeys se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar SQLPrimaryKeys en un cursor actualizable (dinámico o de conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO que indica que se ha cambiado el tipo de cursor.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el *CatalogName* parámetro: *Nombre_servidor_vinculado.nombre_catálogo*.  
+ El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el parámetro *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
   
 ## <a name="sqlprimarykeys-and-table-valued-parameters"></a>SQLPrimaryKeys y parámetros con valores de tabla  
- Si el atributo de instrucción SQL_SOPT_SS_NAME_SCOPE tiene el valor SQL_SS_NAME_SCOPE_TABLE_TYPE, en lugar de su valor predeterminado de SQL_SS_NAME_SCOPE_TABLE, SQLPrimaryKeys devolverá información sobre las columnas de clave principal de tipos de tabla. Para obtener más información sobre SQL_SOPT_SS_NAME_SCOPE, vea [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
+ Si el atributo de instrucción SQL_SOPT_SS_NAME_SCOPE tiene el valor SQL_SS_NAME_SCOPE_TABLE_TYPE, en lugar de su valor predeterminado de SQL_SS_NAME_SCOPE_TABLE, SQLPrimaryKeys devolverá información sobre las columnas de clave principal de los tipos de tabla. Para obtener más información sobre SQL_SOPT_SS_NAME_SCOPE, vea [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros &#40;con&#41;valores de tabla ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Función SQLPrimaryKeys](https://go.microsoft.com/fwlink/?LinkId=59361)   
+   de la [función SQLPrimaryKeys](https://go.microsoft.com/fwlink/?LinkId=59361)  
  [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

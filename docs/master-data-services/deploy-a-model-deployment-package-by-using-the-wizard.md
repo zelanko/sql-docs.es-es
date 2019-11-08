@@ -1,5 +1,5 @@
 ---
-title: Implementar un paquete de implementación de modelo mediante el asistente | Microsoft Docs
+title: Implementar un paquete de implementación de modelo (asistente)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3c546fd0abb82b87cd3d992b5afd270156e84f1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906247"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729395"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Implementar un paquete de implementación de modelo mediante el asistente
 
@@ -50,7 +50,7 @@ ms.locfileid: "67906247"
   
 5.  Busque el paquete de implementación (archivo .pkg) y haga clic en **Abrir**.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 7.  Una vez cargado el paquete, haga clic en **Siguiente**.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "67906247"
   
 9. Haga clic en **Finalizar** para salir del asistente.  
   
- **Notas:**  
+ **Comentarios:**  
   
--   Si una vista de suscripción del paquete tiene el mismo nombre que una vista de suscripción de un modelo existente, se muestra esta advertencia: **Se ha cambiado el nombre de la vista de suscripción del implementador**. Además, se crea la vista como *modelname.subscriptionviewname*. Si este nombre ya se está usando, no se crea la vista de suscripciones.  
+-   Si una vista de suscripciones del paquete tiene el mismo nombre que una vista de suscripciones de un modelo existente, se muestra esta advertencia: **se ha cambiado el nombre de la vista de suscripción del implementador**. Además, se crea la vista como *modelname.subscriptionviewname*. Si este nombre ya se está usando, no se crea la vista de suscripciones.  
   
 -   El proceso de implementación tiene cuatro pasos:  
   

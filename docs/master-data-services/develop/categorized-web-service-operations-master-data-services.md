@@ -1,5 +1,5 @@
 ---
-title: Operaciones de servicio web clasificadas (Master Data Services) | Microsoft Docs
+title: Operaciones de servicio web clasificadas
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3ad01ae5dd8407fda8d7802681695200bf25b167
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098605"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728293"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Operaciones de servicio web clasificadas (Master Data Services)
 
@@ -121,7 +121,7 @@ ms.locfileid: "68098605"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>Operaciones de importación de datos  
- Estas operaciones se utilizan para importar datos en una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Para más información, vea [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Estas operaciones se utilizan para importar datos en una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Para obtener más información, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ||  
 |-|  
@@ -140,7 +140,7 @@ ms.locfileid: "68098605"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>Operaciones de exportación de datos  
- Estas operaciones se utilizan para exportar datos a través del uso de vistas de suscripción. Para más información, vea [Información general: exportación de datos &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
+ Estas operaciones se utilizan para exportar datos a través del uso de vistas de suscripción. Para obtener más información, consulte [Overview: Exporting Data &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
   
 ||  
 |-|  

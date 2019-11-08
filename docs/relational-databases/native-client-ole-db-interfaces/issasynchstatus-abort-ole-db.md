@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: Abort (OLE DB) | Microsoft Docs'
+title: 'ISSAsynchStatus:: ABORT (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55b018941fbd8bb4cecef7c5f10ea41bea566534
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7250c27e2ce35abbd15fc334f4f0ac07e94e985b
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051031"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789520"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Cancela una operación que se ejecuta de forma asincrónica.  
   
@@ -66,7 +65,7 @@ HRESULT Abort(
  E_UNEXPECTED  
  Se llamó a**ISSAsynchStatus::Abort** en un objeto de origen de datos en el que no se llamó a **IDBInitialize::Initialize** , o no se ha completado.  
   
- Se llamó a**ISSAsynchStatus::Abort** en un objeto de origen de datos en el que se llamó a **IDBInitialize::Initialize** pero se canceló posteriormente antes de la inicialización, o se ha superado el tiempo de espera. Todavía no se ha inicializado el objeto de origen de datos.  
+ Se llamó a **ISSAsynchStatus:: ABORT** en un objeto de origen de datos en el que se llamó a **IDBInitialize:: Initialize** pero posteriormente se canceló antes de la inicialización o se agotó el tiempo de espera. Todavía no se ha inicializado el objeto de origen de datos.  
   
  Se llamó a**ISSAsynchStatus::Abo at** en un conjunto de filas en el que previamente se llamó a **ITransaction::Commit** o a **ITransaction::Abo at** was previously called, and the rowset did not survive the commit o a abo at and is in a zombie state.  
   

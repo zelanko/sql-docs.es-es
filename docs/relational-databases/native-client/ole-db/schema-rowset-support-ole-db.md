@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con el conjunto de filas de esquema (OLE DB) | Microsoft Docs
+title: Compatibilidad con conjuntos de filas de esquema (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,23 +17,22 @@ ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac7e0d5f2e0da418918141779e8bdce24f32f19d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913000"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759546"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Compatibilidad con conjuntos de filas de esquema (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client también admite devolver información del esquema de un servidor vinculado al procesar [!INCLUDE[tsql](../../../includes/tsql-md.md)] consultas distribuidas.  
+  El proveedor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de OLE DB Native Client también admite la devolución de información de esquema de un servidor vinculado al procesar [!INCLUDE[tsql](../../../includes/tsql-md.md)] las consultas distribuidas.  
   
 > [!NOTE]  
 >  Aunque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite los sinónimos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no devuelve los metadatos de los sinónimos.  
   
- Las tablas siguientes conjuntos de filas de esquema de lista y las columnas de restricción compatibles con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB.  
+ En las tablas siguientes se enumeran los conjuntos de filas de esquema y las columnas de restricción admitidas por el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 |Conjunto de filas de esquema|Columnas de restricción|  
 |-------------------|-------------------------|  
@@ -59,7 +58,7 @@ ms.locfileid: "67913000"
  [LINKEDSERVERS Rowset &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Vea también  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Usar tipos definidos por el usuario](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

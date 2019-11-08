@@ -1,6 +1,6 @@
 ---
-title: Método SetFlag (clase ClientNetworkProtocolProperty) | Microsoft Docs
-ms.custom: ''
+title: Método SetFlag (ClientNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0407520f-2f84-4f68-b2b7-429697286c1b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c16ae47f80a9d349090684bf7e9c7faf1dca641
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f5c4e9c6e153a548b00e4c273936eea018b316b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035310"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660713"
 ---
 # <a name="setflag-method-clientnetworkprotocolproperty-class"></a>Método SetFlag (clase ClientNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Establece la marca de la propiedad actual al que hace referencia el [Propertyidx (clase ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) valor.  
+  Establece la marca de la propiedad actual a la que hace referencia el valor de la [propiedad PropertyIdx (clase ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,7 +37,7 @@ object.SetFlag(BoolValue) [=]
   
 ## <a name="parts"></a>Partes  
  *object*  
- Un [clase ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) objeto que representa un atributo del protocolo de red utilizado por el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente.  
+ Objeto de la [clase ClientNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) que representa un atributo del Protocolo de red utilizado por el cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
 #### <a name="parameters"></a>Parámetros  
   

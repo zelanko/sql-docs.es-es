@@ -1,5 +1,5 @@
 ---
-title: Procedimiento almacenado de validación (Master Data Services) | Microsoft Docs
+title: Procedimiento almacenado de validación
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7861b0fffa8c85f48ba3d95d417e31817c030ae9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5a9210db5a2594f03b7916d06ed975d69882b513
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017348"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727806"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>Procedimiento almacenado de validación (Master Data Services)
 
@@ -23,7 +23,7 @@ ms.locfileid: "68017348"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], valide una versión para aplicar las reglas de negocios a todos los miembros de la versión del modelo.  
   
- En este tema se explica cómo usar el procedimiento almacenado **mdm.udpValidateModel** para validar datos. Si es administrador de la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , puede realizar la validación en la interfaz de usuario en su lugar. Para obtener más información, consulte [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md).  
+ En este tema se explica cómo usar el procedimiento almacenado **mdm.udpValidateModel** para validar datos. Si es administrador de la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , puede realizar la validación en la interfaz de usuario en su lugar. Para obtener más información, consulte [Validate a Version against Business Rules &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md).  
   
 > [!NOTE]  
 >  Si invoca la validación antes de que se complete el proceso de almacenamiento provisional, no se validarán los miembros que no se hayan terminado de almacenar.  

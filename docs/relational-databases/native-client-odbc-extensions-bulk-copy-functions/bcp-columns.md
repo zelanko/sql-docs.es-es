@@ -18,18 +18,17 @@ ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 904353ca9b5ff6c23ea463d1333ed13499b6c341
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: d26f288c857cf44a932a91b250074c36453e2482
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707704"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782976"
 ---
 # <a name="bcp_columns"></a>bcp_columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Establece el número total de columnas del archivo de usuario para su uso con una copia masiva a o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) se puede usar en lugar de bcp_columns y [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
+  Establece el número total de columnas del archivo de usuario para su uso con una copia masiva a o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) se puede utilizar en lugar de bcp_columns y [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,7 +44,7 @@ RETCODE bcp_columns (
  Es el identificador de la conexión ODBC habilitada para la copia masiva.  
   
  *nColumns*  
- Es el número total de columnas en el archivo de usuario. Incluso si está preparando la copia masiva de datos del archivo de usuario a una tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no pretende copiar todas las columnas del archivo de usuario, debe establecer *nColumns* en el número total de columnas de archivo de usuario.  
+ Es el número total de columnas en el archivo de usuario. Incluso si está preparando la copia masiva de datos del archivo de usuario en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no pretende copiar todas las columnas del archivo de usuario, debe establecer *nColumns* en el número total de columnas de archivo de usuario.  
   
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL.  
@@ -55,7 +54,7 @@ RETCODE bcp_columns (
   
  Solo debe llamar a esta función si piensa utilizar un formato de archivo de usuario que difiere del valor predeterminado. Para obtener más información sobre una descripción del formato de archivo de usuario predeterminado, vea **bcp_init**.  
   
- Después de llamar a **bcp_columns**, debe llamar a [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) para cada columna del archivo de usuario para definir completamente un formato de archivo personalizado.  
+ Después de llamar a **bcp_columns**, debe llamar a [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) por cada columna del archivo de usuario para definir completamente un formato de archivo personalizado.  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones de copia masiva](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

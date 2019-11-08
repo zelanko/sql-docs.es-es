@@ -17,16 +17,15 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57a5c840ac796cf0b30e71c70be72d7c3be5a4e0
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 317f6f25e717a49f3b26c4cc09d957f8c38557f0
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909471"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73758318"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Con el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, puede establecer datos de BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  
   
@@ -721,7 +720,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [BLOB y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Usar tipos de valor grande](../../relational-databases/native-client/features/using-large-value-types.md)  
   

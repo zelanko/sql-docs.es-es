@@ -1,6 +1,6 @@
 ---
-title: Alta disponibilidad y recuperación ante desastres para Master Data Services | Microsoft Docs
-ms.custom: ''
+title: Alta disponibilidad y recuperación ante desastres
+ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 517438d6ffe1b2c69969a0f149cfa4a0a9481a8d
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874774"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728095"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
 
@@ -68,7 +68,7 @@ En la figura 1 se muestra una configuración típica usada principalmente en un 
 
 En el centro de datos de recuperación ante desastres hay una réplica secundaria con una relación de confirmación asincrónica con la principal. Este centro de datos suele estar ubicado en una región geográfica diferente del centro de datos principal. La réplica secundaria no tiene el privilegio VOTE.
 
-Esta configuración se usa para lograr la recuperación en el caso de que el centro de datos principal sufra un desastre, como un incendio, un terremoto, etc. La configuración logra tanto la alta disponibilidad como la recuperación ante desastres con un costo relativamente bajo.
+Esta configuración se usa para lograr la recuperación en caso de que el centro de datos principal esté en un desastre, como un incendio, un terremoto, etc. La configuración consigue alta disponibilidad y recuperación ante desastres con un costo relativamente bajo.
 
 ![Configuración típica de un grupo de disponibilidad de Always On](media/Fig1_TypicalConfig.png)
 
@@ -179,11 +179,11 @@ Cuando haya instalado la característica WSFC en todas las instancias, podrá co
 
    Si más tarde necesita agregar un nodo, haga clic en la acción **Agregar nodo** en el panel derecho de **Administrador de clústeres de conmutación por error**.
 
-Notas:
+Comentarios:
 
 - Es posible que la característica WSFC no esté disponible en todas las ediciones de Windows Server. Asegúrese de que su edición cuenta con esta característica.
 
-- Asegúrese de que cuenta con los permisos adecuados para configurar WSFC en Active Directory. Si hay algún problema, vea [Guía paso a paso de clústeres de conmutación por error: Configurar cuentas en Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx).
+- Asegúrese de que cuenta con los permisos adecuados para configurar WSFC en Active Directory. Si hay algún problema, vea [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guía paso a paso de clústeres de conmutación por error: Configurar cuentas en Active Directory).
 
 Para obtener más información detallada sobre WSFC, vea [Failover Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx) (Clústeres de conmutación por error).
 
@@ -298,13 +298,13 @@ El grupo de disponibilidad solo se puede crear en bases de datos existentes. As�
 
    Para cada réplica, configure las opciones **Confirmación sincrónica**, **Conmutación automática por error** y **Secundaria legible**. Vea la figura 17.
 
-**Confirmación sincrónica**: garantiza que, si se confirma una transacción en la réplica principal de una base de datos, también se confirme en las demás réplicas sincrónicas. La confirmación asincrónica no lo garantiza y podría ir a la zaga de la réplica principal.
+**Confirmación sincrónica**: Garantiza que, si se confirma una transacción en la réplica principal de una base de datos, también se confirme en las demás réplicas sincrónicas. La confirmación asincrónica no lo garantiza y podría ir a la zaga de la réplica principal.
 
 Normalmente debe habilitar la confirmación sincrónica solo si ambos nodos están en el mismo centro de datos. Si se encuentran en centros de datos diferentes, la confirmación sincrónica podría ralentizar el rendimiento de la base de datos. Si no se marca esta casilla, se usará la confirmación asincrónica.
 
-**Conmutación automática por error:** si la réplica principal está inactiva, el grupo de disponibilidad realizará automáticamente una conmutación por error a su réplica secundaria cuando se seleccione la conmutación automática por error. Solo se puede habilitar en las réplicas que tienen confirmaciones sincrónicas.
+**Conmutación automática por error:** Si la réplica principal está inactiva, el grupo de disponibilidad efectuará automáticamente una conmutación por error a su réplica secundaria cuando se seleccione la conmutación automática por error. Solo se puede habilitar en las réplicas que tienen confirmaciones sincrónicas.
 
-**Secundaria legible:** de forma predeterminada, los usuarios no se pueden conectar a ninguna réplica secundaria. Con esta opción, los usuarios podrán conectarse a la réplica secundaria con acceso de solo lectura.
+**Secundaria legible:** De forma predeterminada, los usuarios no se pueden conectar a ninguna réplica secundaria. Con esta opción, los usuarios podrán conectarse a la réplica secundaria con acceso de solo lectura.
 
 8. En la página **Especificar réplicas**, haga clic en la pestaña **Agente de escucha** y haga lo siguiente. Vea la figura 18.
 

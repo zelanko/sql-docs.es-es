@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: de92a64bb090a053d4cecb03cd9b812744f72fba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126401"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73633014"
 ---
-# <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
+# <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Modifica y muestra la información del esquema que se excluye al incluir tablas de Oracle aptas para su publicación.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,35 +39,32 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- Es el nombre de la que no sean de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` es el nombre del publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no [!INCLUDE[msCoName](../../includes/msconame-md.md)]. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ **@schema** =] **'***esquema***'**  
- Es el nombre del esquema. *esquema* es **sysname**, su valor predeterminado es null.  
+`[ @schema = ] 'schema'` es el nombre del esquema. *Schema* es de **tipo sysname y su**valor predeterminado es NULL.  
   
- [ **@operation** =] **'***operación***'**  
- Es la acción que se realiza en este esquema. *operación* es **nvarchar (4)** , y puede tener uno de los siguientes valores.  
+`[ @operation = ] 'operation'` es la acción que se realizará en este esquema. la *operación* es **nvarchar (4)** y puede tener uno de los valores siguientes.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|**add**|Agrega el esquema especificado a la lista de esquemas no aptos para su publicación.|  
-|**drop**|Quita el esquema especificado de la lista de esquemas no aptos para su publicación.|  
+|**agréguela**|Agrega el esquema especificado a la lista de esquemas no aptos para su publicación.|  
+|**omisiones**|Quita el esquema especificado de la lista de esquemas no aptos para su publicación.|  
 |**Ayuda**|Devuelve la lista de esquemas no aptos para su publicación.|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**SchemaName**|**sysname**|Es el nombre del esquema no apto para su publicación.|  
+|**equivale**|**sysname**|Es el nombre del esquema no apto para su publicación.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_schemafilter** solo debe usarse para los publicadores heterogéneos.  
+ **sp_schemafilter** solo se debe usar para publicadores heterogéneos.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor en el distribuidor puede ejecutar **sp_schemafilter**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** en el distribuidor pueden ejecutar **sp_schemafilter**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

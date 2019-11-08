@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con tipos de datos de ODBC mejoras de fecha y hora | Documentos de Microsoft
+title: Compatibilidad de tipos de datos con las mejoras de fecha y hora de ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,15 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9979de414bb044e23aa01d5ce1be1be6daa83c62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed58bf3db95d9989bedf2826cdd722206bfb4d51
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030509"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783998"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Compatibilidad con tipos de datos para mejoras de fecha y hora de ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   En este tema se proporciona información sobre los tipos ODBC compatibles con los tipos de datos de fecha y hora de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -36,18 +35,18 @@ ms.locfileid: "68030509"
   
  La tabla siguiente muestra la asignación completa servidor-tipo. Observe que algunas celdas de la tabla contienen dos entradas; en esos casos, el primero es el valor de ODBC 3.0 y el segundo es el valor de ODBC 2.0.  
   
-|Tipos de datos de SQL Server|Tipo de datos de SQL|Valor|  
+|Tipo de datos de SQL Server|Tipo de datos SQL|Value|  
 |--------------------------|-------------------|-----------|  
-|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|Fecha y hora|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
-|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
-|Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
+|Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (SQL. h)<br /><br /> 9 (sqlext. h)|  
+|Time|SQL_SS_TIME2|-154 (SQLNCLI. h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
   
  En la tabla siguiente se enumeran las estructuras y los tipos C de ODBC correspondientes. Puesto que ODBC no permite tipos C definidos por el controlador, se utiliza SQL_C_BINARY para time y datetimeoffset como estructuras binarias.  
   
-|Tipo de datos de SQL|Diseño de memoria|Tipo de datos C predeterminado|Valor (sqlext.h)|  
+|Tipo de datos SQL|Diseño de memoria|Tipo de datos C predeterminado|Valor (sqlext.h)|  
 |-------------------|-------------------|-------------------------|------------------------|  
 |SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|SQL_TIMESTAMP_STRUCT<br /><br /> TIMESTAMP_STRUCT|SQL_C_TYPE_TIMESTAMP<br /><br /> SQL_C_TIMESTAMP|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|  
 |SQL_TYPE_DATE<br /><br /> SQL_DATE|SQL_DATE_STRUCT<br /><br /> DATE_STRUCT|SQL_C_TYPE_DATE<br /><br /> SQL_C_DATE|SQL_TYPE_DATE<br /><br /> SQL_DATE|  
@@ -56,16 +55,16 @@ ms.locfileid: "68030509"
   
  Cuando se especifica el enlace SQL_C_BINARY, se comprueba la alineación y se genera un error para notificar que la alineación es incorrecta. El SQLSTATE para este error será IM016, con un mensaje del tipo "Alineación de estructura incorrecta".  
   
-## <a name="data-formats-strings-and-literals"></a>Formatos de datos: Las cadenas y literales  
+## <a name="data-formats-strings-and-literals"></a>Formatos de datos: Cadenas y literales  
  En la tabla siguiente se muestran las asignaciones entre tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tipos de datos de ODBC y literales de cadena de ODBC.  
   
-|Tipos de datos de SQL Server|Tipo de datos de ODBC|Formato de cadena para conversiones de cliente|  
+|Tipo de datos de SQL Server|Tipo de datos de ODBC|Formato de cadena para conversiones de cliente|  
 |--------------------------|--------------------|------------------------------------------|  
-|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite hasta tres dígitos de la fracción de segundo para Datetime.|  
+|Fecha y hora|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite hasta tres dígitos de la fracción de segundo para Datetime.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> Este tipo de datos tiene una precisión de un minuto. El componente de segundos será cero en salida y será redondeado por el servidor al producir los resultados.|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'aaaa-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Las fracciones de segundo se pueden especificar si se desea utilizando hasta siete dígitos.|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-dd hh: mm: [.9999999]'<br /><br /> Las fracciones de segundo se pueden especificar si se desea utilizando hasta siete dígitos.|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' AAAA-MM-DD HH: mm: SS [. 9999999] '<br /><br /> Las fracciones de segundo se pueden especificar si se desea utilizando hasta siete dígitos.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Las fracciones de segundo se pueden especificar si se desea utilizando hasta siete dígitos.|  
   
  No hay ningún cambio en las secuencias de escape de ODBC para los literales de fecha y hora.  
@@ -109,7 +108,7 @@ ms.locfileid: "68030509"
   
 -   SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
-### <a name="sqlsstime2struct"></a>SQL_SS_TIME2_STRUCT  
+### <a name="sql_ss_time2_struct"></a>SQL_SS_TIME2_STRUCT  
  Esta estructura se rellena hasta los 12 bytes en sistemas operativos de 32 bits y 64 bits.  
   
 ```  
@@ -121,7 +120,7 @@ typedef struct tagSS_TIME2_STRUCT {
 } SQL_SS_TIME2_STRUCT;  
 ```  
   
-### <a name="sqlsstimestampoffsetstruct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
+### <a name="sql_ss_timestampoffset_struct"></a>SQL_SS_TIMESTAMPOFFSET_STRUCT  
   
 ```  
 typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {  
@@ -137,9 +136,9 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- Si el **timezone_hour** es negativo, el **timezone_minute** debe ser negativo o cero. Si el **timezone_hour** es positivo, el **timezone_minute** debe ser positivo o cero. Si el **timezone_hour** es cero, el **timezone_minute** puede tener cualquier valor en el intervalo de-59 a + 59.  
+ Si el **timezone_hour** es negativo, el **timezone_minute** debe ser negativo o cero. Si el **timezone_hour** es positivo, el **timezone_minute** debe ser positivo o cero. Si el **timezone_hour** es cero, el **timezone_minute** puede tener cualquier valor comprendido entre-59 y + 59.  
   
 ## <a name="see-also"></a>Vea también  
- [Mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Mejoras &#40;de fecha y hora ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -18,20 +18,19 @@ ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dff71f35374df8988e73b958c8b4d476c28b8fbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c73bb76df097d259422f2c5626ecfb08668036c6
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064024"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761748"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Capturar una única fila con IRow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  El **IRow** implementación en la interfaz del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB se ha simplificado para aumentar el rendimiento. **IRow** permite un acceso directo a las columnas de un único objeto de fila. Si sabe de antemano que el resultado de una ejecución de comandos generará exactamente una fila, **IRow** recuperará las columnas de esa fila. Si el conjunto de resultados incluye varias filas, **IRow** solo expondrá la primera.  
+  La implementación de la interfaz **IRow** en el proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB Native Client se ha simplificado para aumentar el rendimiento. **IRow** permite un acceso directo a las columnas de un único objeto de fila. Si sabe de antemano que el resultado de una ejecución de comandos generará exactamente una fila, **IRow** recuperará las columnas de esa fila. Si el conjunto de resultados incluye varias filas, **IRow** solo expondrá la primera.  
   
- La implementación de **IRow** no permite cualquier navegación de la fila. Cada columna de la fila se tiene acceso a solo una vez con una excepción: Una columna puede tener acceso una vez para averiguar el tamaño de columna y otra para capturar los datos.  
+ La implementación de **IRow** no permite cualquier navegación de la fila. Solo se obtiene acceso una vez a cada columna de la fila, con una excepción: se puede obtener acceso a una columna una primera vez para buscar el tamaño de la columna y una segunda vez para capturar los datos.  
   
 > [!NOTE]  
 >  **IRow::Open** solo permite la apertura de objetos de tipo DBGUID_STREAM y DBGUID_NULL.  

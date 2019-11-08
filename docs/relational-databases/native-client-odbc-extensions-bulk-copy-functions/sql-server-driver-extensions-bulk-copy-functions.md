@@ -16,16 +16,15 @@ ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce1ee4536769ea1531a11ca3d57f049310ade042
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 6bee3ca51a46559231242188835ff1b75624cb68
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707594"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782055"
 ---
 # <a name="sql-server-driver-extensions---bulk-copy-functions"></a>Extensiones del controlador de SQL Server: funciones de copia masiva
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Conectividad abierta de bases de datos (ODBC) es una interfaz de programación de aplicaciones Win32 de Microsoft que las aplicaciones utilizan para obtener acceso a los datos de orígenes de datos ODBC. En la referencia del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no se documentan todas las llamadas a funciones de ODBC. Solo se describen las funciones que tienen parámetros o comportamientos específicos del controlador cuando se utilizan con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "71707594"
 -   [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de controlador de SQL Server](https://msdn.microsoft.com/library/1043bc93-965d-4939-bd1c-21e9d8d3e9ac)   
+ [SQL Server extensiones de controlador](https://msdn.microsoft.com/library/1043bc93-965d-4939-bd1c-21e9d8d3e9ac)   
  [Realizar operaciones &#40;de copia masiva ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

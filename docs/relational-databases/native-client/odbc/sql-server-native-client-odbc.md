@@ -19,16 +19,15 @@ ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80adde498a5a35bb0f8ba3bdf055b669326ca5de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48fc5ccd2973a530010975171a90f35a2f18a7e7
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913103"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73760249"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   ODBC es una definición estándar de una interfaz de programación de aplicaciones (API) utilizada para tener acceso a los datos de bases de datos relacionales o de método de acceso secuencial indizado (ISAM). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite ODBC mediante el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, como una de las API nativas para escribir aplicaciones C y C++ que se comuniquen con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -42,13 +41,13 @@ ms.locfileid: "67913103"
   
 -   [Crear una aplicación de controlador ODBC de SQL Server Native Client](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
--   [Comunicar con SQL Server &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+-   [Comunicación con SQL Server &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
--   [Ejecución de consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+-   [Ejecutar consultas &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
 -   [Procesar resultados &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
--   [Uso de cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+-   [Usar cursores &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
 -   [Realizar transacciones &#40;ODBC&#41;](https://msdn.microsoft.com/library/f431191a-5762-4f0b-85bb-ac99aff29724)  
   
@@ -58,30 +57,30 @@ ms.locfileid: "67913103"
   
 -   [Utilizar funciones de catálogo](../../../relational-databases/native-client/odbc/using-catalog-functions.md)  
   
--   [Realizar operaciones de copia masiva &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+-   [Realizar operaciones &#40;de copia masiva ODBC&#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
 -   [Administrar columnas de texto e imagen](../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
 -   [Generar perfiles del rendimiento del controlador ODBC](../../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
--   [Parámetros con valores de tabla &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+-   [Parámetros &#40;con valores de tabla ODBC&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [Mejoras de fecha y hora &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Mejoras &#40;de fecha y hora ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
--   [Tipos definidos por el usuario CLR grandes &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [Tipos &#40;definidos por el usuario CLR grandes ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
--   [Compatibilidad con FILESTREAM &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [Compatibilidad con &#40;FileStream ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
--   [Los nombres de entidad de servicio &#40;SPN&#41; en conexiones cliente &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Nombres &#40;principales de servicio&#41; SPN en conexiones &#40;de cliente ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [Compatibilidad con columnas dispersas &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
+-   [Las columnas dispersas admiten &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
   
--   [SQL Server Native Client &#40;ODBC&#41; referencia](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
+-   [Referencia &#40;de&#41; SQL Server Native Client ODBC](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
   
 -   [Temas de procedimientos de ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Programación de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [SQL Server Native Client programación](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Instalar SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

@@ -18,25 +18,24 @@ ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a6dd7e55ec7474dae0936624a0bdf0cb6bae379
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19a6dafd921edf924a35e30c7770155986203f5f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128735"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73758280"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandos que generan resultados de varios conjuntos de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client puede devolver varios conjuntos de filas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones. Las instrucciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelven resultados de varios conjuntos de filas si se dan las condiciones siguientes:  
+  El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB Native Client puede devolver varios conjuntos de filas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones. Las instrucciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelven resultados de varios conjuntos de filas si se dan las condiciones siguientes:  
   
 -   Las instrucciones SQL por lotes se envían como un comando único.  
   
 -   Los procedimientos almacenados implementan un lote de instrucciones SQL.  
   
 ## <a name="batches"></a>Lotes  
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client reconoce el carácter de punto y coma como delimitador de lote de instrucciones SQL:  
+ El proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client reconoce el carácter de punto y coma como un delimitador de lotes para las instrucciones SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

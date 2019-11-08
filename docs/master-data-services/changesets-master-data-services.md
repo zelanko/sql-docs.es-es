@@ -1,5 +1,5 @@
 ---
-title: Conjuntos de cambios (Master Data Services) | Microsoft Docs
+title: Conjuntos de cambios
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5136be23e428e670e5f6928944203c446c120ba1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d8c277796f743b31dfb5df349352bb6c7470421
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913640"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728619"
 ---
 # <a name="changesets-master-data-services"></a>Conjuntos de cambios (Master Data Services)
 
@@ -29,13 +29,13 @@ ms.locfileid: "67913640"
   
      Seguirá este flujo de trabajo.  
   
-    1.  Cree un conjunto de cambios. El conjunto de cambios está en estado abierto. Consulte [Creación de un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
+    1.  Cree un conjunto de cambios. El conjunto de cambios está en estado abierto. Consulte [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
     2.  Aplique el conjunto de cambios y agregue algunos cambios al conjunto de cambios. Consulte [Aplicar y actualizar un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
     3.  Envíe el conjunto de cambios al administrador de la entidad para su aprobación. El conjunto de cambios está en estado pendiente. Consulte [Confirmación o envío de un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-    4.  El administrador de la entidad recibe una notificación por correo electrónico en la que se indica que hay un conjunto de cambios esperando su aprobación. Si el administrador de la entidad aprueba el conjunto de cambios, el conjunto de cambios está en estado aprobado. Consulte [Aprobación o rechazo de un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
+    4.  El administrador de la entidad recibe una notificación por correo electrónico en la que se indica que hay un conjunto de cambios esperando su aprobación. Si el administrador de la entidad aprueba el conjunto de cambios, el conjunto de cambios está en estado aprobado. Consulte [Approve or Reject a Changeset &#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   
     5.  El conjunto de cambios aprobado se confirmará de forma automática. Si el cambio se confirma correctamente, el conjunto de cambios está en estado confirmado.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67913640"
   
      Seguirá este flujo de trabajo.  
   
-    1.  Cree un conjunto de cambios. El conjunto de cambios está en estado abierto. Consulte [Creación de un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
+    1.  Cree un conjunto de cambios. El conjunto de cambios está en estado abierto. Consulte [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
     2.  Aplique el conjunto de cambios y agregue algunos cambios al conjunto de cambios. Consulte [Aplicar y actualizar un conjunto de cambios &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   

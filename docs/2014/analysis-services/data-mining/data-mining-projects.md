@@ -10,12 +10,12 @@ ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3aa9d5ef81c32f7bb1f4235e4362533f3fac656d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66085054"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73705295"
 ---
 # <a name="data-mining-projects"></a>Proyectos de minería de datos
   Un proyecto de minería de datos forma parte de una solución de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante el proceso de diseño, los objetos que crea en este proyecto están disponibles para probarlos y consultarlos como parte de una base de datos del área de trabajo. Cuando desee que los usuarios puedan consultar o examinar los objetos del proyecto, debe implementarlo en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecute en modo multidimensional.  
@@ -26,7 +26,7 @@ ms.locfileid: "66085054"
 ##  <a name="bkmk_Overview"></a> Crear proyectos de minería de datos  
  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los proyectos se crean con la plantilla **Proyecto de minería de datos y OLAP**. También puede crear proyectos de minería de datos mediante programación, mediante AMO. Los objetos individuales de minería de datos pueden crearse usando el lenguaje de scripting de Analysis Services (ASSL). Para obtener más información, vea [Acceso a datos de modelos multidimensionales &#40;Analysis Services: datos multidimensionales&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- Si crea un proyecto de minería de datos en una solución existente, de forma predeterminada los objetos de minería de datos se implementan en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con el mismo nombre que el archivo de solución. Puede cambiar este nombre y el servidor de destino mediante el cuadro de diálogo **Propiedades del proyecto** . Para obtener más información, vea [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+ Si crea un proyecto de minería de datos en una solución existente, de forma predeterminada los objetos de minería de datos se implementan en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con el mismo nombre que el archivo de solución. Puede cambiar este nombre y el servidor de destino mediante el cuadro de diálogo **Propiedades del proyecto** . Para más información, vea [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 > [!WARNING]  
 >  Para generar e implementar correctamente el proyecto, debe tener acceso a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecute en modo de minería de datos y OLAP. No puede desarrollar ni implementar soluciones de minería de datos en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que admita modelos tabulares, ni puede utilizar directamente los datos de un libro PowerPivot o de un modelo tabular que use el almacén de datos en memoria. Para determinar si la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tiene admite la minería de datos, vea [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "66085054"
   
  Por ejemplo, un solo proyecto de minería de datos puede contener una referencia a varios orígenes de datos y cada origen de datos puede admitir varias vistas del origen de datos. A su vez, cada vista del origen de datos puede admitir varias estructuras de minería de datos, cada una con varios modelos de minería de datos relacionados.  
   
- Además, el proyecto puede incluir algoritmos de complemento, ensamblados personalizados o procedimientos almacenados personalizados; sin embargo, estos objetos no se describen aquí. Para obtener más información, consulte [Guía del desarrollador &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md).  
+ Además, el proyecto puede incluir algoritmos de complemento, ensamblados personalizados o procedimientos almacenados personalizados; sin embargo, estos objetos no se describen aquí. Para obtener más información, consulte [la guía &#40;del&#41;desarrollador Analysis Services](../analysis-services-developer-documentation.md).  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -70,7 +70,7 @@ ms.locfileid: "66085054"
   
  Un solo proyecto de minería de datos puede hacer referencia a varios orígenes de datos. Aunque un modelo de minería de datos puede utilizar un origen de datos cada vez, el proyecto podría tener varios modelos que dibujen en orígenes de datos diferentes.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite datos de muchos proveedores externos y la minería de datos de SQL Server puede usar tanto los datos relacionales como los datos de cubo como origen de datos. Sin embargo, si desarrolla ambos tipos de proyectos de modelos basados en orígenes relacionales y modelos basados en cubos OLAP-es posible que desee desarrollarlos y administrarlos en proyectos independientes.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite datos de muchos proveedores externos y la minería de datos de SQL Server puede usar tanto los datos relacionales como los datos de cubo como origen de datos. Sin embargo, si desarrolla ambos tipos de proyectos basados en orígenes relacionales y modelos basados en cubos OLAP, puede que desee desarrollarlos y administrarlos en proyectos independientes.  
   
 -   Normalmente, los modelos que se basaban en un cubo OLAP se deben desarrollar dentro de la solución de diseño OLAP. Una razón es que los modelos basados en un cubo deben procesar el cubo para actualizar los datos. Generalmente, debe utilizar los datos de un cubo solo cuando ese sea el medio principal de almacenamiento y acceso de los datos, o cuando se requieran agregaciones, dimensiones y atributos creados por el proyecto multidimensional.  
   
@@ -160,9 +160,7 @@ ms.locfileid: "66085054"
   
  Estas visualizaciones son temporales y se cierran sin guardar cuando se cierra la sesión con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por consiguiente, si necesita exportar estas visualizaciones a otra aplicación para mostrarlas o realizar un análisis adicional, utilice los comandos **Copiar** que se proporcionan en cada pestaña o panel de la interfaz del visor.  
   
- Los Complementos de minería de datos de Excel también proporcionan una plantilla de Visio que puede utilizar para representar modelos en un diagrama de Visio y para comentar y modificar el diagrama mediante las herramientas de Visio. Para obtener más información, vea [Complementos de minería de datos de Microsoft SQL Server 2008 para Microsoft Office 2007](https://go.microsoft.com/fwlink/?LinkID=123146).  
-  
-
+ Los Complementos de minería de datos de Excel también proporcionan una plantilla de Visio que puede utilizar para representar modelos en un diagrama de Visio y para comentar y modificar el diagrama mediante las herramientas de Visio. Para obtener más información, vea [Complementos de minería de datos de Microsoft SQL Server 2008 para Microsoft Office 2007](https://www.microsoft.com/download/details.aspx?id=7294).
   
 ###  <a name="bkmk_Validate"></a> Test and Validate Models  
  Después de crear un modelo, puede investigar los resultados y decidir qué modelos se comportan mejor.  
@@ -173,7 +171,7 @@ ms.locfileid: "66085054"
   
  Tenga en cuenta que estos informes y gráficos no se almacenan con el proyecto o en la base de datos de , por lo que, si necesita mantener o duplicar los resultados, debe guardar los resultados o escribir los objetos utilizando DMX o AMO. También puede utilizar procedimientos almacenados para la validación cruzada.  
   
- Para obtener más información, vea [Prueba y validación &#40;minería de datos&#41;](testing-and-validation-data-mining.md).  
+ Para obtener más información, vea [Testing and Validation &#40;Data Mining&#41;](testing-and-validation-data-mining.md).  
   
 
   
@@ -191,7 +189,7 @@ ms.locfileid: "66085054"
   
   
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
  En los temas siguientes se describe el uso del Asistente para minería de datos para crear un proyecto de minería de datos y sus objetos asociados.  
   
 |Tareas|Temas|  
@@ -205,7 +203,7 @@ ms.locfileid: "66085054"
 |Proporciona información acerca de Analysis Services|[Bases de datos de modelos multidimensionales &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Data Mining Designer](data-mining-designer.md)   
+ [Diseñador de minería de datos](data-mining-designer.md)   
  [Crear modelos multidimensionales utilizando las herramientas de datos de SQL Server &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Base de datos de área de trabajo &#40;SSAS tabular&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   

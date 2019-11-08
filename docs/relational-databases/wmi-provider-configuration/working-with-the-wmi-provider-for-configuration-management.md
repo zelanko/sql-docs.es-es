@@ -1,6 +1,6 @@
 ---
-title: Trabajar con el proveedor WMI para la administración de configuración | Microsoft Docs
-ms.custom: ''
+title: Usar el proveedor WMI para la administración de configuración
+ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,33 +19,33 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e6736c73f7cda435d91e3ec9c9f523bdc08f1b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139268"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73657375"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Trabajar con el proveedor WMI para la administración de configuración
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Este artículo proporciona orientación sobre cómo programar con el proveedor WMI para la administración de equipos.
+En este artículo se proporcionan instrucciones sobre cómo programar con el proveedor WMI para la administración de equipos.
 
 ## <a name="binding"></a>Enlace  
  El proveedor WMI para la administración de configuración es un modelo de objetos COM y admite el enlace en tiempo de diseño y en tiempo de ejecución. Con el enlace en tiempo de ejecución puede utilizar lenguajes de script, como VBScript, para manipular mediante programación los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la configuración de red y los alias.  
   
 ## <a name="specifying-a-connection-string"></a>Especificar una cadena de conexión
 
-Las aplicaciones dirigen el proveedor WMI para la administración de configuración a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la conexión a un espacio de nombres WMI definido por el proveedor. El servicio WMI de Windows asigna este espacio de nombres a la DLL del proveedor y carga el archivo DLL en la memoria. Todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se representan con un único espacio de nombres WMI.
+Las aplicaciones dirigen el proveedor WMI para la administración de configuración a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la conexión a un espacio de nombres WMI definido por el proveedor. El servicio WMI de Windows asigna este espacio de nombres al archivo DLL del proveedor y carga el archivo DLL en la memoria. Todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se representan con un único espacio de nombres WMI.
 
-El espacio de nombres predeterminado es el formato siguiente. En el formato, `VV` es el número de versión principal de SQL Server. El número es reconocible ejecutando `SELECT @@VERSION;`.
+El espacio de nombres tiene como valor predeterminado el siguiente formato. En el formato, `VV` es el número de versión principal de SQL Server. El número es reconocible al ejecutar `SELECT @@VERSION;`.
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-Cuando se conecta mediante el uso de PowerShell, el líder `\\.\` deben quitarse. Por ejemplo, el código PowerShell siguiente enumera todas las clases WMI de SQL Server 2016, que es la versión principal 13.
+Al conectarse mediante PowerShell, se deben quitar los `\\.\` iniciales. Por ejemplo, en el siguiente código de PowerShell se enumeran todas las clases WMI para un SQL Server 2016, que es la versión 13 principal.
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -63,13 +63,13 @@ Thus from here I (GeneMi = MightyPen) removed the following text about 'instance
 where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 -->
 
-Puede usar código PowerShell siguiente para consultar todos los espacios de nombres WMI ComputerManagement disponibles.
+Puede usar el siguiente código de PowerShell para consultar todos los espacios de nombres de WMI ComputerManagement disponibles.
 
 ```powershell
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **Nota:** Si se conecta a través de Firewall de Windows deberá asegurarse de que los equipos están configurados correctamente. Consulte el artículo "Connecting Through Windows Firewall" en la documentación de Instrumental de administración de Windows en [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [sitio Web](https://go.microsoft.com/fwlink/?linkid=15426).  
+ **Nota:** Si se va a conectar a través de Firewall de Windows, deberá asegurarse de que los equipos estén configurados correctamente. Vea el artículo sobre la conexión a través de Firewall de Windows en la documentación de Instrumental de administración de Windows en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [sitio web](https://go.microsoft.com/fwlink/?linkid=15426)de MSDN.  
   
 ## <a name="permissions-and-server-authentication"></a>Permisos y autenticación del servidor  
  Para tener acceso al proveedor WMI para la administración de configuración, el script de administración de WMI de cliente se debe ejecutar en el contexto de un administrador en el equipo de destino. Necesita ser miembro del grupo administradores de Windows local en el equipo que desea administrar.  

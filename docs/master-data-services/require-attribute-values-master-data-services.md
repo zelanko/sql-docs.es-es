@@ -1,5 +1,5 @@
 ---
-title: Requerir valores de atributo (Master Data Services) | Microsoft Docs
+title: Requerir valores de atributo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e430e158c301279398574bee64d744a40664b623
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e4a49778b9c75c696d079549f586187b1204fd8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085699"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728941"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Requerir valores de atributo (Master Data Services)
 

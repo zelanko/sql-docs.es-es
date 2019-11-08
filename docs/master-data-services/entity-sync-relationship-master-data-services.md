@@ -1,5 +1,5 @@
 ---
-title: Relación de sincronización de entidades (Master Data Services) | Microsoft Docs
+title: Relación de sincronización de entidades
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f0b989693c92bbecae3221f98a2ccc413700b994
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fde11c6b106a9e559d74504b77d975d096c1f3d0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915973"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729267"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>Relación de sincronización de entidades (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  La sincronización de entidades es una sincronización unidireccional y repetible entre versiones de entidades Permite compartir datos de entidad entre diferentes modelos. Puede conservar un único origen de confianza en un modelo y volver a usar estos datos maestros en otros modelos. Por ejemplo, puede almacenar los datos de estado de Estados Unidos en la entidad de un modelo y volver a usar esos datos en otros modelos.  
+  La sincronización de entidades es una sincronización unidireccional y repetible entre versiones de entidades. Permite compartir datos de entidad entre diferentes modelos. Puede conservar un único origen de confianza en un modelo y volver a usar estos datos maestros en otros modelos. Por ejemplo, puede almacenar los datos de estado de Estados Unidos en la entidad de un modelo y volver a usar esos datos en otros modelos.  
   
  Con la sincronización de entidades, también puede hacer una copia única de los datos.  
   

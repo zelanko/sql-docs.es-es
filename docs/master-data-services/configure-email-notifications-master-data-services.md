@@ -1,5 +1,5 @@
 ---
-title: Configurar notificaciones por correo electrónico (Master Data Services) | Microsoft Docs
+title: Configurar notificaciones por correo electrónico
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2826041b1385966f9ac4f76358588b4af6d414f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b49a2a9b52df3cf5364f0e4f86b4181439ff61b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941064"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729642"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>Configurar notificaciones por correo electrónico (Master Data Services)
 

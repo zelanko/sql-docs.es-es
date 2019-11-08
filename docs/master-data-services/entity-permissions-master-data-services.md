@@ -1,5 +1,5 @@
 ---
-title: Permisos de entidad (Master Data Services) | Microsoft Docs
+title: Permisos de entidad
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7e50c4ff0b3c69d1f943c0cff266520a2fabc9bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051986"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728182"
 ---
 # <a name="entity-permissions-master-data-services"></a>Permisos de entidad (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "68051986"
 |**Lectura**|El usuario puede leer miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
 |**Crear**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
 |**Update**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
-|**Eliminar**|El usuario puede eliminar miembros.|  
+|**Delete**|El usuario puede eliminar miembros.|  
 |**Denegar**|Denegar todo acceso a la entidad.|  
   
  Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan permisos de Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  

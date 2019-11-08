@@ -1,5 +1,5 @@
 ---
-title: Procedimiento almacenado de almacenamiento provisional (Master Data Services) | Microsoft Docs
+title: Procedimiento almacenado de almacenamiento provisional
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: db04bda1a2147c226fb33db12ba829350aac77a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085617"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727885"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Procedimiento almacenado de almacenamiento provisional (Master Data Services)
 
@@ -36,8 +36,8 @@ ms.locfileid: "68085617"
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> Obligatorio|El nombre de la versión. Puede distinguir mayúsculas de minúsculas o no, según la configuración de intercalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
-|**LogFlag**<br /><br /> Obligatorio|Determina si se registran o no las transacciones durante el proceso de almacenamiento provisional. Los valores posibles son:<br /><br /> **0**: no registrar transacciones.<br /><br /> **1**: registrar transacciones.<br /><br /> <br /><br /> Para obtener más información sobre las transacciones, consulte [Transacciones &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
+|**VersionName**<br /><br /> Necesario|El nombre de la versión. Puede distinguir mayúsculas de minúsculas o no, según la configuración de intercalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|**LogFlag**<br /><br /> Necesario|Determina si se registran o no las transacciones durante el proceso de almacenamiento provisional. Los valores posibles son:<br /><br /> **0**: no registrar transacciones.<br /><br /> **1**: registrar transacciones.<br /><br /> <br /><br /> Para obtener más información sobre las transacciones, consulte [Transacciones &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md).|  
 |**BatchTag**<br /><br /> Obligatorio, excepto para el servicio web|El valor de **BatchTag** como se especifica en la tabla de ensayo.|  
 |**Batch_ID**<br /><br /> Solo lo necesita el servicio web|El valor de **Batch_ID** como se especifica en la tabla de almacenamiento provisional.|  
 |**Nombre de usuario**|Parámetro opcional|  

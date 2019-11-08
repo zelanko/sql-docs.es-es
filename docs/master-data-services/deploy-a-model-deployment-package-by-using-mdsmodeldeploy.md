@@ -1,5 +1,5 @@
 ---
-title: Implementar un paquete de implementación de modelo mediante MDSModelDeploy | Microsoft Docs
+title: Implementar un paquete de implementación de modelo (MDSModelDeploy)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7d2041effbc1e5bebb94a730d90c19e28e0a02be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ae40a50eb9866b452efb8d387df62f8bed8fa24
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906222"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728312"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Implementar un paquete de implementación de modelo mediante MDSModelDeploy
 
@@ -37,7 +37,7 @@ ms.locfileid: "67906222"
   
 -   Debe disponer de permiso de acceso al área funcional **Administración del sistema** en el entorno de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] de destino.  
   
--   Debe existir un paquete de implementación de modelo. Para obtener más información, consulte [Crear un paquete de implementación de modelo mediante el asistente](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
+-   Debe existir un paquete de implementación de modelo. Para más información, consulte  [Create a Model Deployment Package by Using MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
 -   Debe ser administrador en el entorno donde va a implementar el modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -94,9 +94,9 @@ ms.locfileid: "67906222"
   
 6.  Cuando el paquete se implementa correctamente, se muestra un mensaje que indica que "la operación de MDSModelDeploy se completó correctamente".  
   
- **Notas:**  
+ **Comentarios:**  
   
--   Si una vista de suscripción del paquete tiene el mismo nombre que una vista de suscripción de un modelo existente, se muestra esta advertencia: **Se ha cambiado el nombre de la vista de suscripción del implementador** y la vista se crea como *nombre_del_modelo.nombre_de_vista_de_suscripción*. Si este nombre ya se está usando, no se crea la vista de suscripciones.  
+-   Si una vista de suscripciones del paquete tiene el mismo nombre que una vista de suscripciones de un modelo existente, esta advertencia se muestra como que **se ha cambiado el nombre de la vista de suscripción del implementador** y la vista se crea como *modelname.subscriptionviewname*. Si este nombre ya se está usando, no se crea la vista de suscripciones.  
   
 -   El proceso de implementación tiene cuatro pasos:  
   

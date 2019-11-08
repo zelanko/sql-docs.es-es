@@ -13,16 +13,15 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf5910d032b921f6cefa1aeb89fef1a6fcfbc44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3624253fa70ca12078a981d694c5e50b5030ce01
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898456"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781178"
 ---
 # <a name="use-a-statement-odbc"></a>Usar una instrucción (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-use-a-statement"></a>Para utilizar una instrucción  
@@ -39,11 +38,11 @@ ms.locfileid: "67898456"
   
 5.  Ejecute directamente una instrucción utilizando SQLExecDirect.  
   
-     \- o -  
+     \- O bien  
   
      Si se ha preparado la instrucción, ejecútela varias veces utilizando [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400).  
   
-     \- o -  
+     \- O bien  
   
      Llame a una función de catálogo, que devuelve los resultados.  
   
@@ -51,11 +50,11 @@ ms.locfileid: "67898456"
   
      Capture una fila cada vez del conjunto de resultados de una instrucción.  
   
-     \- o -  
+     \- O bien  
   
      Capture varias filas cada vez del conjunto de resultados mediante un cursor de bloque.  
   
-     \- o -  
+     \- O bien  
   
      Llame a [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md) para determinar el número de filas afectado por una instrucción INSERT, UPDATE o DELETE.  
   
@@ -74,6 +73,6 @@ ms.locfileid: "67898456"
 8.  Llame a [SQLFreeHandle](../../../relational-databases/native-client-odbc-api/sqlfreehandle.md) con un *HandleType* de SQL_HANDLE_STMT para liberar el identificador de instrucción.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejecutar consultas de temas de procedimientos &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [Temas &#40;de procedimientos de ejecución de consultas ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

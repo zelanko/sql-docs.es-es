@@ -1,6 +1,6 @@
 ---
-title: Obtener acceso el proveedor WMI para la administración de configuración mediante WQL | Microsoft Docs
-ms.custom: ''
+title: Usar WQL para tener acceso al proveedor WMI
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2daaea77ecc69a6c3a011ce0ffdfd862f296b22a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 53ade765b0f6b6710a12da06ae0b7470b55d9400
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139425"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658940"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Obtener acceso al proveedor WMI para la administración de configuración mediante WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,14 +30,14 @@ ms.locfileid: "68139425"
   
 ### <a name="querying-services-using-wbemtest"></a>Consultar los servicios mediante WBEMtest  
   
-1.  Desde el **iniciar** menú, haga clic en **ejecutar**y, a continuación, escriba **WBEMtest**.  
+1.  En el menú **Inicio** , haga clic en **Ejecutar**y, a continuación, escriba **WBEMTest**.  
   
 2.  El diálogo de WBEMtest.exe aparece. Haga clic en **Conectar**.  
   
 3.  En el primer campo de texto, escriba el espacio de nombres del proveedor WMI de Administración de equipos: raíz\Microsoft\SqlServer\ComputerManagement11. Haga clic en **Conectar**.  
   
-4.  Haga clic en **consulta**. Escriba una consulta que devuelve los servicios actuales que se ejecutan en el equipo local: **Seleccione \* de SqlService.** Haga clic en **Aplicar**.  
+4.  Haga clic en **consulta**. Escriba una consulta que devuelva los servicios actuales que se ejecutan en el equipo local: **seleccione \* de SqlService.** Haga clic en **Aplicar**.  
   
-5.  Refinar la consulta agregando **donde ServiceName = "MSSQLSERVER"** .  
+5.  Refine la consulta agregando **Where ServiceName = "MSSQLSERVER"** .  
   
   

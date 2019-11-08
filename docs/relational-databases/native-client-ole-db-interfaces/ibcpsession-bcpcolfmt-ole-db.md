@@ -16,16 +16,15 @@ ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b318557535552d910981bdb43c31973f0c845b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0471fc5fe8d7fc8b3b55d6fec39780e60f591db9
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091128"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73765691"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Crea un enlace entre las variables de programa y las columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -92,7 +91,7 @@ HRESULT BCPColFmt(
   
  Al establecer **cbUserData** en BCP_LENGTH_NULL se indica que todos los valores de los campos del archivo de datos están, o debería estar, establecidos en NULL. Al establecer **cbUserData** en BCP_LENGTH_VARIABLE se indica que el sistema debería determinar la longitud de datos para cada campo. Para algunos campos, esto podría significar que se genera un indicador de longitud o NULL que precede a los datos en una copia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o que se espera el indicador en los datos copiados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para el carácter y los tipos de datos binarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **cbUserData** puede ser BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 o algún valor positivo. Si **cbUserData** es BCP_LENGTH_VARIABLE, el sistema usa el indicador de longitud, si está presente, o una secuencia de terminador que determina la longitud de los datos. Si se proporciona un indicador de longitud y una secuencia de terminador, la copia masiva usa aquél por el que se copia la mínima cantidad de datos. Si **cbUserData** es BCP_LENGTH_VARIABLE, el tipo de datos es un carácter o un tipo binario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no se especifica un indicador de longitud ni una secuencia de terminador, el sistema devuelve un mensaje de error.  
+ Para el carácter y los tipos de datos binarios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **cbUserData** puede ser BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 o un valor positivo. Si **cbUserData** es BCP_LENGTH_VARIABLE, el sistema usa el indicador de longitud, si está presente, o una secuencia de terminador que determina la longitud de los datos. Si se proporciona un indicador de longitud y una secuencia de terminador, la copia masiva usa aquél por el que se copia la mínima cantidad de datos. Si **cbUserData** es BCP_LENGTH_VARIABLE, el tipo de datos es un carácter o un tipo binario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y no se especifica un indicador de longitud ni una secuencia de terminador, el sistema devuelve un mensaje de error.  
   
  Si **cbUserData** es 0 o un valor positivo, el sistema utiliza **cbUserData** como longitud de datos máxima. Sin embargo, si además de un valor de **cbUserData**positivo, se proporciona un indicador de longitud o una secuencia de terminador, el sistema determina la longitud de los datos utilizando el método por el que se copia la cantidad mínima de datos.  
   
@@ -118,7 +117,7 @@ HRESULT BCPColFmt(
  El método se ha llevado a cabo de forma correcta.  
   
  E_FAIL  
- Se produjo un error específico del proveedor; para obtener información detallada, use la interfaz [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) .  
+ Se ha producido un error específico del proveedor; para obtener más información, use la interfaz [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_UNEXPECTED  
  No se esperaba la llamada al método. Por ejemplo, no se llamó al método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) antes de llamar a este método.  
@@ -130,7 +129,7 @@ HRESULT BCPColFmt(
  Error de memoria insuficiente.  
   
 ## <a name="see-also"></a>Vea también  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [ &#40;OLE DB&#41; IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Realizar operaciones de copia masiva](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

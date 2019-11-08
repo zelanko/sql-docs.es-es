@@ -14,16 +14,15 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3a1e8f9076cce34de811713455c914f41b5814d
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 67509c447134edd816c06ac57e7714efd16c7359
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908047"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73766384"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Recuperar filas mediante marcadores (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   El consumidor establece el valor de campo **dwFlag** de la estructura de enlace en DBCOLUMNSINFO_ISBOOKMARK para indicar que la columna se utiliza como marcador. El consumidor establece también la propiedad de conjunto de filas DBPROP_BOOKMARKS en VARIANT_TRUE. Esto permite que la columna 0 esté presente en el conjunto de filas. Se utiliza**IRowsetLocate::GetRowsAt** para capturar filas, a partir de la fila especificada por un desplazamiento de un marcador.  
   

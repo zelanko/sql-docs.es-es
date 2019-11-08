@@ -1,5 +1,5 @@
 ---
-title: Grupos de atributos (Master Data Services) | Microsoft Docs
+title: Grupos de atributos
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 239b3b2131dd5da345fe415dcaa0d6846a62e1ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b5cefb3548886cc26e55a9f408ac68e2bd30620
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047611"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729771"
 ---
 # <a name="attribute-groups-master-data-services"></a>Grupos de atributos (Master Data Services)
 
@@ -42,11 +42,11 @@ ms.locfileid: "68047611"
  Los grupos de atributos se administran en el área funcional **Administración del sistema** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
 ## <a name="show-or-hide-attribute-groups"></a>Mostrar u ocultar grupos de atributos  
- Cuando se crea un grupo de atributos, se oculta automáticamente para todos los usuarios excepto para la persona que lo creó. Para obtener más información sobre cómo hacer visible el grupo, consulte [Hacer que un grupo de atributos sea visible para los usuarios &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md).  
+ Cuando se crea un grupo de atributos, se oculta automáticamente para todos los usuarios excepto para la persona que lo creó. Para obtener más información sobre cómo hacer visible el grupo, consulte [Make an Attribute Group Visible to Users &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md).  
   
  Si desea ocultar un atributo específico dentro de un grupo, puede asignar permisos **Denegar** al atributo. Para más información, vea [Permisos de hoja &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

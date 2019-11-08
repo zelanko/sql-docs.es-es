@@ -1,6 +1,6 @@
 ---
-title: Agregar varias condiciones a una regla de negocios (Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: Agregar condiciones a una regla de negocios
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bc678925ca35260131b318a1c3f674f5157a1fe5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047841"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728797"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>Agregar varias condiciones a una regla de negocios (Master Data Services)
 

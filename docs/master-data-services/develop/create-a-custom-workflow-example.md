@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de flujo de trabajo personalizado (Master Data Services) | Microsoft Docs
+title: Ejemplo de flujo de trabajo personalizado
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7063db46a9ab2dd98013667361c5eb0887bacf89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c15f708a6deb8da2b0ea32efc70635ef50124621
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084185"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729287"
 ---
 # <a name="create-a-custom-workflow---example"></a>Crear un flujo de trabajo personalizado: Ejemplo
 

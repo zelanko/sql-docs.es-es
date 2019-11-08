@@ -1,5 +1,5 @@
 ---
-title: Limpieza de ensamblado sin usar | Microsoft Docs
+title: Limpieza de ensamblados sin usar | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c7966d9d4a517902cf857856fd9bdeac7684de2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780182"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637697"
 ---
 # <a name="unused-assembly-cleanup"></a>Limpieza del ensamblado sin usar
   El ejemplo `AssemblyCleanup` contiene un procedimiento almacenado de .NET que limpia los ensamblados no usados en la base de datos actual mediante consultas en los catálogos de metadatos. Su único parámetro, `visible_assemblies`, se utiliza para especificar si se deben quitar los ensamblados visibles no usados o no. Un valor de 'false' significa de forma predeterminada que solo se quitarán los ensamblados no visibles no usados; en los demás casos se quitarán todos los ensamblados no usados. El conjunto de ensamblados no usados está formado por aquellos que no tienen ningún punto de entrada definido (rutinas, tipos y agregados) y que no tienen ningún ensamblado utilizado que haga referencia a ellos directa o indirectamente.  
@@ -23,7 +23,7 @@ ms.locfileid: "62780182"
 ## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   

@@ -1,5 +1,5 @@
 ---
-title: Crear un modelo (Master Data Services) | Microsoft Docs
+title: Crear un modelo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 96eb620a89fc9f7507f194539d9c1e3e09fc169c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906652"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728482"
 ---
 # <a name="create-a-model-master-data-services"></a>Crear un modelo (Master Data Services)
 
@@ -55,21 +55,21 @@ ms.locfileid: "67906652"
   
  Por cada modelo creado, se agrega una fila con ocho columnas a la cuadrícula. Las ocho columnas son:  
   
--   **Estado**: el estado del modelo. Al hacer clic en el botón **Guardar modelo**, se muestra la imagen ![Actualizar](../master-data-services/media/mds-model-status-updating.png "Actualizar"), que indica que se está actualizando el modelo. Si hay errores al crear o editar un modelo, se muestra la imagen ![Error](../master-data-services/media/mds-model-status-error.png "Error"). De lo contrario, el estado es correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
+-   **Estado**: el estado del modelo. Al hacer clic en el botón **Guardar modelo** , se muestra la imagen de ![actualización](../master-data-services/media/mds-model-status-updating.png "Actualización") , que indica que el modelo se está actualizando. Si hay errores al crear o editar un modelo, se muestra la imagen de ![error](../master-data-services/media/mds-model-status-error.png "Error") . De lo contrario, el estado es Correcto y se muestra la imagen ![Aceptar](../master-data-services/media/mds-model-status-ok.png "Aceptar") .  
   
--   **Nombre**: Nombre del modelo.  
+-   **Nombre**: el nombre del modelo.  
   
--   **Descripción**: La descripción del modelo.  
+-   **Descripción**: la descripción del modelo.  
   
 -   **Días de retención del registro**: el número de días que se conserva el registro para el modelo.  
   
--   **Creado por**: el nombre del usuario que ha creado el modelo.  
+-   **Creado por**: el nombre del usuario que creó el modelo.  
   
--   **Fecha y hora de creación**: fecha y hora en que se ha creado el modelo.  
+-   **Fecha y hora de creación**: la fecha y hora de creación del modelo.  
   
--   **Actualizada por**: nombre del usuario que ha actualizado el modelo por última vez.  
+-   **Actualizado por**: el nombre del último usuario que actualizó el modelo.  
   
--   **Fecha y hora de actualización**: fecha y hora en que se actualizó el modelo por última vez.  
+-   **Fecha y hora de actualización**: la fecha y hora de la última actualización del modelo.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
   

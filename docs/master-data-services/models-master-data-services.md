@@ -1,5 +1,5 @@
 ---
-title: Modelos (Master Data Services) | Microsoft Docs
+title: Modelos
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0376509a71196a8b674d6101f65b4845c660ac28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079611"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727949"
 ---
 # <a name="models-master-data-services"></a>Modelos (Master Data Services)
 
@@ -69,7 +69,7 @@ ms.locfileid: "68079611"
   
 -   Geography: podría incluir entidades como códigos postales, ciudades, municipios, estados, provincias, regiones, territorios, países y continentes.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

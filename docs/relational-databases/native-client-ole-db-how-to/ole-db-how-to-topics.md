@@ -13,24 +13,23 @@ ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f77be346c89a6e3d975a07892d74c0450d164bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6932f80b431a45a75d2d365c04cda644de56f9a
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110090"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789857"
 ---
 # <a name="ole-db-how-to-topics"></a>Temas de procedimientos de OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Para usar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client, tendrá que comprender cómo establecer una conexión con el servidor, ejecute el comando y procesar los resultados.  
+  Para usar el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, debe saber cómo establecer una conexión con el servidor, ejecutar el comando y procesar los resultados.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
 -   [Temas de procedimientos para procesar resultados &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [Conjunto de datos de gran tamaño &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)  
+-   [Establecer OLE DB de &#40;datos de gran tamaño&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [Enumerar orígenes de datos OLE DB &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -52,7 +51,7 @@ ms.locfileid: "68110090"
   
 -   [Enviar datos BLOB a SQL SERVER mediante IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [Usar UDT de CLR grandes &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [Usar UDT &#40;de CLR de gran tamaño OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [Mostrar metadatos de columna y del catálogo para columnas dispersas &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   

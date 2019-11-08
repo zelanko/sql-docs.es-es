@@ -18,16 +18,15 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbaf0029e5c2f7595591fb635c5eb43cc4b2a157
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: b3d09d1f577c9af59ea085eefbf51e9a70558a36
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707867"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782876"
 ---
 # <a name="bcp_control"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Cambia la configuración predeterminada de varios parámetros de control para una copia masiva entre un archivo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,9 +54,9 @@ RETCODE bcp_control (
  Es el número de filas por lote. El valor predeterminado es 0, que indica todas las filas de una tabla, cuando se extraen los datos, o todas las filas del archivo de datos del usuario, cuando los datos se copian en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un valor inferior a 1 restablece el valor predeterminado para BCPBATCH.  
   
  BCPDELAYREADFMT  
- Un valor booleano, si se establece en true, hará que [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) se lea en la ejecución. Si es false (valor predeterminado), bcp_readfmt leerá inmediatamente el archivo de formato. Se producirá un error de secuencia si BCPDELAYREADFMT es true y se llama a bcp_columns o bcp_setcolfmt.  
+ Un valor booleano, si se establece en true, hará que [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) lea en la ejecución. Si es false (valor predeterminado), bcp_readfmt leerá inmediatamente el archivo de formato. Se producirá un error de secuencia si BCPDELAYREADFMT es true y se llama a bcp_columns o bcp_setcolfmt.  
   
- También se producirá un error de secuencia si se llama a `bcp_control(hdbc,` BCPDELAYREADFMT @ no__t-1 después de llamar a `bcp_control(hdbc,` BCPDELAYREADFMT @ no__t-3 y bcp_writefmt.  
+ También se producirá un error de secuencia si se llama a `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` después de llamar a `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` y bcp_writefmt.  
   
  Para obtener más información, vea [Detección de metadatos](../../relational-databases/native-client/features/metadata-discovery.md).  
   
@@ -71,7 +70,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: los datos del archivo están en la página de códigos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- Número de versión del formato de archivo de datos. Puede ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) o 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 es el valor predeterminado. Esto resulta útil para exportar e importar datos en formatos admitidos en versiones anteriores del servidor. Por ejemplo, para importar datos obtenidos de una columna de texto en un servidor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] a una columna **VARCHAR (Max)** en un servidor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior, debe especificar 80. Del mismo modo, si especifica 80 al exportar datos de una columna **VARCHAR (Max)** , se guardará al igual que las columnas de texto se guardan en el formato [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] y se pueden importar en una columna de texto de un servidor @no__t 2.  
+ Número de versión del formato de archivo de datos. Puede ser 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) o 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 es el valor predeterminado. Esto resulta útil para exportar e importar datos en formatos admitidos en versiones anteriores del servidor. Por ejemplo, para importar datos obtenidos de una columna de texto de un servidor de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] a una columna **VARCHAR (Max)** en un servidor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior, debe especificar 80. Del mismo modo, si especifica 80 al exportar datos de una columna **VARCHAR (Max)** , se guardarán igual que las columnas de texto se guardan en el formato [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] y se pueden importar en una columna de texto de un servidor [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  
   
  BCPFIRST  
  Es la primera fila de datos del archivo o la tabla que va a copiarse. El valor predeterminado es 1; un valor menor que 1 reinicializa esta opción a su valor predeterminado.  

@@ -1,5 +1,5 @@
 ---
-title: Entidades (Master Data Services) | Microsoft Docs
+title: Entidades
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 23e4773e96fbee408290684c8e9c5092c1d7ea40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052041"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728157"
 ---
 # <a name="entities-master-data-services"></a>Entidades (Master Data Services)
 
@@ -34,16 +34,16 @@ ms.locfileid: "68052041"
 ## <a name="how-entities-relate-to-other-model-objects"></a>Cómo se relacionan las entidades con otros objetos del modelo  
  Una entidad es como una tabla que contiene datos maestros, donde las filas representan miembros y las columnas representan atributos.  
   
- ![Entidad de Master Data Services representada como una tabla](../master-data-services/media/mds-conc-entity-table.gif "Entidad de Master Data Services representada como una tabla")  
+ ![Entidad Master Data Services representada como tabla](../master-data-services/media/mds-conc-entity-table.gif "Entidad Master Data Services representada como tabla")  
   
  Rellene la entidad con una lista de datos maestros que desee administrar.  
   
- Las entidades se pueden usar para crear jerarquías derivadas, que son jerarquías de nivel basadas en varias entidades. Para obtener más información, consulte [Jerarquías derivadas &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
+ Las entidades se pueden usar para crear jerarquías derivadas, que son jerarquías de nivel basadas en varias entidades. Para obtener más información, consulte [Derived Hierarchies &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
   
  Las entidades también se pueden habilitar para contener jerarquías explícitas (distintas estructuras basadas en una sola entidad) y colecciones (combinaciones únicas de subconjuntos de miembros). Para obtener más información, consulte [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md) y [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="using-entities-as-constrained-lists"></a>Usar entidades como listas restringidas  
- Cuando los usuarios están asignando atributos a los miembros de una entidad, puede hacer que elijan en una lista restringida de valores. Para ello, use una entidad para rellenar la lista de valores para el atributo. Esto se denomina un atributo basado en dominio. Para obtener más información, consulte [Atributos basados en dominios &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
+ Cuando los usuarios están asignando atributos a los miembros de una entidad, puede hacer que elijan en una lista restringida de valores. Para ello, use una entidad para rellenar la lista de valores para el atributo. Esto se denomina un atributo basado en dominio. Para obtener más información, consulte [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
   
 ## <a name="base-entities"></a>Entidades base  
  Una entidad base es un punto de partida para los usuarios cuando navegan por los objetos del modelo. Una entidad base determina el diseño de la pantalla cuando un usuario abre el área funcional de **Explorador** y hace clic en **Explorador** en la barra de menús. Para especificar una entidad como entidad base, navegue hasta el área funcional de **Administración del sistema** . En la página **Vista de modelo** , arrastre la entidad del control de árbol hasta la derecha el nombre del modelo en el control de árbol de la izquierda.  
@@ -54,16 +54,16 @@ ms.locfileid: "68052041"
 ## <a name="entity-examples"></a>Ejemplos de entidad  
  En el ejemplo siguiente se muestra una entidad que tiene estos atributos: Name, Code, Subcategory, StandardCost, ListPrice y FilePhoto. Estos atributos describen los miembros. Cada miembro está representado por una fila única de valores de atributo.  
   
- ![Tabla de entidades de producto de bicicleta](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabla de entidades de producto de bicicleta")  
+ ![Tabla de entidades de producto Bike](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabla de entidades de producto Bike")  
   
  En el ejemplo siguiente, la entidad Product es la entidad central. La entidad Subcategory es un atributo basado en domino de la entidad Product. La entidad Category es un atributo basado en domino de la entidad Subcategory. StandardCost y ListPrice son atributos de forma libre de la entidad Product y FilePhoto es un atributo de archivo de la entidad Product.  
   
- ![Estructura de árbol de entidad de producto](../master-data-services/media/mds-conc-entity-ui.gif "Estructura de árbol de entidad de producto")  
+ ![Estructura del árbol de la entidad Product](../master-data-services/media/mds-conc-entity-ui.gif "Estructura del árbol de la entidad Product")  
   
 > [!NOTE]  
 >  Este es un ejemplo basado en la interfaz de usuario (IU) de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . La estructura de árbol jerárquica muestra las relaciones entre las entidades y los atributos basados en dominio. El objetivo es mostrar las relaciones más que representar niveles de importancia.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

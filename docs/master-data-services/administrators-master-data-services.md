@@ -1,5 +1,5 @@
 ---
-title: Administradores (Master Data Services) | Microsoft Docs
+title: Administradores de
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7b70c5182ec177b8867d2afab7d39dc5ac5955a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047810"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729794"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68047810"
   En este artículo se describen los tipos de administradores de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: administradores de modelos, administradores de entidad y superusuario.  
   
 ## <a name="model-administrators"></a>Administradores de modelos  
- En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de modelos es un usuario que tiene el permiso **Admin** asignado al objeto de modelo de nivel superior en la pestaña **Objetos de modelo** . Cuando un usuario tiene permiso Admin en un modelo determinado, cualquier otro permiso en objetos secundarios del modelo (tanto permisos de objeto de modelo como de miembro) es superado por el permiso **Admin** del modelo y se omiten en la práctica.  
+ En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de modelo es un usuario que tiene permiso de **Administrador** asignado al objeto de modelo de nivel superior en la pestaña **objetos de modelo** . Cuando un usuario tiene permiso de administrador en un modelo determinado, cualquier otro permiso en los objetos secundarios del modelo (tanto los permisos de objeto de modelo como de miembro) es superado por el permiso de **Administrador** del modelo y se pasa por alto de forma efectiva.  
   
 -   Si el usuario tiene acceso al área funcional del **Explorador** , podrá agregar, eliminar y actualizar todos los datos maestros de esta área.  
   
@@ -36,10 +36,10 @@ ms.locfileid: "68047810"
   
  Cada modelo puede tener varios administradores. Cada usuario puede ser administrador de modelo para uno, varios o todos los modelos de la implementación de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
- Un usuario se puede configurar como administrador de modelo en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o mediante programación. Para obtener más información, consulte [Crear un administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
+ Un usuario se puede configurar como administrador de modelo en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o mediante programación. Para obtener más información, consulte [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Administradores de entidad  
- En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de entidad es un usuario que tiene permisos de administrador asignados para el objeto de entidad en la pestaña Objetos de modelo. Cuando un usuario tiene permisos de administrador para una entidad, cualquier otro permiso en los objetos secundarios de la entidad (tanto permisos de objeto de modelo como de miembro) es reemplazado por los permisos de administrador y se omite.  
+ En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de entidad es un usuario que tiene permisos de administrador asignados al objeto entidad en la pestaña objetos de modelo. Cuando un usuario tiene permisos de administrador para una entidad, cualquier otro permiso en los objetos secundarios de la entidad (tanto los permisos de objeto de modelo como de miembro) es reemplazado por los permisos de administrador y se omite.  
   
 -   Si el usuario tiene acceso al área funcional del **Explorador** , podrá agregar, eliminar y actualizar todos los datos maestros de esta área.  
   

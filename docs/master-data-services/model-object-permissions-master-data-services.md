@@ -1,5 +1,5 @@
 ---
-title: Permisos de objeto de modelo (Master Data Services) | Microsoft Docs
+title: Permisos de objeto del modelo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e652d2c42c61e1694c1f8adfa7976f3c1eda8406
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0243df5cd71ed667219b3e4e1b4a8ff6d1115f25
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055743"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727980"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Permisos de objeto del modelo (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "68055743"
   
  Para conceder a un usuario acceso a un área funcional que no sea el **Explorador**, el usuario debe ser un administrador del modelo, lo que implica también la asignación de permisos de administración en el modelo de objeto. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
- Los permisos del objeto de modelo se asignan en la interfaz de usuario de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], en el área funcional **Permisos de grupos y usuarios** de la pestaña **Modelos**. En esta pestaña, el modelo se representa como una estructura de árbol. Cuando asigne un permiso a un objeto en el árbol, todos los objetos subordinados heredan ese permiso. Para invalidar esa herencia asignando el permiso a objetos individuales.  
+ Los permisos del objeto de modelo se asignan en la interfaz de usuario [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] (UI), en el área funcional **permisos de usuario y de grupo** de la pestaña **modelos** . En esta pestaña, el modelo se representa como una estructura de árbol. Cuando asigne un permiso a un objeto en el árbol, todos los objetos subordinados heredan ese permiso. Para invalidar esa herencia asignando el permiso a objetos individuales.  
   
  Puede asignar una combinación de permisos de lectura, creación, actualización y eliminación o denegación a los objetos de modelo. Si no asigna permisos en la pestaña **Modelos** , el usuario no podrá ver ningún modelo ni ningún dato en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   

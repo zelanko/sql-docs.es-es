@@ -1,5 +1,5 @@
 ---
-title: Permisos de modelo (Master Data Services) | Microsoft Docs
+title: Permisos de modelo
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 027240f161ec2853aa2d40a7b4792ccea82c7e64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e42e54689b5b6a576a24fe57f2f9f4dcaccd1b8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000022"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728966"
 ---
 # <a name="model-permissions-master-data-services"></a>Permisos de modelo (Master Data Services)
 
@@ -34,11 +34,11 @@ ms.locfileid: "68000022"
 |**Lectura**|El usuario puede leer miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
 |**Crear**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
 |**Update**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
-|**Eliminar**|El usuario puede eliminar miembros|  
+|**Delete**|El usuario puede eliminar miembros|  
 |**Denegar**|El usuario puede denegar todo el acceso al modelo.|  
 |**Administración**|Permisos de administrador en el modelo. El permiso de administrador solo está disponible en el nivel de modelo.|  
   
- Los permisos de lectura, creación, actualización y eliminación se pueden combinar entre sí. Cuando se asignan permisos de Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
+ Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan permisos de Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
   
 ## <a name="see-also"></a>Vea también  
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

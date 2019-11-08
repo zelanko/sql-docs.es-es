@@ -13,16 +13,15 @@ ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 714823ca585e85d8c1c3840da37630d975b9fdb6
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: f8e3b2f19d25374a592203cbd4b00f118385d980
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908215"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781677"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurar el controlador ODBC de SQL Server: eliminar un origen de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Antes de utilizar las aplicaciones ODBC con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior, debe saber cómo actualizar la versión de los procedimientos almacenados del catálogo en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y agregar, eliminar y probar los orígenes de datos.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "72908215"
 4.  Haga clic en **quitar**y confirme la eliminación.  
 
 ## <a name="example"></a>Ejemplo  
- Para eliminar un origen de datos mediante programación, llame a [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) usando ODBC_REMOVE_DSN o ODBC_REMOVE_SYS_DSN como segundo parámetro.  
+ Para eliminar un origen de datos mediante programación, llame a [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) utilizando ODBC_REMOVE_DSN o ODBC_REMOVE_SYS_DSN como segundo parámetro.  
   
  El ejemplo siguiente se muestra cómo se puede eliminar un origen de datos mediante programación.  
   
@@ -60,7 +59,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Agregar un origen &#40;de datos ODBC&#41;](../../relational-databases/native-client-odbc-how-to/configuring-the-sql-server-odbc-driver-add-a-data-source.md)  
   
   

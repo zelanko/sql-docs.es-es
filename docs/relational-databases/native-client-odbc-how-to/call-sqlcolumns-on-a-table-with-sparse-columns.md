@@ -1,5 +1,5 @@
 ---
-title: Llamar a SQLColumns sobre una tabla con columnas dispersas | Documentos de Microsoft
+title: Llamar a SQLColumns en una tabla con columnas dispersas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -12,16 +12,15 @@ ms.assetid: afd35e13-2370-43c2-9cbc-f8da6248c39c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0690c5ed27f2dd7a0b4bfae55af06e8ac5f0c2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffe65b15ef18618058ea9ccc385dd12cd0482d96
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987589"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781698"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Llamar a SQLColumns sobre una tabla con columnas dispersas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   En este ejemplo, se muestra cómo llamar a SQLColumns sobre una tabla con columnas dispersas definidas mediante ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -30,13 +29,13 @@ ms.locfileid: "67987589"
  Para obtener más información acerca de esta característica de columnas dispersas, vea [Sparse Columns Support in SQL Server Native Client](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md).  
   
 ## <a name="example"></a>Ejemplo  
- La primera lista de código es el código fuente de C++. Cambie “MyServer” por un nombre de servidor válido. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h. Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ La primera lista de código es el código fuente de C++. Cambie “MyServer” por un nombre de servidor válido. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h. Si compila y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
  Compile con /EHsc /D, "UNICODE", y odbc32.lib.  
   
- El segundo ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) lista de código elimina la tabla creada por este ejemplo.  
+ La segunda lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) elimina la tabla creada por este ejemplo.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

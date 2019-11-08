@@ -1,6 +1,6 @@
 ---
-title: Método SetBoolValue (clase SqlServiceAdvancedProperty) | Microsoft Docs
-ms.custom: ''
+title: Método SetBoolValue (SqlServiceAdvancedProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 077cd7adea70facc2033da2bcf54643f6188fda0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b893415c56aae38c76836fbe0496e4d990ff83b
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042691"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659956"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Método SetBoolValue (clase SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

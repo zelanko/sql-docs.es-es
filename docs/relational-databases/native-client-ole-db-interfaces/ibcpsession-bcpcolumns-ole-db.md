@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: BCPColumns (OLE DB) | Documentos de Microsoft'
+title: IBCPSession::BCPColumns (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ ms.assetid: c338abe8-9e30-4853-a7c6-b1a6c00095e1
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40189589f00a7d97716278225cbd799a268c04f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1b5385d32ef349284f261a457391581b6e28da03
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091106"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789704"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Establece el número de campos que van a enlazarse a las columnas en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -38,7 +37,7 @@ HRESULT BCPColumns(
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Llama a [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) internamente para establecer los valores predeterminados de los datos de campo. Estos valores predeterminados se obtienen de la información de columna de SQL Server que el proveedor recupera internamente cuando el nombre de tabla se especifica a través de [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
+ Llama a [a IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) internamente para establecer los valores predeterminados para los datos de campo. Estos valores predeterminados se obtienen de la información de columna de SQL Server que el proveedor recupera internamente cuando el nombre de tabla se especifica a través de [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
   
 > [!NOTE]  
 >  Se puede llamar a este método solamente después de que se haya llamado a **a BCPInit** con un nombre de archivo válido.  
@@ -65,7 +64,7 @@ HRESULT BCPColumns(
  Error de memoria insuficiente.  
   
 ## <a name="see-also"></a>Vea también  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [ &#40;OLE DB&#41; IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Realizar operaciones de copia masiva](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

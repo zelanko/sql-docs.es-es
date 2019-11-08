@@ -1,5 +1,5 @@
 ---
-title: Crear un conjunto de filas con IOpenRowset | Documentos de Microsoft
+title: Crear un conjunto de filas con IOpenRowset | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,17 @@ ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba14712d80e970c9abb995ddbf6d172951c3d414
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd80b90a8c40551344773ab7c5e95a539c21eefb
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105106"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73788996"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Crear un conjunto de filas con IOpenRowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite el **IOpenRowset:: OpenRowset** método con las siguientes restricciones:  
+  El proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite el método **IOpenRowset:: OPENROWSET** con las siguientes restricciones:  
   
 -   Debe especificarse una tabla base o una vista en una estructura de identificador de base de datos (DBID) a la que apunte el parámetro *pTableID*.  
   

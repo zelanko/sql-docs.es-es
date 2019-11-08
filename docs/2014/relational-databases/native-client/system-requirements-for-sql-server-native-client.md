@@ -15,12 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637838"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637794"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Requisitos del sistema para SQL Server Native Client
   Para utilizar las características de acceso a datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como MARS, debe tener instalado el software siguiente:  
@@ -29,13 +29,13 @@ ms.locfileid: "62637838"
   
 -   Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su servidor.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requiere Windows Installer 3.0. Windows Installer 3.0 ya está instalado en los sistemas operativos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Para el resto de plataformas necesita instalarlo explícitamente. Para obtener más información, consulte [Windows Installer 3.0 Redistribuirle](https://go.microsoft.com/fwlink/?LinkId=46459).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requiere Windows Installer 3.0. Windows Installer 3.0 ya está instalado en los sistemas operativos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Para el resto de plataformas necesita instalarlo explícitamente. Para obtener más información, vea [Windows Installer 3,0 Redistributable](https://www.microsoft.com/download/details.aspx?id=16821).  
   
 > [!NOTE]  
 >  Asegúrese de que inicia sesión con privilegios de administrador antes de instalar este software.  
   
 ## <a name="operating-system-requirements"></a>Requisitos de sistema operativo  
- Para obtener una lista de sistemas operativos que admiten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vea [las directivas de soporte técnico para SQL Server Native Client](applications/support-policies-for-sql-server-native-client.md).  
+ Para obtener una lista de sistemas operativos compatibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consulte [directivas de soporte técnico para SQL Server Native Client](applications/support-policies-for-sql-server-native-client.md).  
   
 ## <a name="sql-server-requirements"></a>Requisitos de SQL Server  
  Para utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para tener acceso a los datos en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe tener instalada una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -62,23 +62,23 @@ ms.locfileid: "62637838"
   
  No hay ningún control `DataTypeCompatibility` para ODBC.  
   
- GetKeywords siempre devolverá una lista de palabras clave que corresponde a la versión del servidor en la conexión y no se ve afectada por `DataTypeCompatibility`.  
+ IDBInfo:: GetKeywords siempre devolverá una lista de palabras clave que corresponde a la versión del servidor en la conexión y no se ve afectada por `DataTypeCompatibility`.  
   
-|Tipo de datos|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC y<br /><br /> aplicaciones OLE DB de SQL Server Native Client con DataTypeCompatibility=80|  
+|Tipo de datos|SQL Server Native Client<br /><br /> Resultado de|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC y<br /><br /> aplicaciones OLE DB de SQL Server Native Client con DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|Image|  
-|ntext|varchar|varchar|Text|  
-|nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
-|xml|xml|xml|Ntext|  
-|UDT de CLR (> 8Kb)|udt|varbinary|Image|  
+|varbinary(max)|varbinary|varbinary|Imagen|  
+|varchar(max)|varchar|varchar|Texto|  
+|nvarchar(max)|nvarchar|nvarchar|Ntext|  
+|XML|XML|XML|Ntext|  
+|UDT CLR (> 8 KB)|udt|varbinary|Imagen|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  
   
 ## <a name="see-also"></a>Vea también  
- [Programación de SQL Server Native Client](sql-server-native-client-programming.md)   
+ [SQL Server Native Client programación](sql-server-native-client-programming.md)   
  [Instalar SQL Server Native Client](applications/installing-sql-server-native-client.md)  
   
   

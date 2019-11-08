@@ -1,5 +1,5 @@
 ---
-title: Jerarquías derivadas (Master Data Services) | Microsoft Docs
+title: Jerarquías derivadas
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e75b76eda87580063dfdaea081a1b4f0efaa518
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084208"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728279"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Jerarquías derivadas (Master Data Services)
 
@@ -62,7 +62,7 @@ ms.locfileid: "68084208"
   
  En una jerarquía derivada, puede resaltar la relación entre Product y Subcategory y posteriormente entre Subcategory y Category. Cuando vea los miembros en esta jerarquía, cada nivel en el árbol contendrá los miembros de la misma entidad.  
   
- ![Ejemplo de jerarquía derivada de bicicletas de montaña](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Ejemplo de jerarquía derivada de bicicletas de montaña")  
+ ![Ejemplo de jerarquía derivada de bicicleta de montaña](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "Ejemplo de jerarquía derivada de bicicleta de montaña")  
   
  Este tipo de jerarquía no le permitirá mover miembros a niveles que no sean válidos. Por ejemplo, puede mover la bicicleta Road-650 de una subcategoría, Road Bikes (bicicletas de carretera), a otra, Mountain Bikes (bicicletas de montaña). Pero no puede mover directamente Road-650 a una categoría, como 1 {Bikes} (bicicletas). Cada vez que mueve un miembro en el árbol de jerarquía, el valor del atributo basado en dominio del miembro cambia para reflejar el movimiento.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68084208"
   
  Si el atributo basado en dominio de un miembro está vacío y el atributo se utiliza para una jerarquía derivada, el miembro no se mostrará en la jerarquía. Cree reglas de negocio para exigir que se rellenen los atributos. Para más información, vea [Requerir valores de atributo &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

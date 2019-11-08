@@ -1,5 +1,5 @@
 ---
-title: Jerarquías explícitas (Master Data Services) | Microsoft Docs
+title: Jerarquías explícitas
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e54ac7b6329a678d2965f135dadf5870ca19010b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b80665b6a3b3167b362be7912c70f81ce2add2ef
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915949"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729257"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Jerarquías explícitas (Master Data Services)
 
@@ -75,7 +75,7 @@ ms.locfileid: "67915949"
 |Puede ser desigual|Siempre contiene un número coherente de niveles|  
   
 ## <a name="explicit-hierarchy-example"></a>Ejemplo de jerarquía explícita  
- En el ejemplo siguiente, la entidad Product contiene a estos miembros hoja: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} y BK-R650 {Road-650}.  
+ En el ejemplo siguiente, la entidad Product contiene estos miembros hoja: BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450} y BK-R650 {Road-650}.  
   
  Para resumir estos miembros hoja en puntos específicos de consolidación, puede crear miembros consolidados en la entidad Product. Inserte los miembros consolidados en los niveles del árbol de jerarquía donde desea resumir los miembros hoja. No existe limitación alguna con respecto al lugar donde insertar los miembros consolidados; sin embargo, solo puede utilizar cada miembro (hoja o consolidado) una vez.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "67915949"
   
  Los miembros consolidados se pueden usar para agrupar miembros en cualquier nivel, y los miembros hoja y consolidados se ordenan según se determine.  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

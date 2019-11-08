@@ -1,5 +1,5 @@
 ---
-title: Usar parámetros con valores de tabla (OLE DB) | Documentos de Microsoft
+title: Usar parámetros con valores de tabla (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +11,15 @@ ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f326704a949e4e0703f6dcb732471edd8187729b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0de2c67c1a2d60903054e5098a145f4057fe6e13
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68109961"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789691"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Usar parámetros con valores de tabla (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior. En el ejemplo se realizan las tareas siguientes:  
   
@@ -34,7 +33,7 @@ ms.locfileid: "68109961"
   
 -   Se muestra el control de errores para los errores SQLNCLI11.  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
+ Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros &#40;con&#41;valores](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)de tabla SQL Server Native Client.  
   
 ## <a name="example"></a>Ejemplo  
  La primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea la base de datos que se usa en el ejemplo.  

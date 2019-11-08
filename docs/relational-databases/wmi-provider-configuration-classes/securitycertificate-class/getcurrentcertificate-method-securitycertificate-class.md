@@ -1,6 +1,6 @@
 ---
-title: Método GetCurrentCertificate (clase SecurityCertificate) | Microsoft Docs
-ms.custom: ''
+title: Método GetCurrentCertificate (SecurityCertificate)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c7f5c207f786936a6bb9aebec03fb6e14fe7c1cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d30807d8d20bc5bf969aafd2e700ed88bc3b8584
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912041"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660173"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>Método GetCurrentCertificate (clase SecurityCertificate)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,6 +52,6 @@ object.GetCurrentCertificate(SHA , SQLInstance)
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuración de protocolos de red de servidor y bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

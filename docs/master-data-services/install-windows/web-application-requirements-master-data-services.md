@@ -1,5 +1,5 @@
 ---
-title: Requisitos de aplicaciones web (Master Data Services) | Microsoft Docs
+title: Requisitos de la aplicación Web
 ms.custom: ''
 ms.date: 02/13/2017
 ms.prod: sql
@@ -12,18 +12,18 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 763695a4fe00b2bb5f50113b5c9c2ba65ddd9417
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 851452cd5170abb6328210ecb35bd95b2bb951a3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944885"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728090"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos de la aplicación web (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] es una aplicación web hospedada por Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona únicamente en Internet Explorer (IE) 9 o posterior. No se admiten IE 8 ni versiones anteriores, así como tampoco Microsoft Edge ni Chrome.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] es una aplicación web hospedada por Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona únicamente en Internet Explorer (IE) 9 o versiones posteriores. No se admiten IE 8 ni versiones anteriores, así como tampoco Microsoft Edge ni Chrome.  
 
 **Para obtener instrucciones sobre cómo instalar y configurar IIS**, vea [Instalación y configuración de IIS](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS).
   
@@ -47,18 +47,18 @@ ms.locfileid: "67944885"
  
  
 > [!IMPORTANT]  
->La**compresión de contenido dinámico** está habilitada de forma predeterminada. Esto disminuye considerablemente el tamaño de la respuesta xml y reduce la E/S de red, aunque el uso de CPU aumenta.  Para obtener más información, vea **[CTP 2.0] Rendimiento mejorado** en [Novedades en Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
+>La**compresión de contenido dinámico** está habilitada de manera predeterminada. Esto disminuye considerablemente el tamaño de la respuesta xml y reduce la E/S de red, aunque el uso de CPU aumenta.  Para obtener más información, vea **[CTP 2.0] Rendimiento mejorado** in [Novedades en Master Data Services &#40;MDS&#41;](../../master-data-services/what-s-new-in-master-data-services-mds.md).  
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Herramientas de administración web<br /><br /> Consola de administración de IIS<br /><br /> Servicios de World Wide Web<br /><br /> Desarrollo de aplicaciones<br /><br /> Extensibilidad de .NET<br /><br /> Extensibilidad de .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensiones ISAPI<br /><br /> Filtros ISAPI<br /><br /> Características HTTP comunes<br /><br /> Documento predeterminado<br /><br /> Examen de directorios<br /><br /> Errores HTTP<br /><br /> Contenido estático<br /><br /> [Nota: No instale publicación en WebDAV]<br /><br /> Estado y diagnóstico<br /><br /> Registrar HTTP<br /><br /> Monitor de solicitudes<br /><br /> Rendimiento<br /><br /> Compresión de contenido estático<br /><br /> Seguridad<br /><br /> Filtro de solicitudes<br /><br /> Autenticación de Windows|  
+|Internet Information Services<br /><br /> Herramientas de administración web<br /><br /> Consola de administración de IIS<br /><br /> Servicios de World Wide Web<br /><br /> Desarrollo de aplicaciones<br /><br /> Extensibilidad de .NET<br /><br /> Extensibilidad de .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensiones ISAPI<br /><br /> Filtros ISAPI<br /><br /> Características HTTP comunes<br /><br /> Documento predeterminado<br /><br /> Examen de directorios<br /><br /> Errores HTTP<br /><br /> Contenido estático<br /><br /> [Nota: no instale Publicación en WebDAV]<br /><br /> Estado y diagnóstico<br /><br /> Registrar HTTP<br /><br /> Monitor de solicitudes<br /><br /> Rendimiento<br /><br /> Compresión de contenido estático<br /><br /> Seguridad<br /><br /> Filtro de solicitudes<br /><br /> Autenticación de Windows|  
   
 ### <a name="features"></a>Características 
  En Windows Server 2012 y Windows Server 2012 R2, puede usar **Administrador del servidor** para instalar las siguientes características necesarias.  
   
 ||  
 |-|  
-|.NET Framework 3.5 (incluye .NET 2.0 y 3.0)<br /><br /> Servicios avanzados de .NET Framework 4.5<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> Activación HTTP [Nota: Esto es necesario.]<br /><br /> Uso compartido de puertos TCP<br /><br /> Servicio WAS (Windows Process Activation Service)<br /><br /> Modelo de proceso<br /><br /> Entorno .NET<br /><br /> API de configuración<br/><br/>compresión de contenido dinámico|  
+|.NET Framework 3.5 (incluye .NET 2.0 y 3.0)<br /><br /> Servicios avanzados de .NET Framework 4.5<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> Activación HTTP [Nota: esto es necesario]<br /><br /> Uso compartido de puertos TCP<br /><br /> Servicio WAS (Windows Process Activation Service)<br /><br /> Modelo de proceso<br /><br /> Entorno .NET<br /><br /> API de configuración<br/><br/>compresión de contenido dinámico|  
   
  Este es un script de PowerShell de ejemplo que sirve para agregar características y roles de servidor necesarios. Las características y roles de servidor necesarios varían en función del entorno.  
   
@@ -72,7 +72,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>Cuentas y permisos  
   
-|Type|Descripción|  
+|Tipo|Descripción|  
 |----------|-----------------|  
 |Cuenta de Windows|Debe iniciar sesión en el equipo servidor web con una cuenta de Windows que tenga permiso para configurar roles de Windows, servicios de rol y características, y para crear y administrar grupos de aplicaciones, sitios web y aplicaciones web en IIS, en el equipo local.|  
 |Cuenta de servicio|Cuando cree la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] en [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], debe especificar una identidad para el grupo de aplicaciones en el que se ejecute la aplicación. Esta cuenta puede ser diferente de la cuenta de servicio que se especificó cuando se creó la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Esta identidad debe ser una cuenta de usuario de dominio y se agrega al rol de la base de datos mds_exec en la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para tener acceso a las bases de datos. Para más información, vea [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Esta cuenta también se agrega a un grupo de Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, que es el permiso concedido al directorio de compilación temporal, **MDSTempDir**, en el sistema de archivos. Para obtener más información, vea [Permisos de carpetas y archivos&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  

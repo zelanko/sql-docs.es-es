@@ -1,7 +1,7 @@
 ---
-title: sys.workload_management_workload_classifier_details (Transact-SQL) | Microsoft Docs
+title: Sys. workload_management_workload_classifier_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: system-objects
 ms.prod_service: sql-data-warehouse
@@ -12,14 +12,14 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: f9314b9297af7e8156ed86b2bfa2dadd18896bb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58b3f3315309a734a22e2732af5207b64e2f0a9d
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061289"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632924"
 ---
-# <a name="sysworkloadmanagementworkloadclassifierdetails-transact-sql"></a>sys.workload_management_workload_classifier_details (Transact-SQL)
+# <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>Sys. workload_management_workload_classifier_details (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -27,9 +27,9 @@ ms.locfileid: "68061289"
   
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|
-|classifier_id|**int**|Id. del clasificador. Puede unir a [sys.workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md). No admite valores NULL.|
-|classifier_type|**sysname**|La entidad en el que se realiza la clasificación. No admite valores NULL.|MEMBERNAME|
-|classifier_value|**sysname**|El valor del clasificador. No admite valores NULL.||
+|classifier_id|**int**|IDENTIFICADOR del clasificador.  No admite valores NULL.|
+|classifier_type|**sysname**|Se combina con [Sys. workload_management_workload_classifiers](sys-workload-management-workload-classifiers-transact-sql.md).|`membername`</br>`wlm_label`</br>`wlm_context`</br>`start_time`</br>`end_time`|
+|classifier_value|**sysname**|Valor del clasificador. No admite valores NULL.||
 
 ## <a name="permissions"></a>Permisos
 
@@ -37,4 +37,4 @@ Requiere el permiso VIEW SERVER STATE.
 
 ## <a name="next-steps"></a>Pasos siguientes
   
- Para obtener una lista de todas las vistas de catálogo para SQL Data Warehouse y almacenamiento de datos paralelos, vea [SQL Data Warehouse y vistas de catálogo de almacén de datos paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Para crear un clasificador de carga de trabajo, consulte [crear CLASIFICADOR de carga de trabajo](../../t-sql/statements/create-workload-classifier-transact-sql.md). Para obtener más información sobre la clasificación de la carga de trabajo, consulte SQL Data Warehouse [clasificación de la carga de trabajo](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) y [importancia de la carga de trabajo](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+Para obtener una lista de todas las vistas de catálogo para SQL Data Warehouse y almacenamiento de datos paralelos, consulte [SQL Data Warehouse y las vistas de catálogo de almacenamiento de datos paralelas](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Para crear un clasificador de cargas de trabajo, consulte [crear clasificador de cargas de trabajo](../../t-sql/statements/create-workload-classifier-transact-sql.md). Para obtener más información sobre la clasificación de cargas de trabajo, consulte SQL Data Warehouse [importancia](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) de la carga de trabajo y la [clasificación](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) .

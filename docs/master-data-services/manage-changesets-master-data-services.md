@@ -1,5 +1,5 @@
 ---
-title: Administración de conjuntos de datos (Master Data Services) | Microsoft Docs
+title: Administración de conjuntos de datos
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7f428189723987adbbf867facb819a987c502ab7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4afb02cbd6ef9c4301bfb828415f6faa64a875b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054479"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728038"
 ---
 # <a name="manage-changesets-master-data-services"></a>Administración de conjuntos de datos (Master Data Services)
 

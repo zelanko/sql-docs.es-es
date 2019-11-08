@@ -1,5 +1,5 @@
 ---
-title: Enviar datos BLOB a SQL SERVER mediante IROWSETFASTLOAD e ISEQUENTIALSTREAM | Microsoft Docs
+title: Enviar datos de BLOB a SQL SERVER mediante IROWSETFASTLOAD e ISEQUENTIALSTREAM | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,16 +11,15 @@ ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d38afebf2a1549a87d611f3c04e31f6669be839a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0044cb8f7c7568adc05e669ff288131fcc21b58d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110172"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789838"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Enviar datos de blob a SQL SERVER mediante IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   En este ejemplo se muestra cómo usar IRowsetFastLoad para transmitir flujos de datos BLOB de longitud variable por fila.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "68110172"
   
  Dado que DBTYPE_IUNKNOWN se especifica como tipo de datos del enlace, debe coincidir con el tipo de la columna o parámetro de destino. No se pueden realizar conversiones cuando se envían datos a través de ISequentialStream desde interfaces de conjunto de filas. En el caso de los parámetros, se debe evitar el uso de ICommandWithParameters::SetParameterInfo y especificar un tipo diferente para forzar una conversión; para ello, el proveedor debe almacenar en la memoria caché local todos los datos BLOB a fin de proceder a su conversión antes de enviarlos a SQL Server. El rendimiento no es bueno si se almacenan en la memoria caché datos BLOB grandes y se convierten localmente.  
   
- Para obtener más información, consulte [BLOB y objetos OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
+ Para obtener más información, vea [blobs and OLE Objects](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  

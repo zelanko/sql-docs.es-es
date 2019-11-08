@@ -1,5 +1,5 @@
 ---
-title: Errores del proceso de almacenamiento provisional (Master Data Services) | Microsoft Docs
+title: Errores del proceso de almacenamiento provisional
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ce64900270fd1092320a12a6cc58a744eaadae7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e719a0a96545bdc69134e42facca9bb4ad79069c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085627"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728921"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Errores del proceso de almacenamiento provisional (Master Data Services)
 
@@ -25,7 +25,7 @@ ms.locfileid: "68085627"
 
   Cuando el proceso de ensayo ha finalizado, todos los registros procesados en las tablas de ensayo tienen un valor en la columna ErrorCode. Los valores se muestran en la tabla siguiente.  
   
-|Código|Error|Se produce cuando/detalles|Se aplica a la tabla|  
+|código|Error|Se produce cuando/detalles|Se aplica a la tabla|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|El mismo código de miembro existe varias veces en la tabla de ensayo.|El lote de almacenamiento provisional incluye el mismo código de miembro varias veces. No se crea ni actualiza ningún miembro.|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |210003|El atributo values hace referencia a un miembro que no existe o está inactivo.|Cuando almacena provisionalmente atributos basados en dominio, debe usar el código en lugar del nombre. Se aplica a **ImportType0**, **1**y **2**.|Hoja<br /><br /> Consolidado|  
@@ -36,7 +36,7 @@ ms.locfileid: "68085627"
 |210041|"ROOT" no es un código de miembro válido.|El valor de **MemberCode** contiene la palabra "ROOT".|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |210042|"MDMUNUSED" no es un código de miembro válido.|El valor de **MemberCode** contiene la palabra "MDMUNUSED".|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |210052|MemberCode no puede estar desactivado porque se utiliza como valor de atributo basado en dominio.|Cuando **ImportType** = **3** o **4**, el almacenamiento provisional produce un error si se usa el miembro como valor de atributo para otros miembros. Use **ImportType5** o **6** para establecer el valor en NULL o cambiar los valores antes de ejecutar el proceso de almacenamiento provisional.|Hoja<br /><br /> Consolidado|  
-|300002|El código de miembro no es válido.|Relaciones: el código de miembro primario o secundario no existe.<br /><br /> Hoja o Consolidado: **ImportType** = **3** o **4**, y el código de miembro no existe.|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
+|300002|El código de miembro no es válido.|Relaciones: el código de miembro primario o secundario no existe.<br /><br /> Hoja o consolidado: **ImportType** = **3** o **4** y el código de miembro no existe.|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |300004|El código de miembro ya existe.|**ImportType** = **1** y ha usado un código de miembro que ya existe en la entidad.|Hoja<br /><br /> Consolidado|  
 |210011|Cuando **RelationshipType** es **1**, **ParentCode** no puede ser un miembro hoja.|Asegúrese de que el valor de **ParentCode** sea un código de miembro consolidado.|Relación|  
 |210015|El código de miembro existe varias veces en la tabla de ensayo para una jerarquía y un lote.|Para una jerarquía explícita, especificó la ubicación del mismo miembro varias veces en el mismo lote.|Relación|  

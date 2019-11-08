@@ -15,16 +15,15 @@ ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8aeb097f2cabac01b0d4108dbcf07ed46f15f971
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c1592de2a70018f000c845e4008d41a95f35a312
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110262"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790115"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Los datos grandes se pueden enlazar o recuperar mediante la interfaz **ISequentialStream**. En el caso de las columnas enlazadas, la marca de estado DBSTATUS_S_TRUNCATED indica que se truncan los datos.  
   
@@ -37,13 +36,13 @@ ms.locfileid: "68110262"
   
 2.  Ejecute el comando (en este ejemplo, se llama a **ICommandExecute::Execute()** con IID_IRow).  
   
-3.  Capturar los datos de columna mediante **IRow::Open()** o **IRow::GetColumns()** .  
+3.  Capture los datos de la columna mediante **IRow:: Open ()** o **IRow:: GetColumns ()** .  
   
-    -   **IRow::Open()** puede usarse para abrir un **ISequentialStream** en la fila. Especifique DBGUID_STREAM para indicar que la columna contiene un flujo de datos binarios (**IStream** o **ISequentialStream** pueden usarse después para leer los datos de la columna).  
+    -   **IRow:: Open ()** se puede usar para abrir **ISequentialStream** en la fila. Especifique DBGUID_STREAM para indicar que la columna contiene un flujo de datos binarios (**IStream** o **ISequentialStream** pueden usarse después para leer los datos de la columna).  
   
     -   Si se usa **IRow::GetColumns()** , el elemento **pData** de la estructura DBCOLUMNACCESS se establece de modo que apunte a un objeto de flujo.  
   
-4.  Use **ISequentialStream::Read()** repetidamente para leer el número de bytes especificado en el búfer del consumidor.  
+4.  Utilice **ISequentialStream:: Read ()** varias veces para leer el número especificado de bytes en el búfer del consumidor.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo capturar una sola fila con IRow. En este ejemplo se recupera una columna a la vez de la fila. En este ejemplo se ilustra el uso de IRow::Open() y de IRow::GetColumns(). Para leer los datos de la columna, en el ejemplo se usa ISequentialStream::Read.  

@@ -10,12 +10,12 @@ ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d570ce785e575f607e49dcc10f5bf4aadca741ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 364d155ce61dd452e63112b6182b6ff9653ef261
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753367"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637686"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>Creación de contactos con CLR y XML
   El ejemplo Contact para SQL Server proporciona algunas utilidades que forman un nivel adicional de funcionalidad sobre la base de datos de ejemplo AdventureWorks2012 básica. La primera utilidad crea registros de contacto para diversos tipos de personas involucradas en la base de datos AdventureWorks2012. La información de contacto se especifica utilizando XML y se pasa a un procedimiento almacenado basado en C# o VB para crear el XML y colocarlo en las tablas apropiadas con la base de datos.  
@@ -23,7 +23,7 @@ ms.locfileid: "62753367"
 ## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   

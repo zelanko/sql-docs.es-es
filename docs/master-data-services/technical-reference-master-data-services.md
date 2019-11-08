@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica (Master Data Services) | Microsoft Docs
+title: Referencia técnica
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f6eeba7adb9d1716120f046a3b937e0e9a0e21a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 397526d89ed6e89eb90f619b3bf891bf156e61be
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085585"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727860"
 ---
 # <a name="technical-reference-master-data-services"></a>Referencia técnica (Master Data Services)
 
@@ -26,6 +26,6 @@ ms.locfileid: "68085585"
  
 -   [Base de datos de Master Data Services](../master-data-services/master-data-services-database.md)  
   
--   [Aplicación web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
+-   [Aplicación web Master Data Services](../master-data-services/master-data-manager-web-application.md)  
   
   

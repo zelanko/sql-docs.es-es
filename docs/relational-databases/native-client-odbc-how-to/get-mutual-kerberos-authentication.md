@@ -1,5 +1,5 @@
 ---
-title: Obtener la autenticación mutua de Kerberos | Documentos de Microsoft
+title: Obtener autenticación mutua de Kerberos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,25 +11,24 @@ ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8713c25e4c1bf62e205db33e0b1b7c0bcf6a959f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0c7d2e5ff90ce8ca9fd8e6cef090b4de5e645be4
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898448"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782806"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Obtener la autenticación mutua de Kerberos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   En este ejemplo se muestra cómo obtener la autenticación mutua de Kerberos utilizando ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  No funcionará con ninguna versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Para obtener más información, consulte [nombre Principal de servicio &#40;SPN&#41; compatibilidad en las conexiones de cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Para obtener más información, consulte [compatibilidad de &#40;SPN&#41; de nombre de entidad de seguridad de servicio en conexiones de cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Ejemplo  
- Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
+ Si compila y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   

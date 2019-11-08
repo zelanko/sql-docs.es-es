@@ -14,16 +14,15 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b58abcebdc310a1a5979049495b610ffef37a7b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2c720e67b9f320fc7981fbf717e2496d863f57f6
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909522"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73767705"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Ejecutar procedimiento almacenado con RPC y procesar la salida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden incluir códigos de retorno y parámetros de salida de tipo entero. Los códigos de retorno y parámetros de salida se envían en el último paquete del servidor y, por tanto, no están disponibles para la aplicación hasta que se haya lanzado al mercado completamente el conjunto de filas. Si el comando devuelve varios resultados, los datos de los parámetros de salida están disponibles cuando **IMultipleResults::GetResult** devuelve DB_S_NORESULT o cuando se libera por completo la interfaz **IMultipleResults**, lo que se produzca en primer lugar.  
   
@@ -397,7 +396,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Temas de procedimientos para procesar resultados &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

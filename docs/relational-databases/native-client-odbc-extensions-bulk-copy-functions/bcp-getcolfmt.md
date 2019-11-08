@@ -18,16 +18,15 @@ ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40e7f63438bbe6ff68284aa573e1307b17087234
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8c32df055ea1330fb0d1bdd32b2a3860519d2575
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707545"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782717"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Se utiliza para buscar el valor de propiedad del formato de columna.  
   
@@ -69,7 +68,7 @@ RETCODE bcp_getcolfmt (
 ## <a name="remarks"></a>Comentarios  
  Los valores de propiedad del formato de columna se muestran en el tema [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) . Los valores de propiedad del formato de columna se establecen llamando a la función **bcp_setcolfmt** , y se utiliza la función **bcp_getcolfmt** para buscar el valor de propiedad del formato de columna.  
   
- Los cambios de comportamiento pueden observarse al establecer conexión con un equipo servidor de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (o versiones posteriores) en comparación con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Los cambios de comportamiento pueden observarse al establecer conexión con un equipo servidor de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (o versiones posteriores) en comparación con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Detección de metadatos](../../relational-databases/native-client/features/metadata-discovery.md).  
   
 ## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt admite las características mejoradas de fecha y hora  
  Los tipos utilizados con la propiedad **BCP_FMT_TYPE** para los tipos de fecha y hora se especifican en [cambios de copia masiva para los tipos &#40;de fecha y&#41;hora mejorados OLE DB y ODBC](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  

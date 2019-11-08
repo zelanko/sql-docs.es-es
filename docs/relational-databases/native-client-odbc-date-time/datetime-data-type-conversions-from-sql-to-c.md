@@ -13,16 +13,15 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b5813635c14f569703f186ebe2a55dd933b8427
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9795126f2cd7c39ebd23ed34fde73664388b235f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030404"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783846"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Conversiones del tipo de datos de fecha y hora de SQL a C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   En la tabla siguiente se indican los problemas que hay que tener en cuenta a la hora de convertir tipos de fecha y hora de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tipos de C.  
   
@@ -31,21 +30,21 @@ ms.locfileid: "68030404"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|OK|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|OK|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|OK|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|OK|21|16|16|  
+|SQL_CHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
+|SQL_WCHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
+|SQL_TYPE_DATE|Aceptar|12|13|12|13, 23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|Aceptar|10, 23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7, 8|Aceptar|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|Aceptar|21|16|16|  
   
 ## <a name="key-to-symbols"></a>Clave de los símbolos  
   
 |Símbolo|Significado|  
 |------------|-------------|  
-|OK|Ningún problema de conversión.|  
+|Aceptar|Ningún problema de conversión.|  
 |1|Se aplican las reglas anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |2|Se omiten los espacios iniciales y finales.|  
-|3|La cadena se analiza en un valor de tipo date, time, timezone o timezoneoffset y permite hasta 9 dígitos para las fracciones de segundo. Si se analiza un valor de tipo timezoneoffset, la hora se convierte a la zona horaria del cliente. Si se produce un error durante esta conversión, se genera un registro de diagnóstico con SQLSTATE 22018 y el mensaje "Desbordamiento del campo Datetime".|  
+|3|La cadena se analiza en un valor de tipo date, time, timezone o timezoneoffset y permite hasta 9 dígitos para las fracciones de segundo. Si se analiza un valor de tipo timezoneoffset, la hora se convierte a la zona horaria del cliente. Si se produce un error durante esta conversión, se genera un registro de diagnóstico con SQLSTATE 22018 y el mensaje "desbordamiento del campo DateTime".|  
 |4|Si el valor no es un valor de tipo date, timestamp o timestampoffset válido, se genera un registro de diagnóstico con SQLSTATE 22018 y el mensaje "Valor de carácter no válido para especificación cast".|  
 |5|Si la hora es distinta de cero, se genera un registro de diagnóstico con SQLSTATE 01S07 y el mensaje "Truncamiento fraccionario".|  
 |6|Si el valor no es un valor de tipo time, timestamp o timestampoffset válido, se genera un registro de diagnóstico con SQLSTATE 22018 y el mensaje "Valor de carácter no válido para especificación cast".|  
@@ -66,9 +65,9 @@ ms.locfileid: "68030404"
 |21|Si el búfer es suficientemente grande como para alojar SQL_SS_TIMESTAMPOFFSET_STRUCT, el valor se devuelve como SQL_SS_TIMESTAMPOFFSET_STRUCT. De lo contrario, se genera un registro de diagnóstico con SQLSTATE 22003 y el mensaje "Valor numérico fuera del intervalo".|  
 |22|El valor se convierte a la zona horaria del cliente antes de que se extraiga la fecha. Esto proporciona coherencia con otras conversiones con tipos timestampoffset. Si se produce un error durante esta conversión, se genera un registro de diagnóstico con SQLSTATE 22008 y el mensaje "Desbordamiento del campo DateTime". Esto puede dar lugar a una fecha que difiera del valor obtenido por truncamiento simple.|  
   
- En la tabla de este tema se describen las conversiones entre el tipo devuelto al cliente y el tipo del enlace. Para los parámetros de salida, si el tipo de servidor especificado en SQLBindParameter no coincide con el tipo real en el servidor, se realizará una conversión implícita por el servidor y el tipo devuelto al cliente coincidirá con el tipo especificado a través de SQLBindParameter. Esto puede conducir a resultados de conversión inesperados cuando las reglas de conversión del servidor son diferentes de los que aparecen en la tabla anterior. Por ejemplo, cuando es necesario proporcionar una fecha predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa 1900-1-1 en lugar de la fecha actual.  
+ En la tabla de este tema se describen las conversiones entre el tipo devuelto al cliente y el tipo del enlace. En el caso de los parámetros de salida, si el tipo de servidor especificado en SQLBindParameter no coincide con el tipo real del servidor, el servidor realizará una conversión implícita y el tipo devuelto al cliente coincidirá con el tipo especificado mediante SQLBindParameter. Esto puede dar lugar a resultados de conversión inesperados cuando las reglas de conversión del servidor son distintas de las enumeradas en la tabla anterior. Por ejemplo, cuando es necesario proporcionar una fecha predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa 1900-1-1 en lugar de la fecha actual.  
   
 ## <a name="see-also"></a>Vea también  
- [Mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Mejoras &#40;de fecha y hora ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -23,14 +23,14 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63058111"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637856"
 ---
-# <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
+# <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configurar Firewall de Windows para permitir el acceso a SQL Server
   Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Si un firewall está activado pero no está configurado correctamente, es posible que se bloqueen los intentos de conexión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para obtener acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un firewall, debe configurar el firewall en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que permita el acceso. El firewall es un componente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. También puede instalar un firewall de otra compañía. En este tema se discute cómo configurar el firewall de Windows, pero los principios básicos se aplican a otros programas de firewall.  
@@ -38,7 +38,7 @@ ms.locfileid: "63058111"
 > [!NOTE]  
 >  En este tema se proporciona información general de configuración del firewall y se resume información de interés para un administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información acerca del firewall e información autorizada, vea la documentación sobre el firewall como [Windows Firewall con seguridad avanzada e IPsec](https://go.microsoft.com/fwlink/?LinkID=116904).  
   
- Los usuarios que conozcan el elemento **Firewall de Windows** del Panel de control y el complemento Microsoft Management Console (MMC) de Firewall de Windows con seguridad avanzada, y que sepan qué opciones del firewall quieren configurar, pueden ir directamente a los temas de la lista siguiente:  
+ Los usuarios que conozcan el elemento **Firewall de Windows** del Panel de control y el complemento Microsoft Management Console (MMC) de Firewall de Windows con seguridad avanzada, y que sepan qué opciones del firewall desean configurar pueden ir directamente a los temas de la lista siguiente:  
   
 -   [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "63058111"
   
     -   Establecer algunas restricciones de ámbito  
   
-     El elemento **Firewall de Windows** del Panel de control es muy adecuado para los usuarios que tengan experiencia en la configuración de firewall y que estén configurando opciones de firewall básicas para equipos que no sean móviles. También puede abrir el **Windows Firewall** elemento en el Panel de Control de la `run` comando mediante el procedimiento siguiente:  
+     El elemento **Firewall de Windows** del Panel de control es muy adecuado para los usuarios que tengan experiencia en la configuración de firewall y que estén configurando opciones de firewall básicas para equipos que no sean móviles. También puede abrir el elemento **firewall de Windows** en el panel de control desde el comando `run` mediante el procedimiento siguiente:  
   
     #### <a name="to-open-the-windows-firewall-item"></a>Para abrir el elemento Firewall de Windows  
   
@@ -141,9 +141,9 @@ ms.locfileid: "63058111"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutándose sobre un extremo HTTP.|Se puede especificar cuando se crea un extremo HTTP. El valor predeterminado es el puerto TCP 80 para el tráfico de CLEAR_PORT y el puerto 443 para el tráfico de SSL_PORT.|Se utiliza para una conexión HTTP a través de una dirección URL.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutándose en un extremo HTTPS.|Puerto TCP 443|Se utiliza para una conexión HTTPS a través de una dirección URL. HTTPS es una conexión HTTP que utiliza SSL (Capa de sockets seguros).|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|Puerto 4022 TCP. Para comprobar el puerto que se usa, ejecute la siguiente consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|No hay ningún puerto predeterminado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)], pero esta es la configuración convencional que se usa en los ejemplos de Libros en pantalla.|  
-|Creación de reflejo de la base de datos|Puerto elegido por el administrador. Para determinar el puerto, ejecute la siguiente consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|No hay ningún puerto predeterminado para la creación de reflejo de la base de datos, sin embargo, en los ejemplos de los Libros en pantalla se usa el puerto TCP 7022. Es muy importante evitar interrumpir un extremo de creación de reflejo que se esté usando, sobre todo en el modo de alta seguridad con conmutación automática por error. La configuración del firewall debe evitar el romper el quórum. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
+|Creación de reflejo de base de datos|Puerto elegido por el administrador. Para determinar el puerto, ejecute la siguiente consulta:<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|No hay ningún puerto predeterminado para la creación de reflejo de la base de datos, sin embargo, en los ejemplos de los Libros en pantalla se usa el puerto TCP 7022. Es muy importante evitar interrumpir un extremo de creación de reflejo que se esté usando, sobre todo en el modo de alta seguridad con conmutación automática por error. La configuración del firewall debe evitar el romper el quórum. Para obtener más información, vea [Specify a Server Network Address &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |Replicación|Las conexiones de replicación a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan los puertos de [!INCLUDE[ssDE](../../includes/ssde-md.md)] normales (puerto TCP 1433, para la instancia predeterminada, etc.) habituales.<br /><br /> La sincronización web y el acceso de tipo FTP/UNC para la instantánea de replicación requieren que se abran puertos adicionales en el firewall. Para transferir los datos iniciales y los esquemas de una ubicación a otra, la replicación puede utilizar FTP (puerto TCP 21) o sincronizar sobre HTTP (puerto TCP 80) o Uso compartido de archivos. El uso compartido de archivos utiliza los puertos UDP 137 y 138, y el puerto TCP 139 si usa NetBIOS. El uso compartido de archivos usa el puerto TCP 445.|Para la sincronización sobre HTTP, la replicación utiliza el extremo IIS (para el que se pueden configurar los puertos, pero cuyo puerto predeterminado es el 80), pero el proceso IIS se conecta al servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de los puertos estándar (1433 para la instancia predeterminada).<br /><br /> Durante la sincronización web mediante FTP, la transferencia FTP tiene lugar entre IIS y el publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no entre el suscriptor e IIS.|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] depurador|Puerto TCP 135<br /><br /> Vea [Consideraciones especiales para el puerto 135](#BKMK_port_135)<br /><br /> Quizá sea necesaria también la excepción [IPsec](#BKMK_additional_ports) .|Si utiliza [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], en el equipo host [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] debe agregar también **Devenv.exe** a la lista Excepciones y abrir el puerto TCP 135.<br /><br /> Si utiliza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], en el equipo host [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] debe agregar también **ssms.exe** a la lista Excepciones y abrir el puerto TCP 135. Para obtener más información, consulte [configurar el depurador de Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] depurador|Puerto TCP 135<br /><br /> Vea [Consideraciones especiales para el puerto 135](#BKMK_port_135)<br /><br /> Quizá sea necesaria también la excepción [IPsec](#BKMK_additional_ports) .|Si utiliza [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], en el equipo host [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] debe agregar también **Devenv.exe** a la lista Excepciones y abrir el puerto TCP 135.<br /><br /> Si utiliza [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], en el equipo host [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] debe agregar también **ssms.exe** a la lista Excepciones y abrir el puerto TCP 135. Para obtener más información, vea [configurar el depurador de Transact-SQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   
  Para obtener instrucciones detalladas sobre cómo configurar Firewall de Windows para el [!INCLUDE[ssDE](../../includes/ssde-md.md)], vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
@@ -159,7 +159,7 @@ ms.locfileid: "63058111"
   
 1.  En la pestaña **Excepciones** del elemento **Firewall de Windows** del Panel de control, haga clic en **Agregar un programa**.  
   
-2.  Vaya a la ubicación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea permitir a través del firewall, por ejemplo **C:\Program Files\Microsoft SQL Server\MSSQL12. < nombre_instancia > \MSSQL\Binn**, seleccione  **Sqlservr.exe**y, a continuación, haga clic en **abierto**.  
+2.  Vaya a la ubicación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea permitir a través del firewall, por ejemplo, **c:\Archivos de programa\Microsoft SQL Server\MSSQL12. < instance_name > \MSSQL\Binn**, seleccione **sqlservr. exe**y, a continuación, haga clic en **abrir.** .  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -172,8 +172,8 @@ ms.locfileid: "63058111"
 |-------------|----------|--------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Puerto TCP 2383 para la instancia predeterminada|El puerto estándar para la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servicio Browser|El puerto TCP 2382 solamente es necesario para una instancia con nombre de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Las solicitudes de conexión de cliente para una instancia con nombre de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que no especifican un número de puerto se dirigen al puerto 2382, el puerto en el que escucha el Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a continuación redirige la solicitud al puerto que utiliza la instancia con nombre.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configurado para el uso a través de IIS/HTTP<br /><br /> (La tabla dinámica?? Servicio utiliza HTTP o HTTPS)|Puerto TCP 80|Se utiliza para una conexión HTTP a través de una dirección URL.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configurado para el uso a través de IIS/HTTPS<br /><br /> (La tabla dinámica?? Servicio utiliza HTTP o HTTPS)|Puerto TCP 443|Se utiliza para una conexión HTTPS a través de una dirección URL. HTTPS es una conexión HTTP que utiliza SSL (Capa de sockets seguros).|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configurado para el uso a través de IIS/HTTP<br /><br /> (La tabla dinámica? El servicio utiliza HTTP o HTTPS)|Puerto TCP 80|Se utiliza para una conexión HTTP a través de una dirección URL.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configurado para el uso a través de IIS/HTTPS<br /><br /> (La tabla dinámica? El servicio utiliza HTTP o HTTPS)|Puerto TCP 443|Se utiliza para una conexión HTTPS a través de una dirección URL. HTTPS es una conexión HTTP que utiliza SSL (Capa de sockets seguros).|  
   
  Si los usuarios tienen acceso a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a través de IIS e Internet, debe abrir el puerto en el que está escuchando IIS y especificar ese puerto en la cadena de conexión del cliente. En este caso, no se tiene que abrir ningún puerto para acceso directo a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El puerto predeterminado, 2389 y el puerto 2382 deben restringirse junto con los demás puertos que no sean necesarios.  
   
@@ -320,7 +320,7 @@ ms.locfileid: "63058111"
   
          El modificador **-n** indica a **netstat** que muestre numéricamente la dirección y el número de puerto de las conexiones TCP activas. El modificador **-a** indica a **netstat** que muestre los puertos TCP y UDP en los que está escuchando el equipo.  
   
--   La utilidad **PortQry** se puede usar para notificar el estado de los puertos TCP/IP para indicar que están escuchando, no escuchando o filtrados. (Con un estado de filtrado, el puerto puede o no estar escuchando; este estado indica que la utilidad no ha recibido una respuesta del puerto.) La utilidad **PortQry** se puede descargar desde el [Centro de descargas de Microsoft](https://go.microsoft.com/fwlink/?LinkId=28590).  
+-   La utilidad **PortQry** se puede usar para notificar el estado de los puertos TCP/IP para indicar que están escuchando, no escuchando o filtrados. (Con un estado de filtrado, el puerto puede o no estar escuchando; este estado indica que la utilidad no ha recibido una respuesta del puerto.) La utilidad **PortQry** se puede descargar desde el [Centro de descargas de Microsoft](https://www.microsoft.com/download/details.aspx?id=17148).  
   
 ## <a name="see-also"></a>Vea también  
  [Introducción al servicio y requisitos del puerto de red para el sistema Windows Server](https://support.microsoft.com/kb/832017)  

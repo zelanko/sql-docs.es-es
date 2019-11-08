@@ -1,5 +1,5 @@
 ---
-title: Administrar columnas Text e Image | Microsoft Docs
+title: Administrar columnas de texto e imagen | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,24 +21,23 @@ ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fecf1dd32e5a7a6532766c920828417e9f18153f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 221d83188a3d48fe5383a109b878c7b5a59bdad5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128907"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73758397"
 ---
 # <a name="managing-text-and-image-columns"></a>Administrar columnas de texto e imagen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **texto**, **ntext**, y **imagen** datos (también denominados datos largos) son caracteres o tipos de datos de cadena binaria que pueden contener valores de datos demasiado grande para caber en **char**, **varchar**, **binario**, o **varbinary** columnas. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **texto** tipo de datos se asigna al tipo de datos ODBC SQL_LONGVARCHAR; **ntext** asigna a SQL_WLONGVARCHAR y **imagen** a SQL_LONGVARBINARY. Es posible que algunos elementos de datos, como documentos largos o mapas de bits grandes, resulten demasiado grandes para poder almacenarlos correctamente en la memoria. Para recuperar datos long de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en partes secuenciales, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite que una aplicación llamar a [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md). Para enviar datos largos en partes secuenciales, la aplicación puede llamar a [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md). Los parámetros para los que se envían datos durante la ejecución se conocen como parámetros de datos en ejecución.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos **Text**, **ntext**e **Image** (también denominados datos Long) son tipos de datos de cadenas binarias o de caracteres que pueden contener valores de datos demasiado grandes para caber en **Char**, **VARCHAR**, **Binary**o **varbinary** . columnas. El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Text** se asigna al tipo de datos ODBC SQL_LONGVARCHAR; **ntext** se asigna a SQL_WLONGVARCHAR; y los mapas de **imagen** para SQL_LONGVARBINARY. Es posible que algunos elementos de datos, como documentos largos o mapas de bits grandes, resulten demasiado grandes para poder almacenarlos correctamente en la memoria. Para recuperar datos largos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en partes secuenciales, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite que una aplicación llame a [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md). Para enviar datos largos en partes secuenciales, la aplicación puede llamar a [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md). Los parámetros para los que se envían datos durante la ejecución se conocen como parámetros de datos en ejecución.  
   
- Una aplicación realmente puede escribir o recuperar cualquier tipo de datos (datos no solo largos) con **SQLPutData** o **SQLGetData**, aunque solo **carácter** y  **binario** datos se pueden enviar o recuperar en partes. Sin embargo, si los datos son lo suficientemente pequeños como para caber en un único búfer, normalmente hay ninguna razón para utilizar **SQLPutData** o **SQLGetData**. Resulta mucho más fácil enlazar el búfer único al parámetro o columna.  
+ En realidad, una aplicación puede escribir o recuperar cualquier tipo de datos (no solo datos largos) con **SQLPutData** o **SQLGetData**, aunque solo los datos de **caracteres** y **binarios** se pueden enviar o recuperar en partes. Sin embargo, si los datos son lo suficientemente pequeños como para caber en un solo búfer, generalmente no hay ningún motivo para usar **SQLPutData** o **SQLGetData**. Resulta mucho más fácil enlazar el búfer único al parámetro o columna.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Texto delimitado frente a texto sin delimitar y columnas de imagen](../../relational-databases/native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md)  
+-   [Columnas de imagen y texto enlazado frente a sin enlazar](../../relational-databases/native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md)  
   
 -   [Modificaciones registradas frente a modificaciones no registradas](../../relational-databases/native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md)  
   

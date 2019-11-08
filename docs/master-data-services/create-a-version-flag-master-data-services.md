@@ -1,5 +1,5 @@
 ---
-title: Crear una marca de versión (Master Data Services) | Microsoft Docs
+title: Crear una marca de versión
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e6121d2e55d6e97d6fc474146d5f2cf41f3c8371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 25c52ac4dc179940f1a3c45fd5200cf3525c56f9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906592"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729553"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Crear una marca de versión (Master Data Services)
 

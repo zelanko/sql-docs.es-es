@@ -1,7 +1,7 @@
 ---
 title: sp_enclave_send_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 10/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -19,17 +19,26 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4ced2feee2227ba1db492f721f57907069c5d99
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661358"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593757"
 ---
-# <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys    (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
+[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
-Envía todas las claves de cifrado de columna habilitadas para enclave en la base de datos a la enclave usada por [Always Encrypted con el motor de base de datos &#40;&#41;de enclaves seguro](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Envía las claves de cifrado de columnas, definidas en la base de datos, al enclave seguro de servidor que se usa con [Always Encrypted con enclaves seguro](../security/encryption/always-encrypted-enclaves.md).
+
+`sp_enclave_send_keys` solo envía las claves habilitadas para enclave y cifrar las columnas que usan el cifrado aleatorio y que tienen índices. Para una consulta de usuario normal, un controlador cliente proporciona el enclave con las claves necesarias para los cálculos de la consulta. `sp_enclave_send_keys` envía todas las claves de cifrado de columna definidas en la base de datos y se utiliza para los índices columnas cifradas. 
+
+`sp_enclave_send_keys` proporciona una manera sencilla de enviar claves a enclave y rellenar la memoria caché de claves de cifrado de columnas para operaciones de indexación posteriores. Use `sp_enclave_send_keys` para habilitar:
+- Un DBA para recompilar o modificar índices o estadísticas en columnas de base de datos cifradas, si el DBA no tiene acceso a las claves maestras de columna. Consulte [invocar operaciones de indexación mediante claves de cifrado de columnas almacenadas en caché](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys).
+- [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] para completar la recuperación de índices en columnas cifradas. Consulte [recuperación de base de datos](../security/encryption/always-encrypted-enclaves.md#database-recovery).
+- Una aplicación que usa .NET Framework proveedor de datos para SQL Server cargar datos de forma masiva en columnas cifradas.
+
+Para invocar correctamente `sp_enclave_send_keys`, debe conectarse a la base de datos con los cálculos de Always Encrypted y enclave habilitados para la conexión de base de datos. También debe tener acceso a las claves maestras de columna, proteger las claves de cifrado de columna, va a enviar y necesita permisos para obtener acceso a los metadatos de la clave de Always Encrypted en la base de datos. 
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,16 +59,9 @@ Este procedimiento almacenado no tiene ningún valor devuelto.
 
 Este procedimiento almacenado no tiene ningún conjunto de resultados.
   
-## <a name="remarks"></a>Comentarios
-
-**sp_enclave_send_keys** envía claves de cifrado de columnas habilitadas para enclave a enclave si se cumplen todas las condiciones siguientes:
-
-- Enclave está habilitado en la instancia de SQL Server.
-- **sp_enclave_send_keys** se ha invocado desde una aplicación que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un controlador cliente, lo que admite la Always Encrypted con enclaves seguro mediante una conexión de base de datos que tenga habilitados los cálculos de Always Encrypted y enclave.
-
 ## <a name="permissions"></a>Permisos
 
- Requiere la **definición de clave de cifrado ver cualquier columna** y ver los permisos de **definición de clave maestra de columna** en la base de datos.  
+ Requiere los permisos `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` y `VIEW ANY COLUMN MASTER KEY DEFINITION` en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -68,9 +70,8 @@ EXEC sp_enclave_send_keys;
 ```
 
 ## <a name="see-also"></a>Vea también
+- [Always Encrypted con enclaves seguros](../security/encryption/always-encrypted-enclaves.md) 
+ 
+- [Crear y usar índices en columnas mediante Always Encrypted con Secure enclaves](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
- [Always Encrypted con enclaves &#40;seguros motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
- [Tutorial: Crear y usar índices en columnas habilitadas para enclave mediante el cifrado aleatorio](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
- [Invocar operaciones de indexación mediante claves de cifrado de columnas almacenadas en caché](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
- [Índices en columnas habilitadas para enclave mediante el cifrado aleatorio](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
- [Consideraciones sobre AlwaysOn y la migración de bases de datos](../security/encryption/always-encrypted-enclaves.md#anchorname-1-considerations-availability-groups-db-migration)
+- [Tutorial: crear y usar índices en columnas habilitadas para enclave mediante el cifrado aleatorio](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

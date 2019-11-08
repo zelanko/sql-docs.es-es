@@ -1,5 +1,5 @@
 ---
-title: Inicios de sesión, usuarios y roles en bases de datos (Master Data Services) | Microsoft Docs
+title: Inicios de sesión, usuarios y roles en bases de datos
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b12e077e337cedcdcdd3bb23b12e1fb8dc6f704e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094411"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729485"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Inicios de sesión, usuarios y roles en bases de datos (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "68094411"
   
 ## <a name="logins"></a>Inicios de sesión  
   
-|Login|Descripción|  
+|Inicio de sesión|Descripción|  
 |-----------|-----------------|  
 |**mds_dlp_login**|Permite la creación de ensamblados de UNSAFE. Para más información, consulte [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> -Inicio de sesión deshabilitado con contraseña generada de forma aleatoria.<br /><br /> -Asigna dbo para la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> -Para msdb, mds_clr_user asigna este inicio de sesión.|  
 |**mds_email_login**|Inicio de sesión habilitado usado para las notificaciones.<br /><br /> Para msdb y la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user asigna este inicio de sesión.|  
@@ -42,7 +42,7 @@ ms.locfileid: "68094411"
 |Usuario|Descripción|  
 |----------|-----------------|  
 |**mds_clr_user**|No se usa. Asigna mds_dlp_login.|  
-|**mds_email_user**|Se usa para notificaciones.<br /><br /> -Asigna mds_email_login.<br /><br /> -Es miembro del rol: DatabaseMailUserRole.|  
+|**mds_email_user**|Se usa para notificaciones.<br /><br /> -Asigna mds_email_login.<br /><br /> -Es un miembro del rol: DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Usuarios de la base de datos de Master Data Services  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68094411"
 |----------|-----------------|  
 |**mdm**|Contiene todos los objetos de Service Broker y bases de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que no sean las funciones contenidas en el esquema mdq.|  
 |**mdq**|Contiene funciones de base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relacionadas con el filtrado de los resultados de miembros basados en expresiones regulares o de similitud, y el formato de los correos electrónicos de notificación.|  
-|**stg**|Contiene las tablas de bases de datos, los procedimientos almacenados y las vistas de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relacionadas con el proceso de almacenamiento provisional. No elimine ninguno de estos objetos. Para más información sobre el proceso de almacenamiento provisional, vea [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
+|**stg**|Contiene las tablas de bases de datos, los procedimientos almacenados y las vistas de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] relacionadas con el proceso de almacenamiento provisional. No elimine ninguno de estos objetos. Para obtener más información sobre el proceso de almacenamiento provisional, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).|  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  

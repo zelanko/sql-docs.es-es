@@ -1,6 +1,6 @@
 ---
-title: Propiedad FlagIndex (clase ClientSettingsGeneralFlag) | Microsoft Docs
-ms.custom: ''
+title: Propiedad FlagIndex (ClientSettingsGeneralFlag)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ccf6fdee46acc210b1a528c23523bcceac385d84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 60812a9ad06729c6a7c1f4d71be72d5caa4ebede
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117738"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660629"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>Propiedad FlagIndex (clase ClientSettingsGeneralFlag)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ object.FlagIndex [= value]
  Objeto de la [clase ClientSettingsGeneralFlag](../../../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md) que representa una marca general para la configuración del servidor.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
- Una u**int32** valor que especifica el valor de índice de la marca.  
+ Valor u**Int32** que especifica el valor de índice de la marca.  
   
 ## <a name="remarks"></a>Comentarios  
   

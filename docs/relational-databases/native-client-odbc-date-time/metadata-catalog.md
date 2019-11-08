@@ -1,5 +1,5 @@
 ---
-title: Metadatos de catálogo | Documentos de Microsoft
+title: Metadatos de catálogo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,43 +14,42 @@ ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd0d9cf214833497734ed7dee8fdddbc227d4b13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de11cf1346010881ae3af0bbdf69035583090dd1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030299"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783698"
 ---
 # <a name="metadata---catalog"></a>Metadatos: catálogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  En este tema se describe los metadatos de columna devueltos por **SQLColumns** y **SQLProcedureColumns**, y el tipo de datos metadatos devueltos por **SQLGetTypeInfo**.  
+  En este tema se describen los metadatos de columna devueltos por **SQLColumns** y **SQLProcedureColumns**, y los metadatos de tipo de datos devueltos por **SQLGetTypeInfo**.  
   
 ## <a name="remarks"></a>Comentarios  
- Los siguientes valores de columna se devuelven para los tipos de fecha y hora de **SQLColumns** y **SQLProcedureColumns**.  
+ Se devuelven los siguientes valores de columna para los tipos de fecha y hora por **SQLColumns** y **SQLProcedureColumns**.  
   
 |Tipo de parámetro|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
+|COLUMN_SIZE|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
 |BUFFER_LENGTH|6|10|16|16|16|20|  
-|DECIMAL_DIGITS|0|0..7|0|3|1..7|1..7|  
+|DECIMAL_DIGITS|0|0..7|0|3|1.. 7|1.. 7|  
 |SQL_DATA_TYPE|SQL_DATETIME|SQL_SS_TYPE_TIME2|SQL_DATETIME|SQL_DATETIME|SQL_DATETIME|SQL_SS_TYPE_TIMESTAMPOFFSET|  
 |SQL_DATETIME_SUB|SQL_CODE_DATE|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|  
 |CHAR_OCTET_LENGTH|NULL|NULL|NULL|NULL|NULL|NULL|  
 |SS_DATA_TYPE|0|0|111|111|0|0|  
   
- Los siguientes valores de columna se devuelven para los tipos de fecha y hora de **SQLGetTypeInfo**:  
+ **SQLGetTypeInfo**devuelve los siguientes valores de columna para los tipos de fecha y hora:  
   
 |Tipo de parámetro|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
-|LITERAL_PREFIX|'|'|'|'|'|'|  
-|LITERAL_SUFFIX|'|'|'|'|'|'|  
+|LITERAL_PREFIX|“|“|“|“|“|“|  
+|LITERAL_SUFFIX|“|“|“|“|“|“|  
 |CREATE_PARAMS|NULL|escala|NULL|NULL|escala|escala|  
 |NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|SQL_NULLABLE|  
 |CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

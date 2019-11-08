@@ -50,7 +50,7 @@ Con los enclaves seguros, Always Encrypted protege la privacidad de la informaci
 
 - **Cifrado en contexto**: las operaciones criptográficas sobre información confidencial, como el cifrado inicial de datos o la rotación de una clave de cifrado de columna, se realizan dentro del enclave seguro y no requieren sacar los datos de la base de datos. Puede genera cifrado en contexto con la instrucción Transact-SQL ALTER TABLE y no es necesario usar herramientas, como el Asistente para Always Encrypted en SSMS o el cmdlet Set-SqlColumnEncryption de PowerShell.
 
-- **Cálculos completos (versión preliminar)**: las operaciones sobre columnas cifradas, incluidas la coincidencia de patrones (el predicado LIKE) y las comparaciones de variedades, se admiten dentro del enclave seguro, que permite que Always Encrypted se use en una amplia variedad de aplicaciones y escenarios que requiere que dichos cálculos se realicen dentro del sistema de la base de datos.
+- **Cálculos completos (versión preliminar)** : las operaciones sobre columnas cifradas, incluidas la coincidencia de patrones (el predicado LIKE) y las comparaciones de variedades, se admiten dentro del enclave seguro, que permite que Always Encrypted se use en una amplia variedad de aplicaciones y escenarios que requiere que dichos cálculos se realicen dentro del sistema de la base de datos.
 
 ## <a name="secure-enclave-attestation"></a>Atestación de un enclave seguro
 

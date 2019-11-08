@@ -20,7 +20,7 @@ ms.locfileid: "73589089"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Las extensiones de lenguaje de SQL Server tienen un marco de extensibilidad para ejecutar código externo, como Java, en el servidor. El código se ejecuta en un entorno de runtime de lenguaje como una extensión del motor de base de datos principal.
+Las extensiones de lenguaje de SQL Server tienen un marco de extensibilidad para ejecutar código externo, como Java, en el servidor. El código se ejecuta en un entorno de ejecución de lenguajes como una extensión del motor de base de datos principal.
 
 ## <a name="background"></a>Información previa
 
@@ -46,7 +46,7 @@ La arquitectura está diseñada de modo que el código externo se ejecuta en un 
   
   ![Arquitectura de componentes en Linux](../media/generic-architecture-linux.png "Arquitectura de componentes en Linux")
   
-Los componentes incluyen un servicio **Launchpad** que se usa para invocar los runtimes externos (como Java) y la lógica específica de la biblioteca para cargar intérpretes y bibliotecas.
+Los componentes incluyen un servicio **Launchpad** que se usa para invocar los entornos de ejecución externos (como Java) y la lógica específica de la biblioteca para cargar intérpretes y bibliotecas.
 
 <a name="launchpad"></a>
 
@@ -62,7 +62,7 @@ El servicio [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] s
 
 Se crea un servicio de [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] independiente para cada instancia del motor de base de datos a la que ha agregado extensiones de lenguaje automático de SQL Server. Hay un servicio Launchpad para cada instancia del motor de base de datos, de modo que si tiene varias instancias que admiten scripts externos, contará con un servicio Launchpad para cada una de ellas. Una instancia del motor de base de datos se enlaza al servicio Launchpad creado para esta. Todas las invocaciones del script externo de un procedimiento almacenado o de T-SQL dan como resultado que el servicio SQL Server llama al servicio Launchpad creado para la misma instancia.
 
-Para ejecutar tareas en un lenguaje específico compatible, Launchpad obtiene una cuenta de trabajo segura del grupo e inicia un proceso satélite para administrar el runtime externo. Cada proceso satélite hereda la cuenta de usuario de Launchpad y usa esa cuenta de trabajo mientras dure la ejecución del script. Si el script usa procesos paralelos, estos se crean en la misma cuenta de trabajo única.
+Para ejecutar tareas en un lenguaje específico compatible, Launchpad obtiene una cuenta de trabajo segura del grupo e inicia un proceso satélite para administrar el entorno de ejecución externo. Cada proceso satélite hereda la cuenta de usuario de Launchpad y usa esa cuenta de trabajo mientras dure la ejecución del script. Si el script usa procesos paralelos, estos se crean en la misma cuenta de trabajo única.
 
 ## <a name="communication-channels-between-components"></a>Canales de comunicación entre componentes
 

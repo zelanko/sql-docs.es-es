@@ -56,8 +56,8 @@ Se recomienda el uso de PowerShell:
 Para realizar operaciones criptográficas con el asistente, necesita tener los permisos **VIEW ANY COLUMN MASTER KEY DEFINITION** y **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION**. También debe tener permisos para acceder a las claves maestras de columna que usa en los almacenes de claves que las contienen:
 - **Almacén de certificados, equipo local**: debe tener acceso de lectura al certificado que se usa como clave maestra de columna o ser el administrador del equipo.
 - **Azure Key Vault**: necesita los permisos get, unwrapKey y verify en el almacén que contiene la clave maestra de columna.
-- **Proveedor de almacén de claves (CNG)**: se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
-- **Proveedor de servicios criptográficos (CAPI)**: se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
+- **Proveedor de almacén de claves (CNG)** : se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
+- **Proveedor de servicios criptográficos (CAPI)** : se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
 
 Además, si va a crear nuevas claves mediante el asistente, necesita los permisos adicionales enumerados en [Aprovisionamiento de claves maestras de columna con el cuadro de diálogo Nueva clave maestra de columna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) y en [Aprovisionamiento de claves de cifrado de columna con el cuadro de diálogo Nueva clave de cifrado de columnas](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).
 

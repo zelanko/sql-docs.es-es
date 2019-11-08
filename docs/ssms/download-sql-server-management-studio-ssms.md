@@ -77,7 +77,7 @@ SQL Server Management Studio 18.4:
 | Almacén de consultas | Se ha agregado el valor *Planes máximos por consulta* en las propiedades del cuadro de diálogo. |
 | Almacén de consultas | Se ha agregado compatibilidad para las nuevas directivas de captura personalizadas. |
 | SMO/Generación de Script | Script de compatibilidad de la vista materializada en SQL DW. |
-| SMO/Generación de Script | Se ha agregado compatibilidad con *SQL On Demand*. |
+| SMO/Generación de Script | Se ha agregado compatibilidad con *SQL a petición*. |
 | SMO/Generación de Script | [API de SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md): se han agregado 50 reglas de evaluación (consulte los detalles en GitHub). |
 | SMO/Generación de Script | [API de SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md): se han agregado expresiones matemáticas básicas y comparaciones a las condiciones de las reglas. |
 | SMO/Generación de Script | [API de SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md): se ha agregado compatibilidad con el objeto RegisteredServer. |

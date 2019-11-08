@@ -21,7 +21,7 @@ ms.locfileid: "73589029"
 
 Las extensiones de lenguaje son una característica de SQL Server que se usa para ejecutar código externo. Los datos relacionales se pueden usar en el código externo mediante el uso del [marco de extensibilidad](concepts/extensibility-framework.md).
 
-En SQL Server 2019, se admite Java. El runtime predeterminado de Java es Zulu Open JRE. También puede usar otro JRE o SDK de Java.
+En SQL Server 2019, se admite Java. El entorno de ejecución predeterminado de Java es Zulu Open JRE. También puede usar otro JRE o SDK de Java.
 
 ## <a name="what-you-can-do-with-language-extensions"></a>Qué puede hacer con las extensiones de lenguaje
 

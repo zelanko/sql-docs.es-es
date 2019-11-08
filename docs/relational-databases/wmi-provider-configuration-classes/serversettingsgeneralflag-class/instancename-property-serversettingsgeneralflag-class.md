@@ -1,6 +1,6 @@
 ---
-title: Propiedad InstanceName (clase ServerSettingsGeneralFlag) | Microsoft Docs
-ms.custom: ''
+title: Propiedad InstanceName (ServerSettingsGeneralFlag)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 83b6b11aa575d166ca73dd84907347b9dd76911c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8dec4a22423c7e2d6fa2026d8a0939f484f85be4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052793"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659777"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>Propiedad InstanceName (clase ServerSettingsGeneralFlag)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,6 +45,6 @@ object.InstanceName [= value]
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuración de protocolos de red de servidor y bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

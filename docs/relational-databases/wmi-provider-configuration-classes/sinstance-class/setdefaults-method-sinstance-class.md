@@ -1,6 +1,6 @@
 ---
-title: Método SetDefaults (clase SInstance) | Microsoft Docs
-ms.custom: ''
+title: Método SetDefaults (SInstance)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27842a34ed521bf7fd89c32271a3e09115929f0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3edec1ccd74e59a8bb79353e02939030bf43ce8a
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68052487"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659085"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>Método SetDefaults (clase SInstance)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Establece todos los valores predeterminados para la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con la opción para sobrescribir los datos existentes.  
+  Establece todos los valores predeterminados de la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con la opción de sobrescribir los datos existentes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,13 +37,13 @@ object.SetDefaults(OverwriteAll)
   
 ## <a name="parts"></a>Partes  
  *object*  
- Un [clase SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) objeto que representa una instancia del servidor.  
+ Objeto de la [clase SInstance](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) que representa una instancia del servidor.  
   
 #### <a name="parameters"></a>Parámetros  
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|*OverwriteAll*|Un valor booleano que especifica si se debe sobrescribir el valor existente en la instancia de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente: **true** si se sobrescriben los datos existentes o **false** si no se sobrescriben los datos existentes.|  
+|*OverwriteAll*|Valor booleano que especifica si se va a sobrescribir el valor existente en la instancia del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cliente: **true** si se sobrescriben los datos existentes o **false** si no se sobrescriben los datos existentes.|  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
@@ -51,6 +51,6 @@ object.SetDefaults(OverwriteAll)
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar protocolos de red de servidor y las bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [Configuración de protocolos de red de servidor y bibliotecas de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Cambiar el nombre de una regla de negocios (Master Data Services) | Microsoft Docs
+title: Cambiar el nombre de una regla de negocios
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 59ecf00588ceeeb7d4ca0b9a4bd71675f2d74739
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047367"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728671"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Cambiar el nombre de una regla de negocios (Master Data Services)
 

@@ -1,6 +1,6 @@
 ---
-title: Método SetDisable (clase ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Método SetDisable (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f85c61369c2b5e8b8ec0bd24607d82a8dcc39cfd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2e47e881236819de972d427f902fa5854f0b8b5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040859"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660220"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>Método SetDisable (clase ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Deshabilita el protocolo de red de cliente especificado por el [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
+  Deshabilita el protocolo de red del cliente especificado por [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,6 +45,6 @@ object.SetDisable()
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar bibliotecas de red y protocolos de red de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuración de protocolos de red de cliente y bibliotecas de red](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

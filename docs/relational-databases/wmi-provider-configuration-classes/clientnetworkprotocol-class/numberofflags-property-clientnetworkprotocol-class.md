@@ -1,6 +1,6 @@
 ---
-title: Propiedad NumberOfFlags (clase ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Propiedad NumberOfFlags (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 38ee03d14250e49da21ae5be8526ae52f96ac380
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 48f81c86a823d75d501187ef953930ec92083d27
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041189"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659127"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>Propiedad NumberOfFlags (clase ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Obtiene el número de opciones de marca necesarias para el protocolo de red de cliente especificado por el [método SetOrderValue (clase ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
+  Obtiene el número de opciones de marca necesarias para el protocolo de red del cliente especificado por el [método SetOrderValue (clase ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ object.NumberofFlags [= value]
  Objeto de la [clase ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) que representa el protocolo de red utilizado por el cliente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
- Un **Uint32** valor que especifica el número de opciones de marca necesarias para el protocolo de red de cliente al que hace referencia el **OrderValue** propiedad.  
+ Valor **Uint32** que especifica el número de opciones de marca necesarias para el protocolo de red del cliente al que hace referencia la propiedad **OrderValue** .  
   
 ## <a name="remarks"></a>Comentarios  
   

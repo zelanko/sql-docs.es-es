@@ -1,5 +1,5 @@
 ---
-title: Como resultado de ejemplo de conjunto | Microsoft Docs
+title: Ejemplo de conjunto de resultados | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62782148"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637636"
 ---
 # <a name="result-set-sample"></a>Ejemplo de conjunto de resultados
   A veces resulta útil poder ejecutar comandos mientras se leen resultados de una consulta sin abrir una nueva conexión y sin leer todos los resultados en la memoria. La característica MARS (Multiple Active Result Set) en ADO.NET 2.0 es una tecnología que puede ayudar a conseguirlo. Actualmente, MARS no está implementado para el proveedor en proceso que se utiliza para la programación del servidor. Para subsanar esta limitación, se pueden usar cursores del servidor. En este ejemplo se muestra cómo usar cursores del servidor para resolver la falta de compatibilidad con MARS de la programación del servidor.  
@@ -28,7 +28,7 @@ ms.locfileid: "62782148"
 ## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62782148"
   
 3.  Cree un archivo de clave de nombre seguro ejecutando el comando siguiente en el símbolo del sistema.  
   
-## <a name="sample-code"></a>Código de ejemplo  
+## <a name="sample-code"></a>Código muestra  
  A continuación se muestran las listas de código para este ejemplo.  
   
  Se trata del código para la biblioteca `ResultSet.`  

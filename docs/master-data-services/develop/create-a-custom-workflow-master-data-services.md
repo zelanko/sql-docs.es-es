@@ -1,5 +1,5 @@
 ---
-title: Crear un flujo de trabajo personalizado (Master Data Services) | Microsoft Docs
+title: Crear un flujo de trabajo personalizado
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 87090611cd294e1af72484c4b0c03fcec1fe4f04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68033947"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729322"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Crear un flujo de trabajo personalizado (Master Data Services)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68033947"
 5.  El servicio de integración de flujos de trabajo MDS de SQL Server enruta los datos al ensamblado controlador del flujo de trabajo.  
   
 > [!NOTE]  
->  Nota: Servicio de integración de flujo de trabajo MDS de SQL Server está diseñado para desencadenar procesos simples. Si su código personalizado requiere un procesamiento complejo, realice el procesamiento en un subproceso distinto o fuera del proceso de flujo de trabajo.  
+>  Nota: el servicio de integración de flujos de trabajo MDS de SQL Server está diseñado para desencadenar procesos simples. Si su código personalizado requiere un procesamiento complejo, realice el procesamiento en un subproceso distinto o fuera del proceso de flujo de trabajo.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Configurar Master Data Services para flujos de trabajo personalizados  
  Crear un flujo de trabajo personalizado requiere escribir código personalizado y configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para que pase los datos del flujo de trabajo al controlador de flujo de trabajo. Para habilitar el procesamiento del flujo de trabajo personalizado, siga estos pasos:  
@@ -63,7 +63,7 @@ ms.locfileid: "68033947"
   
 3.  Agregue "using Microsoft.MasterDataServices.Core.Workflow;" al archivo de código de C#.  
   
-4.  Herede de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> en la declaración de clase. La declaración de clase debe ser similar a: ' public class WorkflowTester: IWorkflowTypeExtender'.  
+4.  Herede de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> en la declaración de clase. La declaración de clase debe ser similar a: "public class WorkflowTester : IWorkflowTypeExtender".  
   
 5.  Implemente la interfaz <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. El servicio de integración de flujos de trabajo MDS de SQL Server llama al método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> para iniciar el flujo de trabajo.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68033947"
   
 1.  Utilice el complemento Servicios para detener el servicio.  
   
-2.  Abra un símbolo del sistema, navegue hasta la ubicación del servicio y ejecutar el servicio en modo de consola, escriba: Microsoft.MasterDataServices.Workflow.exe-console.  
+2.  Abra un símbolo del sistema, vaya a la ubicación del servicio y ejecute el servicio en modo de consola especificando: Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  En [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], actualice el miembro y aplique de nuevo las reglas de negocio. En la ventana de la consola se muestran registros detallados.  
   

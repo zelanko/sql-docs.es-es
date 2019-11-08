@@ -1,6 +1,6 @@
 ---
-title: Propiedad SqlServiceType (clase SqlServiceAdvancedProperty) | Microsoft Docs
-ms.custom: ''
+title: Propiedad SqlServiceType (SqlServiceAdvancedProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 20f1663a-9a14-4f14-8c1b-8aa133e272c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30b69a61f184738f72fce32920d8aeedd62797eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 59c42bdb98d5ed19ea2d415a85e9d2ccb4aeb8b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139459"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658965"
 ---
 # <a name="sqlservicetype-property-sqlserviceadvancedproperty-class"></a>Propiedad SqlServiceType (clase SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ object.SetBoolValue(NumValue)
 ## <a name="remarks"></a>Comentarios  
  Los valores devueltos pueden ser uno de los siguientes:  
   
-|Type|Definición|  
+|Tipo|Definición|  
 |----------|----------------|  
 |*1*|MSSQLSERVER es el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |*2*|SQLSERVERAGENT es el servicio Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
@@ -54,11 +54,11 @@ object.SetBoolValue(NumValue)
 |*5*|MSSQLServerOLAPService es el servicio [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |*6*|ReportServer es el servicio [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|  
 |*7*|SQLBrowser es el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Browser.|  
-|*8*|NsService es el [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] servicio de notificación.|  
-|*9*|MSSQLFDLauncher es el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio selector del demonio de filtro de texto completo.|  
-|*10*|SQLPBENGINE es el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio de motor de Polybase.|  
-|*11*|SQLPBDMS es el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio de movimiento de datos de Polybase.|  
-|*12*|MSSQLLaunchpad es el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio Launchpad.|  
+|*8*|NsService es el servicio de notificación de [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)].|  
+|*9*|MSSQLFDLauncher es el servicio selector del demonio de filtro de texto completo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|*10*|SQLPBENGINE es el servicio de motor de polybase [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|*11*|SQLPBDMS es el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio de movimiento de datos de polybase.|  
+|*12*|MSSQLLaunchpad es el servicio Launchpad [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

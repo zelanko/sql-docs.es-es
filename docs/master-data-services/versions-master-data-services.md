@@ -1,5 +1,5 @@
 ---
-title: Versiones (Master Data Services) | Microsoft Docs
+title: Versiones
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fd9ed184d56cf85487d1f8833f7ec22acf60635c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017313"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727798"
 ---
 # <a name="versions-master-data-services"></a>Versiones (Master Data Services)
 
@@ -68,7 +68,7 @@ ms.locfileid: "68017313"
     > [!NOTE]  
     >  Una opción de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] determina si puede copiar o no todas las versiones o únicamente aquellas que se hayan confirmado. Para crear versiones simultáneas debe configurar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para que permita copiar todas las versiones. Este valor también está disponible en la tabla Configuración del sistema. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>Tareas relacionadas  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  

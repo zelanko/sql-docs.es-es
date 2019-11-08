@@ -10,25 +10,25 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2d6d5bd9593c70ae09b042b8218bd8a2c7261a3
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: e3e244b2c4892d725e8e3ddf684b55a224138a50
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72797891"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637674"
 ---
 # <a name="install-sql-server-2014-on-server-core"></a>Instalar SQL Server 2014 en Server Core
   Puede instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instalación Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 o de [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. En este tema se proporcionan detalles específicos de la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en Server Core.  
   
  La opción de instalación Server Core para el sistema operativo [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] o [!INCLUDE[win8srv](../../includes/win8srv-md.md)] proporciona un entorno mínimo para ejecutar determinados roles de servidor. Esto ayuda a reducir los requisitos de administración y mantenimiento y la superficie de ataque para esos roles de servidor. Para obtener más información sobre Server Core tal y como se implementa en [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)], consulte [Server Core para Windows server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=202439) (https://go.microsoft.com/fwlink/?LinkId=202439). Para obtener más información sobre Server Core tal y como se implementa en [!INCLUDE[win8srv](../../includes/win8srv-md.md)], vea [Server Core para Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
   
 |Requisito|Cómo instalar|  
 |-----------------|--------------------|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 SP2|Incluido en la instalación Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 y [!INCLUDE[win8srv](../../includes/win8srv-md.md)]. Si no está habilitado, el programa de instalación lo habilita de forma predeterminada.<br /><br /> No es posible ejecutar las versiones 2.0, 3.0 y 3.5 en paralelo en un equipo. Cuando instala .NET Framework 3.5 SP1, obtiene los niveles 2.0 y 3.0 automáticamente.|  
 |[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 3.5 SP1 Full Profile|Incluido en la instalación Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. Si no está habilitado, el programa de instalación lo habilita de forma predeterminada.<br /><br /> En un equipo con el sistema operativo de servidor Windows, debe descargar e instalar .NET Framework 3.5 SP1 antes de ejecutar el programa de instalación para instalar componentes dependientes de .NET 3.5 SP1.<br /><br /> Para obtener más información acerca de las recomendaciones e instrucciones sobre cómo adquirir y habilitar .NET Framework 3,5 en [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consulte [consideraciones de implementación de Microsoft .NET Framework 3,5](https://msdn.microsoft.com/library/windows/hardware/hh975396) (https://msdn.microsoft.com/library/windows/hardware/hh975396).|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|Para todas las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] excepto [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], el programa de instalación instala [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile como un requisito previo.<br /><br /> Por [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)], descargue el perfil de Server Core de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 de [Microsoft .NET Framework 4 (instalador independiente) para Server Core](https://go.microsoft.com/fwlink/?LinkId=220467) (https://go.microsoft.com/fwlink/?LinkId=220467) e instálelo antes de continuar con la instalación.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile|Para todas las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] excepto [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], el programa de instalación instala [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 Server Core Profile como un requisito previo.<br /><br /> Por [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)], descargue el perfil de Server Core de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4 de [Microsoft .NET Framework 4 (instalador independiente) para Server Core](https://www.microsoft.com/download/details.aspx?id=17718) (https://www.microsoft.com/download/details.aspx?id=17718)e instálelo antes de continuar con la instalación.|  
 |Windows Installer 4.5|Incluido con la instalación Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 y [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
 |Windows PowerShell 2.0|Incluido con la instalación Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 y [!INCLUDE[win8srv](../../includes/win8srv-md.md)].|  
   
@@ -37,25 +37,25 @@ ms.locfileid: "72797891"
   
 |Característica|Admitida|  
 |-------------|---------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Servicios|sí|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replicación|sí|  
-|Búsqueda de texto completo|sí|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|sí|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|no|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|no|  
-|Conectividad con las herramientas de cliente|sí|  
-|Integration Services Server<sup>[1]</sup>|sí|  
-|Compatibilidad con las versiones anteriores de las herramientas de cliente|no|  
-|SDK de las herramientas de cliente|no|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Libros en pantalla|no|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Servicios|Sí|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replicación|Sí|  
+|Búsqueda de texto completo|Sí|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Sí|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|No|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|No|  
+|Conectividad con las herramientas de cliente|Sí|  
+|Integration Services Server<sup>[1]</sup>|Sí|  
+|Compatibilidad con las versiones anteriores de las herramientas de cliente|No|  
+|SDK de las herramientas de cliente|No|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Libros en pantalla|No|  
 |Herramientas de administración: básicas|Solo remoto<sup>[2]</sup>|  
 |Herramientas de administración - Completa|Solo remoto<sup>[2]</sup>|  
-|Distributed Replay Controller|no|  
+|Distributed Replay Controller|No|  
 |Distributed Replay Client|Solo remoto<sup>[2]</sup>|  
-|SDK de conectividad de cliente SQL|sí|  
+|SDK de conectividad de cliente SQL|Sí|  
 |Microsoft Synchronization Framework|Sí<sup>[3]</sup>|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|no|  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|no|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|No|  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|No|  
   
  <sup>[1]</sup> Para obtener más información sobre el nuevo servidor de Integration Services y sus características en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][, &#40;consulte&#41; Integration Services servidor SSIS](../../integration-services/catalog/integration-services-ssis-server-and-catalog.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "72797891"
   
 |||  
 |-|-|  
-|Ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Todas [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ediciones de 64 bits<sup>[1]</sup>|  
+|Ediciones de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Todas [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ediciones de 64 bits<sup>[1]</sup>|  
 |Idioma de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Todos los idiomas|  
 |Idioma de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el idioma o configuración regional (combinación) del sistema operativo|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en japonés<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en alemán<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en chino<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en árabe<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en tailandés<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en turco<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en portugués de Portugal<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en inglés en Windows en inglés|  
 |Edición de Windows|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] de 64 bits x64 Datacenter<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] de 64 bits x64 Standard<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] S12 de 64 bits x64 Data Center Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 de bits x64 Enterprise Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 de 64 bits x64 Standard Server Core<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 de 64 bits x64 Web Server Core|  
@@ -95,10 +95,10 @@ ms.locfileid: "72797891"
   
 ### <a name="feature-parameters"></a>Parámetros de características  
   
-|Parámetro de característica|Description|  
+|Parámetro de característica|Descripción|  
 |-----------------------|-----------------|  
 |SQLENGINE|Instala solo el [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
-|Replicación|Instala el componente Replicación junto con [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|REPLICATION|Instala el componente Replicación junto con [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |FULLTEXT|Instala el componente Texto completo junto con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |AS|Instala todos los componentes de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |IS|Instala todos los componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
@@ -106,12 +106,12 @@ ms.locfileid: "72797891"
   
  Vea los siguientes ejemplos de uso de los parámetros de la característica:  
   
-|Parámetro y valores|Description|  
+|Parámetro y valores|Descripción|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|Instala solo el [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |/FEATURES=SQLEngine,FullText|Instala [!INCLUDE[ssDE](../../includes/ssde-md.md)] y Texto completo.|  
-|/FEATURES=SQLEngine,Conn|Instala los componentes de conectividad y [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
-|/FEATURES=SQLEngine,AS,IS,Conn|Instala el [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los componentes de conectividad.|  
+|/FEATURES=SQLEngine,Conn|Instala los componentes de conectividad y [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
+|/FEATURES=SQLEngine,AS,IS,Conn|Instala el [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]y los componentes de conectividad.|  
   
 ### <a name="installation-options"></a>Opción de instalación  
  El programa de instalación admite las opciones de instalación siguientes al instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un sistema operativo Server Core:  
@@ -130,7 +130,7 @@ ms.locfileid: "72797891"
   
     -   Instalar el [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-         En el siguiente ejemplo se muestra cómo instalar una nueva instancia independiente que incluye el [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+         En el siguiente ejemplo se muestra cómo instalar una nueva instancia independiente que incluye el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
         ```  
         ; ssNoVersion Configuration File  
@@ -295,7 +295,7 @@ ms.locfileid: "72797891"
   
 2.  En la pestaña **Aplicaciones** , haga clic en **Nueva tarea**.  
   
-3.  En el cuadro de diálogo **Crear nueva tarea** , escriba **sqlps.exe** en el campo **Abrir** y, a continuación, haga clic en **Aceptar**. De este modo se abre la ventana **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** .  
+3.  En el cuadro de diálogo **Crear nueva tarea** , escriba **sqlps.exe** en el campo **Abrir** y, a continuación, haga clic en **Aceptar**. De este modo se abre la ventana **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**.  
   
 4.  En la ventana **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**, ejecute el siguiente script para habilitar el protocolo TCP/IP:  
   
@@ -313,7 +313,7 @@ $Tcp
 ## <a name="uninstallation"></a>Desinstalación  
  Después de iniciar sesión en un equipo que ejecute [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Server Core SP1 o [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Server Core, tiene un entorno de escritorio limitado con un símbolo del sistema del administrador. Puede utilizar este símbolo del sistema para iniciar la desinstalación de una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para desinstalar una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], inicie la desinstalación desde el símbolo del sistema el modo completamente silencioso utilizando el parámetro /Q o en modo silencioso simple utilizando el parámetro /QS. El parámetro /QS muestra el progreso a través de la interfaz de usuario, pero no acepta ninguna entrada. /Q se ejecuta en modo silencioso sin ninguna interfaz de usuario.  
   
- Para desinstalar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente.  
+ Para desinstalar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]existente.  
   
 ```cmd
 setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERVER  
@@ -328,10 +328,10 @@ setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
 > 2.  En la pestaña **Aplicaciones** , haga clic en **Nueva tarea**.  
 > 3.  En el cuadro de diálogo **Crear nueva tarea** , escriba **cmd** en el campo **Abrir** y haga clic en [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Instale SQL Server 2014 mediante un archivo de configuración](install-sql-server-using-a-configuration-file.md)   
- [Instale SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md)    
- [Características admitidas por las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)    
+ [Instale SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md)   
+ [Características admitidas por las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Guía paso a paso de la opción de instalación Server Core de Windows Server](https://go.microsoft.com/fwlink/?LinkId=221422)   
  [Configuración de una instalación de Server Core: información general](https://go.microsoft.com/fwlink/?LinkId=221423)   
  [Cmdlets de clúster de conmutación por error en Windows PowerShell enumerados por tarea](https://go.microsoft.com/fwlink/?LinkId=221419)   

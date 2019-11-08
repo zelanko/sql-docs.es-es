@@ -1,5 +1,5 @@
 ---
-title: Eliminar una regla de negocios (Master Data Services) | Microsoft Docs
+title: Eliminar una regla de negocios
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ec560acba23c5423c295f569745da1f8d6bc86e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6af3aac4ac8e2a1a4026162eb6ab5f6038b5eed
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094400"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729408"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Eliminar una regla de negocios (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "68094400"
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una regla de negocios cuando ya no se necesite.  
   
 > [!NOTE]  
->  Puede evitar que los datos se validen con una regla de negocios excluyéndola, en lugar de eliminándola. Para obtener más información, consulte [Excluir una regla de negocios &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md).  
+>  Puede evitar que los datos se validen con una regla de negocios excluyéndola, en lugar de eliminándola. Para obtener más información, consulte [Exclude a Business Rule &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md).  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  

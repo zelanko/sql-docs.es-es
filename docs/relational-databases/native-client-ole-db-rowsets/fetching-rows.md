@@ -1,5 +1,5 @@
 ---
-title: Captura de filas | Microsoft Docs
+title: Capturando filas | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,15 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcdb6fed061cb9f3783985d3cdf934e2d11df151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115208"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761706"
 ---
 # <a name="fetching-rows"></a>Capturar filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   La interfaz **IRowset** es la interfaz de conjunto de filas base. La interfaz **IRowset** proporciona métodos para capturar filas secuencialmente, obtiene los datos de esas filas y administra las filas. Los consumidores usan los métodos de **IRowset** para todas las operaciones básicas de conjunto de filas. Esto incluye la captura y liberación de filas y la obtención de los valores de columna.  
   

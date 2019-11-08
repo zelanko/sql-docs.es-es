@@ -1,5 +1,5 @@
 ---
-title: Modificación y eliminación de una relación de sincronización de entidades (Master Data Services) | Microsoft Docs
+title: Modificación y eliminación de una relación de sincronización de entidades
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 52ffe540d1afe9334533c2a5a8a631f342aed983
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086461"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728238"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Modificación y eliminación de una relación de sincronización de entidades (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  La sincronización de entidades es una sincronización unidireccional y repetible entre versiones de entidades que proporciona una forma de compartir datos de entidad entre diferentes modelos. Puede modificar y eliminar una relación de sincronización que haya creado.  
+  La sincronización de entidades es una sincronización unidireccional y repetible entre versiones de entidades. que proporciona una forma de compartir datos de entidad entre diferentes modelos. Puede modificar y eliminar una relación de sincronización que haya creado.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  Requisitos previos para modificar una relación de sincronización de entidades  
@@ -64,7 +64,7 @@ ms.locfileid: "68086461"
   
 2.  En la barra de menús de la página **Vista de modelo** , seleccione **Administrar** y haga clic en **Entity Sync**(Sincronización de entidades).  
   
-3.  En la página **Entity Sync Maintenance** (Mantenimiento de sincronización de entidades), seleccione una relación de sincronización en la cuadrícula.  
+3.  En la página **Mantenimiento de sincronización de entidades** , seleccione una relación de sincronización en la cuadrícula.  
   
 4.  Haga clic en **Editar**. Se abre un panel a la derecha.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68086461"
   
 2.  En la barra de menús de la página **Vista de modelo** , seleccione **Administrar** y haga clic en **Entity Sync**(Sincronización de entidades).  
   
-3.  En la página **Entity Sync Maintenance** (Mantenimiento de sincronización de entidades), seleccione una relación de sincronización en la cuadrícula.  
+3.  En la página **Mantenimiento de sincronización de entidades** , seleccione una relación de sincronización en la cuadrícula.  
   
 4.  Haga clic en **Eliminar**.  
   

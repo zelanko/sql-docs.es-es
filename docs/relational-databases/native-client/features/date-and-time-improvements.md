@@ -1,5 +1,5 @@
 ---
-title: Mejoras de fecha y hora | Microsoft Docs
+title: Mejoras en la fecha y la hora | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.reviewer: ''
@@ -10,20 +10,19 @@ ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdb0f3382824f11e3058a23555ba0c60e24ef256
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1f1bfa218a32d6cc4697fb0f7eef1748e117c0d7
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67987567"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73788247"
 ---
 # <a name="date-and-time-improvements"></a>Mejoras en la fecha y la hora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   En este tema se describe la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con los nuevos tipos de datos de fecha y hora que se introdujeron en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
- Para obtener más información acerca de las mejoras de fecha y hora, vea [mejoras de fecha y hora &#40;OLE DB&#41; ](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) y [mejoras de fecha y hora &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Para obtener más información acerca de las mejoras de fecha y hora, vea [ &#40;mejoras&#41; de fecha y hora OLE DB](../../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md) y [mejoras &#40;de fecha y hora ODBC&#41;](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
  Para obtener información sobre las aplicaciones de ejemplo que muestran esta característica, vea [Ejemplos de programación de datos de SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
@@ -44,7 +43,7 @@ ms.locfileid: "67987567"
 ### <a name="use-datetime-with-extended-fractional-seconds-precision"></a>Usar el tipo datetime con una precisión ampliada para las fracciones de segundo  
  OLE DB ya define un tipo con una precisión de hasta 1 nanosegundo. Sin embargo, este tipo ya se utiliza en aplicaciones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existentes y estas aplicaciones tienen una expectativa de tan solo 1/300 de precisión en segundos. El nuevo tipo **datetime2(3)** no es directamente compatible con el tipo datetime existente. Si existe el riesgo de que esto afecte al comportamiento de la aplicación, las aplicaciones deben utilizar una nueva marca DBCOLUMN para determinar el tipo de servidor real.  
   
- ODBC también define un tipo con una precisión de hasta 1 nanosegundo. Sin embargo, este tipo ya se utiliza en aplicaciones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existentes y tales aplicaciones solo esperan una precisión de 3 milisegundos. El nuevo **datetime2(3)** tipo no es directamente compatible con las existentes **datetime** tipo. **datetime2(3)** tiene una precisión de un milisegundo y **datetime** tiene una precisión de 1/300 de segundo. En ODBC, las aplicaciones pueden determinar qué tipo de servidor se está usando con el campo descriptor SQL_DESC_TYPE_NAME. Por lo tanto, el tipo SQL_TYPE_TIMESTAMP existente (SQL_TIMESTAMP para aplicaciones ODBC 2.0) puede utilizarse con ambos tipos.  
+ ODBC también define un tipo con una precisión de hasta 1 nanosegundo. Sin embargo, este tipo ya se utiliza en aplicaciones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existentes y tales aplicaciones solo esperan una precisión de 3 milisegundos. El nuevo tipo **datetime2 (3)** no es directamente compatible con el tipo **DateTime** existente. **datetime2 (3)** tiene una precisión de un milisegundo y **DateTime** tiene una precisión de 1/300 de segundo. En ODBC, las aplicaciones pueden determinar qué tipo de servidor se está usando con el campo descriptor SQL_DESC_TYPE_NAME. Por lo tanto, el tipo SQL_TYPE_TIMESTAMP existente (SQL_TIMESTAMP para aplicaciones ODBC 2.0) puede utilizarse con ambos tipos.  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision-and-timezone"></a>Usar el tipo datetime con una precisión ampliada para las fracciones de segundo y la zona horaria  
  Algunas aplicaciones requieren valores de fecha y hora con información de zona horaria. Los nuevos tipos DBTYPE_DBTIMESTAMPOFFSET (OLE DB) y SQL_SS_TIMESTAMPOFFSET (ODBC) admiten este uso.  

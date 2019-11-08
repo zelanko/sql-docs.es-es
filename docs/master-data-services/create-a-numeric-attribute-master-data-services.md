@@ -1,5 +1,5 @@
 ---
-title: Crear un atributo numérico (Master Data Services) | Microsoft Docs
+title: Crear un atributo numérico
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4c759b196c250f4f3f868fba81a45f161dd75f67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 608bdd69396f63fdd0389b43e27bacbab0e763f6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906640"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729588"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Crear un atributo numérico (Master Data Services)
 
@@ -41,10 +41,10 @@ ms.locfileid: "67906640"
 ## <a name="attribute-information"></a>Información de atributo  
  Por cada atributo creado, se agrega una fila con siete columnas a la cuadrícula. En la siguiente tabla se describen las columnas.  
   
-|columna|Descripción|  
+|Columna|Descripción|  
 |------------|-----------------|  
-|Status|Estado del atributo.<br /><br /> Al hacer clic en Guardar, aparece la imagen ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización"), que indica que se está actualizando el atributo.<br /><br /> Si hay errores al crear o editar un atributo, aparecerá la imagen ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error").<br /><br /> En caso contrario, el estado será correcto y aparecerá la imagen ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto").|  
-|NOMBRE|El nombre del atributo.|  
+|Estado|Estado del atributo.<br /><br /> Al hacer clic en guardar, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icon para actualizar el estado ") , que indica que el atributo se está actualizando.<br /><br /> Si hay errores al crear o editar un atributo, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icon para estado de error ") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icon para el estado correcto ") .|  
+|Nombre|El nombre del atributo.|  
 |Nombre para mostrar|Nombre para mostrar del atributo.|  
 |Descripción|Descripción del atributo.|  
 |Ancho de píxel de la pantalla|Ancho del atributo.|  
@@ -53,13 +53,13 @@ ms.locfileid: "67906640"
   
  Cuando se hace clic en un atributo, se muestra la siguiente información.  
   
--   **Creado por**: nombre del usuario que ha creado el atributo.  
+-   **Creado por:** nombre del usuario que creó el atributo.  
   
--   **El**: fecha y hora en que se ha creado el atributo.  
+-   **El**: fecha y hora en que se creó el atributo.  
   
 -   **Actualizado por**: nombre del último usuario que actualizó el atributo.  
   
--   **El**: fecha y hora en que se ha actualizado el atributo por última vez.  
+-   **El**: fecha y hora en que se actualizó el atributo por última vez.  
   
 ### <a name="to-create-a-numeric-attribute"></a>Para crear un atributo numérico  
   

@@ -1,5 +1,5 @@
 ---
-title: Parámetros de salida de la compatibilidad con Streaming para BLOBs | Microsoft Docs
+title: Compatibilidad de streaming con parámetros de salida de BLOB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,16 +13,15 @@ ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00c683cd2cd629d57def7437737d0e8499f9fd77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c15599e2e322eca4f1dca17ff2a46456d6852be9
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128815"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790493"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Compatibilidad con la transmisión por secuencias de parámetros de salida BLOB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Este tema contiene un ejemplo que muestra la compatibilidad de la transmisión por secuencias con los parámetros de salida BLOB, que enlaza los parámetros de salida BLOB como ISequentialStreams.  
   
@@ -30,7 +29,7 @@ ms.locfileid: "68128815"
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="code"></a>Código  
+### <a name="code"></a>código  
   
 ```  
 // blob_out_param.cpp  

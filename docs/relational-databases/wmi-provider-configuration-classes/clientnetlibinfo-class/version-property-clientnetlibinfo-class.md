@@ -1,6 +1,6 @@
 ---
-title: Propiedad Version (clase ClientNetLibInfo) | Microsoft Docs
-ms.custom: ''
+title: Propiedad version (ClientNetLibInfo)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a6b598c26e60a30e0d822a13a4d4d9cef878402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d795f4f76f58829c9c52a6ba3e28f3afa7103080
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040989"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659168"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Propiedad Version (clase ClientNetLibInfo)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

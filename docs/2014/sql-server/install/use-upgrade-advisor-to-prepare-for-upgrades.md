@@ -1,5 +1,5 @@
 ---
-title: Utilice el Asesor de actualizaciones para preparar las actualizaciones | Microsoft Docs
+title: Usar el asesor de actualizaciones para preparar las actualizaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,12 +16,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce60db3b720b046c44d7507d3164c2f2e6c9173f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091261"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632734"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Usar el Asesor de actualizaciones para preparar las actualizaciones
   El Asesor de actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a preparar las actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esta herramienta analiza los componentes instalados de las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y genera un informe que identifica los problemas que han de solucionarse antes o después de la actualización.  
@@ -60,21 +60,21 @@ ms.locfileid: "66091261"
   
  El Asesor de actualizaciones está disponible en un Feature Pack.  
   
- Requisitos previos para instalar y ejecutar el Asesor de actualizaciones son las siguientes:  
+ Los requisitos previos para instalar y ejecutar el asesor de actualizaciones son los siguientes:  
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2, Windows 7 SP1 y [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1.  
   
--   Windows Installer a partir de la versión 4.5. Puede instalar Windows Installer desde la [sitio Web de Windows Installer](https://go.microsoft.com/fwlink/?LinkId=49112).  
+-   Windows Installer a partir de la versión 4.5. Puede instalar Windows Installer desde el [sitio web de Windows Installer](https://www.microsoft.com/download/details.aspx?id=8483).  
   
--   Microsoft .NET Framework 4. .NET framework 4 está disponible en el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CD del producto y desde el [página de descarga de .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET Framework 4 está disponible en los medios del producto [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y en la [Página de descarga de .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Para instalar .NET Framework 4 desde el disco de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], busque la raíz de la unidad de disco. A continuación, haga doble clic en la carpeta \redist, haga doble clic en la carpeta DotNetFrameworks y ejecute dotNetFx40_Full_x86_x64.exe (para sistemas operativos de 32 bits o para sistemas operativos de 64 bits).  
   
  Para instalar el Asesor de actualizaciones desde Internet, haga clic en el botón de descarga de la página de descarga. Puede ejecutar la instalación inmediatamente o guardar el archivo SQLUA.msi para ejecutarlo más tarde. Si va a realizar la instalación desde el disco del producto, ejecute el archivo SQLUA.msi directamente desde dicho disco.  
   
- Después de instalar el Asesor de actualizaciones, puede abrirlo desde el **iniciar** menú:  
+ Después de instalar el asesor de actualizaciones, puede abrirlo desde el menú **Inicio** :  
   
--   Haga clic en **iniciar**, apunte a **todos los programas**, apunte a [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, a continuación, haga clic en  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+-   Haga clic en **Inicio**, seleccione **todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, a continuación, haga clic en **Asesor de actualizaciones de[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** .  
   
  Para obtener más información, vea la documentación del Asesor de actualizaciones incluida en la descarga del Asesor de actualizaciones y las notas de la versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

@@ -14,16 +14,15 @@ ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0944145ae740b7448a19a2607122c8ad07fd33ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d82fa15999c56824f31fb4172969cdbc744a7bc8
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908272"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789868"
 ---
-# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Ejecutar procedimiento almacenado con ODBC CALL y procesar la salida
+# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Ejecutar un procedimiento almacenado con ODBC CALL y procesar la salida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden incluir códigos de retorno y parámetros de salida de tipo entero. Los códigos de retorno y parámetros de salida se envían en el último paquete del servidor y, por tanto, no están disponibles para la aplicación hasta que se haya lanzado al mercado completamente el conjunto de filas. Si el comando devuelve varios resultados, los datos de los parámetros de salida están disponibles cuando **IMultipleResults::GetResult** devuelve DB_S_NORESULT o cuando se libera por completo la interfaz **IMultipleResults**, lo que se produzca en primer lugar.  
   
@@ -36,13 +35,13 @@ ms.locfileid: "67908272"
   
 2.  Cree un conjunto de enlaces (uno para cada creador de parámetro) mediante una matriz de estructura DBBINDING.  
   
-3.  Crear un descriptor de acceso para los parámetros definidos mediante el **IAccessor:: CreateAccessor** método. El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
+3.  Cree un descriptor de acceso para los parámetros definidos mediante el método **IAccessor:: CreateAccessor** . El comando **CreateAccessor** crea un descriptor de acceso a partir de un conjunto de enlaces.  
   
 4.  Rellene la estructura DBPARAMS.  
   
 5.  Llame al comando **Execute** (en este caso, una llamada a un procedimiento almacenado).  
   
-6.  Procesar el conjunto de filas y libérelo mediante el **IRowset:: Release** método.  
+6.  Procese el conjunto de filas y suéltelo mediante el método **IRowset:: Release** .  
   
 7.  Procese el código de retorno y los valores de parámetro de salida que se reciben del procedimiento almacenado.  
   

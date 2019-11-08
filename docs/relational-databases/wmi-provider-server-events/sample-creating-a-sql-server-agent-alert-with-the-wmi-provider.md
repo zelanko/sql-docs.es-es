@@ -1,6 +1,6 @@
 ---
-title: 'Ejemplo: Crear una alerta del Agente SQL Server con el proveedor WMI | Microsoft Docs'
-ms.custom: ''
+title: Crear una alerta de Agente SQL Server con el proveedor WMI
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 875751bd4b2dffd0039ffb40aa884bb9731a75d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b9ceab4fd40174a68bd512fedf2c1b6d5b159b99
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139491"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660526"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Ejemplo: Creación de una alerta del Agente SQL Server con el proveedor WMI
+# <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Ejemplo: crear una alerta del Agente SQL Server con el proveedor WMI
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Una manera común de utilizar el Proveedor de eventos WMI es crear alertas del Agente SQL Server que respondan a eventos concretos. En el ejemplo siguiente se presenta una alerta simple que guarda los eventos de grafo de interbloqueo de XML en una tabla para el análisis posterior. El Agente SQL Server envía una solicitud WQL, recibe los eventos WMI y ejecuta un trabajo en respuesta al evento. Observe que, aunque varios objetos Service Broker están implicados para procesar el mensaje de notificación, el Proveedor de eventos WMI administra los detalles de creación y administración de estos objetos.  
   
 ## <a name="example"></a>Ejemplo  
- Primero, se crea una tabla en la base de datos `AdventureWorks` para contener el evento de grafo de interbloqueo. La tabla contiene dos columnas: El `AlertTime` columna contiene la hora a la que se ejecuta la alerta, y la `DeadlockGraph` columna contiene el documento XML que contiene el gráfico de interbloqueo.  
+ Primero, se crea una tabla en la base de datos `AdventureWorks` para contener el evento de grafo de interbloqueo. La tabla contiene dos columnas: la columna `AlertTime` contiene la hora a la que se ejecuta la alerta y la columna `DeadlockGraph` contiene el documento XML que contiene el grafo de interbloqueo.  
   
  A continuación, se crea la alerta. El script crea primero el trabajo que la alerta ejecutará, agrega un paso de trabajo al trabajo y dirige el trabajo a la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, el script crea la alerta.  
   
- El paso de trabajo recupera la **TextData** propiedad de la instancia del evento WMI e inserta ese valor en el **DeadlockGraph** columna de la **DeadlockEvents** tabla. Observe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente la cadena al formato XML. Dado que el paso de trabajo utiliza el subsistema [!INCLUDE[tsql](../../includes/tsql-md.md)], el paso de trabajo no especifica un proxy.  
+ El paso de trabajo recupera la propiedad **TextData** de la instancia de evento WMI e inserta ese valor en la columna **DeadlockGraph** de la tabla **DeadlockEvents** . Observe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente la cadena al formato XML. Dado que el paso de trabajo utiliza el subsistema [!INCLUDE[tsql](../../includes/tsql-md.md)], el paso de trabajo no especifica un proxy.  
   
  La alerta ejecuta el trabajo cada vez que se registraría un evento de seguimiento de grafo de interbloqueo. Para una alerta WMI, el Agente SQL Server crea una consulta de notificación mediante el espacio de nombres y la instrucción WQL especificados. Para este alerta, el Agente SQL Server supervisa la instancia predeterminada en el equipo local. La instrucción WQL solicita cualquier evento `DEADLOCK_GRAPH` en la instancia predeterminada. Para cambiar la instancia que supervisa la alerta, sustituya el nombre de instancia por `MSSQLSERVER` en el `@wmi_namespace` para la alerta.  
   
 > [!NOTE]  
->  Agente SQL Server recibir eventos WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] debe estar habilitada en **msdb** y [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+>  Para Agente SQL Server recibir eventos de WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] debe estar habilitado en **msdb** y [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 USE AdventureWorks ;  
@@ -90,7 +90,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Probar el ejemplo  
- Para ver cómo se ejecuta el trabajo, provoque un interbloqueo. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra dos **consulta SQL** pestañas y conecte ambas consultas a la misma instancia. Ejecute el script siguiente en una de las pestañas de consulta. Este script genera un conjunto de resultados y finaliza.  
+ Para ver cómo se ejecuta el trabajo, provoque un interbloqueo. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra dos pestañas de **consulta SQL** y conecte ambas consultas a la misma instancia. Ejecute el script siguiente en una de las pestañas de consulta. Este script genera un conjunto de resultados y finaliza.  
   
 ```  
 USE AdventureWorks ;  
@@ -103,7 +103,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Ejecute el siguiente script en la segunda pestaña de consulta. Este script genera un conjunto de resultados y, a continuación, se bloquea, esperando adquirir un bloqueo en `Production.Product`.  
+ Ejecute el siguiente script en la segunda pestaña de consulta. Este script genera un conjunto de resultados y, a continuación, se bloquea, a la espera de adquirir un bloqueo en `Production.Product`.  
   
 ```  
 USE AdventureWorks ;  
@@ -119,7 +119,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Ejecute el siguiente script en la primera pestaña de consulta. Este script se bloquea, esperando adquirir un bloqueo en `Production.Location`. Después de un tiempo de espera corto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elegirá este script o el script del ejemplo como víctima del interbloqueo y finalizará la transacción.  
+ Ejecute el siguiente script en la primera pestaña de consulta. Este script se bloquea, a la espera de adquirir un bloqueo en `Production.Location`. Después de un tiempo de espera corto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elegirá este script o el script del ejemplo como víctima del interbloqueo y finalizará la transacción.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

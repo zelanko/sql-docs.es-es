@@ -1,6 +1,6 @@
 ---
-title: Método SetEnable (clase ClientNetworkProtocol) | Microsoft Docs
-ms.custom: ''
+title: Método SetEnable (ClientNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a66c756a-1311-4f4a-8088-818f8ed90056
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2db233072eac18e0166eff524308a7ff0782eebe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3f92e3b417b3f669cc621e2d29c8ece24183af4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040852"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660124"
 ---
 # <a name="setenable-method-clientnetworkprotocol-class"></a>Método SetEnable (clase ClientNetworkProtocol)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Habilita el protocolo de red de cliente especificado por el [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
+  Habilita el protocolo de red del cliente especificado por [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,6 +45,6 @@ object.SetEnableMethod()
 ## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar bibliotecas de red y protocolos de red de cliente](https://technet.microsoft.com/library/ms181035.aspx)  
+ [Configuración de protocolos de red de cliente y bibliotecas de red](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

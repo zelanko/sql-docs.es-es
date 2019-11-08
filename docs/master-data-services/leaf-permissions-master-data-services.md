@@ -1,5 +1,5 @@
 ---
-title: Permisos de hoja (Master Data Services) | Microsoft Docs
+title: Permisos de hoja
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 72ac77fd62bd0dd0f315bd214f94fe759923ffda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007193"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728078"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permisos de hoja (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "68007193"
   
  Para las entidades sin jerarquías explícitas habilitadas, la asignación de un permiso a **Hoja** es equivalente a asignar un permiso a la entidad.  
   
- **Notas:**  
+ **Comentarios:**  
   
 -   Los permisos de hoja solo se aplican al área funcional del **Explorador** de la interfaz de usuario.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68007193"
 |**Lectura**|El usuario puede leer miembros hoja y atributos.|  
 |**Crear**|Usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
 |**Update**|El usuario puede actualizar miembros hoja y atributos.|  
-|**Eliminar**|El usuario puede eliminar miembros hoja.|  
+|**Delete**|El usuario puede eliminar miembros hoja.|  
 |**Denegar**|Denegar todo el acceso a los miembros hoja.|  
   
  Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
@@ -55,16 +55,16 @@ ms.locfileid: "68007193"
 |**Lectura**|El usuario puede leer atributos.|  
 |**Crear**|El usuario puede asignar valores al crear miembros.|  
 |**Update**|El usuario puede actualizar atributos.|  
-|**Eliminar**|Ningún efecto.|  
+|**Delete**|Ningún efecto.|  
 |**Denegar**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Name y Code.|  
   
 ### <a name="example"></a>Ejemplo  
  Para la entidad Product, asigne el permiso **Actualizar** al atributo Subcategory. Deniegue el permiso al resto de los atributos.  
   
-|NOMBRE|Código|Subcategory (actualizar)|  
+|Nombre|código|Subcategory (actualizar)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Bicicletas de montaña|  
-|Mountain-100|BK-M201|{5} Bicicletas de montaña|  
+|Mountain-100|BK-M101|{5} bicicletas de montaña|  
+|Mountain-100|BK-M201|{5} bicicletas de montaña|  
   
  En el **Explorador**, puede actualizar cualquier valor de atributo en la columna Subcategory. Si no dispone del permiso para un atributo, este no se mostrará.  
   

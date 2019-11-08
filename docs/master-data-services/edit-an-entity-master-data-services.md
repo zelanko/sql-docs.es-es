@@ -1,5 +1,5 @@
 ---
-title: Edición de una entidad (Master Data Services) | Microsoft Docs
+title: Edición de una entidad
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 88a4850c80404ebeb002c5d17af69b0f10dc5bf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4329f618b812bb566d974c5434ef0362b1383f2d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086477"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729300"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Edición de una entidad (Master Data Services)
 
@@ -58,7 +58,7 @@ ms.locfileid: "68086477"
   
      Para obtener más información, consulte [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
-## <a name="status"></a>Status  
+## <a name="status"></a>Estado  
  La columna de estado de la cuadrícula muestra el estado de la operación en la entidad. Al hacer clic en **Guardar entidad**, aparece la imagen siguiente, que indica que la entidad se está actualizando.  
   
  ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")  

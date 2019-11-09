@@ -21,12 +21,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1cb8d3e14d7963bdcbad9bdc273f2adfaf11c0ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704758"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882355"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
   Una vez que haya considerado las sugerencias generales sobre el rendimiento que se describen en [Aumentar el rendimiento general de la replicación](enhance-general-replication-performance.md), tenga en cuenta estas áreas adicionales específicas de la replicación transaccional.  
@@ -51,7 +51,7 @@ ms.locfileid: "62704758"
   
 -   Replique la ejecución de los procedimientos almacenados al realizar actualizaciones por lotes en las tablas publicadas.  
   
-     Si tiene actualizaciones por lotes que afectan ocasionalmente a un gran número de filas en el suscriptor, considere la posibilidad de actualizar la tabla publicada mediante un procedimiento almacenado y publique la ejecución del procedimiento almacenado. En vez de enviar una actualización o eliminación para cada fila afectada, el Agente de distribución ejecutará el mismo procedimiento en el suscriptor con los mismos valores de parámetros. Para más información, vea [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
+     Si tiene actualizaciones por lotes que afectan ocasionalmente a un gran número de filas en el suscriptor, considere la posibilidad de actualizar la tabla publicada mediante un procedimiento almacenado y publique la ejecución del procedimiento almacenado. En vez de enviar una actualización o eliminación para cada fila afectada, el Agente de distribución ejecutará el mismo procedimiento en el suscriptor con los mismos valores de parámetros. Para más información, consulte [Publishing Stored Procedure Execution in Transactional Replication](../transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 -   Reparta los artículos entre varias publicaciones.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "62704758"
     > [!WARNING]  
     >  `MaxCmdsInTran` no se ha diseñado para estar siempre activado. Su función es evitar los casos en los que alguien ha realizado accidentalmente un gran número de operaciones DML en una sola transacción (lo que produce un retraso en la distribución de comandos hasta que toda la transacción está en la base de datos de distribución, se establecen los bloqueos, etc.). Si se encuentra habitualmente esta situación, debe revisar las aplicaciones y buscar formas de reducir el tamaño de las transacciones.  
   
--   Use la **- SubscriptionStreams** parámetro del agente de distribución.  
+-   Use el parámetro **-SubscriptionStreams** para el agente de distribución.  
   
      El parámetro **-SubscriptionStreams** puede mejorar considerablemente el rendimiento de la replicación. Permite establecer varias conexiones con un suscriptor para aplicar lotes de cambios en paralelo, al tiempo que mantiene muchas de las características transaccionales presentes cuando se usa un solo subproceso. Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores. Antes de que finalice esta fase de reintento, pueden aparecer incoherencias transaccionales temporales en el suscriptor. Una vez que se han confirmado correctamente los lotes con errores, el suscriptor vuelve al estado de coherencia transaccional.  
   
-     Se puede especificar un valor para este parámetro del agente mediante el **@subscriptionstreams** de [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
+     Se puede especificar un valor para este parámetro de agente mediante el **\@subscriptionstreams** de [SP_ADDSUBSCRIPTION &#40;Transact-&#41;SQL](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   
 -   Aumente el valor del parámetro **-ReadBatchSize** del Agente de registro del LOG.  
   
@@ -100,6 +100,6 @@ ms.locfileid: "62704758"
   
 -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
+-   [Conceptos de los ejecutables del Agente de replicación](../concepts/replication-agent-executables-concepts.md)  
   
   

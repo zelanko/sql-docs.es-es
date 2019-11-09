@@ -1,6 +1,6 @@
 ---
-title: sp_set_database_firewall_rule (Azure SQL Database) | Microsoft Docs
-ms.custom: ''
+title: sp_set_database_firewall_rule
+titleSuffix: Azure SQL Database
 ms.date: 08/04/2017
 ms.service: sql-database
 ms.prod_service: sql-database
@@ -20,17 +20,18 @@ ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e5363e741c827a0fb16528a8b617e26a5b95f8a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 2a465e03c3b77b8d05437fa0cfaf3354434ce973
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025692"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843853"
 ---
-# <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
+# <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Crea o actualiza las reglas de firewall de nivel de base de datos para su [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las reglas de firewall de base de datos se pueden configurar para la **maestro** base de datos y para las bases de datos de usuario en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Las reglas de firewall de base de datos son especialmente útiles cuando utilizando los usuarios de base de datos de contenido. Para obtener más información, vea [Usuarios de base de datos independiente - Conversión de la base de datos en portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Crea o actualiza las reglas de Firewall de nivel de base de datos para el [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las reglas de Firewall de base de datos se pueden configurar para la base de datos **maestra** y para las bases de datos de usuario en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Las reglas de Firewall de base de datos son especialmente útiles cuando se usan usuarios de bases de datos independientes. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,30 +44,30 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **[@name**  =] [N]'*nombre*'  
- El nombre utilizado para describir y distinguir la configuración del firewall de nivel de base de datos. *nombre* es **nvarchar (128)** con ningún valor predeterminado. El identificador de Unicode `N` es opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+ **[@name** =] [N] '*nombre*'  
+ El nombre utilizado para describir y distinguir la configuración del firewall de nivel de base de datos. *Name* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado. El identificador Unicode `N` es opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
- **[@start_ip_address**  =] '*start_ip_address*'  
- La dirección IP más baja en el intervalo de la configuración del firewall de nivel de base de datos. Las direcciones IP iguales o superiores a esta pueden intentar conectarse con la instancia de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más baja posible es `0.0.0.0`. *start_ip_address* es **varchar (50)** con ningún valor predeterminado.  
+ **[@start_ip_address** =] '*start_ip_address*'  
+ La dirección IP más baja en el intervalo de la configuración del firewall de nivel de base de datos. Las direcciones IP iguales o superiores a esta pueden intentar conectarse con la instancia de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más baja posible es `0.0.0.0`. *start_ip_address* es de tipo **VARCHAR (50)** y no tiene ningún valor predeterminado.  
   
  [ **@end_ip_address** =] '*end_ip_address*'  
- La dirección IP más alta en el intervalo de la configuración del firewall de nivel de base de datos. Las direcciones IP iguales o inferiores a esta pueden intentar conectarse con la instancia de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más alta posible es `255.255.255.255`. *end_ip_address* es **varchar (50)** con ningún valor predeterminado.  
+ La dirección IP más alta en el intervalo de la configuración del firewall de nivel de base de datos. Las direcciones IP iguales o inferiores a esta pueden intentar conectarse con la instancia de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más alta posible es `255.255.255.255`. *end_ip_address* es de tipo **VARCHAR (50)** y no tiene ningún valor predeterminado.  
   
- En la tabla siguiente se muestran los argumentos admitidos y opciones en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ En la tabla siguiente se muestran los argumentos y las opciones admitidos en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 > [!NOTE]  
->  Se permiten los intentos de conexión de Azure cuando este campo y el *start_ip_address* campo equals `0.0.0.0`.  
+>  Se permiten los intentos de conexión de Azure cuando este campo y el campo *start_ip_address* es igual a `0.0.0.0`.  
   
 ## <a name="remarks"></a>Comentarios  
  Los nombres de la configuración del firewall de nivel de base de datos para una base de datos deben ser únicos. Si el nombre de la configuración del firewall de nivel de base de datos proporcionado para el procedimiento almacenado ya existe en la tabla de configuración del firewall de nivel de base de datos, las direcciones IP inicial y final se actualizarán. De lo contrario, se creará una nueva configuración del firewall de nivel de base de datos.  
   
- Cuando se agrega una configuración de firewall de nivel de base de datos donde el principio y final de las direcciones IP son iguales a `0.0.0.0`, habilitar el acceso a la base de datos en el [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor desde cualquier recurso de Azure. Proporcione un valor para el *nombre* parámetro que le ayudarán a recordar lo que es la configuración del firewall para.  
+ Cuando se agrega una configuración de Firewall de nivel de base de datos donde las direcciones IP inicial y final son iguales a `0.0.0.0`, se habilita el acceso a la base de datos en el servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] desde cualquier recurso de Azure. Proporcione un valor al parámetro *Name* que le ayude a recordar para qué sirve la configuración de Firewall.  
   
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso **CONTROL** en la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
- El código siguiente crea un firewall de nivel de base de datos llamada `Allow Azure` que permite el acceso a la base de datos de Azure.  
+ En el código siguiente se crea una configuración de Firewall de nivel de base de datos denominada `Allow Azure` que permite el acceso a la base de datos desde Azure.  
   
 ```  
 -- Enable Azure connections.  
@@ -74,7 +75,7 @@ EXECUTE sp_set_database_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- El código siguiente crea una configuración del firewall de nivel de base de datos denominada `Example DB Setting 1` solo para la dirección IP `0.0.0.4`. A continuación, la `sp_set_database firewall_rule` se llama al procedimiento almacenado nuevo para actualizar la dirección IP final `0.0.0.6`, ya que la configuración de firewall. Esto crea un intervalo que permite a las direcciones IP `0.0.0.4`, `0.0.0.5`, y `0.0.0.6` para tener acceso a la base de datos.
+ El código siguiente crea una configuración del firewall de nivel de base de datos denominada `Example DB Setting 1` solo para la dirección IP `0.0.0.4`. A continuación, se llama de nuevo al procedimiento almacenado `sp_set_database firewall_rule` para actualizar la dirección IP final a `0.0.0.6`, en esa configuración de Firewall. Esto crea un intervalo que permite que las direcciones IP `0.0.0.4`, `0.0.0.5`y `0.0.0.6` tengan acceso a la base de datos.
   
 ```  
 -- Create database-level firewall setting for only IP 0.0.0.4  
@@ -86,10 +87,10 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Firewall de base de datos SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Cómo: Configurar el Firewall (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
- [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
- [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
- [Sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
+ [Azure SQL Database Firewall](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
+ [Cómo configurar los valores del firewall (Azure SQL Database)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [sp_set_firewall_rule &#40;Azure SQL Database&#41; ](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
+ [sp_delete_database_firewall_rule &#40;Azure SQL Database&#41; ](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
+ [Sys. database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  
   
   

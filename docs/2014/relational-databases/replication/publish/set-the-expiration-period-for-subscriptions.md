@@ -15,12 +15,12 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7045454dfd2d05e37e18cdc57f53090cf8b9e76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212085"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882180"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Establecer el período de expiración para las suscripciones
   En este tema se describe cómo establecer el período de expiración para las suscripciones en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. El período de expiración de las suscripciones determina el tiempo que debe transcurrir antes de que una suscripción expire y se quite. Para más información, consulte [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  
@@ -63,11 +63,11 @@ ms.locfileid: "68212085"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para establecer el período de expiración de una suscripción en una instantánea o una publicación transaccional  
   
-1.  En el publicador, ejecute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique el período de expiración deseado para la suscripción, en horas, para **@retention** . El período de expiración predeterminado es 336 horas. Para obtener más información, vea [Crear una suscripción](create-a-publication.md).  
+1.  En el publicador, ejecute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique el período de expiración deseado para la suscripción, en horas, para **\@retention**. El período de expiración predeterminado es 336 horas. Para más información, consulte [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Para establecer el período de expiración de una suscripción en una publicación de combinación  
   
-1.  En el publicador, ejecute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Especifique el valor deseado para el período de expiración de la suscripción en **@retention** . Especifique las unidades en las que se expresa el período de expiración para **@retention_period_unit** , que pueden ser unas de las siguientes:  
+1.  En el publicador, ejecute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Especifique el valor deseado para el período de expiración de la suscripción en **\@retention**. Especifique las unidades en las que se expresa el período de expiración para **\@retention_period_unit**, que pueden ser unas de las siguientes:  
   
     -   **1** = semana  
   
@@ -79,11 +79,11 @@ ms.locfileid: "68212085"
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para cambiar el período de expiración de una suscripción a una instantánea o una publicación transaccional  
   
-1.  En el publicador, ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Especifique **retención** para **@property** y el nuevo período de expiración de suscripción, en horas, para **@value** .  
+1.  En el publicador, ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Especifique **retention** para **\@property** y el nuevo período de expiración de suscripción, en horas, para **\@value**.  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Para cambiar el período de expiración de una suscripción a una publicación de combinación  
   
-1.  En el publicador, ejecute [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), especificando **@publication** y **@publisher** . Tenga en cuenta el valor de **retention_period_unit** en el conjunto de resultados, que puede ser uno de los siguientes:  
+1.  En el publicador, ejecute [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), y especifique **\@publication** y **\@publisher**. Tenga en cuenta el valor de **retention_period_unit** en el conjunto de resultados, que puede ser uno de los siguientes:  
   
     -   **0** = día  
   
@@ -93,9 +93,9 @@ ms.locfileid: "68212085"
   
     -   **3** = año  
   
-2.  En el publicador, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique **retención** para **@property** y el nuevo período de expiración de suscripción, como texto basado en la unidad de período de retención del paso 1, para **@value** .  
+2.  En el publicador, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique **retention** para **\@property** y el nuevo período de expiración de suscripción, como texto en función de la unidad de período de retención del paso 1, para **\@value**.  
   
-3.  (Opcional) En el publicador, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique **retention_period_unit** para **@property** y una nueva unidad para el período de expiración de la suscripción en **@value** .  
+3.  (Opcional) En el publicador, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique **retention_period_unit** para **\@property** y una nueva unidad para el período de expiración de la suscripción para **\@value**.  
   
 ## <a name="see-also"></a>Vea también  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   

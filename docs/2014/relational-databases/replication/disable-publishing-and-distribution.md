@@ -18,12 +18,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 46cdf7ad91de4eacae513399dc7b0c88ad9831fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62721446"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882373"
 ---
 # <a name="disable-publishing-and-distribution"></a>Deshabilitar la publicación y la distribución
   En este tema se describe cómo deshabilitar la publicación y la distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -87,7 +87,7 @@ ms.locfileid: "62721446"
 7.  En el distribuidor, ejecute [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) para quitar la designación de distribuidor del servidor.  
   
     > [!NOTE]  
-    >  Si no se quitan todos los objetos de distribución y publicación de replicación antes de ejecutar [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) y [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), estos procedimientos devolverán un error. Para quitar todos los objetos relacionados con la replicación cuando se quita un publicador o un distribuidor, el parámetro **@no_checks** debe estar establecido en **1**. Si un publicador o un distribuidor no tienen conexión o están inaccesibles, el parámetro **@ignore_distributor** puede estar establecido en **1** para que se puedan quitar; sin embargo, todos los objetos de publicación y distribución omitidos deben quitarse manualmente.  
+    >  Si no se quitan todos los objetos de distribución y publicación de replicación antes de ejecutar [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) y [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), estos procedimientos devolverán un error. Para quitar todos los objetos relacionados con la replicación cuando se quita un publicador o un distribuidor, el parámetro **\@no_checks** debe establecerse en **1**. Si un publicador o un distribuidor está sin conexión o no se puede tener acceso a él, el parámetro **ignore_distributor de\@** se puede establecer en **1** para que se puedan quitar; sin embargo, cualquier publicación y distribución de objetos restantes debe quitarse manualmente.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  Este script de ejemplo quita los objetos de replicación de la base de datos de suscripciones.  
@@ -98,7 +98,7 @@ ms.locfileid: "62721446"
   
  [!code-sql[HowTo#sp_DropDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/dropdistpub.sql#sp_dropdistpub)]  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Para deshabilitar la publicación y la distribución  
   
@@ -112,11 +112,11 @@ ms.locfileid: "62721446"
   
 5.  (Opcional) Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto y compruebe que el Publicador existe. Si este método devuelve `false`, el nombre del Publicador establecido en el paso 4 era incorrecto o este Distribuidor no usa el Publicador.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A>. Pase un valor de `true` para *forzar* si el publicador y distribuidor están en servidores diferentes, y cuando el publicador se debería desinstalar en el distribuidor sin comprobar primero que las publicaciones ya no existen en el Publicador.  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> . Pase un valor de `true` para *Force* si el publicador y el distribuidor están en servidores diferentes, y cuando el publicador se debe desinstalar en el distribuidor sin comprobar primero que las publicaciones ya no existen en el publicador.  
   
 7.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Pase el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 3.  
   
-8.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A>. Pase un valor de `true` para *forzar* para quitar todos los objetos de replicación en el distribuidor sin comprobar primero que todas las bases de datos de publicación locales se han deshabilitado y se han desinstalado las bases de datos de distribución.  
+8.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> . Pase un valor de `true` para que *Force* quite todos los objetos de replicación en el distribuidor sin comprobar primero que todas las bases de datos de publicación locales se han deshabilitado y que se han desinstalado las bases de datos de distribución.  
   
 ###  <a name="PShellExample"></a> Ejemplos (RMO)  
  Este ejemplo quita el registro del Publicador en el Distribuidor, coloca la base de datos de distribución y desinstala el Distribuidor.  
@@ -132,7 +132,7 @@ ms.locfileid: "62721446"
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
 ## <a name="see-also"></a>Vea también  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md) (Conceptos sobre los procedimientos almacenados del sistema de replicación)  
+ [Conceptos de los Replication Management Objects (RMO)](concepts/replication-management-objects-concepts.md)   
+ [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)  
   
   

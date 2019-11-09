@@ -19,12 +19,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 064b6e915b2b1fbc7de1ef9b280bc406d7fc92e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63020737"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882335"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Agregar y quitar artículos de publicaciones existentes
   Después de crear una publicación, se le pueden agregar y quitar artículos. Se pueden agregar artículos en cualquier momento, pero las acciones necesarias para quitar artículos dependen del tipo de replicación y del momento en que se quite el artículo.  
@@ -33,7 +33,7 @@ ms.locfileid: "63020737"
  Para agregar un artículo, es necesario agregar el artículo a la publicación, crear una instantánea nueva para la publicación y sincronizar la suscripción para aplicar el esquema y los datos para el nuevo artículo.  
   
 > [!NOTE]
->  Si se agrega un artículo a una publicación de combinación y ya hay un artículo que depende de este nuevo artículo, debe especificar un orden de procesamiento para los dos artículos con el parámetro **@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) y [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **@processing_order** de **sp_addmergearticle**y el valor **2** para el parámetro **@processing_order** de **sp_changemergearticle**; especifique el nombre de la tabla para el parámetro **@article** . Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
+>  Si se agrega un artículo a una publicación de combinación y ya hay un artículo que dependa de este nuevo artículo, debe especificar un orden de procesamiento para ambos artículos con el parámetro **\@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) y [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **\@processing_order** de **sp_addmergearticle** y el valor **2** para el parámetro **\@processing_order** de **sp_changemergearticle**; asimismo, debe especificar el nombre de la tabla para el parámetro **\@article**. Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
   
 1.  Agregue uno o más artículos con uno de estos métodos:  
   
@@ -49,9 +49,9 @@ ms.locfileid: "63020737"
   
 3.  Una vez creada la instantánea, sincronice la suscripción para copiar el esquema y los datos para el nuevo artículo.  
   
-    -   Para sincronizar una suscripción de inserción, consulte [Sincronizar una suscripción de inserción](../synchronize-a-push-subscription.md).  
+    -   Para sincronizar una suscripción de inserción, vea [Synchronize a Push Subscription](../synchronize-a-push-subscription.md).  
   
-    -   Para sincronizar una suscripción de extracción, consulte [Sincronizar una suscripción de extracción](../synchronize-a-pull-subscription.md).  
+    -   Para sincronizar una suscripción de extracción, vea [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
 ## <a name="dropping-articles"></a>quitar artículos  
  Puede quitar artículos de una publicación en cualquier momento, pero debe tener en cuenta los siguientes comportamientos:  

@@ -19,12 +19,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4be2287a1c0d43ccfdfaeaca3378f6d10f100134
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960874"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882270"
 ---
 # <a name="delete-an-article"></a>Eliminar un artículo
   En este tema se describe cómo eliminar un artículo en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Replication Management Objects (RMO). Para obtener información sobre las condiciones en que se pueden quitar artículos, y si la eliminación de un artículo requiere una nueva instantánea o la reinicialización de las suscripciones, vea [Agregar y quitar artículos de publicaciones existentes](add-articles-to-and-drop-articles-from-existing-publications.md).  
@@ -35,27 +35,27 @@ ms.locfileid: "62960874"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Para eliminar un artículo de una publicación de instantáneas o transaccional  
   
-1.  Ejecute [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) para eliminar un artículo, especificado por **@article** , de una publicación, especificado por **@publication** . Especifique un valor de **1** para **@force_invalidate_snapshot** .  
+1.  Ejecute [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) para eliminar un artículo, especificado por **\@article**, de una publicación, especificada por **\@publication**. Especifique un valor de **1** para **\@force_invalidate_snapshot**.  
   
 2.  (Opcional) Para quitar completamente el objeto publicado de la base de datos, ejecute el comando `DROP <objectname>` en el publicador de la base de datos de publicación.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Para eliminar un artículo de una publicación de combinación  
   
-1.  Ejecute [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) para eliminar un artículo, especificado por **@article** , de una publicación, especificado por **@publication** . Si es necesario, especifique un valor de **1** para **@force_invalidate_snapshot** y un valor de **1** para **@force_reinit_subscription** .  
+1.  Ejecute [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) para eliminar un artículo, especificado por **\@article**, de una publicación, especificada por **\@publication**. Si es necesario, especifique un valor de **1** para **\@force_invalidate_snapshot** y un valor de **1** para **\@force_reinit_subscription**.  
   
 2.  (Opcional) Para quitar completamente el objeto publicado de la base de datos, ejecute el comando `DROP <objectname>` en el publicador de la base de datos de publicación.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
- En el siguiente ejemplo se elimina un artículo de una publicación transaccional Dado que este cambio invalida la instantánea existente, se especifica un valor de **1** para el parámetro **@force_invalidate_snapshot** .  
+ En el siguiente ejemplo se elimina un artículo de una publicación transaccional Como este cambio invalida la instantánea existente, se especifica un valor de **1** para el parámetro **\@force_invalidate_snapshot**.  
   
  [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
- El ejemplo siguiente elimina dos artículos de una publicación de combinación. Dado que estos cambios invalidan la instantánea existente, se especifica un valor de **1** para el parámetro **@force_invalidate_snapshot** .  
+ El ejemplo siguiente elimina dos artículos de una publicación de combinación. Como estos cambios invalidan la instantánea existente, se especifica un valor de **1** para el parámetro **\@force_invalidate_snapshot**.  
   
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
  Puede eliminar artículos mediante programación utilizando Replication Management Objects (RMO). Las clases RMO que usa para eliminar un artículo dependen del tipo de publicación al que pertenece el artículo.  
   
 #### <a name="to-delete-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>Para eliminar un artículo que pertenece a una publicación transaccional o de instantáneas  
@@ -70,7 +70,7 @@ ms.locfileid: "62960874"
   
 5.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que el artículo existe. Si el valor de esta propiedad es `false`, se definieron incorrectamente las propiedades de artículo en el paso 3, o bien el artículo no existe.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Remove%2A>.  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> .  
   
 7.  Cierre todas las conexiones.  
   
@@ -86,12 +86,12 @@ ms.locfileid: "62960874"
   
 5.  Compruebe la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> para asegurarse de que el artículo existe. Si el valor de esta propiedad es `false`, se definieron incorrectamente las propiedades de artículo en el paso 3, o bien el artículo no existe.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Remove%2A>.  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.Article.Remove%2A> .  
   
 7.  Cierre todas las conexiones.  
   
 ## <a name="see-also"></a>Vea también  
  [Agregar y quitar artículos de publicaciones existentes](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Conceptos de procedimientos almacenados del sistema de replicación](../concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

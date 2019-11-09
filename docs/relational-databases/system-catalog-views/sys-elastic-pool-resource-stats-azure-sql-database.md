@@ -1,6 +1,6 @@
 ---
-title: Sys.elastic_pool_resource_stats (Azure SQL Database) | Microsoft Docs
-ms.custom: ''
+title: sys.elastic_pool_resource_stats
+titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.prod_service: sql-database
@@ -16,56 +16,57 @@ helpviewer_keywords:
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: stevestein
 ms.author: sstein
+ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ec3fae7d4e2a649ea05c48d400728e229607d92f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0712785a5af3e8cc3c606a597ba02e0075c88dd9
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079271"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843870"
 ---
-# <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys.elastic_pool_resource_stats (Azure SQL Database)
+# <a name="syselastic_pool_resource_stats-azure-sql-database"></a>Sys. elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Devuelve estadísticas de uso de recursos de todos los grupos elásticos de un servidor de SQL Database. Para cada grupo elástico hay una fila por cada ventana de informe de 15 segundos (cuatro filas por minuto). Esto incluye uso de CPU, E/S, registro, almacenamiento y empleo simultáneo de solicitudes o sesiones por parte de todas las bases de datos del grupo. Estos datos se conservan durante 14 días. 
+  Devuelve las estadísticas de uso de recursos para todos los grupos elásticos de un servidor de SQL Database. Para cada grupo elástico, hay una fila por cada ventana de informes de 15 segundos (cuatro filas por minuto). Esto incluye la CPU, la e/s, el registro, el consumo de almacenamiento y el uso de solicitudes o sesiones simultáneas por parte de todas las bases de datos del grupo. Estos datos se conservan durante 14 días. 
   
 ||  
 |-|  
-|**Se aplica a**:  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
+|**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12.|  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**start_time**|**datetime2**|Hora de UTC que indica el inicio del segundo intervalo de informes 15.|  
-|**end_time**|**datetime2**|Hora de UTC que indica el final del segundo intervalo de informes 15.|  
+|**start_time**|**datetime2**|Hora UTC que indica el inicio del intervalo de informes de 15 segundos.|  
+|**end_time**|**datetime2**|Hora UTC que indica el final del intervalo de informes de 15 segundos.|  
 |**elastic_pool_name**|**nvarchar(128)**|Nombre del grupo de bases de datos elásticas.|  
-|**avg_cpu_percent**|**decimal(5,2)**|Uso de proceso medio en porcentaje del límite del grupo.|  
-|**avg_data_io_percent**|**decimal(5,2)**|Uso de E/S medio en porcentaje basado en el límite del grupo.|  
-|**avg_log_write_percent**|**decimal(5,2)**|Promedio de escritura utilización de recursos en porcentaje del límite del grupo.|  
-|**avg_storage_percent**|**decimal(5,2)**|Promedio de utilización del almacenamiento en porcentaje del límite del grupo de almacenamiento.|  
-|**max_worker_percent**|**decimal(5,2)**|Máximo de trabajos simultáneos (solicitudes) en porcentaje basado en el límite del grupo.|  
-|**max_session_percent**|**decimal(5,2)**|Número máximo de sesiones simultáneo en porcentaje basado en el límite del grupo.|  
-|**elastic_pool_dtu_limit**|**int**|Máximo de grupo elástico DTU configuración actual de este grupo elástico durante este intervalo.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|Límite de almacenamiento máximo del grupo elástico actual configuración para este grupo elástico en megabytes durante este intervalo.|
-|**avg_allocated_storage_percent**|**decimal(5,2)**|El porcentaje de espacio de datos asignado todas las bases de datos en el grupo elástico.  Esto es la proporción de espacio de datos asignado al tamaño máximo de datos para el grupo elástico.  Para obtener más información, vea: [Administración del espacio de archivo en la base de datos SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_cpu_percent**|**decimal (5, 2)**|Uso de proceso promedio en porcentaje del límite del grupo.|  
+|**avg_data_io_percent**|**decimal (5, 2)**|Uso de e/s promedio en porcentaje según el límite del grupo.|  
+|**avg_log_write_percent**|**decimal (5, 2)**|Uso de recursos de escritura promedio en porcentaje del límite del grupo.|  
+|**avg_storage_percent**|**decimal (5, 2)**|Uso de almacenamiento medio en porcentaje del límite de almacenamiento del grupo.|  
+|**max_worker_percent**|**decimal (5, 2)**|Número máximo de trabajos simultáneos (solicitudes) en porcentaje según el límite del grupo.|  
+|**max_session_percent**|**decimal (5, 2)**|Número máximo de sesiones simultáneas en porcentaje según el límite del grupo.|  
+|**elastic_pool_dtu_limit**|**int**|Configuración actual de DTU de grupo elástico máximo para este grupo elástico durante este intervalo.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|Configuración máxima del límite de almacenamiento del grupo elástico actual para este grupo elástico en megabytes durante este intervalo.|
+|**avg_allocated_storage_percent**|**decimal (5, 2)**|El porcentaje de espacio de datos asignado por todas las bases de datos del grupo elástico.  Esta es la proporción de espacio de datos asignado al tamaño máximo de los datos para el grupo elástico.  Para obtener más información, vea [Administración del espacio de archivo en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|  
   
 ## <a name="remarks"></a>Comentarios
 
- Esta vista existe en la base de datos maestra del servidor de base de datos SQL. Debe estar conectado a la base de datos maestra para consultar **sys.elastic_pool_resource_stats**.  
+ Esta vista existe en la base de datos maestra del servidor de SQL Database. Debe estar conectado a la base de datos maestra para consultar **Sys. elastic_pool_resource_stats**.  
   
 ## <a name="permissions"></a>Permisos
 
- Debe pertenecer a la **dbmanager** rol.  
+ Requiere la pertenencia al rol **dbmanager** .  
   
 ## <a name="examples"></a>Ejemplos
 
- El ejemplo siguiente devuelve los datos de utilización de recursos ordenados por la hora más reciente de todos los grupos de bases de datos elásticas en el servidor de base de datos SQL actual.  
+ En el ejemplo siguiente se devuelven los datos de uso de recursos ordenados por la hora más reciente para todos los grupos de bases de datos elásticas en el servidor de SQL Database actual.  
   
 ```sql
 SELECT * FROM sys.elastic_pool_resource_stats
 ORDER BY end_time DESC;  
 ```
 
- El ejemplo siguiente calcula el consumo medio de porcentaje DTU para un grupo determinado.  
+ En el ejemplo siguiente se calcula el consumo medio de porcentaje de DTU para un grupo determinado.  
 
 ```sql
 SELECT start_time, end_time,
@@ -78,9 +79,9 @@ ORDER BY end_time DESC;
 
 ## <a name="see-also"></a>Vea también
 
- [Control del crecimiento explosivo con bases de datos elásticas](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [Crear y administrar un grupo de bases de datos elásticas de SQL Database (versión preliminar)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [Sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [Sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
+ [Dominar el crecimiento explosivo con bases de datos elásticas](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
+ [Creación y administración de un grupo de bases de datos elásticas SQL Database (versión preliminar)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
+ [Sys. resource_stats &#40;Azure SQL Database&#41; ](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [Sys. dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   
   

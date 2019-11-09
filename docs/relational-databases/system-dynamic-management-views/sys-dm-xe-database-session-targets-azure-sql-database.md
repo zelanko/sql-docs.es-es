@@ -1,6 +1,6 @@
 ---
-title: Sys.dm_xe_database_session_targets (Azure SQL Database) | Microsoft Docs
-ms.custom: ''
+title: Sys. dm_xe_database_session_targets
+titleSuffix: Azure SQL Database
 ms.date: 06/10/2016
 ms.service: sql-database
 ms.prod_service: sql-database
@@ -10,25 +10,26 @@ ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
 author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 60d26d76f4d158799fe52e28be9927744ca98745
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 860faaa6c9e574feda8d5c28be17a265707fd72e
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090419"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844433"
 ---
-# <a name="sysdmxedatabasesessiontargets-azure-sql-database"></a>sys.dm_xe_database_session_targets (Azure SQL Database)
+# <a name="sysdm_xe_database_session_targets-azure-sql-database"></a>sys.dm_xe_database_session_targets (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Devuelve información acerca de los destinos de la sesión.  
+  Devuelve información sobre los destinos de la sesión.  
   
 ||  
 |-|  
-|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 y todas las versiones futuras.|  
+|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 y versiones futuras.|  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|event_session_address|**varbinary(8)**|La dirección de memoria de la sesión de eventos. Tiene una relación de varios a uno con sys.dm_xe_database_sessions.address. No admite valores NULL.|  
+|event_session_address|**varbinary(8**|La dirección de memoria de la sesión de eventos. Tiene una relación de varios a uno con sys. dm_xe_database_sessions. Address. No admite valores NULL.|  
 |target_name|**nvarchar(60)**|El nombre del destino dentro de una sesión. No admite valores NULL.|  
 |target_package_guid|**uniqueidentifier**|GUID del paquete que contiene el destino. No admite valores NULL.|  
 |execution_count|**bigint**|El número de veces que se ha ejecutado el destino para la sesión. No admite valores NULL.|  
@@ -40,8 +41,8 @@ ms.locfileid: "68090419"
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Relación|  
+|De|Para|Relación|  
 |----------|--------|------------------|  
-|sys.dm_xe_database_session_targets.event_session_address|sys.dm_xe_database_sessions.address|Varios a uno|  
+|Sys. dm_xe_database_session_targets. event_session_address|Sys. dm_xe_database_sessions. Address|Varios a uno|  
   
   

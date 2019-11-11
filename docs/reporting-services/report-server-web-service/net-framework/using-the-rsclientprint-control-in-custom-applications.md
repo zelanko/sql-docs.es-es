@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5304a540e3f1af6930e982ceaff01063a7c0f432
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a2c548860065672147428c6a5b64bf4ac8be4b79
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155732"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593777"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usar el control RSClientPrint en aplicaciones personalizadas
   El control ActiveX de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **RSPrintClient** proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. Proporciona un cuadro de diálogo **Imprimir** para que un usuario pueda iniciar un trabajo de impresión, obtener una vista previa de un informe, especificar las páginas que se van a imprimir y cambiar los márgenes. Durante una operación de impresión del lado cliente, el servidor de informes representa el informe en la extensión de representación en imágenes (EMF) y utiliza las capacidades de impresión del sistema operativo para crear el trabajo de impresión y enviarlo a una impresora.  
@@ -29,15 +29,14 @@ ms.locfileid: "70155732"
   
 -   Utilice el control para mejorar la impresión en informes basados en web. Puede especificar el objeto en cualquier lenguaje de programación compatible con [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] o en script. El control no está diseñado para aplicaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms.  
   
--   Copie el archivo .cab de los archivos de programa  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y agréguelo al código base de la aplicación personalizada.  
-  
+-   Copie el archivo .cab de los archivos de programa  [!INCLUDE[ssRSNoVersion](../../../includes/ssrsnoversion-md.md)] y agréguelo al código base de la aplicación personalizada.  
+ 
 -   Use una etiqueta \<OBJECT> para especificar el control.  
   
 -   Especifique una dirección URL relativa o completa al archivo .cab en el atributo OBJECT CODEBASE.  
   
 -   Especifique la información de versión de su propia aplicación para el archivo .cab con el fin de realizar un seguimiento de la versión que se utiliza en su aplicación.  
-  
--   Revise los temas de los Libros en pantalla que abordan la representación en imágenes (EMF) con el objetivo de conocer cómo se representan las páginas para la vista previa de impresión y la salida.  
+    
   
 ## <a name="rsprintclient-overview"></a>Información general de RSPrintClient  
  El control muestra un cuadro de diálogo de impresión personalizado compatible con características comunes a otros cuadros de diálogo de impresión, incluida la vista previa de impresión, selecciones de páginas para especificar páginas e intervalos de páginas, márgenes y orientación. El control se empaqueta como un archivo CAB. El texto del cuadro de diálogo **Imprimir** aparece traducido a todos los idiomas admitidos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El control ActiveX **RSPrintClient** usa la extensión de representación en imágenes (EMF) para imprimir el informe. Se usa la siguiente información del dispositivo EMF: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight y PageWidth. No se admite ninguna otra configuración de información de dispositivo para la representación en imágenes.  

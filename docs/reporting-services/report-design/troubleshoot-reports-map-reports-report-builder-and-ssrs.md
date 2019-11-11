@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03b34022547d8bd054817a389fa02a0ca03871c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88005509becb45f48702970153f9a891a8a01978
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65574476"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594495"
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Solucionar problemas de los informes: informes de mapa (Generador de informes y SSRS)
   Podrían producirse problemas con los mapas de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] al agregar un mapa o una capa de mapa a un informe, personalizar un mapa o una capa de mapa existentes en un informe, obtener una vista previa de un mapa en un informe o publicar un informe con un mapa. Utilice este tema como ayuda para solucionar estos problemas.  
@@ -187,7 +187,7 @@ ms.locfileid: "65574476"
   
 -   La proyección del mapa debe ser **Mercator**.  
   
--   Para la vista previa local, debe tener acceso a Internet. Si el informe se ejecuta desde el servidor de informes, este debe configurarse para ser compatible con el fondo de mosaico. Para obtener más información, vea la sección sobre cómo planear la compatibilidad con los mapas, en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) , en los Libros en pantalla de SQL Server.  
+-   Para la vista previa local, debe tener acceso a Internet. Si el informe se ejecuta desde el servidor de informes, este debe configurarse para ser compatible con el fondo de mosaico. Para obtener más información, vea [planear un informe de mapa](plan-a-map-report-report-builder-and-ssrs.md).  
   
  Para más información sobre cómo agregar una capa de mosaico, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -206,6 +206,6 @@ ms.locfileid: "65574476"
   
 ## <a name="see-also"></a>Consulte también  
  [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Solucionar problemas del Generador de informes](https://msdn.microsoft.com/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [Solucionar problemas del Generador de informes](https://docs.microsoft.com/sql/reporting-services/troubleshoot-report-builder?view=sql-server-2014)  
   
   

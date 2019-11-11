@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 25c24bae55bb6d4defb2ef9330b80ddf875723e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823df0704b07657b5f7493c03fb14158b73263a2
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62514424"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594073"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurar las direcciones URL del servidor de informes (Administrador de configuración de SSRS)
   En [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], las direcciones URL se usan para obtener acceso al servicio web del servidor de informes y al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Para poder usar cualquier aplicación, debe configurar al menos una dirección URL para el servicio web y otra para el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] indica valores predeterminados para ambas direcciones URL de la aplicación que mejor funcionan en la mayoría de los escenarios de implementación, incluso en las implementaciones en paralelo con otros servicios web y aplicaciones.  
@@ -33,7 +33,7 @@ ms.locfileid: "62514424"
 |Nombre de host|Una red TCP/IP utiliza una dirección IP para identificar de forma única un dispositivo en la red. Hay una dirección IP física para cada tarjeta adaptadora de red que esté instalada en un equipo. Si la dirección IP se resuelve como un encabezado de host, puede especificar el encabezado de host. Si está implementando el servidor de informes en una red corporativa, puede utilizar el nombre de red del equipo.|  
 |Puerto|Un puerto TCP es un extremo en el dispositivo. El servidor de informes escuchará las solicitudes en un puerto designado.|  
 |Directorio virtual|Varios servicios web o aplicaciones a menudo comparten un puerto. Por esta razón, la dirección URL de un servidor de informes siempre incluye un directorio virtual que corresponde a la aplicación que obtiene la solicitud. Debe especificar nombres de directorio virtual únicos para cada aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que escuche en la misma dirección IP y puerto.|  
-|Configuración SSL|Las direcciones URL en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se pueden configurar para utilizar un certificado SSL existente que se instalara anteriormente en el equipo. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|Configuración SSL|Las direcciones URL en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se pueden configurar para utilizar un certificado SSL existente que se instalara anteriormente en el equipo. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
   
 ## <a name="default-urls"></a>Direcciones URL predeterminadas  
  Al obtener acceso a un servidor de informes o al [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] a través de su dirección URL, esta debería incluir el nombre de host y no la dirección IP. En una red TCP/IP, la dirección IP se resolverá como un nombre de host (o el nombre de red del equipo). Si usó los valores predeterminados para configurar las direcciones URL, debería poder tener acceso al servicio web del servidor de informes mediante direcciones URL que especifiquen el nombre de equipo u host local como el nombre de host:  
@@ -57,7 +57,7 @@ ms.locfileid: "62514424"
  Los permisos de cada extremo de la dirección URL se conceden exclusivamente a la cuenta de servicio del servidor de informes. Solo esta cuenta tiene derechos para aceptar las solicitudes que se dirigen a la dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las listas de control de acceso discrecional (DACL, Discretionary Access Control List) se crean y mantienen para la cuenta cuando se configura la identidad del servicio a través del programa de instalación o de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si cambia la cuenta de servicio, la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] actualizará todas las reservas de direcciones URL que creó para recopilar información de las cuentas nuevas. Para obtener más información, vea [Sintaxis de reserva de direcciones URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md).  
   
 ## <a name="authenticating-client-requests-sent-to-a-report-server-url"></a>Autenticar las solicitudes de cliente que se envían a la dirección URL de un servidor de informes  
- De forma predeterminada, el tipo de autenticación que se admite en los extremos de una dirección URL es la de Windows. Ésta es la extensión de seguridad predeterminada. Si está implementando un proveedor de autenticación de formularios o personalizado, debe modificar la configuración de la autenticación en el servidor de informes. Si lo desea, también puede cambiar la configuración de la autenticación de Windows para que coincida con el subsistema de autenticación que se use en la red. Para obtener más información, vea [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ De forma predeterminada, el tipo de autenticación que se admite en los extremos de una dirección URL es la de Windows. Ésta es la extensión de seguridad predeterminada. Si está implementando un proveedor de autenticación de formularios o personalizado, debe modificar la configuración de la autenticación en el servidor de informes. Si lo desea, también puede cambiar la configuración de la autenticación de Windows para que coincida con el subsistema de autenticación que se use en la red. Para más información, consulte [Authentication with the Report Server](../../reporting-services/security/authentication-with-the-report-server.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  

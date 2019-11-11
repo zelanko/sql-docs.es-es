@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d522f06b226d744a71e1d1eb842182c3b52c935c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cce09ec0e34aec88755eaeac0449bd5f75138d6f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077770"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843731"
 ---
-# <a name="hostid-transact-sql"></a>HOST_ID (Transact-SQL)
+# <a name="host_id-transact-sql"></a>HOST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve el número de identificación de la estación de trabajo. El número de identificación de la estación de trabajo es el identificador de proceso (PID) de la aplicación en el equipo cliente que se está conectando a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -65,6 +65,6 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

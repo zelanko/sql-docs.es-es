@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5204e876de1517f794f654bbfbc545203cca4888
-ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
+ms.openlocfilehash: e2eecd47141dd092fd30ee19abd47cdb7554a1c8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142864"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659092"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1021,8 +1021,6 @@ COPY_ONLY especifica que la copia de seguridad es una *copia de seguridad de sol
 
 El comportamiento predeterminado es que no se realice la compresión de copia de seguridad. Este valor predeterminado se puede cambiar estableciendo la opción [valor predeterminado de compresión de copia de seguridad](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) de la configuración del servidor. Para más información sobre cómo ver el valor actual de esta opción, vea [Ver o cambiar las propiedades del servidor](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).
 
-Para más información sobre cómo usar la compresión de copia de seguridad con bases de datos con [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) habilitado, vea la sección [Comentarios](#general-remarks).
-
 COMPRESSION Habilita de forma explícita la compresión de copia de seguridad.
 
 NO_COMPRESSION Deshabilita de forma explícita la compresión de copia de seguridad.
@@ -1050,7 +1048,6 @@ MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ }
 
 > [!NOTE]
 > En el caso de las bases de datos con [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) habilitado que tienen un único archivo de datos, el valor predeterminado de `MAXTRANSFERSIZE` es 65536 (64 KB). En las bases de datos que no tienen cifrado TDE, el valor predeterminado de `MAXTRANSFERSIZE` es 1048576 (1 MB) cuando se usa la copia de seguridad en DISK y 65536 (64 KB) al usar VDI o TAPE.
-> Para más información sobre cómo usar la compresión de copia de seguridad con bases de datos con Cifrado de datos transparente (TDE), vea la sección [Comentarios](#general-remarks).
 
 **Operaciones de administración de errores**
 

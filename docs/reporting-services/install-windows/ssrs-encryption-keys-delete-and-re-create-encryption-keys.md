@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f2d3a496cbe2b8adda02b5d7425e49c09f44c77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513317"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593535"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Claves de cifrado de SSRS: eliminar y volver a crear claves de cifrado
   Las actividades de eliminación y nueva creación de claves de cifrado quedan fuera del mantenimiento rutinario de las claves de cifrado. Estas tareas se realizan en respuesta a una amenaza específica al servidor de informes o como último recurso cuando ya no se tiene acceso a una base de datos del servidor de informes.  
@@ -106,7 +106,7 @@ ms.locfileid: "62513317"
   
 1.  En cada origen de datos compartido se debe volver a escribir la cadena de conexión.  
   
-2.  Para cada informe y origen de datos compartido que utilice credenciales almacenadas, debe volver a escribir el nombre de usuario y la contraseña y luego guardarlos. Para obtener más información, vea [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+2.  Para cada informe y origen de datos compartido que utilice credenciales almacenadas, debe volver a escribir el nombre de usuario y la contraseña y luego guardarlos. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
 3.  Para cada suscripción controlada por datos, ábrala y vuelva a escribir las credenciales de la base de datos de suscripciones.  
   

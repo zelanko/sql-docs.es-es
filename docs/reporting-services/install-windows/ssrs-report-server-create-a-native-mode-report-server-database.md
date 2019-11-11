@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58ed98edccbf1f9ccf83aef7321ffb6a3bcb442d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652343"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593554"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>Crear una base de datos del servidor de informes de modo nativo
 
@@ -67,7 +67,7 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
 6.  Reiniciar el servicio.  
   
-7.  Abra el software de firewall y abra el puerto en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha. Para la instancia predeterminada, suele ser el puerto 1433 de las conexiones TCP/IP. Para obtener más información, vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+7.  Abra el software de firewall y abra el puerto en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha. Para la instancia predeterminada, suele ser el puerto 1433 de las conexiones TCP/IP. Para más información, vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ### <a name="to-create-a-local-report-server-database"></a>Crear una base de datos del servidor de informes local  
   
@@ -111,7 +111,7 @@ Para crear una base de datos del servidor de informes o cambiar la cadena de con
   
 7.  Revise la información de la página Resumen para comprobar que la configuración es correcta y, después, seleccione **Siguiente**.  
   
-8.  Compruebe la conexión mediante la selección de una dirección URL en la página Dirección URL del servidor de informes. Las direcciones URL deben estar definidas para que esta prueba funcione. Si la conexión de base de datos del servidor de informes es válida, verá la jerarquía de carpetas del servidor de informes. Para obtener más información, vea [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+8.  Compruebe la conexión mediante la selección de una dirección URL en la página Dirección URL del servidor de informes. Las direcciones URL deben estar definidas para que esta prueba funcione. Si la conexión de base de datos del servidor de informes es válida, verá la jerarquía de carpetas del servidor de informes. Para obtener más información, vea [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
 
 ## <a name="change-database-credentials"></a>Modificar las credenciales de base de datos
 

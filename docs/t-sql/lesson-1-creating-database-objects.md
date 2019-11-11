@@ -10,12 +10,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa027f58bd673539dd09f118ea1b9433c42c7990
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7f3f8ee0d5766214ed7dc111728c37d0d41f071
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000279"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632904"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Lección 1: Creación y consulta de objetos de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -24,7 +24,7 @@ En esta lección se muestra cómo crear una base de datos, crear una tabla en la
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] se pueden escribir y enviar a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las siguientes maneras:  
   
--   Mediante el uso de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. En este tutorial se supone que se usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], pero también puede usarse [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible como descarga gratuita en el [Centro de descargas de Microsoft](https://go.microsoft.com/fwlink/?linkid=67359).  
+-   Mediante el uso de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. En este tutorial se supone que se usa [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], pero también puede usarse [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express, disponible como descarga gratuita en el [Centro de descargas de Microsoft](https://www.microsoft.com/download/details.aspx?id=7593).  
   
 -   Mediante el uso de la [utilidad sqlcmd](../tools/sqlcmd-utility.md).  
   

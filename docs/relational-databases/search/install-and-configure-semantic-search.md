@@ -12,12 +12,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c6bfd48773c066ffc29600156475495c0c2a6521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cac6ecd59b270feecea3590c33c9dc8c41f1edcc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021145"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638038"
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar y configurar la búsqueda semántica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,6 +144,6 @@ GO
 ## <a name="install-optional-support-for-newer-document-types"></a>Instalar compatibilidad opcional para nuevos tipos de documento  
   
 ###  <a name="office"></a> Instalar los filtros más recientes para Microsoft Office y otros tipos de documento de Microsoft  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala los separadores de palabras y analizadores lingüísticos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] más recientes, pero no instala los últimos filtros para los documentos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office ni otros tipos de documento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Estos filtros son necesarios para indizar documentos creados con versiones recientes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office y otras aplicaciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para descargar los filtros más recientes, vea [Paquetes de filtros de Microsoft Office 2010](https://go.microsoft.com/fwlink/?LinkId=218293). (Parece que no hay una versión de Filter Pack para Office 2013 ni Office 2016).
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala los separadores de palabras y analizadores lingüísticos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] más recientes, pero no instala los últimos filtros para los documentos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office ni otros tipos de documento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Estos filtros son necesarios para indizar documentos creados con versiones recientes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office y otras aplicaciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para descargar los filtros más recientes, vea [Paquetes de filtros de Microsoft Office 2010](https://www.microsoft.com/download/details.aspx?id=17062). (Parece que no hay una versión de Filter Pack para Office 2013 ni Office 2016).
   
   

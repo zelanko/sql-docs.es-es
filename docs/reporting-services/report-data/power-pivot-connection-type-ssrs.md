@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: adf098f6a855a3db241f33b81b060c654ae47d6d
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: ed100221dd827b84dba935db730d02e8268aac41
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66499600"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638003"
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Tipo de conexión de PowerPivot (SSRS)
   Puede utilizar la extensión de procesamiento de datos de SQL Server Analysis Services para recuperar datos de un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicado en una galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de SharePoint.  
@@ -23,7 +23,7 @@ ms.locfileid: "66499600"
 ## <a name="prerequisites"></a>Prerequisites  
  El origen de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se debe publicar en una galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un sitio de SharePoint.  
   
- Para admitir conexiones del Generador de informes con un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , debe tener SQL Server 2008 R2 ADOMD.NET en el equipo de la estación de trabajo. Esta biblioteca cliente se instala con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, pero si está usando un equipo que no tiene esta aplicación, debe descargar e instalar ADOMD.NET de la página [SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=192565).  
+ Para admitir conexiones del Generador de informes con un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , debe tener SQL Server 2008 R2 ADOMD.NET en el equipo de la estación de trabajo. Esta biblioteca cliente se instala con [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel, pero si está usando un equipo que no tiene esta aplicación, debe descargar e instalar ADOMD.NET de la página [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
   
 ## <a name="data-source-type"></a>Tipo de origen de datos  
  Utilice el origen de datos de informe de tipo **Microsoft SQL Server Analysis Services**.  
@@ -32,7 +32,7 @@ ms.locfileid: "66499600"
  La cadena de conexión es la dirección URL al libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] publicado en SharePoint en la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] u otra biblioteca, por ejemplo, `https://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Credenciales  
- Especifique las credenciales necesarias para tener acceso al libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y el sitio de SharePoint, como Autenticación de Windows (Seguridad integrada). Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión &#40;generador de informes y SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [especificar credenciales y la información de conexión de orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Especifique las credenciales necesarias para tener acceso al libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y el sitio de SharePoint, como Autenticación de Windows (Seguridad integrada). Para obtener más información, vea [conexiones de datos, orígenes de datos y &#40;cadenas de conexión&#41; generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [especificar información de credenciales y conexión para los orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ## <a name="queries"></a>Consultas  
  Cuando esté conectado al origen de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , utilice el diseñador gráfico de consultas MDX para crear una consulta examinando las estructuras de datos subyacentes y seleccionando una de ellas. Después de generar una consulta, ejecútela para ver los datos de muestra en el panel de resultados.  

@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f3784eb3a95b3da02dce2cdecc8c5db2faeaac8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94a7ad079b94d9bc34e5b0e7f7ad55393d8f5de5
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082811"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638055"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "68082811"
   
  Ejecute **filtdump.exe** desde el símbolo del sistema y proporcione un único argumento. Este argumento es el nombre de un archivo individual que tiene un tipo de archivo para el que está instalado un IFilter. La utilidad muestra una lista de todas las propiedades detectadas por el IFilter en el documento, con sus GUID de conjunto de propiedades, identificadores enteros e información adicional.  
   
- Para obtener información acerca de la instalación de este software, vea [SDK de Microsoft Windows para Windows 7 y .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=212980). Después de descargar e instalar el SDK, busque en las siguientes carpetas la utilidad filtdump.exe.  
+ Para obtener información acerca de la instalación de este software, vea [SDK de Microsoft Windows para Windows 7 y .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=8279). Después de descargar e instalar el SDK, busque en las siguientes carpetas la utilidad filtdump.exe.  
   
 -   Para la versión de 64 bits, busque en `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`.  
   

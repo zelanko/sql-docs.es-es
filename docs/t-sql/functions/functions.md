@@ -20,12 +20,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cd604a4f25783e7621f348ea532677cda3da433
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 95fe64603a08d4531d43e45c0b6d76c191fe7d34
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940127"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843712"
 ---
 # <a name="what-are-the-sql-database-functions"></a>¿Cuáles son las funciones de base de datos SQL?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ Operan sobre un valor y después devuelven otro valor. Las funciones escalares s
 |[Funciones de metadatos](metadata-functions-transact-sql.md)|Devuelven información acerca de la base de datos y los objetos de la base de datos.|  
 |[Funciones de seguridad](security-functions-transact-sql.md)|Devuelven información acerca de usuarios y roles.|  
 |[Funciones de cadena](string-functions-transact-sql.md)|Realizan operaciones en el valor de entrada de una cadena (**char** o **varchar**) y devuelven una cadena o un valor numérico.|  
-|[Funciones del sistema](../../relational-databases/system-functions/system-functions-for-transact-sql.md)|Realizan operaciones y devuelven información acerca de valores, objetos y configuraciones de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Funciones del sistema](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Realizan operaciones y devuelven información acerca de valores, objetos y configuraciones de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Funciones estadísticas del sistema](system-statistical-functions-transact-sql.md)|Devuelven información estadística acerca del sistema.|  
 |[Funciones de texto e imagen](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Realizan operaciones sobre los valores de entrada o columnas de texto o imagen, y devuelven información acerca del valor.|  
   

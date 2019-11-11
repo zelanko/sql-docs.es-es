@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f7edcc2212ab54765d92cc119dfd86322ae0d523
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e2f103303a90837a899330952b6f69544b4c496
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140937"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659540"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Tutorial de creación de un ensamblado de regla de análisis de código estático personalizado para SQL Server
 En este tutorial se muestran los pasos utilizados para crear una regla de análisis de código de SQL Server. La regla creada en este tutorial se utiliza para evitar las instrucciones WAITFOR DELAY en procedimientos almacenados, desencadenadores y funciones.  
@@ -67,7 +67,7 @@ A continuación deberá agregar clases auxiliares que la regla utilizará.
 ## <a name="creating-the-custom-code-analysis-rule-supporting-classes"></a>Creación de las clases auxiliares para la regla de análisis de código personalizada  
 Antes de crear la clase para la regla en sí, deberá agregar al proyecto una clase de visitante y una clase de atributos. Estas clases pueden ser útiles para crear reglas personalizadas adicionales.  
   
-La primera clase que debe definir es la clase WaitForDelayVisitor, que se deriva de [TSqlConcreteFragmentVisitor](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx). Esta clase proporciona acceso a las instrucciones WAITFOR DELAY en el modelo. Las clases de visitante hacen uso de la API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx), proporcionada por SQL Server. En esta API, el código Transact\-SQL se representa como un árbol de sintaxis abstracta (AST) y las clases de visitante pueden ser útiles para buscar objetos de sintaxis específica, como instrucciones WAITFORDELAY. Puede ser difícil encontrar estos objetos utilizando el modelo de objetos, ya que no están asociados a una propiedad de objeto o relación específicas, pero es fácil encontrarlos mediante el patrón de visitante y la API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx).  
+La primera clase que debe definir es la clase WaitForDelayVisitor, que se deriva de [TSqlConcreteFragmentVisitor](https://docs.microsoft.com/en-us/dotnet/api/microsoft.sqlserver.transactsql.scriptdom.tsqlconcretefragmentvisitor). Esta clase proporciona acceso a las instrucciones WAITFOR DELAY en el modelo. Las clases de visitante hacen uso de la API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx), proporcionada por SQL Server. En esta API, el código Transact\-SQL se representa como un árbol de sintaxis abstracta (AST) y las clases de visitante pueden ser útiles para buscar objetos de sintaxis específica, como instrucciones WAITFORDELAY. Puede ser difícil encontrar estos objetos utilizando el modelo de objetos, ya que no están asociados a una propiedad de objeto o relación específicas, pero es fácil encontrarlos mediante el patrón de visitante y la API [ScriptDom](https://msdn.microsoft.com/library/microsoft.sqlserver.transactsql.scriptdom.aspx).  
   
 ### <a name="defining-the-waitfordelayvisitor-class"></a>Definición de la clase WaitForDelayVisitor  
   

@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: de0ea61c93de1464ebde068ef47d85e89b8a1587
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68261604"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594081"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar la cuenta de servicio del servidor de informes (Administrador de configuración de SSRS)
 
@@ -36,7 +36,7 @@ ms.locfileid: "68261604"
   
 - Actualiza automáticamente los permisos de inicio de sesión en la instancia del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se utiliza para hospedar la base de datos del servidor de informes. La cuenta nueva se agrega a **RSExecRole**.  
   
-     El inicio de sesión de base de datos de la cuenta anterior no se quita automáticamente. Asegúrese de quitar las cuentas que ya no se usen. Para obtener más información, vea [Administrar una base de datos del servidor de informes &#40;SSRS modo nativo&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) en los Libros en pantalla de SQL Server.  
+     El inicio de sesión de base de datos de la cuenta anterior no se quita automáticamente. Asegúrese de quitar las cuentas que ya no se usen. Para obtener más información, vea [administrar una base de &#40;datos del servidor&#41;de informes modo nativo de SSRS](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md).  
   
      Solo se conceden permisos de base de datos a una cuenta de servicio nueva si la conexión de base de datos del servidor de informes se configuró para usar la cuenta de servicio en primer lugar. Si la conexión de base de datos del servidor de informes se configuró para utilizar una cuenta de usuario de dominio o un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la actualización de la cuenta de servicio no afecta a la información de conexión.  
   

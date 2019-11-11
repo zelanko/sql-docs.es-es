@@ -26,19 +26,19 @@ ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 747ea38576b52b6a3011fd4f0b197a2b7222bcd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 188248ea2a09875e71905878a9d9f85c3ebfcd78
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117499"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843571"
 ---
-# <a name="systemuser-transact-sql"></a>SYSTEM_USER (Transact-SQL)
+# <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Permite insertar en una tabla un valor proporcionado por el sistema para el inicio de sesión actual cuando no se especifica ningún valor predeterminado.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +47,7 @@ SYSTEM_USER
 ```  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **nchar**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Notas  
  En las instrucciones CREATE TABLE y ALTER TABLE puede utilizar la función SYSTEM_USER con restricciones DEFAULT. También puede utilizarla como cualquier función estándar.  
@@ -60,7 +60,7 @@ SYSTEM_USER
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-systemuser-to-return-the-current-system-user-name"></a>A. Usar SYSTEM_USER para devolver el nombre de usuario actual del sistema  
+### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A. Usar SYSTEM_USER para devolver el nombre de usuario actual del sistema  
  En el siguiente ejemplo se declara una variable `char`, se almacena en ella el valor actual de `SYSTEM_USER` y, a continuación, se imprime el valor almacenado en la variable.  
   
 ```  
@@ -79,7 +79,7 @@ The current system user is: WillisJo
 (1 row(s) affected)
  ```  
   
-### <a name="b-using-systemuser-with-default-constraints"></a>B. Usar SYSTEM_USER con restricciones DEFAULT  
+### <a name="b-using-system_user-with-default-constraints"></a>B. Usar SYSTEM_USER con restricciones DEFAULT  
  En el siguiente ejemplo se crea una tabla con `SYSTEM_USER` como una restricción `DEFAULT` para la columna `SRep_tracking_user`.  
   
 ```  
@@ -129,7 +129,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C. Usar SYSTEM_USER para devolver el nombre de usuario actual del sistema  
+### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C. Usar SYSTEM_USER para devolver el nombre de usuario actual del sistema  
  El siguiente ejemplo devuelve el valor actual de `SYSTEM_USER`.  
   
 ```  
@@ -142,7 +142,7 @@ SELECT SYSTEM_USER;
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)  
   
   

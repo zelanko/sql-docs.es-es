@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294735"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637984"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
 En este tutorial se explica cómo crear dos tipos de informes paginados de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. 
@@ -25,7 +25,7 @@ En la ilustración siguiente se muestran los informes que se van a crear y cómo
 Tiempo estimado para completar este tutorial: 30 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
-Para realizar este tutorial se requiere acceso al cubo de ventas de Contoso para los informes principal y detallado. Este conjunto de datos está formado por el almacenamiento de datos de ContosoDW y la base de datos de procesamiento analítico en línea (OLAP) de Contoso_Retail. Los informes que creará en este tutorial recuperan los datos del informe desde el cubo de ventas de Contoso. La base de datos OLAP de Contoso_Retail se puede descargar desde el [Centro de descarga Microsoft](https://go.microsoft.com/fwlink/?LinkID=191575). Solo necesita descargar el archivo ContosoBIdemoABF.exe. Contiene la base de datos OLAP.  
+Para realizar este tutorial se requiere acceso al cubo de ventas de Contoso para los informes principal y detallado. Este conjunto de datos está formado por el almacenamiento de datos de ContosoDW y la base de datos de procesamiento analítico en línea (OLAP) de Contoso_Retail. Los informes que creará en este tutorial recuperan los datos del informe desde el cubo de ventas de Contoso. La base de datos OLAP de Contoso_Retail se puede descargar desde el [Centro de descarga Microsoft](https://www.microsoft.com/download/details.aspx?id=18279). Solo necesita descargar el archivo ContosoBIdemoABF.exe. Contiene la base de datos OLAP.  
   
 El otro archivo, ContosoBIdemoBAK.exe, es para el almacenamiento de datos de ContosoDW, que no se utiliza en este tutorial.  
   
@@ -106,7 +106,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
     > [!TIP]  
-    > Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar a Modo Diseño](../reporting-services/media/rsqdicon-designmode.gif "Cambiar a Modo Diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 6 de [Crear el conjunto de datos](#DSkip).  
+    > Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar al modo de diseño](../reporting-services/media/rsqdicon-designmode.gif "Cambiar al modo de diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 6 de [Crear el conjunto de datos](#DSkip).  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -397,7 +397,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
     > [!TIP]  
-    > Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar a Modo Diseño](../reporting-services/media/rsqdicon-designmode.gif "Cambiar a Modo Diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 5 de [Crear el conjunto de datos](#MSkip).  
+    > Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar al modo de diseño](../reporting-services/media/rsqdicon-designmode.gif "Cambiar al modo de diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 5 de [Crear el conjunto de datos](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  

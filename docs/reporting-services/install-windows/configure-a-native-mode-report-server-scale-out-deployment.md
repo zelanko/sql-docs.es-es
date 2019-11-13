@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500581"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593866"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo
 
@@ -93,9 +93,9 @@ El problema será intermitente; es decir, solo el servidor que creó la tarea de
   
 2.  Inicie la herramienta de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-3.  Configure la dirección URL del servicio web del servidor de informes, la dirección URL del portal web y la base de datos del servidor de informes. Para más información, vea [Configurar un servidor de informes &#40;modo nativo de Reporting Services&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Configure la dirección URL del servicio web del servidor de informes, la dirección URL del portal web y la base de datos del servidor de informes. Para obtener más información, consulte [Configurar un servidor de informes (modo nativo de Reporting Services)](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md).
   
-4.  Compruebe que el servidor de informes está operativo. Para obtener más información, vea [Comprobar una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4.  Compruebe que el servidor de informes está operativo. Para obtener más información, vea [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>Para instalar y configurar la segunda instancia del servidor de informes  
   

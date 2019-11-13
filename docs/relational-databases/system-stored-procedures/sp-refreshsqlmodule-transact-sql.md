@@ -26,19 +26,19 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ed393edf79c3502bf3e054e23eb459d490ce998
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075802"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982769"
 ---
-# <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
+# <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Actualiza los metadatos para el procedimiento almacenado no enlazado a un esquema específico, función definida por el usuario, vista, desencadenador DML, desencadenador DDL de nivel de la base de datos o desencadenador DDL de nivel de servidor en la base de datos actual. Los metadatos persistentes de estos objetos, como los tipos de datos de los parámetros, pueden quedarse obsoletos debido a los cambios en sus objetos subyacentes.
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,27 +56,27 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'module\_name'` Es el nombre del procedimiento almacenado, función definida por el usuario, vista, desencadenador DML, desencadenador DDL de nivel de base de datos o desencadenador DDL de nivel de servidor. *module_name* no puede ser un common language runtime (CLR) procedimiento almacenado o una función CLR. *module_name* no puede estar enlazada a esquema. *module_name* es **nvarchar**, no tiene ningún valor predeterminado. *module_name* puede ser un identificador formado por varias partes, pero solo puede hacer referencia a objetos en la base de datos actual.  
+`[ @name = ] 'module\_name'` es el nombre del procedimiento almacenado, la función definida por el usuario, la vista, el desencadenador DML, el desencadenador DDL de nivel de base de datos o el desencadenador DDL de nivel de servidor. *MODULE_NAME* no puede ser un procedimiento almacenado de Common Language Runtime (CLR) o una función CLR. *MODULE_NAME* no se pueden enlazar a un esquema. *MODULE_NAME* es de tipo **nvarchar**y no tiene ningún valor predeterminado. *MODULE_NAME* puede ser un identificador de varias partes, pero solo puede hacer referencia a objetos de la base de datos actual.  
   
-`[ , @namespace = ] ' \<class> '` Es la clase del módulo especificado. Cuando *module_name* es un desencadenador DDL, \<clase > es necesario. *\<clase >* es **nvarchar**(20). Las entradas válidas son:  
+`[ , @namespace = ] ' \<class> '` es la clase del módulo especificado. Cuando *MODULE_NAME* es un desencadenador DDL, se requiere \<clase >. *\<clase >* es **nvarchar**(20). Las entradas válidas son:  
   
 |||  
 |-|-|  
 |DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|SERVER_DDL_TRIGGER|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="remarks"></a>Comentarios  
- **sp_refreshsqlmodule** se debe ejecutar cuando se realizan cambios en los objetos subyacentes del módulo que afecta a su definición. De lo contrario, el módulo podría producir resultados inesperados cuando se consulta o se invoca. Para actualizar una vista, puede usar **sp_refreshsqlmodule** o **sp_refreshview** con los mismos resultados.  
+## <a name="remarks"></a>Remarks  
+ **sp_refreshsqlmodule** debe ejecutarse cuando se realicen cambios en los objetos subyacentes del módulo que afecten a su definición. De lo contrario, el módulo podría producir resultados inesperados cuando se consulta o se invoca. Para actualizar una vista, puede usar **sp_refreshsqlmodule** o **sp_refreshview** con los mismos resultados.  
   
- **sp_refreshsqlmodule** no afecta a los permisos, las propiedades extendidas o establecer las opciones que están asociadas con el objeto.  
+ **sp_refreshsqlmodule** no afecta a ningún permiso, propiedad extendida o opciones set asociadas al objeto.  
   
  Para actualizar un desencadenador DDL de nivel de servidor, ejecute este procedimiento almacenado desde el contexto de cualquier base de datos.  
   
 > [!NOTE]  
->  Las firmas asociadas con el objeto se anulan al ejecutar **sp_refreshsqlmodule**.  
+>  Las firmas asociadas al objeto se quitan al ejecutar **sp_refreshsqlmodule**.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso ALTER en el módulo y el permiso REFERENCES en cualquier tipo definido por el usuario CLR y las colecciones de esquemas XML a los que hace referencia el objeto. Requiere permiso ALTER ANY DATABASE DDL TRIGGER en la base de datos actual cuando el módulo especificado es un desencadenador DDL de nivel de base de datos. Requiere el permiso CONTROL SERVER cuando el módulo especificado es un desencadenador DDL de nivel de servidor.  
@@ -158,7 +158,7 @@ GO
   
 ||  
 |-|  
-|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.|  
   
 ```  
 USE master;  
@@ -170,6 +170,6 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
- [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Procedimientos &#40;almacenados de motor de base de datos TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_resource_governor_configuration (Transact-SQL) | Microsoft Docs
+title: Sys. dm_resource_governor_configuration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 00b425e5efd441868bfa763fe544827bd7279dc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6d37a6ad94056007dd7c941d53ce52b4b84498a9
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067790"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983300"
 ---
-# <a name="sysdmresourcegovernorconfiguration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
+# <a name="sysdm_resource_governor_configuration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila que contiene el estado actual de la configuración en memoria del regulador de recursos.  
@@ -33,11 +33,11 @@ ms.locfileid: "68067790"
 
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**int**|El Id. de la función clasificadora usada actualmente por el regulador de recursos. Devuelve el valor 0 si no se utiliza ninguna función. No admite valores NULL.<br /><br /> **Nota:** Esta función se utiliza para clasificar nuevas solicitudes y usa reglas para enrutar estas solicitudes al grupo de cargas de trabajo adecuado. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
-|is_reconfiguration_pending|**bit**|Indica si los cambios a un grupo o fondo se realizaron con la instrucción ALTER RESOURCE GOVERNOR RECONFIGURE pero no se han aplicado a la configuración en memoria. El valor devuelto puede ser:<br /><br /> 0 = No es necesaria una instrucción de reconfiguración.<br /><br /> 1 = Es necesaria una instrucción de reconfiguración o un reinicio del servidor para aplicar los cambios de la configuración pendientes.<br /><br /> **Nota:** El valor devuelto es siempre 0 cuando se deshabilita el regulador de recursos.<br /><br /> No admite valores NULL.|  
-|max_outstanding_io_per_volume|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Número máximo de operaciones de E/S pendientes por volumen.|  
+|classifier_function_id|**int**|El Id. de la función clasificadora usada actualmente por el regulador de recursos. Devuelve el valor 0 si no se utiliza ninguna función. No admite valores NULL.<br /><br /> **Nota:** Esta función se usa para clasificar nuevas solicitudes y usa reglas para enrutar estas solicitudes al grupo de cargas de trabajo adecuado. Para obtener más información, vea [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
+|is_reconfiguration_pending|**bit**|Indica si los cambios a un grupo o fondo se realizaron con la instrucción ALTER RESOURCE GOVERNOR RECONFIGURE pero no se han aplicado a la configuración en memoria. El valor devuelto puede ser:<br /><br /> 0 = No es necesaria una instrucción de reconfiguración.<br /><br /> 1 = Es necesaria una instrucción de reconfiguración o un reinicio del servidor para aplicar los cambios de la configuración pendientes.<br /><br /> **Nota:** El valor devuelto siempre es 0 cuando Resource Governor está deshabilitado.<br /><br /> No admite valores NULL.|  
+|max_outstanding_io_per_volume|**int**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Número máximo de operaciones de E/S pendientes por volumen.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  Esta vista de administración dinámica muestra la configuración en memoria. Utilice la vista de catálogo correspondiente para ver los metadatos almacenados de la configuración.  
   
  En el siguiente ejemplo se muestra cómo obtener y comparar los valores de metadatos almacenados y los valores en memoria de la configuración del regulador de recursos.  

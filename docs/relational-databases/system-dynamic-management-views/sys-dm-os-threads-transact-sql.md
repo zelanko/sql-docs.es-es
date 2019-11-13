@@ -20,20 +20,20 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ca20c4a8719ee6a80bd6a3c349dd50c8b0df81d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ef8eeeaaf59934d6c3307641b6c93f110ab5738f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68258716"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982539"
 ---
-# <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
+# <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve una lista de todos los subprocesos del sistema operativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se están ejecutando en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_threads**.  
+>  Para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilice el nombre **Sys. dm_pdw_nodes_os_threads**.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "68258716"
 |stack_end_address|**varbinary(8)**|Dirección de memoria de la dirección de pila más baja de este subproceso.|  
 |stack_bytes_committed|**int**|Número de bytes confirmados en la pila.|  
 |stack_bytes_used|**int**|Número de bytes que se usan de forma activa en el subproceso.|  
-|affinity|**bigint**|Máscara de CPU en la que se ejecuta este subproceso. Esto depende del valor configurado por el **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY** instrucción. Puede ser distinta del programador en caso de afinidad de software.|  
+|affinity|**bigint**|Máscara de CPU en la que se ejecuta este subproceso. Esto depende del valor configurado por la instrucción **ALTER Server Configuration Set Process Affinity** . Puede ser distinta del programador en caso de afinidad de software.|  
 |Prioridad|**int**|Valor de prioridad de este subproceso.|  
 |Configuración regional|**int**|LCID de la configuración regional en memoria caché del subproceso.|  
 |Token|**varbinary(8)**|Identificador del token de suplantación en caché del subproceso.|  
@@ -58,29 +58,29 @@ ms.locfileid: "68258716"
 |fiber_data|**varbinary(8)**|Fibra actual de Win32 que se ejecuta en el subproceso. Esto solo se aplica cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para la agrupación ligera.|  
 |thread_handle|**varbinary(8)**|Exclusivamente para uso interno.|  
 |event_handle|**varbinary(8)**|Exclusivamente para uso interno.|  
-|scheduler_address|**varbinary(8)**|Dirección de memoria del programador asociado con este subproceso. Para obtener más información, consulte [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
-|worker_address|**varbinary(8)**|Dirección de memoria del trabajador enlazado a este subproceso. Para obtener más información, consulte [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|scheduler_address|**varbinary(8)**|Dirección de memoria del programador asociado con este subproceso. Para obtener más información, vea [Sys. &#40;DM_OS_SCHEDULERS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|worker_address|**varbinary(8)**|Dirección de memoria del trabajador enlazado a este subproceso. Para obtener más información, vea [Sys. &#40;DM_OS_WORKERS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |fiber_context_address|**varbinary(8)**|Dirección de contexto de fibra interna. Esto solo se aplica cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para la agrupación ligera.|  
 |self_address|**varbinary(8)**|Puntero de comprobaciones de coherencia.|  
-|processor_group|**smallint**|**Se aplica a**: desde [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador de grupo de procesadores.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
+|processor_group|**smallint**|**Válido para** : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] y versiones posteriores.<br /><br /> Identificador de grupo de procesadores.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requieren el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere el **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles Premium, requiere el permiso `VIEW DATABASE STATE` en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
-## <a name="notes-on-linux-version"></a>Notas de la versión de Linux
+## <a name="notes-on-linux-version"></a>Notas sobre la versión de Linux
 
-Debido a cómo el motor de SQL funciona en Linux, parte de esta información no coincide con los datos de diagnóstico de Linux. Por ejemplo, `os_thread_id` no coincide con el resultado de herramientas como `ps`,`top` o el procfs (/ proc /`pid`).  Esto es debido a la capa de abstracción de plataforma (SQLPAL), una capa entre componentes de SQL Server y el sistema operativo.
+Debido a cómo funciona el motor de SQL en Linux, parte de esta información no coincide con los datos de diagnóstico de Linux. Por ejemplo, `os_thread_id` no coincide con el resultado de herramientas como `ps`,`top` o procfs (/proc/`pid`).  Esto se debe a la capa de abstracción de plataforma (SQLPAL), una capa entre SQL Server componentes y el sistema operativo.
 
 ## <a name="examples"></a>Ejemplos  
- Tras el inicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia subprocesos y después asocia trabajos a dichos subprocesos. Sin embargo, los componentes externos, como un procedimiento almacenado extendido, pueden iniciar subprocesos bajo el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no controla estos subprocesos. Sys.dm_os_threads puede proporcionar información sobre subprocesos rogue que consumen recursos en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proceso.  
+ Tras el inicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia subprocesos y después asocia trabajos a dichos subprocesos. Sin embargo, los componentes externos, como un procedimiento almacenado extendido, pueden iniciar subprocesos bajo el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no controla estos subprocesos. Sys. dm_os_threads puede proporcionar información sobre subprocesos no autorizados que consumen recursos en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La siguiente consulta se utiliza para buscar subprocesos de trabajo, junto con el tiempo consumido en la ejecución, que ejecutan subprocesos no iniciados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]
->  Por concisión, la siguiente consulta utiliza un asterisco (`*`) en la instrucción `SELECT`. Evite utilizar asteriscos (*), especialmente con vistas de catálogo, vistas de administración dinámica y funciones con valores de tabla del sistema. Las actualizaciones futuras y las versiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede agregar columnas y cambiar el orden de columnas para estas funciones y vistas. Es posible que estos cambios provoquen errores en las aplicaciones que esperan un determinado orden y número de columnas.  
+>  Por concisión, la siguiente consulta utiliza un asterisco (`*`) en la instrucción `SELECT`. Evite utilizar asteriscos (*), especialmente con vistas de catálogo, vistas de administración dinámica y funciones con valores de tabla del sistema. Las actualizaciones y versiones futuras de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden agregar columnas y cambiar el orden de las columnas a estas vistas y funciones. Es posible que estos cambios provoquen errores en las aplicaciones que esperan un determinado orden y número de columnas.  
   
 ```  
 SELECT *  
@@ -90,7 +90,7 @@ SELECT *
   
 ## <a name="see-also"></a>Vea también  
   [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
- [Vistas de administración dinámica relacionadas con el sistema operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server vistas &#40;de administración dinámica relacionadas con el sistema operativo TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

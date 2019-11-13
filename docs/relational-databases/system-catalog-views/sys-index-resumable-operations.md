@@ -1,7 +1,7 @@
 ---
 title: sys.index_resumable_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,23 +19,23 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4f79da2af2630fa54a06dc26b32cf22287f7c1d
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227197"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980302"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>Sys. index_resumable_operations (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**Sys. index_resumable_operations** es una vista del sistema que supervisa y comprueba el estado de ejecución actual de la recompilación de índices reanudables.  
-**Se aplica a**: SQL Server 2017 y Azure SQL Database
+**Sys. index_resumable_operations** es una vista del sistema que supervisa y comprueba el estado de ejecución actual de la regeneración o creación de índices reanudables.  
+**Se aplica a**: SQL Server (2017 y versiones más recientes) y Azure SQL Database
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|IDENTIFICADOR del objeto al que pertenece este índice (no acepta valores NULL).|  
-|**index_id**|**int**|IDENTIFICADOR del índice (no acepta valores NULL). el número de la **secuencia es único** en el objeto.|
+|**index_id**|**int**|IDENTIFICADOR del índice (no acepta valores NULL). **index_id** es único solo dentro del objeto.|
 |**Nombre**|**sysname**|Nombre del índice. **Name** es único solo dentro del objeto.|  
 |**sql_text**|**nvarchar(max)**|Texto de la instrucción de T-SQL DDL|
 |**last_max_dop**|**smallint**|Última MAX_DOP usada (valor predeterminado = 0)|
@@ -54,7 +54,7 @@ ms.locfileid: "71227197"
 
 ## <a name="example"></a>Ejemplo
 
- Muestra todas las operaciones de recompilación de índice reanudables que se encuentran en estado de pausa.
+ Enumere todas las operaciones de creación o recompilación de índices reanudables que estén en estado de pausa.
 
 ```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  

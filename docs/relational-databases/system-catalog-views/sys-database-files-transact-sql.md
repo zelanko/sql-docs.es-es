@@ -20,12 +20,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c314c00931e24049551e4a630c56001b14792ece
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: 41132cc875898b98a793e84a35b5c93eee2699e3
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313726"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983181"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "72313726"
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|Identificador del archivo dentro de la base de datos.|  
 |**file_guid**|**uniqueidentifier**|GUID del archivo.<br /><br /> NULL = la base de datos se actualizó desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (válida para SQL Server 2005 y versiones anteriores).|  
-|**Tipo**|**tinyint**|Tipo de archivo:<br /><br /> 0 = Filas (incluye archivos de catálogos de texto completo que se han creado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o actualizado a esta versión).<br /><br /> 1 = Registro<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Texto completo (catálogos de texto completo anteriores a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]; los catálogos de texto completo creados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o actualizados a esta versión notificarán un tipo de archivo 0).|  
-|**type_desc**|**nvarchar(60)**|Descripción del tipo de archivo:<br /><br /> ROWS (incluye archivos de catálogos de texto completo que se han creado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o actualizado a esta versión).<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (catálogos de texto completo anteriores a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
+|**tipo**|**tinyint**|Tipo de archivo:<br/><br /> 0 = filas<br /><br/> 1 = Registro<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texto completo|  
+|**type_desc**|**nvarchar(60)**|Descripción del tipo de archivo:<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|El valor puede ser 0 o mayor que 0. El valor 0 representa el archivo de registro de base de datos y un valor mayor que 0, el identificador del grupo de archivos donde está almacenado este archivo de datos.|  
 |**Nombre**|**sysname**|Nombre lógico del archivo de la base de datos.|  
 |**physical_name**|**nvarchar(260)**|Nombre del archivo del sistema operativo. Si la base de datos está hospedada en una [réplica secundaria legible](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)de AlwaysOn, **physical_name** indica la ubicación del archivo de la base de datos de réplica principal. Para la ubicación de archivo correcta de una base de datos secundaria legible, consulte [Sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
@@ -79,14 +79,14 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-Para obtener más información cuando se usa [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vea [determinar el tamaño de la base de datos en Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) en el blog del equipo de asesoría de clientes de SQL.
+Para obtener más información sobre el uso de [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], vea [determinar el tamaño de la base de datos en Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) en el blog del equipo de asesoría de clientes de SQL.
   
 ## <a name="see-also"></a>Vea también  
  [Vistas de catálogo de archivos y bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Estados de archivo](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [Archivos y grupos de archivos de base de datos](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

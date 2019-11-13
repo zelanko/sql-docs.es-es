@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056292"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982117"
 ---
-# <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
+# <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Captura datos de diagnóstico e información de estado acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para detectar errores potenciales. El procedimiento se ejecuta en modo repetido y envía los resultados periódicamente. Se puede invocar desde una conexión DAC o normal.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores).  
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,9 +40,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Indica el intervalo de tiempo en que se ejecutará el procedimiento almacenado varias veces para enviar información de estado.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` indica el intervalo de tiempo en el que el procedimiento almacenado se ejecutará repetidamente para enviar información de estado.  
   
- *repeat_interval_in_seconds* es **int** con el valor predeterminado es 0. Los valores válidos de los parámetros son 0 o cualquier valor mayor o igual que 5. El procedimiento almacenado tiene que ejecutarse al menos cinco segundos para devolver los datos completos. El tiempo mínimo que el procedimiento almacenado se ejecuta en el modo repetido es 5 segundos.  
+ *repeat_interval_in_seconds* es de **tipo int** y su valor predeterminado es 0. Los valores válidos de los parámetros son 0 o cualquier valor mayor o igual que 5. El procedimiento almacenado tiene que ejecutarse al menos cinco segundos para devolver los datos completos. El tiempo mínimo que el procedimiento almacenado se ejecuta en el modo repetido es 5 segundos.  
   
  Si no se especifica este parámetro o si el valor especificado es 0, el procedimiento almacenado devolverá los datos una vez y, a continuación, saldrá.  
   
@@ -56,30 +56,30 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Conjuntos de resultados  
 **sp_server_diagnostics** devuelve la siguiente información  
   
-|columna|Data type|Descripción|  
+|Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica la marca de tiempo de creación de la fila. Cada fila de un conjunto de filas único tiene la misma marca de tiempo.|  
-|**component_type**|**sysname**|Indica si la fila contiene información para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente o de un grupo de disponibilidad Always On de nivel de instancia:<br /><br /> instance<br /><br /> AlwaysOn: AvailabilityGroup|  
-|**component_name**|**sysname**|Indica el nombre del componente o el nombre del grupo de disponibilidad:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<nombre del grupo de disponibilidad >*|  
+|**component_type**|**sysname**|Indica si la fila contiene información para el componente de nivel de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o para un grupo de disponibilidad de Always On:<br /><br /> instancia<br /><br /> Always On: AvailabilityGroup|  
+|**component_name**|**sysname**|Indica el nombre del componente o el nombre del grupo de disponibilidad:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nombre del grupo de disponibilidad >*|  
 |**state**|**int**|Indica el estado de mantenimiento del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Describe la columna de estado. Las descripciones que corresponden a los valores de la columna de estado son:<br /><br /> 0: Desconocido<br /><br /> 1: limpiar<br /><br /> 2: advertencia<br /><br /> 3: error|  
-|**data**|**varchar (max)**|Especifica los datos que son específicos del componente.|  
+|**state_desc**|**sysname**|Describe la columna de estado. Las descripciones que corresponden a los valores de la columna de estado son:<br /><br /> 0: desconocido<br /><br /> 1: limpiar<br /><br /> 2: ADVERTENCIA<br /><br /> 3: error|  
+|**data**|**VARCHAR (Max)**|Especifica los datos que son específicos del componente.|  
   
  Estas son las descripciones de los cinco componentes:  
   
--   **sistema**: Recopila los datos desde la perspectiva del sistema en los bloqueos por subproceso, condiciones de procesamiento graves, tareas improductivas, errores de página y el uso de CPU. Esta información genera una recomendación del estado de mantenimiento total.  
+-   **sistema**: recopila datos de una perspectiva del sistema en bloqueos por subproceso, condiciones de procesamiento graves, tareas sin rendimiento, errores de página y uso de CPU. Esta información genera una recomendación del estado de mantenimiento total.  
   
--   **recurso**:  Recopila los datos desde una perspectiva de los recursos de memoria física y virtual, grupos de búferes, páginas, caché y otros objetos de memoria. Esta información genera una recomendación general del estado de mantenimiento.  
+-   **recurso**: recopila datos de una perspectiva de recursos de memoria física y virtual, grupos de búferes, páginas, caché y otros objetos de memoria. Esta información genera una recomendación general sobre el estado de mantenimiento.  
   
--   **query_processing**: Recopila los datos desde la perspectiva del procesamiento de consultas en los subprocesos de trabajo, tareas, tipos de espera, sesiones de uso intensivo de CPU y tareas de bloqueo. Esta información genera una recomendación general del estado de mantenimiento.  
+-   **query_processing**: recopila datos de una perspectiva de procesamiento de consultas en los subprocesos de trabajo, tareas, tipos de espera, sesiones intensivas de CPU y tareas de bloqueo. Esta información genera una recomendación general sobre el estado de mantenimiento.  
   
--   **io_subsystem**: Recopila datos de E/S. Además de los datos de diagnóstico, este componente genera un estado de mantenimiento limpio o de advertencia solamente para un subsistema de E/S.  
+-   **io_subsystem**: recopila datos en e/s. Además de los datos de diagnóstico, este componente genera un estado de mantenimiento limpio o de advertencia solamente para un subsistema de E/S.  
   
--   **Eventos**: Recopila datos y superficies a través del procedimiento almacenado en los errores y eventos de interés registrados por el servidor, incluidos los detalles sobre las excepciones de búfer de anillo, los eventos de búfer de anillo acerca del agente de memoria, fuera de la memoria, el monitor del programador, el grupo de búferes, bloqueos por subproceso, seguridad y conectividad. Los eventos mostrarán siempre 0 como estado.  
+-   **eventos**: recopila datos y superficies a través del procedimiento almacenado en los errores y eventos de interés registrados por el servidor, incluidos los detalles sobre las excepciones de búfer de anillo, eventos de búfer de anillo sobre el agente de memoria, memoria insuficiente, monitor de programador, grupo de búferes, bloqueos por subproceso, seguridad y conectividad. Los eventos mostrarán siempre 0 como estado.  
   
--   **\<nombre del grupo de disponibilidad >** : Recopila datos para el grupo de disponibilidad especificado (si component_type = "siempre en: AvailabilityGroup").  
+-   **\<nombre del grupo de disponibilidad >** : recopila datos para el grupo de disponibilidad especificado (si component_type = "Always On: AvailabilityGroup").  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
 Desde la perspectiva de los errores, los componentes del sistema, recursos y procesamiento de consultas se aprovecharán para la detección de errores mientras que los componentes de eventos e io_subsystem se aprovecharán solo con fines de diagnóstico.  
   
 En la tabla siguiente se asignan los componentes a sus estados de mantenimiento asociados.  
@@ -90,12 +90,12 @@ En la tabla siguiente se asignan los componentes a sus estados de mantenimiento 
 |resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
-|events||||x|  
+|eventos||||x|  
   
 La (x) de cada fila representa los estados de mantenimiento válidos para el componente. Por ejemplo, io_subsystem se mostrará como limpio o como advertencia. No mostrará los estados de error.  
  
 > [!NOTE]
-> Ejecución de procedimiento interna sp_server_diagnostics se implementa en un subproceso con una prioridad alta preferente.
+> La ejecución de sp_server_diagnostics procedimiento interno se implementa en un subproceso preventivo con prioridad alta.
   
 ## <a name="permissions"></a>Permisos  
 es necesario contar con el permiso VIEW SERVER STATE en el servidor.  

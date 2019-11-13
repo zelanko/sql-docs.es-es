@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a12a9a0d7b219fd3e950ace9ceed143cc8bcc58c
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 15b16166c21161c40f0c6addb351abe6e9940922
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500164"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594059"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Tipo de conexión de SQL Server (SSRS)
   Para incluir en el informe los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Use este tipo de origen de datos para conectar y recuperar los datos de la versión actual y de las versiones anteriores de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -46,9 +46,9 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   Pedir las credenciales al usuario. Esta opción solo admite la seguridad integrada de Windows.  
   
--   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) en la [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en msdn.microsoft.com.  
+-   No se necesitan credenciales. Para usar esta opción, debe tener la cuenta de ejecución desatendida configurada en el servidor de informes. Para obtener más información, vea [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
- Para obtener más información, consulte [conexiones de datos, orígenes de datos y cadenas de conexión &#40;generador de informes y SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [especificar credenciales y la información de conexión de orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
+ Para obtener más información, vea [conexiones de datos, orígenes de datos y &#40;cadenas de conexión&#41; generador de informes y SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [especificar información de credenciales y conexión para los orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="Query"></a> Consultas  
@@ -137,7 +137,7 @@ WHERE EmployeeID = (@EmpID)
  También puede recuperar los datos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando un tipo de origen de datos ODBC u OLE DB. Para más información, vea [Tipo de conexión OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md) o [Tipo de conexión ODBC &#40;SSRS&#41;](../../reporting-services/report-data/odbc-connection-type-ssrs.md).  
   
 ###### <a name="platform-and-version-information"></a>Información de plataforma y de versión  
- Para obtener más información sobre la compatibilidad de plataformas y de versiones, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para más información sobre la compatibilidad con plataformas y versiones, vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
@@ -165,7 +165,7 @@ WHERE EmployeeID = (@EmpID)
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.  
   
- [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Orígenes de datos admitidos por Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
   
   

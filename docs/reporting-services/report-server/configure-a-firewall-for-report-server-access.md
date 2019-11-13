@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dfb2676b2cc06b2a3ab774b467759c7e26c58e3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbcd96e24d0819cc8403a669c7333bb92d396e05
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175570"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593747"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurar un firewall para el acceso al servidor de informes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] A las aplicaciones del servidor de informes y a los informes publicados se tiene acceso a través de direcciones URL que especifican una dirección IP, un puerto y un directorio virtual. Si Firewall de Windows está activado, es probable que el puerto que el servidor de informes está configurado para usar esté cerrado. Lo que indica que un puerto podría estar cerrado es la recepción de una página en blanco cuando intenta abrir el portal web desde un equipo cliente remoto o una página web en blanco después de solicitar un informe.  
@@ -25,7 +25,7 @@ ms.locfileid: "66175570"
   
  De forma predeterminada, el servidor de informes escucha las solicitudes HTTP en el puerto 80. Por tanto, las instrucciones siguientes incluyen los pasos que especifican ese puerto. Si configuró las direcciones URL del servidor de informes para utilizar un puerto diferente, debe especificar ese número de puerto al seguir las instrucciones siguientes.  
   
- Si está teniendo acceso a las bases de datos relacionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en equipos externos, o si la base de datos del servidor de informes se encuentra en una instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] externa, debe abrir el puerto 1433 y 1434 del equipo externo. Para obtener más información, vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al [!INCLUDE[ssDE](../../includes/ssde-md.md)], a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Si está teniendo acceso a las bases de datos relacionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en equipos externos, o si la base de datos del servidor de informes se encuentra en una instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] externa, debe abrir el puerto 1433 y 1434 del equipo externo. Para más información, vea [Configurar Firewall de Windows para el acceso al motor de base de datos](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md). Para obtener más información sobre la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al [!INCLUDE[ssDE](../../includes/ssde-md.md)], a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 ## <a name="prerequisites"></a>Prerequisites  
  En estas instrucciones se supone que ya configuró la cuenta de servicio, creó la base de datos del servidor de informes y configuró direcciones URL para el servicio web del servidor de informes y el portal web. Para más información, vea [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "66175570"
 16. Reinicie el equipo.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Después de abrir el puerto y antes de confirmar si los usuarios remotos pueden tener acceso al servidor de informes en el puerto que abre, debe conceder acceso de usuario al servidor de informes a través de las asignaciones de roles en Inicio y en el nivel de sitio. Puede abrir un puerto correctamente y seguir teniendo conexiones del servidor de informes erróneas si los usuarios no tienen permisos suficientes. Para más información, consulte [Concesión a un usuario de acceso a un servidor de informes](../../reporting-services/security/grant-user-access-to-a-report-server.md) en los libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Después de abrir el puerto y antes de confirmar si los usuarios remotos pueden tener acceso al servidor de informes en el puerto que abre, debe conceder acceso de usuario al servidor de informes a través de las asignaciones de roles en Inicio y en el nivel de sitio. Puede abrir un puerto correctamente y seguir teniendo conexiones del servidor de informes erróneas si los usuarios no tienen permisos suficientes. Para obtener más información, consulte [Conceder a un usuario acceso a un servidor de informes](../../reporting-services/security/grant-user-access-to-a-report-server.md).  
   
  También puede comprobar que el puerto se abre correctamente iniciando el portal web en un equipo diferente. Para más información, consulte [El portal web de un servidor de informes](../../reporting-services/web-portal-ssrs-native-mode.md).
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bf15831517ebaa8646c1d6f3c080033c3a41405d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702703"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594378"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -59,7 +59,7 @@ Tenga en cuenta que habilitar Always Encrypted no es suficiente para que el cifr
 
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Habilitación de Always Encrypted con enclaves seguros
 
-A partir de la versión 17,4, el controlador admite Always Encrypted con enclaves seguro. Para habilitar el uso de enclave al conectarse a SQL Server 2019 o posterior, establezca el `ColumnEncryption` atributo DSN, cadena de conexión o conexión en el nombre del tipo enclave y el protocolo de atestación, y los datos de atestación asociados, separados por una coma. En la versión 17,4, solo se admite el tipo enclave de [seguridad basada](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) en virtualización y el protocolo de atestación del [servicio de protección de host](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) , indicado por `VBS-HGS`,; para usarlo, especifique la dirección URL del servidor de atestación, por ejemplo:
+A partir de la versión 17.4, el controlador admite Always Encrypted con enclaves seguros. Para habilitar el uso de enclave al conectarse a SQL Server 2019 o posterior, establezca el `ColumnEncryption` DSN, la cadena de conexión o el atributo de conexión en el nombre del tipo enclave y el protocolo de atestación, y los datos de atestación asociados, separados por una coma. En la versión 17,4, solo se admite el tipo enclave de [seguridad basada en virtualización](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) y el protocolo de atestación del [servicio de protección de host](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) , indicado por `VBS-HGS`. para usarlo, especifique la dirección URL del servidor de atestación, por ejemplo:
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -631,4 +631,3 @@ Vea [Migración de datos confidenciales protegidos mediante Always Encrypted](..
 - [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [Blog de Always Encrypted](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-

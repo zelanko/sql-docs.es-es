@@ -21,12 +21,12 @@ ms.locfileid: "71952616"
   En esta sección se proporcionan las listas de comprobación para instalar las características BI de SQL Server en combinaciones diferentes o en topologías de escalamiento horizontal. Si ya sabe cómo ejecutar un programa de instalación para instalar una característica BI, una lista de comprobación es el paso siguiente para saber el orden de instalación recomendado y si se requieren cambios de configuración adicionales que habiliten los escenarios de integración de características.  
   
 ## <a name="checklists-in-this-section"></a>Listas de comprobación en esta sección  
- Lista de comprobación de [Deployment: Reporting Services, Power View y PowerPivot para SharePoint @ no__t-0  
+ [Lista de comprobación de la implementación: Reporting Services, Power View y PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)  
   
- Lista de comprobación de [Deployment: Escalar horizontalmente agregando servidores de PowerPivot a una granja de SharePoint 2010 @ no__t-0  
+ [Lista de comprobación de implementación: escalado horizontal agregando servidores de PowerPivot a una granja de servidores de SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
   
- Lista de comprobación de [Deployment: Instalación en varios servidores de PowerPivot para SharePoint 2010 @ no__t-0  
+ [Lista de comprobación de la implementación: instalación en varios servidores de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
- Lista de comprobación de [Deployment: Instalar Reporting Services en una granja de servidores de SharePoint existente @ no__t-0  
+ [Lista de comprobación de la implementación: instalar Reporting Services en una granja de servidores de SharePoint existente](../../../2014/sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md)  
   
   

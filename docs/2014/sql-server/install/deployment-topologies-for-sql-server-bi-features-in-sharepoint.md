@@ -53,7 +53,7 @@ ms.locfileid: "71952639"
 ##  <a name="bkmk_example_deployments_2013"></a>Topologías de implementación de ejemplo de SharePoint 2013  
  La opción de instalación de SQL Server **PowerPivot para SharePoint** no tiene ninguna dependencia en SharePoint. No usa el modelo de objetos ni las interfaces de SharePoint para admitir la integración. Por tanto, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se puede instalar en cualquier equipo que ejecute Windows Server 2008 R2 o una versión posterior. No obstante, el equipo no puede ser un servidor de aplicaciones de una granja de SharePoint. Uno de los pasos de configuración consiste en que Excel Services apunte al servidor que ejecuta [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para lograr equilibrio de carga y tolerancia a errores, se recomienda instalar y registrar varios servidores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecuten en modo de SharePoint.  
   
- el **modo de sharepoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** requiere sharepoint Server 2013 y el uso de la arquitectura de aplicación de servicio de SharePoint.  
+ **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo de SharePoint** requiere sharepoint Server 2013 y emplea la arquitectura de aplicación de servicio de SharePoint.  
   
  En las próximas secciones se muestran topologías típicas de implementación:  
   
@@ -65,14 +65,14 @@ ms.locfileid: "71952639"
 |||  
 |-|-|  
 |**(1)**|Aplicación de servicio de Excel. La aplicación de servicio se crea como parte de la instalación de SharePoint.|  
-|**(2)**|Aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. El nombre predeterminado es **Aplicación de servicio PowerPivot predeterminada**.|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicación de servicio. El nombre predeterminado es **Aplicación de servicio PowerPivot predeterminada**.|  
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |**(4)**|Instale el complemento Reporting Services para SharePoint desde el disco de instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o Feature Pack de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
 |**(5)**|Ejecute el archivo **spPowerPivot.msi** para instalar proveedores de datos, la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y la actualización de datos programada.|  
-|**(6)**|Servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. Configure el valor de **Configuración del modelo de datos** de la aplicación Excel Services para usar este servidor.|  
+|**(6)**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server en modo de SharePoint. Configure el valor de **Configuración del modelo de datos** de la aplicación Excel Services para usar este servidor.|  
 |**(7)**|Bases de datos de contenido, configuración y aplicación de servicio de SharePoint.|  
   
- La ![configuración de SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint") [envía comentarios e información de contacto a través de Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (@no__t 2.  
+ La ![configuración de SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Configuración de SharePoint") [envía comentarios e información de contacto a través de Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_1server"></a>PowerPivot para SharePoint 2013 de implementación en un solo servidor  
  Una implementación en un solo servidor es útil para realizar pruebas, pero no se recomienda en implementaciones de producción.  
@@ -84,23 +84,23 @@ ms.locfileid: "71952639"
 |||  
 |-|-|  
 |**(1)**|Aplicación de servicio de Excel. La aplicación de servicio se crea como parte de la instalación de SharePoint.|  
-|**(2)**|Aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. El nombre predeterminado es **Aplicación de servicio PowerPivot predeterminada**.|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicación de servicio. El nombre predeterminado es **Aplicación de servicio PowerPivot predeterminada**.|  
 |**(3)**|Bases de datos de contenido, configuración y aplicación de servicio de SharePoint.|  
 |**(4)**|Servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. Configure el valor de **Configuración del modelo de datos** de la aplicación Excel Services para usar este servidor.|  
   
 ###  <a name="bkmk_powerpivot_sharepoint2013_2server"></a>Implementación del servidor PowerPivot para SharePoint 2013 2  
  En la siguiente implementación en dos servidores, el motor de base de datos de SQL Server y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint se ejecutan en un servidor diferente que SharePoint. Para SharePoint 2013, el paquete del instalador de [!INCLUDE[ssGeminiLongvnext](../../includes/ssgeminilongvnext-md.md)] (**spPowerPivot.msi**) se instala en el servidor de SharePoint.  
   
- [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] extiende SharePoint Server 2013 para agregar procesamiento de actualización de datos del lado servidor, proveedores de datos, Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y compatibilidad de administración para libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y libros de Excel con modelos de datos avanzados.  
+ [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] extiende SharePoint Server 2013 para agregar procesamiento de actualización de datos del lado servidor, proveedores de datos, Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y compatibilidad con la administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libros y libros de Excel con modelos de datos avanzados.  
   
- El paquete del instalador está disponible como parte de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Feature Pack. El Feature Pack se puede descargar desde el centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [microsoft® SQL Server® 2014 PowerPivot® para Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_ blank" <https://go.microsoft.com/fwlink/?LinkID=296473>).  
+ El paquete del instalador está disponible como parte de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Feature Pack. Feature Pack se puede descargar desde el centro de descarga de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [microsoft® SQL Server® 2014 PowerPivot® para microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (HYPERLINK "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>).  
   
  ![Implementación de servidor de SSAS PowerPivot Mode 2](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-mode-2server-deployment.gif "Implementación de servidor de SSAS PowerPivot Mode 2")  
   
 |||  
 |-|-|  
 |**(1)**|Aplicación de servicio de Excel. La aplicación de servicio se crea como parte de la instalación de SharePoint.|  
-|**(2)**|Aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. El nombre predeterminado es **Aplicación de servicio PowerPivot predeterminada**.|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicación de servicio. El nombre predeterminado es **Aplicación de servicio PowerPivot predeterminada**.|  
 |**(3)**|EJECUTE el archivo **spPowerPivot.msi** para instalar proveedores de datos, la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y la actualización de datos programada.|  
 |**(4)**|Servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. Configure el valor de **Configuración del modelo de datos** de la aplicación Excel Services para usar este servidor.|  
 |**(5)**|Bases de datos de contenido, configuración y aplicación de servicio de SharePoint.|  
@@ -113,7 +113,7 @@ ms.locfileid: "71952639"
 |||  
 |-|-|  
 |**(1)**|Aplicación de servicio de Excel. La aplicación de servicio se crea como parte de la instalación de SharePoint.|  
-|**(2)**|Aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. El nombre predeterminado es **Aplicación de servicio PowerPivot predeterminada**.|  
+|**(2)**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicación de servicio. El nombre predeterminado es **Aplicación de servicio PowerPivot predeterminada**.|  
 |**(3)**|EJECUTE el archivo spPowerPivot.msi para instalar proveedores de datos, la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y la actualización de datos programada.|  
 |**(4)**|Servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. Configure el valor de **Configuración del modelo de datos** de la aplicación Excel Services para usar este servidor.|  
 |**(5)**|Bases de datos de contenido, configuración y aplicación de servicio de SharePoint.|  
@@ -130,7 +130,7 @@ ms.locfileid: "71952639"
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |**(4)**|Instale el complemento Reporting Services para SharePoint desde el disco de instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o Feature Pack de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
 |**(5)**|Bases de datos de contenido, configuración y aplicación de servicio de SharePoint.|  
-|**(6)**|Servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. Configure el valor de **Configuración del modelo de datos** de la aplicación Excel Services para usar este servidor.|  
+|**(6)**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server en modo de SharePoint. Configure el valor de **Configuración del modelo de datos** de la aplicación Excel Services para usar este servidor.|  
   
 ###  <a name="bkmk_powerpivot_ssrs_sharepoint2013_2server"></a>PowerPivot para SharePoint 2013 y Reporting Services dos implementaciones de servidor  
  En la implementación siguiente en dos servidores, el motor de base de datos de SQL Server y el servidor de Analysis Services en modo de SharePoint se ejecutan en un servidor diferente que SharePoint. El paquete del instalador de PowerPivot para SharePoint 2013 **(spPowerPivot.msi)** se debe ejecutar en el servidor de SharePoint.  
@@ -144,7 +144,7 @@ ms.locfileid: "71952639"
 |**(3)**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |**(4)**|Instale el complemento Reporting Services para SharePoint desde el disco de instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o Feature Pack de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
 |**(5)**|Ejecute el archivo **spPowerPivot.msi** para instalar proveedores de datos, la herramienta de configuración de PowerPivot, la galería de PowerPivot y la actualización de datos programada.|  
-|**(6)**|Servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. Configure el valor de **Configuración del modelo de datos** de la aplicación Excel Services para usar este servidor.|  
+|**(6)**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Server en modo de SharePoint. Configure el valor de **Configuración del modelo de datos** de la aplicación Excel Services para usar este servidor.|  
 |**(7)**|Bases de datos de contenido, configuración y aplicación de servicio de SharePoint.|  
   
 ##  <a name="bkmk_example_deployments_2010"></a>Topologías de implementación de ejemplo de SharePoint 2010  
@@ -172,8 +172,8 @@ ms.locfileid: "71952639"
   
  ![5-topología de servidor](../../../2014/sql-server/install/media/sql11bisetup-5server.gif "5-topología de servidor")  
   
-## <a name="see-also"></a>Ver también  
- [Instalación &#40;del modo de SharePoint de Reporting Services SharePoint 2010&#41;y SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+## <a name="see-also"></a>Vea también  
+ [Instalación &#40;del modo de SharePoint de Reporting Services SharePoint 2010&#41; y SharePoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
  [Instalación de PowerPivot para SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)   
  [Instalación de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

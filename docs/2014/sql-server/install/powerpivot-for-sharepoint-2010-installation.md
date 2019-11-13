@@ -25,11 +25,11 @@ ms.locfileid: "71952052"
 >   
 >  -   La sección "SQL Server 2012 SP1" de [información general sobre la instalación de servicios de SQL Server](../../../2014/sql-server/install/overview-of-sql-server-servicing-installation.md).  
   
- Analysis Services proporciona un procesamiento del lado servidor para los libros de Excel que contienen los datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] funciona junto a Analysis Services, permite la integración de SharePoint, aporta el equilibrio de carga y permite la administración de conexiones. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] extiende Excel Services emparejando su capacidad de procesamiento de datos a gran escala con los servicios de representación de datos que proporciona Excel.  
+ Analysis Services proporciona un procesamiento del lado servidor para los libros de Excel que contienen los datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] funciona junto a Analysis Services, permite la integración de SharePoint, aporta el equilibrio de carga y permite la administración de conexiones. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] amplía Excel Services mediante el emparejamiento de su capacidad de procesamiento de datos a gran escala con los servicios de representación de datos que proporciona Excel.  
   
  Para instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], use el disco de instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
- Para obtener instrucciones sobre escenarios de implementación avanzada, consulte @no__t lista de comprobación de 0Deployment: Reporting Services, Power View y PowerPivot para SharePoint @ no__t-0 y [Deployment Checklist: Escalar horizontalmente agregando servidores de PowerPivot a una granja de SharePoint 2010 @ no__t-0.  
+ Para obtener instrucciones sobre escenarios de implementación avanzada, consulte lista de comprobación de la [implementación: Reporting Services, Power View y PowerPivot para SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) y [lista de comprobación de la implementación: escalado horizontal mediante la adición de servidores de PowerPivot a una granja de servidores de SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Instalar PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  

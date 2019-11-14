@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b45da78b0a79130cbbbd6c39bee07f237de2ef89
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878730"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056776"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Establece una opción de base de datos de replicación para la base de datos especificada. Este procedimiento almacenado se ejecuta en el publicador o el suscriptor de cualquier base de datos.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,11 +41,9 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **[@dbname=** ] **'***dbname***'**  
- Es la base de datos para la que se establece la opción de base de datos de replicación. *db_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @dbname = ] 'dbname'` es la base de datos para la que se establece la opción de base de datos de replicación. *db_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- **[@optname=** ] **'***optname***'**  
- Es la opción de base de datos de replicación que se puede habilitar o deshabilitar. *optname* es de **tipo sysname**y puede tener uno de estos valores.  
+`[ @optname = ] 'optname'` es la opción de base de datos de replicación para habilitar o deshabilitar. *optname* es de **tipo sysname**y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -54,19 +52,19 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**ID**|La base de datos es una base de datos de suscripciones.|  
 |**sincronizar con copia de seguridad**|La base de datos está habilitada para una copia de seguridad coordinada. Para obtener más información, vea [Habilitar copias de seguridad coordinadas para la &#40;replicación transaccional programación&#41;de Transact-SQL](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
-`[ @value = ] 'value'`Indica si se debe habilitar o deshabilitar la opción de base de datos de replicación dada. *Value* es de **tipo sysname**y puede ser **true** o **false**. Cuando este valor es **false** y *optname* es **Merge Publish**, también se quitan las suscripciones a la base de datos publicada de mezcla.  
+`[ @value = ] 'value'` es si se debe habilitar o deshabilitar la opción de base de datos de replicación determinada. *Value* es de **tipo sysname**y puede ser **true** o **false**. Cuando este valor es **false** y *optname* es **Merge Publish**, también se quitan las suscripciones a la base de datos publicada de mezcla.  
   
-`[ @ignore_distributor = ] ignore_distributor`Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es de **bit**, con un valor predeterminado de **0**, lo que significa que el distribuidor debe estar conectado y actualizado con el nuevo estado de la base de datos de publicación. Solo se debe especificar el valor **1** si no se puede obtener acceso al distribuidor y se utiliza **sp_replicationdboption** para deshabilitar la publicación.  
+`[ @ignore_distributor = ] ignore_distributor` indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es de **bits**, con un valor predeterminado de **0**, lo que significa que el distribuidor debe estar conectado al nuevo estado de la base de datos de publicación y actualizarse. Solo se debe especificar el valor **1** si no se puede tener acceso al distribuidor y se usa **sp_replicationdboption** para deshabilitar la publicación.  
   
 `[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_replicationdboption** se utiliza en la replicación de instantáneas, la replicación transaccional y la replicación de mezcla.  
   
- Este procedimiento crea o quita tablas específicas del sistema de replicación, cuentas de seguridad, etc., según las opciones proporcionadas. Establece el correspondiente **is_published** (transacational o la replicación de instantáneas), **is_merge_published** (replicación de mezcla) o los bits de **is_distributor** en la tabla del sistema **Master. Databases** y crea el sistema necesario. tablas.  
+ Este procedimiento crea o quita tablas específicas del sistema de replicación, cuentas de seguridad, etc., según las opciones proporcionadas. Establece el **is_published** correspondiente (replicación de instantáneas o transacational), **is_merge_published** (replicación de mezcla) o **is_distributor** bits en la tabla del sistema **Master. Databases** y crea las tablas del sistema necesarias.  
   
  Para deshabilitar la publicación, la base de datos de publicaciones debe estar en línea. Si existe una instantánea de base de datos para la base de datos de publicaciones, se debe quitar la instantánea antes de deshabilitar la publicación. Las instantáneas de base de datos son copias de solo lectura y sin conexión de bases de datos, y no están relacionadas con una instantánea de replicación. Para más información, vea [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   

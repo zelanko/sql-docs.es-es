@@ -1,6 +1,5 @@
 ---
-title: 'WideWorldImporters generar datos: base de datos de ejemplo SQL | Microsoft Docs'
-ms.custom: ''
+title: Generar datos en ejemplos de SQL WideWorldImporters
 ms.date: 04/04/2018
 ms.reviewer: ''
 ms.prod: sql
@@ -9,25 +8,26 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 38ba117051ad10d788c2357dfb70d36c2b5e50d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 0f880ea881b53c2600fb1fffdf7da5d16ab8d423
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091267"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056283"
 ---
 # <a name="wideworldimporters-data-generation"></a>Generación de datos de WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Las versiones publicadas de las bases de datos WideWorldImporters y WideWorldImportersDW tengan datos desde el 1 de enero de 2013, hasta el día en que se generaron las bases de datos.
+Las versiones de lanzamiento de las bases de datos WideWorldImporters y WideWorldImportersDW tienen datos del 1 de enero de 2013, hasta el día en que se generaron las bases de datos.
 
-Al usar estas bases de datos de ejemplo, desea incluir datos de ejemplo más recientes.
+Al utilizar estas bases de datos de ejemplo, puede que desee incluir datos de ejemplo más recientes.
 
-## <a name="data-generation-in-wideworldimporters"></a>Generación de datos WideWorldImporters
+## <a name="data-generation-in-wideworldimporters"></a>Generación de datos en WideWorldImporters
 
 Para generar datos de ejemplo hasta la fecha actual:
 
 1. Si no lo ha hecho, instale una versión limpia de la base de datos WideWorldImporters. Para obtener instrucciones de instalación, consulte [instalación y configuración](wide-world-importers-oltp-install-configure.md).
-2. Ejecute la instrucción siguiente en la base de datos:
+2. Ejecute la siguiente instrucción en la base de datos:
 
     ```
         EXECUTE DataLoadSimulation.PopulateDataToCurrentDate
@@ -38,44 +38,44 @@ Para generar datos de ejemplo hasta la fecha actual:
             @AreDatesPrinted = 1;
     ```
 
-    Esta instrucción agrega datos de compras y ventas de ejemplo para la base de datos, hasta la fecha actual. Muestra el progreso de la generación de datos por día. Generación de datos puede tardar unos 10 minutos para cada año que necesita que los datos. Debido a un factor aleatorio en la generación de datos, hay algunas diferencias en los datos que se generaron entre ejecuciones.
+    Esta instrucción agrega datos de ventas y compra de ejemplo a la base de datos hasta la fecha actual. Muestra el progreso de la generación de datos por día. La generación de datos puede tardar unos 10 minutos para cada año que necesite datos. Debido a un factor aleatorio en la generación de datos, existen algunas diferencias en los datos que se generan entre ejecuciones.
 
-    Para aumentar o disminuir la cantidad de datos generados para los pedidos por día, cambie el valor del parámetro `@AverageNumberOfCustomerOrdersPerDay`. Use los parámetros `@SaturdayPercentageOfNormalWorkDay` y `@SundayPercentageOfNormalWorkDay` para determinar el volumen de pedidos para los días de la semana.
+    Para aumentar o disminuir la cantidad de datos generados para pedidos por día, cambie el valor del parámetro `@AverageNumberOfCustomerOrdersPerDay`. Use los parámetros `@SaturdayPercentageOfNormalWorkDay` y `@SundayPercentageOfNormalWorkDay` para determinar el volumen de los días del fin de semana.
 
-## <a name="import-generated-data-in-wideworldimportersdw"></a>Datos de importación generada en WideWorldImportersDW
+## <a name="import-generated-data-in-wideworldimportersdw"></a>Importar datos generados en WideWorldImportersDW
 
-Para importar datos de ejemplo hasta la fecha actual en la base de datos WideWorldImportersDW OLAP:
+Para importar datos de ejemplo hasta la fecha actual en la base de datos OLAP de WideWorldImportersDW:
 
-1. Ejecutar la lógica de generación de datos en la base de datos WideWorldImporters OLTP mediante los pasos en la sección anterior.
-2. Si aún no lo ha hecho, instale una versión limpia de la base de datos WideWorldImportersDW. Para obtener instrucciones de instalación, consulte [instalación y configuración](wide-world-importers-oltp-install-configure.md).
-3. Reinicialice la base de datos OLAP mediante la ejecución de la siguiente instrucción en la base de datos:
+1. Ejecute la lógica de generación de datos en la base de datos OLTP de WideWorldImporters siguiendo los pasos de la sección anterior.
+2. Si todavía no lo ha hecho, instale una versión limpia de la base de datos WideWorldImportersDW. Para obtener instrucciones de instalación, consulte [instalación y configuración](wide-world-importers-oltp-install-configure.md).
+3. Reinicialice la base de datos OLAP ejecutando la siguiente instrucción en la base de datos:
 
     ```sql
     EXECUTE [Application].Configuration_ReseedETL
     ```
 
-4. Ejecute el *ETL.ispac diario* paquete SQL Server Integration Services para importar los datos en la base de datos OLAP. Para obtener información sobre cómo ejecutar el trabajo ETL, consulte [flujo de trabajo de WideWorldImporters ETL](wide-world-importers-perform-etl.md).
+4. Ejecute el paquete *ETL. ISPAC* de SQL Server Integration Services diaria para importar los datos en la base de datos OLAP. Para obtener información sobre cómo ejecutar el trabajo ETL, consulte [WIDEWORLDIMPORTERS ETL Workflow](wide-world-importers-perform-etl.md).
 
 ## <a name="generate-data-in-wideworldimportersdw-for-performance-testing"></a>Generar datos en WideWorldImportersDW para pruebas de rendimiento
 
-WideWorldImportersDW arbitrariamente puede aumentar el tamaño de los datos para pruebas de rendimiento. Por ejemplo, puede aumentar el tamaño de datos que se usará con la indexación de almacén de columnas agrupado.
+WideWorldImportersDW puede aumentar arbitrariamente el tamaño de los datos para las pruebas de rendimiento. Por ejemplo, puede aumentar el tamaño de los datos para usarlos con la indexación de almacén de columnas en clúster.
 
-Uno de los desafíos es mantener el tamaño de la descarga lo suficientemente pequeño como para fácilmente, descargar, pero de gran tamaño suficiente para demostrar las características de rendimiento de SQL Server. Por ejemplo, se obtienen ventajas significativas para los índices de almacén de columnas solo cuando se trabaja con un mayor número de filas. 
+Uno de los desafíos es mantener el tamaño de la descarga lo suficientemente pequeño como para descargar fácilmente, pero lo suficientemente grande como para mostrar SQL Server características de rendimiento. Por ejemplo, las ventajas significativas para los índices de almacén de columnas solo se logran cuando se trabaja con un número mayor de filas. 
 
-Puede usar el `Application.Configuration_PopulateLargeSaleTable` procedimiento para aumentar el número de filas de la `Fact.Sale` tabla. Las filas se insertan en el año 2012 para evitar el conflicto con los datos de World Wide Importers existentes que comienza el 1 de enero de 2013.
+Puede usar el procedimiento `Application.Configuration_PopulateLargeSaleTable` para aumentar el número de filas de la tabla `Fact.Sale`. Las filas se insertan en el año natural 2012 para evitar colisiones con los datos de World Wide Importers existentes que comienzan el 1 de enero de 2013.
 
 ### <a name="procedure-details"></a>Detalles del procedimiento
 
-#### <a name="name"></a>NOMBRE
+#### <a name="name"></a>Nombre
 
     Application.Configuration_PopulateLargeSaleTable
 
 #### <a name="parameters"></a>Parámetros
 
-  `@EstimatedRowsFor2012` **bigint** (con un valor predeterminado de 12000000)
+  `@EstimatedRowsFor2012` **BIGINT** (con un valor predeterminado de 12 millones)
 
 #### <a name="result"></a>Resultado
 
-Aproximadamente el número necesario de las filas se inserta en el `Fact.Sale` tabla en el año 2012. El procedimiento artificialmente limita el número de filas a 50 000 por día. Puede cambiar esta limitación, pero la limitación ayuda a evitar overinflations accidentales de la tabla.
+Aproximadamente el número necesario de filas se insertan en la `Fact.Sale` tabla del año 2012. El procedimiento limita artificialmente el número de filas a 50.000 por día. Puede cambiar esta limitación, pero la limitación le ayuda a evitar sobreinflaciones accidentales de la tabla.
 
-El procedimiento también aplica si ya no se ha aplicado la indización de almacén de columnas agrupado.
+El procedimiento también aplica la indexación de almacén de columnas en clúster si aún no se ha aplicado.

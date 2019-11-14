@@ -1,7 +1,8 @@
 ---
-title: Realización de una evaluación de migración SQL Server (Data Migration Assistant) | Microsoft Docs
+title: Realización de una evaluación de migración SQL Server
+titleSuffix: Data Migration Assistant
 description: Aprenda a usar Data Migration Assistant para evaluar una SQL Server local antes de migrar a otro SQL Server o a Azure SQL Database
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e14fc009944f28adb793ef3f89bb93f716a9ac58
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892689"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056633"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realización de una evaluación de migración SQL Server con Data Migration Assistant
 
@@ -33,7 +34,7 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 
     Si va a actualizar la instancia de SQL Server local a una instancia de SQL Server local moderna o a SQL Server hospedada en una máquina virtual de Azure, establezca el tipo de servidor de origen y de destino en **SQL Server**. Si va a migrar a Azure SQL Database, establezca el tipo de servidor de destino en **Azure SQL Database**.
 
-3. Haga clic en **Create**(Crear).
+3. Haga clic en **Crear**.
 
    ![Creación de una evaluación](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
@@ -110,7 +111,7 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 
     ![Adición de orígenes e inicio de la evaluación](../dma/media/dma-assesssqlonprem/select-database1.png)
 
-## <a name="view-results"></a>Ver resultados
+## <a name="view-results"></a>Vista de resultados
 
 La duración de la evaluación depende del número de bases de datos agregadas y el tamaño del esquema de cada base de datos. Los resultados se muestran para cada base de datos en cuanto están disponibles.
 
@@ -140,7 +141,7 @@ Por Azure SQL Database, las evaluaciones proporcionan problemas de bloqueo de la
 
 ## <a name="assess-a-data-estate-for-target-readiness"></a>Evaluación de la disponibilidad de los datos para el destino
 
-Si desea ampliar aún más estas evaluaciones a toda la información y encontrar la preparación relativa de SQL Server instancias y bases de datos para la migración a Azure SQL Database, cargue los resultados en la instancia de Azure Migrate Hub seleccionando **cargar en Azure Migrate** .
+Si desea ampliar aún más estas evaluaciones a toda la información y encontrar la preparación relativa de SQL Server instancias y bases de datos para la migración a Azure SQL Database, cargue los resultados en el concentrador de Azure Migrate seleccionando **cargar en Azure Migrate**.
 
 Esto le permite ver los resultados consolidados en el proyecto de Azure Migrate Hub.
 

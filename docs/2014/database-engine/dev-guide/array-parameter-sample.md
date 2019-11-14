@@ -10,12 +10,12 @@ ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62753737"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055903"
 ---
 # <a name="array-parameter-sample"></a>Ejemplo de parámetro de matriz
   A veces resulta útil crear, actualizar o eliminar un conjunto de filas en una base de datos. Este objetivo puede conseguirse mediante distintos enfoques. Uno de ellos es pasar una matriz de información de un cliente a un procedimiento almacenado de integración CLR (Common Language Runtime) del servidor mediante un tipo CLR de datos de integración definido por el usuario. La naturaleza de los tipos de datos definidos por el usuario de este tipo limita el tamaño de los datos proporcionados al servidor a 8.000 bytes. Por lo tanto, este enfoque no resulta satisfactorio para datos grandes o complejos. Si los datos que se tratan son pequeños y sencillos, este enfoque puede ser mucho más eficaz que llamar a un procedimiento almacenado para cada fila. Al pasar una matriz, el orden de los datos se conserva en las aplicaciones donde es significativo. Este ejemplo contiene lo siguiente:  
@@ -26,12 +26,12 @@ ms.locfileid: "62753737"
   
 3.  La aplicación de consola `TestArrayParameter` . Crea una instancia del tipo de datos definido por el usuario `ContactTypeNames` basada en los parámetros de línea de comandos que se pasan, y luego invoca el procedimiento almacenado `usp_EnsureContactTypeNames` pasando la instancia de tipo de datos definido por el usuario como parámetro.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
   
--   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
+-   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://archive.codeplex.com/?p=SqlServerSamples).  
   
 -   .NET Framework SDK 2.0 o posterior, o Microsoft Visual Studio 2005 o posterior. Puede obtener .NET Framework SDK de forma gratuita.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "62753737"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Código muestra  
+## <a name="sample-code"></a>Código de ejemplo  
  A continuación se muestran las listas de código para este ejemplo.  
   
  Se trata del código para la biblioteca `ContactTypeNames.`  

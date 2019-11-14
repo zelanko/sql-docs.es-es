@@ -1,7 +1,7 @@
 ---
-title: Configurar las opciones de Data Migration Assistant (SQL Server) | Microsoft Docs
+title: Configurar las opciones de Data Migration Assistant
 description: Obtenga información sobre cómo configurar las opciones de la Data Migration Assistant actualizando los valores del archivo de configuración.
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345239"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056541"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurar las opciones de Data Migration Assistant
 
@@ -82,7 +82,7 @@ A partir de Data Migration Assistant v 2.0, si experimenta este problema, puede 
 Durante la evaluación, Data Migration Assistant extrae la aplicación de capa de datos (dacpac) para comprender el esquema de la base de datos. Esta operación puede producir un error en los tiempos de espera de las bases de datos extremadamente grandes o si el servidor está bajo carga. A partir de Data Migration v 1.0, puede modificar los siguientes valores de configuración para evitar errores. 
 
 > [!NOTE]
-> La entrada &lt;dacfx&gt; completa está comentada de forma predeterminada. Quite los comentarios y, a continuación, modifique el valor según sea necesario.
+> De forma predeterminada, se marcan como comentario toda la entrada &lt;&gt; dacfx. Quite los comentarios y, a continuación, modifique el valor según sea necesario.
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ Durante la evaluación, Data Migration Assistant extrae la aplicación de capa d
 
 - databaseLockTimeout
 
-   Este parámetro equivale a establecer el tiempo de [\_espera\_de bloqueo](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*. (Valor predeterminado = 5000)
+   Este parámetro equivale a establecer el tiempo de [\_espera de bloqueo\_](../t-sql/statements/set-lock-timeout-transact-sql.md) tiempo de espera de tiempo de espera en *milisegundos*. (Valor predeterminado = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
@@ -109,7 +109,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Umbral de recomendación
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: umbral de recomendación
 
 Con [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), puede ampliar dinámicamente los datos transaccionales activos e inactivos de Microsoft SQL Server 2016 a Azure. Stretch Database se dirige a las bases de datos transaccionales con grandes cantidades de datos inactivos. En la recomendación de Stretch Database, en la recomendación de características de almacenamiento, primero se identifican las tablas que considera que se beneficiarán de esta característica y, a continuación, se identifican los cambios que se deben realizar para habilitar la tabla para esta característica.
 

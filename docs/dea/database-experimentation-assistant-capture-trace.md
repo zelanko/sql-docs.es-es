@@ -1,7 +1,7 @@
 ---
-title: Capturar un seguimiento en Asistente para experimentación con bases de datos para las actualizaciones de SQL Server
-description: Capturar un seguimiento en Asistente para experimentación con bases de datos
-ms.custom: ''
+title: Capturar un seguimiento para las actualizaciones de SQL Server
+description: Capturar un seguimiento en Asistente para experimentación con bases de datos para las actualizaciones de SQL Server
+ms.custom: seo-lt-2019
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 3887daff7807d57244449d4f35d220bb47b8f10d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6c24632875d09125efcd043ae907e87a21847fe9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653813"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056600"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar un seguimiento en Asistente para experimentación con bases de datos
 
@@ -35,12 +35,12 @@ El almacenamiento en caché de consultas en SQL Server puede afectar a los resul
 
 1. En **nueva captura**, escriba o seleccione la siguiente información:
 
-    - **Nombre**de la instancia de SQL Server: Escriba un nombre para el equipo que ejecuta SQL Server en el que desea capturar un seguimiento de servidor.
-    - **Nombre**de la base de datos: Escriba un nombre para la base de datos en la que se va a iniciar un seguimiento de base de datos. Si no se especifica una base de datos, el seguimiento se captura en todas las bases de datos del servidor.
-    - **Nombre del archivo de seguimiento**: Escriba un nombre para el archivo de seguimiento de la captura.
-    - **Tamaño máximo de archivo (MB)** : Seleccione el tamaño de sustitución de los archivos. Se creará un archivo nuevo según sea necesario en el tamaño de archivo que seleccione. El tamaño de sustitución recomendado es 200 MB.
-    - **Duración (en minutos)** : Seleccione el período de tiempo (en minutos) durante el que desea que se ejecute la captura de seguimiento.
-    - **Ruta de acceso para almacenar el archivo de seguimiento de salida**: Seleccione la ruta de acceso de destino del archivo de seguimiento. 
+    - **Nombre**de la instancia de SQL Server: escriba un nombre para el equipo que ejecuta SQL Server en el que desea capturar un seguimiento del servidor.
+    - **Nombre**de la base de datos: escriba un nombre para la base de datos en la que se va a iniciar un seguimiento de base de datos. Si no se especifica una base de datos, el seguimiento se captura en todas las bases de datos del servidor.
+    - **Nombre del archivo de seguimiento**: escriba un nombre para el archivo de seguimiento de la captura.
+    - **Tamaño máximo de archivo (MB)** : seleccione el tamaño de sustitución de los archivos. Se creará un archivo nuevo según sea necesario en el tamaño de archivo que seleccione. El tamaño de sustitución recomendado es 200 MB.
+    - **Duración (en minutos)** : seleccione el período de tiempo (en minutos) durante el que desea que se ejecute la captura de seguimiento.
+    - **Ruta de acceso para almacenar el archivo de seguimiento de salida**: seleccione la ruta de acceso de destino del archivo de seguimiento. 
 
     > [!NOTE]
     > La ruta de acceso al archivo de seguimiento debe estar en el equipo que ejecuta SQL Server. Si el servicio SQL Server no está establecido para una cuenta específica, es posible que el servicio necesite permisos de escritura en la carpeta especificada para que se escriba el archivo de seguimiento.
@@ -125,7 +125,7 @@ Si ve un error al ejecutar una captura de seguimiento, revise los siguientes req
 - Confirme que el nombre del equipo que ejecuta SQL Server es válido. Para confirmar, intente conectarse al equipo que ejecuta SQL Server mediante SQL Server Management Studio (SSMS).
 - Confirme que la configuración del firewall no bloquea las conexiones con el equipo que ejecuta SQL Server.
 - Confirme que el usuario tiene los permisos que se enumeran en las [preguntas más frecuentes sobre la reproducción](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/)de publicaciones de blog.
-- Confirme que el nombre de seguimiento no sigue la Convención estándar de sustitución\_incremental (Capture 1). En su lugar, pruebe nombres de seguimiento\_como Capture 1A o Capture1.
+- Confirme que el nombre de seguimiento no sigue la Convención estándar de sustitución incremental (Capture\_1). En su lugar, pruebe nombres de seguimiento como Capture\_1A o Capture1.
 
 A continuación se muestran algunos posibles errores que podrían aparecer y soluciones para resolverlos:
 

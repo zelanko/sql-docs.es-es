@@ -1,7 +1,6 @@
 ---
-title: Introducción a Asistente para experimentación con bases de datos para las actualizaciones de SQL Server
-description: Introducción a Asistente para experimentación con bases de datos
-ms.custom: ''
+title: Introducción a Asistente para experimentación con bases de datos
+description: Asistente para experimentación con bases de datos (DEA) es una solución de prueba A/B para los cambios en entornos SQL Server, como actualizaciones o nuevos índices.
 ms.date: 10/22/2018
 ms.prod: sql
 ms.prod_service: dea
@@ -12,14 +11,15 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-ms.openlocfilehash: 9fe162b2a9bc0db4a2a49648eecb76c5802f57c0
-ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 43f8c6bff909716bdd85a798dfd4e5a7431e31af
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381768"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056711"
 ---
-# <a name="get-started-with-database-experimentation-assistant"></a>Introducción a Asistente para experimentación con bases de datos
+# <a name="get-started-with-database-experimentation-assistant-sql-server"></a>Introducción a Asistente para experimentación con bases de datos (SQL Server)
 
 Asistente para experimentación con bases de datos (DEA) es una solución de prueba A/B para los cambios en entornos SQL Server, como actualizaciones o nuevos índices. DEA le ayuda a evaluar cómo realizará la carga de trabajo en el servidor de origen (en su entorno actual) en el nuevo entorno. DEA le guía a través de la ejecución de una prueba A/B realizando tres pasos: 
 
@@ -48,7 +48,7 @@ Para capturar un seguimiento en el servidor de origen:
 
 1. Escriba o seleccione la siguiente información:
 
-   - **Nombre de seguimiento**: el nombre de archivo del nuevo archivo de seguimiento que está creando. Evite un nombre de seguimiento que use la Convención de nomenclatura de archivos de sustitución incremental, por ejemplo, CaptureName @ no__t-0NNN.
+   - **Nombre de seguimiento**: el nombre de archivo del nuevo archivo de seguimiento que está creando. Evite un nombre de seguimiento que use la Convención de nomenclatura de archivos de sustitución incremental, por ejemplo, CaptureName\_NNN.
    - **Duration**: la duración de la captura.
    - **SQL Server nombre de instancia**: la instancia de SQL Server de la que desea capturar un seguimiento.
    - **Nombre**de la base de datos: el nombre de la base de datos del equipo en el que se ejecuta SQL Server el que desea capturar un seguimiento. Si se deja en blanco, el seguimiento se captura de todas las bases de datos en el servidor.

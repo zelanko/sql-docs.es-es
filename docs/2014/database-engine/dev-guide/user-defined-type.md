@@ -10,22 +10,22 @@ ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 860d2f03018abae2b27367a1f41f87268affb328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2baa2a28fb0805f92c27b7f8a237996ce4583db
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779839"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054838"
 ---
 # <a name="user-defined-type"></a>Tipo definido por el usuario
   El ejemplo Tipo de datos definido por el usuario muestra la creación y el uso de un tipo de datos simple definido por el usuario desde Transact-SQL y desde una aplicación cliente mediante `System.Data.SqlClient`.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
   
--   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
+-   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://archive.codeplex.com/?p=SqlServerSamples).  
   
 -   .NET Framework SDK 2.0 o posterior, o Microsoft Visual Studio 2005 o posterior. Puede obtener .NET Framework SDK de forma gratuita.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62779839"
   
     -   `sqlcmd -E -I -i cleanup.sql`  
   
-## <a name="sample-code"></a>Código muestra  
+## <a name="sample-code"></a>Código de ejemplo  
  A continuación se muestran las listas de código para este ejemplo.  
   
  C#  
@@ -910,7 +910,7 @@ Public NotInheritable Class UdtServices
 End Class  
 ```  
   
- Este es el script (`Install.sql`) de instalación de [!INCLUDE[tsql](../../includes/tsql-md.md)], que implementa el ensamblado y crea el UDT en la base de datos.  
+ Este es el script ([!INCLUDE[tsql](../../includes/tsql-md.md)]) de instalación de `Install.sql`, que implementa el ensamblado y crea el UDT en la base de datos.  
   
 ```  
 USE AdventureWorks  

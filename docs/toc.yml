@@ -745,8 +745,6 @@
                   href: database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md
                 - name: Conmutación por error y modos de conmutación por error
                   href: database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md
-                - name: Directiva de conmutación por error flexible para conmutación automática por error
-                  href: database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
                 - name: Solo escalado de lectura
                   href: database-engine/availability-groups/windows/read-scale-availability-groups.md
                 - name: Redirección de conexiones de lectura/escritura
@@ -4157,14 +4155,16 @@
           href: sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Notas de la versión
       items:
-        - name: compatibilidad con versiones anteriores
-          href: database-engine/sql-server-database-engine-backward-compatibility.md
+        - name: Funcionalidad no incluida en SQL Server
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: En desuso en SQL Server 2019
+          href: database-engine/deprecated-database-engine-features-in-sql-server-version-15.md
         - name: En desuso en SQL Server 2017
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: En desuso en SQL Server 2016
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: Funcionalidad no incluida en SQL Server
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
+        - name: Principales cambios en SQL Server 2019
+          href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md
         - name: Principales cambios en SQL Server 2017
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: Principales cambios en SQL Server 2016
@@ -4779,9 +4779,9 @@
         - name: Información general
           href: relational-databases/replication/sql-server-replication.md
           items:
-            - name: Backward Compatibility
+            - name: compatibilidad con versiones anteriores
               href: relational-databases/replication/replication-backward-compatibility.md
-            - name: Características desusadas
+            - name: Características en desuso
               href: relational-databases/replication/deprecated-features-in-sql-server-replication.md
             - name: Últimos cambios
               href: relational-databases/replication/breaking-changes-in-sql-server-replication.md

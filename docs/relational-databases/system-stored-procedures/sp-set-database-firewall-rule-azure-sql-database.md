@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2a465e03c3b77b8d05437fa0cfaf3354434ce973
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843853"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055089"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,21 +44,18 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **[@name** =] [N] '*nombre*'  
- El nombre utilizado para describir y distinguir la configuración del firewall de nivel de base de datos. *Name* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado. El identificador Unicode `N` es opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+`[ @name = ] [N]'name'` el nombre usado para describir y distinguir la configuración de Firewall de nivel de base de datos. *Name* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado. El identificador Unicode `N` es opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
- **[@start_ip_address** =] '*start_ip_address*'  
- La dirección IP más baja en el intervalo de la configuración del firewall de nivel de base de datos. Las direcciones IP iguales o superiores a esta pueden intentar conectarse con la instancia de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más baja posible es `0.0.0.0`. *start_ip_address* es de tipo **VARCHAR (50)** y no tiene ningún valor predeterminado.  
+`[ @start_ip_address = ] 'start_ip_address'` la dirección IP más baja en el intervalo de la configuración de Firewall de nivel de base de datos. Las direcciones IP iguales o superiores a esta pueden intentar conectarse con la instancia de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más baja posible es `0.0.0.0`. *start_ip_address* es de tipo **VARCHAR (50)** y no tiene ningún valor predeterminado.  
   
- [ **@end_ip_address** =] '*end_ip_address*'  
- La dirección IP más alta en el intervalo de la configuración del firewall de nivel de base de datos. Las direcciones IP iguales o inferiores a esta pueden intentar conectarse con la instancia de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más alta posible es `255.255.255.255`. *end_ip_address* es de tipo **VARCHAR (50)** y no tiene ningún valor predeterminado.  
+`[ @end_ip_address = ] 'end_ip_address'` la dirección IP más alta en el intervalo de la configuración de Firewall de nivel de base de datos. Las direcciones IP iguales o inferiores a esta pueden intentar conectarse con la instancia de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más alta posible es `255.255.255.255`. *end_ip_address* es de tipo **VARCHAR (50)** y no tiene ningún valor predeterminado.  
   
  En la tabla siguiente se muestran los argumentos y las opciones admitidos en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 > [!NOTE]  
 >  Se permiten los intentos de conexión de Azure cuando este campo y el campo *start_ip_address* es igual a `0.0.0.0`.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  Los nombres de la configuración del firewall de nivel de base de datos para una base de datos deben ser únicos. Si el nombre de la configuración del firewall de nivel de base de datos proporcionado para el procedimiento almacenado ya existe en la tabla de configuración del firewall de nivel de base de datos, las direcciones IP inicial y final se actualizarán. De lo contrario, se creará una nueva configuración del firewall de nivel de base de datos.  
   
  Cuando se agrega una configuración de Firewall de nivel de base de datos donde las direcciones IP inicial y final son iguales a `0.0.0.0`, se habilita el acceso a la base de datos en el servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] desde cualquier recurso de Azure. Proporcione un valor al parámetro *Name* que le ayude a recordar para qué sirve la configuración de Firewall.  

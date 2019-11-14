@@ -1,41 +1,41 @@
 ---
-title: 'Base de datos WideWorldImporters OLAP: uso de SQL Server | Microsoft Docs'
+title: Características clave de la base de datos WideWorldImporters de DW
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.custom: ''
 ms.date: 08/04/2018
 ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 313f85c5d5ec3590e231bdac4a746318c927a33a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: dfce2ce4a6f13a25687d668268f532893c1404e0
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104222"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056287"
 ---
-# <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>Uso de WideWorldImportersDW de capacidades y características de SQL Server
+# <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW el uso de características y funcionalidades SQL Server
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
-WideWorldImportersDW está diseñada para presentar muchas de las características claves de SQL Server que son adecuadas para el almacenamiento de datos y análisis. La siguiente es una lista de características de SQL Server y las capacidades y una descripción de cómo se utilizan en WideWorldImportersDW.
+WideWorldImportersDW está diseñado para presentar muchas de las características clave de SQL Server que son adecuadas para el almacenamiento y el análisis de datos. A continuación se muestra una lista de las características y capacidades de SQL Server y una descripción de cómo se usan en WideWorldImportersDW.
 
 ## <a name="polybase"></a>PolyBase
 
 [Se aplica a SQL Server (2016 y versiones posteriores)]
 
-PolyBase se usa para combinar la información de ventas de WideWorldImportersDW con un conjunto de datos públicos sobre datos demográficos para saber qué ciudades podrían ser de interés para la expansión de más de las ventas.
+Polybase se usa para combinar la información de ventas de WideWorldImportersDW con un conjunto de datos público acerca de los datos demográficos con el fin de comprender qué ciudades pueden interesarle para ampliar la venta.
 
-Para habilitar el uso de PolyBase en la base de datos de ejemplo, asegúrese de que está instalado y ejecute el siguiente procedimiento almacenado en la base de datos:
+Para habilitar el uso de polybase en la base de datos de ejemplo, asegúrese de que está instalado y ejecute el siguiente procedimiento almacenado en la base de datos:
 
     EXEC [Application].[Configuration_ApplyPolyBase]
 
-Esto creará una tabla externa `dbo.CityPopulationStatistics` que hace referencia a un conjunto de datos público que contiene los datos de población de las ciudades de Estados Unidos, hospedada en Azure blob storage. Se recomienda revisar el código en el procedimiento almacenado para comprender el proceso de configuración. Si desea hospedar sus propios datos en Azure blob storage y mantener la seguridad de acceso público general, deberá realizar los pasos de configuración adicionales. La siguiente consulta devuelve los datos de ese conjunto de datos externos:
+Se creará una tabla externa `dbo.CityPopulationStatistics` que hace referencia a un conjunto de datos público que contiene los datos de población de las ciudades del Estados Unidos, hospedado en Azure BLOB Storage. Se recomienda revisar el código del procedimiento almacenado para comprender el proceso de configuración. Si desea hospedar sus propios datos en Azure BLOB Storage y mantenerlos protegidos del acceso público general, deberá llevar a cabo pasos de configuración adicionales. La siguiente consulta devuelve los datos de ese conjunto de datos externos:
 
     SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
 
-Para saber qué ciudades podrían ser de interés para la expansión más, la siguiente consulta examina la tasa de crecimiento de las ciudades y devuelve las ciudades más grandes de primeros 100 con un crecimiento significativo, y donde Wide World Importers no tiene una presencia en ventas. La consulta implica una combinación entre la tabla remota `dbo.CityPopulationStatistics` y la tabla local `Dimension.City`y un filtro de la tabla local `Fact.Sales`.
+Para comprender qué ciudades pueden ser de interés para una expansión adicional, la consulta siguiente examina la tasa de crecimiento de las ciudades y devuelve las mayores 100 de las ciudades más grandes con un crecimiento significativo y donde Wide World Importers no tiene una presencia de ventas. La consulta implica una combinación entre el `dbo.CityPopulationStatistics` de la tabla remota y el `Dimension.City`de la tabla local, y un filtro que implique la `Fact.Sales`de la tabla local.
 
     WITH PotentialCities
     AS
@@ -71,19 +71,19 @@ Para saber qué ciudades podrían ser de interés para la expansión más, la si
 
 (Versión completa del ejemplo)
 
-Los índices de almacén de columnas en clúster (CCI) se usan con todas las tablas de hechos para reducir el consumo de almacenamiento y mejorar el rendimiento de las consultas. Con el uso de CCI, el almacenamiento de base para las tablas de hechos usa compresión de columnas.
+Los índices de almacén de columnas en clúster (CCI) se usan con todas las tablas de hechos, para reducir la superficie de almacenamiento y mejorar el rendimiento de las consultas. Con el uso de CCI, el almacenamiento base para las tablas de hechos usa la compresión de columnas.
 
-Los índices no clúster se utilizan en la parte superior del índice agrupado, para facilitar la clave principal y restricciones de clave externa. Estas restricciones se agregaron fuera de una gran cantidad de precaución: el proceso ETL orígenes de los datos de la base de datos WideWorldImporters, que tiene restricciones para exigir la integridad. Quitar las restricciones de clave principales y externas y sus índices auxiliares, podría reducir el consumo de almacenamiento de las tablas de hechos.
+Los índices no clúster se usan sobre el índice de almacén de columnas agrupado para facilitar las restricciones de clave principal y clave externa. Estas restricciones se han agregado fuera de una abundancia de PRECAUCIÓN: el proceso ETL origina los datos de la base de datos WideWorldImporters, que tiene restricciones para aplicar la integridad. Al quitar las restricciones de clave principal y externa, y sus índices de apoyo, se reduciría la superficie de almacenamiento de las tablas de hechos.
 
 **Tamaño de los datos**
 
-La base de datos de ejemplo tiene limitado el tamaño de los datos, para que sea fácil de descargar e instalar el ejemplo. Sin embargo, para ver las ventajas de rendimiento real de los índices de almacén de columnas, desearía usar un conjunto de datos más grande.
+La base de datos de ejemplo tiene un tamaño de datos limitado para facilitar la descarga e instalación del ejemplo. Sin embargo, para ver las ventajas de rendimiento reales de los índices de almacén de columnas, debería usar un conjunto de datos más grande.
 
-Puede ejecutar la instrucción siguiente para aumentar el tamaño de la `Fact.Sales` tabla mediante la inserción de otra de 12 millones de filas de datos de ejemplo. Todas estas filas se insertan durante el año 2012, tal que no hay interferencias con el proceso ETL.
+Puede ejecutar la siguiente instrucción para aumentar el tamaño de la tabla `Fact.Sales` insertando otras 12 millones filas de datos de ejemplo. Estas filas se insertan en el año 2012, de modo que no hay interferencias con el proceso ETL.
 
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
 
-Esta instrucción tardará aproximadamente 5 minutos para ejecutar. Para insertar más de 12 millones de filas, pase el número deseado de filas que se va a insertar como un parámetro a este procedimiento almacenado.
+Esta instrucción tardará unos 5 minutos en ejecutarse. Para insertar más de 12 millones filas, pase el número deseado de filas que se van a insertar como parámetro de este procedimiento almacenado.
 
 Para comparar el rendimiento de las consultas con y sin almacén de columnas, puede quitar o volver a crear el índice de almacén de columnas agrupado.
 
@@ -95,20 +95,20 @@ Para volver a crear:
 
     CREATE CLUSTERED COLUMNSTORE INDEX [CCX_Fact_Order] ON [Fact].[Order]
 
-## <a name="partitioning"></a>Creación de particiones
+## <a name="partitioning"></a>Particiones
 
 (Versión completa del ejemplo)
 
-Tamaño de los datos en un almacén de datos puede crecer muy grande. Por lo tanto, es recomendable utilizar la creación de particiones para administrar el almacenamiento de las tablas grandes en la base de datos.
+El tamaño de los datos en un almacenamiento de datos puede aumentar de tamaño. Por lo tanto, se recomienda utilizar las particiones para administrar el almacenamiento de las tablas grandes en la base de datos.
 
-Todas las tablas de hechos más grandes se particionan por año. La única excepción es `Fact.Stock Holdings`, que no está basado en la fecha y con el tamaño de datos limitados en comparación con las otras tablas de hechos.
+Todas las tablas de hechos mayores se particionan por año. La única excepción es `Fact.Stock Holdings`, que no se basa en la fecha y tiene un tamaño de datos limitado en comparación con las demás tablas de hechos.
 
-Es la función de partición que se usa para las tablas con particiones de todos los `PF_Date`, y el esquema de partición que se va a usar es `PS_Date`.
+La función de partición que se usa para todas las tablas con particiones es `PF_Date`y se `PS_Date`el esquema de partición que se está usando.
 
 ## <a name="in-memory-oltp"></a>OLTP en memoria
 
 (Versión completa del ejemplo)
 
-WideWorldImportersDW usa las tablas optimizadas para memoria SCHEMA_ONLY para las tablas de ensayo. Todos los `Integration.` * `_Staging` tablas son SCHEMA_ONLY optimizadas para memoria.
+WideWorldImportersDW usa SCHEMA_ONLY las tablas optimizadas para memoria para las tablas de almacenamiento provisional. Todas las tablas de `Integration.`*`_Staging` se SCHEMA_ONLY tablas optimizadas para memoria.
 
-La ventaja de las tablas SCHEMA_ONLY es que no se ha iniciado y no requieren ningún acceso al disco. Esto mejora el rendimiento del proceso ETL. Dado que estas tablas no se ha iniciado sesión, su contenido se pierden si se produce un error. Sin embargo, el origen de datos sigue estando disponible, por lo que simplemente se puede reiniciar el proceso ETL, si se produce un error.
+La ventaja de SCHEMA_ONLY tablas es que no se registran y no requieren ningún acceso a disco. Esto mejora el rendimiento del proceso ETL. Como estas tablas no se registran, su contenido se pierde si se produce un error. Sin embargo, el origen de datos sigue estando disponible, por lo que el proceso ETL simplemente se puede reiniciar si se produce un error.

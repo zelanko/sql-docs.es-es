@@ -1,5 +1,5 @@
 ---
-title: Ejemplo de funciones de utilidad de cadena | Microsoft Docs
+title: Ejemplo de funciones de la utilidad de cadena | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,24 +10,24 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62780590"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74054846"
 ---
 # <a name="string-utility-functions-sample"></a>Ejemplo de funciones de la utilidad String
   El ejemplo de funciones de la utilidad String contiene una función con valores de tabla de transmisión de datos, escrita en Visual C# y Visual Basic, que divide una cadena delimitada por comas en una tabla con una columna. También contiene una función de agregado que convierte una columna de cadenas en una cadena delimitada por comas.  Además, se implementan una función escalar y una función con valores de tabla que permiten reemplazar y buscar expresiones regulares.  
   
  Para implementar una función con valores de tabla de transmisión de datos, cree un método que devuelva un objeto que implemente la interfaz `IEnumerable`. Este método de `IEnumerable` debe estar vinculado mediante un atributo a otro método que rellene las filas de la función con valores de tabla.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://go.microsoft.com/fwlink/?LinkId=31046)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
   
--   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://go.microsoft.com/fwlink/?linkid=62796).  
+-   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://archive.codeplex.com/?p=SqlServerSamples).  
   
 -   .NET Framework SDK 2.0 o posterior, o Microsoft Visual Studio 2005 o posterior. Puede obtener .NET Framework SDK de forma gratuita.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62780590"
     -   `sqlcmd -E -I -i cleanup.sql`  
   
   
-## <a name="sample-code"></a>Código muestra  
+## <a name="sample-code"></a>Código de ejemplo  
  A continuación se muestran las listas de código para este ejemplo.  
   
  C#  

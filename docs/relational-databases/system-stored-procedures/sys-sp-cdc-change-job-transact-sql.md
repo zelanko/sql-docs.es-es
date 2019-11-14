@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bd906f9a359a73a15d89a4cb60b6646a2abe53a
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: 0c2c39363ca1b0824b27645df8c8501931b674a2
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72305066"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056765"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifica la configuración de un trabajo de captura o de limpieza de captura de datos de cambio en la base de datos actual. Para ver la configuración actual de un trabajo, consulte la tabla [dbo. CDC _jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) o use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
+  Modifica la configuración de un trabajo de captura o de limpieza de captura de datos de cambio en la base de datos actual. Para ver la configuración actual de un trabajo, consulte la tabla [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) o utilice [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,19 +53,19 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *max_trans* solo es válido para los trabajos de captura.  
   
-@no__t el número máximo de ciclos de recorrido que se ejecutarán para extraer todas las filas del registro. *max_scans* es de **tipo int** y su valor predeterminado es null, lo que indica que no hay ningún cambio para este parámetro.  
+`[ @maxscans ] = max_scans_` número máximo de ciclos de recorrido que se ejecutarán para extraer todas las filas del registro. *max_scans* es de **tipo int** y su valor predeterminado es null, lo que indica que no hay ningún cambio para este parámetro.  
   
  *max_scan* solo es válido para los trabajos de captura.  
   
 `[ @continuous ] = continuous_` indica si el trabajo de captura debe ejecutarse continuamente (1) o solo una vez (0). *Continuous* es de **bit** con un valor predeterminado de NULL, que indica que no hay ningún cambio para este parámetro.  
   
- Cuando *Continuous* = 1, el trabajo [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) examina el registro y procesa hasta (*max_trans* \* *max_scans*). Después, espera el número de segundos especificado en *polling_interval* antes de comenzar el siguiente examen del registro.  
+ Cuando *Continuous* = 1, el trabajo de [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) examina el registro y procesa hasta (*max_trans* \* *max_scans*) transacciones. Después, espera el número de segundos especificado en *polling_interval* antes de comenzar el siguiente examen del registro.  
   
- Cuando *Continuous* = 0, el trabajo **sp_cdc_scan** se ejecuta hasta *max_scans* exámenes del registro, procesando hasta *max_trans* transacciones durante cada examen y después se cierra.  
+ Cuando es *Continuous* = 0, el trabajo de **sp_cdc_scan** se ejecuta hasta *max_scans* exámenes del registro, procesando hasta *max_trans* transacciones durante cada análisis y, a continuación, se cierra.  
   
- Si **\@continuous** se cambia de 1 a 0, **\@pollinginterval** se establece automáticamente en 0. Se omite un valor especificado para **\@pollinginterval** distinto de 0.  
+ Si **\@Continuous** se cambia de 1 a 0, **\@PollingInterval** se establece automáticamente en 0. Se omite un valor especificado para **\@PollingInterval** distinto de 0.  
   
- Si se omite **\@continuous** o se establece explícitamente en NULL y **\@pollinginterval** se establece explícitamente en un valor mayor que 0, **\@continuous** se establece automáticamente en 1.  
+ Si se omite **\@Continuous** o se establece explícitamente en NULL y **\@PollingInterval** se establece explícitamente en un valor mayor que 0, **\@Continuous** se establece automáticamente en 1.  
   
  *Continuous* solo es válido para los trabajos de captura.  
   
@@ -83,10 +83,10 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
-## <a name="remarks"></a>Comentarios  
- Si se omite un parámetro, el valor asociado en la tabla [dbo. CDC _jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) no se actualiza. Un parámetro establecido explícitamente en NULL se trata como si se omitiese el parámetro.  
+## <a name="remarks"></a>Remarks  
+ Si se omite un parámetro, no se actualiza el valor asociado en la tabla [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) . Un parámetro establecido explícitamente en NULL se trata como si se omitiese el parámetro.  
   
  Si se especifica un parámetro que no es válido para el tipo de trabajo, la instrucción generará un error.  
   
@@ -111,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>b. Cambiar un trabajo de limpieza  
- En el siguiente ejemplo se actualiza un trabajo de limpieza en la base de datos `AdventureWorks2012`. Se especifican todos los parámetros válidos para este tipo de trabajo, excepto **@threshold** . El valor de **@threshold** no se modifica.  
+ En el siguiente ejemplo se actualiza un trabajo de limpieza en la base de datos `AdventureWorks2012`. Se especifican todos los parámetros válidos para este tipo de trabajo, excepto **\@umbral**. El valor de **\@umbral** no se modifica.  
   
 ```  
 USE AdventureWorks2012;  

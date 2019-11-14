@@ -1,7 +1,7 @@
 ---
-title: Actualización en SQL Server local a SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant | Microsoft Docs
-description: Aprenda a usar Data Migration Assistant para actualizar un servidor de SQL en el entorno local a una versión posterior de SQL Server o a SQL Server en máquinas virtuales de Azure
-ms.custom: ''
+title: Actualice SQL Server mediante el Data Migration Assistant
+description: Aprenda a usar Data Migration Assistant para actualizar un SQL Server local a una versión posterior de SQL Server o a SQL Server en máquinas virtuales de Azure.
+ms.custom: seo-lt-2019
 ms.date: 05/18/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,101 +14,101 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 8366b04be48df3e47e9c6d531738ebebfee45da0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058822"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056534"
 ---
-# <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Actualización local de SQL Server a SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant
+# <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Actualice SQL Server mediante el Data Migration Assistant
 
-Data Migration Assistant proporciona evaluaciones sin problemas de SQL Server local y las actualizaciones a las versiones posteriores de SQL Server o migraciones de SQL Server en máquinas virtuales de Azure o Azure SQL Database.
+El Data Migration Assistant proporciona evaluaciones sin problemas de SQL Server locales y actualizaciones a versiones posteriores de SQL Server o migraciones a SQL Server en máquinas virtuales de Azure o Azure SQL Database.
 
-Este artículo proporciona instrucciones paso a paso para actualizar SQL Server local a las versiones posteriores de SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant.
+En este artículo se proporcionan instrucciones paso a paso para actualizar SQL Server de forma local a versiones posteriores de SQL Server o a SQL Server en máquinas virtuales de Azure mediante el Data Migration Assistant.
 
-## <a name="create-a-new-migration-project"></a>Cree un nuevo proyecto de migración
+## <a name="create-a-new-migration-project"></a>Crear un nuevo proyecto de migración
 
-1. En el panel izquierdo, seleccione **New** (+) y, a continuación, el **migración** tipo de proyecto.
+1. En el panel izquierdo, seleccione **nuevo** (+) y, a continuación, el tipo de proyecto de **migración** .
 
-2. Establece el tipo de servidor de origen y destino en **SQL Server** si va a actualizar un servidor de SQL en el entorno local a una versión posterior de un entorno local de SQL Server.
+2. Establezca el tipo de servidor de origen y de destino en **SQL Server** si va a actualizar un SQL Server local a una versión posterior de SQL Server local.
 
 3. Seleccione **Crear**.
 
    ![Crear proyecto de migración](../dma/media/NewCreate.png)
 
-## <a name="specify-the-source-and-target"></a>Especificar el origen y destino
+## <a name="specify-the-source-and-target"></a>Especificar el origen y el destino
 
-1. Para el origen, escriba el nombre de instancia de SQL Server en el **nombre del servidor** campo el **detalles del servidor de origen** sección. 
+1. En origen, escriba el nombre de la instancia de SQL Server en el campo **nombre del servidor** en la sección Detalles del **servidor de origen** . 
 
-2. Seleccione el **tipo de autenticación** admitidos por la instancia de SQL Server de origen.
+2. Seleccione el **tipo de autenticación** admitido por la instancia de SQL Server de origen.
 
-3. Para el destino, escriba el nombre de instancia de SQL Server en el **nombre del servidor** campo el **detalles del servidor de destino** sección. 
+3. En destino, escriba el nombre de la instancia de SQL Server en el campo **nombre del servidor** en la sección Detalles del **servidor de destino** . 
 
-4. Seleccione el **tipo de autenticación** admitidos por la instancia de SQL Server de destino.
+4. Seleccione el **tipo de autenticación** admitido por la instancia de SQL Server de destino.
 
-5. Se recomienda cifrar la conexión seleccionando **cifrar conexión** en el **las propiedades de conexión** sección.
+5. Se recomienda cifrar la conexión seleccionando **cifrar conexión** en la sección **propiedades** de la conexión.
 
 6. Haga clic en **Next**.
 
-   ![Especificar la página de origen y destino](../dma/media/SourceTarget.png)
+   ![Especificar página de origen y de destino](../dma/media/SourceTarget.png)
 
 ## <a name="add-databases"></a>Agregar bases de datos
 
-1. Elija las bases de datos específicas que desea migrar seleccionando solo esas bases de datos, en el panel izquierdo de la **agregar bases de datos** página.
+1. Elija las bases de datos específicas que desea migrar. para ello, solo tiene que seleccionar las bases de datos en el panel izquierdo de la página **Agregar bases de datos** .
 
-   De forma predeterminada se seleccionan todas las bases de datos de usuario en la instancia de SQL Server de origen para la migración
+   De forma predeterminada, se seleccionan todas las bases de datos de usuario en la instancia de SQL Server de origen para la migración.
 
-2. Use la configuración de migración en el lado derecho de la página para establecer las opciones de migración que se aplican a las bases de datos, mediante los pasos siguientes.
+2. Use la configuración de migración que se encuentra en el lado derecho de la página para establecer las opciones de migración que se aplican a las bases de datos. para ello, haga lo siguiente.
 
    > [!NOTE]
-   > Puede aplicar la configuración de migración para todas las bases de datos que se va a migrar, seleccionando el servidor en el panel izquierdo. También puede configurar una base de datos individual con una configuración específica, seleccione la base de datos en el panel izquierdo.
+   > Puede aplicar la configuración de migración a todas las bases de datos que va a migrar, seleccionando el servidor en el panel izquierdo. También puede configurar una base de datos individual con valores específicos seleccionando la base de datos en el panel izquierdo.
 
-    a. Especifique el **comparten ubicación accesible por los servidores SQL de origen y destino para la operación de copia de seguridad**. Asegúrese de que la cuenta de servicio que ejecuta el origen tiene la instancia de SQL Server escribir privilegios en la ubicación compartida y la cuenta de servicio de destino con privilegios de lectura en la ubicación compartida.
+    A. Especifique la **ubicación compartida a la que pueden acceder los servidores SQL de origen y de destino para la operación de copia de seguridad**. Asegúrese de que la cuenta de servicio que ejecuta la instancia de SQL Server de origen tiene privilegios de escritura en la ubicación compartida y que la cuenta de servicio de destino tiene privilegios de lectura en la ubicación compartida.
 
-    b. Especifique la ubicación para restaurar los datos y archivos de registro transaccional en el servidor de destino.
+    b. Especifique la ubicación para restaurar los archivos de datos y de registro transaccionales en el servidor de destino.
 
-    ![Agregar página de las bases de datos](../dma/media/AddDatabases.png)
+    ![Página agregar bases de datos](../dma/media/AddDatabases.png)
 
-3. Escriba una ubicación compartida que las instancias de SQL Server de origen y destino tienen acceso, en el **comparten ubicación opciones** cuadro.
+3. Escriba una ubicación compartida a la que tengan acceso las instancias de SQL Server de origen y de destino, en el cuadro **Opciones de ubicación del recurso compartido** .
 
-4. Si no puede proporcionar una ubicación compartida que servidores SQL de origen y destino tienen acceso, seleccione **copiar las copias de seguridad de base de datos en una ubicación diferente que el servidor de destino pueda leer y restaurar desde**. A continuación, escriba un valor para el **ubicación para las copias de seguridad para la opción de restauración** cuadro. 
+4. Si no puede proporcionar una ubicación compartida a la que los servidores SQL de origen y de destino tengan acceso, seleccione **copiar las copias de seguridad de base de datos en una ubicación diferente de la que el servidor de destino pueda leer y restaurar**. A continuación, escriba un valor para el cuadro **de opción ubicación de copias de seguridad para restaurar** . 
 
-   Asegúrese de que la cuenta de usuario que ejecuta Data Migration Assistant con privilegios de lectura para la ubicación de copia de seguridad y privilegios de escritura en la ubicación desde la que se restaura el servidor de destino.
+   Asegúrese de que la cuenta de usuario que ejecuta Data Migration Assistant tiene privilegios de lectura en la ubicación de copia de seguridad y privilegios de escritura en la ubicación desde la que restaura el servidor de destino.
 
-   ![Opción para copiar las copias de seguridad de base de datos en otra ubicación](../dma/media/CopyDatabaseDifferentLocation.png)
+   ![Opción para copiar copias de seguridad de base de datos en una ubicación diferente](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. Seleccione **Next** (Siguiente).
+5. Seleccione **Siguiente**.
 
-Data Migration Assistant realiza comprobaciones en las carpetas de copia de seguridad, datos y ubicaciones de archivos de registro. Si se produce un error de validación, corregir las opciones y, a continuación, seleccione **siguiente**.
+El Data Migration Assistant realiza validaciones en las carpetas de copia de seguridad, los datos y las ubicaciones del archivo de registro. Si se produce un error en la validación, corrija las opciones y, a continuación, seleccione **siguiente**.
 
-## <a name="select-logins"></a>Seleccione los inicios de sesión
+## <a name="select-logins"></a>Seleccionar inicios de sesión
 
-1. Seleccione los inicios de sesión específicos para la migración.
+1. Seleccione inicios de sesión específicos para la migración.
 
    > [!IMPORTANT]
-   > Asegúrese de seleccionar los inicios de sesión que se asignan a los usuarios de una o varias de las bases de datos seleccionadas para la migración.   
+   > Asegúrese de seleccionar los inicios de sesión asignados a uno o más usuarios en las bases de datos seleccionadas para la migración.   
 
-   De forma predeterminada, se seleccionan los inicios de sesión de SQL Server y Windows que cumplen los requisitos para la migración para la migración.
+   De forma predeterminada, se seleccionan todos los inicios de sesión de SQL Server y Windows que se pueden habilitar para la migración.
 
 2. Seleccione **Iniciar migración**.
 
-   ![Seleccione los inicios de sesión e iniciar la migración](../dma/media/SelectLogins.png)
+   ![Seleccionar inicios de sesión e iniciar la migración](../dma/media/SelectLogins.png)
 
-## <a name="view-results"></a>Ver los resultados
+## <a name="view-results"></a>Vista de resultados
 
-Puede supervisar el progreso de la migración en el **ver resultados** página.
+Puede supervisar el progreso de la migración en la página **ver resultados** .
 
-![Página de resultados de vista](../dma/media/ViewResults.png)
+![Página ver resultados](../dma/media/ViewResults.png)
 
-## <a name="export-migration-results"></a>Exportar resultados de la migración
+## <a name="export-migration-results"></a>Exportar resultados de migración
 
-1. Haga clic en **Exportar informe** en la parte inferior de la **ver resultados** página para guardar los resultados de la migración a un archivo CSV.
+1. Haga clic en **exportar Informe** en la parte inferior de la página **ver resultados** para guardar los resultados de la migración en un archivo CSV.
 
-2. Revise el archivo guardado para obtener más información sobre la migración de inicio de sesión y, a continuación, comprobar los cambios.
+2. Revise el archivo guardado para obtener más información acerca de la migración de inicio de sesión y, a continuación, compruebe los cambios.
 
 ## <a name="see-also"></a>Vea también
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Asistente para la migración de datos: Opciones de configuración](../dma/dma-configurationsettings.md)
-- [Asistente para la migración de datos: Procedimientos recomendados](../dma/dma-bestpractices.md)
+- [Data Migration Assistant: opciones de configuración](../dma/dma-configurationsettings.md)
+- [Data Migration Assistant: procedimientos recomendados](../dma/dma-bestpractices.md)

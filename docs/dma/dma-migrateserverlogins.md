@@ -1,7 +1,6 @@
 ---
-title: Migre SQL Server inicios de sesión con Data Migration Assistant | Microsoft Docs
+title: Migre SQL Server inicios de sesión con Data Migration Assistant
 description: Obtenga información sobre cómo migrar inicios de sesión de SQL Server con Data Migration Assistant
-ms.custom: ''
 ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,12 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-ms.openlocfilehash: 265ab37c47956400baa759b73838c7f2e66cc83e
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72783273"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056477"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migre SQL Server inicios de sesión con Data Migration Assistant
 
@@ -34,7 +34,7 @@ En este artículo se proporciona información general sobre la migración de ini
 
 - Actualmente, Data Migration Assistant no admite los inicios de sesión asociados a un certificado de seguridad independiente (inicios de sesión asignados a certificados), una clave asimétrica independiente (inicios de sesión asignados a la clave asimétrica) e inicios de sesión asignados a las credenciales.
 
-- Data Migration Assistant no mueve el inicio de sesión **SA** y los principios del servidor con nombres delimitados por marcas hash dobles (\# \#), que solo son para uso interno.
+- Data Migration Assistant no mueve el inicio de sesión **SA** y los principios del servidor con nombres delimitados por marcas hash dobles (\#\#), que solo son para uso interno.
 
 - De forma predeterminada, Data Migration Assistant selecciona todos los inicios de sesión calificados que se van a migrar. Opcionalmente, puede seleccionar inicios de sesión específicos para migrar. Cuando Data Migration Assistant migra todos los inicios de sesión calificados, la asignación de usuario de inicio de sesión permanece intacta en las bases de datos que se migran.
 

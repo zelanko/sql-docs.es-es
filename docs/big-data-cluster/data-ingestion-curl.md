@@ -1,7 +1,7 @@
 ---
 title: Empleo de curl para cargar datos en HDFS | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: Use rizo para cargar datos en HDFS en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Use curl para cargar datos en HDFS en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,20 +9,20 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c65ce7fb6752240f0dd23a6dab195539146e7933
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049875"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706626"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Usar rizo para cargar datos en HDFS en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Empleo de curl para cargar datos en HDFS en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se explica cómo usar **rizo** para cargar datos en HDFS en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar).
+En este artículo se explica cómo usar **curl** para cargar datos en HDFS en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-## <a id="prereqs"></a> Prerequisites
+## <a id="prereqs"></a> Requisitos previos
 
 - [Cargar datos de ejemplo en un clúster de macrodatos](tutorial-load-sample-data.md)
 
@@ -49,7 +49,7 @@ Por ejemplo:
 
 ## <a name="list-a-file"></a>Enumeración de un archivo
 
-Para mostrar el archivo en **HDFS:///product_review_data**, use el siguiente comando de rizo:
+Para mostrar el archivo de **hdfs:///product_review_data**, use el siguiente comando de curl:
 
 ```bash
 curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
@@ -57,7 +57,7 @@ curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP extern
 
 ## <a name="put-a-local-file-into-hdfs"></a>Colocación de un archivo local en HDFS
 
-Para colocar un nuevo archivo **Test. csv** desde el directorio local en el directorio product_review_data, use el siguiente comando de rizo (se requiere el parámetro **Content-Type** ):
+Para colocar un nuevo archivo **test. csv** desde el directorio local en el directorio product_review_data, use el siguiente comando de curl (se requiere el parámetro **Content-Type**):
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'

@@ -1,7 +1,7 @@
 ---
 title: Ingerir datos en un grupo de datos de SQL Server
 titleSuffix: SQL Server big data clusters
-description: En este tutorial se muestra cómo introducir datos en el grupo de datos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]de.
+description: En este tutorial, se muestra cómo ingerir datos en el grupo de datos de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653311"
@@ -20,7 +20,7 @@ ms.locfileid: "69653311"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este tutorial se muestra cómo usar Transact-SQL para cargar datos en el [Grupo](concept-data-pool.md) de datos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]de. Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], los datos de una variedad de orígenes se pueden ingerir y distribuir entre instancias del grupo de datos.
+En este tutorial, se muestra cómo usar Transact-SQL para cargar datos en el [grupo de datos](concept-data-pool.md) de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], se pueden ingerir y distribuir datos de una amplia variedad de orígenes en varias instancias de grupos de datos.
 
 En este tutorial, aprenderá a:
 

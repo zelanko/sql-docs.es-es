@@ -10,15 +10,15 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 08/20/2019
+ms.date: 11/06/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 308cc4189361c795115c061b871238aaba430279
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903618"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727765"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errores comunes en el cifrado de datos transparente con claves administradas por el cliente en Azure Key Vault
 
@@ -26,14 +26,13 @@ ms.locfileid: "69903618"
 En este artículo se describe cómo identificar y resolver los problemas de acceso a la clave de Azure Key Vault que causaron que una base de datos configurada para utilizar el cifrado de datos transparente (TDE) de [ con claves administradas por el cliente en Azure Key Vault](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql) dejara de estar accesible.
 
 ## <a name="introduction"></a>Introducción
-Cuando TDE está configurado para usar una clave administrada por el cliente en Azure Key Vault, es necesario el acceso continuo a este protector de TDE para que la base de datos esté en línea.  Si el servidor lógico de SQL pierde el acceso al protector de TDE administrado por el cliente en Azure Key Vault, una base de datos denegará todas las conexiones y aparecerá como inaccesible en Azure Portal.
+Cuando TDE está configurado para usar una clave administrada por el cliente en Azure Key Vault, es necesario el acceso continuo a este protector de TDE para que la base de datos esté en línea.  Si el servidor lógico de SQL pierde el acceso al protector de TDE administrado por el cliente en Azure Key Vault, una base de datos empezará a denegar todas las conexiones con su correspondiente mensaje de error y cambiará su estado a *Inaccesible* en Azure Portal.
 
-Durante las primeras 48 horas, si se resuelve el problema de acceso a la clave de Azure Key Vault subyacente, la base de datos se restaurará y se conectará en línea automáticamente.  Esto significa que para todos los escenarios de interrupción de la red intermitentes y temporales, no se requiere ninguna acción del usuario y la base de datos se conectará en línea automáticamente.  En la mayoría de los casos, se requiere la intervención del usuario para resolver el problema de acceso a la clave del almacén de claves subyacente. 
+Durante las primeras 8 horas, si se resuelve el problema de acceso a la clave de Azure Key Vault subyacente, la base de datos se restaurará y se conectará en línea automáticamente. Esto significa que para todos los escenarios de interrupción de la red intermitentes y temporales, no se requiere ninguna acción del usuario y la base de datos se conectará en línea automáticamente. En la mayoría de los casos, se requiere la intervención del usuario para resolver el problema de acceso a la clave del almacén de claves subyacente. 
 
-Si ya no se necesita una base de datos inaccesible, puede eliminarse inmediatamente para dejar de incurrir en gastos.  No se permiten todas las demás acciones en la base de datos hasta que se restaure el acceso a la clave de Azure Key Vault y la base de datos vuelva a estar en línea.   Tampoco se admite cambiar en el servidor la opción de TDE de claves administradas por el cliente por la de claves administradas por el servicio mientras una base de datos cifrada con claves administradas por el cliente sea inaccesible. Esto es necesario para proteger los datos contra el acceso no autorizado mientras se han revocado los permisos para el protector de TDE. 
+Si ya no se necesita una base de datos inaccesible, puede eliminarse inmediatamente para dejar de incurrir en gastos. No se permiten todas las demás acciones en la base de datos hasta que se restaure el acceso a la clave de Azure Key Vault y la base de datos vuelva a estar en línea. Tampoco es posible cambiar en el servidor la opción de TDE de claves administradas por el cliente por la de claves administradas por el servicio mientras una base de datos cifrada con claves administradas por el cliente sea inaccesible. Esto es necesario para proteger los datos contra el acceso no autorizado mientras se han revocado los permisos para el protector de TDE. 
 
-Cuando no se pueda obtener acceso a una base de datos durante más de 48 horas, ya no se realizará la restauración automática.  Si se ha restaurado el acceso a la clave de Azure Key Vault requerido, debe volver a validar el acceso manualmente para que la base de datos vuelva a estar en línea.  Volver a poner la base de datos en línea después de que no se haya podido obtener acceso durante más de 48 horas puede tardar una cantidad considerable de tiempo según el tamaño de la base de datos y, actualmente, requiere una incidencia de soporte técnico. Una vez que la base de datos vuelve a estar en línea, se perderán los valores configurados previamente, como el vínculo geográfico, si se configuró geo-DR, el historial de PITR y las etiquetas.  Por tanto, se recomienda implementar un sistema de notificación mediante [Grupos de acciones](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) que permita resolver los problemas subyacentes del almacén de claves en 48 horas. 
-
+Cuando no se pueda obtener acceso a una base de datos durante más de 8 horas, ya no se realizará la restauración automática. Si tras dicho período se ha restaurado el acceso a la clave de Azure Key Vault requerido, debe volver a validar el acceso manualmente para que la base de datos vuelva a estar en línea. En este caso, volver a poner la base de datos en línea puede tardar una cantidad considerable de tiempo según el tamaño de la base de datos y, actualmente, requiere la apertura de una incidencia de soporte técnico. Una vez que la base de datos vuelve a estar en línea, se perderán los valores configurados previamente, como el vínculo geográfico, si se configuró geo-DR, el historial de PITR y las etiquetas. Por tanto, se recomienda implementar un sistema de notificación mediante [Grupos de acciones](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) que permita percatarse y resolver los problemas de acceso a la clave del almacén de claves subyacentes lo antes posible. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Errores comunes que hacen que las bases de datos dejen de estar accesibles
 
@@ -176,13 +175,13 @@ Descripción: La base de datos ha perdido el acceso a la clave del almacén de c
 
  
 
-**Evento cuando comienza el tiempo de espera de 48 horas para la restauración automática** 
+**Evento cuando comienza el tiempo de espera de 8 horas para la restauración automática** 
 
 EventName: MakeDatabaseInaccessible 
 
 Estado: InProgress 
 
-Descripción: La base de datos está esperando a que el usuario vuelva a establecer el acceso a la clave del almacén de claves de Azure en un plazo de 48 horas.   
+Descripción: La base de datos está esperando a que el usuario vuelva a establecer el acceso a la clave del almacén de claves de Azure en un plazo de 8 horas.   
 
  
 
@@ -196,7 +195,7 @@ Descripción: Se ha restablecido el acceso a la clave del almacén de claves de 
 
  
 
-**Evento cuando el problema no se ha resuelto en 48 horas y el acceso a la clave de Azure Key Vault debe validarse manualmente** 
+**Evento cuando el problema no se ha resuelto en 8 horas y el acceso a la clave de Azure Key Vault debe validarse manualmente** 
 
 EventName: MakeDatabaseInaccessible 
 

@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
 ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71341840"
@@ -22,30 +22,30 @@ ms.locfileid: "71341840"
 
 En este tutorial, usará un script de implementación de bash de ejemplo para implementar un clúster de Kubernetes de un solo nodo con kubeadm y un clúster de macrodatos SQL Server en él.  
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-- Una máquina virtual o física de **servidor** Ubuntu 18,04 o 16,04 de vainilla. El script, que se ejecuta desde la máquina virtual, configura todas las dependencias.
+- Una máquina física o virtual de **servidor** de Vanilla Ubuntu 18.04 o 16.04. El script, que se ejecuta desde la máquina virtual, configura todas las dependencias.
 
   > [!NOTE]
   > Todavía no se admite el uso de máquinas virtuales Linux de Azure.
 
-- La máquina virtual debe tener al menos 8 CPU, 64 GB de RAM y 100 GB de espacio en disco. Después de extraer todas las imágenes de Docker del clúster de macrodatos, le quedarán 50 GB para los datos y los registros de todos los componentes.
+- La máquina virtual debe tener al menos 8 CPU, 64 GB de RAM y 100 GB de espacio en disco. Después de extraer todas las imágenes de Docker del clúster de macrodatos, le quedarán 50 GB para los datos y los registros de todos los componentes.
 
-- Actualice los paquetes existentes mediante los comandos siguientes para asegurarse de que la imagen del sistema operativo está actualizada.
+- Actualice los paquetes existentes con los siguientes comandos para asegurarse de que la imagen del sistema operativo está actualizada.
 
    ``` bash
    sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 
-## <a name="recommended-virtual-machine-settings"></a>Configuración recomendada de la máquina virtual
+## <a name="recommended-virtual-machine-settings"></a>Configuración recomendada de máquinas virtuales
 
-1. Use la configuración de memoria estática para la máquina virtual. Por ejemplo, en las instalaciones de Hyper-V no se usa la asignación dinámica de memoria, sino que asignan los 64 GB recomendados o superiores.
+1. Use la configuración de memoria estática para la máquina virtual. Por ejemplo, en las instalaciones de Hyper-V no se debe usar la asignación de memoria dinámica, sino que se deben asignar los 64 GB recomendados o más.
 
-1. Use la funcionalidad de punto de control o de instantáneas de Hyper-visor para que pueda revertir la máquina virtual a un estado limpio.
+1. Use la funcionalidad de punto de control o de instantánea del hipervisor para poder revertir la máquina virtual a un estado limpio.
 
 
-## <a name="instructions-to-deploy-sql-server-big-data-cluster"></a>Instrucciones para implementar SQL Server clúster de Big Data
+## <a name="instructions-to-deploy-sql-server-big-data-cluster"></a>Instrucciones para implementar el clúster de macrodatos de SQL Server
 
 1. Descargue el script en la máquina virtual que planea usar para la implementación.
 
@@ -59,13 +59,13 @@ En este tutorial, usará un script de implementación de bash de ejemplo para im
    chmod +x setup-bdc.sh
    ```
 
-3. Ejecute el script (Asegúrese de que está ejecutando con *sudo*)
+3. Ejecute el script (asegúrese de que lo está ejecutando con *sudo*).
 
    ```bash
    sudo ./setup-bdc.sh
    ```
 
-   Cuando se le solicite, proporcione la contraseña que se va a usar para los siguientes puntos de conexión externos: controlador, SQL Server maestro y puerta de enlace. La contraseña debe ser suficientemente compleja en función de las reglas existentes para SQL Server contraseña. De forma predeterminada, el nombre de usuario del controlador es *admin*.
+   Cuando se le solicite, proporcione la contraseña que se va a usar para los siguientes puntos de conexión externos: controlador, SQL Server maestro y puerta de enlace. La contraseña debe ser suficientemente compleja en función de las reglas existentes para las contraseñas de SQL Server. De forma predeterminada, el nombre de usuario del controlador es *admin*.
 
 4. Configure un alias para la herramienta **azdata**.
 
@@ -81,8 +81,8 @@ En este tutorial, usará un script de implementación de bash de ejemplo para im
 
 ## <a name="cleanup"></a>Limpiar
 
-El script [Cleanup-BDC.sh](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/cleanup-bdc.sh) se proporciona como comodidad para restablecer el entorno si es necesario. Sin embargo, se recomienda usar una máquina virtual con fines de prueba y usar la funcionalidad de instantánea en el hipervisor para revertir la máquina virtual a un estado limpio.
+El script [cleanup-bdc.sh](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/cleanup-bdc.sh) se proporciona para facilitarle el restablecimiento del entorno si es necesario. Sin embargo, se recomienda usar una máquina virtual con fines de prueba y usar la funcionalidad de instantánea en el hipervisor para revertir la máquina virtual a un estado limpio.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para empezar a usar los clústeres de Big Data, consulte @no__t 0Tutorial: Carga de datos de ejemplo en un SQL Server clúster de macrodatos @ no__t-0.
+Para empezar a usar los clústeres de macrodatos, consulte [Tutorial: Carga de datos de ejemplo en un clúster de macrodatos de SQL Server](tutorial-load-sample-data.md).

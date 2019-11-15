@@ -5,28 +5,27 @@ description: Aprenda a explorar y administrar Azure SQL Server, Azure SQL Databa
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.date: 09/24/2018
+ms.openlocfilehash: 2a1f62ed9266b0575f037dfe9541a026a4c1ed29
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959714"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801135"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Exploración y administración de recursos de Azure SQL con Azure Resource Explorer
 
 En este documento aprenderá a explorar y administrar recursos de Azure SQL Server, Azure SQL Database e Instancia administrada de Azure SQL con Azure Resource Explorer en [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
 >[!NOTE]
->En octubre, Azure Resource Explorer será compatible en la versión preliminar de SQL Server 2019. Llegado ese momento, podrá instalar la extensión de vista previa a través del [administrador de extensiones](extensions.md) o mediante **Archivo** > **Install Package from VSIX Package** (Instalar paquete desde paquete VSIX).
-
+>El Azure Resource Explorer se admite en SQL Server 2019. Llegado ese momento, podrá instalar la extensión mediante el [administrador de extensiones](extensions.md) o mediante **Archivo** > **Instalar paquete desde paquete VSIX**.
 
 ## <a name="connect-to-azure"></a>Conexión con Azure
 
-Después de instalar el complemento de vista previa de SQL, aparecerá un icono de Azure en la barra de menús de la izquierda. Haga clic en él para abrir Azure Resource Explorer. Si no lo ve, haga clic con el botón derecho en la barra de menús de la izquierda y seleccione **Azure Resource Explorer**.
+Después de instalar el complemento de SQL, aparecerá un icono de Azure en la barra de menús de la izquierda. Haga clic en él para abrir Azure Resource Explorer. Si no lo ve, haga clic con el botón derecho en la barra de menús de la izquierda y seleccione **Azure Resource Explorer**.
 
 ### <a name="add-an-azure-account"></a>Adición de una cuenta de Azure
 
@@ -87,7 +86,7 @@ Actualmente, Azure Resource Explorer es compatible con Azure SQL Server, con Azu
 
 ## <a name="connect-to-azure-sql-resources"></a>Conexión a recursos de Azure SQL
 
-Azure Resource Explorer proporciona un acceso rápido que ayuda a conectarse a los servidores y bases de datos de SQL Server para su consulta y administración. 
+Azure Resource Explorer proporciona un acceso rápido que ayuda a conectarse a los servidores y bases de datos de SQL Server para su consulta y administración.
 
 1. Explore el recurso de SQL al que quiera conectarse desde la vista de árbol.
 2. Haga clic con el botón derecho en el recurso y seleccione **Conectar**; encontrará este botón también a la derecha del recurso.

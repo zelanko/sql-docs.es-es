@@ -1,24 +1,25 @@
 ---
-title: Supervisión de scripts de Python y R con eventos extendidos
-description: Aprenda a usar eventos extendidos para supervisar y solucionar problemas de operaciones relacionadas con los scripts externos de SQL Server Machine Learning Services, SQL Server Launchpad y Python o R.
+title: Supervisar scripts con eventos extendidos
+description: Obtenga información sobre cómo usar eventos extendidos para supervisar y solucionar problemas de operaciones relacionadas con los scripts externos de trabajos de Python o R, SQL Server Machine Learning Services y SQL Server Launchpad.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/24/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6faef1bd78b1c1aa42714da75679dc989f0b9da9
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MT
+ms.openlocfilehash: 272e92bed10261b5701e2dcb4d35092ad11d59c3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714389"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727739"
 ---
-# <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Supervise los scripts de Python y R con eventos extendidos en SQL Server Machine Learning Services
+# <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Supervisar scripts de Python o R con eventos extendidos en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Aprenda a usar eventos extendidos para supervisar y solucionar problemas de operaciones relacionadas con los scripts externos de SQL Server Machine Learning Services, SQL Server Launchpad y Python o R.
+Obtenga información sobre cómo usar eventos extendidos para supervisar y solucionar problemas de operaciones relacionadas con los scripts externos de trabajos de Python o R, SQL Server Machine Learning Services y SQL Server Launchpad.
 
 ## <a name="extended-events-for-sql-server-machine-learning-services"></a>Eventos extendidos para SQL Server Machine Learning Services
 
@@ -33,13 +34,13 @@ WHERE o.object_type = 'event'
 AND p.name = 'SQLSatellite';
 ```
 
-Para obtener más información sobre cómo usar eventos extendidos, vea [herramientas de eventos extendidos](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
+Para obtener más información sobre cómo usar eventos extendidos, vea [Herramientas de eventos extendidos](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools).
 
 ## <a name="additional-events-specific-to-machine-learning-services"></a>Eventos adicionales específicos de Machine Learning Services
 
-Hay eventos extendidos adicionales disponibles para los componentes que están relacionados y utilizados por SQL Server Machine Learning Services, como los [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] y BXLServer, y el proceso satélite que inicia el Runtime de Python o R. Estos eventos extendidos adicionales se desencadenan desde los procesos externos; por lo tanto, se deben capturar con una utilidad externa.
+Hay eventos extendidos adicionales disponibles para los componentes que están relacionados y que se usan en SQL Server Machine Learning Services, como [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] y BXLServer, y el proceso satélite que inicia el entorno de ejecución de R o Python. Estos eventos extendidos adicionales se desencadenan desde los procesos externos; por lo tanto, se deben capturar con una utilidad externa.
 
-Para obtener más información sobre cómo hacerlo, vea la sección [recopilación de eventos de procesos externos](#bkmk_externalevents).
+Para obtener más información sobre cómo hacerlo, vea la sección [Recopilar eventos de procesos externos](#bkmk_externalevents).
 
 <a name="bkmk_xeventtable"></a> 
 
@@ -55,10 +56,10 @@ Para obtener más información sobre cómo hacerlo, vea la sección [recopilaci�
 |satellite_authentication_completion|Se activa cuando se completa la autenticación para una conexión a través de TCP o una canalización con nombre.||  
 |satellite_authorization_completion|Se activa cuando se completa la autorización para una conexión a través de TCP o una canalización con nombre.||  
 |satellite_cleanup|Se activa cuando la instancia subsidiaria llama a la instrucción de limpieza.|Se activa solo desde procesos externos. Consulte las instrucciones sobre la colección de eventos desde procesos externos.|  
-|satellite_data_chunk_sent|Se activa cuando la conexión subsidiaria termina de enviar un único fragmento de datos.|El evento informa del número de filas enviadas, el número de columnas, el número de paquetes SNI usados y el tiempo transcurrido en milisegundos durante el envío del fragmento. La información puede ayudarle a comprender cuánto tiempo se dedicó a pasar distintos tipos de datos, y cuántos paquetes se usaron.|  
+|satellite_data_chunk_sent|Se activa cuando la conexión subsidiaria termina de enviar un único fragmento de datos.|El evento notifica el número de filas enviadas, el número de columnas, el número de paquetes SNI usados y el tiempo transcurrido en milisegundos al enviar el fragmento. La información puede ayudarle a comprender cuánto tiempo se dedicó a pasar distintos tipos de datos, y cuántos paquetes se usaron.|  
 |satellite_data_receive_completion|Se activa cuando se reciben todos los datos que necesita una consulta a través de una conexión subsidiaria.|Se activa solo desde procesos externos. Consulte las instrucciones sobre la colección de eventos desde procesos externos.|  
 |satellite_data_send_completion|Se activa cuando se envían todos los datos necesarios para una sesión a través de la conexión subsidiaria.||  
-|satellite_data_send_start|Se desencadena cuando se inicia la transmisión de datos.| La transmisión de datos se inicia justo antes de enviar el primer fragmento de datos.|  
+|satellite_data_send_start|Se desencadena cuando se inicia la transmisión de datos.| La transmisión de datos se inicia justo antes de enviarse el primer fragmento de datos.|  
 |satellite_error|Se utiliza para realizar un seguimiento de un error en una instancia subsidiaria de SQL.||  
 |satellite_invalid_sized_message|El tamaño del mensaje no es válido.||  
 |satellite_message_coalesced|Se utiliza para realizar un seguimiento de la fusión de mensajes en la capa de red.||  
@@ -76,29 +77,29 @@ Para obtener más información sobre cómo hacerlo, vea la sección [recopilaci�
 |launchpad_launch_start|Se activa cuando Launchpad empieza a iniciar una instancia subsidiaria.|Solo se activa desde Launchpad. Consulte las instrucciones sobre la recopilación de eventos desde launchpad.exe.|  
 |launchpad_resume_sent|Se activa cuando Launchpad ha iniciado la instancia subsidiaria y enviado un mensaje de reanudación a SQL Server.|Solo se activa desde Launchpad. Consulte las instrucciones sobre la recopilación de eventos desde launchpad.exe.|  
 |satellite_data_chunk_sent|Se activa cuando la conexión subsidiaria termina de enviar un único fragmento de datos.|Contiene información sobre el número de columnas, de filas y de paquetes, así como del tiempo necesitado para enviar el fragmento.|  
-|satellite_sessionId_mismatch|No se esperaba el ID. de sesión del mensaje||  
+|satellite_sessionId_mismatch|No se esperaba el identificador de sesión del mensaje||  
 
 <a name="bkmk_externalevents"></a>
 
 ### <a name="collecting-events-from-external-processes"></a>Recopilación de eventos de procesos externos
 
-SQL Server Machine Learning Services inicia algunos servicios que se ejecutan fuera del proceso de SQL Server. Para capturar los eventos relacionados con estos procesos externos, debe crear un archivo de configuración de seguimiento de eventos y colocar el archivo en el mismo directorio que el ejecutable del proceso.  
+SQL Server Machine Learning Services inicia algunos servicios que se ejecutan fuera del proceso de SQL Server. Para capturar los eventos relacionados con estos procesos externos, debe crear un archivo de configuración de seguimiento de ingresos y colocarlo en el mismo directorio que el ejecutable del proceso.  
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    Para capturar los eventos relacionados con Launchpad, coloque el archivo *.config* en el directorio Binn de la instancia de SQL Server. En una instalación predeterminada, esto sería:
+    Para capturar los eventos relacionados con Launchpad, coloque el archivo *.config* en el directorio Binn de la instancia de SQL Server. En una instalación predeterminada, este sería:
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`  
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
 + **BXLServer** es el proceso satélite que admite la extensibilidad de SQL con lenguajes de script externos, como R o Python. Se inicia una instancia independiente de BxlServer para cada instancia de lenguaje externo.
   
-    Para capturar los eventos relacionados con BXLServer, coloque el archivo *. config* en el directorio de instalación de R o Python. En una instalación predeterminada, esto sería:
+    Para capturar los eventos relacionados con BXLServer, coloque el archivo *.config* en el directorio de instalación de R o Python. En una instalación predeterminada, este sería:
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
     **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
 
-El archivo de configuración debe tener el mismo nombre que el ejecutable, con el formato "[nombre]. xevents. xml". Dicho de otro modo, los archivos deben tener el siguiente nombre:
+El archivo de configuración se debe llamar igual que el ejecutable, con el formato "[nombre].xevents.xml". Dicho de otro modo, los archivos deben tener el siguiente nombre:
 
 + `Launchpad.xevents.xml`
 + `bxlserver.xevents.xml`
@@ -121,12 +122,12 @@ El propio archivo de configuración presenta el siguiente formato:
 </event_sessions>  
 ```
 
-+ Para configurar el seguimiento, edite el marcador de posición de *nombre de sesión* , el`[SessionName].xel`marcador de posición para el nombre de archivo () y los nombres de los eventos `[XEvent Name 1]`que `[XEvent Name 1]`desea capturar, por ejemplo,,).  
-+ Puede aparecer cualquier número de etiquetas de paquete de eventos y se recopilarán siempre que el atributo name sea correcto.
++ Para configurar el seguimiento, edite el marcador de posición *nombre sesión*, el marcador de posición del nombre de archivo (`[SessionName].xel`) y los nombres de los eventos que quiere capturar (por ejemplo, `[XEvent Name 1]`, `[XEvent Name 1]`).  
++ Es posible que aparezca cualquier número de etiquetas de paquete de eventos y se recopilarán siempre que el atributo de nombre sea correcto.
 
 ### <a name="example-capturing-launchpad-events"></a>Ejemplo: Capturar eventos de Launchpad
 
-En el ejemplo siguiente se muestra la definición de un seguimiento de eventos para el servicio Launchpad:
+En el siguiente ejemplo se muestra la definición de un seguimiento de eventos para el servicio Launchpad:
 
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
@@ -145,9 +146,9 @@ En el ejemplo siguiente se muestra la definición de un seguimiento de eventos p
 ```
 
 + Coloque el archivo *.config* en el directorio Binn de la instancia de SQL Server.
-+ Este archivo debe tener nombre `Launchpad.xevents.xml`.
++ Este archivo debe tener el nombre `Launchpad.xevents.xml`.
 
-### <a name="example-capturing-bxlserver-events"></a>Ejemplo: Capturar eventos BXLServer  
+### <a name="example-capturing-bxlserver-events"></a>Ejemplo: Capturar eventos de BXLServer  
 
 En el siguiente ejemplo se muestra la definición de un seguimiento de eventos para el ejecutable BXLServer.
   
@@ -175,9 +176,9 @@ En el siguiente ejemplo se muestra la definición de un seguimiento de eventos p
 ```
 
 + Coloque el archivo *.config* en el mismo directorio que el ejecutable BXLServer.
-+ Este archivo debe tener nombre `bxlserver.xevents.xml`.
++ Este archivo debe tener el nombre `bxlserver.xevents.xml`.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Supervisión de la ejecución de scripts de Python y R mediante informes personalizados en SQL Server Management Studio](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
+- [Supervisar la ejecución de scripts de Python y R mediante informes personalizados en SQL Server Management Studio](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md)
 - [Supervisar SQL Server Machine Learning Services mediante vistas de administración dinámica (DMV)](../../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md)

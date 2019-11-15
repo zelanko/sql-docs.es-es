@@ -1,5 +1,5 @@
 ---
-title: Administración de clústeres de macrodatos SQL Server con cuadernos de Azure Data Studio
+title: Administración de clústeres de macrodatos de SQL Server con cuadernos de Azure Data Studio
 titleSuffix: Manage SQL Server Big Data Clusters with Azure Data Studio notebooks
 description: Use un cuaderno de Azure Data Studio para administrar un clúster de macrodatos y solucionar problemas de este.
 author: yualan
@@ -9,65 +9,65 @@ ms.date: 09/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e22b16cf8658e53e6bdc5db0fcd82692f3730fc7
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
-ms.translationtype: MT
+ms.openlocfilehash: 860524daa5e6ab2db17fdf95cf5aa785aeb4fdf7
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313679"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844285"
 ---
-# <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Administración de clústeres de macrodatos SQL Server con cuadernos de Azure Data Studio
+# <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Administración de clústeres de macrodatos de SQL Server con cuadernos de Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] proporciona una extensión para Azure Data Studio que incluye cuadernos. Un cuaderno proporciona documentación y código que puede usar en Azure Data Studio para administrar clústeres de macrodatos de SQL Server 2019.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] proporciona una extensión para Azure Data Studio que incluye cuadernos. Un cuaderno proporciona documentación y código que se puede usar en Azure Data Studio para administrar clústeres de macrodatos de SQL Server 2019.
 
-Los [notebooks](notebooks-guidance.md) se han implementado en [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download)originalmente como un proyecto de código abierto. Puede usar Markdown para el texto de las celdas de texto y uno de los kernels disponibles para escribir código en las celdas de código.
+Los [cuadernos](notebooks-guidance.md), que originalmente se implementaban como un proyecto de código abierto, se han incorporado a [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download). Puede usar Markdown para el texto de las celdas de texto y uno de los kernels disponibles para escribir código en las celdas de código.
 
 Puede usar cuadernos para implementar clústeres de macrodatos para [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-Además de los cuadernos, puede ver una colección de cuadernos, que se denomina libro Jupyter. Un libro de Jupyter proporciona una tabla de contenido para ayudarle a navegar por una colección de blocs de notas para que pueda encontrar fácilmente el cuaderno que necesita, si desea solucionar problemas SQL Server o ver el estado del clúster.
+Además de los cuadernos, puede ver una colección de cuadernos, que se denomina "libro de Jupyter". Un libro de Jupyter proporciona una tabla de contenido que le permite examinar una colección de cuadernos para que pueda encontrar fácilmente el cuaderno que necesita, tanto para solucionar problemas de SQL Server como para ver el estado del clúster.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Necesitará estos requisitos previos para abrir un cuaderno:
+Deberá cumplir estos requisitos previos para abrir un cuaderno:
 
-* La versión más reciente de la [compilación de Azure Data Studio Insiders](https://aka.ms/azuredatastudio-rc)
-* La extensión [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], instalada en Azure Data Studio
+* La versión más reciente de la [compilación Azure Data Studio Insiders](https://aka.ms/azuredatastudio-rc)
+* La extensión [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] instalada en Azure Data Studio
 
-Además de estos requisitos previos, para implementar clústeres de macrodatos SQL Server 2019, también necesita:
+Además de estos requisitos previos, para implementar clústeres de macrodatos de SQL Server 2019, también necesitará:
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [CLI de Azure](/cli/azure/install-azure-cli)
 
-## <a name="access-troubleshooting-notebooks"></a>Acceder a los cuadernos de solución de problemas
+## <a name="access-troubleshooting-notebooks"></a>Acceso a los cuadernos de solución de problemas
 Hay tres formas de acceder a los cuadernos de solución de problemas.
 
 ### <a name="command-palette"></a>Paleta de comandos
-1. Seleccione **vista** > **paleta de comandos**.
-2. Escriba @no__t 0Jupyter: SQL Server guía 2019 @ no__t-0.
+1. Seleccione **Ver** > **Paleta de comandos**.
+2. Escriba **Libros de Jupyter: Guía de SQL Server 2019**.
 
-Se abrirán los libros de Jupyter Viewlet con el libro Jupyter que contiene los cuadernos de solución de problemas relacionados con los clústeres de macrodatos de SQL Server.
+Se abrirá el viewlet Libros de Jupyter con el libro de Jupyter que contiene los cuadernos de solución de problemas relacionados con los clústeres de macrodatos de SQL Server.
 
 ### <a name="sql-master-dashboard"></a>Panel maestro de SQL
-1. Después de instalar Azure Data Studio Insider, conéctese a una instancia de clúster de Big Data SQL Server.
-2. Una vez conectado a la instancia, haga clic con el botón secundario en el nombre del servidor en **conexiones** y seleccione **administrar**.
-3. En el panel, seleccione **SQL Server clúster de Big Data**. Seleccione **SQL Server guía de 2019** para abrir el libro Jupyter que contiene los cuadernos que necesita.
-    @no__t notebooks de 0Jupyter en el panel @ no__t-1
+1. Después de instalar Azure Data Studio Insiders, conéctese a una instancia de clúster de macrodatos de SQL Server.
+2. Una vez que se haya conectado a la instancia, haga clic con el botón derecho en el nombre del servidor en **CONEXIONES** y seleccione **Administrar**.
+3. En el panel, seleccione **Clúster de macrodatos de SQL Server**. Seleccione **Guía de SQL Server 2019** para abrir el libro de Jupyter que contiene los cuadernos que necesita.
+    ![Cuadernos de Jupyter en el panel](media/manage-notebooks/jupyter-book-button.png)
 
 1. Seleccione el cuaderno de la tarea que debe completar.
 
 ### <a name="controller-dashboard"></a>Panel del controlador
-1. En la vista **conexiones** , expanda **SQL Server clústeres de Big Data**.
+1. En la vista **Conexiones**, expanda **Clúster de macrodatos de SQL Server**.
 2. Agregue los detalles del punto de conexión del controlador.
-3. Una vez conectado al controlador, haga clic con el botón derecho en el punto de conexión y seleccione **administrar**.
-4. Una vez que se cargue el panel, seleccione **solucionar** problemas para abrir el libro de Jupyter guías de solución de problemas.
+3. Una vez que se haya conectado al controlador, haga clic con el botón derecho en el punto de conexión y seleccione **Administrar**.
+4. Una vez que se haya cargado el panel, seleccione **Solucionar problemas** para abrir las guías de solución de problemas de los libros de Jupyter.
 
-## <a name="use-troubleshooting-notebooks"></a>Usar cuadernos de solución de problemas
-1. Busque la guía de solución de problemas que necesita en la tabla de contenido del libro de Jupyter.
-1. Los cuadernos están optimizados, por lo que solo tiene que seleccionar **Ejecutar celdas**. Esta acción ejecutará cada celda del cuaderno individualmente hasta que se complete el cuaderno.
-1. Si se encuentra un error, el libro Jupyter sugerirá un cuaderno que puede ejecutar para corregir el error. Siga los pasos recomendados y, a continuación, vuelva a ejecutar el Bloc de notas.
+## <a name="use-troubleshooting-notebooks"></a>Uso de los cuadernos de solución de problemas
+1. Busque la guía de solución de problemas que necesite en la tabla de contenido del libro de Jupyter.
+1. Los cuadernos están optimizados, por lo que solo tiene que seleccionar **Ejecutar celdas**. Esta acción ejecutará cada celda del cuaderno de forma individual hasta que se haya completado el cuaderno.
+1. Si se encuentra un error, el libro de Jupyter sugerirá un cuaderno que puede ejecutar para corregir el error. Siga los pasos recomendados y, a continuación, vuelva a ejecutar el cuaderno.
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información sobre los cuadernos en Azure Data Studio, vea [Uso de los cuadernos en la versión preliminar de SQL Server 2019](notebooks-guidance.md).
+Para obtener más información sobre los cuadernos en Azure Data Studio, vea [Uso de los cuadernos en SQL Server](notebooks-guidance.md).

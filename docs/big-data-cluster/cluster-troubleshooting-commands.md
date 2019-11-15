@@ -1,7 +1,7 @@
 ---
 title: Supervisión y solución de problemas
 titleSuffix: SQL Server big data clusters
-description: En este artículo se proporcionan comandos útiles para supervisar y solucionar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]problemas de.
+description: En este artículo se proporcionan comandos útiles para supervisar y solucionar problemas de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -11,19 +11,19 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e70689d1e4891fefde8fd1feb76b081bc14bfe81
 ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/29/2019
 ms.locfileid: "70153631"
 ---
-# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Supervisión y solución de problemas[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Supervisión y solución de problemas con [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describen varios comandos de Kubernetes útiles que puede usar para supervisar y [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]solucionar problemas de. Se muestra cómo ver información detallada de un pod u otros artefactos de Kubernetes que se encuentran en el clúster de macrodatos. En este artículo también se tratan las tareas habituales, como copiar archivos en un contenedor que ejecute uno de los servicios de clúster de macrodatos de SQL Server, o bien copiarlos desde uno.
+En este artículo se describen varios comandos útiles de Kubernetes que puede usar para supervisar y solucionar problemas de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Se muestra cómo ver información detallada de un pod u otros artefactos de Kubernetes que se encuentran en el clúster de macrodatos. En este artículo también se tratan las tareas habituales, como copiar archivos en un contenedor que ejecute uno de los servicios de clúster de macrodatos de SQL Server, o bien copiarlos desde uno.
 
 > [!TIP]
-> Para supervisar el estado de los componentes de los clústeres de macrodatos, puede usar los comandos de [**Estado de azdata BDC**](deployment-guidance.md#status) o los cuadernos de [solución de problemas](manage-notebooks.md) integrados en proporcionados con Azure Data Studio.
+> Para supervisar el estado de los componentes de los clústeres de macrodatos, puede usar los comandos [**azdata bdc status**](deployment-guidance.md#status) o los [cuadernos de solución de problemas](manage-notebooks.md) integrados proporcionados con Azure Data Studio.
 
 > [!TIP]
 > Ejecute los siguientes comandos de **kubectl** en un equipo cliente Windows (cmd o PS) o Linux (bash). Requieren la autenticación previa en el clúster y un contexto de clúster en el que ejecutarse. Por ejemplo, para un clúster de AKS creado anteriormente, puede ejecutar `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` para descargar el archivo de configuración del clúster de Kubernetes y establecer el contexto del clúster.
@@ -114,7 +114,7 @@ kubectl get svc -n mssql-cluster
 
 Los siguientes servicios admiten conexiones externas al clúster de macrodatos:
 
-| Servicio | Descripción |
+| ssNoVersion | Descripción |
 |---|---|
 | **master-svc-external** | Proporciona acceso a la instancia maestra.<br/>(**EXTERNAL-IP,31433** y el usuario de **SA**) |
 | **controller-svc-external** | Admite herramientas y clientes que administran el clúster. |
@@ -227,4 +227,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los clústeres de macrodatos, vea [Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md).
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?](big-data-cluster-overview.md) para obtener más información sobre los clústeres de macrodatos.

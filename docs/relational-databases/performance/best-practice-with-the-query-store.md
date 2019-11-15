@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0482182c9720054a85dfd21c264e0acde939b5b
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: d35637b9452500caac680439bd1ef09442d9ef11
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974269"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73142776"
 ---
 # <a name="best-practices-with-query-store"></a>Procedimientos recomendados con el almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -70,7 +70,7 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
 
- **Intervalo del vaciado de datos (minutos)** : define la frecuencia en segundos para conservar en disco las estadísticas en tiempo de ejecución recopiladas. El valor predeterminado es de 900 segundos (15 minutos). Considere la posibilidad de usar un valor más alto si la carga de trabajo no genera gran cantidad de consultas y planes diferentes, o bien si puede soportar más tiempo de conservación de los datos antes de cerrar la base de datos.
+ **Intervalo del vaciado de datos (minutos)** : define la frecuencia para conservar en disco las estadísticas en tiempo de ejecución recopiladas. Se expresa en minutos en la interfaz gráfica de usuario (GUI), pero en [!INCLUDE[tsql](../../includes/tsql-md.md)] se expresa en segundos. El valor predeterminado es 900 segundos, equivalente a 15 minutos en la interfaz gráfica de usuario. Considere la posibilidad de usar un valor más alto si la carga de trabajo no genera gran cantidad de consultas y planes diferentes, o bien si puede soportar más tiempo de conservación de los datos antes de cerrar la base de datos.
  
 > [!NOTE]
 > El uso de la marca de seguimiento 7745 impide que los datos del almacén de consultas se escriban en el disco en el caso de un comando de conmutación por error o apagado. Para más información, vea la sección [Uso de marcas de seguimiento en servidores críticos para mejorar la recuperación ante desastres](#Recovery).
@@ -82,14 +82,14 @@ ALTER DATABASE [QueryStoreDB]
 SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS = 900);  
 ```  
 
- **Intervalo de la recopilación de estadísticas**: define el nivel de granularidad de la estadística en tiempo de ejecución recopilada. El valor predeterminado es 60 minutos. Considere la posibilidad de usar un valor más bajo si necesita una granularidad más precisa o menos tiempo para detectar y mitigar las incidencias. Recuerde que el valor afecta directamente al tamaño de los datos del almacén de consultas. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para establecer otro valor para **Intervalo de recopilación de estadísticas**:  
+ **Intervalo de la recopilación de estadísticas**: define el nivel de granularidad de la estadística en tiempo de ejecución recopilada y se expresa en minutos. El valor predeterminado es 60 minutos. Considere la posibilidad de usar un valor más bajo si necesita una granularidad más precisa o menos tiempo para detectar y mitigar las incidencias. Recuerde que el valor afecta directamente al tamaño de los datos del almacén de consultas. Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] para establecer otro valor para **Intervalo de recopilación de estadísticas**:  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB] 
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
- **Umbral de consultas obsoletas (días)** : directiva de limpieza basada en el tiempo que controla el período de retención de las estadísticas en tiempo de ejecución persistentes y las consultas inactivas. De forma predeterminada, el almacén de consultas se configura para conservar los datos durante 30 días, que podría ser un período innecesariamente largo para su escenario.  
+ **Umbral de consultas obsoletas (días)** : directiva de limpieza basada en el tiempo que controla el período de retención de las estadísticas en tiempo de ejecución persistentes y las consultas inactivas; se expresa en días. De forma predeterminada, el almacén de consultas se configura para conservar los datos durante 30 días, que podría ser un período innecesariamente largo para su escenario.  
   
  Evite mantener datos históricos que no tenga pensado usar. Este procedimiento reduce los cambios al estado de solo lectura. El tamaño de los datos del almacén de consultas y el tiempo para detectar y mitigar la incidencia serán más predecibles. Use [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o el siguiente script para configurar la directiva de limpieza basada en el tiempo:  
   
@@ -199,7 +199,7 @@ El Almacén de consultas de[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.
   
  En el gráfico siguiente se muestra cómo localizar vistas del Almacén de consultas:  
   
-   ![Vistas del Almacén de consultas](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Query Store views")  
+   ![Vistas del almacén de consultas](../../relational-databases/performance/media/objectexplorerquerystore_sql17.png "Vistas del almacén de consultas")  
   
  En la siguiente tabla se explica cuándo usar cada una de las vistas del Almacén de consultas:  
   

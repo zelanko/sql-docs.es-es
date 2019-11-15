@@ -1,24 +1,25 @@
 ---
-title: Conjunto de datos de demostración de vuelos de avión para SQL Server tutoriales de Python y R
-Description: Cree una base de datos que contenga el conjunto de datos de línea aérea de R y Python. Este conjunto de DataSet se usa en ejercicios que muestran cómo ajustar el lenguaje R o el código Python en un SQL Server procedimiento almacenado.
+title: Datos de demostración de vuelos de líneas aéreas para tutoriales
+Description: Cree una base de datos que contenga el conjunto de datos para líneas aéreas de R y Python. Este conjunto de datos se usa en ejercicios en los que se muestra cómo ajustar el lenguaje R o el código Python en un procedimiento almacenado de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b7f28dd4b3e7e6990e037dbd9afe164d8d0e4bec
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 520a94f5f92c8b7e7d8bf7ba4efc851ce0c3e723
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714811"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727149"
 ---
-#  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Datos de demostración de la llegada de vuelos de líneas aéreas para SQL Server tutoriales de Python y R
+#  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Datos de demostración de la llegada de vuelos de líneas aéreas para tutoriales de Python y R de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este ejercicio, cree una base de datos de SQL Server para almacenar los datos importados de los conjuntos de datos de demostración de líneas aéreas integradas de R o Python. Las distribuciones de R y Python proporcionan datos equivalentes, que puede importar a una base de datos de SQL Server mediante Management Studio.
+En este ejercicio, va a crear una base de datos de SQL Server para almacenar los datos importados de los conjuntos de datos de demostración de líneas aéreas integradas en R o Python. Las distribuciones de R y Python proporcionan datos equivalentes, que puede importar a una base de datos de SQL Server mediante Management Studio.
 
 Para completar este ejercicio, debe tener [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) u otra herramienta que pueda ejecutar consultas de T-SQL.
 
@@ -28,30 +29,30 @@ Entre los tutoriales y las guías de inicio rápido que usan este conjunto de da
 
 ## <a name="create-the-database"></a>Crear la base de datos
 
-1. Inicie SQL Server Management Studio, conéctese a una instancia del motor de base de datos que tenga integración de R o Python.  
+1. Inicie SQL Server Management Studio, conéctese a una instancia del motor de base de datos que tenga integración con R o Python.  
 
-2. En Explorador de objetos, haga clic con el botón derecho en **bases** de datos y cree una nueva base de datos denominada **flightdata**.
+2. En Explorador de objetos, haga clic con el botón derecho en **Bases de datos** y cree una nueva base de datos denominada **flightdata**.
 
-3. Haga clic con el botón secundario en **flightdata**, haga clic en **tareas**y en **Importar archivo plano**.
+3. Haga clic con el botón derecho en **flightdata**, haga clic en **Tareas** y haga clic en **Importar archivo plano**.
 
-4. Abra el archivo AirlineDemoData. csv proporcionado en la distribución de R o Python, según el idioma que haya instalado.
+4. Abra el archivo AirlineDemoData.csv proporcionado en la distribución de R o Python, en función del lenguaje de computación que haya instalado.
 
-   Para R, busque **AirlineDemoSmall. csv** en C:\Archivos de Programa\microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData
+   Para R, vaya a **AirlineDemoSmall.csv** en C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData
    
-   Para Python, busque **AirlineDemoSmall. csv** en C:\Archivos de Programa\microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data
+   Para Python, vaya a **AirlineDemoSmall.csv** at C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data
   
-Al seleccionar el archivo, los valores predeterminados se rellenan para el nombre y el esquema de la tabla.
+Al seleccionar el archivo, el nombre y el esquema de la tabla se rellenan con los valores predeterminados.
 
-  ![Asistente para importación de archivos planos con valores predeterminados de demo de líneas aéreas](media/import-airlinedemosmall.png)
+  ![Asistente para la importación de archivos planos en el que se muestran los valores predeterminados de demostración para líneas aéreas](media/import-airlinedemosmall.png)
 
 Haga clic en las páginas restantes y acepte los valores predeterminados para importar los datos.
 
 
 ## <a name="query-the-data"></a>Consultar los datos
 
-Como paso de validación, ejecute una consulta para confirmar que se cargaron los datos.
+Como paso de validación, ejecute una consulta para confirmar que se han cargado los datos.
 
-1. En Explorador de objetos, en bases de datos, haga clic con el botón secundario en la base de datos **flightdata** e inicie una nueva consulta.
+1. En Explorador de objetos, debajo de Bases de datos, haga clic con el botón derecho en la base de datas **flightdata** e inicie una nueva consulta.
 
 2. Ejecute algunas consultas sencillas:
 

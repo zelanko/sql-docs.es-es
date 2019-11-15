@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961791"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729866"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -29,7 +29,7 @@ Para entender las tablas y cómo usarlas, vea [Introducción al diseño de tabla
 > [!NOTE]
 >  En este artículo, las descripciones de SQL Data Warehouse se aplican tanto a SQL Data Warehouse como a Almacenamiento de datos paralelos, a menos que se indique lo contrario.
 
- ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>
 
@@ -162,11 +162,15 @@ Crea una o varias particiones de tabla. Estas particiones son segmentos de tabla
 
  Vea [Crear una tabla con particiones](#PartitionedTable) en la sección Ejemplos.
 
-### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Opción de índice de almacén de columnas agrupado ordenado (versión preliminar para Azure SQL Data Warehouse)
+### <a name="ordered-clustered-columnstore-index-option"></a>Opción de índice de almacén de columnas agrupado ordenado 
 
-El índice de almacén de columnas agrupado (CCI) es el valor predeterminado para crear tablas en Azure SQL Data Warehouse.  Los datos de un CCI no se ordenan antes de comprimirse en segmentos de almacén de columnas.  Al crear un CCI con ORDER, los datos se ordenan antes de agregarse a los segmentos de índice y el rendimiento de las consultas se puede mejorar. Consulte [Optimización del rendimiento con el índice de almacén de columnas agrupado ordenado](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci) para obtener más información.  
+El índice de almacén de columnas agrupado (CCI) es el valor predeterminado para crear tablas en Azure SQL Data Warehouse.  Los datos de un CCI no se ordenan antes de comprimirse en segmentos de almacén de columnas.  Al crear un CCI con ORDER, los datos se ordenan antes de agregarse a los segmentos de índice y el rendimiento de las consultas se puede mejorar. Consulte [Optimización del rendimiento con el índice de almacén de columnas agrupado ordenado](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest) para obtener más información.  
 
-Los usuarios pueden consultar la columna column_store_order_ordinal en sys.index_columns para obtener las columnas en las que se ordena una tabla y la secuencia del orden.  
+Se puede crear un CCI ordenado en columnas de cualquier tipo de datos que se admita en Azure SQL Data Warehouse, excepto en las columnas de cadena.  
+
+Los usuarios pueden consultar la columna **column_store_order_ordinal** en **sys.index_columns** para obtener las columnas en las que se ordena una tabla y la secuencia del orden.  
+
+Consulte [Optimización del rendimiento con el índice de almacén de columnas agrupado ordenado](https://docs.microsoft.com/azure/sql-data-warehouse/performance-tuning-ordered-cci) para obtener más información.   
 
 ### <a name="DataTypes"></a> Tipo de datos
 

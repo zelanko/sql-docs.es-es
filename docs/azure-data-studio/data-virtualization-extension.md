@@ -2,20 +2,20 @@
 title: Extensión de virtualización de datos
 titleSuffix: Azure Data Studio
 description: Extensión de virtualización de datos para Azure Data Studio
-ms.custom: seodec18
-ms.date: 11/04/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rajmera3
 ms.author: raajmera
-ms.openlocfilehash: cb9fe5ddb9e6b84769c78b63cacffa50d270ecf6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.custom: seodec18
+ms.date: 11/04/2019
+ms.openlocfilehash: 98a93895b8f552bf7506880a612ab2ae68c48afb
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532547"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801129"
 ---
 # <a name="data-virtualization-extension-for-azure-data-studio"></a>Extensión de virtualización de datos para Azure Data Studio
 
@@ -70,13 +70,13 @@ Para instalar la extensión de virtualización de datos, abra Azure Data Studio 
 
 ## <a name="release-notes-v0102"></a>Notas de la versión (v0.10.2)
 ### <a name="sql-server-2019-support"></a>Compatibilidad con SQL Server 2019
-Se ha actualizado la compatibilidad con SQL Server 2019. Después de conectarse a una instancia de clúster de macrodatos de SQL Server, aparece una nueva carpeta _Data Services_ en el árbol del explorador. La carpeta dispone de puntos de inicio para acciones como abrir un nuevo cuaderno en la conexión, enviar trabajos de Spark y trabajar con HDFS. Para algunas acciones, como _crear datos externos_ en un archivo o carpeta de HDFS, se debe instalar la extensión de _SQL Server 2019 (versión preliminar)_ .
+Se ha actualizado la compatibilidad con SQL Server 2019. Después de conectarse a una instancia de clúster de macrodatos de SQL Server, aparece una nueva carpeta _Data Services_ en el árbol del explorador. La carpeta dispone de puntos de inicio para acciones como abrir un nuevo cuaderno en la conexión, enviar trabajos de Spark y trabajar con HDFS. Para algunas acciones, como _crear datos externos_ en un archivo o carpeta de HDFS, se debe instalar la extensión de _SQL Server 2019_.
 
 ### <a name="notebook-support"></a>Compatibilidad con Notebook
 En esta versión hemos realizado actualizaciones considerables en la interfaz de usuario de Notebook. Nuestro objetivo consistía en facilitar la lectura de los cuadernos que se comparten con usted. Esto conllevaba, entre otras cosas, quitar todos los cuadros de contorno alrededor de las celdas (a menos que se seleccionen o que se mueva el puntero por encima), agregar compatibilidad con el desplazamiento del puntero para facilitar las acciones de nivel de celda sin necesidad de seleccionar una celda y aclarar el estado de ejecución mediante la adición de un recuento de ejecuciones, y un botón animado para _detener la ejecución_. También hemos agregado métodos abreviados de teclado para _nuevo cuaderno_ (`Ctrl+Shift+N`), _ejecutar celda_ (`F5`), _nueva celda de código_ (`Ctrl+Shift+C`) y _nueva celda de texto_ (`Ctrl+Shift+T`). En un futuro intentaremos que todas las acciones clave se puedan iniciar mediante métodos abreviados, por lo que no dude en comentarnos qué echa en falta.
 
 Entre otras mejoras y correcciones se incluyen las siguientes:
-* La extensión _SQL Server 2019 (versión preliminar)_ ahora solicita a los usuarios que seleccionen un directorio de instalación para las dependencias de Python. Además, ya no incluye Python en `.vsix file`, lo que reduce el tamaño total de la extensión. Las dependencias de Python admiten kernels de Spark y Python3.
+* La extensión de _SQL Server 2019_ ahora solicita a los usuarios que seleccionen un directorio de instalación para las dependencias de Python. Además, ya no incluye Python en `.vsix file`, lo que reduce el tamaño total de la extensión. Las dependencias de Python admiten kernels de Spark y Python3.
 * Se ha agregado compatibilidad con el inicio de un nuevo cuaderno desde la línea de comandos. Si se inicia con los argumentos `--command=notebook.command.new --server=myservername`, debería abrirse un nuevo cuaderno y conectarse a este servidor.
 * Se han realizado correcciones en el rendimiento de los cuadernos con gran longitud de código en las celdas. Si las celdas de código superan las 250 líneas, se agrega una barra de desplazamiento.
 * Se ha mejorado la compatibilidad con el archivo .ipynb. Ahora se admite la versión 3 o posterior. Tenga en cuenta que, al guardar los archivos, se actualizará a la versión 4 o superior.

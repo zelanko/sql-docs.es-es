@@ -1,5 +1,5 @@
 ---
-title: Supervisión y solución de problemas de migración de datos (Stretch Database) | Microsoft Docs
+title: Supervisión y solución de problemas de migración de datos
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -10,12 +10,13 @@ helpviewer_keywords:
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6130bd88e93a33c5bcb295e73b752ae1b749ff77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: d204c7acfbd8598a7cbb66a41dcf89915fc711ef
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136079"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843778"
 ---
 # <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Supervisión y solución de problemas de migración de datos (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "68136079"
   
 -   La parte inferior del monitor muestra el estado de la migración de datos para cada tabla habilitada para Stretch en la base de datos.  
   
- ![Stretch Database Monitor](../../sql-server/stretch-database/media/stretch-monitor.PNG "Stretch Database Monitor")  
+ ![Supervisión de Stretch Database](../../sql-server/stretch-database/media/stretch-monitor.PNG "Supervisión de Stretch Database")  
   
 ##  <a name="Migration"></a> Comprobación del estado de la migración de datos en una vista de administración dinámica  
  Abra la vista de administración dinámica **sys.dm_db_rda_migration_status** para ver el número de lotes y filas de datos que se han migrado. Para obtener más información, vea [sys.dm_db_rda_migration_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  

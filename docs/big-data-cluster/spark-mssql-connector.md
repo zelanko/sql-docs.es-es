@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 19edd6bf2e28a0dd0ec2007493dc02ff55108554
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 7720db661d90c3ff2ebec593b22a5aa638038132
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531610"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844217"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL
 
@@ -76,7 +76,7 @@ El conector utiliza API de escritura masiva de SQL Server. El usuario puede pas
 
 ## <a name="run-the-sample-notebook"></a>Ejecución del cuaderno de ejemplo
 
-Para demostrar el uso del conector de Spark MSSQL con estos datos, puede descargar un cuaderno de ejemplo, abrirlo en Azure Data Studio y ejecutar cada bloque de código. Para obtener más información sobre el trabajo con cuadernos, vea [Uso de los cuadernos en la versión preliminar de SQL Server 2019](notebooks-guidance.md).
+Para demostrar el uso del conector de Spark MSSQL con estos datos, puede descargar un cuaderno de ejemplo, abrirlo en Azure Data Studio y ejecutar cada bloque de código. Para obtener más información sobre el trabajo con cuadernos, vea [Uso de los cuadernos en SQL Server](notebooks-guidance.md).
 
 1. Desde una línea de comandos de PowerShell o Bash, ejecute el siguiente comando para descargar el cuaderno de ejemplo **mssql_spark_connector.ipynb**:
 

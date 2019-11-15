@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 23e08c74d0b41e24eb9677c59b52026e33c527f0
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067533"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049959"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cambia las propiedades de un índice de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -78,7 +78,7 @@ ALTER FULLTEXT INDEX ON table_name
  Especifica si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propagará al índice de texto completo los cambios (actualizaciones, eliminaciones o inserciones) efectuados en las columnas de la tabla que cubre el índice de texto completo. Los cambios realizados en los datos con WRITETEXT y UPDATETEXT no se reflejan en el índice de texto completo y no se recopilan con el seguimiento de cambios.  
   
 > [!NOTE]  
->  Para obtener información sobre la interacción del seguimiento de cambios y WITH NO POPULATION, vea "Comentarios", posteriormente en este tema.  
+>  Para más información, vea [Interacciones del seguimiento de cambios y del parámetro NO POPULATION](#change-tracking-no-population).
   
  MANUAL  
  Especifica que se propagarán manualmente los cambios controlados mediante una llamada a la instrucción ALTER FULLTEXT INDEX... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] statement (*manual population*). Puede utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para llamar a esta instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] de forma periódica.  
@@ -97,7 +97,7 @@ ALTER FULLTEXT INDEX ON table_name
  Use TYPE COLUMN y LANGUAGE con la cláusula ADD para establecer estas propiedades en *column_name*. Cuando se agrega una columna, el índice de texto completo de la tabla se debe rellenar de nuevo para que funcionen las consultas de texto completo en esta columna.  
   
 > [!NOTE]  
->  Que se rellene el índice de texto completo una vez agregada o quitada una columna en un índice de texto completo depende de si está habilitado el seguimiento de cambios y de si se especifica WITH NO POPULATION. Para obtener más información, vea la sección "Comentarios" más adelante en este tema.  
+>  Que se rellene el índice de texto completo una vez agregada o quitada una columna en un índice de texto completo depende de si está habilitado el seguimiento de cambios y de si se especifica WITH NO POPULATION. Para más información, vea [Interacciones del seguimiento de cambios y del parámetro NO POPULATION](#change-tracking-no-population).
   
  TYPE COLUMN *type_column_name*  
  Especifica el nombre de una columna de tabla, *type_column_name*, que se usa para almacenar el tipo de documento para un documento **varbinary**, **varbinary(max)** o **image**. Esta columna, denominada columna de tipo, contiene una extensión de archivo proporcionada por el usuario (.doc, .pdf, .xls, etc.). La columna de tipo debe ser de tipo **char**, **nchar**, **varchar**o **nvarchar**.  
@@ -138,7 +138,7 @@ ALTER FULLTEXT INDEX ON table_name
  Si CHANGE_TRACKING está habilitado y se especifica WITH NO POPULATION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un error. Si CHANGE_TRACKING está habilitado y no se especifica WITH NO POPULATION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza un rellenado completo del índice.  
   
 > [!NOTE]  
->  Para obtener más información acerca de la interacción del seguimiento de cambios y WITH NO POPULATION, vea "Comentarios", más adelante en este tema.  
+>  Para más información, vea [Interacciones del seguimiento de cambios y del parámetro NO POPULATION](#change-tracking-no-population).
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
  **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -194,7 +194,7 @@ ALTER FULLTEXT INDEX ON table_name
  Para agregar una lista de propiedades de búsqueda a un índice de texto completo es preciso rellenar el índice, a fin de indizar las propiedades de búsqueda que se han registrado para la lista de propiedades de búsqueda asociada. Si se especifica WITH NO POPULATION al agregar la lista de propiedades de búsqueda, se deberá ejecutar un rellenado del índice en un momento adecuado.  
   
 > [!IMPORTANT]  
->  Si el índice de texto completo estaba asociado previamente a una lista de propiedades de búsqueda diferente, habrá que volver a generar la lista de propiedades para que el índice tenga un estado coherente. El índice se trunca inmediatamente y está vacío hasta que se ejecuta el rellenado completo. Para obtener más información acerca de cuándo las modificaciones realizadas en la lista de propiedades de búsqueda causan una nueva generación, vea "Comentarios", más adelante en este tema.  
+>  Si el índice de texto completo estaba asociado previamente a una lista de propiedades de búsqueda diferente, habrá que volver a generar la lista de propiedades para que el índice tenga un estado coherente. El índice se trunca inmediatamente y está vacío hasta que se ejecuta el rellenado completo. Para más información, vea [Cambiar la lista de propiedades de búsqueda provoca un rellenado del índice](#change-search-property-rebuild-index). 
   
 > [!NOTE]  
 >  Puede asociar una lista de propiedades de búsqueda a más de un índice de texto completo en la misma base de datos.  
@@ -205,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Para más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>Interacciones del seguimiento de cambios y del parámetro NO POPULATION  
+## <a name="change-tracking-no-population"></a> Interacciones del seguimiento de cambios y del parámetro NO POPULATION  
  Que se rellene el índice de texto completo depende de si el seguimiento de cambios está habilitado y si se especifica WITH NO POPULATION en la instrucción ALTER FULLTEXT INDEX. En la tabla siguiente se resume el resultado de su interacción.  
   
 |Seguimiento de los cambios|WITH NO POPULATION|Resultado|  
@@ -217,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Para más información sobre rellenar índices de texto completo, vea [Rellenar índices de texto completo](../../relational-databases/search/populate-full-text-indexes.md).  
   
-## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a>Cambiar la lista de propiedades de búsqueda provoca un rellenado del índice  
+## <a name="change-search-property-rebuild-index"></a> Cambiar la lista de propiedades de búsqueda provoca un rellenado del índice  
  La primera vez que el índice de texto completo se asocia con una lista de propiedades de búsqueda, el índice debe volver a llenarse para incluir los términos de búsqueda específicos de la propiedad. Los datos del índice existente no se truncan.  
   
  Sin embargo, si se asocia el índice de texto completo con otra lista de propiedades, se vuelve a generar el índice. Una generación inmediata trunca el índice de texto completo y quita todos los datos existentes, de tal forma que el índice se debe volver a llenar. A medida que avanza el rellenado, las consultas de texto completo de la tabla base buscan únicamente en las filas de la tabla que ya se han indizado al efectuar el rellenado. Los datos del índice rellenado incluirán metadatos de las propiedades registradas en la lista de propiedades agregada recientemente.  

@@ -1,48 +1,49 @@
 ---
-title: 'Tutorial de Python: Implementación del modelo (regresión lineal)'
-description: En este tutorial usará Python y la regresión lineal en SQL Server Machine Learning Services para predecir el número de alquileres de esquí. Implementará un modelo de regresión lineal desarrollado en Python en una base de datos de SQL Server con Machine Learning Services.
+title: 'Tutorial de Python: Implementación de un modelo'
+description: En este tutorial, usará Python y una regresión lineal en SQL Server Machine Learning Services para predecir el número de alquileres de esquíes. Implementará un modelo de regresión lineal desarrollado en Python en una base de datos de SQL Server mediante Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 08f5d19af93ab180c660a264d5aaabc538d527a5
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: 3b1dd5eba014a48f661833b1f955135ebacc48cc
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242523"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727069"
 ---
-# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Tutorial de Python: Implementar un modelo de regresión lineal en SQL Server Machine Learning Services
+# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Tutorial de Python: Implementación de un modelo de regresión lineal en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En la cuarta parte de esta serie de tutoriales de cuatro partes, implementará un modelo de regresión lineal desarrollado en Python en una base de datos de SQL Server con Machine Learning Services.
+En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de regresión lineal desarrollado en Python en una base de datos de SQL Server mediante Machine Learning Services.
 
 En este artículo, aprenderá a:
 
 > [!div class="checklist"]
-> * Crear un procedimiento almacenado que genera el modelo de aprendizaje automático
+> * Crear un procedimiento almacenado que genere el modelo de aprendizaje automático
 > * Almacenar el modelo en una tabla de base de datos
-> * Crear un procedimiento almacenado que realice predicciones utilizando el modelo
-> * Ejecutar el modelo con nuevos datos
+> * Crear un procedimiento almacenado que realice predicciones mediante el modelo
+> * Ejecutar el modelo con datos nuevos
 
-En la [primera parte](python-ski-rental-linear-regression.md), aprendió a restaurar la base de datos de ejemplo.
+En la [parte uno](python-ski-rental-linear-regression.md), ha aprendido a restaurar la base de datos de ejemplo.
 
-En la [segunda parte](python-ski-rental-linear-regression-prepare-data.md), ha aprendido a cargar los datos de SQL Server en una trama de datos de Python y a preparar los datos en Python.
+En la [parte dos](python-ski-rental-linear-regression-prepare-data.md), ha aprendido a cargar los datos desde SQL Server en una trama de datos de Python y ha preparado los datos en Python.
 
-En la tercera [parte](python-ski-rental-linear-regression-train-model.md), aprendió a entrenar un modelo de aprendizaje automático de regresión lineal en Python.
+En la [parte tres](python-ski-rental-linear-regression-train-model.md), ha aprendido a entrenar un modelo de aprendizaje automático de regresión lineal en Python.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-* En la cuarta parte de este tutorial se supone que ha completado la [parte uno](python-ski-rental-linear-regression.md) y sus requisitos previos.
+* En la parte cuatro de este tutorial, se da por hecho que ha completado la [parte uno](python-ski-rental-linear-regression.md) y los requisitos previos.
 
-## <a name="create-a-stored-procedure-that-generates-the-model"></a>Crear un procedimiento almacenado que genere el modelo
+## <a name="create-a-stored-procedure-that-generates-the-model"></a>Creación de un procedimiento almacenado que genere el modelo
 
-Ahora, con los scripts de Python desarrollados, cree un procedimiento almacenado **generate_rental_rx_model** que entrena y genere el modelo de regresión lineal mediante LinearRegression desde scikit-Learn.
+Ahora, use los scripts de Python que ha desarrollado para crear un procedimiento almacenado llamado **generate_rental_rx_model** que entrene y genere el modelo de regresión lineal mediante LinearRegression de scikit-learn.
 
-Ejecute la siguiente instrucción T-SQL en Azure Data Studio para crear el procedimiento almacenado para entrenar el modelo.
+Ejecute la siguiente instrucción T-SQL en Azure Data Studio para crear el procedimiento almacenado con el fin de entrenar el modelo.
 
 ```sql
 -- Stored procedure that trains and generates a Python model using the rental_data and a decision tree algorithm
@@ -84,9 +85,9 @@ GO
 
 ## <a name="store-the-model-in-a-database-table"></a>Almacenar el modelo en una tabla de base de datos
 
-Cree una tabla en la base de datos TutorialDB y, a continuación, guarde el modelo en la tabla.
+Cree una tabla en la base de datos TutorialDB y, después, guarde el modelo en la tabla.
 
-1. Ejecute la siguiente instrucción T-SQL en Azure Data Studio para crear una tabla denominada **dbo. rental_py_models** , que se usa para almacenar el modelo.
+1. Ejecute la siguiente instrucción T-SQL en Azure Data Studio para crear una tabla denominada **dbo.rental_py_models**, que se usará para almacenar el modelo.
 
     ```sql
     USE TutorialDB;
@@ -108,9 +109,9 @@ Cree una tabla en la base de datos TutorialDB y, a continuación, guarde el mode
     INSERT INTO rental_py_models (model_name, model) VALUES('linear_model', @model);
     ```
 
-## <a name="create-a-stored-procedure-that-makes-predictions"></a>Crear un procedimiento almacenado que realice predicciones
+## <a name="create-a-stored-procedure-that-makes-predictions"></a>Creación de un procedimiento almacenado que realiza predicciones
 
-1. Cree un procedimiento almacenado **py_predict_rentalcount** que realice predicciones utilizando el modelo entrenado y un conjunto de datos nuevos. Ejecute el T-SQL siguiente en Azure Data Studio.
+1. Cree un procedimiento almacenado llamado **py_predict_rentalcount** que realice predicciones mediante el modelo entrenado y un conjunto de datos nuevos. Ejecute la consulta T-SQL siguiente en Azure Data Studio.
 
     ```sql
     DROP PROCEDURE IF EXISTS py_predict_rentalcount;
@@ -180,7 +181,7 @@ Cree una tabla en la base de datos TutorialDB y, a continuación, guarde el mode
     GO
     ```
 
-1. Ejecutar el procedimiento almacenado para predecir los recuentos de alquiler
+1. Ejecución del procedimiento almacenado para predecir el número de alquileres
 
     ```sql
     --Insert the results of the predictions for test set into a table
@@ -191,17 +192,17 @@ Cree una tabla en la base de datos TutorialDB y, a continuación, guarde el mode
     SELECT * FROM py_rental_predictions;
     ```
 
-Ha creado, entrenado e implementado correctamente un modelo en una SQL Server Machine Learning Services. A continuación, se usa ese modelo en un procedimiento almacenado para predecir valores basados en datos nuevos.
+Ha creado, entrenado e implementado correctamente un modelo en una instancia de SQL Server Machine Learning Services. Después, ha usado el modelo en un procedimiento almacenado para predecir valores basándose en datos nuevos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En la cuarta parte de esta serie de tutoriales, ha completado estos pasos:
+En la parte cuatro de esta serie de tutoriales, ha aprendido a:
 
-* Crear un procedimiento almacenado que genera el modelo de aprendizaje automático
+* Crear un procedimiento almacenado que genere el modelo de aprendizaje automático
 * Almacenar el modelo en una tabla de base de datos
-* Crear un procedimiento almacenado que realice predicciones utilizando el modelo
-* Ejecutar el modelo con nuevos datos
+* Crear un procedimiento almacenado que realice predicciones mediante el modelo
+* Ejecutar el modelo con datos nuevos
 
-Para obtener más información sobre el uso de Python en SQL Server Machine Learning Services, consulte:
+Para más información sobre cómo usar Python en SQL Server Machine Learning Services, vea:
 
-+ [Tutoriales de Python para SQL Server Machine Learning Services](sql-server-python-tutorials.md)
++ [Tutoriales de Python para SQL Server Machine Learning Services](sql-server-python-tutorials.md)

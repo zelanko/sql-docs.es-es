@@ -1,91 +1,92 @@
 ---
-title: Instalación de modelos de aprendizaje automático entrenados previamente
-description: Agregue modelos previamente entrenados para el análisis de opiniones y la imagen características para SQL Server Machine Learning Services (R o Python) o SQL Server R Services.
+title: Instalación de modelos previamente entrenados
+description: Agregue modelos previamente entrenados para el análisis de sentimiento y las características de imagen para SQL Server Machine Learning Services (R o Python) o SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 87f75b8ef8f9f151eb548787da4c9791eb1437b9
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715159"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727561"
 ---
-# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instale modelos de aprendizaje automático entrenados previamente en SQL Server
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Instalación de modelos de aprendizaje automático entrenados previamente en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se explica cómo usar PowerShell para agregar modelos gratuitos de aprendizaje automático entrenado para *análisis de opiniones* e *imágenes características* a una instancia de SQL Server que tiene integración de R o Python. Los modelos entrenados previamente están compilados por Microsoft y listos para su uso, que se agregan a una instancia como una tarea posterior a la instalación. Para obtener más información sobre estos modelos, consulte la sección [recursos](#bkmk_resources) de este artículo.
+En este artículo se explica cómo usar PowerShell para agregar modelos gratuitos de aprendizaje automático entrenados previamente para el *análisis de sentimiento* y las *características de imagen* a una instancia de SQL Server que tenga integración con R o Python. Los modelos entrenados previamente están compilados por Microsoft y listos para su uso, que se agregan a una instancia como una tarea posterior a la instalación. Para obtener más información acerca de estos modelos, vea la sección [Recursos](#bkmk_resources) de este artículo.
 
-Una vez instalados, los modelos previamente entrenados se consideran un detalle de implementación que tiene funciones específicas de energía en las bibliotecas de MicrosoftML (R) y MicrosoftML (Python). No debe (ni no) ver, personalizar ni volver a entrenar los modelos, ni puede tratarlos como un recurso independiente en el código personalizado o emparejar otras funciones. 
+Una vez instalados, los modelos previamente entrenados se consideran un detalle de implementación que tiene funciones específicas de energía en las bibliotecas de MicrosoftML (R) y microsoftml (Python). No debe (y no puede) ver, personalizar, ni volver a entrenar los modelos, ni puede tratarlos como un recurso independiente en el código personalizado o emparejar otras funciones. 
 
 Para usar los modelos previamente entrenados, llame a las funciones que se enumeran en la tabla siguiente.
 
-| Función R (MicrosoftML) | Función de Python (microsoftml) | Uso |
+| Función de R (MicrosoftML) | Función de Python (microsoftml) | Uso |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Genera una puntuación de opinión positiva negativa sobre las entradas de texto. |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Genera una puntuación de opinión positiva-negativa sobre las entradas de texto. |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Extrae información de texto de entradas de archivo de imagen. |
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-Los algoritmos de aprendizaje automático son de cálculo intensivo. Se recomienda 16 GB de RAM para cargas de trabajo de baja a moderada, incluida la finalización de los tutoriales de tutoriales con todos los datos de ejemplo.
+Los algoritmos de aprendizaje automático son de cálculo intensivo. Se recomienda 16 GB de RAM para cargas de trabajo de baja a moderada, incluida la finalización de tutoriales con todos los datos de ejemplo.
 
 Debe tener derechos de administrador en el equipo y SQL Server para agregar modelos previamente entrenados.
 
-Los scripts externos deben estar habilitados y SQL Server servicio LaunchPad debe estar en ejecución. Las instrucciones de instalación proporcionan los pasos para habilitar y comprobar estas capacidades. 
+Los scripts externos deben estar habilitados y el servicio SQL Server LaunchPad debe estar en ejecución. Las instrucciones de instalación proporcionan los pasos para habilitar y comprobar estas capacidades. 
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-El paquete de [MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) o el [paquete de MicrosoftML Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) contienen los modelos entrenados previamente.
+El [paquete MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) o el [paquete microsoftml de Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) contienen los modelos entrenados previamente.
 
-[SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) incluye ambas versiones de idioma de la biblioteca de aprendizaje automático, por lo que se cumple este requisito previo sin necesidad de realizar ninguna acción por su parte. Dado que las bibliotecas están presentes, puede usar el script de PowerShell que se describe en este artículo para agregar los modelos entrenados previamente a estas bibliotecas.
+[SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) incluye las versiones de ambos lenguajes de la biblioteca de aprendizaje automático, por lo que se cumple este requisito previo sin necesidad de realizar ninguna acción por su parte. Dado que las bibliotecas están presentes, puede usar el script de PowerShell que se describe en este artículo para agregar los modelos entrenados previamente a estas bibliotecas.
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-El [paquete de MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) contiene los modelos entrenados previamente.
+El [paquete MicrosoftML R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) contiene los modelos entrenados previamente.
 
-[SQL Server R Services](sql-r-services-windows-install.md), que es solo R, no incluye el [paquete MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) fuera de la caja. Para agregar MicrosoftML, debe realizar una [actualización de componente](../install/upgrade-r-and-python.md). Una ventaja de la actualización de componentes es que puede Agregar simultáneamente los modelos entrenados previamente, lo que hace que no sea necesario ejecutar el script de PowerShell. Sin embargo, si ya se ha actualizado pero ha perdido la adición de los modelos previamente entrenados la primera vez, puede ejecutar el script de PowerShell como se describe en este artículo. Funciona en ambas versiones de SQL Server. Antes de hacerlo, confirme que la biblioteca MicrosoftML existe en `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
+[SQL Server R Services](sql-r-services-windows-install.md), que solo admite R, no incluye el [paquete MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) de serie. Para agregar MicrosoftML, debe realizar una [actualización de componentes](../install/upgrade-r-and-python.md). Una ventaja de la actualización de componentes es que puede agregar simultáneamente los modelos entrenados previamente, lo que hace que no sea necesario ejecutar el script de PowerShell. Sin embargo, si ya ha realizado la actualización pero ha perdido la adición de los modelos previamente entrenados la primera vez, puede ejecutar el script de PowerShell como se describe en este artículo. Funciona en ambas versiones de SQL Server. Antes de hacerlo, confirme que la biblioteca MicrosoftML existe en `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`.
 ::: moniker-end
 
 <a name="file-location"></a>
 
-## <a name="check-whether-pre-trained-models-are-installed"></a>Comprobar si los modelos previamente entrenados están instalados
+## <a name="check-whether-pre-trained-models-are-installed"></a>Comprobación de si los modelos previamente entrenados están instalados
 
 Las rutas de acceso de instalación para los modelos R y Python son las siguientes:
 
-+ Para R:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
++ Para R: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ Para Python:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
++ Para Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
 Los nombres de archivo de modelo se enumeran a continuación:
 
 + AlexNet\_Updated.model
 + ImageNet1K\_mean.xml
-+ modelo preentrenado. Model
++ pretrained.model
 + ResNet\_101\_Updated.model
 + ResNet\_18\_Updated.model
 + ResNet\_50\_Updated.model
 
-Si los modelos ya están instalados, vaya al paso de [validación](#verify) para confirmar la disponibilidad.
+Si los modelos ya están instalados, vaya al [paso de validación](#verify) para confirmar la disponibilidad.
 
-## <a name="download-the-installation-script"></a>Descargar el script de instalación
+## <a name="download-the-installation-script"></a>Descargue el script de instalación.
 
-Haga [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) clic para descargar el archivo **install-MLModels. PS1**.
+Haga clic en [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) para descargar el archivo **Install-MLModels.ps1**.
 
-## <a name="execute-with-elevated-privileges"></a>Ejecutar con privilegios elevados
+## <a name="execute-with-elevated-privileges"></a>Ejecución con privilegios elevados
 
-1. Inicie PowerShell. En la barra de tareas, haga clic con el botón derecho en el icono del programa de PowerShell y seleccione **Ejecutar como administrador**.
-2. Escriba una ruta de acceso completa al archivo de script de instalación e incluya el nombre de la instancia. Suponiendo que la carpeta descargas y una instancia predeterminada, el comando podría ser similar al siguiente:
+1. Inicie PowerShell. En la barra de tareas, haga clic con el botón derecho en el icono del programa PowerShell y seleccione **Ejecutar como administrador**.
+2. Escriba una ruta de acceso completa al archivo de script de instalación e incluya el nombre de la instancia. Asumiendo la carpeta descargas y una instancia predeterminada, el comando podría ser similar al siguiente:
 
    ```powershell
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
    ```
 
-**Genere**
+**Salida**
 
-En una SQL Server conectada a Internet Machine Learning Services instancia predeterminada con R y Python, debería ver mensajes similares a los siguientes.
+En una instancia predeterminada de SQL Server Machine Learning Services conectada a Internet con R y Python, debería ver mensajes similares a los siguientes.
 
    ```powershell
    MSSQL14.MSSQLSERVER
@@ -105,7 +106,7 @@ En primer lugar, busque los nuevos archivos en la [carpeta mxlibs](#file-locatio
 
 ### <a name="r-verification-steps"></a>Pasos de comprobación de R
 
-1. Inicie **RGUI. EXE** en c:\Archivos de programa\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\bin\x64.
+1. Inicie **RGUI. EXE** en C:\Archivos de programa\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64.
 
 2. Pegue el siguiente script de R en el símbolo del sistema.
 
@@ -129,7 +130,7 @@ En primer lugar, busque los nuevos archivos en la [carpeta mxlibs](#file-locatio
     sentimentScores
     ```
 
-3. Presione Entrar para ver las puntuaciones de opinión. El resultado debe ser el siguiente:
+3. Pulse Entrar para ver las puntuaciones de opinión. El resultado debería ser el siguiente:
 
     ```R
     > sentimentScores
@@ -145,7 +146,7 @@ En primer lugar, busque los nuevos archivos en la [carpeta mxlibs](#file-locatio
 
 ### <a name="python-verification-steps"></a>Pasos de comprobación de Python
 
-1. Inicie **Python. exe** en C:\Archivos de Programa\microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES.
+1. Inicie **Python.exe** en C:\Archivos de programa\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES.
 
 2. Pegue el siguiente script de Python en el símbolo del sistema
 
@@ -171,7 +172,7 @@ En primer lugar, busque los nuevos archivos en la [carpeta mxlibs](#file-locatio
     print(sentiment_scores)
     ```
 
-3. Presione Entrar para imprimir las puntuaciones. El resultado debe ser el siguiente:
+3. Presione Entrar para imprimir las puntuaciones. El resultado debería ser el siguiente:
 
     ```python
     >>> print(sentiment_scores)
@@ -187,15 +188,15 @@ En primer lugar, busque los nuevos archivos en la [carpeta mxlibs](#file-locatio
 
 ## <a name="examples-using-pre-trained-models"></a>Ejemplos de uso de modelos previamente entrenados
 
-El siguiente vínculo incluye código de ejemplo que invoca los modelos previamente entrenados.
+El siguiente vínculo incluye el código de ejemplo que invoca los modelos previamente entrenados.
 
-+ [Código de ejemplo: Análisis de sentimiento mediante Caracterizador de texto](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
++ [Ejemplo de código: análisis de sentimiento mediante Caracterizador de texto](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
 <a name="bkmk_resources"></a> 
 
 ## <a name="research-and-resources"></a>Investigación y recursos
 
-Actualmente, los modelos que están disponibles son modelos de red neuronal profunda (DNN) para el análisis de opiniones y la clasificación de imágenes. Todos los modelos entrenados previamente se entrenaron mediante el uso del [Kit de herramientas de cálculo](https://cntk.ai/Features/Index.html)de Microsoft, o **CNTK**.
+Actualmente, los modelos que están disponibles son modelos de red neuronal profunda (DNN) para el análisis de sentimiento y la clasificación de imágenes. Todos los modelos entrenados previamente se entrenaron mediante el uso del [kit de herramientas de red computacional de Microsoft](https://cntk.ai/Features/Index.html) o **CNTK**.
 
 La configuración de cada red se basó en las siguientes implementaciones de referencia:
 
@@ -204,15 +205,15 @@ La configuración de cada red se basó en las siguientes implementaciones de ref
 + ResNet-101
 + AlexNet
 
-Para obtener más información sobre los algoritmos que se usan en estos modelos de aprendizaje profundo y cómo se implementan y se entrenan con CNTK, consulte estos artículos:
+Para obtener más información sobre los algoritmos que se usan en estos modelos de aprendizaje profundo y cómo se implementan y se entrenan con CNTK, vea estos artículos:
 
-+ [Hito de ImageNet de los conjuntos de algoritmos de Microsoft investigadores](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
++ [El algoritmo de los investigadores de Microsoft marca un hito en el reto ImageNet](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
 + [El kit de herramientas de red computacional de Microsoft ofrece un rendimiento de cálculo de aprendizaje profundo distribuido más eficaz](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
 ## <a name="see-also"></a>Vea también
 
 + [Servicios de aprendizaje de máquina SQL Server](sql-machine-learning-services-windows-install.md)
-+ [Actualización de componentes de R y Python en instancias de SQL Server](../install/upgrade-r-and-python.md)
++ [Actualización de los componentes de R y Python en instancias de SQL Server](../install/upgrade-r-and-python.md)
 + [Paquete MicrosoftML para R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
-+ [paquete microsoftml para Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)
++ [Paquete microsoftml para Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

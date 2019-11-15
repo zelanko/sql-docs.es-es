@@ -1,5 +1,5 @@
 ---
-title: Extensión del lenguaje de programación Python
+title: Extensión del lenguaje Python
 description: Obtenga información sobre la ejecución de código de Python y las bibliotecas de Python integradas en SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,13 +7,14 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b1ada7d78cdacb88356b2148475e07d559f4ecbb
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 0445fb83a1ee4c4e2a991df8e698f24988454d19
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532636"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727677"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Extensión del lenguaje Python en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ Una vez que el script esté insertado en el procedimiento almacenado, cualquier 
 ![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. Con el parámetro `@language='Python'` pasado al procedimiento almacenado se indica una solicitud de runtime de Python. SQL Server envía esta solicitud al servicio Launchpad.
-En Linux, SQL usa un servicio **Launchpad** a fin de comunicarse con un proceso de launchpad independiente para cada usuario. Vea el [Diagrama de la arquitectura de extensibilidad](extensibility-framework.md#architecture-diagram) para más información.
+En Linux, SQL usa un servicio **Launchpad** a fin de comunicarse con un proceso de Launchpad independiente para cada usuario. Vea el [Diagrama de la arquitectura de extensibilidad](extensibility-framework.md#architecture-diagram) para más información.
 2. El servicio Launchpad inicia el selector adecuado, en este caso, PythonLauncher.
 3. PythonLauncher inicia el proceso Python35 externo.
 4. BxlServer coordina con el runtime de Python la administración de intercambios de datos y el almacenamiento de los resultados del trabajo.

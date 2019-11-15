@@ -1,7 +1,7 @@
 ---
 title: ¿Qué son los clústeres de macrodatos?
 titleSuffix: SQL Server Big Data Clusters
-description: Obtenga información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar) que se ejecutan en Kubernetes y proporcionan opciones de escalabilidad horizontal para datos relacionales y HDFS.
+description: Obtenga información sobre los clústeres de macrodatos de SQL Server que se ejecutan en Kubernetes y proporcionan opciones de escalabilidad horizontal para datos relacionales y HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 296a39a59521441a8f3cd5b95bd8e61710fa568a
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 6bbb185936b2a388014a16ae0a6ecc6c52c5d29a
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532506"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706664"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -56,7 +56,7 @@ Los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)
 
 Se ofrece administración y supervisión mediante una combinación de herramientas de línea de comandos, interfaces API, portales y vistas de administración dinámica.
 
-Puede usar Azure Data Studio para realizar diversas tareas en el clúster de macrodatos. Esto es posible gracias a la nueva **extensión SQL Server 2019 (versión preliminar)** . Esta extensión proporciona:
+Puede usar Azure Data Studio para realizar diversas tareas en el clúster de macrodatos. Esto es posible gracias a la nueva **extensión SQL Server 2019**. Esta extensión proporciona:
 
 - Fragmentos de código integrados para las tareas de administración comunes.
 - Capacidad de examinar HDFS, cargar archivos, obtener una vista previa de los archivos y crear directorios.
@@ -107,4 +107,4 @@ El grupo de almacenamiento consiste en módulos de almacenamiento que se compone
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre la implementación de los clústeres de macrodatos de SQL Server, vea [Introducción a los clústeres de macrodatos de SQL Server](deploy-get-started.md).
+Para más información sobre cómo implementar clústeres de macrodatos de SQL Server, vea [Introducción a clústeres de macrodatos de SQL Server](deploy-get-started.md).

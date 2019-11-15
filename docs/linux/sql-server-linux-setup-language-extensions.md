@@ -1,23 +1,24 @@
 ---
-title: Instalación de Extensiones de lenguaje (Java) de SQL Server en Linux
-description: Aprenda a instalar Extensiones de lenguaje (Java) de SQL Server en Red Hat, Ubuntu y SUSE.
+title: Instalación de extensiones de lenguaje de SQL Server en Linux
+titleSuffix: ''
+description: Aprenda a instalar Extensiones de lenguaje de SQL Server en Red Hat, Ubuntu y SUSE.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e86da652231a06cd28318096ada3ae3aed7526e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 2b5a8c83f827f574698d2e9b37a19cdb29e1ba80
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531227"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660780"
 ---
-# <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Instalación de Extensiones de lenguaje (Java) de SQL Server 2019 en Linux
+# <a name="install-sql-server-language-extensions-on-linux"></a>Instalación de extensiones de lenguaje de SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -29,7 +30,7 @@ La ubicación del paquete de las extensiones de Java está en los repositorios d
 
 Extensiones de lenguaje también se admite en contenedores de Linux. No se proporcionan contenedores preintegrados con Extensiones de lenguaje, pero puede crear uno a partir de los contenedores de SQL Server mediante [una plantilla de ejemplo disponible en GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Las extensiones de lenguaje y [Machine Learning Services](../advanced-analytics/index.yml) se instalan de forma predeterminada en los clústeres de macrodatos de SQL Server. Si usa clústeres de macrodatos, no es necesario que siga los pasos de este artículo. Para obtener más información, vea [Uso de Machine Learning Services (Python y R) en clústeres de macrodatos](../big-data-cluster/machine-learning-services.md).
+Las extensiones de lenguaje y [Machine Learning Services](../advanced-analytics/index.yml) se instalan de forma predeterminada en los clústeres de macrodatos de SQL Server. Si usa Clústeres de macrodatos, no es necesario que siga los pasos de este artículo. Para obtener más información, vea [Uso de Machine Learning Services (Python y R) en clústeres de macrodatos](../big-data-cluster/machine-learning-services.md).
 
 ## <a name="uninstall-preview-version"></a>Desinstalación de la versión preliminar
 

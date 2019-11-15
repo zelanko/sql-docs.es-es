@@ -1,7 +1,7 @@
 ---
 title: Depuración y diagnóstico de aplicaciones Spark
 titleSuffix: SQL Server big data clusters
-description: Use el servidor de historial de Spark para depurar y diagnosticar aplicaciones de Spark que se ejecutan en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Use el servidor de historial de Spark para depurar y diagnosticar aplicaciones Spark que se ejecutan en clústeres de macrodatos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -9,25 +9,25 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
-ms.translationtype: MT
+ms.openlocfilehash: dd35de4111c5e18d8c8237e2935df5de458f19b1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878696"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706114"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark en el servidor de historial de Spark
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones Spark en clústeres de macrodatos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] con el servidor de historial de Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se proporcionan instrucciones para usar el servidor de historial de Spark extendido para depurar y diagnosticar aplicaciones Spark en un clúster de macrodatos de SQL Server 2019 (versión preliminar). Estas funcionalidades de depuración y diagnóstico están integradas en el servidor de historial de Spark y tienen tecnología de Microsoft. La extensión incluye la pestaña de datos, la pestaña de gráfico y la pestaña de diagnóstico. En la pestaña de datos, los usuarios pueden comprobar los datos de entrada y salida del trabajo de Spark. En la pestaña de gráfico, los usuarios pueden comprobar el flujo de datos y reproducir el gráfico de trabajo. En la pestaña de diagnóstico, el usuario puede hacer referencia a la asimetría de datos, el desfase horario y el análisis de uso del ejecutor.
+En este artículo se proporcionan instrucciones para usar el servidor de historial de Spark extendido para depurar y diagnosticar aplicaciones Spark en un clúster de macrodatos de SQL Server. Estas funcionalidades de depuración y diagnóstico están integradas en el servidor de historial de Spark y tienen tecnología de Microsoft. La extensión incluye la pestaña de datos, la pestaña de gráfico y la pestaña de diagnóstico. En la pestaña de datos, los usuarios pueden comprobar los datos de entrada y salida del trabajo de Spark. En la pestaña de gráfico, los usuarios pueden comprobar el flujo de datos y reproducir el gráfico de trabajo. En la pestaña de diagnóstico, el usuario puede hacer referencia a la asimetría de datos, el desfase horario y el análisis de uso del ejecutor.
 
 ## <a name="get-access-to-spark-history-server"></a>Obtener acceso al servidor de historial de Spark
 
 La experiencia del usuario del servidor de historial de Spark de código abierto se ha mejorado con información, como, por ejemplo, datos específicos del trabajo y visualización interactiva de los flujos de datos y del gráfico de trabajo para el clúster de macrodatos. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Apertura de la interfaz de usuario web del servidor de historial de Spark mediante URL
-Para abrir el servidor de historial de Spark, vaya a la siguiente dirección URL, y reemplace `<Ipaddress>` y `<Port>` por la información específica del clúster de macrodatos. Tenga en cuenta que en una configuración de clúster de Big Data (nombre de usuario/contraseña) básica, debe proporcionar la **raíz** del usuario cuando se le pida que inicie sesión en los puntos de conexión de puerta de enlace (Knox). Puede consultar más información en: [Implementar el clúster de macrodatos de SQL Server](quickstart-big-data-cluster-deploy.md)
+Para abrir el servidor de historial de Spark, vaya a la siguiente dirección URL, y reemplace `<Ipaddress>` y `<Port>` por la información específica del clúster de macrodatos. Tenga en cuenta que en una configuración de clúster de macrodatos (nombre de usuario/contraseña) de autenticación básica, debe proporcionar el usuario **raíz** cuando se le pida que inicie sesión en los puntos de conexión de puerta de enlace (Knox). Puede consultar más información en: [Implementar el clúster de macrodatos de SQL Server](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -91,7 +91,7 @@ Seleccione el id. de trabajo y haga clic en **Gráfico** en el menú de herramie
 
     ![id. de trabajo del gráfico](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ Se deja **Progreso** como valor predeterminado. El usuario puede comprobar el flujo de datos mediante la selección de **lectura** o **escritura** en la lista desplegable de **visualización**.
++ Se deja **Progreso** como valor predeterminado. El usuario puede comprobar el flujo de datos seleccionando **Leer** o **Escrito** en la lista desplegable **Visualización**.
 
     ![presentación de gráfico](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
@@ -203,5 +203,6 @@ El servidor de historial de Spark tiene los siguientes problemas conocidos:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-* [Introducción[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
-* [Configurar las opciones de Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)
+* [Introducción a los clústeres de macrodatos de SQL Server](../big-data-cluster/deploy-get-started.md)
+* Configuración de las opciones de Spark
+* [Configurar las opciones de Spark](/azure/hdinsight/spark/apache-spark-settings/)

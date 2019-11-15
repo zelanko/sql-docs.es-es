@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ccd2812261b4d71fb7553f3f1ab40216cc89016
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264061"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844528"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opciones (Explorador de objetos de SQL Server - página Script)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,10 @@ Use esta página para establecer las opciones de scripting que se aplican a los 
 Los comandos **Editar** y **Modificar** pueden generar resultados distintos a los del comando **Script <object> como** para el mismo valor de opción. Los comandos **Editar** y **Modificar** están diseñados para modificar objetos en la base de datos actual durante una sesión del Editor de consultas. El comando **Script<object> como** está diseñado para generar un script que se pueda usar posteriormente para crear objetos.  
   
 ## <a name="options"></a>Opciones  
-Para especificar las opciones de scripts, seleccione las opciones de configuración disponibles en la lista situada a la derecha de cada opción.  
+Para especificar las opciones de scripts, seleccione las opciones de configuración disponibles en la lista situada a la derecha de cada opción.
+
+> [!NOTE]
+> Los valores de configuración predeterminados solo se aplican a la opción **Crear un script a partir de toda la base de datos y todos los objetos de esta** y pueden variar al usar la opción **Seleccionar objetos de base de datos específicos**.
   
 ### <a name="general-scripting-options"></a>Opciones generales de scripting  
 **Delimitar instrucciones individuales**  

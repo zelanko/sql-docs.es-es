@@ -1,36 +1,37 @@
 ---
-title: Creación de un grupo de recursos para Python y R
-description: Obtenga información sobre cómo crear y usar un grupo de recursos para administrar cargas de trabajo de Python y R en SQL Server Machine Learning Services.
+title: Creación de un grupo de recursos
+description: Obtenga información sobre cómo crear y usar un grupo de recursos para administrar cargas de trabajo de Python o R en SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/01/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e8c48665c2928a0c8133892cc0029b4bd82c4cc
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MT
+ms.openlocfilehash: 49027d7b9ab230f80bb8154a746eb503846534f2
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714329"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727773"
 ---
-# <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>Cree un grupo de recursos para SQL Server Machine Learning Services
+# <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>Crear un grupo de recursos para SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Obtenga información sobre cómo crear y usar un grupo de recursos para administrar cargas de trabajo de Python y R en SQL Server Machine Learning Services. 
+Obtenga información sobre cómo crear y usar un grupo de recursos para administrar cargas de trabajo de Python o R en SQL Server Machine Learning Services. 
 
 El proceso incluye varios pasos:
 
-1. Revise el estado de los grupos de recursos existentes. Es importante que comprenda qué servicios están usando los recursos existentes.
-2. Modifique los grupos de recursos del servidor.
-3. Cree un nuevo grupo de recursos para los procesos externos.
-4. Cree una función de clasificación para identificar las solicitudes de script externo.
-5. Compruebe que el nuevo grupo de recursos externos está capturando trabajos de R o Python de las cuentas o los clientes especificados.
+1. Estado de revisión de cualquiera de los grupos de recursos existente. Es importante que comprenda qué servicios están usando los recursos existentes.
+2. Modificar grupos de recursos de servidor.
+3. Crear un nuevo grupo de recursos para los procesos externos.
+4. Cree una función de clasificación para identificar las solicitudes de script externas.
+5. Compruebe que el nuevo grupo de recursos externos está capturando trabajos de Python o R de las cuentas o los clientes especificados.
 
 <a name="bkmk_ReviewStatus"></a>
 
-##  <a name="review-the-status-of-existing-resource-pools"></a>Revisar el estado de los grupos de recursos existentes
+##  <a name="review-the-status-of-existing-resource-pools"></a>Estado de revisión de los grupos de recursos existentes
   
 1.  Use una instrucción como la siguiente para comprobar los recursos asignados al grupo predeterminado para el servidor.
   
@@ -38,11 +39,11 @@ El proceso incluye varios pasos:
     SELECT * FROM sys.resource_governor_resource_pools WHERE name = 'default'
     ```
 
-    **Resultados de ejemplo**
+    **Ejemplo de resultados**
 
-    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
-    |2|valor predeterminado|0|100|0|100|100|0|0|
+    |2|predeterminados|0|100|0|100|100|0|0|
 
 2.  Compruebe los recursos asignados al grupo de recursos **externos** predeterminado.
   
@@ -50,15 +51,15 @@ El proceso incluye varios pasos:
     SELECT * FROM sys.resource_governor_external_resource_pools WHERE name = 'default'
     ```
 
-    **Resultados de ejemplo**
+    **Ejemplo de resultados**
 
-    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|predeterminados|100|20|0|2|
  
-3.  En esta configuración predeterminada del servidor, el tiempo de ejecución externo probablemente tendrá recursos insuficientes para completar la mayoría de las tareas. Para cambiar esta configuración, se debe modificar el uso de recursos de servidor de la siguiente manera:
+3.  Con estos valores predeterminados de servidor, es probable que el tiempo de ejecución externo no tenga recursos suficientes para completar la mayoría de las tareas. Para cambiar esta configuración, se debe modificar el uso de recursos de servidor de la siguiente manera:
   
-    -   Reduzca la memoria máxima del equipo que puede usar el motor de base de datos.
+    -   Reducir la memoria máxima del equipo que puede usar el motor de base de datos.
   
     -   Aumentar la memoria máxima del equipo que puede usar el proceso externo.
 
@@ -83,13 +84,13 @@ El proceso incluye varios pasos:
     ```
   
     > [!NOTE]
-    >  Se trata simplemente de una configuración sugerida para empezar; debe evaluar las tareas de aprendizaje automático en función de otros procesos de servidor para determinar el equilibrio correcto para su entorno y carga de trabajo.
+    >  Estas son solo opciones iniciales sugeridas. Debe evaluar las tareas de aprendizaje automático en función de otros procesos del servidor para determinar el equilibrio correcto para el entorno y la carga de trabajo.
 
 ## <a name="create-a-user-defined-external-resource-pool"></a>Crear un grupo de recursos externos definido por el usuario
   
 1.  Los cambios en la configuración de Resource Governor se aplican en todo el servidor como un todo y afectan a las cargas de trabajo que usan los grupos predeterminados para el servidor, así como a las cargas de trabajo que usan los grupos externos.
   
-     Por tanto, para proporcionar un mayor control sobre qué cargas de trabajo deben tener prioridad, puede crear un nuevo grupo de recursos externos definido por el usuario. También debe definir una función de clasificación y asignarla al grupo de recursos externos. La palabra clave **external** es New.
+     Por tanto, para proporcionar un mayor control sobre qué cargas de trabajo deben tener prioridad, puede crear un nuevo grupo de recursos externos definido por el usuario. También debe definir una función de clasificación y asignarla al grupo de recursos externos. La palabra clave **EXTERNAL** es nueva.
   
      Empiece por crear un nuevo *grupo de recursos externos definido por el usuario*. En el ejemplo siguiente, el grupo se denomina **ds_ep**.
   
@@ -107,11 +108,11 @@ El proceso incluye varios pasos:
   
      Para más información, vea [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md) (Grupo de cargas de trabajo de Resource Governor) y [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).
   
-## <a name="create-a-classification-function-for-machine-learning"></a>Creación de una función de clasificación para machine learning
+## <a name="create-a-classification-function-for-machine-learning"></a>Crear una función de clasificación para el aprendizaje automático
   
 Una función de clasificación examina las tareas entrantes y determina si la tarea se puede ejecutar con el grupo de recursos actual. Las tareas que no cumplen los criterios de la función de clasificación se vuelven a asignar al grupo de recursos predeterminado del servidor.
   
-1. Empiece por especificar que una función clasificadora debe ser utilizada por Resource Governor para determinar los grupos de recursos. Puede asignar un **valor null** como un marcador de posición para la función clasificadora.
+1. Empiece por especificar una función clasificadora que Resource Governor debe usar para determinar los grupos de recursos. Puede asignar un valor **null** como marcador de posición para la función clasificadora.
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH (classifier_function = NULL);
@@ -120,7 +121,7 @@ Una función de clasificación examina las tareas entrantes y determina si la ta
   
      Para obtener más información, vea [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md).
   
-2.  En la función clasificadora para cada grupo de recursos, defina el tipo de instrucciones o solicitudes entrantes que deben asignarse al grupo de recursos.
+2.  En la función clasificadora para cada grupo de recursos, defina el tipo de instrucciones o las solicitudes entrantes que se deben asignar al grupo de recursos.
   
      Por ejemplo, la siguiente función devuelve el nombre del esquema asignado al grupo de recursos externos definido por el usuario si la aplicación que envió la solicitud es "Microsoft R Host" o "RStudio". De lo contrario, devuelve el grupo de recursos predeterminado.
   
@@ -150,7 +151,7 @@ Una función de clasificación examina las tareas entrantes y determina si la ta
 
 Para comprobar que se han realizado los cambios, debe comprobar la configuración de la memoria del servidor y la CPU de cada uno de los grupos de cargas de trabajo asociados con estos grupos de recursos de instancia:
 
-+ el grupo predeterminado para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servidor
++ el grupo predeterminado para el servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + el grupo de recursos predeterminado para procesos externos
 + el grupo definido por el usuario para procesos externos
 
@@ -160,30 +161,30 @@ Para comprobar que se han realizado los cambios, debe comprobar la configuració
     SELECT * FROM sys.resource_governor_workload_groups;
     ```
 
-    **Resultados de ejemplo**
+    **Ejemplo de resultados**
 
-    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
     |1|interno|Media|25|0|0|0|0|1|2|
-    |2|valor predeterminado|Media|25|0|0|0|0|2|2|
+    |2|predeterminados|Media|25|0|0|0|0|2|2|
     |256|ds_wg|Media|25|0|0|0|0|2|256|
   
-2.  Use la nueva vista de catálogo, [Sys. &#40;resource_governor_external_resource_pools de Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), para ver todos los grupos de recursos externos.
+2.  Use la nueva vista de catálogo, [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), para ver todos los grupos de recursos externos.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
     ```
 
-    **Resultados de ejemplo**
+    **Ejemplo de resultados**
     
-    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|predeterminados|100|20|0|2|
     |256|ds_ep|100|40|0|1|
   
      Para más información, vea [Resource Governor Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md) (Vistas de catálogo de Resource Governor &#40;Transact-SQL&#41;).
   
-3.  Ejecute la siguiente instrucción para devolver información sobre los recursos del equipo que se afinidad con al grupo de recursos externos, si procede:
+3.  Ejecute la instrucción siguiente para devolver información sobre los recursos del equipo que tienen afinidad con el grupo de recursos externo, si procede:
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pool_affinity;
@@ -193,11 +194,11 @@ Para comprobar que se han realizado los cambios, debe comprobar la configuració
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de la administración de recursos del servidor, consulte:
+Para obtener más información acerca de la administración de recursos del servidor, vea:
 
 + [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md) 
-+ [Resource Governor vistas &#40;de administración dinámica relacionadas con TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [Vistas de administración dinámica relacionadas con Resource Governor &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
-Para obtener información general sobre la regulación de recursos para machine learning, consulte:
+Para obtener información general sobre la regulación de recursos para el aprendizaje automático, vea:
 
-+ [Administración de cargas de trabajo de Python y R con Resource Governor en SQL Server Machine Learning Services](resource-governor.md)
++ [Administrar cargas de trabajo de Python o R con Resource Governor en SQL Server Machine Learning Services](resource-governor.md)

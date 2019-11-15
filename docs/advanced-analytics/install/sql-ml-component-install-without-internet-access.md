@@ -1,19 +1,20 @@
 ---
-title: Instalación de componentes de idioma de R y Python sin acceso a Internet
-description: Instalación de Machine Learning (R y Python) sin conexión o desconectado en una instancia aislada de SQL Server detrás de un firewall de red.
+title: Instalación sin acceso a Internet
+description: Instalación de SQL Server Machine Learning (R y Python) en equipos aislados detrás de un firewall de red.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bd1db578d6f1b4900f559c51521d807d7e1ec271
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.openlocfilehash: 9b37851e2becaeddb754339ed6fe850007e97a19
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73594344"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727548"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalación de SQL Server Machine Learning (R y Python) en equipos sin acceso a Internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -177,7 +178,7 @@ Se recomienda aplicar la última actualización acumulativa al motor de base de 
 
 ## <a name="set-environment-variables"></a>Establecimiento de variables de entorno
 
-Solo de cara a la integración de características de R, debe establecer la variable de entorno **MKL_CBWR** para [garantizar una salida coherente](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) de los cálculos de la biblioteca Math Kernel Library (MKL) de Intel.
+Solo de cara a la integración de características de R, conviene establecer la variable de entorno **MKL_CBWR** para [garantizar una salida coherente](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) de los cálculos de la biblioteca Math Kernel Library (MKL) de Intel.
 
 1. En el panel de control, haga clic en **Sistema y seguridad** > **Sistema** > **Configuración avanzada del sistema** > **Variables de entorno**.
 

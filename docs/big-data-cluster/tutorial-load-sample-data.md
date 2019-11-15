@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69653286"
@@ -20,12 +20,12 @@ ms.locfileid: "69653286"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este tutorial se explica cómo usar un script para cargar datos de ejemplo [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]en un. Muchos de los otros tutoriales de la documentación usan estos datos de ejemplo.
+En este tutorial se explica cómo usar un script para cargar datos de ejemplo en un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Muchos de los otros tutoriales de la documentación usan estos datos de ejemplo.
 
 > [!TIP]
-> Puede encontrar más ejemplos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] en el repositorio de github [SQL-Server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) . Se encuentran en la ruta de acceso **sql-server-samples/samples/features/sql-big-data-cluster/** .
+> Puede encontrar más ejemplos para el [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] en el repositorio de GitHub [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster). Se encuentran en la ruta de acceso **sql-server-samples/samples/features/sql-big-data-cluster/** .
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Un clúster de macrodatos implementado](deployment-guidance.md)
 - [Herramientas de macrodatos](deploy-big-data-tools.md)

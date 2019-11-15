@@ -1,21 +1,23 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Documentación de Microsoft Azure
-description: Obtenga información sobre cómo compilar y administrar potentes aplicaciones mediante Microsoft Azure Cloud Services. Obtenga documentación, un código de ejemplo, tutoriales y mucho más.
+experimental: true
+experiment_id: 81ba5f65-59fb-4d
+title: Centro de aprendizaje de SQL Server
+description: Un resumen de los recursos que puede usar para aprender sobre SQL Server y Azure SQL Database. Desde guías de inicio rápido y tutoriales, hasta Microsoft Learn y LinkedIn Learning.
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-ms.date: 12/15/2018
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4430d76ac8e848127e9936bb6ecf8aa8b08e9982
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: b05ebcd71bed887d711705b3dffa99bf6ecf05fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176279"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637926"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -31,7 +33,7 @@ ms.locfileid: "70176279"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Probar SQL Server 2019 (versión preliminar)</span>
+                                    <span class="likeAnH3">Probar SQL Server 2019 (versión preliminar)</span>
                                 </div>
                             </div>
                         </div>

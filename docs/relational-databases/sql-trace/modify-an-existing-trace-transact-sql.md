@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8792b43f-2510-44e3-9239-e73ad8227b89
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7b381b8a980d1f50802d024ce377a7de0bfbc6e7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 2d1f0eeb0591bd4a51b79b8e83fbbd8d6023535f
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909457"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632999"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modificar un seguimiento existente (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,15 +30,15 @@ ms.locfileid: "72909457"
   
 2.  Para modificar los eventos del seguimiento, ejecute **sp_trace_setevent** , especificando los cambios a través de los parámetros. Los parámetros son, por este orden:  
 
-    -   **@traceid** (Id. del seguimiento)  
+    -   **\@traceid** (identificador de seguimiento)  
   
-    -   **@eventid** (Id. del evento)  
+    -   **\@eventid** (identificador del evento)  
   
-    -   **@columnid** (Id. de columna)  
+    -   **\@columnid** (identificador de columna)  
   
-    -   **@on** (ON)  
+    -   **\@on** (activado)  
   
-     Al modificar el parámetro **@on** , tenga presente su interacción con el parámetro **@columnid** :  
+     Al modificar el parámetro **\@on**, tenga presente su interacción con el parámetro **\@columnid**:  
   
     |ON|Identificador de columna|Resultado|  
     |--------|---------------|------------|  

@@ -1,5 +1,5 @@
 ---
-title: Introducción mediante la ejecución del Asistente Habilitar la base de datos para Stretch | Microsoft Docs
+title: Introducción mediante la ejecución del Asistente para Habilitar base de datos para Stretch
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -20,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b4239a8f6aefc9160171c1a700aa37733a66de0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136130"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843800"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Introducción mediante la ejecución del Asistente para Habilitar base de datos para Stretch
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,14 +53,14 @@ ms.locfileid: "68136130"
  -   Tiene que tener una suscripción de Microsoft Azure.
  -   Su SQL Server tiene que poder comunicarse con el servidor remoto de Azure.
   
- ![Página de introducción del Asistente para la base de datos de Stretch](../../sql-server/stretch-database/media/stretch-wizard-1.png "Página de introducción del Asistente para la base de datos de Stretch")  
+ ![Página de introducción del Asistente para Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-1.png "Página de introducción del Asistente para Stretch Database")  
   
 ##  <a name="Tables"></a> Seleccionar tablas  
  Seleccione las tablas que desea habilitar para Stretch.  
  
 Las tablas con muchas filas aparecen en la parte superior de la lista ordenada. Antes de que el Asistente muestre la lista de tablas, las analiza para buscar tipos de datos que no sean compatibles en estos momentos con Stretch Database. 
   
- ![Página Seleccionar tablas del Asistente para la base de datos de Stretch](../../sql-server/stretch-database/media/stretch-wizard-2.png "Página Seleccionar tablas del Asistente para la base de datos de Stretch")  
+ ![Página de selección de tablas del Asistente para Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-2.png "Página de selección de tablas del Asistente para Stretch Database")  
   
 |columna|Descripción|  
 |------------|-----------------|  
@@ -76,7 +77,7 @@ Las tablas con muchas filas aparecen en la parte superior de la lista ordenada. 
   
 1.  En la lista **Seleccione las tablas que quiere ajustar** , haga clic en **Toda la tabla** en la fila de la tabla. Se abre el cuadro de diálogo **Seleccionar filas para ajustar** .  
   
-     ![Definir un predicado de filtro basado en la fecha](../../sql-server/stretch-database/media/stretch-wizard-2a.png "Definir un predicado de filtro basado en la fecha")  
+     ![Definición de un predicado de filtro basado en fechas](../../sql-server/stretch-database/media/stretch-wizard-2a.png "Definición de un predicado de filtro basado en fechas")  
   
 2.  En el cuadro de diálogo **Seleccionar filas para ajustar** , seleccione **Elegir filas**.  
   
@@ -93,7 +94,7 @@ Las tablas con muchas filas aparecen en la parte superior de la lista ordenada. 
 
 La función de filtro se crea en SQL Server solo cuando termina el asistente. Hasta entonces, puede volver a la página **Seleccionar tablas** para modificar o cambiar el nombre de la función de filtro.
 
-![Página Seleccionar tablas después de definir un predicado de filtro](../../sql-server/stretch-database/media/stretch-wizard-2b.png "Página Seleccionar tablas después de definir un predicado de filtro")
+![Página de selección de tablas después de definir un predicado de filtro](../../sql-server/stretch-database/media/stretch-wizard-2b.png "Página de selección de tablas después de definir un predicado de filtro")
 
 Si quiere usar un tipo de función de filtro diferente para seleccionar las filas que va a migrar, realice una de las siguientes acciones.  
   
@@ -105,7 +106,7 @@ Si quiere usar un tipo de función de filtro diferente para seleccionar las fila
   
 1.  Inicie sesión con una cuenta Microsoft en Microsoft Azure.  
   
-     ![Iniciar sesión en Azure: Asistente para la base de datos de Stretch](../../sql-server/stretch-database/media/stretch-wizard-3.png "Iniciar sesión en Azure: Asistente para la base de datos de Stretch")  
+     ![Inicio de sesión en Azure: Asistente para Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-3.png "Inicio de sesión en Azure: Asistente para Stretch Database")  
   
 2.  Seleccione la suscripción de Azure existente que se usará para Stretch Database. 
 
@@ -128,7 +129,7 @@ Si quiere usar un tipo de función de filtro diferente para seleccionar las fila
   
         2.  También puede utilizar una cuenta de servicio federado para que SQL Server se comunique con el servidor remoto de Azure.  
   
-         ![Crear nuevo servidor de Azure: Asistente para la base de datos de Stretch](../../relational-databases/tables/media/stretch-wizard-4.png "Crear nuevo servidor de Azure: Asistente para la base de datos de Stretch")  
+         ![Creación de un nuevo Asistente para Stretch Database de servidor de Azure](../../relational-databases/tables/media/stretch-wizard-4.png "Creación de un nuevo Asistente para Stretch Server de servidor de Azure")  
   
     -   **Servidor existente**  
   
@@ -140,18 +141,18 @@ Si quiere usar un tipo de función de filtro diferente para seleccionar las fila
   
             -   Seleccione **Autenticación integrada de Active Directory** a fin de utilizar una cuenta de servicio federado para que SQL Server se comunique con el servidor remoto de Azure. Si el servidor seleccionado no está integrado en Azure Active Directory, esta opción no aparece.
   
-         ![Seleccionar servidor de Azure existente: Asistente para la base de datos de Stretch](../../sql-server/stretch-database/media/stretch-wizard-5.png "Seleccionar servidor de Azure existente: Asistente para la base de datos de Stretch")  
+         ![Selección de un servidor de Azure existente: Asistente para Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-5.png "Selección de un servidor de Azure existente: Asistente para Stretch Database")  
   
 ##  <a name="Credentials"></a> Secure credentials (Proteger las credenciales)  
  Tendrá que contar con una clave maestra de base de datos para proteger las credenciales que Stretch Database utiliza para conectarse a la base de datos remota.  
   
  Si ya existe una clave maestra de base de datos, escriba la contraseña para esta.  
   
- ![Página Credenciales de seguridad del Asistente para la base de datos de Stretch](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Página Credenciales de seguridad del Asistente para la base de datos de Stretch")  
+ ![Página de credenciales seguras del Asistente para Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-6b.PNG "Página de credenciales seguras del Asistente para Stretch Database")  
   
  Si la base de datos no tiene una clave maestra existente, escriba una contraseña segura para crear una clave maestra de base de datos.  
   
- ![Página Credenciales de seguridad del asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página Credenciales de seguridad del asistente para Stretch Database")  
+ ![Página de credenciales seguras del Asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-6.png "Página de credenciales seguras del Asistente para Stretch Database")  
   
  Para obtener más información sobre la clave maestra de base de datos, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md) y [Crear la clave maestra de una base de datos](../../relational-databases/security/encryption/create-a-database-master-key.md). Para obtener más información sobre la credencial que crea el asistente, vea [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
   
@@ -160,19 +161,19 @@ Si quiere usar un tipo de función de filtro diferente para seleccionar las fila
   
  Las direcciones IP que proporcione en esta página indican al servidor de Azure que permita que los datos entrantes, las consultas y las operaciones de administración iniciadas por SQL Server pasen por el firewall de Azure. El asistente no cambia nada en la configuración del firewall del servidor de SQL Server.  
   
- ![Página Seleccionar dirección IP del Asistente para la base de datos de Stretch](../../relational-databases/tables/media/stretch-wizard-7.png "Página Seleccionar dirección IP del Asistente para la base de datos de Stretch")  
+ ![Página Seleccionar dirección IP del Asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Seleccionar dirección IP del Asistente para Stretch Database")  
   
 ##  <a name="Summary"></a> Resumen  
  Revise los valores especificados y las opciones seleccionadas en el asistente y los costos estimados en Azure. Después, seleccione **Finalizar** para habilitar Stretch.  
   
- ![Página Resumen del Asistente para la base de datos de Stretch](../../sql-server/stretch-database/media/stretch-wizard-8.png "Página Resumen del Asistente para la base de datos de Stretch")  
+ ![Página de resumen del Asistente para Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-8.png "Página de resumen del Asistente para Stretch Database")  
   
 ##  <a name="Results"></a> Resultado  
  Consulte los resultados.  
   
  Para supervisar el estado de la migración de datos, vea [Monitor and troubleshoot data migration &#40;Stretch Database&#41; (Supervisar y solucionar problemas de migración de datos &#40;Stretch Database&#41;)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
- ![Página Resultados del Asistente para la base de datos de Stretch](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Página Resultados del Asistente para la base de datos de Stretch")  
+ ![Página de resultados del Asistente para Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Página de resultados del Asistente para Stretch Database")  
   
 ##  <a name="KnownIssues"></a> Solución de problemas del asistente  
  **Error en el Asistente para Stretch Database.**  

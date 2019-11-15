@@ -1,26 +1,26 @@
 ---
 title: Instalación de extensiones de lenguaje de SQL Server en Windows
-titleSuffix: SQL Server Language Extensions
-description: Pasos de instalación de extensiones de lenguaje de SQL Server 2019 en Windows.
+titleSuffix: ''
+description: Obtenga información sobre cómo instalar las extensiones de lenguaje de SQL Server en Windows.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bc9baf6f5360c82ec27a3c243b840b2d38ed1d56
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e4f3a84e5001d7485ab590a66ee497522042824
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589069"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658842"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Instalación de extensiones de lenguaje de SQL Server en Windows
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-A partir de SQL Server 2019, se proporciona compatibilidad con extensiones de lenguaje y con Java. En este artículo se explica cómo instalar el componente de extensiones de lenguaje ejecutando el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Obtenga información sobre cómo instalar el componente de extensiones de lenguaje en SQL Server ejecutando el asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > Este artículo trata la instalación de extensiones de lenguaje de SQL Server en Windows. Para Linux, vea [Instalación de Extensiones de lenguaje (Java) de SQL Server 2019 en Linux](https://docs.microsoft.com/sql//linux/sql-server-linux-setup-language-extensions).
@@ -61,11 +61,8 @@ En la versión candidata para lanzamiento 1 de SQL Server 2019 existen dos fo
     
 ## <a name="get-the-installation-media"></a>Obtener los medios de instalación
 
-La versión preliminar de SQL Server 2019 está disponible en el [sitio de instalación de SQL Server 2019](https://www.microsoft.com/sql-server/sql-server-2019#Install).
-
-<!-- We can use this include statement, once SQL Server 2019 is in GA
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
--->
+
 ## <a name="run-setup"></a>Ejecución del programa de instalación
 
 En instalaciones locales, debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura y ejecución para dicho recurso.

@@ -1,26 +1,26 @@
 ---
 title: Arquitectura de extensibilidad en extensiones de lenguaje de SQL Server
-titleSuffix: SQL Server Language Extensions
-description: Compatibilidad del código externo con el motor de base de datos de SQL Server, con una arquitectura dual para ejecutar lenguaje externo en datos relacionales.
+titleSuffix: ''
+description: Obtenga información sobre la arquitectura de extensibilidad utilizada para las extensiones de lenguaje de SQL Server, que permite ejecutar código externo en SQL Server. En SQL Server 2019, se admite Java. El código se ejecuta en un entorno de ejecución de lenguajes como una extensión del motor de base de datos principal.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6cefa617dc6068f07b2cc2b684ce0442d7a438e8
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73589089"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658871"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Arquitectura de extensibilidad en extensiones de lenguaje de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Las extensiones de lenguaje de SQL Server tienen un marco de extensibilidad para ejecutar código externo, como Java, en el servidor. El código se ejecuta en un entorno de ejecución de lenguajes como una extensión del motor de base de datos principal.
+Obtenga información sobre la arquitectura de extensibilidad utilizada para las extensiones de lenguaje de SQL Server, que permite ejecutar código externo en SQL Server. En SQL Server 2019, se admite Java. El código se ejecuta en un entorno de ejecución de lenguajes como una extensión del motor de base de datos principal.
 
 ## <a name="background"></a>Información previa
 
@@ -66,7 +66,7 @@ Para ejecutar tareas en un lenguaje específico compatible, Launchpad obtiene un
 
 ## <a name="communication-channels-between-components"></a>Canales de comunicación entre componentes
 
-En esta sección se describen los protocolos de comunicación entre componentes y plataformas de datos.
+En esta sección se describen los protocolos de comunicación entre los componentes y las plataformas de datos.
 
 + **TCP/IP**
 
@@ -79,14 +79,14 @@ En esta sección se describen los protocolos de comunicación entre componentes 
   Además, en función de la tarea, la cuenta podría necesitar los siguientes permisos:
 
   + Lectura de datos que usa el trabajo.
-  + Escritura de datos en tablas, por ejemplo, al guardar los resultados en una tabla.
-  + Creación de objetos de base de datos, por ejemplo, si se guarda el script externo como parte de un procedimiento almacenado nuevo.
+  + Escritura de datos en tablas; por ejemplo, al guardar los resultados en una tabla.
+  + Creación de objetos de bases de datos: por ejemplo, si se guarda el script externo como parte de un procedimiento almacenado nuevo.
 
   Cuando se usa SQL Server como contexto de proceso para un script ejecutado desde un cliente remoto y el ejecutable debe recuperar datos de un origen externo, se usa ODBC para la escritura diferida. SQL Server asigna la identidad del usuario mediante la emisión del comando remoto a la identidad del usuario en la instancia actual y ejecuta el comando ODBC con las credenciales del usuario. La cadena de conexión necesaria para realizar esta llamada ODBC se obtiene del código de cliente.
 
 + **Otros protocolos**
 
-  Los procesos que podrían necesitar trabajar en "fragmentos" o transferir datos de nuevo a un cliente remoto también pueden usar el [formato de archivo XDF](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). La transferencia de datos real se realiza a través de blobs codificados.
+  Los procesos que puede que necesiten trabajar en "fragmentos" o transferir datos de nuevo a un cliente remoto también pueden utilizar el [formato de archivo XDF](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). La transferencia de datos real se realiza a través de blobs codificados.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

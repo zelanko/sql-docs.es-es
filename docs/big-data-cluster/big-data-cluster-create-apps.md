@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 863b569014bf35ef4e6aab01ba966edb34812bd1
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1253863bcd2e1da804480a3e1d0e628024b0798b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532523"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706692"
 ---
 # <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Cómo implementar una aplicación en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -26,7 +26,7 @@ En este artículo se describe cómo implementar y administrar scripts de R y Pyt
 
 - Una única utilidad de línea de comandos para administrar el clúster y la aplicación.
 - Implementación simplificada de aplicaciones al tiempo que se proporciona un control granular sobre los archivos de especificación.
-- Compatibilidad con el hospedaje de más tipos de aplicación: SSIS y MLeap (novedad en CTP 2.3).
+- Compatibilidad con el hospedaje de más tipos de aplicación: SSIS y MLeap.
 - [Extensión de Visual Studio Code](app-deployment-extension.md) para administrar la implementación de aplicaciones.
 
 Las aplicaciones se implementan y administran mediante la utilidad de línea de comandos `azdata`. En este artículo se proporcionan ejemplos de cómo implementar aplicaciones desde la línea de comandos. Para obtener información sobre cómo usar esto en Visual Studio Code, consulte [Extensión de Visual Studio Code](app-deployment-extension.md).
@@ -43,7 +43,7 @@ Se admiten los siguientes tipos de aplicaciones:
 
 ## <a name="capabilities"></a>Capabilities
 
-En SQL Server 2019 (versión preliminar), puede crear, eliminar, describir, inicializar, enumerar, ejecutar y actualizar la aplicación. En la tabla siguiente se describen los comandos de implementación de aplicaciones que puede usar con **azdata**.
+En SQL Server 2019, puede crear, eliminar, describir, inicializar, enumerar, ejecutar y actualizar la aplicación. En la tabla siguiente se describen los comandos de implementación de aplicaciones que puede usar con **azdata**.
 
 |Comando |Descripción |
 |:---|:---|

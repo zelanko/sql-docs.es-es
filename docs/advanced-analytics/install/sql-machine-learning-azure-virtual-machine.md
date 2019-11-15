@@ -1,38 +1,39 @@
 ---
-title: Instalación de las características de lenguaje R y Python en una máquina virtual de Azure
-description: Ejecute soluciones de ciencia de datos y aprendizaje automático de R y Python en una máquina virtual de SQL Server en la nube de Azure.
+title: Instalación en una máquina virtual de Azure
+description: Ejecute las soluciones de ciencia de datos y aprendizaje automático de R y Python en una máquina virtual de SQL Server en la nube de Azure.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/09/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b7aa37c3ec72390d76ecf9e939916f9641187956
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: aeec25b561822e8083b89e03f0f7e74f40660f7b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715883"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727613"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Instalación de Machine Learning Services de SQL Server con R y Python en una máquina virtual de Azure
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Instalación de SQL Server Machine Learning Services con R y Python en una máquina virtual de Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Puede instalar la integración de R y Python con Machine Learning Services en una máquina virtual SQL Server en Azure, lo que elimina las tareas de instalación y configuración. Una vez implementada la máquina virtual, las características están listas para su uso.
+Puede instalar la integración de R y Python con Machine Learning Services en una máquina virtual de SQL Server en Azure, lo que elimina las tareas de instalación y configuración. Cuando se ha implementado la máquina virtual, las características están listas para su uso.
  
-Para obtener instrucciones paso a paso, vea [Cómo aprovisionar una máquina virtual de Windows SQL Server en el Azure portal](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
+Para obtener instrucciones paso a paso, consulte [Aprovisionamiento de una máquina virtual Windows con SQL Server en Azure Portal](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
 
-El paso [configurar las opciones de SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) es donde se agrega el aprendizaje automático a la instancia.
+En el paso [establecer la configuración de SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) se agrega aprendizaje automático a la instancia.
 
 <a name="firewall"></a>
 
 ## <a name="unblock-the-firewall"></a>Desbloqueo del firewall
 
-De forma predeterminada, el Firewall de la máquina virtual de Azure incluye una regla que bloquea el acceso a la red para las cuentas de usuario locales.
+El firewall de la máquina virtual de Azure incluye de forma predeterminada una regla que bloquea el acceso a la red de las cuentas de usuario locales de R.
 
-Debe deshabilitar esta regla para asegurarse de que puede tener acceso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la instancia desde un cliente de ciencia de datos remoto.  De lo contrario, el código de machine learning no se puede ejecutar en contextos de proceso que usan el área de trabajo de la máquina virtual.
+Debe deshabilitar esta regla para asegurarse de que puede tener acceso a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un cliente de ciencia de datos remoto.  De lo contrario, el código de aprendizaje automático no se puede ejecutar en contextos de cálculo que usen el área de trabajo de la máquina virtual.
 
-Para habilitar el acceso desde clientes de ciencia de datos remotos:
+Para permitir el acceso desde clientes de ciencia de datos remotos:
 
 1. En la máquina virtual, abra Firewall de Windows con seguridad avanzada.
 2. Seleccione **Reglas de salida**.
@@ -42,9 +43,9 @@ Para habilitar el acceso desde clientes de ciencia de datos remotos:
   
 ## <a name="enable-odbc-callbacks-for-remote-clients"></a>Habilitar devoluciones de llamada ODBC para clientes remotos
 
-Si espera que los clientes que llaman al servidor necesiten emitir consultas ODBC como parte de sus soluciones de aprendizaje automático, debe asegurarse de que Launchpad pueda realizar llamadas ODBC en nombre del cliente remoto. 
+Si tiene previsto que los clientes llamen al servidor deban generar consultas de ODBC como parte de sus soluciones, deberá asegurarse de que el Launchpad puede realizar llamadas a ODBC en nombre del cliente remoto. 
 
-Para ello, debe permitir que las cuentas de trabajo SQL que usan Launchpad puedan iniciar sesión en la instancia. Para obtener más información, vea [Agregar SQLRUserGroup como un usuario de base de datos](../security/create-a-login-for-sqlrusergroup.md).
+Para ello, debe permitir que las cuentas de trabajo SQL que usan Launchpad puedan iniciar sesión en la instancia. Para obtener más información, vea [Agregar SQLRUserGroup como usuario de base de datos](../security/create-a-login-for-sqlrusergroup.md).
 
 <a name="network"></a>
 
@@ -56,4 +57,4 @@ Para ello, debe permitir que las cuentas de trabajo SQL que usan Launchpad pueda
   
 + Habilitar TCP/IP
 
-  TCP/IP es necesario para las conexiones de bucle invertido. Si obtiene el error "DBNETLIB; SQL Server no existe o se ha denegado el acceso ", habilite TCP/IP en la máquina virtual que admite la instancia.
+  Se necesita TCP/IP en las conexiones de bucle invertido. Si aparece el error "SQL Server no existe o se ha denegado el acceso", habilite TCP/IP en la máquina virtual compatible con la instancia.

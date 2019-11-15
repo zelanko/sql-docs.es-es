@@ -1,5 +1,5 @@
 ---
-title: Pausa y reanudación de la migración de datos (Stretch Database) | Microsoft Docs
+title: Pausa y reanudación de la migración de datos
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -11,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 064685860315af633d0fbba8c250ca23cef46873
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b853d764d1cf7a6aa7252aa181b70dbcccc265fe
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136088"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844541"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>Pausa y reanudación de la migración de datos (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

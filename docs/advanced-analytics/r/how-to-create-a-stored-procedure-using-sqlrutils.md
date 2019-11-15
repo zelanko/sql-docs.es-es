@@ -1,40 +1,41 @@
 ---
-title: Cómo crear un procedimiento almacenado mediante sqlrutils
-description: Use el paquete sqlrutils R en SQL Server para agrupar el código del lenguaje R en una sola función que se pueda pasar como argumento a un procedimiento almacenado.
+title: Creación de un procedimiento almacenado de R
+description: Use el paquete sqlrutils de R en SQL Server para agrupar el código del lenguaje R en una sola función que se pueda pasar como argumento a un procedimiento almacenado.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 22faeb2ea9f3e2104c2c1921b91a26ec5068079e
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715705"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727472"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Crear un procedimiento almacenado mediante sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se describen los pasos necesarios para convertir el código de R para que se ejecute como un procedimiento almacenado de T-SQL. Para obtener el mejor resultado posible, es posible que sea necesario modificar ligeramente el código a fin de garantizar que todas las entradas se puedan parametrizar.
+En este artículo se detallan los pasos para convertir el código R de modo que se ejecute como un procedimiento almacenado de T-SQL. Para obtener el mejor resultado posible, es posible que sea necesario modificar ligeramente el código a fin de garantizar que todas las entradas se puedan parametrizar.
 
-## <a name="bkmk_rewrite"></a>Paso 1. Reescribir script de R
+## <a name="bkmk_rewrite"></a>Paso 1. Reescritura de scripts de R
 
-Para obtener los mejores resultados, debe volver a escribir el código de R para encapsularlo como una sola función.
+Para obtener los mejores resultados, debe reescribir el código de R para encapsularlo como una sola función.
 
-Todas las variables utilizadas por la función deben definirse dentro de la función o deben definirse como parámetros de entrada. Consulte el [código de ejemplo](#samples) de este artículo.
+Todas las variables usadas por la función deben definirse dentro de esta o que deben definirse como parámetros de entrada. Vea el [código de ejemplo](#samples) de este artículo.
 
-Además, dado que los parámetros de entrada de la función de R se convertirán en los parámetros de entrada del procedimiento almacenado de SQL, debe asegurarse de que las entradas y salidas cumplan los siguientes requisitos de tipo:
+Además, puesto que los parámetros de entrada de la función de R se convertirán en los parámetros de entrada del procedimiento almacenado de SQL, debe asegurarse de que las entradas y salidas cumplan los requisitos de tipo siguientes:
 
 ### <a name="inputs"></a>Entradas
 
-Entre los parámetros de entrada, puede haber como máximo una trama de datos.
+Entre los parámetros de entrada puede haber como mucho una trama de datos.
 
 Los objetos de dentro de la trama de datos, así como todos los demás parámetros de entrada de la función, deben ser de los siguientes tipos de datos de R:
 - POSIXct
-- numeric
+- NUMERIC
 - character
 - integer
 - lógicos
@@ -42,7 +43,7 @@ Los objetos de dentro de la trama de datos, así como todos los demás parámetr
 
 Si un tipo de entrada no es uno de los tipos anteriores, tiene que serializarse y pasarse a la función como *raw*. En este caso, la función también debe incluir código para deserializar la entrada.
 
-### <a name="outputs"></a>Salidas
+### <a name="outputs"></a>Resultados
 
 La función puede generar uno de los siguientes:
 
@@ -50,77 +51,77 @@ La función puede generar uno de los siguientes:
 - Una lista con nombre que contenga como máximo una trama de datos. Todos los miembros de la lista deben usar uno de los tipos de datos admitidos.
 - Un valor NULL si la función no devuelve ningún resultado
 
-## <a name="step-2-generate-required-objects"></a>Paso 2. Generar objetos necesarios
+## <a name="step-2-generate-required-objects"></a>Paso 2. Generación de los objetos necesarios
 
-Una vez que el código de R se ha limpiado y se puede llamar como una sola función, usará las funciones del paquete **sqlrutils** para preparar las entradas y salidas en un formulario que se puede pasar al constructor que crea realmente el procedimiento almacenado.
+Una vez que el código de R se ha limpiado y se puede llamar como una sola función, usará las funciones del paquete **sqlrutils** para preparar las entradas y salidas en un formulario que se pueda pasar al constructor que crea realmente el procedimiento almacenado.
 
 **sqlrutils** proporciona funciones que definen el tipo y el esquema de datos de entrada, y definen el tipo y el esquema de datos de salida. También incluye funciones que pueden convertir objetos de R en el tipo de salida necesario. Puede realizar varias llamadas de función para crear los objetos necesarios, en función de los tipos de datos que use el código.
 
 ### <a name="inputs"></a>Entradas
 
-Si la función toma entradas, para cada entrada, llame a las siguientes funciones:
+Si la función toma entradas, para cada una, llame a las siguientes funciones:
 
-- `setInputData`Si la entrada es una trama de datos
-- `setInputParameter`para el resto de tipos de entrada
+- `setInputData` si la entrada es una trama de datos.
+- `setInputParameter` para el resto de tipos de entrada.
 
-Cuando realice una llamada de función, se creará un objeto de R que posteriormente pasará como argumento a `StoredProcedure`para crear el procedimiento almacenado completo.
+Cuando realice una llamada de función, se creará un objeto de R que posteriormente pasará como argumento a `StoredProcedure` para crear el procedimiento almacenado completo.
 
-### <a name="outputs"></a>Salidas
+### <a name="outputs"></a>Resultados
 
-**sqlrutils** proporciona varias funciones para convertir objetos de R, como listas, a Data. Frame required by SQL Server.
+**sqlrutils** proporciona varias funciones para convertir objetos de R, como listas, a trama de datos requerido por SQL Server.
 Si la función genera una trama de datos directamente, sin ajustar primero en una lista, puede omitir este paso.
 También puede omitir la conversión en este paso si la función devuelve NULL.
 
 Al convertir una lista u obtener un elemento determinado de una lista, elija entre estas funciones:
 
-- `setOutputData`Si la variable que se va a obtener de la lista es una trama de datos
-- `setOutputParameter`para todos los demás miembros de la lista
+- `setOutputData` si la variable que se va a obtener de la lista es una trama de datos.
+- `setOutputParameter` para todos los demás miembros de la lista.
 
-Cuando realice una llamada de función, se creará un objeto de R que posteriormente pasará como argumento a `StoredProcedure`para crear el procedimiento almacenado completo.
+Cuando realice una llamada de función, se creará un objeto de R que posteriormente pasará como argumento a `StoredProcedure` para crear el procedimiento almacenado completo.
 
-## <a name="step-3-generate-the-stored-procedure"></a>Paso 3. Generar el procedimiento almacenado
+## <a name="step-3-generate-the-stored-procedure"></a>Paso 3. Generación del procedimiento almacenado
 
-Cuando todos los parámetros de entrada y salida estén listos, realice una llamada `StoredProcedure` al constructor.
+Cuando todos los parámetros de entrada y salida estén listos, realice una llamada al constructor de `StoredProcedure`.
 
-**Uso**
+**Usage**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 
-Para ilustrar, supongamos que desea crear un procedimiento almacenado denominado **sp_rsample** con estos parámetros:
+Como ejemplo, supongamos que desea crear un procedimiento almacenado denominado **sp_rsample** con estos parámetros:
 
-- Usa una función **foosql**existente. La función se basó en el código existente en la función **foo**de R, pero reescribió la función para cumplir los requisitos, tal y como se describe en [esta sección](#bkmk_rewrite), y llamó a la función Updated como **foosql**.
+- Usa una función existente **foosql**. La función estaba basada en el código existente en la función de R **foo**, pero reescribió la función para cumplir los requisitos, tal como se describe en [esta sección](#bkmk_rewrite), y le asignó el nombre **foosql** a la función actualizada.
 - Usa la trama de datos **queryinput** como entrada.
-- Genera como salida una trama de datos con el nombre de variable de R, **SQLOutput**
-- Desea crear el código T-SQL como un archivo en la `C:\Temp` carpeta, de modo que pueda ejecutarlo mediante SQL Server Management Studio posterior
+- Genera como salida una trama de datos con el nombre de la variable de R, **sqloutput**.
+- Quiere crear el código T-SQL como un archivo en la carpeta `C:\Temp`, de modo que pueda ejecutarlo con SQL Server Management Studio más adelante.
 
 ```R
 StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp")
 ```
 
 > [!NOTE]
-> Dado que está escribiendo el archivo en el sistema de archivos, puede omitir los argumentos que definen la conexión a la base de datos.
+> Dado que está escribiendo el archivo en el sistema de archivos, puede omitir los argumentos que definen la conexión de base de datos.
 
-La salida de la función es un procedimiento almacenado de T-SQL que se puede ejecutar en una instancia de SQL Server 2016 (requiere R Services) o SQL Server 2017 (requiere Machine Learning Services con R). 
+La salida de la función es un procedimiento almacenado de T-SQL que se puede ejecutar en una instancia de SQL Server 2016 (requiere R Services) o SQL Server 2017 (requiere Machine Learning Services con R). 
 
-Para obtener más ejemplos, consulte la ayuda del paquete llamando `help(StoredProcedure)` desde un entorno de R.
+Para obtener más ejemplos, vea la ayuda del paquete llamando a `help(StoredProcedure)` desde un entorno de R.
 
-## <a name="step-4-register-and-run-the-stored-procedure"></a>Paso 4. Registrar y ejecutar el procedimiento almacenado
+## <a name="step-4-register-and-run-the-stored-procedure"></a>Paso 4. Registro y ejecución del procedimiento almacenado
 
 Puede ejecutar el procedimiento almacenado de dos maneras:
 
-- Mediante T-SQL, desde cualquier cliente que admita conexiones a la instancia de SQL Server 2016 o SQL Server 2017
-- Desde un entorno de R
+- Mediante T-SQL, desde cualquier cliente que admita conexiones a la instancia de SQL Server 2016 o SQL Server 2017.
+- Desde un entorno de R.
 
-Ambos métodos requieren que el procedimiento almacenado se registre en la base de datos en la que desea utilizar el procedimiento almacenado.
+Ambos métodos requieren que el procedimiento almacenado se registre en la base de datos en la que desee utilizar el procedimiento almacenado.
 
-### <a name="register-the-stored-procedure"></a>Registrar el procedimiento almacenado
+### <a name="register-the-stored-procedure"></a>Registro del procedimiento almacenado
 
 Puede registrar el procedimiento almacenado mediante R o puede ejecutar la instrucción CREATE PROCEDURE en T-SQL.
 
-- Mediante T-SQL.  Si está más familiarizado con T-SQL, abra SQL Server Management Studio (o cualquier otro cliente que pueda ejecutar comandos DDL de SQL) y ejecute la instrucción CREATE PROCEDURE con el código preparado por `StoredProcedure` la función.
-- Usar R. Mientras sigue en el entorno de R, puede usar la `registerStoredProcedure` función de **sqlrutils** para registrar el procedimiento almacenado en la base de datos.
+- Con T-SQL.  Si está más familiarizado con T-SQL, abra SQL Server Management Studio (o cualquier otro cliente que pueda ejecutar comandos DDL de SQL) y ejecute la instrucción CREATE PROCEDURE con el código preparado por la función `StoredProcedure`.
+- Con R. Mientras sigue en el entorno de R, puede usar la función `registerStoredProcedure` en **sqlrutils** para registrar el procedimiento almacenado en la base de datos.
 
-  Por ejemplo, podría registrar el procedimiento almacenado **sp_rsample** en la instancia y la base de datos definidas en *sqlConnStr*, mediante esta llamada de R:
+  Por ejemplo, puede registrar el procedimiento almacenado **sp_rsample** en la instancia y la base de datos definidas en *sqlConnStr*, realizando esta llamada de R:
 
   ```R
   registerStoredProcedure(sp_rsample, sqlConnStr)
@@ -130,13 +131,13 @@ Puede registrar el procedimiento almacenado mediante R o puede ejecutar la instr
 > [!IMPORTANT]
 > Independientemente de si usa R o SQL, debe ejecutar la instrucción con una cuenta que tenga permisos para crear nuevos objetos de base de datos.
 
-### <a name="run-using-sql"></a>Ejecutar con SQL
+### <a name="run-using-sql"></a>Ejecución con SQL
 
 Una vez creado el procedimiento almacenado, abra una conexión a la base de datos SQL con cualquier cliente que admita T-SQL y pase los valores de los parámetros requeridos por el procedimiento almacenado.
 
-### <a name="run-using-r"></a>Ejecutar con R
+### <a name="run-using-r"></a>Ejecución con R
 
-Se necesita una preparación adicional si desea ejecutar el procedimiento almacenado desde código R, en lugar de SQL Server. Por ejemplo, si el procedimiento almacenado requiere valores de entrada, debe establecer esos parámetros de entrada antes de que se pueda ejecutar la función y, a continuación, pasar esos objetos al procedimiento almacenado en el código de R.
+Se necesita una preparación adicional si quiere ejecutar el procedimiento almacenado desde código de R, en lugar de SQL Server. Por ejemplo, si el procedimiento almacenado necesita valores de entrada, debe establecer dichos parámetros de entrada apara que se pueda ejecutar la función y, a continuación, pasar dichos objetos al procedimiento almacenado en el código de R.
 
 El proceso general de llamada al procedimiento almacenado de SQL preparado es el siguiente:
 
@@ -148,7 +149,7 @@ El proceso general de llamada al procedimiento almacenado de SQL preparado es el
 
 En este ejemplo se muestran las versiones anterior y posterior de un script de R que obtiene datos de una base de datos de SQL Server, realiza algunas transformaciones en los datos y los guarda en una base de datos diferente.
 
-Este sencillo ejemplo solo se usa para mostrar cómo se puede reorganizar el código de R con el fin de facilitar la conversión a un procedimiento almacenado.
+Este sencillo ejemplo se usa únicamente para demostrar cómo se puede reorganizar el código de R para facilitar la conversión a un procedimiento almacenado.
 
 ### <a name="before-code-preparation"></a>Antes de la preparación del código
 
@@ -188,12 +189,12 @@ rxDataStep(inData = dsSqlFrom,
 
 > [!NOTE]
 > 
-> Cuando se usa una conexión ODBC en lugar de invocar la función *RxSqlServerData* , debe abrir la conexión con *rxOpen* para poder realizar operaciones en la base de datos.
+> Si usa una conexión ODBC en lugar de invocar a la función *RxSqlServerData*, debe abrir la conexión con *rxOpen* para poder realizar operaciones en la base de datos.
 
 
 ### <a name="after-code-preparation"></a>Después de la preparación del código
 
-En la versión actualizada, la primera línea define el nombre de la función. El resto del código de la solución original de R pasa a formar parte de esa función.
+En la versión actualizada, la primera línea define el nombre de la función. El código restante de la solución original de R se convierte en una parte de esa función.
 
 ```R
 myetl1function <- function() { 
@@ -229,7 +230,7 @@ myetl1function <- function() {
 > 
 > Aunque no es necesario abrir la conexión ODBC de forma explícita como parte del código, se sigue necesitando una conexión ODBC para usar **sqlrutils**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 [sqlrutils (SQL)](ref-r-sqlrutils.md)
 

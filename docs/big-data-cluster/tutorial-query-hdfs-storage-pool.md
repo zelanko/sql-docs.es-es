@@ -1,7 +1,7 @@
 ---
 title: Consultar datos de HDFS en un grupo de almacenamiento
 titleSuffix: SQL Server big data clusters
-description: En este tutorial se muestra cómo consultar los datos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS en un. Cree una tabla externa con los datos en el grupo de almacenamiento y, después, ejecute una consulta.
+description: En este tutorial, se muestra cómo consultar datos de HDFS desde un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Cree una tabla externa con los datos en el grupo de almacenamiento y, después, ejecute una consulta.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 7ba5721ef461fe327a3309431cc994a5ed377be7
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652441"
@@ -20,7 +20,7 @@ ms.locfileid: "69652441"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este tutorial se muestra cómo consultar los datos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]HDFS en un.
+En este tutorial, se muestra cómo consultar datos de HDFS desde un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
 En este tutorial, aprenderá a:
 

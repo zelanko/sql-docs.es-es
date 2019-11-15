@@ -1,6 +1,7 @@
 ---
-title: Novedades
-description: Anuncios de nuevas características para cada versión de SQL Server 2016 R Services, R Server, SQL Server Machine Learning Services.
+title: Novedades de SQL Server Machine Learning Services
+titleSuffix: ''
+description: Anuncios de nuevas características para cada versión de SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.date: 11/04/2019
 ms.topic: conceptual
 author: dphansen
@@ -9,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 16c70e23df018a3bf403280fd6deb48b880c31ce
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 3e21dfe719f40165e0e68e7bf6242c526c298eb4
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532572"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73707443"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services
 
@@ -25,7 +26,7 @@ Se han agregado funciones de aprendizaje automático a SQL Server en cada versi�
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2019"></a>Novedades de SQL Server 2019
 
-En esta versión se agregan las características principales solicitadas para las operaciones de aprendizaje automático de Python y R en SQL Server. Para obtener más información sobre todas las características de esta versión, vea [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) y [Notas de la versión de SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
+En esta versión se agregan las características principales solicitadas para las operaciones de aprendizaje automático de Python y R en SQL Server. Para obtener más información sobre todas las características de esta versión, consulte [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) y [Notas de la versión de SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
 
 > [!NOTE]
 > Para obtener la documentación sobre las novedades de Java en SQL Server 2019, vea las [Novedades de Extensiones de lenguaje de SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new).

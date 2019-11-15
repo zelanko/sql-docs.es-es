@@ -1,43 +1,45 @@
 ---
-title: Supervisión de la ejecución de scripts de Python y R mediante informes personalizados en SSMS
+title: Supervisar scripts con informes personalizados
+description: Use informes personalizados en SQL Server Management Studio (SSMS) para supervisar la ejecución de scripts externos (Python y R) y de los recursos usados, diagnosticar problemas y ajustar el rendimiento en SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 549cdcd35b939b2247b14817271e3d1063fab1e0
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
-ms.translationtype: MT
+ms.openlocfilehash: afc90985fc7c0c6d7a04cb575ee9e93a4b7b4c51
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714399"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727747"
 ---
-# <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Supervisión de la ejecución de scripts de Python y R mediante informes personalizados en SQL Server Management Studio
+# <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Supervisar la ejecución de scripts de R y Python mediante informes personalizados en SQL Server Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Use informes personalizados en SQL Server Management Studio (SSMS) para supervisar la ejecución de scripts externos (Python y R), los recursos usados, diagnosticar problemas y ajustar el rendimiento en SQL Server Machine Learning Services.
+Use informes personalizados en SQL Server Management Studio (SSMS) para supervisar la ejecución de scripts externos (Python y R) y de los recursos usados, diagnosticar problemas y ajustar el rendimiento en SQL Server Machine Learning Services.
 
 En estos informes, puede ver detalles como:
 
-- Sesiones activas de Python o R
+- Sesiones activas de R o Python
 - Opciones de configuración de la instancia
-- Estadísticas de ejecución para trabajos de machine learning
+- Estadísticas de ejecución para trabajos de aprendizaje automático
 - Eventos extendidos para R Services
-- Paquetes de Python o R instalados en la instancia actual
+- Lista de paquetes de Python o R instalados en la instancia actual
 
 En este artículo se explica cómo instalar y usar los informes personalizados proporcionados para SQL Server Machine Learning Services.
 
-Para obtener más información sobre los informes de SQL Server Management Studio, vea [informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
+Para obtener más información sobre los informes de SQL Server Management Studio, vea [Informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 
 ## <a name="how-to-install-the-reports"></a>Cómo instalar los informes
 
-Los informes se diseñan mediante SQL Server Reporting Services, pero se pueden usar directamente desde SQL Server Management Studio. Reporting Services no tiene que estar instalado en la instancia de SQL Server.
+Los informes se diseñan mediante SQL Server Reporting Services, pero pueden utilizarse directamente desde SQL Server Management Studio. No es necesario que Reporting Services esté instalado en la instancia de SQL Server.
 
 Para usar estos informes, siga estos pasos:
 
-1. Descargue los [informes personalizados de SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) para SQL Server Machine Learning Services de github.
+1. Descargue los [informes personalizados de SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) para SQL Server Machine Learning Services desde GitHub.
 
 2. Copiar los informes en Management Studio
 
@@ -47,7 +49,7 @@ Para usar estos informes, siga estos pasos:
 
        También puede especificar una carpeta diferente o crear subcarpetas.
 
-    2. Copie el *. Archivos RDL que descargó en la carpeta de informes personalizados.
+    2. Copie los archivos *.RDL descargados en la carpeta de informes personalizados.
 
 3. Ejecutar los informes en Management Studio
 
@@ -61,17 +63,17 @@ Para usar estos informes, siga estos pasos:
 
 ## <a name="reports"></a>Informes
 
-El [repositorio de informes personalizados de SSMS en github](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) incluye los siguientes informes:
+El repositorio de [informes personalizados de SSMS en GitHub](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports) incluye los siguientes informes:
 
 | Informe | Descripción |
 |-|-|
-| Sesiones activas | Usuarios que están conectados actualmente a la instancia de SQL Server y que ejecutan un script de Python o R. |
-| Configuración | Configuración de la instalación de Machine Learning Services y las propiedades del Runtime de Python o R. |
-| Configurar instancia | Configure Machine Learning Services. |
-| Estadísticas de ejecución | Estadísticas de ejecución de servicios de Machine Learning. Por ejemplo, puede obtener el número total de ejecuciones de scripts externos y el número de ejecuciones paralelas. |
+| Sesiones activas | Usuarios que están conectados actualmente a la instancia de SQL Server y ejecutan un script de Python o R. |
+| Configuración | Configuración de la instalación de Machine Learning Services y propiedades del tiempo de ejecución de Python o R. |
+| Configurar una instancia | Configure Machine Learning Services. |
+| Estadísticas de ejecución | Estadísticas de ejecución de Machine Learning Services. Por ejemplo, puede obtener el número total de ejecuciones de scripts externos y el número de ejecuciones paralelas. |
 | Eventos extendidos | Eventos extendidos que están disponibles para obtener más información sobre la ejecución de scripts externos. |
-| . | Enumere los paquetes de R o Python instalados en la instancia de SQL Server y sus propiedades, como versión y nombre. |
-| Resource Usage | Ver la CPU, la memoria, el consumo de e/s de SQL Server y la ejecución de scripts externos. También puede ver la configuración de memoria para los grupos de recursos externos. |
+| . | Lista de los paquetes de R o Python instalados en la instancia de SQL Server y sus propiedades, como la versión y el nombre. |
+| Resource Usage | Vista de la CPU, la memoria, el consumo de E/S de SQL Server y la ejecución de scripts externos. También puede ver la configuración de la memoria para grupos de recursos externos. |
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión para clústeres de macrodatos de SQL Server
 titleSuffix: SQL Server big data clusters
-description: En este artículo se describen las actualizaciones más recientes y los problemas conocidos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar).
+description: En este artículo se describen las actualizaciones más recientes y los problemas conocidos de los clústeres de macrodatos de SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e868d5db99c3f0be141d28a881d8d8bc6f9c241e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: bc5928a7e3015545d36900b52ef01a42d9694cc0
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531644"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706172"
 ---
 # <a name="sql-server-big-data-clusters-release-notes"></a>Notas de la versión para clústeres de macrodatos de SQL Server
 
@@ -34,7 +34,7 @@ Use los clústeres de macrodatos de SQL Server para:
 - Leer, escribir y procesar macrodatos desde Transact-SQL o Spark.
 - Combinar y analizar de forma sencilla datos relacionales de alto valor con macrodatos de gran volumen.
 - Consultar orígenes de datos externos.
-- Almacenar macrodatos en HDFS administrados mediante SQL Server.
+- Almacenar macrodatos en HDFS administrados mediante SQL Server.
 - Consultar datos de varios orígenes de datos externos a través del clúster.
 - Usar los datos para tareas de inteligencia artificial, aprendizaje automático y otras tareas de análisis.
 - [Implementación y ejecución de aplicaciones](../big-data-cluster/concept-application-deployment.md) en [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].

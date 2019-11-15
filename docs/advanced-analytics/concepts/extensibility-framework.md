@@ -1,5 +1,5 @@
 ---
-title: Arquitectura de extensibilidad para scripts externos
+title: Arquitectura de extensibilidad
 description: En este artículo se describe la arquitectura del marco de extensibilidad para ejecutar un script externo, como R o Python, en SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,13 +8,14 @@ ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3f2f61208f9c43ce827cb65a4f7107ced62b9219
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: fcdb92f92ffb8239a6cf20b0f39dfb8f546b521a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532724"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727692"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitectura de extensibilidad en SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,11 +114,11 @@ En esta sección se describen los protocolos de comunicación entre los componen
 
 + **ODBC**
 
-  Las comunicaciones entre los clientes de ciencia de datos externos y una instancia de SQL Server remota usan ODBC. La cuenta que envía los trabajos de script a SQL Server debe tener permisos para conectarse a la instancia y para ejecutar scripts externos.
+  Las comunicaciones entre los clientes de ciencia de datos externos y una instancia remota de SQL Server usan ODBC. La cuenta que envía los trabajos de script a SQL Server debe tener permisos para conectarse a la instancia y para ejecutar scripts externos.
 
-  Además, en función de la tarea, la cuenta podría necesitar estos permisos:
+  Además, en función de la tarea, la cuenta podría necesitar los siguientes permisos:
 
-  + Lectura de datos que utiliza el trabajo.
+  + Lectura de datos que usa el trabajo.
   + Escritura de datos en tablas; por ejemplo, al guardar los resultados en una tabla.
   + Creación de objetos de bases de datos: por ejemplo, si se guarda el script externo como parte de un procedimiento almacenado nuevo.
 

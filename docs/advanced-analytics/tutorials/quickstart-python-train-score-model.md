@@ -1,7 +1,7 @@
 ---
-title: Crear y puntuar un modelo predictivo en Python
+title: 'Inicio rápido: Entrenamiento de un modelo en Python'
 titleSuffix: SQL Server Machine Learning Services
-description: Cree un modelo predictivo simple en Python mediante SQL Server Machine Learning Services y, a continuación, predicte un resultado con nuevos datos.
+description: Cree un sencillo modelo predictivo en Python mediante SQL Server Machine Learning Services y, después, realice una predicción de un resultado con datos nuevos.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/14/2019
@@ -9,41 +9,42 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cfaf672abd7c68e396b5049ced2d812a43d27d48
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MT
+ms.openlocfilehash: fcf43d57488578020eed09080668156fb926d1b0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542131"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726994"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Inicio rápido: crear y puntuar un modelo predictivo en Python con SQL Server Machine Learning Services
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Inicio rápido: Creación y puntuación de un modelo predictivo en Python con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En esta guía de inicio rápido, creará y entrenará un modelo predictivo mediante Python, guardará el modelo en una tabla en la instancia de SQL Server y, a continuación, usará el modelo para predecir valores de datos nuevos con [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+En este inicio rápido, creará y entrenará un modelo predictivo con Python, guardará el modelo en una tabla de su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. El primero usa el conjunto de datos de flores de iris clásico y genera un modelo Bayes Naive para predecir una especie de iris basada en las características de la flor. El segundo procedimiento es para puntuar: llama al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en nuevos datos. Al colocar el código de Python en un procedimiento almacenado de SQL, las operaciones se incluyen en SQL, son reutilizables y se pueden llamar desde otros procedimientos almacenados y aplicaciones cliente.
+Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. En el primero, se usa el conjunto de datos de flores Iris clásico y se genera un modelo de Bayes naive para predecir una especie de Iris basándose en las características florales. El segundo procedimiento es para puntuación: realiza una llamada al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en datos nuevos. Al colocar código de Python en un procedimiento almacenado en SQL, las operaciones se incluyen en SQL, son reutilizables y pueden recibir llamadas de otros procedimientos almacenados y aplicaciones cliente.
 
-Al completar esta guía de inicio rápido, aprenderá lo siguiente:
+Después de completar este inicio rápido, aprenderá a:
 
 > [!div class="checklist"]
-> - Cómo insertar código Python en un procedimiento almacenado
-> - Cómo pasar entradas al código mediante entradas en el procedimiento almacenado
-> - Cómo se usan los procedimientos almacenados para poner en funcionamiento los modelos
+> - Insertar código de Python en un procedimiento almacenado
+> - Pasar entradas en el código mediante entradas en el procedimiento almacenado
+> - Usar procedimientos almacenados para hacer operativos los modelos
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- Esta guía de inicio rápido requiere acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con el idioma de Python instalado.
+- Para este inicio rápido, es necesario tener acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) que tenga instalado el lenguaje de Python.
 
-- También necesita una herramienta para ejecutar consultas SQL que contienen scripts de Python. Puede ejecutar estos scripts mediante cualquier herramienta de consulta o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. Esta guía de inicio rápido usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- También necesita una herramienta para ejecutar consultas SQL que contengan scripts de Python. Puede ejecutar estos scripts con cualquier herramienta de consultas o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. En este inicio rápido, se usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
-- Los datos de ejemplo que se usan en este ejercicio son los datos de ejemplo de iris. Siga las instrucciones de [datos de demostración de iris](demo-data-iris-in-sql.md) para crear la base de datos de ejemplo **irissql**.
+- Los datos de ejemplo usados en este ejercicio son los datos de ejemplo de Iris. Siga las instrucciones en [Datos de demo de Iris](demo-data-iris-in-sql.md) para crear la base de datos de ejemplo **irissql**.
 
-## <a name="create-a-stored-procedure-that-generates-models"></a>Crear un procedimiento almacenado que genera modelos
+## <a name="create-a-stored-procedure-that-generates-models"></a>Creación de un procedimiento almacenado que genera modelos
 
-En este paso, creará un procedimiento almacenado que genera un modelo para predecir los resultados.
+En este paso, creará un procedimiento almacenado que genera un modelo para la predicción de resultados.
 
-1. Abra SSMS, conéctese a la instancia de SQL Server y abra una nueva ventana de consulta.
+1. Abra SSMS, conéctese a su instancia de SQL Server y abra una nueva ventana de consulta.
 
 1. Conéctese a la base de datos irissql.
 
@@ -52,15 +53,15 @@ En este paso, creará un procedimiento almacenado que genera un modelo para pred
     GO
     ```
 
-1. Copie en el código siguiente para crear un nuevo procedimiento almacenado.
+1. Copie el código siguiente para crear un procedimiento almacenado.
 
-   Cuando se ejecuta, este procedimiento llama a [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para iniciar una sesión de Python. 
+   Cuando se ejecute, el procedimiento llama a [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para iniciar una sesión de Python. 
    
-   Las entradas necesarias para el código de Python se pasan como parámetros de entrada en este procedimiento almacenado. La salida será un modelo entrenado, basado en la biblioteca Python **scikit-Learn** para el algoritmo de aprendizaje automático. 
+   Las entradas que necesita el código de Python se pasan como parámetros de entrada en este procedimiento almacenado. La salida será un modelo entrenado basado en la biblioteca de Python **scikit-learn** para el algoritmo de aprendizaje automático. 
 
-   Este código usa [**Pickle**](https://docs.python.org/2/library/pickle.html) para serializar el modelo. El modelo se entrenará con datos de las columnas 0 a 4 de la tabla **iris_data** . 
+   Este código usa [**pickle**](https://docs.python.org/2/library/pickle.html) para serializar el modelo. El modelo se entrenará con los datos de las columnas 0 a 4 de la tabla **iris_data**. 
    
-   Los parámetros que se ven en la segunda parte del procedimiento articulan las entradas de datos y las salidas del modelo. En la medida de lo posible, desea que el código de Python que se ejecuta en un procedimiento almacenado tenga claramente definidas entradas y salidas que se asignan a las entradas y salidas de procedimientos almacenados que se pasan en tiempo de ejecución.
+   Los parámetros que verá en la segunda parte del procedimiento articulan entradas de datos y salidas del modelo. Siempre que sea posible, intente que el código de Python que se ejecute en un procedimiento almacenado tenga entradas y salidas bien definidas asignadas a las entradas y salidas del procedimiento almacenado pasado en tiempo de ejecución.
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model VARBINARY(max) OUTPUT)
@@ -81,19 +82,19 @@ En este paso, creará un procedimiento almacenado que genera un modelo para pred
     GO
     ```
 
-1. Compruebe que el procedimiento almacenado existe. 
+1. Asegúrese de que el procedimiento almacenado exista. 
 
-   Si el script T-SQL del paso anterior se ejecutó sin errores, se crea un nuevo procedimiento almacenado llamado **generate_iris_model** y se agrega a la base de datos **irissql** . Puede encontrar procedimientos almacenados en el **Explorador de objetos**SSMS, en **programación**.
+   Si el script de T-SQL del paso anterior se ha ejecutado sin errores, se creará un procedimiento almacenado denominado **generate_iris_model** y se agregará a la base de datos **irissql**. Encontrará los procedimientos almacenados en el **Explorador de objetos de SSMS**, en **Programación**.
 
-## <a name="execute-the-procedure-to-create-and-train-models"></a>Ejecutar el procedimiento para crear y entrenar modelos
+## <a name="execute-the-procedure-to-create-and-train-models"></a>Ejecución del procedimiento para crear y entrenar modelos
 
-En este paso, ejecutará el procedimiento para ejecutar el código incrustado, creando un modelo entrenado y serializado como una salida. 
+En este paso, ejecutará el procedimiento del código insertado para crear un modelo entrenado y serializado como resultado. 
 
-Los modelos que se almacenan para su reutilización en SQL Server se serializan como una secuencia de bytes y se almacenan en una columna VARBINARY (MAX) en una tabla de base de datos. Una vez que se crea, entrena, serializa y guarda el modelo en una base de datos, se puede llamar mediante otros procedimientos o mediante la función de [T-SQL de predicción](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) en las cargas de trabajo de puntuación.
+Los modelos almacenados para reutilizarlos en SQL Server se serializan como un flujo de bytes y se almacenan en una columna VARBINARY(MAX) de una tabla de base de datos. Después de crear, entrenar, serializar y guardar el modelo en una base de datos, otros procedimientos pueden llamarlo, o bien puede usarse la función [PREDICT de T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) en cargas de trabajo de puntuación.
 
-1. Ejecute el siguiente script para ejecutar el procedimiento. La instrucción específica para ejecutar un procedimiento almacenado es `EXECUTE` en la cuarta línea.
+1. Ejecute el script siguiente para realizar el procedimiento. La instrucción específica para ejecutar un procedimiento almacenado es `EXECUTE` en la cuarta línea.
 
-   Este script concreto elimina un modelo existente con el mismo nombre ("Bayes naive") para dejar espacio para los nuevos creados al ejecutar de nuevo el mismo procedimiento. Sin la eliminación del modelo, se produce un error que indica que el objeto ya existe. El modelo se almacena en una tabla denominada **iris_models**, aprovisionada al crear la base de datos **irissql** .
+   Este script específico elimina un modelo existente del mismo nombre (“Bayes naive”) para liberar espacio para los nuevos modelos que se crearán al volver a ejecutar el mismo procedimiento. Si no se elimina el modelo, se producirá un error que indica que el objeto ya existe. El modelo se almacena en una tabla llamada **iris_models**, que se aprovisiona al crear la base de datos **irissql**.
 
     ```sql
     DECLARE @model varbinary(max);
@@ -105,7 +106,7 @@ Los modelos que se almacenan para su reutilización en SQL Server se serializan 
     GO
     ```
 
-1. Compruebe que se ha insertado el modelo.
+1. Asegúrese de que se haya insertado el modelo.
 
     ```sql
     SELECT * FROM dbo.iris_models
@@ -113,15 +114,15 @@ Los modelos que se almacenan para su reutilización en SQL Server se serializan 
 
     **Resultado**
 
-    | model_name  | modelo |
+    | model_name  | model |
     |---|-----------------|
-    | Bayes naive | 0x800363736B6C6561726E2E6E616976655F62617965730A... | 
+    | Bayes naive | 0x800363736B6C6561726E2E6E616976655F62617965730A… | 
 
-## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>Crear y ejecutar un procedimiento almacenado para generar predicciones
+## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>Creación y ejecución de un procedimiento almacenado para generar predicciones
 
-Ahora que ha creado, entrenado y guardado un modelo, continúe con el paso siguiente: crear un procedimiento almacenado que genere predicciones. Para ello, debe llamar a `sp_execute_external_script` para ejecutar un script de Python que carga el modelo serializado y proporciona nuevas entradas de datos para puntuar.
+Después de crear, entrenar y guardar un modelo, continúe con el paso siguiente: crear un procedimiento almacenado que genere predicciones. Para hacerlo, realice una llamada a `sp_execute_external_script` para que ejecute un script de Python que cargue el modelo serializado y proporcione entradas de datos nuevos para puntuarlos.
 
-1. Ejecute el código siguiente para crear el procedimiento almacenado que realiza la puntuación. En tiempo de ejecución, este procedimiento cargará un modelo binario, utilizará columnas `[1,2,3,4]` como entradas y especificará las columnas `[0,5,6]` como salida.
+1. Ejecute el código siguiente para crear el procedimiento almacenado que realiza la puntuación. En tiempo de ejecución, este procedimiento cargará un modelo binario que usará las columnas `[1,2,3,4]` como entradas y especificará las columnas `[0,5,6]` como salida.
 
    ```sql
    CREATE PROCEDURE predict_species (@model VARCHAR(100))
@@ -155,35 +156,35 @@ Ahora que ha creado, entrenado y guardado un modelo, continúe con el paso sigui
    GO
    ```
 
-2. Ejecute el procedimiento almacenado y proporcione el nombre del modelo "Naive Bayes" para que el procedimiento sepa qué modelo utilizar.
+2. Ejecute el procedimiento almacenado y asigne al modelo el nombre "Bayes naive" para que el procedimiento pueda identificar el modelo que tiene que usar.
 
    ```sql
    EXECUTE predict_species 'Naive Bayes';
    GO
    ```
 
-   Al ejecutar el procedimiento almacenado, devuelve un marco Data. Frame de Python. Esta línea de T-SQL especifica el esquema de los resultados devueltos: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`. Puede insertar los resultados en una tabla nueva o devolverlos a una aplicación.
+   Al ejecutar el procedimiento almacenado, se devuelve un elemento data.frame de Python. Esta línea de T-SQL especifica el esquema de los resultados devueltos: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`. Inserte los resultados en una tabla nueva, o bien devuélvalos a una aplicación.
 
-   ![Conjunto de resultados de ejecutar procedimiento almacenado](media/train-score-using-python-NB-model-results.png)
+   ![Conjunto de resultados después de ejecutar un procedimiento almacenado](media/train-score-using-python-NB-model-results.png)
 
-   Los resultados son las predicciones 150 sobre las especies que usan características floral como entradas. Para la mayoría de las observaciones, la especie de predicción coincide con la especie real.
+   Los resultados son 150 predicciones sobre especies para los que se han usado características florales como entradas. Para la mayoría de las observaciones, las especies predichas coinciden con las especies reales.
 
-   Este ejemplo se ha simplificado mediante el uso del conjunto de resultados de iris de Python para entrenamiento y puntuación. Un enfoque más típico implicaría la ejecución de una consulta SQL para obtener los datos nuevos y pasarlo a Python como `InputDataSet`.
+   Este ejemplo se ha simplificado mediante el conjunto de datos Iris de Python, tanto para entrenamiento como para puntuación. Una forma más habitual es ejecutar una consulta SQL para obtener datos nuevos y pasarlos a Python como `InputDataSet`.
 
 ## <a name="conclusion"></a>Conclusión
 
-En este ejercicio, aprendió a crear procedimientos almacenados dedicados a diferentes tareas, donde cada procedimiento almacenado usaba el procedimiento almacenado del sistema `sp_execute_external_script` para iniciar un proceso de Python. Las entradas del proceso de Python se pasan a `sp_execute_external` como parámetros. El propio script de Python y las variables de datos en una base de datos de SQL Server se pasan como entradas.
+En este ejercicio, ha aprendido a crear procedimientos almacenados dedicados a tareas distintas, donde cada procedimiento almacenado ha usado el procedimiento almacenado del sistema `sp_execute_external_script` para iniciar un proceso de Python. Las entradas en el proceso de Python se pasan a `sp_execute_external` como parámetros. Tanto el script de Python en sí como las variables de datos de una base de datos de SQL Server se pasan como entradas.
 
-Por lo general, solo debe planear el uso de SSMS con código Python pulido, o código de Python sencillo que devuelve la salida basada en filas. Como herramienta, SSMS admite lenguajes de consulta como T-SQL y devuelve conjuntos de filas planas. Si el código genera una salida visual como un dispersión o histograma, necesita una herramienta o una aplicación de usuario final que pueda representar la imagen.
+Normalmente, solo se usará SSMS con código de Python correcto, o bien código de Python que devuelve resultados basados en filas. Como herramienta, SSMS admite lenguajes de consulta como T-SQL y devuelve conjuntos de filas planos. Si el código genera un resultado visual (como un diagrama de dispersión o un histograma), necesita una herramienta o una aplicación de usuario final que pueda representar la imagen.
 
-En el caso de algunos desarrolladores de Python que se usan para escribir scripts inclusivos de un intervalo de operaciones, la organización de tareas en procedimientos independientes podría parecer innecesaria. Pero el entrenamiento y la puntuación tienen diferentes casos de uso. Al separarlos, puede colocar cada tarea en una programación diferente y permisos de ámbito para cada operación.
+Puede que a algunos desarrolladores de Python, acostumbrados a escribir scripts con todo incluido y que procesan una amplia variedad de operaciones, les parezca innecesario organizar las tareas en procedimientos separados. Pero el entrenamiento y la puntuación tienen distintos casos de uso. Al separarlos, puede colocar cada tarea en una programación distinta y asignar permisos de ámbito distintos a cada operación.
 
-Del mismo modo, también puede aprovechar las características de reabastecimiento de SQL Server, como el procesamiento en paralelo, el gobierno de recursos o la escritura de un script para usar algoritmos en [microsoftml](../python/ref-py-microsoftml.md) que admita la transmisión por secuencias y la ejecución en paralelo. Al separar el entrenamiento y la puntuación, puede dirigirse a las optimizaciones para cargas de trabajo específicas.
+Del mismo modo, también puede usar las características de asignación de recursos de SQL Server, como el procesamiento en paralelo con la gobernanza de recursos, o bien puede escribir un script para usar algoritmos en [microsoftml](../python/ref-py-microsoftml.md) que admitan la transmisión por secuencias y la ejecución en paralelo. Al separar el entrenamiento y la puntuación, puede implementar optimizaciones para cargas de trabajo específicas.
 
-Una ventaja final es que los procesos se pueden modificar mediante parámetros. En este ejercicio, el código de Python que creó el modelo (denominado "Bayes naive" en este ejemplo) se pasó como una entrada a un segundo procedimiento almacenado que llama al modelo en un proceso de puntuación. En este ejercicio solo se usa un modelo, pero puede imaginarse cómo la parametrización del modelo en una tarea de puntuación haría que ese script sea más útil.
+La ventaja final es que los procesos pueden modificarse mediante parámetros. En este ejercicio, el código de Python que ha creado el modelo (denominado "Bayes naive" en este ejemplo) se ha pasado como una entrada a un segundo procedimiento almacenado que llama al modelo en un proceso de puntuación. Aunque en este ejercicio solo se usa un modelo, puede imaginarse que, si parametriza el modelo en una tarea de puntuación, el script resultaría más útil.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de SQL Server Machine Learning Services, consulte:
+Para más información sobre SQL Server Machine Learning Services, vea:
 
-- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)
+- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)

@@ -1,7 +1,7 @@
 ---
 title: Configuración de Kubernetes con kubeadm
-titleSuffix: SQL Server big data clusters
-description: Aprenda a configurar Kubernetes en varias máquinas Ubuntu 16,04 o 18,04 (físicas o virtuales) para [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] implementaciones.
+titleSuffix: SQL Server Big Data Clusters
+description: Aprenda a configurar Kubernetes en varios equipos Ubuntu 16.04 o 18.04 (físicos o virtuales) para implementaciones de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,24 +9,24 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
-ms.translationtype: MT
+ms.openlocfilehash: 0bec68e81eab8557e86bfcbd5db78e19c0ce2175
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688298"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706373"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configuración de Kubernetes en varios equipos para implementaciones de clústeres de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se proporciona un ejemplo de cómo usar **kubeadm** para configurar Kubernetes en varios equipos [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para implementaciones. En este ejemplo, el destino son varios equipos Ubuntu 16.04 o 18.04 LTS (físicos o virtuales). Si va a implementar en otra plataforma de Linux, debe modificar algunos de los comandos para que coincidan con el sistema.  
+En este artículo se proporciona un ejemplo del empleo de **kubeadm** para configurar Kubernetes en varios equipos para implementaciones de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. En este ejemplo, el destino son varios equipos Ubuntu 16.04 o 18.04 LTS (físicos o virtuales). Si va a implementar en otra plataforma de Linux, debe modificar algunos de los comandos para que coincidan con el sistema.  
 
 > [!TIP] 
 > Para obtener scripts de ejemplo que configuran Kubernetes, vea [Creación de un clúster de Kubernetes con Kubeadm en Ubuntu 16.04 LTS o 18.04 LTS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm).
 Vea también [este](deployment-script-single-node-kubeadm.md) tema para obtener un script de ejemplo que automatiza una implementación de kubeadm de un solo nodo en una máquina virtual y luego implementa una configuración predeterminada del clúster de macrodatos.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - Un mínimo de tres equipos físicos o virtuales Linux
 - Configuración recomendada por equipo:
@@ -35,7 +35,7 @@ Vea también [este](deployment-script-single-node-kubeadm.md) tema para obtener 
    - 100 GB de almacenamiento
  
 > [!Important] 
-> Antes de iniciar la implementación del clúster de Big Data, asegúrese de que los relojes estén sincronizados en todos los nodos de Kubernetes de destino de la implementación. El clúster de macrodatos tiene propiedades de estado integradas para varios servicios que son sensibles al tiempo y los sesgos de reloj pueden dar lugar a un estado incorrecto.
+> Antes de iniciar la implementación del clúster de macrodatos, asegúrese de que los relojes estén sincronizados en todos los nodos de Kubernetes a los que se destina la implementación. El clúster de macrodatos tiene propiedades de estado integradas para varios servicios que son sensibles al tiempo y los sesgos de reloj pueden dar lugar a un estado incorrecto.
 
 ## <a name="prepare-the-machines"></a>Preparar los equipos
 

@@ -1,44 +1,45 @@
 ---
-title: 'Tutorial de Python: Entrenar modelo (regresión lineal)'
-description: En este tutorial usará Python y la regresión lineal en SQL Server Machine Learning Services para predecir el número de alquileres de esquí. Entrenará un modelo de regresión lineal en Python.
+title: 'Tutorial de Python: Entrenamiento de un modelo'
+description: En este tutorial, usará Python y una regresión lineal en SQL Server Machine Learning Services para predecir el número de alquileres de esquíes. Entrenará un modelo de regresión lineal en Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/03/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 30f390681dc63d6de9a95e805b6cc8f273b2b8d7
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
-ms.translationtype: MT
+ms.openlocfilehash: e5f83fe37890c997865c44198cbe30bc13cdea4e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70242553"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727050"
 ---
-# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Tutorial de Python: Entrenar un modelo de regresión lineal en SQL Server Machine Learning Services
+# <a name="python-tutorial-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Tutorial de Python: Entrenamiento de un modelo de regresión lineal en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En la tercera parte de esta serie de tutoriales de cuatro partes, entrenaremos un modelo de regresión lineal en Python. En la siguiente parte de esta serie, implementará este modelo en una base de datos de SQL Server con Machine Learning Services.
+En la parte tres de esta serie de tutoriales de cuatro partes, entrenará un modelo de regresión lineal en Python. En la siguiente parte de esta serie, implementará el modelo en una base de datos de SQL Server con Machine Learning Services.
 
 En este artículo, aprenderá a:
 
 > [!div class="checklist"]
 > * Entrenar un modelo de regresión lineal
-> * Crear predicciones usando el modelo de regresión lineal
+> * Realizar predicciones mediante el modelo de regresión lineal
 
-En la [primera parte](python-ski-rental-linear-regression.md), aprendió a restaurar la base de datos de ejemplo.
+En la [parte uno](python-ski-rental-linear-regression.md), ha aprendido a restaurar la base de datos de ejemplo.
 
-En la [segunda parte](python-ski-rental-linear-regression-prepare-data.md), ha aprendido a cargar los datos de SQL Server en una trama de datos de Python y a preparar los datos en Python.
+En la [parte dos](python-ski-rental-linear-regression-prepare-data.md), ha aprendido a cargar los datos desde SQL Server en una trama de datos de Python y ha preparado los datos en Python.
 
-En la [cuarta parte](python-ski-rental-linear-regression-deploy-model.md), aprenderá a almacenar el modelo en SQL Server y, a continuación, creará procedimientos almacenados a partir de los scripts de Python desarrollados en las partes dos y tres. Los procedimientos almacenados se ejecutarán en SQL Server para realizar predicciones basadas en nuevos datos.
+En la [parte cuatro](python-ski-rental-linear-regression-deploy-model.md), aprenderá a almacenar el modelo en SQL Server y, después, creará procedimientos almacenados de los scripts de Python que ha desarrollado en las partes dos y tres. Los procedimientos almacenados se ejecutarán en SQL Server para realizar predicciones basándose en datos nuevos.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-* En la tercera parte de este tutorial se supone que ha completado la [parte uno](python-ski-rental-linear-regression.md) y sus requisitos previos.
+* En la parte tres de este tutorial, se da por hecho que ha completado la [parte uno](python-ski-rental-linear-regression.md) y los requisitos previos.
 
-## <a name="train-the-model"></a>Entrenar el modelo
+## <a name="train-the-model"></a>Entrenamiento del modelo
 
-Para predecir, tiene que buscar una función (modelo) que describa mejor la dependencia entre las variables de nuestro conjunto de resultados. Esto llamó al entrenamiento del modelo. El conjunto de datos de entrenamiento será un subconjunto del conjunto de datos completo desde el **DF** de trama de datos pandas que creó en la segunda parte de esta serie.
+Para realizar predicciones, necesita identificar una función (modelo) que describa mejor la dependencia entre las variables del conjunto de datos. Este proceso se denomina entrenar el modelo. El conjunto de datos de entrenamiento será un subconjunto de todo el conjunto de datos de la trama de datos de pandas **df** que ha creado en la parte dos de esta serie.
 
 Entrenará el modelo **lin_model** mediante un algoritmo de regresión lineal.
 
@@ -63,16 +64,16 @@ lin_model = LinearRegression()
 lin_model.fit(train[columns], train[target])
 ```
 
-Debería ver resultados similares a los siguientes.
+Se mostrarán resultados similares a los siguientes.
 
 ```results
 Training set shape: (362, 7)
 Testing set shape: (91, 7)
 ```
 
-## <a name="make-predictions"></a>Hacer predicciones
+## <a name="make-predictions"></a>Realización de predicciones
 
-Use una función de predicción para predecir los recuentos de alquiler mediante el modelo **lin_model**.
+Use una función de predicción para predecir el número de alquileres mediante el modelo **lin_model**.
 
 ```python
 # Generate our predictions for the test set.
@@ -97,12 +98,12 @@ Computed error: 3.59831533436e-26
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En la tercera parte de esta serie de tutoriales, ha completado estos pasos:
+En la parte tres de esta serie de tutoriales, ha completado estos pasos:
 
-* Entrenar un modelo de regresión lineal
-* Crear predicciones usando el modelo de regresión lineal
+* Entrenamiento de un modelo de regresión lineal
+* Predicciones mediante el modelo de regresión lineal
 
-Para implementar el modelo de aprendizaje automático que ha creado, siga la cuarta parte de esta serie de tutoriales:
+Para implementar el modelo de aprendizaje automático que ha creado, siga la parte cuatro de esta serie de tutoriales:
 
 > [!div class="nextstepaction"]
 > [Tutorial de Python: Implementación de un modelo de aprendizaje automático](python-ski-rental-linear-regression-deploy-model.md)

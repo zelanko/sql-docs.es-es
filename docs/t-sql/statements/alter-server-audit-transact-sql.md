@@ -20,19 +20,19 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2ff1981757af05b97bdc90ff3e79fdc3bebf823
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070315"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049967"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Modifica un objeto de auditoría de servidor mediante la característica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -143,7 +143,9 @@ Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
  Es posible agregar, modificar o quitar especificaciones de auditoría sin detener la auditoría.  
   
  Sin embargo, no se puede cambiar el GUID de una auditoría una vez creada ésta.  
-  
+ 
+ La instrucción **ALTER SERVER AUDIT** no se puede usar dentro de una transacción de usuario.
+ 
 ## <a name="permissions"></a>Permisos  
  Para crear, modificar o quitar una entidad de seguridad de auditoría de servidor, se deben tener los permisos ALTER ANY SERVER AUDIT o CONTROL SERVER.  
   

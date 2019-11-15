@@ -9,22 +9,22 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5417166ea69abe726f47b6bf2adede4b937d5b00
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958281"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844273"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Cómo administrar cuadernos en Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se muestra cómo abrir y guardar archivos de cuaderno en Azure Data Studio con la versión preliminar de SQL Server 2019. También se muestra cómo cambiar la conexión al clúster de macrodatos de SQL Server.
+En este artículo se muestra cómo abrir y guardar archivos de cuaderno en Azure Data Studio con SQL Server. También se muestra cómo cambiar la conexión al clúster de macrodatos de SQL Server.
 
 ## <a name="prerequisites"></a>Prerequisites
 
-En este artículo se supone que ya tiene un cuaderno que quiere usar en Azure Data Studio. Si quiere crear un cuaderno, vea [Uso de los cuadernos en la versión preliminar de SQL Server 2019](notebooks-guidance.md). Para usar cuadernos en Azure Data Studio, debe cumplir los siguientes requisitos previos:
+En este artículo se supone que ya tiene un cuaderno que quiere usar en Azure Data Studio. Si quiere crear un cuaderno, vea [Uso de los cuadernos en SQL Server](notebooks-guidance.md). Para usar cuadernos en Azure Data Studio, debe cumplir los siguientes requisitos previos:
 
 - [Implementar un clúster de macrodatos](quickstart-big-data-cluster-deploy.md).
 - [Herramientas de macrodatos de SQL Server 2019](deploy-big-data-tools.md):
@@ -80,4 +80,4 @@ Para cambiar el clúster de macrodatos de SQL Server de un cuaderno:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los cuadernos en Azure Data Studio, vea [Uso de los cuadernos en la versión preliminar de SQL Server 2019](notebooks-guidance.md).
+Para obtener más información sobre los cuadernos en Azure Data Studio, vea [Uso de los cuadernos en SQL Server 2019](notebooks-guidance.md).

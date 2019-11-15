@@ -1,7 +1,7 @@
 ---
 title: Montaje de S3 para los niveles de HDFS
 titleSuffix: SQL Server big data clusters
-description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos S3 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]externo en HDFS en un.
+description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos S3 externo en HDFS en un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
 ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652305"
@@ -20,7 +20,7 @@ ms.locfileid: "69652305"
 
 En las secciones siguientes se proporciona un ejemplo de cómo configurar los niveles de HDFS con un origen de datos de almacenamiento S3.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Clúster de macrodatos implementado](deployment-guidance.md)
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
@@ -61,7 +61,7 @@ Ahora que ha preparado un archivo de credenciales con claves de acceso, puede in
    
 1. Establezca la variable de entorno MOUNT_CREDENTIALS siguiendo las instrucciones anteriores.
 
-1. Monte el almacenamiento de HDFS remoto en Azure mediante la **creación del montaje de azdata BDC HDFS**. Reemplace los valores de marcador de posición antes de ejecutar el siguiente comando:
+1. Monte el almacenamiento de HDFS remoto en Azure con el comando **azdata bdc hdfs mount create**. Reemplace los valores de marcador de posición antes de ejecutar el siguiente comando:
 
    ```bash
    azdata bdc hdfs mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
@@ -96,7 +96,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> Eliminación del montaje
 
-Para eliminar el montaje, use el comando **azdata BDC HDFS Mount Delete** y especifique la ruta de acceso de montaje en HDFS:
+Para eliminar el montaje, use el comando **azdata bdc hdfs mount delete** y especifique la ruta de acceso de montaje en HDFS:
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]acerca de, vea [¿Qué es [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+Para más información sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vea [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

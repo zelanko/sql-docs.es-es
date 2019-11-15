@@ -1,7 +1,7 @@
 ---
 title: Implementación con un script de Python
-titleSuffix: SQL Server big data clusters
-description: Aprenda a usar un script de implementación para implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (versión preliminar) en Azure Kubernetes Service (AKS).
+titleSuffix: SQL Server Big Data Clusters
+description: Aprenda a usar un script de implementación para implementar clústeres de macrodatos de SQL Server en Azure Kubernetes Service (AKS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3233ec8a266ea77fe0eb62f5cfcadde8f2949ff9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531929"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706347"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Uso de un script de Python para implementar un clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -80,8 +80,6 @@ Siga estos pasos para ejecutar el script de implementación. Este script creará
    | **Nombre del clúster** | El nombre del clúster de AKS y del clúster de macrodatos. El nombre del clúster de macrodatos debe estar formado solo por caracteres alfanuméricos en minúsculas y sin espacios (valor predeterminado**sqlbigdata**). |
    | **Contraseña** | Contraseña del controlador, puerta de enlace de HDFS/Spark e instancia maestra (valor predeterminado **MySQLBigData2019**). |
    | **Nombre de usuario** | Nombre de usuario del controlador (valor predeterminado: **admin**). |
-
-Los siguientes parámetros eran necesarios para los participantes en el programa de usuarios pioneros del clúster de macrodatos de SQL Server 2019: **nombre de usuario de Docker** y **contraseña de Docker**. A partir de la versión CTP 3.2 ya no son necesarios.
 
    > [!IMPORTANT]
    > Es posible que el tamaño de máquina predeterminado **Standard_L8s** no esté disponible en todas las regiones de Azure. Si selecciona un tamaño de máquina diferente, asegúrese de que el número total de discos que se pueden conectar a través de los nodos del clúster es mayor o igual que 24. Cada notificación de volumen persistente en el clúster requiere un disco conectado. Actualmente, el clúster de macrodatos requiere 24 notificaciones de volumen persistentes. Por ejemplo, el tamaño de la máquina [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) admite 32 discos conectados, por lo que puede evaluar los clústeres de macrodatos con un solo nodo de este tamaño de máquina.

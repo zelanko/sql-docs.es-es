@@ -1,38 +1,39 @@
 ---
-title: Consultar y modificar los datos de SQL Server mediante RevoScaleR
-description: Tutorial tutorial sobre cómo consultar y modificar datos mediante el lenguaje R en SQL Server.
+title: Modificar datos de SQL mediante RevoScaleR
+description: Tutorial sobre cómo consultar y modificar datos mediante el lenguaje R en SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bcf782e509263b087cfc599758ae9492b888aed
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 65db15d8c6778723ff04f82cde985c4827813339
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715524"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727189"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Consultar y modificar los datos de SQL Server (tutorial de SQL Server y RevoScaleR)
+# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>Consulta y modificación de datos de SQL Server (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre cómo usar [las funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre el uso de [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
 En la lección anterior, cargó los datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este paso, puede explorar y modificar los datos mediante **RevoScaleR**:
 
 > [!div class="checklist"]
 > * Devolver información básica sobre las variables
-> * Crear datos de categorías a partir de datos sin procesar
+> * Crear datos categóricos a partir de datos sin procesar
 
-Los datos de categorías, o *las variables de factor*, son útiles para las visualizaciones de datos exploratorias. Puede usarlos como entradas para los histogramas para hacerse una idea de qué aspecto tienen los datos variables.
+Los datos categóricos, o *variables de factor*, son útiles para las visualizaciones de datos exploratorias. Puede usarlos como entradas para los histogramas para hacerse una idea de qué aspecto tienen los datos de variables.
 
 ## <a name="query-for-columns-and-types"></a>Consultar columnas y tipos
 
-Use un IDE de R o RGui. exe para ejecutar el script de R. 
+Use un IDE de R o RGui.exe para ejecutar el script de R. 
 
-En primer lugar, obtenga una lista de las columnas y sus tipos de datos. Puede usar la función [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) y especificar el origen de datos que desea analizar. En función de la versión de **RevoScaleR**, también puede usar [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
+En primer lugar, obtenga una lista de las columnas y sus tipos de datos. Use la función [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) y especifique el origen de datos que quiera analizar. Según la versión de **RevoScaleR**, también puede usar [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
 ```R
 rxGetVarInfo(data = sqlFraudDS)
@@ -52,15 +53,15 @@ Var 8: creditLine, Type: integer
 Var 9: fraudRisk, Type: integer
 ```
 
-## <a name="create-categorical-data"></a>Crear datos de categorías
+## <a name="create-categorical-data"></a>Crear datos categóricos
 
-Todas las variables se almacenan como enteros, pero algunas variables representan datos de categorías, denominadas *variables de factor* en R. Por ejemplo, el *Estado* de la columna contiene números que se usan como identificadores para los Estados 50 más el distrito de Columbia. Para facilitar la comprensión de los datos, reemplace los números con una lista de abreviaturas de estado.
+Todas las variables se almacenan como enteros, pero algunas de las variables representan datos categóricos denominados *variables de factor* en R. Por ejemplo, la columna *state* contiene números que se usan como identificadores de los 50 estados, más el Distrito de Columbia. Para facilitar la comprensión de los datos, reemplace los números con una lista de abreviaturas de estado.
 
-En este paso, creará un vector de cadena que contiene las abreviaturas y, a continuación, asignará estos valores de categorías a los identificadores enteros originales. A continuación, use la nueva variable en el argumento *colInfo* para especificar que esta columna se trate como un factor. Cada vez que analiza los datos o los mueve, se usan las abreviaturas y la columna se trata como un factor.
+En este paso, creará un vector de cadena que contenga las abreviaturas y, después, asignará estos valores categóricos a los identificadores enteros originales. Después usará la nueva variable en el argumento *colInfo* para especificar que esta columna se trate como un factor. Cada vez que analice o mueva los datos, se usan las abreviaturas y la columna se trata como un factor.
 
-Asignar la columna a las abreviaturas antes de usarla como un factor mejora realmente también el rendimiento. Para obtener más información, vea [R y optimización de datos](../r/r-and-data-optimization-r-services.md).
+Asignar la columna a las abreviaturas antes de usarla como un factor mejora realmente también el rendimiento. Para más información, vea [R y optimización de datos](../r/r-and-data-optimization-r-services.md).
 
-1. Empiece por crear una variable de R, *stateAbb*, y definir el vector de cadenas que se va a agregar, como se indica a continuación.
+1. Para empezar, cree una variable de R, *stateAbb*, y defina el vector de cadenas que se agregará, como sigue:
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -95,7 +96,7 @@ Asignar la columna a las abreviaturas antes de usarla como un factor mejora real
     )
     ```
   
-3. Para crear el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos que usa los datos actualizados, llame a la función **RxSqlServerData** como antes, pero agregue el argumento *colInfo* .
+3. Para crear el origen de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa los datos actualizados, llame a la función **RxSqlServerData** como antes, pero agregue el argumento *colInfo*.
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,

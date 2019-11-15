@@ -1,5 +1,5 @@
 ---
-title: Escritura de funciones avanzadas de Python
+title: 'Inicio rápido: Escritura de funciones de Python'
 titleSuffix: SQL Server Machine Learning Services
 description: En esta guía de inicio rápido, aprenderá a escribir una función de Python para el cálculo estadístico avanzado con SQL Server Machine Learning Services.
 ms.prod: sql
@@ -9,32 +9,33 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e369e83c99543cc31287932a25949c2ddec98e89
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: MT
+ms.openlocfilehash: 08f43c6406d0ca2c95cc21a207cae63af6e86902
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72007725"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727012"
 ---
-# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>Inicio rápido: Escritura de funciones avanzadas de Python con SQL Server Machine Learning Services
+# <a name="quickstart-write-advanced-python-functions-with-sql-server-machine-learning-services"></a>Inicio rápido: Escritura de funciones de Python avanzadas con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En esta guía de inicio rápido se describe cómo insertar funciones matemáticas y de utilidad de Python en un procedimiento almacenado de SQL con SQL Server Machine Learning Services. Las funciones estadísticas avanzadas que son complicadas de implementar en T-SQL se pueden realizar en Python con una sola línea de código.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
-- Esta guía de inicio rápido requiere acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con el idioma de Python instalado.
+- Esta guía de inicio rápido requiere acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con el lenguaje Python instalado.
 
-  La instancia de SQL Server puede estar en una máquina virtual de Azure o en un entorno local. Tenga en cuenta que la característica de scripting externo está deshabilitada de forma predeterminada, por lo que es posible que tenga que [Habilitar el scripting externo](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) y comprobar que **SQL Server Launchpad servicio** se está ejecutando antes de empezar.
+  La instancia de SQL Server puede estar en una máquina virtual de Azure o en un entorno local. Tenga en cuenta que la característica de scripting externo está deshabilitada de forma predeterminada, por lo que es posible que tenga que [habilitar el scripting externo](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) y comprobar que el **servicio SQL Server Launchpad** se esté ejecutando antes de empezar.
 
-- También necesita una herramienta para ejecutar consultas SQL que contienen scripts de Python. Puede ejecutar estos scripts mediante cualquier herramienta de consulta o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. Esta guía de inicio rápido usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- También necesita una herramienta para ejecutar consultas SQL que contengan scripts de Python. Puede ejecutar estos scripts mediante cualquier herramienta de consulta o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar un procedimiento almacenado o una consulta T-SQL. En esta guía de inicio rápido se usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Crear un procedimiento almacenado para generar números aleatorios
 
-Para simplificar, vamos a usar el paquete python `numpy`, que se instala y carga de forma predeterminada en SQL Server Machine Learning Services con Python instalado. El paquete contiene cientos de funciones para tareas estadísticas comunes, entre otras, la función `random.normal`, que genera una cantidad determinada de números aleatorios que usan la distribución normal, dadas una desviación estándar y la media.
+Para simplificar, vamos a usar el paquete `numpy` de Python, que se instala y se carga de forma predeterminada en SQL Server Machine Learning Services con Python instalado. El paquete contiene cientos de funciones para tareas estadísticas comunes, entre otras, la función `random.normal`, que genera una cantidad determinada de números aleatorios que usan la distribución normal, dadas una desviación estándar y la media.
 
-Por ejemplo, el siguiente código de Python devuelve 100 números en una media de 50, dada una desviación estándar de 3.
+Por ejemplo, el siguiente código de Python devuelve 100 números en una media de 50, lo cual da una desviación estándar de 3.
 
 ```Python
 numpy.random.normal(size=100, loc=50, scale=3)
@@ -80,11 +81,11 @@ WITH RESULT SETS(([Density] FLOAT NOT NULL));
 
 - La primera línea define cada uno de los parámetros de entrada de SQL que se requieren al ejecutar el procedimiento almacenado.
 
-- La línea que comienza por `@params` define todas las variables que usa el código de Python y los tipos de datos de SQL correspondientes.
+- La línea que empieza con `@params` define todas las variables que usa el código de Python y los correspondientes tipos de datos SQL.
 
-- Las líneas que siguen inmediatamente asignan los nombres de los parámetros SQL a los nombres de variables de Python correspondientes.
+- Las líneas que siguen inmediatamente asignan los nombres de parámetro SQL a los valores de variables de Python correspondientes.
 
-Ahora que ha ajustado la función de Python en un procedimiento almacenado, puede llamar fácilmente a la función y pasar valores diferentes, de la siguiente manera:
+Ahora que ha ajustado la función de Python en un procedimiento almacenado, puede llamar a la función y pasar distintos valores fácilmente de la manera siguiente:
 
 ```sql
 EXECUTE MyPyNorm @param1 = 100,@param2 = 50, @param3 = 3
@@ -92,9 +93,9 @@ EXECUTE MyPyNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 ## <a name="use-python-utility-functions-for-troubleshooting"></a>Usar funciones de utilidad de Python para solucionar problemas
 
-Los paquetes de Python proporcionan una variedad de funciones de utilidad para investigar el entorno de Python actual. Estas funciones pueden ser útiles si encuentra discrepancias en la forma en que el código de Python realiza en SQL Server y en entornos externos.
+Los paquetes de Python proporcionan una variedad de funciones de utilidad para investigar el entorno de Python actual. Estas funciones pueden ser útiles si encuentra discrepancias en la forma en que el código de Python se ejecuta en SQL Server y en entornos externos.
 
-Por ejemplo, puede usar las funciones de control de tiempo del sistema en el paquete `time` para medir la cantidad de tiempo que usan los procesos de Python y analizar los problemas de rendimiento.
+Por ejemplo, puede usar las funciones de temporización del sistema en el paquete `time` para medir la cantidad de tiempo que usan los procesos de Python y analizar los problemas de rendimiento.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -115,8 +116,8 @@ elapsed_time = time.time() - start_time
 Para crear un modelo de aprendizaje automático con Python en SQL Server, siga esta guía de inicio rápido:
 
 > [!div class="nextstepaction"]
-> [Inicio rápido: Crear y puntuar un modelo predictivo en Python con SQL Server Machine Learning Services @ no__t-0
+> [Inicio rápido: Crear y puntuar un modelo predictivo en Python con SQL Server Machine Learning Services](quickstart-python-train-score-model.md)
 
-Para obtener más información acerca de SQL Server Machine Learning Services, consulte:
+Para obtener más información acerca de SQL Server Machine Learning Services, vea:
 
 - [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)

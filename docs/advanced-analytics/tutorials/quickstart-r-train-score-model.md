@@ -1,7 +1,7 @@
 ---
-title: Crear y puntuar un modelo predictivo en R
+title: 'Inicio rápido: entrenamiento de un modelo en R'
 titleSuffix: SQL Server Machine Learning Services
-description: Cree un modelo predictivo simple en R mediante SQL Server Machine Learning Services y, a continuación, prediga un resultado con nuevos datos.
+description: Cree un sencillo modelo predictivo en R mediante SQL Server Machine Learning Services y, después, realice una predicción de un resultado con datos nuevos.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/04/2019
@@ -9,48 +9,49 @@ ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9acfe1e546c332801e9a5c1a7d97758053d9a0f4
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
-ms.translationtype: MT
+ms.openlocfilehash: bd91191a84aac8c245bdcbbe0afd2bf3241aa6b3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542124"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73726516"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Inicio rápido: crear y puntuar un modelo predictivo en R con SQL Server Machine Learning Services
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>Inicio rápido: creación y puntuación de un modelo predictivo en R con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En esta guía de inicio rápido, creará y entrenará un modelo predictivo con R, guardará el modelo en una tabla en la instancia de SQL Server y, a continuación, usará el modelo para predecir valores de datos nuevos con [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+En este inicio rápido, creará y entrenará un modelo predictivo con R, guardará el modelo en una tabla en su instancia de SQL Server y, después, usará el modelo para predecir valores a partir de datos nuevos mediante [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
 
-Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. La primera usa el conjunto de **mtcars** que se incluye con R y genera un modelo lineal generalizado simple (GLM) que predice la probabilidad de que un vehículo se haya equipado con una transmisión manual. El segundo procedimiento es para puntuar: llama al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en nuevos datos. Al colocar el código de R en un procedimiento almacenado de SQL, las operaciones se incluyen en SQL, son reutilizables y se pueden llamar desde otros procedimientos almacenados y aplicaciones cliente.
+Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. El primero usa el conjunto de datos **mtcars** incluido con R y genera un sencillo modelo lineal generalizado (GLM) que predice la probabilidad de que un vehículo tenga transmisión manual. El segundo procedimiento es para puntuación: llama al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en datos nuevos. Al colocar código de R en un procedimiento almacenado en SQL, las operaciones se incluyen en SQL, son reutilizables y pueden recibir llamadas de otros procedimientos almacenados y aplicaciones cliente.
 
 > [!TIP]
-> Si necesita un actualizador en modelos lineales, pruebe este tutorial, en el que se describe el proceso de ajuste de un modelo con rxLinMod: [ajuste de modelos lineales](/machine-learning-server/r/how-to-revoscaler-linear-model) .
+> Para más información sobre los modelos lineales, pruebe este tutorial, donde se describe el proceso para adaptar un modelo mediante rxLinMod:  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model) (Ajuste de modelos lineales)
 
-Al completar esta guía de inicio rápido, aprenderá lo siguiente:
+Después de completar este inicio rápido, aprenderá a:
 
 > [!div class="checklist"]
-> - Cómo incrustar código de R en un procedimiento almacenado
-> - Cómo pasar entradas al código mediante entradas en el procedimiento almacenado
-> - Cómo se usan los procedimientos almacenados para poner en funcionamiento los modelos
+> - Insertar código de R en un procedimiento almacenado
+> - Pasar entradas en el código mediante entradas en el procedimiento almacenado
+> - Usar procedimientos almacenados para hacer operativos los modelos
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- Esta guía de inicio rápido requiere acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) con el lenguaje R instalado.
+- Para este inicio rápido, es necesario tener acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) que tenga instalado el lenguaje de R.
 
-  La instancia de SQL Server puede estar en una máquina virtual de Azure o en un entorno local. Tenga en cuenta que la característica de scripting externo está deshabilitada de forma predeterminada, por lo que es posible que tenga que [Habilitar el scripting externo](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) y comprobar que **SQL Server Launchpad servicio** se está ejecutando antes de empezar.
+  Su instancia de SQL Server puede estar en una máquina virtual de Azure o en un entorno local. Tenga en cuenta que la característica de scripts externos está deshabilitada de forma predeterminada, por lo que puede que tenga que [habilitar scripts externos](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) y asegurarse de que el **servicio SQL Server Launchpad** esté ejecutándose antes de empezar.
 
-- También necesita una herramienta para ejecutar consultas SQL que contienen scripts de R. Puede ejecutar estos scripts mediante cualquier herramienta de consulta o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. Esta guía de inicio rápido usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- También necesita una herramienta para ejecutar consultas SQL que contengan scripts de R. Puede ejecutar estos scripts con cualquier herramienta de consultas o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. En este inicio rápido, se usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
 
-## <a name="create-the-model"></a>Crear el modelo
+## <a name="create-the-model"></a>Creación del modelo
 
-Para crear el modelo, debe crear los datos de origen para el entrenamiento, crear el modelo y entrenarlo usando los datos y, a continuación, almacenar el modelo en una base de datos SQL, donde se puede usar para generar predicciones con nuevos datos.
+Para crear el modelo, creará los datos de origen para el entrenamiento, creará el modelo y lo entrenará con los datos; después, guardará el modelo en una base de datos SQL, donde podrá usarse para generar predicciones con datos nuevos.
 
 ### <a name="create-the-source-data"></a>Crear el origen de datos
 
-1. Abra SSMS, conéctese a la instancia de SQL Server y abra una nueva ventana de consulta.
+1. Abra SSMS, conéctese a su instancia de SQL Server y abra una nueva ventana de consulta.
 
-1. Cree una tabla para guardar los datos de entrenamiento.
+1. En primer lugar, cree una tabla para guardar los datos de entrenamiento.
 
    ```sql
    CREATE TABLE dbo.MTCars(
@@ -68,7 +69,7 @@ Para crear el modelo, debe crear los datos de origen para el entrenamiento, crea
    );
    ```
 
-1. Inserte los datos del conjunto de datos integrado `mtcars`.
+1. Inserte los datos desde el conjunto de datos integrado `mtcars`.
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -79,13 +80,13 @@ Para crear el modelo, debe crear los datos de origen para el entrenamiento, crea
    ```
 
    > [!TIP]
-   > El runtime de R incluye muchos conjuntos de datos, pequeños y grandes. Para obtener una lista de los conjuntos de valores instalados con R, escriba `library(help="datasets")` desde un símbolo del sistema de R.
+   > El runtime de R incluye muchos conjuntos de datos, pequeños y grandes. Para obtener una lista de los conjuntos de datos instalados en R, escriba `library(help="datasets")` desde un símbolo del sistema de R.
 
-### <a name="create-and-train-the-model"></a>Crear y entrenar el modelo
+### <a name="create-and-train-the-model"></a>Creación y entrenamiento del modelo
 
-Los datos de velocidad del automóvil contienen dos columnas, numéricas: potencia (`hp`) y peso (`wt`). A partir de estos datos, creará un modelo lineal generalizado (GLM) que calcula la probabilidad de que un vehículo se haya equipado con una transmisión manual.
+Los datos de velocidad de coches contienen dos columnas, ambas numéricas: caballos de vapor (`hp`) y peso (`wt`). Con estos datos, creará un modelo lineal generalizado (GLM) que calcula la probabilidad de que un vehículo tenga transmisión manual.
 
-Para compilar el modelo, debe definir la fórmula dentro del código de R y pasar los datos como un parámetro de entrada.
+Para crear el modelo, defina la fórmula contenida en el código de R y pase los datos como un parámetro de entrada.
 
 ```sql
 DROP PROCEDURE IF EXISTS generate_GLM;
@@ -105,16 +106,16 @@ END;
 GO
 ```
 
-- El primer argumento para `glm` es el parámetro de *fórmula* , que define `am` como dependiente de `hp + wt`.
+- El primer argumento de `glm` es el parámetro *formula*, que define `am` como dependiente de `hp + wt`.
 - Los datos de entrada se almacenan en la variable `MTCarsData`, que se rellena con la consulta SQL. Si no asigna un nombre específico a los datos de entrada, el nombre predeterminado de la variable sería _InputDataSet_.
 
-### <a name="store-the-model-in-the-sql-database"></a>Almacenar el modelo en la base de datos SQL
+### <a name="store-the-model-in-the-sql-database"></a>Almacenamiento del modelo en la base de datos SQL
 
-A continuación, almacene el modelo en una base de datos SQL para que pueda usarlo para la predicción o para volver a entrenarlo. 
+A continuación, almacene el modelo en una base de datos SQL para que pueda usarlo con fines de predicción o para volver a entrenarlo. 
 
 1. Cree una tabla para almacenar el modelo.
 
-   La salida de un paquete de R que crea un modelo suele ser un objeto binario. Por lo tanto, la tabla en la que se almacena el modelo debe proporcionar una columna de tipo **varbinary (Max)** .
+   El resultado de un paquete de R que crea un modelo suele ser un objeto binario. Por tanto, la tabla donde se almacena el modelo necesita tener una columna del tipo **varbinary(max)** .
 
    ```sql
    CREATE TABLE GLM_models (
@@ -123,7 +124,7 @@ A continuación, almacene el modelo en una base de datos SQL para que pueda usar
    );
    ```
 
-1. Ejecute la siguiente instrucción Transact-SQL para llamar al procedimiento almacenado, generar el modelo y guardarlo en la tabla que creó.
+1. Ejecute la siguiente instrucción Transact-SQL para llamar al procedimiento almacenado, genere el modelo y guárdelo en la tabla que ha creado.
 
    ```sql
    INSERT INTO GLM_models(model)
@@ -131,7 +132,7 @@ A continuación, almacene el modelo en una base de datos SQL para que pueda usar
    ```
 
    > [!TIP]
-   > Si ejecuta este código por segunda vez, recibirá este error: "infracción de la restricción de clave principal... No se puede insertar una clave duplicada en el objeto DBO. stopping_distance_models ". Una opción para evitar este error consiste en actualizar el nombre de cada nuevo modelo. Por ejemplo, podría cambiar el nombre por algo más descriptivo e incluir el tipo de modelo, el día en que lo creó, etc.
+   > Si ejecuta este código una segunda vez, se mostrará el error siguiente: "Infracción de restricción de CLAVE PRINCIPAL… No se puede insertar una clave duplicada en el objeto dbo.stopping_distance_models". Una opción para evitar este error consiste en actualizar el nombre de cada nuevo modelo. Por ejemplo, podría cambiar el nombre por algo más descriptivo e incluir el tipo de modelo, el día en que lo creó, etc.
 
      ```sql
      UPDATE GLM_models
@@ -139,13 +140,13 @@ A continuación, almacene el modelo en una base de datos SQL para que pueda usar
      WHERE model_name = 'default model'
      ```
 
-## <a name="score-new-data-using-the-trained-model"></a>Puntuar nuevos datos con el modelo entrenado
+## <a name="score-new-data-using-the-trained-model"></a>Puntuación de datos nuevos con el modelo entrenado
 
-La *puntuación* es un término que se usa en la ciencia de datos para hacer referencia a la generación de predicciones, probabilidades u otros valores basados en nuevos datos que se introducen en un modelo entrenado. Usará el modelo que creó en la sección anterior para puntuar las predicciones con los nuevos datos.
+*Puntuación* es un término usado en ciencia de datos que equivale a generar predicciones, probabilidades y otros valores basándose en datos nuevos proporcionados a un modelo entrenado. Usará el modelo que ha creado en la sección anterior para puntuar predicciones en relación con datos nuevos.
 
-### <a name="create-a-table-of-new-data"></a>Crear una tabla de datos nuevos
+### <a name="create-a-table-of-new-data"></a>Creación de una tabla de datos nuevos
 
-En primer lugar, cree una tabla con nuevos datos.
+Primero, cree una tabla con datos nuevos.
 
 ```sql
 CREATE TABLE dbo.NewMTCars(
@@ -169,15 +170,15 @@ VALUES (120, 2.800)
 GO
 ```
 
-### <a name="predict-manual-transmission"></a>Predicción de la transmisión manual
+### <a name="predict-manual-transmission"></a>Predicción de transmisión manual
 
-Para obtener las predicciones basadas en el modelo, escriba un script SQL que hace lo siguiente:
+Para obtener predicciones basándose en su modelo, escriba un script de SQL que realice lo siguiente:
 
 1. Obtener el modelo que quiere
 1. Obtener los nuevos datos de entrada
 1. Llamar a una función de predicción de R que sea compatible con ese modelo
 
-Con el tiempo, la tabla puede contener varios modelos de R, todos creados con distintos parámetros o algoritmos, o entrenado en distintos subconjuntos de datos. En este ejemplo, usaremos el modelo denominado `default model`.
+Con el tiempo, la tabla puede contener varios modelos de R, todos creados con parámetros o algoritmos diferentes o entrenados a partir de distintos subconjuntos de datos. En este ejemplo, usaremos el modelo denominado `default model`.
 
 ```sql
 DECLARE @glmmodel varbinary(max) = 
@@ -199,7 +200,7 @@ EXEC sp_execute_external_script
 WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3)));
 ```
 
-En el script anterior se realizan los pasos siguientes:
+El script anterior realiza los pasos siguientes:
 
 - Use una instrucción SELECT para obtener un único modelo de la tabla y páselo como un parámetro de entrada.
 
@@ -208,18 +209,18 @@ En el script anterior se realizan los pasos siguientes:
 - Use la función `predict` con los argumentos adecuados para el modelo y proporcione los nuevos datos de entrada.
 
 > [!NOTE]
-> En el ejemplo, se agrega la función `str` durante la fase de prueba para comprobar el esquema de datos devuelto desde R. Puede quitar la instrucción más adelante.
+> En el ejemplo, la función `str` se agrega durante la fase de pruebas para comprobar el esquema de los datos que se devuelven desde R. Puede quitar la instrucción más tarde.
 >
-> Los nombres de columna utilizados en el script de R no se pasan necesariamente a la salida del procedimiento almacenado. Aquí se usa la cláusula WITH RESULTs para definir algunos nombres de columna nuevos.
+> Los nombres de columna usados en el script de R no tienen que pasarse necesariamente al resultado del procedimiento almacenado. Esta es la cláusula WITH RESULTS usada para definir nuevos nombres de columna.
 
 **Resultado**
 
-![Conjunto de resultados para predecir properbility de la transmisión manual](./media/r-predict-am-resultset.png)
+![Conjunto de resultados para predecir la probabilidad de transmisión manual](./media/r-predict-am-resultset.png)
 
-También es posible usar la instrucción [PREDICT (Transact-SQL)](../../t-sql/queries/predict-transact-sql.md) para generar un valor de predicción o una puntuación basada en un modelo almacenado.
+También puede usar la instrucción [PREDICT (Transact-SQL)](../../t-sql/queries/predict-transact-sql.md) para generar una puntuación o un valor predicho basándose en un modelo almacenado.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de SQL Server Machine Learning Services, consulte:
+Para más información sobre SQL Server Machine Learning Services, vea:
 
-- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)
+- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../what-is-sql-server-machine-learning.md)

@@ -1,6 +1,6 @@
 ---
-title: Biblioteca de funciones de R de OLAP
-description: Introducción a la biblioteca de funciones de olapr en SQL Server 2016 R Services y SQL Server Machine Learning Services con R.
+title: Biblioteca de funciones de R de olapR
+description: Introducción a la biblioteca de funciones de olapR en SQL Server 2016 R Services y SQL Server Machine Learning Services con R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
@@ -10,15 +10,15 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 507bd04140880a3c15f1e72eed49c29ade56769c
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68715004"
 ---
-# <a name="olapr-r-library-in-sql-server"></a>olapr (biblioteca de R en SQL Server)
+# <a name="olapr-r-library-in-sql-server"></a>olapR (biblioteca de R en SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-**olapr** es una biblioteca de Microsoft de funciones de R que se usa para las consultas MDX en un cubo OLAP SQL Server Analysis Services. Las funciones no admiten todas las operaciones MDX, pero puede crear consultas que recorten, los índices, la obtención de detalles, el Resumen y los pivotes en las dimensiones. 
+**olapR** es una biblioteca de Microsoft de funciones de R utilizadas para las consultas MDX en un cubo OLAP de SQL Server Analysis Services. Las funciones no admiten todas las operaciones MDX, pero puede crear consultas que segmenten, desmenucen, obtengan detalles, acumulen y dinamicen en las dimensiones. 
 
 Este paquete no se ha cargado previamente en una sesión de R. Ejecute el siguiente comando para cargar la biblioteca.
 
@@ -26,7 +26,7 @@ Este paquete no se ha cargado previamente en una sesión de R. Ejecute el siguie
 library(olapR)
 ```
 
-Puede usar esta biblioteca en las conexiones a un Analysis Services cubo OLAP en todas las versiones compatibles de SQL Server. En este momento no se admiten las conexiones a un modelo tabular.
+Puede usar esta biblioteca en las conexiones a un cubo OLAP de Analysis Services en todas las versiones compatibles de SQL Server. En este momento no se admiten las conexiones a un modelo tabular.
 
 ## <a name="package-version"></a>Versión del paquete
 
@@ -34,24 +34,24 @@ La versión actual es 1.0.0 en todos los productos solo de Windows y descargas q
 
 ## <a name="full-reference-documentation"></a>Documentación de referencia completa
 
-La biblioteca de olapr se distribuye en varios productos de Microsoft, pero el uso es el mismo si se obtiene la biblioteca en SQL Server u otro producto. Dado que las funciones son iguales, la [documentación de las funciones individuales de sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) se publica en una sola ubicación en la [referencia de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft machine learning Server. Si hay algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
+La biblioteca de **olapr** se distribuye en varios productos de Microsoft, pero el uso es el mismo, se obtenga la biblioteca en SQL Server o en otro producto. Dado que las funciones son las mismas, la [documentación de las funciones individuales de sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) se publica en una sola ubicación en la [referencia de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft Machine Learning Server. Si existe algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
 
 ## <a name="availability-and-location"></a>Disponibilidad y ubicación
 
 Este paquete se proporciona en los siguientes productos, así como en varias imágenes de máquina virtual en Azure. La ubicación del paquete varía en consecuencia.
 
-Producto | Location |
+Product | Ubicación |
 --------|----------|
-SQL Server Machine Learning Services (con la integración de R) | C:\Archivos de Programa\microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library | 
-SQL Server 2016 R Services | C:\Archivos de Programa\microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library
-Microsoft Machine Learning Server (R Server) | C:\Archivos de Files\Microsoft\R_SERVER\library |
-Cliente de Microsoft R | C:\Archivos de Files\Microsoft\R Client\R_SERVER\library |
-Data Science Virtual Machine (en Azure) | C:\Archivos de Files\Microsoft\R Client\R_SERVER\library |
-SQL Server máquina virtual (en Azure) <sup>1</sup> | C:\Archivos de Programa\microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library |
+SQL Server Machine Learning Services (con la integración de R) | C:\Archivos de programa\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
+SQL Server 2016 R Services | C:\Archivos de programa\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
+Microsoft Machine Learning Server (R Server) | C:\Archivos de programa\Microsoft\ R_SERVER \library |
+Cliente de Microsoft R | C:\Archivos de programa\Microsoft\R Client\R_SERVER\library |
+Data Science Virtual Machine (en Azure) | C:\Archivos de programa\Microsoft\R Client\R_SERVER\library |
+SQL Server Virtual Machine (en Azure) <sup>1</sup> | C:\Archivos de programa\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
 
-<sup>1</sup> la integración de R es opcional en SQL Server. La biblioteca de olapr se instalará cuando agregue la característica Machine Learning o R durante la configuración de la máquina virtual.
+<sup>1</sup> integración de R es opcional en SQL Server. La biblioteca de olapr se instalará cuando agregue la característica Machine Learning o de R durante la configuración de la máquina virtual.
 
 
 ## <a name="see-also"></a>Vea también
 
-[Cómo crear consultas MDX con olapr](how-to-create-mdx-queries-using-olapr.md)
+[Cómo crear consultas MDX con olapR](how-to-create-mdx-queries-using-olapr.md)

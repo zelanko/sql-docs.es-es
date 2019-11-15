@@ -1,26 +1,27 @@
 ---
-title: Crear características de datos mediante las funciones de T-SQL y Python
-description: Tutorial que muestra cómo agregar cálculos a los procedimientos almacenados para su uso en los modelos de aprendizaje automático de Python.
+title: 'Python + T-SQL: características de datos'
+description: Tutorial en el que se explica cómo agregar cálculos a los procedimientos almacenados para usarlos en modelos de aprendizaje automático de Python.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3eafa7bf06739ba5802ea20caea61fbaaa2474ec
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.openlocfilehash: 94d3160fe372fafb666ed451d207301b86d119d9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715492"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725197"
 ---
-# <a name="create-data-features-using-t-sql"></a>Crear características de datos mediante T-SQL
+# <a name="create-data-features-using-t-sql"></a>Creación de características de datos mediante T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Después de la exploración de datos, ha recopilado información de los datos y está listo para pasar a la *ingeniería de características*. Este proceso de creación de características a partir de los datos sin procesar puede ser un paso crítico en el modelado de análisis avanzado.
+Después de la exploración de datos, ha recopilado conocimientos de los datos y está listo para pasar a la *ingeniería de características*. Este proceso de creación de características a partir de los datos sin procesar puede ser un paso crítico en el modelado de análisis avanzado.
 
-Este artículo forma parte de un tutorial, [análisis de Python en base de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 
+Este artículo forma parte de un tutorial, [Análisis de datos de Python en base de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 En este paso, aprenderá a crear características desde datos sin procesar mediante una función de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Después, llamaremos a esa función desde un procedimiento almacenado para crear una tabla que contiene los valores de las características.
 
@@ -30,7 +31,7 @@ Los valores de distancia notificados en los datos originales se basan en la dist
 
 Usará una función personalizada de T-SQL, _fnCalculateDistance_, para calcular la distancia usando la fórmula Haversine, y una segunda función personalizada de T-SQL, _fnEngineerFeatures_, para crear una tabla que contiene todas las características.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular la distancia de la carrera mediante fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Cálculo de la distancia del trayecto con fnCalculateDistance
 
 1.  La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de la preparación para este tutorial. Tómese un minuto para revisar el código.
   
@@ -67,7 +68,7 @@ Usará una función personalizada de T-SQL, _fnCalculateDistance_, para calcular
 
 Para agregar el valor calculado a una tabla y poder usarlo para entrenar el modelo, deberá usar otra función, _fnEngineerFeatures_.
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>Guardar las características mediante _fnEngineerFeatures_
+### <a name="save-the-features-using-_fnengineerfeatures_"></a>Guardado de las características mediante _fnEngineerFeatures_
 
 1.  Tómese un minuto para revisar el código de la función personalizada de T-SQL, _fnEngineerFeatures_, que debe haberse creado como parte de la preparación para este tutorial.
   
@@ -107,16 +108,16 @@ Para agregar el valor calculado a una tabla y poder usarlo para entrenar el mode
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Como puede ver, la distancia notificada por el taxímetro no siempre se corresponde con la distancia geográfica. Este es el motivo por el que es importante el diseño de características.
+    Como puede ver, la distancia notificada por el taxímetro no siempre se corresponde con la distancia geográfica. Por eso es importante la ingeniería de características.
 
-En el paso siguiente, aprenderá a usar estas características de datos para crear y entrenar un modelo de aprendizaje automático con Python.
+En el paso siguiente, aprenderá cómo usar estas características de datos para crear y entrenar un modelo de aprendizaje automático con Python.
 
 ## <a name="next-step"></a>Paso siguiente
 
-[Entrenar y guardar un modelo de Python mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Entrenamiento y guardado de un modelo Python mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Paso anterior
 
-[Explore y visualice los datos](sqldev-py3-explore-and-visualize-the-data.md)
+[Exploración y visualización de datos](sqldev-py3-explore-and-visualize-the-data.md)
 
 

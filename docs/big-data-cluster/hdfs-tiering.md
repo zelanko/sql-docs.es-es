@@ -1,7 +1,7 @@
 ---
 title: Configuración de la organización en niveles de HDFS
 titleSuffix: SQL Server big data clusters
-description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Azure Data Lake Storage externo en HDFS en un.
+description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos de Azure Data Lake Storage externo en HDFS en un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7b24af0b0c6a22cbab1a9c280a0ba868ca2cd21
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
-ms.translationtype: MT
+ms.openlocfilehash: 673b3eed760af4b36c494e2dd45cdfc8ed8e8dc8
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652326"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706047"
 ---
-# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Configuración de la organización en niveles de HDFS[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Configuración de la organización en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-La organización en niveles de HDFS ofrece la posibilidad de montar un sistema de archivos externo compatible con HDFS en HDFS. En este artículo se explica cómo configurar la organización en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] niveles de HDFS para (versión preliminar). En este momento, se admite la conexión con Azure Data Lake Storage Gen2 y Amazon S3. 
+La organización en niveles de HDFS ofrece la posibilidad de montar un sistema de archivos externo compatible con HDFS en HDFS. En este artículo se explica cómo configurar la organización en niveles de HDFS en clústeres de macrodatos de SQL Server. En este momento, se admite la conexión con Azure Data Lake Storage Gen2 y Amazon S3. 
 
 ## <a name="hdfs-tiering-overview"></a>Introducción a la organización en niveles de HDFS
 
@@ -38,7 +38,7 @@ En las secciones siguientes se ofrece un ejemplo de cómo configurar la organiza
 
 La organización en niveles de HDFS admite la actualización. Actualice un montaje existente para la instantánea más reciente de los datos remotos.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerequisites
 
 - [Clúster de macrodatos implementado](deployment-guidance.md)
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
@@ -54,7 +54,7 @@ Se admite la conexión con Azure Data Lake Storage Gen2 y Amazon S3. Puede encon
 
 ## <a id="issues"></a> Limitaciones y problemas conocidos
 
-En la lista siguiente se proporcionan los problemas conocidos y las limitaciones actuales cuando se [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]usa la organización en niveles de HDFS en:
+En la lista siguiente se indican los problemas conocidos y las limitaciones actuales al usar la organización en niveles de HDFS en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]:
 
 - Si el montaje se queda en un estado `CREATING` durante mucho tiempo, lo más probable es que se haya producido un error. En esta situación, cancele el comando y, si es necesario, elimine el montaje. Compruebe que los parámetros y las credenciales sean correctos antes de volver a intentarlo.
 
@@ -76,4 +76,4 @@ En la lista siguiente se proporcionan los problemas conocidos y las limitaciones
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]acerca de, vea [¿Qué es [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+Para más información sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], vea [¿Qué son [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)

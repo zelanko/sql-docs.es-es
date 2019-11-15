@@ -1,35 +1,36 @@
 ---
-title: Entrenar y guardar un modelo de Python mediante T-SQL
-description: Tutorial de Python que muestra cómo entrenar y guardar un modelo con Transact-SQL en SQL Server.
+title: 'Python + T-SQL: Entrenamiento del modelo'
+description: Tutorial de Python que muestra cómo entrenar y guardar un modelo con Transact-SQL en SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 470d7be0e1777d029f406e183aad644359c82f13
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: MT
+ms.openlocfilehash: b8bec553502b2e5c8d69436e539437be9a5989aa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005996"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73724878"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Entrenar y guardar un modelo de Python mediante T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Este artículo forma parte de un tutorial, [análisis de Python en base de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 
+Este artículo forma parte de un tutorial, [Análisis de datos de Python en base de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-En este paso, aprenderá a entrenar un modelo de aprendizaje automático mediante los paquetes **de Python scikit-Learn** y **revoscalepy**. Estas bibliotecas de Python ya están instaladas con SQL Server Machine Learning Services.
+En este paso, aprenderá a entrenar un modelo de aprendizaje automático mediante los paquetes de Python **scikit-Learn** y **revoscalepy**. Estas bibliotecas de Python ya están instaladas con SQL Server Machine Learning Services.
 
-Los módulos se cargan y se llama a las funciones necesarias para crear y entrenar el modelo mediante un SQL Server procedimiento almacenado. El modelo requiere las características de datos que ha diseñado en lecciones anteriores. Por último, guarde el modelo entrenado en una tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Cargue los módulos y llame a las funciones necesarias para crear y entrenar el modelo mediante un procedimiento almacenado de SQL Server. El modelo necesita las características de datos que ha diseñado en lecciones anteriores. Por último, guarde el modelo entrenado en una tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
 
-## <a name="split-the-sample-data-into-training-and-testing-sets"></a>Divida los datos de ejemplo en conjuntos de entrenamiento y de prueba
+## <a name="split-the-sample-data-into-training-and-testing-sets"></a>Dividir los datos de muestra en conjuntos de entrenamiento y de prueba
 
 1. Cree un procedimiento almacenado denominado **PyTrainTestSplit** para dividir los datos de la tabla nyctaxi_sample en dos partes: nyctaxi_sample_training y nyctaxi_sample_testing. 
 
-    Este procedimiento almacenado ya debe estar creado, pero puede ejecutar el código siguiente para crearlo:
+    Aunque este procedimiento almacenado ya debería estar creado, puede ejecutar este código para crearlo:
 
     ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
@@ -47,7 +48,7 @@ Los módulos se cargan y se llama a las funciones necesarias para crear y entren
     GO
     ```
 
-2. Para dividir los datos mediante una división personalizada, ejecute el procedimiento almacenado y escriba un entero que represente el porcentaje de datos asignados al conjunto de entrenamiento. Por ejemplo, la siguiente instrucción asignaría el 60% de los datos al conjunto de entrenamiento.
+2. Para dividir los datos mediante una división personalizada, ejecute el procedimiento almacenado y escriba un entero que represente el porcentaje de datos asignados al conjunto de entrenamiento. Por ejemplo, la siguiente instrucción asignaría el 60 % de los datos al conjunto de entrenamiento.
 
     ```sql
     EXEC PyTrainTestSplit 60
@@ -56,18 +57,18 @@ Los módulos se cargan y se llama a las funciones necesarias para crear y entren
 
 ## <a name="build-a-logistic-regression-model"></a>Crear un modelo de regresión logística
 
-Una vez preparados los datos, puede usarlos para entrenar un modelo. Para ello, se llama a un procedimiento almacenado que ejecuta código de Python y se toma como entrada la tabla de datos de entrenamiento. En este tutorial, creará dos modelos, ambos modelos de clasificación binaria:
+Una vez preparados los datos, ya puede usarlos para entrenar un modelo. Para ello, llame a un procedimiento almacenado que ejecute código de Python, tomando como entrada la tabla de datos de entrenamiento. En este tutorial, creará dos modelos, ambos modelos de clasificación binaria:
 
-+ El procedimiento almacenado **PyTrainScikit** crea un modelo de predicción de propina mediante el paquete **scikit-Learn** .
-+ El procedimiento almacenado **TrainTipPredictionModelRxPy** crea un modelo de predicción de propinas mediante el paquete **revoscalepy** .
++ El procedimiento almacenado **PyTrainScikit** crea un modelo de predicción de propinas mediante el paquete **scikit-learn**.
++ El procedimiento almacenado **TrainTipPredictionModelRxPy** crea un modelo de predicción de propinas mediante el paquete **revoscalepy**.
 
-Cada procedimiento almacenado utiliza los datos de entrada proporcionados para crear y entrenar un modelo de regresión logística. Todo el código de Python se ajusta en el procedimiento almacenado del sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+Cada procedimiento almacenado usa los datos de entrada proporcionados para crear y entrenar un modelo de regresión logística. Todo el código de Python se ajusta en el procedimiento almacenado del sistema, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-Para que sea más fácil volver a entrenar el modelo en los nuevos datos, se ajusta la llamada a sp_execute_external_script en otro procedimiento almacenado y se pasan los nuevos datos de entrenamiento como un parámetro. Esta sección le guiará a través de ese proceso.
+Para que sea más fácil volver a entrenar el modelo según los nuevos datos, ajuste la llamada a sp_execute_external_script en otro procedimiento almacenado y pase los nuevos datos de entrenamiento como un parámetro. Esta sección le guiará a través de ese proceso.
 
 ### <a name="pytrainscikit"></a>PyTrainScikit
 
-1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra una nueva ventana de **consulta** y ejecute la instrucción siguiente para crear el procedimiento almacenado **PyTrainScikit**.  El procedimiento almacenado contiene una definición de los datos de entrada, por lo que no es necesario proporcionar una consulta de entrada.
+1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra una nueva ventana **Consulta** y ejecute esta instrucción siguiente para crear el procedimiento almacenado **PyTrainScikit**.  El procedimiento almacenado contiene una definición de los datos de entrada, por lo que no es necesario proporcionar una consulta de entrada.
 
     ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
@@ -106,7 +107,7 @@ Para que sea más fácil volver a entrenar el modelo en los nuevos datos, se aju
     GO
     ```
 
-2. Ejecute las siguientes instrucciones SQL para insertar el modelo entrenado en la tabla Nueva York @ no__t-0taxi_models.
+2. Ejecute estas instrucciones SQL para insertar el modelo entrenado en la tabla nyc\_taxi_models.
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -114,22 +115,22 @@ Para que sea más fácil volver a entrenar el modelo en los nuevos datos, se aju
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    El procesamiento de los datos y la conexión del modelo puede tardar un par de minutos. Los mensajes que se canalizarán al flujo **stdout** de Python se muestran en la ventana **mensajes** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Por ejemplo:
+    Es posible que el procesamiento de los datos y el ajuste del modelo tarde unos minutos. Los mensajes que se canalicen al flujo **stdout** de Python se muestran en la ventana **Mensajes** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Por ejemplo:
 
-    *Mensaje (s) stdout del script externo:* 
-  *C:\Archivos de programa\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
+    *Mensajes STDOUT del script externo:* 
+  *C:\Archivos de programa\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
-3. Abra la tabla *Nueva York @ no__t-1taxi_models*. Puede ver que se ha agregado una fila nueva, que contiene el modelo serializado en la columna _modelo_.
+3. Abra la tabla *nyc\_taxi_models*. Puede ver que se ha agregado una fila nueva, que contiene el modelo serializado en la columna _modelo_.
 
     *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
-Este procedimiento almacenado usa el nuevo paquete **revoscalepy** , que es un nuevo paquete de Python. Contiene objetos, transformaciones y algoritmos similares a los proporcionados para el paquete **RevoScaleR** del lenguaje R. 
+Este procedimiento almacenado usa el nuevo paquete **revoscalepy**, que es un nuevo paquete de Python. Contiene objetos, transformaciones y algoritmos similares a los proporcionados para el paquete **RevoScaleR** del lenguaje R. 
 
-Mediante el uso de **revoscalepy**, puede crear contextos de cálculo remotos, trasladar datos entre contextos de cálculo, transformar datos y entrenar modelos predictivos con algoritmos populares, como regresión logística y lineal, árboles de decisión, etc. Para obtener más información, vea [módulo revoscalepy en](../python/ref-py-revoscalepy.md) la [referencia de funciones](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)de SQL Server y revoscalepy.
+Al usar **revoscalepy**, puede crear contextos de proceso remotos, trasladar datos entre contextos de proceso, transformar datos y entrenar modelos predictivos mediante algoritmos populares, como regresión logística y lineal, árboles de decisión, etc. Para más información, vea [Módulo revoscalepy en SQL Server](../python/ref-py-revoscalepy.md) y [Referencia de funciones de revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
 
-1. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra una nueva ventana de **consulta** y ejecute la instrucción siguiente para crear el procedimiento almacenado _TrainTipPredictionModelRxPy_.  Dado que el procedimiento almacenado ya incluye una definición de los datos de entrada, no es necesario proporcionar una consulta de entrada.
+1. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra una nueva ventana **Consulta** y ejecute esta instrucción para crear el procedimiento almacenado _TrainTipPredictionModelRxPy_.  Como el procedimiento almacenado ya incluye una definición de los datos de entrada, no es necesario proporcionar una consulta de entrada.
 
     ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
@@ -164,13 +165,13 @@ Mediante el uso de **revoscalepy**, puede crear contextos de cálculo remotos, t
     GO
     ```
 
-    Este procedimiento almacenado realiza los pasos siguientes como parte del entrenamiento del modelo:
+    Este procedimiento almacenado realiza estos pasos como parte del entrenamiento del modelo:
 
-    - La consulta SELECT aplica la función escalar personalizada _fnCalculateDistance_ para calcular la distancia directa entre las ubicaciones de recogida y desactivación. Los resultados de la consulta se almacenan en la variable de entrada predeterminada de Python, `InputDataset`.
-    - La _variable_ binaria *enmarcada* se usa como la etiqueta o la columna de resultados, y el modelo se ajusta mediante estas columnas de características: _passenger_count_, _trip_distance_, _trip_time_in_secs_y _direct_distance_.
-    - El modelo entrenado se serializa y se almacena en la variable de Python `logitObj`. Al agregar la salida de la palabra clave de T-SQL, puede Agregar la variable como salida del procedimiento almacenado. En el paso siguiente, esa variable se utiliza para insertar el código binario del modelo en una tabla de base de datos _nyc_taxi_models_. Este mecanismo facilita el almacenamiento y la reutilización de modelos.
+    - La consulta SELECT aplica la función escalar personalizada _fnCalculateDistance_ para calcular la distancia directa entre las ubicaciones de origen y de destino. Los resultados de la consulta se almacenan en la variable de entrada predeterminada de Python, `InputDataset`.
+    - La variable binaria _tipped_ se usa como la *etiqueta* o la columna de resultados y el modelo se ajusta mediante estas columnas específicas: _passenger_count_, _trip_distance_, _trip_time_in_secs_ y _direct_distance_.
+    - El modelo entrenado se serializa y se almacena en la variable de Python `logitObj`. Al agregar la palabra clave OUTPUT de T-SQL, puede agregar la variable como un resultado del procedimiento almacenado. En el paso siguiente, esa variable se usa para insertar el código binario del modelo en una tabla de base de datos _nyc_taxi_models_. Este mecanismo facilita el almacenamiento y la reutilización de modelos.
 
-2. Ejecute el procedimiento almacenado como se indica a continuación para insertar el modelo de **revoscalepy** entrenado en la tabla *nyc_taxi_models*.
+2. Ejecute el procedimiento almacenado como se indica aquí para insertar el modelo entrenado **revoscalepy** en la tabla *nyc_taxi_models*.
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -178,20 +179,20 @@ Mediante el uso de **revoscalepy**, puede crear contextos de cálculo remotos, t
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    El procesamiento de los datos y la conexión del modelo puede tardar unos minutos. Los mensajes que se canalizarán al flujo **stdout** de Python se muestran en la ventana **mensajes** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Por ejemplo:
+    Es posible que el procesamiento de los datos y el ajuste del modelo tarden un rato. Los mensajes que se canalicen al flujo **stdout** de Python se muestran en la ventana **Mensajes** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Por ejemplo:
 
-    *Mensaje (s) stdout del script externo:* 
-  *C:\Archivos de programa\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
+    *Mensajes STDOUT del script externo:* 
+  *C:\Archivos de programa\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. Abra la tabla *nyc_taxi_models*. Puede ver que se ha agregado una fila nueva, que contiene el modelo serializado en la columna _modelo_.
 
     *revoscalepy_model* *0x8003637265766F7363616c....*
 
-En el paso siguiente, se usan los modelos entrenados para crear predicciones.
+En el siguiente paso, se usará el modelo entrenado para crear predicciones.
 
 ## <a name="next-step"></a>Paso siguiente
 
-[Ejecutar predicciones con Python incrustado en un procedimiento almacenado](sqldev-py6-operationalize-the-model.md)
+[Ejecución de predicciones con Python insertado en un procedimiento almacenado](sqldev-py6-operationalize-the-model.md)
 
 ## <a name="previous-step"></a>Paso anterior
 

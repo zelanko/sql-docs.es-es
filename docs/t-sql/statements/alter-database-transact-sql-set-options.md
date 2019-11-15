@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: c9f7578623c7ba86003e8e8d7c611fb4e82a9502
-ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
+ms.openlocfilehash: 03586e6ee255019a65528c98655b3cc7782624be
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890463"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729907"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL)
 
@@ -3049,16 +3049,20 @@ Ejecute este comando para comprobar si se ejecutó una consulta con un acierto o
 
 ```sql
 
-SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests 
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
+> [!IMPORTANT]
+> Las operaciones para crear la caché del conjunto de resultados y recuperar los datos de la caché se producen en el nodo de control de una instancia de almacenamiento de datos. Cuando se activa el almacenamiento en caché de conjuntos de resultados, la ejecución de consultas que devuelven un conjunto de resultados grande (por ejemplo, más de 1 millón de filas) puede provocar un uso intensivo de la CPU en el nodo de control y ralentizar la respuesta de consulta general en la instancia. Estas consultas se suelen usar durante la exploración de datos o las operaciones ETL. Para evitar el esfuerzo del nodo de control y los problemas de rendimiento, los usuarios deben desactivar el almacenamiento en caché de los conjuntos de resultados en la base de datos antes de ejecutar esos tipos de consultas.  
+
+Para obtener más información sobre la optimización del rendimiento con el almacenamiento en caché de conjuntos de resultados, consulte [Guía de ajuste del rendimiento](/azure/sql-data-warehouse/performance-tuning-result-set-caching).
+
 ### <a name="permissions"></a>Permisos
 Para establecer la opción RESULT_SET_CACHING, un usuario necesita un inicio de sesión principal de nivel de servidor (el que crea el proceso de aprovisionamiento), o bien ser miembro del rol de la base de datos de `dbmanager`.  
 
-
 **<snapshot_option> ::=**         
-**Se aplica a**: Azure SQL Data Warehouse (versión preliminar)
+**Se aplica a**: Almacenamiento de datos SQL de Azure 
 
 Controla el nivel de aislamiento de transacción de una base de datos.
 
@@ -3115,7 +3119,6 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>Vea también
 
-- [Ajuste del rendimiento con almacenamiento en caché de los resultados](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)

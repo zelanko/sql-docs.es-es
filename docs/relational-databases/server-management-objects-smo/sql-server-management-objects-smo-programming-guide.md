@@ -1,6 +1,6 @@
 ---
-title: Guía de programación de Objetos de administración de SQL Server (SMO) | Microsoft Docs
-ms.custom: ''
+title: Guía de programación para objetos de administración de SQL Server (SMO)
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,17 +15,17 @@ ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2dd5a5e2aa8c9003c06ae80f1cf077a0f54f4e21
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: c06f91b30d4c108a2221f0b6c750dab60ed059bd
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148558"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095385"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guía de programación para objetos de administración de SQL Server (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Los objetos de administración de (SMO) son una colección de objetos diseñados para programar todos los aspectos [!INCLUDE[msCoName](../../includes/msconame-md.md)] de la administración [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Replication Management Objects (RMO) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una colección de objetos que encapsula la administración de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  los objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO) son una colección de objetos diseñados para programar todos los aspectos de la administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Replication Management Objects (RMO) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una colección de objetos que encapsula la administración de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Tema|Descripción|  
 |-----------|-----------------|

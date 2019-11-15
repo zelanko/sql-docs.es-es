@@ -1,7 +1,7 @@
 ---
 title: sys.databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 444be64a8e512011bb20ee103ad0ea459fc413ed
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: c33f30366ef2d63f888684c9afedb2a949ecd589
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981855"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095867"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ Si una base de datos no está `ONLINE`o `AUTO_CLOSE` está establecida en `ON` y
 |**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT es ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT es OFF|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT es local<br /> 0 = CURSOR_DEFAULT es global|  
 |**is_fulltext_enabled**|**bit**|1 = La búsqueda de texto completo está habilitada para la base de datos<br /> 0 = La búsqueda de texto completo está deshabilitada para la base de datos|  
-|**is_trustworthy_on**|**bit**|1 = La base de datos se ha marcado como de confianza<br /> 0 = La base de datos no se ha marcado como de confianza|  
+|**is_trustworthy_on**|**bit**|1 = La base de datos se ha marcado como de confianza<br /> 0 = La base de datos no se ha marcado como de confianza<br /> De manera predeterminada, las bases de datos restauradas o adjuntadas tienen Service Broker deshabilitado. La excepción es la creación de reflejo de bases de datos, donde el agente se habilita tras una conmutación por error.|  
 |**is_db_chaining_on**|**bit**|1 = El encadenamiento de propiedad entre bases de datos es ON<br /> 0 = El encadenamiento de propiedad entre bases de datos es OFF|  
 |**is_parameterization_forced**|**bit**|1 = La parametrización es FORCED<br /> 0 = La parametrización es SIMPLE|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = La base de datos tiene una clave maestra cifrada<br /> 0 = La base de datos no tiene una clave maestra cifrada|  
@@ -93,7 +93,7 @@ Si una base de datos no está `ONLINE`o `AUTO_CLOSE` está establecida en `ON` y
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION es ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION es OFF|  
 |**is_cdc_enabled**|**bit**|1 = La base de datos está habilitada para la captura de datos modificados. Para obtener más información, vea [Sys. &#40;SP_CDC_ENABLE_DB Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
 |**is_encrypted**|**bit**|Indica si la base de datos está cifrada (refleja el último estado establecido mediante la cláusula `ALTER DATABASE SET ENCRYPTION`). Puede ser uno de los siguientes valores:<br /> 1 = Cifrada<br /> 0 = No cifrada<br /> Para obtener más información sobre el cifrado de bases de datos, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Si la base de datos está en proceso de descifrado, `is_encrypted` muestra un valor de 0. Puede ver el estado del proceso de cifrado mediante la vista de administración dinámica [Sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) .|  
-|**is_honor_broker_priority_on**|**bit**|Indica si la base de datos respeta las prioridades de conversación (refleja el último estado establecido mediante la cláusula `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). Puede ser uno de los siguientes valores:<br /> 1 = HONOR_BROKER_PRIORITY es ON<br /> 0 = HONOR_BROKER_PRIORITY es OFF|  
+|**is_honor_broker_priority_on**|**bit**|Indica si la base de datos respeta las prioridades de conversación (refleja el último estado establecido mediante la cláusula `ALTER DATABASE SET HONOR_BROKER_PRIORITY`). Puede ser uno de los siguientes valores:<br /> 1 = HONOR_BROKER_PRIORITY es ON<br /> 0 = HONOR_BROKER_PRIORITY es OFF<br /> De manera predeterminada, las bases de datos restauradas o adjuntadas tienen Service Broker deshabilitado. La excepción es la creación de reflejo de bases de datos, donde el agente se habilita tras una conmutación por error.|  
 |**replica_id**|**uniqueidentifier**|Identificador único de la réplica de disponibilidad [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] local del grupo de disponibilidad, si existe, en el que la base de datos está participando.<br /> NULL = la base de datos no forma parte de una réplica de disponibilidad en el grupo de disponibilidad.<br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Identificador único de la base de datos dentro de un Always On grupo de disponibilidad, si existe, en el que está participando la base de datos. **group_database_id** es el mismo para esta base de datos en la réplica principal y en cada réplica secundaria en la que la base de datos se ha unido al grupo de disponibilidad.<br /> NULL = la base de datos no forma parte de una réplica de disponibilidad en ningún grupo de disponibilidad.<br /> **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|Identificador del grupo de recursos de servidor asignado a esta base de datos. Este grupo de recursos de servidor controla la memoria total disponible para las tablas optimizadas para memoria en esta base de datos.<br /> **Válido para**  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.|  

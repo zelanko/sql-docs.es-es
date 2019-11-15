@@ -1702,7 +1702,7 @@
         - name: Tablas temporales
           href: relational-databases/tables/temporal-tables.md
           items:
-            - name: Administrar
+            - name: Creación y administración
               items:
                 - name: Introducción
                   href: relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md
@@ -1730,17 +1730,17 @@
                   href: relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md
                 - name: Vistas y funciones de metadatos
                   href: relational-databases/tables/temporal-table-metadata-views-and-functions.md
-        - name: Tablas con optimización para memoria
-          href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
-          items:
-            - name: Crear
-              href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
-            - name: Trabajar con
-              href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
-            - name: Monitor
-              href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
-            - name: Consideraciones de rendimiento
-              href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
+            - name: Tablas temporales optimizadas para memoria
+              href: relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md
+              items:
+                - name: Crear
+                  href: relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md
+                - name: Trabajar con
+                  href: relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md
+                - name: Monitor
+                  href: relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md
+                - name: Consideraciones de rendimiento
+                  href: relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md
         - name: Tutoriales
           items:
             - name: Uso del tipo de datos hierarchyid

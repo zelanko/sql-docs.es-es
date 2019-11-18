@@ -1,6 +1,6 @@
 ---
-title: srv_message_handler (API de procedimiento almacenado extendido) | Microsoft Docs
-ms.custom: ''
+title: srv_message_handler (API de procedimiento almacenado extendido)
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f6396b591733b6142dc2946040e06d902ad075b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 5a5aba02a9aaead76e7c9c3340de4f568160b307
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064091"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119397"
 ---
-# <a name="srvmessagehandler-extended-stored-procedure-api"></a>srv_message_handler (API de procedimiento almacenado extendido)
+# <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -99,7 +99,7 @@ oserrtextlen
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Remarks  
  La función **srv_message_handler** permite que un procedimiento almacenado extendido se integre con las características centralizadas de registro e informe de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se pueden establecer alertas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para eventos a partir de los procedimientos almacenados extendidos; el Agente SQL Server supervisa estas condiciones de alerta.  
   
  Si el mensaje de error es más largo, se trunca a 412 bytes.  

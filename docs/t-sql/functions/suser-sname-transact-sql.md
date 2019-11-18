@@ -26,19 +26,19 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74ecfa682fb8b3942b1931c07273cdfa93831c6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 293976660f66f60803e64c492ef868fd38e7c9dd
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117609"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981784"
 ---
-# <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
+# <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve el nombre de inicio de sesión asociado a un número de identificación de seguridad (SID).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,7 +48,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="arguments"></a>Argumentos  
  *server_user_sid*  
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
  Se trata del número de identificación opcional de seguridad del inicio de sesión. *server_user_sid* es **varbinary(85)** . *server_user_sid* puede ser el número de identificación de seguridad de cualquier inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o de un usuario o grupo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Si no se especifica *server_user_sid*, se devuelve información acerca del usuario actual. Si el parámetro contiene la palabra NULL, se devolverá NULL.  
   
@@ -67,7 +67,7 @@ SUSER_SNAME ( [ server_user_sid ] )
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-susersname"></a>A. Usar SUSER_SNAME  
+### <a name="a-using-suser_sname"></a>A. Usar SUSER_SNAME  
  En el ejemplo siguiente se devuelve el nombre de inicio de sesión para el contexto de seguridad actual.  
   
 ```  
@@ -75,17 +75,17 @@ SELECT SUSER_SNAME();
 GO  
 ```  
   
-### <a name="b-using-susersname-with-a-windows-user-security-id"></a>B. Usar SUSER_SNAME con un identificador de seguridad de usuario de Windows  
+### <a name="b-using-suser_sname-with-a-windows-user-security-id"></a>B. Usar SUSER_SNAME con un identificador de seguridad de usuario de Windows  
  En el siguiente ejemplo se devuelve el nombre de inicio de sesión asociado a un número de identificación de seguridad de Windows.  
   
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 ```  
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
 GO  
 ```  
   
-### <a name="c-using-susersname-as-a-default-constraint"></a>C. Usar SUSER_SNAME como una restricción DEFAULT  
+### <a name="c-using-suser_sname-as-a-default-constraint"></a>C. Usar SUSER_SNAME como una restricción DEFAULT  
  En el ejemplo siguiente se utiliza `SUSER_SNAME` como restricción `DEFAULT` en una instrucción `CREATE TABLE`.  
   
 ```  
@@ -102,10 +102,10 @@ INSERT sname_example DEFAULT VALUES;
 GO  
 ```  
   
-### <a name="d-calling-susersname-in-combination-with-execute-as"></a>D. Llamar a SUSER_SNAME junto con EXECUTE AS  
+### <a name="d-calling-suser_sname-in-combination-with-execute-as"></a>D. Llamar a SUSER_SNAME junto con EXECUTE AS  
  En este ejemplo se muestra el comportamiento de SUSER_SNAME si se llama desde un contexto suplantado.  
   
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Válido para**  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
   
 ```  
 SELECT SUSER_SNAME();  
@@ -129,7 +129,7 @@ sa
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-susersname"></a>E. Usar SUSER_SNAME  
+### <a name="e-using-suser_sname"></a>E. Usar SUSER_SNAME  
  En el ejemplo siguiente se obtiene el nombre de inicio de sesión que corresponde al número de identificación de seguridad con un valor de `0x01`.  
   
 ```  

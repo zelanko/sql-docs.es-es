@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809710"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981803"
 ---
 # <a name="dta-utility"></a>dta, utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ dta -d AdventureWorks2012 ...
 [Recomendaciones de índice de almacén de columnas en el Asistente para la optimización de motor de base de datos (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.|  
 
   
  **-fk** _keep_existing_option_  
@@ -219,7 +219,7 @@ dta -d AdventureWorks2012 ...
  Especifica que el Almacén de consultas se va a utilizar como carga de trabajo. Se analizan los primeros 1.000 eventos del Almacén de consultas para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n**.  Para obtener más información, vea [Almacén de consultas](../../relational-databases/performance/how-query-store-collects-data.md) y [Optimización de la base de datos mediante carga de trabajo del Almacén de consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
-|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.|  
      
   
  **-if** _workload_file_  
@@ -265,7 +265,7 @@ dta -n number_of_events -A 0
   
  En este caso es importante especificar un tiempo de optimización ilimitado (`-A 0`). De lo contrario, el Asistente para la optimización de motor de base de datos supone que el tiempo de optimización es de 8 horas de forma predeterminada.
  
- **-I** _time_window_in_hours_    
+ **-I** _time_window_in_hours_   
    Especifica el período de tiempo (en horas) en el que se debe haber ejecutado una consulta para que DTA lo tenga en cuenta para la optimización cuando se usa **la opción-IQ** (carga de trabajo de almacén de consultas). 
 ```  
 dta -iq -I 48  
@@ -273,7 +273,7 @@ dta -iq -I 48
 En este caso, DTA usará Almacén de consultas como el origen de la carga de trabajo y solo tenga en cuenta las consultas que se han ejecutado con las últimas 48 horas.  
   ||  
 |-|  
-|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.|  
 
 
   

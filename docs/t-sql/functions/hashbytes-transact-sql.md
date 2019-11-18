@@ -19,12 +19,12 @@ ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3eef3752a362dcc6709d7c7461cd35fdc5c1892
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29008af0f2584322b180a82b20268c452c603baa
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077777"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982929"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 
@@ -32,7 +32,7 @@ ms.locfileid: "68077777"
 
   Devuelve el hash MD2, MD4, MD5, SHA, SHA1 o SHA2 de su entrada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,7 +55,7 @@ Especifica una expresión que se evalúa como un carácter o una cadena binaria 
   
  La salida se ajusta al algoritmo estándar: 128 bits (16 bytes) para MD2, MD4 y MD5; 160 bits (20 bytes) para SHA y SHA1; 256 bits (32 bytes) para SHA2_256 y 512 bits (64 bytes) para SHA2_512.  
   
-**Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Válido para**  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
  En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones anteriores, los valores de entrada permitidos tienen un límite de 8000 bytes.  
   

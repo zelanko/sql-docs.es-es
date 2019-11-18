@@ -1,33 +1,36 @@
 ---
 title: Puntos de interrupción de Transact-SQL | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoints
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b5e9d6e47a71f8bc65d71e0fb6364e352e8045
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 989c2d7143d48a4817b7a69cf08e2845b51300e6
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263231"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097918"
 ---
 # <a name="transact-sql-breakpoints"></a>Utilizar puntos de interrupción de Transact-SQL
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Los puntos de interrupción especifican que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] pausa la ejecución en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede ver el estado de los elementos de código en ese momento.  
-  
-## <a name="breakpoints"></a>Puntos de interrupción  
- Al ejecutar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] , puede alternar un punto de interrupción en instrucciones concretas. Cuando la ejecución llegue a una instrucción con un punto de interrupción, el depurador pausa la ejecución para que se pueda ver información de depuración, como los valores presentes en variables y parámetros.  
-  
- Puede administrar los puntos de interrupción individualmente en la ventana del editor, o colectivamente mediante la ventana de **Puntos de interrupción** . Puede modificar los puntos de interrupción para especificar elementos como las condiciones particulares en las que la acción debe pausar, o las acciones que deben realizarse si ejecuta el punto de interrupción.  
-  
+
+Los puntos de interrupción especifican que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] pausa la ejecución en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede ver el estado de los elementos de código en ese momento.
+
+## <a name="breakpoints"></a>Puntos de interrupción
+
+Al ejecutar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] , puede alternar un punto de interrupción en instrucciones concretas. Cuando la ejecución llegue a una instrucción con un punto de interrupción, el depurador pausa la ejecución para que se pueda ver información de depuración, como los valores presentes en variables y parámetros.
+
+Puede administrar los puntos de interrupción individualmente en la ventana del editor, o colectivamente mediante la ventana de **Puntos de interrupción** . Puede modificar los puntos de interrupción para especificar elementos como las condiciones particulares en las que la acción debe pausar, o las acciones que deben realizarse si ejecuta el punto de interrupción.
+
 ## <a name="breakpoint-tasks"></a>Tareas de punto de interrupción  
   
 |Descripción de la tarea|Tema|  

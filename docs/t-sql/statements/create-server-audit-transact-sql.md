@@ -22,19 +22,19 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117143"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982999"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Crea un objeto de auditoría de servidor utilizando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -89,7 +89,7 @@ CREATE SERVER AUDIT audit_name
  Especifica el número máximo de archivos que se deben conservar en el sistema de archivos además del archivo actual. El valor de *MAX_ROLLOVER_FILES* debe ser un entero o UNLIMITED. El valor predeterminado es UNLIMITED. Este parámetro se evalúa siempre que se reinicia la auditoría (lo que puede suceder cuando se reinicia la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o cuando se desactiva la auditoría y, a continuación, se activa de nuevo) o cuando se necesita un nuevo archivo porque se ha alcanzado el MAXSIZE. Cuando se evalúa *MAX_ROLLOVER_FILES*, si el número de archivos supera la configuración de *MAX_ROLLOVER_FILES*, se elimina el archivo más antiguo. Como resultado, cuando la configuración de *MAX_ROLLOVER_FILES* es 0, se crea un archivo cada vez que se evalúa la configuración de *MAX_ROLLOVER_FILES*. Se elimina solo un archivo automáticamente cuando se evalúa la configuración de *MAX_ROLLOVER_FILES*, de modo que cuando se disminuye el valor de *MAX_ROLLOVER_FILES*, el número de archivos no se reduce a menos que se eliminen manualmente los archivos antiguos. El número máximo de archivos que se pueden especificar es 2.147.483.647.  
   
  MAX_FILES =*integer*  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Especifica el número máximo de archivos de auditoría que pueden crearse. No realiza la sustitución incremental al primer archivo cuando se alcanza el límite. Cuando se alcanza el límite de MAX_FILES, cualquier acción que ocasione la generación de eventos de auditoría adicionales producirá un error y se mostrará un mensaje.  
   
@@ -110,18 +110,18 @@ Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
  FAIL_OPERATION  
  Las acciones de base de datos producen un error si generan eventos auditados. Las acciones que no generan eventos auditados pueden continuar, pero no pueden producirse eventos auditados. La auditoría continúa intentando el registro de eventos y se reanuda si se resuelve la condición de error. Utilice esta opción si el mantenimiento de una auditoría completa es más importante que el acceso total al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
 
  AUDIT_GUID =*uniqueidentifier*  
  Para que sea compatible con escenarios como la creación de reflejo de la base de datos, una auditoría necesita un GUID específico que coincida con el de la base de datos reflejada. No se puede modificar el GUID una vez creada la auditoría.  
   
  predicate_expression  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Especifica la expresión de predicado usada para determinar si debe procesarse o no un evento. Las expresiones de predicado se limitan a 3.000 caracteres, lo que limita los argumentos de cadena.  
   
  event_field_name  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Es el nombre del campo de evento que identifica el origen del predicado. Los campos de auditoría se describen en [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Todos los campos se pueden filtrar, excepto `file_name`, `audit_file_offset` y `event_time`.  
 
@@ -136,12 +136,12 @@ Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 
 
  number  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Es cualquier tipo numérico, incluido el tipo **decimal**. Las limitaciones son la falta de memoria física disponible o un número demasiado grande para ser representado como un entero de 64 bits.  
   
  ' string '  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Una cadena ANSI o Unicode según lo requerido por la comparación de predicado. No se realiza ninguna conversión implícita de tipos de cadena para las funciones de comparación de predicado. Si se pasa el tipo incorrecto se producirá un error.  
   

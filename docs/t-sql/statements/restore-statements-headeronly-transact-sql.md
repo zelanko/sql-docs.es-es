@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 4ff8da4a1076d8ade4d54e5d44c51d3263480c1c
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742970"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983031"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Instrucciones RESTORE: HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -38,7 +38,7 @@ ms.locfileid: "68742970"
 > [!NOTE]  
 >  Para obtener las descripciones de los argumentos, vea [Argumentos de RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -145,7 +145,7 @@ FROM <backup_device>
 |**BackupTypeDescription**|**nvarchar(60)**|Tipo de copia de seguridad como cadena, uno de los siguientes valores:<br /><br /> DATABASE<br /><br /> TRANSACTION LOG<br /><br /> FILE OR FILEGROUP<br /><br /> DATABASE DIFFERENTIAL<br /><br /> FILE DIFFERENTIAL PARTIAL<br /><br /> PARTIAL DIFFERENTIAL|  
 |**BackupSetGUID**|**uniqueidentifier** NULL|Número de identificación único del conjunto de copia de seguridad mediante el cual se identifica en los medios.|  
 |**CompressedBackupSize**|**bigint**|Recuento de bytes del conjunto de copia de seguridad. Para las copias de seguridad sin comprimir, este valor es igual que **BackupSize**.<br /><br /> Para calcular la razón de compresión, use **CompressedBackupSize** y **BackupSize**.<br /><br /> Durante una actualización de **msdb**, se establece este valor para que coincida con el valor de la columna **BackupSize**.|  
-|**containment**|**tinyint** not NULL|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica el estado de contención de la base de datos.<br /><br /> 0 = el estado de contención de la base de datos es OFF<br /><br /> 1 = la base de datos está en estado de contención parcial|  
+|**containment**|**tinyint** not NULL|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Indica el estado de contención de la base de datos.<br /><br /> 0 = el estado de contención de la base de datos es OFF<br /><br /> 1 = la base de datos está en estado de contención parcial|  
 |**KeyAlgorithm**|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> Algoritmo de cifrado usado para cifrar la copia de seguridad. NO_Encryption indica que no se cifró la copia de seguridad. Cuando no se puede determinar el valor correcto, el valor debe ser NULL.|  
 |**EncryptorThumbprint**|**varbinary(20)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> La huella digital del sistema de cifrado que se puede utilizar para encontrar el certificado o la clave asimétrica en la base de datos. Si la copia de seguridad no se cifró, este valor es NULL.|  
 |**EncryptorType**|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualización acumulativa 1 de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a la versión actual.<br /><br /> Tipo de sistema de cifrado usado: certificado o clave asimétrica. Si la copia de seguridad no se cifró, este valor es NULL.|  

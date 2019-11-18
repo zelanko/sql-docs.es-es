@@ -1,10 +1,7 @@
 ---
-title: Ejecutar el depurador de Transact-SQL | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Ejecutar el depurador de Transact-SQL
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
@@ -21,59 +18,68 @@ helpviewer_keywords:
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8b517e1de4a7b2908d10e2fc486ce7ab263dfd5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 01ac569b82d382850343af0a35b16c676720097c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264260"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097895"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Ejecutar el depurador de Transact-SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Puede iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] después de abrir una ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . A continuación, puede ejecutar el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] en modo de depuración hasta que se detenga el depurador. Puede establecer las opciones para personalizar cómo se ejecuta el depurador.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Puede iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] después de abrir una ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . A continuación, puede ejecutar el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] en modo de depuración hasta que se detenga el depurador. Puede establecer las opciones para personalizar cómo se ejecuta el depurador.
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="starting-and-stopping-the-debugger"></a>Iniciar y detener el depurador
+
+Los requisitos para iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] son los siguientes:
+
+- Si el Editor de consultas del [!INCLUDE[ssDE](../../includes/ssde-md.md)] está conectado a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en otro equipo, debe haber configurado el depurador para la depuración remota. Para obtener más información, vea [Configurar reglas de firewall antes de ejecutar al depurador de TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
   
-## <a name="starting-and-stopping-the-debugger"></a>Iniciar y detener el depurador  
- Los requisitos para iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] son los siguientes:  
+- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se debe ejecutar con una cuenta de Windows que sea miembro del rol fijo de servidor sysadmin.
+
+- La ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se debe conectar mediante el uso de un inicio de sesión de autenticación de Windows o de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que sea miembro del rol fijo de servidor sysadmin.
   
--   Si el Editor de consultas del [!INCLUDE[ssDE](../../includes/ssde-md.md)] está conectado a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en otro equipo, debe haber configurado el depurador para la depuración remota. Para obtener más información, vea [Configurar reglas de firewall antes de ejecutar al depurador de TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).  
+- La ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe estar conectada a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) o posterior. No puede ejecutar el depurador cuando la ventana del Editor de consultas esté conectada a una instancia cuyo modo sea de usuario único.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se debe ejecutar con una cuenta de Windows que sea miembro del rol fijo de servidor sysadmin.  
+ Recomendamos que el código [!INCLUDE[tsql](../../includes/tsql-md.md)] se depure en un servidor de prueba, no en un servidor de producción, por las siguientes razones:
   
--   La ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se debe conectar mediante el uso de un inicio de sesión de autenticación de Windows o de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que sea miembro del rol fijo de servidor sysadmin.  
+- La depuración es una operación con muchos privilegios. Por consiguiente, solo los miembros del rol fijo de servidor sysadmin pueden depurar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
--   La ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe estar conectada a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) o posterior. No puede ejecutar el depurador cuando la ventana del Editor de consultas esté conectada a una instancia cuyo modo sea de usuario único.  
-  
- Recomendamos que el código [!INCLUDE[tsql](../../includes/tsql-md.md)] se depure en un servidor de prueba, no en un servidor de producción, por las siguientes razones:  
-  
--   La depuración es una operación con muchos privilegios. Por consiguiente, solo los miembros del rol fijo de servidor sysadmin pueden depurar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
--   Las sesiones de depuración se suelen ejecutar durante períodos de tiempo prolongados mientras se investiga el funcionamiento de varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Los bloqueos, como los bloqueos de actualización, que adquiere la sesión se pueden mantener durante períodos prolongados, hasta que finalice la sesión o se confirme o revierta la transacción.  
+- Las sesiones de depuración se suelen ejecutar durante períodos de tiempo prolongados mientras se investiga el funcionamiento de varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Los bloqueos, como los bloqueos de actualización, que adquiere la sesión se pueden mantener durante períodos prolongados, hasta que finalice la sesión o se confirme o revierta la transacción.  
   
  Al iniciarse el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] , la ventana del Editor de consultas se pone en el modo de depuración. Cuando la ventana del Editor de consultas entra en el modo de depuración, el depurador se detiene en la primera línea de código. Luego, puede recorrer el código, detener la ejecución en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] específicas y usar las ventanas del depurador para ver el estado de ejecución actual. Puede iniciar el depurador haciendo clic en el botón **Depurador** de la barra de herramientas **Consulta** o en la opción **Iniciar depuración** del menú **Depurar** .  
   
  La ventana del Editor de consultas permanece en estado de depuración hasta que finalice la última instrucción de dicha ventana o se detenga el modo de depuración. Puede detener el modo de depuración y la ejecución de la instrucción mediante uno de los siguientes métodos:  
   
--   En el menú **Depurar** , haga clic en **Detener depuración**.  
+- En el menú **Depurar** , haga clic en **Detener depuración**.  
   
--   En la barra de herramientas **Depurar** , haga clic en el botón **Detener depuración** .  
+- En la barra de herramientas **Depurar** , haga clic en el botón **Detener depuración** .  
   
--   En el menú **Consulta** , haga clic en **Cancelar ejecución de la consulta**.  
+- En el menú **Consulta** , haga clic en **Cancelar ejecución de la consulta**.  
   
--   En la barra de herramientas **Consulta** , haga clic en el botón **Cancelar ejecución de la consulta** .  
+- En la barra de herramientas **Consulta** , haga clic en el botón **Cancelar ejecución de la consulta** .  
   
  También puede detener el modo de depuración y dejar que finalice la ejecución del resto de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] haciendo clic en la opción **Desasociar todo** del menú **Depurar** .  
   
-## <a name="controlling-the-debugger"></a>Controlar el depurador  
+## <a name="controlling-the-debugger"></a>Controlar el depurador
+
  Puede controlar el funcionamiento del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] usando los siguiente comandos de menú, barras de herramientas y accesos directos:  
   
--   El menú **Depurar** y la barra de herramientas **Depurar** . Tanto el menú **Depurar** como la barra de herramientas **Depurar** están inactivos hasta que el foco se coloque en una ventana abierta del Editor de consultas. Permanecen activas hasta que se cierre el proyecto actual.  
+- El menú **Depurar** y la barra de herramientas **Depurar** . Tanto el menú **Depurar** como la barra de herramientas **Depurar** están inactivos hasta que el foco se coloque en una ventana abierta del Editor de consultas. Permanecen activas hasta que se cierre el proyecto actual.  
   
--   Los métodos abreviados de teclado del depurador.  
+- Los métodos abreviados de teclado del depurador.  
   
--   El menú contextual de Editor de consultas. El menú contextual se muestra cuando se hace clic con el botón secundario en una línea de una ventana del Editor de consultas. Cuando esta ventana esté en el modo de depuración, el menú contextual muestra los comandos del depurador que se aplican a la línea o cadena seleccionadas.  
+- El menú contextual de Editor de consultas. El menú contextual se muestra cuando se hace clic con el botón secundario en una línea de una ventana del Editor de consultas. Cuando esta ventana esté en el modo de depuración, el menú contextual muestra los comandos del depurador que se aplican a la línea o cadena seleccionadas.  
   
--   Los elementos de menú y los comandos contextuales de las ventanas que abre el depurador, como las ventanas **Inspección** o **Puntos de interrupción** .  
+- Los elementos de menú y los comandos contextuales de las ventanas que abre el depurador, como las ventanas **Inspección** o **Puntos de interrupción** .  
   
  La siguiente tabla muestra los comandos de menú, los botones de las barras de herramientas y los métodos abreviados de teclado del depurador.  
   
@@ -105,11 +111,10 @@ ms.locfileid: "68264260"
 |**Deshabilitar todos los puntos de interrupción**|No disponible|No disponible|No disponible|Deshabilitar todos los puntos de interrupción.|  
 |No disponible|**Agregar inspección**|No disponible|No disponible|Agregar la expresión seleccionada a la ventana **Inspección** .|  
   
-## <a name="see-also"></a>Consulte también  
- [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Avanzar paso a paso por el código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
- [Ver información del depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   
- [Estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md)  
-  
-  
+## <a name="see-also"></a>Consulte también
+
+- [Depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
+- [Avanzar paso a paso por el código Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)
+- [Ver información del depurador de Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md)

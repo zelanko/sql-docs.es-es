@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1a50b7834f8efb7165b8ae53d11add9504d0fc26
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026042"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926036"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -33,7 +33,7 @@ La instalación de LocalDB copia un conjunto de archivos mínimo necesario para 
 
 ## <a name="try-it-out"></a>Pruébelo. 
 
-- Para descargar e instalar SQL Server Express LocalDB, vaya a las **[descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB es una característica que se selecciona durante la instalación y está disponible al descargar los medios. Si descarga los medios, elija **Express Advanced** o el paquete de LocalDB. En el **Instalador de Visual Studio**, puede instalar LocalDB de SQL Server Express como parte de la carga de trabajo de **desarrollo de escritorio de .NET** o como un componente individual.
+- Para descargar e instalar SQL Server Express LocalDB, vaya a las **[descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)** . LocalDB es una característica que se selecciona durante la instalación y está disponible al descargar los medios. Si descarga los medios, elija **Express Advanced** o el paquete de LocalDB. En el **Instalador de Visual Studio**, puede instalar LocalDB de SQL Server Express como parte de la carga de trabajo de **desarrollo de escritorio de .NET** o como un componente individual.
 
  >[!TIP]
  > También puede instalar LocalDB como parte de Visual Studio. Durante la instalación de Visual Studio, seleccione la carga de trabajo de **desarrollo de escritorio de .NET**, que incluye LocalDB de SQL Server Express.

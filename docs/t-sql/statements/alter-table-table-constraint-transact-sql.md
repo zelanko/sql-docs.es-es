@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 51fd9271fc84f23c331c671aca3b88ee981b19af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070213"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981989"
 ---
-# <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
+# <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Especifica las propiedades de una restricción PRIMARY KEY, UNIQUE, FOREIGN KEY o CHECK, o una definición DEFAULT agregada a una tabla mediante [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -92,7 +92,7 @@ ms.locfileid: "68070213"
 >  La documentación de WITH FILLFACTOR = *fillfactor* como la única opción de índice que se aplica a las restricciones PRIMARY KEY o UNIQUE se mantiene por compatibilidad con versiones anteriores, pero no se documentará de esta forma en futuras versiones. Es posible especificar otras opciones de índice en la cláusula [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) de ALTER TABLE.  
   
  ON { _partition\_scheme\_name_ **(** _partition\_column\_name_ **)**  | _filegroup_|  **"** default **"** }  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica la ubicación de almacenamiento del índice creado para la restricción. Si se especifica *partition_scheme_name*, el índice se divide en particiones y las particiones se asignan a los grupos de archivos que se han especificado con *partition_scheme_name*. Si se especifica *filegroup*, el índice se crea en el grupo de archivos indicado. Si se especifica **"** default **"** o si no se especifica ON en ningún caso, el índice se crea en el mismo grupo de archivos que la tabla. Si se especifica ON al agregar un índice clúster para una restricción PRIMARY KEY o UNIQUE, la tabla completa se mueve al grupo de archivos especificado cuando se crea el índice clúster.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "68070213"
  Por el contrario, si se especifica NO ACTION, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error y revierte la acción de actualización en la fila **Vendor** si al menos hay una fila en la tabla **ProductVendor** que haga referencia a dicha fila.  
   
  NOT FOR REPLICATION  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Se puede especificar para restricciones FOREIGN KEY y CHECK. Si se especifica esta cláusula para una restricción, la restricción no se aplica cuando los agentes de replicación realizan operaciones de inserción, actualización o eliminación.  
 

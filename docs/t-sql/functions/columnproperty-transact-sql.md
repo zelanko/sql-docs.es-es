@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6551eb61d22f69307f6fe671ba22cd4de06cdb67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff96377eac69c1596e0d2e2661714f82dd2cae9a
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064673"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983023"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Esta función devuelve información de la columna o el parámetro.
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -54,13 +54,13 @@ Para el argumento *id*, el argumento *propiedad* especifica el tipo de informaci
 |**AllowsNull**|Permite valores NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**ColumnId**|Valor del Id. de columna correspondiente a **sys.columns.column_id**.|Identificador de columna<br /><br /> **Nota:** Cuando se consultan varias columnas, pueden aparecer espacios en la secuencia de valores de los Id. de columna.|  
 |**FullTextTypeColumn**|El valor TYPE COLUMN de la tabla que contiene la información del tipo de documento de la *columna*.|Id. de TYPE COLUMN de texto completo para la expresión de nombre de columna que se pasa como segundo parámetro de esta función.|  
-|**GeneratedAlwaysType**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.generated_always_type**|**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: no siempre se genera.<br /><br /> 1: se genera siempre como comienzo de fila.<br /><br /> 2: se genera siempre como fin de fila.|  
+|**GeneratedAlwaysType**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.generated_always_type**|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> 0: no siempre se genera.<br /><br /> 1: se genera siempre como comienzo de fila.<br /><br /> 2: se genera siempre como fin de fila.|  
 |**IsColumnSet**|La columna es un conjunto de columnas. Para obtener más información, vea [Usar conjuntos de columnas](../../relational-databases/tables/use-column-sets.md).|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsComputed**|La columna es una columna calculada.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsCursorType**|El parámetro de procedimiento es del tipo CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsDeterministic**|La columna es determinista. Esta propiedad solo se aplica a columnas calculadas y columnas de vistas.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida No es una columna calculada o una columna de vista.|  
 |**IsFulltextIndexed**|La columna se registra para la indización de texto completo.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
-|**IsHidden**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.is_hidden**|**Se aplica a**: desde [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: no está oculto<br /><br /> 1: Hidden|  
+|**IsHidden**|Es el valor de columna generado por el sistema. Corresponde a **sys.columns.is_hidden**|**Válido para** : [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] y versiones posteriores.<br /><br /> 0: no está oculto<br /><br /> 1: Hidden|  
 |**IsIdentity**|La columna utiliza la propiedad IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsIdNotForRepl**|La columna comprueba el valor IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  
 |**IsIndexable**|La columna se puede indizar.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: entrada no válida|  

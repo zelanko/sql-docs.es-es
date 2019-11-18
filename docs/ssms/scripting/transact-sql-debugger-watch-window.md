@@ -1,30 +1,36 @@
 ---
-title: Inspección (ventana) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Ventana de inspección
+titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.reviewer: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd797dce2f05e6636f5037ae1f70939acbcbcadb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: f8870849ef3cb83262284eab524b741c25a0a7ae
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253293"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119218"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Depurador de Transact-SQL: ventana Inspección
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  La ventana **Inspección** muestra información sobre las expresiones que ha seleccionado. Puede haber hasta cuatro ventanas Inspección: **Inspección 1**, **Inspección 2, Inspección 3** e **Inspección 4**. Las expresiones se evalúan dentro del ámbito del marco de la pila de llamadas actual que está seleccionado en la ventana **Pila de llamadas** . Debe estar en modo de depuración para observar las variables y las expresiones.  
-  
-## <a name="task-list"></a>Lista de tareas  
- **Para tener acceso a las ventanas Inspección**  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+La ventana **Inspección** muestra información sobre las expresiones que ha seleccionado. Puede haber hasta cuatro ventanas Inspección: **Inspección 1**, **Inspección 2, Inspección 3** e **Inspección 4**. Las expresiones se evalúan dentro del ámbito del marco de la pila de llamadas actual que está seleccionado en la ventana **Pila de llamadas** . Debe estar en modo de depuración para observar las variables y las expresiones.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="task-list"></a>Lista de tareas
+
+**Para tener acceso a las ventanas Inspección**  
   
 -   En el menú **Depurar** , haga clic en **Ventanas**, luego en **Inspección**y, después, haga clic en **Inspección 1**, **Inspección 2, Inspección 3**o **Inspección 4**.  
   

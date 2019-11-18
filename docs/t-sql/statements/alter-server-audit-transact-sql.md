@@ -20,12 +20,12 @@ ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d2ff1981757af05b97bdc90ff3e79fdc3bebf823
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
+ms.openlocfilehash: c4649a591f7261943d2d5393678f63888930c01f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049967"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982033"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ALTER SERVER AUDIT audit_name
   
  MAX_FILES =*integer*  
  Especifica el número máximo de archivos de auditoría que pueden crearse. No realiza la sustitución incremental al primer archivo cuando se alcanza el límite. Cuando se alcanza el límite de MAX_FILES, cualquier acción que ocasione la generación de eventos de auditoría adicionales producirá un error y se mostrará un mensaje.  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  Esta opción preasigna el archivo en el disco al valor de MAXSIZE. Solo se aplica si MAXSIZE no es igual a UNLIMITED. El valor predeterminado es OFF.  
@@ -111,7 +111,7 @@ Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
  FAIL_OPERATION  
  Las acciones de base de datos producen un error si generan eventos auditados. Las acciones que no generan eventos auditados pueden continuar, pero no pueden producirse eventos auditados. La auditoría continúa intentando el registro de eventos y se reanuda si se resuelve la condición de error. Utilice esta opción si el mantenimiento de una auditoría completa es más importante que el acceso total al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].   
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.   
   
  STATE **=** { ON | OFF }  
  Habilita o deshabilita la recopilación de registros en la auditoría. El cambio de estado de una auditoría que se está ejecutando (de ON a OFF) crea una entrada de auditoría que incluye la auditoría detenida, la entidad de seguridad que la ha detenido y la hora en la que se ha detenido.  
@@ -121,19 +121,19 @@ Obliga a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
  predicate_expression  
  Especifica la expresión de predicado usada para determinar si debe procesarse o no un evento. Las expresiones de predicado se limitan a 3.000 caracteres, lo que limita los argumentos de cadena.  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  event_field_name  
  Es el nombre del campo de evento que identifica el origen del predicado. Los campos de auditoría se describen en [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Todos los campos pueden auditarse excepto `file_name` y `audit_file_offset`.  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  number  
  Es cualquier tipo numérico, incluido el tipo **decimal**. Las limitaciones son la falta de memoria física disponible o un número demasiado grande para ser representado como un entero de 64 bits.  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  ' string '  
  Una cadena ANSI o Unicode según lo requerido por la comparación de predicado. No se realiza ninguna conversión implícita de tipos de cadena para las funciones de comparación de predicado. Si se pasa el tipo incorrecto se producirá un error.  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
 ## <a name="remarks"></a>Notas  
  Se debe especificar al menos una de las cláusulas TO, WITH o MODIFY NAME al llamar a ALTER AUDIT.  

@@ -19,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42e114c1d3f884c40ce47edca84261c2582d8576
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2830c7ae4166ee0b71b1ddfb9de953c57be2452d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117332"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982687"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Crea un grupo de recursos de servidor del regulador de recursos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un grupo de recursos de servidor representa un subconjunto de los recursos físicos (memoria, CPU y E/S) de una instancia del motor de base de datos. El Regulador de recursos permite que un administrador de bases de datos distribuya los recursos del servidor entre los grupos de recursos, hasta un máximo de 64 grupos. El regulador de recursos no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
 ```  
@@ -72,12 +72,12 @@ MAX_CPU_PERCENT =*value*
 Especifica el ancho de banda de CPU promedio máximo que recibirán todas las solicitudes del grupo de recursos de servidor cuando hay contención de CPU. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
 CAP_CPU_PERCENT =*value*   
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
 Especifica un límite máximo de ancho de banda de CPU que recibirán todas las solicitudes del grupo de recursos de servidor. Limita el nivel de ancho de banda máximo de CPU para que coincida con el valor especificado. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
 AFFINITY {SCHEDULER = AUTO | ( \<scheduler_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}      
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
 Adjunte el grupo de recursos de servidor a los programadores específicos. El valor predeterminado es AUTO.  
   
@@ -100,12 +100,12 @@ MAX_MEMORY_PERCENT =*value*
 Especifica la memoria total del servidor que puede ser utilizada por las solicitudes en este grupo de recursos de servidor. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
 MIN_IOPS_PER_VOLUME =*value*    
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.  
   
 Especifica el número mínimo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben reservar para el grupo de recursos de servidor. El intervalo permitido para *value* es de 0 a 2^31-1 (2.147.483.647). Especifique 0 si no desea indicar un umbral mínimo para el grupo. El valor predeterminado es 0.  
   
 MAX_IOPS_PER_VOLUME =*value*    
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.  
   
 Especifica el número máximo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben permitir para el grupo de recursos de servidor. El intervalo permitido para *value* es de 0 a 2^31-1 (2.147.483.647). Especifique 0 para establecer un umbral ilimitado para el grupo. El valor predeterminado es 0.  
   
@@ -135,11 +135,11 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-### <a name="2-set-the-capcpupercent-to-a-hard-cap-and-set-affinity-scheduler"></a>2. Establecer CAP_CPU_PERCENT en un límite máximo y establecer AFFINITY SCHEDULER
+### <a name="2-set-the-cap_cpu_percent-to-a-hard-cap-and-set-affinity-scheduler"></a>2. Establecer CAP_CPU_PERCENT en un límite máximo y establecer AFFINITY SCHEDULER
 
 Establezca CAP_CPU_PERCENT en un límite máximo de 30 por ciento y establezca AFFINITY SCHEDULER en un intervalo de 0 a 63, 128 a 191. 
   
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  
@@ -153,11 +153,11 @@ WITH (
       );  
 ```  
   
-### <a name="3-set-miniopspervolume-and-maxiopspervolume"></a>3. Establecer MIN_IOPS_PER_VOLUME y MAX_IOPS_PER_VOLUME   
+### <a name="3-set-min_iops_per_volume-and-max_iops_per_volume"></a>3. Establecer MIN_IOPS_PER_VOLUME y MAX_IOPS_PER_VOLUME   
 
 Establezca MIN_IOPS_PER_VOLUME en 20 y MAX_IOPS_PER_VOLUME en 100. Estos valores controlan las operaciones de lectura y escritura de E/S física disponibles para el grupo de recursos de servidor.  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.  
   
 ```sql  
 CREATE RESOURCE POOL PoolAdmin  

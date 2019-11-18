@@ -20,19 +20,19 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a2731f569ecf602c4aaa21e233ec671596e16ff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024280"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982938"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Devuelve el valor de propiedad del índice con nombre o las estadísticas de un número de identificación, nombre de índice o estadísticas y nombre de propiedad de una tabla especificada. Devuelve NULL para los índices XML.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -61,14 +61,14 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsAutoStatistics**|Las estadísticas han sido generadas por la opción AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = True<br /><br /> 0 = Falso o índice XML.|  
 |**IsClustered**|El índice está agrupado.|1 = True<br /><br /> 0 = Falso o índice XML.|  
 |**IsDisabled**|El índice está deshabilitado.|1 = True<br /><br /> 0 = False<br /><br /> NULL = La entrada no es válida.|  
-|**IsFulltextKey**|El índice es la clave de indización semántica y de texto completo de una tabla.|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = Falso o índice XML.<br /><br /> NULL = La entrada no es válida.|  
+|**IsFulltextKey**|El índice es la clave de indización semántica y de texto completo de una tabla.|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> 1 = True<br /><br /> 0 = Falso o índice XML.<br /><br /> NULL = La entrada no es válida.|  
 |**IsHypothetical**|El índice es hipotético y no se puede utilizar directamente como ruta de acceso a datos. Los índices hipotéticos contienen estadísticas de nivel de columna y son conservados y utilizados por el Asistente para la optimización de motor de base de datos.|1 = True<br /><br /> 0 = False o índice XML<br /><br /> NULL = La entrada no es válida.|  
-|**IsPadIndex**|El índice especifica el espacio que debe dejarse abierto en cada nodo interior.|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = Falso o índice XML.|  
-|**IsPageLockDisallowed**|El valor de bloqueo de página establecido por la opción ALLOW_PAGE_LOCKS de ALTER INDEX.|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = No se permite el bloqueo de página.<br /><br /> 0 = Se permite el bloqueo de página.<br /><br /> NULL = La entrada no es válida.|  
-|**IsRowLockDisallowed**|El valor de bloqueo de fila establecido por la opción ALLOW_ROW_LOCKS de ALTER INDEX.|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = No se permite el bloqueo de fila.<br /><br /> 0 = Se permite el bloqueo de fila.<br /><br /> NULL = La entrada no es válida.|  
+|**IsPadIndex**|El índice especifica el espacio que debe dejarse abierto en cada nodo interior.|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> 1 = True<br /><br /> 0 = Falso o índice XML.|  
+|**IsPageLockDisallowed**|El valor de bloqueo de página establecido por la opción ALLOW_PAGE_LOCKS de ALTER INDEX.|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> 1 = No se permite el bloqueo de página.<br /><br /> 0 = Se permite el bloqueo de página.<br /><br /> NULL = La entrada no es válida.|  
+|**IsRowLockDisallowed**|El valor de bloqueo de fila establecido por la opción ALLOW_ROW_LOCKS de ALTER INDEX.|**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br /><br /> 1 = No se permite el bloqueo de fila.<br /><br /> 0 = Se permite el bloqueo de fila.<br /><br /> NULL = La entrada no es válida.|  
 |**IsStatistics**|*index_or_statistics_name* son estadísticas creadas por la instrucción CREATE STATISTICS o por la opción AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = True<br /><br /> 0 = Falso o índice XML.|  
 |**IsUnique**|El índice es exclusivo.|1 = True<br /><br /> 0 = Falso o índice XML.|  
-|**IsColumnstore**|El índice es un índice de almacén de columnas optimizado de memoria xVelocity.|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsColumnstore**|El índice es un índice de almacén de columnas optimizado de memoria xVelocity.|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> 1 = True<br /><br /> 0 = False| 
 |**IsOptimizedForSequentialKey**|El índice tiene habilitada la optimización para inserciones de la última página.|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores. <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>Tipos devueltos  

@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0009ec924ebe935b60194f950da5d30593adfd5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68232255"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982042"
 ---
-# <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
+# <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Especifica las propiedades de una columna calculada que se agrega a una tabla por medio de [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -127,7 +127,7 @@ ON UPDATE { **NO ACTION** }
  Especifica la acción que se produce en las filas de la tabla creada, si esas filas tienen una relación referencial y la fila a la que se hace referencia se actualiza en la tabla principal. Cuando se especifica NO ACTION, [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite un error y revierte la acción de actualización de la fila Vendor si existe al menos una fila de la tabla ProductVendor que hace referencia a ella.  
   
 NOT FOR REPLICATION  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Se puede especificar para restricciones FOREIGN KEY y CHECK. Si se especifica esta cláusula para una restricción, la restricción no se aplica cuando los agentes de replicación realizan operaciones de inserción, actualización o eliminación.  
   
@@ -138,7 +138,7 @@ CHECK
  Es una expresión lógica que devuelve TRUE o FALSE. La expresión no puede ser una referencia ni incluir un tipo de datos alias.  
   
 ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Especifica la ubicación de almacenamiento del índice creado para la restricción. Si se especifica *partition_scheme_name*, el índice se divide en particiones y las particiones se asignan a los grupos de archivos que se han especificado con *partition_scheme_name*. Si se especifica *filegroup*, el índice se crea en el grupo de archivos indicado. Si se especifica el parámetro "default" o si no se especifica ON en ningún caso, el índice se crea en el mismo grupo de archivos que la tabla. Si se especifica ON al agregar un índice clúster para una restricción PRIMARY KEY o UNIQUE, la tabla completa se mueve al grupo de archivos especificado cuando se crea el índice clúster.  
   

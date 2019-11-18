@@ -1,30 +1,36 @@
 ---
-title: Subprocesos (ventana) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Ventana de subprocesos
+titleSuffix: T-SQL Debugger
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Threads Window [Transact-SQL]
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf2cf64ab638174d3967c33bfa802ed92b2ce31
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: ba4f72bc5848f14e2bfd9821c43f024a129092e1
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253497"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119234"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Depurador de Transact-SQL: ventana Subprocesos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  La ventana **Subprocesos** muestra información sobre el subproceso de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que usa la sesión del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se está depurando. Debe estar en modo de depuración para mostrar la información del subproceso.  
-  
-## <a name="task-list"></a>Lista de tareas  
- **Para tener acceso a la ventana Subprocesos**  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+La ventana **Subprocesos** muestra información sobre el subproceso de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que usa la sesión del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se está depurando. Debe estar en modo de depuración para mostrar la información del subproceso.  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="task-list"></a>Lista de tareas
+
+**Para tener acceso a la ventana Subprocesos**
   
 -   En el menú **Depurar** , haga clic en **Ventanas**y, a continuación, haga clic en **Subprocesos**.  
   

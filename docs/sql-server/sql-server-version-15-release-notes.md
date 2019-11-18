@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c8a69dc4aa074c7e2d8575f7d8543ee75f577e1e
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: f03c9999471f1f196263cfab43960008c7d26aaf
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532920"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096119"
 ---
 # <a name="includesql-server-2019includessssqlv15-mdmd-release-notes"></a>Notas de la versión de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,9 +49,6 @@ El número de compilación RTM de SQL Server 2019 es `15.0.2000.5`.
   1. Desinstale cualquier versión de SSMS anterior a SSMS 18.3.1.
   1. Instale una versión más reciente de SSMS (18.3.1 o posterior). Para obtener la versión más reciente, consulte [Descargar SSMS](../ssms/download-sql-server-management-studio-ssms.md).
   1. Instale [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] de la manera habitual.
-
-  > [!NOTE]
-  > Se requiere desinstalar.
 
 - **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
 

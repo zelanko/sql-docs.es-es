@@ -1,6 +1,6 @@
 ---
-title: Guía de versiones de fila y bloqueo de transacciones de SQL Server | Microsoft Docs
-ms.custom: ''
+title: Guía de versiones de fila y bloqueo de transacciones
+ms.custom: seo-dt-2019
 ms.date: 02/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76ad73aa54d05081827a99a5b14c5390a04f3782
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: d79007dccddef604315c57beca1e1274d23c6f0f
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909267"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095687"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1246,9 +1246,9 @@ BEGIN TRANSACTION
   
  **Tamaño de almacén de versiones (KB)** . Supervisa el tamaño en KB de todos los almacenes de versiones. Esta información ayuda a determinar el espacio necesario para el almacén de versiones en la base de datos tempdb. La supervisión de este contador durante cierto tiempo proporciona una estimación útil del espacio adicional necesario para tempdb.  
   
- Columnas en la tabla de origen capturadas`Version Generation rate (KB/s)` Supervisa la velocidad de generación de versión en KB por segundo en todos los almacenes de versiones.  
+ `Version Generation rate (KB/s)`. Supervisa la velocidad de generación de versión en KB por segundo en todos los almacenes de versiones.  
   
- Columnas en la tabla de origen capturadas`Version Cleanup rate (KB/s)` Supervisa la velocidad de limpieza de versión en KB por segundo en todos los almacenes de versiones.  
+ `Version Cleanup rate (KB/s)`. Supervisa la velocidad de limpieza de versión en KB por segundo en todos los almacenes de versiones.  
   
 > [!NOTE]  
 > La información procedente de Velocidad de generación de versión (KB/seg.) y Velocidad de limpieza de versión (KB/seg.) se puede utilizar para predecir los requisitos de espacio de tempdb.  
@@ -1265,11 +1265,11 @@ BEGIN TRANSACTION
   
  **Transacciones**. Supervisa el número total de transacciones activas. No incluye las transacciones del sistema.  
   
- Columnas en la tabla de origen capturadas`Snapshot Transactions` Supervisa el número total de transacciones de instantáneas activas.  
+ `Snapshot Transactions`. Supervisa el número total de transacciones de instantáneas activas.  
   
- Columnas en la tabla de origen capturadas`Update Snapshot Transactions` Supervisa el número total de transacciones de instantáneas activas que realizan operaciones de actualización.  
+ `Update Snapshot Transactions`. Supervisa el número total de transacciones de instantáneas activas que realizan operaciones de actualización.  
   
- Columnas en la tabla de origen capturadas`NonSnapshot Version Transactions` Supervisa el número total de transacciones que no son instantáneas activas que generan registros de versión.  
+ `NonSnapshot Version Transactions`. Supervisa el número total de transacciones que no son instantáneas activas que generan registros de versión.  
   
 > [!NOTE]  
 > La suma de Transacciones de instantáneas de actualización y Transacciones de versión que no son instantáneas representa el número total de transacciones que participan en la generación de versiones. La diferencia entre Transacciones de instantáneas y Transacciones de instantáneas de actualización notifica el número de transacciones de instantáneas de solo lectura.  

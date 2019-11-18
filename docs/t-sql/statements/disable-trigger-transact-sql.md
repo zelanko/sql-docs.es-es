@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e2100858c6f18a515db8ee4baf413853ee0a04b
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.openlocfilehash: d658b63e8c2b80c277ed9d8c3647717d07c96c48
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73064579"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982978"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
  En el caso de un desencadenador DDL, indica que *trigger_name* se creó o se modificó para ejecutarse en el ámbito de la base de datos.  
   
  ALL SERVER  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  En el caso de un desencadenador DDL, indica que *trigger_name* se creó o se modificó para ejecutarse en el ámbito de servidor. ALL SERVER también se aplica a los desencadenadores de inicio de sesión.  
   

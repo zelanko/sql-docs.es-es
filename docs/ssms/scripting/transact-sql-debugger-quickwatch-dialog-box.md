@@ -1,10 +1,7 @@
 ---
-title: Inspección rápida (cuadro de diálogo) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Cuadro de diálogo Inspección rápida
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
@@ -13,19 +10,27 @@ helpviewer_keywords:
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0cffe35d5d46b76ef049538710961898d1832b7d
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af12ca6fb0b8eb0b4461d95e75e8c1a3c62ed77e
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68253330"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119249"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Depurador de Transact-SQL: cuadro de diálogo Inspección rápida
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Utilice el cuadro de diálogo **Inspección rápida** para ver rápidamente el tipo de datos y el valor de una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como una variable o un parámetro, cuando esté depurando el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para inspeccionar varias expresiones, puede agregar también la expresión a una ventana **Inspección** .  
-  
-## <a name="task-list"></a>Lista de tareas  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+Utilice el cuadro de diálogo **Inspección rápida** para ver rápidamente el tipo de datos y el valor de una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como una variable o un parámetro, cuando esté depurando el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para inspeccionar varias expresiones, puede agregar también la expresión a una ventana **Inspección** .  
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="task-list"></a>Lista de tareas
+
  **Para tener acceso al cuadro de diálogo Inspección rápida**  
   
 -   En el menú **Depurar** , haga clic en **Inspección rápida**.  

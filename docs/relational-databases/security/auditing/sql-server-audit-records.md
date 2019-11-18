@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3019dc90789ccf8cf43b07a15d5ff0ccc7fb50a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095122"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926029"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit le permite auditar grupos de eventos y eventos de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Columnas en la tabla de origen capturadas[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+  La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit le permite auditar grupos de eventos y eventos de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Las auditorías constan de cero o más elementos de acción de auditoría que se registran en un *destino*de auditoría. Este destino de auditoría puede ser un archivo binario, el registro de eventos de aplicación Windows o el registro de eventos de seguridad de Windows. Los registros que se envían al destino pueden contener los elementos descritos en la tabla siguiente:  
   

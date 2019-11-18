@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b95fd77e973e918dda99ef4a1053b45d3f3f067
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927192"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982088"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cambia la configuración del grupo de recursos de servidor del regulador de recursos existente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -74,7 +74,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  Especifica el promedio máximo de ancho banda de CPU que recibirán todas las solicitudes en el grupo de recursos de servidor cuando hay contención de CPU. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
  CAP_CPU_PERCENT =*value*  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Especifica la capacidad máxima de CPU de destino para las solicitudes del grupo de recursos. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
@@ -82,7 +82,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 >  Debido a la naturaleza estadística de la gobernanza de la CPU, es posible que observe picos ocasionales que superen el valor especificado en CAP_CPU_PERCENT.  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Adjunte el grupo de recursos de servidor a los programadores específicos. El valor predeterminado es AUTO.  
   
@@ -105,12 +105,12 @@ INNER JOIN sys.dm_os_schedulers AS sc
  Especifica la memoria total del servidor que puede ser utilizada por las solicitudes en este grupo de recursos de servidor. *value* es un entero con un valor predeterminado de 100. El intervalo permitido para *value* es de 1 a 100.  
   
  MIN_IOPS_PER_VOLUME =*value*  
- **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.  
   
  Especifica el número mínimo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben reservar para el grupo de recursos de servidor. El intervalo permitido para *value* es de 0 a 2^31-1 (2.147.483.647). Especifique 0 si no desea indicar un umbral mínimo para el grupo.  
   
  MAX_IOPS_PER_VOLUME =*value*  
- **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.  
   
  Especifica el número máximo de operaciones de E/S por segundo (IOPS) por volumen de disco que se deben permitir para el grupo de recursos de servidor. El intervalo permitido para *value* es de 0 a 2^31-1 (2.147.483.647). Especifique 0 para establecer un umbral ilimitado para el grupo. El valor predeterminado es 0.  
   
@@ -151,7 +151,7 @@ GO
   
  En el ejemplo siguiente, `CAP_CPU_PERCENT` establece el límite máximo en 80 % y `AFFINITY SCHEDULER` se establece según un valor individual de 8 y un intervalo de 12 a 16.  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
 ```  
 ALTER RESOURCE POOL Pool25  

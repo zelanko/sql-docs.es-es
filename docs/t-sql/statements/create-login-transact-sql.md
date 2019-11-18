@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cda96435d1b6f3732446295d17b360033e4a17f
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: df02e167ae5014564357d42d7cbbf06a5937845a
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73659362"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983204"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -170,7 +170,7 @@ GO
 
 El ejemplo siguiente crea un inicio de sesión para un usuario determinado y le asigna una contraseña. La opción `MUST_CHANGE` exige a los usuarios que cambien la contraseña la primera vez que se conecten al servidor.
 
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>'
@@ -185,7 +185,7 @@ GO
 
 El ejemplo siguiente crea el inicio de sesión para un usuario determinado, utilizando el de usuario. Este inicio de sesión se asigna a la credencial.
 
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>',
@@ -197,7 +197,7 @@ GO
 
 En el ejemplo siguiente se crea el inicio de sesión para un usuario determinado a partir de un certificado de master.
 
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
 
 ```sql
 USE MASTER;
@@ -213,7 +213,7 @@ GO
 
 El ejemplo siguiente crea un inicio de sesión a partir de una cuenta de dominio de Windows.
 
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.
 
 ```sql
 CREATE LOGIN [<domainName>\<login_name>] FROM WINDOWS;

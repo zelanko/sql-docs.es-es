@@ -24,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6785c481c9cb1049b50c39f7b1cff7ffad8c38f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042041"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980995"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Quita uno o varios desencadenadores DML o DDL de la base de datos actual.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -74,7 +74,7 @@ ON ALL SERVER
  Indica que el ámbito del desencadenador DDL se aplica a la base de datos actual. Debe especificarse DATABASE si también se especificó al crear o modificar el desencadenador.  
   
  ALL SERVER  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Indica que el ámbito del desencadenador DDL se aplica al servidor actual. Debe especificarse ALL SERVER si también se especificó al crear o modificar el desencadenador. ALL SERVER también se aplica a los desencadenadores de inicio de sesión.  
   

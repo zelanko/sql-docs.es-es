@@ -25,12 +25,12 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ac5c9ff7d2fbb5d32b559e6225dba4e7bbb7a48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e8c8f90dbd07af646700a738dcf265785b79475
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948325"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981705"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT: cláusula OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "67948325"
   
 -   [Función NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md)  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -127,7 +127,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Indica que los valores de la columna especificada se deben ordenar en sentido ascendente o descendente. ASC es el criterio de ordenación predeterminado. Los valores NULL se tratan como los valores más bajos posibles.  
   
  ROWS | RANGE  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores. 
   
  Limita aún más las filas de la partición especificando los puntos inicial y final. Para ello, se especifica un rango de filas con respecto a la fila actual mediante asociación lógica o asociación física. La asociación física se realiza mediante la cláusula ROWS.  
   
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 >  ROWS o RANGE requieren que se especifique la cláusula ORDER BY. Si ORDER BY contiene varias expresiones de orden, CURRENT ROW FOR RANGE considera todas las columnas de la lista ORDER BY al determinar la fila actual.  
   
  UNBOUNDED PRECEDING  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Especifica que la ventana comienza en la primera fila de la partición. UNBOUNDED PRECEDING solo se puede especificar como punto inicial de la ventana.  
   
@@ -145,17 +145,17 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Se especifica con \<especificación de valor sin signo> para indicar el número de filas o valores que preceden a la fila actual. Esta especificación no se permite para RANGE.  
   
  CURRENT ROW  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores. 
   
  Especifica que la ventana comienza o termina en la fila actual cuando se utiliza con ROWS, o el valor actual cuando se utiliza con RANGE. CURRENT ROW se puede especificar como punto inicial o final.  
   
  BETWEEN \<límite del marco de ventana> AND \<límite del marco de ventana>  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores. 
   
  Se utiliza con ROWS o RANGE para especificar los puntos de límite inferior (inicio) y superior (final) de la ventana. \<límite del marco de ventana> define el punto inicial del límite y \<límite del marco de ventana> define el punto final. El límite superior no puede ser menor que el límite inferior.  
   
  UNBOUNDED FOLLOWING  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores. 
   
  Especifica que la ventana termina en la última fila de la partición. UNBOUNDED FOLLOWING solo se puede especificar como punto final de una ventana. Por ejemplo, RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING define una ventana que empieza en la fila actual y termina en la última fila de la partición.  
   
@@ -163,7 +163,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Se especifica con \<especificación de valor sin signo> para indicar el número de filas o valores detrás de la fila actual. Cuando \<especificación de valor sin signo> FOLLOWING se especifica como punto inicial de la ventana, el punto final debe ser \<especificación de valor sin signo> FOLLOWING. Por ejemplo, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING define una ventana que empieza en la segunda fila a partir de la fila actual y termina en la décima fila a partir de la fila actual. Esta especificación no se permite para RANGE.  
   
  literal entero sin signo  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Es un literal entero positivo (incluido el 0) que especifica el número de filas o de valores delante o detrás de la fila o el valor actual. Esta especificación es válida solamente para ROWS.  
   
@@ -188,7 +188,7 @@ Si se especifica ROWS/RANGE y se usa \<marco de ventana precedente> para \<exten
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-the-over-clause-with-the-rownumber-function"></a>A. Utilizar la cláusula OVER con la función ROW_NUMBER  
+### <a name="a-using-the-over-clause-with-the-row_number-function"></a>A. Utilizar la cláusula OVER con la función ROW_NUMBER  
  En el ejemplo siguiente se muestra cómo usar la cláusula OVER con la función ROW_NUMBER para mostrar un número de fila para cada fila de una partición. La cláusula ORDER BY especificada en la cláusula OVER ordena las filas de cada partición por la columna `SalesYTD`. La cláusula ORDER BY en la instrucción SELECT determina el orden en que se devuelve el conjunto completo de resultados de la consulta.  
   
 ```sql  
@@ -390,7 +390,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ### <a name="d-specifying-the-rows-clause"></a>D. Especificar la cláusula ROWS  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  En el siguiente ejemplo se usa la cláusula ROWS para definir una ventana de cuyas filas se calcula la fila actual y el número *N* de filas incluidas aquí (1 fila en este ejemplo).  
   
@@ -455,7 +455,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. Utilizar la cláusula OVER con la función ROW_NUMBER  
+### <a name="e-using-the-over-clause-with-the-row_number-function"></a>E. Utilizar la cláusula OVER con la función ROW_NUMBER  
  En este ejemplo se devuelve ROW_NUMBER para los representantes de ventas en función de su cuota de ventas asignada.  
   
 ```sql  

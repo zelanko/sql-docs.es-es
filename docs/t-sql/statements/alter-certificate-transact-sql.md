@@ -23,19 +23,19 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2711a9b2bb1530b979a8294b2d3f9a08f764ec6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97cc55e271344ef571969fee9b20db647da027c1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065963"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982869"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   Cambia la contraseña utilizada para cifrar la clave privada de un certificado, elimina la clave privada o importa la clave privada si no hay ninguna presente. Cambia la disponibilidad de un certificado a [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -87,7 +87,7 @@ ALTER CERTIFICATE certificate_name
  Si solo se especifica un nombre de archivo, el archivo se guarda en la carpeta de datos de usuario predeterminada para la instancia. Esta carpeta puede (o no) ser la carpeta DATA de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para LocalDB de SQL Server Express, la carpeta de datos de usuario predeterminada para la instancia es la ruta de acceso especificada por la variable de entorno `%USERPROFILE%` para la cuenta que ha creado la instancia.  
   
  BINARY ='*private_key_bits*'  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Bits de clave privada especificados como una constante binaria. Estos bits pueden estar en forma cifrada. Si están cifrados, el usuario debe proporcionar una contraseña de descifrado. No se realizan comprobaciones de directiva de contraseña en esta contraseña. Los bits de clave privada deben tener el formato de archivo PVK.  
   

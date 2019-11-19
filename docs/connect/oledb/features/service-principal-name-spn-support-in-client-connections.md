@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 37b9332410d0f75e743776cf3b2c3b4e62a6354d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e7b61536b335d6cbbcdc78e77e0ebbeb18618a22
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988940"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056670"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Compatibilidad con Nombre de la entidad de seguridad del servicio (SPN) en conexiones cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "67988940"
  El nuevo comportamiento de conexión lo implementa el cliente; por lo tanto, no es específico de una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Servidores vinculados y delegación  
- Cuando se crean servidores vinculados, el parámetro **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) puede usarse para especificar los SPN del servidor y del asociado de conmutación por error. Las ventajas de hacerlo son las mismas que cuando los SPN se especifican en las cadenas de conexión del cliente: resulta más sencillo y confiable establecer conexiones que usan la autenticación Kerberos.  
+ Cuando se crean servidores vinculados, el parámetro **\@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) puede usarse para especificar los SPN del servidor y del asociado de conmutación por error. Las ventajas de hacerlo son las mismas que cuando los SPN se especifican en las cadenas de conexión del cliente: resulta más sencillo y confiable establecer conexiones que usan la autenticación Kerberos.  
   
  La delegación con servidores vinculados requiere la autenticación Kerberos.  
   

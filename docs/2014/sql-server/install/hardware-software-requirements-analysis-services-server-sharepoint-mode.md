@@ -54,7 +54,7 @@ ms.locfileid: "73637811"
 |---------------|-------------|-----------------|  
 |Procesador|Procesador de dos núcleos de 64 bits a 3 gigahercios.|16 núcleos|  
 |RAM|8 gigabytes de RAM|64 gigabytes de RAM|  
-|Almacenamiento|80 gigabytes de almacenamiento|80 gigabytes o más|  
+|Storage|80 gigabytes de almacenamiento|80 gigabytes o más|  
   
  Si instala el servidor de Analysis Services en modo de SharePoint en una granja de servidores de SharePoint, puede ver los requisitos mínimos del sistema para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y para SharePoint Server en los vínculos siguientes:  
   

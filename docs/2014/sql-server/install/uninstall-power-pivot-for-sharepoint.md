@@ -38,7 +38,7 @@ ms.locfileid: "72798132"
   
 -   [Paso 6: Lista de comprobación posterior a la desinstalación](#bkmk_post)  
   
-##  <a name="prereq"></a> Prerequisites  
+##  <a name="prereq"></a> Requisitos previos  
   
 -   Debe ser administrador de la granja de servidores de SharePoint o administrador de aplicaciones de servicio para desinstalar características y soluciones de la granja de servidores.  
   
@@ -120,7 +120,7 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
     stsadm -o enumdeployments  
     ```  
   
-3.  Revise las implementaciones existentes para la siguiente información: **Tipo** es Retracción o Implementación, **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
+3.  Revise las implementaciones existentes para la siguiente información: el **Tipo** es Retracción o Implementación, el **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
   
 4.  En el caso de las implementaciones o las retracciones relacionadas con soluciones de PowerPivot, copie el valor GUID para **JobID** y péguelo en el siguiente comando (Use los comandos marcar, copiar y pegar del menú edición del shell para copiar el GUID):  
   
@@ -187,6 +187,6 @@ Get-Service | Where {$_.displayname -like "*sharepoint* administration*"}
   
      No desinstale el proveedor OLE DB de Analysis Services. SharePoint instala el proveedor OLE DB como un requisito previo de los libros de Excel que se conectan a las bases de datos de Analysis Services. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] instala una versión más reciente, pero esta versión es compatible con las versiones anteriores, por lo que debe conservarse en el sistema para evitar problemas de conexión de datos más adelante.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Instalar o desinstalar el complemento PowerPivot para SharePoint de &#40;SharePoint 2013&#41; ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
  [Herramientas de configuración de PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  

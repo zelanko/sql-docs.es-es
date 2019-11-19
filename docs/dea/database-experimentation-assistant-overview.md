@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: bb942a7754235fe5e1bc3c72f60ffa1f2f0f61d1
-ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
+ms.openlocfilehash: 79caf961208287e1482efe780d2d0e335bbdd16d
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74127369"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165553"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Información general de Asistente para experimentación con bases de datos
 
@@ -102,13 +102,13 @@ Los datos de telemetría se pueden recopilar en cuatro tipos de eventos:
 Recopilar y enviar datos de telemetría es opcional. Para especificar los eventos que se recopilan y si los eventos recopilados se envían a Microsoft, siga estos pasos:
 
 1. Vaya a la ubicación en la que se ha instalado DEA (por ejemplo, C:\\archivos de programa (x86)\\Microsoft Corporation\\Asistente para experimentación con bases de datos).
-2. Abra y modifique los dos archivos. config **DEA. exe. config** (para la aplicación) y **DEACmd. exe. config** (para la CLI) de la manera siguiente:
+2. Abra y modifique los archivos. config **DEA. exe. config** (para la aplicación) y **DEACmd. exe. config** (para la CLI) para resolver el escenario según corresponda:
     - Para dejar de recopilar un tipo de evento, establezca el valor de *evento* (por ejemplo, **TraceEvent**) en **false**. Para empezar a recopilar el evento de nuevo, establezca el valor en **true**.
     - Para dejar de guardar las copias locales de los eventos, establezca el valor de **TraceLoggerEnabled** en **false**. Para volver a guardar las copias locales, establezca el valor en **true**.
     - Para dejar de enviar eventos a Microsoft, establezca el valor de **AppInsightsLoggerEnabled** en **false**. Para empezar a enviar eventos a Microsoft de nuevo, establezca el valor en **true**.
 
 DEA se rige por la [declaración de privacidad de Microsoft](https://aka.ms/dea-privacy).
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="see-also"></a>Vea también
 
-[Introducción](database-experimentation-assistant-get-started.md) le guía a través de los pasos necesarios para capturar, reproducir y analizar un seguimiento.
+[Información general sobre el proceso de comparación de cargas de trabajo](database-experimentation-assistant-get-started.md), que explica el proceso implicado en la comparación de cargas de trabajo en dos entornos.

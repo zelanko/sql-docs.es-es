@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b3db7139105b331c1e9fac831330a04cd2a0939a
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 08b18a3a5805b37a371d6fa17850584d6f4953fd
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660505"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164912"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Proveedor WMI de clases y propiedades de eventos de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "73660505"
  Por ejemplo, al hacer referencia al evento ALTER_DATABASE, aprenderá que su evento primario se DDL_SERVER_LEVEL_EVENTS y que sus propiedades son **TSQLCommand** y **DatabaseName**. El evento también hereda las propiedades **SQLInstance**, **posttime**, **ComputerName**, **SPID**y **LoginName**. El evento no tiene ningún evento secundario.  
   
 > [!NOTE]  
->  Los procedimientos almacenados del sistema que realizan operaciones similares a DDL también pueden activar notificaciones de eventos. Pruebe las notificaciones de eventos para determinar su respuesta a los procedimientos almacenados del sistema que se ejecutan. Por ejemplo, la instrucción CREATE TYPE y **sp_addtype** procedimiento almacenado activarán una notificación de eventos que se crea en un evento de CREATE_TYPE. Para obtener más información, vea[eventos DDL](../../relational-databases/triggers/ddl-events.md).  
+>  Los procedimientos almacenados del sistema que realizan operaciones similares a DDL también pueden activar notificaciones de eventos. Pruebe las notificaciones de eventos para determinar su respuesta a los procedimientos almacenados del sistema que se ejecutan. Por ejemplo, la instrucción CREATE TYPE y **sp_addtype** procedimiento almacenado activarán una notificación de eventos que se crea en un evento de CREATE_TYPE. Para obtener más información, vea [eventos DDL](../../relational-databases/triggers/ddl-events.md).  
   
  **Eventos y grupos de eventos del lenguaje de definición de datos**  
   

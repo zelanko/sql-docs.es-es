@@ -20,41 +20,41 @@ ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69fb7b1e0d9f98ec7d00441613a8887a81c4567c
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 086065aa79ca6fba7ad84e5b7e7f99f6f462f7dd
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72260427"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164897"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve una fila por cada tarea activa en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información acerca de las tareas, vea la [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md).
+  Devuelve una fila por cada tarea activa en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una tarea es la unidad básica de ejecución en SQL Server. Entre los ejemplos de tareas se incluyen una consulta, un inicio de sesión, un cierre de sesión y tareas del sistema como la actividad de limpieza fantasma, la actividad de punto de control, el escritor de registros y la actividad de puesta al día Para obtener más información acerca de las tareas, vea la [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md).
   
 > [!NOTE]  
-> Para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **Sys. DM _ _pdw_nodes_os_tasks**.  
+> Para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilice el nombre **Sys. dm_pdw_nodes_os_tasks**.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Dirección de memoria del objeto.|  
-|**task_state**|**nvarchar(60)**|Estado de la tarea. Puede ser uno de los siguientes:<br /><br /> PENDIENTES Esperando un subproceso de trabajo.<br /><br /> XTERM Ejecutable, pero esperando recibir un cuanto.<br /><br /> ESTÉN Ejecutándose actualmente en el programador.<br /><br /> SUSPEND Tiene un trabajador, pero está esperando un evento.<br /><br /> VERTIR Cubiertos.<br /><br /> SPINLOOP: Atascado en un Spinlock.|  
+|**task_state**|**nvarchar(60)**|Estado de la tarea. Puede ser uno de los siguientes:<br /><br /> PENDING: esperando un subproceso de trabajo.<br /><br /> RUNNABLE: se puede ejecutar, pero está esperando a recibir un cuanto.<br /><br /> RUNNING: ejecutándose actualmente en el programador.<br /><br /> SUSPENDED: tiene un trabajador, pero está esperando un evento.<br /><br /> DONE: completado.<br /><br /> SPINLOOP: atrapado en un subproceso.|  
 |**context_switches_count**|**int**|Número de cambios de contexto del programador que esta tarea ha completado.|  
 |**pending_io_count**|**int**|Número de entradas y salidas físicas realizadas por esta tarea.|  
 |**pending_io_byte_count**|**bigint**|Recuento total de bytes de las entradas y salidas realizadas por esta tarea.|  
 |**pending_io_byte_average**|**int**|Recuento promedio de bytes de las entradas y salidas realizadas por esta tarea.|  
-|**scheduler_id**|**int**|Id. del programador primario. Es un identificador de la información del programador para esta tarea. Para obtener más información, vea [Sys. DM &#40;_ _OS_SCHEDULERS Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
+|**scheduler_id**|**int**|Id. del programador primario. Es un identificador de la información del programador para esta tarea. Para obtener más información, vea [Sys. &#40;DM_OS_SCHEDULERS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |**session_id**|**smallint**|Id. de la sesión que está asociada a la tarea.|  
 |**exec_context_id**|**int**|Id. del contexto de ejecución que está asociado a la tarea.|  
-|**request_id**|**int**|Id. de la solicitud de la tarea. Para obtener más información, vea [Sys. DM &#40;_ _EXEC_REQUESTS Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|**worker_address**|**varbinary(8)**|Dirección de memoria del trabajador que ejecuta la tarea.<br /><br /> NULL = La tarea espera un trabajador que pueda ejecutarla o la tarea acaba de finalizar la ejecución.<br /><br /> Para obtener más información, vea [Sys. DM &#40;_ _OS_WORKERS Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|**host_address**|**varbinary(8)**|Dirección de memoria del host.<br /><br /> 0 = No se ha usado el hospedaje para crear la tarea. Esto ayuda a identificar el host que se ha utilizado para crear esta tarea.<br /><br /> Para obtener más información, vea [Sys. DM &#40;_ _OS_HOSTS Transact&#41;-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
+|**request_id**|**int**|Id. de la solicitud de la tarea. Para obtener más información, vea [Sys. &#40;DM_EXEC_REQUESTS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|**worker_address**|**varbinary(8)**|Dirección de memoria del trabajador que ejecuta la tarea.<br /><br /> NULL = La tarea espera un trabajador que pueda ejecutarla o la tarea acaba de finalizar la ejecución.<br /><br /> Para obtener más información, vea [Sys. &#40;DM_OS_WORKERS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|**host_address**|**varbinary(8)**|Dirección de memoria del host.<br /><br /> 0 = No se ha usado el hospedaje para crear la tarea. Esto ayuda a identificar el host que se ha utilizado para crear esta tarea.<br /><br /> Para obtener más información, vea [Sys. &#40;DM_OS_HOSTS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
 |**parent_task_address**|**varbinary(8)**|Dirección de memoria de la tarea que es el elemento primario del objeto.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere @no__t permiso-1.   
-En los niveles Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos. En los niveles estándar y básico de @no__t 0, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles Premium, requiere el permiso `VIEW DATABASE STATE` en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="examples"></a>Ejemplos  
   
@@ -96,7 +96,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
-[SQL Server &#40;vistas de administración dinámica relacionadas con el sistema operativo&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
+[SQL Server &#40;vistas de administración dinámica relacionadas con el sistema operativo&#41;   Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md)     
   
 

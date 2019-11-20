@@ -1,5 +1,5 @@
 ---
-title: Buscar propiedades de documento con listas de propiedades de búsqueda | Microsoft Docs
+title: Búsqueda de propiedades de documento con listas de propiedades de búsqueda
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -18,12 +18,13 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f105b175cf2a9673fff0626fba726d6b7f68b50e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912986"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056099"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

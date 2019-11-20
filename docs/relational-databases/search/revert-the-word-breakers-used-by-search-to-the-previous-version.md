@@ -1,5 +1,5 @@
 ---
-title: Revertir los separadores de palabras usados por las búsquedas a la versión anterior | Microsoft Docs
+title: Reversión a la versión anterior de los separadores de palabras usados por Buscar
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
@@ -10,14 +10,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf635c951c4705fcb726d4122414740b5293cc47
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 67c1241906a83aeb1776d7fa5e1ecb584bc2c723
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903809"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055185"
 ---
-# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Revertir los separadores de palabras usados por las búsquedas a la versión anterior
+# <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Reversión a la versión anterior de los separadores de palabras usados por Buscar (Búsqueda de SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala y habilita una versión de los separadores de palabras y lematizadores para todos los idiomas admitidos por búsqueda de texto completo, a excepción del coreano. En este artículo se describe cómo pasar de esta versión de estos componentes a la versión previa o viceversa.  
   

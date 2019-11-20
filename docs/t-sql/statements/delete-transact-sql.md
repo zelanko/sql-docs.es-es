@@ -26,19 +26,19 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0296995906f7f359a065d7ae4f61877a89a409b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca3a44c1829cc05eac5a412a2b2292e84d3d1bc1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948058"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983237"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Quita una o varias filas de una tabla o vista de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -104,7 +104,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Alias especificado en la cláusula FROM *table_source* que representa la tabla o vista de la que se van a eliminar las filas.  
   
  *server_name*  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Nombre del servidor (un nombre de servidor vinculado o la función [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) como nombre de servidor) en el que se encuentra la tabla o la vista. Si se especifica *server_name*, se requiere *database_name* y *schema_name*.  
   
@@ -122,7 +122,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  La vista a la que hace referencia *table_or_view_name* debe poderse actualizar y debe hacer referencia exactamente a una tabla base de la cláusula FROM de la definición de vista. Para obtener más información sobre las vistas actualizables, vea [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
  Función [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) u [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), dependiendo del proveedor.  
   
@@ -248,7 +248,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- En el siguiente ejemplo se muestra una cláusula WHERE más compleja. La cláusula WHERE define dos condiciones que deben cumplirse para determinar las filas que se van a eliminar. El valor de la columna `StandardCost` debe estar comprendido entre `12.00` y `14.00` y el valor de la columna `SellEndDate` debe ser NULL. En el ejemplo se imprime también el valor desde la función **@@ROWCOUNT** para devolver el número de filas eliminadas.  
+ En el siguiente ejemplo se muestra una cláusula WHERE más compleja. La cláusula WHERE define dos condiciones que deben cumplirse para determinar las filas que se van a eliminar. El valor de la columna `StandardCost` debe estar comprendido entre `12.00` y `14.00` y el valor de la columna `SellEndDate` debe ser NULL. En el ejemplo también se imprime el valor de la función **\@\@ROWCOUNT** para devolver el número de filas eliminadas.  
   
 ```sql
 DELETE Production.ProductCostHistory  
@@ -337,7 +337,7 @@ GO
 ###  <a name="RemoteTables"></a> Eliminar filas de una tabla remota  
  En los ejemplos de esta sección se muestra cómo se eliminan filas de una tabla remota mediante un [servidor vinculado](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [función de conjunto de filas](../../t-sql/functions/rowset-functions-transact-sql.md) para hacer referencia a la tabla remota. Una tabla remota existe en un servidor o instancia diferente de SQL Server.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Eliminar datos de una tabla remota usando un servidor vinculado  
  En el ejemplo siguiente se eliminan filas de una tabla remota. En el ejemplo primero se crea un vínculo al origen de datos remoto mediante [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). El nombre del servidor vinculado, `MyLinkServer`, se especifica después como parte del nombre de objeto de cuatro partes con el formato *server.catalog.schema.object*.  
@@ -402,7 +402,7 @@ WHERE ShoppingCartID = 20621;
 GO  
 ```  
   
-#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Usar OUTPUT con <from_table_name> en una instrucción DELETE  
+#### <a name="j-using-output-with-from_table_name-in-a-delete-statement"></a>J. Usar OUTPUT con <from_table_name> en una instrucción DELETE  
  En el ejemplo siguiente se eliminan las filas de la tabla `ProductProductPhoto` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] según los criterios de búsqueda definidos en la cláusula `FROM` de la instrucción `DELETE`. La cláusula `OUTPUT` devuelve columnas de la tabla que se elimina ( `DELETED.ProductID`, `DELETED.ProductPhotoID`) y de la tabla `Product` . Esta información se utiliza en la cláusula `FROM` para especificar las filas que se deben eliminar.  
   
 ```sql

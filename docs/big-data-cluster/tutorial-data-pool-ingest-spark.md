@@ -1,7 +1,7 @@
 ---
 title: Ingestión de datos con trabajos de Spark
 titleSuffix: SQL Server big data clusters
-description: En este tutorial se muestra cómo introducir datos en el grupo de datos de una [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] mediante trabajos de Spark en Azure Data Studio.
+description: En este tutorial se muestra cómo ingerir datos en el grupo de datos de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] mediante trabajos de Spark en Azure Data Studio.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
-ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73182635"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119195"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: introducción de datos en un grupo de datos de SQL Server con trabajos de Spark
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Ingestión de datos en un grupo de datos de SQL Server con trabajos de Spark
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este tutorial se muestra cómo usar trabajos de Spark para cargar datos en el [grupo de datos](concept-data-pool.md) de un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
+En este tutorial se muestra cómo usar trabajos de Spark para cargar datos en el [grupo de datos](concept-data-pool.md) de un elemento [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. 
 
 En este tutorial, aprenderá a:
 
@@ -32,12 +32,12 @@ En este tutorial, aprenderá a:
 > [!TIP]
 > Si lo prefiere, puede descargar y ejecutar un script con los comandos de este tutorial. Para obtener instrucciones, vea los [Ejemplos de grupos de datos](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool) en GitHub.
 
-## <a id="prereqs"></a> Prerequisites
+## <a id="prereqs"></a> Requisitos previos
 
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
    - **kubectl**
    - **Azure Data Studio**
-   - **Extensión de SQL Server 2019**
+   - **Extensión de SQL Server 2019**
 - [Cargar datos de ejemplo en un clúster de macrodatos](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>Crear una tabla externa en el grupo de datos
@@ -48,7 +48,7 @@ Siga este procedimiento para crear una tabla externa en el grupo de datos denomi
 
 1. Haga doble clic en la conexión de la ventana **Servidores** para mostrar el panel del servidor de la instancia maestra de SQL Server. Seleccione **Nueva consulta**.
 
-   ![Consulta de la instancia maestra de SQL Server](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
+   ![Consultar una instancia maestra de SQL Server](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
 1. Cree un origen de datos externo al grupo de datos (si aún no existe).
 
@@ -79,14 +79,14 @@ Siga este procedimiento para crear una tabla externa en el grupo de datos denomi
 
 ## <a name="start-a-spark-streaming-job"></a>Iniciar un trabajo de streaming de Spark
 
-El paso siguiente es crear un trabajo de streaming de Spark que cargue datos de secuencias de clics web desde el grupo de almacenamiento (HDFS) en la tabla externa que ha creado en el grupo de datos. Estos datos se agregaron a/clickstream_data en [cargar datos de ejemplo en el clúster de Big Data](tutorial-load-sample-data.md).
+El paso siguiente es crear un trabajo de streaming de Spark que cargue datos de secuencias de clics web desde el grupo de almacenamiento (HDFS) en la tabla externa que ha creado en el grupo de datos. Estos datos se han agregado a /clickstream_data en [Carga de datos de ejemplo en el clúster de macrodatos](tutorial-load-sample-data.md).
 
 1. En Azure Data Studio, conéctese a la instancia maestra del clúster de macrodatos. Para obtener más información, vea [Conexión a un clúster de macrodatos](connect-to-big-data-cluster.md).
 
-2. Cree un nuevo cuaderno y seleccione Spark | Scala como kernel.
+2. Cree un cuaderno y seleccione Spark | Scala como el kernel.
 
-3. Ejecución del trabajo de ingesta de Spark
-   1. Configuración de los parámetros del conector de Spark-SQL
+3. Ejecute el trabajo de ingesta de Spark.
+   1. Configure los parámetros del conector de Spark-SQL.
       ```
       import org.apache.spark.sql.types._
       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
@@ -99,16 +99,17 @@ El paso siguiente es crear un trabajo de streaming de Spark que cargue datos de 
       val datapool_table = "web_clickstreams_spark_results"
       val datasource_name = "SqlDataPool"
       val schema = StructType(Seq(
-      StructField("wcs_click_date_sk",IntegerType,true), StructField("wcs_click_time_sk",IntegerType,true), StructField("wcs_sales_sk",IntegerType,true), StructField("wcs_item_sk",IntegerType,true), 
-      StructField("wcs_web_page_sk",IntegerType,true), StructField("wcs_user_sk",IntegerType,true)
+      StructField("wcs_click_date_sk",LongType,true), StructField("wcs_click_time_sk",LongType,true), 
+      StructField("wcs_sales_sk",LongType,true), StructField("wcs_item_sk",LongType,true),
+      StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
       ))
 
       val hostname = "master-0.master-svc"
       val port = 1433
       val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
       ```
-   2. Definir y ejecutar el trabajo de Spark
-      * Cada trabajo tiene dos partes: readStream y writeStream. A continuación, se crea una trama de datos con el esquema definido anteriormente y, a continuación, se escribe en la tabla externa del grupo de datos.
+   2. Defina y ejecute el trabajo de Spark.
+      * Cada trabajo tiene dos elementos: readStream y writeStream. A continuación, se crea una trama de datos con el esquema definido anteriormente y, después, se escribe en la tabla externa del grupo de datos.
       ```
       import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
       
@@ -127,11 +128,11 @@ El paso siguiente es crear un trabajo de streaming de Spark que cargue datos de 
       query.processAllAvailable()
       query.awaitTermination(40000)
       ```
-## <a name="query-the-data"></a>Consulta de los datos
+## <a name="query-the-data"></a>Consultar los datos
 
 En los pasos siguientes, se muestra que el trabajo de streaming de Spark ha cargado los datos de HDFS en el grupo de datos.
 
-1. Antes de consultar los datos ingeridos, examine el estado de la ejecución de Spark, incluidos el identificador de aplicación de hilado, la interfaz de usuario de Spark y los registros de controlador.
+1. Antes de consultar los datos ingeridos, examine el estado de la ejecución de Spark, incluidos el identificador de aplicación de Yarn, la interfaz de usuario de Spark y los registros de controlador.
 
    ![Detalles de la ejecución de Spark](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 

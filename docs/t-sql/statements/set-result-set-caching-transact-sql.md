@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d2368cfe612831685da141f99069676ebf33cbb3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.openlocfilehash: aea7470bd5b4d046dd5346e633fb5302ea8e7b9c
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73729838"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962363"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
@@ -27,7 +27,7 @@ ms.locfileid: "73729838"
 
 Controla el comportamiento de almacenamiento en caché para la sesión de cliente actual del conjunto de resultados.  
 
-Se aplica a Azure SQL Data Warehouse (versión preliminar)
+Se aplica a Azure SQL Data Warehouse  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

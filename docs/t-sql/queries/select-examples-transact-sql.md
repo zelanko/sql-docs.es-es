@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5af6e4703e4e7a776eca47ea43bb41f96105b341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17ae607e02838e4598dce82f6f022208238aefaa
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017611"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119204"
 ---
 # <a name="select-examples-transact-sql"></a>Ejemplos de SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,14 @@ ms.locfileid: "68017611"
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## <a name="e-using-correlated-subqueries"></a>E. Usar subconsultas correlacionadas  
+## <a name="e-using-correlated-subqueries"></a>E. Usar subconsultas correlacionadas
+Una subconsulta correlacionada es una consulta que depende de la consulta externa para obtener sus valores. Se ejecuta varias veces, una vez por cada fila que la consulta externa pueda seleccionar.
+
  En el siguiente ejemplo se muestran consultas que son semánticamente equivalentes y se demuestra la diferencia entre la utilización de la palabra clave `EXISTS` y la palabra clave `IN`. Ambos son ejemplos de subconsultas válidas que recuperan una instancia de cada nombre de producto cuyo modelo es un jersey de manga larga con logotipo y cuyos números de `ProductModelID` coinciden en las tablas `Product` y `ProductModel`.  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- En el siguiente ejemplo se utiliza `IN` en una subconsulta correlativa o repetitiva. Se trata de una consulta que depende de la consulta externa de sus valores. Se ejecuta varias veces, una vez por cada fila que pueda seleccionar la consulta externa. Esta consulta recupera una instancia del nombre y apellido de cada empleado cuya bonificación en la tabla `SalesPerson` sea de `5000.00` y cuyos números de identificación coincidan en las tablas `Employee` y `SalesPerson`.  
+ En el ejemplo siguiente se usa `IN` y se recupera una instancia del nombre y apellido de cada empleado cuya bonificación en la tabla `SalesPerson` sea de `5000.00` y cuyos números de identificación coincidan en las tablas `Employee` y `SalesPerson`.  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   

@@ -1,6 +1,5 @@
 ---
-title: Mantenimiento de valores de identidad al importar datos de forma masiva (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Mantenimiento de valores de identidad al importar datos en bloque
 ms.date: 09/21/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -15,14 +14,15 @@ ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60ca98e5e0e00239293de34f90f015028464d1bc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896677"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055970"
 ---
-# <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantener valores de identidad al importar datos de forma masiva (SQL Server)
+# <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantenimiento de valores de identidad al importar datos en bloque (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Archivos de datos que contienen valores de identidad que pueden importarse de forma masiva en una instancia de Microsoft SQL Server.  De manera predeterminada, los valores de la columna de identidad del archivo de datos que se importa se omiten y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos.  Los valores únicos se basan en los valores de inicialización y de incremento especificados durante la creación de la tabla.
 

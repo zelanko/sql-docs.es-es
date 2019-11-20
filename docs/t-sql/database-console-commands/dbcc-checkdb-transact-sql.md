@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 54b6353b789f837f45759c34b0dbbbd591cf5dbf
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809890"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982421"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ Esto significa que los comandos DBCC CHECKALLOC, DBCC CHECKTABLE o DBCC CHECKCAT
 >     
 > Puesto que las opciones de reparación de DBCC no están disponibles para las tablas optimizadas para memoria, debe hacer periódicamente copia de seguridad de las bases de datos y probar dichas copias. Si se producen problemas de integridad de datos en una tabla optimizada para memoria, debe restaurar desde la última copia de seguridad válida conocida.    
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
 ## <a name="syntax"></a>Sintaxis    
     
@@ -89,7 +89,7 @@ DBCC CHECKDB
  Es el nombre o Id. de la base de datos para la que se van a ejecutar comprobaciones de integridad. Si no se especifica o se especifica 0, se utiliza la base de datos actual. Los nombres de las bases de datos deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
     
 NOINDEX  
- Especifica que no se deben realizar comprobaciones intensivas de índices no clúster para las tablas de usuario. Esto reduce el tiempo total de ejecución. NOINDEX no afecta a las tablas del sistema, porque las comprobaciones de integridad siempre se realizan en los índices de las tablas del sistema.  
+ Especifica que no se deben realizar comprobaciones intensivas de índices no agrupado para las tablas de usuario. Esto reduce el tiempo total de ejecución. NOINDEX no afecta a las tablas del sistema, porque las comprobaciones de integridad siempre se realizan en los índices de las tablas del sistema.  
     
 REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
  Especifica que DBCC CHECKDB repare los errores que encuentre. Utilice las opciones REPAIR solo como último recurso. La base de datos especificada debe estar en modo de usuario único para utilizar una de las siguientes opciones de reparación.  
@@ -161,7 +161,7 @@ DATA_PURITY
  Los errores de validación de los que informe esta opción no se pueden corregir con las opciones de reparación de DBCC. Para obtener información acerca de cómo corregir manualmente estos errores, consulte el artículo 923247 de Knowledge Base: [Resolución del error DBCC 2570 en SQL Server 2005 y versiones posteriores](https://support.microsoft.com/kb/923247).  
     
  MAXDOP  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 y versiones posteriores)  
     
  Invalida la opción de configuración de **grado máximo de paralelismo** de **sp_configure** para la instrucción. MAXDOP puede superar el valor configurado con sp_configure. Si MAXDOP supera el valor configurado con Resource Governor, el [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] usa el valor MAXDOP de Resource Governor, descrito en [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Se pueden aplicar todas las reglas semánticas utilizadas con la opción de configuración max degree of parallelism cuando se utiliza la sugerencia de consulta MAXDOP. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  

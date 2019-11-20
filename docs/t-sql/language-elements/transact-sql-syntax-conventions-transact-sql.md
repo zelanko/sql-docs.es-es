@@ -28,12 +28,12 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdc1e80e6363be923d65c07b5550772c8d16f2af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121599"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981900"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenciones de sintaxis de Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,9 +110,9 @@ La mayoría de los ejemplos de código de la referencia de [!INCLUDE[tsql](../..
 Muchos ejemplos de código agregan como prefijo a las constantes de cadenas de caracteres Unicode la letra **N**. Sin el prefijo **N**, la cadena se convierte a la página de códigos predeterminada de la base de datos. Esta página de códigos predeterminada puede no reconocer determinados caracteres.  
   
 ## <a name="applies-to-references"></a>Referencias de "Se aplica a"  
-La referencia de [!INCLUDE[tsql](../../includes/tsql-md.md)] incluye temas relacionados con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+La referencia de [!INCLUDE[tsql](../../includes/tsql-md.md)] incluye temas relacionados con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
 
-Hay una sección en la parte superior de cada artículo que indica qué productos son compatibles con el tema del artículo. Si se omite un producto, la característica descrita en el artículo no estará disponible en ese producto. Por ejemplo, los grupos de disponibilidad se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En el artículo **CREATE AVAILABILITY GROUP** se indica que se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) porque no se aplica a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ni [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+Hay una sección en la parte superior de cada artículo que indica qué productos son compatibles con el tema del artículo. Si se omite un producto, la característica descrita en el artículo no estará disponible en ese producto. Por ejemplo, los grupos de disponibilidad se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En el artículo **CREATE AVAILABILITY GROUP** se indica que se aplica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores) porque no se aplica a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Se puede usar el tema general del artículo en un producto, pero no se admiten todos los argumentos en algunos casos. Por ejemplo, los usuarios de bases de datos independientes se introdujeron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Use la instrucción **CREATE USER** en cualquier producto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; en cambio, la sintaxis **WITH PASSWORD** no se puede usar con versiones anteriores. Las secciones **Se aplica a** adicionales se insertan en las descripciones del argumento correspondiente en el cuerpo del artículo.  
   

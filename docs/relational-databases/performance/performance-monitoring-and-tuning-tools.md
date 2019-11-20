@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42d3d78b68f84b5ab44658114094bde77cc1f844
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113518"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962406"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Herramientas de supervisión y optimización del rendimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68113518"
   
 |Herramienta|Descripción|  
 |----------|-----------------|  
-|[Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Las funciones integradas muestran estadísticas de instantáneas acerca de la actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el inicio del servidor; estas estadísticas se almacenan en contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinidos. Por ejemplo, **@@CPU_BUSY** contiene el tiempo que la CPU ha estado ejecutando código de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **@@CONNECTIONS** contiene el número de conexiones o intentos de conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y **@@PACKET_ERRORS** contiene el número de paquetes de red generados en conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|Las funciones integradas muestran estadísticas de instantáneas acerca de la actividad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el inicio del servidor; estas estadísticas se almacenan en contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinidos. Por ejemplo, **\@\@CPU_BUSY** contiene el tiempo que la CPU ha estado ejecutando código de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; **\@\@CONNECTIONS** contiene el número de conexiones o intentos de conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y **\@\@PACKET_ERRORS** contiene el número de paquetes de red generados en conexiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|Las instrucciones DBCC (Comandos de consola de base de datos) permiten comprobar las estadísticas de rendimiento y la coherencia lógica y física de una base de datos.|  
 |[Asistente para la optimización de motor de base de datos (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md)|El Asistente para la optimización de motor de base de datos analiza los efectos en el rendimiento de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutadas en las bases de datos que desea optimizar. El Asistente para la optimización de motor de base de datos proporciona recomendaciones para agregar, quitar o modificar índices, vistas indizadas y particiones.|  
 |[Asistente para experimentación con bases de datos (DEA)](https://www.microsoft.com/download/details.aspx?id=54090)|Asistente para experimentación con bases de datos (DEA) es una solución de pruebas A/B nueva para SQL Server. Ayuda a evaluar una versión de destino de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para una carga de trabajo determinada. Al actualizar desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]) a cualquier versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], DEA será capaz de proporcionar métricas de análisis comparativas.|

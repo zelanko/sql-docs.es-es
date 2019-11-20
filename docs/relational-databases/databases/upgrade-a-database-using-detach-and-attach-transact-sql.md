@@ -1,6 +1,6 @@
 ---
-title: Actualizar una base de datos mediante Separar y Adjuntar (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: Actualización de una base de datos mediante Separar y Adjuntar (Transact-SQL)
+ms.custom: seo-dt-2019
 ms.date: 11/26/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a0df5b572fe7c26f250c2172e5fa87b9fd01da85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8e26f678ae13fac11c39569d15e26c0e79e46deb
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127132"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095537"
 ---
-# <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Actualizar una base de datos mediante Separar y Adjuntar (Transact-SQL)
+# <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Actualización de una base de datos mediante Separar y Adjuntar (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 En este tema se describe cómo usar las operaciones de separar y adjuntar para actualizar una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Después de asociarla a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos está disponible de inmediato y se actualiza automáticamente. Esto evita que la base de datos se use con una versión anterior de [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Pero la actualización de metadatos no afecta al valor de [nivel de compatibilidad de base de datos](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) de una base de datos. Obtenga más información en [Nivel de compatibilidad de la base de datos después de la actualización](#dbcompat) más adelante en este tema.  
   

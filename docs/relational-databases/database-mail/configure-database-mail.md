@@ -39,12 +39,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c10388d5becdbcfbe32f3247855e3e421ea7eaa7
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: fb7ea877ba1a3beaabb6cbab8854b4f37a5f6558
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909497"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095704"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -195,13 +195,13 @@ ms.locfileid: "72909497"
  Muestra o actualiza la descripción de la cuenta. La descripción es opcional.  
   
  **Dirección de correo electrónico**  
- Muestra o actualiza el nombre de la dirección de correo electrónico de la cuenta. Es la dirección desde la que se envía el correo electrónico. Por ejemplo, una cuenta del Agente Microsoft SQL Server puede enviar correo electrónico desde la dirección **SqlAgent@Adventure-Works.com** .  
+ Muestra o actualiza el nombre de la dirección de correo electrónico de la cuenta. Es la dirección desde la que se envía el correo electrónico. Por ejemplo, una cuenta del Agente Microsoft SQL Server puede enviar correo electrónico desde la dirección **SqlAgent\@Adventure-Works.com**.  
   
  **Nombre para mostrar**  
  Muestra o actualiza el nombre que se muestra en los mensajes de correo electrónico enviados desde esta cuenta. Este nombre es opcional. Se trata del nombre que se muestra en los mensajes enviados desde esta cuenta. Por ejemplo, una cuenta del Agente SQL Server puede mostrar el nombre **SQL Server Agent Automated Mailer (Proveedor de servicio de envío de correo automatizado del Agente SQL Server)** en los mensajes de correo electrónico.  
   
  **Correo electrónico de respuesta**  
- Muestra o actualiza la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Esta dirección es opcional. Por ejemplo, las respuestas a los mensajes de una cuenta del Agente SQL Server pueden dirigirse al administrador de la base de datos, **danw@Adventure-Works.com** .  
+ Muestra o actualiza la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Esta dirección es opcional. Por ejemplo, las respuestas a los mensajes de una cuenta del Agente SQL Server pueden dirigirse al administrador de la base de datos, **danw\@Adventure-Works.com**.  
   
  **Nombre del servidor**  
  Muestra o actualiza el nombre del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Típicamente está en un formato similar a **smtp.<su_compañía>.com**. Si necesita ayuda, consulte a su administrador de correo.  

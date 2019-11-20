@@ -1,7 +1,7 @@
 ---
 title: Directrices para operaciones de índices en línea | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2019
+ms.date: 11/12/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6a2266a83d8fb041f4d18c5938e87bf31433b70e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32f1363901d06e8e3551c8f161c38d48fc190921
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909790"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981796"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
 
@@ -93,7 +93,7 @@ Las operaciones de índice a gran escala, realizadas sin conexión o en línea, 
 ## <a name="resumable-index-considerations"></a>Consideraciones sobre índices reanudables
 
 > [!NOTE]
-> La opción de índice reanudable se aplica a SQL Server (a partir de SQL Server 2017) (solo recompilación de índice) y SQL Database (creación de índice y recompilación de índice). Consulte [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) (actualmente en versión preliminar pública para [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) y [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
+> La opción de índice reanudable para crear y recompilar índices se aplica a SQL Server (la recompilación de índices empieza con SQL Server 2017 y la creación de índices también se admite en SQL Server 2019) y SQL Database. Consulte [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) y [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
 
 Al realizar la recompilación o la creación de índices en línea reanudables, se aplican las siguientes directrices:
 

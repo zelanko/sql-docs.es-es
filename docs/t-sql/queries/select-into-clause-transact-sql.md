@@ -29,19 +29,19 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac9ba9a291b88b8fc1091ff72e3a7af782b1e618
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948411"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981725"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT: cláusula INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 SELECT…INTO crea una tabla en el grupo de archivos predeterminado e inserta las filas resultantes de la consulta en ella. Para conocer la sintaxis completa de SELECT, vea [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -63,7 +63,7 @@ SELECT…INTO crea una tabla en el grupo de archivos predeterminado e inserta la
  *grupo_de_archivos*    
  Especifica el nombre del grupo de archivos en el que se creará la tabla. El grupo de archivos especificado debe existir en la base de datos; de lo contrario, se mostrará un error en el motor de SQL Server.   
  
- **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores
   
 ## <a name="data-types"></a>Tipos de datos  
  El atributo FILESTREAM no transfiere a la nueva tabla. Los BLOB FILESTREAM se copian y se almacenan en la nueva tabla como BLOB **varbinary(max)** . Sin el atributo FILESTREAM, el tipo de datos **varbinary(max)** tiene una limitación de 2 GB. Si un FILESTREAM BLOB supera este valor, se produce el error 7119 y se detiene la instrucción.  
@@ -171,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. Crear una tabla especificando las columnas de un origen de datos remoto  
  El ejemplo siguiente muestra tres métodos para crear una nueva tabla en el servidor local desde un origen de datos remoto. En el ejemplo se comienza creando un vínculo al origen de datos remoto. El nombre del servidor vinculado, `MyLinkServer,` se especifica en la cláusula FROM de la primera instrucción SELECT...INTO y en la función OPENQUERY de la segunda instrucción SELECT...INTO. La tercera instrucción SELECT...INTO utiliza la función OPENDATASOURCE, que especifica el origen de datos remoto directamente en lugar de utilizar el nombre del servidor vinculado.  
   
- **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores  
   
 ```sql
 USE master;  
@@ -231,7 +231,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Crear una tabla como una copia de otra tabla y cargarla en un grupo de archivos especificado
 En el ejemplo siguiente se muestra cómo crear una tabla como una copia de otra tabla y cargarla en un grupo de archivos especificado diferente del grupo de archivos predeterminado del usuario.
 
- **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

@@ -1,6 +1,5 @@
 ---
-title: Mantenimiento de valores NULL o uso de valores predeterminados durante la importación en bloque (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: Mantenimiento de valores NULL o predeterminados durante la importación en bloque
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -21,14 +20,15 @@ ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c32b4ce4d706986829fa63f1bff96a3e78356672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 7120efd623905f05e1f02c6c02856b793ad15cea
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896669"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055953"
 ---
-# <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantener valores NULL o usar valores predeterminados durante la importación masiva (SQL Server)
+# <a name="keep-nulls-or-default-values-during-bulk-import-sql-server"></a>Mantenimiento de valores NULL o predeterminados durante la importación en bloque (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 De manera predeterminada, cuando se importan datos en una tabla, el comando [BCP](../../tools/bcp-utility.md) y la instrucción [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) aplican los valores predeterminados definidos para las columnas de la tabla.  Por ejemplo, si un archivo de datos contiene un campo NULL, en su lugar, se cargará el valor predeterminado para la columna.  El comando [BCP](../../tools/bcp-utility.md) y la instrucción [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) permiten especificar que se mantengan los valores NULL.

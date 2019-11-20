@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901963"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981763"
 ---
 # <a name="hints-transact-sql---table"></a>Sugerencias (Tabla de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "67901963"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -221,7 +221,7 @@ Cuando FORCESEEK se especifica con parámetros de índice, se aplican las siguie
 > [!CAUTION]  
 > Al especificar FORCESEEK con parámetros se limita el número de planes que el optimizador puede considerar en comparación con cuando se especifica FORCESEEK sin parámetros. Esto puede provocar que se produzca un error `Plan cannot be generated` en más casos. En una versión futura, las modificaciones internas realizadas en el plan pueden permitir que se consideren más planes.  
   
-FORCESCAN **Se aplica a**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+FORCESCAN **Se aplica a**: [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 y versiones posteriores
 Especifica que el optimizador de consultas use solamente una operación de búsqueda de índice como la ruta de acceso a la vista o la tabla a la que se hace referencia. La sugerencia FORCESCAN puede ser útil para consultas en las que el optimizador subestima el número de filas afectadas y elige una operación de búsqueda en lugar de una operación de examen. Cuando esto ocurre, la cantidad de memoria asignada a la operación es demasiado pequeña y el rendimiento de la consulta se ve afectado.  
   
 FORCESCAN se puede especificar con o sin una sugerencia INDEX. Cuando se combina con una sugerencia de índice, (`INDEX = index_name, FORCESCAN`), el optimizador de consultas solo considera el examen de rutas de acceso mediante el índice especificado al tener acceso a la tabla a la que se hace referencia. Se puede especificar FORCESCAN con la sugerencia de índice INDEX(0) para forzar una operación de recorrido de tabla en la tabla base.  
@@ -317,7 +317,7 @@ SERIALIZABLE
 Equivalente a HOLDLOCK. Hace que los bloqueos compartidos sean más restrictivos, manteniéndolos hasta la finalización de la transacción, en lugar de liberarlos cuando la tabla o página de datos deja de ser necesaria, se haya completado la transacción o no. El recorrido se hace con la misma semántica que una transacción que se ejecuta con el nivel de aislamiento SERIALIZABLE. Para más información sobre los niveles de aislamiento, vea [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 SNAPSHOT  
-**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores. 
   
 Se tiene acceso a la tabla optimizada para memoria con aislamiento SNAPSHOT. SNAPSHOT solo se puede utilizar con tablas optimizadas para memoria (no con tablas basadas en disco). Para obtener más información, vea [Introducción a las tablas con optimización para memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -329,7 +329,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
 SPATIAL_WINDOW_MAX_CELLS = *entero*  
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
 Especifica el número máximo de celdas que se van a usar para teselar un objeto de geometría o geografía. *number* es un valor entre 1 y 8192.  
   
 Esta opción permite optimizar el tiempo de ejecución de la consulta ajustando el equilibrio entre el tiempo de ejecución del filtro primario y secundario. Un número mayor reduce el tiempo de ejecución del filtro secundario, pero aumenta el tiempo de ejecución del filtro primario y un número menor disminuye el tiempo de ejecución del filtro primario, pero aumenta el tiempo de ejecución del filtro secundario. En el caso de datos espaciales más densos, un número mayor debe producir un tiempo de ejecución más rápido proporcionando una mejor aproximación con el filtro primario y reduciendo el tiempo de ejecución del filtro secundario. Si se trata de datos más dispersos, un número menor disminuirá el tiempo de ejecución del filtro primario.  

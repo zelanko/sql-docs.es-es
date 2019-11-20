@@ -15,18 +15,18 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7dad5124f08435532c1fd0cf299e54db66c5be05
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.openlocfilehash: 90aa97c7a5dc2f21007c52ac8ebfc6d100e6d178
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882426"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926049"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se presenta Inserción de UDF escalar, una característica del conjunto de características de [procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md). Esta característica mejora el rendimiento de las consultas que llaman a UDF escalares en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+En este artículo se presenta Inserción de UDF escalar, una característica del conjunto de características de [procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md). Esta característica mejora el rendimiento de las consultas que llaman a UDF escalares en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ## <a name="t-sql-scalar-user-defined-functions"></a>Funciones escalares definidas por el usuario de T-SQL
 Las funciones definidas por el usuario (UDF) que se implementan en [!INCLUDE[tsql](../../includes/tsql-md.md)] y que devuelven un único valor de datos se conocen como Funciones escalares definidas por el usuario de T-SQL. Las UDF de T-SQL son una forma elegante de lograr la reutilización y modularidad del código en todas las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Algunos cálculos (como las reglas de negocios complejas) son más fáciles de expresar en forma de UDF imperativa. Las UDF ayudan a crear una lógica compleja, sin necesidad de tener experiencia en escribir consultas de SQL complejas.
@@ -134,7 +134,7 @@ Como se ha mencionado antes, el plan de consulta ya no tiene un operador de func
 Según la complejidad de la lógica de la UDF, es posible que el plan de consulta resultante también aumente de tamaño y complejidad. Como se puede ver, las operaciones dentro de la UDF ahora ya no son una caja negra y, por tanto, el optimizador de consultas es capaz de calcular los costos de esas operaciones y optimizarlas. Además, como la UDF ya no está en el plan, la invocación iterativa de UDF se sustituye por un plan que evita totalmente la sobrecarga de la llamada de función.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Requisitos de las UDF escalares que se pueden insertar
-Una UDF escalar de T-SQL se puede insertar si se cumplen todas las condiciones siguientes:
+<a name="requirements"></a> Una UDF escalar de T-SQL se puede insertar si se cumplen todas las condiciones siguientes:
 
 - La UDF se escribe con las construcciones siguientes:
     - `DECLARE`, `SET`: declaración de variables y asignaciones.
@@ -165,7 +165,7 @@ Una UDF escalar de T-SQL se puede insertar si se cumplen todas las condiciones s
 Para todas las UDF escalares de T-SQL, la vista de catálogo [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) incluye una propiedad denominada `is_inlineable`, que indica si una UDF se puede insertar o no. 
 
 > [!NOTE]
-> La propiedad `is_inlineable` se deriva de las construcciones que se encuentran dentro de la definición de UDF. No comprueba si la UDF es en realidad insertable en tiempo de compilación. Para obtener más información, consulte las condiciones para la inserción a continuación.
+> La propiedad `is_inlineable` se deriva de las construcciones que se encuentran dentro de la definición de UDF. No comprueba si la UDF es en realidad insertable en tiempo de compilación. Para más información, vea las [condiciones para la inserción](#requirements).
 
 Un valor de 1 indica que se puede insertar y 0 indica lo contrario. Esta propiedad también tendrá un valor de 1 para todas las funciones con valores de tabla insertadas. Para todos los demás módulos, el valor será 0.
 
@@ -258,7 +258,7 @@ Como se describe en este artículo, la inserción de UDF escalar transforma una 
 1. Es posible que las sugerencias de combinación de nivel de consulta ya no sean válidas, ya que la inserción puede introducir nuevas combinaciones. En su lugar será necesario usar sugerencias de combinación locales.
 1. Las vistas que hacen referencia a UDF escalares insertadas no se pueden indexar. Si tiene que crear un índice en esas vistas, deshabilite la inserción para las UDF a las que se hace referencia.
 1. Puede haber algunas diferencias en el comportamiento del [enmascaramiento dinámico de datos](../security/dynamic-data-masking.md) con la inserción de UDF. En determinadas situaciones (en función de la lógica de la UDF), es posible que la inserción sea más conservadora que el enmascaramiento de las columnas de salida. En escenarios donde las columnas a las que se hace referencia en una UDF no son columnas de salida, no se enmascararán. 
-1. Si una UDF hace referencia a funciones integradas como `SCOPE_IDENTITY()`, con la inserción se cambiará el valor devuelto por la función integrada. Este cambio de comportamiento se debe a que la inserción modifica el ámbito de las instrucciones dentro de la UDF.
+1. Si una UDF hace referencia a funciones integradas como `SCOPE_IDENTITY()`, `@@ROWCOUNT` o `@@ERROR`, con la inserción se cambiará el valor devuelto por la función integrada. Este cambio de comportamiento se debe a que la inserción modifica el ámbito de las instrucciones dentro de la UDF.
 
 ## <a name="see-also"></a>Consulte también
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)    (Centro de rendimiento para el motor de base de datos SQL Server y Azure SQL Database)  

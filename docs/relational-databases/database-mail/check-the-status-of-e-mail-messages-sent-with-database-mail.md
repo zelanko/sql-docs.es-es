@@ -1,6 +1,5 @@
 ---
-title: Comprobación del estado de los mensajes de correo electrónico enviados con Correo electrónico de base de datos | Microsoft Docs
-ms.custom: ''
+title: Estado de los mensajes de correo electrónico enviados con Correo electrónico de base de datos
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,12 +14,13 @@ helpviewer_keywords:
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11b8160bd47061d226ecd6da01353da718b53dea
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4d3fc240c155632a764025dbd8519385a9d4c6c2
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228447"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095725"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Comprobar el estado de los mensajes de correo electrónico enviados con Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

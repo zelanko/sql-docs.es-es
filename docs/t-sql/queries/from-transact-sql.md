@@ -34,12 +34,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 67aa3078746108b0a337d5bb4ef4eb28f40f8dc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902022"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981971"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM más JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -59,7 +59,7 @@ En este artículo también se tratan las siguientes palabras clave, que se puede
 - APPLY
 - PIVOT
 
-![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -199,7 +199,7 @@ FROM { <table_source> [ ,...n ] }
   
  *rowset_function*  
 
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  Especifica una de las funciones de conjuntos de filas, como OPENROWSET, que devuelve un objeto que se puede utilizar en lugar de una referencia de tabla. Para obtener más información sobre la lista de funciones de conjuntos de filas, vea [Funciones de conjuntos de filas &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
@@ -208,7 +208,7 @@ FROM { <table_source> [ ,...n ] }
   
  *bulk_column_alias*  
 
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  Es un alias opcional para sustituir el nombre de una columna en el conjunto de resultados. Los alias de columna se permiten solo en las instrucciones SELECT que utilizan la función OPENROWSET con la opción BULK. Si usa *bulk_column_alias*, especifique un alias para cada columna de tabla en el mismo orden que las columnas del archivo.  
@@ -221,7 +221,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  Proporciona una vista de un conjunto de filas en un documento XML. Para obtener más información, vea [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
@@ -236,7 +236,7 @@ FROM { <table_source> [ ,...n ] }
   
  *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  Especifica que se devuelva una versión determinada de los datos de la tabla temporal especificada y su tabla de historial de versiones del sistema vinculada.  
@@ -381,27 +381,27 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  Devuelve una tabla con un único registro por cada fila que contenga los valores que fueran reales (actuales) en el momento determinado especificado en el pasado. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de la fila que era válida en el momento determinado especificado por el parámetro *\<date_time>* . El valor de una fila se considera válido si el valor de *system_start_time_column_name* es menor o igual que el valor del parámetro *\<date_time>* y el valor de *system_end_time_column_name* es mayor que el valor del parámetro *\<date_time>* .   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
   
  Devuelve una tabla con los valores de todas las versiones de registro que estaban activas dentro del rango de tiempo especificado, independientemente de si empezaron a ser activas antes del valor del parámetro *\<start_date_time>* del argumento FROM o si dejaron de serlo después del valor del parámetro *\<end_date_time>* del argumento TO. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de todas las versiones de fila que estaban activas en cualquier momento dentro del intervalo de tiempo especificado. Se incluyen las filas que se activaron justamente en el límite inferior definido por el punto de conexión FROM y no se incluyen aquellas que se activaron exactamente en el límite superior definido por el punto de conexión TO.  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  Igual que la descripción anterior de **FROM \<start_date_time> TO \<end_date_time>** , salvo que incluye las filas que se activaron en el límite superior definido por el punto de conexión \<end_date_time>.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
 
   
  Devuelve una tabla con los valores de todas las versiones de registro que se abrieron y cerraron dentro del intervalo de tiempo especificado definido por los dos valores de fecha y hora en el argumento CONTAINED IN. Se incluyen las filas que se activaron justamente en el límite inferior o que dejaron de estarlo exactamente en el límite superior.  
@@ -630,9 +630,9 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>M. Usar FOR SYSTEM_TIME  
+### <a name="m-using-for-system_time"></a>M. Usar FOR SYSTEM_TIME  
   
-**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  En el ejemplo siguiente se usa el argumento FOR SYSTEM_TIME AS OF date_time_literal_or_variable para devolver filas de tabla que eran reales (actuales) el 1 de enero de 2014.  
   

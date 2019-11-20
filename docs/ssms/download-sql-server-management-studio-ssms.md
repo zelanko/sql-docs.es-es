@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: 5188b9a90a910ba94d73db48f5e0c1c527145e48
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 38c594e235bf68c18ec493fd8ec43f585ea0378c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843735"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097864"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 
@@ -40,7 +40,9 @@ Use SSMS para consultar, diseñar y administrar bases de datos y almacenes de da
 
 SSMS es gratuito.
 
-## <a name="download-ssmshttpsakamsssmsfullsetup"></a>[Descargar SSMS](https://aka.ms/ssmsfullsetup)
+## <a name="download-ssms"></a>Descargar SSMS
+
+**[![descargar](media/download-icon.png) Descarga de SQL Server Management Studio (SSMS)](https://aka.ms/ssmsfullsetup)**
 
 SSMS 18.4 es la versión de disponibilidad general más reciente de SSMS. Si tiene instalada una versión anterior de disponibilidad general de SSMS 18, esta se actualizará a 18.4 con la nueva instalación. Si tiene instalada una *versión preliminar* de SSMS 18 anterior, desinstálela antes de instalar SSMS 18.4.
 
@@ -81,7 +83,7 @@ SQL Server Management Studio 18.4:
 | SMO/Generación de Script | [API de SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md): se han agregado 50 reglas de evaluación (consulte los detalles en GitHub). |
 | SMO/Generación de Script | [API de SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md): se han agregado expresiones matemáticas básicas y comparaciones a las condiciones de las reglas. |
 | SMO/Generación de Script | [API de SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md): se ha agregado compatibilidad con el objeto RegisteredServer. |
-| SMO/Generación de Script | [API de SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md): se ha actualizado la forma en que se almacenan las reglas en formato JSON y también el mecanismo de aplicación de invalidaciones o personalizaciones. |
+| SMO/Generación de Script | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md): se ha actualizado la forma de almacenar las reglas en formato JSON y también el mecanismo de aplicación de invalidaciones o personalizaciones. |
 | SMO/Generación de Script | [API de SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md): se han actualizado las reglas para incluir compatibilidad de SQL en Linux. |
 | SMO/Generación de Script | [API de SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md): se ha actualizado el formato JSON del conjunto de reglas y se ha agregado la versión de SCHEMA. |
 | SMO/Generación de Script | [API de SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md): se ha actualizado la salida de los cmdlets para mejorar la legibilidad de las recomendaciones. |

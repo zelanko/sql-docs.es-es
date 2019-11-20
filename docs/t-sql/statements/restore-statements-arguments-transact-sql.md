@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2b1dae2be81524bba3cf1e28d5e64736d4e9078b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141233"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982461"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instrucciones RESTORE: argumentos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 En este tema se documentan los argumentos descritos en las secciones "Sintaxis" de la instrucción RESTORE {DATABASE|LOG} y del conjunto de instrucciones auxiliares asociado: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY y RESTORE VERIFYONLY. Solo un subconjunto de estas seis instrucciones admite la mayoría de los argumentos. En la descripción del argumento se indica si éste está admitido.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
  Para comprobar la sintaxis, vea los siguientes temas:  
@@ -218,7 +218,7 @@ LOADHISTORY
   
  Especifica que la operación de restauración cargará la información en las tablas de historial de **msdb**. La opción LOADHISTORY carga en las tablas de historial de copias de seguridad y restauración de la base de datos **msdb** la información sobre las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacenadas en el conjunto de medios para el conjunto de copia de seguridad que se comprueba. Para más información sobre las tablas de historial, vea [System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md) (Tablas del sistema [Transact-SQL]).  
   
-#### <a name="generalwithoptions--n-"></a>\<general_WITH_options> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<general_WITH_options> [ ,...n ]  
  Las opciones generales de WITH son todas compatibles con las instrucciones RESTORE DATABASE y RESTORE LOG. Algunas de estas opciones también son compatibles con una o varias instrucciones auxiliares, tal y como se indica aquí.  
   
 ##### <a name="restore-operation-options"></a>Opciones de la operación de restauración  
@@ -247,7 +247,7 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
 CREDENTIAL  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y versiones posteriores
   
  Se usa solo al restaurar una copia de seguridad desde el servicio Microsoft Azure Blob Storage.  
   
@@ -394,7 +394,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  FILESTREAM ( DIRECTORY_NAME =*directory_name* )  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-**Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Válido para**  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.
   
  Un nombre de directorio compatible con Windows. Este nombre debe ser único entre todos los nombres de directorio de FILESTREAM de base de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparación de unicidad se realiza sin distinción entre mayúsculas y minúsculas, independientemente de la configuración de intercalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -445,7 +445,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NOUNLOAD  
  Especifica que, tras la operación RESTORE, la cinta permanece cargada en la unidad de cinta.  
   
-#### <a name="replicationwithoption"></a><replication_WITH_option>  
+#### <a name="replication_with_option"></a><replication_WITH_option>  
  Esta opción solo es pertinente si la base de datos se replicó cuando se creó la copia de seguridad.  
   
  KEEP_REPLICATION  
@@ -457,7 +457,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
 -   El nombre del servidor en espera semiactiva debe cambiarse de manera que sea igual que el del servidor principal.  
   
-#### <a name="changedatacapturewithoption"></a><change_data_capture_WITH_option>  
+#### <a name="change_data_capture_with_option"></a><change_data_capture_WITH_option>  
  Esta opción solo es pertinente si la base de datos se habilitó para la captura de datos modificados cuando se creó la copia de seguridad.  
   
  KEEP_CDC  
@@ -469,7 +469,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
  Para más información sobre cómo usar la captura de datos modificados con la creación de reflejo de la base de datos, vea [Captura de datos modificados y otras características de SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="servicebrokerwithoptions"></a>\<service_broker_WITH_options>  
+#### <a name="service_broker_with_options"></a>\<service_broker_WITH_options>  
  Activa o desactiva la entrega de mensajes de [!INCLUDE[ssSB](../../includes/sssb-md.md)] o establece un nuevo identificador de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Esta opción solo es pertinente si [!INCLUDE[ssSB](../../includes/sssb-md.md)] se habilitó (activó) para la base de datos cuando se creó la copia de seguridad.  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
  NEW_BROKER  
  Especifica que se asigne a la base de datos un nuevo identificador de Service Broker. Dado que la base de datos se considera como un nuevo Service Broker, todas las conversaciones existentes en la base de datos se quitan inmediatamente sin generar mensajes de fin de diálogo. Cualquier ruta que haga referencia al identificador de Service Broker anterior debe volverse a crear con el nuevo identificador.  
   
-#### <a name="pointintimewithoptions"></a>\<point_in_time_WITH_options>  
+#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
  **Compatible con:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) y solo en los modelos de recuperación completa o recuperación optimizada para cargas masivas de registros.  
   
  Puede restaurar una base de datos hasta un momento concreto o transacción especificando el punto de recuperación de destino en una cláusula STOPAT, STOPBEFOREMARK o STOPATMARK. Un momento o transacción especificada siempre se restaura a partir de una copia de seguridad de registros. En cada instrucción RESTORE LOG de la secuencia de restauración, debe especificar el momento o la transacción de destino en una cláusula STOPAT, STOPBEFOREMARK o STOPATMARK idéntica.  

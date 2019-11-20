@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0437a637ef199fbef5b1914c65c6506533d906e9
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 818ffbb7a8957fbcec67e6686b12a731397b6501
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532049"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127374"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Procedimientos para implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en Kubernetes
 
@@ -68,6 +68,12 @@ kubectl config view
 > Si va a implementar en un clúster de Kuberntes de varios nodos que ha arrancado mediante `kubeadm`, antes de iniciar la implementación del clúster de macrodatos, asegúrese de que los relojes estén sincronizados en todos los nodos de Kubernetes a los que se destina la implementación. El clúster de macrodatos tiene propiedades de estado integradas para varios servicios que son sensibles al tiempo y los sesgos de reloj pueden dar lugar a un estado incorrecto.
 
 Después de haber configurado el clúster de Kubernetes, puede continuar con la implementación de un nuevo clúster de macrodatos de SQL Server. Si va a actualizar desde una versión anterior, vea [Procedimientos para actualizar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
+
+## <a name="ensure-you-have-storage-configured"></a>Cómo asegurarse de que ha configurado el almacenamiento
+
+Conviene que la mayoría de las implementaciones de clúster de macrodatos tengan almacenamiento persistente. En este momento, debe asegurarse de tener un plan sobre cómo va a proporcionar almacenamiento persistente en el clúster de Kubernetes antes de implementar el BDC.
+
+Si implementa en AKS, no es necesario realizar ninguna configuración de almacenamiento. AKS proporciona clases de almacenamiento integradas con aprovisionamiento dinámico. Puede personalizar la clase de almacenamiento (`default` o `managed-premium`) en el archivo de configuración de implementación. Los perfiles integrados usan una clase de almacenamiento `default`. Si va a realizar la implementación en un clúster de Kubernetes que se ha implementado mediante `kubeadm`, deberá asegurarse de tener suficiente espacio de almacenamiento para un clúster de la escala deseada disponible y configurado para su uso. Si quiere personalizar la forma en que se usa el almacenamiento, debe hacerlo antes de continuar. Vea [Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes](concept-data-persistence.md).
 
 ## <a id="deploy"></a> Información general sobre la implementación
 
@@ -426,4 +432,4 @@ Para obtener más información sobre la implementación del clúster de macrodat
 
 - [Configuración de opciones de implementación para clústeres de macrodatos](deployment-custom-configuration.md)
 - [Realización de una implementación sin conexión de un clúster de macrodatos de SQL Server](deploy-offline.md)
-- [Taller: Arquitectura [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [Taller: Arquitectura de los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

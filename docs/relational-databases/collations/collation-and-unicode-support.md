@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 900a5b469fec529c351e290c76fd380dbb917710
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: b5713ab6b86675b5fbdcd450f1617445ea7bfd2f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680781"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982821"
 ---
 # <a name="collation-and-unicode-support"></a>Compatibilidad con la intercalación y Unicode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +458,7 @@ Cuando use solo columnas de caracteres y páginas de códigos, debe prestar aten
 Sería difícil elegir una página de códigos para los tipos de datos de carácter que admita todos los caracteres que precisa un público mundial. La forma más fácil de administrar los datos de caracteres en las bases de datos internacionales es usar siempre un tipo de datos que admita Unicode. 
 
 ### <a name="unicode-data-types"></a>Tipos de datos Unicode
-Si almacena datos de caracteres que reflejan varios idiomas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), use tipos de datos Unicode (**nchar**, **nvarchar** y **ntext**) en lugar de tipos de datos que no sean Unicode (**char**, **varchar** y **text**). 
+Si almacena datos de caracteres que reflejan varios idiomas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores), use tipos de datos Unicode (**nchar**, **nvarchar** y **ntext**) en lugar de tipos de datos que no sean Unicode (**char**, **varchar** y **text**). 
 
 > [!NOTE]
 > Para los tipos de datos Unicode, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] puede representar hasta 65 535 caracteres mediante UCS-2, o el intervalo completo de Unicode (1 114 111 caracteres) si se usan caracteres adicionales. Para más información sobre cómo habilitar caracteres adicionales, vea [Caracteres adicionales](#Supplementary_Characters).
@@ -473,7 +473,7 @@ Al mover los datos de un servidor a un cliente, los controladores de cliente ant
 > [!TIP]
 > También puede intentar utilizar una intercalación diferente para los datos del servidor. Elija una intercalación que se asigne a una página de códigos en el cliente.    
 >
-> Para usar las intercalaciones UTF-16 disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo en las intercalaciones de Windows), puede seleccionar una de las intercalaciones de caracteres adicionales (\_SC), o bien una de las de la versión 140.    
+> Para usar las intercalaciones UTF-16 disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores) a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo en las intercalaciones de Windows), puede seleccionar una de las intercalaciones de caracteres adicionales (\_SC), o bien una de las de la versión 140.    
  
 Para usar las intercalaciones UTF- 8 disponibles en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a fin de mejorar la búsqueda y la ordenación de algunos caracteres Unicode (solo en las intercalaciones de Windows), debe seleccionar las intercalaciones compatibles con la codificación UTF-8 (\_UTF8).
  

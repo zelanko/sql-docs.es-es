@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 03f0d463-9b0b-4af9-a853-da936d75e5af
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 21737a329fdd6bf68f1bf7df5f4df4511b26cfd9
-ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
+ms.openlocfilehash: 8e746861ef30305a901c388f7574a4a27e2edab4
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71688327"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127480"
 ---
 # <a name="scm-services---configure-sql-server-error-logs"></a>Servicios SCM - Configurar registros de errores de SQL Server
 
@@ -38,7 +38,7 @@ ms.locfileid: "71688327"
   
       **Número máximo de archivos de registro de errores**
 
-      Especifica el número máximo de archivos de registro de errores que se pueden crear antes de reciclarse. El valor predeterminado es 6: el actual más los 5 registros de copia de seguridad anteriores que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserva antes de reciclarlos.
+      Especifica el número máximo de archivos de registro de errores archivados que se pueden crear antes de reciclarse. El valor predeterminado es 6, sin incluir el actual. Este valor determina el número de registros de copia de seguridad anteriores que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserva antes de reciclarlos.
 
     B. Tamaño de archivo de registro
 

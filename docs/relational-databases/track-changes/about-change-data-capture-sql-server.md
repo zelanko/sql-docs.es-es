@@ -1,5 +1,6 @@
 ---
-title: Acerca de la captura de datos modificados (SQL Server) | Microsoft Docs
+title: Captura de datos modificados
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd94fae8b2e66cec1d82e8548f00c27455e4e737
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 876de84a811ad7b4eb5bad3260258acc4abd05fc
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058114"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095329"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Acerca de la captura de datos modificados (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68058114"
 ## <a name="change-data-capture-data-flow"></a>Flujo de datos de la captura de datos modificados  
  La ilustración siguiente muestra el flujo de datos principal de la captura de datos modificados.  
   
- ![Change data capture data flow](../../relational-databases/track-changes/media/cdcdataflow.gif "Change data capture data flow")  
+ ![Flujo de datos de la captura de datos modificados](../../relational-databases/track-changes/media/cdcdataflow.gif "Flujo de datos de la captura de datos modificados")  
   
  El origen de los datos modificados para la captura de datos modificados es el registro de transacciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A medida que se aplican las inserciones, actualizaciones y eliminaciones a las tablas de origen sometidas a seguimiento, se agregan al registro las entradas que describen esos cambios. El registro actúa como entrada para el proceso de captura. Así, se lee el registro y se agrega información sobre los cambios a la tabla de cambios asociada de la tabla sometida a seguimiento. Se proporcionan funciones para enumerar los cambios que aparecen en las tablas de cambios sobre un intervalo especificado, que devuelven la información en forma de un conjunto de resultados filtrado. Un proceso de aplicación utiliza normalmente el conjunto de resultados filtrado para actualizar una representación del origen en algún entorno externo.  
   

@@ -10,25 +10,25 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 56a055c0528bea03419c1a56dd89efb5fbfa1753
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149987"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056755"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Elegir un método de actualización del motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Existen varios métodos que se deben considerar a la hora de planear la actualización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] de una versión previa de SQL Server si se pretende reducir al mínimo el tiempo de inactividad y los riesgos. Puede realizar una actualización local, migrar a una nueva instalación o efectuar una actualización gradual. El siguiente diagrama le ayudará a elegir uno de estos enfoques. Además, más adelante en este artículo se describen todos los enfoques presentes en el diagrama. Si quiere obtener ayuda para tomar las decisiones que se le presentan en el diagrama, consulte también [Planear y probar el plan de actualización del Motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
- ![Árbol de decisión del método de actualización de motor de base de datos](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árbol de decisión del método de actualización de motor de base de datos")  
+ ![Árbol de decisión del método de actualización del motor de base de datos](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árbol de decisión del método de actualización del motor de base de datos")  
   
  **Descargar**  
   
 -   Para descargar [!INCLUDE[SSnoversion](../../includes/ssnoversion-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server)** .  
   
--   ¿Tiene una cuenta de Azure?  Si es así, haga clic **[aquí](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2016?tab=Overview)** para poner en marcha una máquina virtual con [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition ya instalado.  
+-   ¿Tiene una cuenta de Azure?  Si es así, haga clic **[aquí](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=overview)** para poner en marcha una máquina virtual con [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Developer Edition ya instalado.  
   
 > [!NOTE]  
 >  También puede plantearse actualizar la base de datos SQL de Azure o virtualizar su entorno de SQL Server como parte de su plan de actualización. Estos artículos están fuera del ámbito de este artículo, pero aquí incluimos algunos vínculos:
@@ -95,11 +95,11 @@ Los pasos necesarios realizar una actualización mediante una nueva instalación
   
 -   **Entorno de almacenamiento conectado:** si tiene un entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se usa almacenamiento conectado, el diagrama siguiente y los vínculos que incluye le servirán de guía para seguir los pasos necesarios para realizar una actualización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a través de una nueva instalación.  
   
-     ![Método de actualización de nueva instalación con copia de seguridad y restauración del almacenamiento conectado](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Método de actualización de nueva instalación con copia de seguridad y restauración del almacenamiento conectado")  
+     ![Nuevo método de actualización de instalación con copias de seguridad y restauración para el almacenamiento conectado](../../database-engine/install-windows/media/new-installation-upgrade-method-using-backup-and-restore-for-attached-storage.png "Nuevo método de actualización de instalación con copias de seguridad y restauración para el almacenamiento conectado")  
   
 -   **Entorno de almacenamiento SAN:**  si tiene un entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se usa almacenamiento SAN, el diagrama siguiente y los vínculos que incluye le servirán de guía para seguir los pasos necesarios para realizar una actualización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a través de una nueva instalación.  
   
-     ![Método de actualización de nueva instalación por medio de separar y adjuntar en el almacenamiento conectado](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Método de actualización de nueva instalación por medio de separar y adjuntar en el almacenamiento conectado")  
+     ![Nuevo método de actualización de instalación mediante Separar y Adjuntar para almacenamiento SAN](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "Nuevo método de actualización de instalación mediante Separar y Adjuntar para almacenamiento SAN")  
   
 ## <a name="rolling-upgrade"></a>Actualización gradual  
  Se requiere una actualización gradual en entornos de soluciones de SQL Server donde se deba actualizar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un orden determinado para maximizar el tiempo de actividad, minimizar los riesgos y conservar determinada funcionalidad. Una actualización gradual consiste básicamente en la actualización de varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un orden determinado, ya sea mediante una actualización local en cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente o efectuando una actualización con una nueva instalación a fin de facilitar la actualización del hardware o el sistema operativo como parte del proyecto de actualización. Hay una serie de escenarios en los que deberá poner en práctica el enfoque de actualización gradual. Estos se documentan en los siguientes artículos:  

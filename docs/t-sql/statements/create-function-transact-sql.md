@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf64036b88b6f29da0404b6e611ae891db93da70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912664"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982792"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ Crea una función definida por el usuario en [!INCLUDE[ssNoVersion](../../includ
 > [!NOTE]  
 > Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vea [CREATE FUNCTION (SQL Data Warehouse)](../../t-sql/statements/create-function-sql-data-warehouse.md).
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -269,7 +269,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>Argumentos
 *OR ALTER*  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 y versiones posteriores) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Modifica condicionalmente la función solo si ya existe. 
  
@@ -341,20 +341,20 @@ Es un valor predeterminado para el parámetro. Si se define un valor *default*, 
  ORDER (\<order_clause>) Especifica el orden en que los resultados se devuelven de la función con valores de tabla. Para obtener más información, vea la sección "[Usar el criterio de ordenación en funciones CLR con valores de tabla](#using-sort-order-in-clr-table-valued-functions)" más adelante en este tema.  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 y versiones posteriores)
   
  Especifica el ensamblado y el método al que deberá hacer referencia el nombre de la función creada.  
   
 -   *assembly_name*: debe coincidir con un valor en la columna `name` de   
-    Columnas en la tabla de origen capturadas`SELECT * FROM sys.assemblies;`  
+    `SELECT * FROM sys.assemblies;`.  
     Este es el nombre que se utilizó en la instrucción `CREATE ASSEMBLY`.  
   
 -   *class_name*: debe coincidir con un valor en la columna `assembly_name` de  
-    Columnas en la tabla de origen capturadas`SELECT * FROM sys.assembly_modules;`  
+    `SELECT * FROM sys.assembly_modules;`.  
     A menudo el valor contiene un punto incrustado. En tales casos, la instrucción Transact-SQL sintaxis requiere que el valor se limite con un par de corchetes [] o con un par de comillas dobles "".  
   
 -   *method_name*: debe coincidir con un valor en la columna `method_name` de   
-    Columnas en la tabla de origen capturadas`SELECT * FROM sys.assembly_modules;`  
+    `SELECT * FROM sys.assembly_modules;`.  
     El método debe ser estático.  
   
 En un ejemplo típico de MyFood.DLL, en el que todos los tipos están en el espacio de nombres MyFood, el valor de `EXTERNAL NAME` podría ser:   
@@ -369,7 +369,7 @@ En un ejemplo típico de MyFood.DLL, en el que todos los tipos están en el espa
  *\<* table_type_definition *>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Define el tipo de datos de tabla de una función [!INCLUDE[tsql](../../includes/tsql-md.md)]. La declaración de tabla incluye definiciones de columna y restricciones de columna o de tabla. La tabla se coloca siempre en el grupo de archivos principal.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 y versiones posteriores) [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))  
   
  Define los tipos de datos de tabla para una función CLR. La declaración de tabla solamente incluye nombres de columna y tipos de datos. La tabla se coloca siempre en el grupo de archivos principal.  
   
@@ -393,7 +393,7 @@ En un ejemplo típico de MyFood.DLL, en el que todos los tipos están en el espa
  Especifica que la función tendrá una o más de las siguientes opciones.  
   
  ENCRYPTION  
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 y versiones posteriores)  
   
  Indica que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertirá el texto original de la instrucción CREATE FUNCTION a un formato confuso. La salida de los datos confusos no es directamente visible en ninguna de las vistas de catálogo. Los usuarios que no disponen de acceso a las tablas del sistema o a los archivos de base de datos no pueden recuperar el texto protegido. En cambio, estará disponible para los usuarios con privilegios que puedan obtener acceso a las tablas del sistema a través del [puerto DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md) o directamente a los archivos de base de datos. Además, los usuarios que pueden adjuntar un depurador al proceso del servidor pueden recuperar el procedimiento original de la memoria en tiempo de ejecución. Para más información sobre cómo tener acceso al sistema, vea [Configuración de visibilidad de los metadatos](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -786,7 +786,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. Crear una función CLR  
  En el ejemplo se crea la función CLR `len_s`. Antes de crear la función, el ensamblado `SurrogateStringFunction.dll` se registra en la base de datos local.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 y versiones posteriores)  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aff15237e3763818123e0f74febf8523cb6174d3
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298537"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096128"
 ---
 # <a name="hadoop-connection-manager"></a>Administrador de conexiones de Hadoop
 
@@ -152,7 +152,7 @@ En el servidor KDC:
 
     Reinicie el servicio KDC después de la configuración.
 
-2.  Prepare una entidad de seguridad denominada  **krbtgt/REALM.COM@AD.COM** en el servidor KDC. Use el siguiente comando:
+2.  Prepare una entidad de seguridad denominada **krbtgt/REALM.COM\@AD.COM** en el servidor KDC. Use el siguiente comando:
 
     `Kadmin> addprinc krbtgt/REALM.COM@AD.COM`
 
@@ -167,7 +167,7 @@ En el controlador de dominio:
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  Establezca una confianza entre el dominio de Windows y el dominio Kerberos. En el siguiente ejemplo, `[password]` es la contraseña de la entidad de seguridad **krbtgt/REALM.COM@AD.COM** .
+2.  Establezca una confianza entre el dominio de Windows y el dominio Kerberos. En el ejemplo siguiente, `[password]` es la contraseña de la entidad de seguridad **krbtgt/REALM.COM\@AD.COM**.
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 

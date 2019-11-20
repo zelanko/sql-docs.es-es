@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 87f0e82d0e12656bb7a06be1951874b656dbf4b0
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 4671bc07dd21a769746257339ea7903e3dda4701
+ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73532388"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74063975"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistencia de los datos con un clúster de macrodatos de SQL Server en Kubernetes
 
@@ -87,8 +87,10 @@ AKS viene con [dos clases de almacenamiento integradas](/azure/aks/azure-disks-d
 
 Los clústeres de Kubernetes implementados mediante `kubeadm` carecen de una clase de almacenamiento integrada. Necesita crear sus propias clases de almacenamiento y volúmenes persistentes mediante almacenamiento local o su aprovisionador preferido, como [Rook](https://github.com/rook/rook). En ese caso, tendría que establecer el elemento `className` en la clase de almacenamiento que haya configurado. 
 
-> [!NOTE]
->  En el archivo de configuración de implementación integrado de kubeadm (`kubeadm-dev-test` o `kubeadm-prod`), no se especifica ningún nombre de clase de almacenamiento para el almacenamiento de datos o de registros. Antes de la implementación, necesita personalizar el archivo de configuración y establecer el valor del elemento className; de lo contrario, las validaciones antes de la implementación producirán errores. La implementación también tiene un paso de validación que comprueba si existe la clase de almacenamiento, pero no para los volúmenes persistentes necesarios. Tiene que asegurarse de crear volúmenes suficientes, según la escala del clúster. Como tamaño mínimo predeterminado de clúster (escala predeterminada, sin alta disponibilidad), se deben crear al menos 24 volúmenes persistentes. [Aquí](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) puede ver un ejemplo de cómo crear volúmenes persistentes mediante el aprovisionador local.
+> [!IMPORTANT]
+>  En el archivo de configuración de implementación integrado de kubeadm (`kubeadm-dev-test` o `kubeadm-prod`), no se especifica ningún nombre de clase de almacenamiento para el almacenamiento de datos o de registros. Antes de la implementación, tendrá que personalizar el archivo de configuración y establecer el valor de `className`; de lo contrario, las validaciones antes de la implementación producirán errores. La implementación también tiene un paso de validación que comprueba si existe la clase de almacenamiento, pero no para los volúmenes persistentes necesarios. Tiene que asegurarse de crear volúmenes suficientes, según la escala del clúster. Como tamaño mínimo predeterminado de clúster (escala predeterminada, sin alta disponibilidad), se deben crear al menos 24 volúmenes persistentes.
+>
+>En [Creación de un clúster de Kubernetes](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) se presenta un ejemplo de cómo puede crear volúmenes persistentes con el aprovisionamiento local. En este ejemplo se presenta el almacenamiento de Kubernetes.
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>Personalizar las configuraciones de almacenamiento para cada grupo

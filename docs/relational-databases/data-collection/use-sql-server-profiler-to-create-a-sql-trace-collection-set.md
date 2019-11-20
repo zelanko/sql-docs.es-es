@@ -1,6 +1,6 @@
 ---
-title: Usar SQL Server Profiler para crear un conjunto de colecciones de Seguimiento de SQL | Microsoft Docs
-ms.custom: ''
+title: Creación del conjunto de colecciones de seguimiento de SQL con Profiler
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 69d5766b7431f1352b292306f595033a3070053b
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 5f11e6c98d53cd5008c72510282a0d31019a320d
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72909641"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056448"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

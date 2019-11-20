@@ -29,12 +29,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 112eb132c40b5b90137ebaf919f6a4ee2916bc95
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 6fbcdfc0142d448c8ef02898dd8d5610954423c3
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73660442"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056813"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -205,7 +205,7 @@ CREATE USER user_name
  Para más información, consulte [Conexión a Base de datos SQL mediante autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
 WITH PASSWORD = '*password*'  
- **Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  Solo se puede usar en una base de datos independiente. Especifica la contraseña del usuario que se está creando. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la información de la contraseña almacenada se calcula con las funciones SHA-512 de la contraseña salada.  
   
@@ -213,17 +213,17 @@ WITHOUT LOGIN
  Especifica que el usuario no se debe asignar a ningún inicio de sesión existente.  
   
 CERTIFICATE *cert_name*  
- **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  Especifica el certificado del usuario de la base de datos que se crea.  
   
 ASYMMETRIC KEY *asym_key_name*  
- **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  Especifica la clave asimétrica del usuario de la base de datos que se crea.  
   
 DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  Especifica el idioma predeterminado del nuevo usuario. Si se especifica un idioma predeterminado para el usuario y el idioma de la base de datos se cambia posteriormente, el idioma predeterminado de los usuarios se mantiene como se especificó. Si no se especifica ningún idioma predeterminado, el idioma predeterminado del usuario será el idioma predeterminado de la base de datos. Si no se especificó ningún idioma predeterminado para el usuario y el idioma predeterminado de la base de datos se cambia posteriormente, el idioma predeterminado del usuario se cambiará al nuevo idioma predeterminado de la base de datos.  
   
@@ -231,12 +231,12 @@ DEFAULT_LANGUAGE = *{ NONE | \<lcid> | \<language name> | \<language alias> }*
 >  *DEFAULT_LANGUAGE* solo se usa para un usuario de base de datos independiente.  
   
 SID = *sid*  
- **Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
  Solo se aplica a los usuarios con contraseñas (autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) en una base de datos independiente. Especifica el SID de la base de datos. Si esta opción no se selecciona, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente un SID. Utilice el parámetro SID para crear usuarios en varias bases de datos que tienen la misma identidad (SID). Esto es útil para crear usuarios de varias bases de datos y preparar la conmutación por error de Always On. Para determinar el SID de un usuario, consulte sys.database_principals.  
   
 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]  
- **Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. De esta manera, el usuario puede copiar los datos de forma masiva entre tablas o bases de datos, sin descifrar los datos. El valor predeterminado es OFF.  
   
@@ -376,7 +376,7 @@ GO
 ### <a name="c-creating-a-database-user-from-a-certificate"></a>C. Crear un usuario de base de datos a partir de un certificado  
  En el siguiente ejemplo, se crea el usuario de base de datos `JinghaoLiu` desde el certificado `CarnationProduction50`.  
   
-**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.  
   
 ```  
 USE AdventureWorks2012;  
@@ -415,7 +415,7 @@ GO
 ### <a name="e-creating-a-contained-database-user-with-password"></a>E. Crear un usuario de base de datos independiente con contraseña  
  En el siguiente ejemplo se crea un usuario de base de datos independiente con contraseña. Este ejemplo solo se puede ejecutar en una base de datos independiente.  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Este ejemplo funciona en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] si se quita DEFAULT_LANGUAGE.  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores. Este ejemplo funciona en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] si se quita DEFAULT_LANGUAGE.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -430,7 +430,7 @@ GO
 ### <a name="f-creating-a-contained-database-user-for-a-domain-login"></a>F. Crear un usuario de base de datos independiente para un inicio de sesión de dominio  
  En el siguiente ejemplo se crea un usuario de base de datos independiente para un inicio de sesión denominado Fritz en un dominio denominado Contoso. Este ejemplo solo se puede ejecutar en una base de datos independiente.  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -442,7 +442,7 @@ GO
 ### <a name="g-creating-a-contained-database-user-with-a-specific-sid"></a>G. Crear un usuario de base de datos independiente con un SID específico  
  En el siguiente ejemplo se crea un usuario de base de datos independiente y autenticado de SQL Server denominado CarmenW. Este ejemplo solo se puede ejecutar en una base de datos independiente.  
   
-**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -455,7 +455,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. Crear un usuario para copiar los datos cifrados  
  En el siguiente ejemplo se crea un usuario que puede copiar datos protegidos por la característica Always Encrypted de un conjunto de tablas con las columnas cifradas a otro conjunto de tablas con columnas cifradas (en la misma base de datos o en otra diferente).  Para obtener más información, vea [Migración de datos confidenciales protegidos mediante Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 ```  
 CREATE USER [Chin]   
@@ -468,7 +468,7 @@ WITH
 
  Para crear un usuario de Azure AD a partir de un inicio de sesión de Azure AD, use la sintaxis siguiente.
 
- Inicie sesión en la Instancia administrada con un inicio de sesión de Azure AD que tenga concedido el rol `sysadmin`. Lo siguiente crea un usuario de Azure AD bob@contoso.com, a partir del inicio de sesión bob@contoso.com. Este inicio de sesión se ha creado en el ejemplo [CREATE LOGIN](create-login-transact-sql.md#examples).
+ Inicie sesión en la Instancia administrada con un inicio de sesión de Azure AD que tenga concedido el rol `sysadmin`. Lo siguiente crea un usuario de Azure AD bob@contoso.com, a partir del inicio de sesión bob@contoso.com. Este inicio de sesión se ha creado en el ejemplo [CREATE LOGIN](/sql/t-sql/statements/create-login-transact-sql#examples).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];

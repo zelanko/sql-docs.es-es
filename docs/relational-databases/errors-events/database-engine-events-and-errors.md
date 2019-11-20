@@ -1,24 +1,24 @@
 ---
-title: Eventos y errores del motor de base de datos | Microsoft Docs
+title: Eventos y errores del motor de base de datos
 ms.custom: ''
 ms.date: 01/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
-ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
+ms.openlocfilehash: 78fff1f1a5f1e68989338a9d5b0274899267fd42
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127359"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119429"
 ---
 # <a name="database-engine-errors"></a>Errores del motor de base de datos
 
-La tabla contiene los números de mensajes de error y la descripción, que es el texto del mensaje de error de la vista de catálogo sys.messages.
+La tabla contiene los números de mensajes de error y la descripción, que es el texto del mensaje de error de la vista de catálogo sys.messages. Cuando proceda, el número de error es un vínculo a información adicional.
 
 ## <a name="errors--2-to-999"></a>Errores 2 a 999
 

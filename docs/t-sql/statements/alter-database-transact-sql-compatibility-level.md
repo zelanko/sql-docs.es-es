@@ -1,7 +1,7 @@
 ---
 title: Nivel de compatibilidad de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/27/2019
+ms.date: 11/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,18 +24,18 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a0c105891577807920404267aa4a9b7c2613b18
-ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.openlocfilehash: 0d65bcb7db0bc0628d1c7b40d21e9b2089ad285c
+ms.sourcegitcommit: 02b7fa5fa5029068004c0f7cb1abe311855c2254
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240676"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74127693"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Establece [!INCLUDE[tsql](../../includes/tsql-md.md)] y los comportamientos del procesamiento de consultas para que sean compatibles con la versión especificada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Para más información sobre otras opciones de ALTER DATABASE, consulte [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
+Establece [!INCLUDE[tsql](../../includes/tsql-md.md)] y los comportamientos del procesamiento de consultas para que sean compatibles con la versión especificada del motor de SQL. Para más información sobre otras opciones de ALTER DATABASE, consulte [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md).  
 
 Para obtener más información sobre las convenciones de sintaxis, vea [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
@@ -48,11 +48,9 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name*      
-Es el nombre de la base de datos que se va a modificar.
+*database_name* Es el nombre de la base de datos que se va a modificar.
 
-COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }       
-Es la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que se va a hacer compatible la base de datos. Se pueden configurar los siguientes valores de nivel de compatibilidad (no todas las versiones admiten todo el nivel de compatibilidad mencionado anteriormente):
+COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 } Es la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que la base de datos que se va a hacer compatible. Se pueden configurar los siguientes valores de nivel de compatibilidad (no todas las versiones admiten todo el nivel de compatibilidad mencionado anteriormente):
 
 <a name="supported-dbcompats"></a>
 
@@ -60,8 +58,8 @@ Es la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con 
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|
 |[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
-|Grupo elástico o base de datos única de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|140|150, 140, 130, 120, 110, 100|
-|Instancia administrada de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|140|150, 140, 130, 120, 110, 100|
+|Grupo elástico o base de datos única de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|150|150, 140, 130, 120, 110, 100|
+|Instancia administrada de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|150|150, 140, 130, 120, 110, 100|
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|
@@ -70,7 +68,11 @@ Es la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con 
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|9|90|90, 80|
 |[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|8|80|80|
 
+> [!IMPORTANT]
+> Los números de versión del motor de base de datos para SQL Server y Azure SQL Database no son comparables entre sí y, en su lugar, son números de compilación internos para estos productos independientes. El motor de base de datos de Azure SQL Database se basa en el mismo código base que el de SQL Server. Lo más importante es que el motor de base de datos de Azure SQL Database siempre tiene los bits más recientes del motor de base de datos SQL. La versión 12 de Azure SQL Database es más reciente que la versión 15 de SQL Server.
+
 ## <a name="remarks"></a>Notas
+
 En todas las instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nivel de compatibilidad predeterminado está asociado a la versión del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las nuevas bases de datos se establecen en este nivel a menos que la base de datos **modelo** tenga un nivel de compatibilidad inferior. En el caso de las bases de datos adjuntadas o restauradas desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dicha base de datos mantiene su nivel de compatibilidad si es al menos la versión mínima permitida para esa instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mover una base de datos con un nivel de compatibilidad inferior al nivel permitido mediante el [!INCLUDE[ssde_md](../../includes/ssde_md.md)] hace que la base de datos se establezca automáticamente en el nivel de compatibilidad más bajo permitido. Esto se aplica a las bases de datos del usuario y del sistema.
 
 Se prevén los siguientes comportamientos para [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] cuando se adjunta o se restaura una base de datos, así como después de una actualización local:
@@ -81,18 +83,18 @@ Se prevén los siguientes comportamientos para [!INCLUDE[ssSQL17](../../includes
 - La base de datos del sistema maestra conserva el nivel de compatibilidad que tenía antes de la actualización.
 
 Use `ALTER DATABASE` para cambiar el nivel de compatibilidad de la base de datos. El nuevo nivel de compatibilidad de una base de datos se hace efectivo cuando se emite un comando `USE <database>` o se procesa un nuevo inicio de sesión con esa base de datos como contexto de base de datos predeterminada.
-Para ver el nivel de compatibilidad actual de una base de datos, consulte la columna **compatibility_level** en la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+Para ver el nivel de compatibilidad actual de una base de datos, consulte la columna `compatibility_level` en la vista de catálogo [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 > [!NOTE]
 > Una [base de datos de distribución](../../relational-databases/replication/distribution-database.md) creada en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que se actualiza a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM o Service Pack 1 tiene el nivel de compatibilidad 90, que no es compatible con otras bases de datos. Esto no afecta a la funcionalidad de la replicación. Si se actualiza a un service pack o a una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el nivel de compatibilidad de la base de datos de distribución aumentará para coincidir con el de la base de datos **maestra**.
 
 > [!NOTE]
-> En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a partir de **enero de 2018**, el nivel de compatibilidad predeterminado es 140 para las bases de datos recién creadas. [!INCLUDE[msCoName](../../includes/msconame-md.md)] no actualiza el nivel de compatibilidad de las bases de datos existentes. Queda a la elección de los clientes.        
+> En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], a partir de **noviembre de 2019**, el nivel de compatibilidad predeterminado es el de 150 para las bases de datos recién creadas. [!INCLUDE[msCoName](../../includes/msconame-md.md)] no actualiza el nivel de compatibilidad de las bases de datos existentes. Queda a la elección de los clientes.        
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda encarecidamente que los clientes planeen la actualización al último nivel de compatibilidad con el fin de aprovechar las últimas mejoras de optimización de consulta.        
 
 Si quiere aprovechar el nivel de compatibilidad de base de datos 120 o superior para su base de datos global, pero tiene motivos para quedarse con el modelo de [**estimación de cardinalidad**](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], que se asigna al nivel de compatibilidad de base de datos 110, vea [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) y, en concreto, su palabra clave `LEGACY_CARDINALITY_ESTIMATION = ON`.
 
-Para más información sobre cómo valorar las diferencias de rendimiento de las consultas más importantes entre dos niveles de compatibilidad diferentes de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vea la [mejora en el rendimiento de las consultas con el nivel de compatibilidad 130 de Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Tenga en cuenta que en este artículo se hace referencia al nivel de compatibilidad 130 y a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aunque se aplica la misma metodología a las actualizaciones al nivel de compatibilidad 140 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+Para más información sobre cómo valorar las diferencias de rendimiento de las consultas más importantes entre dos niveles de compatibilidad diferentes de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vea la [mejora en el rendimiento de las consultas con el nivel de compatibilidad 130 de Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Tenga en cuenta que en este artículo se hace referencia al nivel de compatibilidad 130 y a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aunque se aplica la misma metodología a las actualizaciones al nivel de compatibilidad 140 o superiores en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Para determinar la versión del [!INCLUDE[ssDE](../../includes/ssde-md.md)] al que está conectado, ejecute la consulta siguiente.
 
@@ -201,8 +203,6 @@ Los cambios fundamentales que afectan al plan y que solo se agregan al nivel de 
 
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>Diferencias entre los niveles de compatibilidad 140 y 150
 En esta sección se describen los nuevos comportamientos incluidos en el nivel de compatibilidad 150.
-
-El nivel de compatibilidad 150 de la base de datos está actualmente en versión preliminar pública para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Este nivel de compatibilidad de la base de datos se asociará con la próxima generación de mejoras de procesamiento de consultas más allá de lo que se introdujo en el nivel de compatibilidad 140 de la base de datos.
 
 |Nivel de compatibilidad 140 o inferior|Nivel de compatibilidad 150|
 |--------------------------------------------------|-----------------------------------------|

@@ -45,7 +45,7 @@ ms.locfileid: "73790632"
   
 -   Enlazar como DBTYPE_IUNKNOWN y usar la transmisión por secuencias.  
   
- Si se enlaza a DBTYPE_IUNKNOWN, se utiliza la funcionalidad de flujo de ISequentialStream. El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB Native Client admite parámetros de salida de enlace como DBTYPE_IUNKNOWN para tipos de datos de valores grandes para facilitar escenarios en los que un procedimiento almacenado devuelve estos tipos de datos como valores devueltos que se expondrán como DBTYPE_IUNKNOWN al Nº.  
+ Si se enlaza a DBTYPE_IUNKNOWN, se utiliza la funcionalidad de flujo de ISequentialStream. El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB Native Client admite parámetros de salida de enlace como DBTYPE_IUNKNOWN para tipos de datos de valores grandes para facilitar escenarios en los que un procedimiento almacenado devuelve estos tipos de datos como valores devueltos que se expondrán como DBTYPE_IUNKNOWN al cliente.  
   
 ## <a name="storage-object-limitations"></a>Limitaciones de los objetos de almacenamiento  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73790632"
   
 -   La longitud de los datos presentados por un objeto de almacenamiento implementado por el consumidor debe ser conocida por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB Native Client cuando se crea el descriptor de acceso de fila que hace referencia al objeto de almacenamiento. El consumidor debe enlazar un indicador de longitud de la estructura DBBINDING que se utiliza para la creación del descriptor de acceso.  
   
--   Si una fila contiene más de un valor de datos de gran tamaño y DBPROP_ACCESSORDER no es DBPROPVAL_AO_RANDOM, el consumidor debe usar un conjunto de filas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider compatible para recuperar los datos de fila o procesar todos los valores de datos grandes antes de recuperando otros valores de fila. Si DBPROP_ACCESSORDER es DBPROPVAL_AO_RANDOM, el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client almacena en caché todos los tipos de datos XML como objetos binarios grandes (blobs) para que se pueda tener acceso a ellos en cualquier orden.  
+-   Si una fila contiene más de un valor de datos de gran tamaño y DBPROP_ACCESSORDER no es DBPROPVAL_AO_RANDOM, el consumidor debe usar un conjunto de filas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider compatible para recuperar los datos de fila o procesar todos los valores de datos grandes antes de recuperar otros valores de fila. Si DBPROP_ACCESSORDER es DBPROPVAL_AO_RANDOM, el proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client almacena en caché todos los tipos de datos XML como objetos binarios grandes (blobs) para que se pueda tener acceso a ellos en cualquier orden.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

@@ -23,7 +23,7 @@ ms.locfileid: "73728912"
 
   Utilice el **Asistente para actualizar base de datos** para actualizar una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="action"></a>Acción  
+## <a name="action"></a>Action  
  Es la página de introducción del asistente. Haga clic en **Siguiente** para comenzar el proceso de actualizar la base de datos.  
   
 ## <a name="upgrade-review"></a>Revisión de actualización  

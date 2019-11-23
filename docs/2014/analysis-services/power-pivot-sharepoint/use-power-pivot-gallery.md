@@ -21,7 +21,7 @@ ms.locfileid: "70874484"
   La Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una biblioteca de documentos de SharePoint con una finalidad especial que permite obtener una eficaz vista previa y administrar los documentos de los libros de Excel publicados y los informes de Reporting Services que contienen datos PowerPivot.  
   
 > [!NOTE]  
->  Según cómo esté configurado el servidor, podría ver mensajes de error o advertencia en el área de vista previa para documentos concretos. Los mensajes pueden aparecer cuando un libro de Excel se establece para actualizar sus datos automáticamente cada vez que se abre. Los mensajes de advertencia de actualización de datos aparecerán como imagen de vista previa si Servicios de Excel está configurado para mostrar mensajes de error de advertencia de actualización de datos. Los administradores de servicios o de la granja pueden modificar la configuración para permitir que aparezca una vista previa de la hoja de cálculo real. Para obtener más información, consulte [crear una ubicación de confianza para sitios PowerPivot en Administración Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+>  Según cómo esté configurado el servidor, podría ver mensajes de error o advertencia en el área de vista previa para documentos concretos. Los mensajes pueden aparecer cuando un libro de Excel se establece para actualizar sus datos automáticamente cada vez que se abre. Los mensajes de advertencia de actualización de datos aparecerán como imagen de vista previa si Servicios de Excel está configurado para mostrar mensajes de error de advertencia de actualización de datos. Los administradores de servicios o de la granja pueden modificar la configuración para permitir que aparezca una vista previa de la hoja de cálculo real. Para obtener más información, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="bkmk_top"></a> En este tema  
   
@@ -49,7 +49,7 @@ ms.locfileid: "70874484"
 >  La Galería de Power Pivot requiere Microsoft Silverlight.  El navegador Microsoft Edge no es compatible con Silverlight.   
 > Para ver el contenido de la biblioteca en Microsoft Edge, haga clic en la pestaña **biblioteca** de la galería de Power Pivot y, a continuación, cambie la vista biblioteca de documentos a **todos los documentos**.    
 > Para cambiar la vista predeterminada, haga clic en la pestaña **Biblioteca** y, después, en Modificar vista. Haga clic en "Establecer esta vista como predeterminada" y, después, en Aceptar para guardar la vista predeterminada.  
->  Para obtener más información sobre lo que Microsoft Edge admite, vea el blog [de Windows, un salto del pasado, parte 2: Decir adiós a ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+>  Para obtener más información sobre lo que Microsoft Edge admite, vea el blog [de Windows, un salto del pasado, parte 2: decir adiós a ActiveX, VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
  Para obtener una lista completa de los requisitos previos, vea [crear y personalizar la galería de PowerPivot](create-and-customize-power-pivot-gallery.md).  
   
@@ -69,13 +69,13 @@ ms.locfileid: "70874484"
   
 1.  Guarde el archivo.  
   
-2.  1.  **Excel 2010:** En el menú Archivo, haga clic en **guardar & enviar**.  
+2.  1.  **Excel 2010:** en el menú Archivo, haga clic en **Guardar y enviar**.  
   
     2.  Haga clic en **Guardar en SharePoint**.  
   
     3.  Haga clic en **Opciones de publicación** si desea usar Opciones de Excel Services para seleccionar hojas o parámetros individuales que desee publicar. Por ejemplo, la pestaña Parámetros de Opciones de Excel Services le permite elegir qué segmentaciones de datos aparecen en el libro publicado.  
   
-    1.  **Excel 2013:**  En el menú Archivo, haga clic en **Guardar**.  
+    1.  **Excel 2013**  : en el menú Archivo, haga clic en **Guardar**.  
   
     2.  Haga clic en **Opciones de vista de explorador** si desea usar Opciones de Excel Services para seleccionar hojas o parámetros individuales que desee publicar. Por ejemplo, la pestaña Parámetros de Opciones de Excel Services le permite elegir qué segmentaciones de datos aparecen en el libro publicado.  
   
@@ -161,8 +161,8 @@ ms.locfileid: "70874484"
  El tipo de contenido **Documento de galería de PowerPivot** no se agrega automáticamente a las bibliotecas de documentos. No encontrará este problema a menos que habilite manualmente el tipo de contenido no admitido.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una ubicación de confianza para los sitios de PowerPivot en administración central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [Eliminar la galería de PowerPivot](delete-power-pivot-gallery.md)   
+ [Crear una ubicación de confianza para los sitios de PowerPivot en Administración Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [Eliminar](delete-power-pivot-gallery.md)  de la galería de PowerPivot  
  [Crear y personalizar la galería de PowerPivot](create-and-customize-power-pivot-gallery.md)   
  [Programar una actualización &#40;de datos PowerPivot para SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)  
   

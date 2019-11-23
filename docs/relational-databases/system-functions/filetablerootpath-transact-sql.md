@@ -40,8 +40,8 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  *FileTable_name*  
  Nombre del FileTable. *FileTable_name* es de tipo **nvarchar**. Se trata de un parámetro opcional. El valor predeterminado es la base de datos actual. Especificar *schema_name* también es opcional. Puede pasar NULL para que *FileTable_name* use el valor de parámetro predeterminado.  
   
- *@no__t 1option*  
- Expresión entera que define cómo se debe dar formato al componente de servidor de la ruta de acceso. *\@option* puede tener uno de los siguientes valores:  
+ *\@, opción*  
+ Expresión entera que define cómo se debe dar formato al componente de servidor de la ruta de acceso. *\@opción* puede tener uno de los valores siguientes:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -66,7 +66,7 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  Para más información, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 ## <a name="best-practices"></a>Procedimientos recomendados  
- Para mantener independientes del equipo y de la base de datos actuales el código y las aplicaciones, evite escribir código basado en rutas de acceso absolutas de archivos. En su lugar, obtenga la ruta de acceso completa de un archivo en tiempo de ejecución mediante las funciones **FileTableRootPath** y **GetFileNamespacePath** , como se muestra en el ejemplo siguiente. De forma predeterminada, la función **GetFileNamespacePath** devuelve la ruta de acceso relativa del archivo en la ruta de acceso raíz de la base de datos.  
+ Para mantener independientes del equipo y de la base de datos actuales el código y las aplicaciones, evite escribir código basado en rutas de acceso absolutas de archivos. En su lugar, obtenga la ruta de acceso completa de un archivo en tiempo de ejecución mediante las funciones **FileTableRootPath** y **GetFileNamespacePath** , como se muestra en el ejemplo siguiente. De manera predeterminada, la función **GetFileNamespacePath** devuelve la ruta de acceso relativa del archivo en la ruta de acceso raíz de la base de datos.  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -87,7 +87,7 @@ WHERE Name = N'document.docx';
   
 -   Permiso SELECT en el objeto FileTable para obtener la ruta de acceso raíz de un objeto FileTable específico.  
   
--   **db_datareader** o el permiso superior para obtener la ruta de acceso raíz de la base de datos actual.  
+-   **db_datareader** o un permiso superior para obtener la ruta de acceso raíz de la base de datos actual.  
   
 ## <a name="examples"></a>Ejemplos  
  En los siguientes ejemplos se muestra cómo llamar a la función **FileTableRootPath** .  

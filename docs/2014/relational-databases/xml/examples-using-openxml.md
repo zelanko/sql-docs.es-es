@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplos: Uso de OPENXML | Microsoft Docs'
+title: 'Ejemplos: usar OPENXML | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -33,8 +33,8 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70874692"
 ---
-# <a name="examples-using-openxml"></a>Ejemplos: Uso de OPENXML
-  Los ejemplos de este tema muestran cómo se utiliza OPENXML para crear una vista de conjunto de filas de un documento XML. Para obtener más información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Los ejemplos muestran todos los aspectos de OPENXML, pero no especifican metapropiedades en OPENXML. Para obtener más información sobre cómo especificar metapropiedades en OPENXML, vea [Especificar metapropiedades en OPENXML](specify-metaproperties-in-openxml.md).  
+# <a name="examples-using-openxml"></a>Ejemplos: usar OPENXML
+  Los ejemplos de este tema muestran cómo se utiliza OPENXML para crear una vista de conjunto de filas de un documento XML. Para obtener información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Los ejemplos muestran todos los aspectos de OPENXML, pero no especifican metapropiedades en OPENXML. Para obtener más información sobre cómo especificar metapropiedades en OPENXML, vea [Especificar metapropiedades en OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Ejemplos  
  Al recuperar los datos, se utiliza *rowpattern* para identificar los nodos del documento XML que determinan las filas. Además, *rowpattern* se expresa en el lenguaje del patrón XPath que se utiliza en la implementación XPath de MSXML. Por ejemplo, si el patrón termina en un elemento o atributo, se crea una fila para cada nodo de elemento o atributo que *rowpattern*seleccione.  
@@ -84,7 +84,7 @@ FROM OPENXML (@DocHandle, '/ROOT/Customer',1)
 EXEC sp_xml_removedocument @DocHandle  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 CustomerID ContactName            
@@ -93,7 +93,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Si se ejecuta la misma instrucción SELECT con el parámetro *flags* establecido en **2** para indicar una asignación centrada en elementos, puesto que los elementos <`Customer`> no disponen de subelementos, los valores de **CustomerID** y **ContactName** de ambos clientes se devuelven como NULL.  
+ Si se ejecuta la misma instrucción SELECT con el parámetro `Customer`flags*establecido en*2 **para indicar una asignación centrada en elementos, puesto que los elementos <** > no disponen de subelementos, los valores de **CustomerID** y **ContactName** de ambos clientes se devuelven como NULL.  
   
  @xmlDocument también puede ser de tipo **xml** o de tipo **(n)varchar(max)** .  
   
@@ -129,7 +129,7 @@ FROM      OPENXML (@XmlDocumentHandle, '/ROOT/Customer',2)
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 CustomerID ContactName            
@@ -192,7 +192,7 @@ WITH (OrderID     int         '../@OrderID',
 EXEC sp_xml_removedocument @XmlDocumentHandle  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 OrderID CustomerID        OrderDate          ProdID    Qty  
@@ -286,7 +286,7 @@ LILAS      Carlos Gonzlez
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. Especificar la función text() de XPath como ColPattern  
  El documento XML de este ejemplo se compone de los elementos <`Customer`> y <`Order`>. La instrucción OPENXML recupera un conjunto de filas que está compuesto por el atributo **oid** del elemento <`Order`>, el identificador del elemento primario del nodo identificado por *rowpattern* y la cadena del valor de hoja del contenido de elemento.  
   
- Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument**. Este identificador de documento se pasa a OPENXML.  
+ Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument** . Este identificador de documento se pasa a OPENXML.  
   
  La instrucción OPENXML muestra lo siguiente:  
   
@@ -329,7 +329,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 oid   amount        comment  
@@ -389,7 +389,7 @@ FROM OPENXML (@docHandle, '/root/Customer/Order', 1)
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 oid   date                        amount  
@@ -405,7 +405,7 @@ O4    1996-01-20 00:00:00.000     10000.0
   
  El documento XML del ejemplo se compone de los elementos <`Customer`>, <`Order`> y <`OrderDetail`>.  
   
- Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument**. Este identificador de documento se pasa a OPENXML.  
+ Primero, para obtener un identificador de documento se llama al procedimiento almacenado **sp_xml_preparedocument** . Este identificador de documento se pasa a OPENXML.  
   
  La instrucción OPENXML muestra lo siguiente:  
   
@@ -512,7 +512,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer/Order/OrderDetail/@ProductID')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 ProdID      Qty         OID  
@@ -578,7 +578,7 @@ EXEC sp_xml_removedocument @h
   
  Específicamente, se está pasando una variable de tipo **xml** (\@x) a la función **sp_xml_preparedocument()** .  
   
- Éste es el resultado:  
+ El resultado es el siguiente:  
   
 ```  
 id  lname   xmlname                   OverFlow  

@@ -27,7 +27,7 @@ ms.locfileid: "70148588"
 
   El modelo de objetos SMO se compone de una jerarquía de objetos. El objeto <xref:Microsoft.SqlServer.Management.Smo.Server> es el objeto de nivel superior y todos los objetos de clase de instancia se encuentran debajo del objeto <xref:Microsoft.SqlServer.Management.Smo.Server>.  
   
- La clase <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> es una clase de nivel superior con una jerarquía de objeto independiente. El <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> objeto representa [!INCLUDE[msCoName](../../includes/msconame-md.md)]losserviciosyla configuracióndereddisponiblesatravésdelproveedorWMI.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ La clase <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> es una clase de nivel superior con una jerarquía de objeto independiente. El objeto <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> representa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los servicios y la configuración de red disponibles a través del proveedor WMI.  
   
  Además de los objetos <xref:Microsoft.SqlServer.Management.Smo.Server> y <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>, hay varias clases de utilidad que representan tareas u operaciones, como <xref:Microsoft.SqlServer.Management.Smo.Transfer>, <xref:Microsoft.SqlServer.Management.Smo.Backup> o <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
@@ -35,7 +35,7 @@ ms.locfileid: "70148588"
   
 ## <a name="see-also"></a>Vea también  
  [Diagrama del modelo de objetos SMO](../../relational-databases/server-management-objects-smo/smo-object-model-diagram.md)   
- [Espacios de nombres SMO](../../relational-databases/server-management-objects-smo/smo-object-model-namespaces.md)   
+ [Espacios de nombres de SMO](../../relational-databases/server-management-objects-smo/smo-object-model-namespaces.md)   
  [Conceptos del proveedor WMI de administración de configuración](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

@@ -57,7 +57,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  El proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no pudo asignar memoria suficiente para completar la solicitud.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  El proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client asigna memoria para las cadenas SSERRORINFO y OLECHAR devueltas a través de los punteros pasados por el consumidor. El consumidor debe desasignar esta memoria mediante el método **IMalloc::Free** cuando ya no requiera tener acceso a los datos de error.  
   
  La estructura SSERRORINFO se define como sigue:  
@@ -76,7 +76,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
 |*pwszMessage*|El mensaje de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El mensaje se devuelve a través del método **IErrorInfo::GetDescription**.|  
 |*pwszServer*|El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se ha producido el error.|  

@@ -55,8 +55,8 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL SERVER.  
   
-## <a name="remarks"></a>Comentarios  
- Después de ejecutar el procedimiento almacenado, apague el motor de polybase y reinicie el servicio Movimiento de datos de PolyBase en el equipo. Para comprobar, ejecute la siguiente DMV en el nodo principal: **Sys. DM _ _exec_compute_nodes**.  
+## <a name="remarks"></a>Remarks  
+ Después de ejecutar el procedimiento almacenado, apague el motor de polybase y reinicie el servicio Movimiento de datos de PolyBase en el equipo. Para comprobar, ejecute la siguiente DMV en el nodo principal: **Sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo se une el equipo actual como un nodo de proceso a un grupo de polybase.  El nombre del nodo principal es **HST01** y el nombre de la instancia de SQL Server en el nodo principal es **MSSQLSERVER**.  

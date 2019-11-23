@@ -26,7 +26,7 @@ ms.locfileid: "73705295"
 ##  <a name="bkmk_Overview"></a> Crear proyectos de minería de datos  
  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los proyectos se crean con la plantilla **Proyecto de minería de datos y OLAP**. También puede crear proyectos de minería de datos mediante programación, mediante AMO. Los objetos individuales de minería de datos pueden crearse usando el lenguaje de scripting de Analysis Services (ASSL). Para obtener más información, vea [Acceso a datos de modelos multidimensionales &#40;Analysis Services: datos multidimensionales&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
- Si crea un proyecto de minería de datos en una solución existente, de forma predeterminada los objetos de minería de datos se implementan en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con el mismo nombre que el archivo de solución. Puede cambiar este nombre y el servidor de destino mediante el cuadro de diálogo **Propiedades del proyecto** . Para más información, vea [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+ Si crea un proyecto de minería de datos en una solución existente, de forma predeterminada los objetos de minería de datos se implementan en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con el mismo nombre que el archivo de solución. Puede cambiar este nombre y el servidor de destino mediante el cuadro de diálogo **Propiedades del proyecto** . Para obtener más información, consulte [Configure Analysis Services Project Properties &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 > [!WARNING]  
 >  Para generar e implementar correctamente el proyecto, debe tener acceso a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecute en modo de minería de datos y OLAP. No puede desarrollar ni implementar soluciones de minería de datos en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que admita modelos tabulares, ni puede utilizar directamente los datos de un libro PowerPivot o de un modelo tabular que use el almacén de datos en memoria. Para determinar si la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que tiene admite la minería de datos, vea [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
@@ -183,13 +183,13 @@ ms.locfileid: "73705295"
  
   
 ##  <a name="bkmk_API"></a> Acceso a objetos de minería de datos mediante programación  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varias herramientas que puede usar para trabajar mediante programación con proyectos de minería de datos y con los objetos contenidos en ellas. El lenguaje DMX proporciona instrucciones que puede usar para crear orígenes de datos y vistas del origen de datos, y para crear, entrenar y usar estructuras y modelos de minería de datos. Para obtener más información, vea [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varias herramientas que puede usar para trabajar mediante programación con proyectos de minería de datos y con los objetos contenidos en ellas. El lenguaje DMX proporciona instrucciones que puede usar para crear orígenes de datos y vistas del origen de datos, y para crear, entrenar y usar estructuras y modelos de minería de datos. Para más información, vea [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference).  
   
  También puede llevar a cabo estas tareas mediante el Lenguaje de scripting de Analysis Services (ASSL) o bien usando Objetos de administración de análisis (AMO). Para obtener más información, vea [Desarrollar con XMLA en Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
   
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  En los temas siguientes se describe el uso del Asistente para minería de datos para crear un proyecto de minería de datos y sus objetos asociados.  
   
 |Tareas|Temas|  
@@ -203,8 +203,8 @@ ms.locfileid: "73705295"
 |Proporciona información acerca de Analysis Services|[Bases de datos de modelos multidimensionales &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Diseñador de minería de datos](data-mining-designer.md)   
+ [Data Mining Designer](data-mining-designer.md)   
  [Crear modelos multidimensionales utilizando las herramientas de datos de SQL Server &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Base de datos de área de trabajo &#40;SSAS tabular&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
+ [Base de datos del área de trabajo &#40;SSAS tabular&#41;](../tabular-models/workspace-database-ssas-tabular.md)  
   
   

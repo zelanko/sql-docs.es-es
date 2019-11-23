@@ -49,11 +49,11 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @expected_rowcount = ] expected_rowcountOUTPUT` especifica si se debe devolver el número esperado de filas de la tabla. *expected_rowcount* es de **tipo int**y su valor predeterminado es NULL. Si es NULL, el recuento de filas real se devuelve como parámetro de salida. Si se proporciona un valor, dicho valor se compara con el recuento de filas real para identificar posibles diferencias.  
   
-`[ @expected_checksum = ] expected_checksumOUTPUT` especifica si se debe devolver la suma de comprobación esperada para la tabla. *expected_checksum* es **numérico**y su valor predeterminado es NULL. Si es NULL, la suma de comprobación real se devuelve como parámetro de salida. Si se proporciona un valor, dicho valor se compara con la suma de comprobación real para identificar posibles diferencias.  
+`[ @expected_checksum = ] expected_checksumOUTPUT` especifica si se debe devolver la suma de comprobación esperada para la tabla. *expected_checksum* es **numérica**y su valor predeterminado es NULL. Si es NULL, la suma de comprobación real se devuelve como parámetro de salida. Si se proporciona un valor, dicho valor se compara con la suma de comprobación real para identificar posibles diferencias.  
   
 `[ @rowcount_only = ] type_of_check_requested` especifica qué tipo de suma de comprobación o recuento de filas se va a realizar. *type_of_check_requested* es de **smallint**y su valor predeterminado es **1**.  
   
- Si es **0**, se realiza un recuento de filas y una suma de comprobación compatible con @no__t @no__t 2 7,0.  
+ Si es **0**, realice un recuento de filas y una suma de comprobación compatible con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.  
   
  Si es **1**, realizar solo una comprobación del recuento de filas.  
   
@@ -69,9 +69,9 @@ sp_table_validation [ @table = ] 'table'
 |**1**|Realiza un recuento rápido de **sysindexes. Rows**. El recuento de filas en **sysindexes** es mucho más rápido que contar las filas de la tabla real. Sin embargo, dado que **sysindexes** se actualiza de forma diferida, es posible que el recuento de filas no sea preciso.|  
 |**2** (predeterminado)|Realiza un recuento rápido condicional intentando primero el método rápido. Si el método rápido muestra diferencias, se utiliza el método completo. Si *expected_rowcount* es NULL y se usa el procedimiento almacenado para obtener el valor, siempre se usa un recuento completo (*).|  
   
-`[ @shutdown_agent = ] shutdown_agent` si el Agente de distribución está ejecutando **sp_table_validation**, especifica si el agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit**y su valor predeterminado es **0**. Si es **0**, el agente de replicación no se cierra. Si es **1**, se genera el error 20578 y se indica al agente de replicación que se cierre. Este parámetro se omite cuando el usuario ejecuta **sp_table_validation** directamente.  
+`[ @shutdown_agent = ] shutdown_agent` si el Agente de distribución se está ejecutando **sp_table_validation**, especifica si el agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit**y su valor predeterminado es **0**. Si es **0**, el agente de replicación no se cierra. Si es **1**, se genera el error 20578 y se indica al agente de replicación que se cierre. Este parámetro se omite cuando el usuario ejecuta **sp_table_validation** directamente.  
   
-`[ @table_name = ] table_name` es el nombre de la tabla de la vista utilizada para los mensajes de salida. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es **\@table**.  
+`[ @table_name = ] table_name` es el nombre de la tabla de la vista utilizada para los mensajes de salida. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es **\@tabla**.  
   
 `[ @column_list = ] 'column_list'` es la lista de columnas que se deben utilizar en la función de suma de comprobación. *column_list* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. Habilita la validación de artículos de mezcla para especificar una lista de columnas que excluya las columnas calculadas y de marca de tiempo.  
   
@@ -80,14 +80,14 @@ sp_table_validation [ @table = ] 'table'
   
  Si se realiza una validación de RowCount y el número esperado de filas es igual al número de la tabla, **sp_table_validation** devuelve un mensaje que indica que la tabla ha pasado la validación de RowCount. De lo contrario, devuelve un mensaje que indica que la tabla puede no estar sincronizada e informa de la diferencia entre el número de filas real y el esperado.  
   
-## <a name="remarks"></a>Comentarios  
- **sp_table_validation** se utiliza en todos los tipos de replicación. **sp_table_validation** no es compatible con publicadores de Oracle.  
+## <a name="remarks"></a>Remarks  
+ **sp_table_validation** se utiliza en todos los tipos de replicación. los publicadores de Oracle no admiten **sp_table_validation** .  
   
  La suma de comprobación calcula una prueba de redundancia cíclica (CRC, Cyclic Redundancy Check) de 32 bits sobre la imagen completa de la fila en la página. No comprueba las columnas de forma selectiva y no puede operar sobre vistas ni particiones verticales de la tabla. Además, la suma de comprobación omite el contenido de las columnas de **texto** e **imagen** (por diseño).  
   
  Al realizar una suma de comprobación, la estructura de la tabla debe ser idéntica en los dos servidores; es decir, las tablas deben tener las mismas columnas y en el mismo orden, el mismo tipo de datos y la misma longitud, y las mismas condiciones NULL o NOT NULL. Por ejemplo, si el publicador ejecutó CREATE TABLE y, a continuación, ALTER TABLE para agregar columnas, pero el script aplicado en el suscriptor es simplemente CREATE TABLE, la estructura NO será la misma. Si no está seguro de que la estructura de las dos tablas es idéntica, mire [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) y confirme que el desplazamiento de cada tabla es el mismo.  
   
- Es probable que los valores de punto flotante generen diferencias de suma de comprobación si se utilizó **BCP** de modo de carácter, que es el caso si la publicación tiene suscriptores que no son de @no__t 1. Dichas diferencias se deben a pequeñas e inevitables diferencias de precisión en la conversión desde y hacia el modo de carácter.  
+ Es probable que los valores de punto flotante generen diferencias de suma de comprobación si se utilizó **BCP** de modo de carácter, que es el caso si la publicación tiene suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dichas diferencias se deben a pequeñas e inevitables diferencias de precisión en la conversión desde y hacia el modo de carácter.  
   
 ## <a name="permissions"></a>Permisos  
  Para ejecutar **sp_table_validation**, debe tener permisos SELECT en la tabla que se va a validar.  

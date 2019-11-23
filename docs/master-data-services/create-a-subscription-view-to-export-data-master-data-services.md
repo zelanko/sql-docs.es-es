@@ -26,7 +26,7 @@ ms.locfileid: "73728471"
 
   Cree una vista de suscripciones para exportar datos de Master Data Services a sistemas de suscripción. Va a crear una vista de los datos en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de integraciones** . Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -68,14 +68,14 @@ ms.locfileid: "73728471"
 |Columna|Descripción|  
 |------------|-----------------|  
 |Estado|El estado de la vista.<br /><br /> Al hacer clic en **Guardar**, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icon para actualizar el estado ") , que indica que la vista se está actualizando.<br /><br /> Si hay errores al crear o editar una vista, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icon para estado de error ") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icon para el estado correcto ") .|  
-|Nombre|El nombre de la vista de suscripciones.|  
+|NOMBRE|El nombre de la vista de suscripciones.|  
 |Modelo|Nombre del modelo.|  
 |Versión|El nombre de la versión.|  
 |Marca de versión|El nombre de la marca de la versión.|  
 |Jerarquía derivada|El nombre de la jerarquía derivada.|  
 |Entidad|El nombre de la entidad.|  
 |Formato|Especifica el tipo de los datos en la vista.|  
-|Nivel|Especifica el número de niveles de la vista, que solo se usa para formatos de vista con niveles Explícito o Derivado.|  
+|level|Especifica el número de niveles de la vista, que solo se usa para formatos de vista con niveles Explícito o Derivado.|  
 |Incluir miembros eliminados|Indica si los miembros eliminados temporalmente están incluidos en la vista.|  
   
  Cuando se hace clic en una vista, se muestra la siguiente información.  

@@ -45,7 +45,7 @@ sp_delete_firewall_rule [@name =] 'name'
  [@name =] '*nombre*'  
  El nombre de la configuración del firewall de nivel de servidor que se quitará. *Name* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], los datos de inicio de sesión necesarios para autenticar una conexión y reglas de firewall de nivel de servidor se almacenan temporalmente en caché en cada base de datos. Esta caché se actualiza regularmente. Para forzar una actualización de la caché de autenticación y garantizar que una base de datos tenga la versión más reciente de la tabla de inicios de sesión, ejecute [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  

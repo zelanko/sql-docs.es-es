@@ -25,7 +25,7 @@ ms.locfileid: "72783146"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo nativo|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|  
   
  En Mis suscripciones, puede ordenar las suscripciones por carpeta, informe, descripción, desencadenador, última ejecución o estado. Todos los valores se ordenan alfabéticamente, a excepción de Última ejecución, que utiliza el orden cronológico.  
   
@@ -52,7 +52,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 #$subscriptions
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Data-Driven Subscriptions](data-driven-subscriptions.md)   
+## <a name="see-also"></a>Vea también  
+ [Suscripciones controladas por datos](data-driven-subscriptions.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Creación y administración de suscripciones para servidores de informes en modo nativo](../create-manage-subscriptions-native-mode-report-servers.md)  

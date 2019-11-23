@@ -47,7 +47,7 @@ ms.locfileid: "73882245"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -69,11 +69,11 @@ ms.locfileid: "73882245"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>Para crear una instantánea o una publicación transaccional que no replique cambios de esquema  
   
-1.  En la base de datos de publicación del publicador, ejecute [ &#40;sp_addpublication&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)y especifique un valor de **0** para **\@replicate_ddl**. Para más información, consulte [Create a Publication](create-a-publication.md).  
+1.  En la base de datos de publicación del publicador, ejecute [ &#40;sp_addpublication&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)y especifique un valor de **0** para **\@replicate_ddl**. Para obtener más información, consulte [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>Para crear una publicación de combinación que no replique cambios de esquema  
   
-1.  En la base de datos de publicación del publicador, ejecute [ &#40;sp_addmergepublication&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)y especifique un valor de **0** para **\@replicate_ddl**. Para más información, consulte [Create a Publication](create-a-publication.md).  
+1.  En la base de datos de publicación del publicador, ejecute [ &#40;sp_addmergepublication&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)y especifique un valor de **0** para **\@replicate_ddl**. Para obtener más información, consulte [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>Para deshabilitar temporalmente la replicación de cambios de esquema para una instantánea o una publicación transaccional  
   
@@ -92,7 +92,7 @@ ms.locfileid: "73882245"
 3.  Opta Vuelva a habilitar la replicación de cambios de esquema ejecutando [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando un valor de **replicate_ddl** para **\@propiedad** y un valor de **1** para **\@valor**.  
   
 ## <a name="see-also"></a>Vea también  
- [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)  (Realizar cambios de esquema en bases de datos de publicaciones)  
+ [Realizar cambios de esquema en bases de datos de publicaciones](make-schema-changes-on-publication-databases.md)   
  [Realizar cambios de esquema en bases de datos de publicaciones](make-schema-changes-on-publication-databases.md)  
   
   

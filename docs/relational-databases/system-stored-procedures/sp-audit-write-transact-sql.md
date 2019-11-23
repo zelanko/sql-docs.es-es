@@ -27,7 +27,7 @@ ms.locfileid: "72251972"
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Agrega un evento de auditoría definido por el usuario a **USER_DEFINED_AUDIT_GROUP**. Si **USER_DEFINED_AUDIT_GROUP** no está habilitado, **sp_audit_write** se omite.  
+  Agrega un evento de auditoría definido por el usuario al **USER_DEFINED_AUDIT_GROUP**. Si **USER_DEFINED_AUDIT_GROUP** no está habilitado, se omite **sp_audit_write** .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +42,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Argumentos  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Parámetro definido por el usuario y registrado en la columna **user_defined_event_id** del registro de auditoría. *\@user_defined_event_id es de* tipo **smallint**.  
+ Parámetro definido por el usuario y registrado en la columna **user_defined_event_id** del registro de auditoría. *\@user_defined_event_id* es de tipo **smallint**.  
   
  `[ @succeeded = ] succeeded`  
  Parámetro pasado por el usuario para indicar si el evento se realizó correctamente o no. Aparece en la columna "succeeded" del registro de auditoría. `@succeeded` es **bit**.  
@@ -55,8 +55,8 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
  Los errores los producen parámetros de entrada incorrectos o errores al escribir en el registro de auditoría de destino.  
   
-## <a name="remarks"></a>Comentarios  
- Cuando se agrega **USER_DEFINED_AUDIT_GROUP** a una especificación de auditoría de servidor o a una especificación de auditoría de base de datos, el evento desencadenado por **sp_audit_write** se incluirá en el registro de auditoría.  
+## <a name="remarks"></a>Remarks  
+ Cuando se agrega el **USER_DEFINED_AUDIT_GROUP** a una especificación de auditoría de servidor o a una especificación de auditoría de base de datos, el evento desencadenado por **sp_audit_write** se incluirá en el registro de auditoría.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol de base de datos **Public** .  

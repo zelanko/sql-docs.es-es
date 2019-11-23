@@ -83,7 +83,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Código de la fila del primer conjunto de resultados. La fila a la que se hace referencia describe la clave de cifrado de columnas configurada para la columna, el parámetro corresponde a.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Número de versión del algoritmo de normalización de tipos.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  Un controlador cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compatible con Always Encrypted, llama automáticamente a **sp_describe_parameter_encryption** para recuperar los metadatos de cifrado de las consultas con parámetros, emitidas por la aplicación. Posteriormente, el controlador usa los metadatos de cifrado para cifrar los valores de los parámetros que corresponden a las columnas de base de datos protegidas con Always Encrypted y sustituye los valores de parámetro de texto simple enviados por la aplicación, con el cifrado valores de parámetro, antes de enviar la consulta al motor de base de datos.  
   
 ## <a name="permissions"></a>Permisos  
@@ -164,7 +164,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
 |1|1|  
   
 ## <a name="see-also"></a>Vea también  
- [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Desarrollo de aplicaciones con Always Encrypted](../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

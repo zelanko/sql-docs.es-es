@@ -20,7 +20,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798135"
 ---
-# <a name="sqlps-utility"></a>sqlps, utilidad
+# <a name="sqlps-utility"></a>Utilidad sqlps
   La utilidad `sqlps` inicia una sesión de Windows PowerShell 2.0 con el proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell y los cmdlets cargados y registrados. Puede escribir scripts o comandos de PowerShell que usen los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell para trabajar con instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y sus objetos.  
   
 > [!IMPORTANT]  
@@ -66,7 +66,7 @@ ms.locfileid: "72798135"
  **-Command:** especifica que la utilidad de `sqlps` lee la entrada de la entrada estándar.  
   
  *script_block* [ **-args**_argument_array_ ]  
- Especifica un bloque de comandos de PowerShell que se han de ejecutar; el bloque debe incluirse entre llaves: {}. *Script_block* solo se puede especificar cuando se llama a la utilidad de `sqlps` desde **PowerShell** o desde otra sesión de la utilidad de `sqlps`. *argument_array* es una matriz de variables de PowerShell que contiene los argumentos de los comandos de PowerShell en *script_block*.  
+ Especifica un bloque de comandos de PowerShell que se han de ejecutar; el bloque debe incluirse entre llaves: {}. *Script_block* solo se pueden especificar cuando se llama a la utilidad de `sqlps` desde **PowerShell** u otra sesión de la utilidad de `sqlps`. *argument_array* es una matriz de variables de PowerShell que contiene los argumentos de los comandos de PowerShell en *script_block*.  
   
  *string* [ *command_parameters* ]  
  Especifica una cadena que contiene los comandos de PowerShell que se han de ejecutar. Use el formato **"& { *`command`* }"** . Las comillas indican una cadena y el operador de invocación (&) hace que la utilidad de `sqlps` ejecute el comando.  
@@ -74,7 +74,7 @@ ms.locfileid: "72798135"
  [ **-?** |  **-Help** ]  
  Muestra el resumen de la sintaxis de las opciones de la utilidad `sqlps`.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Remarks  
  La utilidad `sqlps` inicia el entorno de PowerShell (PowerShell. exe) y carga el módulo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell. El módulo, también denominado `sqlps`, carga y registra estos complementos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
@@ -119,6 +119,6 @@ sqlps -Command "&{.\MyFolder.MyScript.ps1}"
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Habilitar o deshabilitar un protocolo de red de servidor](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)  

@@ -27,9 +27,9 @@ ms.locfileid: "71952457"
  Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes. Para obtener más información, [vea &#40;administrador de configuración de Reporting Services&#41;del](reporting-services-configuration-manager-native-mode.md).  
   
 > [!TIP]  
->  El Configuration Manager @ no__t-0 (RSConfigTool. exe) se instala con un nivel de privilegios "highestAvailable". Este comportamiento es así por diseño. El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precisa la comunicación con las API WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una parte de la comunicación WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere un nivel superior o administrativo de privilegios.  
+>  El Configuration Manager de[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (RSConfigTool. exe) se instala con un nivel de privilegios "highestAvailable". Este comportamiento es así por diseño. El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precisa la comunicación con las API WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una parte de la comunicación WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere un nivel superior o administrativo de privilegios.  
   
- Si se conecta al servidor de informes y todos los vínculos de página están deshabilitados, compruebe que se ha iniciado el servicio del servidor de informes. **Estado del servicio de informes:** Debe ser "Started". También puede usar la aplicación de consola Servicios en Herramientas administrativas para comprobar el estado del servicio.  
+ Si se conecta al servidor de informes y todos los vínculos de página están deshabilitados, compruebe que se ha iniciado el servicio del servidor de informes. **Estado del servicio de informes:** debe ser "iniciado". También puede usar la aplicación de consola Servicios en Herramientas administrativas para comprobar el estado del servicio.  
   
 ## <a name="options"></a>Opciones  
  **Instancia de SQL Server**  
@@ -50,7 +50,7 @@ ms.locfileid: "71952457"
  Si instala una segunda instancia de un componente que ya instaló, como el [!INCLUDE[ssDE](../../includes/ssde-md.md)], y asigna el nombre Contoso a la instancia, el **Id. de instancia** es MSSQL12.Contoso.  
   
  **Edición**  
- Muestra información de la edición. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server](https://go.microsoft.com/fwlink/?linkid=232473).  
+ Muestra información de la edición. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473).  
   
  **Versión del producto**  
  Muestra la versión de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que instaló.  
@@ -71,8 +71,8 @@ ms.locfileid: "71952457"
  Detiene el servicio Servidor de informes. Al detener el servicio, se detiene el funcionamiento del servidor de informes. Para obtener más información, vea [iniciar y detener el servicio del servidor de informes en los](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Administrador de configuración de Reporting Services temas &#40;de ayuda de F1 en&#41;el modo nativo de SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Administrador de configuración de Reporting Services &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
+ [Administrador de configuración de Reporting Services temas &#40;de ayuda de F1 en&#41; el modo nativo de SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Administrador de configuración de Reporting Services &#40;del&#41; ](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

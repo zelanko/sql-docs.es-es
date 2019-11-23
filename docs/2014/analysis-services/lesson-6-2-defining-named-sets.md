@@ -36,7 +36,7 @@ ms.locfileid: "69493892"
   
      En el panel **Organizador de script** , observe el icono único que diferencia un conjunto con nombre de un comando de script o de un miembro calculado.  
   
-4.  En la pestaña **metadatos** del **panel herramientas de cálculo** , expanda **producto**, **categoría**, expanda `Members` y, a continuación, expanda **todos los productos**.  
+4.  En la pestaña **metadatos** del **panel herramientas de cálculo** , expanda **producto**, **categoría**, expanda `Members`y, a continuación, expanda **todos los productos**.  
   
     > [!NOTE]  
     >  Si no puede ver los metadatos en el panel **Herramientas de cálculo** , haga clic en **Volver a conectar** en la barra de herramientas. Si esto no funciona, puede que tenga que procesar el cubo o iniciar la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "69493892"
   
      Ahora que ha definido el primer conjunto para la expresión de conjunto EXISTS, está listo para agregar el segundo conjunto: el conjunto de miembros de la dimensión reseller que contiene el mayor número de empleados.  
   
-7.  En la pestaña **metadatos** del panel **herramientas de cálculo** , expanda **número de empleados** en la dimensión reseller, expanda `Members` y, a continuación, expanda **todos los revendedores**.  
+7.  En la pestaña **metadatos** del panel **herramientas de cálculo** , expanda **número de empleados** en la dimensión reseller, expanda `Members`y, a continuación, expanda **todos los revendedores**.  
   
      Observe que los miembros de esta jerarquía de atributo no están agrupados.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "69493892"
   
 11. Cuando la implementación haya finalizado correctamente, vaya al Diseñador de cubos del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial y, a continuación, haga clic en **Volver a conectar** en la barra de herramientas de la pestaña **Cálculos** .  
   
-12. En la pestaña **metadatos** del **panel herramientas de cálculo** , expanda **número de empleados** en la dimensión **reseller** , expanda `Members` y, a continuación, expanda **todos los revendedores**.  
+12. En la pestaña **metadatos** del **panel herramientas de cálculo** , expanda **número de empleados** en la dimensión **reseller** , expanda `Members`y, a continuación, expanda **todos los revendedores**.  
   
      Observe que los miembros de esta jerarquía de atributos están contenidos ahora en cinco grupos, numerados de 0 a 4. Para ver el número de un grupo, pause el puntero sobre ese grupo para ver un recuadro informativo. Para el intervalo `2 -17`, el recuadro informativo debe contener `[Reseller].[Number of Employees].&[0]`.  
   
@@ -134,8 +134,8 @@ ms.locfileid: "69493892"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Lección 7: Definir indicadores clave de rendimiento &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>Ver también  
- [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)    
+## <a name="see-also"></a>Vea también  
+ [Cálculos](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Crear conjuntos con nombre](multidimensional-models/create-named-sets.md)  
   
   

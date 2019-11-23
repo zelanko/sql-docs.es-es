@@ -20,7 +20,7 @@ ms.locfileid: "72797767"
 # <a name="encode-and-decode-sql-server-identifiers"></a>Codificar y descodificar identificadores de SQL Server
   Los identificadores delimitados de SQL Server a veces contienen caracteres no admitidos en las rutas de acceso de Windows PowerShell. Estos caracteres se pueden especificar codificando sus valores hexadecimales.  
   
-1.  **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
 2.  **Para procesar los caracteres especiales:**  [Codificar un identificador](#EncodeIdent), [Descodificar un identificador](#DecodeIdent)  
   
@@ -71,7 +71,7 @@ Set-Location (Encode-SqlName "Table:Test")
 Decode-SqlName "Table%3ATest"  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Identificadores de SQL Server en PowerShell](sql-server-identifiers-in-powershell.md)   
  [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

@@ -44,7 +44,7 @@ ms.locfileid: "73882346"
   
 |Descripción|Procedimiento almacenado|Propiedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
-|Quitar un artículo|**sp_droparticle**|Todos los parámetros|Los artículos se pueden quitar antes de crear las suscripciones. Utilizando procedimientos almacenados es posible quitar una suscripción a un artículo; utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], es necesario quitar, volver a crear y sincronizar toda la suscripción. Para más información, vea [Agregar y quitar artículos de publicaciones existentes](add-articles-to-and-drop-articles-from-existing-publications.md).|  
+|Quitar un artículo|**sp_droparticle**|Todos los parámetros|Los artículos se pueden quitar antes de crear las suscripciones. Utilizando procedimientos almacenados es posible quitar una suscripción a un artículo; utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], es necesario quitar, volver a crear y sincronizar toda la suscripción. Para obtener más información, vea [Agregar y quitar artículos de publicaciones existentes](add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Cambiar un filtro de columna|**sp_articlecolumn**|**\@columna**<br /><br /> **\@operación**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Agregar un filtro de fila|**sp_articlefilter**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Quitar un filtro de fila|**sp_articlefilter**|**\@artículo**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  

@@ -25,7 +25,7 @@ ms.locfileid: "73728932"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los administradores pueden invertir una transacción cuando sea necesario deshacer una acción. Los ejemplos de transacciones son cambios del valor de atributo, movimientos de la jerarquía o eliminaciones de miembro. Este tema se aplica solo a las transacciones de las entidades con el tipo de registro de transacciones "Attribute". Vaya a la página del explorador de entidades para ver el historial de transacciones de las entidades con el tipo de registro de transacciones "Member".  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  
   
@@ -50,6 +50,6 @@ ms.locfileid: "73728932"
 ## <a name="see-also"></a>Vea también  
  [Transacciones &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)   
  [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
- [Revertir el historial de revisiones de miembro](../master-data-services/rollback-member-revision-history-master-data-services.md)
+ [Reversión del historial de revisiones de miembro](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   

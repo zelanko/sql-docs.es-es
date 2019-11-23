@@ -40,7 +40,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="arguments"></a>Argumentos  
 `[ @no_checks = ] no_checks` indica si se deben comprobar los objetos dependientes antes de quitar el distribuidor. *no_checks* es de **bit**y su valor predeterminado es 0.  
   
- Si es **0**, **sp_dropdistributor** comprueba para asegurarse de que se han quitado todos los objetos de publicación y distribución, además del distribuidor.  
+ Si es **0**, **sp_dropdistributor** comprobaciones para asegurarse de que se han quitado todos los objetos de publicación y distribución, además del distribuidor.  
   
  Si es **1**, **sp_dropdistributor** quita todos los objetos de publicación y distribución antes de desinstalar el distribuidor.  
   
@@ -53,12 +53,12 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistributor** se utiliza en todos los tipos de replicación.  
   
- Si existen otros objetos de publicador o de distribución en el servidor, se produce un error en **sp_dropdistributor** a menos que **\@no_checks** se establezca en **1**.  
+ Si existen otros objetos de publicador o de distribución en el servidor, **sp_dropdistributor** producirá un error a menos que **\@no_checks** se establezca en **1**.  
   
- Este procedimiento almacenado se debe ejecutar después de quitar la base de datos de distribución mediante la ejecución de **sp_dropdistributiondb**.  
+ Este procedimiento almacenado se debe ejecutar después de quitar la base de datos de distribución ejecutando **sp_dropdistributiondb**.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributor-trans_1.sql)]  

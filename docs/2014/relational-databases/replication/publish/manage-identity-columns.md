@@ -27,7 +27,7 @@ ms.locfileid: "73882292"
   En este tema se describe cómo administrar columnas de identidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Cuando las inserciones del Suscriptor se replican de nuevo al Publicador, se deben administrar las columnas de identidad para evitar la asignación del mismo valor de identidad en el Suscriptor y el Publicador. La replicación puede administrar automáticamente intervalos de identidad o puede elegir procesar manualmente la administración de intervalos de identidad.  Para obtener información sobre las opciones de administración de intervalos de identidad proporcionadas por la replicación, vea [Replicar columnas de identidad](replicate-identity-columns.md).  
   
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73882292"
   
 5.  Si seleccionó **Automático** o **True** en el paso 4, escriba los valores de las opciones en la siguiente tabla. Para obtener más información sobre cómo usar estos valores, vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](replicate-identity-columns.md).  
   
-    |Opción|Value|Descripción|  
+    |Opción|Valor|Descripción|  
     |------------|-----------|-----------------|  
     |**Tamaño de intervalo del publicador**|Valor entero para el tamaño del intervalo (por ejemplo, 20 000).|Vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](replicate-identity-columns.md).|  
     |**Tamaño de intervalo del suscriptor**|Valor entero para el tamaño del intervalo (por ejemplo, 10000).|Vea la sección "Asignar intervalos de identidad"de [Replicar columnas de identidad](replicate-identity-columns.md).|  
@@ -77,7 +77,7 @@ ms.locfileid: "73882292"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Haga clic en **Aceptar** en el cuadro de diálogo **Propiedades de la publicación: \<Publicación>** .  
+5.  Haga clic en **Aceptar** en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede usar los procedimientos almacenados de replicación para especificar las opciones de administración de intervalos de identidad cuando se crea un artículo.  
@@ -137,8 +137,8 @@ ms.locfileid: "73882292"
     -   Para deshabilitar la administración automática de intervalos de identidad, ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) en el Publicador de la base de datos de publicación. Especifique un valor de **identityrangemanagementoption** para **\@property** y **manual** o **none** para **\@value**.  
   
 ## <a name="see-also"></a>Vea también  
- [Replicación transaccional punto a punto](../transactional/peer-to-peer-transactional-replication.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Peer-to-Peer Transactional Replication](../transactional/peer-to-peer-transactional-replication.md)   
+ [Conceptos sobre los procedimientos almacenados del sistema de replicación](../concepts/replication-system-stored-procedures-concepts.md)   
  [Replicar columnas de identidad](replicate-identity-columns.md)  
   
   

@@ -45,30 +45,30 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="arguments"></a>Argumentos  
 `[ @job_id = ] 'job_id'` el número de identificación del trabajo que contiene el registro de paso de trabajo que se va a quitar. *job_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` el nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-> **NOTA:** Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
+> **Nota:** Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
 `[ @step_id = ] step_id` el número de identificación del paso en el trabajo para el que se va a eliminar el registro de paso de trabajo. Si no se incluye, se eliminarán todos los registros de paso de trabajo del trabajo a menos que se especifiquen **\@older_than** o **\@larger_than** . *step_id* es de **tipo int**y su valor predeterminado es NULL.  
   
 `[ @step_name = ] 'step_name'` el nombre del paso en el trabajo para el que se va a eliminar el registro de paso de trabajo. *step_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-> **NOTA:** Se puede especificar *step_id* o *step_name* , pero no se pueden especificar ambos.  
+> **Nota:** Se puede especificar *step_id* o *step_name* , pero no se pueden especificar ambos.  
   
 `[ @older_than = ] 'date'` la fecha y hora del registro de paso de trabajo más antiguo que desea conservar. Todos los registros de paso de trabajo con fecha anterior a esta fecha y hora se quitarán. *Date* es de **tipo DateTime**y su valor predeterminado es NULL. Se pueden especificar **\@older_than** y **\@larger_than** .  
   
-`[ @larger_than = ] 'size_in_bytes'` tamaño en bytes del registro de pasos de trabajo más grande que desea conservar. Todos los registros de paso de trabajo con un tamaño superior a este se quitan. Se pueden especificar **\@larger_than** y **\@older_than** .  
+`[ @larger_than = ] 'size_in_bytes'` el tamaño en bytes del registro de pasos de trabajo más grande que desea conservar. Todos los registros de paso de trabajo con un tamaño superior a este se quitan. Se pueden especificar **\@larger_than** y **\@older_than** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_delete_jobsteplog** está en la base de datos **msdb** .  
   
- Si no se especifican argumentos excepto **\@job_id** o **\@job_name** , se eliminarán todos los registros de paso de trabajo para el trabajo especificado.  
+ Si no se especifican argumentos salvo **\@job_id** o **\@job_name** , se eliminarán todos los registros de paso de trabajo para el trabajo especificado.  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  

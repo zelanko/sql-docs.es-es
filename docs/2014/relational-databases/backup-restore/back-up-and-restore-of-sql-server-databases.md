@@ -34,8 +34,7 @@ ms.locfileid: "70176026"
   
  El componente de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece una protección esencial para los datos críticos almacenados en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para minimizar el riesgo de pérdida de datos catastrófica, debe realizar copias de seguridad de las bases de datos para conservar las modificaciones en los datos de forma periódica. Una estrategia de copias de seguridad y restauración correctamente planeada contribuye a la protección de las bases de datos de la pérdida de datos derivada de daños causados por diferentes errores. Pruebe la estrategia mediante la restauración de las copias de seguridad y la posterior recuperación de la base de datos para estar preparado y poder responder de forma eficaz ante un desastre.  
   
- Además del almacenamiento local para almacenar las copias de seguridad, SQL Server también admite la copia de seguridad y la restauración desde el servicio Azure Blob Storage. Para obtener más información, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio
-](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Además del almacenamiento local para almacenar las copias de seguridad, SQL Server también admite la copia de seguridad y la restauración en el servicio Azure Blob Storage. Para obtener más información, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 
   
@@ -54,7 +53,7 @@ ms.locfileid: "70176026"
   
     -   Errores de hardware, por ejemplo, una unidad de disco dañada o la pérdida permanente de un servidor.  
   
-    -   Desastres naturales. Mediante el uso de SQL Server copia de seguridad en el servicio de almacenamiento de blobs de Azure, puede crear una copia de seguridad externa en una región diferente de la ubicación local, para utilizarla en caso de que se produzca un desastre natural que afecte a su ubicación local.  
+    -   Desastres naturales. El uso de la copia de seguridad de SQL Server en el servicio Azure Blob Storage le permite crear una copia de seguridad externa en una región diferente de la ubicación local, con lo que podrá utilizarla en caso de que un desastre natural afecte a su ubicación.  
   
 -   Además, las copias de seguridad de una base de datos son útiles para fines administrativos habituales, como copiar una base de datos de un servidor a otro, configurar [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] o la creación de reflejo de la base de datos y el archivo.  
   
@@ -68,8 +67,7 @@ ms.locfileid: "70176026"
  Copia de los datos que se puede usar para restaurar y recuperar los datos después de un error. Las copias de seguridad de una base de datos también se pueden usar para restaurar una copia de la base de datos en una nueva ubicación.  
   
  dispositivo de copia de seguridad  
- Disco o dispositivo de cinta en el que se escriben las copias de seguridad de SQL Server del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio de almacenamiento de blobs de Azure y el formato de **dirección URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio
-](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Disco o dispositivo de cinta en el que se escriben las copias de seguridad de SQL Server del que se pueden restaurar. Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage, y el formato de **URL** se usa para especificar el destino y el nombre del archivo de copia de seguridad. Para obtener más información, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  medio de copia de seguridad  
  Una o varias cintas o archivos de disco en los que se han escrito una o varias copias de seguridad.  
@@ -150,10 +148,10 @@ ms.locfileid: "70176026"
   
 -   ¿Cuánto espacio en disco necesitará una copia de seguridad completa de la base de datos?  
   
-     Para obtener más información, vea [Calcular el tamaño de una copia de seguridad completa de base de datos](#EstimateDbBuSize)más adelante en este tema.  
+     Para obtener más información, vea [Calcular el tamaño de una copia de seguridad completa de base de datos](#EstimateDbBuSize) más adelante en este tema.  
   
 ####  <a name="EstimateDbBuSize"></a>Calcular el tamaño de una copia de seguridad completa de la base de datos  
- Antes de implementar una estrategia de copias de seguridad y restauración, es necesario calcular cuánto espacio en disco usará la copia de seguridad completa. La operación de copia de seguridad copia los datos de la base de datos a un archivo de copia de seguridad. La copia de seguridad contiene solo los datos reales de la base de datos y no el espacio no utilizado. Por tanto, la copia de seguridad es normalmente más pequeña que la propia base de datos. Para calcular el tamaño de la copia de seguridad completa de la base de datos, use el procedimiento almacenado del sistema **sp_spaceused**. Para obtener más información, vea [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
+ Antes de implementar una estrategia de copias de seguridad y restauración, es necesario calcular cuánto espacio en disco usará la copia de seguridad completa. La operación de copia de seguridad copia los datos de la base de datos a un archivo de copia de seguridad. La copia de seguridad contiene solo los datos reales de la base de datos y no el espacio no utilizado. Por tanto, la copia de seguridad es normalmente más pequeña que la propia base de datos. Para calcular el tamaño de la copia de seguridad completa de la base de datos, use el procedimiento almacenado del sistema **sp_spaceused** . Para obtener más información, vea [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Programar copias de seguridad  
  La realización de una operación de copia de seguridad tiene un efecto mínimo en las transacciones que se están ejecutando, por lo que se puede efectuar al mismo tiempo que otras operaciones periódicas. Puede realizar una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un efecto mínimo en las cargas de trabajo de producción.  
@@ -201,19 +199,19 @@ ms.locfileid: "70176026"
 ### <a name="creating-backups"></a>Crear copias de seguridad  
   
 > [!NOTE]  
->  En el caso de copias de seguridad parciales o de solo copia, debe usar la instrucción [BACKUP](/sql/t-sql/statements/backup-transact-sql) de [!INCLUDE[tsql](../../includes/tsql-md.md)] con la opción PARTIAL o COPY_ONLY, respectivamente.  
+>  En el caso de copias de seguridad parciales o de solo copia, debe usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]BACKUP[ de ](/sql/t-sql/statements/backup-transact-sql) con la opción PARTIAL o COPY_ONLY, respectivamente.  
   
  **Usar SQL Server Management Studio**  
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
--   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
+-   [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)  
   
 -   [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
   
 -   [Crear una copia de seguridad diferencial de una base de datos &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
- **Uso de Transact-SQL**  
+ **Usar Transact-SQL**  
   
 -   [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
@@ -236,7 +234,7 @@ ms.locfileid: "70176026"
   
 -   [Restaurar archivos y grupos de archivos &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
- **Uso de Transact-SQL**  
+ **Usar Transact-SQL**  
   
 -   [Restaurar una copia de seguridad de base de datos en el modelo de recuperación simple &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
@@ -255,18 +253,18 @@ ms.locfileid: "70176026"
   
 -   [Restaurar una base de datos en una transacción marcada &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
--   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
+-   [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  
   
 -   [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
- **Uso de Transact-SQL**  
+ **Usar Transact-SQL**  
   
 -   [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 
   
 ### <a name="additional-restore-tasks"></a>Tareas adicionales de restauración  
- **Uso de Transact-SQL**  
+ **Usar Transact-SQL**  
   
 -   [Reiniciar una operación de restauración interrumpida &#40;Transact-SQL&#41;](restart-an-interrupted-restore-operation-transact-sql.md)  
   

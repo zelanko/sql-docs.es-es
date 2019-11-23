@@ -183,7 +183,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 >   
 >  Se encontraron uno o varios errores de validación del publicador para el host de réplica 'MyReplicaHostName'.  
   
- Este comportamiento es el esperado. Debe comprobar la presencia de las entradas del servidor del suscriptor en estos host de réplica secundaria consultando las entradas de sysserver directamente en el host.  
+ Este es el comportamiento normal. Debe comprobar la presencia de las entradas del servidor del suscriptor en estos host de réplica secundaria consultando las entradas de sysserver directamente en el host.  
   
 ##  <a name="step7"></a> 7. Agregar el publicador original al Monitor de replicación  
  En cada réplica del grupo de disponibilidad, agregue el publicador original al Monitor de replicación.  
@@ -219,8 +219,8 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41; ](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Grupos de disponibilidad AlwaysOn: interoperabilidad (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [Replicación de SQL Server](../../../relational-databases/replication/sql-server-replication.md)  

@@ -16,7 +16,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/10/2019
 ms.locfileid: "72252123"
 ---
-# <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
+# <a name="sql-server-migration-assistant"></a>Asistente para migración de SQL Server
 
 Microsoft SQL Server Migration Assistant (SSMA) es una herramienta diseñada para automatizar la migración de bases de datos a SQL Server desde Microsoft Access, DB2, MySQL, Oracle y SAP ASE.  
   
@@ -38,12 +38,12 @@ En el caso de los orígenes compatibles, revise la información del centro de de
 
 Las siguientes versiones de destino son compatibles con SSMA.
 
-- SQL Server 2012
+- SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017 en Windows y Linux
 - SQL Server 2019 en Windows y Linux
-- Se aplica a: Base de datos SQL de Azure
+- Azure SQL Database
 - Azure SQL Data Warehouse * *
 
 \* * Este destino solo es compatible con SSMA para Oracle.
@@ -68,7 +68,7 @@ Las siguientes versiones de destino son compatibles con SSMA.
   
   - [Comunidad de SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456) : grupos de noticias, foros y otros recursos de la comunidad que son útiles para los desarrolladores de SQL Server  
   
-- **Soporte técnico asistido** : vaya a [@no__t 2](https://support.microsoft.com/assistedsupportproducts) y busque "SQL Server Migration Assistant".  Seleccione su versión y, a continuación, seleccione "iniciar solicitud".  Se incluye soporte técnico asistido con la herramienta SQL Server Migration Assistant.  
+- **Soporte técnico asistido** : vaya a [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) y busque "SQL Server Migration Assistant".  Seleccione su versión y, a continuación, seleccione "iniciar solicitud".  Se incluye soporte técnico asistido con la herramienta SQL Server Migration Assistant.  
   
 - **Soporte técnico Premier** : Si tiene un contrato Premier, puede obtener soporte técnico Premier en el [portal Premier online](https://premier.microsoft.com/).  
   

@@ -29,9 +29,9 @@ ms.locfileid: "72782668"
   
 1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **Para actualizar una DAC, mediante:**  [Ver el contenido de una DAC](#ViewDACContents), [Ver los cambios de la base de datos](#ViewDBChanges), [Ver las acciones de actualización](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
+2.  **Para actualizar una DAC, mediante:**  [Ver el contenido de una DAC](#ViewDACContents), [Ver los cambios de la base de datos](#ViewDBChanges), [Ver las acciones de actualización](#ViewUpgradeActions), [Comparar las DAC](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> Prerequisites  
+##  <a name="Prerequisites"></a> Requisitos previos  
  Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estas DAC contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema. Antes de usar una DAC de un origen desconocido o que no sea de confianza, impleméntela en una instancia de prueba aislada de [!INCLUDE[ssDE](../../includes/ssde-md.md)], ejecute [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) en la base de datos y examine también el código en la base de datos, como los procedimientos almacenados u otro código definido por el usuario.  
   
 ##  <a name="ViewDACContents"></a> Ver el contenido de una DAC  
@@ -168,7 +168,7 @@ $fileStream.Close()
   
  O bien, desempaquete las DAC en carpetas independientes. A continuación, puede usar una herramienta de diferenciación, como la utilidad WinDiff, para analizar las diferencias.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](data-tier-applications.md)   
  [Implementar una aplicación de capa de datos](deploy-a-data-tier-application.md)   
  [Actualizar una aplicación de capa de datos](upgrade-a-data-tier-application.md)  

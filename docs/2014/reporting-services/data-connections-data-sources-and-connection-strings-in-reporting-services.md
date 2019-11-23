@@ -76,7 +76,7 @@ ms.locfileid: "70154591"
   
 -   ODBC  
   
--   Modelo semántico de Microsoft BI para Power View: En un sitio de SharePoint que se ha configurado para una galería de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]PowerPivot y, este tipo de origen de datos está disponible. Este tipo de origen de datos solo se usa para presentaciones de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea [compilar el Perfect BI Semantic Tabular Models para Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Modelo semántico de Microsoft BI para Power View: en un sitio de SharePoint que se haya configurado para una galería de PowerPoint y [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], está disponible este tipo de origen de datos. Este tipo de origen de datos solo se usa para presentaciones de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea [Building the Perfect BI Semantic Tabular Models for Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Para obtener una lista completa de los orígenes de datos y las versiones que admite [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -107,13 +107,13 @@ ms.locfileid: "70154591"
   
  Cuando se implementa un informe en el servidor de informes o un sitio de SharePoint, los orígenes de datos incrustados y compartidos correspondientes se administran independientemente. Las credenciales del origen de datos necesarias para tener acceso a los datos del equipo pueden diferir de las credenciales necesarias para que el servidor de informes tenga acceso a los datos.  
   
- ![Nota:](media/rs-fyinote.png "Nota:") Se recomienda comprobar que las conexiones de origen de datos continúan conectándose correctamente después de publicar un informe. Si necesita cambiar las credenciales, puede modificarlas directamente en el servidor de informes.  
+ ![Nota tenga](media/rs-fyinote.png "en cuenta que")se recomienda comprobar que las conexiones de origen de datos continúan conectándose correctamente después de publicar un informe. Si necesita cambiar las credenciales, puede modificarlas directamente en el servidor de informes.  
   
- Para cambiar los orígenes de datos que usa un informe, puede modificar las propiedades del informe en modo nativo Administrador de informes o desde bibliotecas de documentos en modo de SharePoint. Para obtener más información, vea lo siguiente:  
+ Para cambiar los orígenes de datos que usa un informe, puede modificar las propiedades del informe en modo nativo Administrador de informes o desde bibliotecas de documentos en modo de SharePoint. Para obtener más información, vea:  
   
--   [Almacenar credenciales en un origen de datos de Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md) [Almacenar credenciales en un origen de datos de Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)  
+-   [Almacenar credenciales en un Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md) origen [de datos almacenar credenciales en un origen de datos de Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
--   [Especificación de información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+-   [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
 -   [Especificación de conexiones para extensiones de procesamiento de datos personalizadas](report-data/specify-connections-for-custom-data-processing-extensions.md)  
   
@@ -124,16 +124,16 @@ ms.locfileid: "70154591"
 ##  <a name="bkmk_connection_examples"></a> Ejemplos de cadenas de conexión comunes  
  Las cadenas de conexión son la representación en texto de las propiedades de conexión para un proveedor de datos. En la tabla siguiente se muestran ejemplos de cadenas de conexión para diversos tipos de conexión.  
   
-|**Origen de datos**|**Ejemplo**|**Descripción**|  
+|**Data source**|**Ejemplo**|**Descripción**|  
 |---------------------|-----------------|---------------------|  
 |Base de datos de SQL Server en el servidor local|`data source="(local)";initial catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`. Para obtener más información, vea [Tipo de conexión de SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md).|  
 |Base de datos de SQL Server en el servidor local|`data source="(local)";initial catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`.|  
 |Instancia de SQL Server<br /><br /> database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`.|  
 |Base de datos de SQL Server Express|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|Establezca el tipo de origen de datos en `Microsoft SQL Server`.|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)]en la nube|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Establezca el tipo de origen de datos en `Azure SQL Database`. Para obtener más información, vea [Tipo de conexión SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)] en la nube|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Establezca el tipo de origen de datos en `Azure SQL Database`. Para obtener más información, vea [Tipo de conexión SQL Azure &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md).|  
 |Almacenamiento de datos paralelo de SQL Server|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Establezca el tipo de origen de datos en `Microsoft SQL Server Parallel Data Warehouse`. Para obtener más información, vea [Tipo de conexión Almacenamiento de datos paralelo de SQL Server &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
 |Base de datos de Analysis Services en el servidor local|`data source=localhost;initial catalog=Adventure Works DW`|Establezca el tipo de origen de datos en `Microsoft SQL Server Analysis Services`. Para más información, vea [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) o [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
-|Base de datos de modelo tabular de Analysis Services con una perspectiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Establezca el tipo de origen de datos en `Microsoft SQL Server Analysis Services`. Especifique el nombre de la perspectiva en la configuración cube=. Para más información, vea [Perspectivas &#40;SSAS tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
+|Base de datos de modelo tabular de Analysis Services con una perspectiva Sales|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Establezca el tipo de origen de datos en `Microsoft SQL Server Analysis Services`. Especifique el nombre de la perspectiva en la configuración cube=. Para más información, vea [Perspectives &#40;SSAS Tabular&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|  
 |Origen de datos de modelo de informe en un servidor de informes configurado en modo nativo|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Especifique la dirección URL del servidor de informes o de la biblioteca de documentos, y la ruta de acceso al modelo publicado en el espacio de nombres de la carpeta del servidor de informes o de la carpeta de la biblioteca de documentos.
 |Origen de datos de modelo de informe en un servidor de informes configurado en el modo integrado de SharePoint|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Especifique la dirección URL del servidor de informes o de la biblioteca de documentos, y la ruta de acceso al modelo publicado en el espacio de nombres de la carpeta del servidor de informes o de la carpeta de la biblioteca de documentos.|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Configure el tipo de origen de datos en `OLE DB Provider for OLAP Services 8.0`.<br /><br /> Puede conseguir una conexión más rápida con orígenes de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] si establece la propiedad `ConnectTo` en `8.0`. Para establecer esta propiedad, use la pestaña **Propiedades avanzadas** del cuadro de diálogo **Propiedades de conexión** .|  
@@ -143,7 +143,7 @@ ms.locfileid: "70154591"
 |Origen de datos de Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Configure el tipo de origen de datos en `Teradata`. La cadena de conexión es una dirección IP (protocolo de Internet) formada por cuatro campos, donde cada campo puede tener de uno a tres dígitos. Para más información, vea [Tipo de conexión de Teradata &#40;SSRS&#41;](report-data/teradata-connection-type-ssrs.md).|  
 |Origen de datos XML, servicio web|`data source=http://adventure-works.com/results.aspx`|Configure el tipo de origen de datos en `XML`. La cadena de conexión es una dirección URL de un servicio web que admite el Lenguaje de definición de servicios web (WSDL). Para más información, vea [Tipo de conexión XML &#40;SSRS&#41;](report-data/xml-connection-type-ssrs.md).|  
 |Origen de datos XML, documento XML|`http://localhost/XML/Customers.xml`|Configure el tipo de origen de datos en `XML`. La cadena de conexión es una dirección URL que lleva al documento XML.|  
-|Origen de datos XML, documento XML incrustado|*Vacía*|Configure el tipo de origen de datos en `XML`. Los datos XML se incrustan en la definición de informe.|  
+|Origen de datos XML, documento XML incrustado|*Vacío*|Configure el tipo de origen de datos en `XML`. Los datos XML se incrustan en la definición de informe.|  
   
 Si no puede conectar con un servidor de informes mediante `localhost`, compruebe que se ha habilitado el protocolo de red TCP/IP. Para obtener más información, consulte [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).  
   

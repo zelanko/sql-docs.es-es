@@ -89,7 +89,7 @@ ms.locfileid: "73761282"
 |DBTYPE_BSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
 |DBTYPE_STR|Correcto<sup>6, 9, 10</sup>|N/D <sup>2</sup>|Correcto<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Flujo de bytes mediante **ISequentialStream**<sup>7</sup>|N/D <sup>2</sup>|Flujo de bytes mediante **ISequentialStream**<sup>11</sup>|N/D <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Paso a través<sup>6,7</sup>|N/D <sup>2</sup>|N/D|N/D <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Paso a través<sup>6,7</sup>|N/D <sup>2</sup>|N/A|N/D <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
   
  <sup>1</sup>Si se especifica un tipo de servidor distinto de DBTYPE_XML con **ICommandWithParameters::SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_XML, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED, el estado del parámetro es DBSTATUS_E_BADACCESSOR); de lo contrario, los datos se envían al servidor, pero este devuelve un error que indica que no hay ninguna conversión implícita de XML al tipo de datos del parámetro.  
@@ -169,7 +169,7 @@ ms.locfileid: "73761282"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER  
  Con el fin de admitir el tipo de datos **XML** a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa el nuevo conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER, que contiene los valores siguientes.  
   
-|Nombre|Tipo|Descripción|  
+|NOMBRE|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nombre del catálogo (base de datos) donde se define una colección de esquemas XML. Una de las partes del identificador de nombre de tres partes de SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nombre de un esquema XML de la colección de esquemas. Una de las partes del identificador de nombre de tres partes de SQL.|  
@@ -178,7 +178,7 @@ ms.locfileid: "73761282"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN  
  Para admitir la creación de tablas en la interfaz **ITableDefinition** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client agrega tres nuevas columnas al conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nombre|Tipo|Descripción|  
+|NOMBRE|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Para las columnas XML con tipo, esta propiedad es una cadena que especifica el nombre del catálogo donde se almacena el esquema XML. Para otros tipos de columna, esta propiedad devuelve una cadena vacía.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Para las columnas XML con tipo, esta propiedad es una cadena que especifica el nombre del esquema XML que define esta columna.|  
@@ -218,7 +218,7 @@ ms.locfileid: "73761282"
   
  En caso de DBTYPE_BSTR, DBTYPE_WSTR o DBTYPE_VARIANT, el proveedor almacena la instancia XML que reside en el búfer del consumidor en la columna apropiada.  
   
- En el caso de DBTYPE_IUNKNOWN/ISequentialStream, si el consumidor no especifica ningún objeto de almacenamiento, el consumidor debe crear un objeto **ISequentialStream** de antemano, enlazar el documento XML con el objeto y, a continuación, pasar el objeto al proveedor. a través del método **IRowsetChange:: SetData** . El consumidor también puede crear un objeto de almacenamiento, establecer el argumento pObject en IID_ISequentialStream, crear un objeto **ISequentialStream** y, después, pasar el objeto **ISequentialStream** al método **IRowsetChange::SetData**. En ambos casos, el proveedor puede recuperar el objeto XML a través del objeto **ISequentialStream** e insertarlo en una columna apropiada.  
+ En el caso de DBTYPE_IUNKNOWN/ISequentialStream, si el consumidor no especifica ningún objeto de almacenamiento, el consumidor debe crear un objeto **ISequentialStream** de antemano, enlazar el documento XML con el objeto y, a continuación, pasar el objeto al proveedor a través del método **IRowsetChange:: SetData** . El consumidor también puede crear un objeto de almacenamiento, establecer el argumento pObject en IID_ISequentialStream, crear un objeto **ISequentialStream** y, después, pasar el objeto **ISequentialStream** al método **IRowsetChange::SetData**. En ambos casos, el proveedor puede recuperar el objeto XML a través del objeto **ISequentialStream** e insertarlo en una columna apropiada.  
   
 #### <a name="the-irowsetupdate-interface"></a>La interfaz IRowsetUpdate  
  La interfaz **IRowsetUpdate** proporciona funciones para las actualizaciones retrasadas. Los datos que se ponen a disposición de los conjuntos de filas no se ponen a disposición de otras transacciones hasta que el consumidor llama al método **IRowsetUpdate: Update** .  

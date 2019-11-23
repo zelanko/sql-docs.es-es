@@ -42,7 +42,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'` clase sobre la que se solicita información. la *clase* es **VARCHAR (8)** y su valor predeterminado es **Job**. la *clase* puede ser uno de estos valores.  
+`[ @class = ] 'class'` la clase sobre la que se solicita información. la *clase* es **VARCHAR (8)** y su valor predeterminado es **Job**. la *clase* puede ser uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -58,15 +58,15 @@ sp_help_category [ [ @class = ] 'class' ]
 |**VARIOS SERVIDORES**|Categoría de trabajo multiservidor.|  
 |**NONE**|Categoría para una clase distinta de **Job**.|  
   
-`[ @name = ] 'name'` nombre de la categoría para la que se solicita información. *Name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @name = ] 'name'` el nombre de la categoría para la que se solicita información. *Name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @suffix = ] suffix` especifica si la columna **category_type** del conjunto de resultados es un identificador o un nombre. el *sufijo* es de **bit**y su valor predeterminado es **0**. **1** muestra el **category_type** como un nombre y **0** lo muestra como un identificador.  
+`[ @suffix = ] suffix` especifica si la columna de **category_type** del conjunto de resultados es un identificador o un nombre. el *sufijo* es de **bit**y su valor predeterminado es **0**. **1** muestra el **category_type** como un nombre y **0** lo muestra como un identificador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Cuando **\@suffix** es **0**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
+ Cuando **\@sufijo** es **0**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
 |**Nombre**|**sysname**|Nombre de la categoría|  
   
- Cuando **\@suffix** es **1**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
+ Cuando **\@sufijo** es **1**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -82,7 +82,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|Tipo de categoría. Uno de los **locales**, **varios servidores**o **ninguno**|  
 |**Nombre**|**sysname**|Nombre de la categoría|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_help_category** se debe ejecutar desde la base de datos **msdb** .  
   
  Si no se especifica ningún parámetro, el conjunto de resultados proporciona información acerca de todas las categorías de trabajo.  

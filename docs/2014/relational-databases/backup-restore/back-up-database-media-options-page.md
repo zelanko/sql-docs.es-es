@@ -33,17 +33,17 @@ ms.locfileid: "70154837"
 >  Puede definir un plan de mantenimiento de base de datos para crear copias de seguridad. Para obtener más información, vea [Planes de mantenimiento](../maintenance-plans/maintenance-plans.md) y [Usar el Asistente para planes de mantenimiento](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [BACKUP](/sql/t-sql/statements/backup-transact-sql) de [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondiente si hace clic en el botón **Script** y, después, selecciona un destino para el script.  
+>  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)]BACKUP[ de ](/sql/t-sql/statements/backup-transact-sql) correspondiente si hace clic en el botón **Script** y, después, selecciona un destino para el script.  
   
 ## <a name="options"></a>Opciones  
   
 ### <a name="overwrite-media"></a>Sobrescribir medios  
- Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó dirección URL (Azure Storage) como destino de la copia de seguridad en la página general del cuadro de diálogo copia de seguridad de base de datos, las opciones de la sección sobrescribir medios están deshabilitadas. Puede sobrescribir una copia de seguridad mediante la instrucción Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para más información, consulte [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+ Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó la dirección URL (Azure Storage) como el destino de la copia de seguridad en la página General del cuadro de diálogo Copia de seguridad de base de datos, las opciones de la sección Sobrescribir medios estarán deshabilitadas. Puede sobrescribir una copia de seguridad mediante la instrucción Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para obtener más información, consulte [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
  Solo la opción **Hacer copia de seguridad en un nuevo medio y borrar todos los conjuntos de copia de seguridad existentes** se admite con las opciones de cifrado. Si selecciona las opciones de la sección **Hacer copia de seguridad en un medio existente** , las opciones de cifrado en la página **Opciones de copia de seguridad** se deshabilitarán.  
   
 > [!NOTE]  
->  Para obtener más información sobre los conjuntos de medios, vea [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+>  Para obtener más información sobre los conjuntos de medios, vea [Media Sets, Media Families, and Backup Sets &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
  **Hacer copia de seguridad en el conjunto de medios existente**  
  Realiza una copia de seguridad de una base de datos en un conjunto de medios existente. Si se selecciona este botón de opción, se activan tres opciones.  
@@ -113,7 +113,7 @@ ms.locfileid: "70154837"
   
 ## <a name="see-also"></a>Vea también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Realizar una copia de seguridad del registro de transacciones cuando la base de datos está dañada &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   

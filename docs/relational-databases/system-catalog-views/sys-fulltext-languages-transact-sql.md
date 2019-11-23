@@ -41,7 +41,7 @@ ms.locfileid: "73981776"
 ## <a name="values-returned-for-default-languages"></a>Valores devueltos para los idiomas predeterminados  
  En la tabla siguiente se muestran los valores para los idiomas cuyos separadores de palabras están registrados de forma predeterminada.  
   
-|Language|LCID|  
+|Lenguaje|LCID|  
 |--------------|----------|  
 |Arabic|1025|  
 |Bengali (India)|1093|  

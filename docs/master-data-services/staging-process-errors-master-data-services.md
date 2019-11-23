@@ -25,7 +25,7 @@ ms.locfileid: "73728921"
 
   Cuando el proceso de ensayo ha finalizado, todos los registros procesados en las tablas de ensayo tienen un valor en la columna ErrorCode. Los valores se muestran en la tabla siguiente.  
   
-|código|Error|Se produce cuando/detalles|Se aplica a la tabla|  
+|Código|Error|Se produce cuando/detalles|Se aplica a la tabla|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|El mismo código de miembro existe varias veces en la tabla de ensayo.|El lote de almacenamiento provisional incluye el mismo código de miembro varias veces. No se crea ni actualiza ningún miembro.|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |210003|El atributo values hace referencia a un miembro que no existe o está inactivo.|Cuando almacena provisionalmente atributos basados en dominio, debe usar el código en lugar del nombre. Se aplica a **ImportType0**, **1**y **2**.|Hoja<br /><br /> Consolidado|  

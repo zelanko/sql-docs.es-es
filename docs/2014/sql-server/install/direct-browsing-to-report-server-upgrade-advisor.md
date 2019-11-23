@@ -22,18 +22,18 @@ ms.locfileid: "71952212"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** @no__t el modo de SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo de SharePoint.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descripción  
- El asesor de actualizaciones ha detectado la instalación actual de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está navegando directamente al directorio virtual del servidor de informes, por ejemplo, **http://\<server nombre de la >/ReportServer**. Esto no se admite en las versiones actuales de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ El asesor de actualizaciones ha detectado la instalación actual de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está navegando directamente al directorio virtual del servidor de informes, por ejemplo, **http://\<nombre del servidor >/ReportServer**. Esto no se admite en las versiones actuales de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 > [!NOTE]  
 >  Esta regla es una advertencia y la actualización no se bloquea.  
   
 ## <a name="corrective-action"></a>Acción correctora  
- Examine el uso de la interfaz de usuario de SharePoint para bibliotecas de documentos o use **http://\<server nombre >/SharePoint sitio >/_vti_bin/ReportServer**.  
+ Examine el uso de la interfaz de usuario de SharePoint para bibliotecas de documentos o use **http://\<nombre de servidor > sitio de/sharepoint >/_vti_bin/ReportServer**.  
   
   

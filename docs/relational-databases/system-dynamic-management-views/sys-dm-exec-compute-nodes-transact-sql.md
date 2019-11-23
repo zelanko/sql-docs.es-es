@@ -36,10 +36,10 @@ ms.locfileid: "71326145"
   
  Use esta DMV para ver la lista de todos los nodos del clúster de escalabilidad horizontal con su rol, el nombre y la dirección IP.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Column Name|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Identificador numérico único asociado al nodo. Clave para esta vista.|Único en todo el clúster de escalado horizontal, independientemente del tipo.|  
-|type|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ', ' HEAD '|  
+|Tipo|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ', ' HEAD '|  
 |name|**nvarchar(32)**|Nombre lógico del nodo.|Cualquier cadena de longitud adecuada.|  
 |address|**nvarchar(32)**|Dirección IP de este nodo.|Intervalo de direcciones IP|  
   

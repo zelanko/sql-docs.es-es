@@ -24,7 +24,7 @@ ms.lasthandoff: 10/22/2019
 ms.locfileid: "72783217"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Dar de baja un servidor de destino desde un servidor maestro
-  En este tema se describe cómo dar de baja un servidor de destino de un servidor maestro en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] u Objetos de administración de SQL Server (SMO). Ejecute este procedimiento en el servidor de destino.  
+  En este tema se describe cómo dar de baja un servidor de destino de un servidor maestro en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]u Objetos de administración de SQL Server (SMO). Ejecute este procedimiento en el servidor de destino.  
   
  **En este tema**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "72783217"
 ####  <a name="Permissions"></a> Permisos  
  Para ejecutar este procedimiento almacenado, un usuario debe ser miembro del rol fijo de servidor `sysadmin`.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>Para dar de baja un servidor de destino desde un servidor maestro  
   
@@ -61,7 +61,7 @@ ms.locfileid: "72783217"
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>Para dar de baja un servidor de destino desde un servidor maestro  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Desde la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -76,7 +76,7 @@ sp_msx_defect ;
 ##  <a name="PowerShellProcedure"></a>Usar Objetos de administración de SQL Server (SMO)  
  Use `MsxDefect Method`.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Crear un entorno multiservidor](create-a-multiserver-environment.md)   
  [Administración automatizada en una empresa](automated-administration-across-an-enterprise.md)   
  [Dar de baja varios servidores de destino desde un servidor maestro](defect-multiple-target-servers-from-a-master-server.md)  

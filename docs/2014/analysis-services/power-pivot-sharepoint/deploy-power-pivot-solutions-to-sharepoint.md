@@ -142,12 +142,12 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  La solución de aplicación Web se implementa inicialmente en Administración central, seguida de las siguientes implementaciones de la solución en cualquier aplicación Web adicional que vaya a admitir solicitudes de los datos PowerPivot. Para implementar la solución de aplicación web de Administración central, debe usar el cmdlet de PowerShell o de la Herramienta de configuración de PowerPivot. Para todas las demás aplicaciones Web, puede implementar la solución de aplicación Web mediante Administración central o PowerShell.  
   
-|Solución|Description|  
+|Solución|Descripción|  
 |--------------|-----------------|  
 |Powerpivotfarm.wsp|Agrega los archivos Microsoft.AnalysisServices.SharePoint.Integration.dll al ensamblado global.<br /><br /> Agrega Microsoft.AnalysisServices.ChannelTransport.dll al ensamblado global.<br /><br /> Instala las características y los archivos de recursos, y registra los tipos de contenido.<br /><br /> Agrega plantillas de biblioteca para las bibliotecas Galería de PowerPivot y Fuentes de datos.<br /><br /> Agrega las páginas de aplicación para la configuración de aplicación de servicio, el panel de administración de PowerPivot, actualización de datos y la Galería de PowerPivot.|  
 |powerpivotwebapp.wsp|Agrega los archivos de recursos Microsoft.AnalysisServices.SharePoint.Integration.dll a la carpeta de extensiones de servidor web del servidor front-end web.<br /><br /> Agrega el Servicio web PowerPivot al servidor front-end web.<br /><br /> Agrega la generación de imágenes en miniatura para la Galería de PowerPivot.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [PowerPivot para SharePoint de actualización](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Administración y configuración del servidor PowerPivot en Administración Central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Configuración de PowerPivot mediante Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  

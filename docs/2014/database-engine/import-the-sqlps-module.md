@@ -12,7 +12,7 @@ ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34859c0c516c61a73e31dbf752ab274188c6343a
 ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72797871"
@@ -20,7 +20,7 @@ ms.locfileid: "72797871"
 # <a name="import-the-sqlps-module"></a>Importar el módulo SQLPS
   El método recomendado para administrar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde PowerShell consiste en importar el módulo `sqlps` en un entorno de Windows PowerShell 2.0. El módulo carga y registra los complementos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y los ensamblados de administración.  
   
-1.  **Before You Begin:**  [Security](#Security)  
+1.  **Antes de comenzar:**  [Seguridad](#Security)  
   
 2.  **Para cargar el módulo:**  [Cargar el módulo sqlps](#LoadSqlps)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72797871"
 Import-Module "sqlps" -DisableNameChecking  
 ```  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [Proveedor de PowerShell de SQL Server](../powershell/sql-server-powershell-provider.md)   
- [Usar los cmdlets del motor de base de datos](../../2014/database-engine/use-the-database-engine-cmdlets.md)  
+ [Utilizar los cmdlets del motor de base de datos](../../2014/database-engine/use-the-database-engine-cmdlets.md)  

@@ -47,7 +47,7 @@ ms.locfileid: "72782840"
   
  En la tabla siguiente se enumeran los contadores que se incluyen con el objeto de rendimiento `MSRS 2014 Web Service SharePoint Mode`.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sesiones activas. Este contador proporciona un recuento acumulativo de todas las sesiones del explorador que se generan a partir de las ejecuciones de informes, independientemente de si todavía están o no activas.<br /><br /> El contador se reduce cuando se quitan registros de sesiones. De forma predeterminada, las sesiones se quitan después de diez minutos de inactividad.|  
 |`Cache Hits/Sec`|Número de solicitudes por segundo para informes en memoria caché. Se trata de solicitudes para informes que se vuelven a representar, no de solicitudes para informes procesados directamente desde la memoria caché. (Vea `Total Cache Hits` más adelante en este tema).|  
@@ -77,7 +77,7 @@ ms.locfileid: "72782840"
   
  En la tabla siguiente se enumeran los contadores que se incluyen con el objeto de rendimiento `MSRS 2014 Windows Service SharePoint mode`.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sesiones activas almacenadas en la base de datos del servidor de informes. Este contador proporciona un recuento acumulativo de todas las sesiones del explorador que se pueden utilizar generadas a partir de suscripciones de informes, independientemente de si todavía están o no activas.|  
 |`Alerting: event queue length`||  
@@ -139,6 +139,6 @@ CounterSetName     : MSRS 2014 Web Service SharePoint Mode
 (Get-Counter -ListSet "MSRS 2014 Windows Service SharePoint Mode").Paths  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Supervisar el rendimiento del servidor de informes](monitoring-report-server-performance.md)   
  [Contadores de rendimiento para el servicio Web de MSRS 2014 y el modo nativo de &#40;los objetos de rendimiento del servicio de Windows de MSRS 2014&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  

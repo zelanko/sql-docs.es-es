@@ -20,7 +20,7 @@ ms.locfileid: "72890527"
 
   En la siguiente tabla se muestran las instrucciones que forman parte del lenguaje de definición de datos (DDL) de minería de datos en Extensiones de minería de datos (DMX).  
   
-|.|Description|  
+|Estamento|Descripción|  
 |---------------|-----------------|  
 |[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)|Crea una nueva estructura de minería de datos en la base de datos.|  
 |[MODIFICAR la estructura &#40;de minería de datos DMX&#41;](../dmx/alter-mining-structure-dmx.md)|Agrega un modelo de minería de datos a una estructura de minería de datos existente.|  
@@ -31,7 +31,7 @@ ms.locfileid: "72890527"
 |[IMPORT &#40;DMX&#41;](../dmx/import-dmx.md)|Importa un modelo o una estructura de minería de datos y sus objetos asociados de un archivo .abf.|  
 |[SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md)|Crea una copia de un modelo de minería de datos existente.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Instrucciones de manipulación &#40;de&#41; datos DMX de extensiones de minería de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

@@ -45,10 +45,10 @@ sp_rda_get_rpo_duration @durationinhours output
   Es el número de horas (valor entero no NULL) de los datos migrados que SQL Server conserva para la base de datos habilitada para Stretch actual.    
     
 ## <a name="permissions"></a>Permisos    
- Requiere permisos db_owner.    
+ Requiere permisos de db_owner.    
     
-## <a name="remarks"></a>Comentarios    
- Para cambiar el valor, ejecute [Sys. &#40;sp_rda_set_rpo_duration de Transact&#41;-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md).    
+## <a name="remarks"></a>Remarks    
+ Para cambiar el valor, ejecute [Sys. &#40;SP_RDA_SET_RPO_DURATION Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md).    
     
 ## <a name="see-also"></a>Vea también    
  [sys.sp_rda_set_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     

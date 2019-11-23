@@ -26,7 +26,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882270"
 ---
-# <a name="delete-an-article"></a>Eliminar un artículo
+# <a name="delete-an-article"></a>Delete an Article
   En este tema se describe cómo eliminar un artículo en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Replication Management Objects (RMO). Para obtener información sobre las condiciones en que se pueden quitar artículos, y si la eliminación de un artículo requiere una nueva instantánea o la reinicialización de las suscripciones, vea [Agregar y quitar artículos de publicaciones existentes](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
   

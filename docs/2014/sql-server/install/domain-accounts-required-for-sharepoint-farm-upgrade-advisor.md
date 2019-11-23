@@ -22,7 +22,7 @@ ms.locfileid: "71952511"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** @no__t el modo de SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo de SharePoint.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRS](../../includes/ssrs.md)]  
@@ -35,7 +35,7 @@ ms.locfileid: "71952511"
  "El servidor de informes se está ejecutando en la cuenta de servicio NT AUTHORITY\NETWORK integrada, lo que no se admite en una instalación de granja de SharePoint. Vuelva a configurar el servidor de informes para que se ejecute en una cuenta de dominio."  
   
 ## <a name="corrective-action"></a>Acción correctora  
- En el caso de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y versiones anteriores, utilice el Administrador de configuración de Reporting Services para cambiar la cuenta asignada como cuenta de servicio del servidor de informes.  
+ En [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y versiones anteriores, utilice el Administrador de configuración de Reporting Services para cambiar la cuenta asignada como cuenta de servicio del servidor de informes.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>Para cambiar la cuenta de servicio del Administrador de configuración  
   

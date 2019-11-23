@@ -43,11 +43,11 @@ ms.locfileid: "72305018"
 |**update_mode**|**tinyint**|Modo de actualización:<br /><br /> **0** = solo lectura.<br /><br /> **1** = actualización inmediata.|  
 |**loopback_detection**|**bit**|Se aplica a las suscripciones que forman parte de una topología de replicación transaccional bidireccional. La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **0** = devuelve.<br /><br /> **1** = no devuelve.|  
 |**queued_reinit**|**bit**|Especifica si el artículo está marcado para inicialización o reinicialización. Un valor de **1** especifica que el artículo suscrito está marcado para inicialización o reinicialización.|  
-|**nosync_type**|**tinyint**|Tipo de inicialización de la suscripción:<br /><br /> **0** = automática (instantánea)<br /><br /> **1** = solo compatibilidad con replicación<br /><br /> **2** = inicializar con copia de seguridad<br /><br /> **3** = inicializar desde el número de secuencia de registro (LSN)<br /><br /> Para obtener más información, vea el parámetro **\@sync_type** de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).|  
+|**nosync_type**|**tinyint**|Tipo de inicialización de la suscripción:<br /><br /> **0** = automática (instantánea)<br /><br /> **1** = solo compatibilidad con replicación<br /><br /> **2** = inicializar con copia de seguridad<br /><br /> **3** = inicializar desde el número de secuencia de registro (LSN)<br /><br /> Para obtener más información, consulte el parámetro **\@sync_type** de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).|  
 |**srvname**|**sysname**|Nombre del suscriptor.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas &#40;de replicación de Transact&#41;-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tablas &#40;de replicación de Transact&#41; -SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

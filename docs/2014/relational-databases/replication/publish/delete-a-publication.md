@@ -156,7 +156,7 @@ ms.locfileid: "73882287"
  [!code-vb[HowTo#rmo_vb_DropMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_dropmergepub)]  
   
 ## <a name="see-also"></a>Vea también  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Conceptos sobre los procedimientos almacenados del sistema de replicación](../concepts/replication-system-stored-procedures-concepts.md)   
  [Publicar datos y objetos de base de datos](publish-data-and-database-objects.md)  
   
   

@@ -33,7 +33,7 @@ ms.locfileid: "72260380"
   Devuelve información sobre la cola de tareas que están esperando en algún recurso. Para obtener más información acerca de las tareas, vea la [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md).
    
 > [!NOTE]  
->  Para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **Sys. DM _ _pdw_nodes_os_waiting_tasks**.  
+>  Para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilice el nombre **Sys. dm_pdw_nodes_os_waiting_tasks**.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -54,11 +54,11 @@ ms.locfileid: "72260380"
   
  **Propietario del recurso de grupo de subprocesos:**  
   
--   ThreadPool ID = Scheduler @ no__t-0hex-Address >  
+-   ThreadPool ID = Scheduler\<dirección Hex >  
   
  **Propietario del recurso de consulta en paralelo:**  
   
--   exchangeEvent ID = {puerto | Pipe} \<hex-Address > WaitType = \<exchange-wait-Type > nodeId = \<exchange-node-ID >  
+-   exchangeEvent ID = {puerto | Pipe}\<dirección Hex > WaitType =\<Exchange-wait-Type > nodeId =\<Exchange-node-ID >  
   
  **Exchange-wait-Type:**  
   
@@ -78,43 +78,43 @@ ms.locfileid: "72260380"
   
  **Propietario del recurso de bloqueo:**  
   
--   \<type-specific-Description > ID = Lock @ no__t-1lock-Hex-Address > Mode = \<mode > associatedObjectId = \<associated-obj-ID >  
+-   \<Type-specific-Description > ID = Lock\<Lock-Hex-Address > Mode =\<Mode > associatedObjectId =\<asoció-obj-ID >  
   
-     **\<Type-specific-Description > puede:**  
+     **\<> de Descripción específica del tipo puede ser:**  
   
-    -   En DATABASE: databaselock subresource = \<databaselock-subresource > DBID = \<dB-ID >  
+    -   En DATABASE: databaselock subresource =\<databaselock-subresource > DBID =\<dB-ID >  
   
-    -   En FILE: FileLock fileid = \<file-ID > subresource = \<filelock-subresource > DBID = \<dB-ID >  
+    -   En FILE: FileLock fileid =\<ID. de archivo > subresource =\<FileLock-subresource > DBID =\<dB-ID >  
   
-    -   Para OBJECT: objectlock lockPartition = \<lock-Partition-ID > objid = \<obj-ID > subresource = \<objectlock-subresource > DBID = @no__t-banda-ID >  
+    -   Para OBJECT: objectlock lockPartition =\<Lock-Partition-ID > objid =\<obj-ID > subresource =\<objectlock-subresource > DBID =\<dB-ID >  
   
-    -   En PAGE: pagelock fileid = \<file-ID > pageId = \<page-ID > DBID = \<dB-ID > subresource = \<pagelock-subresource >  
+    -   En la página: pagelock fileid =\<ID. de archivo > pageId =\<ID. de página > DBID =\<dB-ID > subresource =\<pagelock-subresource >  
   
-    -   En Key: Keylock hobtid = \<hobt-ID > DBID = \<dB-ID >  
+    -   En Key: Keylock hobtid =\<hobt-ID > DBID =\<dB-ID >  
   
-    -   Para extent: extentlock fileid = \<file-ID > pageId = \<page-ID > DBID = \<dB-ID >  
+    -   Para extent: extentlock fileid =\<ID. de archivo > pageId =\<ID. de página > DBID =\<dB-ID >  
   
-    -   Para RID: ridlock fileid = \<file-ID > pageId = \<page-ID > DBID = \<dB-ID >  
+    -   Para RID: ridlock fileid =\<ID. de archivo > pageId =\<ID. de página > DBID =\<dB-ID >  
   
-    -   Para APPLICATION: applicationlock hash = \<hash > databasePrincipalId = \<role-ID > DBID = \<dB-ID >  
+    -   Para APPLICATION: applicationlock hash =\<hash > databasePrincipalId =\<ID. de rol > DBID =\<dB-ID >  
   
-    -   En el caso de metadatos: metadatalock subresource = \<metadata-subresource > classid = \<metadatalock-Description > DBID = \<dB-ID >  
+    -   En el caso de metadatos: metadatalock subresource =\<Metadata-subresource > classid =\<metadatalock-Description > DBID =\<dB-ID >  
   
-    -   Para HOBT: hobtlock hobtid = \<hobt-ID > subresource = \<hobt-subresource > DBID = \<dB-ID >  
+    -   Para HOBT: hobtlock hobtid =\<HOBT-ID > subresource =\<HOBT-subresource > DBID =\<dB-ID >  
   
-    -   Para ALLOCATION_UNIT: allocunitlock hobtid = \<hobt-ID > subresource = \<alloc-Unit-subresource > DBID = \<dB-ID >  
+    -   Por ALLOCATION_UNIT: allocunitlock hobtid =\<hobt-ID > subresource =\<Alloc-Unit-subresource > DBID =\<dB-ID >  
   
-     **@no__t 1mode > puede:**  
+     **el modo de \<> puede ser:**  
   
      Sch-S, Sch-M, S, U, X, IS, IU, IX, SIU, SIX, UIX, BU, RangeS-S, RangeS-U, RangeI-N, RangeI-S, RangeI-U, RangeI-X, RangeX-, RangeX-U, RangeX-X  
   
  **Propietario del recurso externo:**  
   
--   External ExternalResource = \<wait-Type >  
+-   External ExternalResource =\<tipo de espera >  
   
  **Propietario de recurso genérico:**  
   
--   TransactionMutex TransactionInfo Workspace = \<workspace-ID >  
+-   TransactionMutex TransactionInfo Workspace =\<Workspace-ID >  
   
 -   Mutex  
   
@@ -136,8 +136,8 @@ ms.locfileid: "72260380"
   
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere @no__t permiso-1.   
-En los niveles Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos. En los niveles estándar y básico de @no__t 0, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles Premium, requiere el permiso `VIEW DATABASE STATE` en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
  
 ## <a name="example"></a>Ejemplo
 En este ejemplo se identificarán las sesiones bloqueadas. Ejecute la consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
@@ -148,7 +148,7 @@ WHERE blocking_session_id IS NOT NULL;
 ``` 
   
 ## <a name="see-also"></a>Vea también  
-[SQL Server &#40;vistas de administración dinámica relacionadas con el sistema operativo&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
+[SQL Server &#40;vistas de administración dinámica relacionadas con el sistema operativo&#41;     Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md)     
    
  

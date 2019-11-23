@@ -37,9 +37,9 @@ ms.locfileid: "72797843"
   
  Un agente de escucha de grupo de disponibilidad se compone de un nombre de agente de escucha del Sistema de nombres de dominio (DNS), de una designación de puerto de agente de escucha y de una o varias direcciones IP. Solo el protocolo TCP es compatible con el agente de escucha del grupo de disponibilidad.  El nombre DNS del agente de escucha también debe ser único en el dominio y en NetBIOS.  Cuando se crea un nuevo agente de escucha del grupo de disponibilidad, se convierte en un recurso en un clúster con un nombre de red virtual (VNN), una dirección IP virtual (VIP) y una dependencia de grupo de disponibilidad asociados. Un cliente utiliza DNS para resolver VNN en varias direcciones IP y después intenta conectarse a cada dirección hasta que una solicitud de conexión tiene éxito o hasta que se agota el tiempo de espera de las solicitudes de conexión.  
   
- Si el enrutamiento de solo lectura se configura para una o varias [réplicas secundarias legibles](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), las conexiones cliente de intento de lectura dirigidas a la réplica principal se redirigen a una réplica secundaria legible. Asimismo, si la réplica principal se queda sin conexión en una instancia de SQL Server y se pone en línea una nueva réplica principal en otra instancia de SQL Server, el agente de escucha del grupo de disponibilidad permite a los clientes conectarse a la nueva réplica principal.  
+ Si el enrutamiento de solo lectura se configura para una o varias[réplicas secundarias legibles](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md), las conexiones cliente de intento de lectura dirigidas a la réplica principal se redirigen a una réplica secundaria legible. Asimismo, si la réplica principal se queda sin conexión en una instancia de SQL Server y se pone en línea una nueva réplica principal en otra instancia de SQL Server, el agente de escucha del grupo de disponibilidad permite a los clientes conectarse a la nueva réplica principal.  
   
- Para obtener información esencial sobre los agentes de escucha del grupo de disponibilidad, vea [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
+ Para obtener información esencial sobre los agentes de escucha del grupo de disponibilidad, vea [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
  
   
@@ -84,7 +84,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  Puede seguir eligiendo hacer referencia directamente a la instancia de SQL Server de las réplicas principal o secundaria en lugar de utilizar el nombre del servidor del agente de escucha del grupo de disponibilidad; sin embargo, si decide realizar esta acción, perderá la ventaja que supone dirigir automáticamente las nuevas conexiones a la réplica principal actual.  También perderá la ventaja del enrutamiento de solo lectura.  
   
 ##  <a name="ConnectToSecondary"></a> Usar un agente de escucha para conectarse a una réplica secundaria de solo lectura (enrutamiento de solo lectura)  
- El *enrutamiento de solo lectura* se refiere a la capacidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de enrutar las conexiones entrantes a un agente de escucha de grupo de disponibilidad a una réplica secundaria configurada para permitir las cargas de trabajo de solo lectura. Una conexión entrante que hace referencia al nombre de un agente de escucha del grupo de disponibilidad se puede enrutar automáticamente a una réplica de solo lectura si se cumple lo siguiente:  
+ El*enrutamiento de solo lectura* se refiere a la capacidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de enrutar las conexiones entrantes a un agente de escucha de grupo de disponibilidad a una réplica secundaria configurada para permitir las cargas de trabajo de solo lectura. Una conexión entrante que hace referencia al nombre de un agente de escucha del grupo de disponibilidad se puede enrutar automáticamente a una réplica de solo lectura si se cumple lo siguiente:  
   
 -   Al menos una réplica secundaria se establece para acceso de solo lectura, y cada réplica secundaria de solo lectura y la réplica principal se configuran para admitir el enrutamiento de solo lectura. Para obtener más información, vea [Para configurar réplicas de disponibilidad para el enrutamiento de solo lectura](#ConfigureARsForROR), más adelante en esta sección.  
   
@@ -144,7 +144,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  Cuando se utilizan cadenas de conexión de creación de reflejo de la base de datos, el cliente puede usar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client o el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La cadena de conexión proporcionada por un cliente debe proporcionar como mínimo el nombre de una instancia del servidor, el *nombre del asociado inicial*, para identificar la instancia del servidor que hospeda inicialmente la réplica de disponibilidad con la que se desea establecer conexión. Opcionalmente, la cadena de conexión también puede proporcionar el nombre de otra instancia del servidor, *nombre del asociado de conmutación por error*, para identificar la instancia del servidor que hospeda inicialmente la réplica secundaria como nombre del asociado de conmutación por error.  
   
- Para obtener más información sobre las cadenas de conexión de creación de reflejo de la base de datos, vea [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Para obtener más información sobre las cadenas de conexión de creación de reflejo de la base de datos, vea [Connect Clients to a Database Mirroring Session &#40;SQL Server&#41;](database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ##  <a name="CCBehaviorOnFailover"></a> Comportamiento de conexiones de cliente en la conmutación por error  
  Cuando se produce una conmutación por error de grupo de disponibilidad, las conexiones persistentes existentes al grupo de disponibilidad se terminan y el cliente debe establecer una nueva conexión para continuar trabajando con la misma base de datos principal o una base de datos secundaria de solo lectura.  Mientras una conmutación por error se produce en el servidor, la conectividad al grupo de disponibilidad puede sufrir un error, forzando a la aplicación cliente a volver a intentar la conexión hasta que el servidor principal vuelve a ponerse totalmente en línea.  
@@ -172,7 +172,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; Mult
   
  Se debe configurar un certificado X.509 para cada nodo de servidor participante en el clúster de conmutación por error con una lista de todos los agentes de escucha del grupo de disponibilidad establecidos en el nombre alternativo del asunto del certificado.  
   
- Por ejemplo, si el WSFC tiene tres agentes de escucha del grupo de disponibilidad con los nombres `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com` y `AG3_listener.Adventure-Works.com`, el nombre alternativo del asunto del certificado debe establecerse del modo siguiente:  
+ Por ejemplo, si el WSFC tiene tres agentes de escucha del grupo de disponibilidad con los nombres `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`y `AG3_listener.Adventure-Works.com`, el nombre alternativo del asunto del certificado debe establecerse del modo siguiente:  
   
 ```  
 CN = ServerFQDN  
@@ -188,7 +188,7 @@ SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.
 setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
 ```  
   
- Para obtener más información acerca del registro manual de un SPN para SQL Server, vea [Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+ Para obtener más información acerca del registro manual de un SPN para SQL Server, vea [Register a Service Principal Name for Kerberos Connections](configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -212,8 +212,8 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [Blog del equipo de AlwaysOn SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
-## <a name="see-also"></a>Ver también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)    
+## <a name="see-also"></a>Vea también  
+ [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [SQL Server de conectividad &#40;de cliente de AlwaysOn&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)  
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Secundarias activas: réplicas &#40;secundarias&#41; legibles grupos de disponibilidad AlwaysOn](availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   

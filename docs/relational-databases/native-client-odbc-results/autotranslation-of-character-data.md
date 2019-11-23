@@ -43,9 +43,9 @@ ms.locfileid: "73779169"
   
  Cuando autotranslate está establecido en "no", no se realiza ninguna conversión en los datos que se mueven entre SQL_C_CHAR variables en el cliente y las columnas, variables o parámetros **Char**, **VARCHAR**o **Text** en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los modelos de bits se pueden interpretar de manera diferente en los equipos cliente y servidor si los datos contienen caracteres extendidos y los dos equipos tienen páginas de códigos diferentes. Los datos se interpretarán del mismo modo si ambos equipos tienen la misma página de códigos.  
   
- Cuando autotranslate está establecido en "Yes", el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utiliza Unicode para convertir los datos que se mueven entre SQL_C_CHAR variables en el cliente y las columnas, variables o parámetros **Char**, **VARCHAR**o **Text** de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base  
+ Cuando autotranslate está establecido en "sí", el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utiliza Unicode para convertir los datos que se mueven entre SQL_C_CHAR variables en el cliente y las columnas, variables o parámetros **Char**, **VARCHAR**o **Text** de una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   Cuando los datos se envían desde una variable de SQL_C_CHAR en el cliente a una columna, variable o parámetro de tipo **Char**, **VARCHAR**o **Text** en una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el controlador ODBC convierte primero de SQL_C_CHAR a Unicode mediante la ACP del cliente. y, después, desde Unicode hasta el carácter mediante la ACP del servidor.  
+-   Cuando los datos se envían desde una variable de SQL_C_CHAR en el cliente a una columna, variable o parámetro de tipo **Char**, **VARCHAR**o **Text** en una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el controlador ODBC convierte primero de SQL_C_CHAR a Unicode mediante la ACP del cliente y, a continuación, de Unicode a carácter mediante la ACP del servidor.  
   
 -   Cuando se envían datos de una columna, una variable o un parámetro de tipo **Char**, **VARCHAR**o **Text** en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una variable de SQL_C_CHAR en el cliente, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client convierte primero de carácter a Unicode mediante la ACP del servidor y, a continuación, de Unicode a SQL_C_CHAR mediante la ACP del cliente.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "73779169"
   
 ## <a name="see-also"></a>Vea también  
  [Procesar los &#40;resultados&#41; de ODBC](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)   
- [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

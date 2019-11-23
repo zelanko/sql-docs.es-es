@@ -280,6 +280,6 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>Ver también  
- [Agente SQL Server](../../../ssms/agent/sql-server-agent.md)    
+## <a name="see-also"></a>Vea también  
+ [Agente SQL Server](../../../ssms/agent/sql-server-agent.md)   
  [Implementar trabajos](../../../ssms/agent/implement-jobs.md)  

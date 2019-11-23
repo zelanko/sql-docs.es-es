@@ -18,7 +18,7 @@ ms.lasthandoff: 10/16/2019
 ms.locfileid: "72381742"
 ---
 # <a name="task-4-setting-domain-rules"></a>Tarea 4: configurar reglas de dominio
-  En esta tarea, creará una regla para el dominio de **correo electrónico de contacto** para comprobar si la dirección de correo electrónico termina con **@no__t 2adventure-Works.com**. Vea el tema [Crear una regla de dominio](https://msdn.microsoft.com/library/hh510397.aspx) para obtener más detalles sobre la página.  
+  En esta tarea, creará una regla para el dominio de **correo electrónico de contacto** para comprobar si la dirección de correo electrónico termina con **\@Adventure-Works.com**. Vea el tema [Crear una regla de dominio](https://msdn.microsoft.com/library/hh510397.aspx) para obtener más detalles sobre la página.  
   
 1.  Haga clic en **Correo electrónico de contacto** en la lista **Dominio**.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "72381742"
   
 5.  En el panel **Generar una regla** , haga clic en la **flecha abajo**y seleccione **El valor termina por**.  
   
-6.  Escriba **\@adventure-Works.com** en el cuadro de texto y presione **Tab**. Puede agregar más condiciones si hace clic en el botón **Agregar una nueva condición a la cláusula seleccionada** de la barra de herramientas del panel **Generar una regla** .  
+6.  Escriba **\@Adventure-Works.com** en el cuadro de texto y presione **Tab**. Puede agregar más condiciones si hace clic en el botón **Agregar una nueva condición a la cláusula seleccionada** de la barra de herramientas del panel **Generar una regla** .  
   
      ![Regla de validación de correo electrónico](../../2014/tutorials/media/et-settingdomainrules-02.jpg "Regla de validación de correo electrónico")  
   
@@ -44,9 +44,9 @@ ms.locfileid: "72381742"
   
      ![Cuadro de diálogo probar regla de dominio](../../2014/tutorials/media/et-settingdomainrules-04.jpg "Cuadro de diálogo probar regla de dominio")  
   
-9. Escriba **frank7\@adventure-works.com** (un valor válido) en la columna **correo electrónico de contacto** .  
+9. Escriba **frank7\@Adventure-Works.com** (un valor válido) en la columna **correo electrónico de contacto** .  
   
-10. Repita los dos pasos anteriores para agregar **joe2\@adventure-work.com** (un valor no válido sin ') '.  
+10. Repita los dos pasos anteriores para agregar **joe2\@Adventure-work.com** (un valor no válido sin ') '.  
   
 11. Haga clic en el último botón (**Probar la regla de dominio en todos los términos**) de la barra de herramientas para probar los datos de entrada con la regla.  
   

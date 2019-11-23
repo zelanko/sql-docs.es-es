@@ -53,11 +53,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permisos  
  El usuario debe ser miembro del rol **Public** . Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  Las propiedades que contienen valores NULL están incluidas en el conjunto XML que se devuelve.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa `sp_help_spatial_geometry_index_xml` para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en la tabla **geometry_col** para el ejemplo de consulta determinado en **\@QS**. En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
+ En el ejemplo siguiente se usa `sp_help_spatial_geometry_index_xml` para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en la tabla **geometry_col** para el ejemplo de consulta determinado en **\@** . En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
   
  Después, se ejecuta una consulta [XQuery](../../xquery/xquery-basics.md) en el conjunto de resultados, que devuelve una propiedad concreta.  
   
@@ -79,7 +79,7 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
- [Conceptos básicos de XQuery](../../xquery/xquery-basics.md)   
+ [Aspectos básicos de XQuery](../../xquery/xquery-basics.md)   
  [Referencia del lenguaje de XQuery](../../xquery/xquery-language-reference-sql-server.md)  
   
   

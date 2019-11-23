@@ -29,7 +29,7 @@ ms.locfileid: "72909555"
 
   Cambia la configuración de la base de datos secundaria.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -85,14 +85,14 @@ sp_change_log_shipping_secondary_database
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Remarks  
  **sp_change_log_shipping_secondary_database** se debe ejecutar desde la base de datos **maestra** en el servidor secundario. Este procedimiento almacenado hace lo siguiente:  
   
-1.  Cambia la configuración de los registros de **log_shipping_secondary_database** según sea necesario.  
+1.  Cambia la configuración del **log_shipping_secondary_database** registros según sea necesario.  
   
 2.  Cambia el registro de supervisión local en **log_shipping_monitor_secondary** en el servidor secundario utilizando los argumentos proporcionados, si es necesario.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -110,7 +110,7 @@ EXEC master.dbo.sp_change_log_shipping_secondary_database
 ,  @history_retention_period = 14420;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

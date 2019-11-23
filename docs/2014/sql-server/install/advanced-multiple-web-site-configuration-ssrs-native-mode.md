@@ -34,13 +34,13 @@ ms.locfileid: "71952671"
  **Dirección IP**  
  Identifica el equipo del servidor de informes en una red TCP/IP. Los valores válidos incluyen:  
   
--   **Todas asignadas** especifica que cualquiera de las direcciones IP que están asignadas al equipo se puede utilizar en una dirección URL que señale a una aplicación de servidor de informes. Este valor también abarca nombres de host descriptivos (como nombres de equipo) que un servidor de nombres de dominio puede resolver en una dirección IP que se asigna al equipo. Éste es el valor predeterminado de una dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   **Todas asignadas** especifica que cualquiera de las direcciones IP que están asignadas al PC se puede usar en una dirección URL que señale a una aplicación de servidor de informes. Este valor también abarca nombres de host descriptivos (como nombres de equipo) que un servidor de nombres de dominio puede resolver en una dirección IP que se asigna al equipo. Éste es el valor predeterminado de una dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   **Todas sin asignar** especifica que el servidor de informes aceptará cualquier solicitud que no tenga una coincidencia exacta para la dirección IP o nombre de host. No utilice este valor si otra aplicación web ya está utilizándolo. Si hace esto, interrumpirá el servicio para la otra aplicación.  
   
 -   **127.0.0.1** se utilizan para tener acceso al host local. Admite la administración local en el equipo del servidor de informes. Si selecciona solo este valor, únicamente los usuarios que hayan iniciado sesión de forma local en el equipo servidor de informes tendrán acceso a la aplicación.  
   
--   *Nnn.nnn.nnn.nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa el direccionamiento IPv6, la dirección IP será un valor de 128 bits de campos de 8 4 bytes similar al siguiente formato: \<header >:*nnnn: nnnn: nnnn: nnnn*.  
+-   *Nnn.nnn.nnn.nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa el direccionamiento IPv6, la dirección IP será un valor de 128 bits de campos de 8 4 bytes similar al siguiente formato: \<encabezado >:*nnnn: nnnn: nnnn: nnnn*.  
   
      Si tiene varias tarjetas, verá una dirección IP para cada una. Si selecciona solo este valor, limitará el acceso de la aplicación únicamente a la dirección IP (y a cualquier nombre de host que un servidor de nombres de dominio asigne a esa dirección). No puede utilizar el host local para tener acceso a un servidor de informes y no puede utilizar las direcciones IP de otras tarjetas de adaptadores de red que estén instalados en el equipo del servidor de informes.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "71952671"
   
  Especifica el nombre completo del equipo para el que se registra el certificado. El nombre que se especifica debe ser idéntico al nombre para el que se registra el certificado.  
   
- Para utilizar esta opción debe tener instalado un certificado. También debe modificar la opción de configuración UrlRoot del archivo RSReportServer.config de manera que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Para utilizar esta opción debe tener instalado un certificado. También debe modificar la opción de configuración UrlRoot del archivo RSReportServer.config de manera que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Emitido para**  
  Muestra el nombre del equipo para el que se creó el certificado.  

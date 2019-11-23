@@ -35,7 +35,7 @@ ms.locfileid: "73844501"
 Si usa SQL Database V12, debe usar [Sys. dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (porque *Sys. dm_continuous_copy_status* solo se aplica a V11).
 
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Column Name|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|Identificador único de la base de datos de réplica.|  
 |**partner_server**|**sysname**|Nombre del servidor de SQL Database vinculado.|  
@@ -51,7 +51,7 @@ Si usa SQL Database V12, debe usar [Sys. dm_geo_replication_link_status](../../r
 ## <a name="permissions"></a>Permisos  
  Para recuperar datos, es necesario pertenecer al rol de base de datos **db_owner** . El usuario DBO, los miembros del rol de base de datos **dbmanager** y el inicio de sesión SA también pueden consultar esta vista.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  La vista **Sys. dm_continuous_copy_status** se crea en la base de datos de **recursos** y está visible en todas las bases de datos, incluida la maestra lógica. Sin embargo, al consultar esta vista en la maestra lógica se devuelve un conjunto vacío.  
   
  Si la relación de copia continua se termina en una base de datos, la fila de esa base de datos en la vista **Sys. dm_continuous_copy_status** desaparece.  

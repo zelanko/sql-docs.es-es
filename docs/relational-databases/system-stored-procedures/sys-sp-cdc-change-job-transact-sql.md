@@ -49,7 +49,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @job_type = ] 'job_type'` tipo de trabajo que se va a modificar. *job_type* es de tipo **nvarchar (20)** y su valor predeterminado es ' Capture '. Las entradas válidas son 'capture' y 'cleanup'.  
   
-`[ @maxtrans ] = max_trans_` número máximo de transacciones para procesar en cada ciclo de examen. *max_trans* es de **tipo int** y su valor predeterminado es null, lo que indica que no hay ningún cambio para este parámetro. Si se especifica, el valor debe ser un entero positivo.  
+`[ @maxtrans ] = max_trans_` número máximo de transacciones que se van a procesar en cada ciclo de examen. *max_trans* es de **tipo int** y su valor predeterminado es null, lo que indica que no hay ningún cambio para este parámetro. Si se especifica, el valor debe ser un entero positivo.  
   
  *max_trans* solo es válido para los trabajos de captura.  
   
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-changing-a-capture-job"></a>A. Cambiar un trabajo de captura  
- En el ejemplo siguiente se actualizan los parámetros `@job_type`, `@maxscans` y `@maxtrans` de un trabajo de captura en la base de datos `AdventureWorks2012`. El resto de parámetros válidos para un trabajo captura, `@continuous` y `@pollinginterval`, se omiten; sus valores no se modifican.  
+ En el ejemplo siguiente se actualizan los parámetros `@job_type`, `@maxscans`y `@maxtrans` de un trabajo de captura en la base de datos `AdventureWorks2012`. El resto de parámetros válidos para un trabajo captura, `@continuous` y `@pollinginterval`, se omiten; sus valores no se modifican.  
   
 ```  
 USE AdventureWorks2012;  

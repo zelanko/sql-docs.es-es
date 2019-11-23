@@ -47,7 +47,7 @@ ms.locfileid: "69493875"
   
 6.  En el menú **Formato** , seleccione **Diseño automático**y haga clic en **Diagrama**.  
   
-7.  En el ventana Propiedades, cambie la propiedad **FriendlyName** de la tabla **DimSalesReason** a `SalesReason` y, a continuación, cambie la propiedad **FriendlyName** de la tabla **FactInternetSalesReason** a `InternetSalesReason`.  
+7.  En el ventana Propiedades, cambie la propiedad **FriendlyName** de la tabla **DimSalesReason** a `SalesReason`y, a continuación, cambie la propiedad **FriendlyName** de la tabla **FactInternetSalesReason** a `InternetSalesReason`.  
   
 8.  En el panel **Tablas** , expanda **InternetSalesReason (dbo.FactInternetSalesReason)** , haga clic en **SalesOrderNumber**y luego revise la propiedad **DataType** para esta columna de datos en la ventana Propiedades.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "69493875"
   
 1.  Cambie al Diseñador de cubos para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y haga clic en la pestaña **Estructura de cubo** .  
   
-2.  Haga clic con el botón derecho en cualquier punto del panel **Medidas** y, después, haga clic en **Nuevo grupo de medida**. Para obtener más información, consulte [Crear medidas y grupos de medida en modelos multidimensionales](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
+2.  Haga clic con el botón secundario en cualquier punto del panel **Medidas** y, después, haga clic en **Nuevo grupo de medida**. Para obtener más información, consulte [Crear medidas y grupos de medida en modelos multidimensionales](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
 3.  En el cuadro de diálogo **nuevo grupo de medida** , seleccione `InternetSalesReason` en la lista **Seleccione una tabla de la vista del origen de datos** y, a continuación, haga clic en **Aceptar**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69493875"
   
 8.  Haga clic en **Next**.  
   
-9. En la página **Seleccionar los atributos de la dimensión** , el atributo **Sales Reason Key** se selecciona automáticamente porque es el atributo clave. Active la casilla situada junto al atributo **sales Reason Reason Type** , cambie su nombre a `Sales Reason Type` y, a continuación, haga clic en **siguiente**.  
+9. En la página **Seleccionar los atributos de la dimensión** , el atributo **Sales Reason Key** se selecciona automáticamente porque es el atributo clave. Active la casilla situada junto al atributo **sales Reason Reason Type** , cambie su nombre a `Sales Reason Type`y, a continuación, haga clic en **siguiente**.  
   
 10. En la página **Finalización del asistente** , haga clic en **Finalizar** para crear la dimensión Sales Reason.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "69493875"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Definir la granularidad de las dimensiones en un grupo de medida](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Trabajar con diagramas en el Diseñador de vistas del origen de datos &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definir una relación de varios a varios y las propiedades de las relaciones de varios a varios](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  

@@ -132,13 +132,13 @@ ms.locfileid: "73637822"
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformaciones Búsqueda aproximada y Agrupación aproximada  
  Para obtener información sobre cómo optimizar el rendimiento de las transformaciones Agrupación aproximada y Búsqueda aproximada, vea las notas del producto [Fuzzy Lookup and Fuzzy Grouping in SQL Server Integration Services 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
   
-#### <a name="lookup-transformation"></a>Transformación Búsqueda  
+#### <a name="lookup-transformation"></a>Lookup Transformation  
  Puede minimizar el tamaño de los datos de referencia en memoria si escribe una instrucción SELECT que busque solo las columnas necesarias. Esta opción presenta un rendimiento mejor que seleccionar una tabla o una vista completa, lo que devuelve una gran cantidad de datos innecesarios.  
   
 #### <a name="merge-join-transformation"></a>Transformación Combinación de mezcla  
  Ya no tiene que configurar el valor de la propiedad `MaxBuffersPerInput` porque Microsoft ha realizado modificaciones que reducen el riesgo de que la transformación Combinación de mezcla utilice demasiada memoria. Este problema se producía a veces cuando varias entradas de la Combinación de mezcla generaban datos a velocidades desiguales.  
   
-#### <a name="slowly-changing-dimension-transformation"></a>Dimensión de variación lenta, transformación  
+#### <a name="slowly-changing-dimension-transformation"></a>Slowly Changing Dimension Transformation  
  El Asistente para dimensiones variables y la transformación Dimensión de variación lenta son herramientas de uso general que satisfacen las necesidades de la mayoría de los usuarios. Sin embargo, el flujo de datos que genera el asistente no está optimizado en cuanto a rendimiento.  
   
  Normalmente, los componentes más lentos de la transformación Dimensión de variación lenta son las transformaciones Comando de OLE DB que ejecutan cláusulas UPDATE sobre las filas de una en una. Por consiguiente, la manera más efectiva de mejorar el rendimiento de la transformación Dimensión de variación lenta consiste en reemplazar las transformaciones Comando de OLE DB. Puede reemplazar estas transformaciones por componentes de destino que guarden todas las filas que hay que actualizar en una tabla de ensayo. A continuación, puede agregar una tarea Ejecutar SQL que ejecute una cláusula Transact-SQL UPDATE basada en un solo conjunto sobre todas las filas al mismo tiempo.  
@@ -159,7 +159,7 @@ ms.locfileid: "73637822"
   
  Para habilitar o deshabilitar la presentación de mensajes en la pestaña **Progreso** , active o desactive la opción **Informe de progreso de depuración** del menú **SSIS** . La deshabilitación de los informes de progreso puede ayudar a mejorar el rendimiento al ejecutar un paquete complejo en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   

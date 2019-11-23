@@ -28,22 +28,22 @@ Además de instalar SSMA, también debe instalar los componentes en el equipo qu
 
 El paquete de extensión SSMA agrega las bases de datos **sysdb** y **ssmatesterdb** a la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La base de datos **sysdb** contiene las tablas y los procedimientos almacenados necesarios para migrar los datos y las funciones definidas por el usuario que emulan las funciones del sistema de Oracle. La base de datos **ssmatesterdb** contiene las tablas y los procedimientos necesarios para el componente Tester.  
   
-Además, al migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA crea trabajos del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se usa el motor de migración de datos del lado servidor para migrar los datos.  
+Además, al migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA crea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajos del agente cuando se usa el motor de migración de datos del lado servidor para migrar los datos.  
   
-### <a name="prerequisites"></a>Requisitos previos
+### <a name="prerequisites"></a>Prerequisites
 
-Antes de instalar SSMA para los componentes de servidor de Oracle en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], asegúrese de que el sistema cumple los requisitos siguientes:  
+Antes de instalar los componentes de SSMA para Oracle Server en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], asegúrese de que el sistema cumple los requisitos siguientes:  
   
-- la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalada. SSMA no es compatible con SQL Server 2008 Express Edition.
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia está instalada. SSMA no es compatible con SQL Server 2008 Express Edition.
   
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 o una versión posterior.  
   
 - El proveedor de cliente de Oracle o el proveedor de OLE DB para Oracle y la conectividad a la base de datos de Oracle que desea migrar. Puede instalar proveedores desde el sitio web de Oracle u Oracle.  
   
-- El servicio de explorador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe estar en ejecución durante la instalación. Se utiliza para rellenar una lista de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el Asistente para la instalación. Puede deshabilitar el servicio de explorador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] después de la instalación.  
+- El servicio explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe estar en ejecución durante la instalación. Se utiliza para rellenar una lista de las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el Asistente para la instalación. Puede deshabilitar el servicio de explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] después de la instalación.  
   
     > [!NOTE]  
-    > Si el servicio de explorador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando, pero todavía no ve una lista de instancias en el programa de instalación, debe desbloquear el puerto UDP 1434. Puede usar el Firewall de Windows para desbloquear temporalmente el puerto o puede deshabilitar temporalmente el Firewall de Windows. Es posible que también tenga que deshabilitar temporalmente el software antivirus. Asegúrese de habilitar los firewalls y el software antivirus después de la instalación.  
+    > Si el servicio explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando, pero todavía no ve una lista de instancias en el programa de instalación, debe desbloquear el puerto UDP 1434. Puede usar el Firewall de Windows para desbloquear temporalmente el puerto o puede deshabilitar temporalmente el Firewall de Windows. Es posible que también tenga que deshabilitar temporalmente el software antivirus. Asegúrese de habilitar los firewalls y el software antivirus después de la instalación.  
   
 ### <a name="installing-the-extension-pack"></a>Instalación del paquete de extensión
 
@@ -74,13 +74,13 @@ Puede instalar el paquete de extensión en cualquier momento antes de migrar los
   
     Aparecerá un nuevo cuadro de diálogo en el que podrá seleccionar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la instalación del paquete de extensión.  
   
-9. Seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que va a migrar los esquemas de Oracle y, después, seleccione **siguiente**.  
+9. Seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que va a migrar los esquemas de Oracle y, a continuación, seleccione **siguiente**.  
   
     La instancia predeterminada tiene el mismo nombre que el equipo. Las instancias con nombre van seguidas de una barra diagonal inversa y el nombre de la instancia.  
   
 10. En la página conexión, seleccione el método de autenticación y, después, seleccione **siguiente**.  
   
-    La autenticación de Windows usará sus credenciales de Windows para intentar iniciar sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si selecciona la autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe escribir un nombre y una contraseña de inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    La autenticación de Windows usará sus credenciales de Windows para intentar iniciar sesión en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si selecciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, debe escribir un nombre de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y una contraseña.  
   
 11. En la página siguiente, seleccione **instalar Utilities Database** *n*, donde *n* es el número de versión y, después, seleccione **siguiente**.  
   
@@ -88,7 +88,7 @@ Puede instalar el paquete de extensión en cualquier momento antes de migrar los
   
     Si la opción **instalar base de datos de prueba** está activada, se creará la base de datos de **ssmatesterdb** de evaluador.  
   
-12. Para instalar las utilidades en otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione **sí**y, a continuación, haga clic en **siguiente**, o bien, para salir del asistente, seleccione **no**.  
+12. Para instalar las utilidades en otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione **sí**y, después, haga clic en **siguiente**, o bien para salir del asistente, seleccione **no**.  
   
 13. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o mediante la utilidad SQLCMD, ejecute el siguiente script para habilitar CLR:  
   
@@ -105,9 +105,9 @@ Puede instalar el paquete de extensión en cualquier momento antes de migrar los
   
 ### <a name="sql-server-database-objects"></a>SQL Server objetos de base de datos  
 
-Después de instalar el paquete de extensión, aparece una tabla de **_migration_packages de ssma_oracle. BCP** en la base de datos **sysdb** .
+Después de instalar el paquete de extensión, aparece una tabla **ssma_oracle. bcp_migration_packages** en la base de datos **sysdb** .
 
-Cada vez que se migran datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA crea un trabajo del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos trabajos se denominan **ssma_oracle Data Migration Package {GUID}** y están visibles en el nodo del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de @no__t 2 en la carpeta Jobs.  
+Cada vez que se migran datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA crea un trabajo de agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos trabajos se denominan **ssma_oracle paquete de migración de datos {GUID}** y están visibles en el nodo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en la carpeta trabajos.  
   
 ## <a name="see-also"></a>Vea también
 

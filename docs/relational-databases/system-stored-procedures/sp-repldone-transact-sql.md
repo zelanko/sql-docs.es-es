@@ -30,7 +30,7 @@ ms.locfileid: "72798390"
 > [!CAUTION]  
 >  Si ejecuta **sp_repldone** manualmente, puede invalidar el orden y la coherencia de las transacciones entregadas. **sp_repldone** solo se debe usar para solucionar problemas de replicación según lo indicado por un profesional de soporte técnico de replicación experimentado.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,16 +56,16 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Notas  
- **sp_repldone** se usa en la replicación transaccional.  
+## <a name="remarks"></a>Remarks  
+ **sp_repldone** se utiliza en la replicación transaccional.  
   
- el proceso de registro del log usa **sp_repldone** para realizar el seguimiento de las transacciones que se han distribuido.  
+ el proceso de registro del log utiliza **sp_repldone** para realizar un seguimiento de las transacciones que se han distribuido.  
   
  Con **sp_repldone**, puede indicar manualmente al servidor que se ha replicado una transacción (enviada al distribuidor). También le permite cambiar la transacción que está marcada como la siguiente en espera de la replicación. Puede desplazarse hacia delante y hacia atrás en la lista de transacciones replicadas. (Todas las transacciones menores o iguales que esa transacción se marcan como distribuidas.)  
   
  Los parámetros necesarios *xactid* y *xact_seqno* se pueden obtener mediante **sp_repltrans** o **sp_replcmds**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_repldone**.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -78,8 +78,8 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
 > [!CAUTION]  
 >  Este procedimiento se puede utilizar en situaciones de emergencia para permitir que se trunque el registro de transacciones cuando existen transacciones pendientes de replicación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replflush &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+ [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

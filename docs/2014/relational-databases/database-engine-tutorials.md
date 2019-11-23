@@ -38,23 +38,23 @@ ms.locfileid: "70154610"
  [Tutorial: Firmar procedimientos almacenados con un certificado](tutorial-signing-stored-procedures-with-a-certificate.md)  
  En este tutorial se describe cómo se firman los procedimientos almacenados con un certificado generado por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Tutorial: Cadenas de propiedad y cambio de contexto](tutorial-ownership-chains-and-context-switching.md)  
+ [Tutorial: Ownership Chains and Context Switching](tutorial-ownership-chains-and-context-switching.md)  
  En este tutorial se usa un escenario para ilustrar los conceptos de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relacionados con las cadenas de propiedad y el cambio de contexto de usuario.  
   
  [Tutorial: Administrar servidores mediante administración basada en directivas](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  En este tutorial se enseña a crear directivas que aplican las normas de administración del sitio.  
   
- [Tutorial: Evaluación de los procedimientos recomendados mediante la administración basada en directivas](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [Tutorial: evaluar los procedimientos recomendados usando administración basada en directivas](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  En este tutorial se enseña a crear directivas que se pueden usar para analizar instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] y ver si hay problemas conocidos.  
   
- [Tutorial: SQL Server copias de seguridad y restauración en Azure Blob Storage servicio](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
- En este tutorial se muestra cómo realizar una copia de seguridad de SQL Server y restaurar al servicio Azure Blob Storage.  
+ [Tutorial: SQL Server copias de seguridad y restauración en Azure Blob Storage Service](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ Este tutorial ilustra el modo de hacer una copia de seguridad y una restauración de SQL Server para el servicio Azure Blob Storage.  
   
- [Tutorial: SQL Server archivos de datos en Azure Storage servicio](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
- Este tutorial le ayudará a comprender cómo almacenar los archivos de datos de SQL Server en el servicio de almacenamiento de blobs de Azure directamente.  
+ [Tutorial: SQL Server de archivos de datos en Azure Storage Service](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ Este tutorial le ayudará a saber cómo almacenar archivos de datos de SQL Server en el servicio Azure Blob Storage directamente.  
   
 ## <a name="see-also"></a>Vea también  
  [Tutoriales para SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
- [Wiki de TechNet: Ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
+ [TechNet WIKI: Ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

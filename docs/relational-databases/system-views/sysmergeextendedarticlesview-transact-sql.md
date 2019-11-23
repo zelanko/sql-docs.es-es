@@ -32,7 +32,7 @@ ms.locfileid: "72278170"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre del artículo.|  
-|**Tipo**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla.<br /><br /> **32** = solo esquema proc.<br /><br /> **64** = solo esquema de vista o esquema de vista indizada.<br /><br /> **128** = solo esquema de función.<br /><br /> **160** = solo esquema de sinónimo.|  
+|**tipo**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla.<br /><br /> **32** = solo esquema proc.<br /><br /> **64** = solo esquema de vista o esquema de vista indizada.<br /><br /> **128** = solo esquema de función.<br /><br /> **160** = solo esquema de sinónimo.|  
 |**objid**|**int**|Identificador del objeto de publicador.|  
 |**sync_objid**|**int**|Identificador de la vista que representa el conjunto de datos sincronizado.|  
 |**view_type**|**tinyint**|Tipo de vista:<br /><br /> **0** = no es una vista; usar todo el objeto base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporal.|  
@@ -79,8 +79,8 @@ ms.locfileid: "72278170"
 |**liviano**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**delete_proc**|**sysname**|Procedimiento que utiliza el solucionador de conflictos predeterminado para eliminar filas durante la sincronización.|  
 |**before_upd_view_objid**|**int**|Id. de la vista de una tabla antes de las actualizaciones.|  
-|**delete_tracking**|**bit**|Indica si las eliminaciones se replican.<br /><br /> **0** = las eliminaciones no se replican.<br /><br /> **1** = las eliminaciones se replican, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Cuando el valor de *delete_tracking* es **0**, las filas eliminadas en el suscriptor deben quitarse manualmente en el publicador, y las filas eliminadas en el publicador deben quitarse manualmente en el suscriptor.<br /><br /> Nota: Un valor de **0** produce una no convergencia.|  
-|**compensate_for_errors**|**bit**|Indica si se llevan a cabo acciones de compensación cuando se producen errores durante la sincronización.<br /><br /> **0** = las acciones de compensación están deshabilitadas.<br /><br /> **1** = los cambios que no se pueden aplicar en un suscriptor o publicador siempre conducen a acciones de compensación para deshacer estos cambios, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Nota: Un valor de **0** produce una no convergencia.|  
+|**delete_tracking**|**bit**|Indica si las eliminaciones se replican.<br /><br /> **0** = las eliminaciones no se replican.<br /><br /> **1** = las eliminaciones se replican, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Cuando el valor de *delete_tracking* es **0**, las filas eliminadas en el suscriptor deben quitarse manualmente en el publicador, y las filas eliminadas en el publicador deben quitarse manualmente en el suscriptor.<br /><br /> Nota: un valor de **0** produce una no convergencia.|  
+|**compensate_for_errors**|**bit**|Indica si se llevan a cabo acciones de compensación cuando se producen errores durante la sincronización.<br /><br /> **0** = las acciones de compensación están deshabilitadas.<br /><br /> **1** = los cambios que no se pueden aplicar en un suscriptor o publicador siempre conducen a acciones de compensación para deshacer estos cambios, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Nota: un valor de **0** produce una no convergencia.|  
 |**pub_range**|**bigint**|Tamaño del intervalo de identidad del publicador.|  
 |**variedad**|**bigint**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
 |**threshold**|**int**|Porcentaje de umbral del intervalo de identidad.|  
@@ -89,8 +89,8 @@ ms.locfileid: "72278170"
 |**preserve_rowguidcol**|**bit**|Indica si la replicación utiliza una columna rowguid existente. Un valor de **1** significa que se utiliza una columna ROWGUIDCOL existente. **0** significa que la replicación ha agregado la columna ROWGUIDCOL.|  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas &#40;de replicación de Transact&#41;-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Vistas &#40;de replicación de Transact&#41;-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Tablas &#40;de replicación de Transact&#41; -SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Vistas &#40;de replicación de Transact&#41; -SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   

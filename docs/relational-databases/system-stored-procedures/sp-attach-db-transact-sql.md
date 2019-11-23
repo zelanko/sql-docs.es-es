@@ -30,10 +30,10 @@ ms.locfileid: "72305272"
   Adjunta una base de datos a un servidor.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] le recomendamos que utilice CREATE DATABASE *database_name* for Attach en su lugar. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] se recomienda usar CREATE DATABASE *database_name* para Attach en su lugar. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 > [!NOTE]  
->  Para volver a generar varios archivos de registro cuando uno o varios tienen una nueva ubicación, utilice CREATE DATABASE *database_name* for ATTACH_REBUILD_LOG.  
+>  Para volver a generar varios archivos de registro cuando uno o varios tengan una nueva ubicación, utilice CREATE DATABASE *database_name* for ATTACH_REBUILD_LOG.  
   
 > [!IMPORTANT]  
 >  Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
@@ -49,7 +49,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Argumentos  
 `[ @dbname = ] 'dbnam_ '` es el nombre de la base de datos que se va a adjuntar al servidor. El nombre debe ser único. *dbname* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @filename1 = ] 'filename_n'` es el nombre físico, incluida la ruta de acceso, de un archivo de base de datos. *filename_n* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Se pueden especificar hasta 16 nombres de archivo. Los nombres de parámetro empiezan en **\@filename1** y se incrementan a **\@filename16**. La lista de nombres de archivo debe incluir al menos el archivo principal. El archivo principal contiene las tablas del sistema que señalan a otros archivos de la base de datos. La lista también debe contener los archivos que se hayan movido después de separar la base de datos.  
+`[ @filename1 = ] 'filename_n'` es el nombre físico, incluida la ruta de acceso, de un archivo de base de datos. *filename_n* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Se pueden especificar hasta 16 nombres de archivo. Los nombres de parámetro comienzan en **\@nombreDeArchivo1** y se incrementan en **\@filename16**. La lista de nombres de archivo debe incluir al menos el archivo principal. El archivo principal contiene las tablas del sistema que señalan a otros archivos de la base de datos. La lista también debe contener los archivos que se hayan movido después de separar la base de datos.  
   
 > [!NOTE]  
 >  Este argumento se asigna al parámetro FILENAME de la instrucción CREATE DATABASE. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -60,10 +60,10 @@ sp_attach_db [ @dbname= ] 'dbname'
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
-## <a name="remarks"></a>Comentarios  
- El procedimiento almacenado **sp_attach_db** solo debe ejecutarse en bases de datos que se hayan desasociado previamente del servidor de bases de datos mediante una operación **sp_detach_db** explícita o en bases de datos copiadas. Si tiene que especificar más de 16 archivos, use CREATE DATABASE *database_name* for Attach o CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ El **sp_attach_db** procedimiento almacenado solo debe ejecutarse en bases de datos que se hayan desasociado previamente del servidor de base de datos mediante una operación de **sp_detach_db** explícita o en bases de datos copiadas. Si tiene que especificar más de 16 archivos, use crear *database_name* de base de datos para adjuntar o crear base de datos *database_name* FOR_ATTACH_REBUILD_LOG. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
  Se da por supuesto que cualquier archivo que no se especifique se encuentra en su última ubicación conocida. Para utilizar un archivo que se encuentra en una ubicación diferente, debe especificar la nueva ubicación.  
   

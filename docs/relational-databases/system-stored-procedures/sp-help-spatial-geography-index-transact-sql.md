@@ -50,10 +50,10 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permisos  
  El usuario debe tener asignado un rol PUBLIC para tener acceso al procedimiento. Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa `sp_help_spatial_geography_index` para investigar el índice espacial **Geography** **SIndx_SpatialTable_geography_col2** definido en la tabla **geography_col** para el ejemplo de consulta determinado en **\@qs**. En este ejemplo se devuelven solo las propiedades básicas del índice especificado.  
+ En el ejemplo siguiente se usa `sp_help_spatial_geography_index` para investigar el índice espacial **geography** **SIndx_SpatialTable_geography_col2** definido en la tabla **geography_col** para el ejemplo de consulta dado en **\@** . En este ejemplo se devuelven solo las propiedades básicas del índice especificado.  
   
 ```  
 declare @qs geography  

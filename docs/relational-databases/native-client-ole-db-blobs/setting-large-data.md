@@ -48,7 +48,7 @@ ms.locfileid: "73758318"
   
 2.  Establezca las propiedades en el grupo de propiedades DBPROPSET_ROWSET de modo que el conjunto de filas sea actualizable.  
   
-3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establezca el elemento *wType* de la estructura DBBINDING en DBTYPE_IUNKNOWN y el elemento *pObject* para que señale a la estructura DBOBJECT creada.  
+3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establezca el elemento *wType* de la estructura DBBINDING en DBTYPE_IUNKNOWN y el elemento *pObject* que señale a la estructura DBOBJECT creada.  
   
 4.  Cree un descriptor de acceso utilizando la información de enlace de la matriz de estructuras DBBINDINGS.  
   

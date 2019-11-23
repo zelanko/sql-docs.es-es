@@ -41,7 +41,7 @@ ms.locfileid: "72782762"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Objeto*  
+ *Object*  
  Especifica el tipo de objeto que se representa en ese nodo de la cadena de expresión. Cada objeto representa una clase de colección de estos espacios de nombres del modelo de objetos SMO:  
   
  <xref:Microsoft.SqlServer.Management.Smo>  
@@ -98,7 +98,7 @@ ms.locfileid: "72782762"
  not(\<*PropertyExpression*>)  
  Niega el valor de evaluación de *PropertyExpression*, enumerando todos los objetos que no coinciden con la condición especificada en *PropertyExpression*. Por ejemplo, distinto de (contains(\@Name, 'xyz')) enumera todos los objetos que no tienen la cadena xyz en su nombre.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Remarks  
  Las expresiones de consulta son cadenas que enumeran los nodos de una jerarquía de modelo SMO. Cada nodo tiene una expresión de filtro que especifica los criterios para determinar los objetos que se enumeran en ese nodo. Las expresiones de consulta se modelan en el lenguaje de expresión XPath. Las expresiones de consulta implementan un pequeño subconjunto admitido por XPath y, además, tienen algunas extensiones que no se encuentran en XPath. Las expresiones XPath son cadenas que especifican un conjunto de criterios usados para enumerar una o mas de las etiquetas de un documento XML. Para obtener más información acerca de XPath, vea [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
   
  Las expresiones de consulta deben empezar por una referencia absoluta al objeto Server. No se admiten expresiones relativas con una / inicial. La secuencia de objetos que se especifica en una expresión de consulta debe seguir la jerarquía de los objetos de la colección del modelo de objetos asociado. Por ejemplo, una expresión de consulta que hace referencia a objetos del espacio de nombres Microsoft.SqlServer.Management.Smo debe empezar por un nodo Server seguido de un nodo Database, etc.  
@@ -156,6 +156,6 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [cmdlet Invoke-PolicyEvaluation](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40;motor de base de datos&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

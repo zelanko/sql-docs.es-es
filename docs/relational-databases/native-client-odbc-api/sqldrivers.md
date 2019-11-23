@@ -27,7 +27,7 @@ ms.locfileid: "73786972"
   El Administrador de controladores ODBC devuelve todas las cadenas de especificación de atributos de **SQLDrivers** . Para obtener más información sobre la definición de valores y cadenas de atributos, vea en línea el [Centro para programadores de acceso a datos y almacenamiento](https://go.microsoft.com/fwlink/?LinkId=4173)o la [Referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) .  
   
 ## <a name="see-also"></a>Vea también  
-   [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)  
+ [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
  [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

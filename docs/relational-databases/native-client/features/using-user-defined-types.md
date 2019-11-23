@@ -53,7 +53,7 @@ ms.locfileid: "73761349"
 |DBTYPE_STR|Compatible<sup>3, 6</sup>|N/D<sup>2</sup>|Compatible<sup>4, 6</sup>|N/D<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|No compatible|N/D<sup>2</sup>|No compatible|N/D<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Compatible<sup>6</sup>|N/D<sup>2</sup>|Compatible<sup>4</sup>|N/D<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Compatible<sup>3, 6</sup>|N/D<sup>2</sup>|N/D|N/D<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Compatible<sup>3, 6</sup>|N/D<sup>2</sup>|N/A|N/D<sup>2</sup>|  
   
  <sup>1</sup>Si se especifica un tipo de servidor distinto de DBTYPE_UDT con **ICommandWithParameters::SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_UDT, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED; el estado del parámetro es DBSTATUS_E_BADACCESSOR). De lo contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de UDT al tipo de datos del parámetro.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "73761349"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER  
  Para admitir los UDT a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa el nuevo conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER que contiene los valores siguientes.  
   
-|Nombre|Tipo|Descripción|  
+|NOMBRE|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|Identificador de nombre de tres partes.<br /><br /> Para los parámetros UDT, esta propiedad es una cadena que especifica el nombre del catálogo donde se define el tipo definido por el usuario.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|Identificador de nombre de tres partes.<br /><br /> Para los parámetros UDT, esta propiedad es una cadena que especifica el nombre del esquema donde se define el tipo definido por el usuario.|  
@@ -150,7 +150,7 @@ ms.locfileid: "73761349"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN  
  Para admitir la creación de tablas en la interfaz **ITableDefinition** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client agrega las tres nuevas columnas siguientes al conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nombre|Descripción|Tipo|Descripción|  
+|NOMBRE|Descripción|Tipo|Descripción|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Para las columnas de tipo DBTYPE_UDT, esta propiedad es una cadena que especifica el nombre del catálogo donde se define el UDT.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Para las columnas de tipo DBTYPE_UDT, esta propiedad es una cadena que especifica el nombre del esquema donde se define el UDT.|  
@@ -181,7 +181,7 @@ ms.locfileid: "73761349"
 #### <a name="the-icolumnsrowset-interface"></a>La interfaz IColumnsRowset  
  Además de la interfaz **ISSCommandWithParameters** , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client también agrega nuevos valores al conjunto de filas devuelto por la llamada al método **IColumnsRowset:: GetColumnRowset** , incluido lo siguiente.  
   
-|Nombre de la columna|Tipo|Descripción|  
+|Column Name|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|Identificador de nombre de catálogo UDT.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|Identificador de nombre de esquema UDT.|  

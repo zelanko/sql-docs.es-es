@@ -45,7 +45,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @traceid = ] trace_id` es el ID. del seguimiento que se va a modificar. *trace_id* es de **tipo int**y no tiene ningún valor predeterminado. El usuario emplea este valor de *trace_id* para identificar, modificar y controlar el seguimiento.  
+`[ @traceid = ] trace_id` es el ID. del seguimiento que se va a modificar. *trace_id* es de **tipo int**y no tiene ningún valor predeterminado. El usuario emplea este valor *trace_id* para identificar, modificar y controlar el seguimiento.  
   
 `[ @eventid = ] event_id` es el identificador del evento que se va a activar. *event_id* es de **tipo int**y no tiene ningún valor predeterminado.  
   
@@ -60,7 +60,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|SQL:BatchStarting|Se produce cuando se ha iniciado un proceso por lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |14|Audit Login|Se produce cuando un usuario inicia una sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correctamente.|  
 |15|Audit Logout|Se produce cuando un usuario cierra la sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|16|Atención|Se produce cuando tienen lugar eventos de atención como, por ejemplo, las solicitudes de interrupción de clientes o las conexiones de cliente interrumpidas.|  
+|16|Attention|Se produce cuando tienen lugar eventos de atención como, por ejemplo, las solicitudes de interrupción de clientes o las conexiones de cliente interrumpidas.|  
 |17|ExistingConnection|Detecta toda la actividad de los usuarios conectados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes del inicio del seguimiento.|  
 |18|Audit Server Starts and Stops|Se produce cuando se modifica el estado del servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |19|DTCTransaction|Realiza un seguimiento de las transacciones coordinadas del Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC) entre dos o más bases de datos.|  
@@ -71,11 +71,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |24|Lock:Acquired|Indica la adquisición de un bloqueo en un recurso, como una página de datos.|  
 |25|Lock:Deadlock|Indica que dos transacciones simultáneas se han interbloqueado mutuamente al intentar obtener bloqueos incompatibles en recursos que son propiedad de la otra transacción.|  
 |26|Lock:Cancel|Indica la anulación de la adquisición de un bloqueo en un recurso (por ejemplo, debido a un interbloqueo).|  
-|27|Lock:Timeout|Indica que una solicitud de un bloqueo en un recurso, como una página, ha agotado el tiempo de espera debido a que existía otra transacción que mantenía un bloqueo en el recurso requerido. El tiempo de espera viene determinado por la función @ @LOCK_TIMEOUT y se puede establecer con la instrucción SET LOCK_TIMEOUT.|  
+|27|Lock:Timeout|Indica que una solicitud de un bloqueo en un recurso, como una página, ha agotado el tiempo de espera debido a que existía otra transacción que mantenía un bloqueo en el recurso requerido. El tiempo de espera viene determinado por la función @@LOCK_TIMEOUT y se puede establecer con la instrucción SET LOCK_TIMEOUT.|  
 |28|Degree of Parallelism Event (7.0 Insert)|Se produce antes de ejecutarse una instrucción SELECT, INSERT o UPDATE.|  
 |29-31|Reservado|Utilice el evento 28 en su lugar.|  
 |32|Reservado|Reservado|  
-|33|Excepción|Indica que se ha producido una excepción en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|33|Exception|Indica que se ha producido una excepción en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |34|SP:CacheMiss|Indica que no se ha encontrado un procedimiento almacenado en la caché de procedimientos.|  
 |35|SP:CacheInsert|Indica que se ha insertado un elemento en la caché de procedimientos.|  
 |36|SP:CacheRemove|Indica que se ha eliminado un elemento de la caché de procedimientos.|  
@@ -132,13 +132,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |101|Reservado||  
 |102|Audit Database Scope GDR|Se produce siempre que un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emite una instrucción GRANT, DENY o REVOKE para acciones exclusivas de base de datos como la concesión de permisos en una base de datos.|  
 |103|Audit Object GDR Event|Se produce cada vez que un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emite GRANT, DENY, REVOKE para un permiso de objeto.|  
-|104|Audit AddLogin Event|Se produce cuando se agrega o se quita un inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; para **sp_addlogin** y **sp_droplogin**.|  
-|105|Audit Login GDR Event|Se produce cuando se agrega o se quita un derecho de inicio de sesión de Windows. para **sp_grantlogin**, **sp_revokelogin**y **sp_denylogin**.|  
+|104|Audit AddLogin Event|Se produce cuando se agrega o se quita un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; para **sp_addlogin** y **sp_droplogin**.|  
+|105|Audit Login GDR Event|Se produce cuando se agrega o se quita un derecho de inicio de sesión de Windows. por **sp_grantlogin**, **sp_revokelogin**y **sp_denylogin**.|  
 |106|Audit Login Change Property Event|Se produce cuando se modifica una propiedad de un inicio de sesión, excepto las contraseñas; para **sp_defaultdb** y **sp_defaultlanguage**.|  
 |107|Audit Login Change Password Event|Se produce cuando se cambia una contraseña de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Las contraseñas no se registran.|  
-|108|Audit Add Login to Server Role Event|Se produce cuando se agrega o se quita un inicio de sesión de un rol fijo de servidor; para **sp_addsrvrolemember**y **sp_dropsrvrolemember**.|  
-|109|Audit Add DB User Event|Se produce cuando se agrega o se quita un inicio de sesión como un usuario de base de datos (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) en una base de datos; para **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**y **sp_dropuser**.|  
-|110|Audit Add Member to DB Role Event|Se produce cuando se agrega o se quita un inicio de sesión como un usuario de base de datos (fijo o definido por el usuario) en una base de datos; para **sp_addrolemember**, **sp_droprolemember**y **sp_changegroup**.|  
+|108|Audit Add Login to Server Role Event|Se produce cuando se agrega o se quita un inicio de sesión de un rol fijo de servidor; por **sp_addsrvrolemember**y **sp_dropsrvrolemember**.|  
+|109|Audit Add DB User Event|Se produce cuando se agrega o se quita un inicio de sesión como un usuario de base de datos (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) en una base de datos; por **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**y **sp_dropuser**.|  
+|110|Audit Add Member to DB Role Event|Se produce cuando se agrega o se quita un inicio de sesión como un usuario de base de datos (fijo o definido por el usuario) en una base de datos; por **sp_addrolemember**, **sp_droprolemember**y **sp_changegroup**.|  
 |111|Audit Add Role Event|Se produce cuando se agrega o se quita un inicio de sesión como un usuario de base de datos en una base de datos; para **sp_addrole** y **sp_droprole**.|  
 |112|Audit App Role Change Password Event|Se produce cuando se cambia una contraseña de un rol de aplicación.|  
 |113|Audit Statement Permission Event|Se produce cuando se utiliza un permiso de instrucción (como CREATE TABLE).|  
@@ -165,7 +165,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |134|Audit Server Object Take Ownership Event|Se produce cuando se cambia el propietario de objetos en el ámbito del servidor.|  
 |135|Audit Database Object Take Ownership Event|Se produce cuando se cambia el propietario de objetos en el ámbito de la base de datos.|  
 |136|Broker:Conversation Group|Se produce cuando [!INCLUDE[ssSB](../../includes/sssb-md.md)] crea un grupo de conversación o quita un grupo de conversación existente.|  
-|137|Blocked Process Report|Se produce cuando un proceso ha estado bloqueado durante más tiempo del especificado. No incluye procesos del sistema ni procesos que esperan en recursos no detectables por interbloqueo. Utilice **sp_configure** para configurar el umbral y la frecuencia con que se generan los informes.|  
+|137|Blocked Process Report|Se produce cuando un proceso ha estado bloqueado durante más tiempo del especificado. No incluye procesos del sistema ni procesos que esperan en recursos no detectables por interbloqueo. Use **sp_configure** para configurar el umbral y la frecuencia con que se generan los informes.|  
 |138|Broker:Connection|Informa del estado de una conexión de transporte administrada por [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
 |139|Broker:Forwarded Message Sent|Se produce cuando [!INCLUDE[ssSB](../../includes/sssb-md.md)] reenvía un mensaje.|  
 |140|Broker:Forwarded Message Dropped|Se produce cuando [!INCLUDE[ssSB](../../includes/sssb-md.md)] quita un mensaje pensado para reenviarse.|  
@@ -205,18 +205,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|Se produce al crear, modificar o quitar entidades de seguridad de servidor.|  
 |178|Audit Database Operation Event|Se produce cuando tienen lugar operaciones en una base de datos, como un punto de comprobación o una notificación de consulta de suscripción.|  
 |180|Audit Database Object Access Event|Se produce cuando se tiene acceso a objetos de base de datos, como esquemas.|  
-|181|TM: Inicio de Begin Tran|Se produce cuando se inicia una solicitud BEGIN TRANSACTION.|  
-|182|TM: Inicio de Tran completado|Se produce cuando se completa una solicitud BEGIN TRANSACTION.|  
-|183|TM: Promover inicio de Tran|Se produce cuando se inicia una solicitud PROMOTE TRANSACTION.|  
-|184|TM: Promover Tran completado|Se produce cuando se completa una solicitud PROMOTE TRANSACTION.|  
-|185|TM: Inicio de commit Tran|Se produce cuando se inicia una solicitud COMMIT TRANSACTION.|  
-|186|TM: Confirmar transacción completada|Se produce cuando se completa una solicitud COMMIT TRANSACTION.|  
-|187|TM: Revertir inicio de Tran|Se produce cuando se inicia una solicitud ROLLBACK TRANSACTION.|  
-|188|TM: Rollback Tran completado|Se produce cuando se completa una solicitud ROLLBACK TRANSACTION.|  
+|181|TM: Begin Tran starting|Se produce cuando se inicia una solicitud BEGIN TRANSACTION.|  
+|182|TM: Begin Tran completed|Se produce cuando se completa una solicitud BEGIN TRANSACTION.|  
+|183|TM: Promote Tran starting|Se produce cuando se inicia una solicitud PROMOTE TRANSACTION.|  
+|184|TM: Promote Tran completed|Se produce cuando se completa una solicitud PROMOTE TRANSACTION.|  
+|185|TM: Commit Tran starting|Se produce cuando se inicia una solicitud COMMIT TRANSACTION.|  
+|186|TM: Commit Tran completed|Se produce cuando se completa una solicitud COMMIT TRANSACTION.|  
+|187|TM: Rollback Tran starting|Se produce cuando se inicia una solicitud ROLLBACK TRANSACTION.|  
+|188|TM: Rollback Tran completed|Se produce cuando se completa una solicitud ROLLBACK TRANSACTION.|  
 |189|Lock: timeout (tiempo de espera > 0)|Se produce cuando se agota el tiempo de espera para una solicitud de bloqueo en un recurso, como una página.|  
-|190|Informe de progreso: Operación de índice en línea|Informa del progreso de una operación de generación de índice en línea mientras está en ejecución.|  
-|191|TM: Inicio de guardar Tran|Se produce cuando se inicia una solicitud SAVE TRANSACTION.|  
-|192|TM: Guardar Tran completado|Se produce cuando se completa una solicitud SAVE TRANSACTION.|  
+|190|Progress Report: Online Index Operation|Informa del progreso de una operación de generación de índice en línea mientras está en ejecución.|  
+|191|TM: Save Tran starting|Se produce cuando se inicia una solicitud SAVE TRANSACTION.|  
+|192|TM: Save Tran completed|Se produce cuando se completa una solicitud SAVE TRANSACTION.|  
 |193|Background Job Error|Se produce cuando un trabajo en segundo plano finaliza de forma anómala.|  
 |194|OLEDB Provider Information|Se produce cuando una consulta distribuida se ejecuta y recopila información correspondiente a la conexión del proveedor.|  
 |195|Mount Tape|Se produce cuando se recibe una solicitud de montaje de cinta.|  
@@ -270,7 +270,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|**ServerName**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *ServerName* o *nombredeservidor\nombredeinstancia*, de la que se realiza un seguimiento.|  
 |27|**EventClass**|Tipo de clase de evento que se está registrando.|  
 |28|**ObjectType**|Tipo de objeto, por ejemplo: tabla, función o procedimiento almacenado.|  
-|29|**NestLevel**|Nivel de anidamiento en el que se ejecuta este procedimiento almacenado. Vea [@ @NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
+|29|**NestLevel**|Nivel de anidamiento en el que se ejecuta este procedimiento almacenado. Vea [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**Estado**|Estado del servidor, si se produce un error.|  
 |31|**Error**|Número de error.|  
 |32|**Modo**|Modo de bloqueo del bloqueo adquirido. Esta columna no se rellena con el evento **Lock: released** .|  
@@ -282,7 +282,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |38|**RoleName**|Nombre de la base de datos o del rol de todo el servidor que es el destino de una instrucción.|  
 |39|**TargetUserName**|Nombre de usuario del destino de alguna acción.|  
 |40|**DBUserName**|Nombre de usuario de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del cliente.|  
-|41|**LoginSid**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión.|  
+|41|**LoginSid**|SID (identificador de seguridad) del usuario que ha iniciado la sesión.|  
 |42|**TargetLoginName**|Nombre de inicio de sesión del destino de alguna acción.|  
 |43|**TargetLoginSid**|SID del inicio de sesión que es el destino de alguna acción.|  
 |44|**ColumnPermissions**|Estado de los permisos de nivel de columna; utilizado por Auditoría de seguridad.|  
@@ -307,14 +307,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a **sys.dm_exec_sql_text()** para recuperar el texto SQL asociado.|  
 |64|**SessionLoginName**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con **inicioDeSesión1** y ejecuta una instrucción como **inicioDeSesión2**, **SessionLoginName** muestra **inicioDeSesión1**y **LoginName** muestra **inicioDeSesión2**. En esta columna de datos se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|  
   
- **[@on =]** el  
+ **[@on=]** el  
  Especifica la activación o desactivación del evento mediante ON (1) u OFF (0). *on es de* **bit**y no tiene ningún valor predeterminado.  
   
  Si *on* está establecido en **1**y *column_id* es null, el evento se establece en on y se borran todas las columnas. Si *column_id* no es null, la columna se establece en ON para ese evento.  
   
  Si *on* está establecido en **0**y *column_id* es null, el evento se desactiva y se borran todas las columnas. Si *column_id* no es null, la columna se desactiva.  
   
- En esta tabla se muestra la interacción entre **\@ON** y **\@columnid**.  
+ En esta tabla se muestra la interacción entre **\@en** y **\@columnid**.  
   
 |@on|@columnid|Resultado|  
 |---------|---------------|------------|  
@@ -338,8 +338,8 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|Memoria insuficiente. Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
 |16|La función no es válida para este seguimiento.|  
   
-## <a name="remarks"></a>Comentarios  
- **sp_trace_setevent** realiza muchas de las acciones ejecutadas previamente por procedimientos almacenados extendidos disponibles en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilice **sp_trace_setevent** en lugar de lo siguiente:  
+## <a name="remarks"></a>Remarks  
+ **sp_trace_setevent** realiza muchas de las acciones ejecutadas previamente por procedimientos almacenados extendidos disponibles en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use **sp_trace_setevent** en lugar de lo siguiente:  
   
 -   **xp_trace_addnewqueue**  
   
@@ -347,7 +347,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- Los usuarios deben ejecutar **sp_trace_setevent** para cada columna agregada para cada evento. Durante cada ejecución, si **\@ON** se establece en **1**, **sp_trace_setevent** agrega el evento especificado a la lista de eventos del seguimiento. Si **\@ON** se establece en **0**, **sp_trace_setevent** quita el evento especificado de la lista.  
+ Los usuarios deben ejecutar **sp_trace_setevent** para cada columna agregada para cada evento. Durante cada ejecución, si **\@on** está establecido en **1**, **sp_trace_setevent** agrega el evento especificado a la lista de eventos del seguimiento. Si **\@on** se establece en **0**, **sp_trace_setevent** quita el evento especificado de la lista.  
   
  Los parámetros de todos los procedimientos almacenados de seguimiento de SQL (**sp_trace_xx**) tienen un tipo estricto. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devolverá un error.  
   

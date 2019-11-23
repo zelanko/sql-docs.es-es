@@ -44,27 +44,27 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @login_name = ] 'login_name'` nombre de inicio de sesión al que se va a conceder acceso. *Login_name* es de tipo **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de **\@login_name**, **\@fixed_server_role**o **\@msdb_role** , o bien se produce un error en el procedimiento almacenado.  
+`[ @login_name = ] 'login_name'` el nombre de inicio de sesión al que se va a conceder acceso. El *login_name* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de los **\@login_name**, **\@fixed_server_role**o **\@** , o bien se produce un error en el procedimiento almacenado.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` el rol fijo de servidor al que se va a conceder acceso. *Fixed_server_role* es de tipo **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de **\@login_name**, **\@fixed_server_role**o **\@msdb_role** , o bien se produce un error en el procedimiento almacenado.  
+`[ @fixed_server_role = ] 'fixed_server_role'` el rol fijo de servidor al que se va a conceder acceso. El *fixed_server_role* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de los **\@login_name**, **\@fixed_server_role**o **\@** , o bien se produce un error en el procedimiento almacenado.  
   
-`[ @msdb_role = ] 'msdb_role'` rol de base de datos en la base de datos **msdb** a la que se va a conceder acceso. *Msdb_role* es de tipo **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de **\@login_name**, **\@fixed_server_role**o **\@msdb_role** , o bien se produce un error en el procedimiento almacenado.  
+`[ @msdb_role = ] 'msdb_role'` el rol de base de datos en la base de datos **msdb** para conceder acceso a. El *msdb_role* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de los **\@login_name**, **\@fixed_server_role**o **\@** , o bien se produce un error en el procedimiento almacenado.  
   
-`[ @proxy_id = ] id` identificador del proxy al que se va a conceder acceso. El *identificador* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar uno de los **\@proxy_id** o **\@proxy_name** , o bien se produce un error en el procedimiento almacenado.  
+`[ @proxy_id = ] id` el identificador del proxy al que se va a conceder acceso. El *identificador* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar una de **\@proxy_id** o **\@proxy_name** o se produce un error en el procedimiento almacenado.  
   
-`[ @proxy_name = ] 'proxy_name'` nombre del proxy al que se va a conceder acceso. *Proxy_name* es de tipo **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar uno de los **\@proxy_id** o **\@proxy_name** , o bien se produce un error en el procedimiento almacenado.  
+`[ @proxy_name = ] 'proxy_name'` el nombre del proxy al que se va a conceder acceso. El *proxy_name* es **nvarchar (256)** y su valor predeterminado es NULL. Se debe especificar una de **\@proxy_id** o **\@proxy_name** o se produce un error en el procedimiento almacenado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_grant_login_to_proxy** se debe ejecutar desde la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_grant_login_to_proxy**.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se permite que el inicio de sesión `adventure-works\terrid` Use el proxy `Catalog application proxy`.  
+ En el ejemplo siguiente se permite que el inicio de sesión `adventure-works\terrid` use el `Catalog application proxy`proxy.  
   
 ```sql
 USE msdb ;  

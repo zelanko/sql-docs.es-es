@@ -39,9 +39,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @account_id = ] account_id` identificador de cuenta de la cuenta para la que se va a mostrar información. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @account_id = ] account_id` el identificador de cuenta de la cuenta para la que se va a mostrar información. *ACCOUNT_ID* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @account_name = ] 'account_name'` nombre de la cuenta para la que se va a mostrar información. *account_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @account_name = ] 'account_name'` el nombre de la cuenta para la que se va a mostrar información. *account_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -62,11 +62,11 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**servername**|**sysname**|Nombre del servidor de correo electrónico para la cuenta.|  
 |**port**|**int**|Número de puerto que utiliza el servidor de correo electrónico.|  
 |**username**|**nvarchar(128)**|Nombre de usuario que se utiliza para iniciar sesión en el servidor de correo electrónico si éste utiliza autenticación. Cuando el **nombre de usuario** es NULL, correo electrónico de base de datos no utiliza la autenticación para esta cuenta.|  
-|**use_default_credentials**|**bit**|Especifica si se debe enviar el correo al servidor SMTP con las credenciales de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** es de bit y no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos utiliza las credenciales del servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Cuando este parámetro es 0, Correo electrónico de base de datos usa el **\@username** y **\@password** para la autenticación en el servidor SMTP. Si **\@username** y **\@password** son NULL, correo electrónico de base de datos utiliza la autenticación anónima. Consulte al administrador de SMTP antes de especificar este parámetro.|  
-|**enable_ssl**|**bit**|Especifica si el Correo electrónico de base de datos cifra la comunicación mediante Capa de sockets seguros (SSL). Utilice esta opción si se requiere SSL en el servidor SMTP. **enable_ssl** es de bit y no tiene ningún valor predeterminado. El valor 1 indica que el Correo electrónico de base de datos cifra la comunicación mediante SSL. El valor 0 indica que el Correo electrónico de base de datos envía el correo sin cifrado SSL.|  
+|**use_default_credentials**|**bit**|Especifica si se debe enviar el correo al servidor SMTP con las credenciales de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** es de bits y no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos utiliza las credenciales del servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Cuando este parámetro es 0, Correo electrónico de base de datos usa el **nombre de usuario\@** y **\@contraseña** para la autenticación en el servidor SMTP. Si **\@nombre de usuario** y **\@contraseña** son NULL, correo electrónico de base de datos utiliza la autenticación anónima. Consulte al administrador de SMTP antes de especificar este parámetro.|  
+|**enable_ssl**|**bit**|Especifica si el Correo electrónico de base de datos cifra la comunicación mediante Capa de sockets seguros (SSL). Utilice esta opción si se requiere SSL en el servidor SMTP. **enable_ssl** es de bits y no tiene ningún valor predeterminado. El valor 1 indica que el Correo electrónico de base de datos cifra la comunicación mediante SSL. El valor 0 indica que el Correo electrónico de base de datos envía el correo sin cifrado SSL.|  
   
-## <a name="remarks"></a>Comentarios  
- Cuando no se proporciona *ACCOUNT_ID* o *account_name* , **sysmail_help_account** muestra información sobre todas las cuentas de correo electrónico de base de datos en la instancia de Microsoft SQL Server.  
+## <a name="remarks"></a>Remarks  
+ Cuando no se proporciona ningún *ACCOUNT_ID* o *account_name* , **sysmail_help_account** muestra información sobre todas las cuentas de correo electrónico de base de datos en la instancia de Microsoft SQL Server.  
   
  El procedimiento almacenado **sysmail_help_account_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
@@ -74,7 +74,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
  Los permisos de ejecución para este procedimiento tienen como valor predeterminado los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
- **A. Enumerar la información de todas las cuentas @ no__t-0  
+ **A. Mostrar la información de todas las cuentas**  
   
  En el siguiente ejemplo se muestra la información de cuenta para todas las cuentas de la instancia.  
   
@@ -91,7 +91,7 @@ account_id  name                         description                            
 149         Audit Account                Account for audit e-mail.               audit@Adventure-Works.com Automated Mailer (Audit)         NULL            SMTP       smtp.Adventure-Works.com  25          NULL 0                          0        
 ```  
   
- **B. Mostrar la información de una cuenta específica @ no__t-0  
+ **B. Mostrar la información de una cuenta específica**  
   
  En el siguiente ejemplo se muestra la información de cuenta para la cuenta llamada `AdventureWorks Administrator`.  
   
@@ -110,7 +110,7 @@ account_id  name                         description                            
   
 ## <a name="see-also"></a>Vea también  
  [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md)   
- [Creación de una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Cree una cuenta de Correo electrónico de base de datos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Procedimientos &#40;almacenados de correo electrónico de base de datos TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

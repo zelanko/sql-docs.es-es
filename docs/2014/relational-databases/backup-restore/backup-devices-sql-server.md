@@ -33,21 +33,21 @@ ms.lasthandoff: 08/29/2019
 ms.locfileid: "70155044"
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivos de copia de seguridad (SQL Server)
-  En una operación de copia de seguridad en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los datos copiados (la *copia de seguridad*) se escriben en un dispositivo físico de copia de seguridad. Este dispositivo físico de copia de seguridad se inicializa cuando se escribe en él la primera copia de seguridad de un conjunto de medios. Las copias de seguridad de uno o varios dispositivos de copia de seguridad constituyen un solo conjunto de medios.  
+  En una operación de copia de seguridad en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los datos que se van a copiar (la *copia de seguridad*), se escriben en un dispositivo físico de copia de seguridad. Este dispositivo físico de copia de seguridad se inicializa cuando se escribe en él la primera copia de seguridad de un conjunto de medios. Las copias de seguridad de uno o varios dispositivos de copia de seguridad constituyen un solo conjunto de medios.  
   
  **En este tema:**  
   
 -   [Términos y definiciones](#TermsAndDefinitions)  
   
--   [Uso de dispositivos de copia de seguridad en disco](#DiskBackups)  
+-   [Usar dispositivos de copia de seguridad en disco](#DiskBackups)  
   
 -   [Uso de dispositivos de cinta](#TapeDevices)  
   
--   [Uso de un dispositivo lógico de copia de seguridad](#LogicalBackupDevice)  
+-   [Usar un dispositivo lógico de copia de seguridad](#LogicalBackupDevice)  
   
 -   [Conjuntos de medios de copia de seguridad reflejados](#MirroredMediaSets)  
   
--   [Archivado de copias de seguridad de SQL Server](#Archiving)  
+-   [Archivar copias de seguridad de SQL Server](#Archiving)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
@@ -61,14 +61,14 @@ ms.locfileid: "70155044"
  dispositivo físico de copia de seguridad  
  Unidad de cinta o un archivo de disco proporcionado por el sistema operativo. Una copia de seguridad puede utilizar entre 1 y 64 dispositivos de copia de seguridad. Si una copia de seguridad requiere varios dispositivos de copia de seguridad, estos deben ser de un mismo tipo (disco o cinta).  
   
- También se pueden escribir copias de seguridad de SQL Server en el servicio de almacenamiento de blobs de Azure, además de en disco o cinta.  
+ Las copias de seguridad de SQL Server también se pueden escribir en un servicio Azure Blob Storage.  
   
 ##  <a name="DiskBackups"></a>Uso de dispositivos de copia de seguridad en disco  
  **En esta sección:**  
   
 -   [Especificar un archivo de copia de seguridad mediante su nombre físico (Transact-SQL)](#BackupFileUsingPhysicalName)  
   
--   [Especificación de la ruta de acceso de un archivo de copia de seguridad en disco](#BackupFileDiskPath)  
+-   [Especificar la ruta de acceso de un archivo de copia de seguridad en disco](#BackupFileDiskPath)  
   
 -   [Realizar una copia de seguridad en un archivo en un recurso compartido de red](#NetworkShare)  
   
@@ -110,7 +110,7 @@ RESTORE DATABASE AdventureWorks2012
 ```  
   
 ###  <a name="BackupFileDiskPath"></a>Especificación de la ruta de acceso de un archivo de copia de seguridad en disco  
- Cuando se especifica un archivo de copia de seguridad, se debe especificar ruta de acceso completa y el nombre de archivo. Si especifica solo el nombre de archivo o la ruta de acceso relativa al realizar la copia de seguridad de un archivo, el archivo de copia de seguridad se sitúa en el directorio predeterminado de copias de seguridad. El directorio predeterminado de copias de seguridad es C:\Archivos de programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, donde *n* es el número de la instancia de servidor. Por lo tanto, para la instancia del servidor predeterminada, el directorio de copia de seguridad predeterminado es: C:\Archivos de Programa\microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Backup.  
+ Cuando se especifica un archivo de copia de seguridad, se debe especificar ruta de acceso completa y el nombre de archivo. Si especifica solo el nombre de archivo o la ruta de acceso relativa al realizar la copia de seguridad de un archivo, el archivo de copia de seguridad se sitúa en el directorio predeterminado de copias de seguridad. El directorio predeterminado de copias de seguridad es C:\Archivos de programa\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, donde *n* es el número de instancia de servidor. Por lo tanto, para la instancia de servidor predeterminada, el directorio predeterminado de copias de seguridad es C:\Archivos de programa\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup.  
   
  Para evitar ambigüedades, particularmente en los scripts, recomendamos especificar de forma explícita la ruta de acceso del directorio de copias de seguridad en cada cláusula DISK. Sin embargo, esto es menos importante cuando se utiliza el Editor de consultas. En ese caso, si está seguro de que el archivo de copia de seguridad reside en el directorio predeterminado de copias de seguridad, puede omitir la ruta de acceso de una cláusula DISK. Por ejemplo, la siguiente instrucción `BACKUP` realiza una copia de seguridad de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el directorio predeterminado de copias de seguridad.  
   
@@ -205,15 +205,15 @@ GO
 >  Para obtener más información sobre la sintaxis y los argumentos de BACKUP, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Para obtener más información sobre los argumentos y la sintaxis de RESTORE, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) y [RESTORE &#40;argumentos, Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql), respectivamente.  
   
 ###  <a name="OpenTapes"></a>Administrar cintas abiertas  
- Para ver una lista de los dispositivos de cinta abiertos y el estado de las solicitudes de montaje, vea la vista de administración dinámica [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . En esta vista se muestran todas las cintas abiertas. Se incluyen las cintas en uso que se encuentran temporalmente inactivas mientras esperan a la siguiente operación BACKUP o RESTORE.  
+ Para ver una lista de los dispositivos de cinta abiertos y el estado de las solicitudes de montaje, consulte la vista de administración dinámica [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . En esta vista se muestran todas las cintas abiertas. Se incluyen las cintas en uso que se encuentran temporalmente inactivas mientras esperan a la siguiente operación BACKUP o RESTORE.  
   
  Si deja abierta la cinta accidentalmente, la manera más rápida de liberarla es usar el siguiente comando: RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. Para obtener más información, vea [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-azure-blob-storage-service"></a>Usar el servicio de Azure Blob Storage  
- Se pueden escribir SQL Server copias de seguridad en el servicio Azure Blob Storage.  Para obtener más información sobre cómo usar el servicio Azure BLOB Storage para las copias de seguridad, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Las copias de seguridad de SQL Server se pueden escribir en un servicio de Azure Blob Storage.  Para obtener más información sobre cómo usar el servicio Azure BLOB Storage para las copias de seguridad, vea [SQL Server copias de seguridad y restauración con Azure Blob Storage servicio](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ##  <a name="LogicalBackupDevice"></a>Uso de un dispositivo lógico de copia de seguridad  
- Un *dispositivo lógico de copia de seguridad* es un nombre opcional y definido por el usuario que apunta a un dispositivo físico de copia de seguridad específico (un archivo de disco o una unidad de cinta). Un dispositivo lógico de copia de seguridad permite usar el direccionamiento indirecto cuando se hace referencia al dispositivo físico de copia de seguridad correspondiente.  
+ Un *dispositivo lógico de copia de seguridad* es un nombre opcional y definido por el usuario que señala un dispositivo físico de copia de seguridad específico (un archivo de disco o una unidad de cinta). Un dispositivo lógico de copia de seguridad permite usar el direccionamiento indirecto cuando se hace referencia al dispositivo físico de copia de seguridad correspondiente.  
   
  Definir un dispositivo lógico de copia de seguridad requiere la asignación de un nombre lógico a un dispositivo físico. Por ejemplo, puede definirse el dispositivo lógico AdventureWorksBackups para que apunte al archivo Z:\SQLServerBackups\AdventureWorks2012.bak o a la unidad de cinta \\\\.\tape0. De esta forma, los comandos de copias de seguridad y restauración pueden especificar AdventureWorksBackups como dispositivo de copia de seguridad, en lugar de DISK = 'Z:\SQLServerBackups\AdventureWorks2012.bak' o TAPE = '\\\\.\tape0'.  
   
@@ -239,13 +239,13 @@ GO
 2.  Definir un nuevo dispositivo lógico de copia de seguridad que utilice el nombre de dispositivo lógico original pero que se asigne a un dispositivo de copia de seguridad físico distinto. Los dispositivos lógicos de copia de seguridad resultan muy útiles para identificar los dispositivos de copia de seguridad en cinta.  
   
 ##  <a name="MirroredMediaSets"></a>Conjuntos de medios de copia de seguridad reflejados  
- La creación de reflejos de los conjuntos de medios de copia de seguridad reduce el efecto de los errores de funcionamiento de los dispositivos de copia de seguridad. Los errores de funcionamiento son especialmente graves porque las copias de seguridad son el último recurso para evitar la pérdida de datos. A medida que aumenta el tamaño de una base de datos, aumentan las posibilidades de que un error de un dispositivo o medio de copia de seguridad provoque que no se pueda restaurar una copia de seguridad. La creación de reflejo de los medios de copia de seguridad aumenta la confiabilidad de las copias de seguridad al proporcionar redundancia para el dispositivo físico. Para obtener más información, vea [Conjuntos de medios de copia de seguridad reflejados &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
+ La creación de reflejos de los conjuntos de medios de copia de seguridad reduce el efecto de los errores de funcionamiento de los dispositivos de copia de seguridad. Los errores de funcionamiento son especialmente graves porque las copias de seguridad son el último recurso para evitar la pérdida de datos. A medida que aumenta el tamaño de una base de datos, aumentan las posibilidades de que un error de un dispositivo o medio de copia de seguridad provoque que no se pueda restaurar una copia de seguridad. La creación de reflejo de los medios de copia de seguridad aumenta la confiabilidad de las copias de seguridad al proporcionar redundancia para el dispositivo físico. Para obtener más información, vea [Mirrored Backup Media Sets &#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md).  
   
 > [!NOTE]  
 >  Los conjuntos de medios de copia de seguridad reflejados solo se admiten en [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] y en versiones posteriores.  
   
 ##  <a name="Archiving"></a>Archivado de copias de seguridad de SQL Server  
- Se recomienda que use una utilidad de copia de seguridad del sistema de archivos para archivar las copias de seguridad en disco y que guarde los archivos fuera de las instalaciones. El uso de discos tiene la ventaja de poder utilizar la red para escribir las copias de seguridad archivadas en un disco fuera de las instalaciones. El servicio de almacenamiento de blobs de Azure se puede usar como una opción de archivado fuera del sitio.  Puede cargar las copias de seguridad del disco o escribir directamente las copias de seguridad en el servicio de almacenamiento de blobs de Azure.  
+ Se recomienda que use una utilidad de copia de seguridad del sistema de archivos para archivar las copias de seguridad en disco y que guarde los archivos fuera de las instalaciones. El uso de discos tiene la ventaja de poder utilizar la red para escribir las copias de seguridad archivadas en un disco fuera de las instalaciones. El servicio Azure Blob Storage se puede usar como una opción de archivado externo.  Puede cargar las copias de seguridad en disco, o escribir directamente las copias de seguridad en dicho servicio.  
   
  Otro método común de archivado consiste en escribir las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un disco local de copia de seguridad, archivarlas en cinta y guardar estas cintas fuera de las instalaciones.  
   

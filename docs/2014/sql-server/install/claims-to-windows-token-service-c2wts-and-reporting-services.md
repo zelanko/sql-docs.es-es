@@ -23,7 +23,7 @@ ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952272"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services
-  Las notificaciones del servicio de token de Windows (c2WTS) de SharePoint son necesarias con el modo de SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si desea usar la autenticación de Windows para los orígenes de datos que están fuera de la granja de servidores de SharePoint. Esto es cierto incluso si el usuario accede a los orígenes de datos con la autenticación de Windows porque la comunicación entre el servicio front-end web (WFE) y el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se realizará siempre con autenticación de notificaciones.  
+  Las notificaciones del servicio de token de Windows (c2WTS) de SharePoint son necesarias con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo de SharePoint si desea usar la autenticación de Windows para los orígenes de datos que están fuera de la granja de servidores de SharePoint. Esto es cierto incluso si el usuario accede a los orígenes de datos con la autenticación de Windows porque la comunicación entre el servicio front-end web (WFE) y el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se realizará siempre con autenticación de notificaciones.  
   
  c2WTS es necesario aunque los orígenes de datos estén en el mismo equipo que el servicio compartido. Sin embargo, en este escenario no es necesaria la delegación restringida.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "71952272"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
   
 > [!NOTE]  
->  Nota: Algunos de los pasos de configuración pueden cambiar o no funcionar en algunas topologías de granja de servidores. Por ejemplo, una instalación de un solo servidor no admite los servicios c2WTS de Windows Identity Foundation, por lo que las notificaciones a los escenarios de delegación de token de Windows no son posibles con esta configuración de granja.  
+>  Nota: algunos pasos de configuración pueden cambiar o no funcionar en algunas topologías de granja. Por ejemplo, una instalación de un solo servidor no admite los servicios c2WTS de Windows Identity Foundation, por lo que las notificaciones a los escenarios de delegación de token de Windows no son posibles con esta configuración de granja.  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>Pasos básicos necesarios para configurar c2WTS  
   
@@ -96,7 +96,7 @@ ms.locfileid: "71952272"
   
     2.  Cambie el tipo de inicio a "**automático**" e inicie el servicio.  
   
-4.  Iniciar las notificaciones del servicio de token de Windows de SharePoint: Inicie las Notificaciones del servicio de token de Windows a través de la Administración central de SharePoint en la página **Administrar servicios en el servidor**. El servicio se debe iniciar en el servidor que realizará la acción. Por ejemplo, si tiene un servidor que es un servidor web front-end (WFE) y otro servidor que es un servidor de aplicaciones que tiene la ejecución del servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , solo tiene que iniciar c2WTS en el servidor de aplicaciones. c2WTS no es necesario en el servidor web front-end (WFE).  
+4.  Iniciar las notificaciones del servicio de token de Windows de SharePoint: inicie las notificaciones del servicio de token de Windows a través de administración central de SharePoint en la página **administrar servicios en el servidor** . El servicio se debe iniciar en el servidor que realizará la acción. Por ejemplo, si tiene un servidor que es un servidor web front-end (WFE) y otro servidor que es un servidor de aplicaciones que tiene la ejecución del servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , solo tiene que iniciar c2WTS en el servidor de aplicaciones. c2WTS no es necesario en el servidor web front-end (WFE).  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de notificaciones al servicio de token de Windows (c2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   

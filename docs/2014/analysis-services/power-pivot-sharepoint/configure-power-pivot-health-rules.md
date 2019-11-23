@@ -127,6 +127,6 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
      Esta opción de configuración corresponde a la definición de la siguiente regla en la página **Revisar los problemas y las soluciones** : **PowerPivot: los datos de uso no se actualizan con la frecuencia prevista**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Configurar el uso &#40;del espacio&#41; en disco PowerPivot para SharePoint](configure-disk-space-usage-power-pivot-for-sharepoint.md)   
  [Panel de administración de PowerPivot y datos de uso](power-pivot-management-dashboard-and-usage-data.md)  

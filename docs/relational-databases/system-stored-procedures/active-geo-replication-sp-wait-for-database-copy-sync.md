@@ -31,7 +31,7 @@ ms.locfileid: "73844402"
   
 ||  
 |-|  
-|**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -61,7 +61,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="permissions"></a>Permisos  
  Cualquier usuario de la base de datos principal puede llamar a este procedimiento almacenado del sistema. El inicio de sesión debe ser un usuario tanto en la base de datos principal como en la secundaria activa.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  Todas las transacciones confirmadas antes de una llamada **sp_wait_for_database_copy_sync** se envían a la base de datos secundaria activa.  
   
 ## <a name="examples"></a>Ejemplos  

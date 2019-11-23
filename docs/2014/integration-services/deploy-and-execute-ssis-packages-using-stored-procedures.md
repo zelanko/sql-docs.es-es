@@ -29,16 +29,16 @@ ms.locfileid: "72251316"
 > 2.  Haga clic con el botón derecho en el paquete y, después, haga clic en **Ejecutar**.  
 > 3.  Según sea necesario, establezca los valores de parámetros, las propiedades del administrador de conexiones y las opciones de la pestaña **Avanzadas** , como el nivel de registro.  
 > 
->      Para obtener más información acerca de los niveles de registro, vea [Habilitar el registro para la ejecución de paquetes en el servidor SSIS](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md).  
+>      Para obtener más información acerca de los niveles de registro, vea [Enable Logging for Package Execution on the SSIS Server](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md).  
 > 4.  Antes de hacer clic en **Aceptar** para ejecutar el paquete, haga clic en **Script**. Transact-SQL aparece en una ventana del Editor de consultas en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>Para implementar y ejecutar un paquete mediante procedimientos almacenados  
   
 1.  Llame a [catalog.deploy_project &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) para implementar el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Para recuperar el contenido binario del archivo de implementación del proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], para el parámetro *\@project_stream* , use una instrucción SELECT con la función OPENROWSET y el proveedor de conjuntos de filas bulk. El proveedor de conjuntos de filas BULK le permite leer datos de un archivo. El argumento SINGLE_BLOB del proveedor de conjuntos de filas BULK devuelve el contenido del archivo de datos como un conjunto de filas de una sola fila y una sola columna de tipo varbinary(max). Para obtener más información, vea [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+     Para recuperar el contenido binario del archivo de implementación del proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], para el parámetro *project_stream\@* , utilice una instrucción SELECT con la función OPENROWSET y el proveedor de conjuntos de filas bulk. El proveedor de conjuntos de filas BULK le permite leer datos de un archivo. El argumento SINGLE_BLOB del proveedor de conjuntos de filas BULK devuelve el contenido del archivo de datos como un conjunto de filas de una sola fila y una sola columna de tipo varbinary(max). Para obtener más información, vea [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     En el ejemplo siguiente, el proyecto SSISPackages_ProjectDeployment se implementa en la carpeta Paquetes SSIS del servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Los datos binarios se leen del archivo de proyecto (SSISPackage_ProjectDeployment. ISPAC) y se almacenan en el parámetro *\@ProjectBinary* de tipo varbinary (Max). El valor del parámetro *\@ProjectBinary* se asigna al parámetro *\@project_stream* .  
+     En el ejemplo siguiente, el proyecto SSISPackages_ProjectDeployment se implementa en la carpeta Paquetes SSIS del servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Los datos binarios se leen del archivo de proyecto (SSISPackage_ProjectDeployment. ISPAC) y se almacenan en el parámetro *\@ProjectBinary* de tipo varbinary (Max). El valor de parámetro *\@ProjectBinary* se asigna al parámetro *\@project_stream*.  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

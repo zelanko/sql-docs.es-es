@@ -32,10 +32,10 @@ ms.locfileid: "72783205"
 > [!IMPORTANT]  
 >  A partir de la versión de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , el proveedor WMI se admite para los servidores de informes en modo nativo. Los servidores de informes en modo de SharePoint pueden administrarse con las páginas de Administración central de SharePoint y scripts de PowerShell.  
   
-|Clase|Espacio de nombres|Description|  
+|Clase|Espacio de nombres|Descripción|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName >* \v11|Proporciona la información básica requerida para que un cliente se conecte a un servidor de informes instalado.|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName >* \v11\Admin|Representa la instalación y los parámetros de tiempo de ejecución de una instancia del servidor de informes. Estos parámetros se guardan en el archivo de configuración del servidor de informes.<br /><br /> **\*\* Importante \*\*** Esta clase solo está disponible con privilegios de administrador.|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v11|Proporciona la información básica requerida para que un cliente se conecte a un servidor de informes instalado.|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v11\Admin|Representa la instalación y los parámetros de tiempo de ejecución de una instancia del servidor de informes. Estos parámetros se guardan en el archivo de configuración del servidor de informes.<br /><br /> **\*\* Importante \*\*** Esta clase solo está disponible con privilegios de administrador.|  
   
  Se crea una instancia de cada una de las clases anteriores para cada instancia del servidor de informes. Puede utilizar cualquier herramienta de Microsoft o de terceros para tener acceso a los objetos de WMI expuestos por el servidor de informes, incluidas las interfaces de programación de WMI, expuestas por .NET Framework. En este tema se describe cómo acceder y usar las instancias de clases WMI con el comando de PowerShell [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx).  
   
@@ -86,6 +86,6 @@ $rsconfig = Get-WmiObject -Namespace "root\Microsoft\SqlServer\ReportServer\RS_M
 $rsconfig.GetAdminSiteUrl()  
 ```  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Vea también
  [Referencia de la biblioteca de proveedores WMI de Reporting Services &#40;SSRS&#41;](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
  [Archivo de configuración RSReportServer](../report-server/rsreportserver-config-configuration-file.md)  

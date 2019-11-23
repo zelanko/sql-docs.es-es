@@ -22,13 +22,13 @@ ms.locfileid: "71952094"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** @no__t el modo de SharePoint.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo de SharePoint.|  
   
 ## <a name="component"></a>Componente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descripción  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se actualizará ni instalará en SharePoint 2007. La actualización está bloqueada.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se actualizarán ni instalarán en SharePoint 2007. La actualización está bloqueada.  
   
 ## <a name="corrective-action"></a>Acción correctora  
  Para continuar con la actualización, debe desinstalar SharePoint 2007 o actualizar SharePoint 2007 a un producto SharePoint 2010. Una vez que haya actualizado la instalación de SharePoint, vuelva a ejecutar el Asesor de actualizaciones para confirmar que no hay otros problemas de actualización.  

@@ -59,9 +59,9 @@ ms.locfileid: "70212396"
  Se pueden crear procedimientos almacenados extendidos para llevar a cabo funcionalidades que no son posibles con los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Los procedimientos almacenados extendidos pueden, sin embargo, poner en peligro la integridad del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mientras que el código administrado, cuya seguridad de tipos se comprueba, no puede. Además, la administración de memoria, la programación de subprocesos y fibras y los servicios de sincronización se integran más plenamente entre el código administrado de CLR y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con la integración CLR, tiene una manera más segura que los procedimientos almacenados extendidos de escribir los procedimientos almacenados necesarios para realizar las tareas que no son posibles en [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obtener más información acerca de la integración CLR y los procedimientos almacenados extendidos, vea [rendimiento de la integración CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Instalación del .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Instalación del  de .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)  
  [Arquitectura de la integración CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
- [Acceso a datos desde objetos de base de datos CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
+ [Acceso a datos de objetos de base de datos CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Introducción a la integración CLR](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  
   
   

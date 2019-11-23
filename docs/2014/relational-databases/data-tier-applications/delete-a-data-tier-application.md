@@ -30,7 +30,7 @@ ms.locfileid: "72782742"
 # <a name="delete-a-data-tier-application"></a>Eliminar una aplicación de capa de datos
   Puede eliminar una aplicación de capa de datos mediante el Asistente para eliminar aplicación de capa de datos o un script de Windows PowerShell. Puede especificar si la base de datos asociada se conserva, se separa o se quita.  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
   
 -   **Para actualizar una DAC mediante:**  [Asistente para registrar aplicación de capa de datos](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
@@ -82,11 +82,11 @@ ms.locfileid: "72782742"
 ##  <a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para eliminar una aplicación de capa de datos.  
   
- **No volver a mostrar esta página.** - Haga clic en la casilla para evitar que la página se muestre en el futuro.  
+ **No volver a mostrar esta página.** active esta casilla para que la página deje de mostrarse en el futuro.  
   
- **Siguiente >:** avance a la página **Elegir método**.  
+ **Siguiente >** : continúa hasta la página **Elegir método**.  
   
- **Cancelar** : termina el asistente sin eliminar una aplicación de capa de datos o base de datos.  
+ **Cancelar** - Termina el asistente sin eliminar una aplicación de capa de datos o base de datos.  
   
 ##  <a name="Choose_method"></a> Página Elegir método  
  Use esta página para especificar la opción a fin de controlar la base de datos asociada a la DAC que se va a eliminar.  
@@ -105,7 +105,7 @@ ms.locfileid: "72782742"
   
  **Siguiente >** : avanza a la página **Resumen**.  
   
- **Cancelar** : termina el asistente sin eliminar la DAC o la base de datos.  
+ **Cancelar** - Termina el asistente sin eliminar la DAC o la base de datos.  
   
 ##  <a name="Summary"></a> Página Resumen  
  Use esta página para revisar las acciones que el asistente realizará al eliminar la instancia de la DAC.  
@@ -116,7 +116,7 @@ ms.locfileid: "72782742"
   
  **Siguiente >** : elimina la instancia de DAC mediante el método elegido en la página anterior y avanza a la página **Eliminar aplicación de capa de datos**.  
   
- **Cancelar** : finaliza el asistente sin eliminar la instancia de DAC.  
+ **Cancelar** - Finaliza el asistente sin eliminar la instancia de la DAC.  
   
 ##  <a name="Delete_datatier_application"></a> Página Eliminar aplicación de capa de datos  
  Esta página notifica si la operación de eliminación se realizó correctamente o no.  
@@ -125,7 +125,7 @@ ms.locfileid: "72782742"
   
  **Guardar informe** : seleccione este botón para guardar el informe de eliminación en un archivo HTML. El archivo notifica el estado de cada acción, incluidos todos los errores generados por cualquiera de las acciones. La carpeta predeterminada es una carpeta SQL Server Management Studio\DAC Packages de la carpeta Documentos de su cuenta de Windows.  
   
- **Finalizar** : termina el asistente.  
+ **Finalizar** - Termina el asistente.  
   
 ##  <a name="DeleteDACPowerShell"></a> Eliminar una DAC mediante PowerShell  
  **Para eliminar una DAC mediante un script de PowerShell**  
@@ -218,7 +218,7 @@ $dacName  = "MyApplication"
 ## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](data-tier-applications.md)   
  [Aplicaciones de capa de datos](data-tier-applications.md)   
  [Implementar una aplicación de capa de datos](deploy-a-data-tier-application.md)   

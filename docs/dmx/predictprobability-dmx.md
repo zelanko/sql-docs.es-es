@@ -33,8 +33,8 @@ PredictProbability(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>Tipo devuelto  
  Un valor escalar.  
   
-## <a name="remarks"></a>Comentarios  
- Si se omite el estado predicho, se usa el estado que tenga la mayor probabilidad de predicción, sin incluir el depósito de estados que faltan. Para incluir el depósito de Estados que faltan \<, establezca el estado de predicción > en **INCLUDE_NULL**. Para devolver la probabilidad de los Estados que faltan, \<establezca el > de estado de predicción en NULL.  
+## <a name="remarks"></a>Remarks  
+ Si se omite el estado predicho, se usa el estado que tenga la mayor probabilidad de predicción, sin incluir el depósito de estados que faltan. Para incluir el depósito de Estados que faltan, establezca la \<> de estado de predicción en **INCLUDE_NULL**. Para devolver la probabilidad de los Estados que faltan, establezca el \<de estado predicho > en NULL.  
   
 > [!NOTE]  
 >  Algunos modelos de minería de datos no proporcionan los valores de probabilidad y, por consiguiente, no pueden utilizar esta función. Además, los valores de probabilidad de cualquier valor del objetivo determinado se calcula de manera diferente o podría tener una interpretación distinta que dependa del tipo de modelo que esté consultando. Para obtener más información sobre cómo se calcula la probabilidad para un tipo de modelo determinado, vea el tema sobre el algoritmo individual del [contenido &#40;del&#41;modelo de minería de datos Analysis Services-minería de datos](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
@@ -64,7 +64,7 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de funciones &#40;DMX&#41; de extensiones de minería de datos](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX &#40;de funciones&#41;](../dmx/functions-dmx.md)   
+   de [funciones &#40;DMX&#41; ](../dmx/functions-dmx.md)  
  [Funciones &#40;de predicción generales DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

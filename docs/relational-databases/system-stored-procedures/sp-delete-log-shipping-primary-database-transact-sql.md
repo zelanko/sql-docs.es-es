@@ -27,9 +27,9 @@ ms.locfileid: "72909870"
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Este procedimiento almacenado quita el trasvase de registros de la base de datos principal, incluyendo el trabajo de copia de seguridad y los historiales local y remoto. Utilice este procedimiento almacenado solo después de quitar las bases de datos secundarias con **sp_delete_log_shipping_primary_secondary**.  
+  Este procedimiento almacenado quita el trasvase de registros de la base de datos principal, incluyendo el trabajo de copia de seguridad y los historiales local y remoto. Utilice este procedimiento almacenado solo después de quitar las bases de datos secundarias mediante **sp_delete_log_shipping_primary_secondary**.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,24 +48,24 @@ sp_delete_log_shipping_primary_database
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Remarks  
  **sp_delete_log_shipping_primary_database** se debe ejecutar desde la base de datos **maestra** del servidor principal. Este procedimiento almacenado hace lo siguiente:  
   
 1.  Elimina el trabajo de copia de seguridad para la base de datos principal especificada.  
   
-2.  Quita el registro de supervisión local en **log_shipping_monitor_primary** en el servidor principal.  
+2.  Quita el registro de monitor local en **log_shipping_monitor_primary** en el servidor principal.  
   
-3.  Quita las entradas correspondientes de **log_shipping_monitor_history_detail** y **log_shipping_monitor_error_detail**.  
+3.  Quita las entradas correspondientes en **log_shipping_monitor_history_detail** y **log_shipping_monitor_error_detail**.  
   
 4.  Si el servidor de supervisión es diferente del servidor principal, quita el registro del monitor en **log_shipping_monitor_primary** en el servidor de supervisión.  
   
-5.  Quita las entradas correspondientes de **log_shipping_monitor_history_detail** y **log_shipping_monitor_error_detail** en el servidor de supervisión.  
+5.  Quita las entradas correspondientes en **log_shipping_monitor_history_detail** y **log_shipping_monitor_error_detail** en el servidor de supervisión.  
   
 6.  Quita la entrada de **log_shipping_primary_databases** para esta base de datos principal.  
   
 7.  Llama a **sp_delete_log_shipping_alert_job** en el servidor de supervisión.  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -76,7 +76,7 @@ EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureW
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

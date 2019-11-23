@@ -25,13 +25,13 @@ ms.locfileid: "73882253"
   En este tema se describe cómo configurar la publicación y distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener más información, vea implementación de la [replicación segura](security/view-and-modify-replication-security-settings.md).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Configure la distribución con el Asistente para nueva publicación o el Asistente para configurar la distribución. Después de configurar el distribuidor, vea y modifique las propiedades en el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** . Utilice el Asistente para configurar la distribución si desea configurar un distribuidor para que los miembros de los roles fijos de base de datos **db_owner** puedan crear publicaciones o si desea configurar un distribuidor remoto que no sea un publicador.  
+ Configure la distribución con el Asistente para nueva publicación o el Asistente para configurar la distribución. Después de configurar el distribuidor, vea y modifique las propiedades en el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** . Use el Asistente para configurar la distribución si quiere configurar un distribuidor para que los miembros de los roles fijos de base de datos **db_owner** puedan crear publicaciones o si quiere configurar un distribuidor remoto que no sea un publicador.  
   
 #### <a name="to-configure-distribution"></a>Para configurar la distribución  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73882253"
   
     -   Opcionalmente, habilite otros publicadores para utilizar el distribuidor. Si se habilitan otros publicadores para utilizar el distribuidor, debe escribir una contraseña en la página **Contraseña del distribuidor** para las conexiones realizadas desde esos publicadores al distribuidor.  
   
-    -   Opcionalmente, genere un script de opciones de configuración. Para más información, consulte [Scripting Replication](scripting-replication.md).  
+    -   Opcionalmente, genere un script de opciones de configuración. Para obtener más información, consulte [Scripting Replication](scripting-replication.md).  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  La publicación y distribución de replicaciones se puede configurar mediante programación usando procedimientos almacenados de replicación.  
@@ -166,7 +166,7 @@ ms.locfileid: "73882253"
   
 ## <a name="see-also"></a>Vea también  
  [Ver y modificar las propiedades del distribuidor y del publicador](view-and-modify-distributor-and-publisher-properties.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [Conceptos sobre los procedimientos almacenados del sistema de replicación](concepts/replication-system-stored-procedures-concepts.md)   
  [Configurar distribución](configure-distribution.md)   
  [Conceptos de los Replication Management Objects (RMO)](concepts/replication-management-objects-concepts.md)   
  [Configurar la replicación para &#40;grupos de disponibilidad AlwaysOn SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 

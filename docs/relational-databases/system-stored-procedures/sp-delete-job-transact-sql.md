@@ -53,7 +53,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 `[ @delete_history = ] delete_history` especifica si se debe eliminar el historial del trabajo. *delete_history* es de **bit**y su valor predeterminado es **1**. Cuando *delete_history* es **1**, se elimina el historial de trabajos del trabajo. Cuando *delete_history* es **0**, no se elimina el historial de trabajos.  
   
- Tenga en cuenta que cuando se elimina un trabajo y no se elimina el historial, la información histórica del trabajo no se mostrará en el historial de trabajos de la interfaz gráfica de usuario del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero la información seguirá residiendo en la tabla **sysjobhistory** en la base de datos **msdb** base de datos.  
+ Tenga en cuenta que cuando se elimina un trabajo y no se elimina el historial, la información histórica del trabajo no se mostrará en el historial de trabajos de la interfaz gráfica de usuario del agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero la información seguirá residiendo en la tabla **sysjobhistory** de la base de datos **msdb** .  
   
 `[ @delete_unused_schedule = ] delete_unused_schedule` especifica si se deben eliminar las programaciones adjuntas a este trabajo si no están adjuntas a ningún otro trabajo. *delete_unused_schedule* es de **bit**y su valor predeterminado es **1**. Cuando *delete_unused_schedule* es **1**, se eliminan las programaciones adjuntas a este trabajo si ningún otro trabajo hace referencia a la programación. Cuando *delete_unused_schedule* es **0**, no se eliminan las programaciones.  
   
@@ -61,12 +61,12 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
-## <a name="remarks"></a>Comentarios  
- El argumento **\@originating_server** está reservado para uso interno.  
+## <a name="remarks"></a>Remarks  
+ El **\@argumento originating_server** está reservado para uso interno.  
   
- El argumento **\@delete_unused_schedule** proporciona compatibilidad con versiones anteriores de SQL Server quitando automáticamente las programaciones que no están adjuntas a ningún trabajo. Tenga en cuenta que este parámetro tiene como valor predeterminado el comportamiento compatible con versiones anteriores. Para conservar las programaciones que no están adjuntas a un trabajo, debe proporcionar el valor **0** como argumento **\@delete_unused_schedule** .  
+ El argumento **delete_unused_schedule de\@** proporciona compatibilidad con versiones anteriores de SQL Server al quitar automáticamente las programaciones que no están adjuntas a ningún trabajo. Tenga en cuenta que este parámetro tiene como valor predeterminado el comportamiento compatible con versiones anteriores. Para conservar las programaciones que no están adjuntas a un trabajo, debe proporcionar el valor **0** como **\@delete_unused_schedule** argumento.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   

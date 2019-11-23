@@ -198,18 +198,18 @@ Set oServer = nothing
   
 |||  
 |-|-|  
-|**Description**|**Tema**|  
+|**Descripción**|**Tema**|  
 |Describe cómo crear un paso de trabajo con un programa ejecutable.|[Crear un paso de trabajo CmdExec](create-a-cmdexec-job-step.md)|  
-|Describe cómo restablecer los permisos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Configurar un usuario para crear y administrar trabajos del Agente SQL Server](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
-|Describe cómo crear un paso de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
-|Describe cómo definir opciones para los pasos de trabajo Transact-SQL del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Microsoft.|[Definir opciones de pasos de trabajo de Transact-SQL](define-transact-sql-job-step-options.md)|  
-|Describe cómo crear un paso de trabajo de script ActiveX.|[Create an ActiveX Script Job Step](create-an-activex-script-job-step.md)|  
-|Describe cómo crear y definir pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan comandos y consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Crear un paso de trabajo de Analysis Services](create-an-analysis-services-job-step.md)|  
-|Describe la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar si se produce un error durante la ejecución del trabajo.|[Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)|  
+|Describe cómo restablecer los permisos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Configurar un usuario para crear y administrar trabajos del Agente SQL Server](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
+|Describe cómo crear un paso de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Crear un paso de trabajo de Transact-SQL](create-a-transact-sql-job-step.md)|  
+|Describe cómo definir opciones para los pasos de trabajo Transact-SQL del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Microsoft.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
+|Describe cómo crear un paso de trabajo de script ActiveX.|[Crear un paso de trabajo para un script ActiveX](create-an-activex-script-job-step.md)|  
+|Describe cómo crear y definir pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan comandos y consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](create-an-analysis-services-job-step.md)|  
+|Describe la acción que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe realizar si se produce un error durante la ejecución del trabajo.|[Establecer el flujo correcto o con errores de los pasos de un trabajo](set-job-step-success-or-failure-flow.md)|  
 |Describe cómo ver detalles de pasos de trabajo en el cuadro de diálogo Propiedades de paso de trabajo.|[Ver información de pasos de trabajo](view-job-step-information.md)|  
-|Describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Eliminar un registro de paso de trabajo](delete-a-job-step-log.md)|  
+|Describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [dbo. sysjobstepslogs &#40;Transact-SQL&#41; ](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Crear trabajos](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

@@ -37,7 +37,7 @@ ms.locfileid: "73882180"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73882180"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para establecer el período de expiración de una suscripción en una instantánea o una publicación transaccional  
   
-1.  En el publicador, ejecute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique el período de expiración deseado para la suscripción, en horas, para **\@retention**. El período de expiración predeterminado es 336 horas. Para más información, consulte [Create a Publication](create-a-publication.md).  
+1.  En el publicador, ejecute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique el período de expiración deseado para la suscripción, en horas, para **\@retention**. El período de expiración predeterminado es 336 horas. Para obtener más información, consulte [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Para establecer el período de expiración de una suscripción en una publicación de combinación  
   
@@ -75,7 +75,7 @@ ms.locfileid: "73882180"
   
     -   **3** = año  
   
-     El período de expiración predeterminado es 14 días. Para más información, consulte [Create a Publication](create-a-publication.md).  
+     El período de expiración predeterminado es 14 días. Para obtener más información, consulte [Create a Publication](create-a-publication.md).  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para cambiar el período de expiración de una suscripción a una instantánea o una publicación transaccional  
   
@@ -98,7 +98,7 @@ ms.locfileid: "73882180"
 3.  (Opcional) En el publicador, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique **retention_period_unit** para **\@property** y una nueva unidad para el período de expiración de la suscripción para **\@value**.  
   
 ## <a name="see-also"></a>Vea también  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
+ [Conceptos sobre los procedimientos almacenados del sistema de replicación](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Desactivación y expiración de las suscripciones](../subscription-expiration-and-deactivation.md)  
   
   

@@ -30,7 +30,7 @@ ms.locfileid: "72452872"
 
 Agrega un ensamblado a la lista de ensamblados de confianza para el servidor.
 
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
 ## <a name="syntax"></a>Sintaxis
@@ -40,21 +40,21 @@ sp_add_trusted_assembly
     [ , [ @description = ] 'description' ]
 ```  
 
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Remarks  
 
 Este procedimiento agrega un ensamblado a [Sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## <a name="arguments"></a>Argumentos
 
 [@hash =] '*valor*'  
-Valor hash de SHA2_512 del ensamblado que se va a agregar a la lista de ensamblados de confianza para el servidor. Los ensamblados de confianza pueden cargarse cuando se habilita [CLR STRICT Security](../../database-engine/configure-windows/clr-strict-security.md) , incluso si el ensamblado está sin firmar o si la base de datos no está marcada como de confianza.
+Valor hash SHA2_512 del ensamblado que se va a agregar a la lista de ensamblados de confianza para el servidor. Los ensamblados de confianza pueden cargarse cuando se habilita [CLR STRICT Security](../../database-engine/configure-windows/clr-strict-security.md) , incluso si el ensamblado está sin firmar o si la base de datos no está marcada como de confianza.
 
 [@description =] '*Descripción*'  
-Descripción opcional definida por el usuario del ensamblado. Microsoft recomienda usar el nombre canónico que codifica el nombre simple, el número de versión, la referencia cultural, la clave pública y la arquitectura del ensamblado para confiar. Este valor identifica de forma única el ensamblado en el lado Common Language Runtime (CLR) y es el mismo que el valor de clr_name en sys. Assemblies. 
+Descripción opcional definida por el usuario del ensamblado. Microsoft recomienda usar el nombre canónico que codifica el nombre simple, el número de versión, la referencia cultural, la clave pública y la arquitectura del ensamblado para confiar. Este valor identifica de forma única el ensamblado en el lado Common Language Runtime (CLR) y es el mismo que el valor clr_name de sys. Assemblies. 
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Permisos
 
-Requiere la pertenencia al rol fijo de servidor @no__t 0 o el permiso `CONTROL SERVER`.
+Requiere la pertenencia al rol fijo de servidor `sysadmin` o al permiso `CONTROL SERVER`.
 
 ## <a name="examples"></a>Ejemplos  
 
@@ -65,9 +65,9 @@ EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7
 N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarchitecture=msil';
 ```  
 
-## <a name="see-also"></a>Ver también  
-  [Sys. sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
-  [Sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
+## <a name="see-also"></a>Vea también  
+  [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
+  [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  

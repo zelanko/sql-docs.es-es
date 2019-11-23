@@ -47,7 +47,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  El consumidor interpreta los miembros de la estructura SSERRORINFO de la siguiente manera.  
   
-|Miembro|Descripción|  
+|Member|Descripción|  
 |------------|-----------------|  
 |*pwszMessage*|Mensaje de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Idéntico a la cadena que se devuelve en **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la sesión.|  

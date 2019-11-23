@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **\@publication =** ] **'***publicación***'**  
+ [ **\@publicación =** ] **'***publicación***'**  
  Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 `[ @level = ] level` es el tipo de validación que se va a realizar. *LEVEL* es de **tinyint**y no tiene ningún valor predeterminado. Puede ser uno de estos valores.  
@@ -46,13 +46,13 @@ sp_validatemergepublication [@publication=] 'publication'
 |Valor de nivel|Descripción|  
 |-----------------|-----------------|  
 |**1**|Validación solo del recuento de filas|  
-|**2**|Validación del recuento de filas y de la suma de comprobación. Para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Subscribers, se establece automáticamente en **3**.|  
+|**2**|Validación del recuento de filas y de la suma de comprobación. Para los suscriptores de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], este valor se establece automáticamente en **3**.|  
 |**3**|Este es el valor recomendado.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_validatemergepublication** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
@@ -60,7 +60,7 @@ sp_validatemergepublication [@publication=] 'publication'
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Validar datos replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [Transact &#40;-SQL de sp_validatemergesubscription&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
+ [Validar  de datos replicados](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
+ [sp_validatemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   

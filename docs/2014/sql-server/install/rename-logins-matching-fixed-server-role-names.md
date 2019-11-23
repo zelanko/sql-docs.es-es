@@ -60,7 +60,7 @@ ms.locfileid: "72278216"
   
 2.  Elimine los inicios de sesión.  
   
-3.  Utilice el procedimiento del sistema **sp_addlogin** para crear nuevos inicios de sesión. Especifique el SID devuelto en el paso 1 en el parámetro **\@sid** para cada inicio de sesión correspondiente.  
+3.  Utilice el procedimiento del sistema **sp_addlogin** para crear nuevos inicios de sesión. Especifique el SID devuelto en el paso 1 en el parámetro **\@SID** para cada inicio de sesión correspondiente.  
   
 ## <a name="see-also"></a>Vea también  
  [Motor de base de datos problemas de actualización](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

@@ -28,7 +28,7 @@ ms.locfileid: "73982608"
 
   Devuelve información sobre todas las esperas encontradas por los subprocesos que se ejecutaron para cada sesión. Puede usar esta vista para diagnosticar problemas de rendimiento con la sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y también con lotes y consultas específicos.  Esta vista devuelve la misma información que se agrega para [Sys. dm_os_wait_stats &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) , pero también proporciona el número de **session_id** .  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores)  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

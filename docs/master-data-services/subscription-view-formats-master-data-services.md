@@ -25,7 +25,7 @@ ms.locfileid: "73728892"
   
 ## <a name="subscription-view-formats"></a>Formatos de vista de suscripciones  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |**Miembros hoja**|Contiene miembros hoja y sus valores de atributo asociados.|  
 |**Historial de miembros hoja**|Contiene los datos históricos de los miembros hoja y los valores de atributo asociados. El formato de vista es el estilo Dimensión de variación lenta tipo 4.|  

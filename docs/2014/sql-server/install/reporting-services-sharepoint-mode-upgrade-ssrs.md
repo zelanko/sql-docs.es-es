@@ -26,10 +26,10 @@ ms.locfileid: "71952433"
 ## <a name="options"></a>Opciones  
  El botón **Siguiente** solo se encuentra disponible si ha seleccionado la casilla **Continuar con la actualización** . Si no selecciona la casilla, no puede continuar con la actualización.  
   
- Para obtener más información, consulte [upgrade and migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628).  
+ Para obtener más información, vea [actualizar y migrar Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628).  
   
 ## <a name="see-also"></a>Vea también  
- [Ver y leer los archivos de registro de instalación de SQL Server](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
+ [View and Read SQL Server Setup Log Files](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   
  [Instalación desde el símbolo del sistema del modo de SharePoint y el modo nativo de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=217620)  
   
   

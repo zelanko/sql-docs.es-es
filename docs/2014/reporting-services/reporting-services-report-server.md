@@ -34,13 +34,13 @@ ms.locfileid: "70176187"
 # <a name="reporting-services-report-server"></a>Servidor de informes de Reporting Services
   En este tema se ofrece información general del servidor de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , el componente central de una instalación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Está compuesto por un par de motores de procesamiento, además de una serie de extensiones con finalidades especiales que administran la autenticación, el procesamiento de datos, la representación y las operaciones de entrega. Un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se ejecuta en uno de dos modos de implementación: modo nativo o modo de SharePoint. Consulte la sección [Comparación de características de SharePoint en modo nativo](#bkmk_featuresupport) para obtener una comparación de las características.  
   
- **Instalación:** Para obtener información [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sobre la instalación de, vea lo siguiente:  
+ **Instalación** : para obtener información sobre la instalación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vea lo siguiente:  
   
 -   [Instalar el servidor de informes en modo nativo de Reporting Services](install-windows/install-reporting-services-native-mode-report-server.md)  
   
 -   [Instalación de características de SQL Server BI &#40;con SharePoint PowerPivot y Reporting Services&#41;](../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
   
- **Azure**: Para obtener información sobre [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] el uso de con Azure virtual machines, consulte lo siguiente:  
+ **Azure**: para obtener información sobre el uso de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] con Azure virtual machines, consulte lo siguiente:  
   
 -   [SQL Server Business Intelligence en Azure virtual machines](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx).  
   
@@ -83,23 +83,23 @@ ms.locfileid: "70176187"
   
 ##  <a name="bkmk_featuresupport"></a>Comparación de características de SharePoint y el modo nativo  
   
-|Componente o característica|Modo nativo|Modo SharePoint|  
+|Componente o característica|.|modo de SharePoint|  
 |--------------------------|-----------------|---------------------|  
 |**Direcciones URL**|Sí|El direccionamiento de direcciones URL es distinto en el modo integrado de SharePoint. Las direcciones URL de SharePoint se utilizan para hacer referencia a informes, modelos de informe, orígenes de datos compartidos y recursos. No se utiliza la jerarquía de carpetas del servidor de informes. Si tiene aplicaciones personalizadas que dependen del acceso de direcciones URL como las admitidas en un servidor de informes en modo nativo, esa funcionalidad ya no funcionará cuando el servidor de informes se configure para la integración de SharePoint.<br /><br /> Para más información sobre el acceso URL, vea [Referencia de parámetros de acceso URL](url-access-parameter-reference.md).|  
 |**Extensiones de seguridad personalizadas**|Sí|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en el servidor de informes. El servidor de informes incluye una extensión de seguridad para fines especiales que se utiliza siempre que se configura un servidor de informes para que se ejecute en el modo integrado de SharePoint. Esta extensión de seguridad es un componente interno que se requiere para las operaciones integradas.|  
 |**Administrador de configuración**|Sí|**\*\* Importante \*\*** El Administrador de configuración no se puede usar para administrar un servidor de informes en modo de SharePoint. En su lugar, utilice Administración central de SharePoint.|  
-|**Administrador de informes**|Sí|El Administrador de informes no se puede usar para administrar el modo de SharePoint. Use las páginas de aplicación de SharePoint. Para más información, vea [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
+|**Administrador de informes**|Sí|El Administrador de informes no se puede usar para administrar el modo de SharePoint. Use las páginas de aplicación de SharePoint. Para obtener más información, vea [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Informes vinculados**|Sí|No.|  
-|**Mis informes**|Sí|Sin|  
-|**Mis suscripciones** y métodos de procesamiento por lotes.|Sí|Sin|  
-|**Alertas de datos**|Sin|Sí|  
-|**Power View**|Sin|Sí<br /><br /> Requiere Silverlight en el explorador cliente. Para obtener más información sobre los requisitos del explorador, consulte [planeación de la &#40;compatibilidad del&#41; explorador de Reporting Services y Power View Reporting Services 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Mis informes**|Sí|No|  
+|**Mis suscripciones** y métodos de procesamiento por lotes.|Sí|No|  
+|**Alertas de datos**|No|Sí|  
+|**Power View**|No|Sí<br /><br /> Requiere Silverlight en el explorador cliente. Para obtener más información sobre los requisitos del explorador, consulte [planeación de la &#40;compatibilidad del&#41; explorador de Reporting Services y Power View Reporting Services 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Informes .RDL**|Sí|Sí<br /><br /> Los informes .RDL pueden ejecutarse en servidores de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo nativo o en modo de SharePoint.|  
-|**Informes .RDLX**|Sin|Sí<br /><br /> Los informes .RDLX de Power View solo pueden ejecutarse en servidores de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint.|  
-|**Credenciales de token de usuario de SharePoint para la extensión de lista de SharePoint**|Sin|Sí|  
-|**Zonas de AAM para implementaciones con conexión a Internet**|Sin|Sí|  
-|**Copias de seguridad y recuperación de SharePoint**|Sin|Sí|  
-|**Compatibilidad con registros de ULS**|Sin|Sí|  
+|**Informes .RDLX**|No|Sí<br /><br /> Los informes .RDLX de Power View solo pueden ejecutarse en servidores de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint.|  
+|**Credenciales de token de usuario de SharePoint para la extensión de lista de SharePoint**|No|Sí|  
+|**Zonas de AAM para implementaciones con conexión a Internet**|No|Sí|  
+|**Copias de seguridad y recuperación de SharePoint**|No|Sí|  
+|**Compatibilidad con registros de ULS**|No|Sí|  
   
 ##  <a name="bkmk_nativemode"></a>Modo nativo  
  En el modo nativo, un servidor de informes es un servidor de aplicaciones independiente que proporciona todas las operaciones de visualización, administración, procesamiento y entrega de informes y modelos de informe. Se trata del modo predeterminado para las instancias del servidor de informes. Puede instalar un servidor de informes en modo nativo que se configure durante la instalación o puede configurarlo para las operaciones en modo nativo una vez completado el programa de instalación.  
@@ -113,14 +113,14 @@ ms.locfileid: "70176187"
  Los programadores de otros fabricantes pueden crear extensiones adicionales para reemplazar o ampliar la capacidad de procesamiento del servidor de informes. Para obtener más información acerca de las interfaces de programación disponibles para los desarrolladores de aplicaciones, vea la [Referencia técnica](../../2014/reporting-services/technical-reference-ssrs.md).  
   
 ###  <a name="bkmk_nativewithwebparts"></a>Modo nativo con SharePoint elementos web  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]proporciona dos elementos Web que puede instalar y registrar en una instancia de [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2,0 o posterior, o en SharePoint Portal Server 2003 o posterior. Desde un sitio de SharePoint, puede utilizar los elementos web para buscar y ver informes almacenados y procesados en el servidor de informes que se ejecuta en modo nativo. Estos elementos web se incluyeron en versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona dos elementos web que puede instalar y registrar en una instancia de [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2,0 o posterior, o bien SharePoint Portal Server 2003 o posterior. Desde un sitio de SharePoint, puede utilizar los elementos web para buscar y ver informes almacenados y procesados en el servidor de informes que se ejecuta en modo nativo. Estos elementos web se incluyeron en versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_sharepointmode"></a> Modo de SharePoint  
  En el modo de SharePoint, un servidor de informes se debe ejecutar en una granja de servidores de SharePoint. Las características de administración, representación y procesamiento del servidor de informes se representan mediante un servidor de aplicaciones de SharePoint que ejecuta el servicio compartido [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y una o varias aplicaciones de servicio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Un sitio de SharePoint proporciona el acceso front-end al contenido y las operaciones del servidor de informes.  
   
  El modo de SharePoint requiere:  
   
--   [!INCLUDE[SPF2010](../includes/spf2010-md.md)] o [!INCLUDE[SPS2010](../includes/sps2010-md.md)].  
+-   [!INCLUDE[SPF2010](../includes/spf2010-md.md)] o bien [!INCLUDE[SPS2010](../includes/sps2010-md.md)].  
   
 -   Una versión adecuada del Complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para Productos de SharePoint 2010.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "70176187"
   
  Reporting Services proporciona extensiones predeterminadas para que se puedan utilizar todas las características de servidor sin tener que desarrollar componentes personalizados. En la tabla siguiente se describen las extensiones predeterminadas que contribuyen a una instancia del servidor de informes completa con la funcionalidad lista para su uso:  
   
-|Type|Default|  
+|Tipo|Valor de DB-Library|  
 |----------|-------------|  
 |Autenticación|Una instancia del servidor de informes predeterminada admite la autenticación de Windows, incluso las características de suplantación y delegación si están habilitadas en el dominio.|  
 |Procesamiento de datos|Una instancia del servidor de informes predeterminada incluye extensiones de procesamiento de datos para orígenes de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], Oracle, Hyperion Essbase, SAPBW, OLE DB, Almacenamiento de datos paralelo y ODBC.|  
@@ -169,8 +169,8 @@ ms.locfileid: "70176187"
 |Instalar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint.|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Si es un programador web o tiene experiencia creando hojas de estilos en cascada, puede modificar los estilos predeterminados bajo su responsabilidad para cambiar los colores, las fuentes y el diseño de la barra de herramientas o el Administrador de informes. En esta versión no se documentan las hojas de estilos predeterminadas ni las instrucciones para modificarlas.|[Personalizar hojas de estilos para el Visor HTML y el Administrador de informes](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
 |Los desarrolladores web que están familiarizados con estilos HTML y las hojas de estilos en cascada (CSS) pueden usar la información de este tema para determinar qué archivos se pueden modificar para personalizar el aspecto del Administrador de informes.|[Configurar el Administrador de informes para pasar cookies de autenticación personalizadas](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
-|Explica cómo ajustar la configuración de memoria para el servicio web del servidor de informes y el servicio de Windows.|[Configurar la memoria disponible para las aplicaciones del servidor de informes](report-server/configure-available-memory-for-report-server-applications.md)|  
-|Explica los pasos recomendados para configurar el servidor de informes para la administración remota.|[Configurar un servidor de informes para la administración remota](report-server/configure-a-report-server-for-remote-administration.md)|  
+|Explica cómo ajustar la configuración de memoria para el servicio web del servidor de informes y el servicio de Windows.|[Configurar la memoria disponible para aplicaciones del servidor de informes](report-server/configure-available-memory-for-report-server-applications.md)|  
+|Explica los pasos recomendados para configurar el servidor de informes para la administración remota.|[Configuración de un servidor de informes para la administración remota](report-server/configure-a-report-server-for-remote-administration.md)|  
 |Proporciona instrucciones para configurar la disponibilidad de **Mis informes** en una instancia del servidor de informes nativo.|[Habilitar y deshabilitar Mis informes](report-server/enable-and-disable-my-reports.md)|  
 |Proporciona las instrucciones para configurar el control RSClientPrint que proporciona la funcionalidad de impresión desde dentro de los exploradores admitidos. Para obtener más información acerca de los requisitos del explorador, consulte [Planning for Reporting Services &#40;and Power View&#41;Browser support Reporting Services 2014](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
@@ -179,7 +179,7 @@ ms.locfileid: "70176187"
  [Herramientas de Reporting Services](tools/reporting-services-tools.md)   
  [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](report-server/report-server-database-ssrs-native-mode.md)   
- [Implementar una extensión de seguridad](extensions/security-extension/implementing-a-security-extension.md)   
+ [Implementing a Security Extension](extensions/security-extension/implementing-a-security-extension.md)   
  [Implementar una extensión de procesamiento de datos](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Cómo administrar SSRS con PowerShell](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  

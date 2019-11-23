@@ -31,7 +31,7 @@ ms.locfileid: "72289404"
 Devuelve información acerca de todas las esperas de bloqueos temporales organizadas por clase. 
   
 > [!NOTE]  
-> Para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **Sys. DM _ _pdw_nodes_os_latch_stats**.  
+> Para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilice el nombre **Sys. dm_pdw_nodes_os_latch_stats**.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -42,10 +42,10 @@ Devuelve información acerca de todas las esperas de bloqueos temporales organiz
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere @no__t permiso-1.   
-En los niveles Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos. En los niveles estándar y básico de @no__t 0, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles Premium, requiere el permiso `VIEW DATABASE STATE` en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  sys.dm_os_latch_stats se puede utilizar para identificar el origen de la contención del bloqueo temporal examinando los tiempos y números de esperas relativos en las diferentes clases de bloqueos temporales. En algunas situaciones, se puede resolver o reducir la contención de bloqueos temporales. No obstante, puede haber situaciones que requerirán ponerse en contacto con los servicios de soporte al cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 Puede restablecer el contenido de sys.dm_os_latch_stats utilizando `DBCC SQLPERF` de la forma siguiente:  
@@ -61,7 +61,7 @@ GO
 >  Estas estadísticas no permanecen si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia. Todos los datos se acumulan desde la última vez que se restablecieron las estadísticas o desde que se inició [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="latches"></a>Bloqueos temporales  
- Un bloqueo temporal es un objeto de sincronización ligero interno similar a un bloqueo, que se usa en varios componentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un bloqueo temporal se usa principalmente para sincronizar páginas de base de datos durante operaciones como el acceso a archivos o búferes. Cada bloqueo temporal está asociado a una sola unidad de asignación. 
+ Un bloqueo temporal es un objeto de sincronización ligero interno similar a un bloqueo, que se usa en varios componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un bloqueo temporal se usa principalmente para sincronizar páginas de base de datos durante operaciones como el acceso a archivos o búferes. Cada bloqueo temporal está asociado a una sola unidad de asignación. 
   
  Una espera de bloqueo temporal se produce cuando no se puede conceder una solicitud de bloqueo temporal inmediatamente, porque otro subproceso mantiene el bloqueo temporal en un modo de conflictos. A diferencia de los bloqueos, un bloqueo temporal se libera inmediatamente después de la operación, incluso en operaciones de escritura.  
   
@@ -100,7 +100,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Se utiliza para sincronizar operaciones de copia de seguridad diferencial con DBCC.|  
 |BACKUP_OPERATION|Se utiliza para sincronizar estructuras de datos internas en una operación de copia de seguridad, como base de datos, registro o copia de seguridad de archivos.|  
 |BACKUP_FILE_HANDLE|Se utiliza para sincronizar operaciones de apertura de archivos durante una operación de restauración.|  
-|BUFFER|Se utiliza para sincronizar el acceso a corto plazo a páginas de la base de datos. Se requiere un bloqueo temporal de búfer antes de leer o modificar una página de la base de datos. La contención de bloqueos temporales de búfer puede indicar varios problemas, incluidas páginas activas y operaciones de E/S lentas.<br /><br /> Esta clase de bloqueo temporal cubre todos los usos posibles de bloqueos temporales de página. Sys. DM _ _os_wait_stats crea una diferencia entre las esperas de bloqueos temporales de página causadas por operaciones de e/s y las operaciones de lectura y escritura en la página.|  
+|BUFFER|Se utiliza para sincronizar el acceso a corto plazo a páginas de la base de datos. Se requiere un bloqueo temporal de búfer antes de leer o modificar una página de la base de datos. La contención de bloqueos temporales de búfer puede indicar varios problemas, incluidas páginas activas y operaciones de E/S lentas.<br /><br /> Esta clase de bloqueo temporal cubre todos los usos posibles de bloqueos temporales de página. Sys. dm_os_wait_stats crea una diferencia entre las esperas de bloqueos temporales de página causadas por operaciones de e/s y las operaciones de lectura y escritura en la página.|  
 |BUFFER_POOL_GROW|Se utiliza para sincronizar el administrador del búfer interno durante operaciones de ampliación del grupo de búferes.|  
 |DATABASE_CHECKPOINT|Se utiliza para serializar puntos de comprobación en una base de datos.|  
 |CLR_PROCEDURE_HASHTABLE|Exclusivamente para uso interno.|  
@@ -164,7 +164,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_HOST_NAME|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_READ_CACHE|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Se utiliza para sincronizar un mapa de nivel de instancia de colas de espera. Existe una cola por el identificador de base de datos, la versión de base de datos y la tupla de ID. de cola. La contención de bloqueos temporales de esta clase puede producirse cuando hay muchas conexiones: En un estado de espera de WAITFOR (RECEIVE); llamar a WAITFOR (RECEIVE); supera el tiempo de espera de WAITFOR; recibir un mensaje; confirmar o revertir la transacción que contiene WAITFOR (RECEIVE); Puede reducir la contención reduciendo el número de subprocesos en un estado de espera de WAITFOR (RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Se utiliza para sincronizar un mapa de nivel de instancia de colas de espera. Existe una cola por el identificador de base de datos, la versión de base de datos y la tupla de ID. de cola. La contención en bloqueos temporales de esta clase puede producirse cuando hay muchas conexiones: en un estado de espera de WAITFOR (RECEIVE); llamar a WAITFOR (RECEIVE); supera el tiempo de espera de WAITFOR; recibir un mensaje; confirmar o revertir la transacción que contiene WAITFOR (RECEIVE); Puede reducir la contención reduciendo el número de subprocesos en un estado de espera de WAITFOR (RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Exclusivamente para uso interno.|  
 |SERVICE_BROKER_TRANSPORT|Exclusivamente para uso interno.|  
@@ -195,5 +195,5 @@ GO
   
 ## <a name="see-also"></a>Vea también  
 [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[SQL Server &#40;vistas de administración dinámica relacionadas con el sistema operativo&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+[SQL Server &#40;vistas de administración dinámica relacionadas con el sistema operativo&#41;      Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 [Latches (objeto de SQL Server)](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

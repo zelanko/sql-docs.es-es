@@ -26,11 +26,11 @@ ms.locfileid: "71952363"
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y haga clic en **Dirección URL del servicio web** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y haga clic en **Dirección URL del servicio web** en el panel de navegación. Para obtener más información, vea [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  Esta página proporciona los valores que se suelen usar en las direcciones URL del servidor de informes. Si desea crear más direcciones URL, usar los encabezados de host o especificar la dirección IP en un formato determinado, haga clic en **Avanzadas**.  
   
- Un vínculo al servicio web aparecerá en esta página después de hacer clic en **Aplicar**. Si hace clic en este vínculo antes de que se cree la base de datos del servidor de informes, puede aparecer un error "Página no encontrada". Este error ya no aparecerá una vez que se configure la base de datos. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+ Un vínculo al servicio web aparecerá en esta página después de hacer clic en **Aplicar**. Si hace clic en este vínculo antes de que se cree la base de datos del servidor de informes, puede aparecer un error "Página no encontrada". Este error ya no aparecerá una vez que se configure la base de datos. Para obtener más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
  Si vuelve a instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y encuentra que obtiene errores al intentar utilizar el valor de dirección IP predeterminado Todas asignadas y el puerto 80, normalmente puede resolver el error volviendo a crear la dirección URL después de reiniciar el servicio.  
   
@@ -41,13 +41,13 @@ ms.locfileid: "71952363"
  **Dirección IP**  
  Identifica el equipo del servidor de informes en una red TCP/IP. Los valores válidos incluyen:  
   
--   **Todas asignadas** especifica que cualquiera de las direcciones IP que están asignadas al equipo se puede utilizar en una dirección URL que señale a una aplicación de servidor de informes. Este valor también abarca nombres de host descriptivos (como nombres de equipo) que un servidor de nombres de dominio puede resolver en una dirección IP que se asigna al equipo. Éste es el valor predeterminado de una dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   **Todas asignadas** especifica que cualquiera de las direcciones IP que están asignadas al PC se puede usar en una dirección URL que señale a una aplicación de servidor de informes. Este valor también abarca nombres de host descriptivos (como nombres de equipo) que un servidor de nombres de dominio puede resolver en una dirección IP que se asigna al equipo. Éste es el valor predeterminado de una dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 -   **Todas sin asignar** especifica que el servidor de informes aceptará cualquier solicitud que no tenga una coincidencia exacta para la dirección IP o nombre de host. No utilice este valor si otra aplicación web ya está utilizándolo. Si hace esto, interrumpirá el servicio para la otra aplicación.  
   
 -   **127.0.0.1** se utilizan para tener acceso al host local. Admite la administración local en el equipo del servidor de informes. Si selecciona solo este valor, únicamente los usuarios que hayan iniciado sesión de forma local en el equipo servidor de informes tendrán acceso a la aplicación.  
   
--   *Nnn.nnn.nnn.nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa el direccionamiento IPv6, la dirección IP será un valor de 128 bits de campos de 8 4 bytes similar al siguiente formato: \<header >:*nnnn: nnnn: nnnn: nnnn*  
+-   *Nnn.nnn.nnn.nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa el direccionamiento IPv6, la dirección IP será un valor de 128 bits de campos de 8 4 bytes similar al siguiente formato: \<encabezado >:*nnnn: nnnn: nnnn: nnnn*  
   
      Si tiene varias tarjetas, verá una dirección IP para cada una. Si selecciona solo este valor, limitará el acceso de la aplicación únicamente a la dirección IP (y a cualquier nombre de host que un servidor de nombres de dominio asigne a esa dirección). No puede utilizar el host local para tener acceso a un servidor de informes y no puede utilizar las direcciones IP de otras tarjetas de adaptadores de red que estén instalados en el equipo del servidor de informes.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71952363"
  **Certificado SSL**  
  Enlaza un certificado a la dirección IP que especificó. El certificado debe estar instalado y configurado en el equipo. Reporting Services no proporciona características para administrar certificados. El certificado se debe emitir para un nombre de host o un nombre de equipo que se resuelva como la dirección IP. Por ejemplo, para usar un certificado emitido para http://salesreports, la dirección IP que especificó debe resolverse en un servidor denominado "salesreports".  
   
- Si usa un certificado, debe modificar el valor de configuración `UrlRoot` del archivo RSReportServer.config de manera que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Si usa un certificado, debe modificar el valor de configuración `UrlRoot` del archivo RSReportServer.config de manera que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Puerto SSL**  
  Especifica el puerto para las conexiones SSL.  
@@ -82,7 +82,7 @@ ms.locfileid: "71952363"
 >  Para corregir el problema, elimine todos los enlaces y, a continuación, cree nuevos enlaces con una configuración única, o configure los registros de direcciones URL de Reporting Services con caracteres comodín.  
   
 ## <a name="see-also"></a>Vea también  
- [Administrador de configuración de Reporting Services temas &#40;de ayuda de F1 en&#41;el modo nativo de SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Administrador de configuración de Reporting Services temas &#40;de ayuda de F1 en&#41; el modo nativo de SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

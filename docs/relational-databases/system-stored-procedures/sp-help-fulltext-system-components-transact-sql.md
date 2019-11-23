@@ -45,7 +45,7 @@ sp_help_fulltext_system_components
  'all'  
  Devuelve información para todos los componentes de texto completo.  
   
-`[ @component_type = ] component_type` especifica el tipo de componente. *component_type* puede ser uno de los siguientes:  
+`[ @component_type = ] component_type` especifica el tipo de componente. *component_type* puede ser una de las siguientes:  
   
 -   **wordbreaker**  
   
@@ -57,7 +57,7 @@ sp_help_fulltext_system_components
   
  Si se especifica una ruta de acceso completa, también se debe especificar *param* con la ruta de acceso completa del archivo DLL del componente; de lo contrario, se devuelve un mensaje de error.  
   
-`[ @param = ] param` dependiendo del tipo de componente, es uno de los siguientes: un identificador de configuración regional (LCID), la extensión de archivo con el prefijo ".", el nombre de componente completo del controlador de protocolo o la ruta de acceso completa al archivo DLL del componente.  
+`[ @param = ] param` en función del tipo de componente, es uno de los siguientes: un identificador de configuración regional (LCID), la extensión de archivo con el prefijo ".", el nombre de componente completo del controlador de protocolo o la ruta de acceso completa al archivo DLL del componente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -84,7 +84,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol **Public** ; sin embargo, los usuarios solo pueden ver información sobre los catálogos de texto completo para los que tienen permiso VIEW DEFINITION. Solo los miembros del rol fijo de servidor **serveradmin** pueden ver los valores de la columna **fullpath** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  Este método es de particular importancia cuando se prepara una actualización. Ejecute el procedimiento almacenado en una base de datos determinada y utilice la salida para determinar si un catálogo concreto se verá afectado por la actualización.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -136,7 +136,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Ver o cambiar filtros registrados y](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)separadores de palabras    
+ [Ver o cambiar los filtros y separadores de palabras registrados](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar y administrar filtros para búsquedas](../../relational-databases/search/configure-and-manage-filters-for-search.md)   
  [Procedimientos &#40;almacenados de búsqueda semántica y búsqueda de texto completo de TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  

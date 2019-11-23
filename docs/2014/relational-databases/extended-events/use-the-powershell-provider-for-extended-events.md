@@ -35,7 +35,7 @@ ms.locfileid: "72782906"
   
  Puede examinar el árbol de carpetas XEvent para ver las sesiones de eventos extendidos, así como sus eventos, destinos y predicados asociados. Por ejemplo, en la ruta de acceso de PS SQLSERVER: \ XEvent\\*ServerName*\\*InstanceName*>, si escribe `cd sessions`, presiona entrar, escribe `dir`y, a continuación, presiona entrar, puede ver la lista de sesiones almacenadas en esa instancia. Asimismo, puede ver si la sesión se está ejecutando (y si este es el caso, durante cuánto tiempo), así como si la sesión está configurada para iniciarse cuando se inicie la instancia.  
   
- Para ver los eventos, sus predicados y los destinos asociados con una sesión, puede cambiar los directorios al nombre de la sesión y, a continuación, ver la carpeta de eventos o de destino. Por ejemplo, para ver los eventos y los predicados que están asociados a la sesión de mantenimiento del sistema predeterminada, desde la PS SQLSERVER: \ XEvent\\*ServerName*\\*InstanceName*\Sessions > Path, escriba `cd system_health\events,` Presione entrar, escriba `dir`y, a continuación, presione Entrar.  
+ Para ver los eventos, sus predicados y los destinos asociados con una sesión, puede cambiar los directorios al nombre de la sesión y, a continuación, ver la carpeta de eventos o de destino. Por ejemplo, para ver los eventos y sus predicados asociados a la sesión de mantenimiento del sistema predeterminada, en la ruta de acceso de PS SQLSERVER: \ XEvent\\*ServerName*\\*InstanceName*\Sessions >, escriba `cd system_health\events,` presione entrar, escriba `dir`y, a continuación, presione Entrar.  
   
  El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell es una herramienta eficaz que puede usar para crear, modificar y administrar sesiones de eventos extendidos. En la siguiente sección se proporcionan algunos ejemplos básicos del uso de los scripts de PowerShell con eventos extendidos.  
   
@@ -109,7 +109,7 @@ $session.Create()
 ## <a name="security"></a>Seguridad  
  Para crear, modificar o quitar una sesión de eventos extendidos, debe disponer del permiso ALTER ANY EVENT SESSION.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
  [Usar la sesión system_health](use-the-ssms-xe-profiler.md)   
  [Herramientas de eventos extendidos](extended-events-tools.md)  

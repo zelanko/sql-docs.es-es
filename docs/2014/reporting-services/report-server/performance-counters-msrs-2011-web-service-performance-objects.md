@@ -30,7 +30,7 @@ ms.locfileid: "72782822"
 > [!NOTE]  
 >  Estos objetos de rendimiento supervisan los eventos en el servidor de informes local. Si ejecuta un servidor de informes en una implementación escalada, los recuentos se aplican al servidor actual y no a la implementación escalada.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Modo nativo  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]  
   
  Los objetos de rendimiento están disponibles en el Monitor de rendimiento de Windows (**Perfmon.exe**). Para más información, consulte la documentación de Windows, [Generar perfiles en tiempo de ejecución](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "72782822"
   
  En la tabla siguiente se enumeran los contadores que se incluyen con el objeto de rendimiento `MSRS 2014 Web Service`.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sesiones activas. Este contador proporciona un recuento acumulativo de todas las sesiones del explorador que se generan a partir de las ejecuciones de informes, independientemente de si todavía están o no activas.<br /><br /> El contador se reduce cuando se quitan registros de sesiones. De forma predeterminada, las sesiones se quitan después de diez minutos de inactividad.|  
 |`Cache Hits/Sec`|Número de solicitudes por segundo para informes en memoria caché. Las solicitudes son para informes que se vuelven a representar, no de solicitudes para informes procesados directamente desde la memoria caché. (Vea `Total Cache Hits` más adelante en este tema).|  
@@ -79,7 +79,7 @@ ms.locfileid: "72782822"
   
  En la tabla siguiente se enumeran los contadores que se incluyen con el objeto de rendimiento `MSRS 2014 Windows Service`.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |`Active Sessions`|Número de sesiones activas almacenadas en la base de datos del servidor de informes. Este contador proporciona un recuento acumulativo de todas las sesiones del explorador que se pueden utilizar generadas a partir de suscripciones de informes, independientemente de si todavía están o no activas.|  
 |`Cache Flushes/Sec`|Número de vaciados de memoria caché por segundo.|  
@@ -126,7 +126,7 @@ Get-Counter -ListSet msr*
 (Get-Counter -ListSet "MSRS 2014 Windows Service").Paths  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Supervisar el rendimiento del servidor de informes](monitoring-report-server-performance.md)   
- [Contadores de rendimiento para los &#40;objetos&#41; de rendimiento de modo SharePoint de MSRS 2014 Web Service y MSRS 2014 Windows Service](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md) SharePoint en modo SharePoint    
+ [Contadores de rendimiento para los &#40;objetos&#41; de rendimiento de modo SharePoint de MSRS 2014 Web Service y MSRS 2014 Windows Service](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md) SharePoint en modo SharePoint   
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  

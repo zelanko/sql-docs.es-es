@@ -37,7 +37,7 @@ ms.locfileid: "70874441"
 -   En el caso de la conmutación por error manual, el único factor es el tiempo necesario para realizar la conmutación por error de la base de datos una vez que se emite el comando de conmutación por error.  
   
 ## <a name="error-detection"></a>Detección de errores  
- La hora en que el sistema observa un error depende del tipo de error; por ejemplo, un error de red se detecta casi al instante, mientras que si se observa que un servidor que no responde tarda 10 segundos (con el tiempo de espera predeterminado).  
+ El tiempo que necesita el sistema para detectar un error depende del tipo de error; por ejemplo, un error de red se detecta casi al instante, mientras que la detección de un servidor que no responde tarda 10 segundos (con el tiempo de espera predeterminado).  
   
  Para obtener información sobre los errores que pueden causar un error durante una sesión de creación de reflejo de la base de datos y detección del tiempo de espera en modo de seguridad alta con conmutación automática por error, vea [Posibles errores durante la creación de reflejo de la base de datos](possible-failures-during-database-mirroring.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "70874441"
  El tiempo de la conmutación por error consiste principalmente en el tiempo que el servidor reflejado anterior necesita para poner al día los registros pendientes en su cola rehecha más un breve tiempo adicional (para obtener más información sobre cómo procesa las entradas de registro el servidor reflejado, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)). Para obtener información acerca de cómo calcular el tiempo de la conmutación por error, vea Calcular la tasa de puesta al día de la conmutación por error, más adelante en este tema.  
   
 > [!IMPORTANT]  
->  Si la conmutación por error se produce durante una transacción en la que se crea un índice o tabla y después se cambia, es posible que tarde más de lo habitual.  Por ejemplo, si se realiza una conmutación por error durante la siguiente secuencia de operaciones, es posible que el tiempo de conmutación por error sea mayor:  BEGIN TRANSACTION, CREATE INDEX en una tabla y SELECT INTO en la tabla. Existe la posibilidad de un mayor tiempo de conmutación por error durante una transacción de este tipo hasta su finalización con una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
+>  Si la conmutación por error se produce durante una transacción en la que se crea un índice o tabla y después se cambia, es posible que tarde más de lo habitual.  Por ejemplo, si se realiza una conmutación por error durante la siguiente secuencia de operaciones, es posible que el tiempo de conmutación por error sea mayor: BEGIN TRANSACTION, CREATE INDEX en una tabla y SELECT INTO en la tabla. Existe la posibilidad de un mayor tiempo de conmutación por error durante una transacción de este tipo hasta su finalización con una instrucción COMMIT TRANSACTION o ROLLBACK TRANSACTION.  
   
 ### <a name="the-redo-queue"></a>Cola rehecha  
  La confirmación de la base de datos conlleva aplicar las entradas de registro que se encuentren en la cola rehecha del servidor reflejado. La *cola rehecha* está formada por las entradas de registro que se han escrito en el disco del servidor reflejado, pero todavía no se han puesto al día en la base de datos reflejada.  

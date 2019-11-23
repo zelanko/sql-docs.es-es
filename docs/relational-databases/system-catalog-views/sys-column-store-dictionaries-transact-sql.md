@@ -35,21 +35,21 @@ ms.locfileid: "72304754"
 |-----------------|---------------|-----------------|  
 |**hobt_id**|**bigint**|IDENTIFICADOR del índice de montículo o árbol B (HoBT) de la tabla que tiene este índice de almacén de columnas.|  
 |**column_id**|**int**|IDENTIFICADOR de la columna de almacén de columnas que empieza por 1. La primera columna tiene el identificador 1, la segunda columna tiene el identificador 2, etc.|  
-|**dictionary_id**|**int**|Puede haber dos tipos de diccionarios, globales y locales, asociados a un segmento de columna. Un valor de dictionary_id de 0 representa el Diccionario global que se comparte entre todos los segmentos de columna (uno por cada grupo de filas) de esa columna.|  
+|**dictionary_id**|**int**|Puede haber dos tipos de diccionarios, globales y locales, asociados a un segmento de columna. Un dictionary_id de 0 representa el Diccionario global que se comparte entre todos los segmentos de columna (uno por cada grupo de filas) de esa columna.|  
 |**version**|**int**|Versión del formato de diccionario.|  
-|**Tipo**|**int**|Tipo de diccionario:<br /><br /> 1: Diccionario hash que contiene valores **int**<br /><br /> 2: no se usa<br /><br /> 3: Diccionario hash que contiene valores de cadena<br /><br /> 4: Diccionario hash que contiene valores **float**<br /><br /> Para obtener más información acerca de los diccionarios, consulte [Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
+|**tipo**|**int**|Tipo de diccionario:<br /><br /> 1: Diccionario hash que contiene valores **int**<br /><br /> 2: no se usa<br /><br /> 3: Diccionario hash que contiene valores de cadena<br /><br /> 4: Diccionario hash que contiene valores **float**<br /><br /> Para obtener más información acerca de los diccionarios, consulte [Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**int**|El último identificador de datos del diccionario.|  
 |**entry_count**|**bigint**|Número de entradas en el diccionario.|  
 |**on_disc_size**|**bigint**|Tamaño del diccionario en bytes.|  
 |**partition_id**|**bigint**|Indica el identificador de partición. Es único en una base de datos.|  
   
 ## <a name="permissions"></a>Permisos  
-Debe tener un permiso de `VIEW DEFINITION` sobre la tabla. Las columnas siguientes devuelven un valor null a menos que el usuario también tenga el permiso `SELECT`: last_id, entry_count, data_ptr.  
+Debe tener un permiso de `VIEW DEFINITION` sobre la tabla. Las columnas siguientes devuelven un valor null a menos que el usuario tenga también `SELECT` permiso: last_id, entry_count data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
+ [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  [Vistas de catálogo de objetos (Transact-SQL)]  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultar las preguntas más frecuentes sobre el catálogo del sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   

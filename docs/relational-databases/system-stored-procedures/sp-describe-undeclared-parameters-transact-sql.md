@@ -30,7 +30,7 @@ ms.locfileid: "72908330"
 
   Devuelve un conjunto de resultados que contiene metadatos sobre parámetros no declarados en un lote de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Considera cada parámetro que se utiliza en el lote **\@TSQL** , pero no se declara en **\@params**. Se devuelve un conjunto de resultados que contiene una fila para cada parámetro, con la información de tipo deducida para dicho parámetro. El procedimiento devuelve un conjunto de resultados vacío si el lote de entrada **\@TSQL** no tiene ningún parámetro excepto los declarados en **\@params**.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,7 +44,7 @@ sp_describe_undeclared_parameters
 ## <a name="arguments"></a>Argumentos  
 `[ \@tsql = ] 'Transact-SQL\_batch'` una o varias instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* puede ser **nvarchar (** _n_ **)** o **nvarchar (Max)** .  
   
-`[ \@params = ] N'parameters'` \@params proporciona una cadena de declaración para los parámetros del lote de [!INCLUDE[tsql](../../includes/tsql-md.md)], de forma similar a la forma en que funciona sp_executesql. *Los parámetros* pueden ser **nvarchar (** _n_ **)** o **nvarchar (Max)** .  
+`[ \@params = ] N'parameters'` \@params proporciona una cadena de declaración para los parámetros del lote de [!INCLUDE[tsql](../../includes/tsql-md.md)], de forma similar a la forma en que sp_executesql funciona. *Los parámetros* pueden ser **nvarchar (** _n_ **)** o **nvarchar (Max)** .  
   
  Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en *Transact-SQL_batch*. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. n es un marcador de posición que indica definiciones de parámetros adicionales. Si la instrucción o el lote de Transact-SQL de la instrucción no contiene parámetros, no es necesario \@params. El valor predeterminado de este parámetro es NULL.  
   
@@ -52,18 +52,18 @@ sp_describe_undeclared_parameters
  El tipo de datos del parámetro.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- **sp_describe_undeclared_parameters** siempre devuelve el estado de retorno de cero si se ejecuta correctamente. Si el procedimiento produce un error y se llama al procedimiento como un RPC, el estado de retorno es rellenado por el tipo de error, tal y como se describe en la columna error_type de sys. DM _ _exec_describe_first_result_set. Si se llama al procedimiento desde [!INCLUDE[tsql](../../includes/tsql-md.md)], el valor devuelto siempre es cero, incluso si se produce un error.  
+ **sp_describe_undeclared_parameters** siempre devuelve el estado de retorno de cero si se realiza correctamente. Si el procedimiento produce un error y se llama al procedimiento como un RPC, el estado de retorno es rellenado por el tipo de error tal y como se describe en la error_type columna de sys. dm_exec_describe_first_result_set. Si se llama al procedimiento desde [!INCLUDE[tsql](../../includes/tsql-md.md)], el valor devuelto siempre es cero, incluso si se produce un error.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_describe_undeclared_parameters** devuelve el siguiente conjunto de resultados.  
   
-|Nombre de columna|Data type|Description|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|Contiene la posición ordinal del parámetro en el conjunto de resultados. La posición del primer parámetro se especificará como 1.|  
 |**Nombre**|**sysname NOT NULL**|Contiene el nombre del parámetro.|  
 |**suggested_system_type_id**|**int NOT NULL**|Contiene el **system_type_id** del tipo de datos del parámetro tal y como se especifica en sys. types.<br /><br /> En el caso de los tipos de CLR, aunque la columna **system_type_name** devuelva NULL, esta columna devolverá el valor 240.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Contiene el nombre del tipo de datos. Incluye los argumentos (como length, precision y scale) especificados para el tipo de datos del parámetro. Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí. Si es un tipo de datos definido por el usuario de CLR, NULL se devuelve en esta columna. Si no se puede deducir el tipo del parámetro, se devuelve NULL.|  
-|**suggested_max_length**|**smallint NOT NULL**|Vea sys. Columns. para la descripción de la columna **max_length** .|  
+|**suggested_max_length**|**smallint NOT NULL**|Vea sys. Columns. para **max_length** Descripción de la columna.|  
 |**suggested_precision**|**tinyint NOT NULL**|Vea sys. Columns. para obtener la descripción de la columna de precisión.|  
 |**suggested_scale**|**tinyint NOT NULL**|Vea sys. Columns. para obtener la descripción de la columna de escala.|  
 |**suggested_user_type_id**|**int NULL**|Para los tipos de alias y CLR, contiene el user_type_id del tipo de datos de la columna tal y como se especifica en sys.types. De lo contrario, es NULL.|  
@@ -84,7 +84,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Para uso interno.|  
 |**suggested_tds_length**|**int NOT NULL**|Para uso interno.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Remarks  
  **sp_describe_undeclared_parameters** siempre devuelve el estado de retorno de cero.  
   
  El uso más común es cuando se proporciona a una aplicación una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)] que podría contener parámetros y debe procesarlos de alguna manera. Un ejemplo es una interfaz de usuario (como ODBCTest o RowsetViewer) en la que el usuario proporciona una consulta con la sintaxis de parámetros de ODBC. La aplicación debe detectar el número de parámetros dinámicamente y pedir confirmación al usuario para cada uno.  
@@ -158,7 +158,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  Por ejemplo, considere la consulta `SELECT * FROM t WHERE @p1 = dbo.tbl(@p2 + c1)`. A continuación, E (\@P1) = \@P1, E (\@P2) = \@P2 + C1, TT (\@P1) es el tipo de datos devuelto declarado de DBO. tbl y TT (\@P2) es el tipo de datos de parámetro declarado para DBO. tbl.  
   
- Si \@p no está incluido en ninguna expresión enumerada al principio del paso 2, el algoritmo de deducción de tipos determina que E (\@p) es la expresión escalar más grande que contiene \@p y el algoritmo de deducción de tipo no calcula los datos de destino. Escriba TT (\@p) para E (\@p). Por ejemplo, si la consulta se selecciona `@p + 2` entonces E (\@p) = \@p + 2 y no hay ningún TT (\@p).  
+ Si \@p no está incluido en ninguna expresión enumerada al principio del paso 2, el algoritmo de deducción de tipos determina que E (\@p) es la expresión escalar más grande que contiene \@p y el algoritmo de deducción de tipos no calcula un tipo de datos de destino TT (\@p) para E (\@p). Por ejemplo, si la consulta se selecciona `@p + 2` entonces E (\@p) = \@p + 2 y no hay ningún TT (\@p).  
   
  **Paso 3**  
   
@@ -166,7 +166,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Deducción simple  
   
-     Si E (\@p) = \@p y TT (\@p) existe, es decir, si \@p es directamente un argumento de una de las expresiones enumeradas al principio del paso 2, el algoritmo de deducción de tipo deduce el tipo de datos de \@p para que sea TT (\@p). Por ejemplo:  
+     Si E (\@p) = \@p y TT (\@p) existe, es decir, si \@p es directamente un argumento de una de las expresiones enumeradas al principio del paso 2, el algoritmo de deducción de tipo deduce el tipo de datos de \@p como TT (\@p). Por ejemplo:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -248,7 +248,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  Como último ejemplo, dada una consulta `SELECT NULL + @p`, se elige **int** para \@p porque produce una conversión de tipo (c).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Requiere permiso para ejecutar el argumento TSQL \@.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -273,7 +273,7 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>Ver también  
- [sp_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [Sys. DM _ &#40;_exec_describe_first_result_set Transact-&#41; SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [Sys. DM _ &#40;_exec_describe_first_result_set_for_object TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
+## <a name="see-also"></a>Vea también  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

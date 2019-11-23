@@ -31,7 +31,7 @@ ms.locfileid: "72304866"
   Agrega un usuario de base de datos a la base de datos actual.  
   
 > [!IMPORTANT]  
->  en su lugar [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)], use [Create User](../../t-sql/statements/create-user-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] usar [Create User](../../t-sql/statements/create-user-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,20 +43,20 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login_ '` es el nombre del grupo de Windows, Inicio de sesión de Windows o inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a asignar al nuevo usuario de base de datos. Los nombres de los grupos de Windows y los inicios de sesión de Windows deben calificarse con un nombre de dominio de Windows con el formato *dominio*\\*Inicio de sesión*; por ejemplo, **LONDON\Joeb**. El inicio de sesión ya no se puede asignar a un usuario de la base de datos. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @loginame = ] 'login_ '` es el nombre del grupo de Windows, el inicio de sesión de Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión que se va a asignar al nuevo usuario de base de datos. Los nombres de los grupos de Windows y los inicios de sesión de Windows deben calificarse con un nombre de dominio de Windows con el formato *dominio*\\*Inicio de sesión*. por ejemplo, **LONDON\Joeb**. El inicio de sesión ya no se puede asignar a un usuario de la base de datos. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` es el nombre del nuevo usuario de la base de datos. *name_in_db* es una variable de salida con un tipo de datos **sysname y su**valor predeterminado es NULL. Si no se especifica, se usa *login* . Si se especifica como una variable de salida con un valor NULL, **\@name_in_db** se establece en *login*. *name_in_db* no debe existir ya en la base de datos actual.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` es el nombre del nuevo usuario de la base de datos. *name_in_db* es una variable de salida con un tipo de datos **sysname y su**valor predeterminado es NULL. Si no se especifica, se usa *login* . Si se especifica como una variable de salida con un valor NULL, **\@name_in_db** se establece en *login*. *name_in_db* no debe existir en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_grantdbaccess** llama a Create User, que admite opciones adicionales. Para obtener información sobre cómo crear usuarios de base de datos, vea [Create User &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md). Para quitar un usuario de base de datos de una base de datos, utilice [Drop User](../../t-sql/statements/drop-user-transact-sql.md).  
   
  **sp_grantdbaccess** no se puede ejecutar en una transacción definida por el usuario.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol fijo de base de datos **db_owner** o al rol fijo de base de datos **db_accessadmin** .  
+ Requiere la pertenencia al rol fijo de base de datos **db_owner** o el rol fijo de base de datos **db_accessadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `CREATE USER` para agregar un usuario de base de datos para el inicio de sesión de Windows `Edmonds\LolanSo` a la base de datos actual. El nuevo usuario se llama `Lolan`. Es el método preferido para crear un usuario de base de datos.  

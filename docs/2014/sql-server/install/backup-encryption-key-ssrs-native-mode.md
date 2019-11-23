@@ -24,7 +24,7 @@ ms.locfileid: "71952648"
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Para abrir el cuadro de diálogo Copia de seguridad de clave de cifrado, haga clic en **Claves de cifrado** en el panel de navegación del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y, a continuación, haga clic en **Copia de seguridad**. Este cuadro de diálogo también aparece al actualizar la cuenta de servicio desde la página Cuenta de servicio del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información sobre el Configuration Manager [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [vea &#40;administrador de configuración de Reporting Services modo&#41;nativo](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir el cuadro de diálogo Copia de seguridad de clave de cifrado, haga clic en **Claves de cifrado** en el panel de navegación del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y, a continuación, haga clic en **Copia de seguridad**. Este cuadro de diálogo también aparece al actualizar la cuenta de servicio desde la página Cuenta de servicio del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información sobre el Configuration Manager de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [ &#40;administrador de configuración de Reporting Services&#41;modo nativo](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opciones  
  **Ubicación del archivo**  
@@ -37,7 +37,7 @@ ms.locfileid: "71952648"
  Vuelva a escribir la contraseña que escribió.  
   
 ## <a name="see-also"></a>Vea también  
- [Administrador de configuración de Reporting Services temas &#40;de ayuda de F1 en&#41;el modo nativo de SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Administrador de configuración de Reporting Services temas &#40;de ayuda de F1 en&#41; el modo nativo de SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Eliminar y volver a crear claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

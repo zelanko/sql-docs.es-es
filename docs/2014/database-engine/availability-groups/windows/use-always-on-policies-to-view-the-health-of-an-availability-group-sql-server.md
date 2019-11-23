@@ -43,7 +43,7 @@ ms.locfileid: "72782848"
   
 3.  Expanda el nodo **Alta disponibilidad de AlwaysOn** .  
   
-     Haga clic con el botón derecho en el nodo **Grupos de disponibilidad** o expanda este nodo y haga clic con el botón derecho en un grupo de disponibilidad específico.  
+     Haga clic con el botón secundario en el nodo **Grupos de disponibilidad** o expanda este nodo y haga clic con el botón secundario en un grupo de disponibilidad específico.  
   
 4.  Seleccione el comando de **Mostrar panel** .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72782848"
   
      Estos cmdlets aceptan las siguientes opciones:  
   
-    |Opción|Description|  
+    |Opción|Descripción|  
     |------------|-----------------|  
     |`AllowUserPolicies`|Ejecuta las directivas de usuario que se encuentran en las categorías de directiva de AlwaysOn.|  
     |`InputObject`|Una colección de objetos que representan grupos de disponibilidad, réplicas de disponibilidad o estados de bases de datos de disponibilidad (dependiendo del cmdlet que esté utilizando). El cmdlet calculará el estado de los objetos especificados.|  
@@ -103,7 +103,7 @@ ms.locfileid: "72782848"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, vea [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
@@ -122,8 +122,8 @@ ms.locfileid: "72782848"
   
 -   [Parte 4: integración con el Agente SQL Server](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
   
-## <a name="see-also"></a>Ver también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+## <a name="see-also"></a>Vea también  
+ [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Administración de un grupo de disponibilidad &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Directivas de AlwaysOn para problemas operativos con Grupos de disponibilidad AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 

@@ -39,11 +39,11 @@ ms.locfileid: "72688664"
 > [!NOTE]  
 >  Si una aplicación envía un procedimiento con la sintaxis de Transact-SQL EXECUTE (en contraposición al flujo de escape ODBC CALL), el controlador ODBC de SQL Server pasa la llamada al procedimiento a SQL Server como una instrucción SQL en lugar de como una RPC. Además, los parámetros de salida no se devuelven si se usa la instrucción Transact-SQL EXECUTE.  
   
-## <a name="see-also"></a>Ver también  
- [Temas &#40;de procedimientos de ejecución de procedimientos almacenados&#41; de   ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
- [Procesar por lotes las llamadas a procedimientos almacenados](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)    
- [Ejecutar procedimientos almacenados](../native-client-odbc-stored-procedures/running-stored-procedures.md)    
- [Llamar a un procedimiento almacenado](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)    
+## <a name="see-also"></a>Vea también  
+ [Temas &#40;de procedimientos de ejecución de procedimientos almacenados&#41; de  ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+ [Procesar por lotes las llamadas a procedimientos almacenados](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+ [Ejecutar procedimientos almacenados](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
+ [Llamar a un procedimiento almacenado](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [Procedimientos](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

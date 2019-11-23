@@ -66,14 +66,14 @@ ms.locfileid: "73758337"
   
  IDBInfo:: GetKeywords siempre devolverá una lista de palabras clave que corresponde a la versión del servidor en la conexión y no se ve afectada por **DataTypeCompatibility**.  
   
-|Tipo de datos|SQL Server Native Client<br /><br /> Resultado de|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC y<br /><br /> aplicaciones OLE DB de SQL Server Native Client con DataTypeCompatibility=80|  
+|Tipo de datos|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC y<br /><br /> aplicaciones OLE DB de SQL Server Native Client con DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|Imagen|  
-|varchar(max)|varchar|varchar|Texto|  
-|nvarchar(max)|nvarchar|nvarchar|Ntext|  
-|XML|XML|XML|Ntext|  
-|UDT CLR (> 8 KB)|udt|varbinary|Imagen|  
+|varbinary(max)|varbinary|varbinary|imagen|  
+|ntext|varchar|varchar|Texto|  
+|ssNoVersion|nvarchar|nvarchar|Ntext|  
+|xml|xml|xml|Ntext|  
+|UDT CLR (> 8 KB)|udt|varbinary|imagen|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

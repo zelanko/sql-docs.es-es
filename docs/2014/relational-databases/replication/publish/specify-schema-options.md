@@ -22,7 +22,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882163"
 ---
-# <a name="specify-schema-options"></a>Especificar las opciones del esquema
+# <a name="specify-schema-options"></a>Specify Schema Options
   En este tema se describe cómo especificar las opciones de esquema en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Al publicar una tabla o una vista, puede controlar las opciones de creación de objetos que se replican para el objeto publicado. Puede establecer estas opciones cuando se haya creado el artículo y también puede modificarlas posteriormente. Si no especifican explícitamente estas opciones para un artículo, se definirá un conjunto predeterminado de opciones.  
   
 > [!NOTE]  
@@ -42,7 +42,7 @@ ms.locfileid: "73882163"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73882163"
 -   Para obtener una lista completa de las opciones de esquema, vea el parámetro **\@schema_option** de [ &#40;sp_addarticle&#41; Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) y [ &#40;sp_addmergearticle&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Especifique las opciones de los esquemas (por ejemplo, si quiere copiar las restricciones y los desencadenadores para los suscriptores) en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** . Dicha pestaña está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación](create-a-publication.md) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+ Especifique las opciones de los esquemas (por ejemplo, si quiere copiar las restricciones y los desencadenadores para los suscriptores) en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** . Dicha pestaña está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, vea [Crear una publicación](create-a-publication.md) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-schema-options"></a>Para especificar las opciones del esquema  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73882163"
   
 2.  Seleccione qué cambios de opción de esquema de artículos se deben aplicar:  
   
-    -   Haga clic en **Establecer propiedades del artículo de \<tipoDeObjeto> resaltado** para iniciar el cuadro de diálogo **Propiedades del artículo: \<nombreDeObjeto>** . Los cambios de propiedad realizados en este cuadro de diálogo solo se aplican al objeto que está resaltado en el panel de objetos de la página **Artículos**.  
+    -   Haga clic en **Establecer propiedades del artículo de \<tipoDeObjeto> resaltado** para iniciar el cuadro de diálogo **Propiedades del artículo: \<tipoDeObjeto>** ; los cambios de propiedad realizados en este cuadro de diálogo solo se aplican al objeto que está resaltado en el panel de objetos de la página **Artículos**.  
   
     -   Haga clic en **Establecer propiedades de todos los artículos de \<tipoDeObjeto>** para iniciar el cuadro de diálogo **Propiedades de todos los artículos de \<tipoDeObjeto>** ; los cambios de propiedad realizados en este cuadro de diálogo se aplican a todos los objetos de ese tipo en el panel de objetos de la página **Artículos**, incluidos los que todavía no se hayan seleccionado para la publicación.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "73882163"
   
 4.  En la base de datos de publicación del publicador, ejecute [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql). Especifique el nombre de la publicación a la que pertenece el artículo para **\@publicación**, el nombre del artículo para **\@artículo**, un valor de **schema_option** para **\@propiedad**y el resultado hexadecimal del paso 3 para **\@valor**.  
   
-5.  Ejecute el Agente de instantáneas para generar una nueva instantánea. Para más información, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+5.  Ejecute el Agente de instantáneas para generar una nueva instantánea. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>Para cambiar las opciones de esquema de un artículo existente en una publicación de mezcla  
   
@@ -118,7 +118,7 @@ ms.locfileid: "73882163"
   
 4.  En la base de datos de publicación del publicador, ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique el nombre de la publicación a la que pertenece el artículo para **\@publicación**, el nombre del artículo para **\@artículo**, un valor de **schema_option** para **\@propiedad**y el resultado hexadecimal del paso 3 para **\@valor**.  
   
-5.  Ejecute el Agente de instantáneas para generar una nueva instantánea. Para más información, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+5.  Ejecute el Agente de instantáneas para generar una nueva instantánea. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Publicar datos y objetos de base de datos](publish-data-and-database-objects.md)   

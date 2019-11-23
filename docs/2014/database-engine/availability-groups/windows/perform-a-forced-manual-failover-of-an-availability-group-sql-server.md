@@ -37,7 +37,7 @@ ms.locfileid: "72782882"
     > [!IMPORTANT]  
     >  Si el quórum se recupera por medios naturales en lugar de forzarse, las réplicas de disponibilidad pasarán por una recuperación normal. Si la réplica principal sigue sin estar disponible después de que se recupere el quórum, puede realizar una conmutación por error manual planeada en una réplica secundaria sincronizada.  
   
-     Para obtener información sobre cómo forzar el cuórum, vea [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md). Para obtener información sobre por qué es necesario forzar la conmutación por error después de forzar el cuórum, vea [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+     Para obtener información sobre cómo forzar el cuórum, vea [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md). Para obtener información sobre por qué es necesario forzar la conmutación por error después de forzar el cuórum, vea [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
 -   Si la réplica principal deja de estar disponible cuando el clúster de WSFC tiene un quórum en buen estado, puede forzar la conmutación por error (con posible pérdida de datos) a cualquier réplica cuyo rol esté en el estado SECONDARY o RESOLVING. Si es posible, fuerce la conmutación por error a una réplica secundaria de confirmación sincrónica que se sincronizó cuando se perdió la réplica principal.  
   
@@ -63,11 +63,11 @@ ms.locfileid: "72782882"
 -   La coherencia entre las bases de datos de las distintas bases de datos del grupo de disponibilidad no se mantiene en la conmutación por error.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no admite las transacciones entre bases de datos ni las transacciones distribuidas. Para más información, vea [Transacciones entre bases de datos no compatibles para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md).  
+    >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]no admite las transacciones entre bases de datos ni las transacciones distribuidas. Para más información, vea [Transacciones entre bases de datos no compatibles para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transactions-always-on-availability-and-database-mirroring.md).  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Requisitos previos  
   
--   El clúster de WSFC tiene quórum. Si el clúster no tiene cuórum, vea [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+-   El clúster de WSFC tiene quórum. Si el clúster no tiene cuórum, vea [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 -   Debe poder conectarse a una instancia de servidor que hospeda una replicación cuyo rol esté en el estado SECONDARY o RESOLVING.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72782882"
     ```  
   
     > [!CAUTION]  
-    >  Si el nodo restaurado no estaba activo en el momento en que se perdió el cuórum, puede que **is_failover_ready** no refleje el estado real del clúster en el momento en que la réplica principal pasó a estar sin conexión. Por tanto, el valor **is_failover_ready** solo es adecuado si el nodo del host estaba activo en el momento del error. Para más información, vea "Por qué se requiere la conmutación por error después de forzar el cuórum" en [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
+    >  Si el nodo restaurado no estaba activo en el momento en que se perdió el cuórum, puede que **is_failover_ready** no refleje el estado real del clúster en el momento en que la réplica principal pasó a estar sin conexión. Por tanto, el valor **is_failover_ready** solo es adecuado si el nodo del host en el momento del error. Para más información, vea "Por qué se requiere la conmutación por error después de forzar el cuórum" en [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).  
   
      Si **is_failover_ready** = 1, la base de datos está marcada como sincronizada en el clúster y está preparada para una conmutación por error. Si **is_failover_ready** = 1 en todas las bases de datos de una réplica secundaria determinada, puede realizar una conmutación por error forzada (FORCE_FAILOVER_ALLOW_DATA_LOSS) sin pérdida de datos en esta réplica secundaria. La réplica secundaria sincronizada se pone en línea en el rol principal; es decir, como la nueva réplica principal, con todos los datos intactos.  
   
@@ -116,14 +116,14 @@ ms.locfileid: "72782882"
 ####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  **Para forzar la conmutación por error (con posible pérdida de datos)**  
   
 1.  En el Explorador de objetos, conéctese a una instancia de servidor que hospede una réplica cuyo rol esté en el estado SECONDARY o RESOLVING en el grupo de disponibilidad que necesita ser objeto de conmutación por error y expanda el árbol de servidores.  
   
 2.  Expanda los nodos **Alta disponibilidad de AlwaysOn** y **Grupos de disponibilidad** .  
   
-3.  Haga clic con el botón derecho en el grupo de disponibilidad que va a ser objeto de conmutación por error y seleccione el comando **Conmutación por error** .  
+3.  Haga clic con el botón secundario en el grupo de disponibilidad que va a ser objeto de conmutación por error y seleccione el comando **Conmutación por error** .  
   
 4.  Esto inicia el Asistente para conmutación por error del grupo de disponibilidad. Para obtener más información, vea [Use the Fail Over Availability Group Wizard &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
@@ -176,7 +176,7 @@ ms.locfileid: "72782882"
         ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, vea [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 3.  Después de forzar un grupo de disponibilidad a la conmutación por error, complete los pasos necesarios de seguimiento. Para obtener más información, vea [Seguimiento: tareas esenciales después de una conmutación por error forzada](#FollowUp), más adelante en este tema.  
   
@@ -195,9 +195,9 @@ ms.locfileid: "72782882"
   
          **Para ajustar los votos de quórum**  
   
-        -   [Ver la configuración de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+        -   [Ver la configuración de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
-        -   [Configurar los valores de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+        -   [Configurar los valores de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
         -   [Forzar el inicio de un clúster WSFC sin un quórum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -266,14 +266,14 @@ ms.locfileid: "72782882"
 |Paso|Action|Vínculos|  
 |----------|------------|-----------|  
 |**1.**|El administrador de red o DBA se asegura de que el clúster WSF tiene un quórum correcto. En este ejemplo, el quórum tiene que forzarse.|[Configuración de los votos y modos de cuórum WSFC &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)<br /><br /> [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)|  
-|**2.**|El DBA se conecta a la instancia del servidor con la menor latencia (en el **Nodo 04**) y realiza una conmutación por error manual forzada. Esta conmutación por error forzada pasa esta réplica secundaria al rol principal y suspende las bases de datos secundarias en el resto de réplicas secundarias (en el **Nodo 05**).|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) (Consulte la columna **end_of_log_lsn** . Para obtener más información, vea [Recomendaciones](#Recommendations), anteriormente en este tema).|  
+|**2.**|El DBA se conecta a la instancia del servidor con la menor latencia (en el **Nodo 04**) y realiza una conmutación por error manual forzada. Esta conmutación por error forzada pasa esta réplica secundaria al rol principal y suspende las bases de datos secundarias en el resto de réplicas secundarias (en **Nodo 05**).|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql) (Consulte la columna **end_of_log_lsn** . Para obtener más información, vea [Recomendaciones](#Recommendations), anteriormente en este tema).|  
 |**3.**|El DBA reanuda de modo manual cada una de las bases de datos secundarias en la réplica secundaria restante.|[Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)|  
   
 ###  <a name="ReturnToOrigTopology"></a> Devolver el grupo de disponibilidad a su topología original  
  En la ilustración siguiente se muestra la serie de acciones que devuelven el grupo de disponibilidad a su topología original una vez que el centro de datos principal se pone en línea y los nodos WSFC restablecen la comunicación con el clúster WSFC.  
   
 > [!IMPORTANT]  
->  Si el quórum del clúster WSFC ha sido forzado, a medida que los nodos sin conexión se reinicien, podrían formar un nuevo quórum si se dan las dos condiciones siguientes: (a) no hay conectividad de red entre ninguno de los nodos en el conjunto de quórum forzado y (b) los nodos que se reinician son la mayoría de los nodos del clúster. Eso resultaría en una condición de "división de cerebro" en la que el grupo poseería dos réplicas principales independientes, una en cada centro de datos. Antes de forzar el cuórum para crear un conjunto de cuórum minoritario, vea [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  Si el quórum del clúster WSFC ha sido forzado, a medida que los nodos sin conexión se reinicien, podrían formar un nuevo quórum si se dan las dos condiciones siguientes: (a) no hay conectividad de red entre ninguno de los nodos en el conjunto de quórum forzado y (b) los nodos que se reinician son la mayoría de los nodos del clúster. Eso resultaría en una condición de "división de cerebro" en la que el grupo poseería dos réplicas principales independientes, una en cada centro de datos. Antes de forzar el cuórum para crear un conjunto de cuórum minoritario, vea [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
  ![Pasos para devolver el grupo a su topología original](../../media/aoag-failurerecovery-actions-part2.gif "Pasos para devolver el grupo a su topología original")  
   
@@ -289,9 +289,9 @@ ms.locfileid: "72782882"
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
  **Para ajustar los votos de quórum**  
   
--   [Ver la configuración de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [Ver la configuración de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
--   [Configurar los valores de NodeWeight de cuórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Configurar los valores de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
 -   [Forzar el inicio de un clúster WSFC sin un quórum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -323,10 +323,10 @@ ms.locfileid: "72782882"
   
      [Notas del producto del equipo de asesoramiento al cliente de SQL Server](http://sqlcat.com/)  
   
-## <a name="see-also"></a>Ver también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
- [ &#40;Modos de disponibilidad&#41; grupos de disponibilidad AlwaysOn](availability-modes-always-on-availability-groups.md)    
- [Conmutación por error y &#40;modos&#41; de conmutación por error grupos de disponibilidad AlwaysOn](failover-and-failover-modes-always-on-availability-groups.md)    
+## <a name="see-also"></a>Vea también  
+ [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [ &#40;Modos de disponibilidad&#41; grupos de disponibilidad AlwaysOn](availability-modes-always-on-availability-groups.md)   
+ [Conmutación por error y &#40;modos&#41; de conmutación por error grupos de disponibilidad AlwaysOn](failover-and-failover-modes-always-on-availability-groups.md)   
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  

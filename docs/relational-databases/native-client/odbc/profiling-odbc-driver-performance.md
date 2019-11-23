@@ -69,7 +69,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Conexión  
   
--   red  
+-   Red  
   
 -   Time  
   

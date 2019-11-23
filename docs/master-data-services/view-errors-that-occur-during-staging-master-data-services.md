@@ -29,7 +29,7 @@ ms.locfileid: "73728839"
   
 -   stg.viw_name_RelationshipErrorDetails para las actualizaciones de la relación de la jerarquía.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   En la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , debe tener permisos SELECT en las vistas stg.viw_name_MemberErrorDetails o stg.viw_name_RelationshipErrorDetails.  
@@ -48,7 +48,7 @@ ms.locfileid: "73728839"
   
 4.  Ejecute la consulta. Los detalles del error se muestran en el campo **ErrorDescription** .  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
  Para obtener más información sobre mensajes de error, consulte [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).  
   
 ## <a name="see-also"></a>Vea también  

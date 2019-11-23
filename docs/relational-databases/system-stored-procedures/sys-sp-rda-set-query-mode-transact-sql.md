@@ -39,7 +39,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@mode =] *@no__t 2mode*  
+ [@mode =] *modo de\@*  
  Es uno de los valores siguientes.  
   
 -   **Deshabilitado** Se produce un error en todas las consultas en tablas habilitadas para Stretch.  
@@ -48,29 +48,29 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_AND_REMOTE** Las consultas en tablas habilitadas para Stretch devuelven datos locales y remotos. Éste es el comportamiento predeterminado.  
   
- [@force =]  *@no__t 2force*  
+ [@force =]  *forzar\@*  
  Es un valor de bit opcional que se puede establecer en 1 si se desea cambiar el modo de consulta sin validación.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o > 0 (error)  
   
 ## <a name="permissions"></a>Permisos  
- Requiere permisos db_owner.  
+ Requiere permisos de db_owner.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  Los siguientes procedimientos almacenados extendidos también establecen el modo de consulta para una base de datos habilitada para Stretch.  
   
 -   **sp_rda_deauthorize_db**  
   
      Después de ejecutar **sp_rda_deauthorize_db** , se producirá un error en todas las consultas de bases de datos y tablas habilitadas para Stretch. Es decir, el modo de consulta se establece en Disabled. Para salir de este modo, realice una de las siguientes acciones.  
   
-    -   Ejecute la [instrucción de &#40;Transact-SQL&#41; de sys. sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectarse a la base de datos remota de Azure. Esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado de Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
+    -   Ejecute [Sys. sp_rda_reauthorize_db &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos de Azure remota. Esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado de Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
   
     -   Ejecute [Sys. sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) con el argumento LOCAL_ONLY para permitir que las consultas sigan ejecutándose solo con datos locales.  
   
 -   **sp_rda_reauthorize_db**  
   
-     Al ejecutar el [sp_rda_reauthorize_db &#40;de Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectarse a la base de datos remota de Azure, esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado de stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
+     Al ejecutar [Sys. sp_rda_reauthorize_db &#40;&#41; Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos remota de Azure, esta operación restablece automáticamente el modo de consulta a LOCAL_AND_REMOTE, que es el comportamiento predeterminado para Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
   
 ## <a name="see-also"></a>Vea también  
  [sys.sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   

@@ -39,7 +39,7 @@ ms.locfileid: "72782649"
 
 Para obtener más información sobre la sintaxis y los ejemplos, vea [Analysis Services referencia de PowerShell](/sql/analysis-services/powershell/analysis-services-powershell-reference).
 
-##  <a name="bkmk_prereq"></a> Prerequisites  
+##  <a name="bkmk_prereq"></a> Requisitos previos  
  Windows PowerShell 2.0 debe estar instalado. Se instaló de forma predeterminada en las versiones más recientes de los sistemas operativos Windows. Para obtener más información, vea [instalar Windows PowerShell 2,0](https://msdn.microsoft.com/library/ff637750.aspx)
 
 <!-- ff637750.aspx above is linked to by:  (https://go.microsoft.com/fwlink/?LinkId=227613). -->
@@ -76,7 +76,7 @@ Para obtener más información sobre la sintaxis y los ejemplos, vea [Analysis S
   
  El parámetro-credential toma un objeto PSCredential que especifica un nombre de usuario y una contraseña. En Analysis Services PowerShell, el parámetro-credential está disponible para los cmdlets que realizan una solicitud de conexión a Analysis Services, en lugar de a los cmdlets que se ejecutan en el contexto de una conexión existente. Entre los cmdlets que realizan una solicitud de conexión se hallan Invoke-ASCmd, Backup-ASDatabase y Restore-ASDatabase. Para estos cmdlets, se puede usar el parámetro-Credential, siempre que se cumplan los siguientes criterios:  
   
-1.  El servidor se configura para el acceso a través de HTTP, lo que significa que IIS administra la conexión, lee el nombre de usuario y la contraseña, y suplanta la identidad del usuario al conectarse a Analysis Services. Para obtener más información, vea [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
+1.  El servidor se configura para el acceso a través de HTTP, lo que significa que IIS administra la conexión, lee el nombre de usuario y la contraseña, y suplanta la identidad del usuario al conectarse a Analysis Services. Para más información, consulte [Configure HTTP Access to Analysis Services on Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
 2.  El directorio virtual de IIS creado para el acceso a Analysis Services a través de HTTP se configura para la autenticación básica.  
   
@@ -273,7 +273,7 @@ Restart-Service mssqlserverolapservice
     Get-PSDrive  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Instalar SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
  [Administrar modelos tabulares con PowerShell (blog)](https://go.microsoft.com/fwlink/?linkID=227685)   
  [Configurar el acceso HTTP a Analysis Services en Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  

@@ -22,7 +22,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/09/2019
 ms.locfileid: "73882324"
 ---
-# <a name="create-a-publication"></a>Create a Publication
+# <a name="create-a-publication"></a>Crear una publicación
   En este tema se describe cómo crear una publicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
   
  **En este tema**  
@@ -41,7 +41,7 @@ ms.locfileid: "73882324"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -91,7 +91,7 @@ ms.locfileid: "73882324"
   
          Para obtener más información, consulte [Replication Agent Security Model](../security/replication-agent-security-model.md) y [Replication Security Best Practices](../security/replication-security-best-practices.md).  
   
-    -   De forma opcional, incluir la publicación. Para más información, consulte [Scripting Replication](../scripting-replication.md).  
+    -   De forma opcional, incluir la publicación. Para obtener más información, consulte [Scripting Replication](../scripting-replication.md).  
   
     -   Especificar un nombre para la publicación.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "73882324"
     > [!NOTE]  
     >  Los nombres de publicación no pueden incluir los caracteres siguientes:  
     >   
-    >  % * [ ] | : " ? \< >  
+    >  % * [ ] | : " ? \ / \< >  
   
 4.  En el publicador, ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique el nombre de publicación usado en el paso 3 para **\@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **\@snapshot_job_name** y **\@password**. Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **\@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **\@publisher_login** y **\@publisher_password**. Esto crea un trabajo de Agente de instantáneas para la publicación.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "73882324"
   
 5.  Agregue artículos a la publicación. Para obtener más información, consulte [Define an Article](define-an-article.md).  
   
-6.  Inicie el trabajo del Agente de instantáneas para generar la instantánea inicial de esta publicación. Para más información, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+6.  Inicie el trabajo del Agente de instantáneas para generar la instantánea inicial de esta publicación. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 #### <a name="to-create-a-merge-publication"></a>Para crear una publicación de combinación  
   
@@ -135,7 +135,7 @@ ms.locfileid: "73882324"
     > [!NOTE]  
     >  Los nombres de publicación no pueden incluir los caracteres siguientes:  
     >   
-    >  % * [ ] | : " ? \< >  
+    >  % * [ ] | : " ? \ / \< >  
   
 3.  En el publicador, ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique el nombre de publicación usado en el paso 2 para **\@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **\@snapshot_job_name** y **\@password**. Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **\@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **\@publisher_login** y **\@publisher_password**. Esto crea un trabajo de Agente de instantáneas para la publicación.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "73882324"
   
 4.  Agregue artículos a la publicación. Para obtener más información, consulte [Define an Article](define-an-article.md).  
   
-5.  Inicie el trabajo del Agente de instantáneas para generar la instantánea inicial de esta publicación. Para más información, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
+5.  Inicie el trabajo del Agente de instantáneas para generar la instantánea inicial de esta publicación. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  Este ejemplo crea una publicación transaccional. Las variables de scripting se usan para pasar las credenciales de Windows necesarias para crear los trabajos del Agente de instantáneas y del Agente de registro del LOG.  

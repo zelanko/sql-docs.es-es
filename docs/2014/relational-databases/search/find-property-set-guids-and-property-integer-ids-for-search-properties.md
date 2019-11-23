@@ -41,7 +41,7 @@ ms.locfileid: "73637894"
 |Nombre conocido|Nombre canónico de Windows|GUID del conjunto de propiedades|Identificador entero|Descripción|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autor o autores de un elemento determinado.|  
-|Etiquetas|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palabras clave (también conocido como etiquetas) asignado al elemento.|  
+|`Tags`|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palabras clave (también conocido como etiquetas) asignado al elemento.|  
 |Tipo|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo de archivo percibido basado en su tipo canónico.|  
 |Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título del elemento. Por ejemplo, el título de un documento, el asunto de un mensaje, la leyenda de una foto o el nombre de una pista de música.|  
   

@@ -25,7 +25,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 09/10/2019
 ms.locfileid: "70874504"
 ---
-# <a name="possible-failures-during-database-mirroring"></a>Posibles errores durante la creación de reflejo de la base de datos
+# <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
   Los problemas físicos, del sistema operativo o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden provocar un error en una sesión de creación de reflejo de la base de datos. La creación de reflejo de la base de datos no comprueba regularmente los componentes de los que depende Sqlservr.exe para comprobar si están funcionando de forma correcta o si se ha producido un error. Sin embargo, en algunos tipos de errores, el componente afectado informa a Sqlservr.exe. Cuando otro componente informa del error, éste se denomina *error de hardware*. Para detectar otros errores que pudieran pasar desapercibidos, la creación de reflejo de la base de datos implementa su propio mecanismo de tiempo de espera. Si se agota el tiempo de espera de la creación de reflejo, la creación de reflejo de la base de datos supone que se ha producido un error y declara un *error de software*. Sin embargo, algunos errores que se producen en el nivel de instancia de SQL Server no ocasionan que se agote el tiempo de espera de la creación de reflejo y pueden no ser detectados.  
   
 > [!IMPORTANT]  
@@ -79,7 +79,7 @@ ms.locfileid: "70874504"
   
 -   Errores de red, como tiempos de espera de vínculos TCP, paquetes que se han dañado o se han quitado o paquetes que están en un orden incorrecto.  
   
--   Sistema operativo, servidor o base de datos que no responde.  
+-   Un sistema operativo, un servidor o una base de datos que no responde.  
   
 -   Se ha agotado el tiempo de espera de un servidor de Windows.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "70874504"
   
  Para mantener una conexión abierta, una instancia de servidor debe recibir un ping en dicha conexión dentro del período de tiempo de espera definido, además del tiempo de espera necesario para enviar otro ping. La recepción de un ping durante el período de tiempo de espera indica que la conexión todavía está abierta y que las instancias de servidor se comunican a través de ella. Al recibir un ping, una instancia de servidor restablece su contador de tiempo de espera en dicha conexión.  
   
- Si no se recibe ningún ping en una conexión durante el período de tiempo de espera, una instancia de servidor considera que la conexión ha agotado el tiempo de espera. La instancia de servidor cierra la conexión que ha superado el tiempo de espera y controla el evento de tiempo de espera según el estado y el modo de funcionamiento de la sesión.  
+ Si no se recibe ningún ping en una conexión durante el período de tiempo de espera, una instancia de servidor considera que la conexión ha agotado el tiempo de espera. La instancia de servidor cierra la conexión que ha agotado el tiempo de espera y controla el evento de tiempo de espera según el estado y el modo de funcionamiento de la sesión.  
   
  Incluso aunque el otro servidor funcione correctamente, un tiempo de espera agotado se considera un error. Si el valor de tiempo de espera establecido para una sesión es demasiado corto para el nivel de respuesta normal de cualquier servidor asociado, puede darse un error falso. Un error falso se produce cuando una instancia de servidor se pone en contacto correctamente con otra cuyo tiempo de respuesta es tan lento que sus comandos ping no se reciben antes de que expire el período de tiempo de espera.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "70874504"
   
 ## <a name="see-also"></a>Vea también  
  [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
+ [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   

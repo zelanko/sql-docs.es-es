@@ -42,12 +42,12 @@ ms.locfileid: "73787096"
   
  Si el valor del parámetro *DriverCompletion* es SQL_DRIVER_NOPROMPT o SQL_DRIVER_COMPLETE_REQUIRED y el lenguaje o la base de datos proceden de la cadena de conexión y no son válidos, **SQLDriverConnect** devuelve SQL_ERROR.  
   
- Si el valor del parámetro *DriverCompletion* es SQL_DRIVER_NOPROMPT o SQL_DRIVER_COMPLETE_REQUIRED y el lenguaje o la base de datos proceden de las definiciones de origen de datos ODBC y no son válidos, **SQLDriverConnect** usa el idioma predeterminado o base de datos para el ID. de usuario especificado y devuelve SQL_SUCCESS_WITH_INFO.  
+ Si el valor del parámetro *DriverCompletion* es SQL_DRIVER_NOPROMPT o SQL_DRIVER_COMPLETE_REQUIRED y el lenguaje o la base de datos proceden de las definiciones de origen de datos ODBC y no son válidos, **SQLDriverConnect** utiliza el idioma o la base de datos predeterminados para el ID. de usuario especificado y devuelve SQL_SUCCESS_WITH_INFO.  
   
  Si el valor del parámetro *DriverCompletion* es SQL_DRIVER_COMPLETE o SQL_DRIVER_PROMPT y si el idioma o la base de datos no son válidos, **SQLDriverConnect** vuelve a mostrar el cuadro de diálogo.  
   
 ## <a name="sqldriverconnect-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQLDriverConnect para la alta disponibilidad con recuperación de desastres  
- Para obtener más información sobre el uso de **SQLDriverConnect** para conectarse a un clúster de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], consulte [SQL Server Native Client compatibilidad con la alta disponibilidad y la recuperación ante desastres](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Para obtener más información sobre el uso de **SQLDriverConnect** para conectarse a un [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] del clúster, consulte [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>Compatibilidad de SQLDriverConnect con los Nombres principales de servicio (SPN)  
  SQLDDriverConnect utilizará el cuadro de diálogo Inicio de sesión ODBC boxwhen se habilitará la solicitud. Esto permite escribir SPN tanto para el servidor principal como para su asociado de conmutación por error.  
@@ -84,6 +84,6 @@ SQLDriverConnect(hdbc, hwnd,
  [Detalles de implementación](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md) de la API de ODBC   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [SET ANSI_WARNINGS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

@@ -20,7 +20,7 @@ ms.locfileid: "72890500"
 
   En la siguiente tabla se muestran las instrucciones que forman parte del lenguaje de manipulación de datos (DML) de minería de datos en Extensiones de minería de datos (DMX).  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[ELIMINAR &#40;DMX&#41;](../dmx/delete-dmx.md)|Borra el contenido entrenado de un modelo de minería de datos.|  
 |[INSERCIÓN en &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Entrena un modelo de minería de datos.|  
@@ -28,7 +28,7 @@ ms.locfileid: "72890500"
 |[&#60;consulta de datos de origen&#62;](../dmx/source-data-query.md)|Consulta los orígenes de datos para las instrucciones **Insert Into** y **Select** .|  
 |[ACTUALIZAR &#40;DMX&#41;](../dmx/update-dmx.md)|Cambia el contenido del modelo de minería de datos.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Instrucciones de definición &#40;de&#41; datos DMX de extensiones de minería de datos](../dmx/dmx-statements-data-definition.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

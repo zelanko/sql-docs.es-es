@@ -31,7 +31,7 @@ ms.locfileid: "73786761"
  **SQLFetch** admite los tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, vea [ &#40;tipos CLR grandes definidos por el&#41;usuario ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
-   [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)  
+ [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

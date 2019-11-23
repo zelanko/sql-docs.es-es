@@ -54,7 +54,7 @@ ms.locfileid: "70175414"
  Describe cómo conectarse a una base de datos de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="see-also"></a>Vea también  
- [Programación de SQL Server Native Client](../sql-server-native-client-programming.md)   
+ [SQL Server Native Client programación](../sql-server-native-client-programming.md)   
  [Temas de procedimientos de ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Temas de procedimientos de OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

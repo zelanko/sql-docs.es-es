@@ -27,7 +27,7 @@ ms.locfileid: "72304825"
 
     
 > [!IMPORTANT]  
->  La característica de suscripciones adjuntables ha quedado desusada y se retirará en versiones posteriores. Esta característica no se debe utilizar en nuevos trabajos de desarrollo. En las publicaciones de combinación en las que se han creado particiones mediante filtros con parámetros, se recomienda utilizar las nuevas características de las instantáneas con particiones, que simplifican la inicialización de un gran número de suscripciones. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). En las publicaciones que no están divididas en particiones, puede inicializar una suscripción con una copia de seguridad. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
+>  La característica de suscripciones adjuntables ha quedado desusada y se retirará en versiones posteriores. Esta característica no se debe utilizar en nuevos trabajos de desarrollo. En las publicaciones de combinación en las que se han creado particiones mediante filtros con parámetros, se recomienda utilizar las nuevas características de las instantáneas con particiones, que simplifican la inicialización de un gran número de suscripciones. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). En las publicaciones que no están divididas en particiones, puede inicializar una suscripción con una copia de seguridad. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
  Copia una base de datos de suscripciones que tiene suscripciones de extracción, pero no de inserción. Solo se pueden copiar bases de datos de un único archivo. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
   
@@ -45,19 +45,19 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="arguments"></a>Argumentos  
 `[ @filename = ] 'file_name'` es la cadena que especifica la ruta de acceso completa, incluido el nombre de archivo, en la que se guarda una copia del archivo de datos (. MDF). *el nombre de archivo* es **nvarchar (260)** y no tiene ningún valor predeterminado.  
   
-`[ @temp_dir = ] 'temp_dir'` es el nombre del directorio que contiene los archivos temporales. *temp_dir* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Si es NULL, se utilizará el directorio de datos predeterminado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El directorio debe tener espacio suficiente para contener un archivo que tenga el tamaño de todos los archivos de la base de datos del suscriptor combinados.  
+`[ @temp_dir = ] 'temp_dir'` es el nombre del directorio que contiene los archivos temporales. *temp_dir* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Si es NULL, se usará el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directorio de datos predeterminado. El directorio debe tener espacio suficiente para contener un archivo que tenga el tamaño de todos los archivos de la base de datos del suscriptor combinados.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` es una marca booleana opcional que especifica si se sobrescribirá o no un archivo existente con el mismo nombre especificado en **\@filename**. *overwrite_existing_file*es de **bit**y su valor predeterminado es **0**. Si es **1**, sobrescribe el archivo especificado por **\@filename**, si existe. Si es **0**, se produce un error en el procedimiento almacenado si el archivo existe y el archivo no se sobrescribe.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` es una marca booleana opcional que especifica si se sobrescribirá o no un archivo existente con el mismo nombre especificado en **\@nombre**de archivo. *overwrite_existing_file*es de **bit**y su valor predeterminado es **0**. Si es **1**, sobrescribe el archivo especificado por **\@nombre**de archivo, si existe. Si es **0**, se produce un error en el procedimiento almacenado si el archivo existe y el archivo no se sobrescribe.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_copysubscription** se utiliza en todos los tipos de replicación para copiar una base de datos de suscripciones en un archivo como alternativa a la aplicación de una instantánea en el suscriptor. La base de datos se debe configurar para que solo admita suscripciones de extracción. Los usuarios que tengan los permisos apropiados pueden realizar copias de la base de datos de suscripciones y, a continuación, enviar por correo electrónico, copiar o transportar el archivo de suscripción (.msf) a otro suscriptor, donde se puede adjuntar como una suscripción.  
   
  El tamaño de la base de datos de suscripciones que se va a copiar debe ser inferior a 2 gigabytes (GB).  
   
- **sp_copysubscription** solo se admite para las bases de datos con suscripciones de cliente y no se puede ejecutar cuando la base de datos tiene suscripciones de servidor.  
+ **sp_copysubscription** solo se admite para bases de datos con suscripciones de cliente y no se puede ejecutar cuando la base de datos tiene suscripciones de servidor.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_copysubscription**.  

@@ -45,9 +45,9 @@ class SQLErrorLogFile
 |InstanceName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
 |LastModified|Tipo de datos: **DateTime**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Fecha de la última modificación del archivo de registro.|  
 |LogFileSize|Tipo de datos: **UInt32**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> El tamaño del archivo de registro en bytes.|  
-|Nombre|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> El nombre del archivo de registro.|  
+|NOMBRE|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> El nombre del archivo de registro.|  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
   
 |||  
 |-|-|  
@@ -98,6 +98,6 @@ Next
   
 ## <a name="see-also"></a>Vea también  
    de la [clase SqlErrorLogEvent](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)  
- [Ver archivos del registro sin conexión](../../relational-databases/logs/view-offline-log-files.md)  
+ [Ver sin conexión archivos de registro](../../relational-databases/logs/view-offline-log-files.md)  
   
   

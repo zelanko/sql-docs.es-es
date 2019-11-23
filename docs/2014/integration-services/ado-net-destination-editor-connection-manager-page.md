@@ -33,11 +33,11 @@ ms.locfileid: "70154029"
 3.  En el **Editor de destinos de ADO NET**, haga clic en **Administrador de conexiones**.  
   
 ## <a name="static-options"></a>Opciones estáticas  
- **Connection manager**  
+ **Administrador de conexiones**  
  Seleccione un administrador de conexiones de la lista o cree una conexión haciendo clic en **Nuevo**.  
   
  **Nuevo**  
- Cree un administrador de conexiones mediante el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET** .  
+ Cree un nuevo administrador de conexiones mediante el cuadro de diálogo **Configurar el administrador de conexiones de ADO.NET** .  
   
  **Usar una tabla o una vista**  
  Seleccione una tabla o vista de la lista o cree una tabla haciendo clic en **Nueva**.  
@@ -46,7 +46,7 @@ ms.locfileid: "70154029"
  Cree un tabla o una vista mediante el cuadro de diálogo **Crear tabla** .  
   
 > [!NOTE]  
->  Al hacer clic en **Nueva**, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] genera una instrucción predeterminada CREATE TABLE basada en el origen de datos conectado. La instrucción predeterminada CREATE TABLE no incluirá el atributo FILESTREAM, aunque la tabla de origen tenga una columna con el atributo FILESTREAM declarado. Para ejecutar un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con el atributo FILESTREAM, implemente en primer lugar el almacenamiento de FILESTREAM en la base de datos de destino. A continuación, agregue el atributo FILESTREAM a la instrucción CREATE TABLE en el cuadro de diálogo **Crear tabla** . Para más información, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
+>  Al hacer clic en **Nueva**, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] genera una instrucción predeterminada CREATE TABLE basada en el origen de datos conectado. La instrucción predeterminada CREATE TABLE no incluirá el atributo FILESTREAM, aunque la tabla de origen tenga una columna con el atributo FILESTREAM declarado. Para ejecutar un componente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con el atributo FILESTREAM, implemente en primer lugar el almacenamiento de FILESTREAM en la base de datos de destino. A continuación, agregue el atributo FILESTREAM a la instrucción CREATE TABLE en el cuadro de diálogo **Crear tabla** . Para obtener más información, vea [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
  **Vista previa**  
  Obtenga una vista previa de los resultados mediante el cuadro de diálogo **Vista previa de los resultados de la consulta** . La vista previa puede mostrar hasta 200 filas.  
@@ -61,12 +61,12 @@ ms.locfileid: "70154029"
  Si selecciona **Use bulk insert when available**(Usar la inserción masiva cuando esté disponible) y establece la opción **Error** en **Redirect the row**(Redirigir la fila), el lote de datos que el destino redirige a la salida de error puede incluir filas correctas. Para obtener más información sobre cómo administrar errores en operaciones masivas, vea [Control de errores en los datos](data-flow/error-handling-in-data.md). Para obtener más información sobre la opción **Error** , vea [ADO NET Destination Editor &#40;Error Output Page&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Si una tabla de origen de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o de Sybase incluye una columna de identidad, es necesario que use las tareas Ejecutar SQL para ejecutar una instrucción SET IDENTITY_INSERT antes y después del destino de ADO NET. La propiedad de la columna de identidad especifica un valor incremental de la columna. La instrucción SET IDENTITY_INSERT permite insertar valores explícitos en la columna de identidad. Para ejecutar las instrucciones CREATE TABLE y SET IDENTITY en la misma conexión de bases de datos, establezca en `RetainSameConnection` la propiedad `True` del administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)]. Asimismo, use el mismo administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)] para las tareas Ejecutar SQL y el destino de ADO NET.  
+>  Si una tabla de origen de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o de Sybase incluye una columna de identidad, es necesario que use las tareas Ejecutar SQL para ejecutar una instrucción SET IDENTITY_INSERT antes y después del destino de ADO NET. La propiedad de la columna de identidad especifica un valor incremental de la columna. La instrucción SET IDENTITY_INSERT permite insertar valores explícitos en la columna de identidad. Para ejecutar las instrucciones CREATE TABLE y SET IDENTITY en la misma conexión de bases de datos, establezca en `RetainSameConnection` la propiedad [!INCLUDE[vstecado](../includes/vstecado-md.md)] del administrador de conexiones `True`. Asimismo, use el mismo administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)] para las tareas Ejecutar SQL y el destino de ADO NET.  
 >   
 >  Para obtener más información, vea [SET IDENTITY_INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) y [IDENTITY &#40;propiedad de Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property).  
   
 ## <a name="external-resources"></a>Recursos externos  
- Artículo técnico sobre [Cómo cargar datos en Azure SQL Database la manera rápida](https://go.microsoft.com/fwlink/?LinkId=244333), en sqlcat.com  
+ Artículo técnico sobre cómo [cargar datos en Azure SQL Database de la forma más rápida](https://go.microsoft.com/fwlink/?LinkId=244333), en sqlcat.com  
   
 ## <a name="see-also"></a>Vea también  
  [Editor de destinos de ADO NET &#40;página Asignaciones&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   

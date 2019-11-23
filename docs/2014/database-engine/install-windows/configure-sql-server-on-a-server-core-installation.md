@@ -34,7 +34,7 @@ ms.locfileid: "72797908"
   
 -   [Configuración de una instalación de Server Core: información general](https://go.microsoft.com/fwlink/?LinkId=245958) (https://go.microsoft.com/fwlink/?LinkId=245958)  
   
--   [Configuración de una instalación Server Core de Windows server 2008 R2 con Sconfig. cmd](https://go.microsoft.com/fwlink/?LinkId=245959) (https://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [Configuración de una instalación Server Core de Windows Server 2008 R2 con Sconfig.cmd](https://go.microsoft.com/fwlink/?LinkId=245959) (https://go.microsoft.com/fwlink/?LinkId=245959)  
   
 -   [Instalación de un rol de servidor en un servidor que ejecuta una instalación Server Core de Windows server 2008 R2: información general](https://go.microsoft.com/fwlink/?LinkId=245960) (https://go.microsoft.com/fwlink/?LinkId=245960)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "72797908"
   
 -   [Administración de una instalación de Server Core: información general](https://go.microsoft.com/fwlink/?LinkId=245962) (https://go.microsoft.com/fwlink/?LinkId=245962)  
   
--   [Administración de una instalación de Server Core](https://go.microsoft.com/fwlink/?LinkId=245963) (https://go.microsoft.com/fwlink/?LinkId=245963)  
+-   [Administración de una instalación Server Core](https://go.microsoft.com/fwlink/?LinkId=245963) (https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="install-updates"></a>Instalar actualizaciones de  
  En esta sección se proporciona información sobre la instalación de actualizaciones para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un equipo con Windows Server Core. Se recomienda que los clientes evalúen e instalen las últimas actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puntualmente para asegurarse de que los sistemas están al día con las actualizaciones de seguridad más recientes. Para obtener más información sobre cómo instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un equipo con Windows Server Core, consulte [instalación de SQL Server 2014 en Server Core](install-sql-server-on-server-core.md).  
@@ -90,7 +90,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
     ```  
   
 ##  <a name="startstop-sql-server-service"></a>Iniciar o detener servicio de SQL Server  
- La aplicación [sqlservr](../../tools/sqlservr-application.md) se inicia, se detiene, se pone en pausa y continúa una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un símbolo del sistema.  
+ La aplicación [sqlservr Application](../../tools/sqlservr-application.md) se inicia, se detiene, se pone en pausa y continúa una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un símbolo del sistema.  
   
  También puede usar los servicios Net para iniciar y detener los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -122,7 +122,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 5.  Haga doble clic en el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-6.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, haga clic en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Services, haga clic con el botón secundario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<nombre de instancia >), donde \<nombre de instancia > es el nombre de una instancia del servidor local para la que desea habilitar Grupos de disponibilidad AlwaysOn y haga clic en Propiedades.  
+6.  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, haga clic en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Services, haga clic con el botón secundario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (\<nombre de instancia >), donde \<nombre de instancia > es el nombre de una instancia del servidor local para la que desea habilitar Grupos de disponibilidad AlwaysOn y, a continuación, haga clic en propiedades.  
   
 7.  Seleccione la pestaña Alta disponibilidad de AlwaysOn.  
   
@@ -213,9 +213,9 @@ $Tcp
 ##  <a name="sql-server-profiler"></a>SQL Server Profiler  
  En un equipo remoto, inicie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] y seleccione Nuevo seguimiento en el menú Archivo; la aplicación muestra un cuadro de diálogo Conectar al servidor en el que se puede especificar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que se desea conectarse, que reside en el equipo con Server Core. Para obtener más información, vea [Start SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md).  
   
- Para obtener más información sobre los permisos necesarios para ejecutar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vea [Permisos necesarios para ejecutar SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
+ Para obtener más información acerca de los permisos necesarios para ejecutar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vea [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
- Para conocer más detalles sobre [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vea [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md).  
+ Para obtener detalles adicionales sobre [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vea [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md).  
   
 ##  <a name="sql-server-auditing"></a>Auditoría de SQL Server  
  Puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] de forma remota para definir una auditoría. Una vez creada y habilitada la auditoría, el destino comenzará a recibir entradas. Para obtener más información sobre cómo crear y administrar auditorías de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
@@ -223,11 +223,11 @@ $Tcp
 ##  <a name="sql-servevr-command-prompt-utilities"></a>Utilidades del símbolo del sistema de SQL Servevr  
  Puede usar las siguientes utilidades del símbolo del sistema que le permiten crear scripts de operaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo con Server Core. La siguiente tabla contiene una lista de utilidades de símbolo del sistema que se suministran junto con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Server Core:  
   
-|**Utilidad**|**Description**|**Instalada en**|  
+|**Utilidad**|**Descripción**|**Instalada en**|  
 |-----------------|---------------------|----------------------|  
-|[bcp (utilidad)](../../tools/bcp-utility.md)|Se usa para copiar datos entre una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un archivo de datos en un formato especificado por el usuario.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
-|[Utilidad dtexec](../../integration-services/packages/dtexec-utility.md)|Se usa para configurar y ejecutar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
-|[Utilidad dtutil](../../integration-services/dtutil-utility.md)|Se usa para administrar paquetes SSIS.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
+|[bcp Utility](../../tools/bcp-utility.md)|Se usa para copiar datos entre una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un archivo de datos en un formato especificado por el usuario.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[dtexec (utilidad)](../../integration-services/packages/dtexec-utility.md)|Se usa para configurar y ejecutar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
+|[dtutil Utility](../../integration-services/dtutil-utility.md)|Se usa para administrar paquetes SSIS.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  
 |[osql (utilidad)](../../tools/osql-utility.md)|Permite especificar instrucciones, procedimientos del sistema y archivos de scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el símbolo del sistema.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[sqlagent90 (aplicación)](../../tools/sqlagent90-application.md)|Se usa para iniciar el Agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un símbolo del sistema.|\<unidad>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*nombre_instancia*>\MSSQL\Binn|  
 |[sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)|Permite especificar instrucciones, procedimientos del sistema y archivos de scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el símbolo del sistema.|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
@@ -237,10 +237,10 @@ $Tcp
 |[sqlservr (aplicación)](../../tools/sqlservr-application.md)|Se usa para iniciar y detener una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] desde el símbolo del sistema para solucionar problemas.|\<unidad >: \Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn|  
   
 ##  <a name="use-troubleshooting-tools"></a>Usar herramientas para la solución de problemas  
- Puede usar la [utilidad SQLdiag](../../tools/sqldiag-utility.md) para recopilar los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otros tipos de servidores, y para supervisar los servidores a lo largo del tiempo o solucionar problemas específicos de los mismos. SQLdiag tiene como fin acelerar y simplificar la recopilación de información de diagnóstico para los Servicios de soporte técnico de Microsoft.  
+ Puede usar [SQLdiag Utility](../../tools/sqldiag-utility.md) para recopilar los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otros tipos de servidores, y para supervisar los servidores a lo largo del tiempo o solucionar problemas específicos de los mismos. SQLdiag tiene como fin acelerar y simplificar la recopilación de información de diagnóstico para los Servicios de soporte técnico de Microsoft.  
   
  Puede iniciar la utilidad en el símbolo del sistema del administrador en Server Core, mediante la sintaxis especificada en el tema: [SQLdiag Utility](../../tools/sqldiag-utility.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Instale SQL Server 2014 en Server Core](install-sql-server-on-server-core.md)   
  [Temas de procedimientos de instalación](../../sql-server/install/installation-how-to-topics.md)  

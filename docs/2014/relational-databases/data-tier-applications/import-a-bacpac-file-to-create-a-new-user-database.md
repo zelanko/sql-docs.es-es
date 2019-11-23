@@ -36,7 +36,7 @@ ms.locfileid: "70175933"
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
   Importe un archivo de aplicación de capa de datos (DAC), o archivo .bacpac, para crear una copia de la base de datos original, con los datos, en una instancia nueva de [!INCLUDE[ssDE](../../includes/ssde-md.md)] o en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación e importación se pueden combinar para migrar una DAC o una base de datos de una instancia a otra o para crear una copia de seguridad lógica, como crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar  
  El proceso de importación compila una nueva DAC en dos fases.  
   
 1.  La importación crea una nueva DAC y la base de datos asociada mediante la definición de DAC almacenada en el archivo de exportación de la misma manera que una implementación de DAC crea una nueva DAC a partir de la definición de un archivo de paquete DAC.  
@@ -45,7 +45,7 @@ ms.locfileid: "70175933"
   
  
 ## <a name="sql-server-utility"></a>Utilidad de SQL Server  
- Si importa una DAC en una instancia administrada del motor de base de datos, la DAC importada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicaciones de capa de datos implementadas** details page.  
+ Si importa una DAC en una instancia administrada del motor de base de datos, la DAC importada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **de** y se notificará en la página de detalles **Aplicaciones de capa de datos implementadas** .  
   
 ## <a name="database-options-and-settings"></a>Opciones y configuración de bases de datos  
  De forma predeterminada, la base de datos creada durante la importación incorporará toda la configuración predeterminada de la instrucción CREATE DATABASE, con la excepción de que la intercalación de base de datos y el nivel de compatibilidad se establecen en los valores definidos en el archivo de exportación de DAC. Un archivo de exportación de DAC usa los valores de la base de datos original.  
@@ -55,8 +55,8 @@ ms.locfileid: "70175933"
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Se puede importar una DAC en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que ejecute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. Si exporta una DAC de una versión anterior, puede contener objetos que [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]no admita. No puede implementar dicha DAC en instancias de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="prerequisites"></a>Requisitos previos  
- Se recomienda no importar un archivo de exportación de DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos archivos contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un archivo de exportación de un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como procedimientos almacenados y otro código definido por el usuario. Para más información sobre cómo realizar estas comprobaciones, consulte [Validar un paquete de DAC](validate-a-dac-package.md).  
+## <a name="prerequisites"></a>Prerequisites  
+ Se recomienda no importar un archivo de exportación de DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos archivos contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un archivo de exportación de un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como procedimientos almacenados y otro código definido por el usuario. Para obtener más información acerca de cómo realizar estas comprobaciones, vea [Validate a DAC Package](validate-a-dac-package.md).  
   
 ## <a name="security"></a>Seguridad  
  Para mejorar la seguridad, los inicios de sesión de autenticación de SQL Server están almacenados en un archivo de exportación de DAC sin contraseña. Cuando el archivo se importa, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y emplee ALTER LOGIN para habilitar el inicio de sesión y asignar una nueva contraseña que pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
@@ -124,7 +124,7 @@ ms.locfileid: "70175933"
   
 -   **Nombre de la nueva base de datos**: proporcione un nombre para la base de datos importada.  
   
--   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  : especifique [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obtener más información acerca de las [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea este sitio web de [base de datos SQL](http://www.windowsazure.com/home/tour/database/) .  
+-   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** : especifique [!INCLUDE[ssSDS](../../includes/sssds-md.md)] empresa o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obtener más información acerca de las [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea este sitio web de [base de datos SQL](http://www.windowsazure.com/home/tour/database/) .  
   
 -   **Tamaño máximo de la base de datos (GB)** : Use el menú desplegable para especificar el tamaño máximo de la base de datos.  
   

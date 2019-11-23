@@ -123,7 +123,7 @@ ms.locfileid: "72797945"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>Para iniciar, detener, pausar, reanudar o reiniciar una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
-1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, haga clic en **Administrador de configuración de SQL Server**.  
+1.  En el menú **Inicio** , elija **Todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y luego haga clic en **Administrador de configuración de SQL Server**.  
   
 2.  Si aparece el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Sí**.  
   
@@ -138,7 +138,7 @@ ms.locfileid: "72797945"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-includessnoversionincludesssnoversion-mdmd-browser-or-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>Para iniciar, detener, pausar, reanudar o reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser o una instancia de Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, haga clic en **Administrador de configuración de SQL Server**.  
+1.  En el menú **Inicio** , elija **Todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y luego haga clic en **Administrador de configuración de SQL Server**.  
   
 2.  Si aparece el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Sí**.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "72797945"
 5.  Haga clic en **Aceptar** para cerrar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El agente no se puede pausar.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede pausar.  
   
 ##  <a name="SSMSProcedure"></a> Usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio  
   
@@ -337,6 +337,6 @@ ms.locfileid: "72797945"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Iniciar SQL Server con la configuración mínima](start-sql-server-with-minimal-configuration.md)   
  [Características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  

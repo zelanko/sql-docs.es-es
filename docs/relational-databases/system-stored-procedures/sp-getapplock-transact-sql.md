@@ -31,7 +31,7 @@ ms.locfileid: "72717260"
 
   Coloca un bloqueo en un recurso de la aplicación.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,30 +46,30 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@Resource =] '*resource_name*'  
- Cadena que indica un nombre que identifica al recurso de bloqueo. La aplicación debe asegurar que el nombre del recurso sea exclusivo. El nombre especificado se convierte internamente mediante un algoritmo hash en un valor que puede almacenarse en el administrador de bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* es **nvarchar (255)** y no tiene ningún valor predeterminado. Si una cadena de recursos es mayor que **nvarchar (255)** , se truncará a **nvarchar (255)** .  
+ [@Resource=] '*resource_name*'  
+ Cadena que indica un nombre que identifica al recurso de bloqueo. La aplicación debe asegurar que el nombre del recurso sea exclusivo. El nombre especificado se convierte internamente mediante un algoritmo hash en un valor que puede almacenarse en el administrador de bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado. Si una cadena de recursos es mayor que **nvarchar (255)** , se truncará a **nvarchar (255)** .  
   
- *resource_name* se compara con binario y, por tanto, distingue mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.  
+ *resource_name* se comparan en binario y, por tanto, distinguen mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.  
   
 > [!NOTE]  
 >  Una vez que se ha adquirido un bloqueo de aplicación, solo los primeros 32 caracteres pueden recuperarse como texto simple; al resto se le aplicará el algoritmo hash.  
   
- [@LockMode =] '*Lock_Mode*'  
+ [@LockMode=] '*Lock_Mode*'  
  Es el modo de bloqueo que se va a obtener para un recurso determinado. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. El valor puede ser cualquiera de los siguientes: **Shared**, **Update**, **IntentShared**, **IntentExclusive**o **Exclusive**. Para obtener más información, vea [modos de bloqueo](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
- [@LockOwner =] '*lock_owner*'  
+ [@LockOwner=] '*lock_owner*'  
  Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)** . El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el valor de *lock_owner* es **Transaction**, de forma predeterminada o se especifica explícitamente, sp_getapplock debe ejecutarse desde una transacción.  
   
- [@LockTimeout =] '*valor*'  
- Es un valor de tiempo de espera de los bloqueos, en milisegundos. El valor predeterminado es el mismo que el valor devuelto por @ @LOCK_TIMEOUT. Para indicar que una solicitud de bloqueo debe devolver un código de retorno de-1 en lugar de esperar el bloqueo cuando no se puede conceder la solicitud inmediatamente, especifique 0.  
+ [@LockTimeout=] '*valor*'  
+ Es un valor de tiempo de espera de los bloqueos, en milisegundos. El valor predeterminado es el mismo que el valor devuelto por @@LOCK_TIMEOUT. Para indicar que una solicitud de bloqueo debe devolver un código de retorno de-1 en lugar de esperar el bloqueo cuando no se puede conceder la solicitud inmediatamente, especifique 0.  
   
- [@DbPrincipal =] '*database_principal*'  
+ [@DbPrincipal=] '*database_principal*'  
  Es el usuario, el rol o el rol de aplicación que tiene permisos para un objeto de una base de datos. El autor de la llamada de la función debe ser miembro de *database_principal*, DBO o el rol fijo de base de datos db_owner para llamar a la función correctamente. El valor predeterminado es public.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- \> = 0 (correcto) o < 0 (error)  
+ \>= 0 (correcto) o < 0 (error)  
   
-|Value|Resultado|  
+|Valor|Resultado|  
 |-----------|------------|  
 |0|Se concedió el bloqueo de forma sincrónica.|  
 |1|Se concedió el bloqueo después de esperar a que se liberaran otros bloqueos no compatibles.|  
@@ -78,7 +78,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|La solicitud de bloqueo fue objeto del propio bloqueo.|  
 |-999|Indica un error de llamada o de validación de parámetros.|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Remarks  
  Los bloqueos colocados en un recurso se asocian a la transacción o a la sesión actuales. Los bloqueos asociados con la transacción actual se liberan cuando ésta se confirma o se revierte. Los bloqueos asociados a la sesión se liberan cuando se cierra la sesión. Cuando el servidor se cierra por cualquier motivo, se liberan todos los bloqueos.  
   
  El bloqueo de recurso creado por sp_getapplock se crea en la base de datos actual para la sesión. Cada recurso de bloqueo se identifica mediante la combinación de los siguientes valores:  
@@ -136,7 +136,7 @@ GO
   
  Utilice la vista de administración dinámica sys.dm_tran_locks o el procedimiento almacenado sp_lock system o utilice [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para supervisar los bloqueos.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -163,9 +163,9 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
- [APPLOCK_MODE &#40;Transact-SQL&#41; ](../../t-sql/functions/applock-mode-transact-sql.md)    
- [APPLOCK_TEST &#40;Transact-SQL&#41; ](../../t-sql/functions/applock-test-transact-sql.md)    
+## <a name="see-also"></a>Vea también  
+ [APPLOCK_MODE &#40;Transact-SQL&#41; ](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;Transact-SQL&#41; ](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

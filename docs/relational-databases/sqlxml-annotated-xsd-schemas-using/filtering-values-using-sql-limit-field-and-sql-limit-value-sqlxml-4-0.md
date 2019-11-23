@@ -306,9 +306,9 @@ ms.locfileid: "72906100"
     </root>  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [float y real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [Transact-SQL &#40;&#41; nchar y nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
+ [Transact-SQL &#40;&#41;  nchar y nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
  [Instalación de SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [Usar esquemas XSD anotados en consultas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

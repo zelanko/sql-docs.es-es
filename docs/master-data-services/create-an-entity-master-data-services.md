@@ -26,7 +26,7 @@ ms.locfileid: "73728464"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una entidad para contener los miembros y sus atributos.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -69,10 +69,10 @@ ms.locfileid: "73728464"
 ## <a name="grid-columns"></a>Columnas de la cuadrícula  
  Por cada entidad creada, se agrega una fila con trece columnas a la cuadrícula. Las columnas son las siguientes.  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |Estado|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icon para actualizar el estado ")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icon para estado de error ")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icon para el estado correcto ")|  
-|Nombre|El nombre de la entidad.|  
+|NOMBRE|El nombre de la entidad.|  
 |Descripción|La descripción de la entidad.|  
 |Tabla de ensayo|El nombre de prefijo de la tabla que se usa para almacenar datos.|  
 |Tipo de registro de transacciones|El tipo de registro de transacciones de la entidad.|  
@@ -85,7 +85,7 @@ ms.locfileid: "73728464"
 |Actualizada por|Nombre del usuario que actualizó la entidad por última vez.|  
 |Actualizada el|Fecha y hora en que se actualizó la entidad por última vez.|  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Crear un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   

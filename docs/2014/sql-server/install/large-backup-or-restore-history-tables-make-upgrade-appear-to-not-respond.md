@@ -46,13 +46,13 @@ ms.locfileid: "70874601"
  Si alguna de estas tablas tiene 10.000 o más filas, el Asesor de actualizaciones notificará que se ha producido un error al no poder cumplir con su tarea. No notificará qué tabla supera el número permitido de filas. La primera tabla que supere las 10.000 filas generará el error.  
   
 ## <a name="corrective-action"></a>Acción correctora  
- Antes de actualizar una base de datos, si alguna de estas tablas supera las 10.000 filas, recomendamos reducir su número a menos de 10.000 filas. Para reducir las filas de todas estas tablas, puede ejecutar el procedimiento almacenado **sp_delete_backuphistory** . Este procedimiento elimina las entradas de todas las tablas de historial de restauración y copia de seguridad correspondientes a los conjuntos de copia de seguridad que sean anteriores a una fecha dada. Para más información, vea [sp_delete_backuphistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql).  
+ Antes de actualizar una base de datos, si alguna de estas tablas supera las 10.000 filas, recomendamos reducir su número a menos de 10.000 filas. Para reducir las filas de todas estas tablas, puede ejecutar el **sp_delete_backuphistory** procedimiento almacenado. Este procedimiento elimina las entradas de todas las tablas de historial de restauración y copia de seguridad correspondientes a los conjuntos de copia de seguridad que sean anteriores a una fecha dada. Para más información, vea [sp_delete_backuphistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql).  
   
 > [!NOTE]  
 >  Puede actualizar una base de datos cuyas tablas de historial de restauración y copia de seguridad tengan más de 10.000 filas. Sin embargo, puede parecer que la actualización se detiene mientras se modifican esas tablas de gran tamaño. Cuanto mayor sea el tamaño de las tablas, más tiempo necesitará el programa de instalación para completar el proceso.  
   
 ## <a name="see-also"></a>Vea también  
- [Problemas de actualización Motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [Motor de base de datos problemas de actualización](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Asesor &#91;de actualizaciones de SQL Server 2014 nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

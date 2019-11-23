@@ -23,7 +23,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/23/2019
 ms.locfileid: "72798056"
 ---
-# <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Administración extensible de claves con el Almacén de claves de Azure (SQL Server)
+# <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Administración extensible de claves con Azure Key Vault (SQL Server)
   El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault permite que el cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aproveche el servicio de Azure Key Vault como un proveedor de [Administración &#40;extensible de claves EKM&#41; ](extensible-key-management-ekm.md) para proteger sus claves de cifrado.  
   
  Este tema incluye:  
@@ -45,9 +45,9 @@ ms.locfileid: "72798056"
 ##  <a name="Uses"></a>Usos de EKM  
  Una organización puede utilizar el cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para proteger datos confidenciales. el cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye [ &#40;cifrado de datos transparente TDE&#41;](transparent-data-encryption.md), [cifrado de nivel de columna](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) y [cifrado de copia de seguridad](../../backup-restore/backup-encryption.md). En todos estos casos, los datos se cifran con una clave de cifrado de datos simétrica. La clave de cifrado de datos simétrica se protege, además, cifrándose con una jerarquía de claves almacenadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O bien, la arquitectura del proveedor EKM permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proteger las claves de cifrado de datos con una clave asimétrica que se almacena fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un proveedor de servicios criptográficos externo. El uso de la arquitectura de proveedor de EKM agrega un nivel de seguridad adicional y permite a las organizaciones separar la administración de claves y datos.  
   
- El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Key Vault permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usar el servicio de almacén de claves de alto rendimiento, alta disponibilidad y escalable como un proveedor de EKM para la protección de claves de cifrado. El servicio de almacén de claves se puede usar con instalaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en máquinas virtuales de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure y para servidores locales. El servicio Almacén de claves también permite usar módulos de seguridad de hardware (HSM) supervisados y controlados estrechamente. Así, se obtiene un mayor grado de protección para las claves de cifrado asimétricas. Para obtener más información sobre el Almacén de claves, consulte el tema sobre el [Almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521401).  
+ El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del almacén de claves de Azure permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usar el servicio de almacén de claves de alto rendimiento, alta disponibilidad y escalable como un proveedor de EKM para la protección de claves de cifrado. El servicio de almacén de claves se puede usar con instalaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en máquinas virtuales de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure y para servidores locales. El servicio Almacén de claves también permite usar módulos de seguridad de hardware (HSM) supervisados y controlados estrechamente. Así, se obtiene un mayor grado de protección para las claves de cifrado asimétricas. Para más información sobre el Almacén de claves, consulte el tema sobre el [Almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521401).  
   
- En la siguiente imagen se resume el flujo de procesos de EKM usando el almacén de claves. Los números de pasos del proceso de la imagen no de proceso de la imagen no se ofrecen con el fin de que coincidan con los números de los pasos de configuración que siguen a la imagen.  
+ La siguiente imagen resume el flujo de procesos de EKM usando el almacén de claves. Los números de pasos del proceso de la imagen no se ofrecen con el fin de que coincidan con los números de los pasos de configuración que siguen a la imagen.  
   
  ![SQL Server EKM mediante el Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "EKM de SQL Server con Azure Key Vault")  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72798056"
     >  En los escenarios de producción, le recomendamos encarecidamente que importe la clave asimétrica, porque permite al administrador custodiar la clave en un sistema de custodia de clave. Si la clave asimétrica se crea en el almacén, no se puede custodiar, porque la clave privada no puede salir nunca del almacén. Las claves que se usen para proteger datos críticos se deben custodiar. Si se pierde una clave asimétrica, los datos no podrán recuperarse nunca más.  
   
     > [!IMPORTANT]  
-    >  El Almacén de claves admite varias versiones de la clave que tengan el mismo nombre. Las claves que use el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no deben tener versiones ni revertirse. Si el administrador quiere revertir la clave que se usa para el cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , debe crear una nueva clave con otro nombre en el almacén y usar la nueva clave para cifrar la clave de cifrado de datos (DEK).  
+    >  El Almacén de claves admite varias versiones de la clave que tengan el mismo nombre. Las claves que use el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no deben tener versiones ni revertirse. Si el administrador quiere revertir la clave que se usa para el cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , debe crear una nueva clave con otro nombre en el almacén y utilizar la nueva clave para cifrar la clave de cifrado de datos (DEK).  
   
      Para más información sobre cómo importar una clave en el Almacén de claves o crear una clave en el Almacén de claves (no recomendado en entornos de producción), consulte la sección sobre **cómo agregar una clave o un secreto al Almacén de claves** de la [introducción al Almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521402).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "72798056"
   
     -   **Entidad de servicio** para [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]: **CLIENTID_DBEngine** y **SECRET_DBEngine**.  
   
-4.  **Conceda permiso a las entidades de servicio para tener acceso a la Key Vault:** Las **entidades** de seguridad **CLIENTID_sysadmin_login** y CLIENTID_DBEngineService requieren los **permisos Get**, **List**, **wrapKey**y **unwrapKey** en el almacén de claves. Si tiene pensado crear las claves con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , también deberá conceder el permiso **create** en el Almacén de claves.  
+4.  **Conceda permiso a las entidades de servicio para tener acceso a la Key Vault:** Las **entidades** de seguridad de **CLIENTID_sysadmin_login** y CLIENTID_DBEngineService requieren los permisos **Get**, **List**, **wrapKey**y **unwrapKey** en el almacén de claves. Si tiene pensado crear las claves con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , también deberá conceder el permiso **create** en el Almacén de claves.  
   
     > [!IMPORTANT]  
     >  Los usuarios deben habilitar, al menos, las operaciones **wrapKey** y **unwrapKey** para el almacén de claves.  
@@ -101,15 +101,15 @@ ms.locfileid: "72798056"
     -   Referencia de [cmdlets del Almacén de claves de Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault) de PowerShell  
   
 ##  <a name="Step2"></a>Paso 2: instalar el Conector de SQL Server  
- El administrador del equipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] descarga e instala el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se puede descargar desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Busque el **conector de SQL Server para el Almacén de claves de Microsoft Azure**, revise los detalles, los requisitos del sistema y las instrucciones de instalación y elija la opción de descargar el conector e iniciar la instalación con **Ejecutar**. Revise la licencia, acéptela y continúe.  
+ El administrador del equipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] descarga e instala el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se puede descargar desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Busque el **Conector de SQL Server para Azure Key Vault**, revise los detalles, los requisitos del sistema y las instrucciones de instalación y elija la opción de descargar el conector e iniciar la instalación con **Ejecutar**. Revise la licencia, acéptela y continúe.  
   
  De forma predeterminada, el conector se instala en **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**. Esta ubicación se puede cambiar durante la instalación. (Si la cambia, ajuste los siguientes scripts).  
   
  Al finalizar la instalación, estarán instalados en el equipo:  
   
--   **Microsoft.AzureKeyVaultService.EKM.dll**: es la DLL del proveedor de servicios criptográficos EKM que se tiene que registrar con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con la instrucción CREATE CRYPTOGRAPHIC PROVIDER.  
+-   **Microsoft.AzureKeyVaultService.EKM.dll**: es la DLL del proveedor EKM que es necesario registrar con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la instrucción CREATE CRYPTOGRAPHIC PROVIDER.  
   
--   **Conector de SQL Server del Almacén de claves de Azure**: es un servicio de Windows que permite al proveedor de servicios criptográficos EKM comunicarse con el Almacén de claves.  
+-   **Conector de SQL Server de Azure Key Vault**: es un servicio de Windows que permite al proveedor de servicios criptográficos EKM comunicarse con Key Vault.  
   
  La instalación del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también le permite descargar, si quiere, los scripts de muestra del cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -159,7 +159,7 @@ ms.locfileid: "72798056"
 2.  Configure una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para un inicio de sesión de administrador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , para utilizar el Almacén de claves con el fin de configurar y administrar escenarios de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     > [!IMPORTANT]  
-    >  El argumento **Identity** de `CREATE CREDENTIAL` requiere el nombre del almacén de claves. El argumento **Secret** de `CREATE CREDENTIAL` requiere que el *ID. de cliente\<* (sin guiones) y *\<secreto >* se pasen juntos sin un espacio entre ellos.  
+    >  El argumento **Identity** de `CREATE CREDENTIAL` requiere el nombre del almacén de claves. El argumento **Secret** de `CREATE CREDENTIAL` requiere que el *ID. de cliente\<>* (sin guiones) y *\<secreto >* se pasen juntos sin un espacio entre ellos.  
   
      En el ejemplo siguiente, el **Id. de cliente** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) se deja sin guiones y se introduce como la cadena `EF5C8E094D2A4A769998D93440D8115D` . El **secreto** se representa con la cadena *SECRET_sysadmin_login*.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "72798056"
     ```  
   
 > [!TIP]  
->  Los usuarios que reciben el error **no pueden exportar la clave pública del proveedor. Código de error de proveedor: 2053.** debe comprobar sus permisos **get**, **list**, **wrapKey**y **unwrapKey** en el almacén de claves.  
+>  Los usuarios que reciben el error **no pueden exportar la clave pública del proveedor. Código de error de proveedor: 2053.** debe comprobar sus permisos **get**, **list**, **wrapKey**y **unwrapKey** en el Almacén de claves.  
   
  Para obtener más información, vea:  
   
@@ -224,7 +224,7 @@ ms.locfileid: "72798056"
 1.  Cree una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que la use [!INCLUDE[ssDE](../../../includes/ssde-md.md)] al acceder al Almacén de claves EKM mientras se carga la base de datos.  
   
     > [!IMPORTANT]  
-    >  El argumento **Identity** de `CREATE CREDENTIAL` requiere el nombre del almacén de claves. El argumento **Secret** de `CREATE CREDENTIAL` requiere que el *ID. de cliente\<* (sin guiones) y *\<secreto >* se pasen juntos sin un espacio entre ellos.  
+    >  El argumento **Identity** de `CREATE CREDENTIAL` requiere el nombre del almacén de claves. El argumento **Secret** de `CREATE CREDENTIAL` requiere que el *ID. de cliente\<>* (sin guiones) y *\<secreto >* se pasen juntos sin un espacio entre ellos.  
   
      En el ejemplo siguiente, el **Id. de cliente** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) se deja sin guiones y se introduce como la cadena `EF5C8E094D2A4A769998D93440D8115D` . El **secreto** se representa con la cadena *SECRET_DBEngine*.  
   
@@ -302,7 +302,7 @@ GO
  Para obtener más información sobre las opciones de copia de seguridad, vea [copia de seguridad &#40;de Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
 ###  <a name="ExampleC"></a>Ejemplo C: cifrado de nivel de columna con una clave asimétrica desde el Key Vault  
- En el ejemplo siguiente, se crea una clave simétrica protegida por la clave asimétrica en el Almacén de claves. Luego, se usa la clave simétrica para cifrar los datos de la base de datos.  
+ En el ejemplo siguiente, se crea una clave simétrica protegida por la clave asimétrica en el Almacén de claves. Luego, se utiliza la clave simétrica para cifrar los datos de la base de datos.  
   
  En este ejemplo, se utiliza la clave asimétrica CONTOSO_KEY almacenada en el Almacén de claves, que se importó o se creó anteriormente, como se describe en el [paso 3, sección 3](#Step3) , más arriba. Para utilizar esta clave asimétrica en la base de datos `ContosoDatabase` , debe ejecutar de nuevo la instrucción CREATE ASYMMETRIC KEY para proporcionar a la base de datos `ContosoDatabase` una referencia a la clave.  
   
@@ -341,7 +341,7 @@ SELECT CONVERT(VARCHAR, DECRYPTBYKEY(@DATA));
 CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   

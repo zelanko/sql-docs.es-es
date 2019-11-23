@@ -40,7 +40,7 @@ ms.locfileid: "72798018"
   
 6.  Escriba una contraseña y haga clic en **Aceptar**.  
   
-     La contraseña protege la clave maestra de la base de datos que se usar para cifrar los datos del catálogo. Guarde la contraseña en un lugar seguro. Se recomienda que haga también una copia de seguridad de la clave maestra de la base de datos. Para obtener más información, consulte [Hacer copias de seguridad de una clave maestra de una base de datos](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
+     La contraseña protege la clave maestra de la base de datos que se usar para cifrar los datos del catálogo. Guarde la contraseña en un lugar seguro. Se recomienda que haga también una copia de seguridad de la clave maestra de la base de datos. Para más información, consulte [Back Up a Database Master Key](../relational-databases/security/encryption/back-up-a-database-master-key.md).  
   
 ### <a name="to-create-the-ssisdb-catalog-programmatically"></a>Para crear el catálogo de SSISDB mediante programación  
   
@@ -69,6 +69,6 @@ ms.locfileid: "72798018"
   
      Para obtener más ejemplos de cómo usar Windows PowerShell y el espacio de nombres <xref:Microsoft.SqlServer.Management.IntegrationServices>, vea la entrada del blog [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) (SSIS y PowerShell en SQL Server 2012), en blogs.msdn.com. Para obtener información general sobre el espacio de nombres y ejemplos de código, vea la entrada del blog sobre el [Modelo de objetos administrados del catálogo de SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)en blogs.msdn.com.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Catálogo de SSIS](catalog/ssis-catalog.md)   
  [Copia de seguridad, restauración y traslado del catálogo de SSIS](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  

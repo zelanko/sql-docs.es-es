@@ -45,7 +45,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @class = ] 'class'`Clase de la categoría que se va a agregar. la *clase* es **VARCHAR (8)** con un valor predeterminado Job y puede tener uno de estos valores.  
+`[ @class = ] 'class'` la clase de la categoría que se va a agregar. la *clase* es **VARCHAR (8)** con un valor predeterminado Job y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -53,23 +53,23 @@ sp_add_category
 |ALERT|Agrega una categoría de alerta.|  
 |OPERATOR|Agrega una categoría de operador.|  
   
-`[ @type = ] 'type'`Tipo de categoría que se va a agregar. *Type* es **VARCHAR (12)** , con un valor predeterminado de **local**y puede tener uno de estos valores.  
+`[ @type = ] 'type'` el tipo de categoría que se va a agregar. *Type* es **VARCHAR (12)** , con un valor predeterminado de **local**y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |LOCAL|Categoría de trabajos locales.|  
 |VARIOS SERVIDORES|Categoría de trabajos multiservidor.|  
-|Ninguno|Una categoría para una clase distinta de JOB **.**|  
+|NONE|Una categoría para una clase distinta de JOB **.**|  
   
-`[ @name = ] 'name'`Nombre de la categoría que se va a agregar. El nombre debe ser único en la clase especificada. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'` el nombre de la categoría que se va a agregar. El nombre debe ser único en la clase especificada. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_add_category** se debe ejecutar desde la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  

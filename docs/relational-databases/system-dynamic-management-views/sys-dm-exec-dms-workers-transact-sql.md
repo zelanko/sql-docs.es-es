@@ -1,5 +1,5 @@
 ---
-title: Sys. DM _ _exec_dms_workers (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_dms_workers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -29,21 +29,21 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532939"
 ---
-# <a name="sysdm_exec_dms_workers-transact-sql"></a>Sys. DM _ _exec_dms_workers (Transact-SQL)
+# <a name="sysdm_exec_dms_workers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contiene información sobre todos los trabajadores que completan los pasos de DMS.  
   
  Esta vista muestra los datos de las últimas 1000 solicitudes y solicitudes activas; las solicitudes activas siempre tienen los datos presentes en esta vista.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Column Name|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Consulta de la que forma parte este trabajador de DMS. request_id, step_index y dms_step_index forman la clave de esta vista.||  
-|step_index|`int`|Paso de consulta del que forma parte este trabajador de DMS.|Consulte Step index in [Sys. DM _ &#40;_EXEC_DISTRIBUTED_REQUEST_STEPS Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|`int`|Paso del plan DMS en el que se ejecuta este trabajador.|Vea [Sys. DM _ _exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|`int`|Nodo en el que se está ejecutando el trabajo.|Vea [Sys. DM _ &#40;_EXEC_COMPUTE_NODES Transact-&#41;SQL](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|execution_id|`nvarchar(32)`|Consulta de la que forma parte este trabajador DMS. request_id, step_index y dms_step_index forman la clave de esta vista.||  
+|step_index|`int`|Paso de consulta del que forma parte este trabajador de DMS.|Consulte Step index in [Sys. dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
+|dms_step_index|`int`|Paso del plan DMS en el que se ejecuta este trabajador.|Vea [Sys. dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|`int`|Nodo en el que se está ejecutando el trabajo.|See [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
-|tipo|`nvarcha(32)`|||  
+|Tipo|`nvarcha(32)`|||  
 |status|`nvarchar(32)`|Estado de este paso|' Pending ', ' Running ', ' complete ', ' failed ', ' UndoFailed ', ' PendingCancel ', ' Canceled ', ' Undone ', ' Aborted '|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  

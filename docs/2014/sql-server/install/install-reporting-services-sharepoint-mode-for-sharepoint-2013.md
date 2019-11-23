@@ -22,7 +22,7 @@ ms.locfileid: "72798338"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **Nota:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]modo de SharePoint **no admite la** funcionalidad de varios inquilinos de SharePoint Server.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; **Nota:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo de SharePoint **no admite la** funcionalidad de varios inquilinos de SharePoint Server.|  
   
  Para obtener información acerca de cómo agregar más servidores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una granja existente, vea lo siguiente:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72798338"
   
 -   [Script de Windows PowerShell para los pasos 1-4](#bkmk_full_script)  
   
--   [Additional Configuration](#bkmk_additional_config) incluido el aprovisionamiento de suscripciones y alertas, tipos de contenido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y configurar Excel Services para que use servidor de Analysis Services.  
+-   [Configuración adicional](#bkmk_additional_config) incluido el aprovisionamiento de suscripciones y alertas, tipos de contenido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y configurar Excel Services para que use servidor de Analysis Services.  
   
 -   [Comprobar la instalación](#bkmk_verify_installation)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72798338"
  ![Implementación de un solo servidor en modo de SharePoint de SSRS](../../../2014/sql-server/install/media/rs-sharepoint-1server-deployment.gif "Implementación de un solo servidor en modo de SharePoint de SSRS")  
   
 > [!TIP]  
->  Para obtener ejemplos de implementación más complejos, vea [Topologías de implementación para las características BI de SQL Server](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
+>  Para obtener ejemplos de implementación más complejos, vea [Deployment Topologies for SQL Server BI Features in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
   
 ##  <a name="bkmk_setupaccounts"></a> Cuentas de instalación  
  En esta sección se describen las cuentas y los permisos usados para los principales pasos de implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint.  
@@ -121,7 +121,7 @@ ms.locfileid: "72798338"
   
     -   **Complemento de Reporting Services para productos de SharePoint**.  
   
-         ![Nota:](../../../2014/reporting-services/media/rs-fyinote.png "Tenga en cuenta") La opción del Asistente para la instalación de para instalar el complemento es nueva con la versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+         ![Nota:](../../../2014/reporting-services/media/rs-fyinote.png "nota") La opción del Asistente para la instalación de para instalar el complemento es nueva con la versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
     -   Si aún no tiene una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]de SQL Server, también podría seleccionar **Servicios de Motor de base de datos** y **Herramientas de administración - Completa** para un entorno completo.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "72798338"
   
 12. Si seleccionó los servicios del Motor de base de datos, acepte la instancia predeterminada de **MSSQLSERVER** en la página **Configuración de instancia** y haga clic en **Siguiente**.  
   
-     ![Nota:](../../../2014/reporting-services/media/rs-fyinote.png "Tenga en cuenta") La arquitectura de servicio de SharePoint de Reporting Services no se basa en una SQL Server "instancia" como era la arquitectura de Reporting Services anterior.  
+     ![Nota:](../../../2014/reporting-services/media/rs-fyinote.png "nota") La arquitectura de servicio de SharePoint de Reporting Services no se basa en una SQL Server "instancia" como era la arquitectura de Reporting Services anterior.  
   
 13. Examine la página **Requisitos de espacio en disco** y haga clic en **Siguiente**.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "72798338"
   
 7.  En **Nombre de la base de datos** , el valor predeterminado es `ReportingService_<guid>`, que es un nombre de base de datos único. Si escribe un nuevo valor, escriba un valor único. Es la nueva base de datos que se crea específicamente para la aplicación de servicio.  
   
-8.  En **Autenticación de base de datos**, el valor predeterminado es Autenticación de Windows. Si elige **Autenticación de SQL**, consulte la documentación de SharePoint para conocer las prácticas recomendadas sobre cómo usar este tipo de autenticación en una implementación de SharePoint.  
+8.  En **Autenticación de bases de datos**, el valor predeterminado es Autenticación de Windows. Si elige **Autenticación de SQL**, consulte la documentación de SharePoint para conocer las prácticas recomendadas sobre cómo usar este tipo de autenticación en una implementación de SharePoint.  
   
 9. En la sección **Asociación de aplicación web** , seleccione la aplicación web que se va a aprovisionar para el acceso de la aplicación de servicio de Reporting Services. Puede asociar una aplicación de servicio de Reporting Services a una aplicación web. Si todas las aplicaciones web actuales ya están asociadas a una aplicación de servicio de Reporting Services, ve un mensaje de advertencia.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "72798338"
   
 6.  Haga clic en **Activar**. El estado de la característica cambiará a **Activo**.  
   
- Este procedimiento se completa en cada colección de sitios. Para más información, consulte [Activate the Report Server and Power View Integration Features in SharePoint](../../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md).  
+ Este procedimiento se completa en cada colección de sitios. Para más información, consulte [Activar las características de integración del servidor de informes y Power View en SharePoint](../../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md).  
   
 ##  <a name="bkmk_full_script"></a>Script de Windows PowerShell para los pasos 1-4  
  El script de PowerShell de esta sección es el equivalente a completar los pasos 1 a 4 de las secciones anteriores. El script hace lo siguiente:  
@@ -398,7 +398,7 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona tipos de contenido predefinidos que se usan para administrar archivos de orígenes de datos compartidos (.rsds), modelos de informe (.smdl) y archivos de definición de informe (.rdl) del Generador de informes. Al agregar un tipo de contenido **Informe del Generador de informes**, **Modelo de informe**y **Origen de datos de informe** a una biblioteca se habilita el comando **Nuevo** para que pueda crear nuevos documentos de ese tipo. Para obtener más información, vea [agregar tipos de contenido del servidor de &#40;informes a una biblioteca Reporting Services&#41;en el modo integrado de SharePoint](../../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 ### <a name="activate-the-report-server-file-sync-feature"></a>Activar la característica de sincronización de archivos del servidor de informes  
- Si los usuarios van a cargar con frecuencia elementos de informe publicados directamente en bibliotecas de documentos de SharePoint, la característica de nivel de sitio **Sincronizar archivo del Servidor de informes** será beneficiosa. La característica de sincronización de archivos sincronizará el catálogo del servidor de informes con los elementos de las bibliotecas de documentos con más frecuencia. Para más información, consulte [Activar la característica de sincronización de archivos del servidor de informes en Administración central de SharePoint](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+ Si los usuarios van a cargar con frecuencia elementos de informe publicados directamente en bibliotecas de documentos de SharePoint, la característica de nivel de sitio **Sincronizar archivo del Servidor de informes** será beneficiosa. La característica de sincronización de archivos sincronizará el catálogo del servidor de informes con los elementos de las bibliotecas de documentos con más frecuencia. Para más información, consulte [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
 ##  <a name="bkmk_verify_installation"></a> Comprobar la instalación  
  A continuación se muestran los pasos y procedimientos sugeridos para comprobar la implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint.  
@@ -409,9 +409,9 @@ Enable-SPfeature -identity "reportserver" -Url http://server/sites/bi
   
      Guarde el informe en la biblioteca de documentos y ejecútelo desde la biblioteca. Para obtener más información sobre cómo crear informes con el Generador de informes, vea [Iniciar el Generador de informes (Generador de informes)](https://technet.microsoft.com/library/ms159221.aspx).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
- [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Mapa de ruta de contenido: configuración y configuración de SharePoint Server y SQL Server BI](https://technet.microsoft.com/library/dn205112.aspx)   
  [Características admitidas por las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)

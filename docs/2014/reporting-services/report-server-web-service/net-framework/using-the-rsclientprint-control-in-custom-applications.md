@@ -65,7 +65,7 @@ ms.locfileid: "70155002"
   
 ### <a name="rsclientprint-properties"></a>Propiedades de RSClientPrint  
   
-|Property|Type|RW|Default|Descripción|  
+|propiedad|Tipo|RW|Valor de DB-Library|Descripción|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|Valor del informe|Obtiene o establece el margen izquierdo. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
 |MarginRight|Double|RW|Valor del informe|Obtiene o establece el margen derecho. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
@@ -73,9 +73,9 @@ ms.locfileid: "70155002"
 |MarginBottom|Double|RW|Valor del informe|Obtiene o establece el margen inferior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
 |PageWidth|Double|RW|Valor del informe|Obtiene o establece el ancho de página. El valor predeterminado, si no lo ha establecido el desarrollador o no está incluido en la definición de informe, es de 215,9 milímetros.|  
 |PageHeight|Double|RW|Valor del informe|Obtiene o establece el alto de página. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está incluido en la definición de informe, es 279,4 milímetros.|  
-|Culture|Int32|RW|Configuración regional del explorador|Especifica el identificador de configuración regional (LCID). Este valor determina la unidad de medida para la entrada del usuario. Por ejemplo, si un usuario escribe `3`, el valor se medirá en milímetros si el idioma es francés o pulgadas si el idioma es el inglés (Estados Unidos). Los valores válidos incluyen: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|string|RW|Valor de cultura del cliente|Especifica la traducción de las cadenas del cuadro de diálogo. El texto del cuadro de diálogo Imprimir se localiza en estos idiomas: Chino simplificado, Chino tradicional, Inglés, Francés, alemán, Italiano, Japonés, Coreano y español. Los valores válidos incluyen: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|Authenticate|Boolean|RW|False|Especifica si el control envía un comando GET en el servidor de informes para iniciar una conexión para la impresión fuera de sesión.|  
+|Culture|Int32|RW|Configuración regional del explorador|Especifica el identificador de configuración regional (LCID). Este valor determina la unidad de medida para la entrada del usuario. Por ejemplo, si un usuario escribe `3`, el valor se medirá en milímetros si el idioma es francés o pulgadas si el idioma es el inglés (Estados Unidos). Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
+|UICulture|String|RW|Valor de cultura del cliente|Especifica la traducción de las cadenas del cuadro de diálogo. El texto del cuadro de diálogo Imprimir está traducido a los idiomas que se indican a continuación: alemán, chino simplificado, chino tradicional, coreano, español, francés, inglés, italiano y japonés. Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
+|Authenticate|Booleano|RW|False|Especifica si el control envía un comando GET en el servidor de informes para iniciar una conexión para la impresión fuera de sesión.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Cuándo establecer la propiedad Authenticate  
  Al imprimir desde una sesión del explorador, no es necesario establecer la propiedad `Authenticate`. En el contexto de una sesión activa, todas las solicitudes del control de impresión que se hacen al servidor de informes se controlan a través del propio explorador. El explorador establece las variables de sesión necesarias para la comunicación con el servidor de informes.  
@@ -93,7 +93,7 @@ ms.locfileid: "70155002"
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- Al ejecutar el informe en Azure SQL Reporting, se usan los siguientes valores de CLSID.  
+ Cuando ejecute el informe en Azure SQL Reporting, use los siguientes valores de CLSID.  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   
@@ -102,11 +102,11 @@ ms.locfileid: "70155002"
 ### <a name="rsprintclient-support-for-the-print-method"></a>Compatibilidad de RSPrintClient con el método Print  
  El objeto **RSClientPrint** admite el método **Print** usado para iniciar el cuadro de diálogo Imprimir. El método **Print** dispone de los siguientes argumentos.  
   
-|Argumento|E/S|Type|Descripción|  
+|Argumento|E/S|Tipo|Descripción|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|En|string|Especifica el directorio virtual del servidor de informes (por https://adventure-works/reportserver) ejemplo,.|  
-|ReportPathParameters|En|string|Especifica el nombre completo para obtener acceso al informe en el espacio de nombres de carpetas del servidor de informes, incluidos los parámetros. Los informes se recuperan mediante el acceso a una dirección URL. Por ejemplo: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
-|ReportName|En|string|Nombre corto del informe (en el ejemplo anterior, el nombre corto es Employee Sales Summary). Aparece en el cuadro de diálogo Imprimir y en la cola de impresión.|  
+|ServerPath|Entrada|String|Especifica el directorio virtual del servidor de informes (por ejemplo, https://adventure-works/reportserver).|  
+|ReportPathParameters|Entrada|String|Especifica el nombre completo para obtener acceso al informe en el espacio de nombres de carpetas del servidor de informes, incluidos los parámetros. Los informes se recuperan mediante el acceso a una dirección URL. Por ejemplo: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportName|Entrada|String|Nombre corto del informe (en el ejemplo anterior, el nombre corto es Employee Sales Summary). Aparece en el cuadro de diálogo Imprimir y en la cola de impresión.|  
   
 ### <a name="example"></a>Ejemplo  
  El siguiente ejemplo HTML muestra cómo especificar el archivo .cab, el método **Print** y las propiedades en JavaScript:  

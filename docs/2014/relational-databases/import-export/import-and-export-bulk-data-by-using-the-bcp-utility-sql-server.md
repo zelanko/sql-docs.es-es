@@ -50,7 +50,7 @@ Este tema constituye una introducción al uso de la [utilidad bcp](../../tools/b
 
  Para consultar los ejemplos de **bcp** , vea:  
   
--   [bcp (utilidad)](../../tools/bcp-utility.md)  
+-   [bcp Utility](../../tools/bcp-utility.md)  
   
 -   [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -74,8 +74,11 @@ Este tema constituye una introducción al uso de la [utilidad bcp](../../tools/b
 
 ## <a name="see-also"></a>Vea también
 
-[Instrucción &#40;Select de Transact&#41;-SQL](/sql/t-sql/statements/insert-transact-sql)
-[SELECT de &#40;Transact&#41;-SQL](/sql/t-sql/queries/select-clause-transact-sql)
+[Instrucción &#40;INSERT de Transact&#41; -SQL](/sql/t-sql/statements/insert-transact-sql)
+[SELECT de &#40;Transact&#41; -SQL](/sql/t-sql/queries/select-clause-transact-sql)
 [utilidad BCP](../../tools/bcp-utility.md)   
-[Preparar la importación masiva de &#40;datos&#41;SQL Server](prepare-to-bulk-import-data-sql-server.md)@no__t-[3 &#40;Bulk Insert Transact-&#41;SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
-[importación y exportación masiva de &#40;datos&#41;SQL Server](bulk-import-and-export-of-data-sql-server.md)@no__t-[11 &#40; OPENROWSET Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)5[crear un archivo &#40;de formato&#41; SQL Server](create-a-format-file-sql-server.md)
+[Preparar la importación masiva de &#40;datos&#41; SQL Server](prepare-to-bulk-import-data-sql-server.md)
+[Bulk Insert &#40;Transact-&#41; SQL](/sql/t-sql/statements/bulk-insert-transact-sql)
+[importación y exportación masivas &#40;de&#41; datos SQL Server](bulk-import-and-export-of-data-sql-server.md)
+[OPENROWSET &#40;Transact&#41; -SQL](/sql/t-sql/functions/openrowset-transact-sql)
+[crear un &#40;archivo&#41; de formato SQL Server](create-a-format-file-sql-server.md)

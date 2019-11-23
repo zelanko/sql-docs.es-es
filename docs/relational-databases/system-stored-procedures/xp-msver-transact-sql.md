@@ -46,7 +46,7 @@ xp_msver [ optname ]
 |-------------------------|-----------------|  
 |**ProductName**|Nombre del producto; por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ProductVersion**|Versión del producto.|  
-|**Lenguaje**|Versión del idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Idioma**|Versión del idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Plataforma**|Nombre del sistema operativo, nombre del fabricante y nombre de la familia de circuitos integrados del equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Comentarios**|Información diversa acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Compañía**|Nombre de la compañía que produce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  

@@ -28,9 +28,9 @@ ms.locfileid: "70154511"
   
  Un esquema del servicio de datos de referencia puede tener una columna obligatoria que se debe asignar al dominio apropiado si decide usar el servicio de datos de referencia. La columna obligatoria de un esquema de datos de referencia se identifica mediante "(M)" en el nombre de columna. Por ejemplo, **AddressLine** es la columna de esquema obligatoria en **Melissa Data - Address Data** y **CompanyName** es la columna de esquema obligatoria en **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- En este tema, crearemos cuatro dominios: **Línea de dirección**, **Ciudad**, **Estado** y **Código postal** bajo un dominio compuesto, **Verificación de direcciones**; después, se adjuntará el dominio compuesto al servicio de datos de referencia **Datos de Melissa Data: comprobación de dirección** y, por último, se asignarán los dominios individuales dentro del dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia.  
+ En este tema, se crearán cuatro dominios: **Address Line**, **City**, **State** y **Zip**, bajo un dominio compuesto, **Address Verification**, se adjuntará el dominio compuesto al servicio de datos de referencia **Melissa Data - Address Check** y después se asignarán los dominios individuales dentro del dominio compuestas a las columnas adecuadas del esquema del servicio de datos de referencia.  
   
-## <a name="before-you-begin"></a>Antes de empezar  
+## <a name="before-you-begin"></a>Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Es necesario configurar [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para utilizar los servicios de datos de referencia. Vea [Configurar DQS para usar datos de referencia](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "70154511"
   
 3.  En la pantalla **Nueva base de conocimiento** , escriba un nombre para la nueva base de conocimiento, haga clic en la actividad **Administración de dominios** y, por último, haga clic en **Crear**.  
   
-4.  En la pantalla **Administración de dominios** , haga clic en el icono **Crear un dominio** para crear un dominio. Cree estos cuatro dominios: **Línea de dirección**, **Ciudad**, **Estado** y **Código postal**.  
+4.  En la pantalla **Administración de dominios** , haga clic en el icono **Crear un dominio** para crear un dominio. Cree los cuatro dominios siguientes: **Address line**, **City**, **State**y **Zip**.  
   
 5.  Haga clic en el icono **Crear un dominio compuesto** para crear un dominio compuesto. En el cuadro de diálogo **Crear un dominio compuesto** , escriba **Address Verification** en el cuadro **Nombre de dominio compuesto** e incluya en el dominio compuesto todos los dominios creados en el paso 3. Haga clic en **Aceptar**.  
   
@@ -69,13 +69,13 @@ ms.locfileid: "70154511"
         > [!NOTE]  
         >  -   En el cuadro de diálogo **Catálogo de proveedores de datos de referencia en línea** , el nodo **Datamarket Data Quality Services** muestra todos los proveedores de servicios de datos de referencia a los que se ha suscrito en Azure Marketplace. Si ha configurado proveedores de servicios directos de datos de referencia de terceros en línea en DQS, estos aparecerán en otro nodo denominado **Proveedores en línea directa de terceros** (no disponible en este momento debido a que se ha configurado ningún proveedor de servicios directos de datos de referencia de terceros en línea en DQS).  
   
-9. Regresará a la pestaña **Datos de referencia** . En el área **Configuración de proveedores**, cambie los valores de los cuadros siguientes, si es necesario:  
+9. Volverá a la pestaña **datos de referencia** . En el área **configuración de proveedor** , cambie los valores de los cuadros siguientes, si es necesario:  
   
-    -   **Umbral de corrección automática**: las correcciones del servicio de datos de referencia con un nivel de confianza por encima de estos valores de umbral se ejecutan automáticamente. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,9 para un porcentaje del 90%.  
+    -   **Umbral de corrección automática**: las correcciones del servicio de datos de referencia con un nivel de confianza por encima de estos valores de umbral se llevan a cabo automáticamente. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,9 para un porcentaje del 90%.  
   
-    -   **Candidatos sugeridos**: número de candidatos sugeridos que se van a mostrar del servicio de datos de referencia.  
+    -   **Candidatos sugeridos**: el número de candidatos sugeridos que se van a mostrar del servicio de datos de referencia.  
   
-    -   **Confianza mínima**: se omitirán las sugerencias del servicio de datos de referencia con un nivel de confianza por debajo de este valor. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,6 para un porcentaje del 60 %.  
+    -   **Confianza mínima**: las sugerencias del servicio de datos de referencia con un nivel de confianza por debajo de este valor se omitirán. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,6 para un porcentaje del 60 %.  
   
 10. Haga clic en **Finalizar** para publicar la base de conocimiento. Aparecerá un mensaje de confirmación una vez que la base de conocimiento se haya publicado correctamente.  
   

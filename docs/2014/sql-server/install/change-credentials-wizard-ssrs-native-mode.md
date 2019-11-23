@@ -25,7 +25,7 @@ ms.locfileid: "71952317"
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>Asistente para cambiar credenciales (Modo nativo de SSRS)
   El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona el Asistente para cambiar credenciales. Este asistente actúa como guía por los pasos necesarios para reconfigurar la cuenta que el servidor de informes usa para conectar con la base de datos del servidor de informes. Al cambiar las credenciales, el Administrador de configuración actualizará todos los permisos y la información de inicio de sesión de base de datos en el servidor de bases de datos correspondiente a la base de datos que usa activamente el servidor de informes.  
   
- Para iniciar el asistente, haga clic en **Cambiar credenciales** en la página Base de datos del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener instrucciones sobre cómo iniciar el Configuration Manager [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Administrador de configuración de Reporting Services &#40;modo&#41;nativo](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para iniciar el asistente, haga clic en **Cambiar credenciales** en la página Base de datos del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener instrucciones sobre cómo iniciar el Configuration Manager de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [vea &#40;administrador de configuración de Reporting Services modo&#41;nativo](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "71952317"
  No puede especificar credenciales de Windows diferentes. Si desea conectarse como otro usuario de Windows, inicie sesión como ese usuario y, a continuación, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  **Credenciales**  
- Especifica la cuenta con la que el servidor de informes se conecta a la base de datos del servidor de informes. Los valores válidos incluyen la cuenta de servicio web del servidor de informes, un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido en la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que usa para hospedar el servidor de informes o una cuenta de Windows. Si utiliza una cuenta de Windows, puede especificar una cuenta local ( *\<computername > \\ < nombreDeUsuario @ no__t-3*) si el servidor de informes y la base de datos están en el mismo equipo o una cuenta de usuario de dominio ( *\<domain > \\ < nombre de usuario @ no__t-7*) si están en equipos distintos del mismo dominio.  
+ Especifica la cuenta con la que el servidor de informes se conecta a la base de datos del servidor de informes. Los valores válidos incluyen la cuenta de servicio web del servidor de informes, un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definido en la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que usa para hospedar el servidor de informes o una cuenta de Windows. Si utiliza una cuenta de Windows, puede especificar una cuenta local ( *\<nombredeequipo >\\< nombre de usuario\>* ) si el servidor de informes y la base de datos están en el mismo equipo, o una cuenta de usuario de dominio (\<dominio >\\<*nombre de usuario*\>) si están en equipos distintos del mismo dominio.  
   
  El servidor de informes creará un inicio de sesión de base de datos y asignará permisos de base de datos a la cuenta que especifique.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "71952317"
  Supervise el progreso de cada tarea.  
   
 ## <a name="see-also"></a>Vea también  
- [ &#40;Modo&#41;nativo de SSRs de base de datos](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
- [Asistente para &#40;cambiar base de datos&#41;@no__t el modo nativo de SSRS](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)-3  
+ [ &#40;Modo&#41; nativo de SSRs de base de datos](../../../2014/sql-server/install/database-ssrs-native-mode.md)   
+ [Asistente para &#40;cambiar base de datos&#41;  modo nativo de SSRS](../../../2014/sql-server/install/change-database-wizard-ssrs-native-mode.md)  
  [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
- [Administrador de configuración de Reporting Services temas &#40;de ayuda de F1 en&#41;el modo nativo de SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Administrador de configuración de Reporting Services temas &#40;de ayuda de F1 en&#41; el modo nativo de SSRS](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

@@ -50,11 +50,11 @@ ms.lasthandoff: 08/30/2019
 ms.locfileid: "70175740"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure
-  Use el Asistente para **implementar una base de datos de SQL Server en una máquina** virtual de Azure para implementar una [!INCLUDE[ssDE](../../includes/ssde-md.md)] base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos desde una instancia del en en una máquina virtual (VM) de Azure. El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
+  Use el Asistente para **implementar una base de datos de SQL Server en una máquina** virtual de Azure para implementar una base de datos desde una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina virtual (VM) de Azure. El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
   
  No puede usar el asistente para las copias de seguridad diferenciales porque no sobrescribirá una base de datos existente que tenga el mismo nombre de base de datos. Para reemplazar una base de datos existente en la VM, debe quitar primero la base de datos existente o cambiar el nombre de la base de datos. Si hay un conflicto de nombres entre el nombre de la base de datos para una operación de implementación en ejecución y una base de datos existente en la VM, el asistente sugerirá un nombre de base de datos anexado para la base de datos en ejecución de manera que pueda completar la operación.  
   
-##  <a name="before_you_begin"></a> Antes de comenzar  
+##  <a name="before_you_begin"></a> Antes de empezar  
  Para completar este asistente, debe poder proporcionar la siguiente información y tener esta configuración:  
   
 -   Los detalles de cuenta de Microsoft asociados con la suscripción de Azure.  
@@ -88,9 +88,9 @@ ms.locfileid: "70175740"
   
  En los equipos que ejecutan sistemas operativos Windows Server, debe usar la configuración siguiente para ejecutar este asistente:  
   
--   Desactive la configuración de seguridad mejorada:  Utilice Administrador del servidor > servidor local para establecer la configuración de seguridad mejorada (ESC) deInternet Explorer en desactivada.  
+-   Desactive la Configuración de seguridad mejorada: use Administrador del servidor > Servidor local para establecer la Configuración de seguridad mejorada (ESC) de Internet Explorer en **DESACTIVADA**.  
   
--   Habilitar JavaScript:  Internet Explorer > Opciones de Internet > Seguridad > nivel de cliente > Scripting > Active Scripting: **Habilitar**.  
+-   Habilitar JavaScript: Internet Explorer > Opciones de Internet > Seguridad > Nivel personalizado > Scripting > Active scripting: **Habilitar**.  
   
 ###  <a name="limitations"></a> Limitaciones y restricciones  
  La limitación de tamaño de la base de datos para esta operación es 1 TB.  
@@ -107,13 +107,13 @@ ms.locfileid: "70175740"
   
 -   SQL Server 2008 R2  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  SQL Server versiones de base de datos que se ejecutan en una base de datos de máquinas virtuales de Azure se pueden implementar en:  
   
--   SQL Server 2012  
+-   SQL Server 2012  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -152,7 +152,7 @@ ms.locfileid: "70175740"
   
             -   BackupPath="\\\\[nombre de servidor]\\[volumen]\\" \<!-- La última ruta de acceso usada para la copia de seguridad. Se usa como valor predeterminado del asistente. -->  
   
-            -   CleanupDisabled = false/> \<!--asistente no eliminará los archivos intermedios y los objetos de Azure (VM, CS, SA). -->  
+            -   CleanupDisabled = false/> \<Asistente para!--no eliminará los archivos intermedios y los objetos de Azure (VM, CS, SA). -->  
   
         -   <PublishProfile \<! -- La última información usada del perfil de publicación. -->  
   
@@ -168,7 +168,7 @@ ms.locfileid: "70175740"
   
  **Valores del archivo de configuración**  
   
-###  <a name="permissions"></a> Permissions  
+###  <a name="permissions"></a> Permisos  
  La base de datos que se implementa debe estar en un estado normal, la base de datos debe ser accesible para la cuenta de usuario que ejecuta el asistente y la cuenta de usuario debe tener permisos para realizar una operación de copia de seguridad.  
   
 ##  <a name="launch_wizard"></a>Uso del Asistente para implementar una base de datos en máquina virtual de Azure  
@@ -200,7 +200,7 @@ ms.locfileid: "70175740"
   
  **Opciones**  
   
--   Haga clic en **conectar...** y, a continuación, especifique los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detalles de conexión de la instancia de que hospeda la base de datos que se va a implementar.  
+-   Haga clic en **conectar...** y, a continuación, especifique los detalles de conexión de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos que se va a implementar.  
   
 -   Use la lista desplegable **Seleccionar base de datos** para especificar la base de datos que implementar.  
   

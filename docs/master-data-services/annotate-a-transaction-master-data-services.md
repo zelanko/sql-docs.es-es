@@ -28,7 +28,7 @@ ms.locfileid: "73728791"
 > [!NOTE]  
 >  Las anotaciones no se pueden eliminar.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
   
 -   Para agregar transacciones que creó, debe contar con el permiso para obtener acceso al área funcional de **Explorador** y tener como mínimo el permiso **Actualizar** para el objeto del modelo al que desea agregar anotaciones.  
   

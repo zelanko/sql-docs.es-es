@@ -37,7 +37,7 @@ ms.locfileid: "72797754"
   
 -   Si un grupo de disponibilidad supera su umbral de error de WSFC, el clúster de WSFC no intentará una conmutación automática por error para dicho grupo. Además, el grupo de recursos de WSFC del grupo de disponibilidad permanece en un estado de error hasta que el administrador del clúster conecta manualmente el grupo de recursos con error o el administrador de la base de datos realiza una conmutación por error manual del grupo de disponibilidad. El *umbral de error de WSFC* se define como el número máximo de errores admitidos para el grupo de disponibilidad en un período de tiempo determinado. El período predeterminado es de seis horas, y el valor predeterminado del número máximo de errores durante este período es *n*-1, donde *n* es el número de nodos de WSFC. Para cambiar los valores del umbral de error de un grupo de disponibilidad determinado, use la consola del administrador de conmutación por error de WSFC.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72797754"
   
 ####  <a name="Permissions"></a> Permisos  
   
-|Tarea|Permissions|  
+|Tarea|Permisos|  
 |----------|-----------------|  
 |Para configurar la directiva flexible de conmutación por error para un nuevo grupo de disponibilidad|Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
 |Para modificar la directiva de un grupo de disponibilidad|Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
@@ -57,7 +57,7 @@ ms.locfileid: "72797754"
   
 2.  Para un nuevo grupo de disponibilidad, use la instrucción [CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] . Si va a modificar un grupo de disponibilidad existente, use la instrucción [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
-    -   Para establecer el nivel de la condición de conmutación por error, use la opción FAILURE_CONDITION_LEVEL = *n* , donde *n* es un entero entre 1 y 5.  
+    -   Para establecer el nivel de la condición de conmutación por error, utilice la opción FAILURE_CONDITION_LEVEL = *n* , donde *n* es un entero entre 1 y 5.  
   
          Por ejemplo, la siguiente instrucción de [!INCLUDE[tsql](../../../includes/tsql-md.md)] cambia el nivel de condición de error de un grupo de disponibilidad existente, `AG1`, al nivel uno:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "72797754"
   
     -   Para establecer el nivel de la condición de conmutación por error, use el parámetro de *nivel* de `FailureConditionLevel`, donde, *LEVEL* es uno de los siguientes valores:  
   
-        |Value|level|La conmutación por error iniciada es automática cuando se produce...|  
+        |Valor|level|La conmutación por error iniciada es automática cuando se produce...|  
         |-----------|-----------|-------------------------------------------|  
         |`OnServerDown`|Uno|Por inactividad de servidor. El servicio SQL Server se detiene debido a una conmutación por error o reinicio.|  
         |`OnServerUnresponsive`|Dos|Al dejar de responder el servidor. Se cumple cualquier condición de un valor inferior, el servicio SQL Server se conecta al clúster y se supera el umbral del tiempo de espera de comprobación de estado, o la réplica principal actual está en un estado de error.|  
@@ -105,7 +105,7 @@ ms.locfileid: "72797754"
   
          Para obtener más información sobre los niveles de condición de conmutación por error, vea [Directiva de conmutación por error flexible para conmutación automática por error de un grupo de disponibilidad &#40;SQL Server&#41;](flexible-automatic-failover-policy-availability-group.md).  
   
-         Por ejemplo, el siguiente comando cambia el nivel de condición de error de un grupo de disponibilidad existente, `AG1`al nivel uno.  
+         Por ejemplo, el siguiente comando cambia el nivel de condición de error de un grupo de disponibilidad existente, `AG1` al nivel uno.  
   
         ```powershell
         Set-SqlAvailabilityGroup `
@@ -124,7 +124,7 @@ ms.locfileid: "72797754"
         ```  
   
 > [!NOTE]  
->  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+>  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, vea [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
@@ -132,10 +132,10 @@ ms.locfileid: "72797754"
   
 -   [Obtener ayuda de SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-## <a name="see-also"></a>Ver también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
- [Modos de disponibilidad (grupos de disponibilidad AlwaysOn)](availability-modes-always-on-availability-groups.md)    
- [Conmutación por error y &#40;modos&#41; de conmutación por error grupos de disponibilidad AlwaysOn](failover-and-failover-modes-always-on-availability-groups.md)    
+## <a name="see-also"></a>Vea también  
+ [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
+ [Modos de disponibilidad (grupos de disponibilidad AlwaysOn)](availability-modes-always-on-availability-groups.md)   
+ [Conmutación por error y &#40;modos&#41; de conmutación por error grupos de disponibilidad AlwaysOn](failover-and-failover-modes-always-on-availability-groups.md)   
  [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Directiva de conmutación por error para instancias de clústeres de conmutación por error](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  

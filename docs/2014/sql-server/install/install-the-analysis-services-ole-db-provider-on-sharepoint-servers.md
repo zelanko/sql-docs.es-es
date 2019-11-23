@@ -12,7 +12,7 @@ ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a8068ae9f1e52b235ebec52bf8499ba8d2d3777e
 ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/04/2019
 ms.locfileid: "71952533"
@@ -49,9 +49,9 @@ ms.locfileid: "71952533"
 ##  <a name="bkmk_why"></a>Por qué es necesario instalar el proveedor de OLE DB  
  Hay dos escenarios que requieren la instalación manual del proveedor OLE DB en los servidores de la granja.  
   
- **El escenario más común** es cuando tiene versiones anteriores y más recientes de los libros de @no__t 1 que se guardan en las bibliotecas de documentos de la granja. Si los analistas de la organización usan la versión [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel y guardan esos libros en una instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], el libro anterior no funcionará. Su cadena de conexión hará referencia a una versión anterior del proveedor, que no estará en el servidor a menos que lo instale. Al instalar ambas versiones se habilitará el acceso a los datos para los libros PowerPivot creados en las versiones anteriores y recientes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel. El programa de instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no instala la versión [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del proveedor, de modo que debe instalarla manualmente si usa libros de una versión anterior.  
+ **El escenario más común** es cuando tiene versiones anteriores y más recientes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libros que se guardan en las bibliotecas de documentos de la granja. Si los analistas de la organización usan la versión [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel y guardan esos libros en una instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], el libro anterior no funcionará. Su cadena de conexión hará referencia a una versión anterior del proveedor, que no estará en el servidor a menos que lo instale. Al instalar ambas versiones se habilitará el acceso a los datos para los libros PowerPivot creados en las versiones anteriores y recientes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel. El programa de instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no instala la versión [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del proveedor, de modo que debe instalarla manualmente si usa libros de una versión anterior.  
   
- **El segundo escenario** es cuando se tiene un servidor en una granja de servidores de SharePoint que ejecuta Excel Services, pero no [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. En este caso, el servidor de aplicaciones que ejecuta Excel Services debe actualizarse manualmente para utilizar una versión más reciente del proveedor. Esto es necesario para conectarse a una instancia de PowerPivot para SharePoint. Si Excel Services está usando una versión anterior del proveedor, la solicitud de conexión generará un error. Tenga en cuenta que el proveedor debe instalarse mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el paquete de instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) para garantizar que se instalan todos los componentes necesarios para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+ **El segundo escenario** es cuando tiene un servidor en una granja de servidores de SharePoint que ejecuta Excel Services, pero no [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. En este caso, el servidor de aplicaciones que ejecuta Excel Services debe actualizarse manualmente para utilizar una versión más reciente del proveedor. Esto es necesario para conectarse a una instancia de PowerPivot para SharePoint. Si Excel Services está usando una versión anterior del proveedor, la solicitud de conexión generará un error. Tenga en cuenta que el proveedor debe instalarse mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el paquete de instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) para garantizar que se instalan todos los componentes necesarios para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
   
 ##  <a name="bkmk_sql11"></a>Instalar el proveedor de OLE DB de SQL Server 2012 en un servidor de Excel Services mediante el programa de instalación de SQL Server  
@@ -101,7 +101,7 @@ ms.locfileid: "71952533"
   
 3.  Haga clic en **Detalles**.  
   
-4.  Vea la información de la versión del archivo. La versión debe incluir 11,00. \<buildnumber >.  
+4.  Vea la información de la versión del archivo. La versión debe incluir 11,00.\<BuildNumber >.  
   
 5.  En la carpeta Windows\Assembly, compruebe que Microsoft.AnalysisServices.Xmla.dll, versión 11.0.0.0, aparece en la lista.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "71952533"
 ##  <a name="bkmk_kj"></a>Instalar el proveedor de OLE DB de SQL Server 2008 R2 para hospedar libros de versiones anteriores  
  Use las siguientes instrucciones para instalar la versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del proveedor MSOLAP.4 y registrar el archivo Microsoft.AnalysisServices.ChannelTransport.dll. ChannelTransport es un subcomponente del proveedor OLE DB de Analysis Services. La versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del proveedor lee el Registro al usar ChannelTransport para establecer una conexión. El registro de este archivo es un paso posterior a la instalación que solo se requiere para las conexiones administradas por el proveedor de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] en un servidor de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
-#### <a name="step-1-download-and-install-the-client-library"></a>Paso 1: Descargar e instalar la biblioteca de cliente  
+#### <a name="step-1-download-and-install-the-client-library"></a>Paso 1: descargar e instalar la biblioteca cliente  
   
 1.  En la [página SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=159570), busque proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2008 R2.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "71952533"
   
 4.  Si tiene otros servidores en la granja que solo ejecutan Excel Services, sin [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] en el mismo servidor, repita los pasos anteriores para instalar la versión 2008 R2 del proveedor en el equipo de Excel Services.  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Paso 2: Registrar el archivo Microsoft. AnalysisServices. ChannelTransport. dll  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Paso 2: registrar el archivo Microsoft.AnalysisServices.ChannelTransport.dll  
   
-1.  Use la herramienta regasm.exe para registrar el archivo. Si no ha ejecutado Regasm. exe antes, agregue su carpeta principal, C:\Windows\Microsoft.NET\Framework64\v4.0.30319 @ no__t-0, a la variable de ruta de acceso del sistema.  
+1.  Use la herramienta regasm.exe para registrar el archivo. Si no ha ejecutado Regasm. exe antes, agregue su carpeta principal, C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\, a la variable de ruta de acceso del sistema.  
   
 2.  Abra un símbolo del sistema con permisos de administrador.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "71952533"
   
      Ir a `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Haga clic con el botón secundario en **msolap100. dll** y seleccione **propiedades**. Haga clic en **Detalles**.  
   
-     Vea la información de la versión del archivo. La versión debe incluir 10,50. \<buildnumber >.  
+     Vea la información de la versión del archivo. La versión debe incluir 10,50.\<BuildNumber >.  
   
   
 ## <a name="see-also"></a>Vea también  

@@ -58,7 +58,7 @@ ADO para Windows Foundation Classes (ADO/WFC) se basa en el modelo de eventos de
   
 6.  Vuelva del controlador de eventos al controlador de ADO/WFC para el evento de ADO. ADO/WFC copia los miembros de datos de eventos ADO/WFC pertinentes de nuevo a los parámetros de evento de ADO y, a continuación, devuelve el controlador de eventos de ADO.  
   
-7.  Cuando haya terminado el procesamiento, quite el controlador de la lista de controladores de eventos ADO/WFC. Use el método con un nombre como renameon_eventName_(*controlador*).  
+7.  Cuando haya terminado el procesamiento, quite el controlador de la lista de controladores de eventos ADO/WFC. Use el método con un **nombre como renameon**_eventName_(*controlador*).  
   
 ## <a name="see-also"></a>Vea también  
  [Resumen del controlador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   

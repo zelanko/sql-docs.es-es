@@ -1,5 +1,5 @@
 ---
-title: Sys. DM _ _exec_compute_node_status (Transact-SQL) | Microsoft Docs
+title: Sys. dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -28,12 +28,12 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/04/2019
 ms.locfileid: "73532760"
 ---
-# <a name="sysdm_exec_compute_node_status-transact-sql"></a>Sys. DM _ _exec_compute_node_status (Transact-SQL)
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Contiene información adicional sobre el rendimiento y el estado de todos los nodos de polybase. Muestra una fila por nodo.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Column Name|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|`int`|Identificador numérico único asociado al nodo.|Único en todo el clúster de escalado horizontal, independientemente del tipo.|  
 |process_id|`int`|||  

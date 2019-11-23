@@ -55,10 +55,10 @@ ms.locfileid: "72797979"
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  Las actualizaciones de DAC solo se pueden realizar en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior.  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Requisitos previos  
  Es conveniente hacer una copia de seguridad completa de la base de datos antes de comenzar la actualización. Si una actualización encuentra un error y no puede revertir todos sus cambios, puede que tenga que restaurar la copia de seguridad.  
   
- Antes de iniciar la actualización, hay varias acciones que debe realizar para validar el paquete DAC y las acciones de actualización. Para más información sobre cómo realizar estas comprobaciones, consulte [Validar un paquete de DAC](validate-a-dac-package.md).  
+ Antes de iniciar la actualización, hay varias acciones que debe realizar para validar el paquete DAC y las acciones de actualización. Para obtener más información acerca de cómo realizar estas comprobaciones, vea [Validate a DAC Package](validate-a-dac-package.md).  
   
 -   Recomendamos no realizar la actualización con un paquete DAC de fuentes desconocidas o que no sean de confianza. Es posible que estos paquetes contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un paquete desde un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como por ejemplo procedimientos almacenados u otro código definido por el usuario.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "72797979"
 ##  <a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para actualizar una aplicación de capa de datos.  
   
- **No volver a mostrar esta página.** - Haga clic en la casilla para evitar que la página se muestre en el futuro.  
+ **No volver a mostrar esta página.** active esta casilla para que la página deje de mostrarse en el futuro.  
   
  **Siguiente >:** avanza a la página **Seleccionar paquete**.  
   
@@ -284,6 +284,6 @@ $dacstore.IncrementalUpgrade($dacName, $dacType, $upgradeProperties)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](data-tier-applications.md)   
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  

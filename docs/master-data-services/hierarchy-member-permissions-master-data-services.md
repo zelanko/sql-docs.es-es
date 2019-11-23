@@ -41,7 +41,7 @@ ms.locfileid: "73729236"
 |----------------|-----------------|  
 |**Lectura**|Los miembros se muestran.<br /><br /> <br /><br /> Nota: Si solo asigna el permiso **Lectura** a **Raíz**, los miembros de **Raíz** son de solo lectura; en cambio, en las jerarquías explícitas y en las colecciones, el usuario puede mover miembros a **Raíz** y agregar miembros nuevos a **Raíz**.|  
 |**Crear**|La creación de permisos no está disponible para los permisos de los miembros de jerarquías.|  
-|**Update**|Se muestran los miembros, pero el usuario no puede cambiarlos. El usuario también puede mover los miembros en cualquier jerarquía explícita o colección a la que los miembros pertenezcan.|  
+|**Actualizar**|Se muestran los miembros, pero el usuario no puede cambiarlos. El usuario también puede mover los miembros en cualquier jerarquía explícita o colección a la que los miembros pertenezcan.|  
 |**Delete**|Se muestran los miembros, y el usuario puede eliminarlos.|  
 |**Denegar**|Los miembros no se muestran.|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "73729236"
   
 -   Si un nodo de la jerarquía tiene asignados los permisos **Actualizar** y **Crear** y otro tiene asignados los permisos **Actualizar** y **Eliminar** , los miembros del nodo se pueden actualizar.  
   
--   Si un nodo de la jerarquía tiene asignada cualquier combinación de permisos **Crear**/**Lectura**/**Actualizar**/**Eliminar** y otro nodo tiene asignados permisos **Denegar** , se deniega el acceso a los miembros del nodo.  
+-   Si un nodo de la jerarquía tiene asignada cualquier combinación de permisos **Crear**/**Lectura**/**Update**/**Delete** , y otro nodo tiene asignado permisos **Denegar** , se deniega el acceso a los miembros del nodo.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Entrada de blog, [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Mejoras de seguridad), en msdn.com.  

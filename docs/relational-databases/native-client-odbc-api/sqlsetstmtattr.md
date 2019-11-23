@@ -52,7 +52,7 @@ ms.locfileid: "73785526"
   
 |Valor *ValuePtr*|Descripción|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|Predeterminado: Deshabilita los cursores de solo avance rápido y de solo lectura y la captura automática, habilita **SQLGetData** en cursores de solo avance y de solo lectura. Si SQL_SOPT_SS_CURSOR_OPTIONS está establecido en SQL_CO_OFF, el tipo de cursor no cambiará. Es decir, el cursor de solo avance rápido seguirá siendo un cursor de solo avance rápido. Para cambiar el tipo de cursor, la aplicación debe establecer ahora un tipo de cursor diferente mediante **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
+|SQL_CO_OFF|Predeterminado. Deshabilita los cursores de solo avance rápido y de solo lectura y la captura automática, habilita **SQLGetData** en cursores de solo avance y de solo lectura. Si SQL_SOPT_SS_CURSOR_OPTIONS está establecido en SQL_CO_OFF, el tipo de cursor no cambiará. Es decir, el cursor de solo avance rápido seguirá siendo un cursor de solo avance rápido. Para cambiar el tipo de cursor, la aplicación debe establecer ahora un tipo de cursor diferente mediante **SQLSetStmtAttr**/SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Habilita los cursores de solo avance rápido y solo lectura, deshabilita **SQLGetData** en cursores de solo avance y de solo lectura.|  
 |SQL_CO_AF|Habilita la opción de captura automática en cualquier tipo de cursor. Cuando se establece esta opción para un identificador de instrucción, **SQLExecute** o **SQLExecDirect** generarán una **SQLFetchScroll** implícita (SQL_FIRST). El cursor se abre y se devuelve el primer lote de filas en un único viaje de ida y vuelta al servidor.|  
 |SQL_CO_FFO_AF|Habilita los cursores de solo avance rápido con la opción de captura automática. Es lo mismo que si se especifican SQL_CO_AF y SQL_CO_FFO.|  
@@ -66,7 +66,7 @@ ms.locfileid: "73785526"
   
 |Valor *ValuePtr*|Descripción|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Predeterminado: Después de llamar a la [función SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la preparación de la instrucción se aplaza hasta que se llama a **SQLExecute** o se ejecuta la operación de metapropiedad (**SQLDescribeCol** o **SQLDescribeParam**).|  
+|SQL_DP_ON|Predeterminado. Después de llamar a la [función SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la preparación de la instrucción se aplaza hasta que se llama a **SQLExecute** o se ejecuta la operación de metapropiedad (**SQLDescribeCol** o **SQLDescribeParam**).|  
 |SQL_DP_OFF|La instrucción se prepara en cuanto se ejecuta **SQLPrepare** .|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -76,7 +76,7 @@ ms.locfileid: "73785526"
   
 |Valor *ValuePtr*|Descripción|  
 |----------------------|-----------------|  
-|SQL_RE_OFF|Predeterminado: El controlador no convierte los datos de fecha, hora y moneda a datos de cadenas de caracteres utilizando la configuración regional del cliente.|  
+|SQL_RE_OFF|Predeterminado. El controlador no convierte los datos de fecha, hora y moneda a datos de cadenas de caracteres utilizando la configuración regional del cliente.|  
 |SQL_RE_ON|El controlador utiliza la configuración regional del cliente al convertir los datos de fecha, hora y moneda en datos de cadenas de caracteres.|  
   
  La configuración de conversión regional se aplica a los tipos de datos de moneda, numéricos, de fecha y de hora. La configuración de conversión solamente es aplicable a la conversión de salida cuando los valores de moneda, numéricos, de fecha o de hora se convierten en cadenas de caracteres.  
@@ -92,14 +92,14 @@ ms.locfileid: "73785526"
 |Valor *ValuePtr*|Descripción|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Deshabilita el registro de operaciones realizadas en datos de **texto** e **imagen** .|  
-|SQL_TL_ON|Predeterminado: Habilita el registro de operaciones realizadas en datos de **texto** e **imagen** .|  
+|SQL_TL_ON|Predeterminado. Habilita el registro de operaciones realizadas en datos de **texto** e **imagen** .|  
   
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  El atributo SQL_SOPT_SS_HIDDEN_COLUMNS expone, en el conjunto de resultados, las columnas ocultas en una instrucción SELECT FOR BROWSE de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El controlador no expone estas columnas de forma predeterminada. El valor de *ValuePtr* es de tipo SQLLEN.  
   
 |Valor *ValuePtr*|Descripción|  
 |----------------------|-----------------|  
-|SQL_HC_OFF|Predeterminado: Las columnas FOR BROWSE se ocultan del conjunto de resultados.|  
+|SQL_HC_OFF|Predeterminado. Las columnas FOR BROWSE se ocultan del conjunto de resultados.|  
 |SQL_HC_ON|Expone las columnas FOR BROWSE.|  
   
 ### <a name="sql_sopt_ss_querynotification_msgtext"></a>SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
@@ -133,7 +133,7 @@ ms.locfileid: "73785526"
   
 |Valor *ValuePtr*|Descripción|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Predeterminado:<br /><br /> Cuando se utilizan parámetros con valores de tabla, indica que se deben devolver metadatos para las tablas reales.<br /><br /> Cuando se usa la característica de columnas dispersas, SQLColumns solo devolverá las columnas que no sean miembros del **COLUMN_SET**disperso.|  
+|SQL_SS_NAME_SCOPE_TABLE|Predeterminado.<br /><br /> Cuando se utilizan parámetros con valores de tabla, indica que se deben devolver metadatos para las tablas reales.<br /><br /> Cuando se usa la característica de columnas dispersas, SQLColumns solo devolverá las columnas que no sean miembros del **COLUMN_SET**disperso.|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indica que la aplicación requiere metadatos para un tipo de tabla, en lugar de una tabla real (las funciones de catálogo deben devolver metadatos para los tipos de tabla). A continuación, la aplicación pasa el TYPE_NAME del parámetro con valores de tabla como parámetro *TableName* .|  
 |SQL_SS_NAME_SCOPE_EXTENDED|Cuando se usa la característica de columnas dispersas, SQLColumns devuelve todas las columnas, con independencia de la pertenencia a **COLUMN_SET** .|  
 |SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Cuando se usa la característica de columnas dispersas, SQLColumns solo devuelve las columnas que son miembros del **COLUMN_SET**disperso.|  

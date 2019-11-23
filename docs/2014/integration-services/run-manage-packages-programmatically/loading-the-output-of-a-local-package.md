@@ -29,16 +29,16 @@ ms.locfileid: "72988219"
 > [!NOTE]  
 >  El procedimiento descrito en este tema necesita que la propiedad DelayValidation de la tarea Flujo de datos y de los objetos primarios esté establecida en el valor predeterminado de **False**.  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descripción  
  Este procedimiento muestra cómo desarrollar una aplicación cliente en código administrado que carga la salida de un paquete con un destino DataReader directamente de la memoria. Los pasos resumidos aquí se muestran en el ejemplo de código que figura a continuación.  
   
 #### <a name="to-load-data-package-output-into-a-client-application"></a>Para cargar la salida del paquete de datos en una aplicación cliente  
   
 1.  En el paquete, configure un destino DataReader para recibir la salida que desea leer en la aplicación cliente. Dé un nombre descriptivo al destino DataReader, dado que utilizará este nombre más adelante en la aplicación cliente. Tome nota del nombre del destino DataReader.  
   
-2.  En el proyecto de desarrollo, establezca una referencia al espacio de nombres `Microsoft.SqlServer.Dts.DtsClient` localizando el ensamblado **Microsoft. SqlServer. DTS. DtsClient. dll**. De forma predeterminada, este ensamblado se instala en **C:\Archivos de programa\Microsoft SQL Server\100\DTS\Binn**. Importe el espacio de nombres en el código mediante C# el`Using`o la instrucción`Imports`[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+2.  En el proyecto de desarrollo, establezca una referencia al espacio de nombres `Microsoft.SqlServer.Dts.DtsClient` localizando el ensamblado **Microsoft. SqlServer. DTS. DtsClient. dll**. De forma predeterminada, este ensamblado se instala en **C:\Archivos de programa\Microsoft SQL Server\100\DTS\Binn**. Importe el espacio de nombres en el código mediante C# el `Using` o la instrucción `Imports` [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-3.  En el código, cree un objeto de tipo `DtsClient.DtsConnection` con una cadena de conexión que contenga los parámetros de línea de comandos requeridos por **DTExec. exe** para ejecutar el paquete. Para más información, consulte [dtexec Utility](../packages/dtexec-utility.md). A continuación, abra la conexión con esta cadena de conexión. También puede emplear la utilidad **dtexecui** para crear visualmente la cadena de conexión necesaria.  
+3.  En el código, cree un objeto de tipo `DtsClient.DtsConnection` con una cadena de conexión que contenga los parámetros de línea de comandos requeridos por **DTExec. exe** para ejecutar el paquete. Para obtener más información, consulte [dtexec Utility](../packages/dtexec-utility.md). A continuación, abra la conexión con esta cadena de conexión. También puede emplear la utilidad **dtexecui** para crear visualmente la cadena de conexión necesaria.  
   
     > [!NOTE]  
     >  En el código de ejemplo se muestra cómo cargar el paquete del sistema de archivos mediante la sintaxis `/FILE <path and filename>`. No obstante, puede también cargar el paquete desde la base de datos MSDB utilizando la sintaxis `/SQL <package name>` o desde el almacén de paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizando la sintaxis `/DTS \<folder name>\<package name>`.  
@@ -105,7 +105,7 @@ ms.locfileid: "72988219"
   
 7.  Ejecute la aplicación y haga clic en el botón. Después de una breve pausa mientras el paquete se ejecuta, debería aparecer en el cuadro de texto del formulario el valor agregado calculado por el paquete (el recuento de clientes de Canadá).  
   
-### <a name="sample-code"></a>Código muestra  
+### <a name="sample-code"></a>Código de ejemplo  
   
 ```vb  
 Imports System.Data  
@@ -293,9 +293,9 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
+![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, los artículos, los ejemplos y los vídeos más recientes de Microsoft, así como las soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Descripción de las diferencias entre la ejecución local y remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Cargar y ejecutar un paquete local mediante programación](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Cargar y ejecutar un paquete remoto mediante programación](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  

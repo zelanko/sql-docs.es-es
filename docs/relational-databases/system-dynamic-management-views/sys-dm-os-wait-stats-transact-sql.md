@@ -22,7 +22,7 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e274375177859d456592a6e1879d7f528d1cb724
 ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/13/2019
 ms.locfileid: "73983092"
@@ -944,7 +944,7 @@ Este comando restablece todos los contadores en 0.
 |WAIT_XTP_CKPT_CLOSE |Tiene lugar cuando se espera que se complete un punto de control. <br /> **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.| 
 |WAIT_XTP_CKPT_ENABLED |Se produce al deshabilitar los puntos de comprobación y esperar a que se habiliten los puntos de control. <br /> **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Se produce al sincronizar la comprobación del estado del punto de comprobación. <br /> **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.| 
-|WAIT_XTP_COMPILE_WAIT |Exclusivamente para uso interno. <br /> **Se aplica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y versiones posteriores.| 
+|WAIT_XTP_COMPILE_WAIT |Exclusivamente para uso interno. <br /> **SE APLICA A**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] y versiones posteriores| 
 |WAIT_XTP_GUEST |Se produce cuando el asignador de memoria de la base de datos debe dejar de recibir notificaciones de memoria insuficiente. <br /> **Válido para** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] y versiones posteriores.| 
 |WAIT_XTP_HOST_WAIT |Se produce cuando el motor de base de datos desencadena las esperas e implementa el host. <br /> **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |Exclusivamente para uso interno. <br /> **Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.| 

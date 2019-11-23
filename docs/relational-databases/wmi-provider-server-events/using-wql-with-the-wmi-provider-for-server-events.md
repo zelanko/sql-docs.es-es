@@ -83,7 +83,7 @@ WHERE where_condition
   
  Solo el operando `=` se puede usar junto con **DatabaseName**, **SchemaName**y **objectname**. Otras expresiones no se pueden utilizar con estas propiedades de evento.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  La *where_condition* de la sintaxis del proveedor WMI para eventos de servidor determina lo siguiente:  
   
 -   El ámbito por el que el proveedor intenta recuperar el *event_type*especificado: el nivel de servidor, el nivel de base de datos o el nivel de objeto (el único objeto actualmente admitido es la cola). Finalmente, este ámbito determina el tipo de notificación de eventos creado en la base de datos de destino. Este proceso efectuó una llamada al registro de notificación de eventos.  
@@ -123,7 +123,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 SELECT * FROM SERVER_MEMORY_CHANGE  
 ```  
   
-### <a name="b-querying-for-events-at-the-database-scope"></a>B. Consultar eventos en el ámbito de base de datos  
+### <a name="b-querying-for-events-at-the-database-scope"></a>b. Consultar eventos en el ámbito de base de datos  
  La consulta WQL siguiente recupera propiedades de evento concretas de los eventos que se produzcan en la base de datos `AdventureWorks` y existan bajo el grupo de eventos `DDL_DATABASE_LEVEL_EVENTS`.  
   
 ```  

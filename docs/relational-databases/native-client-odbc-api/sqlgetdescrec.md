@@ -62,7 +62,7 @@ ms.locfileid: "73787289"
  **SQLGetDescRec** admite tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, vea [ &#40;tipos CLR grandes definidos por el&#41;usuario ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vea también  
-   [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)  
+ [SQLGetDescRec](https://go.microsoft.com/fwlink/?LinkId=80707)   
  [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

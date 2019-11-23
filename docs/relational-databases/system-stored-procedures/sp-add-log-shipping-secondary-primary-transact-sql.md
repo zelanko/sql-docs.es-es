@@ -29,7 +29,7 @@ ms.locfileid: "72909683"
 
   Configura información principal, agrega vínculos al monitor local y remoto y crea trabajos de copia y restauración en el servidor secundario de la base de datos principal especificada.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -93,28 +93,28 @@ sp_add_log_shipping_secondary_primary
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_secondary_primary** se debe ejecutar desde la base de datos **maestra** en el servidor secundario. Este procedimiento almacenado hace lo siguiente:  
   
 1.  Genera un Id. secundario para el servidor principal y la base de datos principal especificados.  
   
 2.  Hace lo siguiente:  
 
-    1.  Agrega una entrada para el identificador secundario en **log_shipping_secondary** con los argumentos proporcionados.  
+    1.  Agrega una entrada para el identificador secundario en **log_shipping_secondary** utilizando los argumentos proporcionados.  
   
     2.  Crea un trabajo de copia para el Id. secundario que está deshabilitado.  
   
-    3.  Establece el identificador del trabajo de copia en la entrada **log_shipping_secondary** en el ID. de trabajo del trabajo de copia.  
+    3.  Establece el identificador de trabajo de copia de la entrada **log_shipping_secondary** en el identificador de trabajo del trabajo de copia.  
   
     4.  Crea un trabajo de restauración para el Id. secundario que está deshabilitado.  
   
     5.  Establezca el identificador del trabajo de restauración en la entrada **log_shipping_secondary** en el ID. de trabajo del trabajo de restauración.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En este ejemplo se muestra el uso del procedimiento almacenado **sp_add_log_shipping_secondary_primary** para configurar la información de la base de datos principal [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el servidor secundario.  
+ En este ejemplo se muestra el uso del **sp_add_log_shipping_secondary_primary** procedimiento almacenado para configurar la información de la base de datos principal [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el servidor secundario.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -133,7 +133,7 @@ EXEC master.dbo.sp_add_log_shipping_secondary_primary
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

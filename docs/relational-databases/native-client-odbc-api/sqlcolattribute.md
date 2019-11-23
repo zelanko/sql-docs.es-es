@@ -86,7 +86,7 @@ ms.locfileid: "73787424"
   
  Asimismo, en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se introdujeron nuevos campos descriptores específicos del controlador para proporcionar información adicional para una columna de tipo definido por el usuario (UDT) de un conjunto de resultados o un parámetro UDT de un procedimiento almacenado o una consulta con parámetros. Estas propiedades no requieren comillas ni un carácter de escape si contienen caracteres no alfanuméricos. En la tabla siguiente se enumeran estos nuevos campos descriptores:  
   
-|Nombre de la columna|Tipo|Descripción|  
+|Column Name|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|Nombre del catálogo que contiene el UDT.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|Nombre del esquema que contiene el UDT.|  

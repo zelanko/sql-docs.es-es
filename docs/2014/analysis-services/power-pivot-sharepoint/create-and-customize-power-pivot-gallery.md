@@ -34,7 +34,7 @@ ms.locfileid: "70874404"
   
 -   [Cambiar a la Vista de teatro o a la Vista de galería](#switch)  
   
-##  <a name="prereq"></a> Prerequisites  
+##  <a name="prereq"></a> Requisitos previos  
   
 -   Debe tener Silverlight. Silverlight se puede descargar e instalar a través de Microsoft Update. Si ve una biblioteca de la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mediante un explorador que no tenga Silverlight, haga clic en el vínculo de la página para instalarlo. Debe cerrar el explorador y volver a abrirlo tras instalarlo.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "70874404"
   
  En la siguiente tabla se describen los diferentes diseños para presentar dibujos en miniatura de cada página de la que se obtiene la vista previa:  
   
-|Ver|Description|  
+|Ver|Descripción|  
 |----------|-----------------|  
 |Vista de la galería (valor predeterminado)|La Vista de la galería es la predeterminada para una Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . La vista previa aparece a la izquierda. Las miniaturas más pequeñas de cada hoja de cálculo aparecen al lado de ella siguiendo un orden secuencial de izquierda a derecha.|  
 |Todos los documentos|Este es el diseño estándar para las bibliotecas de documentos. Puede elegir esta vista para administrar documentos individuales o ver el contenido de la biblioteca en un formato de lista.<br /><br /> Utilice esta vista para modificar las propiedades, y eliminar o mover documentos individuales.<br /><br /> Si habilitó el control de versiones, debe utilizar esta vista para proteger o desproteger los documentos en la biblioteca.|  
@@ -146,10 +146,10 @@ ms.locfileid: "70874404"
   
 3.  En Administrar vistas, en Vista actual, seleccione la vista que desee utilizar en la lista. Las vistas prediseñadas incluyen la Vista de galería, la Vista de teatro y la Vista de carrusel. O bien, puede elegir Todos los documentos si desea mover, eliminar o administrar los documentos de la biblioteca.  
   
-## <a name="see-also"></a>Ver también  
- [Solucionar problemas de una instalación de PowerPivot para SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)    
- [Usar la galería de PowerPivot](use-power-pivot-gallery.md)    
- [Crear una ubicación de confianza para los sitios de PowerPivot en Administración Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)    
+## <a name="see-also"></a>Vea también  
+ [Solucionar problemas de una instalación de PowerPivot para SharePoint](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
+ [Usar la galería de PowerPivot](use-power-pivot-gallery.md)   
+ [Crear una ubicación de confianza para los sitios de PowerPivot en Administración Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Eliminar la Galería de PowerPivot](delete-power-pivot-gallery.md)  
   
   

@@ -34,12 +34,12 @@ ms.locfileid: "72783170"
   
 -   Las herramientas de configuración de PowerPivot son una de las características compartidas de SQL Server y todas las características compartidas se actualizan al mismo tiempo. Si durante un proceso de actualización selecciona otras instancias o características de SQL Server que necesitan la actualización de una característica compartida, la herramienta de configuración de PowerPivot también se actualizará. Puede tener problemas si se actualiza la herramienta de configuración de PowerPivot pero no la instancia de PowerPivot. Para obtener más información acerca de las características compartidas de SQL Server, consulte [actualización a &#40;SQL Server&#41;2014 mediante el Asistente para la instalación](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
--   El complemento PowerPivot para SharePoint (**spPowerPivot.msi**) se instala en paralelo con versiones anteriores. Por ejemplo, el complemento [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se instala en la carpeta `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools`.  
+-   El complemento PowerPivot para SharePoint (**spPowerPivot.msi**) se instala en paralelo con versiones anteriores. Por ejemplo el complemento [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se instala en la carpeta `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools`.  
   
 
   
-##  <a name="bkmk_prereq"></a> Prerequisites  
- **Permissions**  
+##  <a name="bkmk_prereq"></a> Requisitos previos  
+ **Permisos**  
   
 -   Debe ser administrador de granja para actualizar una instalación de PowerPivot para SharePoint. Debe ser administrador local para ejecutar el programa de instalación de SQL Server.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72783170"
   
          ![dos herramientas de configuración de PowerPivot](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "dos herramientas de configuración de PowerPivot")  
   
-         o bien  
+         ni  
   
          En el menú **Inicio** , elija **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], en **Herramientas de configuración**y, a continuación, en **Herramienta de configuración de PowerPivot para SharePoint 2013**. Observe que esta herramienta solo se enumera cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado en el servidor local.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "72783170"
         stsadm -o enumdeployments  
         ```  
   
-    2.  Revise las implementaciones existentes para la siguiente información: **Tipo** es Retracción o Implementación, **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
+    2.  Revise las implementaciones existentes para la siguiente información: el **Tipo** es Retracción o Implementación, el **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
   
     3.  En el caso de las implementaciones o las retracciones relacionadas con soluciones de PowerPivot, copie el valor GUID para **JobID** y péguelo en el siguiente comando (Use los comandos marcar, copiar y pegar del menú edición del shell para copiar el GUID):  
   
@@ -237,7 +237,7 @@ ms.locfileid: "72783170"
 Get-PowerPivotSystemService  
 ```  
   
- Compruebe **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] es la versión 12,0. \<major > de compilación. \<minor > de compilación  
+ Compruebe **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] es la versión 12,0.\<> de compilación principal.\<> de compilación secundaria  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Comprobar la versión del servicio de Windows Analysis Services  
  Si solo actualizó alguno de los servidores [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de una granja de SharePoint 2010, la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en los servidores sin actualizar será anterior a la de la versión esperada en la granja. Necesitará actualizar todos los servidores a la misma versión para que puedan utilizarse. Use uno de los métodos siguientes para comprobar la versión del servicio de Windows SQL Server Analysis Services (PowerPivot) en cada equipo.  
@@ -250,7 +250,7 @@ Get-PowerPivotSystemService
   
 3.  Haga clic en **Detalles**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versión del archivo debe ser 12,00. \<major > de compilación. \<minor > de compilación.  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] versión del archivo debe ser 12,00.\<> de compilación principal.\<> de compilación secundaria.  
   
 5.  Compruebe que este número es idéntico a la versión de la solución y del servicio de sistema de PowerPivot.  
   
@@ -264,7 +264,7 @@ Get-PowerPivotSystemService
   
 3.  Busque un evento de nivel de información similar al siguiente  
   
-     Se ha iniciado el servicio  de. Microsoft SQL Server Analysis Services 64 de evaluación de bits (x64) RTM **12.0.2000.8**.  
+     . Microsoft SQL Server Analysis Services 64 de evaluación de bits (x64) RTM **12.0.2000.8**.  
   
  **Use PowerShell para comprobar la versión del archivo.**  
   
@@ -289,7 +289,7 @@ Get-PowerPivotSystemService
   
 3.  Haga clic en **Proveedores de datos de confianza**. Debe ver MSOLAP.5 (Proveedor OLE DB de Microsoft para OLAP Services 11.0). Si actualizó la instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , también verá MSOLAP.4 de la versión anterior.  
   
-4.  Para obtener más información, vea [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
+4.  Para obtener más información, vea [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services).  
   
  MSOLAP.4 se describe como el proveedor Microsoft OLE DB para OLAP Services 10.0. Esta versión podría ser la predeterminada de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] que se instala con Excel Services o podría ser la versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] . La versión predeterminada que SharePoint instala no admite el acceso a datos PowerPivot. Debe tener la versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o posterior para conectarse a los libros PowerPivot en SharePoint. Para comprobar que tiene la versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , utilice las instrucciones de la sección anterior que explican cómo comprobar la versión viendo las propiedades del archivo.  
   
@@ -300,7 +300,7 @@ Get-PowerPivotSystemService
   
 2.  Ordene por nombre del ensamblado y busque **Microsoft.Analysis Services.Adomd.Client**.  
   
-3.  Compruebe que tiene la versión 12,0. \<build número >.  
+3.  Compruebe que tiene la versión 12,0.\<número de compilación >.  
   
 
 ##  <a name="geminifarm"></a>Actualización de varios servidores PowerPivot para SharePoint en una granja de servidores de SharePoint  
@@ -349,6 +349,6 @@ Get-PowerPivotSystemService
   
  Para obtener instrucciones paso a paso que le guíen en todas las tareas de configuración posteriores a la instalación, consulte [Initial &#40;Configuration&#41;PowerPivot para SharePoint](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
 
-## <a name="see-also"></a>Ver también  
- [Características admitidas por las ediciones de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)    
+## <a name="see-also"></a>Vea también  
+ [Características admitidas por las ediciones de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Instalación de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

@@ -69,7 +69,7 @@ ms.locfileid: "69493862"
   
 16. Agregue el atributo **Sales Order Number** a la dimensión arrastrando la columna **SalesOrderNumber** de la tabla **InternetSales** del panel **Vista del origen de datos** al panel **Atributos** .  
   
-17. Cambie la propiedad **nombre** del nuevo atributo **sales Order Number** por `Order Number` y cambie la propiedad **OrderBy** a **key**.  
+17. Cambie la propiedad **nombre** del nuevo atributo **sales Order Number** por `Order Number`y cambie la propiedad **OrderBy** a **key**.  
   
 18. En el panel **jerarquías** , cree una jerarquía de usuarios de **pedidos de ventas por Internet** que contenga los niveles de `Order Number` y descripción de los **elementos** , en ese orden.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "69493862"
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Definir una relación de varios a varios](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definir relaciones de hechos y propiedades de las relaciones de hechos](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

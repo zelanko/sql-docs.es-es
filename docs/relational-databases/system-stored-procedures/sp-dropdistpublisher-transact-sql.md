@@ -56,7 +56,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_dropdistpublisher** se utiliza en todos los tipos de replicación.  
   
  Al quitar un publicador de Oracle, si no puede quitar el publicador **sp_dropdistpublisher** devuelve un error y se quitan los objetos de distribuidor para el publicador.  

@@ -42,13 +42,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación asociada. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Si es **All**, se cancelan todas las suscripciones de todas las publicaciones del suscriptor especificado. la *publicación* es un parámetro necesario.  
+`[ @publication = ] 'publication'` es el nombre de la publicación asociada. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. Si es **All**, se cancelan todas las suscripciones de todas las publicaciones del suscriptor especificado. la *publicación* es un parámetro necesario.  
   
-`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es NULL. Si es **All**, se quitan las suscripciones a todos los artículos de cada publicación y suscriptor especificados. Usar **todo para las** publicaciones que permiten la actualización inmediata.  
+`[ @article = ] 'article'` es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es NULL. Si es **All**, se quitan las suscripciones a todos los artículos de cada publicación y suscriptor especificados. Usar **todo para las** publicaciones que permiten la actualización inmediata.  
   
-`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor al que se quitarán sus suscripciones. *Subscriber* es de **tipo sysname**y no tiene ningún valor predeterminado. Si es **All**, se quitan todas las suscripciones de todos los suscriptores.  
+`[ @subscriber = ] 'subscriber'` es el nombre del suscriptor al que se quitarán sus suscripciones. *Subscriber* es de **tipo sysname**y no tiene ningún valor predeterminado. Si es **All**, se quitan todas las suscripciones de todos los suscriptores.  
   
-`[ @destination_db = ] 'destination_db'`Es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su**valor predeterminado es NULL. Cuando es NULL, se quitan todas las suscripciones del suscriptor indicado.  
+`[ @destination_db = ] 'destination_db'` es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su**valor predeterminado es NULL. Cuando es NULL, se quitan todas las suscripciones del suscriptor indicado.  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -59,7 +59,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_dropsubscription** se utiliza en la replicación de instantáneas y transaccional.  
   
  Si quita la suscripción a un artículo de una publicación de sincronización inmediata, no podrá volverla a agregar, a menos que quite las suscripciones a todos los artículos de la publicación y las agregue de nuevo todas a la vez.  
@@ -68,12 +68,12 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros del rol fijo de servidor **sysadmin** , del rol fijo de base de datos **db_owner** o del usuario que creó la suscripción pueden ejecutar **sp_dropsubscription**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** , el rol fijo de base de datos **db_owner** o el usuario que creó la suscripción pueden ejecutar **sp_dropsubscription**.  
   
 ## <a name="see-also"></a>Vea también  
  [Eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-push-subscription.md)   
- [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_addsubscription &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [Transact &#40;-SQL de sp_helpsubscription&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

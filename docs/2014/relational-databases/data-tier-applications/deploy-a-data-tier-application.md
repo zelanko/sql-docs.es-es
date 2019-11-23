@@ -40,7 +40,7 @@ ms.locfileid: "72783066"
  El mismo paquete DAC se puede implementar varias veces en una instancia única de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , sin embargo las implementaciones se deben ejecutar de una en una. El nombre de instancia de DAC que se especificó para cada implementación debe ser único en la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ###  <a name="SQLUtility"></a>Utilidad de SQL Server  
- Si implementa una DAC en una instancia administrada del Motor de base de datos, la DAC implementada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Aplicaciones de capa de datos implementadas** details page.  
+ Si implementa una DAC en una instancia administrada del Motor de base de datos, la DAC implementada se incorpora a la Utilidad de SQL Server la próxima vez que el conjunto de recopilación de utilidades se envíe desde la instancia al punto de control de la utilidad. Posteriormente, la DAC aparecerá en el nodo **Aplicaciones de capa de datos implementadas** del [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **de** y se notificará en la página de detalles **Aplicaciones de capa de datos implementadas** .  
   
 ###  <a name="DBOptSettings"></a> Opciones y configuración de bases de datos  
  De forma predeterminada, la base de datos que se cree durante la implementación incorporará toda la configuración predeterminada de la instrucción CREATE DATABASE, excepto en lo siguiente:  
@@ -54,8 +54,8 @@ ms.locfileid: "72783066"
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  Una DAC puede implementarse en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]o una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que ejecute [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) o posterior. Si crea una DAC usando una versión posterior, la DAC puede contener objetos no admitidos por [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No puede implementar dicha DAC en instancias de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-###  <a name="Prerequisites"></a> Prerequisites  
- Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos paquetes contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un paquete desde un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como por ejemplo procedimientos almacenados u otro código definido por el usuario. Para más información sobre cómo realizar estas comprobaciones, consulte [Validar un paquete de DAC](validate-a-dac-package.md).  
+###  <a name="Prerequisites"></a> Requisitos previos  
+ Se recomienda no implementar un paquete DAC desde orígenes desconocidos o que no sean de confianza. Es posible que estos paquetes contengan código malintencionado que podría ejecutar código Transact-SQL no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Antes de usar un paquete desde un origen desconocido o que no sea de confianza, desempaquete la DAC y examine el código, como por ejemplo procedimientos almacenados u otro código definido por el usuario. Para obtener más información acerca de cómo realizar estas comprobaciones, vea [Validate a DAC Package](validate-a-dac-package.md).  
   
 ###  <a name="Security"></a> Seguridad  
  Para mejorar la seguridad, los inicios de sesión de la autenticación de SQL Server están almacenados en un paquete DAC sin ninguna contraseña. Cuando el paquete se implementa o actualiza, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y emplee ALTER LOGIN para habilitar el inicio de sesión y asignar una nueva contraseña que pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
@@ -87,7 +87,7 @@ ms.locfileid: "72783066"
 ##  <a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para implementar una aplicación de capa de datos.  
   
- **No volver a mostrar esta página.** - Haga clic en la casilla para evitar que la página se muestre en el futuro.  
+ **No volver a mostrar esta página.** active esta casilla para que la página deje de mostrarse en el futuro.  
   
  **Siguiente >:** avanza a la página **Seleccionar paquete DAC**.  
   
@@ -231,7 +231,7 @@ $dacstore.Install($dacType, $deployProperties, $evaluateTSPolicy)
 $fileStream.Close()  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Aplicaciones de capa de datos](data-tier-applications.md)   
  [Extraer una DAC de una base de datos](extract-a-dac-from-a-database.md)   
  [Identificadores de base de datos](../databases/database-identifiers.md)  

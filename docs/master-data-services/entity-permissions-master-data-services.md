@@ -41,7 +41,7 @@ ms.locfileid: "73728182"
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
 |**Crear**|El usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
-|**Update**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
+|**Actualizar**|El usuario puede actualizar miembros, atributos, pertenencias a la jerarquía o pertenencias a la colección.|  
 |**Delete**|El usuario puede eliminar miembros.|  
 |**Denegar**|Denegar todo acceso a la entidad.|  
   

@@ -41,25 +41,25 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @principal_id = ] principal_id` identificador del usuario o el rol de la base de datos **msdb** de la asociación. *principal_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *principal_id* o *principal_name* . Un valor de *principal_id* de **0** convierte este perfil en un perfil público, lo que concede acceso a todas las entidades de seguridad de la base de datos.  
+`[ @principal_id = ] principal_id` el ID. del usuario o el rol de la base de datos **msdb** de la asociación. *principal_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *principal_id* o *principal_name* . Un *principal_id* de **0** convierte este perfil en un perfil público, lo que concede acceso a todas las entidades de seguridad de la base de datos.  
   
-`[ @principal_name = ] 'principal_name'` nombre del usuario o rol de la base de datos en la base de datos **msdb** de la asociación. *principal_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *principal_id* o *principal_name* . Un *principal_name* de **' Public '** convierte este perfil en un perfil público, lo que concede acceso a todas las entidades de seguridad de la base de datos.  
+`[ @principal_name = ] 'principal_name'` el nombre del usuario o el rol de la base de datos **msdb** de la asociación. *principal_name* es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *principal_id* o *principal_name* . Un *principal_name* de **' Public '** convierte este perfil en un perfil público, lo que concede acceso a todas las entidades de seguridad de la base de datos.  
   
-`[ @profile_id = ] profile_id` identificador del perfil para la asociación. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
+`[ @profile_id = ] profile_id` el identificador del perfil para la asociación. *profile_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *profile_id* o *profile_name* .  
   
 `[ @profile_name = ] 'profile_name'` el nombre del perfil para la asociación. *profile_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Se debe especificar *profile_id* o *profile_name* .  
   
-`[ @is_default = ] is_default` especifica si este perfil es el perfil predeterminado para la entidad de seguridad. Una entidad de seguridad debe tener solo un perfil predeterminado. *is_default* es de **bit**y no tiene ningún valor predeterminado.  
+`[ @is_default = ] is_default` especifica si este perfil es el perfil predeterminado para la entidad de seguridad. Una entidad de seguridad debe tener solo un perfil predeterminado. *is_default* es de **bits**y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  Para que un perfil sea público, especifique un **\@principal_id** de **0** o un **\@principal_name** de **Public**. Un perfil público está disponible para todos los usuarios de la base de datos **msdb** , aunque los usuarios también deben ser miembros de **DatabaseMailUserRole** para ejecutar **sp_send_dbmail**.  
   
- El usuario de la base de datos solo puede tener un perfil predeterminado. Cuando **\@is_default** es "**1**" y el usuario ya está asociado a uno o más perfiles, el perfil especificado se convierte en el perfil predeterminado del usuario. El perfil predeterminado anterior sigue estando asociado con el usuario, pero ya no es el perfil predeterminado.  
+ El usuario de la base de datos solo puede tener un perfil predeterminado. Cuando **\@is_default** es '**1**' y el usuario ya está asociado a uno o más perfiles, el perfil especificado se convierte en el perfil predeterminado para el usuario. El perfil predeterminado anterior sigue estando asociado con el usuario, pero ya no es el perfil predeterminado.  
   
- Cuando **\@is_default** es '**0**' y no existe ninguna otra asociación, el procedimiento almacenado devuelve un error.  
+ Cuando **\@is_default** es "**0**" y no existe ninguna otra asociación, el procedimiento almacenado devuelve un error.  
   
  El procedimiento almacenado **sysmail_add_principalprofile_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   
@@ -67,9 +67,9 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  Los permisos de ejecución para este procedimiento tienen como valor predeterminado los miembros del rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
- **A. Crear una asociación estableciendo el perfil predeterminado @ no__t-0  
+ **A. crear una asociación, establecer el perfil predeterminado**  
   
- En el ejemplo siguiente se crea una asociación entre el perfil denominado `AdventureWorks Administrator Profile` y el usuario de base de datos **msdb** `ApplicationUser`. El perfil es el predeterminado del usuario.  
+ En el ejemplo siguiente se crea una asociación entre el perfil denominado `AdventureWorks Administrator Profile` y el `ApplicationUser`de usuario de la base de datos **msdb** . El perfil es el predeterminado del usuario.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -78,9 +78,9 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
- **B. Convertir un perfil en el perfil público predeterminado @ no__t-0  
+ **B. convertir un perfil en el perfil público predeterminado**  
   
- En el ejemplo siguiente se convierte el perfil `AdventureWorks Public Profile` en el perfil público predeterminado para los usuarios de la base de datos **msdb** .  
+ En el ejemplo siguiente se hace que el perfil `AdventureWorks Public Profile` perfil público predeterminado para los usuarios de la base de datos **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  

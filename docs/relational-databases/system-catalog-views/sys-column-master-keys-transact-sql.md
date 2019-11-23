@@ -45,7 +45,7 @@ ms.locfileid: "73594523"
 |**modify_date**|**datetime**|Fecha en que se modificó por última vez la clave maestra de columna.|  
 |**key_store_provider_name**|**sysname**|Nombre del proveedor del almacén de claves maestras de columna que contiene CMK. Los valores permitidos son:<br /><br /> MSSQL_CERTIFICATE_STORE: Si el almacén de claves maestras de columna es un almacén de certificados.<br /><br /> Un valor definido por el usuario, si el almacén de claves maestras de columna es de un tipo personalizado.|  
 |**key_path**|**nvarchar(4000)**|Una ruta de acceso específica del almacén de claves maestras de columna de la clave. El formato de la ruta de acceso depende del tipo de almacén de claves maestras de columna. Ejemplo:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Para un almacén de claves maestras de columna personalizado, el desarrollador es responsable de definir qué es una ruta de acceso de clave para el almacén de claves maestras de columna personalizado.|  
-|**allow_enclave_computations**|**bit**|Indica si la clave maestra de columna está habilitada para enclave, (si las claves de cifrado de columna, cifradas con esta clave maestra, se pueden usar para los cálculos dentro de enclaves seguras del lado servidor). Para obtener más información, consulte [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**allow_enclave_computations**|**bit**|Indica si la clave maestra de columna está habilitada para enclave, (si las claves de cifrado de columna, cifradas con esta clave maestra, se pueden usar para los cálculos dentro de enclaves seguras del lado servidor). Para obtener más información, vea [Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
 |**signature**|**varbinary(max)**|Firma digital de **key_path** y **allow_enclave_computations**, generada mediante la clave maestra de columna a la que hace referencia **key_path**.|
 
 
@@ -59,9 +59,9 @@ ms.locfileid: "73594523"
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
- [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Información general sobre la administración de claves para Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [Administrar claves para Always Encrypted con Secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Información general sobre la administración de claves de Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [Administración de claves para Always Encrypted con enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
  
   
   

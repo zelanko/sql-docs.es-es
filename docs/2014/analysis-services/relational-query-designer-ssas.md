@@ -82,7 +82,7 @@ ms.locfileid: "72251217"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../includes/tsql-md.md)] y de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] usa [!INCLUDE[DWsql](../includes/dwsql-md.md)]. Ambos dialectos del lenguaje SQL admiten la cláusula, la palabra clave y los agregados que el diseñador de consultas proporciona.  
   
- Para más información sobre [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [Libros en pantalla](https://go.microsoft.com/fwlink/?LinkId=141687) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en msdn.microsoft.com.  
+ Para obtener más información sobre [!INCLUDE[tsql](../includes/tsql-md.md)], vea [Referencia de Transact-SQL &#40;motor de base de datos&#41;](/sql/t-sql/language-reference) en los [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Libros en pantalla[ de ](https://go.microsoft.com/fwlink/?LinkId=141687) en msdn.microsoft.com.  
   
  En la siguiente tabla se enumeran los agregados y se proporciona una breve descripción de los mismos.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "72251217"
 |Count|Devuelve el número de elementos de un grupo. Implementa el agregado COUNT de SQL.|  
 |Count Big|Devuelve el número de elementos de un grupo. Es el agregado de SQL COUNT_BIG. La diferencia entre COUN y COUNT_BIG es que COUNT_BIG siempre devuelve un valor de tipo de datos `bigint`.|  
 |Min|Devuelve el valor mínimo en un grupo. Implementa el agregado de SQL MIN.|  
-|Max|Devuelve el valor máximo en un grupo. Implementa el agregado de SQL MAX.|  
+|Máximo|Devuelve el valor máximo en un grupo. Implementa el agregado de SQL MAX.|  
 |StDev|Devuelve la desviación estadística estándar de todos los valores de un grupo. Implementa el agregado de SQL STDEV.|  
 |StDevP|Devuelve la desviación estadística estándar para la población de todos los valores de una expresión especificada de grupo. Implementa el agregado de SQL STDEVP.|  
 |Sum|Devuelve la suma de todos los valores de un grupo. Implementa el agregado de SQL SUM.|  
@@ -178,7 +178,7 @@ ms.locfileid: "72251217"
 |Botón|Descripción|  
 |------------|-----------------|  
 |**Editar como texto**|Cambie al diseñador de consultas basado en texto para ver la consulta generada automáticamente o para modificar la consulta.|  
-|**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivo .sql y .rdl.|  
+|**Importar**|Importa una consulta existente de un archivo o informe. Solo se admiten los tipos de archivo .sql y .rdl.|  
 |**Ejecutar consulta**|Ejecuta la consulta. El panel Resultados de la consulta muestra el conjunto de resultados.|  
   
 ## <a name="understanding-automatically-generated-queries"></a>Descripción de las consultas generadas automáticamente  
@@ -201,7 +201,7 @@ ms.locfileid: "72251217"
 |Botón|Descripción|  
 |------------|-----------------|  
 |**Editar como texto**|Alterna entre el diseñador de consultas basado en texto y el diseñador gráfico de consultas. No todos los tipos de orígenes de datos admiten diseñadores gráficos de consultas.|  
-|**Importar**|Importe una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos sql y rdl.|  
+|**Importar**|Importa una consulta existente de un archivo o informe. Solo se admiten los tipos de archivos sql y rdl.|  
 |![Ejecutar la consulta](media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra el conjunto de resultados en el panel Resultado.|  
 |**Tipo de comando**|Seleccione **Text**, **StoredProcedure**o **TableDirect**. Si un procedimiento almacenado tiene parámetros, el cuadro de diálogo **Definir parámetros de consulta** aparece al hacer clic en **Ejecutar** en la barra de herramientas; puede rellenar los valores según sea necesario.<br /><br /> Tenga en cuenta que si un procedimiento almacenado devuelve más de un conjunto de resultados, solo se usa el primer conjunto de resultados para rellenar el conjunto de resultados. Tenga en cuenta también que <br />                      **TableDirect** solo está disponible para el tipo de origen de datos OLE DB.|  
   
@@ -214,7 +214,7 @@ ms.locfileid: "72251217"
   
 |Panel|Función|  
 |----------|--------------|  
-|Consultar|Muestra el texto de consulta SQL. Use este panel para escribir o editar una consulta SQL.|  
+|Query|Muestra el texto de consulta SQL. Use este panel para escribir o editar una consulta SQL.|  
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  
@@ -237,7 +237,7 @@ SELECT Name FROM ContactType
   
 |Panel|Función|  
 |----------|--------------|  
-|Consultar|Muestra el nombre del procedimiento almacenado y de los parámetros de entrada.|  
+|Query|Muestra el nombre del procedimiento almacenado y de los parámetros de entrada.|  
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  
@@ -247,12 +247,12 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Haga clic en el botón **Ejecutar** ( **!** ). En la tabla siguiente se proporciona un ejemplo de parámetros `uspGetWhereUsedProductID` para los que se proporcionan valores en el cuadro de diálogo **definir parámetro de consulta** .  
+ Haga clic en el botón **Ejecutar** ( **!** ). En la tabla siguiente se proporciona un ejemplo de `uspGetWhereUsedProductID` parámetros para los que se proporcionan valores en el cuadro de diálogo **definir parámetro de consulta** .  
   
 |||  
 |-|-|  
-|*@no__t 1StartProductID*|820|  
-|*@no__t 1CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@CheckDate*|20010115|  
   
 #### <a name="command-type-tabledirect"></a>Tipo de comando TableDirect  
  Si selecciona **Tipo de comando TableDirect**, el diseñador de consultas basado en texto presenta dos paneles: el panel Consulta y el panel Resultado. Si selecciona una tabla y hace clic en el botón **Ejecutar** , se devolverán todas las columnas de dicha tabla.  

@@ -37,8 +37,8 @@ ms.locfileid: "70874870"
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|Id. de idioma único.|  
 |dateformat|**nchar(3)**|Orden de la fecha (por ejemplo, DMA).|  
-|datefirst|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para Domingo.|  
-|upgrade|**int**|Reservado para uso del sistema.|  
+|datefirst|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para domingo.|  
+|actualización|**int**|Reservado para uso del sistema.|  
 |name|**sysname**|Nombre del idioma oficial, por ejemplo, Français.|  
 |alias|**sysname**|Nombre alternativo del idioma (por ejemplo, francés).|  
 |meses|**nvarchar(372)**|Lista separada por comas con los nombres completos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 20 caracteres.|  
@@ -51,42 +51,42 @@ ms.locfileid: "70874870"
   
 |Nombre en español|LCID de Windows|Id. de grupo de mensajes del [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |---------------------|------------------|-----------------------------------------|  
-|Inglés|3082|3082|  
-|Alemán|1031|1031|  
-|Francés|1036|1036|  
-|Japonés|1041|1041|  
-|Danish|1030|1030|  
-|Español|3082|3082|  
-|Italiano|1040|1040|  
-|Neerlandés|1043|1043|  
+|English|3082|3082|  
+|German|1031|1031|  
+|French|1036|1036|  
+|Japanese|1041|1041|  
+|Danés|1030|1030|  
+|Spanish|3082|3082|  
+|Italian|1040|1040|  
+|Dutch|1043|1043|  
 |Noruego|2068|2068|  
 |Portugués|2070|2070|  
 |Finlandés|1035|1035|  
-|Sueco|1053|1053|  
+|Swedish|1053|1053|  
 |Czech|1029|1029|  
 |Húngaro|1038|1038|  
-|Polaco|1045|1045|  
+|Polish|1045|1045|  
 |Rumano|1048|1048|  
-|Croata|1050|1050|  
-|Eslovaco|1051|1051|  
+|Croatian|1050|1050|  
+|Slovak|1051|1051|  
 |Slovene|1060|1060|  
 |Greek|1032|1032|  
-|Búlgaro|1026|1026|  
-|Ruso|1049|1049|  
-|Turco|1055|1055|  
+|Bulgarian|1026|1026|  
+|Russian|1049|1049|  
+|Turkish|1055|1055|  
 |British English|2057|3082|  
 |Estonio|1061|1061|  
-|Letón|1062|1062|  
-|Lituano|1063|1063|  
-|Portugués (Brasil)|1046|1046|  
-|Chino tradicional|1028|1028|  
-|Coreano|1042|1042|  
-|Chino simplificado|2052|2052|  
-|Árabe|1025|1025|  
-|Tailandés|1054|1054|  
+|Latvian|1062|1062|  
+|Lithuanian|1063|1063|  
+|Portuguese (Brazil)|1046|1046|  
+|Traditional Chinese|1028|1028|  
+|Korean|1042|1042|  
+|Simplified Chinese|2052|2052|  
+|Arabic|1025|1025|  
+|Thai|1054|1054|  
   
 ## <a name="see-also"></a>Vea también  
- [Vistas &#40;de compatibilidad de TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Vistas &#40;de compatibilidad de Transact&#41; -SQL](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [Asignar tablas del sistema a las &#40;vistas del sistema TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

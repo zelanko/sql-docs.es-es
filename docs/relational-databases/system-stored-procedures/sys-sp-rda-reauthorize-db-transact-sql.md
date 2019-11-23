@@ -38,26 +38,26 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @credential = *\@credential*  
+ @credential = *credencial\@*  
  Es la credencial con ámbito de base de datos asociada con la base de datos habilitada para Stretch local.  
   
  @with_copy = *\@with_copy*  
  Especifica si se debe hacer una copia de los datos remotos y conectarse a la copia (recomendado). *\@with_copy* es bit.  
   
  @azure_servername = *\@azure_servername*  
- Especifica el nombre del servidor de Azure que contiene los datos remotos. *\@azure_servername es de* tipo sysname.  
+ Especifica el nombre del servidor de Azure que contiene los datos remotos. *\@azure_servername* es sysname.  
   
  @azure_databasename = *\@azure_databasename*  
- Especifica el nombre de la base de datos de Azure que contiene los datos remotos. *\@azure_databasename es de* tipo sysname.  
+ Especifica el nombre de la base de datos de Azure que contiene los datos remotos. *\@azure_databasename* es sysname.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o > 0 (error)  
   
 ## <a name="permissions"></a>Permisos  
- Requiere permisos db_owner.  
+ Requiere permisos de db_owner.  
   
-## <a name="remarks"></a>Comentarios  
- Al ejecutar [Sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos remota de Azure, esta operación restablece automáticamente el modo de consulta en LOCAL_AND_REMOTE, que es el comportamiento predeterminado para Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
+## <a name="remarks"></a>Remarks  
+ Al ejecutar [Sys. sp_rda_reauthorize_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) para volver a conectar con la base de datos remota de Azure, esta operación restablece automáticamente el modo de consulta a LOCAL_AND_REMOTE, que es el comportamiento predeterminado para Stretch Database. Es decir, las consultas devuelven los resultados de los datos locales y remotos.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se restaura la conexión autenticada entre una base de datos local habilitada para Stretch y la base de datos remota. Realiza una copia de los datos remotos (recomendado) y se conecta a la nueva copia.  

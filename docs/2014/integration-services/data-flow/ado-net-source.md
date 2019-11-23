@@ -28,7 +28,7 @@ ms.locfileid: "70153957"
 # <a name="ado-net-source"></a>Origen de ADO NET
   El origen de ADO NET consume datos de un proveedor .NET y hace que los datos estén disponibles para el flujo de datos.  
   
- Puede usar el origen de ADO NET para conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. No se admite la conexión a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante OLE DB. Para obtener más información [!INCLUDE[ssSDS](../../includes/sssds-md.md)]acerca de, vea [instrucciones y limitaciones generales (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Puede utilizar el origen de ADO NET para conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. No se admite la conexión a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante OLE DB. Para más información sobre [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [Instrucciones y limitaciones generales (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Compatibilidad con tipos de datos  
  El origen convierte cualquier tipo de datos que no se asigna a un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] específico en el tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_NTEXT. Esta conversión se produce aunque el tipo de datos sea `System.Object`.  
@@ -58,7 +58,7 @@ ms.locfileid: "70153957"
  Para más información sobre cómo asignar tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a tipos de datos administrados, vea [Trabajar con tipos de datos del flujo de datos](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="ado-net-source-troubleshooting"></a>Solución de problemas del origen de ADO NET  
- Puede registrar las llamadas que el origen de ADO NET realiza a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar los problemas relacionados con la carga de datos de orígenes de datos externos que realiza el origen de ADO NET. Para registrar las llamadas realizadas por el origen de ADO NET a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
+ Puede registrar las llamadas que el origen de ADO NET realiza a proveedores de datos externos. Puede utilizar esta capacidad de registro para solucionar los problemas relacionados con la carga de datos de orígenes de datos externos que realiza el origen de ADO NET. Para registrar las llamadas realizadas por el origen de ADO NET a proveedores de datos externos, habilite el registro de paquetes y seleccione el evento **Diagnostic** en el nivel de paquete. Para obtener más información, vea [Herramientas para solucionar problemas con la ejecución de paquetes](../troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="ado-net-source-configuration"></a>Configuración del origen de ADO NET  
  Para configurar el origen de ADO NET, debe proporcionar la instrucción SQL que define el conjunto de resultados. Por ejemplo, un origen de ADO NET que se conecta a la base de datos [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] y utiliza la instrucción SQL `SELECT * FROM Production.Product` extrae todas las filas de la tabla **Production.Product** y proporciona el conjunto de datos a un componente de nivel inferior.  
@@ -79,7 +79,7 @@ ms.locfileid: "70153957"
   
  Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
 -   [Propiedades personalizadas de ADO NET](ado-net-custom-properties.md)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "70153957"
   
 ## <a name="see-also"></a>Vea también  
  [Destino de DataReader](datareader-destination.md)   
- [Destino ADO NET](ado-net-destination.md)   
+ [Destino de ADO NET](ado-net-destination.md)   
  [Flujo de datos](data-flow.md)  
   
   

@@ -24,7 +24,7 @@ ms.locfileid: "71952406"
   
 ## <a name="see-also"></a>Vea también  
  [Quitar una instalación SQL Server 2014](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   
- [Instalación de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
+ [Instale PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
  [Desinstalar una instancia existente de SQL Server &#40;programa de instalación&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Instalación de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   

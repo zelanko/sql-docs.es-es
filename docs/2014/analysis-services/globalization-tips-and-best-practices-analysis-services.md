@@ -68,9 +68,9 @@ ms.locfileid: "70874416"
   
      En RPC y Singapur, Microsoft Support acostumbra a preferir el chino simplificado con pinyin como orden de clasificación. Las intercalaciones recomendadas son Chinese_PRC (para SQL Server 2000), Chinese_PRC_90 (para SQL Server 2005) o Chinese_Simplified_Pinyin_100 (para SQL Server 2008 y versiones posteriores).  
   
-     En Taiwán, es más habitual ver chino tradicional con el criterio de ordenación recomendado basado en el número de trazos: Chinese_Taiwan_Stroke (por SQL Server 2000), Chinese_Taiwan_Stroke_90 (para SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (para SQL Server 2008 y versiones posteriores).  
+     En Taiwán, es más habitual ver chino tradicional con el criterio de ordenación recomendado basado en el número de trazos: Chinese_Taiwan_Stroke (para SQL Server 2000), Chinese_Taiwan_Stroke_90 (para SQL Server 2005) o Chinese_Traditional_Stroke_Count_100 (para SQL Server 2008 y versiones posteriores).  
   
-     Otras regiones (por ejemplo, Hong Kong y Macao) también utilizan el chino tradicional. Para las intercalaciones en Hong Kong es habitual ver Chinese_Hong_Kong_Stroke_90 (en SQL Server 2005). En Macao, se utiliza con bastante frecuencia Chinese_Traditional_Stroke_Count_100 (en SQL Server 2008 y versiones posteriores).  
+     Otras regiones (por ejemplo, Hong Kong y Macao) también utilizan el chino tradicional. Para las intercalaciones en Hong Kong es habitual ver Chinese_Hong_Kong_Stroke_90 (en SQL Server 2005). En Macao, Chinese_Traditional_Stroke_Count_100 (en SQL Server 2008 y versiones posteriores) se usa con bastante frecuencia.  
   
 -   Para el japonés, la intercalación utiliza con más frecuencia es Japanese_CI_AS. Japanese_XJIS_100 se usa en instalaciones que admiten [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213). Japanese_BIN2 suele aparecer en proyectos de migración de datos, con datos que se originan en plataformas que no son de Windows o en orígenes de datos distintos al motor de base de datos relacional de SQL Server.  
   
@@ -83,12 +83,12 @@ ms.locfileid: "70874416"
   
 |Alfabeto del idioma|Distinción de mayúsculas y minúsculas|  
 |---------------------|----------------------|  
-|**Alfabeto Latín básico**|Los identificadores de objetos expresados en el alfabeto latino (cualquiera de las 26 letras mayúsculas o minúsculas del inglés) se tratan sin distinguir mayúsculas de minúsculas, independientemente de la intercalación. Por ejemplo, los siguientes identificadores de objeto se consideran idénticos: 54321**abcdef**, 54321**abcdef**, 54321**abcdef**. Internamente, Analysis Services trata los caracteres de la cadena como si todos estuvieran en mayúsculas y, luego, realiza una comparación de byte simple que es independiente del idioma.<br /><br /> Tenga en cuenta que solo los 26 caracteres se ven afectados. Si el idioma es Europeo occidental pero utiliza caracteres escandinavos, los caracteres adicionales no estarán en mayúsculas.|  
+|**Alfabeto Latín básico**|Los identificadores de objetos expresados en el alfabeto latino (cualquiera de las 26 letras mayúsculas o minúsculas del inglés) se tratan sin distinguir mayúsculas de minúsculas, independientemente de la intercalación. Por ejemplo, los identificadores de objetos siguientes se consideran idénticos: 54321**abcdef**, 54321**ABCDEF**, 54321**AbCdEf**. Internamente, Analysis Services trata los caracteres de la cadena como si todos estuvieran en mayúsculas y, luego, realiza una comparación de byte simple que es independiente del idioma.<br /><br /> Tenga en cuenta que solo los 26 caracteres se ven afectados. Si el idioma es Europeo occidental pero utiliza caracteres escandinavos, los caracteres adicionales no estarán en mayúsculas.|  
 |**Cirílico, griego, copto y armenio**|Los identificadores de objetos en script bicameral no latino, como el cirílico, siempre distinguen entre mayúsculas y minúsculas. Por ejemplo, Измерение y измерение se consideran dos valores distintos, aunque la única diferencia sea el uso de mayúsculas y minúsculas en la primera letra.|  
   
  **Implicaciones de la distinción entre mayúsculas y minúsculas para los identificadores de objetos**  
   
- Solo los identificadores de objetos, y no los nombres de objetos, están sujetos a los comportamientos de mayúsculas y minúsculas que se describen en la tabla. Si ve un cambio en el funcionamiento de la solución (una comparación del antes y el después de instalar SQL Server 2012 SP2 o una versión posterior), probablemente se trate de un problema de procesamiento. Las consultas no se ven afectadas por los identificadores de objeto. En los dos lenguajes de consulta (DAX y MDX), el motor de fórmulas utiliza el nombre del objeto (no el identificador).  
+ Solo los identificadores de objetos, y no los nombres de objetos, están sujetos a los comportamientos de mayúsculas y minúsculas que se describen en la tabla. Si ve un cambio en el funcionamiento de la solución (una comparación del antes y el después de instalar SQL Server 2012 SP2 o una versión posterior), probablemente se trate de un problema de procesamiento. Los identificadores de objetos no afectan a las consultas. En los dos lenguajes de consulta (DAX y MDX), el motor de fórmulas utiliza el nombre del objeto (no el identificador).  
   
 > [!NOTE]  
 >  Los cambios de código relacionados con la distinción entre mayúsculas y minúsculas han supuesto un cambio importante para algunas aplicaciones. Consulte [cambios importantes en las características de Analysis Services en SQL Server 2014](breaking-changes-to-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
@@ -98,15 +98,15 @@ ms.locfileid: "70874416"
   
  Puede hacerlo manualmente, editando el archivo .odc para incluir la propiedad de cadena de conexión del identificador de configuración regional. Pruebe con la base de datos multidimensional de muestra de Adventure Works.  
   
--   Busque los archivos .odc existentes. Cuando encuentre el de la base de datos multidimensional de Adventure Works, haga clic con el botón derecho en el archivo para abrirlo en el Bloc de notas.  
+-   Busque los archivos.odc existentes. Cuando encuentre el de la base de datos multidimensional de Adventure Works, haga clic con el botón derecho en el archivo para abrirlo en el Bloc de notas.  
   
 -   Agregue `Locale Identifier=1036` a la cadena de conexión. Guarde el archivo y ciérrelo.  
   
--   Abra Excel | **Datos** | **Conexiones existentes**. Filtre la lista para que solo aparezcan los archivos de las conexiones de este equipo. Busque la conexión de Adventure Works (observe el nombre con atención: puede que haya más de una). Abrir la conexión.  
+-   Abra Excel | **Datos** | **Conexiones existentes**. Filtre la lista para que solo aparezcan los archivos de las conexiones de este equipo. Busque la conexión de Adventure Works (observe el nombre con atención: puede que haya más de una). Abra la conexión.  
   
      Debería ver las traducciones al francés de la base de datos de muestra de Adventure Works.  
   
-     ![Tabla dinámica de Excel con traducciones en francés](media/ssas-localetest-excel.png "Tabla dinámica de Excel con traducciones en francés")  
+     ![Tabla dinámica de Excel con traducciones francesas](media/ssas-localetest-excel.png "tabla dinámica de Excel con traducciones en francés")  
   
  A modo de seguimiento, puede usar SQL Server Profiler para confirmar la configuración regional. Haga clic en un evento de `Session Initialize` y, luego, observe la lista de propiedades del área de texto inferior para buscar `<localeidentifier>1036</localeidentifier>`.  
   
@@ -118,20 +118,20 @@ ms.locfileid: "70874416"
   
 -   Ejecute una consulta MDX en la base de datos de Adventure Works. Los resultados de la consulta deberían ser las traducciones al francés.  
   
-     ![Consulta MDX con traducciones en francés en SSMS](media/ssas-localetest-ssms.png "Consulta MDX con traducciones en francés en SSMS")  
+     ![Consulta MDX con traducciones francesas en SSMS](media/ssas-localetest-ssms.png "consulta MDX con traducciones en francés en SSMS")  
   
 ##  <a name="bkmk_mdx"></a> Escritura de consultas MDX en una solución que contiene traducciones  
  Las traducciones proporcionan información de los nombres de los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , pero los identificadores de los mismos objetos no se traducen. Siempre que sea posible, utilice los identificadores y las claves de los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en lugar de los títulos y los nombres traducidos. Por ejemplo, utilice claves de miembro en lugar de nombres de miembro en los scripts e instrucciones MDX (Expresiones multidimensionales) con el fin de asegurar la portabilidad entre diferentes idiomas.  
   
 > [!NOTE]  
->  Recuerde que los nombres de objetos tabulares siempre distinguen mayúsculas de minúsculas, independientemente de la intercalación. Los nombres del objeto multidimensional, en cambio, siguen la distinción entre mayúsculas y minúsculas de la intercalación. Puesto que solo los nombres de los objetos multidimensionales distinguen entre mayúsculas y minúsculas, compruebe que en todas las consultas MDX que hagan referencia a objetos multidimensionales se utilicen las mayúsculas y las minúsculas correctamente.  
+>  Recuerde que los nombres de objetos tabulares siempre distinguen mayúsculas de minúsculas, independientemente de la intercalación. Los nombres de objetos multidimensionales, sin embargo, distinguen mayúsculas de minúsculas según la intercalación. Puesto que solo los nombres de los objetos multidimensionales distinguen entre mayúsculas y minúsculas, compruebe que en todas las consultas MDX que hagan referencia a objetos multidimensionales se utilicen las mayúsculas y las minúsculas correctamente.  
   
 ##  <a name="bkmk_datetime"></a> Escritura de consultas MDX que contengan valores de fecha y hora  
  Las siguientes sugerencias permiten hacer que las consultas MDX basadas en el tiempo y en la fecha sean más portables en los diferentes idiomas:  
   
 1.  **Utilizar elementos numéricos para las comparaciones y operaciones**  
   
-     Cuando realice operaciones y comparaciones de día de la semana y mes, utilice los elementos numéricos de hora y fecha en lugar de los equivalentes de cadena (por ejemplo, utilice MonthNumberofYear en lugar de MonthName). Los valores numéricos se ven menos afectados por las diferencias en las traducciones de idiomas.  
+     Cuando realice operaciones y comparaciones de día de la semana y mes, utilice los elementos numéricos de hora y fecha en lugar de los equivalentes de cadena (por ejemplo, utilice MonthNumberofYear en lugar de MonthName). Las diferencias en las traducciones de idiomas afectan menos a los valores numéricos.  
   
 2.  **Utilizar los equivalentes de cadena en un conjunto de resultados**  
   
@@ -139,7 +139,7 @@ ms.locfileid: "70874416"
   
 3.  **Usar formatos de fecha ISO para información de fecha y hora universal**  
   
-     Un [experto en Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) tiene esta recomendación: "Siempre uso el formato de fecha ISO AAAA-MM-DD para cualquier cadena de fecha que paso a las consultas en SQL o MDX, porque no es ambiguo y funcionará independientemente de la configuración regional del cliente o del servidor. Sé que el servidor debería recurrir a su configuración regional al analizar formatos de fecha ambiguos, pero también creo que si hay una opción que no da pie a varias interpretaciones, lo mejor es elegir esa opción en cualquier caso”.  
+     Un [experto en Analysis Services](http://geekswithblogs.net/darrengosbell/Default.aspx) tiene esta recomendación: “Siempre uso el formato de fecha ISO, aaaa-mm-dd, para las cadenas de fecha que paso a las consultas en SQL o MDX, porque no es ambiguo y funciona sea cual sea la configuración regional del servidor o del cliente. Sé que el servidor debería recurrir a su configuración regional al analizar formatos de fecha ambiguos, pero también creo que si hay una opción que no da pie a varias interpretaciones, lo mejor es elegir esa opción en cualquier caso”.  
   
 4.  `Use the Format function to enforce a specific format, regardless of regional language settings`  
   

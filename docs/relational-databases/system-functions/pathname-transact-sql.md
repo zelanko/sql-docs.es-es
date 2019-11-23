@@ -44,8 +44,8 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  La solicitud del nombreruta para una columna de cualquier otro tipo de datos o de un columnthat **varbinary (Max)** no tiene el atributo de almacenamiento FileStream producirá un error en tiempo de compilación de la consulta.  
   
- *@no__t 1option*  
- [Expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero que define cómo se debe dar formato al componente de servidor de la ruta de acceso. *\@option* puede ser uno de los valores siguientes. El valor predeterminado es 0.  
+ *\@, opción*  
+ [Expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero que define cómo se debe dar formato al componente de servidor de la ruta de acceso. *\@opción* puede ser uno de los valores siguientes. El valor predeterminado es 0.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -72,7 +72,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>Valor devuelto  
  El valor devuelto es la ruta de acceso de NETBIOS o la ruta de acceso lógica completa del BLOB. PathName no devuelve una dirección IP. Se devuelve NULL cuando no se ha creado el BLOB FILESTREAM.  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  La columna ROWGUID debe estar visible en cualquier consulta que llame a PathName.  
   
  Un BLOB FILESTREAM solo se puede crear utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -148,8 +148,8 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
- [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
+ [Datos de objeto binario grande &#40;Blob&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41; ](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
   

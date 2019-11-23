@@ -29,7 +29,7 @@ ms.locfileid: "72381911"
 
   Agrega un nuevo trabajo ejecutado por el servicio Agente SQL.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
  > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
@@ -57,42 +57,42 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'` nombre del trabajo. El nombre debe ser único y no puede contener el carácter**de porcentaje (%** ). *job_name*es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado.  
+`[ @job_name = ] 'job_name'` el nombre del trabajo. El nombre debe ser único y no puede contener el carácter de porcentaje ( **%** ). *job_name*es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado.  
   
 `[ @enabled = ] enabled` indica el estado del trabajo agregado. *Enabled*es de **tinyint**y su valor predeterminado es 1 (habilitado). Si es **0**, el trabajo no está habilitado y no se ejecuta según su programación; sin embargo, se puede ejecutar manualmente.  
   
-`[ @description = ] 'description'` Descripción del trabajo. la *Descripción* es de tipo **nvarchar (512)** y su valor predeterminado es NULL. Si se omite la *Descripción* , se usa "no hay descripción disponible".  
+`[ @description = ] 'description'` la descripción del trabajo. la *Descripción* es de tipo **nvarchar (512)** y su valor predeterminado es NULL. Si se omite la *Descripción* , se usa "no hay descripción disponible".  
   
 `[ @start_step_id = ] step_id` el número de identificación del primer paso que se va a ejecutar para el trabajo. *step_id*es de **tipo int**y su valor predeterminado es 1.  
   
-`[ @category_name = ] 'category'` categoría del trabajo. *Category*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @category_name = ] 'category'` la categoría del trabajo. *Category*es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @category_id = ] category_id` mecanismo independiente del lenguaje para especificar una categoría de trabajo. *category_id*es de **tipo int**y su valor predeterminado es NULL.  
+`[ @category_id = ] category_id` un mecanismo independiente del idioma para especificar una categoría de trabajo. *category_id*es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @owner_login_name = ] 'login'` nombre del inicio de sesión al que pertenece el trabajo. *login*es de **tipo sysname y su**valor predeterminado es null, que se interpreta como el nombre de inicio de sesión actual. Solo los miembros del rol fijo de servidor **sysadmin** pueden establecer o cambiar el valor de **\@owner_login_name**. Si los usuarios que no son miembros del rol **sysadmin** establecen o cambian el valor de **\@owner_login_name**, se produce un error en la ejecución de este procedimiento almacenado y se devuelve un error.  
+`[ @owner_login_name = ] 'login'` el nombre del inicio de sesión al que pertenece el trabajo. *login*es de **tipo sysname y su**valor predeterminado es null, que se interpreta como el nombre de inicio de sesión actual. Solo los miembros del rol fijo de servidor **sysadmin** pueden establecer o cambiar el valor de **\@owner_login_name**. Si los usuarios que no son miembros del rol **sysadmin** establecen o cambian el valor de **\@owner_login_name**, se produce un error en la ejecución de este procedimiento almacenado y se devuelve un error.  
   
 `[ @notify_level_eventlog = ] eventlog_level` un valor que indica cuándo se debe colocar una entrada en el registro de aplicación de Microsoft Windows para este trabajo. *eventlog_level*es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|En caso de éxito|  
 |**2** (predeterminado)|En caso de error|  
 |**3**|Always|  
   
-`[ @notify_level_email = ] email_level` valor que indica cuándo se debe enviar un mensaje de correo electrónico al finalizar este trabajo. *email_level*es de **tipo int**y su valor predeterminado es **0**, que indica que nunca. *email_level*usa los mismos valores que *eventlog_level*.  
+`[ @notify_level_email = ] email_level` un valor que indica cuándo se debe enviar un mensaje de correo electrónico al finalizar este trabajo. *email_level*es de **tipo int**y su valor predeterminado es **0**, que indica que nunca. *email_level*usa los mismos valores que *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level` valor que indica cuándo se debe enviar un mensaje de red al finalizar este trabajo. *netsend_level*es de **tipo int**y su valor predeterminado es **0**, que indica que nunca. *netsend_level* usa los mismos valores que *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` un valor que indica cuándo se debe enviar un mensaje de red al finalizar este trabajo. *netsend_level*es de **tipo int**y su valor predeterminado es **0**, que indica que nunca. *netsend_level* usa los mismos valores que *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level` valor que indica cuándo se debe enviar una página al finalizar este trabajo. *page_level*es de **tipo int**y su valor predeterminado es **0**, que indica que nunca. *page_level*usa los mismos valores que *eventlog_level*.  
+`[ @notify_level_page = ] page_level` un valor que indica cuándo se debe enviar una página al finalizar este trabajo. *page_level*es de **tipo int**y su valor predeterminado es **0**, que indica que nunca. *page_level*usa los mismos valores que *eventlog_level*.  
   
 `[ @notify_email_operator_name = ] 'email_name'` el nombre de correo electrónico de la persona a la que se va a enviar un correo electrónico cuando se alcance *email_level* . *email_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 `[ @notify_netsend_operator_name = ] 'netsend_name'` el nombre del operador al que se envía el mensaje de red al finalizar este trabajo. *netsend_name*es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @notify_page_operator_name = ] 'page_name'` nombre de la persona a la que se va a paginar al finalizar este trabajo. *PAGE_NAME*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @notify_page_operator_name = ] 'page_name'` el nombre de la persona que se va a paginar al finalizar este trabajo. *PAGE_NAME*es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @delete_level = ] delete_level` valor que indica cuándo se debe eliminar el trabajo. *delete_value*es de **tipo int**y su valor predeterminado es 0, lo que significa que nunca. *delete_level*usa los mismos valores que *eventlog_level*.  
+`[ @delete_level = ] delete_level` un valor que indica cuándo se debe eliminar el trabajo. *delete_value*es de **tipo int**y su valor predeterminado es 0, lo que significa que nunca. *delete_level*usa los mismos valores que *eventlog_level*.  
   
 > [!NOTE]  
 >  Cuando *delete_level* es **3**, el trabajo se ejecuta solo una vez, independientemente de las programaciones definidas para el trabajo. Además, si un trabajo se elimina a sí mismo, también se elimina todo el historial de trabajos.  
@@ -105,17 +105,17 @@ sp_add_job [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Remarks  
  **\@originating_server** existe en **sp_add_job,** pero no aparece en argumentos. **\@originating_server** está reservado para uso interno.  
   
- Una vez que se ha ejecutado **sp_add_job** para agregar un trabajo, **sp_add_jobstep** se puede usar para agregar pasos que realizan las actividades del trabajo. **sp_add_jobschedule** se puede usar para crear la programación que utiliza el servicio del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar el trabajo. Use **sp_add_jobserver** para establecer la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde se ejecuta el trabajo y **sp_delete_jobserver** para quitar el trabajo de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Una vez que se ha ejecutado **sp_add_job** para agregar un trabajo, **sp_add_jobstep** se puede usar para agregar pasos que realizan las actividades del trabajo. **sp_add_jobschedule** se puede usar para crear la programación que utiliza el servicio del agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar el trabajo. Use **sp_add_jobserver** para establecer la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se ejecuta el trabajo y **sp_delete_jobserver** para quitar el trabajo de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Si el trabajo se va a ejecutar en uno o varios servidores de destino en un entorno multiservidor, use **sp_apply_job_to_targets** para establecer los servidores de destino o los grupos de servidores de destino para el trabajo. Para quitar trabajos de los servidores de destino o grupos de servidores de destino, use **sp_remove_job_from_targets**.  
+ Si el trabajo se va a ejecutar en uno o varios servidores de destino en un entorno multiservidor, utilice **sp_apply_job_to_targets** para establecer los servidores de destino o los grupos de servidores de destino para el trabajo. Para quitar trabajos de los servidores de destino o de los grupos de servidores de destino, use **sp_remove_job_from_targets**.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   
-## <a name="permissions"></a>Permissions  
- Para ejecutar este procedimiento almacenado, los usuarios deben ser miembros del rol fijo de servidor **sysadmin** o tener uno de los siguientes roles fijos de base de datos del agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que residen en la base de datos **msdb** :  
+## <a name="permissions"></a>Permisos  
+ Para ejecutar este procedimiento almacenado, los usuarios deben ser miembros del rol fijo de servidor **sysadmin** o tener uno de los siguientes roles fijos de base de datos del agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que residen en la base de datos **msdb** :  
   
 -   **SQLAgentUserRole**  
   
@@ -167,7 +167,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

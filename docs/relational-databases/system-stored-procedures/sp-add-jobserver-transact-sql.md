@@ -42,20 +42,20 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="arguments"></a>Argumentos  
 `[ @job_id = ] job_id` el número de identificación del trabajo. *job_id* es de tipo **uniqueidentifier**y su valor predeterminado es NULL.  
   
-`[ @job_name = ] 'job_name'` nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` el nombre del trabajo. *job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @server_name = ] 'server'` nombre del servidor en el que se va a dirigir el trabajo. el *servidor* es de tipo **nvarchar (30)** y su valor predeterminado es N ' (local) '. el *servidor* puede ser **(local)** para un servidor local o el nombre de un servidor de destino existente.  
+`[ @server_name = ] 'server'` el nombre del servidor en el que se va a dirigir el trabajo. el *servidor* es de tipo **nvarchar (30)** y su valor predeterminado es N ' (local) '. el *servidor* puede ser **(local)** para un servidor local o el nombre de un servidor de destino existente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **\@automatic_post** existe en **sp_add_jobserver**, pero no aparece en argumentos. **\@automatic_post** está reservado para uso interno.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
@@ -79,7 +79,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  En el ejemplo siguiente se asigna el trabajo `NightlyBackups` para su ejecución en el servidor local.  
   
 > [!NOTE]  
->  En este ejemplo se da por supuesto que el trabajo `NightlyBackups` ya existe.  
+>  En este ejemplo se da por supuesto que el trabajo de `NightlyBackups` ya existe.  
   
 ```  
 USE msdb ;  

@@ -1,5 +1,5 @@
 ---
-title: 'Página Especificar réplicas (Asistente para nuevo grupo de disponibilidad: Asistente para agregar réplica) | Microsoft Docs'
+title: Especificar la página de réplicas (Asistente para nuevo grupo de disponibilidad/Asistente para agregar réplica) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,7 +21,7 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 08/30/2019
 ms.locfileid: "70176046"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Asistente para nuevo grupo de disponibilidad: Asistente para agregar réplica)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Especificar la página de réplicas (Asistente para nuevo grupo de disponibilidad/Asistente para agregar réplica)
   En este tema se describen las opciones de la página **Especificar réplicas** . Esta página se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] y a [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use la página **Especificar réplicas** para especificar y configurar una o varias réplicas de disponibilidad para agregar al grupo de disponibilidad. Esta página contiene cuatro pestañas, que se presentan en la tabla siguiente. Haga clic en el nombre de una pestaña de la tabla para ir a la sección correspondiente, más adelante en este tema.  
   
 |Pestaña|Descripción breve|  
@@ -35,10 +35,10 @@ ms.locfileid: "70176046"
  **Instancia del servidor**  
  Muestra el nombre de la instancia del servidor que hospedará la réplica de disponibilidad.  
   
- Si una instancia de servidor que se usa para hospedar una réplica secundaria no aparece en la cuadrícula **Réplicas de disponibilidad** , haga clic en el botón **Agregar réplica** . Si va a configurar un grupo de disponibilidad en un entorno de ti híbrida (consulte [alta disponibilidad y recuperación ante desastres para SQL Server en Azure virtual machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), puede hacer clic en el botón **Agregar réplica de Azure** para crear máquinas virtuales con la secundaria. réplicas en Azure.  
+ Si una instancia de servidor que se usa para hospedar una réplica secundaria no aparece en la cuadrícula **Réplicas de disponibilidad** , haga clic en el botón **Agregar réplica** . Si configura un grupo de disponibilidad en un entorno de tecnologías de la información híbrido (consulte [Alta disponibilidad y recuperación ante desastres para SQL Server en Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), puede hacer clic en el botón **Agregar réplica de Azure** para crear máquinas virtuales con réplicas secundarias en Azure.  
   
  **Rol inicial**  
- Indica el rol que la nueva réplica realizará inicialmente: **Principal** o **Secundaria**.  
+ Indica el rol que la nueva réplica realizará inicialmente: **Principal** o **Secundario**.  
   
  **Conmutación por error automática (hasta 2)**  
  Active esta casilla solo si desea que esta réplica de disponibilidad sea un asociado de conmutación por error automática. Para configurar la conmutación por error automática, debe elegir esta opción para la réplica principal inicial y para una réplica secundaria. Estas dos réplicas utilizarán el modo de disponibilidad de confirmación sincrónica. Solo dos réplicas pueden admitir la conmutación por error automática.  
@@ -66,7 +66,7 @@ ms.locfileid: "70176046"
  Haga clic para agregar una réplica secundaria al grupo de disponibilidad.  
   
  **Agregar réplica de Microsoft Azure**  
- Haga clic para crear una máquina virtual de Azure que ejecute una réplica secundaria en el grupo de disponibilidad. Esta opción solo se aplica a un grupo de disponibilidad en tecnologías de la información híbridas que contienen réplicas locales. Para obtener más información, consulte [alta disponibilidad y recuperación ante desastres para SQL Server en Azure virtual machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
+ Haga clic para crear una máquina virtual de Azure que ejecute una réplica secundaria en el grupo de disponibilidad. Esta opción solo se aplica a un grupo de disponibilidad en tecnologías de la información híbridas que contienen réplicas locales. Para obtener más información, vea [Alta disponibilidad y recuperación ante desastres para SQL Server en Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx).  
   
  **Quitar réplica**  
  Haga clic para quitar la réplica secundaria seleccionada del grupo de disponibilidad.  
@@ -98,7 +98,7 @@ ms.locfileid: "70176046"
   
 -   Si cada instancia del servidor se ejecuta con una cuenta de servicio de dominio, es decir, si la columna **Cuenta de servicio de SQL Server** muestra una cuenta de servicio de dominio para cada instancia del servidor, haga clic en **Siguiente**.  
   
--   Si una instancia del servidor se ejecuta con una cuenta de servicio que no es de dominio, se debe realizar un cambio manual en la instancia del servidor antes de continuar con el asistente. En este caso, si hace clic en **Siguiente** , se muestra un cuadro de diálogo de advertencia; debe hacer clic en **No**y volverá a la pestaña**Extremos** . Permaneciendo en la página **Especificar réplicas** del asistente, realice uno de los siguientes cambios en cada instancia del servidor para que la columna **Cuenta de servicio de SQL Server** muestre una cuenta de servicio que no es de dominio; puede:  
+-   Si una instancia del servidor se ejecuta con una cuenta de servicio que no es de dominio, se debe realizar un cambio manual en la instancia del servidor antes de continuar con el asistente. En este caso, al hacer clic en **siguiente** se abre un cuadro de diálogo de advertencia; debe hacer clic en **no**, lo que le devolverá a la pestaña**extremos** . Mientras sale del asistente en la página **especificar réplicas** , realice uno de los siguientes cambios en cada instancia del servidor para la que la columna **cuenta de servicio de SQL Server** muestra una cuenta de servicio que no es de dominio, ya sea:  
   
     -   Usar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para cambiar la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a una cuenta de dominio. Para obtener más información, vea [Cambiar la cuenta de inicio del servicio para SQL Server &#40;Administrador de configuración de SQL Server&#41;](../../configure-windows/scm-services-change-the-service-startup-account.md).  
   
@@ -122,7 +122,7 @@ ms.locfileid: "70176046"
  Especifica que, de acuerdo con sus preferencias, los trabajos de copia de seguridad omitan el rol de las réplicas de disponibilidad cuando la réplica realiza copias de seguridad. Tenga en cuenta que los trabajos de copia de seguridad pueden evaluar otros factores, como la prioridad de copia de seguridad de cada réplica de disponibilidad junto con su estado operativo y de conexión.  
   
 > [!IMPORTANT]  
->  No se aplica el valor de preferencia de copia de seguridad. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para las bases de datos de un grupo de disponibilidad dado. Para más información, consulte [Secundarias activas: Copia de seguridad en las réplicas secundarias (Grupos de disponibilidad AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  No se aplica el valor de preferencia de copia de seguridad. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para las bases de datos de un grupo de disponibilidad dado. Para obtener más información, vea [secundarias activas: copia de seguridad en las réplicas secundarias (grupos de disponibilidad AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Cuadrícula de prioridades de copia de seguridad de réplica  
  Use la cuadrícula **Prioridades de copia de seguridad de réplica** para especificar sus prioridades de copia de seguridad para cada una de las réplicas del grupo de disponibilidad. Esta cuadrícula contiene las columnas siguientes:  
@@ -140,7 +140,7 @@ ms.locfileid: "70176046"
  Especifique sus preferencias para una[escucha de grupo de disponibilidad](../../listeners-client-connectivity-application-failover.md)que proporcionará un punto de conexión de cliente; puede ser:  
   
  **No cree ahora un agente de escucha del grupo de disponibilidad.**  
- Seleccione esta opción para omitir este paso. Puede crear un agente de escucha más adelante. Para obtener más información, vea [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
+ Seleccione esta opción para omitir este paso. Puede crear un agente de escucha más adelante. Para obtener más información, vea [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md).  
   
  **Crea un agente de escucha del grupo de disponibilidad.**  
  Especifique sus preferencias de agente de escucha para este grupo de disponibilidad del siguiente modo:  
@@ -209,7 +209,7 @@ ms.locfileid: "70176046"
 -   [Cree un extremo de creación de reflejo de &#40;la base de datos para grupos de disponibilidad AlwaysOn SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Información general de &#40;grupos de disponibilidad AlwaysOn SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   

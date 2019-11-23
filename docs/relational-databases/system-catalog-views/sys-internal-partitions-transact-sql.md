@@ -49,7 +49,7 @@ ms.locfileid: "72304813"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>A. Ver todos los conjuntos de filas internos de una tabla  
- En este ejemplo se devuelven todos los conjuntos de filas de almacén de columnas internos de una tabla. También puede usar hobt_id para obtener más información sobre el conjunto de filas específico.  
+ En este ejemplo se devuelven todos los conjuntos de filas de almacén de columnas internos de una tabla. También puede usar el hobt_id para obtener más información sobre el conjunto de filas específico.  
   
 ```sql  
 SELECT i.object_id, i.index_id, i.name, p.hobt_id, p.internal_object_type_id, p.internal_object_type_desc  
@@ -60,7 +60,7 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
+ [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  [Vistas de catálogo de objetos (Transact-SQL)]  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Preguntas frecuentes sobre consultas del catálogo de sistema de SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

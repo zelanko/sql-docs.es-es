@@ -33,11 +33,11 @@ ms.locfileid: "73729640"
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer los miembros de las colecciones y los atributos de los miembros.|  
 |**Crear**|El usuario puede crear miembros de colecciones y asignar valores de atributos.|  
-|**Update**|El usuario puede actualizar los miembros de las colecciones, así como los atributos y relaciones.|  
+|**Actualizar**|El usuario puede actualizar los miembros de las colecciones, así como los atributos y relaciones.|  
 |**Delete**|El usuario puede eliminar miembros de colecciones.|  
 |**Denegar**|Denegar todo el acceso a los miembros de las colecciones.|  
   
- Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan Crear, Actualizar y Eliminar, el permiso de lectura se asigna automáticamente.  
+ Los permisos de lectura, creación, actualización y eliminación se pueden combinar. Cuando se asignan los permisos de creación, actualización y eliminación, el permiso de lectura se asigna automáticamente.  
   
 ## <a name="see-also"></a>Vea también  
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   

@@ -36,7 +36,7 @@ ms.locfileid: "73775507"
   
 -   ICommand::Execute  
   
- Si la propiedad DBPROP_ACCESSORDER (en el grupo de propiedades de conjunto de filas) está establecida en cualquiera de los valores DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, el consumidor solo debe capturar una fila de datos en una llamada al método **GetNextRows** . Dado que los datos de BLOB no se almacenan en búfer. Si el valor de DBPROP_ACCESSORDER está establecido en DBPROPVAL_AO_RANDOM, el consumidor puede capturar varias filas de datos en **GetNextRows**.  
+ Si la propiedad DBPROP_ACCESSORDER (en el grupo de propiedades de conjunto de filas) está establecida en cualquiera de los valores DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, el consumidor solo debe capturar una fila de datos en una llamada al método **GetNextRows** porque los datos de BLOB no se almacenan en búfer. Si el valor de DBPROP_ACCESSORDER está establecido en DBPROPVAL_AO_RANDOM, el consumidor puede capturar varias filas de datos en **GetNextRows**.  
   
  El proveedor de OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no recupera datos grandes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que el consumidor lo solicite. El consumidor debe enlazar todos los datos cortos en un descriptor de acceso y, a continuación, utilizar uno o más descriptores de acceso temporales para recuperar los valores de datos grandes según se precise.  
   

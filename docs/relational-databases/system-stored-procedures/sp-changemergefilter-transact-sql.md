@@ -55,7 +55,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
-|Property|Valor|Descripción|  
+|propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Filtro de combinación.<br /><br /> Esta opción es necesaria para admitir los suscriptores de [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relación de registros lógicos.|  
@@ -64,7 +64,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_articlename**||Nombre del artículo de combinación.|  
 |**join_filterclause**||Cláusula de filtro.|  
 |**join_unique_key**|**true**|La combinación se hace sobre una clave exclusiva.|  
-||**false**|La combinación no se hace sobre una clave exclusiva.|  
+||**False**|La combinación no se hace sobre una clave exclusiva.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, con un valor predeterminado de **0**.  
   
@@ -81,12 +81,12 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_changemergefilter** se utiliza en la replicación de mezcla.  
   
- Para cambiar el filtro de un artículo de mezcla es preciso recrear la instantánea, si ya existe. Esto se realiza estableciendo el **@no__t 1force_invalidate_snapshot** en **1**. Asimismo, si hay suscripciones para este artículo, es necesario reinicializarlas. Esto se hace estableciendo el **@no__t 1force_reinit_subscription** en **1**.  
+ Para cambiar el filtro de un artículo de mezcla es preciso recrear la instantánea, si ya existe. Esto se realiza estableciendo el **\@force_invalidate_snapshot** en **1**. Asimismo, si hay suscripciones para este artículo, es necesario reinicializarlas. Esto se hace estableciendo el **force_reinit_subscription de\@** en **1**.  
   
- Para utilizar registros lógicos, la publicación y los artículos deben satisfacer una serie de requisitos. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+ Para utilizar registros lógicos, la publicación y los artículos deben satisfacer una serie de requisitos. Para obtener más información, vea [Group Changes to Related Rows with Logical Records](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md) (Agrupar cambios en filas relacionadas con registros lógicos).  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_changemergefilter**.  

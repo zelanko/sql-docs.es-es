@@ -103,23 +103,23 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
   
  No todos los parámetros de **sqlcmd** son necesarios en un entorno de PowerShell. Por ejemplo, Windows PowerShell da formato a toda la salida de los cmdlets, de modo que los parámetros de **sqlcmd** que especifican las opciones de formato no se implementan en **Invoke-Sqlcmd**. En la siguiente tabla se muestra la relación entre los parámetros de **Invoke-Sqlcmd** y las opciones de **sqlcmd** :  
   
-|Description|Opción sqlcmd|Parámetro de Invoke-Sqlcmd|  
+|Descripción|Opción sqlcmd|Parámetro de Invoke-Sqlcmd|  
 |-----------------|-------------------|------------------------------|  
 |Nombre de servidor e instancia.|-S|-ServerInstance|  
 |Base de datos inicial que se utilizará.|-d|-Database|  
 |Ejecutar la consulta especificada y salir.|-Q|-Query|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-p|-Password|  
-|Definición de variable.|-V|-Variable|  
+|Definición de variable.|-v|-Variable|  
 |Consultar el intervalo de tiempo de espera.|-T|-QueryTimeout|  
 |Detener la ejecución cuando se produce un error.|-b|-AbortOnError|  
 |Conexión de administrador dedicada.|-a|-DedicatedAdministratorConnection|  
-|Deshabilitar comandos interactivos, script de inicio y variables de entorno.|-X|-DisableCommands|  
-|Deshabilitar la sustitución de variables.|-X|-DisableVariables|  
+|Deshabilitar comandos interactivos, script de inicio y variables de entorno.|-x|-DisableCommands|  
+|Deshabilitar la sustitución de variables.|-x|-DisableVariables|  
 |Nivel de gravedad mínimo que se ha de notificar.|-v|-SeverityLevel|  
-|Nivel de error mínimo que se ha de notificar.|-M|-ErrorLevel|  
+|Nivel de error mínimo que se ha de notificar.|-m|-ErrorLevel|  
 |Intervalo de tiempo de espera de inicio de sesión.|-l|-ConnectionTimeout|  
-|Nombre de host.|-H|-HostName|  
+|Nombre de host.|-h|-HostName|  
 |Cambiar contraseña y salir.|-Z|-NewPassword|  
 |Archivo de entrada que contiene una consulta.|-i|-InputFile|  
 |Longitud máxima de la salida de caracteres.|-w|-MaxCharLength|  
@@ -128,25 +128,25 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Mostrar los errores.|Ningún parámetro.|-OutputSqlErrors|  
 |Mensajes de salida a stderr.|-r|Ningún parámetro.|  
 |Usar la configuración regional del cliente.|-r|Ningún parámetro.|  
-|Ejecutar la consulta especificada y continuar la ejecución.|-Q|Ningún parámetro.|  
+|Ejecutar la consulta especificada y continuar la ejecución.|-q|Ningún parámetro.|  
 |Página de códigos que se ha de utilizar para los datos de salida.|-f|Ningún parámetro.|  
 |Cambiar una contraseña y continuar la ejecución.|-Z|Ningún parámetro.|  
-|Tamaño del paquete|-A|Ningún parámetro.|  
-|Delimitador de columnas.|-S|Ningún parámetro.|  
+|Tamaño del paquete|-a|Ningún parámetro.|  
+|Delimitador de columnas.|-s|Ningún parámetro.|  
 |Controlar los encabezados de salida|-H|Ningún parámetro.|  
 |Especificar los caracteres de control.|-k|Ningún parámetro.|  
-|Ancho de presentación de longitud fija.|-y|Ningún parámetro.|  
-|Ancho de presentación de longitud variable.|-y|Ningún parámetro.|  
-|Entrada de eco.|-E|Ningún parámetro.|  
-|Habilitar los identificadores entre comillas.|-i|Ningún parámetro.|  
-|Quitar los espacios finales.|-w|Ningún parámetro.|  
-|Enumerar instancias.|-l|Ningún parámetro.|  
-|Dar formato al resultado como Unicode.|-U|Ningún parámetro.|  
-|Imprimir las estadísticas.|-P|Ningún parámetro.|  
+|Ancho de presentación de longitud fija.|-Y|Ningún parámetro.|  
+|Ancho de presentación de longitud variable.|-Y|Ningún parámetro.|  
+|Entrada de eco.|-e|Ningún parámetro.|  
+|Habilitar los identificadores entre comillas.|-I|Ningún parámetro.|  
+|Quitar los espacios finales.|-W|Ningún parámetro.|  
+|Enumerar instancias.|-L|Ningún parámetro.|  
+|Dar formato al resultado como Unicode.|-u|Ningún parámetro.|  
+|Imprimir las estadísticas.|-p|Ningún parámetro.|  
 |Fin del comando.|-c|Ningún parámetro.|  
 |Conectar con la autenticación de Windows.|-E|Ningún parámetro.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Utilizar los cmdlets del motor de base de datos](../../2014/database-engine/use-the-database-engine-cmdlets.md)   
  [sqlcmd (utilidad)](../tools/sqlcmd-utility.md)   
  [Usar la utilidad sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  

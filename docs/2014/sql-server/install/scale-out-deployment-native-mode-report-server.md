@@ -34,7 +34,7 @@ ms.locfileid: "71952424"
   
  Para configurar una implementación escalada, comience conectando una o más instancias del servidor de informes a la misma base de datos. Una vez instaladas todas las instancias, conéctese al primer servidor de informes y, a continuación, use la página Implementación escalada para unir cada instancia adicional. Solo un servidor de informes que ya se haya inicializado para utilizar una base de datos puede inicializar nodos adicionales.  
   
- Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y seleccione **Implementación escalada** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y seleccione **Implementación escalada** en el panel de navegación. Para obtener más información, vea [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opciones  
  **Nombre del SQL Server**  
@@ -46,7 +46,7 @@ ms.locfileid: "71952424"
  **Modo de servidor**  
  Muestra el modo de servidor y la base de datos. El modo de servidor es o bien nativo o bien integrado de SharePoint. Las implementaciones escaladas se admiten en ambos modos.  
   
- **Server**  
+ **Servidor**  
  Muestra el nombre del servidor de informes. En la mayor parte de los casos, éste es el nombre del equipo en el que se instala el servidor de informes.  
   
  **Instancia**  

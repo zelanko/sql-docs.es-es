@@ -25,7 +25,7 @@ ms.locfileid: "70745383"
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Muestra información acerca del distribuidor, la base de datos de distribución, [!INCLUDE[msCoName](../../includes/msconame-md.md)] el directorio de trabajo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la cuenta de usuario del agente. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones o en cualquier base de datos.  
+  Muestra información acerca del distribuidor, la base de datos de distribución, el directorio de trabajo y la cuenta de usuario del agente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones o en cualquier base de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,31 +49,31 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @distributor = ] 'distributor' OUTPUT`Es el nombre del distribuidor. Distributor es de **tipo sysname y su**valor **%** predeterminado es, que es el único valor que devuelve un conjunto de resultados.  
+`[ @distributor = ] 'distributor' OUTPUT` es el nombre del distribuidor. Distributor es de **tipo sysname y su**valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT`Es el nombre de la base de datos de distribución. *distribdb* es de **tipo sysname y su**valor **%** predeterminado es, que es el único valor que devuelve un conjunto de resultados.  
+`[ @distribdb = ] 'distribdb' OUTPUT` es el nombre de la base de datos de distribución. *distribdb* es de **tipo sysname y su**valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @directory = ] 'directory' OUTPUT`Es el directorio de trabajo. el *directorio* es de tipo **nvarchar (255)** y su **%** valor predeterminado es, que es el único valor que devuelve un conjunto de resultados.  
+`[ @directory = ] 'directory' OUTPUT` es el directorio de trabajo. el *directorio* es de tipo **nvarchar (255)** y su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @account = ] 'account' OUTPUT`Es la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de usuario de Windows. *account*es de tipo **nvarchar (255)** y su valor **%** predeterminado es, que es el único valor que devuelve un conjunto de resultados.  
+`[ @account = ] 'account' OUTPUT` es la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de usuario de Windows. *account*es de tipo **nvarchar (255)** y su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @min_distretention = ] _min_distretentionOUTPUT`Es el período mínimo de retención de la distribución, en horas. *min_distretention* es de **tipo int**y su valor predeterminado es **-1**.  
+`[ @min_distretention = ] _min_distretentionOUTPUT` es el período mínimo de retención de la distribución, en horas. *min_distretention* es de **tipo int**y su valor predeterminado es **-1**.  
   
-`[ @max_distretention = ] _max_distretentionOUTPUT`Es el período máximo de retención de distribución, en horas. *max_distretention* es de **tipo int**y su valor predeterminado es **-1**.  
+`[ @max_distretention = ] _max_distretentionOUTPUT` es el período máximo de retención de distribución, en horas. *max_distretention* es de **tipo int**y su valor predeterminado es **-1**.  
   
-`[ @history_retention = ] _history_retentionOUTPUT`Es el período de retención del historial, en horas. *history_retention* es de **tipo int**y su valor predeterminado es **-1**.  
+`[ @history_retention = ] _history_retentionOUTPUT` es el período de retención del historial, en horas. *history_retention* es de **tipo int**y su valor predeterminado es **-1**.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`Es el nombre del agente de limpieza del historial. *history_cleanupagent* es de tipo **nvarchar (100)** y su valor **%** predeterminado es, que es el único valor que devuelve un conjunto de resultados.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` es el nombre del agente de limpieza del historial. *history_cleanupagent* es de tipo **nvarchar (100)** y su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`Es el nombre del agente de limpieza de distribución. *distrib_cleanupagent* es de tipo **nvarchar (100)** y su valor **%** predeterminado es, que es el único valor que devuelve un conjunto de resultados.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` es el nombre del agente de limpieza de distribución. *distrib_cleanupagent* es de tipo **nvarchar (100)** y su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @local = ] 'local'`Indica si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe obtener valores del servidor local. *local* es de tipo **nvarchar (5)** y su valor predeterminado es NULL.  
+`[ @local = ] 'local'` es si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe obtener los valores del servidor local. *local* es de tipo **nvarchar (5)** y su valor predeterminado es NULL.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`Es el nombre del servidor que emite llamadas a procedimientos remotos. *rpcsrvname* es de **tipo sysname y su**valor **%** predeterminado es, que es el único valor que devuelve un conjunto de resultados.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` es el nombre del servidor que emite llamadas a procedimientos remotos. *rpcsrvname* es de **tipo sysname y su**valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT`Es el tipo de publicador del publicador. *publisher_type* es de **tipo sysname y su**valor **%** predeterminado es, que es el único valor que devuelve un conjunto de resultados.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` es el tipo de publicador del publicador. *publisher_type* es de **tipo sysname y su**valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -95,17 +95,17 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_helpdistributor** se utiliza en todos los tipos de replicación.  
   
- Si se especifican uno o más parámetros OUTPUT al ejecutar **sp_helpdistributor**, todos los parámetros de salida establecidos en NULL se asignan a los valores de Exit y no se devuelve ningún conjunto de resultados. Si no se especifica ningún parámetro de salida, se devuelve un conjunto de resultados.  
+ Si se especifican uno o varios parámetros de salida al ejecutar **sp_helpdistributor**, se asignan valores a todos los parámetros de salida establecidos en NULL y no se devuelve ningún conjunto de resultados. Si no se especifica ningún parámetro de salida, se devuelve un conjunto de resultados.  
   
 ## <a name="permissions"></a>Permisos  
  Las siguientes columnas del conjunto de resultados o parámetros de salida se devuelven a los miembros del rol fijo de servidor **sysadmin** en el publicador y el rol fijo de base de datos **db_owner** en la base de datos de publicación:  
   
 |Columna del conjunto de resultados|Parámetro de salida|  
 |-----------------------|----------------------|  
-|account|**\@Código**|  
+|account|**\@cuenta**|  
 |min distrib retention|**\@min_distretention**|  
 |max distrib retention|**\@max_distretention**|  
 |history retention|**\@history_retention**|  

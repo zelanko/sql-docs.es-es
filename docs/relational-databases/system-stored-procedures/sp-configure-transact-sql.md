@@ -84,8 +84,8 @@ RECONFIGURE
 |**config_value**|**int**|Valor en el que se estableció la opción de configuración mediante **sp_configure** (valor en sys. Configurations **. Value**). Para obtener más información sobre estas opciones, vea [ &#40;opciones de configuración&#41; del servidor SQL Server y sys. Configurations](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [de &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Valor que se está ejecutando actualmente de la opción de configuración (valor en sys. Configurations **. value_in_use**).<br /><br /> Para obtener más información, vea [Sys. &#40;Configurations&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Comentarios  
- Utilice **sp_configure** para mostrar o cambiar la configuración de nivel de servidor. Para cambiar la configuración de la base de datos, utilice ALTER DATABASE. Para cambiar la configuración que afecta solo a la sesión de usuario actual, utilice la instrucción SET.  
+## <a name="remarks"></a>Remarks  
+ Use **sp_configure** para mostrar o cambiar la configuración de nivel de servidor. Para cambiar la configuración de la base de datos, utilice ALTER DATABASE. Para cambiar la configuración que afecta solo a la sesión de usuario actual, utilice la instrucción SET.  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -101,12 +101,12 @@ RECONFIGURE
   
  La instrucción RECONFIGURE actualiza algunas opciones dinámicamente; para otras opciones es necesario detener y reiniciar el servidor. Por ejemplo, las opciones de memoria de servidor **min** Server Memory y **Max Server Memory** se actualizan dinámicamente en el [!INCLUDE[ssDE](../../includes/ssde-md.md)]; por lo tanto, puede cambiarlos sin necesidad de reiniciar el servidor. Por el contrario, para volver a configurar el valor de ejecución de la opción de **factor de relleno** , es necesario reiniciar el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- Después de ejecutar reconfigure en una opción de configuración, puede ver si la opción se ha actualizado dinámicamente ejecutando **sp_configure '***nombredeopción***'** . Los valores de las columnas **run_value** y **config_value** deben coincidir para una opción actualizada dinámicamente. También puede comprobar qué opciones son dinámicas examinando la columna **is_dynamic** de la vista de catálogo **Sys.** Configurations.  
+ Después de ejecutar reconfigure en una opción de configuración, puede ver si la opción se ha actualizado dinámicamente ejecutando **sp_configure "***option_name***"** . Los valores de las columnas **run_value** y **config_value** deben coincidir para una opción actualizada dinámicamente. También puede comprobar qué opciones son dinámicas examinando la columna **is_dynamic** de la vista de catálogo **Sys.** Configurations.  
  
  El cambio también se escribe en el registro de errores de SQL Server.
   
 > [!NOTE]  
->  Si un *valor* especificado es demasiado alto para una opción, la columna **run_value** refleja el hecho de que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha establecido de forma predeterminada en la memoria dinámica en lugar de usar una configuración que no es válida.  
+>  Si un *valor* especificado es demasiado alto para una opción, la columna **run_value** refleja el hecho de que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ha establecido de forma predeterminada en memoria dinámica en lugar de usar un valor que no es válido.  
   
  Para obtener más información, vea [REconfigure &#40;Transact&#41;-SQL](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
@@ -138,7 +138,7 @@ RECONFIGURE;
 EXEC sp_configure;  
 ```  
   
-### <a name="b-changing-a-configuration-option"></a>B. Cambiar una opción de configuración  
+### <a name="b-changing-a-configuration-option"></a>b. Cambiar una opción de configuración  
  En el siguiente ejemplo se establece el `recovery interval` (intervalo de recuperación) del sistema en `3` minutos.  
   
 ```sql  
@@ -157,7 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- El resultado devuelve el nombre de opción seguido por los valores mínimo y máximo de la opción. **Config_value** es el valor que [!INCLUDE[ssDW](../../includes/ssdw-md.md)] usará cuando se complete la reconfiguración. El valor **run_value** es el valor que se está usando actualmente. Los valores **config_value** y **run_value** son normalmente los mismos, a menos que el valor se esté modificando.  
+ El resultado devuelve el nombre de opción seguido por los valores mínimo y máximo de la opción. El **config_value** es el valor que [!INCLUDE[ssDW](../../includes/ssdw-md.md)] utilizará cuando se complete la reconfiguración. El valor **run_value** es el valor que se está usando actualmente. Los valores **config_value** y **run_value** son normalmente los mismos, a menos que el valor se esté modificando.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. Lista de las opciones de configuración para un nombre de configuración  
   

@@ -33,7 +33,7 @@ ms.locfileid: "72797929"
   
 -   **Before you begin:**  [Security](#Security)  
   
--   **Para crear un punto de conexión de creación de reflejo de la base de datos con:** [Transact-SQL](#TsqlProcedure)  
+-   **Para crear un punto de conexión de creación de reflejo de la base de datos con:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
@@ -44,7 +44,7 @@ ms.locfileid: "72797929"
 >  El algoritmo RC4 está obsoleto. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.  
   
 ####  <a name="Permissions"></a> Permisos  
- Requiere permiso CREATE ENDPOINT o pertenecer al rol fijo de servidor sysadmin. Para obtener más información, vea [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
+ Requiere permiso CREATE ENDPOINT o pertenecer al rol fijo de servidor sysadmin. Para obtener más información, vea [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -110,7 +110,7 @@ ms.locfileid: "72797929"
   
     -   ENCRYPTION se establece en REQUIRED de forma predeterminada. Esto significa que todas las conexiones con este punto final deben usar cifrado. No obstante, puede deshabilitar el cifrado o hacer que sea opcional en un extremo. Las alternativas son las siguientes:  
   
-        |Value|Definición|  
+        |Valor|Definición|  
         |-----------|----------------|  
         |DISABLED|Especifica que los datos enviados a través de una conexión no están cifrados.|  
         |SUPPORTED|Especifica que los datos están cifrados solo si el extremo opuesto especifica SUPPORTED o REQUIRED.|  
@@ -185,7 +185,7 @@ GO
   
 -   [Usar certificados para un punto de conexión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [Permitir que un punto de conexión de creación de reflejo de la base de datos use certificados para las conexiones salientes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+    -   [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
     -   [Permitir que un punto de conexión de creación de reflejo de la base de datos use certificados para las conexiones entrantes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
@@ -197,7 +197,7 @@ GO
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   

@@ -48,7 +48,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  **sp_reinitpullsubscription** se utiliza en la replicación transaccional.  
   
  **sp_reinitpullsubscription** no se admite para la replicación transaccional punto a punto.  

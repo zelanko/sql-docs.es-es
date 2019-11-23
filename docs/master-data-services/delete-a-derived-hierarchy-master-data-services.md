@@ -29,7 +29,7 @@ ms.locfileid: "73728368"
 > [!NOTE]  
 >  Eliminar una jerarquía derivada no tiene ningún efecto en las relaciones de atributo en las que se basas la jerarquía.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  

@@ -47,15 +47,15 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @proxy_id = ] id` el número de identificación del proxy que se va a cambiar. *Proxy_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @proxy_id = ] id` el número de identificación del proxy del proxy que se va a cambiar. La *proxy_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` nombre del proxy que se va a cambiar. *Proxy_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @proxy_name = ] 'proxy_name'` el nombre del proxy que se va a cambiar. La *proxy_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @credential_name = ] 'credential_name'` el nombre de la nueva credencial para el proxy. *Credential_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar *credential_name* o *credential_id* .  
+`[ @credential_name = ] 'credential_name'` el nombre de la nueva credencial para el proxy. La *credential_name* es de **tipo sysname y su**valor predeterminado es NULL. Se puede especificar *credential_name* o *credential_id* .  
   
-`[ @credential_id = ] credential_id` el número de identificación de la nueva credencial para el proxy. *Credential_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar *credential_name* o *credential_id* .  
+`[ @credential_id = ] credential_id` el número de identificación de la nueva credencial para el proxy. La *credential_id* es de **tipo int**y su valor predeterminado es NULL. Se puede especificar *credential_name* o *credential_id* .  
   
-`[ @new_name = ] 'new_name'` nombre nuevo del proxy. *New_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se proporciona, el procedimiento cambia el nombre del proxy a *new_name*. Si este argumento es NULL, el nombre del proxy no varía.  
+`[ @new_name = ] 'new_name'` el nuevo nombre del proxy. La *new_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se proporciona, el procedimiento cambia el nombre del proxy a *new_name*. Si este argumento es NULL, el nombre del proxy no varía.  
   
 `[ @enabled = ] is_enabled` es si el proxy está habilitado. La marca *is_enabled* es **tinyint**y su valor predeterminado es NULL. Cuando *is_enabled* es **0**, el proxy no está habilitado y no se puede usar en un paso de trabajo. Si este argumento es NULL, el estado del proxy no varía.  
   
@@ -64,7 +64,7 @@ sp_update_proxy
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  Se debe especificar **\@proxy_name** o **\@proxy_id** . Si se especifican los dos argumentos, deben hacer referencia al mismo proxy; de lo contrario, el procedimiento almacenado genera un error.  
   
  Se debe especificar **\@credential_name** o **\@credential_id** para cambiar la credencial para el proxy. Si se especifican los dos argumentos, deben hacer referencia a la misma credencial; de lo contrario, el procedimiento almacenado genera un error.  
@@ -88,8 +88,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Agente SQL Server procedimientos &#40;almacenados de Transact-&#41;SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [Implementación de Agente SQL Server de seguridad](../../ssms/agent/implement-sql-server-agent-security.md)   
+ [Agente SQL Server procedimientos &#40;almacenados de Transact-&#41; SQL](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Implementar Agente SQL Server seguridad](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   

@@ -46,7 +46,7 @@ ms.locfileid: "73882116"
   
 2.  Para los artículos **logbased manualboth** y **logbased manualfilter** , ejecute [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) a fin de generar el procedimiento almacenado de filtrado para un artículo filtrado horizontalmente. Para más información, consulte [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-3.  Para los artículos **logbased manualboth**, **logbased manualview**y **logbased manualfilter** , ejecute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) a fin de generar la vista que define el artículo filtrado verticalmente. Para más información, consulte [definir y modificar un filtro de columna](define-and-modify-a-column-filter.md).  
+3.  Para los artículos **logbased manualboth**, **logbased manualview**y **logbased manualfilter** , ejecute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) a fin de generar la vista que define el artículo filtrado verticalmente. Para más información, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>Para publicar una vista o un artículo de vista indizada en una publicación transaccional o de instantáneas  
   
@@ -68,7 +68,7 @@ ms.locfileid: "73882116"
   
 2.  Para los artículos **logbased manualboth** y **logbased manualfilter** , ejecute [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) a fin de generar el procedimiento almacenado de filtrado para un artículo filtrado horizontalmente. Para más información, consulte [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-3.  Para los artículos **logbased manualboth**, **logbased manualview**y **logbased manualfilter** , ejecute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) a fin de generar la vista que define el artículo filtrado verticalmente. Para más información, consulte [definir y modificar un filtro de columna](define-and-modify-a-column-filter.md).  
+3.  Para los artículos **logbased manualboth**, **logbased manualview**y **logbased manualfilter** , ejecute [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) a fin de generar la vista que define el artículo filtrado verticalmente. Para más información, consulte [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
 ### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>Para publicar un procedimiento almacenado, una ejecución de procedimiento almacenado o un artículo de función definida por el usuario en una publicación transaccional o de instantáneas  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73882116"
      Esto define un nuevo artículo para la publicación. Para obtener más información, consulte [Define an Article](define-an-article.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Conceptos sobre los procedimientos almacenados del sistema de replicación](../concepts/replication-system-stored-procedures-concepts.md)   
  [Publicar datos y objetos de base de datos](publish-data-and-database-objects.md)  
   
   

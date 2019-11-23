@@ -30,13 +30,13 @@ ms.locfileid: "70155543"
 # <a name="sysdatabase_usage-azure-sql-database"></a>sys.database_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **Tenga en cuenta Esto solo se aplica a Azure SQL Database v11.**  
+  **Nota: esto solo se aplica a Azure SQL Database v11.**  
   
- Muestra el número, el tipo y la duración de las bases de datos [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el servidor.  
+ Muestra el número, el tipo y la duración de las bases de datos en el servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  La vista **Sys. database_usage** contiene las columnas siguientes.  
   
-|Nombre de la columna|Descripción|  
+|Column Name|Descripción|  
 |-----------------|-----------------|  
 |time|Fecha en que se produjeron los eventos de uso.|  
 |sku|El tipo de nivel de servicio para la base de datos: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
@@ -45,11 +45,11 @@ ms.locfileid: "70155543"
 ## <a name="permissions"></a>Permisos  
  El acceso de solo lectura a esta vista está disponible para todos los usuarios con permisos para conectarse a la base de datos **maestra** .  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
  La vista **Sys. database_usage** devuelve una fila por cada día de la suscripción.  
   
 ## <a name="see-also"></a>Vea también  
- [Detalles de precios de SQL Database](https://go.microsoft.com/fwlink/?LinkID=394978)   
+ [SQL Database detalles de precios](https://go.microsoft.com/fwlink/?LinkID=394978)   
  [Cuentas y facturación en Azure SQL Database](https://msdn.microsoft.com/library/windowsazure/ee621788.aspx)  
   
   

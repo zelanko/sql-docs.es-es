@@ -39,17 +39,17 @@ ms.locfileid: "73843870"
 |**start_time**|**datetime2**|Hora UTC que indica el inicio del intervalo de informes de 15 segundos.|  
 |**end_time**|**datetime2**|Hora UTC que indica el final del intervalo de informes de 15 segundos.|  
 |**elastic_pool_name**|**nvarchar(128)**|Nombre del grupo de bases de datos elásticas.|  
-|**avg_cpu_percent**|**decimal (5, 2)**|Uso de proceso promedio en porcentaje del límite del grupo.|  
-|**avg_data_io_percent**|**decimal (5, 2)**|Uso de e/s promedio en porcentaje según el límite del grupo.|  
-|**avg_log_write_percent**|**decimal (5, 2)**|Uso de recursos de escritura promedio en porcentaje del límite del grupo.|  
-|**avg_storage_percent**|**decimal (5, 2)**|Uso de almacenamiento medio en porcentaje del límite de almacenamiento del grupo.|  
-|**max_worker_percent**|**decimal (5, 2)**|Número máximo de trabajos simultáneos (solicitudes) en porcentaje según el límite del grupo.|  
-|**max_session_percent**|**decimal (5, 2)**|Número máximo de sesiones simultáneas en porcentaje según el límite del grupo.|  
+|**avg_cpu_percent**|**decimal(5,2)**|Uso de proceso promedio en porcentaje del límite del grupo.|  
+|**avg_data_io_percent**|**decimal(5,2)**|Uso de e/s promedio en porcentaje según el límite del grupo.|  
+|**avg_log_write_percent**|**decimal(5,2)**|Uso de recursos de escritura promedio en porcentaje del límite del grupo.|  
+|**avg_storage_percent**|**decimal(5,2)**|Uso de almacenamiento medio en porcentaje del límite de almacenamiento del grupo.|  
+|**max_worker_percent**|**decimal(5,2)**|Número máximo de trabajos simultáneos (solicitudes) en porcentaje según el límite del grupo.|  
+|**max_session_percent**|**decimal(5,2)**|Número máximo de sesiones simultáneas en porcentaje según el límite del grupo.|  
 |**elastic_pool_dtu_limit**|**int**|Configuración actual de DTU de grupo elástico máximo para este grupo elástico durante este intervalo.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Configuración máxima del límite de almacenamiento del grupo elástico actual para este grupo elástico en megabytes durante este intervalo.|
-|**avg_allocated_storage_percent**|**decimal (5, 2)**|El porcentaje de espacio de datos asignado por todas las bases de datos del grupo elástico.  Esta es la proporción de espacio de datos asignado al tamaño máximo de los datos para el grupo elástico.  Para obtener más información, vea [Administración del espacio de archivo en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|  
+|**avg_allocated_storage_percent**|**decimal(5,2)**|El porcentaje de espacio de datos asignado por todas las bases de datos del grupo elástico.  Esta es la proporción de espacio de datos asignado al tamaño máximo de los datos para el grupo elástico.  Para obtener más información, vea [Administración del espacio de archivo en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|  
   
-## <a name="remarks"></a>Comentarios
+## <a name="remarks"></a>Remarks
 
  Esta vista existe en la base de datos maestra del servidor de SQL Database. Debe estar conectado a la base de datos maestra para consultar **Sys. elastic_pool_resource_stats**.  
   

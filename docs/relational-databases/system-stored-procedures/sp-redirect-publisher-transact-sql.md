@@ -40,9 +40,9 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @original_publisher = ] 'original_publisher'` nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicó originalmente la base de datos. *original_publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @original_publisher = ] 'original_publisher'` el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicó originalmente la base de datos. *original_publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher_db = ] 'publisher_db'` nombre de la base de datos que se está publicando. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` el nombre de la base de datos que se está publicando. *publisher_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 `[ @redirected_publisher = ] 'redirected_publisher'` el nombre del agente de escucha del grupo de disponibilidad asociado al grupo de disponibilidad que será el nuevo publicador. *redirected_publisher* es de **tipo sysname**y no tiene ningún valor predeterminado. Cuando el agente de escucha de grupo de disponibilidad está configurado en un puerto que no es el predeterminado, especifique el número de puerto junto con el nombre del agente de escucha, como `'Listenername,51433'`  
   
@@ -50,15 +50,15 @@ sp_redirect_publisher
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- None  
+ Ninguno  
   
-## <a name="remarks"></a>Comentarios  
- **sp_redirect_publisher** se usa para permitir que un publicador de replicación se redirija a la réplica principal actual de un grupo de disponibilidad de Always on mediante la Asociación del par de publicador y base de datos con el agente de escucha de un grupo de disponibilidad. Ejecute **sp_redirect_publisher** una vez que se haya configurado el agente de escucha del AG para el grupo de disponibilidad que contiene la base de datos publicada.  
+## <a name="remarks"></a>Remarks  
+ **sp_redirect_publisher** se usa para permitir que un publicador de replicación se redirija a la réplica principal actual de un grupo de disponibilidad de Always on mediante la Asociación del par de publicador y base de datos con el agente de escucha de un grupo de disponibilidad. Ejecute **sp_redirect_publisher** después de configurar el agente de escucha del AG para el grupo de disponibilidad que contiene la base de datos publicada.  
   
- Si la base de datos de publicación del publicador original se quita de un grupo de disponibilidad en la réplica principal, ejecute **sp_redirect_publisher** sin especificar un valor para el parámetro *\@redirected_publisher* para quitar el redirección del par de publicador y base de datos. Para obtener más información sobre cómo redirigir el publicador cuando, vea [mantener una base de &#40;datos&#41;de publicación AlwaysOn SQL Server](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Si la base de datos de publicación del publicador original se quita de un grupo de disponibilidad en la réplica principal, ejecute **sp_redirect_publisher** sin especificar un valor para el parámetro *\@redirected_publisher* para quitar el redireccionamiento del par de publicador y base de datos. Para obtener más información sobre cómo redirigir el publicador cuando, vea [mantener una base de &#40;datos&#41;de publicación AlwaysOn SQL Server](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Permisos  
- El autor de la llamada debe ser miembro del rol fijo de servidor **sysadmin** , del rol fijo de base de datos **db_owner** para la base de datos de distribución o de un miembro de una lista de acceso a la publicación para una publicación definida asociada a la base de datos del publicador.  
+ El autor de la llamada debe ser miembro del rol fijo de servidor **sysadmin** , el rol fijo de base de datos **db_owner** para la base de datos de distribución, o un miembro de una lista de acceso a la publicación para una publicación definida asociada a la base de datos del publicador.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

@@ -56,7 +56,7 @@ ms.locfileid: "71952492"
  [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
  Explica cómo utilizar y administrar las claves de cifrado que se utilizan al almacenar datos confidenciales.  
   
- [Administración de un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+ [Administrar un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
  Proporciona instrucciones paso a paso para la realización de tareas comunes.  
   
  [Administrador de configuración de Reporting Services temas &#40;de la ayuda F1 modo nativo de SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  

@@ -57,15 +57,15 @@ ms.locfileid: "72783124"
 ###  <a name="Security"></a> Seguridad  
   
 ####  <a name="Permissions"></a> Permisos  
- Para obtener más información, vea [Roles de nivel de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).  
+ Para obtener más información, consulte [Server-Level Roles](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
  De forma predeterminada, los permisos Execute en `sp_configure` sin parámetros o solo se conceden a todos los usuarios al primer parámetro. Para ejecutar `sp_configure` con ambos parámetros para cambiar una opción de configuración o ejecutar la instrucción RECONFIGURE, se debe conceder al usuario el permiso de nivel de servidor ALTER SETTINGs. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>Para ver o cambiar las propiedades del servidor  
   
-1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y luego haga clic en **Propiedades**.  
+1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y, luego, haga clic en **Propiedades**.  
   
 2.  En el cuadro de diálogo **Propiedades del servidor** , haga clic en una página para ver o cambiar la información de servidor acerca de dicha página. Algunas propiedades son de solo lectura.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "72783124"
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Para ver las propiedades del servidor mediante la función integrada SERVERPROPERTY  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Desde la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "72783124"
   
 #### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>Para ver las propiedades del servidor mediante la vista de catálogo sys.servers  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Desde la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72783124"
   
 #### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>Para ver las propiedades del servidor mediante la vista de catálogo sys.configurations  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Desde la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "72783124"
   
 #### <a name="to-change-a-server-property-by-using-sp_configure"></a>Para cambiar una propiedad del servidor mediante sp_configure  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Desde la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -144,7 +144,7 @@ GO
   
 #### <a name="to-view-or-change-server-properties"></a>Para ver o cambiar las propiedades del servidor  
   
-1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, haga clic en **Administrador de configuración de SQL Server**.  
+1.  En el menú **Inicio** , elija **Todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y luego haga clic en **Administrador de configuración de SQL Server**.  
   
 2.  En **Administrador de configuración de SQL Server**, haga clic en **Servicios de SQL Server**.  
   
@@ -155,7 +155,7 @@ GO
 ##  <a name="FollowUp"></a> Seguimiento: después de cambiar propiedades del servidor  
  Para algunas propiedades, puede que sea necesario reiniciar el servidor para que el cambio surta efecto.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [Instrucciones SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   

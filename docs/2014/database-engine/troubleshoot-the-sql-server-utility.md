@@ -116,7 +116,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     2.  Haga clic con el botón derecho en **UtilityAgentProxyCredential_\<GUID >** y seleccione **propiedades**.  
   
-    3.  En el cuadro de diálogo Propiedades de credenciales, actualice las credenciales según sea necesario para la credencial **UtilityAgentProxyCredential_\<GUID >** .  
+    3.  En el cuadro de diálogo Propiedades de credenciales, actualice las credenciales según sea necesario para el **UtilityAgentProxyCredential_\<GUID >** credencial.  
   
     4.  Haga clic en **Aceptar** para confirmar el cambio.  
   
@@ -164,6 +164,6 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     5.  Si la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ya se ha inscrito con el UCP antes de agregar al usuario a este grupo, reinicie el servicio del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Solucionar problemas de estado de recursos de SQL Server &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

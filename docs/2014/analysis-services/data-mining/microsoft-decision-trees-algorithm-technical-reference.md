@@ -62,7 +62,7 @@ ms.locfileid: "73637527"
 ### <a name="scoring-methods-and-feature-selection"></a>Métodos de puntuación y selección de características  
  El algoritmo de árboles de decisión de Microsoft proporciona tres fórmulas para puntuar la obtención de información: la entropía de Shannon, la red bayesiana con prioridad K2 y la red bayesiana con una distribución Dirichlet uniforme de prioridades. Los tres métodos están bien consolidados en el campo de la minería de datos. Se recomienda que experimente con parámetros y métodos de puntuación diferentes para determinar cuáles son los que proporcionan mejores resultados. Para obtener más información acerca de estos métodos de puntuación, vea [Feature Selection](../../sql-server/install/feature-selection.md).  
   
- Todos los algoritmos de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizan automáticamente la selección de características para mejorar el análisis y reducir la carga de procesamiento. El método usado para la selección de características depende del algoritmo empleado para generar el modelo. Los parámetros del algoritmo que controlan la selección de características para el modelo de árboles de decisión son MAXIMUM_INPUT_ATTRIBUTES y MAXIMUM_OUTPUT.  
+ Todos los algoritmos de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usan automáticamente la selección de características para mejorar el análisis y reducir la carga de procesamiento. El método usado para la selección de características depende del algoritmo empleado para generar el modelo. Los parámetros del algoritmo que controlan la selección de características para el modelo de árboles de decisión son MAXIMUM_INPUT_ATTRIBUTES y MAXIMUM_OUTPUT.  
   
 |Algoritmo|Método de análisis|Comentarios|  
 |---------------|------------------------|--------------|  
@@ -101,7 +101,7 @@ ms.locfileid: "73637527"
 > [!NOTE]  
 >  El algoritmo de árboles de decisión de Microsoft está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; sin embargo, algunos parámetros avanzados para personalizar el comportamiento de dicho algoritmo pueden usarse exclusivamente en ciertas ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
-### <a name="setting-algorithm-parameters"></a>Establecer parámetros del algoritmo  
+### <a name="setting-algorithm-parameters"></a>Establecer los parámetros del algoritmo  
  En la tabla siguiente se describen los parámetros que puede usar con el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  *COMPLEXITY_PENALTY*  
@@ -149,7 +149,7 @@ ms.locfileid: "73637527"
  *SCORE_METHOD*  
  Determina el método usado para calcular el resultado de la división. Las siguientes opciones están disponibles:  
   
-|ID|Nombre|  
+|ID|NOMBRE|  
 |--------|----------|  
 |1|Entropía|  
 |3|Bayesiano con prioridad K2|  
@@ -162,7 +162,7 @@ ms.locfileid: "73637527"
  *SPLIT_METHOD*  
  Determina el método usado para dividir el nodo. Las siguientes opciones están disponibles:  
   
-|ID|Nombre|  
+|ID|NOMBRE|  
 |--------|----------|  
 |1|**Binary:** indica que, independientemente del número real de valores para el atributo, el árbol se debería dividir en dos bifurcaciones.|  
 |2|**Complete:** indica que el árbol puede crear tantas divisiones como valores de atributo existan.|  
@@ -170,7 +170,7 @@ ms.locfileid: "73637527"
   
  El valor predeterminado es 3.  
   
-### <a name="modeling-flags"></a>Marcas de modelado  
+### <a name="modeling-flags"></a>Marcadores de modelado  
  El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las marcas de modelado siguientes. Al crear la estructura o el modelo de minería de datos, se definen las marcas de modelado que especifican cómo se tratan los valores de cada columna durante el análisis. Para obtener más información, vea [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md).  
   
 |Marca de modelado|Descripción|  
@@ -191,7 +191,7 @@ ms.locfileid: "73637527"
  Un modelo de árbol de decisión debe contener una columna de clave, columnas de entrada y al menos una columna de predicción.  
   
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
- El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para obtener más información sobre lo que significan los tipos de contenido cuando se usan en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
+ El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se incluyen en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md).  
   
 |Columna|Tipos de contenido|  
 |------------|-------------------|  
@@ -202,7 +202,7 @@ ms.locfileid: "73637527"
 >  Se admiten los tipos de contenido cíclicos y ordenados, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm.md)   
+ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
  [Ejemplos de consultas de modelos de árboles de decisión](decision-trees-model-query-examples.md)   
  [Contenido del modelo de minería de datos para los modelos de árboles de decisión &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   

@@ -33,7 +33,7 @@ ms.locfileid: "72305264"
   Configura los valores básicos de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para una base de datos específica o para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Se puede llamar a este procedimiento por su cuenta para crear una configuración básica de copia de seguridad administrada. Sin embargo, si tiene previsto agregar características avanzadas o una programación personalizada, configure primero esos valores con [managed_backup. &#40;sp_backup_config_advanced Transact-&#41; SQL](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) y [managed_backup. &#40; sp_backup_config_schedule Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) antes de habilitar la copia de seguridad administrada con este procedimiento.  
+>  Se puede llamar a este procedimiento por su cuenta para crear una configuración básica de copia de seguridad administrada. Sin embargo, si tiene previsto agregar características avanzadas o una programación personalizada, configure primero esos valores con [managed_backup. &#40;sp_backup_config_advanced Transact-&#41; SQL](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) y [managed_backup. &#40;sp_backup_config_schedule Transact-&#41; SQL](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) antes de habilitar la copia de seguridad administrada con este procedimiento.  
    
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,19 +53,19 @@ EXEC managed_backup.sp_backup_config_basic
  Nombre de la base de datos para habilitar la copia de seguridad administrada en una base de datos específica.  
   
  @container_url  
- Una dirección URL que indica la ubicación de la copia de seguridad. Cuando @credential_name es NULL, esta dirección URL es una dirección URL de firma de acceso compartido (SAS) para un contenedor de blobs en Azure Storage y las copias de seguridad usan la nueva funcionalidad de copia de seguridad para bloquear BLOB. Para obtener más información, consulte [Descripción de SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Cuando se especifica @credential_name, se trata de una dirección URL de cuenta de almacenamiento y las copias de seguridad usan la funcionalidad de BLOB de copia de seguridad en página en desuso.  
+ Una dirección URL que indica la ubicación de la copia de seguridad. Cuando @credential_name es NULL, esta dirección URL es una dirección URL de firma de acceso compartido (SAS) a un contenedor de blobs en Azure Storage y las copias de seguridad usan la nueva funcionalidad de copia de seguridad para bloquear BLOB. Para obtener más información, consulte [Descripción de SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Cuando se especifica @credential_name, se trata de una dirección URL de cuenta de almacenamiento y las copias de seguridad usan la funcionalidad de BLOB de copia de seguridad en página en desuso.  
   
 > [!NOTE]  
 >  En este momento solo se admite una dirección URL de SAS para este parámetro.  
   
  @retention_days  
- El período de retención en días de los archivos de copia de seguridad. El @storage_url es INT. Este es un parámetro obligatorio al configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al cambiar la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], este parámetro es opcional. Si no se especifica, los valores de configuración existentes se conservan.  
+ El período de retención en días de los archivos de copia de seguridad. La @storage_url es de tipo INT. Este es un parámetro obligatorio al configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al cambiar la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], este parámetro es opcional. Si no se especifica, los valores de configuración existentes se conservan.  
   
  @credential_name  
  El nombre de la credencial SQL que se usa para autenticar en la cuenta de almacenamiento de Azure. @credentail_name es de **tipo SYSNAME**. Cuando se especifica, la copia de seguridad se almacena en un BLOB en páginas. Si este parámetro es NULL, la copia de seguridad se almacenará como un BLOB en bloques. El BLOB de copia de seguridad en página está en desuso, por lo que es preferible usar la nueva funcionalidad de copia de seguridad de blobs en bloques. Cuando se utiliza para cambiar la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], este parámetro es opcional. Si no se especifica, se conservan los valores de configuración existentes.  
   
 > [!WARNING]
->  En este momento no se admite el parámetro **\@credential_name** . Solo se admite la copia de seguridad en blobs en bloques, lo que requiere que este parámetro sea NULL.  
+>  En este momento no se admite el parámetro **credential_name de\@** . Solo se admite la copia de seguridad en blobs en bloques, lo que requiere que este parámetro sea NULL.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto) o 1 (error)  
@@ -73,7 +73,7 @@ EXEC managed_backup.sp_backup_config_basic
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol de base de datos **db_backupoperator** , con permisos **ALTER any Credential** y permisos **Execute** en el procedimiento almacenado **sp_delete_backuphistory** .  
+ Requiere la pertenencia al rol de base de datos **db_backupoperator** , con permisos **ALTER any Credential** y permisos **Execute** en **sp_delete_backuphistory** procedimiento almacenado.  
   
 ## <a name="examples"></a>Ejemplos  
  Puede crear el contenedor de la cuenta de almacenamiento y la dirección URL de SAS mediante los comandos Azure PowerShell más recientes. En el ejemplo siguiente se crea un nuevo contenedor, alcontainer, en la cuenta de almacenamiento mystorageaccount y, a continuación, se obtiene una dirección URL de SAS con permisos completos.  

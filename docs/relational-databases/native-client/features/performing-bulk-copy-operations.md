@@ -114,7 +114,7 @@ ms.locfileid: "73788239"
 ## <a name="see-also"></a>Vea también  
  [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Propiedades del origen de datos &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
- [Importar y exportar datos en bloque &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
+ [Importar y exportar datos de forma masiva &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
  [ &#40;OLE DB&#41; IBCPSession](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Optimizar el rendimiento de una importación en bloque](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  

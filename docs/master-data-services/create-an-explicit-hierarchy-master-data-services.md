@@ -28,7 +28,7 @@ ms.locfileid: "73729518"
   
  Después de crear una jerarquía explícita, puede agregarle miembros en el área funcional de **Explorador** .  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -58,17 +58,17 @@ ms.locfileid: "73729518"
 ## <a name="grid-columns"></a>Columnas de la cuadrícula  
  Por cada jerarquía explícita creada, se agrega una fila con siete columnas a la cuadrícula. A continuación, se ofrece una descripción de las columnas.  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |Estado|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icon para actualizar el estado ")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icon para estado de error ")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icon para el estado correcto ")|  
-|Nombre|Nombre de jerarquía explícita.|  
+|NOMBRE|Nombre de jerarquía explícita.|  
 |Obligatorio|Especifica si la jerarquía explícita es obligatoria.|  
 |Creado por|Nombre del usuario que creó la jerarquía explícita.|  
 |Creada el|Fecha y hora en que se creó la jerarquía explícita.|  
 |Actualizada por|Nombre del usuario que realizó la última actualización de la jerarquía explícita.|  
 |Actualizada el|Fecha y hora en que se actualizó la jerarquía explícita por última vez.|  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Crear un miembro consolidado &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)  
   

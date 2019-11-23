@@ -40,7 +40,7 @@ ms.locfileid: "71163929"
 |**minor_id**|**int**|Id. secundaria del elemento sobre el que existe el permiso, interpretado según la clase.|  
 |**grantee_principal_id**|**int**|Id. de la entidad de seguridad de servidor a la que se conceden los permisos.|  
 |**grantor_principal_id**|**int**|Id. de la entidad de seguridad de servidor del que concede esos permisos.|  
-|**Tipo**|**char(4)**|Tipo de permiso de servidor. Para obtener una lista de los tipos de permisos, vea la tabla siguiente.|  
+|**tipo**|**char(4)**|Tipo de permiso de servidor. Para obtener una lista de los tipos de permisos, vea la tabla siguiente.|  
 |**permission_name**|**nvarchar(128)**|Nombre del permiso.|  
 |**state**|**char(1)**|Estado del permiso:<br /><br /> D = Denegar<br /><br /> R = Revocar<br /><br /> G = Conceder<br /><br /> W = Conceder con la opción conceder|  
 |**state_desc**|**nvarchar(60)**|Descripción del estado del permiso:<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
@@ -70,7 +70,7 @@ ms.locfileid: "71163929"
 |CL|CONTROL SERVER|SERVER|  
 |CO|CONNECT|ENDPOINT|  
 |COSQ|CONNECT SQL|SERVER|
-|CRAC|Crear grupo de disponibilidad|SERVER|  
+|CRAC|CREATE AVAILABILITY GROUP|SERVER|  
 |CRDB|CREATE ANY DATABASE|SERVER|  
 |CRDE|CREATE DDL EVENT NOTIFICATION|SERVER|  
 |CRHE|CREATE ENDPOINT|SERVER|

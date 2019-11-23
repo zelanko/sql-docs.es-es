@@ -30,9 +30,9 @@ ms.locfileid: "72381718"
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Define el nombre de la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se cambie el nombre del equipo que hospeda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice **sp_addserver** para informar a la instancia del @no__t 2 del nuevo nombre de equipo. Este procedimiento debe ejecutarse en todas las instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] hospedado en el equipo. No se puede cambiar el nombre de instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Para cambiar el nombre de instancia de una instancia con nombre, instale una instancia nueva con el nombre deseado, desasocie los archivos de base de datos de la instancia antigua, asocie las bases de datos a la nueva instancia y quite la antigua instancia. Como alternativa, puede crear un nombre de alias de cliente en el equipo cliente, redirigir la conexión a un servidor y nombre de instancia diferentes o a la combinación **servidor:puerto** sin cambiar el nombre de la instancia en el equipo servidor.  
+  Define el nombre de la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se cambie el nombre del equipo que hospeda [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilice **sp_addserver** para informar a la instancia de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] del nombre del nuevo equipo. Este procedimiento debe ejecutarse en todas las instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] hospedado en el equipo. No se puede cambiar el nombre de instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Para cambiar el nombre de instancia de una instancia con nombre, instale una instancia nueva con el nombre deseado, desasocie los archivos de base de datos de la instancia antigua, asocie las bases de datos a la nueva instancia y quite la antigua instancia. Como alternativa, puede crear un nombre de alias de cliente en el equipo cliente, redirigir la conexión a un servidor y nombre de instancia diferentes o a la combinación **servidor:puerto** sin cambiar el nombre de la instancia en el equipo servidor.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a temas") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,25 +48,25 @@ sp_addserver [ @server = ] 'server' ,
   
  Cuando se instalan varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo, una instancia opera como si estuviera en un servidor independiente. Especifique una instancia con nombre haciendo referencia al *servidor* como *nombredeservidor\nombredeinstancia*.  
   
-`[ @local = ] 'LOCAL'` especifica que el servidor que se va a agregar como servidor local. **\@LOCAL** es de tipo **VARCHAR (10)** y su valor predeterminado es NULL. Al especificar **\@LOCAL** como **local** , se define **\@server** como el nombre del servidor local y se hace que la función @ @SERVERNAME devuelva el valor de *Server*.  
+`[ @local = ] 'LOCAL'` especifica que el servidor que se va a agregar como servidor local. **\@local** es **VARCHAR (10)** y su valor predeterminado es NULL. Al especificar **\@local** como **local** , se define **\@Server** como el nombre del servidor local y se hace que la función @@SERVERNAME devuelva el valor de *Server*.  
   
  El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establece esta variable en el nombre del equipo durante la instalación. De manera predeterminada, el nombre del equipo es la forma en que los usuarios se conectan a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin requerir ninguna configuración adicional.  
   
  La definición local solo surte efecto después de reiniciarse el [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Solo puede definirse un servidor local en cada instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @duplicate_ok = ] 'duplicate_OK'` especifica si se permite un nombre de servidor duplicado. **\@duplicate_OK** es de tipo **VARCHAR (13)** y su valor predeterminado es NULL. **\@duplicate_OK** solo puede tener el valor **duplicate_OK** o null. Si se especifica **duplicate_OK** y el nombre del servidor que se va a agregar ya existe, no se genera ningún error. Si no se utilizan parámetros con nombre, se debe especificar **\@LOCAL** .  
+`[ @duplicate_ok = ] 'duplicate_OK'` especifica si se permite un nombre de servidor duplicado. **\@duplicate_OK** es **VARCHAR (13)** y su valor predeterminado es NULL. **\@duplicate_OK** solo puede tener el valor **duplicate_OK** o null. Si se especifica **duplicate_OK** y el nombre del servidor que se va a agregar ya existe, no se genera ningún error. Si no se utilizan parámetros con nombre, se debe especificar **\@local** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Notas  
- Para establecer o borrar las opciones de servidor, utilice **sp_serveroption**.  
+## <a name="remarks"></a>Remarks  
+ Para establecer o borrar las opciones de servidor, use **sp_serveroption**.  
   
- **sp_addserver** no se puede usar en una transacción definida por el usuario.  
+ no se puede usar **sp_addserver** dentro de una transacción definida por el usuario.  
   
  El uso de **sp_addserver** para agregar un servidor remoto es discontinuo. Use en su lugar [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) .  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol fijo de servidor **setupadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
@@ -76,7 +76,7 @@ sp_addserver [ @server = ] 'server' ,
 sp_addserver 'ACCOUNTS', 'local';  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Cambiar el nombre de un equipo que hospeda una instancia independiente de SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   

@@ -47,11 +47,11 @@ ms.locfileid: "72797665"
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
-###  <a name="Prerequisites"></a> Prerequisites  
+###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica secundaria.  
   
--   La réplica secundaria ya debe estar unida al grupo de disponibilidad. Para obtener más información, vea [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+-   La réplica secundaria ya debe estar unida al grupo de disponibilidad. Para obtener más información, vea [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
 -   La base de datos secundaria debe haberse preparado recientemente. Para obtener más información, vea [Manually Prepare a Secondary Database for an Availability Group &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72797665"
 ####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  **Para combinar una base de datos secundaria con un grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica secundaria y expanda el árbol de servidores.  
@@ -84,7 +84,7 @@ ms.locfileid: "72797665"
   
      donde *nombre_BaseDeDatos* es el nombre de la base de datos que se va a unir y *nombre_grupo* es el nombre del grupo de disponibilidad.  
   
-     En el ejemplo siguiente se une la base de datos secundaria `Db1`a la réplica secundaria local del grupo de disponibilidad `MyAG` .  
+     En el ejemplo siguiente se une la base de datos secundaria `Db1` a la réplica secundaria local del grupo de disponibilidad `MyAG`.  
   
     ```sql
     ALTER DATABASE Db1 SET HADR AVAILABILITY GROUP = MyAG;  
@@ -107,7 +107,7 @@ ms.locfileid: "72797665"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, vea [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
@@ -119,7 +119,7 @@ ms.locfileid: "72797665"
   
 -   [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)    
+ [Información general de &#40;grupos de disponibilidad AlwaysOn&#41; SQL Server](overview-of-always-on-availability-groups-sql-server.md)   
  [Solucionar problemas de &#40;configuración&#41;de grupos de disponibilidad AlwaysOn SQL Server eliminada](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

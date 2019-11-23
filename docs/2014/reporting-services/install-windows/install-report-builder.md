@@ -47,11 +47,11 @@ ms.locfileid: "73637830"
   
 6.  En la página **Bienvenido al Asistente para la instalación** , haga clic en **siguiente**.  
   
-7.  En la página **contrato de licencia** , lea el contrato y, a continuación, seleccione la opción acepto **los términos del contrato de licencia** . Haga clic en **Siguiente**.  
+7.  En la página **contrato de licencia** , lea el contrato y, a continuación, seleccione la opción acepto **los términos del contrato de licencia** . Haga clic en **Next**.  
   
-8.  Especifique su nombre y el nombre de su compañía. Haga clic en **Siguiente**.  
+8.  Especifique su nombre y el nombre de su compañía. Haga clic en **Next**.  
   
-9. En la página **selección de características** , puede hacer clic en **examinar** o en el costo del **disco**. Haga clic en **Siguiente**.  
+9. En la página **selección de características** , puede hacer clic en **examinar** o en el costo del **disco**. Haga clic en **Next**.  
   
     -   Haga clic en **examinar** para ver la ubicación predeterminada de generador de informes y actualizarla.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73637830"
         > [!NOTE]  
         >  Si un volumen no tiene suficiente espacio disponible en disco, se muestra resaltado.  
   
-10. En la página **Servidor de destino predeterminado** , puede especificar la dirección URL al servidor de informes de destino si difiere del valor predeterminado. Haga clic en **Siguiente**.  
+10. En la página **Servidor de destino predeterminado** , puede especificar la dirección URL al servidor de informes de destino si difiere del valor predeterminado. Haga clic en **Next**.  
   
     > [!NOTE]  
     >  Si tiene previsto trabajar con el Generador de informes cuando esté conectado a un servidor de informes, conviene que especifique en este momento la dirección URL al servidor. Sin embargo, también puede hacerlo desde el cuadro de diálogo **Opciones** cuando esté trabajando en generador de informes.  
@@ -80,11 +80,11 @@ ms.locfileid: "73637830"
   
 3.  En la página **Bienvenido al Asistente para la instalación** , haga clic en **siguiente**.  
   
-4.  En la página **contrato de licencia** , lea el contrato y, a continuación, seleccione la opción acepto **los términos del contrato de licencia** . Haga clic en **Siguiente**.  
+4.  En la página **contrato de licencia** , lea el contrato y, a continuación, seleccione la opción acepto **los términos del contrato de licencia** . Haga clic en **Next**.  
   
-5.  Especifique su nombre y el nombre de su compañía. Haga clic en **Siguiente**.  
+5.  Especifique su nombre y el nombre de su compañía. Haga clic en **Next**.  
   
-6.  En la página **selección de características** , puede hacer clic en **examinar** o en el costo del **disco**. Haga clic en **Siguiente**.  
+6.  En la página **selección de características** , puede hacer clic en **examinar** o en el costo del **disco**. Haga clic en **Next**.  
   
     -   Haga clic en **examinar** para ver la ubicación predeterminada de generador de informes y actualizarla.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "73637830"
         > [!NOTE]  
         >  Si un volumen no tiene suficiente espacio disponible en disco, se muestra resaltado.  
   
-7.  En la página **Servidor de destino predeterminado** , puede especificar la dirección URL al servidor de informes de destino si difiere del valor predeterminado. Haga clic en **Siguiente**.  
+7.  En la página **Servidor de destino predeterminado** , puede especificar la dirección URL al servidor de informes de destino si difiere del valor predeterminado. Haga clic en **Next**.  
   
     > [!NOTE]  
     >  Si tiene previsto trabajar con el Generador de informes cuando esté conectado a un servidor de informes, conviene que especifique en este momento la dirección URL al servidor. Sin embargo, también puede hacerlo desde el cuadro de diálogo **Opciones** cuando esté trabajando en generador de informes.  

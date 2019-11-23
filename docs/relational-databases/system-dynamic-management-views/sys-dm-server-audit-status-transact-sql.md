@@ -37,7 +37,7 @@ ms.locfileid: "72313686"
 |**status**|**smallint**|Estado numérico de la auditoría de servidor:<br /><br /> 0 = no iniciado<br /><br /> 1 =<br />        Iniciado<br /><br /> 2 =<br />      Error de tiempo de ejecución<br /><br /> 3 = error de creación de destino<br /><br /> 4 = cerrando|  
 |**status_desc**|**nvarchar(256)**|Cadena que muestra el estado de la auditoría de servidor:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Marca de tiempo en UTC del último cambio de estado de la auditoría.|  
-|**event_session_address**|**varbinary(8)**|Dirección de la sesión de Extended Events asociada a la auditoría. Relacionado con la vista de catálogo **Sys. DM _ _xe_sessions. Address** .|  
+|**event_session_address**|**varbinary(8)**|Dirección de la sesión de Extended Events asociada a la auditoría. Relacionado con la vista de catálogo **Sys. dm_xe_sessions. Address** .|  
 |**audit_file_path**|**nvarchar(256)**|Ruta de acceso completa y nombre de archivo del destino de archivo de auditoría que se está usando actualmente. Solo se rellena para la auditoría de archivos.|  
 |**audit_file_size**|**bigint**|Tamaño aproximado del archivo de auditoría, en bytes. Solo se rellena para la auditoría de archivos.|  
   

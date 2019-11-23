@@ -38,20 +38,20 @@ ms.locfileid: "72278334"
   
 ## <a name="arguments"></a>Argumentos  
  *column-name*  
- El nombre de columna de la columna VARBINARY (MAX) **file_stream** de una filetable.  
+ Nombre de columna de la columna de **FILE_STREAM** varbinary (Max) de una filetable.  
   
  El valor de *nombre de columna* debe ser un nombre de columna válido. No puede ser una expresión ni un valor convertido de una columna de otro tipo de datos.  
   
  *is_full_path*  
- Expresión entera que especifica si se devuelve una ruta de acceso absoluta o relativa. *is_full_path* puede tener uno de los siguientes valores:  
+ Expresión entera que especifica si se devuelve una ruta de acceso absoluta o relativa. *is_full_path* puede tener uno de los valores siguientes:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Devuelve la ruta de acceso relativa al directorio de base de datos.<br /><br /> Este es el valor predeterminado|  
 |**1**|Devuelve la ruta de acceso UNC completa, empezando por `\\computer_name`.|  
   
- *@no__t 1option*  
- Expresión entera que define cómo se debe dar formato al componente de servidor de la ruta de acceso. *\@option* puede tener uno de los siguientes valores:  
+ *\@, opción*  
+ Expresión entera que define cómo se debe dar formato al componente de servidor de la ruta de acceso. *\@opción* puede tener uno de los valores siguientes:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "72278334"
  Esta ruta de acceso lógica no se corresponde directamente con una ruta de acceso NTFS física. Se convierte en la ruta de acceso física mediante el controlador de filtro del sistema de archivos de FILESTREAM y el agente de FILESTREAM. Esta separación entre la ruta de acceso lógica y la ruta de acceso física permite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reorganizar internamente los datos sin afectar a la validez de la ruta de acceso.  
   
 ## <a name="best-practices"></a>Procedimientos recomendados  
- Para mantener independientes del equipo y de la base de datos actuales el código y las aplicaciones, evite escribir código basado en rutas de acceso absolutas de archivos. En su lugar, obtenga la ruta de acceso completa de un archivo en tiempo de ejecución mediante las funciones **FileTableRootPath** y **GetFileNamespacePath** , como se muestra en el ejemplo siguiente. De forma predeterminada, la función **GetFileNamespacePath** devuelve la ruta de acceso relativa del archivo en la ruta de acceso raíz de la base de datos.  
+ Para mantener independientes del equipo y de la base de datos actuales el código y las aplicaciones, evite escribir código basado en rutas de acceso absolutas de archivos. En su lugar, obtenga la ruta de acceso completa de un archivo en tiempo de ejecución mediante las funciones **FileTableRootPath** y **GetFileNamespacePath** , como se muestra en el ejemplo siguiente. De manera predeterminada, la función **GetFileNamespacePath** devuelve la ruta de acceso relativa del archivo en la ruta de acceso raíz de la base de datos.  
   
 ```sql  
 USE MyDocumentDatabase;  
@@ -86,7 +86,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Ejemplos  
  En los siguientes ejemplos se muestra cómo llamar a la función **GetFileNamespacePath** para obtener la ruta de acceso UNC para un archivo o directorio de una filetable.  

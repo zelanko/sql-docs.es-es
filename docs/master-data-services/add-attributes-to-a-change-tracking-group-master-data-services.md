@@ -30,7 +30,7 @@ ms.locfileid: "73728808"
 > [!NOTE]  
 >  Después de agregar un atributo a un grupo de seguimiento de cambios, cuando los valores del atributo cambian, el atributo se marca como que ha cambiado en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Cree una regla de negocios para realizar una acción según el cambio.  
   
-## <a name="prerequisites"></a>Requisitos previos  
+## <a name="prerequisites"></a>Prerequisites  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -69,7 +69,7 @@ ms.locfileid: "73728808"
   
 10. Repita este procedimiento para todos los atributos que desea incluir en el grupo. Utilice el mismo número de grupo de seguimiento de cambios para cada atributo del grupo.  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Iniciar acciones según los cambios de valores de atributos &#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Configuración del cifrado de columna mediante el asistente para Always Encrypted | Microsoft Docs
+title: Configuración del cifrado de columnas mediante el asistente para Always Encrypted | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -23,22 +23,22 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 11/05/2019
 ms.locfileid: "73594504"
 ---
-# <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configuración del cifrado de columna mediante el asistente para Always Encrypted
+# <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Configuración del cifrado de columnas mediante el asistente para Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 El asistente para Always Encrypted es una herramienta eficaz que permite establecer la configuración de [Always Encrypted](always-encrypted-database-engine.md) elegida para las columnas de la base de datos seleccionadas. Según la configuración actual y la configuración de destino elegida, el asistente puede cifrar una columna, descifrarla (quitar el cifrado) o volver a cifrarla (por ejemplo, con una nueva clave de cifrado de columnas o con un tipo de cifrado diferente del actual configurado para la columna). Es posible configurar varias columnas en una misma ejecución del asistente.
 
-El asistente le permite cifrar columnas con claves de cifrado de columna existentes, aunque también puede generar una nueva clave de cifrado de columnas o, además de esta, una nueva clave maestra de columna. 
+El asistente le permite cifrar columnas con claves de cifrado de columnas existentes, aunque también puede generar una nueva clave de cifrado de columnas o, además de esta, una nueva clave maestra de columna. 
 
 El asistente sirve para sacar datos de la base de datos y realizar operaciones criptográficas en el proceso de SSMS. El asistente crea una tabla (o varias) con la configuración de cifrado deseada en la base de datos, carga todos los datos de las tablas originales, realiza las operaciones criptográficas solicitadas, carga los datos en las nuevas tablas y, después, intercambia las tablas originales por las nuevas.
 
 > [!NOTE]
-> La ejecución de operaciones criptográficas puede llevar mucho tiempo. Durante ese tiempo, la base de datos no está disponible para escribir transacciones. PowerShell es una herramienta recomendada para realizar operaciones criptográficas en tablas de mayor tamaño. Vea [Configuración del cifrado de columna mediante Always Encrypted con PowerShell](configure-column-encryption-using-powershell.md).
+> La ejecución de operaciones criptográficas puede llevar mucho tiempo. Durante ese tiempo, la base de datos no está disponible para escribir transacciones. PowerShell es una herramienta recomendada para realizar operaciones criptográficas en tablas de mayor tamaño. Vea [Configuración del cifrado de columnas mediante Always Encrypted con PowerShell](configure-column-encryption-using-powershell.md).
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
 > [!NOTE]
-> Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede ejecutar las operaciones criptográficas en contexto, sin sacar los datos de la base de datos. Vea [Configuración del cifrado de columna en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Tenga en cuenta que el asistente no admite el cifrado en contexto.
+> Si usa [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] y su instancia de SQL Server está configurada con un enclave seguro, puede ejecutar las operaciones criptográficas en contexto, sin sacar los datos de la base de datos. Vea [Configuración del cifrado de columnas en contexto mediante Always Encrypted con enclaves seguros](always-encrypted-enclaves-configure-encryption.md). Tenga en cuenta que el asistente no admite el cifrado en contexto.
 
 ::: moniker-end
 
@@ -59,7 +59,7 @@ Para realizar operaciones criptográficas con el asistente, necesita tener los p
 - **Proveedor de almacén de claves (CNG)** : se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del KSP.
 - **Proveedor de servicios criptográficos (CAPI)** : se le podrían solicitar el permiso y las credenciales necesarios al usar una clave o un almacén de claves, en función del almacén y de la configuración del CSP.
 
-Además, si va a crear nuevas claves mediante el asistente, necesita los permisos adicionales enumerados en [Aprovisionamiento de claves maestras de columna con el cuadro de diálogo Nueva clave maestra de columna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) y en [Aprovisionamiento de claves de cifrado de columna con el cuadro de diálogo Nueva clave de cifrado de columnas](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).
+Además, si va a crear nuevas claves mediante el asistente, necesita los permisos adicionales enumerados en [Aprovisionamiento de claves maestras de columna con el cuadro de diálogo Nueva clave maestra de columna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) y en [Aprovisionamiento de claves de cifrado de columnas con el cuadro de diálogo Nueva clave de cifrado de columnas](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog).
 
 ## <a name="open-the-always-encrypted-wizard"></a>Apertura del asistente para Always Encrypted
 Puede iniciar el asistente en tres niveles distintos: 
@@ -79,11 +79,11 @@ Puede iniciar el asistente en tres niveles distintos:
  ## <a name="column-selection-page"></a>Página de selección de columnas
 En esta página, puede seleccionar las columnas que quiere cifrar, volver a cifrar o descifrar y puede definir la configuración de cifrado de destino para las columnas seleccionadas.
 
-Para cifrar una columna de texto cifrado (una columna que no está cifrada), seleccione un tipo de cifrado (**determinista** o **aleatorio**) y una clave de cifrado para la columna. 
+Para cifrar una columna de texto no cifrado, seleccione un tipo de cifrado (**determinista** o **aleatorio**) y una clave de cifrado para la columna. 
 
 Para cambiar un tipo de cifrado o rotar (cambiar) una clave de cifrado de columnas por una columna ya cifrada, seleccione el tipo de cifrado que quiere aplicar y la clave. 
 
-Si quiere que el asistente cifre o vuelva a cifrar una o más columnas con una nueva clave de cifrado de columnas, seleccione una clave que contenga **(Nueva)** en su nombre. El asistente generará la clave.
+Si quiere que el asistente cifre o vuelva a cifrar una o más columnas con una nueva clave de cifrado de columnas, seleccione una clave que contenga **(New)** en su nombre. El asistente generará la clave.
 
 Para descifrar una columna que actualmente está cifrada, seleccione **Texto no cifrado** para el tipo de cifrado.
 
@@ -92,14 +92,14 @@ Para descifrar una columna que actualmente está cifrada, seleccione **Texto no 
 > El asistente no admite operaciones criptográficas en tablas temporales y en memoria. Puede crear tablas temporales o en memoria vacías con Transact-SQL, e insertar datos mediante su aplicación.
 
 ## <a name="master-key-configuration-page"></a>Página de configuración de la clave maestra
-Si ha seleccionado una clave de cifrado de columnas generada automáticamente para cualquier columna de la página anterior, en esta página deberá seleccionar una clave maestra de columna existente o configurar una nueva clave maestra de columna que cifre la clave de cifrado de columna. 
+Si ha seleccionado una clave de cifrado de columnas generada automáticamente para cualquier columna de la página anterior, en esta página deberá seleccionar una clave maestra de columna existente o configurar una nueva clave maestra de columna que cifre la clave de cifrado de columnas. 
 
 A la hora de configurar una nueva clave maestra de columna, puede elegir una clave existente en el almacén de certificados de Windows o en Azure Key Vault y hacer que el asistente cree un objeto de metadatos para la clave en la base de datos, o puede generar la clave y el objeto de metadatos que describe la clave en la base de datos. 
 
 Para obtener más información acerca de cómo crear y almacenar claves maestras de columna en el almacén de certificados de Windows, en Azure Key Vault o en otros almacenes de claves, vea [Creación y almacenamiento de claves maestras de columna para Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 > [!TIP]
-> El asistente solo le permite buscar y crear claves en el almacén de certificados de Windows y en Azure Key Vault. También genera automáticamente los nombres de las nuevas claves y los objetos de metadatos de la base de datos que describen las claves. Si necesita más control sobre la manera en que se aprovisionan las claves (y más opciones para un almacén de claves que contenga su clave maestra de columna), puede usar los cuadros de diálogo **Nueva clave maestra de columna** y **Nueva clave de cifrado de columnas** para crear las claves y, después, ejecute el asistente y seleccione las claves que ha generado. Vea [Aprovisionamiento de claves maestras de columna con el cuadro de diálogo Nueva clave maestra de columna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) y [Aprovisionamiento de claves de cifrado de columna con el cuadro de diálogo Nueva clave de cifrado de columnas](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog). 
+> El asistente solo le permite buscar y crear claves en el almacén de certificados de Windows y en Azure Key Vault. También genera automáticamente los nombres de las nuevas claves y los objetos de metadatos de la base de datos que describen las claves. Si necesita más control sobre la manera en que se aprovisionan las claves (y más opciones para un almacén de claves que contenga su clave maestra de columna), puede usar los cuadros de diálogo **Nueva clave maestra de columna** y **Nueva clave de cifrado de columnas** para crear las claves y, después, ejecute el asistente y seleccione las claves que ha generado. Vea [Aprovisionamiento de claves maestras de columna con el cuadro de diálogo Nueva clave maestra de columna](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog) y [Aprovisionamiento de claves de cifrado de columnas con el cuadro de diálogo Nueva clave de cifrado de columnas](configure-always-encrypted-keys-using-ssms.md#provision-column-encryption-keys-with-the-new-column-encryption-key-dialog). 
 
 ## <a name="next-steps"></a>Next Steps
 - [Consulta de columnas mediante Always Encrypted con SQL Server Management Studio](always-encrypted-query-columns-ssms.md)
@@ -110,5 +110,5 @@ Para obtener más información acerca de cómo crear y almacenar claves maestras
  - [Información general de administración de claves de Always Encrypted](overview-of-key-management-for-always-encrypted.md) 
  - [Configurar Always Encrypted con SQL Server Management Studio](configure-always-encrypted-using-sql-server-management-studio.md)
  - [Aprovisionamiento de claves de Always Encrypted mediante PowerShell](configure-always-encrypted-keys-using-powershell.md)
- - [Configuración del cifrado de columna mediante Always Encrypted con PowerShell](configure-column-encryption-using-powershell.md)
- - [Configuración del cifrado de columna mediante Always Encrypted con un paquete DAC](configure-always-encrypted-using-dacpac.md)
+ - [Configuración del cifrado de columnas mediante Always Encrypted con PowerShell](configure-column-encryption-using-powershell.md)
+ - [Configuración del cifrado de columnas mediante Always Encrypted con un paquete DAC](configure-always-encrypted-using-dacpac.md)

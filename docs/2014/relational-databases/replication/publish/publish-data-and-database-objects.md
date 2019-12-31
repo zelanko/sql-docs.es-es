@@ -41,12 +41,12 @@ ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
+ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199393"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74479316"
 ---
 # <a name="publish-data-and-database-objects"></a>Publicar datos y objetos de base de datos
   Al crear una publicación puede elegir las tablas y otros objetos de base de datos que desee publicar. Puede publicar los siguientes objetos de base de datos utilizando la replicación.  
@@ -89,13 +89,13 @@ ms.locfileid: "68199393"
   
  Para obtener información acerca de cómo trabajar con publicaciones, vea los siguientes temas:  
   
--   [Create a Publication](create-a-publication.md) (Creación de una publicación)  
+-   [Crear una publicación](create-a-publication.md)  
   
 -   [Definir un artículo](define-an-article.md)  
   
 -   [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md)  
   
--   [er y modificar las propiedades de un artículo](view-and-modify-article-properties.md)  
+-   [Ver y modificar las propiedades de un artículo](view-and-modify-article-properties.md)  
   
 -   [Eliminar una publicación](delete-a-publication.md)  
   
@@ -109,9 +109,9 @@ ms.locfileid: "68199393"
   
 -   [Filtrar datos publicados](filter-published-data.md)  
   
--   [Article Options for Transactional Replication](../transactional/article-options-for-transactional-replication.md)  
+-   [Opciones de artículos para la replicación transaccional](../transactional/article-options-for-transactional-replication.md)  
   
--   [Article Options for Merge Replication](../merge/article-options-for-merge-replication.md)  
+-   [Opciones de artículo para la replicación de mezcla](../merge/article-options-for-merge-replication.md)  
   
 -   [Replicar columnas de identidad](replicate-identity-columns.md)  
   
@@ -119,7 +119,7 @@ ms.locfileid: "68199393"
   
  Para especificar opciones de esquema, vea [Especificar las opciones del esquema](specify-schema-options.md) o <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
-### <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes  
+### <a name="partitioned-tables-and-indexes"></a>Tablas e índices con particiones  
  La replicación admite la publicación de tablas con particiones e índices. El nivel de compatibilidad depende del tipo de replicación que se utiliza y las opciones que especifica para la publicación y los artículos asociados a las tablas con particiones. Para obtener más información, vea [Replicar tablas e índices con particiones](replicate-partitioned-tables-and-indexes.md).  
   
 ## <a name="publishing-stored-procedures"></a>Publicar procedimientos almacenados  
@@ -130,7 +130,7 @@ ms.locfileid: "68199393"
 ## <a name="publishing-views"></a>Publicar vistas  
  Todos los tipos de replicación permiten replicar vistas: la vista (y el índice asociado, si se trata de una vista indizada) se puede copiar en el suscriptor, pero la tabla base también se debe replicar.  
   
- En las vistas indizadas, la replicación transaccional también permite replicar la vista indizada en forma de tabla y no como vista, eliminando la necesidad de replicar también la tabla base. Para ello, especifique una de las opciones "indexed view logbased" del parámetro *@type* de [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Para obtener más información sobre cómo usar **sp_addarticle**, vea [Definir un artículo](define-an-article.md).  
+ En las vistas indizadas, la replicación transaccional también permite replicar la vista indizada en forma de tabla y no como vista, eliminando la necesidad de replicar también la tabla base. Para ello, especifique una de las opciones "indexed View logbased" para el * \@* parámetro de tipo de [sp_addarticle &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql). Para obtener más información sobre cómo usar **sp_addarticle**, vea [Definir un artículo](define-an-article.md).  
   
 ## <a name="publishing-user-defined-functions"></a>Publicar funciones definidas por el usuario  
  Las instrucciones CREATE FUNCTION para las funciones de CLR y de [!INCLUDE[tsql](../../../includes/tsql-md.md)] se copian en cada suscriptor. En el caso de las funciones CLR, también se copia el ensamblado asociado. Los cambios en las funciones se replican en los suscriptores, a diferencia de los cambios en los ensamblados asociados.  
@@ -168,9 +168,9 @@ ms.locfileid: "68199393"
 -   Para publicar un objeto de base de datos que depende de uno o más objetos de base de datos, debe publicar todos los objetos a los que se hace referencia. Por ejemplo, si publica una vista que depende de una tabla, también debe publicar la tabla.  
   
     > [!NOTE]  
-    >  Si se agrega un artículo a una publicación de combinación y ya hay un artículo que depende de este nuevo artículo, debe especificar un orden de procesamiento para los dos artículos con el parámetro **@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) y [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **@processing_order** de **sp_addmergearticle**y el valor **2** para el parámetro **@processing_order** de **sp_changemergearticle**; especifique el nombre de la tabla para el parámetro **@article** . Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
+    >  Si agrega un artículo a una publicación de combinación y un artículo existente depende del nuevo artículo, debe especificar un orden de procesamiento para ambos artículos mediante el ** \@processing_order** parámetro de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) y [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Considere el caso siguiente: publica una tabla pero no publica una función a la que hace referencia la tabla. Si no publica la función, la tabla no se puede crear en el suscriptor. Al agregar la función a la publicación: especifique el valor **1** para el parámetro **\@processing_order** de **sp_addmergearticle** y el valor **2** para el parámetro **\@processing_order** de **sp_changemergearticle**; asimismo, debe especificar el nombre de la tabla para el parámetro **\@article**. Este orden de procesamiento garantiza que la función se cree en el suscriptor antes que la tabla que depende de él. Puede usar números distintos para cada artículo, siempre que el número de la función sea inferior al de la tabla.  
   
--   Los nombres de publicación no pueden incluir los caracteres siguientes: % * [ ] | : " ? \ / \< >.  
+-   Los nombres de publicación no pueden incluir los caracteres siguientes: % * [ ] | : " ? \/ \< >.  
   
 ### <a name="limitations-on-publishing-objects"></a>Limitaciones en la publicación de objetos  
   
@@ -184,7 +184,7 @@ ms.locfileid: "68199393"
   
 -   Los valores predeterminados enlazados creados con [sp_bindefault &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-bindefault-transact-sql) no se replican (los valores predeterminados enlazados ya no se usan en favor de los valores predeterminados creados con la palabra clave DEFAULT de ALTER TABLE o CREATE TABLE).  
   
--   Las funciones que contienen la sugerencia `NOEXPAND` en vistas indizadas no se pueden publicar en la misma publicación que las tablas y las vistas indizadas a las que se hace referencia, debido al orden en que el agente de distribución las entrega. Para evitar este problema, coloque la creación de tablas y vistas indizadas en una primera publicación, y agregue las funciones que contienen la sugerencia `NOEXPAND` en las vistas indizadas en una segunda publicación que se publique después de que se complete la primera publicación. O bien, cree scripts para estas funciones y entregue el script mediante el *@post_snapshot_script* parámetro de `sp_addpublication`.  
+-   Las funciones que contienen la sugerencia `NOEXPAND` en vistas indizadas no se pueden publicar en la misma publicación que las tablas y las vistas indizadas a las que se hace referencia, debido al orden en que el agente de distribución las entrega. Para evitar este problema, coloque la creación de tablas y vistas indizadas en una primera publicación, y agregue las funciones que contienen la sugerencia `NOEXPAND` en las vistas indizadas en una segunda publicación que se publique después de que se complete la primera publicación. O bien, cree scripts para estas funciones y entregue el script mediante * \@* el parámetro post_snapshot_script `sp_addpublication`de.  
   
 ### <a name="schemas-and-object-ownership"></a>Esquemas y propiedad de objetos  
  La replicación tiene el siguiente comportamiento predeterminado en el Asistente para nueva publicación con respecto a los esquemas y a la propiedad de objetos:  
@@ -208,9 +208,9 @@ ms.locfileid: "68199393"
 ### <a name="publishing-tables-in-more-than-one-publication"></a>Publicar tablas en más de una publicación  
  La replicación es compatible con la publicación de artículos en varias publicaciones (incluso permiten volver a publicar datos) con las siguientes restricciones:  
   
--   Si un artículo se publica en una publicación transaccional y en una publicación de combinación, asegúrese de que la propiedad *@published_in_tran_pub* está establecida en TRUE para el artículo de mezcla. Para obtener más información, vea [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md) y [Ver y modificar las propiedades de un artículo](view-and-modify-article-properties.md).  
+-   Si un artículo se publica en una publicación transaccional y en una publicación de combinación, asegúrese de que * \@* la propiedad published_in_tran_pub está establecida en true para el artículo de mezcla. Para obtener más información, vea [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md) y [Ver y modificar las propiedades de un artículo](view-and-modify-article-properties.md).  
   
-     También debería establecer la propiedad *@published_in_tran_pub* si un artículo forma parte de una suscripción transaccional y está incluido en una publicación de combinación. Si éste es el caso, tenga en cuenta que, de forma predeterminada, la replicación transaccional espera que las tablas del suscriptor se traten como de solo lectura; si la replicación de mezcla realiza cambios en los datos de una tabla de una suscripción transaccional, se puede producir la no convergencia de los datos. Para evitar esta posibilidad, se recomienda que cada tabla de este tipo se especifique como solo para descarga en la publicación de combinación. Esto evita que un suscriptor de mezcla cargue cambios de datos en la tabla. Para obtener más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+     También debe establecer la * \@propiedad published_in_tran_pub* si un artículo forma parte de una suscripción transaccional y está incluido en una publicación de combinación. Si éste es el caso, tenga en cuenta que, de forma predeterminada, la replicación transaccional espera que las tablas del suscriptor se traten como de solo lectura; si la replicación de mezcla realiza cambios en los datos de una tabla de una suscripción transaccional, se puede producir la no convergencia de los datos. Para evitar esta posibilidad, se recomienda que cada tabla de este tipo se especifique como solo para descarga en la publicación de combinación. Esto evita que un suscriptor de mezcla cargue cambios de datos en la tabla. Para obtener más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 -   No es posible publicar un artículo en una publicación de combinación y en una publicación transaccional con suscripciones de actualización en cola.  
   
@@ -218,41 +218,41 @@ ms.locfileid: "68199393"
   
 -   Si un artículo se publica en más de una publicación transaccional que admita suscripciones de actualización en cola, las siguientes propiedades deben tener el mismo valor para el artículo en todas las publicaciones:  
   
-    |Property|Parámetro en sp_addarticle|  
+    |Propiedad|Parámetro en sp_addarticle|  
     |--------------|---------------------------------|  
-    |Administración del intervalo de identidad|**@auto_identity_range** (en desuso) y **@identityrangemangementoption**|  
-    |Intervalo de identidad del publicador|**@pub_identity_range**|  
-    |Intervalo de identidad|**@identity_range**|  
-    |Umbral del intervalo de identidad|**@threshold**|  
+    |Administración del intervalo de identidad|auto_identity_range (en desuso) y identityrangemangementoption ** \@** ** \@**|  
+    |Intervalo de identidad del publicador|**\@pub_identity_range**|  
+    |Intervalo de identidad|**\@identity_range**|  
+    |Umbral del intervalo de identidad|**\@mínimo**|  
   
      Para obtener más información sobre estos parámetros, vea [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
 -   Si un artículo se publica en más de una publicación de combinación, las siguientes propiedades deben tener el mismo valor para el artículo en todas las publicaciones:  
   
-    |Property|Parámetro en sp_addmergearticle|  
+    |Propiedad|Parámetro en sp_addmergearticle|  
     |--------------|--------------------------------------|  
-    |Seguimiento de columnas|**@column_tracking**|  
-    |Opciones del esquema|**@schema_option**|  
-    |Filtros de columnas|**@vertical_partition**|  
-    |Opciones de carga de suscriptor|**@subscriber_upload_options**|  
-    |Seguimiento condicional de eliminaciones|**@delete_tracking**|  
-    |Compensación de errores|**@compensate_for_errors**|  
-    |Administración del intervalo de identidad|**@auto_identity_range** (en desuso) y **@identityrangemangementoption**|  
-    |Intervalo de identidad del publicador|**@pub_identity_range**|  
-    |Intervalo de identidad|**@identity_range**|  
-    |Umbral del intervalo de identidad|**@threshold**|  
-    |Opciones de partición|**@partition_options**|  
-    |Secuencias de columnas de tipo Blob|**@stream_blob_columns**|  
-    |Tipo de filtro|**@filter_type** (parámetro de **sp_addmergefilter**)|  
+    |Seguimiento de columnas|**\@column_tracking**|  
+    |Opciones del esquema|**\@schema_option**|  
+    |Filtros de columnas|**\@vertical_partition**|  
+    |Opciones de carga de suscriptor|**\@subscriber_upload_options**|  
+    |Seguimiento condicional de eliminaciones|**\@delete_tracking**|  
+    |Compensación de errores|**\@compensate_for_errors**|  
+    |Administración del intervalo de identidad|auto_identity_range (en desuso) y identityrangemangementoption ** \@** ** \@**|  
+    |Intervalo de identidad del publicador|**\@pub_identity_range**|  
+    |Intervalo de identidad|**\@identity_range**|  
+    |Umbral del intervalo de identidad|**\@mínimo**|  
+    |Opciones de partición|**\@partition_options**|  
+    |Secuencias de columnas de tipo Blob|**\@stream_blob_columns**|  
+    |Tipo de filtro|filter_type (parámetro en **sp_addmergefilter**) ** \@**|  
   
      Para obtener más información sobre estos parámetros, vea [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) y [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql).  
   
--   La replicación transaccional y la replicación de mezcla sin filtrar admiten la publicación de una tabla en varias publicaciones y la posterior suscripción en una única tabla en la base de datos de suscripciones (es lo que normalmente se denomina un escenario de acumulación). Este tipo de escenario se suele utilizar para agregar subconjuntos de datos de varias ubicaciones en una tabla en un suscriptor central. Las publicaciones de combinación filtradas no admiten el escenario de suscriptor central. En la replicación de mezcla, la acumulación se suele implementar a través de una única publicación con filtros de fila con parámetros. Para obtener más información, consulte [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   La replicación transaccional y la replicación de mezcla sin filtrar admiten la publicación de una tabla en varias publicaciones y la posterior suscripción en una única tabla en la base de datos de suscripciones (es lo que normalmente se denomina un escenario de acumulación). Este tipo de escenario se suele utilizar para agregar subconjuntos de datos de varias ubicaciones en una tabla en un suscriptor central. Las publicaciones de combinación filtradas no admiten el escenario de suscriptor central. En la replicación de mezcla, la acumulación se suele implementar a través de una única publicación con filtros de fila con parámetros. Para obtener más información, consulte [Filtros de fila con parámetros](../merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Agregar y quitar artículos de publicaciones existentes](add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Configurar la distribución](../configure-distribution.md)   
- [Initialize a Subscription](../initialize-a-subscription.md)  (Inicializar una suscripción)  
+ [Inicializar una suscripción](../initialize-a-subscription.md)   
  [Crear script para la replicación](../scripting-replication.md)   
  [Proteger el publicador](../security/secure-the-publisher.md)   
  [Suscribirse a publicaciones](../subscribe-to-publications.md)  

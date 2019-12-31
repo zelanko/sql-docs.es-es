@@ -1,7 +1,7 @@
 ---
 title: Asistencia al usuario en SQL Server Management Studio | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
@@ -13,15 +13,15 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63016186"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74684456"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Asistencia al usuario en SQL Server Management Studio
-  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], la asistencia al usuario está disponible mediante el menú Ayuda y los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El menú Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ofrece diferentes rutas a la información sobre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. También proporciona acceso a la comunidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y a los recursos de MSDN Online no disponibles anteriormente desde el entorno de la Ayuda. Además, el entorno de la Ayuda ahora se puede configurar de modo que se inicie dentro del entorno de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o en una ventana externa asociada independiente.  
+  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , la asistencia al usuario está disponible mediante el menú Ayuda y los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El menú Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ofrece diferentes rutas a la información sobre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. También proporciona acceso a la comunidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y a los recursos de MSDN Online no disponibles anteriormente desde el entorno de la Ayuda. Además, el entorno de la Ayuda ahora se puede configurar de modo que se inicie dentro del entorno de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o en una ventana externa asociada independiente.  
   
 ## <a name="the-help-interface"></a>La interfaz de la Ayuda  
  El **Contenido** y el **Índice** ofrecen una funcionalidad y una interfaz con las que los usuarios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ya están familiarizados. Las demás opciones son:  
@@ -30,7 +30,7 @@ ms.locfileid: "63016186"
   
      Proporciona un conjunto jerárquico de páginas vinculadas que contienen temas de utilidad relacionados con las tareas comunes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El contenido está organizado por componente y tarea, por ejemplo, temas sobre replicación.  
   
--   **Buscar**  
+-   **Search**  
   
      Busca por temas, con o sin filtros predefinidos. Buscar en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es una página con pestañas independiente. Los usuarios pueden restringir las búsquedas con uno o más filtros predefinidos de tipo de tema, lenguaje o tecnología. De forma predeterminada, Buscar no utiliza ninguno de los filtros predefinidos. Solo se busca en los temas de las colecciones instaladas.  
   
@@ -40,14 +40,14 @@ ms.locfileid: "63016186"
   
      Muestra automáticamente los vínculos a la información relevante mientras los usuarios trabajan en el entorno de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
--   **Favoritos de la Ayuda**  
+-   **Favoritos de la ayuda**  
   
      Almacena marcadores de temas del usuario para facilitar el acceso en otras ocasiones.  
   
- Ayuda sobre la Ayuda (Ayuda de[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) vincula a los usuarios con la documentación sobre el Visor de ayuda; sin embargo, los temas se encuentran en una colección independiente de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para más información acerca del Visor de ayuda, seleccione **Ayuda sobre la Ayuda** en el menú Ayuda de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener información acerca de cómo agregar la Ayuda en la colección de Ayuda de temas a la colección de libros en pantalla, consulte [agregar o quitar la documentación del producto para SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ Ayuda sobre la Ayuda (Ayuda de[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) vincula a los usuarios con la documentación sobre el Visor de ayuda; sin embargo, los temas se encuentran en una colección independiente de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para más información acerca del Visor de ayuda, seleccione **Ayuda sobre la Ayuda** en el menú Ayuda de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener información sobre cómo agregar la colección de temas de ayuda sobre la ayuda a la colección de libros en pantalla, vea [Agregar o quitar la documentación del producto para SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online y comunidades de SQL Server  
- La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece a los usuarios formas de ponerse en contacto con MSDN Online y con comunidades centradas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en la Web para obtener información. Puede hacer lo siguiente:  
+ La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece a los usuarios formas de ponerse en contacto con MSDN Online y con comunidades centradas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en la Web para obtener información. Se puede hacer lo siguiente:  
   
 -   Obtener acceso a las comunidades de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde la página Cómo.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63016186"
   
 2.  En el área **Cuando cargue contenido de la Ayuda** , seleccione una opción en línea.  
   
-3.  En la lista **Buscar estos proveedores** , active los buscadores en los que desea buscar y desactive los que no vaya a necesitar.  
+3.  En la lista **Buscar estos proveedores**, active los buscadores en los que desea buscar y desactive los que no vaya a necesitar.  
   
 4.  Si **Comunidad de Codezone** es uno de los buscadores que activa, en la lista **Comunidad de Codezone** , active y desactive los elementos adecuados.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63016186"
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>Para buscar en MSDN Online y en comunidades centradas en SQL Server desde la página Buscar  
   
-1.  En el menú **Ayuda** , haga clic en **Buscar**.  
+1.  En el menú **Ayuda**, haga clic en **Buscar**.  
   
 2.  Escriba los términos de búsqueda en el cuadro de texto **Buscar** y, a continuación, haga clic en **Buscar**.  
   

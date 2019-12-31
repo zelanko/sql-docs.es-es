@@ -1,7 +1,7 @@
 ---
-title: sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs
+title: Sys. dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 11/26/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -12,34 +12,54 @@ ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 35868774efc7083b835bb6f44b6c71cbffc7ae2c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46b1155878aae6cc7f667965cfae065ed1a9cacc
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899210"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564740"
 ---
-# <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
+# <a name="sysdm_pdw_resource_waits-transact-sql"></a>Sys. dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Información para todos los tipos de recursos en espera de muestra [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+  Muestra información de espera para todos los tipos [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]de recursos de.  
   
-|Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
+|Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Posición de la solicitud en la lista de espera.|ordinal basado en 0. Esto no es único en todas las entradas de espera.|  
-|session_id|**nvarchar(32)**|Identificador de la sesión en el que se ha producido el estado de espera.|Consulte session_id en [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|type|**nvarchar(255)**|Tipo de espera que esta entrada representa.|Valores posibles:<br /><br /> Conexión<br /><br /> Simultaneidad de consultas locales<br /><br /> Simultaneidad de las consultas distribuidas<br /><br /> Simultaneidad DMS<br /><br /> Simultaneidad de copia de seguridad|  
-|object_type|**nvarchar(255)**|Tipo de objeto que se ve afectado por la espera.|Valores posibles:<br /><br /> **OBJETO**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **APLICACIÓN**|  
-|object_name|**nvarchar(386)**|Nombre o GUID del objeto especificado que se vio afectado por la espera.|Las tablas y vistas se muestran con nombres de tres partes.<br /><br /> Índices y estadísticas se muestran con nombres de cuatro partes.<br /><br /> Los nombres de las entidades de seguridad y las bases de datos son los nombres de cadena.|  
-|request_id|**nvarchar(32)**|Identificador de la solicitud en el que se ha producido el estado de espera.|Identificador QID de la solicitud.<br /><br /> Identificador GUID para las solicitudes de carga.|  
-|request_time|**datetime**|Hora a la que se solicitó el bloqueo o recurso.||  
-|acquire_time|**datetime**|Hora a la que se adquirió el bloqueo o recurso.||  
+|session_id|**nvarchar (32)**|IDENTIFICADOR de la sesión en la que se ha producido el estado de espera.|Vea session_id en [Sys. dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|tipo|**nvarchar(255)**|Tipo de espera que esta entrada representa.|Valores posibles:<br /><br /> Conexión<br /><br /> Simultaneidad de consultas locales<br /><br /> Simultaneidad de consultas distribuidas<br /><br /> Simultaneidad de DMS<br /><br /> Simultaneidad de copias de seguridad|  
+|object_type|**nvarchar(255)**|Tipo de objeto que se ve afectado por la espera.|Valores posibles:<br /><br /> **OBJETO**<br /><br /> **BASE**<br /><br /> **INTEGRADO**<br /><br /> **ESQUEMA**<br /><br /> **APLICACIÓN**|  
+|object_name|**nvarchar (386)**|Nombre o GUID del objeto especificado que se ha visto afectado por la espera.|Las tablas y vistas se muestran con nombres de tres partes.<br /><br /> Los índices y las estadísticas se muestran con nombres de cuatro partes.<br /><br /> Los nombres, entidades de seguridad y bases de datos son nombres de cadena.|  
+|request_id|**nvarchar (32)**|IDENTIFICADOR de la solicitud en la que se produjo el estado de espera.|Identificador de QID de la solicitud.<br /><br /> Identificador GUID para las solicitudes de carga.|  
+|request_time|**DateTime**|Hora a la que se solicitó el bloqueo o el recurso.||  
+|acquire_time|**DateTime**|Hora a la que se adquirió el bloqueo o el recurso.||  
 |state|**nvarchar(50)**|Estado del estado de espera.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|prioridad|**int**|Prioridad del elemento de espera.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|concurrency_slots_used|**int**|Número de espacios de simultaneidad (máximo 32) reservado para esta solicitud.|1 - en SmallRC<br /><br /> 3 - por MediumRC<br /><br /> 7 para LargeRC<br /><br /> 22 - para XLargeRC|  
-|resource_class|**nvarchar(20)**|La clase de recursos para esta solicitud.|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
+|priority|**Inter**|Prioridad del elemento de espera.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|concurrency_slots_used|**Inter**|Interno|Vea las [esperas de recursos de monitor](#monitor-resource-waits) a continuación|  
+|resource_class|**nvarchar (20)**|Interno |Vea las [esperas de recursos de monitor](#monitor-resource-waits) a continuación|  
   
-## <a name="see-also"></a>Vea también  
- [Vistas de administración dinámica de almacenamiento de datos en paralelo y SQL Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+## <a name="monitor-resource-waits"></a>Supervisar esperas de recursos 
+Con la introducción de [grupos de cargas de trabajo](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-isolation), los espacios de simultaneidad ya no son aplicables.  Utilice la consulta siguiente y la `resources_requested` columna para comprender los recursos necesarios para ejecutar la solicitud.
+
+```sql
+select rw.wait_id
+      ,rw.session_id
+      ,rw.type
+      ,rw.object_type
+      ,rw.object_name
+      ,rw.request_id
+      ,rw.request_time
+      ,rw.acquire_time
+      ,rw.state
+      ,resources_requested = s.effective_request_min_resource_grant_percent
+      ,r.group_name
+  from sys.dm_workload_management_workload_groups_stats s
+  join sys.dm_pdw_exec_requests r on r.group_name = s.name collate SQL_Latin1_General_CP1_CI_AS
+  join sys.dm_pdw_resource_waits rw on rw.request_id = r.request_id
+```
+
+## <a name="see-also"></a>Véase también  
+ [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

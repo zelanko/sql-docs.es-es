@@ -1,7 +1,7 @@
 ---
 title: PowerPivot para SharePoint (SSAS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2017
+ms.date: 11/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: analysis-services
@@ -10,12 +10,12 @@ ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 486db389b3cca8936a5350da61880637406a1387
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
+ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071142"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683587"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot para SharePoint (SSAS)
   PowerPivot para SharePoint es un servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint. PowerPivot para SharePoint proporciona hospedaje de servidor de datos PowerPivot en una granja de SharePoint. Los datos de PowerPivot son un modelo de datos analíticos que se genera mediante uno de los siguientes procedimientos:  
@@ -24,18 +24,18 @@ ms.locfileid: "66071142"
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
   
  El hospedaje de servidor de esos datos requiere SharePoint, Excel Services y una instalación de PowerPivot para SharePoint. Los datos se cargan en las instancias de PowerPivot para SharePoint donde pueden actualizarse en los intervalos programados mediante la capacidad de actualización de datos PowerPivot que el servidor proporciona para los libros de Excel 2010 o que SharePoint Excel Services 2013 proporciona para los libros de Excel 2013.  
   
 ## <a name="powerpivot-for-sharepoint-2013"></a>PowerPivot para SharePoint 2013  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] admite el uso por parte de Excel Services de [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013 de libros de Excel que contienen modelos de datos e informes de Power View de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] admite [!INCLUDE[msCoName](../../includes/msconame-md.md)] el uso de excel Services de SharePoint 2013 de los libros de Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que contienen modelos de datos e informes de Power View.  
   
  Excel Services en SharePoint 2013 incluye funcionalidad de modelo de datos para habilitar la interacción con un libro PowerPivot en el explorador. No es necesario implementar el complemento PowerPivot para SharePoint 2013 en la granja de servidores. Solo se necesita instalar un servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en modo de SharePoint y registrarlo dentro de la configuración de **Modelo de datos** de Excel Services.  
   
  La implementación del complemento PowerPivot para SharePoint 2013 habilita funcionalidad y características adicionales en la granja de servidores de SharePoint. Entre las características adicionales se incluyen Galería de PowerPivot, programar la actualización de datos y el panel de administración de PowerPivot.  
   
- ![Implementación del servidor de modo 2 de PowerPivot SSAS](../media/as-powerpivot-mode-2server-deployment.gif "implementación del servidor de modo 2 de PowerPivot SSAS")  
+ ![Modo 2 de implementación de servidores SSAS PowerPivot](../media/as-powerpivot-mode-2server-deployment.gif "Modo 2 de implementación de servidores SSAS PowerPivot")  
   
 ## <a name="powerpivot-for-sharepoint-2010"></a>PowerPivot para SharePoint 2010  
  PowerPivot para SharePoint 2010 proporciona hospedaje de servidor de datos PowerPivot en una granja de SharePoint 2010. Los datos de PowerPivot son un modelo de datos analíticos creado en Excel mediante el complemento PowerPivot para Excel. El hospedaje de servidor de esos datos requiere SharePoint 2010, Excel Services, y una instalación de PowerPivot para SharePoint. Los datos se cargan en las instancias de PowerPivot para SharePoint en la granja, donde pueden actualizarse a intervalos programados mediante la función de actualización de datos PowerPivot que el servidor proporciona.  
@@ -53,7 +53,7 @@ ms.locfileid: "66071142"
   
  Una instancia de servidor de Analysis Services en modo integrado de SharePoint completa la implementación. Carga, consulta, y descarga los datos. También procesa los datos si el libro se configura para la actualización de datos PowerPivot.  Cada instancia está unida estrechamente al Servicio de sistema de PowerPivot local que forma parte de la misma instalación.  
   
-##  <a name="bkmk_RelatedContent"></a> En esta sección  
+##  <a name="bkmk_RelatedContent"></a>En esta sección  
  [Administración y configuración del servidor PowerPivot en Administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Configuración de PowerPivot mediante Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
@@ -62,33 +62,33 @@ ms.locfileid: "66071142"
   
  [Autenticación y autorización de PowerPivot](power-pivot-authentication-and-authorization.md)  
   
- [Configurar reglas de mantenimiento de PowerPivot:](configure-power-pivot-health-rules.md)  
+ [Reglas de mantenimiento de PowerPivot - Configurar](configure-power-pivot-health-rules.md)  
   
  [Panel de administración de PowerPivot y datos de uso](power-pivot-management-dashboard-and-usage-data.md)  
   
- [La Galería de PowerPivot](../../2014-toc/books-online-for-sql-server-2014.md)  
+ [Galería de PowerPivot](../../2014-toc/index.yml)  
   
  [Acceso a datos PowerPivot](power-pivot-data-access.md)  
   
  [Actualización de datos PowerPivot](power-pivot-data-refresh.md)  
   
- [Fuentes de distribución de datos de PowerPivot](power-pivot-data-feeds.md)  
+ [Fuentes de datos PowerPivot](power-pivot-data-feeds.md)  
   
- [Conexión de modelo semántico de BI PowerPivot &#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
+ [Conexión de modelo semántico de BI PowerPivot &#40;. Bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)  
   
  **En otras secciones**  
   
-## <a name="additional-topics"></a>Temas adicionales  
- [Actualizar PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
+## <a name="additional-topics"></a>Otros temas  
+ [PowerPivot para SharePoint de actualización](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
  [Instalación de PowerPivot para SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [Referencia de PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
- [Costes y topologías de licencia de ejemplo de inteligencia empresarial de autoasistencia de SQL Server 2014](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
+ [Ejemplos de topologías y costos de licencias para la inteligencia empresarial de autoservicio de SQL Server 2014](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
-## <a name="see-also"></a>Vea también  
- [Planeación de PowerPivot e implementación](https://go.microsoft.com/fwlink/?linkID=220972)   
- [Recuperación ante desastres de PowerPivot para SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
+## <a name="see-also"></a>Véase también  
+ [Planeación e implementación de PowerPivot](https://go.microsoft.com/fwlink/?linkID=220972)   
+ [Recuperación antes desastres de PowerPivot para SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

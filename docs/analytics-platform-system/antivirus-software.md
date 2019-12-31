@@ -1,5 +1,5 @@
 ---
-title: Software antivirus-Analytics Platform System (APS) | Microsoft Docs
+title: Software antivirus
 description: Si el centro de datos requiere un software antivirus, siga estas instrucciones para instalar el software antivirus en Analytics Platform System (APS). Se recomienda no instalar el software antivirus a menos que sea un requisito firme de su centro de datos.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c3687b839e52e64350591402c3aa19e9c2c54ac7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176054"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401470"
 ---
 # <a name="antivirus-software-for-analytics-platform-system-aps"></a>Software antivirus para Analytics Platform System (APS)
 Si el centro de datos requiere un software antivirus, siga estas instrucciones para instalar el software antivirus en Analytics Platform System. Se recomienda no instalar el software antivirus a menos que sea un requisito firme de su centro de datos.  
@@ -45,13 +46,13 @@ Para instalar el software antivirus en los hosts físicos, excluya la siguiente 
 ## <a name="exclusion-list-for-virtual-machines-vms"></a>Lista de exclusión para Virtual Machines (VM)  
 Para instalar el software antivirus en las máquinas virtuales, excluya la siguiente lista de directorios y archivos. No se deben analizar mediante el software antivirus.  
   
-**_PDW_region_-CTL01**  
+**_PDW_region_CTL01**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-**_appliance_domain_-AD01** y  **_appliance_domain_-AD02**  
+**_appliance_domain_-AD01** y ** _appliance_domain_-AD02**  
   
 -   Sin restricciones  
   
@@ -69,10 +70,10 @@ Para instalar el software antivirus en las máquinas virtuales, excluya la sigui
   
 -   Sin restricciones  
   
-**_appliance_domain_-ISCSI01**  
+**_appliance_domain_ISCSI01**  
   
 -   C:\iscsitarget  
   
-## <a name="see-also"></a>Vea también  
-[Tareas &#40;de administración de dispositivos análisis de plataforma System&#41;](appliance-management-tasks.md)  
+## <a name="see-also"></a>Véase también  
+[Tareas de administración de dispositivos &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

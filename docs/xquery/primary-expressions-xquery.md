@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67946387"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200514"
 ---
 # <a name="primary-expressions-xquery"></a>Expresiones principales (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +36,17 @@ ms.locfileid: "67946387"
   
 |Referencia de entidad|Representa|  
 |----------------------|----------------|  
-|&lt;|\<|  
-|&gt;|>|  
-|&amp;|&|  
-|&quot;|"|  
-|&apos;|'|  
+|`&lt;`|\<|  
+|`&gt;`|>|  
+|`&amp;`|&|  
+|`&quot;`|"|  
+|`&apos;`|'|  
   
- Un literal de cadena también puede contener una referencia de carácter, una referencia de estilo XML a un carácter Unicode, que se identifica mediante su punto de código decimal o hexadecimal. Por ejemplo, el símbolo del Euro se puede representar la referencia de carácter "&\#8364;".  
+ Un literal de cadena también puede contener una referencia de carácter, una referencia de estilo XML a un carácter Unicode, que se identifica mediante su punto de código decimal o hexadecimal. Por ejemplo, el símbolo del euro se puede representar mediante la referencia de carácter " \#&8364;".  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza la versión 1.0 de XML como base para el análisis.  
+>  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza la versión 1.0 de XML como base para el análisis.  
   
 ### <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes ilustran la utilización de literales y las referencias de entidad y carácter.  
@@ -64,7 +65,7 @@ GO
 ```  
 DECLARE @var XML  
 SET @var = ''  
-SELECT @var.query(' <SalaryRange>Salary > 50000 and < 100000</SalaryRange>')  
+SELECT @var.query(' <SalaryRange>Salary &gt; 50000 and &lt; 100000</SalaryRange>')  
 GO  
 ```  
   
@@ -93,7 +94,7 @@ Go
   
  `<a>I don't know</a>`  
   
- Las funciones booleanas integradas, **true()** y **false()** , puede usar para representar valores booleanos, como se muestra en el ejemplo siguiente.  
+ Las funciones booleanas integradas, **true ()** y **false ()**, se pueden usar para representar valores booleanos, tal y como se muestra en el ejemplo siguiente.  
   
 ```  
 DECLARE @var XML  
@@ -130,7 +131,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- Puede usar la función de extensión SQL:variable() para hacer referencia a variables SQL, como se muestra en la siguiente consulta.  
+ Puede utilizar la función de extensión SQL: variable () para hacer referencia a variables SQL, como se muestra en la consulta siguiente.  
   
 ```  
 DECLARE @price money  
@@ -151,12 +152,12 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   No se admite la importación de módulos.  
   
--   No se admiten las declaraciones de variables externas. Una solución para este problema consiste en usar el [:variable()](../xquery/xquery-extension-functions-sql-variable.md).  
+-   No se admiten las declaraciones de variables externas. Una solución a esto es usar la [función SQL: variable ()](../xquery/xquery-extension-functions-sql-variable.md).  
   
 ## <a name="context-item-expressions"></a>Expresiones de elementos de contexto  
- El elemento de contexto es el elemento que se está procesando en el contexto de una expresión de ruta de acceso. Se inicializa en una instancia de tipo de datos XML distinta de NULL con el nodo de documento. También puede cambiarse por el método nodes(), en el contexto de las expresiones XPath o los predicados [].  
+ El elemento de contexto es el elemento que se está procesando en el contexto de una expresión de ruta de acceso. Se inicializa en una instancia de tipo de datos XML distinta de NULL con el nodo de documento. También puede cambiarse mediante el método Nodes (), en el contexto de las expresiones XPath o de los predicados [].  
   
- Una expresión que contiene un punto (.) devuelve el elemento de contexto. Por ejemplo, la consulta siguiente evalúa cada elemento <`a`> para detectar la presencia del atributo `attr`. Si el atributo está presente, se devuelve el elemento. Tenga en cuenta que la condición del predicado especifica que el nodo de contexto se especifica mediante un solo punto.  
+ Una expresión que contiene un punto (.) devuelve el elemento de contexto. Por ejemplo, la consulta siguiente evalúa cada elemento <`a`> para la presencia del atributo. `attr` Si el atributo está presente, se devuelve el elemento. Tenga en cuenta que la condición del predicado especifica que el nodo de contexto se especifica mediante un solo punto.  
   
 ```  
 DECLARE @var XML  
@@ -172,7 +173,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>Llamadas a funciones  
- Puede llamar a funciones integradas de XQuery y el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funciones SQL:variable() y SQL:Column(). Para obtener una lista de funciones implementadas, consulte [funciones de XQuery con el tipo de datos xml](../xquery/xquery-functions-against-the-xml-data-type.md).  
+ Puede llamar a funciones de XQuery integradas y a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] las funciones SQL: variable () y SQL: column (). Para obtener una lista de las funciones implementadas, vea [funciones de XQuery con el tipo de datos XML](../xquery/xquery-functions-against-the-xml-data-type.md).  
   
 #### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones de la implementación:  
@@ -181,7 +182,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
 -   No se admite la importación de funciones.  
   
-## <a name="see-also"></a>Vea también  
- [Construcción de XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
-  
-  
+## <a name="see-also"></a>Véase también  
+ [Construcción XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)
+ 

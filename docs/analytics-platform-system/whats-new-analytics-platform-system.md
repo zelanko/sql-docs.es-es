@@ -1,5 +1,5 @@
 ---
-title: 'Novedades de Analytics Platform System: un almacenamiento de datos de escalado horizontal'
+title: Novedades
 description: Vea las novedades de Microsoft Analytics Platform System, un dispositivo local de escalado horizontal que hospeda MPP SQL Server almacenamiento de datos paralelos.
 author: mzaman1
 manager: craigg
@@ -9,29 +9,30 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9d0ff3861912270091b6a63cbd3fd7b2e8e0e481
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227107"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399418"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacenamiento de datos MPP de escalabilidad horizontal
 Vea las novedades de las últimas actualizaciones del dispositivo para Microsoft Analytics Platform System (AP). APS es un dispositivo local de escalado horizontal que hospeda MPP SQL Server almacenamiento de datos paralelos. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 <a name="h2-aps-cu7.5"></a>
-## <a name="aps-cu75"></a>APS CU 7.5
+## <a name="aps-cu75"></a>APS CU7.5
 Fecha de lanzamiento: septiembre 2019
 
 ### <a name="alter-external-data-source"></a>Modificar origen de datos externo
-Los clientes podrán modificar la definición del origen de datos externo con la actualización CU 7.5. Los clientes con la alta disponibilidad del nodo de nombre de Hadoop ahora pueden modificar el origen de datos para cambiar los argumentos cuando se produce una conmutación por error. En el caso de los APS, solo se pueden cambiar la ubicación, RESOURCE_MANAGER_LOCATION y CREDENTIAL. Vea [ALTER external Data Source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) para obtener más información.
+Los clientes podrán modificar la definición del origen de datos externo con la actualización CU 7.5. Los clientes con la alta disponibilidad del nodo de nombre de Hadoop ahora pueden modificar el origen de datos para cambiar los argumentos cuando se produce una conmutación por error. En el caso de los APS, solo se pueden cambiar la ubicación, la RESOURCE_MANAGER_LOCATION y la credencial. Vea [ALTER external Data Source](https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql?view=sql-server-2017) para obtener más información.
 
 ### <a name="cdh-515-and-516-support-with-polybase"></a>Compatibilidad con CDH 5,15 y 5,16 con polybase
 Polybase en APS con la actualización CU 7.5 admite ahora CDH 5,15 y 5,16 versiones de la distribución de Hadoop desde Cloudera. Use la opción 6 para las versiones de CDH 5. x. 
 
 ### <a name="try_convert-and-try_cast-support"></a>Compatibilidad con Try_Convert y Try_Cast
-CU 7.5 APS ahora admite las funciones TSQL [TRY_CAST](https://docs.microsoft.com/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-2017) y [TRY_CONVERT](https://docs.microsoft.com/sql/t-sql/functions/try-convert-transact-sql?view=sql-server-2017) . Ambas funciones devuelven un valor convertido al tipo de datos especificado si la conversión se realiza correctamente; de lo contrario, devuelve NULL.
+CU 7.5 APS ahora admite funciones de [TRY_CAST](https://docs.microsoft.com/sql/t-sql/functions/try-cast-transact-sql?view=sql-server-2017) y [TRY_CONVERT](https://docs.microsoft.com/sql/t-sql/functions/try-convert-transact-sql?view=sql-server-2017) TSQL. Ambas funciones devuelven un valor convertido al tipo de datos especificado si la conversión se realiza correctamente; de lo contrario, devuelve NULL.
 
 <a name="h2-aps-cu7.4"></a>
 ## <a name="aps-cu74"></a>APS CU7.4
@@ -82,7 +83,7 @@ Hemos agregado un [modificador de características](appliance-feature-switch.md)
 > Al aumentar maxdop, a veces pueden producirse operaciones más lentas o errores de interbloqueo. Si esto ocurre, vuelva a cambiar la configuración a maxdop 1 y reintente la operación.
 
 ### <a name="columnstore-index-health-dmv"></a>DMV de mantenimiento de índice de almacén de columnas
-Puede ver la información de mantenimiento del índice de almacén de columnas mediante la DMV **dm_pdw_nodes_db_column_store_row_group_physical_stats** . Utilice la siguiente vista para determinar la fragmentación y decidir cuándo volver a generar o reorganizar un índice de almacén de columnas.
+Puede ver la información de mantenimiento del índice de almacén de columnas mediante **dm_pdw_nodes_db_column_store_row_group_physical_stats** DMV. Utilice la siguiente vista para determinar la fragmentación y decidir cuándo volver a generar o reorganizar un índice de almacén de columnas.
 
 ```sql
 create view dbo.vCS_rg_physical_stats
@@ -120,7 +121,7 @@ El nuevo adaptador de destino de SSIS de APS que admite SQL Server 2017 como des
 Fecha de lanzamiento: 2018 de julio
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>Los comandos DBCC no consumen espacios de simultaneidad (cambio de comportamiento)
-APS admite un subconjunto de [comandos DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) de T-SQL, como [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Anteriormente, estos comandos consumirían una [ranura de simultaneidad](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) que redujo el número de cargas o consultas de usuario que podrían ejecutarse. Los `DBCC` comandos se ejecutan ahora en una cola local que no consume un espacio de simultaneidad de usuarios que mejora el rendimiento general de la ejecución de consultas.
+APS admite un subconjunto de [comandos DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) de T-SQL, como [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Anteriormente, estos comandos consumían un [espacio de simultaneidad](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) reduciendo el número de cargas y consultas de usuario que podían ejecutarse. Los `DBCC` comandos se ejecutan ahora en una cola local que no consume un espacio de simultaneidad de usuarios que mejora el rendimiento general de la ejecución de consultas.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Reemplaza algunas llamadas de metadatos por objetos de catálogo
 El uso de objetos de catálogo para llamadas de metadatos en lugar de usar SMO ha mostrado la mejora del rendimiento en APS. A partir de CU 7.1, algunas de estas llamadas de metadatos ahora usan objetos de catálogo de forma predeterminada. Este comportamiento se puede desactivar por el [modificador de características](appliance-feature-switch.md) si los clientes que usan consultas de metadatos se ejecutan en cualquier problema.
@@ -173,8 +174,8 @@ APS AU6 se ejecuta en la versión más reciente SQL Server 2016 y usa el nivel d
 APS AU6 admite estas mejoras de compatibilidad con T-SQL.  Estos elementos adicionales del lenguaje facilitan la migración desde SQL Server y otros orígenes de datos. 
 
 - Ahora se admiten las [intercalaciones de SQL de nivel de columna][] , además de las intercalaciones de Windows.
-- Los [Índices no clúster en índices de almacén de columnas agrupados][] mejoran el rendimiento de las consultas que buscan valores específicos en el índice de almacén de columnas agrupado. 
-- [SELECCIONE... DENTRO][] 
+- Los [índices no clúster en los índices de almacén de columnas agrupados][] mejoran el rendimiento de las consultas que buscan valores específicos en el índice de almacén de columnas agrupado. 
+- [Seleccione... DENTRO][] 
 - [sp_spaceused ()][] muestra el espacio en disco utilizado o reservado en una tabla o base de datos.
 - La compatibilidad con [tablas anchas][] es igual que SQL Server 2016. Ya no existe el límite anterior de 32 K para el tamaño de la fila. 
 
@@ -183,7 +184,7 @@ APS AU6 admite estas mejoras de compatibilidad con T-SQL.  Estos elementos adici
 - [VARCHAR (Max)][], [nvarchar (Max)][] y [varbinary (Max)][]. Estos tipos de datos LOB tienen un tamaño máximo de 2 GB. Para cargar estos objetos, utilice la [utilidad BCP][]. Polybase y dwloader no admiten estos tipos de datos actualmente. 
 - [PREDETERMINADO][]
 - [UNIQUEIDENTIFIER][]
-- Tipos de datos [NUMERIC][] y decimales.
+- Tipos de datos [numéricos][] y decimales.
 
 **Funciones de ventana**
 
@@ -195,13 +196,13 @@ APS AU6 admite estas mejoras de compatibilidad con T-SQL.  Estos elementos adici
 
 **Funciones de seguridad**
 
-- [CHECKSUM()][] y [BINARY_CHECKSUM()][]
-- [HAS_PERMS_BY_NAME()][]
+- [Checksum ()][] y [BINARY_CHECKSUM ()][]
+- [HAS_PERMS_BY_NAME ()][]
 
 **Funciones adicionales**
 
-- [NEWID()][]
-- [RAND()][]
+- [NEWID ()][]
+- [RAND ()][]
 
 ### <a name="polybasehadoop-enhancements"></a>Mejoras de polybase y Hadoop
 
@@ -246,23 +247,23 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [PREDETERMINADO]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[SELECCIONE... DENTRO]:/sql/t-sql/queries/select-into-clause-transact-sql
+[Seleccione... DENTRO]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused ()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Tablas anchas]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
-[utilidad BCP]:/sql/tools/bcp-utility
+[BCP, utilidad]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[ALFANUMÉRICO]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [FILAS o intervalo]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql
 [CUME_DIST]:/sql/t-sql/functions/cume-dist-transact-sql
 [PERCENT_RANK]:/sql/t-sql/functions/percent-rank-transact-sql
-[CHECKSUM()]:/sql/t-sql/functions/checksum-transact-sql
-[BINARY_CHECKSUM()]:/sql/t-sql/functions/binary-checksum-transact-sql
-[HAS_PERMS_BY_NAME()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
-[NEWID()]:/sql/t-sql/functions/newid-transact-sql
-[RAND()]:/sql/t-sql/functions/rand-transact-sql
+[SUMA de comprobación ()]:/sql/t-sql/functions/checksum-transact-sql
+[BINARY_CHECKSUM ()]:/sql/t-sql/functions/binary-checksum-transact-sql
+[HAS_PERMS_BY_NAME ()]:/sql/t-sql/functions/has-perms-by-name-transact-sql
+[NEWID ()]:/sql/t-sql/functions/newid-transact-sql
+[RAND ()]:/sql/t-sql/functions/rand-transact-sql
 
 
   

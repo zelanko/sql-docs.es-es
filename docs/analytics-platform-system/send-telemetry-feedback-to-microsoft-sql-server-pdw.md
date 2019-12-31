@@ -1,6 +1,6 @@
 ---
-title: Comentarios de telemetría - Analytics Platform System | Microsoft Docs
-description: Enviar comentarios de telemetría a Microsoft para Analytics Platform System.
+title: Comentarios sobre telemetría
+description: Envíe comentarios de telemetría a Microsoft for Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,111 +8,112 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 347879cd468d67b3feee0c92dcd154334df4c237
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960094"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400359"
 ---
-# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Enviar comentarios de telemetría a Microsoft para Analytics Platform System
-Analytics Platform System tiene una característica opcional de telemetría que envía datos de la consola de administración a Microsoft. 
+# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Enviar comentarios de telemetría a Microsoft for Analytics Platform System
+Analytics Platform System tiene una característica de telemetría opcional que envía datos de la consola de administración a Microsoft. 
   
 > [!NOTE]  
-> En esta versión, Microsoft no supervisa activamente los datos de telemetría. Los datos se recopilan solo con fines de análisis.  
+> En esta versión, Microsoft no está supervisando activamente los datos de telemetría. Los datos se recopilan solo con fines de análisis.  
   
-## <a name="privacy"></a>Privacidad  
-Para proporcionar la protección de privacidad máximo, puntos de acceso se incluye sin habilitar la telemetría. Antes de habilitar esta característica, revise el [declaración de privacidad de Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=400902). Para participar en, ejecute el script de PowerShell que se describe a continuación.  
+## <a name="privacy"></a>Service  
+Para proporcionar la máxima protección de privacidad, APS se suministra sin habilitar la telemetría. Antes de habilitar esta característica, revise primero la [Microsoft Analytics Platform System declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=400902). Para participar, ejecute el script de PowerShell que se describe a continuación.  
   
 ## <a name="enable"></a>Habilitar la telemetría  
-**Reenvío de DNS:** Requiere que envían datos de telemetría a Microsoft Analytics Platform System para conectarse a internet a través de un reenviador DNS. Para habilitar esta característica, debe habilitar en todos los hosts y máquinas virtuales de carga de trabajo de reenvío de DNS. Invocar el `Enable-RemoteMonitoring` comando con el `SetupDnsForwarder` opción para configurar el reenvío de DNS y habilitar la telemetría correctamente. Invocar el `Enable-RemoteMonitoring` comando sin el `SetupDnsForwarder` opción cuando el reenvío de DNS ya está configurado y desea habilitar la supervisión de latido.  
+**Reenvío de DNS:** El envío de datos de telemetría a Microsoft requiere Analytics Platform System para conectarse a Internet a través de un reenviador de DNS. Para habilitar esta característica, debe habilitar el reenvío de DNS en todos los hosts y máquinas virtuales de carga de trabajo. Invoque `Enable-RemoteMonitoring` el comando con `SetupDnsForwarder` la opción de configurar correctamente el reenvío de DNS y habilitar la telemetría. Invoque `Enable-RemoteMonitoring` el comando sin `SetupDnsForwarder` la opción cuando el reenvío de DNS ya esté configurado y solo desee habilitar la supervisión de latidos.  
   
 > [!IMPORTANT]  
-> Habilitar el reenvío de DNS, abre la conexión a internet para todos los hosts y máquinas virtuales de carga de trabajo.  
+> Al habilitar el reenvío DNS, se abre la conexión a Internet para todos los hosts y máquinas virtuales de carga de trabajo.  
   
 #### <a name="to-enable-feedback"></a>Para habilitar los comentarios  
   
-1.  Con una cuenta de administrador de dominio de aplicación, conéctese al nodo de Control (<strong>*appliance_domain*-CTL01</strong>) y abra un símbolo del sistema con sus credenciales de administrador de Windows.  
+1.  Mediante una cuenta de administrador de dominio de dispositivo, conéctese al nodo de control (<strong>*appliance_domain*-CTL01</strong>) y abra un símbolo del sistema con las credenciales de administrador de Windows.  
   
 2.  Navegue hasta el siguiente directorio: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
-3.  Importe el módulo `Configure-RemoteMonitoring.ps1`  
+3.  Importar el módulo`Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
-    > Para importar debe usar dos puntos en el comando.  
+    > Para importar, debe usar dos puntos en el comando.  
   
-    **Ejemplo:**  
+    **Ejemplo**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
     ```  
   
-4.  Invocar el `Enable-RemoteMonitoring` comando.  
+4.  Invoque `Enable-RemoteMonitoring` el comando.  
   
     > [!NOTE]  
-    > El script se da por supuesto que la conexión a internet funciona correctamente y no valida la conexión a internet.  
+    > El script supone que la conexión a Internet funciona correctamente y no valida la conexión a Internet.  
   
-    1.  La primera vez que habilite la telemetría, use el siguiente comando para asegurarse de que todos los reenviadores DNS están configurados correctamente. En este ejemplo, reemplace la dirección IP de DNS reenvían `xx.xx.xx.xx` con la dirección IP del reenviador DNS en su entorno.  
+    1.  La primera vez que habilite la telemetría, use el siguiente comando para asegurarse de que todos los reenviadores DNS estén configurados correctamente. En este ejemplo, reemplace la dirección `xx.xx.xx.xx` IP reenviada DNS por la dirección IP del reenviador DNS de su entorno.  
   
         ```  
         PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Enable-RemoteMonitoring -SetupDnsForwarder -DnsForwarderIp xx.xx.xx.xx  
         ```  
   
-    2.  Cuando ya están configurados los reenviadores DNS, como volver a habilitar previamente deshabilitado telemetría, use el comando siguiente para habilitar la telemetría sin configurar el reenvío de DNS.  
+    2.  Cuando ya estén configurados los reenviadores de DNS, como volver a habilitar la telemetría previamente deshabilitada, use el siguiente comando para habilitar la telemetría sin configurar el reenvío de DNS.  
   
         ```  
         PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Enable-RemoteMonitoring  
         ```  
   
-5.  Se le indicará que lea y acepte que APS recopilará información sobre el dispositivo. Habrá un vínculo a la declaración de privacidad de puntos de acceso que puede copiar y pegar en cualquier explorador de internet para su revisión.  
+5.  Se le pedirá que lea y confirme que APS recopilará información sobre el dispositivo. Habrá un vínculo a la declaración de privacidad del APS que puede copiar y pegar en cualquier explorador de Internet para su revisión.  
   
-6.  Escriba **Y** para aceptar y participar en los comentarios o escriba **N** no Aceptar.  
+6.  Escriba **y** para aceptar y participar en los comentarios o escriba **N** para no aceptar.  
   
-7.  Si escribió **Y** habrá una serie de comandos que se ejecutarán, lo que permitirá a los datos de telemetría (y opcionalmente el reenviador de DNS) características en el dispositivo. Si ve errores o información que lo conduce a creer que el comando no tuvo éxito póngase en contacto con CSS.  
+7.  Si ha escrito **Y** , habrá una serie de comandos que se ejecutarán, lo que habilitará la característica de telemetría (y, opcionalmente, el reenviador DNS) en el dispositivo. Si ve algún error o información que le lleve a creer que el comando no se ha realizado correctamente, póngase en contacto con CSS para obtener ayuda.  
   
-Si escribió **N**, no hay ningún comando que se va a ejecutar y no se habilitará la característica y no hay nada más para hacer.  
+Si ha escrito **N**, no se ejecutará ningún comando y la característica no estará habilitada y no habrá nada más que hacer.  
   
-No hay ningún riesgo en ejecución el `Enable-RemoteMonitoring` comando varias veces. Si ya se ha establecido el reenviador DNS obtendrá un mensaje de advertencia que indica que es el caso.  
+No hay ningún daño en ejecutar el `Enable-RemoteMonitoring` comando varias veces. Si el reenviador DNS ya está establecido, recibirá un mensaje de advertencia que indica que es el caso.  
   
 ## <a name="disable"></a>Deshabilitar la telemetría  
-Deshabilitación de la telemetría se detendrá todas las operaciones que se comunican información sobre el estado del dispositivo a los puntos de acceso a la supervisión de servicio en la nube.  
+Al deshabilitar la telemetría, se detendrán todas las operaciones que comunican información sobre el estado del dispositivo al servicio de supervisión de APS en la nube.  
   
 > [!IMPORTANT]  
-> Al realizar esta operación no se deshabilitará el reenviador DNS o la conexión a internet que puede estar en uso por otras características en el dispositivo.  
+> Al realizar esta operación, no se deshabilitará el reenviador DNS o la conexión a Internet que otras características del dispositivo pueden usar.  
   
 #### <a name="to-disable-telemetry"></a>Para deshabilitar la telemetría  
   
-1.  Con una cuenta de administrador de dominio de aplicación, conéctese al nodo de Control (<strong>*appliance_domain*-CTL01</strong>) y abra una ventana de PowerShell con privilegios de administrador.  
+1.  Con una cuenta de administrador de dominio de dispositivo, conéctese al nodo de control (<strong>*appliance_domain*-CTL01</strong>) y abra una ventana de PowerShell con privilegios de administrador.  
   
 2.  Navegue hasta el siguiente directorio: `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
-3.  Importe el módulo `Configure-RemoteMonitoring.ps1`  
+3.  Importar el módulo`Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
-    > Para importar debe usar dos puntos en el comando.  
+    > Para importar, debe usar dos puntos en el comando.  
   
-    **Ejemplo:**  
+    **Ejemplo**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
     ```  
   
-4.  Invocar el `Disable-RemoteMonitoring` comando sin parámetros. Este comando dejará de enviar comentarios. (Esto no afectará a la supervisión local.) Sin embargo, el comando no deshabilitar el reenviador de DNS o deshabilitar la conectividad a internet. Esto debe hacerse manualmente después de deshabilitar los comentarios correctamente.  
+4.  Invoque `Disable-RemoteMonitoring` el comando sin parámetros. Este comando dejará de enviar comentarios. (Esto no afectará a la supervisión local). Sin embargo, el comando no deshabilitará el reenviador de DNS ni deshabilitar la conectividad a Internet. Esto debe realizarse manualmente después de deshabilitar correctamente los comentarios.  
   
-    **Ejemplo:**  
+    **Ejemplo**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  
     ```  
   
-Si ve errores o información que lo conduce a creer que el comando no tuvo éxito póngase en contacto con CSS.  
+Si ve algún error o información que le lleve a creer que el comando no se ha realizado correctamente, póngase en contacto con CSS para obtener ayuda.  
   
-No hay ningún riesgo en ejecución el `Disable-RemoteMonitoring` comando varias veces.  
+No hay ningún daño en ejecutar el `Disable-RemoteMonitoring` comando varias veces.  
   
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información, vea:
-- [Supervisión del dispositivo mediante el uso de la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-- [Supervisión del dispositivo mediante el uso de vistas del sistema &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
-- [Supervisión del dispositivo mediante el uso de System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-- [Usar un reenviador DNS para resolver nombres DNS que no sea de dispositivo &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+Para obtener más información, consulte:
+- [Supervise el dispositivo mediante la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+- [Supervise el dispositivo mediante las vistas del sistema &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
+- [Supervise el dispositivo mediante System Center Operations Manager &#40;de sistema de plataforma de análisis&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+- [Usar un reenviador DNS para resolver nombres DNS que no sean de aplicación &#40;Analytics Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

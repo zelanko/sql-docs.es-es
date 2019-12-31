@@ -1,6 +1,6 @@
 ---
-title: Supervisar las cargas de almacenamiento de datos paralelos | Microsoft Docs
-description: Supervisar las cargas activas y recientes mediante el uso de la consola de administración de Analytics Platform System (APS) o las vistas de sistema de (PDW) de almacenamiento de datos paralelo".
+title: Cargas de monitor
+description: Supervise las cargas activas y recientes mediante el uso de la consola de administración de Analytics Platform System (APS) o las vistas del sistema de almacenamiento de datos paralelo (PDW).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,25 +8,26 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1eadf20e036c6c76cd3bece7c404fde2af4a7d70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960609"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400961"
 ---
-# <a name="monitor-loads-into-parallel-data-warehouse"></a>Supervisar las cargas de almacenamiento de datos paralelos
-Monitor activa y reciente [dwloader](dwloader.md) carga mediante la consola de administración de Analytics Platform System (APS) o el almacenamiento de datos paralelos (PDW) [vistas del sistema](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
+# <a name="monitor-loads-into-parallel-data-warehouse"></a>Supervisión de cargas en almacenamiento de datos paralelos
+Supervise las cargas [dwloaders](dwloader.md) activas y recientes mediante la consola de administración de Analytics Platform System (APS) o las [vistas del sistema](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)de almacenamiento de datos paralelo (PDW). 
   
 > [!TIP]  
-> Algunas de las cargas se inician mediante el uso de las instrucciones INSERT o herramientas de inteligencia empresarial que usar instrucciones SQL para realizar la carga. 
+> Algunas cargas se inician mediante instrucciones INSERT o herramientas de inteligencia empresarial que usan instrucciones SQL para realizar la carga. 
 
 <!-- MISSING LINKS
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Independientemente del método usado para supervisar una carga, el inicio de sesión debe tener permiso para tener acceso a los orígenes de datos subyacente. 
+Independientemente del método utilizado para supervisar una carga, el inicio de sesión debe tener permiso de acceso a los orígenes de datos subyacentes. 
 
 <!-- MISSING LINKS
 For the permissions to grant, see "Use All of the Admin Console" in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
@@ -34,38 +35,38 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
 --> 
   
 ## <a name="monitoring-loads"></a>Supervisión de cargas  
-Las secciones siguientes describen cómo supervisar las cargas.  
+En las secciones siguientes se describe cómo supervisar cargas.  
   
-### <a name="to-monitor-loads-by-using-the-admin-console"></a>Para supervisar las cargas mediante el uso de la consola de administración  
+### <a name="to-monitor-loads-by-using-the-admin-console"></a>Para supervisar las cargas mediante la consola de administración  
   
-1.  Inicie sesión en la consola de administración. <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
+1.  Inicie sesión en la consola de administración de. <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
   
-2.  En el menú superior, haga clic en **cargas**. Verá una tabla que se puede ordenar que muestra todos los recientes y cargas activas así como información adicional, por ejemplo, si la carga se ha completado o aún está activa. Haga clic en los encabezados de columna para ordenar las filas.  
+2.  En el menú superior, haga clic en **cargas**. Verá una tabla que se puede ordenar y que muestra todas las cargas recientes y activas más información adicional, por ejemplo, si la carga se ha completado o todavía está activa. Haga clic en los encabezados de columna para ordenar las filas.  
   
-3.  Para ver detalles adicionales para una carga específica, haga clic en la carga **ID** en la columna izquierda. En la vista detallada, puede ver el progreso en cada paso de la carga.  
+3.  Para ver detalles adicionales de una carga específica, haga clic en el **identificador** de carga en la columna izquierda. En la vista detallada, puede ver el progreso en cada paso de la carga.  
   
 Consulte estas vistas del sistema para obtener información sobre los metadatos acerca de la carga que se muestra en la consola de administración:  
   
--   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
+-   [Sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
 -   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
--   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [Sys. pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [Sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
-### <a name="to-monitor-loads-by-using-system-views"></a>Para supervisar las cargas mediante el uso de vistas del sistema  
-Para supervisar cargas activas y recientes mediante las vistas de SQL Server PDW, siga los pasos siguientes. Para cada vista del sistema que utiliza, consulte la documentación de esa vista para obtener información en las columnas y los posibles valores devueltos por la vista.  
+### <a name="to-monitor-loads-by-using-system-views"></a>Para supervisar las cargas mediante vistas del sistema  
+Para supervisar las cargas activas y recientes mediante PDW de SQL Server vistas, siga los pasos que se indican a continuación. Para cada vista del sistema utilizada, vea la documentación de esa vista para obtener información sobre las columnas y los valores posibles devueltos por la vista.  
   
-1.  Buscar el `request_id` para la carga en el [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) vista mediante la búsqueda de la línea de comandos del cargador en la `command` columna para esta vista.  
+1.  Busque la `request_id` de la carga en la vista [Sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) buscando la línea de comandos del cargador en `command` la columna para esta vista.  
   
-    Por ejemplo, el siguiente comando devuelve el texto del comando y el estado actual, más el `request_id`.  
+    Por ejemplo, el siguiente comando devuelve el texto del comando y el estado actual, `request_id`más el.  
   
     ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  Use la `request_id` para recuperar información adicional para la carga mediante el uso de la [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) , y [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) vistas. Por ejemplo, la consulta siguiente devuelve el `run_id` y obtener información acerca de las horas de inicio, final y duración de la carga, además de los errores e información sobre el número de filas procesadas:  
+2.  Utilice `request_id` para recuperar información adicional para la carga mediante las vistas [Sys. pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) y [Sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md) . Por ejemplo, la consulta siguiente devuelve el `run_id` y la información sobre los tiempos de inicio, finalización y duración de la carga, más los errores e información sobre el número de filas procesadas:  
   
     ```sql  
     SELECT lbr.run_id,   

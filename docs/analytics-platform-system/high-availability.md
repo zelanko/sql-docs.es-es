@@ -1,5 +1,5 @@
 ---
-title: Alta disponibilidad en Analytics Platform System | Microsoft Docs
+title: Alta disponibilidad
 description: Obtenga información sobre cómo Analytics Platform System (APS) está diseñado para lograr alta disponibilidad.
 author: mzaman1
 ms.prod: sql
@@ -8,38 +8,39 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cdf1837bd3b3b1cdf8e189ae591cd6fbff58387a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6246ed25909a2e366d8bbafcd912a4fd923cc84a
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960863"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401102"
 ---
 # <a name="analytics-platform-system-high-availability"></a>Alta disponibilidad de Analytics Platform System
 Obtenga información sobre cómo Analytics Platform System (APS) está diseñado para lograr alta disponibilidad.  
   
 ## <a name="high-availability-architecture"></a>Arquitectura de alta disponibilidad  
-![Arquitectura del dispositivo](media/appliance-architecture.png "arquitectura del dispositivo")  
+![Arquitectura del dispositivo](media/appliance-architecture.png "Arquitectura del dispositivo")  
   
-## <a name="network"></a>red  
-Disponibilidad de la red, el dispositivo APS tiene dos redes InfiniBand. Si una de las redes InfiniBand deja de funcionar, el otro se sigue estando disponible. Además, Active Directory ha replicado los controladores de dominio para resolver las solicitudes entrantes a la red InfiniBand correcta.  
+## <a name="network"></a>Red  
+En cuanto a la disponibilidad de la red, el dispositivo APS tiene dos redes InfiniBand. Si una de las redes InfiniBand deja de funcionar, la otra sigue estando disponible. Además, Active Directory ha replicado controladores de dominio para resolver las solicitudes entrantes en la red InfiniBand correcta.  
   
-Para obtener más información, consulte [adaptadores de red InfiniBand configurar](configure-infiniband-network-adapters.md).  
+Para obtener más información, consulte [configuración de adaptadores de red InfiniBand](configure-infiniband-network-adapters.md).  
   
-## <a name="storage"></a>Almacenamiento  
-Para mantener seguros los datos, puntos de acceso utiliza RAID 1 para mantener dos copias de todos los datos de usuario de creación de reflejo. Cuando se produce un error en un disco, el sistema de hardware regenera los datos en un disco de repuesto y establece una alerta que hay un error de disco.  
+## <a name="storage"></a>Storage  
+Para mantener la seguridad de los datos, APS utiliza la creación de reflejo RAID 1 para mantener dos copias de todos los datos de usuario. Cuando se produce un error en un disco, el sistema de hardware vuelve a generar los datos en un disco de reserva y establece una alerta que indica que hay un error de disco.  
   
-Para mantener los datos disponibles en línea, APS usa espacios de almacenamiento de Windows y volúmenes compartidos en clúster para administrar los discos de datos de usuario en el almacenamiento de conexión directa. Hay un grupo de almacenamiento por unidad de escalado de datos que se organizan en volúmenes compartidos de clúster que están disponibles para los hosts de nodo de proceso a través de puntos de montaje.  
+Para mantener los datos disponibles en línea, APS usa espacios de almacenamiento de Windows y volúmenes compartidos en clúster para administrar los discos de datos del usuario en el almacenamiento de conexión directa. Hay un grupo de almacenamiento por unidad de escala de datos organizados en volúmenes compartidos de clúster que están disponibles para los hosts del nodo de proceso a través de puntos de montaje.  
   
-Para asegurarse de que el bloque de almacenamiento permanece en línea, cada host en la unidad de escalado de datos tiene una máquina virtual de ISCSI que realiza la conmutación por error. Esta arquitectura es importante porque si se produce un error en un host, los datos están siendo accesibles a través de los otros hosts en la unidad de escalado de datos.  
+Para asegurarse de que el grupo de almacenamiento permanece en línea, cada host de la unidad de escalado de datos tiene una máquina virtual ISCSI que no realiza la conmutación por error. Esta arquitectura es importante porque, si se produce un error en un host, todavía se puede obtener acceso a los datos a través de los otros hosts de la unidad de escala de datos.  
   
 ## <a name="hosts"></a>Hosts  
-Para la disponibilidad del host, todos los hosts se configuran en un clúster de conmutación por error de Windows. Cada bastidor tiene un host pasivo. El primer bastidor, que controla el almacenamiento de datos paralelos (PDW) de SQL Server y el tejido de dispositivo, puede tener opcionalmente un segundo host pasivo. Si se produce un error en un host, las máquinas virtuales que están configuradas para la conmutación por error, conmutará por error a un host disponible pasivo.  
+Para la disponibilidad del host, todos los hosts se configuran en un clúster de conmutación por error de Windows. Cada bastidor tiene un host pasivo. Opcionalmente, el primer bastidor, que controla SQL Server almacenamiento de datos paralelo (PDW) y el tejido del dispositivo, puede tener un segundo host pasivo. Si se produce un error en un host, las máquinas virtuales configuradas para la conmutación por error se conmutarán por error a un host pasivo disponible.  
   
-## <a name="pdw-nodes-and-appliance-fabric"></a>Nodos PDW y el tejido de dispositivo  
-Para la alta disponibilidad de los nodos PDW y el tejido del dispositivo APS utiliza la virtualización. Cada uno de los componentes del dispositivo y de PDW fabric se ejecute en una máquina virtual.  
+## <a name="pdw-nodes-and-appliance-fabric"></a>Nodos de PDW y fabric de dispositivo  
+Para lograr una alta disponibilidad de los nodos PDW y el tejido del dispositivo, APS usa la virtualización. Cada uno de los componentes de PDW y de fabric de dispositivo se ejecuta en una máquina virtual.  
   
-Cada máquina virtual se define como un rol en el clúster de conmutación por error de Windows. Cuando se produce un error en una máquina virtual, el clúster reinicia en un host disponible pasivo. Las máquinas virtuales se implementan mediante System Center Virtual Machine Manager. Cuando se produce una conmutación por error, la máquina virtual que se ejecuta en el host pasivo es siguen teniendo acceso a sus datos de usuario a través de la red InfiniBand.  
+Cada máquina virtual se define como un rol en el clúster de conmutación por error de Windows. Cuando se produce un error en una máquina virtual, el clúster la reinicia en un host pasivo disponible. Las máquinas virtuales se implementan mediante System Center Virtual Machine Manager. Cuando se produce una conmutación por error, la máquina virtual que se ejecuta en el host pasivo sigue pudiendo acceder a sus datos de usuario a través de la red InfiniBand.  
   
-El nodo de Control y las máquinas virtuales de nodo de proceso se configuran como un clúster de nodo único. El clúster de nodo único administra las redes InfiniBand como un recurso de clúster para asegurarse de que el clúster siempre usa la IP de InfiniBand active. El clúster de nodo único administra los procesos PDW que se ejecutan dentro de la máquina virtual. Por ejemplo, el clúster de nodo único tiene SQL Server y el servicio de movimiento de datos (DMS) como recursos de modo que puede iniciarlos en el orden correcto. El nodo de Control de máquina virtual también controla el orden de inicio para las máquinas virtuales que se ejecutan en el host de orquestación.  
+Las máquinas virtuales de nodo de control y de nodo de proceso se configuran como un clúster de un solo nodo. El clúster de un solo nodo administra las redes InfiniBand como un recurso de clúster para asegurarse de que el clúster siempre usa la dirección IP de InfiniBand activa. El clúster de un solo nodo administra los procesos de PDW que se ejecutan dentro de la máquina virtual. Por ejemplo, el clúster de un solo nodo tiene SQL Server y el servicio de movimiento de datos (DMS) como recursos para que pueda iniciarlos en el orden adecuado. La VM de nodo de control también controla el orden de inicio de las otras máquinas virtuales que se ejecutan en el host de orquestación.  
   

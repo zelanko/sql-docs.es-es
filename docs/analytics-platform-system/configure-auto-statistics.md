@@ -1,6 +1,6 @@
 ---
-title: Estadísticas automáticas (Analytics Platform System)
-description: Describe la característica de estadísticas automática introducida en Analytics Platform System AU7.
+title: Estadísticas automáticas
+description: Describe la característica de estadísticas automáticas introducida en Analytics Platform System AU7.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,43 +8,44 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: caed6b9d126e09bc70a61c73b5100d689f81b011
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7071c9cb46bde6e2d353293cec9f01451c0b4f67
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961279"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401282"
 ---
-# <a name="configure-auto-statistics"></a>Configuración automática de estadísticas
+# <a name="configure-auto-statistics"></a>Configurar estadísticas automáticas
 
-Obtenga información sobre cómo configurar el almacenamiento de datos paralelos para utilizar estadísticas automáticamente para crear y actualizar estadísticas automáticamente.  Utilizar esta capacidad para mejorar los planes de consulta y, por lo tanto, mejorar el rendimiento de las consultas.
+Aprenda a configurar el almacenamiento de datos paralelo para usar estadísticas automáticas para crear y actualizar estadísticas automáticamente.  Utilice esta función para mejorar los planes de consulta y, por tanto, mejorar el rendimiento de las consultas.
 
-**Se aplica a:** Puntos de acceso (a partir de 2016 AU7)
+**Se aplica a:** APS (a partir de 2016-AU7)
 
-## <a name="what-are-statistics"></a>¿Cuáles son las estadísticas?
-Las estadísticas de optimización de la consulta son objetos que contienen información estadística sobre la distribución de valores en una o varias columnas de una tabla. El optimizador de consultas utiliza estas estadísticas para estimar la cardinalidad o tienen como resultado el número de filas de la consulta. Estas estimaciones de cardinalidad habilitar el optimizador de consultas crear un plan de consulta de alta calidad. Por ejemplo, los puntos de acceso, los usos del optimizador de consultas MPP estimaciones de cardinalidad para elegir en orden aleatorio o replicar el menor de dos tablas que se utilizan en una cláusula join y hacerlo mejoran el rendimiento de la consulta.  Para obtener más información, consulte [estadísticas](../relational-databases/statistics/statistics.md) y [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
+## <a name="what-are-statistics"></a>¿Qué son las estadísticas?
+Las estadísticas para la optimización de consultas son objetos que contienen información estadística acerca de la distribución de valores en una o más columnas de una tabla. El optimizador de consultas utiliza estas estadísticas para estimar la cardinalidad, o número de filas, en el resultado de la consulta. Estas estimaciones de cardinalidad habilitan al optimizador de consultas para crear un plan de consulta de alta calidad. Como ejemplo, en APS, el optimizador de consultas MPP utiliza las estimaciones de cardinalidad para elegir el orden aleatorio o la replicación del menor de dos tablas usadas en una cláusula join y, de este modo, mejorar el rendimiento de las consultas.  Para obtener más información, vea [Statistics](../relational-databases/statistics/statistics.md) y [DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
 
-## <a name="what-are-auto-statistics"></a>¿Cuáles son las estadísticas automáticamente?
-Estadísticas automáticamente son las estadísticas que el optimizador de consultas crea y se actualiza automáticamente para mejorar el plan de consulta. Las estadísticas pueden quedar desfasadas después las cargas, insertan, actualizan y eliminan las operaciones. Sin estadísticas automáticamente, deberá realizar su propio análisis para entender qué columnas necesitan estadísticas y cuando las estadísticas deben actualizarse.
+## <a name="what-are-auto-statistics"></a>¿Qué son las estadísticas automáticas?
+Las estadísticas automáticas son estadísticas que el optimizador de consultas crea y actualiza automáticamente para mejorar el plan de consulta. Las estadísticas pueden quedar desactualizadas después de las operaciones de carga, inserciones, actualizaciones y eliminaciones. Sin estadísticas automáticas, debe realizar su propio análisis para comprender qué columnas necesitan estadísticas y Cuándo es necesario actualizar las estadísticas.
 
-Automática de estadísticas incluye los tres valores siguientes: 
+Estadísticas automáticas incluye las tres opciones siguientes: 
 
-### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
+### <a name="auto_create_statistics"></a>AUTO_CREATE_STATISTICS
 Cuando está activada la opción automática de creación de estadísticas, AUTO_CREATE_STATISTICS, el optimizador de consultas crea las estadísticas en columnas individuales en el predicado de consulta, según sea necesario, para mejorar las estimaciones de cardinalidad del plan de consulta. Estas estadísticas de columna única se crean en las columnas que aún no tienen un histograma en un objeto de estadísticas existente.
 
-### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
+### <a name="auto_update_statistics"></a>AUTO_UPDATE_STATISTICS 
 Cuando está activada la opción automática de actualización de estadísticas, AUTO_UPDATE_STATISTICS, el optimizador de consultas determina cuándo las estadísticas pueden estar desfasadas y las actualiza cuando son usadas por una consulta. Las estadísticas se vuelven obsoletas después de que las operaciones de inserción, actualización, eliminación o combinación cambien la distribución de los datos en la tabla o la vista indexada. El optimizador de consultas determina cuándo han podido quedar obsoletas las estadísticas contando el número de modificaciones de datos desde la actualización más reciente de las estadísticas, comparando el número de modificaciones con respecto a un umbral. El umbral se basa en el número de filas de la tabla o la vista indizada.
 
-### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC
-La opción de actualización asincrónica de estadísticas AUTO_UPDATE_STATISTICS_ASYNC determina si el Optimizador de consultas utiliza actualizaciones sincrónicas o asincrónicas de las estadísticas. Para los puntos de acceso, la opción de actualización de estadísticas asincrónica es ON de forma predeterminada y el optimizador de consultas actualiza las estadísticas de forma asincrónica. La opción AUTO_UPDATE_STATISTICS_ASYNC se aplica a los objetos de estadística creados para índices y columnas únicas de los predicados de consulta, así como a las estadísticas creadas con la instrucción CREATE STATISTICS.
+### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC
+La opción de actualización asincrónica de estadísticas AUTO_UPDATE_STATISTICS_ASYNC determina si el Optimizador de consultas utiliza actualizaciones sincrónicas o asincrónicas de las estadísticas. En el caso de los APS, la opción de actualización asincrónica de las estadísticas está activada de forma predeterminada y el optimizador de consultas actualiza las estadísticas de forma asincrónica. La opción AUTO_UPDATE_STATISTICS_ASYNC se aplica a los objetos de estadística creados para índices y columnas únicas de los predicados de consulta, así como a las estadísticas creadas con la instrucción CREATE STATISTICS.
 
-## <a name="configuration-settings-for-system-administrators"></a>Opciones de configuración para los administradores del sistema
-Después de actualizar a AU7 APS, automática de estadísticas está habilitada de forma predeterminada. El administrador del sistema puede habilitar o deshabilitar estadísticas automáticamente con el [modificador de característica](appliance-feature-switch.md) opción en el Administrador de configuración de dispositivo.  Una vez habilitada, los usuarios pueden cambiar la configuración de las estadísticas por base de datos.
-Cambiar los valores de conmutador de característica requiere un reinicio del servicio en puntos de acceso.
+## <a name="configuration-settings-for-system-administrators"></a>Opciones de configuración para administradores del sistema
+Después de actualizar a APS AU7, las estadísticas automáticas están habilitadas de forma predeterminada. El administrador del sistema puede habilitar o deshabilitar las estadísticas automáticas con la opción de [cambio de características](appliance-feature-switch.md) en el dispositivo Configuration Manager.  Una vez habilitado, los usuarios pueden cambiar la configuración de las estadísticas por base de datos.
+El cambio de los valores de modificador de características requiere un reinicio del servicio en APS.
 
-## <a name="change-auto-statistics-settings-on-a-database"></a>Cambiar la configuración de las estadísticas automáticamente en una base de datos
-Cuando las estadísticas automáticamente está habilitada el administrador del sistema, puede usar [ALTER DATABASE (almacenamiento de datos paralelos)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) para cambiar la configuración de las estadísticas en una base de datos. Si el modificador de característica de estadísticas automática está habilitado por el administrador del sistema, las bases de datos creadas después de actualizar a AU7 tendrá automática de estadísticas habilitada. Todas las bases de datos que existían antes de la actualización a AU7 tienen estadísticas automáticamente deshabilitadas. El ejemplo siguiente habilita las estadísticas automáticamente en el myPDW de base de datos existente.
+## <a name="change-auto-statistics-settings-on-a-database"></a>Cambiar la configuración de estadísticas automática en una base de datos
+Cuando el administrador del sistema habilita las estadísticas automáticas, puede usar [ALTER DATABASE (almacenamiento de datos paralelos)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) para cambiar la configuración de las estadísticas en una base de datos. Si el administrador del sistema habilita el modificador de características de estadísticas automáticas, las nuevas bases de datos creadas después de la actualización a AU7 tendrán habilitadas las estadísticas automáticas. Todas las bases de datos que existían antes de la actualización a AU7 tienen deshabilitadas las estadísticas automáticas. En el siguiente ejemplo se habilitan las estadísticas automáticas en la base de datos existente myPDW.
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON
@@ -52,15 +53,15 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS ON
 ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
 ```
  
-Opción AUTO_UPDATE STATISTICS_ASYNC sólo funciona si AUTO_UPDATE_STATISTICS es ON.  Por lo tanto, no se actualizan las estadísticas cuando AUTO_UPDATE_STATISTICS es OFF y AUTO_UPDATE_STATISTICS_ASYNC es ON. 
+AUTO_UPDATE STATISTICS_ASYNC opción solo funciona si AUTO_UPDATE_STATISTICS está activada.  Por lo tanto, las estadísticas no se actualizan cuando AUTO_UPDATE_STATISTICS está desactivada y AUTO_UPDATE_STATISTICS_ASYNC está activada. 
 
 ### <a name="error-messages"></a>mensajes de error
-Podría recibir el mensaje de error "no se admite esta opción en PDW".  Este error se produce cuando el administrador del sistema no ha habilitado estadísticas automáticamente y se intenta establecer cualquiera del automáticamente las opciones de estadísticas en ALTER DATABASE. 
+Podría recibir el mensaje de error "esta opción no es compatible con PDW".  Este error se produce cuando el administrador del sistema no ha habilitado las estadísticas automáticas e intenta establecer cualquiera de las opciones de estadísticas automáticas en ALTER DATABASE. 
 
 ### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
-Estadística automática no funciona en las tablas externas. 
+Las estadísticas automáticas no funcionan en tablas externas. 
 
-### <a name="check-the-current-values"></a>Compruebe los valores actuales
+### <a name="check-the-current-values"></a>Comprobar los valores actuales
 La consulta siguiente devuelve los valores actuales de la configuración de las estadísticas automáticas para todas las bases de datos.
 
 ```sql
@@ -72,7 +73,7 @@ FROM
     sys.databases;
 ```
 
-Un valor devuelto de 1 significa que en la configuración se encuentra en y 0 significa que la opción está desactivada. 
+Un valor devuelto de 1 significa que la opción está activada y 0 significa que la opción está desactivada. 
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para ver cómo funcionan las consultas, consulte [supervisión de consultas activas](monitoring-active-queries.md)
+Para ver el rendimiento de las consultas, consulte [supervisar consultas activas](monitoring-active-queries.md)

@@ -1,6 +1,6 @@
 ---
-title: 'Restablecimiento de contraseña: Analytics Platform System | Microsoft Docs'
-description: La página de restablecimiento de contraseña permite cambiar la contraseña de Analytics Platform System utilizada las cuentas de administrador.
+title: Restablecimiento de contraseña
+description: La página de restablecimiento de contraseña le permite cambiar la contraseña de las cuentas de administrador que usa Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,52 +8,53 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5fb3bbb5adba5754c220c34503a22656f6da39c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 952dbda04b4f7132406e3a6de4479afea1be92e7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960466"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400906"
 ---
-# <a name="password-reset---analytics-platform-system"></a>Restablecimiento de contraseñas: Analytics Platform System
-El **de restablecimiento de contraseña** página le permite cambiar la contraseña de Analytics Platform System utilizada las cuentas de administrador.  
+# <a name="password-reset---analytics-platform-system"></a>Restablecimiento de contraseña: Analytics Platform System
+La página de **restablecimiento de contraseña** le permite cambiar la contraseña de las cuentas de administrador que usa Analytics Platform System.  
   
 > [!WARNING]  
-> Use siempre la **Configuration Manager** para actualizar la contraseña de administrador de dominio de aplicación. Otros métodos no pueden actualizar todos los componentes de Analytics Platform System y podrían provocar problemas de acceso de dispositivo.  
+> Use siempre el **Configuration Manager** para actualizar la contraseña de administrador de dominio de la aplicación. Otros métodos podrían no actualizar todos los componentes de Analytics Platform System y podrían causar problemas de acceso a la aplicación.  
   
-Las contraseñas de Analytics Platform System, se proporciona cuando se entrega el dispositivo. Siempre debe cambiar las contraseñas con los nuevos valores cuando asume la responsabilidad de su dispositivo. Hay tres contraseñas para la actualización. Las contraseñas no debe ser igual entre sí.  
+Cuando se entregue el dispositivo, se le proporcionarán las contraseñas del sistema de la plataforma de análisis. Cambie siempre las contraseñas a nuevos valores cuando asuma la responsabilidad de su dispositivo. Hay tres contraseñas para actualizar. No es necesario que las contraseñas sean las mismas.  
   
-**F <*xxxx*> \Administrator**  
-El **administrador** del dominio de aplicación.  
+**F<*xxxx*> \Administrador**  
+El **Administrador** del dominio de la aplicación.  
   
-**. \Administrator**  
-Local **administrador** cuenta en los equipos que hospedan las máquinas virtuales.  
-  
-> [!IMPORTANT]  
-> Para el dispositivo de actualización 1, **Configuration Manager** ¿correctamente no cambiará la contraseña de las cuentas de administrador local en todo el PDW VM. Si es necesario, póngase en contacto con CSS para obtener instrucciones adicionales.  
-  
-**sa**  
-El **sa** inicio de sesión en SQL Server. **SA** es un miembro de la **sysadmin** rol fijo de servidor y es un administrador de SQL Server. La contraseña de la **sa** también se puede cambiar el inicio de sesión mediante el uso de la **ALTER LOGIN** instrucción.  
-  
-## <a name="password-requirements"></a>Requisitos de contraseña  
-Las credenciales de administrador de dominio y las credenciales de administrador del sistema cumplan las directivas de seguridad de contraseñas para cada tipo de credencial. Al cambiar las credenciales de administrador de dominio, la nueva contraseña se actualiza en el dominio donde sea necesario a lo largo de PDW de SQL Server.  
+**.\Administrator**  
+La cuenta de **Administrador** local en los equipos que hospedan las máquinas virtuales.  
   
 > [!IMPORTANT]  
-> PDW de SQL Server no admite el carácter de signo de dólar ( **$** ) en el Administrador de dominio o las contraseñas de administrador local. Los caracteres **^ % &** se permiten en las contraseñas, sin embargo, PowerShell lo que respecta a estos elementos como caracteres especiales. Si alguno de estos caracteres se usan en las contraseñas para el administrador del sistema o SQL Server**sa** cuentas (el **AdminPassword** y **PdwSAPassword** parámetros durante programa de instalación), a continuación, instalación, se producirá un error de instalación, actualización, REPLACENODE y aplicación de revisiones, incluidos. Para garantizar una actualización correcta cuando contraseñas actuales contienen caracteres no admitidos, cambiar estas contraseñas para que no contienen dichos caracteres antes de ejecutar la actualización. Una vez completada la actualización, puede establecer estas contraseñas a sus valores originales. Para obtener más información acerca de los requisitos de contraseña, consulte [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
+> En el caso de la actualización 1 del dispositivo, **Configuration Manager** no cambia correctamente la contraseña de las cuentas de administrador local en las máquinas virtuales de PDW. Si es necesario, póngase en contacto con CSS para obtener instrucciones adicionales.  
+  
+**valida**  
+Inicio de sesión **SA** en SQL Server. **SA** es miembro del rol fijo de servidor **sysadmin** y es un administrador de SQL Server. La contraseña del inicio de sesión **SA** también se puede cambiar mediante la instrucción **ALTER login** .  
+  
+## <a name="password-requirements"></a>Requisitos de contraseñas  
+Las credenciales de administrador de dominio y las credenciales de administrador del sistema se adhieren a las directivas de seguridad de contraseña para cada tipo de credencial. Al cambiar las credenciales de administrador de dominio, la nueva contraseña se actualiza en el dominio donde sea necesario en PDW de SQL Server.  
+  
+> [!IMPORTANT]  
+> PDW de SQL Server no admite el carácter de signo de dólar**$**() en las contraseñas de administrador de dominio o de administrador local. Los caracteres **^% &** se permiten en las contraseñas; sin embargo, PowerShell los considera como caracteres especiales. Si se usa cualquiera de estos caracteres en contraseñas para el administrador del sistema o SQL Server cuentas**SA** (los parámetros **AdminPassword** y **PdwSAPassword** durante la instalación), se producirá un error en la instalación, incluida la instalación, la actualización, la REPLACENODE y la revisión. Para garantizar una actualización correcta cuando las contraseñas actuales contienen caracteres no admitidos, cambie estas contraseñas para que no contengan dichos caracteres antes de ejecutar la actualización. Una vez finalizada la actualización, puede volver a establecer estas contraseñas en sus valores originales. Para obtener más información sobre los requisitos de contraseña, consulte [ALTER login](../t-sql/statements/alter-login-transact-sql.md).  
   
 ## <a name="to-reset-a-password"></a>Para restablecer una contraseña  
   
-1.  Conectar con el nodo de Control e iniciar el **Configuration Manager** (**dwconfig.exe**). Para obtener más información, consulte [iniciar el Administrador de configuración &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md).  
+1.  Conéctese al nodo de control e inicie el **Configuration Manager** (**dwconfig. exe**). Para obtener más información, consulte [Inicio del&#41;de &#40;de Configuration Manager de la plataforma de análisis ](launch-the-configuration-manager.md).  
   
-2.  En el panel izquierdo de la **Configuration Manager**, haga clic en **de restablecimiento de contraseña**.  
+2.  En el panel izquierdo del **Configuration Manager**, haga clic en **restablecimiento de contraseña**.  
   
-3.  Seleccione el tipo de administrador en el **cuenta** menú desplegable y, a continuación, escriba la nueva contraseña en el **contraseña** y **Confirmar contraseña** cuadros. Haga clic en **aplicar** para guardar los cambios.  
+3.  Seleccione el tipo de administrador en el menú desplegable **cuenta** y, a continuación, escriba la nueva contraseña en los cuadros **contraseña** y **Confirmar contraseña** . Haga clic en **aplicar** para guardar los cambios.  
   
-    Cambios en estas cuentas no afectan a las sesiones activas actualmente, pero se aplicará en el próximo intento de inicio de sesión para cada usuario.  
+    Los cambios que realice en estas cuentas no afectarán a las sesiones activas, pero se aplicarán en el siguiente intento de inicio de sesión de cada usuario.  
   
-    ![Contraseña de DWConfig SQL Server](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
+    ![Contraseña SQL Server DWConfig](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
-## <a name="see-also"></a>Vea también  
-[Establecer contraseña de administrador para iniciar sesión en los nodos de AD en el modo de restauración de servicios de directorio &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
-[Inicie el Administrador de configuración &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
+## <a name="see-also"></a>Véase también  
+[Establezca la contraseña de administrador para iniciar sesión en los nodos de AD en Modo de restauración de servicios de directorio &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
+[Inicie el sistema de Configuration Manager &#40;Analytics Platform&#41;](launch-the-configuration-manager.md)  
   

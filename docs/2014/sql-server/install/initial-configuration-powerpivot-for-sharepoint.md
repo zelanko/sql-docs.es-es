@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ba58e81cb802f3debe1c481443751de1947c595e
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
-ms.translationtype: HT
+ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798119"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200436"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configuración inicial (PowerPivot para SharePoint)
   Siga los pasos de este tema para configurar una instalación inicial de PowerPivot para SharePoint. La manera más fácil de configurar una instalación inicial es utilizar la herramienta de configuración de PowerPivot. Automatiza todos los pasos de configuración que se describen a continuación.  
@@ -24,7 +24,7 @@ ms.locfileid: "72798119"
   
  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  El servidor de SharePoint debe haberse instalado utilizando la opción de instalación Granja de servidores del programa de instalación de SharePoint. No se admite ningún servidor de SharePoint independiente que utilice una base de datos integrada. Para obtener más información, vea [instrucciones para usar las características de SQL Server BI en una granja de servidores de SharePoint 2010](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md).  
   
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ ms.locfileid: "72798119"
 ##  <a name="deploywsp"></a>Paso 1: implementar soluciones de PowerPivot  
  Hay dos soluciones que deben instalarse e implementarse: una solución de granja y una solución de aplicación web.  
   
-### <a name="install-and-deploy-the-farm-solution"></a>Instalar e implementar la solución de granja de servidores
+### <a name="install-and-deploy-the-farm-solution"></a>Instalar e implementar la solución de granja
   
  En la versión anterior, el programa de instalación de SQL Server instalaba e implementaba la solución de granja. En esta versión, debe utilizar la herramienta de configuración de PowerPivot o el script de PowerShell para implementar la solución de granja. No puede utilizar Administración central para implementar la solución de granja. Este es el único paso en la configuración de PowerPivot para SharePoint que no se puede realizar en Administración central. Una vez implementada la solución de granja, puede usar Administración central y los pasos de este tema para configurar una instalación de PowerPivot para SharePoint.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "72798119"
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-### <a name="deploy-the-web-application-solution"></a>Implementación de la solución de aplicación Web
+### <a name="deploy-the-web-application-solution"></a>Implementar la solución de aplicación web
   
 1.  Haga clic en el botón Inicio, seleccione **todos los programas**, seleccione **productos de Microsoft SharePoint 2010**y, a continuación, seleccione **Administración central de SharePoint 2010**.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "72798119"
   
      Debe ver dos paquetes de solución independientes: powerpivotfarm.wsp y powerpivotwebapp.wsp. La primera solución (powerpivotfarm.wsp) debe estar implementada. Una vez implementada, no es necesario implementarla de nuevo. La segunda solución (powerpivotwebapp.wsp) se implementa para Administración central, pero debe implementar esta solución manualmente para cada aplicación web de SharePoint que vaya a admitir el acceso a datos PowerPivot.  
   
-3.  Haga clic en **powerpivotwebapp.wsp**.  
+3.  Haga clic en **powerpivotwebapp. wsp**.  
   
 4.  Haga clic en **implementar solución.**  
   
-5.  En **¿cómo implementar en?** , seleccione la aplicación Web de SharePoint a la que desea agregar compatibilidad con las características de PowerPivot.  
+5.  En **¿cómo implementar en?**, seleccione la aplicación Web de SharePoint a la que desea agregar compatibilidad con las características de PowerPivot.  
   
 6.  Haga clic en **Aceptar**.  
   
@@ -97,19 +97,19 @@ ms.locfileid: "72798119"
 ##  <a name="createapp"></a>Paso 3: crear una aplicación de servicio PowerPivot  
  El próximo paso es crear una aplicación de servicio PowerPivot.  
   
-1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  En la cinta **Aplicaciones de servicio** , haga clic en **Nuevo**.  
   
 3.  Seleccione **SQL Server aplicación de servicio PowerPivot**. Si no aparece en la lista, PowerPivot para SharePoint no está instalado o la solución no se implementó.  
   
-4.  En la página **crear nueva aplicación de servicio PowerPivot** , escriba un nombre para la aplicación. El valor predeterminado es PowerPivotServiceApplication\<número >. Si va a crear varias aplicaciones de servicio PowerPivot, un nombre descriptivo ayudará a otros administradores a saber cómo se utiliza la aplicación.  
+4.  En la página **crear nueva aplicación de servicio PowerPivot** , escriba un nombre para la aplicación. El valor predeterminado es\<PowerPivotServiceApplication número>. Si va a crear varias aplicaciones de servicio PowerPivot, un nombre descriptivo ayudará a otros administradores a saber cómo se utiliza la aplicación.  
   
 5.  En Grupo de aplicaciones, cree un nuevo grupo de aplicaciones y seleccione una cuenta de seguridad para él. Se requiere una cuenta de usuario de dominio.  
   
 6.  En **servidor de base de datos**, elija un servidor de base de datos en el que crear la base de datos de aplicación de servicio. El valor predeterminado es la instancia del motor de base de datos de SQL Server que hospeda las bases de datos de configuración de la granja.  
   
-7.  En **nombre**de la base de datos, el valor predeterminado es PowerPivotServiceApplication1_\<GUID >. El nombre predeterminado de la base de datos corresponde al de la aplicación de servicio. Si escribió un nombre de aplicación del servicio único, siga una convención de nomenclatura similar para el nombre de la base de datos, de modo que pueda administrarlos juntos.  
+7.  En **nombre**de la base de datos, el\<valor predeterminado es PowerPivotServiceApplication1_ guid>. El nombre predeterminado de la base de datos corresponde al de la aplicación de servicio. Si escribió un nombre de aplicación del servicio único, siga una convención de nomenclatura similar para el nombre de la base de datos, de modo que pueda administrarlos juntos.  
   
 8.  En **Autenticación de bases de datos**, el valor predeterminado es Autenticación de Windows. Si elige **Autenticación de SQL**, consulte la guía del administrador de SharePoint para obtener información sobre cómo usar este tipo de autenticación en una implementación de SharePoint.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "72798119"
 ##  <a name="ExcelServ"></a>Paso 4: habilitar Excel Services  
  PowerPivot para SharePoint requiere que Servicios de Excel admita el acceso a datos PowerPivot en la granja. Puede determinar si Servicios de Excel ya está habilitado confirmando si Aplicación de Servicios de Excel aparece en la lista de aplicaciones de servicio en Administración central. Si Servicios de Excel no aparece, siga estos pasos para habilitarlo en este momento.  
   
-1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  En la cinta de opciones de aplicaciones de servicio, en crear, haga clic en **nuevo**.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "72798119"
   
 ##### <a name="part-1-enable-secure-store-service"></a>Parte 1: habilitar el Servicio de almacenamiento seguro  
   
-1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  En la cinta de opciones de aplicaciones de servicio, en crear, haga clic en **nuevo**.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "72798119"
   
 5.  En **base de datos**, especifique la instancia de SQL Server que hospedará la base de datos para esta aplicación de servicio. El valor predeterminado es la instancia del motor de base de datos de SQL Server que hospeda las bases de datos de configuración de la granja.  
   
-6.  En **nombre**de la base de datos, escriba el nombre de la base de datos de aplicación de servicio. El valor predeterminado es Secure_Store_Service_DB_\<GUID >. El nombre predeterminado corresponde al de la aplicación de servicio. Si escribió un nombre de aplicación del servicio único, siga una convención de nomenclatura similar para el nombre de la base de datos, de modo que pueda administrarlos juntos.  
+6.  En **nombre**de la base de datos, escriba el nombre de la base de datos de aplicación de servicio. El valor predeterminado es Secure_Store_Service_DB_\<guid>. El nombre predeterminado corresponde al de la aplicación de servicio. Si escribió un nombre de aplicación del servicio único, siga una convención de nomenclatura similar para el nombre de la base de datos, de modo que pueda administrarlos juntos.  
   
 7.  En **Autenticación de bases de datos**, el valor predeterminado es Autenticación de Windows. Si elige Authentication SQL, consulte la guía de administrador de SharePoint para obtener información sobre cómo utilizar el tipo de autenticación en la granja.  
   
@@ -195,20 +195,20 @@ ms.locfileid: "72798119"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Parte 3: configurar la cuenta de actualización de datos PowerPivot desatendida  
  A menudo se requiere crear una cuenta de actualización de datos desatendida para el acceso a datos PowerPivot y el acceso a datos externos durante la actualización de datos. Por ejemplo, si Kerberos no está habilitado, debe crear una cuenta desatendida que el servicio PowerPivot pueda utilizar para conectarse a los orígenes de datos externos.  
   
- Para obtener instrucciones sobre cómo crear la cuenta de actualización de datos PowerPivot desatendida u otras credenciales almacenadas que se utilizan en la actualización de datos, vea [configurar la &#40;cuenta de actualización&#41; de datos desatendida de PowerPivot PowerPivot para SharePoint](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) y [configurar credenciales almacenadas para la actualización &#40;de datos PowerPivot&#41;PowerPivot para SharePoint](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
+ Para obtener instrucciones acerca de cómo crear la cuenta de actualización de datos PowerPivot desatendida u otras credenciales almacenadas que se utilizan en la actualización de datos, vea [configurar la cuenta de actualización de datos desatendida de powerpivot &#40;PowerPivot para SharePoint&#41;](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) y [configurar credenciales almacenadas para la actualización de datos PowerPivot &#40;PowerPivot para SharePoint ](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)&#41;.  
   
 ##  <a name="Usage"></a>Paso 6: habilitar la recopilación de datos de uso  
- PowerPivot para SharePoint utiliza la infraestructura de recopilación de datos de uso de SharePoint para recopilar información sobre el uso de PowerPivot en toda la granja. Aunque los datos de uso siempre forman parte de una instalación de SharePoint, puede que tenga que habilitarla para poder usarla. Para obtener instrucciones, consulte [configurar la recopilación de &#40;datos de uso para PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint).  
+ PowerPivot para SharePoint utiliza la infraestructura de recopilación de datos de uso de SharePoint para recopilar información sobre el uso de PowerPivot en toda la granja. Aunque los datos de uso siempre forman parte de una instalación de SharePoint, puede que tenga que habilitarla para poder usarla. Para obtener instrucciones, consulte [configurar la recopilación de datos de uso para &#40;PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint).  
   
 ##  <a name="Upload"></a>Paso 7: aumentar el tamaño máximo de carga para las aplicaciones Web de SharePoint y Excel Services  
- Dado que los libros PowerPivot pueden ser grandes, quizá desee aumentar el tamaño de archivo máximo. Hay dos valores de tamaño de archivo que puede configurar: el tamaño máximo de carga para la aplicación web y el tamaño de libro máximo en Servicios de Excel. El tamaño máximo de archivo debe estar establecido en el mismo valor en ambas aplicaciones. Para obtener instrucciones, vea [configurar el tamaño &#40;máximo de&#41;carga de archivos PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint).  
+ Dado que los libros PowerPivot pueden ser grandes, quizá desee aumentar el tamaño de archivo máximo. Hay dos valores de tamaño de archivo que puede configurar: el tamaño máximo de carga para la aplicación web y el tamaño de libro máximo en Servicios de Excel. El tamaño máximo de archivo debe estar establecido en el mismo valor en ambas aplicaciones. Para obtener instrucciones, vea [configurar el tamaño máximo de carga de archivos &#40;PowerPivot para SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint).  
   
 ##  <a name="activatePP"></a>Paso 8: activar la integración de características de PowerPivot para colecciones de sitios  
  La activación de características en el nivel de colección de sitios hace que las plantillas y las páginas de las aplicaciones estén disponibles para los sitios, incluidas las páginas de configuración para la actualización de datos programada y las páginas de aplicación para las bibliotecas de Galería de PowerPivot y de fuentes de distribución de datos.  
   
 1.  En un sitio de SharePoint, haga clic en **Acciones de sitio**.  
   
-     De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que, a menudo, puede tener acceso a un sitio de SharePoint escribiendo http://\<nombre de equipo > para abrir la colección de sitios raíz.  
+     De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que, a menudo, puede tener acceso a un sitio\<de SharePoint escribiendo http://nombre del equipo> para abrir la colección de sitios raíz.  
   
 2.  Haga clic en **Configuración del sitio**.  
   
@@ -216,9 +216,9 @@ ms.locfileid: "72798119"
   
 4.  Desplácese hacia abajo en la página hasta que encuentre la **característica de colección de sitios de integración de PowerPivot**.  
   
-5.  Haga clic en **Activar**.  
+5.  Haz clic en **Activar**.  
   
-6.  Repita este procedimiento con las demás colecciones de sitios abriendo cada sitio y haciendo clic en **Acciones de sitio**.  
+6.  Repita el procedimiento para las colecciones de sitios adicionales abriendo cada sitio y haciendo clic en **acciones del sitio**.  
   
  Para obtener más información, vea [activar la integración de características de PowerPivot para colecciones de sitios en administración central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca).  
   
@@ -227,7 +227,7 @@ ms.locfileid: "72798119"
   
  Instalar el proveedor permitirá que los libros que hacen referencia a MSOLAP.4 en la cadena de conexión de datos funcionen según lo previsto en un servidor PowerPivot de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La instalación del proveedor OLE DB de SQL Server 2008 R2 es un método alternativo para actualizar los libros creados en una versión anterior de PowerPivot para Excel.  
   
- Puede descargar el proveedor desde [SQL Server página del Feature Pack de 2008 R2](https://go.microsoft.com/fwlink/?LinkId=159570). Busque **microsoft® proveedor OLE DB de Analysis Services para microsoft® SQL Server® 2008 R2**y, a continuación, descargue el paquete x64 del programa de instalación de `SQLServer2008_ASOLEDB10.msi`.  
+ Puede descargar el proveedor desde [SQL Server página del Feature Pack de 2008 R2](https://www.microsoft.com/download/details.aspx?id=16978). Busque **microsoft® proveedor OLE DB de Analysis Services para microsoft® SQL Server® 2008 R2**y, a continuación, descargue el paquete x64 del `SQLServer2008_ASOLEDB10.msi` programa de instalación.  
   
  Para obtener más información sobre cómo instalar el proveedor, incluidos los pasos de comprobación, vea [instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
@@ -236,11 +236,11 @@ ms.locfileid: "72798119"
   
  Para comprobar la integración de PowerPivot con un sitio de SharePoint, haga lo siguiente:  
   
-1.  En un explorador, abra la aplicación web que ha creado. Si ha usado los valores predeterminados, puede especificar http://\<el nombre del equipo > en la dirección URL.  
+1.  En un explorador, abra la aplicación web que ha creado. Si ha usado los valores predeterminados, puede\<especificar http://el nombre del equipo> en la dirección URL.  
   
 2.  Compruebe que el acceso a datos y las características de procesamiento de PowerPivot están disponibles en la aplicación. Para ello, compruebe la presencia de plantillas de biblioteca proporcionadas por PowerPivot:  
   
-    1.  En acciones del sitio, haga clic en **más opciones..** .  
+    1.  En acciones del sitio, haga clic en **más opciones..**.  
   
     2.  En bibliotecas, debería ver **biblioteca de fuentes** de distribución de datos y Galería de **PowerPivot**. La característica PowerPivot proporciona estas plantillas de biblioteca, que estarán visibles en la lista Bibliotecas si la característica está integrada correctamente.  
   
@@ -256,7 +256,7 @@ ms.locfileid: "72798119"
   
 5.  En Tipo de servidor, seleccione **Analysis Services**.  
   
-6.  En nombre del servidor, escriba **\<nombre del servidor > \powerpivot**, donde **\<nombre del servidor >** es el nombre del equipo que tiene la instalación PowerPivot para SharePoint.  
+6.  En nombre del servidor, escriba ** \<el nombre del servidor> \powerpivot**, donde ** \<nombre** del servidor>es el nombre del equipo que tiene la PowerPivot para SharePoint instalación.  
   
 7.  Haga clic en **Conectar**.  
   
@@ -292,10 +292,10 @@ ms.locfileid: "72798119"
   
  Con el tiempo, si decide que se necesitan mayores capacidades de almacenamiento y procesamiento de datos, puede agregar una segunda instancia de PowerPivot para SharePoint a la granja. El proceso de instalación es casi idéntico al usado para agregar el primer servidor, salvo los requisitos para especificar los nombres de instancia y la información de la cuenta de servicio. Para obtener instrucciones, consulte [lista de comprobación de implementación: escalado horizontal mediante la adición de servidores de PowerPivot a una granja de servidores de SharePoint 2010](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Características admitidas por las ediciones de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Configurar cuentas de servicio PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   
- [Crear y configurar una aplicación de servicio PowerPivot en Administración Central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)   
+ [Crear y configurar una aplicación de servicio PowerPivot en administración central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)   
  [Implementar soluciones de PowerPivot en SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)   
- [Activar la integración de características de PowerPivot para colecciones de sitios en Administración Central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)   
+ [Activar la integración de características de PowerPivot para colecciones de sitios en administración central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)   
  [Instalación de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

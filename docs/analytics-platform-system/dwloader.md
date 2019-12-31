@@ -1,5 +1,5 @@
 ---
-title: Cargador de línea de comandos dwloader-almacenamiento de datos paralelos | Microsoft Docs
+title: Cargador de línea de comandos de dwloader
 description: dwloader es una herramienta de línea de comandos de almacenamiento de datos paralelos (PDW) que carga masivamente filas de tabla en una tabla existente.
 author: mzaman1
 ms.prod: sql
@@ -8,19 +8,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 598a244849f843a2b95e6614d4e676a18ba54f61
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212266"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401174"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Cargador de línea de comandos de dwloader para almacenamiento de datos paralelos
-**dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelos (PDW) que carga masivamente filas de tabla en una tabla existente. Al cargar filas, puede agregar todas las filas al final de la tabla (modo*Append* o *modo fastappend*), anexar nuevas filas y actualizar las filas existentes (*modo Upsert*) o eliminar todas las filas existentes antes de cargarlas y, a continuación, insertar todas las filas en una tabla vacía. (*modo de recarga*).  
+**dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelos (PDW) que carga masivamente filas de tabla en una tabla existente. Al cargar filas, puede agregar todas las filas al final de la tabla (modo*Append* o *modo fastappend*), anexar nuevas filas y actualizar las filas existentes (*modo Upsert*) o eliminar todas las filas existentes antes de cargarlas y, a continuación, insertar todas las filas en una tabla vacía (*modo de recarga*).  
   
 **Proceso de carga de datos**  
   
-1.  Preparar los datos de origen.  
+1.  Prepare los datos de origen.  
   
     Use su propio proceso ETL para crear los datos de origen que desea cargar. Se debe dar formato a los datos de origen para que coincidan con el esquema de la tabla de destino. Almacene los datos de origen en uno o varios archivos de texto y copie los archivos de texto en el mismo directorio del servidor de carga. Para obtener información sobre el servidor de carga, consulte [adquisición y configuración de un servidor de carga](acquire-and-configure-loading-server.md) .  
   
@@ -122,18 +123,18 @@ Muestra información de ayuda sencilla sobre el uso del cargador. La ayuda solo 
 **-U** *login_name*  
 Un inicio de sesión de autenticación de SQL Server válido con los permisos adecuados para realizar la carga.  
   
-**-P** *password*  
+**-P** *contraseña*  
 La contraseña de un *login_name*de autenticación de SQL Server.  
   
 **-W**  
-Usa la autenticación de Windows. (No se requiere *login_name* ni una *contraseña* ). 
+Usa la autenticación de Windows. (No se requiere *login_name* ni la *contraseña* ). 
 
 <!-- MISSING LINK
 For information about configuring Windows Authentication, see [Security - Configure Domain Trusts](security-configure-domain-trusts.md).  
 -->
   
 **-f** *parameter_file_name*  
-Use un archivo de parámetros, *parameter_file_name*, en lugar de los parámetros de línea de comandos. *parameter_file_name* puede contener cualquier parámetro de línea de comandos, excepto *user_name* y *password*. Si se especifica un parámetro en la línea de comandos y en el archivo de parámetros, la línea de comandos invalida el parámetro de archivo.  
+Use un archivo de parámetros, *parameter_file_name*, en lugar de los parámetros de línea de comandos. *parameter_file_name* puede contener cualquier parámetro de línea de comandos excepto *user_name* y *contraseña*. Si se especifica un parámetro en la línea de comandos y en el archivo de parámetros, la línea de comandos invalida el parámetro de archivo.  
   
 El archivo de parámetros contiene un parámetro, sin **-** el prefijo, por línea.  
   
@@ -146,7 +147,7 @@ Ejemplos:
 **-S** *target_appliance*  
 Especifica el dispositivo PDW de SQL Server que recibirá los datos cargados.  
   
-*En el caso de las conexiones de InfiniBand*, *target_appliance* se especifica como < nombre del dispositivo >-SQLCTL01. Para configurar esta conexión con nombre, consulte [configuración de adaptadores de red InfiniBand](configure-infiniband-network-adapters.md).  
+*En el caso de las conexiones de InfiniBand*, *target_appliance* se especifica como <nombre del dispositivo>-SQLCTL01. Para configurar esta conexión con nombre, consulte [configuración de adaptadores de red InfiniBand](configure-infiniband-network-adapters.md).  
   
 En el caso de las conexiones Ethernet, *target_appliance* es la dirección IP del clúster de nodo de control.  
   
@@ -156,7 +157,7 @@ Si se omite, dwloader toma como valor predeterminado el valor que se especificó
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [*schema*].*table_name*  
+**-T** *target_database_name.* [*esquema*]. *TABLE_NAME*  
 Nombre de tres partes de la tabla de destino.  
   
 **-I** *source_data_location*  
@@ -168,7 +169,7 @@ Para dar formato a un archivo de código fuente:
   
 -   Cada línea de un archivo de código fuente contiene los datos de una fila de la tabla. Los datos de origen deben coincidir con el esquema de la tabla de destino. El orden de las columnas y los tipos de datos también deben coincidir. Cada campo de la fila representa una columna de la tabla de destino.  
   
--   De forma predeterminada, los campos son de longitud variable y están separados por un delimitador. Para especificar el tipo de delimitador, use las opciones de línea de comandos de < variable_length_column_options >. Para especificar campos de longitud fija, use las opciones de línea de comandos de < fixed_width_column_options >.  
+-   De forma predeterminada, los campos son de longitud variable y están separados por un delimitador. Para especificar el tipo de delimitador, use las opciones de la línea de comandos> variable_length_column_options de <. Para especificar los campos de longitud fija, utilice las opciones de la línea de comandos> fixed_width_column_options de <.  
   
 Para especificar la ubicación de los datos de origen:  
   
@@ -208,10 +209,10 @@ Ejemplos:
 Si hay errores de carga, **dwloader** almacena la fila que no se pudo cargar y la descripción del error en un archivo denominado *load_failure_file_name*. Si este archivo ya existe, dwloader sobrescribirá el archivo existente. *load_failure_file_name* se crea cuando se produce el primer error. Si todas las filas se cargan correctamente, no se crea *load_failure_file_name* .  
   
 **-fh** *number_header_rows*  
-Número de líneas (filas) que se van a omitir al principio de *source_data_file_name*. El valor predeterminado es 0.  
+Número de líneas (filas) que se van a omitir al principio de *source_data_file_name*. El valor predeterminado es 0.  
   
 <variable_length_column_options>  
-Opciones para un *source_data_file_name* que tiene columnas de longitud variable delimitada por caracteres. De forma predeterminada, *source_data_file_name* contiene caracteres ASCII en columnas de longitud variable.  
+Opciones de un *source_data_file_name* que tiene columnas de longitud variable delimitada por caracteres. De forma predeterminada, *source_data_file_name* contiene caracteres ASCII en columnas de longitud variable.  
   
 En el caso de los archivos ASCII, los valores NULL se representan mediante la colocación consecutiva de los delimitadores. Por ejemplo, en un archivo delimitado por canalización ("|"), un valor NULL se indica mediante "| |". En un archivo delimitado por comas, un valor NULL se indica mediante ",,". Además, se debe especificar la opción **-E** (--emptyStringAsNull). Para obtener más información sobre-E, vea a continuación.  
   
@@ -221,14 +222,14 @@ Especifica un tipo de codificación de caracteres para los datos que se van a ca
 **-t** *field_delimiter*  
 Delimitador para cada campo (columna) de la fila. El delimitador de campo es uno o varios de estos caracteres de escape ASCII o valores hexadecimales ASCII.  
   
-|NOMBRE|Carácter de escape|Carácter Hex|  
+|Nombre|Carácter de escape|Carácter Hex|  
 |--------|--------------------|-----------------|  
-|Pestaña|\t|0x09|  
+|Tabulador|\t|0x09|  
 |Retorno de carro (CR)|\r|0x0D|  
-|Avance de línea (LF)|\n|0x0a|  
+|Avance de línea (LF)|\n|STOP|  
 |CRLF|\r\n|0x0d0x0a|  
 |Coma|','|0x2c|  
-|Comilla doble|\\|0x22|  
+|Comilla doble|\\"|0x22|  
 |Comilla simple|\\'|0x27|  
   
 Para especificar el carácter de barra vertical en la línea de comandos, escríbalo entre comillas dobles, "|". Esto evitará que el analizador de la línea de comandos interprete erróneamente. Otros caracteres se incluyen entre comillas simples.  
@@ -287,7 +288,7 @@ Las columnas de ancho fijo no se admiten cuando-e es UTF8.
 **-w** *fixed_width_config_file*  
 Ruta de acceso y nombre del archivo de configuración que especifica el número de caracteres de cada columna. Se debe especificar cada campo.  
   
-Este archivo debe residir en el servidor de carga. La ruta de acceso puede ser una ruta de acceso UNC, relativa o absoluta. Cada línea de *fixed_width_config_file* contiene el nombre de una columna y el número de caracteres de esa columna. Hay una línea por columna, como se indica a continuación, y el orden del archivo debe coincidir con el orden de la tabla de destino:  
+Este archivo debe residir en el servidor de carga. La ruta de acceso puede ser una ruta de acceso UNC, relativa o absoluta. Cada línea de *fixed_width_config_file* contiene el nombre de una columna y el número de caracteres de dicha columna. Hay una línea por columna, como se indica a continuación, y el orden del archivo debe coincidir con el orden de la tabla de destino:  
   
 *column_name*=*num_chars*  
   
@@ -339,17 +340,17 @@ Ejemplos de LF:
   
 Se requiere un LF para UNIX. Se requiere un CR para Windows.  
   
-**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
+**-D** { **AMD** | ydm | MDA | Mad |  DMY | Dam | *custom_date_format* }  
 Especifica el orden de mes (m), día (d) y año (y) de todos los campos de fecha y hora del archivo de entrada. El orden predeterminado es AMD. Para especificar varios formatos de orden para el mismo archivo de código fuente, use la opción-DT.  
   
-ymd | dmy  
+AMD | DMY  
 ydm y DMY permiten los mismos formatos de entrada. Ambos permiten que el año esté al principio o al final de la fecha. Por ejemplo, para los formatos de fecha **ydm** y **DMY** , podría tener 2013-02-03 o 02-03-2013 en el archivo de entrada.  
   
 ydm  
 Solo puede cargar entradas con formato de ydm en columnas de tipo de datos datetime y smalldatetime. No se pueden cargar valores de ydm en una columna de tipo de datos datetime2, Date o DateTimeOffset.  
   
 mdy  
-MDA permite <month>. <space> <day> <comma> <year>  
+<month> <space> <day>MDA permite <comma>. <year>  
   
 Ejemplos de datos de entrada de MDA para el 1 de enero de 1975:  
   
@@ -362,15 +363,15 @@ Ejemplos de datos de entrada de MDA para el 1 de enero de 1975:
 -   01011975  
   
 mad  
-Ejemplos de archivos de entrada del 4 de marzo de 2010: 03-2010-04, 3/2010/4  
+Ejemplos de archivos de entrada del 4 de marzo de 2010:03-2010-04, 3/2010/4  
   
 dam  
-Ejemplos de archivos de entrada de marzo de 2004, 2010: 04-2010-03, 4/2010/3  
+Ejemplos de archivos de entrada de marzo de 2004, 2010:04-2010-03, 4/2010/3  
   
 *custom_date_format*  
 *custom_date_format* es un formato de fecha personalizado (por ejemplo, mm/dd/aaaa) y se incluye únicamente por razones de compatibilidad con versiones anteriores. dwloader no aplica el formato de fecha personalizado. En su lugar, cuando se especifica un formato de fecha personalizado, **dwloader** lo convertirá en la configuración correspondiente de AMD, ydm, MDA, Mad, Dam o DMY.  
   
-Por ejemplo, si especifica-D MM/DD/AAAA, dwloader espera que todas las entradas de fecha se ordenen con el mes primero, después con el día y después con el año (MDA). No aplica los meses de 2 caracteres, los días de 2 dígitos y los años de 4 dígitos tal como se especifica en el formato de fecha personalizado. Estos son algunos ejemplos de formas en las que se puede dar formato a las fechas en el archivo de entrada cuando el formato de fecha es-D MM/DD/AAAA: 01/02/2013, Jan. 02.2013, 1/2/2013  
+Por ejemplo, si especifica-D MM/DD/AAAA, dwloader espera que todas las entradas de fecha se ordenen con el mes primero, después con el día y después con el año (MDA). No aplica los meses de 2 caracteres, los días de 2 dígitos y los años de 4 dígitos tal como se especifica en el formato de fecha personalizado. Estos son algunos ejemplos de formas en las que se puede dar formato a las fechas en el archivo de entrada cuando el formato de fecha es-D MM/DD/AAAA: 01/02/2013, Ene. 02.2013, 1/2/2013  
   
 Para obtener información de formato más completa, vea [reglas de conversión de tipos de datos para dwloader](dwloader-data-type-conversion-rules.md).  
   
@@ -391,16 +392,16 @@ Nombre de la base de datos que contendrá la tabla de ensayo. El valor predeterm
 **-M** *load_mode_option*  
 Especifica si se van a anexar, Upsert o volver a cargar los datos. El modo predeterminado es anexar.  
   
-anexar  
+append  
 El cargador inserta filas al final de las filas existentes en la tabla de destino.  
   
 fastappend  
 El cargador inserta filas directamente, sin usar una tabla temporal, al final de las filas existentes en la tabla de destino. fastappend requiere la opción de transacciones múltiples (-m). No se puede especificar una base de datos de ensayo cuando se usa fastappend. No hay reversión con fastappend, lo que significa que la recuperación de una carga errónea o anulada debe controlarse mediante su propio proceso de carga.  
   
-Upsert **-K** *merge_column* [,...*n* ]  
+Upsert **-K**  *merge_column* [,... *n* ]  
 El cargador utiliza la instrucción SQL Server Merge para actualizar las filas existentes e insertar nuevas filas.  
   
-La opción-K especifica las columnas en las que se basará la combinación. Estas columnas forman una clave de combinación, que debe representar una fila única. Si la clave de combinación existe en la tabla de destino, se actualiza la fila. Si no existe la clave de combinación en la tabla de destino, se anexa la fila.  
+La opción-K especifica las columnas en las que se basará la combinación. Estas columnas forman una clave de combinación, que debe representar una fila única. Si la clave de combinación existe en la tabla de destino, se actualiza la fila. Si la clave de fusión mediante combinación no existe en la tabla de destino, se anexará la fila.  
   
 En el caso de las tablas distribuidas por hash, la clave de fusión mediante combinación debe ser o incluir la columna de distribución.  
   
@@ -425,8 +426,8 @@ Si el tipo de carga es FASTAPPEND, *BatchSize* se aplica a la carga de datos en 
 <reject_options>  
 Especifica las opciones para determinar el número de errores de carga que permitirá el cargador. Si los errores de carga superan el umbral, el cargador se detendrá y no confirmará ninguna fila.  
   
-**-rt** { **value** | percentage }  
-Especifica si-*reject_value* en la opción **-RV** *reject_value* es un número literal de filas (valor) o una tasa de error (porcentaje). El valor predeterminado es Value.  
+**-RT** { **Value** | Percentage}  
+Especifica si el*reject_value* de la opción **-RV** *reject_value* es un número literal de filas (valor) o una tasa de error (porcentaje). El valor predeterminado es Value.  
   
 La opción de porcentaje es un cálculo en tiempo real que se produce a intervalos según la opción-RS.  
   
@@ -435,9 +436,9 @@ Por ejemplo, si el cargador intenta cargar 100 filas y 25 producen un error y 75
 **-rv** *reject_value*  
 Especifica el número o porcentaje de rechazos de filas que se van a permitir antes de detener la carga. La opción **-RT** determina si *reject_value* hace referencia al número de filas o al porcentaje de filas.  
   
-El valor predeterminado de *reject_value* es 0.  
+El *reject_value* predeterminado es 0.  
   
-Cuando se usa con el valor-RT, el cargador detiene la carga cuando el recuento de filas rechazado supera el valor de reject_value.  
+Cuando se usa con el valor-RT, el cargador detiene la carga cuando el recuento de filas rechazados supera reject_value.  
   
 Cuando se usa con el porcentaje de-RT, el cargador calcula el porcentaje a intervalos (opción-RS). Por lo tanto, el porcentaje de filas con errores puede superar *reject_value*.  
   
@@ -534,7 +535,7 @@ Al cargar varios archivos con un comando LOAD, todas las filas rechazadas se esc
 La cadena vacía no se debe usar como delimitador. Cuando se usa una cadena vacía como delimitador de filas, se producirá un error en la carga. Cuando se usa como delimitador de columna, la carga omite el delimitador y continúa usando el valor predeterminado "|" como delimitador de columna. Cuando se usa como delimitador de cadena, la cadena vacía se omite y se aplica el comportamiento predeterminado.  
   
 ## <a name="locking-behavior"></a>Comportamiento del bloqueo  
-el comportamiento de bloqueo de **dwloader** varía en función de *load_mode_option*.  
+el comportamiento de bloqueo de **dwloader** varía en función del *load_mode_option*.  
   
 -   **Append** -Append es la opción recomendada y la más común. Append carga los datos en una tabla de ensayo. El bloqueo se describe en detalle a continuación.  
   
@@ -554,19 +555,19 @@ El modo Append carga los datos en dos fases. La fase uno carga los datos del arc
 |Tipo de tabla|Transacciones múltiples<br />Modo (-m)|La tabla está vacía|Compatibilidad con simultaneidad|Registro|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Montón|Sí|Sí|Sí|Mínimo|  
-|Montón|Sí|Sin|Sí|Mínimo|  
-|Montón|Sin|Sí|Sin|Mínimo|  
-|Montón|Sin|No|Sin|Mínimo|  
-|Cl|Sí|Sí|Sin|Mínimo|  
-|Cl|Sí|Sin|Sí|Completo|  
-|Cl|Sin|Sí|Sin|Mínimo|  
-|Cl|Sin|No|Sí|Completo|  
+|Montón|Sí|No|Sí|Mínimo|  
+|Montón|No|Sí|No|Mínimo|  
+|Montón|No|No|No|Mínimo|  
+|Cl|Sí|Sí|No|Mínimo|  
+|Cl|Sí|No|Sí|Completo|  
+|Cl|No|Sí|No|Mínimo|  
+|Cl|No|No|Sí|Completo|  
   
 En la tabla anterior se muestra **dwloader** mediante la carga del modo Append en un montón o en una tabla de índice clúster (CI), con o sin la marca multitransaccional y la carga en una tabla vacía o en una tabla no vacía. El comportamiento de bloqueo y registro de cada combinación de carga se muestra en la tabla. Por ejemplo, la fase de carga (2ª) con el modo Append en un índice agrupado sin el modo de varias transacciones y en una tabla vacía hará que PDW cree un bloqueo exclusivo en la tabla y el registro sea mínimo. Esto significa que un cliente no podrá cargar (2ª) fase y consulta simultáneamente en una tabla vacía. Sin embargo, al cargar con la misma configuración en una tabla que no está vacía, PDW no emitirá un bloqueo exclusivo en la tabla y es posible la simultaneidad. Desafortunadamente, se produce el registro completo, lo que ralentiza el proceso.  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-simple-dwloader-example"></a>A. Ejemplo de dwloader simple  
+### <a name="a-simple-dwloader-example"></a>a. Ejemplo de dwloader simple  
 En el ejemplo siguiente se muestra la iniciación del **cargador** solo con las opciones requeridas seleccionadas. Otras opciones se toman del archivo de configuración global, *loadparamfile. txt*.  
   
 Ejemplo de uso de la autenticación de SQL Server.  
@@ -596,14 +597,14 @@ Ejemplo de uso de argumentos para un archivo de código fuente y un archivo de e
 dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees.csv -T AdventureWorksPDW2012.dbo.DimEmployees -R C:\SQLData\LoadErrors  
 ```  
   
-### <a name="b-load-data-into-an-adventureworks-table"></a>b. Cargar datos en una tabla de AdventureWorks  
+### <a name="b-load-data-into-an-adventureworks-table"></a>B. Cargar datos en una tabla de AdventureWorks  
 El ejemplo siguiente forma parte de un script de Batch que carga datos en **AdventureWorksPDW2012**.  Para ver el script completo, abra el archivo aw_create. bat que se incluye con el paquete de instalación de **AdventureWorksPDW2012** . 
 
 <!-- Missing link
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-El siguiente fragmento de script usa dwloader para cargar datos en las tablas DimAccount y DimCurrency. Este script usa una dirección Ethernet. Si estaba usando InfiniBand, el servidor sería *< appliance_name >* `-SQLCTL01`.  
+El siguiente fragmento de script usa dwloader para cargar datos en las tablas DimAccount y DimCurrency. Este script usa una dirección Ethernet. Si estaba usando InfiniBand, el servidor se *<appliance_name>* `-SQLCTL01`.  
   
 ```  
 set server=10.193.63.134  
@@ -665,7 +666,7 @@ A continuación se muestra un ejemplo del archivo de datos, DimAccount. txt, que
 13|3|1170|110|Deferred Taxes|Assets|+||Currency|  
 ```  
   
-### <a name="c-load-data-from-the-command-line"></a>C. Cargar datos desde la línea de comandos  
+### <a name="c-load-data-from-the-command-line"></a>c. Cargar datos desde la línea de comandos  
 El script del ejemplo B se puede reemplazar escribiendo todos los parámetros en la línea de comandos, tal y como se muestra en el ejemplo siguiente.  
   
 ```  
@@ -680,7 +681,7 @@ Descripción de los parámetros de la línea de comandos:
   
 -   *-E* especifica que se carguen cadenas vacías como null.  
   
--   *-M* recargar especifica que se trunque la tabla de destino antes de insertar los datos de origen.  
+-   *-M recargar* especifica que se trunque la tabla de destino antes de insertar los datos de origen.  
   
 -   *-e UTF16* indica que el archivo de origen usa el tipo de codificación de caracteres Little Endian.  
   
@@ -694,7 +695,7 @@ Descripción de los parámetros de la línea de comandos:
   
 -   *-r \r\n* especifica que cada fila de DimAccount. txt finaliza con un retorno de carro y un carácter de avance de línea.  
   
--   *-U < login_name >-P <password>*  especifica el inicio de sesión y la contraseña para el inicio de sesión que tiene permisos para realizar la carga.  
+-   *-U <login_name>-P <password> * especifica el inicio de sesión y la contraseña para el inicio de sesión que tiene permisos para realizar la carga.  
   
 
 <!-- MISSING LINK

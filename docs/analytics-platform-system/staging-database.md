@@ -1,6 +1,6 @@
 ---
-title: Uso de una base de datos provisional - almacenamiento de datos paralelos | Microsoft Docs
-description: Almacenamiento de datos paralelos (PDW) de SQL Server usa una base de datos de almacenamiento provisional para almacenar datos temporalmente durante el proceso de carga.
+title: Usar una base de datos de ensayo
+description: SQL Server almacenamiento de datos paralelos (PDW) utiliza una base de datos provisional para almacenar los datos temporalmente durante el proceso de carga.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,37 +8,38 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 824ad4dedee0224023f50b6855b2de1e53581304
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960037"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400282"
 ---
-# <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Uso de una base de datos provisional en el almacenamiento de datos paralelos (PDW)
-Almacenamiento de datos paralelos (PDW) de SQL Server usa una base de datos de almacenamiento provisional para almacenar datos temporalmente durante el proceso de carga. De forma predeterminada, SQL Server PDW usa la base de datos de destino como la base de datos de almacenamiento provisional, lo que puede provocar la fragmentación de las tablas. Para reducir la fragmentación de las tablas, puede crear una base de datos de almacenamiento provisional definido por el usuario. O bien, cuando la reversión de un error de carga no es un problema, puede usar el modo de carga de fastappend para mejorar el rendimiento mediante la omisión de la tabla temporal y cargando directamente en la tabla de destino.  
+# <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Usar una base de datos de ensayo en almacenamiento de datos paralelos (PDW)
+SQL Server almacenamiento de datos paralelos (PDW) utiliza una base de datos provisional para almacenar los datos temporalmente durante el proceso de carga. De forma predeterminada, PDW de SQL Server usa la base de datos de destino como base de datos de almacenamiento provisional, lo que puede provocar la fragmentación de la tabla. Para reducir la fragmentación de la tabla, puede crear una base de datos de almacenamiento provisional definida por el usuario. O bien, cuando la reversión de un error de carga no es un problema, puede usar el modo de carga fastappend para mejorar el rendimiento omitiendo la tabla temporal y cargando directamente en la tabla de destino.  
   
-## <a name="StagingDatabase"></a>Conceptos básicos de la base de datos de almacenamiento provisional  
-Un *base de datos provisional* es una base PDW creada por el usuario que almacene datos temporalmente mientras se cargan en el dispositivo. Cuando se especifica una base de datos de almacenamiento provisional para una carga, el dispositivo primero copia los datos en la base de datos provisional y, a continuación, copia los datos de tablas temporales en la base de datos de ensayo en tablas permanentes en la base de datos de destino.  
+## <a name="StagingDatabase"></a>Conceptos básicos de bases de datos de ensayo  
+Una *base* de datos de ensayo es una base de datos de PDW creada por el usuario que almacena los datos temporalmente mientras se cargan en el dispositivo. Cuando se especifica una base de datos de almacenamiento provisional para una carga, el dispositivo copia primero los datos en la base de datos de ensayo y, a continuación, copia los datos de las tablas temporales de la base de datos de ensayo en tablas permanentes en la base de datos de destino.  
   
-Cuando una base de datos de almacenamiento provisional no se especifica para una carga, ServerPDW SQL crea las tablas temporales en la base de datos de destino y los utiliza para almacenar los datos cargados antes de insertar los datos cargados en las tablas de destino permanente.  
+Cuando una base de datos de ensayo no se especifica para una carga, SQL ServerPDW crea las tablas temporales en la base de datos de destino y las usa para almacenar los datos cargados antes de insertar los datos cargados en las tablas de destino permanentes.  
   
-Cuando se usa una carga el *modo fastappend*, ServerPDW SQL omite el uso de tablas temporales por completo y anexa los datos directamente a la tabla de destino. El modo fastappend mejora el rendimiento de carga para los escenarios ELT donde los datos se cargan en una tabla que es una tabla temporal desde el punto de vista de la aplicación. Por ejemplo, un proceso ELT podría cargar datos en una tabla temporal, procesar los datos mediante la deduplicación de cancelación y limpieza y, a continuación, inserte los datos en la tabla de hechos de destino. En este caso, no es necesario para PDW cargar primero los datos en una tabla temporal interna antes de insertar los datos en la tabla temporal de la aplicación. El modo fastappend evita el paso de la carga adicional, lo que mejora significativamente el rendimiento de carga. Para utilizar el modo fastappend, debe utilizar el modo de transacción múltiple, lo que significa que la recuperación a partir de una carga con errores o anuló deberá controlarse mediante su propio proceso de carga.  
+Cuando una carga usa el *modo fastappend*, SQL ServerPDW omite el uso de las tablas temporales y anexa los datos directamente a la tabla de destino. El modo fastappend mejora el rendimiento de la carga de los escenarios de ELT en los que los datos se cargan en una tabla que es una tabla temporal desde el punto de vista de la aplicación. Por ejemplo, un proceso ELT podría cargar datos en una tabla temporal, procesar los datos mediante la limpieza y el duping y, a continuación, insertar los datos en la tabla de hechos de destino. En este caso, no es necesario que PDW cargue primero los datos en una tabla temporal interna antes de insertar los datos en la tabla temporal de la aplicación. El modo fastappend evita el paso de carga adicional, lo que mejora significativamente el rendimiento de la carga. Para usar el modo fastappend, debe usar el modo de transacciones múltiples, lo que significa que la recuperación de una carga errónea o anulada debe controlarse mediante su propio proceso de carga.  
   
-**Ventajas de la base de datos de almacenamiento provisional**  
+**Ventajas de las bases de datos provisionales**  
   
-La principal ventaja de una base de datos de almacenamiento provisional es reducir la fragmentación de la tabla. Si no se usa una base de datos de almacenamiento provisional, los datos se cargan en tablas temporales de la base de datos de destino. Cuando obtengan crean tablas temporales y se quitan en la base de datos de destino, las páginas de las tablas temporales y tablas permanentes se convierten en intercalada. Con el tiempo, la fragmentación de las tablas se produce y degrada el rendimiento. En cambio, una base de datos de ensayo garantiza que las tablas temporales se crean y quitan en un espacio de archivo independiente de las tablas permanentes.  
+La principal ventaja de una base de datos provisional es reducir la fragmentación de la tabla. Si no se utiliza una base de datos de almacenamiento provisional, los datos se cargan en tablas temporales en la base de datos de destino. Cuando las tablas temporales se crean y se colocan en la base de datos de destino, se intercalan las páginas de las tablas temporales y las tablas permanentes. Con el tiempo, se produce la fragmentación de la tabla y se degrada el rendimiento. Por el contrario, una base de datos provisional garantiza que las tablas temporales se crean y se colocan en un espacio de archivo independiente que las tablas permanentes.  
   
-**Estructuras de tabla de base de datos de almacenamiento provisional**  
+**Estructuras de tabla de base de datos de ensayo**  
   
-La estructura de almacenamiento para cada tabla de base de datos depende de la tabla de destino.  
+La estructura de almacenamiento de cada tabla de base de datos depende de la tabla de destino.  
   
--   Para las cargas en un montón o índice agrupado, la tabla de ensayo es un montón.  
+-   En el caso de cargas en un índice de almacén de columnas agrupado o montón, la tabla de ensayo es un montón.  
   
--   Para las cargas en un índice agrupado de almacén de filas, la tabla de ensayo es un índice agrupado de almacén de filas.  
+-   En el caso de las cargas en un índice clúster de almacén, la tabla de ensayo es un índice clúster de almacén.  
   
-## <a name="Permissions"></a>Permissions  
-Requiere el permiso de creación (para crear una tabla temporal) en la base de datos de almacenamiento provisional. 
+## <a name="Permissions"></a>Los  
+Requiere el permiso CREATE (para crear una tabla temporal) en la base de datos de ensayo. 
 
 <!-- MISSING LINKS
 
@@ -46,24 +47,24 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
 
 -->
   
-## <a name="CreatingStagingDatabase"></a>Procedimientos recomendados para crear una base de datos provisional  
+## <a name="CreatingStagingDatabase"></a>Prácticas recomendadas para crear una base de datos de ensayo  
   
-1.  Solo debe haber una base de datos de almacenamiento provisional por dispositivo. La base de datos de almacenamiento provisional se puede compartir por todos los trabajos de carga para todas las bases de datos de destino.  
+1.  Solo debe haber una base de datos de ensayo por cada dispositivo. La base de datos provisional se puede compartir con todos los trabajos de carga de todas las bases de datos de destino.  
   
-2.  El tamaño de la base de datos de almacenamiento provisional es específica del cliente. Inicialmente, al rellenar primero el dispositivo, la base de datos de almacenamiento provisional debe ser lo suficientemente grande como para dar cabida a los trabajos de carga inicial. Estos trabajos de carga tienden a ser grandes, porque pueden se producen varias cargas al mismo tiempo. Después de han completado los trabajos de carga inicial y el sistema está en producción, es probable que sea más pequeño el tamaño de cada carga de trabajo. Cuando las cargas son pequeñas, puede reducir el tamaño de la base de datos de almacenamiento provisional para dar cabida a los tamaños más pequeños de carga. Para reducir el tamaño, puede quitar la base de datos provisional y volver a crearla con una asignación menor tamaño, o puede usar el [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) instrucción.  
+2.  El tamaño de la base de datos provisional es específico del cliente. Inicialmente, al rellenar el dispositivo por primera vez, la base de datos de ensayo debe ser lo suficientemente grande como para alojar los trabajos de carga iniciales. Estos trabajos de carga tienden a ser grandes porque pueden producirse varias cargas simultáneamente. Una vez que se han completado los trabajos de carga iniciales y el sistema está en producción, es probable que el tamaño de cada trabajo de carga sea menor. Cuando las cargas son pequeñas, puede reducir el tamaño de la base de datos provisional para acomodar los tamaños de carga más pequeños. Para reducir el tamaño, puede quitar la base de datos de ensayo y volver a crearla con asignaciones de tamaño menor, o puede usar la instrucción [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) .  
   
-    Al crear la base de datos de almacenamiento provisional, utilice las instrucciones siguientes.  
+    Al crear la base de datos provisional, utilice las siguientes directrices.  
   
-    -   El tamaño de la tabla replicada debe ser el tamaño estimado por nodo de proceso, de todas las tablas replicadas que se cargará al mismo tiempo. Normalmente, el tamaño es 25-30 GB.  
+    -   El tamaño de la tabla replicada debe ser el tamaño estimado, por nodo de proceso, de todas las tablas replicadas que se cargarán simultáneamente. El tamaño suele ser de 25-30 GB.  
   
-    -   El tamaño de una tabla distribuida debe ser el tamaño estimado por dispositivo, de todas las tablas distribuidas que se cargará al mismo tiempo.  
+    -   El tamaño de la tabla distribuida debe ser el tamaño estimado, por dispositivo, de todas las tablas distribuidas que se cargarán simultáneamente.  
   
-    -   El tamaño del registro es normalmente similar al tamaño de la tabla replicada.  
+    -   Normalmente, el tamaño del registro es similar al tamaño de la tabla replicada.  
   
-## <a name="Examples"></a>Ejemplos  
+## <a name="Examples"></a>Example  
   
-### <a name="a-create-a-staging-database"></a>A. Crear una base de datos provisional 
-El ejemplo siguiente crea una base de datos provisional, Stagedb, para su uso con todas las cargas en el dispositivo. Suponga que calcule que replica cinco tablas de tamaño de que 5 GB se cargará al mismo tiempo. Esta simultaneidad da lugar a asignar al menos 25 GB para el tamaño replicado. Supongamos que calcula que distribuyen seis tablas de tamaños de 100, 200, 400, 500, 500 y 550 GB se cargan al mismo tiempo. Esta simultaneidad da como resultado asignar 2250 GB como mínimo para el tamaño de una tabla distribuida.  
+### <a name="a-create-a-staging-database"></a>a. Crear una base de datos de ensayo 
+En el ejemplo siguiente se crea una base de datos de ensayo, Stagedb, para su uso con todas las cargas en el dispositivo. Supongamos que calcula que cinco tablas replicadas de tamaño 5 GB se cargarán simultáneamente. Esta simultaneidad da como resultado la asignación de al menos 25 GB para el tamaño replicado. Supongamos que calcula que seis tablas distribuidas de los tamaños 100, 200, 400, 500, 500 y 550 GB se cargarán simultáneamente. Esta simultaneidad da como resultado la asignación de al menos 2250 GB para el tamaño de la tabla distribuida.  
   
 ```sql  
 CREATE DATABASE Stagedb  

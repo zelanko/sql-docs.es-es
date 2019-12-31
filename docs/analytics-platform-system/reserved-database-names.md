@@ -1,6 +1,6 @@
 ---
-title: Nombres de base de datos - almacenamiento de datos paralelos reservados | Microsoft Docs
-description: Nombres reservados de la base de datos en almacenamiento de datos paralelos de sistema de plataforma de análisis.
+title: Nombres reservados de la base de datos
+description: Nombres de base de datos reservados en el almacenamiento de datos paralelos de Analytics Platform System.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,19 +8,20 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: aa4628a5f4685eb805948de0b67f9387a189054a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 77625b2a8b1169af90ab0573fa57a4246f81ceab
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960195"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400473"
 ---
-# <a name="reserved-database-names-in-parallel-data-warehouse"></a>Nombres de base de datos reservado en el almacenamiento de datos paralelos
-Un nombre de base de datos reservado es un nombre que no se puede asignar a una base de datos de usuario en PDW de SQL Server.  
+# <a name="reserved-database-names-in-parallel-data-warehouse"></a>Nombres de base de datos reservados en almacenamiento de datos paralelos
+Un nombre de base de datos reservada es un nombre que no se puede asignar a una base de datos de usuario en PDW de SQL Server.  
   
-Lista de nombres de base de datos reservado:  
+Lista de nombres de base de datos reservada:  
   
--   maestra  
+-   maestro  
   
 -   model  
   
@@ -40,7 +41,7 @@ Lista de nombres de base de datos reservado:
   
 -   DWQueue  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
 <!-- MISSING LINKS 
 [Database Administration &#40;SQL Server PDW&#41;](../sqlpdw/database-administration-sql-server-pdw.md)  
 -->

@@ -1,6 +1,6 @@
 ---
-title: Monitor con SCOM - Analytics Platform System | Microsoft Docs
-description: Use System Center Operations Manager (SCOM) para supervisar la aplicación Analytics Platform System (APS).
+title: Supervisión con SCOM
+description: Use System Center Operations Manager (SCOM) para supervisar el dispositivo de Analytics Platform System (APS).
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,50 +8,51 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0da122b7ff4f17621a896e3a9f5076f8564d32c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960548"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400969"
 ---
-# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Supervisión con System Center Operations Manager: Analytics Platform System
-Use System Center Operations Manager (SCOM) para supervisar la aplicación Analytics Platform System (APS).
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Supervisión con System Center Operations Manager-Analytics Platform System
+Use System Center Operations Manager (SCOM) para supervisar el dispositivo de Analytics Platform System (APS).
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
 ### <a name="prerequisites"></a>Requisitos previos  
   
-1.  System Center Operations Manager 2007 R2, 2012 o 2012 SP1 debe estar instalado y ejecutándose.  
+1.  System Center Operations Manager 2007 R2, 2012 o 2012 SP1 debe estar instalado y en ejecución.  
   
-2.  Debe tener instalado SQL Server 2008 R2 Native Client o SQL Server 2012 Native Client.  
+2.  SQL Server 2008 R2 Native Client o SQL Server 2012 Native Client deben estar instalados.  
   
-3.  Los módulos de administración para supervisar SQL Server PDW deben ser instalados, importados y configurados. Utilice los siguientes artículos para obtener instrucciones para realizar estas tareas.  
+3.  Los módulos de administración para supervisar PDW de SQL Server deben estar instalados, importados y configurados. Use los artículos siguientes para obtener instrucciones sobre cómo realizar estas tareas.  
   
-    -   [Instalar los módulos de administración de SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md)  
+    -   [Instale los módulos de administración de SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md)  
   
-    -   [Importar el módulo de administración de SCOM para PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md) 
+    -   [Importe el módulo de administración de SCOM para PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md) 
     
-    -   [Configuración de SCOM para supervisar Analytics Platform System &#40;Analytics Platform System&#41;](configure-scom-to-monitor-analytics-platform-system.md)
+    -   [Configure SCOM para supervisar Analytics Platform System &#40;Analytics Platform System&#41;](configure-scom-to-monitor-analytics-platform-system.md)
   
 <!-- MISSING LINKS    -   [Import the SCOM Management Pack for HDInsight &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-hdinsight.md)  -->  
    
   
-## <a name="to-monitor-sql-server-pdw-with-scom"></a>Para supervisar SQL Server PDW con SCOM  
-Después de configurar los módulos de administración de SCOM, haga clic en el panel de supervisión de SCOM y profundice para **SQL Server Appliance** y, a continuación, **almacenamiento de datos paralelos de Microsoft SQL Server**. Debajo de Microsoft SQL Server Parallel Data Warehouse, hay cuatro opciones: Las alertas, dispositivos, diagrama de dispositivo y los nodos.  
+## <a name="to-monitor-sql-server-pdw-with-scom"></a>Para supervisar PDW de SQL Server con SCOM  
+Después de configurar los módulos de administración de SCOM, haga clic en el panel supervisión de SCOM y explore en profundidad hasta **SQL Server dispositivo** y, a continuación, **Microsoft SQL Server almacenamiento de datos paralelos**. Debajo Microsoft SQL Server almacenamiento de datos paralelos, hay cuatro opciones: alertas, dispositivos, diagrama de dispositivos y nodos.  
   
 ### <a name="alerts"></a>Alertas  
 Las alertas son donde puede encontrar las alertas actuales para administrar.  
   
-![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Alarmas](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
-### <a name="appliances"></a>Dispositivos  
-Los dispositivos son donde encontrará los dispositivos detectados y supervisados actualmente SQL Server PDW en su entorno. Si un dispositivo no se muestra aquí y que ha creado la conexión de ODBC para ella, a continuación, puede haber algún problema con su cuenta PDWWatcher. Si muestra como "Sin supervisión", puede haber algún problema con su cuenta PDWMonitor. Tenga paciencia, puesto que SCOM no realiza cambios en tiempo real, pero comprueba periódicamente nuevos dispositivos supervisar y envía periódicamente las consultas a dispositivos para la supervisión.  
+### <a name="appliances"></a>Dota  
+Los dispositivos son los lugares en los que encontrará los dispositivos PDW de SQL Server detectados y supervisados actualmente en su entorno. Si un dispositivo no aparece aquí y ha creado la conexión ODBC para él, puede haber algún problema con su cuenta de PDWWatcher. Si aparecen como "sin supervisión", puede haber algún problema con su cuenta de PDWMonitor. Sea paciente, ya que SCOM no realiza cambios en tiempo real, sino que comprueba periódicamente si hay nuevos dispositivos para supervisar y envía consultas periódicamente a los dispositivos para su supervisión.  
   
-![Dispositivos](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![Dota](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>Diagrama de dispositivos  
-La página de diagrama de dispositivos es donde puede obtener un vistazo el estado de su dispositivo con una vista de árbol:  
+En la página de diagramas de dispositivos puede ver el estado del dispositivo con una vista de árbol:  
   
 ![Diagrama de dispositivos](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
@@ -60,7 +61,7 @@ Por último, la vista de nodos permite ver el estado del dispositivo a través d
   
 ![Nodos](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Alertas de la consola de administración de conocimiento &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)  
+[Descripción de las alertas de la consola de administración &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Modificador de característica (Analytics Platform System)
-description: Muestra información acerca de los modificadores de dos características que se introducen en Analytics Platform System AU7.
+title: Modificador de características
+description: Muestra información sobre los dos modificadores de características que se introdujeron en Analytics Platform System AU7.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,38 +9,38 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e9929d4729cc1027c82b61c9fab6ebfcddbd54d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8642f27a329da8819acf0ab99a648c4979ed40d0
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961516"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401451"
 ---
-# <a name="appliance-feature-switches"></a>Modificadores de características del dispositivo
+# <a name="appliance-feature-switches"></a>Conmutadores de características del dispositivo
 
-El **modificador de característica** página muestra información sobre los conmutadores de característica que se presentan en Analytics Platform System AU7 y versiones posteriores. Utilice esta página de configuración para habilitar o deshabilitar características y la configuración de Analytics Platform System o actualizar.
+La página **conmutador de características** muestra información sobre los modificadores de características que se introducen en Analytics Platform System AU7 y versiones posteriores. Use esta página de configuración para actualizar o habilitar o deshabilitar características y configuraciones en Analytics Platform System.
 
 > [!NOTE]
-> Los cambios en los valores de conmutador de característica requieren un reinicio del servicio.
+> Los cambios en los valores del modificador de características requieren un reinicio del servicio.
 
-![Cambio de características del dispositivo de DWConfig](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "cambio de características del dispositivo DWConfig")
+![Conmutador de características del dispositivo DWConfig](media/feature-switch/SQL_Server_PDW_DWConfig_feature_switch.png "Conmutador de características del dispositivo DWConfig")
 
 ## <a name="autostatsenabled"></a>AutoStatsEnabled
 
-Controla la característica de estadísticas automática. Este modificador de característica se establece en true de forma predeterminada después de actualizar a AU7. Cualquier base de datos creada después de la actualización heredarán la creación automática y la actualización asincrónica de estadísticas. Para las bases de datos existentes, pueden permitir que los administradores de base de datos automática de estadísticas con [ALTER DATABASE (almacenamiento de datos paralelos)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). Para obtener más información sobre las estadísticas, consulte [estadísticas](../relational-databases/statistics/statistics.md).
+Controla la característica de estadísticas automáticas. Este modificador de característica se establece en true de forma predeterminada después de actualizar a AU7. Cualquier base de datos creada después de la actualización heredará la creación automática y la actualización asincrónica de las estadísticas. En el caso de las bases de datos existentes, los administradores de bases de datos pueden habilitar las estadísticas automáticas con [ALTER DATABASE (almacenamiento de datos paralelos)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw). Para obtener más información sobre las estadísticas, vea [estadísticas](../relational-databases/statistics/statistics.md).
 
 ## <a name="maxdopforinsertqueries"></a>MaxDOPForInsertQueries
 
-Permite seleccionar la configuración de maxdop mayor que 1 para las operaciones insert o select. Opciones para esta configuración son 0, 1, 2 y 4, con el valor predeterminado es 1.
+Permite seleccionar la configuración maxdop mayor que 1 para las operaciones de inserción/selección. Las opciones de esta configuración son 0, 1, 2 y 4, y el valor predeterminado es 1.
 
 ## <a name="optimizecommonsubexpressions"></a>OptimizeCommonSubExpressions
 
-Mejora el rendimiento de las consultas mediante la eliminación de movimiento de datos de la subexpresión común en el optimizador de consultas SQL. Puede encontrar una explicación detallada de esta característica [aquí](common-sub-expression-elimination.md).
+Mejora el rendimiento de las consultas al eliminar el movimiento de datos para la subexpresión común en el optimizador de consultas de SQL. [Aquí](common-sub-expression-elimination.md)puede encontrar una explicación detallada de esta característica.
 
 ## <a name="usecatalogqueries"></a>UseCatalogQueries
 
-Uso de los objetos de catálogo para algunas llamadas de metadatos en lugar de usar SMO ha demostrado mejora del rendimiento. Establecido en true de forma predeterminada en CU7.1, este modificador controla ese comportamiento.
+El uso de objetos de catálogo para algunas llamadas de metadatos en lugar de usar SMO ha mostrado la mejora del rendimiento. Establecido en true de forma predeterminada en CU 7.1, este modificador controla ese comportamiento.
 
 ## <a name="dmsprocessstopmessagetimeoutinseconds"></a>DmsProcessStopMessageTimeoutInSeconds
 
-Controla el tiempo de espera del servicio de movimiento de datos (DMS) para sincronizar en un sistema ocupado cuando se cancela una consulta que implique el movimiento de datos. Actualizar a AU7 establece este valor en 900 segundos (15 minutos) de forma predeterminada. El intervalo válido es 0 - 3600 segundos.
+Controla el tiempo que el servicio de movimiento de datos (DMS) espera a sincronizarse en un sistema ocupado cuando se cancela una consulta que implica el movimiento de datos. De forma predeterminada, al actualizar a AU7, este valor se establece en 900 segundos (15 minutos). El intervalo válido es de 0-3600 segundos.

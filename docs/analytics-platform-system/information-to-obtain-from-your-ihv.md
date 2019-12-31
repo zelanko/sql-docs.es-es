@@ -1,6 +1,6 @@
 ---
-title: Obtener información de IHV - Analytics Platform System | Microsoft Docs
-description: Información para obtener de IHV acerca de la aplicación Analytics Platform System.
+title: Obtener información de IHV
+description: Información que se va a obtener de su IHV sobre el dispositivo de sistema de la plataforma de análisis.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,22 +8,23 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 016a20567968e45456be79c8c67e77d7c3fbb2bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 730cf09ab7e45ea74070db591592fdb871243a77
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960835"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401065"
 ---
-# <a name="information-to-obtain-from-your-ihv"></a>Información para obtener de IHV
-Cuando el proveedor de hardware independientes (IHV) proporciona el nuevo dispositivo PDW de SQL Server para usted, también ofrecerá información sobre el hardware del equipo y la configuración que han realizado en el dispositivo. Necesitará esta información para administrar el dispositivo.  
+# <a name="information-to-obtain-from-your-ihv"></a>Información que se debe obtener de su IHV
+Cuando su proveedor de hardware independiente (IHV) le entregue su nuevo PDW de SQL Server dispositivo, también proporcionará información sobre el hardware del dispositivo y la configuración que han realizado en el dispositivo. Necesitará esta información para administrar el dispositivo.  
   
-En la lista siguiente se muestra información que normalmente es necesario de IHV. En algunos casos, se necesita información adicional u otra. Póngase en contacto con el IHV para asegurarse de que se ha transferido toda la información pertinente para usted con la entrega de dispositivo.  
+En la lista siguiente se muestra información que suele ser necesaria desde el IHV. En algunos casos, se necesita información adicional o de otro. Consulte con el IHV para asegurarse de que toda la información relevante se le ha transferido con la entrega del dispositivo.  
   
 |||  
 |-|-|  
 |**Información o documento**|**Descripción**|  
-|Lista de materiales (BOM)|La lista de materiales se enumeran los componentes que se incluyen en el dispositivo. Esta información es necesaria confirmar que se enviaron todos los componentes.<br /><br />**Importante:** La lista de materiales debe incluir pesos para cada uno de los nodos del dispositivo y para cada bastidor completa. Esta información es importante al planear cómo administrar y mover los componentes del dispositivo y para asegurarse de su centro de datos admite el dispositivo. Si la marca BOM no incluye los pesos de nodo, asegúrese de obtener esta información de los IHV para todos los nodos.|  
-|Diagramas de cableado|Diagramas de cableado muestran cómo conectarse a la red, cables de alimentación y otros para cada dispositivo de bastidor. Estos diagramas son necesarios al instalar el dispositivo en su centro de datos y cualquier tiempo deberá quitar o reemplazar un componente.|  
-|Requisitos de bastidor de tipo de dispositivo|Antes de que el dispositivo se puede instalar en su centro de datos, deberá saber si su centro de datos cumple el aire y requisitos de longitud de cable para el dispositivo, así como el tamaño y los requisitos de energía para los componentes. Consulte también lista de materiales (BOM) anteriormente para obtener información acerca de las ponderaciones del componente de dispositivo, que también es necesario.|  
+|Lista de materiales (BOM)|En su lista de materiales se enumeran los componentes que se incluyen en el dispositivo. Esta información es necesaria para confirmar que se han entregado todos los componentes.<br /><br />**Importante:** La lista de materiales debe incluir pesos para cada uno de los nodos del dispositivo y para cada bastidor completo. Esta información es importante a la hora de planear cómo controlar y trasladar componentes del dispositivo, y para asegurarse de que el centro de datos puede alojar el dispositivo. Si la marca BOM no incluye pesos de nodo, asegúrese de obtener esta información de su IHV para todos los nodos.|  
+|Diagramas de cableado|Los diagramas de cableado muestran cómo conectar la red, la alimentación y otros cables para cada bastidor del dispositivo. Estos diagramas son necesarios cuando se instala el dispositivo en el centro de datos y cada vez que se necesita quitar o reemplazar un componente.|  
+|Requisitos de montaje en bastidor del dispositivo|Antes de que el dispositivo pueda instalarse en el centro de datos, debe saber si el centro de datos cumple los requisitos de flujo de aire y de longitud de cable para el dispositivo, así como los requisitos de tamaño y energía de los componentes. Consulte también la lista de materiales (BOM) anterior para obtener información sobre las ponderaciones de los componentes del dispositivo, que también es necesaria.|  
   

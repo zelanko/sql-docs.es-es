@@ -10,12 +10,12 @@ ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a8068ae9f1e52b235ebec52bf8499ba8d2d3777e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
-ms.translationtype: HT
+ms.openlocfilehash: f8dcec71f8b9c90df9f30aa5bfb972fef28fbcd7
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952533"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200449"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint
   El Proveedor Microsoft OLE DB para Analysis Services (MSOLAP) es una interfaz que las aplicaciones cliente emplean para interactuar con datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. En un entorno de SharePoint que incluye [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], el proveedor administra las solicitudes de conexión para datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
@@ -49,9 +49,9 @@ ms.locfileid: "71952533"
 ##  <a name="bkmk_why"></a>Por qué es necesario instalar el proveedor de OLE DB  
  Hay dos escenarios que requieren la instalación manual del proveedor OLE DB en los servidores de la granja.  
   
- **El escenario más común** es cuando tiene versiones anteriores y más recientes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] libros que se guardan en las bibliotecas de documentos de la granja. Si los analistas de la organización usan la versión [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel y guardan esos libros en una instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], el libro anterior no funcionará. Su cadena de conexión hará referencia a una versión anterior del proveedor, que no estará en el servidor a menos que lo instale. Al instalar ambas versiones se habilitará el acceso a los datos para los libros PowerPivot creados en las versiones anteriores y recientes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel. El programa de instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no instala la versión [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del proveedor, de modo que debe instalarla manualmente si usa libros de una versión anterior.  
+ **El escenario más común** es cuando tiene versiones anteriores y más recientes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] los libros que se guardan en las bibliotecas de documentos de la granja. Si los analistas de la organización usan la versión [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel y guardan esos libros en una instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], el libro anterior no funcionará. Su cadena de conexión hará referencia a una versión anterior del proveedor, que no estará en el servidor a menos que lo instale. Al instalar ambas versiones se habilitará el acceso a los datos para los libros PowerPivot creados en las versiones anteriores y recientes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel. El programa de instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no instala la versión [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] del proveedor, de modo que debe instalarla manualmente si usa libros de una versión anterior.  
   
- **El segundo escenario** es cuando tiene un servidor en una granja de servidores de SharePoint que ejecuta Excel Services, pero no [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. En este caso, el servidor de aplicaciones que ejecuta Excel Services debe actualizarse manualmente para utilizar una versión más reciente del proveedor. Esto es necesario para conectarse a una instancia de PowerPivot para SharePoint. Si Excel Services está usando una versión anterior del proveedor, la solicitud de conexión generará un error. Tenga en cuenta que el proveedor debe instalarse mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el paquete de instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) para garantizar que se instalan todos los componentes necesarios para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+ **El segundo escenario** es cuando se tiene un servidor en una granja de servidores de SharePoint que ejecuta Excel Services [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], pero no. En este caso, el servidor de aplicaciones que ejecuta Excel Services debe actualizarse manualmente para utilizar una versión más reciente del proveedor. Esto es necesario para conectarse a una instancia de PowerPivot para SharePoint. Si Excel Services está usando una versión anterior del proveedor, la solicitud de conexión generará un error. Tenga en cuenta que el proveedor debe instalarse mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el paquete de instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi) para garantizar que se instalan todos los componentes necesarios para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
   
 ##  <a name="bkmk_sql11"></a>Instalar el proveedor de OLE DB de SQL Server 2012 en un servidor de Excel Services mediante el programa de instalación de SQL Server  
@@ -101,13 +101,13 @@ ms.locfileid: "71952533"
   
 3.  Haga clic en **Detalles**.  
   
-4.  Vea la información de la versión del archivo. La versión debe incluir 11,00.\<BuildNumber >.  
+4.  Vea la información de la versión del archivo. La versión debe incluir 11,00. \<BuildNumber>.  
   
 5.  En la carpeta Windows\Assembly, compruebe que Microsoft.AnalysisServices.Xmla.dll, versión 11.0.0.0, aparece en la lista.  
   
   
 ##  <a name="bkmk_install2012_from_sppowerpivot_msi"></a>Use el paquete de instalación de PowerPivot para SharePoint (spPowerPivot. msi) para instalar el proveedor de OLE DB de SQL Server 2012  
- Instale el proveedor de OLE DB de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] en y el servidor de Excel Services mediante el paquete de instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] **(spPowerPivot. msi)** .  
+ Instale el [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] proveedor de OLE DB en y el servidor de Excel Services [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] mediante el paquete de instalación de **(spPowerPivot. msi)**.  
   
 #### <a name="download-the-msolap5-provider-from-the-includesssql11sp1includessssql11sp1-mdmd-feature-pack"></a>Descargue el proveedor MSOLAP.5 desde [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Feature Pack.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "71952533"
   
 3.  Vea la sección "Proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2012 SP1". Descargue el archivo e inicie la instalación.  
   
-4.  En la página **selección de características** , seleccione **proveedor OLE DB de Analysis Services para SQL Server**. Anule la selección de los demás componentes y complete la instalación. Para obtener más información sobre spPowerPivot. msi, vea [instalar o desinstalar el complemento PowerPivot para SharePoint de &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
+4.  En la página **selección de características** , seleccione **proveedor OLE DB de Analysis Services para SQL Server**. Anule la selección de los demás componentes y complete la instalación. Para obtener más información sobre spPowerPivot. msi, vea [instalar o desinstalar el complemento de PowerPivot para SharePoint &#40;&#41;de SharePoint 2013 ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 5.  Registre MSOLAP.5 como proveedor de confianza con Servicios de Excel de SharePoint. Para obtener más información, vea [Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
@@ -127,7 +127,7 @@ ms.locfileid: "71952533"
   
 #### <a name="step-1-download-and-install-the-client-library"></a>Paso 1: descargar e instalar la biblioteca cliente  
   
-1.  En la [página SQL Server 2008 R2 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=159570), busque proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2008 R2.  
+1.  En la [página SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978), busque proveedor OLE DB de Microsoft Analysis Services para Microsoft SQL Server 2008 R2.  
   
 2.  Descargue el paquete x64 del programa de instalación de `SQLServer2008_ASOLEDB10.msi`. Aunque el nombre de archivo contiene SQLServer2008, es el archivo correcto para la versión de SQL Server 2008 R2 del proveedor.  
   
@@ -153,12 +153,12 @@ ms.locfileid: "71952533"
   
 2.  Además, puede comprobar la versión del archivo.  
   
-     Ir a `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Haga clic con el botón secundario en **msolap100. dll** y seleccione **propiedades**. Haga clic en **Detalles**.  
+     Vaya a `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Haga clic con el botón secundario en **msolap100. dll** y seleccione **propiedades**. Haga clic en **Detalles**.  
   
-     Vea la información de la versión del archivo. La versión debe incluir 10,50.\<BuildNumber >.  
+     Vea la información de la versión del archivo. La versión debe incluir 10,50. \<BuildNumber>.  
   
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Instalación de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

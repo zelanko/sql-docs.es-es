@@ -1,6 +1,6 @@
 ---
-title: Inicie el Administrador de configuración - Analytics Platform System | Microsoft Docs
-description: Instrucciones para iniciar la herramienta Administrador de configuración para la aplicación Analytics Platform System.
+title: Iniciar Configuration Manager
+description: Instrucciones para iniciar la herramienta de Configuration Manager para el dispositivo de sistema de plataforma de análisis.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,44 +8,45 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7aef9ada4a93605460cf2759dbe9deeddfc9e0d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960726"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401053"
 ---
-# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Inicie el Administrador de configuración de Analytics Platform System
-Este tema proporciona instrucciones para iniciar el **Configuration Manager** para la aplicación Analytics Platform System.  
+# <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Inicio del Configuration Manager en Analytics Platform System
+En este tema se proporcionan instrucciones para iniciar el **Configuration Manager** para el dispositivo de sistema de plataforma de análisis.  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
 ### <a name="prerequisites"></a>Requisitos previos  
-El sistema Analytics Platform System**Configuration Manager** solo se puede ejecutar el Administrador de dominio del dispositivo. Para ejecutar esta herramienta, necesitará la contraseña para el Administrador de dominio de aplicación. Para crear otros administradores APS, vea [crear un administrador de dominio de APS &#40;APS&#41;](create-an-aps-domain-administrator-aps.md).  
+Solo el administrador de dominio de la aplicación puede ejecutar el**Configuration Manager** de sistema de la plataforma de análisis. Para ejecutar esta herramienta, necesita la contraseña del administrador de dominio del dispositivo. Para crear administradores de APS adicionales, consulte [crear un administrador de dominio aps &#40;aps&#41;](create-an-aps-domain-administrator-aps.md).  
   
-## <a name="Accessing"></a>Inicie la herramienta Administrador de configuración  
-Para ejecutar el Administrador de configuración, utilice Escritorio remoto para conectarse al nodo de Control de PDW ( **_PDW_region_-CTL01**) nodo e inicie sesión como _appliance_domain_ **\Administrator**. Al iniciar el **Configuration Manager** de programa, use la **ejecutar como administrador** opción para asegurarse de que se usan las credenciales de administrador.  
+## <a name="Accessing"></a>Iniciar la herramienta de Configuration Manager  
+Para ejecutar el Configuration Manager, use Escritorio remoto para conectarse al nodo de control PDW (**_PDW_region_-CTL01**) e inicie sesión como _appliance_domain_**\Administrador**. Al iniciar el programa de **Configuration Manager** , use la opción **Ejecutar como administrador** para asegurarse de que se utilizan las credenciales de administrador.  
   
-#### <a name="to-launch-from-a-browser-window"></a>Iniciar desde una ventana del explorador  
+#### <a name="to-launch-from-a-browser-window"></a>Para iniciar desde una ventana del explorador  
   
 1.  Abra un explorador y navegue hasta el directorio `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
   
-2.  Haga clic en `dwconfig.exe` y, a continuación, haga clic en **ejecutar como administrador**.  
+2.  Haga clic `dwconfig.exe` con el botón secundario y, a continuación, haga clic en **Ejecutar como administrador**.  
   
 #### <a name="to-launch-from-a-command-prompt"></a>Para iniciar desde un símbolo del sistema  
   
-1.  En el escritorio, abra el **iniciar** menú, haga clic en **programas**, haga clic en **Accesorios**, haga clic en **símbolo** y, a continuación, haga clic en  **Ejecutar como administrador**.  
+1.  En el escritorio, abra el menú **Inicio** , haga clic en **programas**, **accesorios**, haga clic con el botón secundario en **símbolo del sistema** y, a continuación, haga clic en **Ejecutar como administrador**.  
   
-2.  En el símbolo del sistema, escriba el siguiente comando para cambiar el directorio: `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`.  
+2.  En el símbolo del sistema, escriba el siguiente comando para cambiar los `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`directorios:.  
   
-3.  En el símbolo del sistema, escriba `dwconfig.exe`.  
+3.  En el símbolo del sistema, `dwconfig.exe`escriba.  
   
-Después de la **Configuration Manager** está iniciado, verá todas las funciones disponibles aparecen en el panel izquierdo. El resto de esta sección explica cómo realizar cada acción disponible en la herramienta.  
+Una vez iniciado el **Configuration Manager** , verá todas las funciones disponibles en el panel izquierdo. En el resto de esta sección se describe cómo realizar cada una de las acciones disponibles en la herramienta.  
   
-Para cerrar y salir **Configuration Manager**, haga clic en **salir** en la esquina inferior derecha de la pantalla.  
+Para cerrar y salir de **Configuration Manager**, haga clic en **salir** en la esquina inferior derecha de cualquier pantalla.  
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>Vea también  
-[Supervisión del dispositivo mediante el uso de la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+## <a name="see-also"></a>Véase también  
+[Supervise el dispositivo mediante la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

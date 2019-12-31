@@ -1,6 +1,6 @@
 ---
-title: Importar el módulo de administración de SCOM - Analytics Platform System | Microsoft Docs
-description: Siga estos pasos para importar los módulos de administración de System Center Operations Manager (SCOM) para Analytics Platform System (APS). Los módulos de administración necesarias para supervisar el almacenamiento de datos paralelos de SCOM.
+title: Importar módulo de administración de SCOM
+description: Siga estos pasos para importar los módulos de administración de System Center Operations Manager (SCOM) para Analytics Platform System (APS). Los módulos de administración son necesarios para supervisar el almacenamiento de datos paralelos de SCOM.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,42 +8,43 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 070e7b73614f6884e45a5c91603d6086613d15ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: seo-dt-2019
+ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960858"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401083"
 ---
-# <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importar el módulo de administración de SCOM - Analytics Platform System
-Siga estos pasos para importar los módulos de administración de System Center Operations Manager (SCOM) para Analytics Platform System (APS). Los módulos de administración necesarias para supervisar el almacenamiento de datos paralelos de SCOM. 
+# <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importar el módulo de administración de SCOM-Analytics Platform System
+Siga estos pasos para importar los módulos de administración de System Center Operations Manager (SCOM) para Analytics Platform System (APS). Los módulos de administración son necesarios para supervisar el almacenamiento de datos paralelos de SCOM. 
   
 ## <a name="BeforeBegin"></a>Antes de empezar  
 **Requisitos previos**  
   
-System Center Operations Manager 2007 R2 debe estar instalado y ejecutándose.  
+System Center Operations Manager 2007 R2 debe estar instalado y en ejecución.  
   
-Los módulos de administración deben estar instalados. Consulte [instalar los módulos de administración de SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md).  
+Los módulos de administración deben estar instalados. Consulte [instalación de los módulos de administración de SCOM &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md).  
   
-## <a name="Step1"></a>Paso 1: Importar el módulo de administración de la Base de aplicación de SQL Server  
+## <a name="Step1"></a>Paso 1: importar el módulo de administración de la base de SQL Server Appliance  
   
-1.  Inicie sesión en el equipo con una cuenta que sea miembro del rol administradores de Operations Manager para el grupo de administración de Operations Manager 2007.  
+1.  Inicie sesión en el equipo con una cuenta que sea miembro de la función Administradores de Operations Manager para el grupo de administración de Operations Manager 2007.  
   
-2.  En la consola del operador, haga clic en **administración**.  
+2.  En la consola de Operations, haga clic en **Administración**.  
   
-3.  Haga clic en el **módulos de administración** nodo y, a continuación, haga clic en **Importar módulos de administración**.  
+3.  Haga clic con el botón secundario en el nodo **módulos de administración** y, a continuación, haga clic en **importar módulos de administración**.  
   
-    ![Haga clic en Importar módulos de administración](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP.png "SCOM")  
+    ![Haga clic en Importar módulos de administración](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP.png "SCOM_IMP")  
   
-4.  En la lista de módulos de administración, seleccione el módulo de administración que desea importar, haga clic en **seleccione**y, a continuación, haga clic en **agregar**.  
+4.  En la lista de módulos de administración, seleccione el módulo de administración que desea importar, haga clic en **seleccionar**y, a continuación, haga clic en **Agregar**.  
   
     ![Lista de módulos de administración](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP2.png "SCOM_IMP2")  
   
-5.  Busque **dispositivo** y, a continuación, explorar en profundidad de la Base de aplicación de SQL Server y, a continuación, haga clic en **agregar** las dos opciones.  
+5.  Busque el **dispositivo** y, a continuación, explore en profundidad SQL Server base del dispositivo y, a continuación, haga clic en **Agregar** las dos opciones.  
   
-    ![Dispositivo de SQL Server base](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP3.png "SCOM_IMP3")  
+    ![Base de dispositivo SQL Server](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP3.png "SCOM_IMP3")  
   
-6.  Una vez que los dos módulos de administración se encontraban en el panel inferior seleccionado, a continuación, haga clic en **Aceptar**.  
+6.  Una vez que los dos módulos de administración estén en el panel de la parte inferior seleccionada, haga clic en **Aceptar**.  
   
     ![Seleccione ambos módulos de administración](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP4.png "SCOM_IMP4")  
   
@@ -51,21 +52,21 @@ Los módulos de administración deben estar instalados. Consulte [instalar los m
   
     ![Haga clic en instalar](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
-8.  Una vez que haya terminado, haga clic en **cerrar**.  
+8.  Cuando haya terminado, haga clic en **cerrar**.  
   
-    ![Una vez que haya terminado, haga clic en Cerrar](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP6.png "SCOM_IMP6")  
+    ![Una vez se haya completado, haga clic en Cerrar](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP6.png "SCOM_IMP6")  
   
-## <a name="Step2"></a>Importar el módulo de supervisión para el dispositivo de almacenamiento de datos paralelos de Microsoft SQL Server 2008 R2  
+## <a name="Step2"></a>Importar el módulo de supervisión para el dispositivo de almacenamiento de datos paralelos Microsoft SQL Server 2008 R2  
   
-1.  Haga clic en el **módulos de administración** nodo y, a continuación, haga clic en **Importar módulos de administración**.  
+1.  Haga clic con el botón secundario en el nodo **módulos de administración** y, a continuación, haga clic en **importar módulos de administración**.  
   
-2.  Elija **agregar del disco**...  
+2.  Elija **Agregar desde disco**....  
   
-    ![Haga clic en los módulos de administración](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW.png "SCOM_PDW")  
+    ![Haga clic con el botón secundario en los módulos de administración](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW.png "SCOM_PDW")  
   
-3.  Vaya a la ubicación donde extrajo los módulos de administración de PDW de SQL Server y elija los tres módulos de administración que se encuentran en la sección "Módulos de administración seleccionado para importar". Para ello, seleccione la primera de ellas, al hacer clic en la tecla MAYÚS y seleccione la última de ellas. Una vez que todos estén seleccionados, haga clic en **abierto**.  
+3.  Vaya a la ubicación donde extrajo el PDW de SQL Server módulos de administración y elija los tres módulos de administración que se encuentran en la sección "módulos de administración seleccionados para importar". Para ello, seleccione el primero, haga clic en Mayús y seleccione el último. Una vez que todos estén seleccionados, haga clic en **abrir**.  
   
-    ![Seleccionar módulos de administración](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW2.png "SCOM_PDW2")  
+    ![Seleccione los módulos de administración](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW2.png "SCOM_PDW2")  
   
 4.  Haga clic en **Instalar**.  
   
@@ -73,10 +74,10 @@ Los módulos de administración deben estar instalados. Consulte [instalar los m
   
 5.  Haga clic en **Cerrar**.  
   
-    ![Haga clic en Cerrar](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
+    ![Haga clic en cerrar](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW4.png "SCOM_PDW4")  
   
 ## <a name="next-step"></a>Paso siguiente  
-Ahora que ha importado los módulos de administración, vaya al paso siguiente: [Configuración de SCOM para supervisar Analytics Platform System &#40;Analytics Platform System&#41;](configure-scom-to-monitor-analytics-platform-system.md).  
+Ahora que ha importado los módulos de administración, continúe con el paso siguiente: [configurar SCOM para supervisar Analytics Platform system &#40;Analytics Platform system&#41;](configure-scom-to-monitor-analytics-platform-system.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

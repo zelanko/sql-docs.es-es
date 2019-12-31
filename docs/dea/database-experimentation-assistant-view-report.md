@@ -2,7 +2,7 @@
 title: Ver informes de análisis para actualizaciones de SQL Server
 description: Ver informes de análisis en Asistente para experimentación con bases de datos
 ms.custom: seo-lt-2019
-ms.date: 10/22/2018
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,28 +10,28 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
+ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: fddc71bf7cdf7686154b4f9b5612cf671ca64fce
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056661"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317739"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Ver informes de análisis en Asistente para experimentación con bases de datos
 
-Después de [crear el informe de análisis](database-experimentation-assistant-create-report.md) en Asistente para experimentación con bases de datos (DEA), complete los pasos descritos en este artículo para ver el informe y obtener información de rendimiento proporcionada por la prueba A/B.
+Después de usar Asistente para experimentación con bases de datos (DEA) para [crear un informe de análisis](database-experimentation-assistant-create-report.md), siga los pasos que se indican a continuación para revisar el informe para obtener información sobre el rendimiento en función de la prueba a/B.
 
-## <a name="select-a-server"></a>Seleccionar un servidor
+## <a name="select-a-server"></a>Seleccione un servidor
 
 En DEA, seleccione el icono de menú. En el menú expandido, seleccione **informes de análisis** junto al icono de lista de comprobación para abrir la ventana informes de análisis.
 
-En **informes de análisis**, escriba el nombre de un equipo que ejecute SQL Server que tenga una base de datos de análisis. Seleccione **Conectar**. 
+En **informes de análisis**, escriba el nombre de un equipo que ejecute SQL Server que tenga una base de datos de análisis y, a continuación, seleccione **conectar**.
 
 ![Conectarse a un informe existente](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-Si faltan dependencias, la página **requisitos previos** le pedirá vínculos para instalarlas. Instale los requisitos previos y, a continuación, seleccione Volver **a intentarlo**.
+Si faltan dependencias, la página **requisitos previos** le pedirá vínculos para instalarlas. Si es necesario, instale los requisitos previos y, a continuación, seleccione Volver **a intentarlo**.
 
 ![Página requisitos previos](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
@@ -78,16 +78,13 @@ Puede ver las instancias A y B en las que se ejecutó la consulta. También pued
 El informe de Resumen de comparación tiene secciones de información de **error** y de **plan de consulta** expansibles. En las secciones se muestran los errores y la información del plan para ambas instancias.
 
 Seleccione el gráfico de error (rojo) para mostrar estos tipos de errores:
+
 - **Errores existentes**: errores que estaban en un.
 - **Nuevos errores**: errores que se encontraban en B.
 - **Errores resueltos**: errores que estaban en, pero no en B.
 
 ![Gráficos de error](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="see-also"></a>Vea también
 
 - Para obtener información sobre cómo generar un informe de análisis en un símbolo del sistema, vea [ejecutar en el símbolo del sistema](database-experimentation-assistant-run-command-prompt.md).
-
-- Para obtener una introducción de 19 minutos a DEA y demostraciones, vea el siguiente vídeo:
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]

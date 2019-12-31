@@ -1,5 +1,5 @@
 ---
-title: 'Base de datos Tempdb: almacenamiento de datos paralelos | Microsoft Docs'
+title: Base de datos Tempdb
 description: Base de datos Tempdb en almacenamiento de datos paralelos.
 author: mzaman1
 ms.prod: sql
@@ -8,12 +8,13 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6bdba302778224ab2615018d6c5dec0740328d93
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810938"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400139"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>base de datos Tempdb en almacenamiento de datos paralelos
 **tempdb** es una PDW de SQL Server base de datos del sistema que almacena tablas temporales locales para las bases de datos de usuario. Las tablas temporales suelen usarse para mejorar el rendimiento de las consultas. Por ejemplo, puede usar una tabla temporal para modularr un script y reutilizar los datos calculados.  
@@ -59,7 +60,7 @@ Limitaciones y restricciones en el PDW de SQL Server base de datos**tempdb** . *
   
 -   Modifique los permisos de **tempdb** con las instrucciones **Grant**, **Deny**o **REVOKE** .  
   
--   Ejecute **DBCC SHRINKLOG** paratempdb tempdb.  
+-   Ejecute **DBCC SHRINKLOG** para **tempdb tempdb.**  
   
 -   Realizar operaciones DDL en **tempdb**. Hay un par de excepciones a esto. Para obtener más información, consulte la siguiente lista de limitaciones y restricciones de las tablas temporales locales.  
   

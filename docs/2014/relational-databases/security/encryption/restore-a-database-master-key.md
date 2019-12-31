@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 8cd45bd5a03cd50053ffe436fbf62d01019c2ae7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b05177fb6cf11d6224d760f2d301212d58307d9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011558"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957166"
 ---
 # <a name="restore-a-database-master-key"></a>Restaurar una clave maestra de base de datos
   En este tema se describe cómo restaurar la clave maestra de una base de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -28,13 +28,13 @@ ms.locfileid: "63011558"
   
      [Limitaciones y restricciones](#Restrictions)  
   
-     [Seguridad](#Security)  
+     [Bursátil](#Security)  
   
--   [Para restaurar la clave maestra de una base de datos utilizando Transact-SQL](#SSMSProcedure)  
+-   [Para restaurar la clave maestra de base de datos mediante Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a>Antes de empezar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="Restrictions"></a>Limitaciones y restricciones  
   
 -   Al restaurar la clave maestra, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] descifra todas las claves cifradas con la clave maestra actualmente activa y cifra estas claves con la clave maestra restaurada. Esta operación requiere un uso intensivo de recursos, por lo que debe programarse durante un período de baja demanda. Si la clave maestra de base de datos no se encuentra abierta, no puede abrirse o alguna de las claves cifradas con ella no pueden descifrarse, la operación de restauración no se puede realizar.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "63011558"
   
 -   Si no hay una clave maestra en la base de datos actual, RESTORE MASTER KEY creará una clave maestra. La nueva clave maestra no se cifrará automáticamente con la clave maestra de servicio.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="Security"></a>Bursátil  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a>Los  
  Necesita el permiso CONTROL en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio con Transact-SQL  
+##  <a name="SSMSProcedure"></a>Usar SQL Server Management Studio con Transact-SQL  
   
 #### <a name="to-restore-the-database-master-key"></a>Para restaurar la clave maestra de una base de datos  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63011558"
   
 2.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-3.  En la barra de Estándar, haga clic en **Nueva consulta**.  
+3.  En la barra Estándar , haga clic en **Nueva consulta**.  
   
 4.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   

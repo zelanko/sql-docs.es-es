@@ -3,7 +3,7 @@ title: Realización de una evaluación de migración SQL Server
 titleSuffix: Data Migration Assistant
 description: Aprenda a usar Data Migration Assistant para evaluar una SQL Server local antes de migrar a otro SQL Server o a Azure SQL Database
 ms.custom: seo-lt-2019
-ms.date: 08/08/2019
+ms.date: 12/10/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,18 +15,21 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: b2ec2f0f7030db2928a2a1e1c4f39ec62ed830ad
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.openlocfilehash: b6d9fd3f31885641451b3ade2f0f4543d9f44455
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74056633"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001910"
 ---
-# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realización de una evaluación de migración SQL Server con Data Migration Assistant
+# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Evaluación de la migración de SQL Server con Data Migration Assistant
 
 Las siguientes instrucciones paso a paso le ayudarán a realizar la primera evaluación de la migración a SQL Server locales, SQL Server que se ejecutan en una máquina virtual de Azure o Azure SQL Database mediante el uso de Data Migration Assistant.
 
-## <a name="create-an-assessment"></a>Creación de una evaluación
+   > [!NOTE]
+   > Data Migration Assistant v 5.0 incluye compatibilidad para analizar la conectividad de base de datos y las consultas SQL incrustadas en el código de la aplicación. Para obtener más información, consulte la entrada de blog sobre el [uso de Data Migration Assistant para evaluar el nivel de acceso a datos de una aplicación](https://techcommunity.microsoft.com/t5/Microsoft-Data-Migration/Using-Data-Migration-Assistant-to-assess-an-application-s-data/ba-p/990430).
+
+## <a name="create-an-assessment"></a>Crear una evaluación
 
 1. Seleccione el icono de **nuevo** (+) y, a continuación, seleccione el tipo de proyecto **evaluación** .
 
@@ -36,7 +39,7 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 
 3. Haga clic en **Crear**.
 
-   ![Creación de una evaluación](../dma/media/dma-assesssqlonprem/new-assessment.png)
+   ![Crear una evaluación](../dma/media/dma-assesssqlonprem/new-assessment.png)
 
 ## <a name="choose-assessment-options"></a>Elegir opciones de evaluación
 
@@ -53,8 +56,8 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
 
    Al evaluar la instancia de SQL Server de origen para migrar a Azure SQL Database, puede elegir uno de los siguientes tipos de informe de evaluación o ambos:
 
-    - **Comprobar la compatibilidad de bases de datos**
-    - **Comprobación de la paridad de características**
+    - **Check database compatibility (Comprobar compatibilidad de bases de datos)**
+    - **Check feature parity (Comprobar paridad de características)**
 
     ![Seleccionar el tipo de informe de evaluación para SQL Database destino](../dma/media/dma-assesssqlonprem/assessment-types-azure.png)
 
@@ -107,11 +110,11 @@ Las siguientes instrucciones paso a paso le ayudarán a realizar la primera eval
         go
     ```
 
-5. Haga clic en **siguiente** para iniciar la evaluación.
+5. Haga clic en **Siguiente** para iniciar la evaluación.
 
     ![Adición de orígenes e inicio de la evaluación](../dma/media/dma-assesssqlonprem/select-database1.png)
 
-## <a name="view-results"></a>Vista de resultados
+## <a name="view-results"></a>Visualización de los resultados
 
 La duración de la evaluación depende del número de bases de datos agregadas y el tamaño del esquema de cada base de datos. Los resultados se muestran para cada base de datos en cuanto están disponibles.
 
@@ -129,13 +132,13 @@ Las recomendaciones de características cubren distintos tipos de característic
 
 ![Ver recomendaciones de características](../dma/media/dma-assesssqlonprem/feature-recommendations.png)
 
-Por Azure SQL Database, las evaluaciones proporcionan problemas de bloqueo de la migración y problemas de paridad de características. Revise los resultados de ambas categorías seleccionando las opciones específicas.
+Por Azure SQL Database, las evaluaciones proporcionan problemas de bloqueo de la migración y problemas de paridad de características.Revise los resultados de ambas categorías seleccionando las opciones específicas.
 
 - La categoría de **paridad de características SQL Server** proporciona un conjunto completo de recomendaciones, enfoques alternativos disponibles en Azure y procedimientos de mitigación. Le ayuda a planear este esfuerzo en los proyectos de migración.
 
   ![Ver información de SQL Server paridad de características](../dma/media/dma-assesssqlonprem/sql-feature-parity.png)
 
-- La categoría de **problemas de compatibilidad** proporciona características parcialmente compatibles o no compatibles que bloquean la migración de bases de datos locales de SQL Server a bases de datos SQL de Azure. A continuación, se proporcionan recomendaciones para ayudarle a solucionar esos problemas.
+- La categoría de **problemas de compatibilidad** proporciona características parcialmente compatibles o no compatibles que bloquean la migración de bases de datos locales de SQL Server a bases de datos SQL de Azure.A continuación, se proporcionan recomendaciones para ayudarle a solucionar esos problemas.
 
   ![Ver problemas de compatibilidad](../dma/media/dma-assesssqlonprem/compatibility-issues.png)
 
@@ -153,4 +156,4 @@ Esto le permite ver los resultados consolidados en el proyecto de Azure Migrate 
 
 Una vez finalizada la evaluación de todas las bases de datos, seleccione **exportar Informe** para exportar los resultados a un archivo JSON o a un archivo CSV. A continuación, puede analizar los datos con su comodidad.
 
-Puede ejecutar varias evaluaciones simultáneamente y ver el estado de las evaluaciones abriendo la página **todas las evaluaciones** .
+Para ejecutar varias evaluaciones simultáneamente y ver su estado, abra la página **All Assessments** (Todas las evaluaciones).

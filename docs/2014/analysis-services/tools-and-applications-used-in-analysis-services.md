@@ -1,5 +1,5 @@
 ---
-title: Herramientas y aplicaciones utilizadas en Analysis Services | Microsoft Docs
+title: Herramientas y aplicaciones usadas en Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 169ae399522f8de40b8a50dba0b98ccc4ddc57c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c04742d0e0a84dd35e300bace9107685685ef75b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065870"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228901"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Herramientas y aplicaciones utilizadas en Analysis Services
   Encuentre las herramientas y las aplicaciones que necesitará para crear los modelos de Analysis Services y para administrar las bases de datos asociadas en una instancia de Analysis Services.  
@@ -24,7 +24,8 @@ ms.locfileid: "66065870"
  Los modelos tabulares y multidimensionales se crean a partir de plantillas de proyectos en una solución construida dentro del shell de Visual Studio. La plantilla del proyecto proporciona los diseñadores la creación de modelos, cubos, dimensiones y roles y comprenden una solución de Analysis Services.  
   
 ### <a name="download-sql-server-data-tools-for-business-intelligence-ssdt-bi"></a>Descargue SQL Server Data Tools para Business Intelligence (SSDT-BI)  
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para Business Intelligence (SSDT-BI), conocido anteriormente como Business Intelligence Development Studio (BIDS), se emplea para crear modelos de Analysis Services, informes de Reporting Services y paquetes de Integration Services. Puede descargar SSDT-BI desde las ubicaciones siguientes:  
+ 
+  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para Business Intelligence (SSDT-BI), conocido anteriormente como Business Intelligence Development Studio (BIDS), se emplea para crear modelos de Analysis Services, informes de Reporting Services y paquetes de Integration Services. Puede descargar SSDT-BI desde las ubicaciones siguientes:  
   
 -   [Descargar SSDT-BI para Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)  
   
@@ -42,13 +43,11 @@ ms.locfileid: "66065870"
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Management Studio es la herramienta de administración principal para todas las características de SQL Server, incluida Analysis Services. SQL Server Management Studio es un componente opcional. Si no lo ve con otras aplicaciones de SQL Server en la página de aplicaciones de Windows Server 2012, ejecute el programa de instalación de SQL Server para añadirlo a su instalación.  
   
-### <a name="sql-server-profiler"></a>SQL Server Profiler  
+### <a name="sql-server-profiler"></a>Analizador de SQL Server  
  Aunque oficialmente no se use, SQL Server Profiler ofrece una forma sencilla de controlar las conexiones, ejecutar consultas MDX y otras operaciones del servidor. SQL Server Profiler está instalado de forma predeterminada. Puede encontrarlo con aplicaciones SQL Server en aplicaciones de Windows Server 2012.  
   
 ### <a name="powershell"></a>PowerShell  
  Puede utilizar comandos de PowerShell para realizar muchas tareas administrativas. Para obtener más información, vea [Analysis Services PowerShell](analysis-services-powershell.md) .  
   
 ### <a name="community-and-third-party-tools"></a>Herramientas de la comunidad y de terceros  
- Consulte la [página de codeplex Analysis Services](http://sqlsrvanalysissrvcs.codeplex.com/) para obtener ejemplos de código de la comunidad. [Los foros](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) pueden ser útiles a la hora de buscar recomendaciones para herramientas de terceros que admitan Analysis Services.  
-  
-  
+ Consulte la [página de codeplex Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/) para obtener ejemplos de código de la comunidad. Los [foros](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) pueden ser útiles a la hora de buscar recomendaciones para herramientas de terceros que admiten Analysis Services.  

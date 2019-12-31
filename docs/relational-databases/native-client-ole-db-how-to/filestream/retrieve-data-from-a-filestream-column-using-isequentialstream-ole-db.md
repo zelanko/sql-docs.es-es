@@ -1,5 +1,5 @@
 ---
-title: Recuperar datos de una columna FILESTREAM mediante ISequentialStream (OLE DB) | Microsoft Docs
+title: FILESTREAM mediante ISequentialStream (OLE DB)
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ ms.assetid: 814cb31e-6fd1-4eb7-afe3-25b520638815
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c32630be13f643276ac2767953f91b541eef3b1
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 3f8a296327dae84f5b799fc6aef07e3e4022bb83
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790090"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75225844"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Recuperar datos de una columna FILESTREAM utilizando ISequentialStream (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   En este ejemplo se muestra el uso de una interfaz ISequentialStream en una interfaz ICommandText para recuperar un único registro de una columna Filestream.  
   
- Para obtener más información sobre la característica FileStream, vea [compatibilidad &#40;de&#41;FileStream OLE DB](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Para obtener más información sobre la característica FileStream, vea [compatibilidad de filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Ejemplo  
  Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
  Utilice uno de los siguientes ejemplos para crear la tabla de la que lee este ejemplo:  
   
--   [Enviar datos a una columna FILESTREAM usando ISequentialStream enlazada al parámetro de ICommandText &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Enviar datos a una columna FILESTREAM mediante ISequentialStream enlazado al parámetro ICommandText &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
 -   [Enviar datos a una columna FILESTREAM mediante IRowsetFastUpload &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73790090"
   
  Al ejecutar este ejemplo, debe pasar un nombre de servidor (o servidor\nombre_de_instancia).  
   
-```  
+```cpp
 // ISSHelper.h: interface for the CISSHelper class.  
   
 #if !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
@@ -97,7 +97,7 @@ private:
 #endif // !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
 ```  
   
-```  
+```cpp
 // ISSHelper.cpp: implementation of the CISSHelper class.  
 #pragma once  
   
@@ -242,7 +242,7 @@ HRESULT CISSHelper::Write( const void *pv, ULONG cb, ULONG* pcbWritten ) {
 }  
 ```  
   
-```  
+```cpp
 //  ICommandDownload.cpp  
 #pragma once  
   

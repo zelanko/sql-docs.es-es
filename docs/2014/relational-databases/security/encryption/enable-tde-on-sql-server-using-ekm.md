@@ -12,20 +12,20 @@ helpviewer_keywords:
 - EKM, TDE how to
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: e55afa78d82c19d9a6a09226c537ca95f65105ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b3f046017aa54f5db96878f8bfb6c435409d839
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011507"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957239"
 ---
 # <a name="enable-tde-using-ekm"></a>Habilitar TDE con EKM
   En este tema se describe cómo habilitar el cifrado de datos transparente (TDE) en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para proteger una clave de cifrado de base de datos mediante una clave asimétrica almacenada en un módulo EKM (Administración extensible de claves) con [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- TDE cifra el almacenamiento de una base de datos completa utilizando una clave simétrica denominada clave de cifrado de base de datos. La clave de cifrado de base de datos también se puede proteger utilizando un certificado que se protege mediante la clave maestra de base de datos de la base de datos maestra. Para obtener más información sobre cómo proteger la clave de cifrado de base de datos usando la clave maestra de base de datos, vea [Cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md). Para obtener más información sobre cómo configurar TDE cuando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se está ejecutando en una máquina virtual de Azure, vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md).  
+ TDE cifra el almacenamiento de una base de datos completa mediante el uso de una clave simétrica denominada clave de cifrado de base de datos. La clave de cifrado de base de datos también se puede proteger utilizando un certificado que se protege mediante la clave maestra de base de datos de la base de datos maestra. Para obtener más información sobre cómo proteger la clave de cifrado de base de datos usando la clave maestra de base de datos, vea [Cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md). Para obtener más información sobre cómo configurar TDE cuando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se está ejecutando en una máquina virtual de Azure, vea [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md).  
   
  **En este tema**  
   
@@ -33,13 +33,13 @@ ms.locfileid: "63011507"
   
      [Limitaciones y restricciones](#Restrictions)  
   
-     [Seguridad](#Security)  
+     [Bursátil](#Security)  
   
 -   [Para habilitar TDE mediante EKM usando Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a>Antes de empezar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="Restrictions"></a>Limitaciones y restricciones  
   
 -   Debe ser un usuario con muchos privilegios (como un administrador del sistema) para crear una clave de cifrado de base de datos y cifrar una base de datos. Ese usuario debe poder ser autenticado por el módulo EKM.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "63011507"
   
 -   Las opciones y los parámetros requeridos por el proveedor de EKM pueden diferir de lo que se proporciona en el ejemplo de código siguiente. Para obtener más información, consulte al proveedor de EKM.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="Security"></a>Bursátil  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a>Los  
  En este tema se utilizan los permisos siguientes:  
   
 -   Para cambiar una opción de configuración y ejecutar la instrucción RECONFIGURE, debe tener el permiso ALTER SETTINGS de nivel de servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
@@ -64,7 +64,7 @@ ms.locfileid: "63011507"
   
 -   Requiere el permiso CONTROL en la base de datos para cifrarla.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="TsqlProcedure"></a>Usar Transact-SQL  
   
 #### <a name="to-enable-tde-using-ekm"></a>Para habilitar TDE usando EKM  
   
@@ -73,11 +73,12 @@ ms.locfileid: "63011507"
 2.  Instale los certificados en el equipo tal y como requiera el proveedor EKM.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no proporciona un proveedor EKM. Cada proveedor EKM puede tener procedimientos diferentes para instalar, configurar y autorizar a los usuarios.  Consulte la documentación del proveedor EKM para completar este paso.  
+    >  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no proporciona un proveedor EKM. Cada proveedor EKM puede tener procedimientos diferentes para instalar, configurar y autorizar a los usuarios.  Consulte la documentación del proveedor EKM para completar este paso.  
   
 3.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-4.  En la barra de Estándar, haga clic en **Nueva consulta**.  
+4.  En la barra Estándar , haga clic en **Nueva consulta**.  
   
 5.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
@@ -147,26 +148,26 @@ ms.locfileid: "63011507"
     GO  
     ```  
   
- Para obtener más información, vea:  
+ Para obtener más información, consulte los temas siguientes:  
   
--   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREAR proveedor de servicios CRIPTOGRÁFICOs &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREAR credencial &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREAR clave asimétrica &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREAR inicio de sesión &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREAR la clave de CIFRAdo de base de datos &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
 -   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
--   [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
+-   [Administración extensible de claves mediante Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   
--   [Cifrado de datos transparente con Base de datos SQL de Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
+-   [Cifrado de datos transparente con Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
   
   

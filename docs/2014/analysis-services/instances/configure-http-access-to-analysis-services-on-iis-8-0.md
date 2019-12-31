@@ -1,5 +1,5 @@
 ---
-title: Configurar el acceso HTTP a Analysis Services en Internet Information Services (IIS) 8.0 | Microsoft Docs
+title: Configurar el acceso HTTP a Analysis Services en Internet Information Services (IIS) 8,0 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/19/2019
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 42ccdae89fdb0883201ec022479e51a327ea0b33
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263230"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75225400"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurar el acceso HTTP a Analysis Services en Internet Information Services (IIS) 8.0
   En este artículo se explica cómo configurar un extremo HTTP para acceder a una instancia de Analysis Services. Puede habilitar el acceso HTTP configurando MSMDPUMP.dll, una extensión ISAPI que se ejecuta en Internet Information Services (IIS) y transfiere datos entre las aplicaciones cliente y un servidor de Analysis Services. Este método proporciona una alternativa para conectarse a Analysis Services cuando una solución BI necesita las capacidades siguientes:  
@@ -36,23 +36,23 @@ ms.locfileid: "67263230"
   
  A medida que avanza en la configuración de MSMDPUMP, recuerde que se deben tener en cuenta dos conexiones: cliente a IIS, IIS a SSAS. Este artículo da instrucciones sobre la conexión IIS a SSAS. La aplicación cliente podría requerir configuración adicional antes de poder conectar a IIS. Algunas decisiones, como si se debe utilizar SSL o cómo configurar enlaces, están fuera del ámbito de este artículo. Consulte [Servidor Web (IIS)](https://technet.microsoft.com/library/hh831725.aspx) para obtener más información acerca de IIS.  
   
- En este tema se incluyen las secciones siguientes:  
+ Este tema incluye las siguientes secciones:  
   
--   [Información general](#bkmk_overview)  
+-   [Visión](#bkmk_overview)  
   
 -   [Requisitos previos](#bkmk_prereq)  
   
--   [Copiar MSMDPUMP.dll en una carpeta del servidor web](#bkmk_copy)  
+-   [Copiar MSMDPUMP. dll en una carpeta del servidor Web](#bkmk_copy)  
   
 -   [Crear un grupo de aplicaciones y un directorio virtual en IIS](#bkmk_appPool)  
   
--   [Configurar la autenticación IIS y agregar la extensión](#bkmk_auth)  
+-   [Configurar la autenticación de IIS y agregar la extensión](#bkmk_auth)  
   
--   [Modificar el archivo MSMDPUMP.INI para establecer el servidor de destino](#bkmk_edit)  
+-   [Edite MSMDPUMP. Archivo INI para establecer el servidor de destino](#bkmk_edit)  
   
--   [Probar la configuración](#bkmk_test)  
+-   [Prueba de la configuración](#bkmk_test)  
   
-##  <a name="bkmk_overview"></a> Información general  
+##  <a name="bkmk_overview"></a>Visión  
  MSMDPUMP es una extensión ISAPI que se carga en IIS y permite la redirección a una instancia de Analysis Services local o remota. Al configurar esta extensión ISAPI, crea un extremo HTTP a una instancia de Analysis Services.  
   
  Debe crear y configurar un directorio virtual para cada extremo HTTP. Cada extremo tendrá su propio conjunto de archivos MSMDPUMP para cada instancia de Analysis Services a la que desee conectarse. Un archivo de configuración en este conjunto de archivos especifica el nombre de la instancia de Analysis Services que se usa para cada extremo HTTP.  
@@ -61,7 +61,7 @@ ms.locfileid: "67263230"
   
  Cuando MSMDPUMP se conecta a Analysis Services, lo hace con una identidad de usuario Windows. Esta cuenta será la cuenta anónima, si configuró el directorio virtual para las conexiones anónimas, o una cuenta de usuario Windows. La cuenta debe tener los permisos de acceso de datos apropiados en la base de datos y el servidor Analysis Services.  
   
- ![Diagrama que muestra las conexiones entre componentes](../media/ssas.gif "diagrama muestra las conexiones entre componentes")  
+ ![Diagrama que muestra las conexiones entre los componentes](../media/ssas.gif "Diagrama que muestra las conexiones entre los componentes")  
   
  En la siguiente tabla se enumeran consideraciones adicionales que se aplican al habilitar el acceso HTTP en diferentes escenarios.  
   
@@ -71,26 +71,26 @@ ms.locfileid: "67263230"
 |IIS y Analysis Services en equipos diferentes|En esta topología, debe instalar el proveedor OLE DB para Analysis Services en el servidor web. También debe modificar el archivo msmdpump.ini para especificar la ubicación de la instancia de Analysis Services en el equipo remoto.<br /><br /> Esta topología agrega un paso de autenticación de doble salto, en el que las credenciales deben fluir del cliente al servidor web y en el servidor back-end de Analysis Services. Si especifica las credenciales de Windows y NTLM, obtendrá un error porque NTLM no permite la delegación de las credenciales de cliente en un segundo servidor. La solución más habitual es usar la autenticación básica con Capa de sockets seguros (SSL), pero esto requerirá que los usuarios proporcionen un nombre de usuario y una contraseña al acceder al directorio virtual de MSMDPUMP. Un método más sencillo podría ser habilitar Kerberos y configurar la delegación restringida de Analysis Services para que los usuarios puedan acceder a Analysis Services de un modo transparente. Para obtener información detallada, vea [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) .<br /><br /> Considere qué puertos desbloquear en Firewall de Windows. Tendrá que desbloquear los puertos en ambos servidores para permitir el acceso a la aplicación web en IIS y a Analysis Services en un servidor remoto.|  
 |Las conexiones de cliente provienen de un dominio que no es de confianza o de una conexión de la extranet|Las conexiones de cliente que provienen de un dominio que no es de confianza imponen mayores restricciones en la autenticación. De forma predeterminada, Analysis Services usa la autenticación integrada de Windows, que requiere que los usuarios estén en el mismo dominio que el servidor. Si tiene usuarios de la extranet que se conectan a IIS desde fuera del dominio, recibirán un error de conexión si el servidor está configurado para usar la configuración predeterminada.<br /><br /> Como solución alternativa, puede hacer que los usuarios de la extranet se conecten a través de una VPN con las credenciales del dominio. Sin embargo, sería mejor solución habilitar la autenticación básica y SSL en el sitio web de IIS.|  
   
-##  <a name="bkmk_prereq"></a> Requisitos previos  
+##  <a name="bkmk_prereq"></a>Requisitos previos  
  Las instrucciones de este artículo suponen que IIS ya está configurado y que ya está instalado Analysis Services. Windows Server 2012 se suministra con IIS 8.x como rol de servidor que se puede habilitar en el sistema.  
   
- **Configuración adicional de IIS 8.0**  
+ **Configuración adicional en IIS 8,0**  
   
  A la configuración predeterminada de IIS 8.0 le faltan componentes necesarios para el acceso HTTP a Analysis Services. Estos componentes, que se encuentran en las áreas de funciones **Seguridad** y **desarrollo de aplicaciones** del rol **servidor Web (IIS)** , incluyen los siguientes:  
   
--   **Seguridad** | **Autenticación de Windows**o **Autenticación básica**, y otras características de seguridad necesarias para su escenario de acceso a datos.  
+-   **** | **Autenticación de Windows**de seguridad, **autenticación básica**y cualquier otra característica de seguridad necesaria para el escenario de acceso a datos.  
   
--   **Desarrollo de aplicaciones** | **CGI**  
+-   **** | **Cgi** de desarrollo de aplicaciones  
   
--   **Desarrollo de aplicaciones** | **Extensiones ISAPI**  
+-   **** | **Extensiones ISAPI** de desarrollo de aplicaciones  
   
- Para comprobar o agregar estos componentes, use **Administrador del servidor** | **Administrar** | **Agregar roles y funciones**. Siga los pasos del asistente hasta llegar a **Roles de servidor**. Desplácese hacia abajo hasta encontrar **Servidor Web (IIS)**.  
+ Para comprobar o agregar estos componentes, use **Administrador del servidor** | **administrar** | **Agregar roles y características**. Siga los pasos del asistente hasta llegar a **Roles de servidor**. Desplácese hacia abajo hasta encontrar **Servidor Web (IIS)**.  
   
-1.  Abra **Servidor web** | **Seguridad** y elija los métodos de autenticación.  
+1.  Abra | **seguridad** del **servidor Web**y elija los métodos de autenticación.  
   
-2.  Abra **Servidor web** | **Desarrollo de aplicaciones** y elija **CGI** y **Extensiones ISAPI**.  
+2.  Abra el | **desarrollo de aplicaciones** de **servidor Web**y elija extensiones **cgi** y **ISAPI**.  
   
-     ![Página Agregar características para el rol de servidor Web](../media/ssas-httpaccess-isapicgi.png "página Agregar características para el rol de servidor Web")  
+     ![Agregar una página de características para el rol de servidor web](../media/ssas-httpaccess-isapicgi.png "Agregar una página de características para el rol de servidor web")  
   
  **Cuando IIS está en un servidor remoto**  
   
@@ -107,28 +107,28 @@ ms.locfileid: "67263230"
 > [!NOTE]  
 >  No olvide desbloquear los puertos en Firewall de Windows para permitir las conexiones cliente a un servidor Analysis Services remoto. Para obtener más información, consulte [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-##  <a name="bkmk_copy"></a> Paso 1: Copie los archivos MSMDPUMP en una carpeta en el servidor Web  
+##  <a name="bkmk_copy"></a>Paso 1: copiar los archivos MSMDPUMP en una carpeta del servidor Web  
  Cada extremo HTTP que cree debería tener su propio conjunto de archivos MSMDPUMP. En este paso, copie el ejecutable MSMDPUMP, el archivo de configuración y la carpeta de recursos de las carpetas de programas de Analysis Services a una nueva carpeta del directorio virtual que creará en el sistema de archivos del equipo que ejecuta IIS.  
   
  La unidad debe tener el formato del sistema de archivos NTFS. La ruta de acceso a la carpeta que cree no debe contener ningún espacio.  
   
-1.  Copie los archivos siguientes, que se encuentra en \<unidad >: \Program Files\Microsoft SQL Server\\< instancia\>\OLAP\bin\isapi: MSMDPUMP. ARCHIVO DLL, MSMDPUMP. INI y una carpeta de recursos.  
+1.  Copie los archivos siguientes, que se \<encuentran en la unidad>:\\ \archivos de\>programa\Microsoft SQL Server<instancia \OLAP\bin\isapi: MSMDPUMP. DLL, MSMDPUMP. INI y una carpeta Resources.  
   
-     ![Explorador que muestra los archivos para copiar de archivos](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "Explorador de archivos que muestra los archivos para copiar")  
+     ![Explorador de archivos que muestra los archivos para copiar](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "Explorador de archivos que muestra los archivos para copiar")  
   
-2.  En el servidor web, cree una nueva carpeta: \<unidad >: \inetpub\wwwroot\\**OLAP**  
+2.  En el servidor Web, cree una nueva carpeta: \<unidad>: \Inetpub\wwwroot\\**OLAP**  
   
 3.  Pegue los archivos que copió anteriormente en esta nueva carpeta.  
   
-4.  Compruebe que la carpeta \inetpub\wwwroot\OLAP del servidor web contiene lo siguiente: MSMDPUMP. ARCHIVO DLL, MSMDPUMP. INI y una carpeta de recursos. La estructura de carpetas debe tener una apariencia como esta:  
+4.  Compruebe que la carpeta \inetpub\wwwroot\OLAP del servidor Web contiene lo siguiente: MSMDPUMP.DLL, MSMDPUMP.INI y una carpeta Resources. La estructura de carpetas debe tener una apariencia como esta:  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<> de unidad: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<> de unidad: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+    -   \<> de unidad: \inetpub\wwwroot\OLAP\Resources  
   
-##  <a name="bkmk_appPool"></a> Paso 2: Crear un grupo de aplicaciones y un directorio virtual en IIS  
+##  <a name="bkmk_appPool"></a>Paso 2: crear un grupo de aplicaciones y un directorio virtual en IIS  
  A continuación, cree un grupo de aplicaciones y un extremo al bombeo.  
   
 #### <a name="create-an-application-pool"></a>Crear un grupo de aplicaciones  
@@ -137,34 +137,34 @@ ms.locfileid: "67263230"
   
 2.  Abra la carpeta del servidor, haga clic con el botón derecho en **Grupos de aplicaciones** y haga clic en **Agregar grupo de aplicaciones**. Cree un grupo de aplicaciones denominado **OLAP**, con .NET Framework, con el modo de canalización administrada establecido en **Clásico**.  
   
-     ![Cuadro de diálogo de captura de pantalla del grupo de aplicaciones agregar](../media/ssas-httpaccess.PNG "cuadro de diálogo de captura de pantalla de Agregar grupo de aplicaciones")  
+     ![Captura de pantalla del cuadro de diálogo Agregar grupo de aplicaciones](../media/ssas-httpaccess.PNG "Captura de pantalla del cuadro de diálogo Agregar grupo de aplicaciones")  
   
 3.  De forma predeterminada, IIS crea grupos de aplicaciones con **ApplicationPoolIdentity** como identidad de seguridad, que es una opción válida para el acceso HTTP a Analysis Services. Si tiene motivos concretos para cambiar la identidad, haga clic con el botón derecho en **OLAP**y seleccione **Configuración avanzada**. Seleccione **ApplicationPoolIdentity**. Haga clic en el botón **Cambiar** para que esta propiedad reemplace la cuenta integrada con la cuenta personalizada que desea usar.  
   
-     ![Página de propiedades de la captura de pantalla de configuración avanzada](../media/ssas-httpaccess-advsettings.PNG "página de propiedades de la captura de pantalla de configuración avanzada")  
+     ![Captura de pantalla de la página de propiedades Configuración avanzada](../media/ssas-httpaccess-advsettings.PNG "Captura de pantalla de la página de propiedades Configuración avanzada")  
   
 4.  De manera predeterminada, en un sistema operativo de 64 bits, IIS establece la propiedad **Habilitar aplicaciones de 32 bits** en **false**. Si copió el archivo msmdpump.dll de una instalación de 64 bits de Analysis Services, es la opción correcta para la extensión MSMDPUMP en un servidor IIS de 64 bits. Si copió los archivos binarios de MSMDPUMP de una instalación de 32 bits, establézcala en **true**. Compruebe esta propiedad ahora en **Configuración avanzada** para asegurarse de que se ha establecido correctamente.  
   
-#### <a name="create-an-application"></a>Crear una aplicación  
+#### <a name="create-an-application"></a>Creación de una aplicación  
   
 1.  En el Administrador de IIS, abra **Sitios**y abra **Sitio web predeterminado**. Debe ver una carpeta denominada **Olap**. Se trata de una referencia a la carpeta OLAP que creó en \inetpub\wwwroot.  
   
-     ![Carpeta OLAP en el sitio web predeterminado](../media/ssas-httpaccess-convertfolderbefore.png "carpeta OLAP en el sitio web predeterminado")  
+     ![Carpeta OLAP en el sitio web predeterminado](../media/ssas-httpaccess-convertfolderbefore.png "Carpeta OLAP en el sitio web predeterminado")  
   
 2.  Haga clic con el botón derecho en la carpeta y seleccione **Convertir en aplicación**.  
   
 3.  En Agregar aplicación, escriba **OLAP** como alias. Haga clic en **Seleccionar** para elegir el grupo de aplicaciones de OLAP. La ruta de acceso física se debe establecer en C:\inetpub\wwwroot\OLAP  
   
-     ![Cuadro de diálogo Agregar aplicación](../media/ssas-httpaccess-convertedapp.png "cuadro de diálogo Agregar aplicación")  
+     ![cuadro de diálogo Agregar aplicación](../media/ssas-httpaccess-convertedapp.png "cuadro de diálogo Agregar aplicación")  
   
 4.  Haga clic en **Aceptar**. Actualice el sitio web y observe que la carpeta OLAP es ahora una aplicación en el sitio web predeterminado. Ahora se establece la ruta de acceso virtual al archivo MSMDPUMP.  
   
-     ![Carpeta OLAP después de la conversión de la aplicación](../media/ssas-httpaccess-convertfolderafter.png "carpeta OLAP después de la conversión de la aplicación")  
+     ![Carpeta OLAP después de la conversión de la aplicación](../media/ssas-httpaccess-convertfolderafter.png "Carpeta OLAP después de la conversión de la aplicación")  
   
 > [!NOTE]  
 >  Las versiones anteriores de estas instrucciones incluyen pasos para crear un directorio virtual. Esa operación ya no es necesaria.  
   
-##  <a name="bkmk_auth"></a> Paso 3: Configurar la autenticación IIS y agregar la extensión  
+##  <a name="bkmk_auth"></a>Paso 3: configurar la autenticación de IIS y agregar la extensión  
  En este paso, seguirá configurando el directorio virtual SSAS recién creado. Especificará un método de autenticación y después agregará una asignación de script. Algunos métodos de autenticación admitidos para Analysis Services sobre HTTP son los siguientes:  
   
 -   Autenticación de Windows (Kerberos o NTLM)  
@@ -173,17 +173,17 @@ ms.locfileid: "67263230"
   
 -   Autenticación anónima  
   
- La**autenticación de Windows** se considera la más segura y aprovecha la infraestructura existente para las redes que utilizan Active Directory. Para utilizar la autenticación de Windows con eficacia, todos los exploradores, aplicaciones cliente y aplicaciones de servidor deben admitirla. Es el modo más seguro y recomendado, pero requiere que IIS pueda tener acceso a un controlador de dominio de Windows que pueda autenticar la identidad del usuario que solicita una conexión.  
+ La **autenticación de Windows** se considera la más segura y aprovecha la infraestructura existente para las redes que usan Active Directory. Para utilizar la autenticación de Windows con eficacia, todos los exploradores, aplicaciones cliente y aplicaciones de servidor deben admitirla. Es el modo más seguro y recomendado, pero requiere que IIS pueda tener acceso a un controlador de dominio de Windows que pueda autenticar la identidad del usuario que solicita una conexión.  
   
  Para las topologías que colocan a Analysis Services e IIS en equipos diferentes, deberá resolver los problemas del doble salto que surgen cuando una identidad de usuario tiene que delegarse a un segundo servicio en un equipo remoto, normalmente habilitando Analysis Services para la delegación restringida de Kerberos. Para obtener más información, vea [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md).  
   
- La**autenticación básica** se usa cuando se tienen identidades de Windows pero las conexiones de usuario son de dominios que no son de confianza, lo que prohíbe el uso de conexiones suplantadas o delegadas. La autenticación básica le permite especificar una identidad y una contraseña en una cadena de conexión. En lugar de utilizar el contexto de seguridad del usuario actual, las credenciales de la cadena de conexión se utilizan para conectarse a Analysis Services. Dado que Analysis Services solo admite la autenticación de Windows, las credenciales que se le pasan deben ser un usuario o un grupo de Windows que sea miembro del dominio en el que Analysis Services se hospeda.  
+ La **autenticación básica** se usa cuando se tienen identidades de Windows, pero las conexiones de usuario son de dominios que no son de confianza, lo que prohíbe el uso de conexiones delegadas o suplantadas. La autenticación básica le permite especificar una identidad y una contraseña en una cadena de conexión. En lugar de utilizar el contexto de seguridad del usuario actual, las credenciales de la cadena de conexión se utilizan para conectarse a Analysis Services. Dado que Analysis Services solo admite la autenticación de Windows, las credenciales que se le pasan deben ser un usuario o un grupo de Windows que sea miembro del dominio en el que Analysis Services se hospeda.  
   
- La**autenticación anónima** se suele utilizar durante las pruebas inicial debido a que su facilidad de configuración ayuda a validar rápidamente la conectividad HTTP a Analysis Services. En unos pocos pasos, puede asignar una cuenta de usuario único como identidad, conceder a esa cuenta permisos en Analysis Services, utilizar la cuenta para comprobar el acceso a los datos en una aplicación cliente y, después, deshabilitar la autenticación anónima cuando se complete la prueba.  
+ La **autenticación anónima** se suele utilizar durante las pruebas iniciales, ya que su facilidad de configuración ayuda a validar rápidamente la conectividad HTTP a Analysis Services. En unos pocos pasos, puede asignar una cuenta de usuario único como identidad, conceder a esa cuenta permisos en Analysis Services, utilizar la cuenta para comprobar el acceso a los datos en una aplicación cliente y, después, deshabilitar la autenticación anónima cuando se complete la prueba.  
   
- También puede usar la autenticación anónima en un entorno de producción si los usuarios no tienen cuentas de usuario de Windows pero seguir las prácticas recomendadas bloqueando los permisos en el sistema host, como se explica en este artículo: [Habilitar la autenticación anónima (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Asegúrese de que la autenticación se establece en el directorio virtual y no en el sitio Web primario, para reducir aún más el nivel de acceso de la cuenta.  
+ También puede utilizar la autenticación anónima en un entorno de producción si los usuarios no tienen cuentas de usuario de Windows pero seguir las prácticas recomendadas bloqueando los permisos del sistema host, como se explica en este artículo: [Habilitar la autenticación anónima (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Asegúrese de que la autenticación se establece en el directorio virtual y no en el sitio Web primario, para reducir aún más el nivel de acceso de la cuenta.  
   
- Cuando se habilita la autenticación anónima, cualquier conexión de usuario al extremo HTTP se permite como usuario anónimo. No podrá auditar conexiones de usuario individuales, ni usar la identidad del usuario para seleccionar datos de un modelo. Como puede ver, el uso de la autenticación anónima afecta a todo, desde el diseño del modelo a la actualización y el acceso a los datos. Sin embargo, si los usuarios no tienen un inicio de sesión de usuario de Windows con el que empezar, el uso de la cuenta anónima podría ser la única opción.  
+ Cuando se habilita la autenticación anónima, cualquier conexión de usuario al extremo HTTP se permite como usuario anónimo. No podrá auditar conexiones de usuario individuales, ni utilizar la identidad de usuario para seleccionar datos de un modelo. Como puede ver, el uso de la autenticación anónima afecta a todo, desde el diseño del modelo a la actualización y el acceso a los datos. Sin embargo, si los usuarios no tienen un inicio de sesión de usuario de Windows con el que empezar, el uso de la cuenta anónima podría ser la única opción.  
   
 #### <a name="set-the-authentication-type-and-add-a-script-map"></a>Establecer el tipo de autenticación y el mapa de script  
   
@@ -191,11 +191,11 @@ ms.locfileid: "67263230"
   
 2.  Haga doble clic en **Autenticación** en la sección de IIS de la página principal.  
   
-     ![Página principal de captura de pantalla del Administrador de IIS](../media/ssas-httpaccess-iis.png "página principal de captura de pantalla del Administrador de IIS")  
+     ![Captura de pantalla de la página principal del Administrador IIS](../media/ssas-httpaccess-iis.png "Captura de pantalla de la página principal del Administrador IIS")  
   
 3.  Si está usando la seguridad integrada de Windows, habilite **Autenticación de Windows** .  
   
-     ![Configuración de captura de pantalla de la autenticación Vdir](../media/ssas-httpaccess-iisauth.png "configuración de autenticación de captura de pantalla del directorio virtual")  
+     ![Captura de pantalla de la configuración de autenticación de directorio virtual](../media/ssas-httpaccess-iisauth.png "Captura de pantalla de la configuración de autenticación de directorio virtual")  
   
 4.  También puede habilitar la **autenticación básica** si las aplicaciones cliente y servidor están en dominios diferentes. Este modo requiere que el usuario escriba un nombre de usuario y una contraseña. El nombre de usuario y la contraseña se transmiten a través de la conexión HTTP a IIS. IIS intentará suplantar al usuario utilizando las credenciales proporcionadas al conectarse a MSMDPUMP, pero las credenciales no se delegarán a Analysis Services. En su lugar, deberá pasar un nombre de usuario y una contraseña válidos en una conexión, como se describe en el paso 6 de este documento.  
   
@@ -213,20 +213,20 @@ ms.locfileid: "67263230"
   
 6.  Haga clic en el directorio virtual **OLAP** para abrir la página principal. Haga doble clic en **Asignaciones de controlador**.  
   
-     ![Icono de asignación de controlador en la página de la característica](../media/ssas-httpaccess-handlermapping.png "icono en la página de la característica de asignación de controlador")  
+     ![Icono de asignación de controlador en la página de características](../media/ssas-httpaccess-handlermapping.png "Icono de asignación de controlador en la página de características")  
   
-7.  Haga clic con el botón secundario en cualquier lugar de la página y seleccione **Agregar asignación de script**. En el cuadro de diálogo Agregar asignación de script, especifique **\*.dll** como la ruta de acceso de la solicitud, especifique c:\inetpub\wwwroot\olap\msmdpump.dll como el ejecutable y escriba **OLAP** como nombre. Mantenga todas las restricciones predeterminadas asociadas con esta asignación de script.  
+7.  Haga clic con el botón secundario en cualquier lugar de la página y seleccione **Agregar asignación de script**. En el cuadro de diálogo Agregar asignación de script, especifique ** \*. dll** como la ruta de acceso de la solicitud, especifique c:\inetpub\wwwroot\OLAP\msmdpump.dll como el ejecutable y escriba **OLAP** como nombre. Mantenga todas las restricciones predeterminadas asociadas con esta asignación de script.  
   
-     ![Cuadro de diálogo de captura de pantalla de agregar asignación de Script](../media/ssas-httpaccess-addscript.png "cuadro de diálogo de captura de pantalla de agregar asignación de Script")  
+     ![Captura de pantalla del cuadro de diálogo Agregar asignación de script](../media/ssas-httpaccess-addscript.png "Captura de pantalla del cuadro de diálogo Agregar asignación de script")  
   
 8.  Cuando se le solicite que permita la extensión ISAPI, haga clic en **Sí**.  
   
-     ![Captura de pantalla de confirmación para agregar la extensión ISAPI](../media/ssas-httpaccess-isapiprompt.png "captura de pantalla de confirmación para agregar la extensión ISAPI")  
+     ![Captura de pantalla de la confirmación para agregar la extensión de ISAPI](../media/ssas-httpaccess-isapiprompt.png "Captura de pantalla de la confirmación para agregar la extensión de ISAPI")  
   
-##  <a name="bkmk_edit"></a> Paso 4: Modificar el archivo MSMDPUMP.INI para establecer el servidor de destino  
+##  <a name="bkmk_edit"></a>Paso 4: editar MSMDPUMP. Archivo INI para establecer el servidor de destino  
  El archivo MSMDPUMP.INI especifica la instancia de Analysis Services a la que se conecta MSMDPUMP.DLL. Esta instancia puede ser local o remota, instalarse como la predeterminada o como una instancia con nombre.  
   
- Abra el archivo msmdpump.ini que se encuentra en la carpeta C:\inetpub\wwwroot\OLAP y examine el contenido de este archivo. Debería ser similar al siguiente:  
+ Abra el archivo msmdpump.ini que se encuentra en la carpeta C:\inetpub\wwwroot\OLAP y examine el contenido de este archivo. Debería tener este aspecto:  
   
 ```  
 <ConfigurationSettings>  
@@ -237,31 +237,31 @@ ms.locfileid: "67263230"
   
 ```  
   
- Si la instancia de Analysis Services para la que está configurando el acceso HTTP se encuentra en el equipo local y se instala como una instancia predeterminada, no hay ninguna razón para cambiar este valor. En caso contrario, debe especificar el nombre del servidor (por ejemplo, \<ServerName > ADWRKS-SRV01\</ServerName >). Para un servidor que se instala como una instancia con nombre, asegúrese de anexar el nombre de instancia (por ejemplo, \<ServerName > ADWRKS-SRV01\Tabular\</ServerName >).  
+ Si la instancia de Analysis Services para la que está configurando el acceso HTTP se encuentra en el equipo local y se instala como una instancia predeterminada, no hay ninguna razón para cambiar este valor. De lo contrario, debe especificar el nombre del servidor (por \<ejemplo, ServerName>ADWRKS\<-SRV01/ServerName>). Para un servidor que esté instalado como una instancia con nombre, asegúrese de anexar el nombre de instancia (por \<ejemplo, ServerName\<>ADWRKS-SRV01\Tabular/ServerName>).  
   
- De forma predeterminada, Analysis Services escucha en el puerto TCP/IP 2383. Si ha instalado Analysis Services como instancia predeterminada, no es necesario especificar ningún puerto en \<nombreServidor > porque Analysis Services sabe cómo escuchar en el puerto 2383 automáticamente. Sin embargo, no necesita permitir las conexiones de entrada en ese puerto en Firewall de Windows. Para obtener más información, consulte [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ De forma predeterminada, Analysis Services escucha en el puerto TCP/IP 2383. Si ha instalado Analysis Services como instancia predeterminada, no es necesario especificar ningún puerto en \<ServerName> porque Analysis Services sabe cómo escuchar en el puerto 2383 automáticamente. Sin embargo, no necesita permitir las conexiones de entrada en ese puerto en Firewall de Windows. Para obtener más información, consulte [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Si configura una con nombre o predeterminada de la instancia de Analysis Services para escuchar en un puerto fijo, debe agregar el número de puerto al nombre del servidor (por ejemplo, \<nombreDeServidor > AW-SRV01:55555\</ServerName >) y debe permitir entrantes conexiones a ese puerto en Firewall de Windows.  
+ Si configuró una instancia con nombre o predeterminada de Analysis Services para escuchar en un puerto fijo, debe agregar el número de puerto al nombre del servidor (por ejemplo \<, ServerName>AW-SRV01:\<55555/ServerName>) y debe permitir las conexiones entrantes en firewall de Windows en ese puerto.  
   
-## <a name="step-5-grant-data-access-permissions"></a>Paso 5: Conceder permisos de acceso  
+## <a name="step-5-grant-data-access-permissions"></a>Paso 5: otorgar permisos de acceso a datos  
  Como se indicó anteriormente, deberá conceder permisos en la instancia de Analysis Services. Cada objeto de base de datos tendrá roles que proporcionan un nivel determinado de permisos (lectura o lectura/escritura), y cada rol tendrá miembros que constan de identidades de usuario de Windows.  
   
- Para establecer los permisos puede utilizar SQL Server Management Studio. En la carpeta **Base de datos** | **Roles** , puede crear roles, especificar permisos de base de datos, asignar la pertenencia a las cuentas de grupo o de usuario de Windows y, a continuación, conceder permisos de lectura o escritura en objetos específicos. Normalmente, los permisos de **Lectura** en un cubo son suficientes para las conexiones de cliente que utilizan, pero no actualizan, los datos del modelo.  
+ Para establecer los permisos puede utilizar SQL Server Management Studio. En la carpeta**roles** de **base de datos** | , puede crear roles, especificar permisos de base de datos, asignar la pertenencia a cuentas de usuario o de grupo de Windows y, a continuación, conceder permisos de lectura o escritura en objetos específicos. Normalmente, los permisos de **Lectura** en un cubo son suficientes para las conexiones de cliente que utilizan, pero no actualizan, los datos del modelo.  
   
  La asignación de roles varía en función de cómo configuró la autenticación.  
   
 |||  
 |-|-|  
-|Anónimo|Agregar a la lista de miembros la cuenta especificada en **Editar las credenciales de autenticación anónima** en IIS. Para obtener más información, vea [Autenticación anónima](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication).|  
+|Anónimas|Agregar a la lista de miembros la cuenta especificada en **Editar las credenciales de autenticación anónima** en IIS. Para obtener más información, vea [Autenticación anónima](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication).|  
 |Autenticación de Windows|Agregue a la lista de miembros las cuentas de usuario o grupo de Windows que solicitan datos de Analysis Services a través de la suplantación y la delegación.<br /><br /> Suponiendo que se usa la delegación restringida de Kerberos, las únicas cuentas que necesitan permisos son las cuentas de grupo y usuario de Windows que solicitan acceso. No son necesarios permisos para la identidad del grupo de aplicaciones.|  
-|Autenticación básica|Agregue a la lista de miembros las cuentas de usuario o de grupo de Windows que se pasarán en la cadena de conexión.<br /><br /> Además, si se pasan credenciales a través de `EffectiveUserName` en la cadena de conexión, la identidad del grupo de aplicaciones deberá tener derechos de administrador en la instancia de Analysis Services. En SSMS, haga clic en la instancia &#124; **propiedades** &#124; **seguridad** &#124; **agregar**. Especifique la identidad del grupo de aplicaciones. Si usa la identidad predeterminada integrada, la cuenta se especifica como **IIS AppPool\DefaultAppPool**.<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
+|Autenticación básica|Agregue a la lista de miembros las cuentas de usuario o de grupo de Windows que se pasarán en la cadena de conexión.<br /><br /> Además, si se pasan credenciales a través de `EffectiveUserName` en la cadena de conexión, la identidad del grupo de aplicaciones deberá tener derechos de administrador en la instancia de Analysis Services. En SSMS, haga clic con el botón secundario en la instancia &#124; **propiedades** &#124; **seguridad** &#124; **Agregar**. Especifique la identidad del grupo de aplicaciones. Si usó la identidad predeterminada integrada, la cuenta se especifica como **IIS AppPool\DefaultAppPool**.<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
   
  Para obtener más información sobre los permisos de configuración, vea [Cómo autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
-##  <a name="bkmk_test"></a> Paso 6: Probar la configuración  
+##  <a name="bkmk_test"></a>Paso 6: probar la configuración  
  La sintaxis de la cadena de conexión para MSMDPUMP es la dirección URL del archivo MSMDPUMP.dll.  
   
- Si la aplicación web está escuchando en un puerto fijo, anexe el número de puerto al nombre del servidor o dirección IP, por ejemplo, `http://my-web-srv01:8080/OLAP/msmdpump.dll` o `http://123.456.789.012:8080/OLAP/msmdpump.dll`.  
+ Si la aplicación web está escuchando en un puerto fijo, Anexe el número de puerto al nombre o la dirección IP del servidor, por `http://my-web-srv01:8080/OLAP/msmdpump.dll` ejemplo `http://123.456.789.012:8080/OLAP/msmdpump.dll`, o.  
   
  Para probar rápidamente la conexión, puede abrir una conexión utilizando Microsoft Excel o SQL Server Management Studio.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "67263230"
   
      Explorador de objetos muestra la conexión HTTP:  
   
-     ![Objeto de explorador que muestra la conexión http a SSAS](../media/ssas-httpaccess-ssms.PNG "Explorador de objetos que muestra la conexión http a SSAS")  
+     ![Explorador de objetos que muestra la conexión http a SSAS](../media/ssas-httpaccess-ssms.PNG "Explorador de objetos que muestra la conexión http a SSAS")  
   
 2.  La autenticación debe ser la de Windows y la persona que usa Management Studio debe ser un administrador de Analysis Services. Un administrador puede conceder más permisos para permitir el acceso a otros usuarios.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "67263230"
   
  **Probar las conexiones con AMO**  
   
- Puede probar el acceso HTTP mediante programación utilizando AMO, sustituyendo la dirección URL del extremo para el nombre del servidor. Para obtener información detallada, vea [Exposición en el foro (Cómo sincronizar las bases de datos SSAS 2008 R2 mediante HTTPS a través de los límites de dominio y bosque y de firewall)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/c4249d55-914d-4c81-9980-44d0b8df9c3e).  
+ Puede probar el acceso HTTP mediante programación utilizando AMO, sustituyendo la dirección URL del extremo para el nombre del servidor. Para obtener información detallada, vea [Exposición en el foro (Cómo sincronizar las bases de datos SSAS 2008 R2 mediante HTTPS a través de los límites de dominio y bosque y de firewall)](https://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/c4249d55-914d-4c81-9980-44d0b8df9c3e).  
   
  Una cadena de conexión de ejemplo que muestra la sintaxis del acceso HTTP con la autenticación básica:  
   
@@ -297,11 +297,10 @@ ms.locfileid: "67263230"
   
  Como paso final, asegúrese de realizar las pruebas de forma más rigurosa con un equipo cliente que se ejecute en el entorno de red desde el que se vayan a originar las conexiones.  
   
-## <a name="see-also"></a>Vea también  
- [Publicación del foro (acceso de http con msmdpump y la autenticación básica)](http://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
- [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Cómo autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
+## <a name="see-also"></a>Véase también  
+ [Publicación del foro (acceso http con msmdpump y autenticación básica)](https://social.msdn.microsoft.com/Forums/en/sqlanalysisservices/thread/79d2f225-df35-46da-aa22-d06e98f7d658)   
+ [Configurar el Firewall de Windows para permitir el acceso a Analysis Services](configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+ [Autorización de acceso a objetos y operaciones &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)   
  [Métodos de autenticación de IIS](https://go.microsoft.com/fwlink/?LinkdID=208461)   
- [Configurar SSL en IIS 7](https://go.microsoft.com/fwlink/?LinkId=207562)  
-  
+ [Cómo configurar SSL en IIS 7](https://go.microsoft.com/fwlink/?LinkId=207562)  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], creating
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 757b6c62d63da2b8f1fa33e5d704d7a2c4fabd38
-ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
+ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70978366"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957249"
 ---
 # <a name="create-a-database-master-key"></a>Crear la clave maestra de una base de datos
 
@@ -27,25 +27,25 @@ En este tema se describe cómo crear una clave maestra de base `master` de datos
 
 - **Antes de empezar:**
 
-  [Seguridad](#Security)
+  [Bursátil](#Security)
 
 - [Para crear una clave maestra de base de datos mediante Transact-SQL](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> Antes de comenzar
+## <a name="BeforeYouBegin"></a>Antes de empezar
 
-### <a name="Security"></a> Seguridad
+### <a name="Security"></a>Bursátil
 
-#### <a name="Permissions"></a> Permisos
+#### <a name="Permissions"></a>Los
 
 Necesita el permiso CONTROL en la base de datos.
 
-## <a name="TsqlProcedure"></a> Usar Transact-SQL
+## <a name="TsqlProcedure"></a>Usar Transact-SQL
 
 ### <a name="to-create-a-database-master-key"></a>Para crear la clave maestra de una base de datos
 
 1. Elija una contraseña para cifrar la copia de la clave maestra que se almacenará en la base de datos.
 2. En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].
-3. Expanda **bases de datos del sistema**, haga `master` clic con el botón secundario y, a continuación, haga clic en **nueva consulta**.
+3. Expanda **Bases de datos del sistema**, haga clic con el botón derecho en `master` y, después, haga clic en **Nueva consulta**.
 4. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.
 
   ```sql

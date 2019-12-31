@@ -10,12 +10,12 @@ ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b253c99b0fbdc0ff4e4651a981da80b9935a7184
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176034"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228071"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introducción a la nube híbrida de SQL Server 2014
  La mayoría de las aplicaciones presentan algunos desafíos importantes, como alta eficacia, valor empresarial, configuraciones de hardware complejas, picos masivos a petición, y cumplimiento con las normativas del sector y corporativas. Tener en cuenta todos estos factores y generar una tecnología de clase empresarial puede resultar muy complicado. La estrategia de nube híbrida de Microsoft proporciona compatibilidad con los entornos tradicional, de nube privada, de nube pública y de nube híbrida para superar estos desafíos. 
@@ -27,7 +27,7 @@ ms.locfileid: "70176034"
 ## <a name="sql-server-azure-and-hybrid-cloud"></a>SQL Server, Azure y la nube híbrida 
  Con las tecnologías de Microsoft, puede ejecutar código tanto de forma local como en la nube, en la nube con datos locales o completamente en la nube aprovechando más de un centro de datos. Por tanto, puede mover sus aplicaciones a la nube a su propio ritmo mientras conserva el valor de las inversiones de TI existentes. 
  
- En este artículo, nos centraremos en los escenarios de nube híbrida que abarcan las ofertas de SQL Server local a la nube pública de Azure: [SQL Server en Azure virtual machines](https://msdn.microsoft.com/library/azure/jj823132.aspx) y [Azure Storage](http://www.azure.com/documentation/services/storage/). En concreto, trataremos los escenarios siguientes: 
+ En este artículo, nos centraremos en los escenarios de nube híbrida que abarcan las ofertas de SQL Server local a la nube pública de Azure: [SQL Server en Azure virtual machines](https://msdn.microsoft.com/library/azure/jj823132.aspx) y [Azure Storage](https://www.azure.com/documentation/services/storage/). En concreto, trataremos los escenarios siguientes: 
  
 -  [Copia de seguridad y restauración de bases de datos a y desde Azure Storage](../../2014/getting-started/introduction-to-sql-server-2014-hybrid-cloud.md#backup) 
  
@@ -56,11 +56,11 @@ ms.locfileid: "70176034"
  
 -  La característica [SQL Server copia de seguridad en dirección URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) le permite realizar una copia de seguridad en Azure Storage especificando la dirección URL como destino de la copia de seguridad. Con esta característica, puede realizar una copia de seguridad manual o configurar su propia estrategia de copia de seguridad como haría para un almacenamiento local u otras opciones externas. 
  
--  La característica de cifrado de [copia de seguridad](../relational-databases/backup-restore/backup-encryption.md) le permite cifrar los datos mientras crea una copia de seguridad para los destinos de almacenamiento: local y Azure Storage. 
+-  La característica de [cifrado de copia de seguridad](../relational-databases/backup-restore/backup-encryption.md) le permite cifrar los datos mientras crea una copia de seguridad para los destinos de almacenamiento: local y Azure Storage. 
  
 -  La característica de [compresión de copia de seguridad (SQL Server)](../relational-databases/backup-restore/backup-compression-sql-server.md) le permite crear una copia de seguridad, que es menor que una copia de seguridad sin comprimir de los mismos datos. La compresión de una copia de seguridad necesita menos E/S de dispositivo, lo que suele aumentar la velocidad considerablemente. Esto puede aportar grandes ventajas al almacenar archivos de copia de seguridad en Azure Storage. 
  
--  La característica [SQL Server copia de seguridad administrada en Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) permite hacer copia de seguridad automáticamente de las bases de datos SQL Server en [Azure Storage](http://www.azure.com/documentation/services/storage/). Con esta característica, puede configurar SQL Server para administrar la estrategia de copia de seguridad y programar las copias de seguridad de una sola base de datos, o de varias, o establecer los valores predeterminados en el nivel de instancia. 
+-  La característica [SQL Server copia de seguridad administrada en Azure](https://msdn.microsoft.com/library/dn606152(v=sql.120).aspx) permite hacer copia de seguridad automáticamente de las bases de datos SQL Server en [Azure Storage](https://www.azure.com/documentation/services/storage/). Con esta característica, puede configurar SQL Server para administrar la estrategia de copia de seguridad y programar las copias de seguridad de una sola base de datos, o de varias, o establecer los valores predeterminados en el nivel de instancia. 
  
 -  La [herramienta copia de seguridad de SQL Server en Azure](https://www.microsoft.com/download/details.aspx?id=40740) permite que la copia de seguridad Azure BLOB Storage y cifra y comprime SQL Server copias de seguridad almacenadas localmente o en la nube. Esta herramienta hace posible tener una única estrategia de copia de seguridad en la nube en varias versiones de SQL Server, como SQL Server 2005, 2008, 2008 R2 y 2014. 
  
@@ -105,12 +105,11 @@ ms.locfileid: "70176034"
  
 -  **Mover toda la máquina virtual:** Puede traer sus propias SQL Server máquinas virtuales a Azure o crear una con la imagen de la plataforma. Después, puede cargar y conectar a la máquina virtual un disco de datos que ya contenga datos, o conectar un disco vacío a la máquina. Tener una instancia de datos de SQL Server en Azure Virtual Machines con discos de datos conectados proporciona otro almacenamiento persistente para los archivos de datos y los datos de la aplicación. Para obtener información completa y procedimientos, consulte [SQL Server implementación en Azure virtual machines](https://msdn.microsoft.com/library/dn133141.aspx). 
  
- Si tiene previsto trasladar las capas de aplicación (como el nivel de presentación, el nivel empresarial y el nivel de base de datos) a Azure Virtual Machines, se recomienda que revise las recomendaciones proporcionadas en los [patrones de aplicación y estrategias de desarrollo para SQL Servidor en Azure Virtual Machines](https://msdn.microsoft.com/library/dn574746.aspx) artículo. El objetivo de este artículo es proporcionar a los desarrolladores y arquitectos de soluciones una base para la buena arquitectura y diseño de aplicaciones, que pueden seguir al migrar las aplicaciones existentes a Azure, así como al desarrollar nuevas aplicaciones en Azure. Para cada patrón de aplicación, el artículo describe un escenario local, su solución habilitada para la nube correspondiente y las recomendaciones técnicas relacionadas. Además, en el artículo se describen las estrategias de desarrollo específicas de Azure para que pueda diseñar sus aplicaciones correctamente. 
+ Si tiene previsto trasladar las capas de aplicación (como el nivel de presentación, el nivel empresarial y el nivel de base de datos) a Azure Virtual Machines, se recomienda que revise las recomendaciones proporcionadas en el artículo [patrones de aplicaciones y estrategias de desarrollo para SQL Server en azure virtual machines](https://msdn.microsoft.com/library/dn574746.aspx) . El objetivo de este artículo es proporcionar a los desarrolladores y arquitectos de soluciones una base para la buena arquitectura y diseño de aplicaciones, que pueden seguir al migrar las aplicaciones existentes a Azure, así como al desarrollar nuevas aplicaciones en Azure. Para cada patrón de aplicación, el artículo describe un escenario local, su solución habilitada para la nube correspondiente y las recomendaciones técnicas relacionadas. Además, el artículo describe estrategias de desarrollo específicas de Azure para que pueda diseñar sus aplicaciones correctamente. 
  
 ## <a name="see-also"></a>Vea también 
  [Guía del producto SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Microsoft SQL Server serie de blogs de nube híbrida](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [Series de blogs de nube híbrida de Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
  [Migración de aplicaciones centradas en datos a Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
- 
  

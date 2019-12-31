@@ -10,15 +10,15 @@ helpviewer_keywords:
 - service master key [SQL Server], importing
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 17a404ef96b4800aa072b8f35c2d22c349361ca3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011547"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957180"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurar la clave maestra de servicio
   En este tema se describe cómo restaurar la clave maestra de servicio en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -32,13 +32,13 @@ ms.locfileid: "63011547"
   
      [Limitaciones y restricciones](#Restrictions)  
   
-     [Seguridad](#Security)  
+     [Bursátil](#Security)  
   
 -   [Para restaurar la clave maestra de servicio utilizando Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a>Antes de empezar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="Restrictions"></a>Limitaciones y restricciones  
   
 -   Al restaurar la clave maestra de servicio, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] descifra todas las claves y secretos cifrados con la clave maestra de servicio actual y, a continuación, los cifra con la clave maestra de servicio cargada desde el archivo de copia de seguridad.  
   
@@ -49,12 +49,12 @@ ms.locfileid: "63011547"
 > [!CAUTION]  
 >  La clave maestra de servicio es la raíz de la jerarquía de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La clave maestra de servicio protege directa o indirectamente las demás claves del árbol. Si no es posible descifrar una clave dependiente durante una restauración forzada, se perderán los datos que protege la clave.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="Security"></a>Bursátil  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a>Los  
  Requiere el permiso CONTROL SERVER en el servidor.  
   
-##  <a name="SSMSProcedure"></a> Usar Transact-SQL  
+##  <a name="SSMSProcedure"></a>Usar Transact-SQL  
   
 #### <a name="to-restore-the-service-master-key"></a>Para restaurar la clave maestra de servicio  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63011547"
   
 2.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-3.  En la barra de Estándar, haga clic en **Nueva consulta**.  
+3.  En la barra Estándar , haga clic en **Nueva consulta**.  
   
 4.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   

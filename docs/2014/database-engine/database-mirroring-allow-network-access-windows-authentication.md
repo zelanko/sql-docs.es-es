@@ -1,6 +1,7 @@
 ---
-title: Permitir el acceso de red a una base de datos mediante la autenticación de Windows (SQL Server) del extremo de reflejo | Microsoft Docs
-ms.custom: ''
+title: Acceso de red a un extremo de creación de reflejo de la base de datos
+description: Obtenga información acerca de cómo permitir el acceso de red authenticatino de Windows a un extremo de creación de reflejo de la base de datos para SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,19 +14,19 @@ ms.assetid: 28c8fec5-5feb-4c84-8d72-f2bd1ae3b40d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d561c3939a8f13767faf9195102080cc7b73af0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e40a1eead54fe9d00eaf099410260023229796d0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62807489"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228566"
 ---
 # <a name="allow-network-access-to-a-database-mirroring-endpoint-using-windows-authentication-sql-server"></a>Permitir el acceso de red a un extremo de creación de reflejo de la base de datos mediante la autenticación de Windows (SQL Server)
-  Si utiliza la autenticación de Windows para conectar los extremos de creación de reflejo de la base de datos de dos instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se requiere la configuración manual de las cuentas de inicio de sesión en las siguientes condiciones:  
+  Si utiliza la autenticación de Windows para conectar los extremos de creación de reflejo de la base de datos de dos instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , se requiere la configuración manual de las cuentas de inicio de sesión en las siguientes condiciones:  
   
 -   Si las instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ejecutan como servicios bajo diferentes cuentas de dominio (en el mismo dominio o en dominios de confianza), el inicio de sesión de cada cuenta debe crearse en **master** en cada una de las instancias de los servidores remotos y se deben conceder permisos CONNECT a ese inicio de sesión en el punto de conexión.  
   
--   Si las instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ejecutan con la cuenta de servicio de red, el inicio de sesión de cada cuenta de equipo host (*NombreDeDominio***\\***NombreDeEquipo$* ) se debe crear en **master** en cada una de las instancias de los servidores remotos, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión. Esto se debe a que una instancia de servidor que se ejecuta en la cuenta Servicio de red se autentica mediante la cuenta de dominio del equipo host.  
+-   Si las instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ejecutan con la cuenta de servicio de red, el inicio de sesión de cada cuenta de equipo host (*NombreDeDominio***\\***NombreDeEquipo$*) se debe crear en **master** en cada una de las instancias de los servidores remotos, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión. Esto se debe a que una instancia de servidor que se ejecuta en la cuenta Servicio de red se autentica mediante la cuenta de dominio del equipo host.  
   
 > [!NOTE]  
 >  Asegúrese de que exista un extremo para cada instancia del servidor. Para obtener más información, vea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
@@ -52,10 +53,10 @@ GRANT CONNECT on ENDPOINT::Mirroring_Endpoint TO [Adomain\Otheruser];
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring/database-mirroring-sql-server.md)   
- [Seguridad de transporte para la creación de reflejo de base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
- [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
+## <a name="see-also"></a>Véase también  
+ [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](database-mirroring/database-mirroring-sql-server.md)   
+ [Seguridad de transporte para la creación de reflejo de la base de datos y Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [El extremo de creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   

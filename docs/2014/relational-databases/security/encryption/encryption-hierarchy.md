@@ -13,18 +13,18 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c34eafe153c5361df1945b55094737fa529f617
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011452"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957219"
 ---
 # <a name="encryption-hierarchy"></a>Jerarquía de cifrado
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cifra los datos con una infraestructura de cifrado jerárquico y administración de claves. Cada capa cifra la capa inferior utilizando una combinación de certificados, claves asimétricas y claves simétricas. Las claves asimétricas y las claves simétricas pueden estar almacenadas fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un módulo de Administración extensible de claves (EKM).  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]cifra los datos con una infraestructura de cifrado jerárquico y administración de claves. Cada capa cifra la capa inferior utilizando una combinación de certificados, claves asimétricas y claves simétricas. Las claves asimétricas y las claves simétricas pueden estar almacenadas fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un módulo de Administración extensible de claves (EKM).  
   
  La siguiente ilustración muestra que cada nivel de la jerarquía de cifrado cifra el nivel que tiene por debajo y muestra las configuraciones de cifrado más comunes. El acceso al principio de la jerarquía se suele proteger mediante una contraseña.  
   
@@ -55,9 +55,10 @@ ms.locfileid: "63011452"
 -   Las claves simétricas y asimétricas de EKM pueden proteger el acceso a las claves simétricas y asimétricas almacenadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La línea de puntos asociada a la EKM indica que las claves de la EKM podrían reemplazar a las claves simétricas y asimétricas que se almacenan en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="encryption-mechanisms"></a>Mecanismos de cifrado  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ofrece los mecanismos siguientes para el cifrado:  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ofrece los mecanismos siguientes para el cifrado:  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] funciones  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)]dia  
   
 -   Claves asimétricas  
   
@@ -105,12 +106,12 @@ ms.locfileid: "63011452"
  El Cifrado de datos transparente (TDE) es un caso especial de cifrado que usa una clave simétrica. TDE cifra una base de datos completa utilizando la clave simétrica denominada clave de cifrado de base de datos. Otras claves o certificados que se protegen bien mediante la clave maestra de base de datos o bien mediante una clave asimétrica almacenadas en un módulo EKM protegen la clave de cifrado de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md).  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Proteger SQL Server](../securing-sql-server.md)  
+ [Protección de SQL Server](../securing-sql-server.md)  
   
  [Funciones de seguridad &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
-## <a name="see-also"></a>Vea también  
- [Jerarquía de permisos &#40;motor de base de datos&#41;](../permissions-hierarchy-database-engine.md)   
- [Elementos protegibles](../securables.md)  
+## <a name="see-also"></a>Véase también  
+ [Jerarquía de permisos &#40;Motor de base de datos&#41;](../permissions-hierarchy-database-engine.md)   
+ [Proteger](../securables.md)  
   
   

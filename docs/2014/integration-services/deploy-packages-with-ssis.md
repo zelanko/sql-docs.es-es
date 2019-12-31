@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de SSIS: Implementación de paquetes | Microsoft Docs'
+title: 'Tutorial de SSIS: implementar paquetes | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3752c7e0f99a62534a670743c0ee7deb3c2e07a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89db7def474b26ffd25da1495e3efaf0e1af43dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62899013"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232689"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>Tutorial de SSIS: Implementación de paquetes
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona herramientas que permiten implementar paquetes en otro equipo. Las herramientas de implementación también administran las dependencias, como configuraciones y archivos que necesita el paquete. En este tutorial, aprenderá a usar estas herramientas para instalar paquetes y sus dependencias en un equipo de destino.  
+# <a name="ssis-tutorial-deploying-packages"></a>Tutorial de SSIS: Implementar paquetes
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona herramientas que facilitan la implementación de paquetes en otro [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] equipo. Las herramientas de implementación también administran las dependencias, como configuraciones y archivos que necesita el paquete. En este tutorial, aprenderá a usar estas herramientas para instalar paquetes y sus dependencias en un equipo de destino.  
   
  Primero, realizará tareas para preparar la implementación. Creará un nuevo proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y agregará paquetes y archivos de datos existentes al proyecto. No creará nuevos paquetes desde el principio; solamente trabajará con paquetes completados creados exclusivamente para este tutorial. En este tutorial no modificará la funcionalidad de los paquetes; no obstante, después de agregar los paquetes al proyecto, puede resultar útil abrirlos en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] y revisar el contenido de cada paquete. Mediante el examen de los paquetes, conocerá las dependencias de los paquetes como los archivos de registro y otras características interesantes de los mismos.  
   
@@ -43,14 +43,15 @@ ms.locfileid: "62899013"
  El objetivo de este tutorial es simular la complejidad de los problemas reales de implementación que puede encontrarse. No obstante, si no puede implementar los paquetes en otro equipo, puede seguir este tutorial instalando los paquetes en la base de datos msdb en una instancia local de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, a continuación, ejecutar los paquetes desde [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en la misma instancia.  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
- La mejor forma de familiarizarse con las nuevas herramientas, los controles y las características disponibles en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es usándolas. Este tutorial le guía por los pasos para crear un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y, a continuación, agregar los paquetes y otros archivos necesarios al proyecto. Después de completar el proyecto, creará un paquete de implementación, copiará el paquete al equipo de destino e instalará los paquetes en él.  
+ La mejor manera de familiarizarse con las nuevas herramientas, los controles y las características disponibles en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es usarlos. Este tutorial le guía por los pasos para crear un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y, a continuación, agregar los paquetes y otros archivos necesarios al proyecto. Después de completar el proyecto, creará un paquete de implementación, copiará el paquete al equipo de destino e instalará los paquetes en él.  
   
 ## <a name="requirements"></a>Requisitos  
- Este tutorial está concebido para los usuarios familiarizados con las operaciones básicas del sistema de archivos, pero que no conocen con detalle las nuevas características disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para comprender mejor básica [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] conceptos que utilizará en este tutorial, puede resultarle útil completar primero el siguiente [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutoriales: [Ejecutar el servidor SQL de importación y exportación de asistente](import-export-data/start-the-sql-server-import-and-export-wizard.md) y [SSIS Tutorial: Creación de un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md).  
+ Este tutorial está destinado a usuarios que ya están familiarizados con las operaciones fundamentales del sistema de archivos, pero que tienen una exposición limitada a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]las nuevas características disponibles en. Para comprender mejor los [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] conceptos básicos que va a usar en este tutorial, puede resultarle útil completar primero los siguientes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutoriales: [ejecutar el Asistente para importación y exportación de SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md) y tutorial de [SSIS: crear un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md).  
   
  **Equipo de origen.** El equipo en el que creará el paquete de implementación debe tener instalados los siguientes componentes:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos AdventureWorks. Con el objeto de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada. Puede descargar la base de datos de ejemplo de [CodePlex](http://msftdbprodsamples.codeplex.com/releases/view/125550).  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos AdventureWorks. Con el objeto de mejorar la seguridad, las bases de datos de ejemplo no se instalan de forma predeterminada. Puede descargar la base de datos de ejemplo de [CodePlex](https://msftdbprodsamples.codeplex.com/releases/view/125550).  
   
 -   Debe tener permiso para crear y quitar tablas en AdventureWorks.  
   
@@ -60,15 +61,16 @@ ms.locfileid: "62899013"
   
  **Equipo de destino.** El equipo en el que implementará los paquetes debe tener instalados los siguientes componentes:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos AdventureWorks.  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos AdventureWorks.  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 -   Debe tener permiso para crear y quitar tablas en AdventureWorks y ejecutar paquetes en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
--   Tiene que leer y escribir permisos en la tabla sysssispackages de la msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos del sistema.  
+-   Debe tener el permiso de lectura y escritura en la tabla sysssispackages en la[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos del sistema msdb.  
   
  Si planea implementar paquetes en el mismo equipo en el que va a crear el paquete de implementación, ese equipo debe cumplir los requisitos de los equipos de origen y destino.  
   
@@ -78,12 +80,11 @@ ms.locfileid: "62899013"
  [Lección 1: Preparar la creación del paquete de implementación](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  En esta lección, se preparará para implementar una solución ETL creando un nuevo proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y agregando los paquetes y otros archivos necesarios al proyecto.  
   
- [Lección 2: Crear el paquete de implementación](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [Lección 2: crear el paquete de implementación](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  En esta lección, generará una utilidad de implementación y comprobará que el paquete de implementación incluye los archivos necesarios.  
   
- [Lección 3: Instalación de paquetes](../integration-services/lesson-3-install-ssis-package.md)  
+ [Lección 3: instalar paquetes](../integration-services/lesson-3-install-ssis-package.md)  
  En esta lección, copiará el paquete de implementación en el equipo de destino, instalará los paquetes y, a continuación, los ejecutará.  
   
-![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
-  
+![Integration Services icono (pequeño)](media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   

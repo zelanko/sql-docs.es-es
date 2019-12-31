@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 23d4a24811c545bc69b41cb43bfc3f6b957eddf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6e67b2eacfd428bc296596699ff65939789d1e8
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011541"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957279"
 ---
 # <a name="back-up-the-service-master-key"></a>Hacer una copia de seguridad de la clave maestra de servicio
   En este tema se describe cómo realizar una copia de seguridad de la clave maestra de servicio en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La clave maestra de servicio es la raíz de la jerarquía de cifrado. Debe realizar una copia de seguridad de la clave maestra de servicio y almacenarla en una ubicación segura y fuera de las instalaciones. Crear esta copia de seguridad debe ser una de las primeras acciones de administración que se realicen en el servidor.  
@@ -28,24 +28,24 @@ ms.locfileid: "63011541"
   
      [Limitaciones y restricciones](#Restrictions)  
   
-     [Seguridad](#Security)  
+     [Bursátil](#Security)  
   
 -   [Para realizar una copia de seguridad de la clave maestra de servicio](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a>Antes de empezar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="Restrictions"></a>Limitaciones y restricciones  
   
 -   Es necesario abrir la clave maestra y, por tanto, descifrarla antes de realizar una copia de seguridad de la misma. Si está cifrada con la clave maestra de servicio, la clave maestra no tiene que abrirse explícitamente; sin embargo, si la clave maestra está cifrada únicamente con una contraseña, debe abrirse explícitamente.  
   
 -   Se recomienda realizar una copia de seguridad de la clave maestra inmediatamente después de crearla y guardarla en un lugar seguro y alejado de las instalaciones.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="Security"></a>Bursátil  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a>Los  
  Necesita el permiso CONTROL en la base de datos.  
   
-##  <a name="Procedure"></a> Usar Transact-SQL  
+##  <a name="Procedure"></a>Usar Transact-SQL  
   
 #### <a name="to-back-up-the-service-master-key"></a>Para realizar una copia de seguridad de la clave maestra de servicio  
   
@@ -59,7 +59,7 @@ ms.locfileid: "63011541"
   
 5.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-6.  En la barra de Estándar, haga clic en **Nueva consulta**.  
+6.  En la barra Estándar , haga clic en **Nueva consulta**.  
   
 7.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   

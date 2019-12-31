@@ -1,5 +1,5 @@
 ---
-title: Instalar SQL Server Native Client | Documentos de Microsoft
+title: Instalación de SQL Server Native Client | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 71438a61dcaec201d0b3ae21eb7e27d979029204
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f832c4b55c8a039de440b08e6d2ed3350175e2a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63046360"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75231811"
 ---
 # <a name="installing-sql-server-native-client"></a>Instalar SQL Server Native Client
-  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 se instala a la vez que [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. No hay ningún [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client. Para obtener más información, consulte [What ' s New in SQL Server Native Client](../sql-server-native-client.md). También puede obtener sqlncli.msi de la página web de SQL Server 2012 Feature Pack. Para descargar la versión más reciente de SQL Server Native Client, vaya a [Microsoft?? ¿SQL Server? 2012 SP2 Feature Pack de](https://www.microsoft.com/en-us/download/details.aspx?id=43339). Si también está instalada una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client anterior a SQL Server 2012 en el equipo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 se instalará en paralelo con la versión anterior.  
+  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 se instala a la vez que [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. No hay ningún [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client. Para obtener más información, consulte [novedades de SQL Server Native Client](../sql-server-native-client.md). También puede obtener sqlncli.msi de la página web de SQL Server 2012 Feature Pack. Para descargar la versión más reciente de la SQL Server Native Client, vaya a [Microsoft?? ¿¿SQL Server?? Feature Pack de 2012 SP2](https://www.microsoft.com/download/details.aspx?id=43339). Si también está instalada una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client anterior a SQL Server 2012 en el equipo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 se instalará en paralelo con la versión anterior.  
   
  Los archivos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (sqlncli11.dll, sqlnclir11.rll y s11ch_sqlncli.chm) se instalan en la siguiente ubicación:  
   
@@ -44,11 +44,11 @@ ms.locfileid: "63046360"
   
  Además de instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client como parte de la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], hay también un programa de instalación redistribuible denominado sqlncli.msi, que se puede encontrar en el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la ubicación siguiente: `%CD%\Setup\`.  
   
- Puede distribuir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client a través de sqlncli.msi. Es posible que tenga que instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client al implementar una aplicación. Una manera de instalar varios paquetes en lo que al usuario le parece ser una instalación única es usar tecnología de encadenador y arranque. Para obtener más información, vea [Authoring a Custom Bootstrapper Package for Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) (Crear un paquete de arranque personalizado para Visual Studio 2005) y [Adding Custom Prerequisites](https://go.microsoft.com/fwlink/?LinkId=115668) (Agregar requisitos previos personalizados).  
+ Puede distribuir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client a través de sqlncli.msi. Es posible que tenga que instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client al implementar una aplicación. Una manera de instalar varios paquetes en lo que al usuario le parece ser una instalación única es usar tecnología de encadenador y arranque. Para obtener más información, vea [crear un paquete de programa previo personalizado para Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) y [Agregar requisitos previos personalizados](https://go.microsoft.com/fwlink/?LinkId=115668).  
   
  Las versiones x64 e Itanium de sqlncli.msi también instalan las versiones de 32 bits de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Si su aplicación está diseñada para una plataforma distinta de aquella en la que se desarrolló, puede descargar versiones de sqlncli.msi para x64, Itanium y x86 en el Centro de descarga de Microsoft.  
   
- Cuando se llama a sqlncli.msi, solo se instalan los componentes de cliente de forma predeterminada. Los componentes de cliente son archivos que admiten la ejecución de una aplicación que se desarrolló con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Para instalar también los componentes SDK, especifique `ADDLOCAL=All` en la línea de comandos. Por ejemplo:  
+ Cuando se llama a sqlncli.msi, solo se instalan los componentes de cliente de forma predeterminada. Los componentes de cliente son archivos que admiten la ejecución de una aplicación [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desarrollada mediante Native Client. Para instalar también los componentes SDK, especifique `ADDLOCAL=All` en la línea de comandos. Por ejemplo:  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   
@@ -56,14 +56,14 @@ ms.locfileid: "63046360"
  Si usa la opción /passive, /qn, /qb o /qr con msiexec, también debe especificar IACCEPTSQLNCLILICENSETERMS=YES, para indicar explícitamente que acepta los términos de la licencia de usuario final. Esta opción se debe especificar con todas las letras mayúsculas.  
   
 ## <a name="uninstalling-sql-server-native-client"></a>Desinstalar SQL Server Native Client  
- Dado que aplicaciones como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] server y el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dependen de las herramientas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, es importante no desinstalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client hasta que se desinstalen todas las aplicaciones dependientes. Para usuarios con una advertencia de que la aplicación depende del proveedor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, utilice la opción de instalación APPGUID en su MSI, como se indica a continuación:  
+ Dado que las aplicaciones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como el servidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y las herramientas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dependen de Native Client, es importante no desinstalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client hasta que se desinstalen todas las aplicaciones dependientes. Para que los usuarios del proveedor tengan una advertencia de que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la aplicación depende de Native Client, use la opción de instalación APPGUID en el archivo MSI, como se indica a continuación:  
   
  `msiexec /i sqlncli.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   
  El valor pasado a APPGUID es su código de producto específico. Se debe crear un código de producto al usar Microsoft Installer para empaquetar su programa de instalación de la aplicación.  
   
-## <a name="see-also"></a>Vea también  
- [Creación de aplicaciones con SQL Server Native Client](installing-sql-server-native-client.md)   
+## <a name="see-also"></a>Véase también  
+ [Compilar aplicaciones con SQL Server Native Client](installing-sql-server-native-client.md)   
  [Temas de procedimientos de instalación](../../../sql-server/install/installation-how-to-topics.md)  
   
   

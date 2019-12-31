@@ -1,5 +1,5 @@
 ---
-title: Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream | Microsoft Docs
+title: 'Fetch, IRow:: GetColumns e ISequentialStream'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +15,12 @@ ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1592de2a70018f000c845e4008d41a95f35a312
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 1151da2b2763aec188682ba6e5e227a8b560855f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73790115"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226079"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "73790115"
   Los datos grandes se pueden enlazar o recuperar mediante la interfaz **ISequentialStream**. En el caso de las columnas enlazadas, la marca de estado DBSTATUS_S_TRUNCATED indica que se truncan los datos.  
   
 > [!IMPORTANT]  
->  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si debe conservar las credenciales, debe cifrarlas con la [API Crypto de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Para capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream  
   
@@ -36,11 +36,11 @@ ms.locfileid: "73790115"
   
 2.  Ejecute el comando (en este ejemplo, se llama a **ICommandExecute::Execute()** con IID_IRow).  
   
-3.  Capture los datos de la columna mediante **IRow:: Open ()** o **IRow:: GetColumns ()** .  
+3.  Capture los datos de la columna mediante **IRow:: Open ()** o **IRow:: GetColumns ()**.  
   
     -   **IRow:: Open ()** se puede usar para abrir **ISequentialStream** en la fila. Especifique DBGUID_STREAM para indicar que la columna contiene un flujo de datos binarios (**IStream** o **ISequentialStream** pueden usarse después para leer los datos de la columna).  
   
-    -   Si se usa **IRow::GetColumns()** , el elemento **pData** de la estructura DBCOLUMNACCESS se establece de modo que apunte a un objeto de flujo.  
+    -   Si se usa **IRow::GetColumns()**, el elemento **pData** de la estructura DBCOLUMNACCESS se establece de modo que apunte a un objeto de flujo.  
   
 4.  Utilice **ISequentialStream:: Read ()** varias veces para leer el número especificado de bytes en el búfer del consumidor.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73790115"
   
  La tercera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) elimina la tabla que se usa en el ejemplo.  
   
-```  
+```sql
 USE AdventureWorks  
 GO  
   
@@ -96,7 +96,7 @@ values
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #define DBINITCONSTANTS  
 #define INITGUID  
@@ -663,7 +663,7 @@ int InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql
 USE AdventureWorks  
 GO  
   
@@ -672,7 +672,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Temas de procedimientos de OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -12,20 +12,21 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 853e85ea84b84f1ed0af040be5d8614feab193b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d133a9ed99cc270c9a2f7826f231086e3eb141c3
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011386"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957259"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Elegir un algoritmo de cifrado
   El cifrado es una de las medidas defensivas con que cuenta cualquier administrador que desee proteger una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Los algoritmos de cifrado definen transformaciones de datos que los usuarios no autorizados no pueden revertir con facilidad. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite a los administradores y los desarrolladores de software elegir entre varios algoritmos, incluidos DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 de 128 bits, DESX, AES de 128 bits, AES de 192 bits y AES de 256 bits.  
+ Los algoritmos de cifrado definen las transformaciones de datos que los usuarios no autorizados no pueden revertir fácilmente. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite a los administradores y los desarrolladores de software elegir entre varios algoritmos, incluidos DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, RC4 de 128 bits, DESX, AES de 128 bits, AES de 192 bits y AES de 256 bits.  
   
  Ningún algoritmo único resulta idóneo para todas las situaciones. Además, ofrecer información detallada sobre las ventajas de cada uno queda fuera del ámbito de los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No obstante, se aplican los siguientes principios generales:  
   
@@ -50,7 +51,7 @@ ms.locfileid: "63011386"
   
  Para obtener más información acerca de los algoritmos y la tecnología de cifrado, vea la sección referente a [conceptos claves de seguridad](https://go.microsoft.com/fwlink/?LinkId=62082) de la publicación .NET Framework Developer's Guide en MSDN.  
   
- **Clarificación con respecto a los algoritmos DES:**  
+ **Aclaración con respecto a los algoritmos DES:**  
   
 -   DESX se denominó incorrectamente. Las claves simétricas creadas con ALGORITHM = DESX realmente utilizan el cifrado TRIPLE DES con una clave de 192 bits. No se proporciona el algoritmo DESX. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -62,13 +63,13 @@ ms.locfileid: "63011386"
   
 |||  
 |-|-|  
-|Cifrar mediante una clave simétrica.|[CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
-|Cifrar mediante una clave asimétrica.|[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
-|Cifrar mediante un certificado.|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
+|Cifrar mediante una clave simétrica.|[CREAR clave simétrica &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)|  
+|Cifrar mediante una clave asimétrica.|[CREAR clave asimétrica &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)|  
+|Cifrar mediante un certificado.|[CREATE CERTIFICAte &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
 |Cifrar los archivos de base de datos mediante el cifrado de datos transparente.|[Cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md)|  
 |Cómo cifrar una columna de una tabla.|[Cifrar una columna de datos](encrypt-a-column-of-data.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Cifrado de SQL Server](sql-server-encryption.md)   
  [Jerarquía de cifrado](encryption-hierarchy.md)  
   

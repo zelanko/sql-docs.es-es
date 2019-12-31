@@ -1,5 +1,5 @@
 ---
-title: Leer una columna FILESTREAM en el archivo mediante IBCPSession (OLE DB) | Microsoft Docs
+title: FILESTREAM en archivo, IBCPSession (OLE DB)
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,26 +11,26 @@ ms.assetid: ab3ce02a-549d-4e01-87b9-d15281fba349
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68c16521b787208a4c4653096e26224695b26dd2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: a94b904d191b2d39adc03c9012c2e4c4469da61a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73767008"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75225848"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>Leer una columna FILESTREAM en un archivo utilizando IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   En este ejemplo se lee una columna FILESTREAM en un archivo mediante la interfaz IBCPSession y escribe un archivo de formato.  
   
- Para obtener más información sobre la característica FileStream, vea [compatibilidad &#40;de&#41;FileStream OLE DB](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Para obtener más información sobre la característica FileStream, vea [compatibilidad de filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Ejemplo  
  Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
  Utilice uno de los siguientes ejemplos para crear la tabla de la que lee este ejemplo:  
   
--   [Enviar datos a una columna FILESTREAM usando ISequentialStream enlazada al parámetro de ICommandText &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Enviar datos a una columna FILESTREAM mediante ISequentialStream enlazado al parámetro ICommandText &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
 -   [Enviar datos a una columna FILESTREAM mediante IRowsetFastUpload &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73767008"
   
  Cuando se ejecuta este ejemplo, debe pasar un nombre de servidor (o servidor\nombre_de_instancia) y un nombre para el archivo de formato que creará.  
   
-```  
+```cpp
 // ISSHelper.h: interface for the CISSHelper class.  
   
 #if !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
@@ -96,7 +96,7 @@ private:
 #endif // !defined(AFX_ISSHELPER_H__7B88E5F3_263F_11D2_9D1F_00C04F96B8B2__INCLUDED_)  
 ```  
   
-```  
+```cpp
 // ISSHelper.cpp: implementation of the CISSHelper class.  
   
 #pragma once  
@@ -238,7 +238,7 @@ HRESULT CISSHelper::Write( const void *pv, ULONG cb, ULONG* pcbWritten ) {
 }  
 ```  
   
-```  
+```cpp
 //  IBCPSession.cpp  
 #pragma once  
 #define WIN32_LEAN_AND_MEAN// Exclude rarely-used stuff from Windows headers  

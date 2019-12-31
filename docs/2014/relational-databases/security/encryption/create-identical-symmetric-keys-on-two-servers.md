@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 85901ba63607de721259431ab83d3a0cd3a3185d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ff075880833be8179697cb4047babee67cfe61e
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63011711"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957235"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Crear claves simétricas idénticas en dos servidores
   En este tema se describe cómo crear claves simétricas idénticas en dos servidores diferentes de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para descifrar el texto cifrado, se necesita la clave que se usó para cifrarlo. Cuando el cifrado y el descifrado tienen lugar en una sola base de datos, la clave se almacena en la base de datos y está disponible, según los permisos, tanto para el cifrado como para el descifrado. Pero cuando ambos procesos ocurren en bases de datos diferentes o en servidores diferentes, la clave almacenada en una base de datos no está disponible para utilizarla en la segunda base de datos.  
@@ -28,30 +28,30 @@ ms.locfileid: "63011711"
   
      [Limitaciones y restricciones](#Restrictions)  
   
-     [Seguridad](#Security)  
+     [Bursátil](#Security)  
   
 -   [Para crear claves simétricas idénticas en dos servidores diferentes, mediante Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a>Antes de empezar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="Restrictions"></a>Limitaciones y restricciones  
   
 -   Cuando se crea una clave simétrica, se debe cifrar mediante uno de los siguientes métodos: certificado, contraseña, clave simétrica, clave asimétrica o PROVIDER. La clave puede tener más de un cifrado de cada tipo. En otras palabras, una misma clave simétrica puede cifrarse con varios certificados, contraseñas, claves simétricas y claves asimétricas a la vez.  
   
 -   Si se utiliza una contraseña para cifrar una clave simétrica, en lugar de la clave pública de la clave maestra de base de datos, se utiliza el algoritmo de cifrado TRIPLE DES. Por ello, las claves creadas con un algoritmo de cifrado seguro, como AES, se protegen mediante un algoritmo menos seguro.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="Security"></a>Bursátil  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a>Los  
  Necesita el permiso ALTER ANY SYMMETRIC KEY para la base de datos. Si se especifica la cláusula AUTHORIZATION, es necesario el permiso IMPERSONATE para el usuario de base de datos o el permiso ALTER para el rol de aplicación. Si el cifrado se realiza mediante una clave asimétrica o un certificado, es necesario el permiso VIEW DEFINITION para el certificado o en la clave asimétrica. Solo los inicios de sesión de Windows, los inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y los roles de aplicación pueden poseer claves simétricas. Los grupos y roles no pueden poseer claves simétricas.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="TsqlProcedure"></a>Usar Transact-SQL  
   
 #### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>Para crear claves simétricas idénticas en dos servidores diferentes  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
-2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
+2.  En la barra Estándar , haga clic en **Nueva consulta**.  
   
 3.  Cree una clave ejecutando las siguientes instrucciones, CREATE MASTER KEY, CREATE CERTIFICATE y CREATE SYMMETRIC KEY.  
   
@@ -99,18 +99,18 @@ ms.locfileid: "63011711"
     GO  
     ```  
   
- Para obtener más información, vea:  
+ Para obtener más información, consulte los temas siguientes:  
   
--   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
+-   [CREAR clave maestra &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
--   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICAte &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [CREAR clave simétrica &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
 -   [ENCRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)  
   
 -   [DECRYPTBYKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/decryptbykey-transact-sql)  
   
--   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
+-   [ABRIR clave simétrica &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
   
   

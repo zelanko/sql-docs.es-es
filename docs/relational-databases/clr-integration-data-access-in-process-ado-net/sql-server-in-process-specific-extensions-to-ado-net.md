@@ -1,6 +1,7 @@
 ---
-title: Extensiones específicas en proceso SQL Server a ADO.NET | Microsoft Docs
-ms.custom: ''
+title: SQL Server extensiones en proceso a ADO.NET
+description: Vínculos a artículos sobre las cuatro extensiones funcionales principales a ADO.NET que son específicamente para el uso en proceso.
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 781b812e-eb14-472a-85fa-aa4cdb929bee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1ed0cf58c34506ce12dd04bf529a80d44a03d2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3c1729d216a1456551da3699c286385694e558a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951689"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258168"
 ---
 # <a name="sql-server-in-process-specific-extensions-to-adonet"></a>Extensiones específicas en proceso de SQL Server a ADO.NET
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "67951689"
  [Objeto SqlContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
  Esta clase proporciona acceso a las demás extensiones abstrayendo el contexto de llamador de una rutina de SQL Server que ejecuta el código administrado en proceso.  
   
- [Objeto SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
+ [SqlPipe (objeto)](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
  Esta clase contiene rutinas para enviar resultados tabulares y mensajes al cliente.  
   
  [Objeto SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)  

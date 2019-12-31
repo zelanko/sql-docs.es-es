@@ -1,6 +1,5 @@
 ---
-title: Adjuntar un dominio o un dominio compuesto a datos de referencia | Microsoft Docs
-ms.custom: ''
+title: Adjuntar un dominio o un dominio compuesto a datos de referencia
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ f1_keywords:
 - sql13.dqs.dm.refdata.f1
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: d8aed52e248a61b5d10fc58977854b49837ebfad
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: dbd64575acaf5ddf2f57e99b010a8a3b1555780e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152780"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258873"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Adjuntar un dominio o un dominio compuesto a datos de referencia
 
@@ -36,19 +35,19 @@ ms.locfileid: "70152780"
   
  En este tema, se crearán cuatro dominios: **Address Line**, **City**, **State** y **Zip**, bajo un dominio compuesto, **Address Verification**, se adjuntará el dominio compuesto al servicio de datos de referencia **Melissa Data - Address Check** y después se asignarán los dominios individuales dentro del dominio compuestas a las columnas adecuadas del esquema del servicio de datos de referencia.  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="Prerequisites"></a>Requisitos previos  
  Es necesario configurar [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) para utilizar los servicios de datos de referencia. Vea [Configurar DQS para usar datos de referencia](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="Security"></a>Bursátil  
   
 #### <a name="permissions"></a>Permisos  
  Debe disponer del rol dqs_kb_editor en la base de datos DQS_MAIN para asignar dominios a datos de referencia.  
   
-##  <a name="Map"></a> Asignar dominios a datos de referencia de Melissa Data  
+##  <a name="Map"></a>Asignación de dominios a datos de referencia de Melissa Data  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , en **Administración de la base de conocimiento**, haga clic en **Nueva base de conocimiento**.  
   
@@ -77,21 +76,21 @@ ms.locfileid: "70152780"
   
 9. Volverá a la pestaña **datos de referencia** . En el área **configuración de proveedor** , cambie los valores de los cuadros siguientes, si es necesario:  
   
-    -   **Umbral de corrección automática**: las correcciones del servicio de datos de referencia con un nivel de confianza por encima de estos valores de umbral se llevan a cabo automáticamente. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,9 para un porcentaje del 90%.  
+    -   **Umbral de corrección automática**: las correcciones del servicio de datos de referencia con un nivel de confianza por encima de este umbral se realizarán automáticamente. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,9 para un porcentaje del 90%.  
   
-    -   **Candidatos sugeridos**: el número de candidatos sugeridos que se van a mostrar del servicio de datos de referencia.  
+    -   **Candidatos sugeridos**: el número de candidatos sugeridos que se van a mostrar desde el servicio de datos de referencia.  
   
-    -   **Confianza mínima**: las sugerencias del servicio de datos de referencia con un nivel de confianza por debajo de este valor se omitirán. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,6 para un porcentaje del 60 %.  
+    -   **Confianza mínima**: las sugerencias del servicio de datos de referencia con un nivel de confianza inferior a este valor se omitirán. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,6 para un porcentaje del 60 %.  
   
 10. Haga clic en **Finalizar** para publicar la base de conocimiento. Aparecerá un mensaje de confirmación una vez que la base de conocimiento se haya publicado correctamente.  
   
  Ahora puede usar esta base de conocimiento para la actividad de limpieza en un proyecto de calidad de datos para normalizar y limpiar direcciones de EE. UU. en los datos de origen en función del conocimiento proporcionado por Melissa data a través de Azure Marketplace.  
   
-##  <a name="FollowUp"></a> Seguimiento: después de asignar un dominio a datos de referencia  
+##  <a name="FollowUp"></a>Seguimiento: después de asignar un dominio a datos de referencia  
  Cree un proyecto de calidad de datos y ejecute la actividad de limpieza en los datos de origen que incluyan direcciones de EE. UU., comparándolos con la base de conocimiento creada en este tema. Vea [Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## <a name="see-also"></a>Vea también  
- [Servicios de datos de referencia en DQS](../data-quality-services/reference-data-services-in-dqs.md)   
+## <a name="see-also"></a>Véase también  
+ [Data Services de referencia en DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Limpieza de datos](../data-quality-services/data-cleansing.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: Utilizar ADO para ejecutar SQLXML 4.0 consultas | Microsoft Docs
+title: Utilizar ADO para ejecutar consultas SQLXML 4.0
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 12/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
@@ -16,12 +16,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2a8f5cdb74385852a0feef0f9de0d760eb57f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02dfe2bfe1a5893a2ef121f279648c5962d6cce9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012145"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251414"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizar ADO para ejecutar consultas SQLXML 4.0
   En versiones anteriores de SQLXML, la ejecución de consultas basadas en HTTP se admitía mediante la utilización de directorios virtuales de SQLXML IIS y el filtro SQLXML ISAPI. En SQLXML 4.0, estos componentes se han quitado ya que se ofrece una funcionalidad similar superpuesta a través de servicios web XML nativos a partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
@@ -35,9 +35,9 @@ ms.locfileid: "66012145"
   
 #### <a name="to-create-the-sqlxml-40-query-tester-using-ado-vbscript"></a>Para crear el evaluador de consultas de SQLXML 4.0 mediante ADO (VBScript).  
   
-1.  Copie el código siguiente y péguelo en un archivo de texto. Guarde el archivo como Sqlxml4test.vbs.  
+1.  Copie el código de VBScript siguiente y péguelo en un archivo de texto. Guarde el archivo como Sqlxml4test.vbs.  
   
-    ```  
+    ```vb
     WScript.Echo "Query process may take a few seconds to complete. Please be patient."  
   
     ' Note that for SQL Server Native Client to be used as the data provider,  
@@ -112,16 +112,16 @@ ms.locfileid: "66012145"
   
 1.  Compruebe tal como se indica a continuación que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client está instalado:  
   
-    1.  Desde el **iniciar** menú, elija **configuración**y, a continuación, haga clic en **Panel de Control**.  
+    1.  En el menú **Inicio** , seleccione **configuración**y, a continuación, haga clic en **Panel de control**.  
   
-    2.  En el Panel de Control, abra **agregar o quitar programas**  
+    2.  En el panel de control, Abra **Agregar o quitar programas** .  
   
-    3.  En la lista de programas actualmente instalados, compruebe que **Microsoft SQL Server Native Client** aparece en la lista.  
+    3.  En la lista de programas instalados actualmente, compruebe que **Microsoft SQL Server Native Client** aparece en la lista.  
   
         > [!NOTE]  
-        >  Si necesita instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, vea [instalar SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
+        >  Si necesita instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, consulte instalación de [SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md).  
   
-2.  Compruebe que la versión de MDAC instalada en el equipo cliente es la versión 2.6 o posterior. Si necesita comprobar información de versión de MDAC, puede utilizar la herramienta MDAC Component Checker, que se proporciona como descarga gratuita en el sitio web de Microsoft (www.microsoft.com). Para obtener más información, busque "MDAC Component Checker" en el sitio web de Microsoft.  
+2.  Compruebe que la versión de MDAC instalada en el equipo cliente es la versión 2.6 o posterior. Si necesita comprobar la información de la versión de MDAC, puede usar la herramienta Comprobador de componentes de MDAC, que se proporciona como descarga gratuita [https://www.microsoft.com/](https://www.microsoft.com/)en el sitio web de Microsoft. Para obtener más información, busque "MDAC Component Checker" en el sitio web de Microsoft.  
   
 3.  Ejecute el script.  
   

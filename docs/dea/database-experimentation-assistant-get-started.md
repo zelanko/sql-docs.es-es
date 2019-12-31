@@ -1,7 +1,7 @@
 ---
 title: Información general del proceso de comparación de cargas de trabajo
 description: Asistente para experimentación con bases de datos (DEA) es una solución de prueba A/B para los cambios en entornos SQL Server, como actualizaciones o nuevos índices.
-ms.date: 11/16/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -9,15 +9,15 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 18cba7abf0d73197c248a62283d52126873169a3
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165748"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258522"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>Información general del proceso de comparación de cargas de trabajo
 
@@ -31,13 +31,13 @@ En este artículo se proporciona información general sobre este proceso.
 
 ## <a name="capturing-a-workload-trace"></a>Capturar un seguimiento de carga de trabajo
 
-La primera fase de SQL Server prueba a/B es capturar un seguimiento en el servidor de origen. El servidor de origen suele ser el servidor de producción. Los archivos de seguimiento capturan toda la carga de trabajo de consultas en ese servidor, incluidas las marcas de tiempo.
+La primera fase de SQL Server prueba a/B es capturar un seguimiento en el servidor de origen. Por lo general, el servidor de origen es el servidor de producción. Los archivos de seguimiento capturan toda la carga de trabajo de consultas en ese servidor, incluidas las marcas de tiempo.
 
 Consideraciones:
 
-- Antes de empezar a capturar el seguimiento de la carga de trabajo, asegúrese de hacer una copia de seguridad de las bases de datos desde las que está capturando el seguimiento.
-- Un usuario de DEA debe estar configurado para conectarse a la base de datos mediante la autenticación de Windows.
-- Una cuenta de servicio de SQL Server requiere acceso a la ruta de acceso del archivo de seguimiento de origen.
+- Antes de empezar, asegúrese de hacer una copia de seguridad de las bases de datos desde las que va a capturar el seguimiento.
+- El usuario de DEA debe poder conectarse a la base de datos mediante la autenticación de Windows.
+- Una cuenta de servicio de SQL Server debe poder tener acceso a la ruta de acceso del archivo de seguimiento de origen.
 - Para que DEA determine si el rendimiento de una consulta se ha mejorado o degradado, dicha consulta debe ejecutarse al menos 15 veces durante el período de captura.
 
 ## <a name="replaying-a-workload-trace"></a>Reproducir un seguimiento de carga de trabajo
@@ -46,7 +46,7 @@ La segunda fase de SQL Server pruebas A/B es reproducir el archivo de seguimient
 
 Destino 1, que imita el destino del servidor de origen 2, que imita el entorno de destino propuesto.
 
-Las configuraciones de hardware de destino 1 y destino 2 deben ser lo más parecidas posible, por lo que SQL Server puede analizar con precisión el impacto en el rendimiento de los cambios propuestos.
+Las configuraciones de hardware de destino 1 y destino 2 deben ser lo más parecidas posible para que SQL Server pueda analizar con precisión el efecto de rendimiento de los cambios propuestos.
 
 Consideraciones:
 
@@ -56,7 +56,7 @@ Consideraciones:
 
 ## <a name="analyzing-the-replayed-workload-traces"></a>Análisis de los seguimientos de carga de trabajo reproducidos
 
-La fase final del proceso es generar un informe de análisis mediante los seguimientos de reproducción. A continuación, puede revisar el informe de análisis para obtener información sobre las posibles implicaciones de rendimiento del cambio propuesto.
+La fase final del proceso es generar un informe de análisis mediante los seguimientos de reproducción y revisar el informe para obtener información sobre las posibles implicaciones de rendimiento del cambio propuesto.
 
 Consideraciones:
 
@@ -65,4 +65,4 @@ Consideraciones:
 
 ## <a name="see-also"></a>Vea también
 
-- Para obtener información sobre cómo generar un archivo de seguimiento con un registro de eventos que se producen en un servidor, consulte [Capture Trace](database-experimentation-assistant-capture-trace.md).
+- Para obtener información sobre cómo generar un archivo de seguimiento con un registro de eventos que se producen en un servidor, vea el artículo [capturar un seguimiento en Asistente para experimentación con bases de datos](database-experimentation-assistant-capture-trace.md).

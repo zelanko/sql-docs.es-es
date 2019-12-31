@@ -1,6 +1,5 @@
 ---
-title: Consideraciones de seguridad de carga (SQLXML 4.0) de forma masiva | Microsoft Docs
-ms.custom: ''
+title: Consideraciones de seguridad de carga masiva (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0087a8846935905574a8666186de5e025a16494e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 817c8c4d0ff2a140033e99879c0720a63f81e5f4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027001"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252527"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Consideraciones de seguridad sobre la carga masiva (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   A continuación se muestran una serie de instrucciones de seguridad para utilizar la carga masiva XML:  
   
--   Cuando se especifica que la carga masiva es operación debe realizarse como una transacción, use la **TempFilePath** propiedad para especificar una carpeta en la que se va a crear los archivos temporales.  
+-   Cuando se especifica que la operación de carga masiva debe realizarse como una transacción, se usa la propiedad **TempFilePath** para especificar una carpeta en la que crear los archivos temporales.  
   
      El proceso de carga masiva crea estos archivos temporales con los siguientes permisos:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "68027001"
   
 -   Si el usuario establece un archivo de registro de errores para que SQLXML escriba errores en él, cada vez se ejecute la carga masiva, el archivo se sobrescribirá con los datos del último proceso de carga masiva.  
   
-## <a name="see-also"></a>Vea también  
- [Realizar la carga masiva de datos XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>Véase también  
+ [Realizar la carga masiva de datos XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

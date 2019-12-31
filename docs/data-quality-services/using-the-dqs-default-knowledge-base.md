@@ -1,5 +1,5 @@
 ---
-title: Usar la base de conocimiento predeterminada de DQS | Microsoft Docs
+title: Utilizar la base de conocimiento predeterminada de DQS
 ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: a07b2c32c205af10c65e42b290dc7187376871ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 2696a911edeefecc1dc34efeb77351acbaafc0d8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991724"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257744"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Utilizar la base de conocimiento predeterminada de DQS
 
@@ -23,21 +23,21 @@ ms.locfileid: "67991724"
 
   En este tema se describe la base de conocimiento predeterminada, **Datos de DQS**, que se instala con [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Esta es una base de conocimiento predeterminada pregenerada que contiene los dominios siguientes:  
   
--   **País o región**: contiene nombres convencionales largos (nombre oficial según se designe por el país o región) y cortos (nombre común usado en las listas, en el mapa, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  El valor principal se establece en el nombre de país largo.  
+-   **País o región**: contiene el largo convencional (nombre oficial designado por el país o región) y los nombres cortos (nombre común usado en las listas, en mapas, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  El valor principal se establece en el nombre de país largo.  
   
--   **País o región (tres letras iniciales)** : contiene nombres convencionales largos (nombre oficial según se designe por el país o región) y cortos (nombre común usado en las listas, en el mapa, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  Los valores iniciales se establecen en la abreviatura de tres letras del condado.  
+-   **País o región (tres letras iniciales)**: contiene el largo convencional (nombre oficial designado por el país o región) y los nombres cortos (nombre común usado en las listas, en Maps, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  Los valores iniciales se establecen en la abreviatura de tres letras del condado.  
   
--   **País o región (dos letras iniciales)** : contiene nombres convencionales largos (nombre oficial según se designe por el país o región) y cortos (nombre común usado en las listas, en el mapa, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  El valor principal se establece en la abreviatura de dos letras del país.  
+-   **País o región (dos letras iniciales)**: contiene el largo convencional (nombre oficial designado por el país o región) y los nombres cortos (nombre común usado en las listas, en mapas, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  El valor principal se establece en la abreviatura de dos letras del país.  
   
--   **Condados de Estados Unidos**: contiene una lista de condados de Estados Unidos.  
+-   **US-condados**: contiene una lista de condados de EE. UU.  
   
--   **Apellidos de Estados Unidos**: contiene una lista de apellidos que aparecen al menos 100 veces en el censo de 2000.  
+-   **US-Last Name**: contiene una lista de los apellidos (Apellidos) que se producen 100 o más veces en el censo 2000.  
   
--   **Lugares de Estados Unidos**: contiene una lista de sitios para los 50 estados, el distrito de Columbia y Puerto Rico extraídos del censo de 2010.  
+-   **EE.UU.-lugares**: contiene una lista de lugares para los Estados 50, el distrito de Columbia y el Puerto Rico extraídos del censo 2010.  
   
--   **Estados de Estados Unidos**: contiene el nombre largo convencional (oficial) y la abreviatura de dos letras para cada estado de EE. UU. El valor principal se establece en el nombre convencional de estado.  
+-   Estados **Unidos**: contiene el nombre largo convencional (oficial) y la abreviatura de dos letras para cada estado de EE. UU. El valor principal se establece en el nombre convencional de estado.  
   
--   **Estados de Estados Unidos (encabezado de dos letras)** : contiene el nombre largo convencional (oficial) y la abreviatura de dos letras para cada estado de EE. UU. El valor inicial se establece en la abreviatura de dos letras del nombre de estado.  
+-   Estados **Unidos (encabezado de 2 Letras)**: contiene el nombre largo convencional (oficial) y la abreviatura de dos letras para cada estado de EE. UU. El valor inicial se establece en la abreviatura de dos letras del nombre de estado.  
   
 ## <a name="using-the-default-knowledge-base"></a>Usar la base de conocimiento predeterminada  
  Puede utilizar la base de conocimiento predeterminado DQS, DQS Data, de las maneras siguientes:  
@@ -50,7 +50,7 @@ ms.locfileid: "67991724"
   
 -   Úsela en el [componente Limpieza de DQS de Integration Services](https://go.microsoft.com/fwlink/?LinkId=238830) y [Complemento Master Data Services para Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

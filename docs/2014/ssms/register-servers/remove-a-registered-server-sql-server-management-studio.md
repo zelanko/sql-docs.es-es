@@ -1,6 +1,6 @@
 ---
-title: Quitar un servidor registrado (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Quitar un servidor registrado
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deleting registered servers
 - Registered Servers [SQL Server], removing servers
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 918661b548d22383efd884442416a9206456234d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: caae0e0b81c29454a8d7825e8077690369c76805
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960552"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254461"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>Quitar un servidor registrado (SQL Server Management Studio)
   En este tema se describe cómo quitar un servidor de Servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

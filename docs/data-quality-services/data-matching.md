@@ -1,6 +1,5 @@
 ---
-title: Coincidencia de datos | Microsoft Docs
-ms.custom: ''
+title: Coincidencia de datos
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: c2aede1654f993feba951d2053d9a0ae5e31011b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 4a34828900a90d3c01814c77a76d78e7b657d6f6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992238"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251756"
 ---
 # <a name="data-matching"></a>Coincidencia de datos
 
@@ -41,14 +40,14 @@ ms.locfileid: "67992238"
   
  ![Proceso de coincidencia en DQS](../data-quality-services/media/dqs-matchingprocess.gif "Proceso de coincidencia en DQS")  
   
-##  <a name="How"></a> Cómo realizar la búsqueda de coincidencias de datos  
+##  <a name="How"></a>Cómo realizar la búsqueda de coincidencias de datos  
  Al igual que ocurre con otros procesos de calidad de datos de DQS, la búsqueda de coincidencias se efectúa creando una base de conocimiento y ejecutando una actividad de búsqueda de coincidencias en un proyecto de calidad de datos mediante los pasos siguientes:  
   
 1.  Crear una directiva de coincidencia en la base de conocimiento  
   
 2.  Realizar un proceso de eliminación de datos duplicados en una actividad de búsqueda de coincidencias que forma parte de un proyecto de calidad de datos.  
   
-###  <a name="Policy"></a> Crear una directiva de coincidencia  
+###  <a name="Policy"></a>Creación de una directiva de coincidencia  
  Para preparar la base de conocimiento para el proceso de búsqueda de coincidencias, cree una directiva de coincidencia en ella que defina la forma en la que DQS asigna la probabilidad de coincidencia. Una directiva de coincidencia consta de una o varias reglas de coincidencia que identifican los dominios que se utilizarán cuando DQS evalúe el grado de coincidencia de un registro con otro, y especifica la importancia de cada valor de dominio en la evaluación de coincidencias. En la regla se debe especificar si los valores de dominio deben ser una coincidencia exacta o simplemente similares, y hasta qué punto. También se debe especificar si una coincidencia de dominio es un requisito previo.  
   
  La actividad de directiva de coincidencia del Asistente para la administración de la base de conocimiento analiza los datos de ejemplo aplicando cada una de las reglas de coincidencia para comparar los registros del intervalo de registros de dos en dos. Los registros cuyas puntuaciones de coincidencia sean superiores a un mínimo especificado se agrupan en clústeres en los resultados de búsqueda de coincidencias. Estos resultados de búsqueda de coincidencias no se agregan a la base de conocimiento, pero se pueden utilizar para optimizar las reglas de coincidencia. La creación de una directiva de coincidencia puede ser un proceso iterativo en el que se modifican las reglas de coincidencia en función de los resultados de búsqueda de coincidencias o las estadísticas de generación de perfiles.  
@@ -62,7 +61,7 @@ ms.locfileid: "67992238"
   
  Las reglas de coincidencia se guardan en la base de conocimiento a medida que se crean. Sin embargo, una base de conocimiento solo estará disponible para su uso en un proyecto de calidad de datos una vez que se haya publicado. Además, hasta que se realice la publicación, las reglas de coincidencia que contiene solo las podrá cambiar el usuario que la creó.  
   
-###  <a name="Project"></a> Ejecutar un proyecto de búsqueda de coincidencias  
+###  <a name="Project"></a>Ejecutar un proyecto de búsqueda de coincidencias  
  DQS realiza la eliminación de datos duplicados comparando cada una de las filas de los datos de origen con todas las demás, utilizando la directiva de coincidencia definida en la base de conocimiento, y generando una probabilidad de que las filas sean una coincidencia. Esto se lleva a cabo en un proyecto de calidad de datos de tipo Coincidencia. El proceso de búsqueda de coincidencias es uno de los pasos principales de un proyecto de calidad de datos. El mejor momento para realizarlo es después de la limpieza de datos, de modo que los datos que se van a comparar no tengan errores. Antes de ejecutar un proceso de búsqueda de coincidencias, puede exportar los resultados del proyecto de limpieza a una tabla de datos o un archivo .csv, para crear a continuación un proyecto de búsqueda de coincidencias en el que asigne los resultados de limpieza a los dominios de dicho proyecto.  
   
  Un proyecto de búsqueda de coincidencias de datos consta de un proceso asistido por PC y de un proceso interactivo. El proyecto de búsqueda de coincidencias aplica las reglas de coincidencia de la directiva correspondiente al origen de datos que se va a evaluar. Este proceso evalúa la probabilidad de que dos filas cualesquiera sean coincidencias valiéndose de una puntuación de coincidencia. Solo aquellos registros con una probabilidad de coincidencia superior a un valor establecido por el administrador de datos en la directiva de coincidencia se considerarán una coincidencia.  
@@ -77,6 +76,6 @@ ms.locfileid: "67992238"
 |||  
 |-|-|  
 |Crear y probar reglas de coincidencia en una directiva de coincidencia|[Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md)|  
-|Ejecutar la búsqueda de coincidencias en un proyecto de calidad de datos|[Ejecutar un proyecto de coincidencia](../data-quality-services/run-a-matching-project.md)|  
+|Ejecutar la búsqueda de coincidencias en un proyecto de calidad de datos|[Ejecutar un proyecto de búsqueda de coincidencias](../data-quality-services/run-a-matching-project.md)|  
   
   

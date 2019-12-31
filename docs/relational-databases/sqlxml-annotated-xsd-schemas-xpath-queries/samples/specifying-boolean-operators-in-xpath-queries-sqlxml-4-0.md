@@ -1,6 +1,5 @@
 ---
-title: Especificar operadores booleanos en consultas XPath (SQLXML 4.0) | Documentos de Microsoft
-ms.custom: ''
+title: Usar operadores booleanos en consultas XPath (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,38 +15,39 @@ helpviewer_keywords:
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c57742e1fe2c11c7e81518384f72b2acbab7a925
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 00a53f9d1b04d0f96e854a9e85c1588aa33e60fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68027083"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252580"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores booleanos en consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  El ejemplo siguiente muestra cómo los operadores booleanos se especifican en consultas XPath. La consulta XPath de este ejemplo se especifica en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
+  El ejemplo siguiente muestra cómo los operadores booleanos se especifican en consultas XPath. La consulta XPath de este ejemplo se especifica en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado para los ejemplos de XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-specify-the-or-boolean-operator"></a>A. Especificar el operador booleano OR  
- Esta consulta XPath devuelve los  **\<cliente >** elementos secundarios del nodo de contexto con el **CustomerID** valor de atributo de 13 ó 31:  
+### <a name="a-specify-the-or-boolean-operator"></a>a. Especificar el operador booleano OR  
+ Esta consulta XPath devuelve **** los ** \<** elementos secundarios del elemento Customer>del nodo de contexto con el valor de atributo CustomerID de 13 o 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
 ```  
   
- Un acceso directo a la **atributo** eje (@) se pueden especificar y porque el **secundarios** es el eje predeterminado, puede omitirse:  
+ Se puede especificar un acceso directo al eje de **atributo** (@) y, puesto que el eje **secundario** es el predeterminado, se puede omitir:  
   
 ```  
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- En el predicado, `attribute` es el eje y `CustomerID` es la prueba de nodo (TRUE si **CustomerID** es un  **\<atributo >** nodo, porque el  **\<atributo >** nodo es el nodo principal para el **atributo** eje). El predicado filtra los  **\<cliente >** elementos y devuelve solo aquellos que satisfacen la condición especificadas en el predicado.  
+ En el predicado `attribute` , es el eje `CustomerID` y es la prueba de nodo (true si **CustomerID** es un ** \<atributo>** nodo, porque el ** \<atributo>** nodo es el nodo principal del eje de **atributo** ). El predicado filtra los elementos de ** \<>del cliente** y devuelve solo aquellos que satisfacen la condición especificada en el predicado.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Para probar las consultas XPath en el esquema de asignación  
   
-1.  Copia el [código del esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
+1.  Copie el [código de esquema de ejemplo](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) y péguelo en un archivo de texto. Guarde el archivo como SampleSchema1.xml.  
   
 2.  Cree la siguiente plantilla (BooleanOperatorsA.xml) y guárdela en el directorio donde esté guardado el archivo SampleSchema1.xml.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68027083"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el conjunto de resultados de ejecución de la plantilla:  
   

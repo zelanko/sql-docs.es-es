@@ -1,6 +1,5 @@
 ---
-title: Crear un dominio compuesto | Microsoft Docs
-ms.custom: ''
+title: Crear un dominio compuesto
 ms.date: 11/22/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -11,14 +10,14 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: f6c146146a039958937a74cbdbd072dfb482bf4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935554"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255590"
 ---
 # <a name="create-a-composite-domain"></a>Crear un dominio compuesto
 
@@ -30,19 +29,19 @@ ms.locfileid: "67935554"
   
  Después de crear un dominio compuesto, puede cambiar las propiedades del mismo, adjuntar un servicio de datos de referencia al dominio, crear reglas entre dominios o crear relaciones de valor. Para ello, seleccione el dominio compuesto en la lista **Dominio** de la página **Administración de dominios** y seleccione la pestaña adecuada.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a>Antes de empezar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="Prerequisites"></a>Requisitos previos  
  Para crear un dominio compuesto, debe haber creado y abierto una base de conocimiento, y debe haber creado al menos dos dominios individuales para agregarlos al dominio compuesto.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="Security"></a>Bursátil  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a>Los  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio compuesto.  
   
-##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Crear un dominio compuesto en la actividad Detección de conocimiento  
+##  <a name="ParsingKnowledgeDiscoveryActivity"></a>Crear un dominio compuesto en la actividad detección de conocimiento  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Abrir base de conocimiento** y seleccione una base de conocimiento, o haga clic en **Nueva base de conocimiento** y especifique las propiedades para la nueva base de conocimiento.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "67935554"
   
 7.  Haga clic en el icono **Crear un dominio compuesto** .  
   
-##  <a name="DomainManagementActivity"></a> Crear un dominio compuesto en la actividad Administración de dominios  
+##  <a name="DomainManagementActivity"></a>Crear un dominio compuesto en la actividad administración de dominios  
   
 1.  En la página de inicio del cliente de Data Quality Services, haga clic en **Abrir base de conocimiento** y, a continuación, seleccione una base de conocimiento, o haga clic en **Nueva base de conocimiento** y especifique las propiedades de la nueva base de conocimiento.  
   
@@ -72,30 +71,30 @@ ms.locfileid: "67935554"
   
 7.  Haga clic en **Aceptar**.  
   
-##  <a name="CompositeDomainProperties"></a> Establecer las propiedades de un dominio compuesto  
+##  <a name="CompositeDomainProperties"></a>Establecer propiedades de dominio compuesto  
   
 1.  En el cuadro de diálogo **Crear dominio compuesto** , escriba un nombre que sea único en la base de conocimiento y una descripción con una longitud máxima de 256 caracteres.  
   
 2.  En la **Lista de dominios**, seleccione los dominios que formarán parte del dominio compuesto y, a continuación, haga clic en la flecha derecha para moverlos a la tabla **Dominios del dominio compuesto** . Esta lista contiene los dominios individuales disponibles para agregarlos al dominio compuesto que está creando. Solo están disponibles los dominios individuales que se han creado y que no se hayan agregado a un dominio compuesto existente. Un dominio individual no se puede agregar a más de un dominio compuesto de la knowledge base, y un dominio compuesto no se puede agregar a otro dominio compuesto.  
   
-3.  Haga clic en **Avanzadas**.  
+3.  Haga clic en **Opciones avanzadas**.  
   
 4.  En **Método de análisis**, seleccione una de las opciones siguientes:  
   
-    -   **Datos de referencia**: analiza los valores del campo en función del formato que el servicio de datos de referencia (RDS) haya aplicado a los datos de referencia. Data Quality Services enviará los valores del dominio compuesto a RDS, y RDS devuelve datos corregidos y analizados en función del dominio compuesto.  
+    -   **Datos de referencia**: analiza los valores del campo según cómo el servicio de datos de referencia (RDS) dé formato a los datos. Data Quality Services enviará los valores del dominio compuesto a RDS, y RDS devuelve datos corregidos y analizados en función del dominio compuesto.  
   
-    -   **En orden**: analiza los valores de los campos según el orden que tienen los dominios en el dominio compuesto. El primer valor se incluirá en el primer dominio, el segundo valor en el segundo dominio, y así sucesivamente.  
+    -   **En orden**: analiza los valores del campo según el orden de los dominios en el dominio compuesto. El primer valor se incluirá en el primer dominio, el segundo valor en el segundo dominio, y así sucesivamente.  
   
-    -   **Delimitadores**: analiza los valores del campo según el delimitador seleccionado en los botones de radio que se muestran cuando se selecciona Delimitadores. Pueden ser **Carácter de tabulación**, **Punto y coma**, **Coma**, **Espacio**u **Otros**. Si selecciona **Otros**, escriba el valor que servirá como delimitador.  
+    -   **Delimitadores**: analiza los valores del campo según el delimitador seleccionado en los botones de radio que se muestran cuando se selecciona delimitadores. Pueden ser **Carácter de tabulación**, **Punto y coma**, **Coma**, **Espacio**u **Otros**. Si selecciona **Otros**, escriba el valor que servirá como delimitador.  
   
 5.  Si selecciona **Delimitadores** como método de análisis, también puede seleccionar **Usar el análisis de bases de conocimiento**. Para obtener más información, consulte [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Seguimiento: crear un dominio compuesto  
+##  <a name="FollowUp"></a>Seguimiento: después de crear un dominio compuesto  
  Una vez creado el dominio compuesto, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
+##  <a name="KnowledgeBaseParsing"></a>Análisis basado en conocimiento  
  Data Quality Services permite analizar los datos en función del conocimiento, no solo en función de los delimitadores o el orden. El análisis basado en conocimiento se utiliza cuando los datos de origen complejos están asignados a un dominio compuesto y no se están utilizando los servicios de datos de referencia. Puede utilizar el análisis basado en conocimiento para analizar los datos del origen de datos en los dominios individuales correspondientes. Con el análisis basado en conocimiento, DQS primero intentará utilizar el conocimiento para analizar datos complejos en dominios individuales. Si es posible, identificará partes de la cadena como pertenecientes a uno o varios dominios, y analizará la cadena en sus distintos dominios. Por ejemplo, supongamos que tiene "John B. Doe" como valor complejo en un campo de nombre completo representado por un dominio compuesto denominado Nombre completo. Si DQS identifica "John" como en el dominio Nombre y "Doe" como en el dominio Apellidos, DQS agregará "B". al dominio Segundo nombre según el conocimiento de los dominios.  
   
  Solo puede utilizar el análisis basado en conocimiento si también selecciona el análisis basado en delimitadores. El análisis basado en conocimiento no reemplaza al análisis basado en delimitadores, sino que lo mejora. DQS solo utilizará un delimitador para realizar el análisis si no existe ningún conocimiento para hacerlo. En algunos casos, DQS puede determinar parte del análisis mediante el análisis basado en conocimiento y después determinar otra parte del análisis mediante el análisis basado en delimitadores.  

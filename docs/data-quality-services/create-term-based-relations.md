@@ -1,6 +1,5 @@
 ---
-title: Crear relaciones basadas en términos | Microsoft Docs
-ms.custom: ''
+title: Crear relaciones basadas en términos
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: e0bec04d00222ca0dd11854b41c5ec6b4bf705a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: a982279e06a1968cf80335cd16dd9eb74e458c3e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992252"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251778"
 ---
 # <a name="create-term-based-relations"></a>Crear relaciones basadas en términos
 
@@ -33,7 +32,7 @@ ms.locfileid: "67992252"
   
  Cuando se aplica una relación basada en términos en la administración de dominios, DQS aplicará los cambios en los procesos de detección del conocimiento, limpieza o coincidencia; sin embargo, DQS no cambia el propio valor para adecuarse a la relación basada en términos. Es decir, si escribe y acepta una relación basada en términos en la pestaña **Relaciones basadas en términos** de la página **Administración de dominio** , el cambio no se llevará a cabo en la pestaña **Valores del dominio** de la misma página. Esto permite cambiar la TBR posteriormente.  
   
- **Relaciones basadas en términos y y limpieza de datos**  
+ **Relaciones basadas en términos y limpieza de datos**  
   
  Cuando se aplica una relación basada en términos en un dominio y después se ejecuta el proceso de limpieza de datos, DQS aplica los cambios durante la limpieza pero no aplica los cambios a los términos de la base de conocimiento.  
   
@@ -45,27 +44,27 @@ ms.locfileid: "67992252"
   
 -   Si un valor según esmodificado por una relación basada en términos se encuentra en el dominio, pero el valor es Error/No válido sin ninguna corrección, el valor aparecerá en la pestaña No válido con el motivo Valor de dominio.  
   
- **Relaciones basadas en términos y detección del conocimiento**  
+ **Relaciones basadas en términos y detección de conocimiento**  
   
  Cuando se aplica una relación basada en términos se ejecuta después el proceso de detección del conocimiento, cualquier valor que se ajuste al TBR permanecerá tal cual y se identificará como valor correcto. Cualquier valor que un TBR vambie se importará como valor correcto y se identificará como sinónimo en un valor que se ajuste al TBR.  
   
- **Relaciones basadas en trérminos e importar valores de limpieza en un dominio**  
+ **Relaciones basadas en términos e importar valores de limpieza en un dominio**  
   
  Si importa el conocimiento de calidad de los datos recopilados durante el proces ode limpieza en un dominio, valor que cambie un TBR se importará como valor correcto.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="BeforeYouBegin"></a>Antes de empezar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="Prerequisites"></a>Requisitos previos  
  Para crear relaciones basadas en términos, debe tener un dominio abierto en la actividad Administración de dominios.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="Security"></a>Bursátil  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="Permissions"></a>Los  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear relaciones basadas en términos.  
   
-##  <a name="Create"></a> Crear relaciones basadas en términos  
+##  <a name="Create"></a>Crear relaciones basadas en términos  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , abra o cree una base de conocimiento. Seleccione **Administración de dominios** como actividad y, a continuación, haga clic en **Abrir** o en **Crear**. Para obtener más información, consulte [Crear una base de conocimiento](../data-quality-services/create-a-knowledge-base.md) o [Abrir una base de conocimiento](../data-quality-services/open-a-knowledge-base.md).  
   
@@ -93,7 +92,7 @@ ms.locfileid: "67992252"
   
     6.  Busque un valor en la tabla de relaciones; para ello, especifique uno o varios caracteres en el cuadro de texto **Buscar** . Se resaltarán las cadenas que coincidan con la especificada. Utilice las flechas arriba y abajo para desplazarse por las distintas instancias de la cadena en la tabla.  
   
-    7.  **Corrector ortográfico**: si un valor de la columna **Valor** o **Corregir a** tiene un carácter de subrayado rojo ondulado, quiere decir que el corrector ortográfico sugiere una corrección para el valor. Haga clic con el botón secundario en el valor que tiene el carácter de subrayado y seleccione uno de los valores propuestos por el corrector ortográfico. O bien, puede hacer clic en **Agregar** en el menú contextual para seguir usando el valor original. Para obtener más información, consulte [Utilizar el corrector ortográfico de DQS](../data-quality-services/use-the-dqs-speller.md) y [Establecer propiedades de dominio](../data-quality-services/set-domain-properties.md).  
+    7.  **Corrector ortográfico**: Si un valor de la columna **valor** o **corregir a** tiene un carácter de subrayado rojo ondulado, el corrector ortográfico está sugiriendo una corrección al valor. Haga clic con el botón secundario en el valor que tiene el carácter de subrayado y seleccione uno de los valores propuestos por el corrector ortográfico. O bien, puede hacer clic en **Agregar** en el menú contextual para seguir usando el valor original. Para obtener más información, consulte [Utilizar el corrector ortográfico de DQS](../data-quality-services/use-the-dqs-speller.md) y [Establecer propiedades de dominio](../data-quality-services/set-domain-properties.md).  
   
         > [!NOTE]  
         >  Para utilizar el corrector ortográfico, puede habilitarlo en la página **Propiedades del dominio** o, si está deshabilitado en la página **Propiedades del dominio** , puede hacer clic en el icono **Habilitar o deshabilitar el corrector ortográfico** de la página **Relaciones basadas en términos** para habilitarlo en esta página.  
@@ -102,7 +101,7 @@ ms.locfileid: "67992252"
   
 7.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Seguimiento: después de crear las relaciones basadas en términos  
+##  <a name="FollowUp"></a>Seguimiento: después de crear relaciones basadas en términos  
  Una vez creadas las relaciones basadas en términos, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
   

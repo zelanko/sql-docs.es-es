@@ -1,6 +1,5 @@
 ---
-title: Seguridad de DQS | Microsoft Docs
-ms.custom: ''
+title: Seguridad de DQS
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: c732645c526b2179265a6669055d005e944ee114
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 33d8ecce0aaba4826e20783bbe63aee44f63b4b1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992103"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251637"
 ---
 # <a name="dqs-security"></a>Seguridad de DQS
 

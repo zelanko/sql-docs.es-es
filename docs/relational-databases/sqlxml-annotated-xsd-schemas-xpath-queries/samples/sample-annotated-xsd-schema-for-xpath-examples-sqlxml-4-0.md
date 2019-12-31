@@ -1,6 +1,5 @@
 ---
-title: Esquema XSD anotado de ejemplo para obtener ejemplos de XPath (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Esquema XSD anotado de ejemplo para XPath (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,23 +13,24 @@ helpviewer_keywords:
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c786414ee9682091f53c2a91e09bcbd5b636ff7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 127e98b36465d196bc20cf6888e56b20a93dad59
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119507"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252640"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Esquema XSD anotado de ejemplo para los ejemplos de XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Las consultas XPath de ejemplo de esta sección hacen referencia a un esquema de asignación. El esquema de asignación es un archivo de esquema XML anotado (XSD). Para obtener más información acerca de los esquemas de asignación, consulte [Introducción a los esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
+  Las consultas XPath de ejemplo de esta sección hacen referencia a un esquema de asignación. El esquema de asignación es un archivo de esquema XML anotado (XSD). Para obtener más información acerca de la asignación de esquemas, vea [Introducción a los esquemas XSD anotados &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
   
  Para ejecutar consultas XPath en un esquema XSD anotado, se requiere lo siguiente:  
   
--   Cree una plantilla que contenga una consulta XPath. En la plantilla, especifique el esquema de asignación para el que se va a ejecutar la consulta XPath. En este caso, el esquema de asignación debe almacenarse en el directorio (o uno de sus subdirectorios, en cuyo caso una ruta de acceso relativa se especifica como el valor de la **esquema de asignación** atributo en la plantilla) asociado con el archivo de plantilla.  
+-   Cree una plantilla que contenga una consulta XPath. En la plantilla, especifique el esquema de asignación para el que se va a ejecutar la consulta XPath. En este caso, el esquema de asignación debe almacenarse en el directorio (o en uno de sus subdirectorios, en cuyo caso se especifica una ruta de acceso relativa como el valor del atributo **mapping-schema** de la plantilla) asociado al archivo de plantilla.  
   
--   Cree una aplicación de prueba que utilice las extensiones de SQLXML de ADO para ejecutar las consultas. Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+-   Cree una aplicación de prueba que utilice las extensiones de SQLXML de ADO para ejecutar las consultas. Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  En todos los ejemplos de esta sección, por motivos ilustrativos, las consultas XPath se especifican en una plantilla y la plantilla se ejecuta utilizando ADO. Por consiguiente, debe utilizar el archivo de esquema de asignación siguiente, SampleSchema1.xml. Guarde este archivo en el directorio donde estén almacenadas sus plantillas.  
   

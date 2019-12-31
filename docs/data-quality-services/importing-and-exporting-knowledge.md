@@ -1,6 +1,5 @@
 ---
-title: Importar y exportar conocimiento | Microsoft Docs
-ms.custom: ''
+title: Importar y exportar conocimiento
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 8f7c0f8997973cf73df5afd1dbe43b5971060799
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 06f4b140ef90eb3d1ed942e5374643e80fb1b24e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935254"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254809"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Importar y exportar conocimiento
 
@@ -31,19 +30,19 @@ ms.locfileid: "67935254"
   
 |||  
 |-|-|  
-|Exportar un dominio de una base de conocimiento a un archivo de datos .dqs|[Exportar un dominio a un archivo .dqs](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
-|Importar un dominio desde un archivo de datos .dqs a una base de conocimiento existente|[Importar un dominio desde un archivo .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
-|Exportar una base de conocimiento completa a un archivo de datos .dqs|[Exportar una base de conocimiento a un archivo .dqs](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
-|Importar una base de conocimiento completa desde un archivo de datos .dqs|[Importar una base de conocimiento desde un archivo .dqs](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
-|Importar valores desde un archivo de Excel a un dominio|[Importar valores desde un archivo de Excel a un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
-|Importar dominios desde un archivo de Excel a una base de conocimiento|[Importar dominios desde un archivo de Excel a la detección del conocimiento](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
-|Importar el conocimiento recopilado durante la limpieza en una base de conocimiento|[Importar valores de un proyecto de limpieza en un dominio](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
+|Exportar un dominio de una base de conocimiento a un archivo de datos .dqs|[Exportar un dominio a un archivo. DQS](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
+|Importar un dominio desde un archivo de datos .dqs a una base de conocimiento existente|[Importar un dominio desde un archivo. DQS](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  
+|Exportar una base de conocimiento completa a un archivo de datos .dqs|[Exportar una base de conocimiento a un archivo. DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)|  
+|Importar una base de conocimiento completa desde un archivo de datos .dqs|[Importar una base de conocimiento desde un archivo. DQS](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)|  
+|Importar valores desde un archivo de Excel a un dominio|[Importar valores de un archivo de Excel a un dominio](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)|  
+|Importar dominios desde un archivo de Excel a una base de conocimiento|[Importar dominios desde un archivo de Excel en la detección de conocimiento](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)|  
+|Importar el conocimiento recopilado durante la limpieza en una base de conocimiento|[Importar valores de proyecto de limpieza en un dominio](../data-quality-services/import-cleansing-project-values-into-a-domain.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Compilar una base de conocimiento](../data-quality-services/building-a-knowledge-base.md)|  
+|Generar una base de conocimiento ejecutando la detección de conocimiento y administrando el conocimiento de forma interactiva|[Crear una base de conocimiento](../data-quality-services/building-a-knowledge-base.md)|  
 |Crear un dominio individual y agregarle conocimiento.|[Administrar un dominio](../data-quality-services/managing-a-domain.md)|  
 |Crear un dominio compuesto y agregarle conocimiento.|[Administrar un dominio compuesto](../data-quality-services/managing-a-composite-domain.md)|  
   

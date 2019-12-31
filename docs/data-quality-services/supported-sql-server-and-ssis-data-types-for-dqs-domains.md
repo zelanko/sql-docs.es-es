@@ -1,6 +1,5 @@
 ---
-title: Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS | Microsoft Docs
-ms.custom: ''
+title: Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,14 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
-author: lrtoyou1223
-ms.author: lle
-ms.openlocfilehash: 2a75eacaf4283b957a24ade9319ea0dc46c436bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 57950290bdf2b7f83463fa6b950db90a4bdbb9f0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991763"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257771"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS
 
@@ -26,31 +25,31 @@ ms.locfileid: "67991763"
 > [!NOTE]  
 >  En los archivos .xlsx y .xls, el tipo de datos de la columna de origen está determinado por el tipo de datos más frecuente de las ocho primeras filas. Si una celda no se ajusta a dicho tipo de datos, se le asignará un valor NULL. De igual modo, en los archivos .csv, el tipo de datos de la columna de origen está determinado por el tipo de datos más frecuente de las ocho primeras filas.  
   
-##  <a name="SQLServer"></a> Tipos de datos de SQL Server admitidos  
+##  <a name="SQLServer"></a>Tipos de datos de SQL Server admitidos  
  En la tabla siguiente se proporciona información acerca de los tipos de datos de SQL Server admitidos para cada tipo de datos de dominio DQS:  
   
 |Tipo de datos de dominio DQS|Tipo de datos de SQL Server admitido|  
 |--------------------------|------------------------------------|  
-|Date|Date|  
-|Decimal|Decimal<br /><br /> float<br /><br /> money<br /><br /> numeric<br /><br /> real<br /><br /> smallmoney|  
-|Entero|bigint<br /><br /> int<br /><br /> smallint<br /><br /> tinyint|  
+|Date|date|  
+|Decimal|decimal<br /><br /> float<br /><br /> money<br /><br /> numeric<br /><br /> real<br /><br /> smallmoney|  
+|Integer|bigint<br /><br /> int<br /><br /> smallint<br /><br /> tinyint|  
 |Cadena|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
   
  El resto de los tipos de datos de SQL Server no se admiten en DQS. Para obtener información sobre todos los tipos de datos de SQL Server, vea [Tipos de datos &#40;Transact-SQL&#41;](../t-sql/data-types/data-types-transact-sql.md).  
   
-##  <a name="SSIS"></a> Tipos de datos de SSIS admitidos  
+##  <a name="SSIS"></a>Tipos de datos de SSIS admitidos  
  En la tabla siguiente se proporciona información acerca de los tipos de datos de SSIS admitidos para cada tipo de datos de dominio DQS:  
   
 |Tipo de datos de dominio DQS|Tipo de dato de SSIS admitido|  
 |--------------------------|------------------------------|  
 |Date|DT_DATE|  
 |Decimal|DT_DECIMAL<br /><br /> DT_NUMERIC<br /><br /> DT_R4<br /><br /> DT_R8|  
-|Entero|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
+|Integer|DT_I1<br /><br /> DT_I2<br /><br /> DT_I4<br /><br /> DT_I8<br /><br /> DT_U1<br /><br /> DT_U2<br /><br /> DT_U4<br /><br /> DT_U8|  
 |Cadena|DT_STR<br /><br /> DT_WSTR|  
   
  El resto de los tipos de datos de SSIS no se admiten en DQS. Para obtener información acerca de todos los tipos de datos SSIS, vea [Integration Services Data Types](../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Administrar un dominio](../data-quality-services/managing-a-domain.md)  
   
   

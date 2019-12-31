@@ -1,5 +1,5 @@
 ---
-title: Con la carga masiva SQLXML en el entorno .NET | Documentos de Microsoft
+title: Usar la carga masiva SQLXML en el entorno .NET
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed725ac58b7224ad157dd7b5d06b3b522395023b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5800c6323408f7b018021c041fbba17d2e8f6b89
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220391"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252448"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>Compatibilidad de SQLXML 4.0 con .NET Framework: utilizar la carga masiva
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  En este tema se explica cómo se puede usar la funcionalidad de carga masiva XML en el entorno .NET. Para obtener información detallada acerca de la carga masiva XML, vea [realizar carga masiva de datos XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
+  En este tema se explica cómo se puede usar la funcionalidad de carga masiva XML en el entorno .NET. Para obtener información detallada acerca de la carga masiva XML, vea [realizar la carga masiva de datos xml &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
   
  Para utilizar el objeto COM de carga masiva SQLXML desde un entorno administrado, tiene que agregar una referencia de proyecto a este objeto. Esto genera una interfaz de contenedor administrado para el objeto COM de carga masiva.  
   
 > [!NOTE]  
->  La carga masiva XML administrada no funciona con flujos administrados y requiere un contenedor para los flujo nativos. El componente Carga masiva SQLXML no se ejecutará en un entorno multiproceso (atributo ' [MTAThread]'). Si intenta ejecutar el componente carga masiva en un entorno multiproceso, obtendrá una excepción InvalidCastException con la siguiente información adicional: "Error de QueryInterface para la interfaz SQLXMLBULKLOADLib.ISQLXMLBulkLoad". La solución consiste en hacer que el objeto que contiene la carga masiva objeto único subproceso accesible (por ejemplo, mediante el **[STAThread]** atributo tal como se muestra en el ejemplo).  
+>  La carga masiva XML administrada no funciona con flujos administrados y requiere un contenedor para los flujo nativos. El componente Carga masiva SQLXML no se ejecutará en un entorno multiproceso (atributo ' [MTAThread]'). Si intenta ejecutar el componente de carga masiva en un entorno de varios subprocesos, obtendrá una excepción InvalidCastException con la siguiente información adicional: "error de QueryInterface para la interfaz SQLXMLBULKLOADLib. ISQLXMLBulkLoad". La solución consiste en hacer que el objeto que contiene el objeto de carga masiva sea accesible desde un solo subproceso (por ejemplo, mediante el atributo **[STAThread]** como se muestra en el ejemplo).  
   
  En este tema se proporciona una aplicación de ejemplo funcional en C# para realizar la carga masiva de los datos XML de la base de datos. Para crear un ejemplo funcional, siga estos pasos:  
   
@@ -111,13 +111,13 @@ ms.locfileid: "68220391"
   
 4.  Inicie Visual Studio.  
   
-5.  Cree una aplicación de consola de C#.  
+5.  Cree una aplicación de consola en C#  
   
-6.  Desde el **proyecto** menú, seleccione **Agregar referencia**.  
+6.  En el menú **proyecto** , seleccione **Agregar referencia**.  
   
-7.  En el **COM** ficha, seleccione **biblioteca de tipos de Microsoft SQLXML Bulkload 4.0** (xblkld4.dll) y haga clic en **Aceptar**. Verá el **Interop.SQLXMLBULKLOADLib** ensamblado creado en el proyecto.  
+7.  En la pestaña **com** , seleccione **biblioteca de tipos de carga masiva de Microsoft SQLXML 4,0** (xblkld4. dll) y haga clic en **Aceptar**. Verá el ensamblado **Interop. SQLXMLBULKLOADLib** creado en el proyecto.  
   
-8.  Reemplace el método Main() por el código siguiente. Actualización de la **ConnectionString** propiedad y la ruta de acceso a los archivos de esquema y los datos.  
+8.  Reemplace el método Main() por el código siguiente. Actualice la propiedad **ConnectionString** y la ruta de acceso del archivo para el esquema y los archivos de datos.  
   
     ```  
     [STAThread]  
@@ -149,7 +149,7 @@ ms.locfileid: "68220391"
   
      Esto crea la DLL del contenedor administrado (SQLXMLBULKLOADLib.dll) que puede utilizar en el proyecto de .NET Framework. En .NET Framework, puede agregar la referencia del proyecto a la DLL recién creada.  
   
-## <a name="see-also"></a>Vea también  
- [Realizar la carga masiva de datos XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+## <a name="see-also"></a>Véase también  
+ [Realizar la carga masiva de datos XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

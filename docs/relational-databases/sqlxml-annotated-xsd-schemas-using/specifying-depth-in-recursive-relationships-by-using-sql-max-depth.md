@@ -1,6 +1,5 @@
 ---
-title: 'Especificar la profundidad en relaciones recursivas mediante SQL: Max-Depth | Microsoft Docs'
-ms.custom: ''
+title: 'Establecer relaciones de profundidad recursiva con SQL: Max-Depth'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,13 +20,14 @@ ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a77c5a9e36a644c35edf9a31c63b6b3ef18bef1c
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: aaeeae8c0adfc34c80b986898c5209b744d7efc4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907146"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257354"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificar la profundidad en relaciones recursivas utilizando sql:max-depth
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  En este fragmento, el empleado 5 es subordinado directo del empleado 4, el empleado 4 es subordinado directo del empleado 3 y los empleados 3 y 2 son subordinados directos del empleado 1.  
   
- Para generar este resultado, puede usar el siguiente esquema XSD y especificar una consulta XPath en él. El esquema describe un elemento **\<emp >** de tipo EmployeeType, que consta de un elemento secundario **\<EMP >** del mismo tipo, EmployeeType. Se trata de una relación recursiva (el elemento y su antecesor son del mismo tipo). Además, el esquema usa una **\<SQL: relationship >** para describir la relación de elementos primarios y secundarios entre el supervisor y el supervisado. Tenga en cuenta que en este **\<SQL: relationship >** , EMP es la tabla primaria y la secundaria.  
+ Para generar este resultado, puede usar el siguiente esquema XSD y especificar una consulta XPath en él. El esquema describe un ** \<elemento>EMP** de tipo EmployeeType, que consta de un ** \<** elemento secundario de EMP>del mismo tipo, EmployeeType. Se trata de una relación recursiva (el elemento y su antecesor son del mismo tipo). Además, el esquema usa un ** \<>SQL: Relationship** para describir la relación de elementos primarios y secundarios entre el supervisor y el supervisado. Tenga en cuenta que en esta ** \<>de SQL: Relationship **, EMP es la tabla primaria y la secundaria.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -171,7 +171,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 > [!NOTE]  
 >  Para generar diferentes profundidades de jerarquías en el resultado, cambie el valor de la anotación **SQL: Max-Depth** en el esquema y vuelva a ejecutar la plantilla después de cada cambio.  
   
- En el esquema anterior, todos los elementos **\<Emp >** tenían exactamente el mismo conjunto de atributos (**EmployeeID**, **FirstName**y **LastName**). El esquema siguiente se ha modificado ligeramente para devolver un atributo **Reportto** adicional para todos los elementos **\<EMP >** que se notifican a un administrador.  
+ En el esquema anterior, todos los ** \<elementos de>EMP** tenían exactamente el mismo conjunto de atributos **(EmployeeID**, **FirstName**y **LastName**). El esquema siguiente se ha modificado ligeramente para devolver un atributo **reportto** adicional para todos ** \<** los elementos de>EMP que informan a un administrador.  
   
  Por ejemplo, este fragmento XML muestra los subordinados del empleado 1:  
   
@@ -243,7 +243,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  La anotación **SQL: Max-Depth** se puede especificar en cualquier elemento de contenido complejo.  
   
 ### <a name="recursive-elements"></a>Elementos recursivos  
- Si se especifica **SQL: Max-Depth** en el elemento primario y en el elemento secundario de una relación recursiva, la anotación **SQL: Max-Depth** especificada en el elemento primario tiene prioridad. Por ejemplo, en el esquema siguiente, la anotación **SQL: Max-Depth** se especifica en los elementos primarios y secundarios. En este caso, **SQL: Max-Depth = 4**, especificado en el **\<EMP >** elemento primario (que desempeña un rol de supervisor) tiene prioridad. Se omite **SQL: Max-Depth** especificada en el elemento secundario **\<EMP >** elemento (que desempeña un rol de supervisado).  
+ Si se especifica **SQL: Max-Depth** en el elemento primario y en el elemento secundario de una relación recursiva, la anotación **SQL: Max-Depth** especificada en el elemento primario tiene prioridad. Por ejemplo, en el esquema siguiente, la anotación **SQL: Max-Depth** se especifica en los elementos primarios y secundarios. En este caso, **SQL: Max-Depth = 4**, especificado en el ** \<** elemento primario de EMP>(desempeñando un rol de supervisor) tiene prioridad. Se omite el parámetro **SQL: Max-Depth** especificado en el elemento secundario ** \<EMP>** (desempeñando un rol de supervisado).  
   
 #### <a name="example-b"></a>Ejemplo B  
   
@@ -283,9 +283,9 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Para probar este esquema, siga los pasos proporcionados para el ejemplo A, anteriormente en este tema.  
   
 ### <a name="nonrecursive-elements"></a>Elementos no recursivos  
- Si la anotación **SQL: Max-Depth** se especifica en un elemento del esquema que no produce ninguna recursividad, se omite. En el esquema siguiente, un elemento **\<Emp >** está formado por una **constante\<** elemento secundario, que, a su vez, tiene un elemento secundario\<**EMP** >.  
+ Si la anotación **SQL: Max-Depth** se especifica en un elemento del esquema que no produce ninguna recursividad, se omite. En el esquema siguiente, un ** \<elemento>EMP** está compuesto de una ** \<constante>** elemento secundario, que, a su vez, tiene un ** \<elemento secundario EMP>** .  
   
- En este esquema, se omite la anotación **SQL: Max-Depth** especificada en el elemento **> constante\<** porque no hay ninguna recursividad entre el **\<EMP >** elemento primario y la **constante\<** > elemento secundario. Pero hay una recursividad entre el **\<emp >** antecesor y el **\<EMP >** secundario. El esquema especifica la anotación **SQL: Max-Depth** en ambos. Por lo tanto, la anotación **SQL: Max-Depth** que se especifica en el antecesor ( **\<EMP >** en el rol supervisor) tiene prioridad.  
+ En este esquema, la anotación **SQL: Max-Depth** especificada en la ** \<constante>** elemento se omite porque no hay ninguna recursividad entre el ** \<>** primario de EMP y la ** \<constante>** elemento secundario. Pero hay una recursividad entre el antecesor de ** \<>de EMP** y el>secundario de ** \<EMP** . El esquema especifica la anotación **SQL: Max-Depth** en ambos. Por lo tanto, la anotación **SQL: Max-Depth** que se especifica en el antecesor (**\<EMP>** en el rol supervisor) tiene prioridad.  
   
 #### <a name="example-c"></a>Ejemplo C  
   
@@ -329,11 +329,11 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  Para probar este esquema, siga los pasos que se proporcionaron para el Ejemplo A anteriormente en este tema.  
   
 ## <a name="complex-types-derived-by-restriction"></a>Tipos complejos derivados por restricción  
- Si tiene una derivación de tipo complejo mediante **\<restricción >** , los elementos del tipo complejo base correspondiente no pueden especificar la anotación **SQL: Max-Depth** . En estos casos, se puede Agregar la anotación **SQL: Max-Depth** al elemento del tipo derivado.  
+ Si tiene una derivación de tipo complejo por ** \<restricción>**, los elementos del tipo complejo base correspondiente no pueden especificar la anotación **SQL: Max-Depth** . En estos casos, se puede Agregar la anotación **SQL: Max-Depth** al elemento del tipo derivado.  
   
- Por otro lado, si tiene una derivación de tipo complejo mediante **\<extensión >** , los elementos del tipo complejo base correspondiente pueden especificar la anotación **SQL: Max-Depth** .  
+ Por otro lado, si tiene una derivación de tipo complejo por ** \<>de extensión **, los elementos del tipo complejo base correspondiente pueden especificar la anotación **SQL: Max-Depth** .  
   
- Por ejemplo, el esquema XSD siguiente genera un error porque la anotación **SQL: Max-Depth** se especifica en el tipo base. Esta anotación no se admite en un tipo derivado de **\<restricción >** de otro tipo. Para corregir este problema, debe cambiar el esquema y especificar la anotación **SQL: Max-Depth** en el elemento del tipo derivado.  
+ Por ejemplo, el esquema XSD siguiente genera un error porque la anotación **SQL: Max-Depth** se especifica en el tipo base. Esta anotación no se admite en un tipo derivado por ** \<Restriction>** de otro tipo. Para corregir este problema, debe cambiar el esquema y especificar la anotación **SQL: Max-Depth** en el elemento del tipo derivado.  
   
 #### <a name="example-d"></a>Ejemplo D  
   
@@ -377,7 +377,7 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
 </xsd:schema>   
 ```  
   
- En el esquema, **SQL: Max-Depth** se especifica en un tipo complejo de **CustomerBaseType** . El esquema también especifica un elemento **\<Customer >** de tipo **CustomerType**, que se deriva de **CustomerBaseType**. Una consulta XPath especificada en este tipo de esquema generará un error, porque **SQL: Max-Depth** no se admite en un elemento que se define en un tipo base de restricción.  
+ En el esquema, **SQL: Max-Depth** se especifica en un tipo complejo de **CustomerBaseType** . El esquema también especifica un ** \<elemento Customer>** del tipo **CustomerType**, que se deriva de **CustomerBaseType**. Una consulta XPath especificada en este tipo de esquema generará un error, porque **SQL: Max-Depth** no se admite en un elemento que se define en un tipo base de restricción.  
   
 ## <a name="schemas-with-a-deep-hierarchy"></a>Esquemas con una jerarquía profunda  
  Puede tener un esquema que incluya una jerarquía profunda en la que un elemento contiene un elemento secundario, que a su vez contiene otro elemento secundario, y así sucesivamente. Si la anotación **SQL: Max-Depth** especificada en un esquema de este tipo genera un documento XML que incluye una jerarquía de más de 500 niveles (con un elemento de nivel superior en el nivel 1, su secundario en el nivel 2, etc.), se devuelve un error.  

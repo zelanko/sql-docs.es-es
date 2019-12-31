@@ -1,6 +1,7 @@
 ---
-title: Programación de la integración de CLR y de atributos de protección de host | Microsoft Docs
-ms.custom: ''
+title: Atributos de protección del host de Common Language Runtime (CLR)
+description: El Common Language Runtime (CLR) proporciona un mecanismo para anotar interfaces de programación de aplicaciones (API) administradas que forman parte del .NET Framework con ciertos atributos.
+ms.custom: seo-lt-2019
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,26 +17,26 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e060411864c0f354ee9107216b86a47f738bf43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 733e4adc69570dd98e6e0ad5448820607ade6329
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028063"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258750"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Atributos de protección del host y programación de la integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   El Common Language Runtime (CLR) proporciona un mecanismo para anotar interfaces de programación de aplicaciones (API) administradas que forman parte del .NET Framework con ciertos atributos que pueden ser de interés para un host del CLR, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que se inició con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Los ejemplos de estos atributos de protección del host (HPA) incluyen:  
   
--   **SharedState**, que indica si la API expone la capacidad de crear o administrar el estado (por ejemplo, campos clase estática) compartido.  
+-   **SharedState**, que indica si la API expone la capacidad de crear o administrar el estado compartido (por ejemplo, campos de clase estáticos).  
   
 -   **Sincronización**, que indica si la API expone la capacidad de realizar la sincronización entre subprocesos.  
   
--   **ExternalProcessMgmt**, que indica si la API expone una forma de controlar el proceso de host.  
+-   **ExternalProcessMgmt**, que indica si la API expone una manera de controlar el proceso de host.  
   
- Al proporcionar estos atributos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica una lista de los HPA que no se permiten en el entorno hospedado a través de la seguridad de acceso del código (CAS). Los requisitos de CAS se especifican mediante uno de tres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de permisos: **SEGURO**, **EXTERNAL_ACCESS**, o **UNSAFE**. Uno de estos tres niveles de seguridad se especifica cuando se registra el ensamblado en el servidor, utilizando el **CREATE ASSEMBLY** instrucción. Código que se ejecuta dentro de la **seguro** o **EXTERNAL_ACCESS** conjuntos de permisos que deben evitar ciertos tipos o miembros que tienen el **System.Security.Permissions.HostProtectionAttribute** atributo aplicado. Para obtener más información, consulte [creación de un ensamblado](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) y [restricciones del modelo de programación de integración de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ Al proporcionar estos atributos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica una lista de los HPA que no se permiten en el entorno hospedado a través de la seguridad de acceso del código (CAS). Los requisitos de CAS se especifican mediante uno [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los tres conjuntos de permisos: **Safe**, **external_access**o **Unsafe**. Uno de estos tres niveles de seguridad se especifica cuando el ensamblado se registra en el servidor mediante la instrucción **Create Assembly** . El código que se ejecuta dentro de los conjuntos de permisos **Safe** o **external_access** debe evitar ciertos tipos o miembros que tienen aplicado el atributo **System. Security. Permissions. HostProtectionAttribute** . Para obtener más información, vea [crear un ensamblado](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) y restricciones del modelo de programación de la [integración CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
- El **HostProtectionAttribute** no es un permiso de seguridad como una manera de mejorar la confiabilidad, en que identifica el código específico de construcciones, bien sean tipos o métodos, que el host podría rechazar. El uso de la **HostProtectionAttribute** exige un modelo de programación que ayuda a proteger la estabilidad del host.  
+ **HostProtectionAttribute** no es un permiso de seguridad, ya que se trata de una manera de mejorar la confiabilidad, ya que identifica construcciones de código específicas, ya sean tipos o métodos, que el host puede impedir. El uso de **HostProtectionAttribute** aplica un modelo de programación que ayuda a proteger la estabilidad del host.  
   
 ## <a name="host-protection-attributes"></a>Atributos de protección del host  
  Los HPA identifican los tipos o miembros que no se ajustan al modelo de programación del host y representan los siguientes niveles crecientes de amenaza de confiabilidad:  
@@ -46,13 +47,13 @@ ms.locfileid: "68028063"
   
 -   Podría provocar la desestabilización del propio proceso de servidor.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite el uso de un tipo o miembro que tiene un **HostProtectionAttribute** que especifica un **System.Security.Permissions.HostProtectionResource** enumeración con un valor de  **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**,  **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **sincronización**, o **deinterfazdeusuario**. De esta forma, se evita que los ensamblados llamen a miembros que habiliten el estado compartido, ejecuten la sincronización, puedan causar una pérdida de recursos al terminar o afecten la integridad de los procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no permite el uso de un tipo o miembro que tiene un **HostProtectionAttribute** que especifica una enumeración **System. Security. Permissions. HostProtectionResource** con un valor de **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**o **UI**. De esta forma, se evita que los ensamblados llamen a miembros que habiliten el estado compartido, ejecuten la sincronización, puedan causar una pérdida de recursos al terminar o afecten la integridad de los procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="disallowed-types-and-members"></a>Tipos y miembros no permitidos  
- Los temas siguientes identifican los tipos y miembros cuyos **HostProtectionResource** valores no están permitidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los temas siguientes se identifican los tipos y miembros cuyos valores de **HostProtectionResource** no se permiten.  
   
 > [!NOTE]  
->  Las listas de estos temas se generaron a partir de los ensamblados admitidos.  Para obtener más información, consulte [admite bibliotecas de .NET Framework](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Las listas de estos temas se generaron a partir de los ensamblados admitidos.  Para obtener más información, consulte [supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Miembros y tipos no permitidos en Microsoft.VisualBasic.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
@@ -61,18 +62,18 @@ ms.locfileid: "68028063"
  [Miembros y tipos no permitidos en mscorlib.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
  Enumera los tipos y miembros en mscorlib.dll cuyos valores HPA no se permiten.  
   
- [Tipos y miembros no permitidos en System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
+ [Tipos y miembros no permitidos en System. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
  Enumera los tipos y miembros en System.dll cuyos valores HPA no se permiten.  
   
  [Tipos y miembros no permitidos en System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
  Enumera los tipos y miembros en System.Data.dll cuyos valores HPA no se permiten.  
   
- [Tipos y miembros no permitidos en System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
+ [Tipos y miembros no permitidos en System. Core. dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
  Enumera los tipos y miembros en System.Core.dll cuyos valores HPA no se permiten.  
   
-## <a name="see-also"></a>Vea también  
- [Seguridad de acceso del código de integración de CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [Restricciones del modelo de programación de integración de CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
+## <a name="see-also"></a>Véase también  
+ [Seguridad de acceso del código de integración CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+ [Restricciones del modelo de programación de la integración CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Crear un ensamblado](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

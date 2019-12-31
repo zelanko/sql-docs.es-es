@@ -1,5 +1,5 @@
 ---
-title: Temas de procedimientos de generación de perfiles de rendimiento del controlador ODBC (ODBC) | Microsoft Docs
+title: Generar perfiles del rendimiento del controlador ODBC
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,29 +11,29 @@ ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 782558d3c8325f1886310fea4d0291982544d16c
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: aad2036f5b72f268d09092a2761f7c1d2ab73456
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73791036"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254712"
 ---
 # <a name="profiling-odbc-driver-performance-odbc"></a>Generar perfiles del rendimiento del controlador ODBC (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos opciones específicas del controlador para generar perfiles de rendimiento del controlador.  
   
- El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede registrar las estadísticas de rendimiento en el archivo. El archivo de registro es un archivo delimitado por tabuladores que puede analizarse en cualquier hoja de cálculo que admita archivos delimitados por tabuladores, como Microsoft Excel.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC puede registrar las estadísticas de rendimiento en el archivo. El archivo de registro es un archivo delimitado por tabuladores que puede analizarse en cualquier hoja de cálculo que admita archivos delimitados por tabuladores, como Microsoft Excel.  
   
  El controlador también puede registrar consultas de ejecución prolongada (consultas que no reciben ninguna respuesta del servidor durante un intervalo de tiempo especificado). Los programadores y administradores de bases de datos pueden analizar después estas consultas.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Datos &#40;de rendimiento del controlador de perfil ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data.md)  
+-   [Datos de rendimiento del controlador de perfil &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data.md)  
   
--   [Registrar consultas &#40;de ejecución prolongada ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
+-   [Registrar consultas de ejecución prolongada &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Temas de procedimientos de ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

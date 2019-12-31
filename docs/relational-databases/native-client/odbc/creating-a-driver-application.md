@@ -1,5 +1,5 @@
 ---
-title: Crear una aplicación de controlador ODBC de SQL Server Native Client | Microsoft Docs
+title: Crear SQL Native Client aplicación ODBC
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,12 +24,12 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8960a75ed04e1e12f39a5f74002af6702b432480
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 0cf46cdf2fb658623a549f3eef160ae6293ab9c7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73761263"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247389"
 ---
 # <a name="creating-a-driver-application"></a>Crear una aplicación de controlador
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "73761263"
   
 |Componente|Función|  
 |---------------|--------------|  
-|Aplicación|Llama a las funciones ODBC para comunicarse con un origen de datos ODBC, envía instrucciones SQL y procesa los conjuntos de resultados.|  
+|Application|Llama a las funciones ODBC para comunicarse con un origen de datos ODBC, envía instrucciones SQL y procesa los conjuntos de resultados.|  
 |Administrador de controladores|Administra la comunicación entre una aplicación y todos los controladores ODBC usados por la aplicación.|  
 |Controlador|Procesa todas las llamadas de función ODBC desde la aplicación, se conecta a un origen de datos, pasa instrucciones SQL de la aplicación al origen de datos y devuelve resultados a la aplicación. Si es necesario, el controlador traduce el SQL de ODBC de la aplicación al SQL nativo usado por el origen de datos.|  
 |Origen de datos|Contiene toda la información que un controlador necesita para obtener acceso a una determinada instancia de datos en un DBMS.|  
   
- Una aplicación que utiliza el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para comunicarse con una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza las siguientes tareas:  
+ Una aplicación que utiliza el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client para comunicarse con una instancia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de realiza las siguientes tareas:  
   
 -   Se conecta con un origen de datos.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73761263"
   
 -   Termina la conexión con el origen de datos.  
   
- Una aplicación más compleja escrita para el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client también puede realizar las siguientes tareas:  
+ Una aplicación más compleja escrita para el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client también puede realizar las siguientes tareas:  
   
 -   Usar cursores para controlar la ubicación en un conjunto de resultados.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "73761263"
   
 -   Realizar operaciones de copia masiva.  
   
--   Administrar operaciones de datos de gran tamaño (**VARCHAR (Max)** , **nvarchar (Max)** y **varbinary (Max)** Columns  
+-   Administrar operaciones de datos de gran tamaño (**VARCHAR (Max)**, **nvarchar (Max)** y **varbinary (Max)** Columns  
   
 -   Usar la lógica de reconexión para facilitar la conmutación por error al configurar la creación de reflejo de la base de datos.  
   
@@ -77,21 +77,21 @@ ms.locfileid: "73761263"
   
  Para realizar llamadas a funciones ODBC, una aplicación C o C++ debe incluir los archivos de encabezado sql.h, sqlext.h y sqltypes.h. Para realizar llamadas a las funciones API del instalador ODBC, una aplicación debe incluir el archivo de encabezado odbcinst.h. Una aplicación ODBC Unicode debe incluir el archivo de encabezado sqlucode.h. Las aplicaciones ODBC deben estar vinculadas al archivo odbc32.lib. Las aplicaciones ODBC que llaman a las funciones API del instalador ODBC deben estar vinculadas al archivo odbccp32.lib. Estos archivos se incluyen en Windows Platform SDK.  
   
- Muchos controladores ODBC, incluido el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ofrecen extensiones ODBC específicas del controlador. Para beneficiarse de las extensiones específicas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del controlador ODBC de Native Client, una aplicación debe incluir el archivo de encabezado SQLNCLI. h. Este archivo de encabezado incluye:  
+ Muchos controladores ODBC, incluido el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client, ofrecen extensiones ODBC específicas del controlador. Para aprovechar las extensiones [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] específicas del controlador ODBC de Native Client, una aplicación debe incluir el archivo de encabezado SQLNCLI. h. Este archivo de encabezado incluye:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] atributos de conexión específicos del controlador ODBC de Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de conexión específicos del controlador ODBC de Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] atributos de instrucción específicos del controlador ODBC de Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de instrucción específicos del controlador ODBC de Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] atributos de columna específicos del controlador ODBC de Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Atributos de columna específicos del controlador ODBC de Native Client.  
   
 -   Tipos de datos específicos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Tipos de datos definidos por el usuario específicos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) específicos del controlador ODBC de Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Tipos de [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) específicos del controlador ODBC de Native Client.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] campos de diagnóstico del controlador ODBC de Native Client.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Campos de diagnóstico del controlador ODBC de Native Client.  
   
 -   Códigos de función dinámica de diagnóstico específicos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -103,7 +103,7 @@ ms.locfileid: "73761263"
   
 -   Llame a las funciones API de metadatos de consulta distribuida para obtener listas de servidores vinculados y sus catálogos.  
   
- Cualquier aplicación de C++ C o ODBC que use la característica de copia masiva del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client debe estar vinculada con el archivo sqlncli11. lib. Las aplicaciones que llaman a las funciones API de metadatos de consulta distribuida también deben vincularse a sqlncli11.lib. Los archivos SQLNCLI. h y sqlncli11. lib se distribuyen como parte de las herramientas del desarrollador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los directorios Include y Lib de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deberían estar en las rutas de acceso LIB e INCLUDE del compilador, como en el siguiente ejemplo:  
+ Cualquier aplicación ODBC de C o C++ que use la característica de copia masiva [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del controlador ODBC de Native Client debe estar vinculada al archivo sqlncli11. lib. Las aplicaciones que llaman a las funciones API de metadatos de consulta distribuida también deben vincularse a sqlncli11.lib. Los archivos SQLNCLI. h y sqlncli11. lib se distribuyen como parte de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las herramientas del desarrollador. Los directorios Include y Lib de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deberían estar en las rutas de acceso LIB e INCLUDE del compilador, como en el siguiente ejemplo:  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
@@ -118,7 +118,7 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
   
 -   [Aplicaciones multiproceso](../../../relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md)  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

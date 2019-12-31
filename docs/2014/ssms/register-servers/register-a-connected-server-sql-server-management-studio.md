@@ -1,6 +1,6 @@
 ---
-title: Registrar un servidor conectado (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Registrar un servidor conectado
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], register connected servers
 - connected server registrations [SQL Server]
 ms.assetid: 77deb5f5-0f80-484f-8b8b-29afa67ec18f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80dbd927f0a1b008e48fda7fcbd4a7e75b7fbaf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191940"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241337"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Registrar un servidor conectado (SQL Server Management Studio)
   En este tema se describe cómo registrar servidores en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Mediante el registro del servidor, puede guardar la información de conexión correspondiente a los servidores a los que accede con frecuencia. Un servidor puede registrarse antes de conectarlo o cuando se conecta desde el Explorador de objetos.  
@@ -31,7 +31,7 @@ ms.locfileid: "63191940"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   
 #### <a name="to-register-a-connected-server"></a>Para registrar un servidor conectado  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63191940"
      **Descripción del servidor**  
      Escriba una descripción opcional del servidor. El número máximo de caracteres permitido es 250.  
   
-     **Seleccione un grupo de servidores**  
+     **Seleccionar un grupo de servidores**  
      Seleccione el grupo de servidores donde desea guardar el registro del servidor.  
   
      **Nuevo grupo**  

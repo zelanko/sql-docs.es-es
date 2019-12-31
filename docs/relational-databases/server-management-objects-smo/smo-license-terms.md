@@ -1,7 +1,6 @@
 ---
-title: 'SQL Server objetos de administración compartida (SMO): términos de licencia | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/08/2018
+title: Términos de licencia de los objetos de administración compartida (SMO) de SQL Server
+ms.date: 12/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssms
@@ -10,17 +9,17 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64834ed8f35186032a3abe8f82733e4a437fffdf
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70911177"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75238650"
 ---
-# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Términos de licencia de SQL Server objetos de administración compartida (SMO)
+# <a name="sql-server-shared-management-objects-smo-license-terms"></a>Términos de licencia de los objetos de administración compartida (SMO) de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="microsoft-software-license-terms"></a>TÉRMINOS DE LICENCIA DEL SOFTWARE DE MICROSOFT
+## <a name="microsoft-software-license-terms"></a>TÉRMINOS DE LICENCIA DE SOFTWARE DE MICROSOFT
 **OBJETOS DE ADMINISTRACIÓN COMPARTIDA DE MICROSOFT SQL SERVER 2017**
 
 ---
@@ -32,31 +31,31 @@ Los presentes términos de licencia constituyen un contrato entre Microsoft Corp
 
 de Microsoft para este software, a menos que haya otros términos que acompañen a dichos elementos. En tal caso, se aplicarán esos otros términos.
 
-**AL HACER USO DEL SOFTWARE, ESTARÁ ACEPTANDO ESTOS TÉRMINOS. SI NO LOS ACEPTA, NO USE EL SOFTWARE.**
+**AL USAR EL SOFTWARE, ACEPTA ESTOS TÉRMINOS. SI NO LOS ACEPTA, NO USE EL SOFTWARE.**
 
 ---
-**Si cumple los presentes términos de licencia, dispondrá de los derechos siguientes.**
+**Si cumple con estos términos de licencia, tendrá los derechos siguientes.**
 
 **1. DERECHOS DE INSTALACIÓN Y USO.**
 
 &nbsp;&nbsp;Puede instalar y usar cualquier número de copias del software en sus dispositivos para diseñar, desarrollar y probar sus programas.
 
-**2.    REQUISITOS DE LICENCIA Y/O DERECHOS DE USUARIO ADICIONALES.**
+**2. REQUISITOS DE LICENCIA Y/O DERECHOS DE USO ADICIONALES.**
 
-&nbsp;&nbsp;**a.    Código distribuible.**
+&nbsp;&nbsp;**Código. distribuible.**
 
-&nbsp;&nbsp;&nbsp;&nbsp;**i.    Derecho de uso y distribución. Si cumple con los términos siguientes:**
+&nbsp;&nbsp;&nbsp;&nbsp;**i. derecha para usar y distribuir. Si cumple con los términos siguientes:**
 *   Puede copiar y distribuir el formulario de código objeto del software ("código distribuible") en los programas que desarrolle; etc
 *   Puede permitir que los distribuidores de sus programas copien y distribuyan el Código distribuible como parte de esos programas.
 
-&nbsp;&nbsp;&nbsp;&nbsp;**ii.   Requisitos de distribución. Para distribuir cualquier Código distribuible, deberá**
+&nbsp;&nbsp;&nbsp;&nbsp;**II. requisitos de distribución. Para cualquier código distribuible que distribuya, debe**
 * agregarle la funcionalidad primaria relevante en sus programas;
 * para cualquier código distribuible que tenga una extensión de nombre de archivo. dll, distribuya solo los resultados de ejecutar este tipo de código distribuible a través de un enlazador con el programa;
 * exigir a los distribuidores y usuarios finales externos que acepten los términos que lo protegen, al menos en lo que respecta al presente contrato; 
 * mostrar el aviso de copyright válido en los programas; y
 * indemnizar, defender y eximir a Microsoft de cualquier reclamación, incluidos los honorarios de abogados, relacionados con la distribución o el uso de sus programas.
 
-&nbsp;&nbsp;&nbsp;&nbsp;**iii.  Limitaciones de distribución. No puede**
+&nbsp;&nbsp;&nbsp;&nbsp;**III. restricciones de distribución. No puede**
 * modificar ningún aviso de copyright, marca comercial o patente en el Código distribuible;
 * usar las marcas comerciales de Microsoft en los nombres de sus programas o de forma que sugiera que los programas provienen de Microsoft o que están aprobados por Microsoft;
 * incluir el Código distribuible en programas dañinos, engañosos o ilegales ni
@@ -65,43 +64,43 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
   * que otros tengan derecho a modificarlo.
 
 
-**3. ALCANCE DE LA LICENCIA.** El software se cede sujeto a licencia y no es objeto de venta. A menos que la ley aplicable le otorgue más derechos, Microsoft se reserva todos los demás derechos no otorgados expresamente en este contrato, ya sea por implicación, desestimación o de otro modo. Puede usar el software solo como se permite expresamente en este contrato. Si lo hace, debe cumplir con todas las limitaciones técnicas del software que solo le permiten usarlo de ciertas maneras. No puede hacer lo siguiente:
+**3. ÁMBITO DE LA LICENCIA.** El software no se vende, sino que está sujeto a licencia. A menos que la ley aplicable le otorgue más derechos, Microsoft se reserva todos los demás derechos no otorgados expresamente en este contrato, ya sea por implicación, desestimación o de otro modo. Puede usar el software solo como se permite expresamente en este contrato. Si lo hace, debe cumplir con todas las limitaciones técnicas del software que solo le permiten usarlo de ciertas maneras. No puede hacer lo siguiente:
 
 - Solucionar cualquier limitación técnica del software.
 - Aplicar técnicas de ingeniería inversa, descompilar o desensamblar el software, excepto y únicamente en la medida en que la legislación aplicable lo permita expresamente a pesar de esta limitación.
 - Hacer más copias del software de las que se especifican en este contrato, o permitidas por la ley aplicable a pesar de esta limitación.
 - Comparta, publique, alquile o conceda el software, o bien proporcione el software como una solución independiente hospedada para que lo usen otros usuarios.
 
-**4.    NOTIFICACIONES DE TERCEROS.** El software puede incluir componentes de terceros que tengan avisos legales independientes o que se rijan por otros contratos, que pueden estar descritos en el archivo ThirdPartyNotices que acompaña al software.  Aunque estos componentes se rijan por otros contratos, también se aplican las limitaciones, la declinación de responsabilidades y las exclusiones de daños siguientes.
+**4. AVISOS DE TERCEROS.** El software puede incluir componentes de terceros que tengan avisos legales independientes o que se rijan por otros contratos, que pueden estar descritos en el archivo ThirdPartyNotices que acompaña al software.  Aunque estos componentes se rijan por otros contratos, también se aplican las limitaciones, la declinación de responsabilidades y las exclusiones de daños siguientes.
 
-**5.    COPIA DE SEGURIDAD.** Puede realizar una única copia de seguridad del software. Solo podrá utilizarla para volver a instalar el software.
+**5. COPIA DE SEGURIDAD.** Puede realizar una única copia de seguridad del software. Solo podrá utilizarla para volver a instalar el software.
 
-**6.    DOCUMENTACIÓN.** Toda persona que tenga acceso válido a su equipo o a la red interna puede copiar y utilizar la documentación a efectos internos de consulta.
+**6. DOCUMENTACIÓN.** Toda persona que tenga acceso válido a su equipo o a la red interna puede copiar y utilizar la documentación a efectos internos de consulta.
 
-**7.    RESTRICCIONES EN MATERIA DE EXPORTACIÓN.** El software está sujeto a las leyes y a los reglamentos en materia de exportación de Estados Unidos. Debe cumplir con todas las leyes y disposiciones en materia de exportación internacionales y nacionales que sean de aplicación para el software. Estas leyes incluyen restricciones de los destinos, usuarios finales y uso final. Para obtener más información, consulte www.microsoft.com/exporting.
+**7. RESTRICCIONES DE EXPORTACIÓN.** El software está sujeto a las leyes y a los reglamentos en materia de exportación de Estados Unidos. Debe cumplir con todas las leyes y disposiciones en materia de exportación internacionales y nacionales que sean de aplicación para el software. Estas leyes incluyen restricciones de los destinos, usuarios finales y uso final. Para obtener más información, [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)vea.
 
-**8.    SERVICIOS DE SOPORTE TÉCNICO.** Dado que este software es "tal cual", no podemos proporcionar servicios de soporte técnico para él.
+**8. SERVICIOS DE SOPORTE TÉCNICO.** Dado que este software es "tal cual", no podemos proporcionar servicios de soporte técnico para él.
 
-**9.    CONTRATO**COMPLETO. Este contrato, así como los términos de suplementos, actualizaciones, servicios basados en Internet y servicios de soporte técnico que use, constituyen el contrato completo del software y los servicios de soporte técnico.
+**9. contrato completo**. Este contrato, así como los términos de suplementos, actualizaciones, servicios basados en Internet y servicios de soporte técnico que use, constituyen el contrato completo del software y los servicios de soporte técnico.
 
-**10.   LEGISLACIÓN APLICABLE.**
+**10. LEGISLACIÓN APLICABLE.**
 
-&nbsp;&nbsp;**a.    Estados Unidos de América.** Si adquirió el software en los Estados Unidos, es la ley estatal de Washington la que rige la interpretación de este contrato y se aplica a las reclamaciones por incumplimiento del mismo, independientemente del conflicto de principios legales. Para el resto de reclamaciones, será aplicable la legislación de su estado de residencia, incluidas las reclamaciones en virtud de las leyes estatales en materia de protección al consumidor, competencia desleal y responsabilidad extracontractual.
+&nbsp;&nbsp;**a. Estados Unidos.** Si adquirió el software en los Estados Unidos, es la ley estatal de Washington la que rige la interpretación de este contrato y se aplica a las reclamaciones por incumplimiento del mismo, independientemente del conflicto de principios legales. Para el resto de reclamaciones, será aplicable la legislación de su estado de residencia, incluidas las reclamaciones en virtud de las leyes estatales en materia de protección al consumidor, competencia desleal y responsabilidad extracontractual.
 
-&nbsp;&nbsp;**b.    Fuera de los Estados Unidos.** Si adquirió el software en otro país, se aplicarán las leyes del país en el que usted vive.
+&nbsp;&nbsp;**b. fuera del Estados Unidos.** Si adquirió el software en otro país, se aplicarán las leyes del país en el que usted vive.
 
-**11.   EFECTO LEGAL.** Este contrato describe determinados derechos legales. Usted puede tener otros derechos conforme a las leyes de su estado o país. También puede tener derechos respecto a la parte de la que adquirió el software. Este contrato no cambia sus derechos bajo las leyes de su país o estado si dichas leyes no permiten que así lo haga.
+**11. EFECTO LEGAL.** En este contrato se describen determinados derechos legales. Usted puede tener otros derechos conforme a las leyes de su estado o país. También puede tener derechos respecto a la parte de la que adquirió el software. Este contrato no cambia sus derechos bajo las leyes de su país o estado si dichas leyes no permiten que así lo haga.
 
-**12.   EXCLUSIÓN DE GARANTÍA. LA LICENCIA DEL SOFTWARE SE OTORGA "TAL CUAL". USTED ACEPTA EL RIESGO DE UTILIZARLO. MICROSOFT NO PROPORCIONA GARANTÍAS O CONDICIONES EXPRESAS. ES POSIBLE QUE LA LEGISLACIÓN LOCAL LE OTORGUE DERECHOS DE CONSUMIDOR O GARANTÍAS LEGALES ADICIONALES QUE EL PRESENTE CONTRATO NO PUEDA MODIFICAR. EN LA MEDIDA EN QUE ASÍ LO PERMITA LA LEGISLACIÓN LOCAL, MICROSOFT EXCLUYE LAS GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD, IDONEIDAD PARA UN FIN PARTICULAR Y AUSENCIA DE INFRACCIÓN DE DERECHOS.**
+**12. RENUNCIA DE GARANTÍA. EL SOFTWARE SE CONCEDE BAJO LICENCIA "TAL CUAL". USTED ASUME EL RIESGO DE USARLA. MICROSOFT NO PROPORCIONA GARANTÍAS NI CONDICIONES EXPRESAS. PUEDE TENER DERECHOS DE CONSUMIDOR ADICIONALES O GARANTÍAS ESTATUTARIAS EN VIRTUD DE LA LEGISLACIÓN LOCAL QUE ESTE CONTRATO NO PUEDE CAMBIAR. EN LA MEDIDA EN QUE LO PERMITA LA LEGISLACIÓN LOCAL, MICROSOFT EXCLUYE LAS GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y AUSENCIA DE INFRACCIÓN.**
 
 **PARA AUSTRALIA: usted cuenta con garantías legales conforme a la ley australiana del consumidor y nada en estos términos pretende afectar a dichos derechos.**
 
-**13.   LIMITACIÓN Y EXCLUSIÓN DE RECURSOS E INDEMNIZACIONES. PUEDE RECUPERAR DE MICROSOFT Y SUS DISTRIBUIDORES SOLO LOS DAÑOS DIRECTOS HASTA LA CANTIDAD DE 5 DÓLARES ESTADOUNIDENSES. NO PODRÁ OBTENER INDEMNIZACIÓN ALGUNA POR DAÑOS DE OTRA ÍNDOLE, INCLUIDOS LOS DAÑOS CONSECUENCIALES, POR LUCRO CESANTE, ESPECIALES, INDIRECTOS O INCIDENTALES.**
+**13. LIMITACIÓN Y EXCLUSIÓN DE RECURSOS Y DAÑOS. PUEDE RECUPERAR DE MICROSOFT Y SUS PROVEEDORES SOLO LOS DAÑOS DIRECTOS HASTA $5,00 ESTADOUNIDENSES. NO SE PUEDE RECUPERAR NINGÚN OTRO DAÑO, INCLUIDOS LOS CONSECUENTES, PÉRDIDAS DE BENEFICIOS, ESPECIALES, INDIRECTOS O INCIDENTALES.**
 Esta limitación se aplica a
 * cualquier tema relacionado con el software, servicios, contenido (incluido el código) en sitios de Internet de terceros, o programas de terceros, así como a
 * reclamaciones por incumplimiento de contrato, incumplimiento de garantía, condición impuesta, responsabilidad estricta, negligencia u otro agravio hasta el límite permitido por la ley vigente.
 
-También se aplica incluso si Microsoft conocía o debería haber conocido la posibilidad de dichos daños. Algunos estados no admiten la exclusión o limitación de la responsabilidad por daños consecuentes o incidentales, por lo que es posible que la limitación o las exclusiones anteriores no sean de aplicación a su caso.
+Esto también se aplicaría aunque Microsoft conociera o debiera conocer la posibilidad de tales daños. Algunos estados no admiten la exclusión o limitación de la responsabilidad por daños consecuentes o incidentales, por lo que es posible que la limitación o las exclusiones anteriores no sean de aplicación a su caso.
 
 > [!NOTE]
 > La sección 3 se actualizó el 8 de agosto de 2018.

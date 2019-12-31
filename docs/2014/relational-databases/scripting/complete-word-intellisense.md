@@ -1,6 +1,6 @@
 ---
-title: Palabra completa (IntelliSense) | Microsoft Docs
-ms.custom: ''
+title: Palabra completa (IntelliSense)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbfa7853e1b12bc31b5676e3b64082a57a3c800a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9606d85d18418df94501a91ddfb888915302788
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064154"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244916"
 ---
 # <a name="complete-word-intellisense"></a>Palabra completa (IntelliSense)
   La opción Palabra completa de [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense escribe el resto de una variable, un comando o un nombre de función una vez que se han especificado los suficientes caracteres para identificar de forma exclusiva esos elementos.  

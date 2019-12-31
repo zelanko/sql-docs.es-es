@@ -1,6 +1,6 @@
 ---
-title: Ventanas Resultados de la búsqueda | Microsoft Docs
-ms.custom: ''
+title: Ventanas Resultados de la búsqueda
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,15 +14,15 @@ ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2b5561ce30a638ed526d2a807820222a156c6e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090496"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245130"
 ---
 # <a name="find-results-windows"></a>Ventanas Resultados de la búsqueda
-  Las dos ventanas Resultados de la búsqueda muestran las coincidencias encontradas utilizando las pestañas **Buscar en archivos** o **Reemplazar en archivos** del cuadro de diálogo **Buscar y reemplazar** . El comando **Opciones de resultados** de **Buscar en archivos** y **Reemplazar en archivos** le permite elegir la ventana Resultados de la búsqueda donde desea que se muestren todas las coincidencias encontradas.  
+  Las dos ventanas resultados de la búsqueda muestran las coincidencias encontradas al usar las pestañas **Buscar en archivos** o **reemplazar en archivos** del cuadro de diálogo **Buscar y reemplazar** . El comando **Opciones de resultados** de **Buscar en archivos** y **Reemplazar en archivos** le permite elegir la ventana Resultados de la búsqueda donde desea que se muestren todas las coincidencias encontradas.  
   
  La ventana Resultados de la búsqueda seleccionada se abrirá automáticamente cada vez que se encuentren coincidencias. Para mostrar la ventana Resultados de la búsqueda de forma manual, haga clic en **Otras ventanas** en el menú **Ver** y, a continuación, haga clic en **Resultados de la búsqueda 1** o **Resultados de la búsqueda 2**.  
   
@@ -34,16 +34,16 @@ ms.locfileid: "66090496"
  **marca de página + flecha arriba**  
  Se desplaza a la línea donde se ha encontrado la coincidencia seleccionada.  
   
- **página + flecha izquierda**  
+ **Página + flecha izquierda**  
  Se desplaza a la línea de la coincidencia anterior.  
   
- **página + flecha derecha**  
+ **Página + flecha derecha**  
  Se desplaza a la línea de la siguiente coincidencia.  
   
  **Borrar todo**  
  Quita todas las coincidencias de la lista **Resultados** .  
   
-## <a name="shortcut-keys"></a>Teclas de acceso directo  
+## <a name="shortcut-keys"></a>Teclas de método abreviado  
  Las teclas de acceso directo que se muestran a continuación le ayudarán a navegar rápidamente por las coincidencias encontradas.  
   
  CTRL+INICIO  

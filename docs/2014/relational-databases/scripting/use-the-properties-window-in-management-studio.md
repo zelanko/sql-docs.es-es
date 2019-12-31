@@ -1,6 +1,6 @@
 ---
-title: Usar la ventana Propiedades en Management Studio | Microsoft Docs
-ms.custom: ''
+title: Utilizar la ventana Propiedades en Management Studio
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9095bb81099c2e84d087cb92991c0a1757376ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddcb099e81ef99ff3a2f0d0cf7bbf23adc0bc16b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063247"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242972"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Utilizar la ventana Propiedades en Management Studio
   La ventana Propiedades describe el estado de un elemento de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como una conexión o un operador de plan de presentación, además de proporcionar información acerca de objetos de la base de datos, como tablas, vistas y diseñadores.  
@@ -50,7 +50,7 @@ ms.locfileid: "66063247"
   
 4.  En la pestaña **Plan de ejecución** del Editor de consultas de SQL, haga clic en los iconos de los operadores para ver información sobre éstos en la ventana Propiedades.  
   
-## <a name="see-also"></a>Vea también  
- [Ventana Propiedades &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
+## <a name="see-also"></a>Véase también  
+ [&#40;Management Studio de la ventana Propiedades&#41;](../../ssms/properties-window-management-studio.md)  
   
   

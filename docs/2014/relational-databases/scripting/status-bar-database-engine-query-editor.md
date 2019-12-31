@@ -1,6 +1,6 @@
 ---
-title: Barra de estado (Editor de consultas del motor de base de datos) | Microsoft Docs
-ms.custom: ''
+title: Barra de estado (Editor de consultas del motor de base de datos)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,58 +10,58 @@ ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31d482f5972358900da30816f88d7225c863c15c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5fe864d5f4f622237c5c7b92e5a1e717c26692ec
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063627"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243147"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra de estado (Editor de consultas del motor de base de datos)
   La barra de estado de las ventanas del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede codificarse por colores para indicar la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a la que está conectada cada ventana.  
   
-1.  **Antes de empezar:**  [Colores de la barra de estado](#StatusBarColors)  
+1.  **Antes de empezar:**[colores](#StatusBarColors) de la barra de estado    
   
-2.  **Para establecer un color de estado del servidor en:**  [Explorador de objetos](#SetOEServerColor), [Servidor registrado](#SetRegServerColor)  
+2.  **Para establecer un color de estado de servidor en:**  [Explorador de objetos](#SetOEServerColor), [servidor registrado](#SetRegServerColor)  
   
-3.  **Para usar un color de estado:**  [Abrir el editor de consultas usando un color de servidor](#OpenServerColor), [Abrir un editor de consultas especificando un color de estado](#OpenSpecColor)  
+3.  **Para usar un color de estado:**  [abrir el editor de consultas con un color de servidor](#OpenServerColor), [abrir un editor de consultas especificando un color de estado](#OpenSpecColor)  
   
-##  <a name="StatusBarColors"></a> Colores de la barra de estado  
+##  <a name="StatusBarColors"></a>Colores de la barra de estado  
  Puede asociar el color de una barra de estado con un determinado nodo del servidor en el **Explorador de objetos** o en los **Servidores registrados**. Los colores solo se pueden especificar en los nodos del servidor conectados a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)], no en los nodos del servidor de otras tecnologías de SQL Server. También puede especificar un color personalizado para la barra de estado cada vez que conecte una nueva ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Puede abrir una ventana del Editor de consultas mediante el color de estado definido en el nodo de servidor o especificar un color único para la ventana del editor.  
   
  Si desea establecer un color de barra de estado personalizado para un nodo de servidor en el Explorador de objetos, deberá hacerlo al realizar la conexión. Para cambiar el color asociado a un nodo de servidor existente, deberá desconectar y conectarse de nuevo especificando el nuevo color.  
   
-##  <a name="SetOEServerColor"></a> Establecer el color de estado de un servidor en el Explorador de objetos  
- **Para establecer el color de estado del servidor en el Explorador de objetos**  
+##  <a name="SetOEServerColor"></a>Establecer el color de estado de un servidor en Explorador de objetos  
+ **Para establecer un color de estado de servidor en Explorador de objetos**  
   
-1.  En el **Explorador de objetos**, haga clic en el botón **Conectar** y después seleccione **Motor de base de datos...** .  
+1.  En el **Explorador de objetos**, haga clic en el botón **Conectar** y después seleccione **Motor de base de datos...**.  
   
-2.  En el cuadro de diálogo **Conectar con el servidor**, seleccione **Options >>** .  
+2.  En el cuadro de diálogo **Conectar con el servidor**, seleccione **Options >>**.  
   
 3.  Active la casilla **Usar color personalizado** .  
   
-4.  Para elegir el color, haga clic en el botón **Seleccionar…** .  
+4.  Para elegir el color, haga clic en el botón **Seleccionar…**.  
   
 5.  Seleccione un color básico o personalizado y haga clic en Aceptar.  
   
 6.  Complete el resto de la información de conexión y, a continuación, haga clic en el botón **Conectar** .  
   
-##  <a name="SetRegServerColor"></a> Establecer el color de estado en un servidor registrado  
- **Para establecer el color de estado en un servidor registrado**  
+##  <a name="SetRegServerColor"></a>Establecer el color de estado de un servidor registrado  
+ **Para establecer un color de servidor para un servidor registrado**  
   
-1.  En **Servidores registrados**, haga clic con el botón derecho en el nodo de servidor y después haga clic en **Propiedades...** .  
+1.  En **Servidores registrados**, haga clic con el botón derecho en el nodo de servidor y después haga clic en **Propiedades...**.  
   
 2.  En el cuadro de diálogo **Editar propiedades de registro de servidor** , seleccione la pestaña **Propiedades de conexión** .  
   
 3.  Active la casilla **Usar color personalizado** .  
   
-4.  Para elegir el color, haga clic en el botón **Seleccionar…** .  
+4.  Para elegir el color, haga clic en el botón **Seleccionar…**.  
   
 5.  Seleccione un color básico o personalizado y haga clic en Aceptar.  
   
 6.  Haga clic en el botón **Guardar** del cuadro de diálogo **Editar propiedades de registro de servidor** .  
   
-##  <a name="OpenServerColor"></a> Abrir un editor mediante un color de servidor  
+##  <a name="OpenServerColor"></a>Abrir un editor mediante un color de servidor  
  **Para abrir una ventana del editor mediante un color de servidor**  
   
 -   Haga clic con el botón derecho en un nodo del servidor en el **Explorador de objetos** o en **Servidores registrados**y seleccione **Nueva consulta**.  
@@ -70,22 +70,22 @@ ms.locfileid: "66063627"
   
 -   La barra de estado de la ventana del editor usará el color definido para el servidor asociado.  
   
-##  <a name="OpenSpecColor"></a> Abrir un editor especificando un color de estado  
+##  <a name="OpenSpecColor"></a>Abrir un editor especificando un color de estado  
  **Para abrir una ventana del editor especificando un color de estado**  
   
 -   Abra el menú **Archivo** , seleccione **Nuevo**y, a continuación, seleccione **Consulta de motor de base de datos**.  
   
--   En el cuadro de diálogo **Conectar con el servidor**, seleccione **Options >>** .  
+-   En el cuadro de diálogo **Conectar con el servidor**, seleccione **Options >>**.  
   
 -   Active la casilla **Usar color personalizado** .  
   
--   Para elegir el color, haga clic en el botón **Seleccionar…** .  
+-   Para elegir el color, haga clic en el botón **Seleccionar…**.  
   
 -   Seleccione un color básico o personalizado y haga clic en Aceptar.  
   
 -   Complete el resto de la información de conexión y, a continuación, haga clic en el botón **Conectar** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

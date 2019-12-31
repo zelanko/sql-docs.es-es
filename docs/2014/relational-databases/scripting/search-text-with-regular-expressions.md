@@ -1,6 +1,6 @@
 ---
-title: Buscar texto mediante expresiones regulares | Microsoft Docs
-ms.custom: ''
+title: Buscar texto mediante expresiones regulares
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81df6d31819594611933d3187f1a6f6bcbda46cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063770"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243320"
 ---
 # <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
   Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
@@ -49,8 +49,9 @@ ms.locfileid: "66063770"
 |Salto de línea|\n|Devuelve un salto de línea independiente de la plataforma. En una expresión de Reemplazar, inserta un salto de línea.|  
 |Un carácter cualquiera del conjunto|[]|Devuelve cualquier carácter situado dentro de []. Para especificar un intervalo de caracteres, escriba los caracteres inicial y final separados por un guión (-), como en [a-z].|  
 |Un carácter cualquiera no perteneciente al conjunto|[^...]|Devuelve cualquier carácter que no se encuentre en el juego de caracteres que sigue a ^.|  
-|o bien|&#124;|Devuelve la expresión situada antes o la situada después del símbolo OR (&#124;). Se utiliza fundamentalmente dentro de un grupo. Por ejemplo, (sponge&#124;mud) bath devuelve "sponge bath" y "mud bath".|  
-|Escape|\|Devuelve el carácter que sigue a la barra diagonal inversa (\\) como un literal. Esto permite buscar los caracteres utilizados en la notación de expresiones regulares, como { y ^. Por ejemplo, \\^ busca el carácter ^.|  
+|Or|&#124;|Devuelve la expresión situada antes o la situada después del símbolo OR (&#124;). Se utiliza fundamentalmente dentro de un grupo. Por ejemplo, (sponge&#124;mud) bath devuelve "sponge bath" y "mud bath".|  
+|Escape|
+  \|Devuelve el carácter que sigue a la barra diagonal inversa (\\) como un literal. Esto permite buscar los caracteres utilizados en la notación de expresiones regulares, como { y ^. Por ejemplo, \\^ busca el carácter ^.|  
 |Expresión de etiqueta|{}|Devuelve texto etiquetado con la expresión entre comillas.|  
 |Identificador de C/C++|:i|Devuelve la expresión ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Cadena entre comillas|:q|Devuelve la expresión (("[^"]*")&#124;('[^']\*')).|  
@@ -64,10 +65,11 @@ ms.locfileid: "66063770"
 |Cero o más como mínimo|@|Devuelve cero o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
 |Uno o más como mínimo|#|Devuelve una o más repeticiones de la expresión anterior, devolviendo la menor cantidad de caracteres posible.|  
 |Repetir n veces|^n|Devuelve n repeticiones de la expresión anterior. Por ejemplo, [0-9]^4 devuelve cualquier secuencia de cuatro dígitos.|  
-|Agrupar|()|Agrupa una subexpresión.|  
+|Agrupación|()|Agrupa una subexpresión.|  
 |N-ésimo texto etiquetado|\n|En una expresión **Buscar y reemplazar** , indica el texto devuelto por la expresión con etiqueta enésima, donde n es un número de 1 a 9.<br /><br /> En una expresión de **Reemplazar** , \0 inserta todo el texto coincidente.|  
-|Campo justificado a la derecha|\\(w,n)|En una expresión de **Reemplazar** , justifica a la derecha la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
-|Campo justificado a la izquierda|\\(-w,n)|En una expresión de **Reemplazar** , justifica a la izquierda la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
+|Campo justificado a la derecha|\\(w, n)|En una expresión de **Reemplazar** , justifica a la derecha la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
+|Campo justificado a la izquierda|
+  \\(-w,n)|En una expresión de **Reemplazar** , justifica a la izquierda la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
 |Evitar coincidencia|~(X)|Evita una coincidencia cuando aparece X en este punto de la expresión. Por ejemplo, real~(ity) devuelve "real" de "realty" y "really", pero no "real" de "reality".|  
 |Carácter alfanumérico|:a|Devuelve la expresión ([a-zA-Z0-9]).|  
 |Carácter alfabético|:c|Devuelve la expresión ([a-zA-Z]).|  
@@ -78,7 +80,7 @@ ms.locfileid: "66063770"
 |Escape|\e|Unicode U+001B.|  
 |Bell|\g|Unicode U+0007.|  
 |Retroceso|\h|Unicode U+0008.|  
-|Pestaña|\t|Devuelve un carácter de tabulación, Unicode U+0009.|  
+|Tabulador|\t|Devuelve un carácter de tabulación, Unicode U+0009.|  
 |carácter Unicode|\x#### o \u####|Devuelve un carácter dado por un valor Unicode donde #### son dígitos hexadecimales. Es posible especificar un carácter fuera del plano básico multilingüe (es decir, un suplente) con el punto de código ISO 10646 o con dos puntos de código Unicode que proporcionen los valores del par suplente.|  
   
  En la tabla siguiente se muestra la sintaxis de coincidencias para propiedades estándar de caracteres Unicode. La abreviatura de dos letras es la misma que la que aparece en la base de datos de propiedades de caracteres Unicode. Éstas se pueden especificar como parte de un juego de caracteres. Por ejemplo, la expresión [:Nd:Nl:No] devuelve cualquier tipo de dígito.  
@@ -120,9 +122,9 @@ ms.locfileid: "66063770"
   
 |Expresión|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
-|Alpha|:Al|Devuelve cualquier carácter. Por ejemplo, :Alhe devuelve palabras como "The", "then" y "reached".|  
-|Numérico|:Nu|Devuelve cualquier número o dígito.|  
-|Signo de puntuación|:Pu|Devuelve cualquier signo de puntuación, como ?, @, ', etc.|  
+|Alfa|:Al|Devuelve cualquier carácter. Por ejemplo, :Alhe devuelve palabras como "The", "then" y "reached".|  
+|Numeric|:Nu|Devuelve cualquier número o dígito.|  
+|Signos de puntuación|:Pu|Devuelve cualquier signo de puntuación, como ?, @, ', etc.|  
 |Espacio en blanco|:Wh|Devuelve cualquier tipo de espacio en blanco, incluidos los espacios de publicación y los ideográficos.|  
 |Bidireccional|:Bi|Devuelve caracteres de alfabetos con escritura de derecha a izquierda, como el árabe y el hebreo.|  
 |Hangul|:Ha|Devuelve caracteres de combinación y Hangul Jamos coreanos.|  
@@ -130,6 +132,6 @@ ms.locfileid: "66063770"
 |Katakana|:Ka|Devuelve caracteres Katakana.|  
 |Ideográfico/Han/Kanji|:Id|Devuelve caracteres ideográficos, como Han y Kanji.|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Buscar y reemplazar](search-and-replace.md)   
  [Buscar texto con caracteres comodín](search-text-with-wildcards.md)  

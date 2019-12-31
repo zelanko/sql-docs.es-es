@@ -1,6 +1,6 @@
 ---
-title: Fragmentos de código de Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Fragmentos de código de Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77162f98496ce2a8632ff025652a19b5af593de7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbd2b5d690303521d11fcd0f4888b4dc611406e8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063623"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243118"
 ---
 # <a name="transact-sql-code-snippets"></a>Fragmentos de código de Transact-SQL
   Un fragmento de código [!INCLUDE[tsql](../../includes/tsql-md.md)]es una plantilla que contiene la estructura básica de una instrucción o bloque de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Puede usar los fragmentos como punto de partida para agregar instrucciones en el editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Puede insertar los fragmentos de código predefinidos proporcionados con SQL Server o crear los suyos.  
@@ -25,11 +25,11 @@ ms.locfileid: "66063623"
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Describe cómo insertar un fragmento existente, como un fragmento CREATE TABLE o SELECT.|[Insertar fragmentos de código de Transact-SQL](insert-transact-sql-snippets.md)|  
-|Describe cómo incluir un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en un bloque BEGIN, IF o WHILE.|[Insertar fragmentos de código de Transact-SQL para rodear](insert-surround-with-transact-sql-snippets.md)|  
+|Describe cómo incluir un conjunto de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en un bloque BEGIN, IF o WHILE.|[Insertar fragmentos de código de Transact-SQL](insert-surround-with-transact-sql-snippets.md)|  
 |Describe cómo terminar de compilar una instrucción o bloque de [!INCLUDE[tsql](../../includes/tsql-md.md)] completos después de insertar un fragmento de código.|[Completar fragmentos de código de Transact-SQL](complete-transact-sql-snippets.md)|  
 |Describe cómo compilar sus propios fragmentos personalizados y agregarlos al conjunto de fragmentos de SQL Server.|[Agregar fragmentos de código de Transact-SQL](add-transact-sql-snippets.md)|  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

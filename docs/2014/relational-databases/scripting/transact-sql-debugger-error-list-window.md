@@ -1,6 +1,6 @@
 ---
-title: Lista de errores (ventana, Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Ventana Lista de errores.
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f7649875faf636d2bbc78834c13d4b5b1b99e72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1eb74eca33bc92152ea08fad2303b9a8b4ba48e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063442"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243092"
 ---
 # <a name="error-list-window-management-studio"></a>Ventana Lista de errores (Management Studio)
   La ventana [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** muestra los errores sintácticos y semánticos generados a partir del código de IntelliSense en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -56,11 +56,13 @@ ms.locfileid: "66063442"
  La ventana **Lista de errores** no incluye vínculos a información adicional sobre errores concretos.  
   
 ## <a name="transact-sql-errors-in-management-studio"></a>Errores de Transact-SQL en Management Studio  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muestra los errores para los scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] en las ubicaciones siguientes:  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] muestra los errores para los scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] en las ubicaciones siguientes:  
   
 -   La ventana **Lista de errores** contiene todos los errores sintácticos y semánticos encontrados por IntelliSense en el Editor de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Esta lista de errores se actualiza dinámicamente a medida que se modifican los scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La lista incluye todos los errores encontrados por el editor en cada script de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El editor no detiene el análisis de un archivo al encontrar errores en un script. En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], IntelliSense en el Editor de [!INCLUDE[ssDE](../../includes/ssde-md.md)] no admite todos los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La ventana **Lista de errores** solo contiene los errores de la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] admitida por IntelliSense.  
   
--   La pestaña **Mensajes** de la parte inferior de ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra todos los errores y los mensajes devueltos por [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] al ejecutar un script de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Esta lista no cambia hasta que se ejecuta el script de nuevo. [!INCLUDE[ssDE](../../includes/ssde-md.md)] detiene el análisis de un lote cuando encuentra uno o dos errores de compilación; por lo tanto, es posible que la pestaña **Mensajes** no incluya todos los errores de un script.  
+-   La pestaña **Mensajes** de la parte inferior de ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra todos los errores y los mensajes devueltos por [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] al ejecutar un script de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Esta lista no cambia hasta que se ejecuta el script de nuevo. 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] detiene el análisis de un lote cuando encuentra uno o dos errores de compilación; por lo tanto, es posible que la pestaña **Mensajes** no incluya todos los errores de un script.  
   
  A veces, los errores aparecen en ambas ubicaciones. Por ejemplo, un archivo de script podría tener un error de sintaxis que apareciese en la ventana **Lista de errores**. Si ejecuta el script antes de corregir el error, el analizador de [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede detectar la misma condición y devolver otra copia del mensaje de error en la pestaña **Mensajes** .  
   
@@ -76,7 +78,7 @@ ms.locfileid: "66063442"
  **Descripción**  
  Muestra el texto de la entrada de error. Las descripciones largas se ajustan a las líneas siguientes.  
   
- **Archivo**  
+ **Filesystem**  
  Muestra el nombre del archivo de script que generó el error.  
   
  **Línea**  

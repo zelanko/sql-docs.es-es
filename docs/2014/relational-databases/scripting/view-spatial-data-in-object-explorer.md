@@ -1,6 +1,6 @@
 ---
-title: Ver datos espaciales en el Explorador de objetos | Microsoft Docs
-ms.custom: ''
+title: Ver datos espaciales en el Explorador de objetos
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c791c0c00681fcc28cfb025c8108443bbb9e12a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5ac09bdbc05f406d8d7925af1c9a45346913151
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063205"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242953"
 ---
 # <a name="view-spatial-data-in-object-explorer"></a>Ver datos espaciales en el Explorador de objetos
-  La ventana **Resultados espaciales** del Editor de consultas proporciona herramientas de asignación visual para ver los resultados de los datos espaciales junto con los datos mostrados en formato de cuadrícula en la ventana **Resultados** . Para mostrar datos espaciales en la ventana **Resultados espaciales** , los resultados de la consulta deben contener al menos una columna de datos espaciales con datos de geometría o de geografía.  
+  La ventana **resultados espaciales** del editor de consultas proporciona herramientas de asignación visual para ver los resultados de los datos espaciales, además de los datos mostrados en formato de cuadrícula en la ventana **resultados** . Para mostrar datos espaciales en la ventana **Resultados espaciales** , los resultados de la consulta deben contener al menos una columna de datos espaciales con datos de geometría o de geografía.  
   
 ### <a name="to-view-spatial-data-in-the-spatial-results-window"></a>Para ver datos espaciales en la ventana de resultados espaciales  
   
@@ -38,9 +38,9 @@ ms.locfileid: "66063205"
   
 5.  Ajuste el control deslizante **Zoom** para aumentar el tamaño visual de los elementos asignados. En las formas de polígono, la etiqueta solo está visible cuando la forma es lo suficientemente grande como para contener el texto del rótulo.  
   
-## <a name="see-also"></a>Vea también  
- [Ventana Resultados espaciales](spatial-results-window.md)   
- [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+## <a name="see-also"></a>Véase también  
+ [Ventana resultados espaciales](spatial-results-window.md)   
+ [SQL Server Management Studio de &#40;del editor de consultas de Motor de base de datos&#41;](database-engine-query-editor-sql-server-management-studio.md)   
  [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Pila de llamadas (ventana) | Microsoft Docs
-ms.custom: ''
+title: Ventana de pila de llamadas
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,22 +12,23 @@ ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed3fbddcf91fe63920b349224a0dde73141c6d75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6707dc2e3c317c8b573eada62b2db07adbfa9d4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063519"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243098"
 ---
 # <a name="call-stack-window"></a>Ventana de pila de llamadas
-  La ventana **Pila de llamadas** muestra los módulos de la pila de llamadas y los tipos de datos y valores de los parámetros que se pasen a los módulos. [!INCLUDE[tsql](../../includes/tsql-md.md)] incluyen procedimientos almacenados, funciones y desencadenadores). Para mostrar la pila de llamadas, debe estar en modo de depuración.  
+  La ventana **pila de llamadas** muestra los módulos de la pila de llamadas y los tipos de datos y valores de los parámetros que se pasan a los módulos. 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] incluyen procedimientos almacenados, funciones y desencadenadores). Para mostrar la pila de llamadas, debe estar en modo de depuración.  
   
 ## <a name="task-list"></a>Lista de tareas  
- **Para tener acceso a la ventana Pila de llamadas**  
+ **Para tener acceso a la ventana pila de llamadas**  
   
 -   En el menú **Depurar** , haga clic en **Ventanas**y, a continuación, en **Pila de llamadas**.  
   
- **Para cambiar el marco de Pila de llamadas actual**  
+ **Para cambiar el marco de pila de llamadas actual**  
   
  Puede utilizar cualquiera de los procedimientos siguientes para convertir un marco de pila en el marco actual:  
   
@@ -50,22 +51,22 @@ ms.locfileid: "66063519"
   
  En la fila inferior de la pila de llamadas, **Nombre** muestra la ventana de código fuente del Editor de consultas y el número de línea de la primera llamada en la pila. Para las otras filas, **Nombre** tiene el formato **módulo (instancia.baseDeDatos) (listaDeParámetros) númeroDeLínea**.  
   
- **módulo**  
+ **Módulo**  
  Es el nombre del procedimiento almacenado o función que llamó al marco siguiente.  
   
- **instancia.baseDeDatos**  
+ **Instancia. Database**  
  Es la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y la base de datos que contiene el módulo.  
   
- **listaDeParámetros**  
+ **Listadeparámetros**  
  Indica el tipo de datos, nombre y valor de cada parámetro que se pasa durante la llamada al módulo.  
   
  **LineNumber**  
  Para todas las filas excepto la fila superior, **númeroDeLínea** indica qué línea en el módulo llamó al marco. Para la fila superior, **númeroDeLínea** indica la línea en la que actualmente se centra el depurador.  
   
- **Lenguaje**  
+ **Módulo**  
  Muestra **Transact-SQL** para [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)   
- [Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
+ [Información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
  [Avanzar paso a paso por el código Transact-SQL](step-through-transact-sql-code.md)  

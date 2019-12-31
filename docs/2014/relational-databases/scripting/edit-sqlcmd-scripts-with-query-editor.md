@@ -1,6 +1,6 @@
 ---
-title: Modificar scripts SQLCMD con el Editor de consultas | Microsoft Docs
-ms.custom: ''
+title: Modificar scripts SQLCMD con el Editor de consultas
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b0d7d34da4f26211075de05e19e223bafd0e9429
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064109"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245179"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modificar scripts SQLCMD con el Editor de consultas
   Con el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , es posible escribir y modificar consultas como scripts SQLCMD. Los scripts SQLCMD se usan cuando es necesario procesar comandos del sistema de Windows e instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en el mismo script.  
@@ -76,7 +76,8 @@ ms.locfileid: "66064109"
   
     -   (6 filas afectadas)  
   
-    -   \<La información del directorio>  
+    -   
+  \<La información del directorio>  
   
     -   (4 filas afectadas)  
   
@@ -110,7 +111,8 @@ ms.locfileid: "66064109"
 -   El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es compatible con las variables de entorno y las variables definidas como parte de un script SQLCMD, aunque no es compatible con variables SQLCMD no integradas ni variables **osql** . El procesamiento de SQLCMD por [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] distingue entre mayúsculas y minúsculas para las variables. Por ejemplo, PRINT '$(COMPUTERNAME)' genera el resultado correcto, pero PRINT '$(ComputerName)' devuelve un error.  
   
 > [!CAUTION]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient para la ejecución en los modos normal y SQLCMD. Cuando se ejecuta desde la línea de comandos, SQLCMD utiliza el proveedor OLE DB. Puesto que se pueden aplicar diferentes opciones predeterminadas, es posible observar diferentes comportamientos al ejecutar la misma consulta en el modo SQLCMD de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y en la herramienta SQLCMD.  
+>  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usa [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient para la ejecución en los modos normal y SQLCMD. Cuando se ejecuta desde la línea de comandos, SQLCMD utiliza el proveedor OLE DB. Puesto que se pueden aplicar diferentes opciones predeterminadas, es posible observar diferentes comportamientos al ejecutar la misma consulta en el modo SQLCMD de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y en la herramienta SQLCMD.  
   
 ## <a name="supported-sqlcmd-syntax"></a>Sintaxis SQLCMD compatible  
  El Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] admite las siguientes palabras clave de script SQLCMD:  
@@ -138,7 +140,7 @@ ms.locfileid: "66064109"
 > [!NOTE]  
 >  Tanto para `:error` como para `:out`, `stderr` y `stdout` envían los resultados a la pestaña de mensajes.  
   
- Los comandos SQLCMD que no aparecen en la lista anterior no son compatibles con el Editor de consultas. Cuando se ejecuta un script que contiene palabras clave SQLCMD no compatibles, el Editor de consultas enviará un mensaje al destino, por cada palabra clave no compatible, que indica que se omite el comando *\<comando omitido*>. El script se ejecutará correctamente, aunque los comandos no compatibles se omitirán.  
+ Los comandos SQLCMD que no aparecen en la lista anterior no son compatibles con el Editor de consultas. Cuando se ejecuta un script que contiene palabras clave SQLCMD que no son compatibles, el editor de consultas envía un mensaje que indica que se omite el comando * \<omitido* del comando> "al destino para cada palabra clave no admitida. El script se ejecutará correctamente, aunque los comandos no compatibles se omitirán.  
   
 > [!CAUTION]  
 >  Puesto que no se está iniciando SQLCMD desde la línea de comandos, existen algunas limitaciones al ejecutar el Editor de consultas en modo SQLCMD. No es posible enviar parámetros de línea de comandos como variables y, dado que el Editor de consultas no puede responder a las solicitudes del sistema operativo, hay que tener cuidado de no ejecutar instrucciones interactivas.  
@@ -158,7 +160,7 @@ SELECT @@SERVERNAME AS 'Server Name'
 GO  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+## <a name="see-also"></a>Véase también  
+ [Sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: Mediante los esquemas XSD en consultas (SQLXML 4.0) anotados | Microsoft Docs
-ms.custom: ''
+title: Usar esquemas XSD anotados en consultas (SQLXML)
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,19 +20,20 @@ helpviewer_keywords:
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9229f612c45c2163148b809d8a79de592f06b32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a53e53f27b9b0c9c94519cb55aa136349f6ff7c5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041078"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246999"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>Usar esquemas XSD anotados en consultas (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Puede especificar consultas en un esquema anotado para recuperar datos de la base de datos especificando consultas XPath en una plantilla en el esquema XSD.  
   
- El  **\<sql:xpath-consulta >** elemento le permite especificar una consulta XPath en la vista XML definida por el esquema anotado. El esquema anotado en la que se se ejecuta la consulta XPath se identifica mediante el **esquema de asignación** atributo de la  **\<sql:xpath-consulta >** elemento.  
+ El ** \<elemento SQL: XPath-Query>** permite especificar una consulta XPath en la vista XML definida por el esquema anotado. El esquema anotado en el que se va a ejecutar la consulta XPath se identifica mediante el atributo **mapping-schema** del elemento ** \<SQL: XPath-Query>** .  
   
  Las plantillas son documentos XML válidos que contienen una o varias consultas. Las consultas FOR XML y XPath devuelven un fragmento de documento. Las plantillas actúan como contenedores para los fragmentos de documento; de esta forma, las plantillas proporcionan un modo de especificar un elemento único de nivel superior.  
   
@@ -64,12 +64,12 @@ ms.locfileid: "68041078"
 </sql:xpath-query>  
 ```  
   
- Después, puede crear y usar el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la consulta como parte de un archivo de plantilla. Para obtener más información, consulte [esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
+ Después, puede crear y usar el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la consulta como parte de un archivo de plantilla. Para obtener más información, consulte [esquemas XDR anotados &#40;en desuso en SQLXML 4,0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="using-inline-mapping-schemas"></a>Usar esquemas de asignación insertados  
  Un esquema anotado puede incluirse directamente en una plantilla y, después, puede especificarse una consulta XPath en la plantilla en el esquema insertado. La plantilla también puede ser un diagrama de actualización.  
   
- Una plantilla puede incluir varios esquemas insertados. Para usar un esquema en línea que se incluye en una plantilla, especifique la **id** atributo con un valor único en la  **\<xsd: schema >** elemento y, a continuación, utilice **#idvalue**para hacer referencia al esquema en línea. El **id** atributo es un comportamiento idéntico a la **SQL: ID** ({urn: schemas-microsoft-com-sql} id) utilizados en los esquemas XDR.  
+ Una plantilla puede incluir varios esquemas insertados. Para usar un esquema insertado que se incluye en una plantilla, especifique el atributo **ID** con un valor único en el ** \<elemento xsd: Schema>** y, a continuación, utilice **#idvalue** para hacer referencia al esquema en línea. El atributo **ID** es idéntico en comportamiento al **SQL: ID** ({urn: schemas-microsoft-com: XML-SQL} ID) que se usa en los esquemas XDR.  
   
  Por ejemplo, la plantilla siguiente especifica dos esquemas anotados insertados:  
   
@@ -116,23 +116,23 @@ ms.locfileid: "68041078"
 </ROOT>  
 ```  
   
- La plantilla también especifica dos consultas XPath. Cada uno de los  **\<consulta de xpath >** elementos identifica el esquema de asignación especificando el **esquema de asignación** atributo.  
+ La plantilla también especifica dos consultas XPath. Cada uno de los ** \<elementos de>XPath-Query** identifica de forma única el esquema de asignación especificando el atributo **mapping-schema** .  
   
- Cuando se especifica un esquema insertado en la plantilla, el **sql: is-mapping-schema** anotación debe especificarse en el  **\<xsd: schema >** elemento. El **sql: is-mapping-schema** toma un valor booleano (0 = false, 1 = true). Un esquema insertado con **sql: is-mapping-schema = "1"** se trata como un esquema anotado insertado y no se devuelve en el documento XML.  
+ Cuando se especifica un esquema insertado en la plantilla, la anotación **SQL: is-mapping-schema** también debe especificarse en el ** \<elemento xsd: Schema>** . **SQL: is-mapping-schema** toma un valor booleano (0 = false, 1 = true). Un esquema insertado con **SQL: is-mapping-schema = "1"** se trata como esquema anotado insertado y no se devuelve en el documento XML.  
   
- El **sql: is-mapping-schema** anotación pertenece al espacio de nombres de plantilla **urn: schemas-microsoft-com: sql**.  
+ La anotación **SQL: is-mapping-schema** pertenece al espacio de nombres de plantilla **urn: schemas-microsoft-com: XML-SQL**.  
   
- Para probar este ejemplo, guarde la plantilla (InlineSchemaTemplate.xml) en un directorio local y, a continuación, cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla. Para obtener más información, consulte [utilizar ADO para ejecutar consultas de SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+ Para probar este ejemplo, guarde la plantilla (InlineSchemaTemplate.xml) en un directorio local y, a continuación, cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla. Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Además de especificar el **esquema de asignación** atributo el  **\<sql:xpath-consulta >** elemento en una plantilla (cuando hay una consulta XPath) o en  **\< updg:Sync >** elemento en un diagrama de actualización, puede hacer lo siguiente:  
+ Además de especificar el atributo **mapping-schema** en el ** \<elemento SQL: XPath-Query>** en una plantilla (cuando hay una consulta XPath) o en ** \<el elemento atributo updg: Sync>** de un diagrama, puede hacer lo siguiente:  
   
--   Especifique el **esquema de asignación** atributo el  **\<raíz >** elemento (declaración global) en la plantilla. Este esquema de asignación, a continuación, se convierte en el esquema predeterminado que se usará en todos los nodos de XPath y diagrama de actualización que tienen no explícita **esquema de asignación** anotación.  
+-   Especifique el atributo **mapping-schema** en el ** \<elemento>raíz** (declaración global) en la plantilla. Este esquema de asignación se convierte entonces en el esquema predeterminado que usarán todos los nodos XPath y diagrama que no tienen ninguna anotación **de esquema de asignación** explícita.  
   
--   Especifique el **esquema de asignación** atributo utilizando ADO **comando** objeto.  
+-   Especifique el atributo de **esquema de asignación** utilizando el objeto de **comando** de ADO.  
   
- El **esquema de asignación** atributo que se especifica en el  **\<consulta de xpath >** o  **\<updg:sync >** elemento tiene la más alta prioridad; ADO **comando** objeto tiene la prioridad más baja.  
+ El atributo **mapping-schema** que se especifica en el ** \<elemento XPath-Query>** o ** \<atributo updg: Sync>** tiene la prioridad más alta; el objeto **Command** de ADO tiene la prioridad más baja.  
   
- Tenga en cuenta que si especifica una consulta XPath en una plantilla y no especifica un esquema de asignación en la que se ejecutó la consulta XPath, la consulta XPath se trata como un **dbobject** consulta de tipo. Por ejemplo, fíjese en esta plantilla:  
+ Tenga en cuenta que si especifica una consulta XPath en una plantilla y no especifica un esquema de asignación en el que se ejecuta la consulta XPath, la consulta XPath se trata como una consulta de tipo **dbobject** . Por ejemplo, fíjese en esta plantilla:  
   
 ```  
 <sql:xpath-query   
@@ -141,6 +141,6 @@ ms.locfileid: "68041078"
 </sql:xpath-query>  
 ```  
   
- La plantilla especifica una consulta XPath, pero no especifica ningún esquema de asignación. Por lo tanto, esta consulta se considera un **dbobject** donde Production.ProductPhoto es el nombre de tabla de consulta de tipo y @ProductPhotoID= '100' es un predicado que busca una fotografía del producto con el valor de identificador de 100. @LargePhoto es la columna desde la que se va a recuperar el valor.  
+ La plantilla especifica una consulta XPath, pero no especifica ningún esquema de asignación. Por lo tanto, esta consulta se trata como una consulta de tipo **dbobject** en la que production. ProductPhoto es @ProductPhotoIDel nombre de tabla y = ' 100 ' es un predicado que busca una fotografía de producto con el valor de identificador de 100. @LargePhotoes la columna de la que se va a recuperar el valor.  
   
   

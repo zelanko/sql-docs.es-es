@@ -19,18 +19,19 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfd81188f0e751fb57c2d4a29ce61d574cfe3486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: fedb0808c6071ec6a6ba9bb7bd985a43890cce3d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119620"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245071"
 ---
-# <a name="srvsetutype-extended-stored-procedure-api"></a>srv_setutype (API de procedimiento almacenado extendido)
+# <a name="srv_setutype-extended-stored-procedure-api"></a>srv_setutype (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use la integración con CLR en su lugar.  
   
  Establece el tipo de datos definido por el usuario para una columna de una fila.  
   
@@ -54,7 +55,7 @@ user_type
  *srvproc*  
  Es un puntero a la estructura SRV_PROC que es el identificador de una conexión cliente determinada. La estructura contiene información que la biblioteca de API de procedimiento almacenado extendido usa para administrar la comunicación y los datos entre la aplicación y el cliente.  
   
- *column*  
+ *artículo*  
  Indica qué columna se va a establecer. Las columnas se numeran comenzando por 1.  
   
  *user_type*  
@@ -63,15 +64,15 @@ user_type
 ## <a name="returns"></a>Devuelve  
  SUCCEED o FAIL. Devuelve FAIL si la columna no existe.  
   
-## <a name="remarks"></a>Notas  
- Una columna tiene dos tipos de datos: el tipo de datos real y el tipo de datos definido por el usuario. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el tipo de datos definido por el usuario para almacenar el tipo de datos real de la columna definido por el usuario, si la hubiera, e información de descripción de la columna, como nulabilidad y capacidad de actualización.  
+## <a name="remarks"></a>Observaciones  
+ Una columna tiene dos tipos de datos: el tipo de datos real y el tipo de datos definido por el usuario. Usa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el tipo de datos definido por el usuario para almacenar el tipo de datos definido por el usuario real de la columna, si existe, y la información de descripción de la columna, como la nulabilidad y la actualización, para la columna.  
   
  Se puede llamar a la función **srv_setutype** en cualquier momento siempre que se haya definido *column* con **srv_describe** y antes de que se haya enviado la última fila.  
   
 > [!IMPORTANT]  
->  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://www.microsoft.com/en-us/msrc?rtc=1).  
+>  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://www.microsoft.com/msrc?rtc=1).  
   
-## <a name="see-also"></a>Consulte también  
- [srv_describe &#40;API de procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>Véase también  
+ [srv_describe API de procedimiento almacenado extendido &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: Agregar fragmentos de código de Transact-SQL| Microsoft Docs
-ms.custom: ''
+title: Agregar fragmentos de código de Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d79989e37483342e5cc1624a0529f9df98ae980
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27070cc125ca0443ae833854e721c6f72c7ce832
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064292"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244818"
 ---
 # <a name="add-transact-sql-snippets"></a>Agregar fragmentos de código de Transact-SQL
   Puede agregar sus propios fragmentos de código de Transact-SQL al conjunto de fragmentos de código predefinidos que se incluyen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "66064292"
   
 2.  Seleccione el menú **Herramientas** y haga clic en **Administrador de fragmentos de código**.  
   
-3.  Haga clic en el botón **Agregar** .  
+3.  Haga clic en el botón **Agregar**.  
   
 4.  Navegue a la carpeta que contiene los fragmentos de código y haga clic en el botón **Seleccionar carpeta** .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66064292"
   
 2.  Seleccione el menú **Herramientas** y haga clic en **Administrador de fragmentos de código**.  
   
-3.  Haga clic en el botón **Importar** .  
+3.  Haga clic en el botón **Importar**.  
   
 4.  Navegue a la carpeta que contiene el fragmento de código, haga clic en el archivo .snippet y haga clic en el botón **Abrir** .  
   
@@ -106,11 +106,11 @@ ms.locfileid: "66064292"
   
 3.  Seleccione el menú **Herramientas** y haga clic en **Administrador de fragmentos de código**.  
   
-4.  Haga clic en el botón **Importar** .  
+4.  Haga clic en el botón **Importar**.  
   
 5.  Navegue a la carpeta que contiene el archivo TryCatch.snippet, haga clic en el citado archivo y haga clic en el botón **Abrir** . No debe haber un fragmento de código TryCatch en la carpeta **Mis fragmentos de código** .  
   
-## <a name="see-also"></a>Vea también  
- [Insertar fragmentos de código de Transact-SQL para rodear](insert-surround-with-transact-sql-snippets.md)  
+## <a name="see-also"></a>Véase también  
+ [Insertar fragmentos de código de Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
   
   

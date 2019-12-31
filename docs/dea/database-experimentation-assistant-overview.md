@@ -1,8 +1,8 @@
 ---
 title: Información general sobre el Asistente para experimentación con bases de datos
-description: Información general de Asistente para experimentación con bases de datos
+description: Información general del Asistente para experimentación con bases de datos.
 ms.custom: seo-lt-2019
-ms.date: 11/16/2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,26 +10,26 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: jtoland
+ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 79caf961208287e1482efe780d2d0e335bbdd16d
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74165553"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247123"
 ---
-# <a name="overview-of-database-experimentation-assistant"></a>Información general de Asistente para experimentación con bases de datos
+# <a name="overview-of-database-experimentation-assistant"></a>Información general del Asistente para experimentación con bases de datos.
 
-Asistente para experimentación con bases de datos (DEA) es una solución de experimentación para las actualizaciones de SQL Server. DEA puede ayudarle a evaluar una versión de destino de SQL Server para una carga de trabajo específica. Los clientes que están actualizando desde versiones SQL Server anteriores (a partir de 2005) a una versión más reciente de SQL Server pueden utilizar las métricas de análisis que proporciona la herramienta.
+Asistente para experimentación con bases de datos (DEA) es una solución de experimentación para las actualizaciones de SQL Server. DEA puede ayudarle a evaluar una versión de destino de SQL Server para una carga de trabajo específica. Los clientes que se actualizan desde versiones anteriores de SQL Server (a partir de 2005) a versiones más recientes de SQL Server pueden utilizar las métricas de análisis que proporciona la herramienta.
 
 Las métricas de análisis de DEA incluyen:
 
-- Consultas que tienen errores de compatibilidad
-- Consultas degradadas y planes de consulta
-- Otros datos de comparación de carga de trabajo
+- Consultas que tienen errores de compatibilidad.
+- Consultas degradadas y planes de consulta.
+- Otros datos de comparación de carga de trabajo.
 
-Los datos de comparación pueden dar lugar a una mayor confianza y una experiencia de actualización correcta.
+Los datos de comparación pueden dar lugar a una mayor confianza y ayudar a garantizar una experiencia de actualización correcta.
 
 ## <a name="get-dea"></a>Obtener DEA
 
@@ -46,51 +46,55 @@ En el diagrama siguiente se muestra la arquitectura de la solución para una com
 A continuación se indican algunos requisitos previos para ejecutar DEA:
 
 - Requisito de hardware mínimo: una máquina de un solo núcleo con 3,5 GB de RAM.
-- Requisito de hardware ideal: una CPU de ocho núcleos (con 3,5 GB de RAM o más). Los procesadores que tienen más de ocho núcleos no mejoran los tiempos de ejecución de DEA.
+- Requisito de hardware ideal: una CPU de ocho núcleos (con 3,5 GB de RAM o más). Los procesadores con más de ocho núcleos no mejoran los tiempos de ejecución de DEA.
 - Se necesita un 33% de tamaño de seguimiento de rendimiento adicional para almacenar las bases de datos de análisis de informes, B y.
 
 ## <a name="configure-dea"></a>Configuración de DEA
 
-En la arquitectura de entorno de requisito previo, se recomienda instalar DEA *en el mismo equipo que el controlador de Distributed Replay*. Esta práctica evita las llamadas entre equipos y simplifica la configuración.
+En la arquitectura de entorno de requisito previo, se recomienda instalar DEA *en el mismo equipo que el controlador de Distributed Replay*. Esta práctica evita llamadas entre equipos y simplifica la configuración.
 
 ### <a name="required-configuration-for-workload-comparison-using-dea"></a>Configuración necesaria para la comparación de cargas de trabajo mediante DEA
 
-DEA se conecta a los servidores de bases de datos mediante la autenticación de Windows. Asegúrese de que un usuario que ejecute DEA pueda conectarse a los servidores de bases de datos (origen, destino y análisis) mediante la autenticación de Windows.
+DEA se conecta a los servidores de bases de datos mediante la autenticación de Windows. Asegúrese de que el usuario que ejecuta DEA puede conectarse a los servidores de bases de datos (origen, destino y análisis) mediante la autenticación de Windows.
 
 **Capturar requisitos de configuración**
 
-La captura de un seguimiento requiere que:
+La captura de un seguimiento requiere que el usuario ejecute DEA:
 
-- El usuario que ejecuta DEA puede conectarse al servidor de base de datos de origen mediante la autenticación de Windows.
-- El usuario que ejecuta DEA tiene derechos de administrador del servidor en el servidor de base de datos de origen.
-- La cuenta de servicio que ejecuta el servidor de base de datos de origen tiene acceso de escritura a la ruta de la carpeta de seguimiento.
+- Puede conectarse al servidor de base de datos de origen mediante la autenticación de Windows.
+- Tiene derechos de administrador del servidor en el servidor de base de datos de origen.
 
-Para obtener más información, consulte preguntas más frecuentes [sobre la captura de seguimiento](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture) .
+Además, la cuenta de servicio que ejecuta el servidor de base de datos de origen requiere acceso de escritura a la ruta de acceso de la carpeta de seguimiento.
+
+Para obtener más información, consulte preguntas más frecuentes [sobre la captura de seguimiento](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture).
 
 **Requisitos de configuración de reproducción**
 
-La reproducción de un seguimiento requiere que:
+La reproducción de un seguimiento requiere que el usuario ejecute DEA:
 
-- El usuario que ejecuta DEA puede conectarse al servidor de base de datos de destino mediante la autenticación de Windows.
-- El usuario que ejecuta DEA tiene derechos de administrador del servidor en el servidor de base de datos de destino.
-- La cuenta de servicio que ejecuta los servidores de base de datos de destino tiene acceso de escritura a la ruta de la carpeta de seguimiento.
-- La cuenta de servicio que se ejecuta Distributed Replay clientes puede conectarse al servidor de base de datos de destino mediante la autenticación de Windows.
+- Puede conectarse al servidor de base de datos de destino mediante la autenticación de Windows.
+- Tiene derechos sysadmin en el servidor de base de datos de destino.
+
+Además, la reproducción de un seguimiento requiere lo siguiente:
+
+- La cuenta de servicio que ejecuta los servidores de base de datos de destino tiene acceso de escritura a la ruta de acceso de la carpeta de seguimiento.
+- La cuenta de servicio que ejecuta Distributed Replay clientes puede conectarse al servidor de base de datos de destino mediante la autenticación de Windows.
 - Los puertos TCP se abren para las solicitudes entrantes en el controlador de Distributed Replay. DEA se comunica con el controlador de Distributed Replay mediante el uso de interfaces COM.
 
-Para obtener más información, consulte preguntas más frecuentes [sobre la reproducción de seguimiento](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay) .
+Para obtener más información, consulte preguntas más frecuentes [sobre la reproducción de seguimiento](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay).
 
 **Requisitos de configuración de análisis**
 
-Para realizar el análisis, es necesario que:
+Para realizar el análisis, es necesario que el usuario ejecute DEA:
 
-- El usuario que ejecuta DEA puede conectarse al servidor de base de datos de análisis mediante la autenticación de Windows.
-- El usuario que ejecuta DEA tiene derechos de administrador del servidor en el servidor de base de datos de origen.
+- Puede conectarse al servidor de base de datos de análisis mediante la autenticación de Windows.
+- Tiene derechos de administrador del servidor en el servidor de base de datos de origen.
 
-Para obtener más información, consulte preguntas más frecuentes [sobre los informes de análisis](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
+Para obtener más información, consulte preguntas más frecuentes [sobre los informes de análisis](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports).
 
 ## <a name="set-up-telemetry"></a>Configuración de la telemetría
 
-DEA tiene una característica habilitada para Internet que puede enviar información de telemetría a Microsoft para su uso en la mejora de la experiencia del producto. La información recopilada también se guarda en el equipo para la auditoría local, por lo que siempre puede ver lo que se ha recopilado. Todos los archivos de registro de DEA se guardan en la carpeta% Temp%\\DEA.
+DEA tiene una característica habilitada para Internet que puede enviar información de telemetría a Microsoft para su uso en la mejora de la experiencia del producto. La información recopilada también se guarda en el equipo para la auditoría local, por lo que siempre puede ver lo que se ha recopilado. Todos los archivos de registro de DEA se guardan en\\la carpeta% Temp% DEA.
 
 Los datos de telemetría se pueden recopilar en cuatro tipos de eventos:
 
@@ -101,7 +105,7 @@ Los datos de telemetría se pueden recopilar en cuatro tipos de eventos:
 
 Recopilar y enviar datos de telemetría es opcional. Para especificar los eventos que se recopilan y si los eventos recopilados se envían a Microsoft, siga estos pasos:
 
-1. Vaya a la ubicación en la que se ha instalado DEA (por ejemplo, C:\\archivos de programa (x86)\\Microsoft Corporation\\Asistente para experimentación con bases de datos).
+1. Vaya a la ubicación en la que se ha instalado DEA (por ejemplo,\\C: archivos de programa\\(x86\\) Microsoft Corporation Asistente para experimentación con bases de datos).
 2. Abra y modifique los archivos. config **DEA. exe. config** (para la aplicación) y **DEACmd. exe. config** (para la CLI) para resolver el escenario según corresponda:
     - Para dejar de recopilar un tipo de evento, establezca el valor de *evento* (por ejemplo, **TraceEvent**) en **false**. Para empezar a recopilar el evento de nuevo, establezca el valor en **true**.
     - Para dejar de guardar las copias locales de los eventos, establezca el valor de **TraceLoggerEnabled** en **false**. Para volver a guardar las copias locales, establezca el valor en **true**.
@@ -111,4 +115,4 @@ DEA se rige por la [declaración de privacidad de Microsoft](https://aka.ms/dea-
 
 ## <a name="see-also"></a>Vea también
 
-[Información general sobre el proceso de comparación de cargas de trabajo](database-experimentation-assistant-get-started.md), que explica el proceso implicado en la comparación de cargas de trabajo en dos entornos.
+- El artículo [información general sobre el proceso de comparación de cargas de trabajo](database-experimentation-assistant-get-started.md), que explica el proceso implicado en la comparación de cargas de trabajo en dos entornos.

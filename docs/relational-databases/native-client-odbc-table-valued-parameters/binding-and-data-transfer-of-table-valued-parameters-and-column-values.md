@@ -1,5 +1,5 @@
 ---
-title: Enlace y Transferencia de datos de parámetros con valores de tabla y valores de columna | Microsoft Docs
+title: Transferencia de datos de parámetros con valores de tabla
 ms.custom: ''
 ms.date: 04/04/2017
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a03beb8375384660b0e4a9ec18ce38f19db42d5
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.openlocfilehash: 1e966d63a2d357ad9b867e5e8bf66fbf731fc987
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73778069"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246522"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Enlace y transferencia de datos de valores de columnas y parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,11 +27,11 @@ ms.locfileid: "73778069"
   
  En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior, solo se admiten parámetros con valores de tabla de entrada. Por lo tanto, cualquier intento de establecer SQL_DESC_PARAMETER_TYPE en un valor distinto de SQL_PARAM_INPUT devolverá SQL_ERROR con SQLSTATE = HY105 y el mensaje "Tipo de parámetro no válido".  
   
- Es posible asignar valores predeterminados a columnas completas de parámetros con valores de tabla mediante el atributo SQL_CA_SS_COL_HAS_DEFAULT_VALUE. No obstante, los valores de columna de parámetros con valores de tabla individuales no pueden tener asignados valores predeterminados mediante SQL_DEFAULT_PARAM en *StrLen_or_IndPtr* con SQLBindParameter. Los parámetros con valores de tabla como un conjunto no se pueden establecer en un valor predeterminado mediante SQL_DEFAULT_PARAM en *StrLen_or_IndPtr* con SQLBindParameter. Si no se siguen estas reglas, SQLExecute o SQLExecDirect devolverán SQL_ERROR. Se generará un registro de diagnóstico con SQLSTATE = 07S01 y el mensaje "uso no válido de los parámetros predeterminados para el parámetro \<p >", donde \<p > es el ordinal de TVP en la instrucción de consulta.  
+ Es posible asignar valores predeterminados a columnas completas de parámetros con valores de tabla mediante el atributo SQL_CA_SS_COL_HAS_DEFAULT_VALUE. No obstante, los valores de columna de parámetros con valores de tabla individuales no pueden tener asignados valores predeterminados mediante SQL_DEFAULT_PARAM en *StrLen_or_IndPtr* con SQLBindParameter. Los parámetros con valores de tabla como un conjunto no se pueden establecer en un valor predeterminado mediante SQL_DEFAULT_PARAM en *StrLen_or_IndPtr* con SQLBindParameter. Si no se siguen estas reglas, SQLExecute o SQLExecDirect devolverán SQL_ERROR. Se generará un registro de diagnóstico con SQLSTATE = 07S01 y el mensaje "uso no válido de los parámetros \<predeterminados para el \<parámetro p>", donde p> es el ordinal de la TVP en la instrucción de consulta.  
   
  Después de enlazar el parámetro con valores de tabla, la aplicación debe enlazar cada una de las columnas de parámetros con valores de tabla. Para ello, la aplicación llama primero a SQLSetStmtAttr para establecer SQL_SOPT_SS_PARAM_FOCUS en el ordinal de un parámetro con valores de tabla. A continuación, la aplicación enlaza las columnas del parámetro con valores de tabla mediante llamadas a las siguientes rutinas: SQLBindParameter, SQLSetDescRec y SQLSetDescField. Si se establece SQL_SOPT_SS_PARAM_FOCUS en 0, se restaura el efecto habitual de SQLBindParameter, SQLSetDescRec y SQLSetDescField en el funcionamiento de los parámetros de nivel superior normales.
  
- Nota: para los controladores ODBC de Linux y Mac con unixODBC 2.3.1 en 2.3.4, al establecer el nombre de TVP a través de SQLSetDescField con el campo de descriptor de SQL_CA_SS_TYPE_NAME, unixODBC no convierte automáticamente entre cadenas ANSI y Unicode en función de los valores exactos función llamada (SQLSetDescFieldA/SQLSetDescFieldW). Es necesario usar siempre SQLBindParameter o SQLSetDescFieldW con una cadena Unicode (UTF-16) para establecer el nombre de TVP.
+ Nota: para los controladores ODBC de Linux y Mac con unixODBC 2.3.1 en 2.3.4, al establecer el nombre de TVP a través de SQLSetDescField con el campo descriptor de SQL_CA_SS_TYPE_NAME, unixODBC no convierte automáticamente entre cadenas ANSI y Unicode en función de la función exacta denominada (SQLSetDescFieldA/SQLSetDescFieldW). Es necesario usar siempre SQLBindParameter o SQLSetDescFieldW con una cadena Unicode (UTF-16) para establecer el nombre de TVP.
   
  No se envían ni se reciben datos reales para el propio parámetro con valores de tabla, sino que los datos se envían y se reciben para cada una de sus columnas constitutivas. Dado que el parámetro con valores de tabla es una pseudo columna, los parámetros de SQLBindParameter se usan para hacer referencia a atributos diferentes a los de otros tipos de datos, como se indica a continuación:  
   
@@ -45,7 +45,8 @@ ms.locfileid: "73778069"
 |*ParameterValuePtr*|SQL_DESC_DATA_PTR en APD.|SQL_CA_SS_TYPE_NAME.<br /><br /> Es opcional para las llamadas a procedimientos almacenados y puede especificarse NULL si no se requiere. Debe especificarse para las instrucciones SQL que no sean llamadas a procedimientos.<br /><br /> Este parámetro también actúa como un valor único que la aplicación puede usar para identificar este parámetro con valores de tabla cuando se usa el enlace de filas variable. Para obtener más información, consulte la sección "Enlace de filas variable de parámetros con valores de tabla" más adelante en este mismo tema.<br /><br /> Cuando se especifica un nombre de tipo de parámetro con valores de tabla en una llamada a SQLBindParameter, debe especificarse como un valor Unicode, incluso en aplicaciones compiladas como aplicaciones ANSI. El valor usado para el parámetro *StrLen_or_IndPtr* debe ser SQL_NTS o la longitud de la cadena del nombre multiplicado por SIZEOF (WCHAR).|  
 |*BufferLength*|SQL_DESC_OCTET_LENGTH en APD.|Longitud en bytes del nombre de tipo de parámetro con valores de tabla.<br /><br /> Puede ser SQL_NTS si el nombre de tipo termina en NULL, o 0 si no se requiere el nombre de tipo de parámetro con valores de tabla.|  
 |*StrLen_or_IndPtr*|SQL_DESC_OCTET_LENGTH_PTR en APD.|SQL_DESC_OCTET_LENGTH_PTR en APD.<br /><br /> En el caso de los parámetros con valores de tabla, es un recuento de filas en lugar de una longitud de datos.|  
-  
+||||
+
  Se admiten dos modos de transferencia de datos para los parámetros con valores de tabla: enlace de filas fijo y enlace de filas variable.  
   
 ## <a name="fixed-table-valued-parameter-row-binding"></a>Enlace de filas fijo de parámetros con valores de tabla  
@@ -63,7 +64,7 @@ ms.locfileid: "73778069"
   
 3.  Llama a SQLSetStmtAttr para establecer SQL_SOPT_SS_PARAM_FOCUS en 0. Esto debe hacerse antes de llamar a SQLExecute o SQLExecDirect. De lo contrario, se devuelve SQL_ERROR y se genera un registro de diagnóstico con SQLSTATE=HY024 y el mensaje "Valor de atributo no válido, SQL_SOPT_SS_PARAM_FOCUS (debe ser cero en el tiempo de ejecución)".  
   
-4.  Establece *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR en SQL_DEFAULT_PARAM para un parámetro con valores de tabla sin filas, o el número de filas que se van a transferir en la siguiente llamada a SQLExecute o SQLExecDirect si el parámetro con valores de tabla tiene filas. *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR no se pueden establecer en SQL_NULL_DATA para un parámetro con valores de tabla, ya que los parámetros con valores de tabla no admiten valores NULL (aunque las columnas de componentes de parámetro con valores de tabla pueden aceptar valores NULL). Si se establece en un valor no válido, SQLExecute o SQLExecDirect devuelve SQL_ERROR, y se genera un registro de diagnóstico con SQLSTATE = HY090 y el mensaje "longitud de búfer o cadena no válida para el parámetro \<p >", donde p es el número de parámetro.  
+4.  Establece *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR en SQL_DEFAULT_PARAM para un parámetro con valores de tabla sin filas, o el número de filas que se van a transferir en la siguiente llamada a SQLExecute o SQLExecDirect si el parámetro con valores de tabla tiene filas. *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR no se pueden establecer en SQL_NULL_DATA para un parámetro con valores de tabla, ya que los parámetros con valores de tabla no admiten valores NULL (aunque las columnas de componentes de parámetro con valores de tabla pueden aceptar valores NULL). Si se establece en un valor no válido, SQLExecute o SQLExecDirect devuelve SQL_ERROR, y se genera un registro de diagnóstico con SQLSTATE = HY090 y el mensaje "longitud de búfer o cadena no \<válida para el parámetro p>", donde p es el número de parámetro.  
   
 5.  Llama a SQLExecute o SQLExecDirect.  
   
@@ -92,7 +93,7 @@ ms.locfileid: "73778069"
   
 6.  Llama de nuevo a SQLParamData. Si hay parámetros de datos en ejecución entre las columnas de parámetro con valores de tabla, se identificarán con el valor *ValuePtrPtr* devuelto por SQLParamData. Cuando todos los valores de columna están disponibles, SQLParamData devolverá de nuevo el valor de *ParameterValuePtr* para el parámetro con valores de tabla y la aplicación se iniciará de nuevo.  
   
-## <a name="see-also"></a>Vea también  
- [Parámetros &#40;con valores de tabla ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>Véase también  
+ [Parámetros con valores de tabla &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

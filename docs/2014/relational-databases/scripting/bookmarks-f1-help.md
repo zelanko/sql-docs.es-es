@@ -1,6 +1,6 @@
 ---
-title: Marcadores (Ayuda F1) | Microsoft Docs
-ms.custom: ''
+title: Marcadores (Ayuda F1)
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,16 +14,15 @@ ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9221781d921e1eae72c87bb5c1d211394fcd61c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7375b1fb5e76efae9feea1fa5f3a7384fc39b003
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090658"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244788"
 ---
 # <a name="bookmarks-f1-help"></a>Marcadores (Ayuda F1)
-  Esta sección contiene la Ayuda F1 de las páginas de **Marcadores** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+
+ Esta sección contiene la ayuda F1 para las páginas de **marcadores** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [Administrar marcadores](manage-bookmarks.md)  
-  
-  
+ [Administrar marcadores](manage-bookmarks.md)

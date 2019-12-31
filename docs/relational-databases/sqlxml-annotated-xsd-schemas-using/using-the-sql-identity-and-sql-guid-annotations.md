@@ -1,5 +1,5 @@
 ---
-title: Con las anotaciones de sql:identity y sql:guid | Documentos de Microsoft
+title: Utilizar las anotaciones sql:guid y sql:identity
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,27 +24,27 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a6c19e23fc886e15b8e116ca293c4560fded74e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50483d7f6f84371b42bf0c79fbc74a1f85a65eab
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68066883"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246820"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Utilizar las anotaciones sql:guid y sql:identity
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Puede especificar el **: Identity** y **SQL** anotaciones en un esquema XSD en cualquier nodo que se asigna a una columna de base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mientras que el formato de diagrama de actualización admite la **updg: en identidad** y **updg: GUID** atributos, el formato DiffGram no. El **updg: en identidad** atributo define el comportamiento en la actualización de una columna de tipo IDENTITY. El **updg: GUID** atributo le permite obtener un valor GUID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y su uso en el diagrama de actualización. Para obtener más información y ejemplos de trabajo, consulte [actualización de inserción de datos usando XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+  Puede especificar las anotaciones **SQL: Identity** y **SQL: GUID** en un esquema XSD en cualquier nodo que se asigne a una columna de base de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]datos en. Mientras que el formato diagrama admite los atributos **atributo updg: at-Identity** y **atributo updg: GUID** , el formato DiffGram no lo es. El atributo **atributo updg: at-Identity** define el comportamiento en la actualización de una columna de tipo Identity. El atributo **atributo updg: GUID** permite obtener un valor GUID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y usarlo en diagrama. Para obtener más información y ejemplos de trabajo, vea [Insertar datos mediante XML diagramas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
- El **: Identity** y **SQL** anotaciones amplían esta funcionalidad a los DiffGrams.  
+ Las anotaciones **SQL: Identity** y **SQL: GUID** amplían esta funcionalidad a DiffGrams.  
   
- Cuando se ejecuta un DiffGram, primero se convierte en un diagrama de actualización que después se ejecuta. Especificando el **: Identity** y **SQL** las anotaciones en el esquema XSD, es en realidad es definir el comportamiento de un diagrama de actualización. Por consiguiente, todas las anotaciones se describen en el contexto de un diagrama de actualización. Las anotaciones se pueden utilizar tanto para DiffGrams como para diagramas de actualización; sin embargo, los diagramas de actualización ya proporcionan un modo más eficaz de administrar los valores de identidad y GUID.  
+ Cuando se ejecuta un DiffGram, primero se convierte en un diagrama de actualización que después se ejecuta. Al especificar las anotaciones **SQL: Identity** y **SQL: GUID** en el esquema XSD, en realidad está definiendo el comportamiento de un diagrama. Por consiguiente, todas las anotaciones se describen en el contexto de un diagrama de actualización. Las anotaciones se pueden utilizar tanto para DiffGrams como para diagramas de actualización; sin embargo, los diagramas de actualización ya proporcionan un modo más eficaz de administrar los valores de identidad y GUID.  
   
- El **: Identity** y **SQL** anotaciones se pueden definir en un elemento de contenido complejo.  
+ Las anotaciones **SQL: Identity** y **SQL: GUID** se pueden definir en un elemento de contenido complejo.  
   
 ## <a name="sqlidentity-annotation"></a>Anotación sql:identity  
- Puede especificar el **: Identity** anotación en el esquema XSD en cualquier nodo que se asigna a una columna de base de datos de tipo IDENTITY. El valor especificado para esta anotación define cómo se actualiza la columna de tipo IDENTITY (ya sea mediante el valor proporcionado en el diagrama de actualización para modificar la columna o se omite el valor, en cuyo caso un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-valor generado se usa para esta columna).  
+ Puede especificar la anotación **SQL: Identity** en el esquema XSD en cualquier nodo que se asigne a una columna de base de datos de tipo Identity. El valor especificado para esta anotación define cómo se actualiza la columna de tipo de identidad (ya sea mediante el valor proporcionado en diagrama para modificar la columna o omitiendo el valor, en cuyo caso se usa un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]valor generado por para esta columna).  
   
- El **: Identity** anotación se puede asignar dos valores:  
+ A la anotación **SQL: Identity** se le pueden asignar dos valores:  
   
  ignore  
  Hace que el diagrama de actualización omita cualquier valor que se proporcione en el diagrama de actualización para esa columna y deje que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere el valor de identidad.  
@@ -52,12 +52,12 @@ ms.locfileid: "68066883"
  useValue  
  Hace que el diagrama de actualización utilice el valor que se proporciona en el diagrama de actualización para actualizar la columna de tipo IDENTITY. Un diagrama de actualización no comprueba si la columna es un valor de identidad o no.  
   
- Si el diagrama de actualización especifica un valor para la columna de tipo de identidad, el **: Identity = "useValue"** debe especificarse en el esquema.  
+ Si diagrama especifica un valor para la columna IDENTITY-Type, se debe especificar **SQL: Identity = "useValue"** en el esquema.  
   
 ## <a name="sqlguid-annotation"></a>Anotación sql:guid  
- Un diagrama de actualización puede hacer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un valor GUID para después utilizarlo en el diagrama de actualización. En el contexto de los DiffGrams, puede usar el **SQL** anotación para especificar si se debe usar un valor GUID generado por SQL Server o utilizar el valor que se proporciona en el diagrama de actualización para esa columna.  
+ Un diagrama de actualización puede hacer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un valor GUID para después utilizarlo en el diagrama de actualización. En el contexto de los DiffGrams, puede usar la anotación **SQL: GUID** para especificar si se va a usar un valor GUID generado por SQL Server o usar el valor que se proporciona en diagrama para esa columna.  
   
- El **SQL** anotación se puede asignar dos valores:  
+ A la anotación **SQL: GUID** se le pueden asignar dos valores:  
   
  generate  
  Especifica que el GUID generado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utilice para esa columna en la operación de actualización.  

@@ -1,6 +1,6 @@
 ---
-title: Habilitar, deshabilitar y eliminar puntos de interrupción | Microsoft Docs
-ms.custom: ''
+title: Habilitar, deshabilitar y eliminar puntos de interrupción
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: edc19f948689fafea8cde0fb4ae2fd5f79de3242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2242511b34c2fc5e588318362b504358b330a30
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064060"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245136"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Habilitar, deshabilitar y eliminar puntos de interrupción
-  Para ver y administrar todos los puntos de interrupción abiertos, puede usar la ventana **Puntos de interrupción** . Use la ventana para ver la información de punto de interrupción y para realizar acciones tales como eliminar, deshabilitar o habilitar puntos de interrupción.  
+  Para ver y administrar todos los puntos de interrupción abiertos, puede usar la ventana **puntos de interrupción** . Use la ventana para ver la información de punto de interrupción y para realizar acciones tales como eliminar, deshabilitar o habilitar puntos de interrupción.  
   
 ## <a name="the-breakpoints-window"></a>Ventana Puntos de interrupción  
  La ventana **Puntos de interrupción** muestra información como la línea de código en la que está ubicado el punto de interrupción. Además en **Puntos de interrupción** , puede eliminar, deshabilitar y habilitar los puntos de interrupción. Para obtener más información sobre la ventana **Puntos de interrupción** , vea [Breakpoints Window](transact-sql-debugger-breakpoints-window.md)  
@@ -26,7 +26,7 @@ ms.locfileid: "66064060"
  Al deshabilitar un punto de interrupción, se evita que detenga la ejecución, pero deja la definición en su lugar en caso de que desee habilitar el punto de interrupción posteriormente. Al eliminar un punto de interrupción se quita permanentemente. Debe alternar un nuevo punto de interrupción para pausar la ejecución de la instrucción.  
   
 ## <a name="to-open-the-breakpoints-window"></a>Para abrir la ventana Puntos de interrupción  
- **To open the Breakpoints window**  
+ **Para abrir la ventana puntos de interrupción**  
   
  Puede abrir la ventana **Puntos de interrupción** de una de las siguientes formas:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66064060"
 -   Presione CTRL+ALT+B.  
   
 ## <a name="to-disable-a-single-breakpoint"></a>Para deshabilitar un punto de interrupción  
- **To disable a single breakpoint**  
+ **Para deshabilitar un punto de interrupción**  
   
  Puede deshabilitar un punto de interrupción de una de las siguientes maneras:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66064060"
 -   En la ventana Puntos de interrupción, desactive la casilla situada a la izquierda del punto de interrupción.  
   
 ## <a name="to-disable-all-breakpoints"></a>Para deshabilitar todos los puntos de interrupción  
- **To disable all breakpoints**  
+ **Para deshabilitar todos los puntos de interrupción**  
   
  Puede deshabilitar todos los puntos de interrupción de una de las siguientes maneras:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66064060"
 -   En la barra de herramientas de la ventana **Puntos de interrupción** , haga clic en el botón **Deshabilitar todos los puntos de interrupción** .  
   
 ## <a name="to-enable-a-single-breakpoint"></a>Para habilitar un punto de interrupción  
- **To enable a single breakpoint**  
+ **Para habilitar un punto de interrupción**  
   
  Puede habilitar un punto de interrupción de una de las siguientes maneras:  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66064060"
 -   En la ventana Puntos de interrupción, active la casilla situada a la izquierda del punto de interrupción.  
   
 ## <a name="to-enable-all-breakpoints"></a>Para habilitar todos los puntos de interrupción  
- **To enable all breakpoints**  
+ **Para habilitar todos los puntos de interrupción**  
   
  Puede habilitar todos los puntos de interrupción de una de las siguientes maneras:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66064060"
 -   En la barra de herramientas de la ventana **Puntos de interrupción** , haga clic en el botón **Habilitar todos los puntos de interrupción** .  
   
 ## <a name="to-delete-a-single-breakpoint"></a>Para eliminar un punto de interrupción  
- **To delete a single breakpoint**  
+ **Para eliminar un punto de interrupción**  
   
  Puede eliminar un punto de interrupción de una de las siguientes maneras:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66064060"
 -   En la ventana Puntos de interrupción, seleccione el punto de interrupción y, a continuación, presione SUPR.  
   
 ## <a name="to-delete-all-breakpoints"></a>Para eliminar todos los puntos de interrupción  
- **To delete all breakpoints**  
+ **Para eliminar todos los puntos de interrupción**  
   
  Puede eliminar todos los puntos de interrupción de una de las siguientes maneras:  
   
@@ -92,7 +92,7 @@ ms.locfileid: "66064060"
   
 -   En la barra de herramientas de la ventana **Puntos de interrupción** , haga clic en el botón **Eliminar todos los puntos de interrupción** .  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Alternar un punto de interrupción](../spatial/point.md)  
   
   

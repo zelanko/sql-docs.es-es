@@ -1,6 +1,6 @@
 ---
-title: Mover un servidor registrado o un grupo de servidores registrados (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: Trasladar un servidor o grupo registrado
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], moving server or server group
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1718ef034b6650dde246f8c0bc3d4e5f02f2f2ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+author: markingmyname
+ms.author: maghan
+manager: jroth
+ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298052"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241332"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>Mover un Servidor registrado o un grupo de Servidores registrados (SQL Server Management Studio)
   En este tema se describe cómo organizar los servidores en Servidores registrados moviendo un servidor o grupos de servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Los grupos de servidores pueden contener servidores registrados u otros grupos de servidores. Tanto los servidores como los grupos de servidores pueden moverse de un grupo de servidores a otro.  
@@ -34,7 +34,7 @@ ms.locfileid: "63298052"
   
 2.  En el cuadro de diálogo **Mover registro de servidor** , expanda la lista de grupos de servidores, haga clic en el nodo donde desea que se muestre el servidor o grupo de servidores y, a continuación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Registrar servidores](register-servers.md)   
  [Crear o editar un grupo de servidores &#40;SQL Server Management Studio&#41;](create-or-edit-a-server-group-sql-server-management-studio.md)  
   

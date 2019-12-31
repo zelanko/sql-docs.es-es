@@ -1,6 +1,6 @@
 ---
-title: Buscar en un documento activo de forma incremental | Microsoft Docs
-ms.custom: ''
+title: Buscar en un documento activo de forma incremental
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ce3f1265f33da943b7db2b3f951fd9aa6504f81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063830"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243651"
 ---
 # <a name="search-an-active-document-incrementally"></a>Buscar en un documento activo de forma incremental
   Es posible buscar en un único documento o ventana de forma incremental mediante la especificación de texto. La operación de búsqueda destaca el primer juego de caracteres que coincide con los especificados durante la búsqueda incremental en el documento o ventana. La búsqueda incremental busca automáticamente en todo el texto de un documento o ventana, excepto el texto oculto.  
@@ -30,7 +30,7 @@ ms.locfileid: "66063830"
   
 1.  Abra el archivo o ventana en que desea realizar la búsqueda.  
   
-2.  En el menú **Editar** , elija **Avanzado**y, a continuación, haga clic en **Búsqueda incremental**.  
+2.  En el menú **Editar**, elija **Avanzado** y, a continuación, haga clic en **Búsqueda incremental**.  
   
      El cursor cambia a unos prismáticos con una flecha, que indica la dirección de la búsqueda, y la barra de estado muestra "Búsqueda incremental".  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66063830"
 > [!NOTE]  
 >  Para obtener una lista completa de las teclas de método abreviado, vea [Métodos abreviados de teclado de SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Buscar y reemplazar](search-and-replace.md)   
  [Buscar documentos de forma interactiva](search-documents-interactively.md)   
  [Buscar en documentos mediante las listas de resultados](search-documents-using-results-lists.md)   
  [Buscar texto con caracteres comodín](search-text-with-wildcards.md)   
- [Buscar texto mediante expresiones regulares](search-text-with-regular-expressions.md)  
+ [Buscar texto con expresiones regulares](search-text-with-regular-expressions.md)  
   
   

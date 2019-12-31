@@ -10,12 +10,12 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3eaaace0d8ae5924305024e6ee67f7f3fefb415c
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: a2808ff3bb6cfab084854a8d9cd7cf5511dfd0fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285034"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244500"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
   La extensión de representación de Word representa informes en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. El formato es Office Open XML.  
@@ -24,24 +24,24 @@ ms.locfileid: "67285034"
   
  El tipo de contenido de los archivos generados por este representador es **application/vnd.openxmlformats-officedocument.wordprocessingml.document** y la extensión de los archivos es .docx.  
   
- El nombre de la versión anterior de la extensión de representación de Word, solo compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, cambia a Word 2003. Solo la extensión de representación de Word está disponible de forma predeterminada. Debe actualizar los archivos de configuración de Reporting Services para que la extensión de representación de Word 2003 esté disponible. El tipo de contenido de los archivos generados por el representador de Word 2003 es **application/vnd.ms-word** y la extensión del nombre de los archivos es .doc.  
+ El nombre de la versión anterior de la extensión de representación de Word, solo compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, cambia a Word 2003. Solo la extensión de representación de Word está disponible de forma predeterminada. Debe actualizar los archivos de configuración de Reporting Services para que la extensión de representación de Word 2003 esté disponible. El tipo de contenido de los archivos generados por el representador de Word 2003 es **application/vnd.ms-word** y la extensión de nombre de archivo es .doc.  
   
 > [!IMPORTANT]  
->  La extensión de representación de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 ha quedado obsoleta. Para obtener más información, consulte [características desusadas de SQL Server Reporting Services en SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  La extensión de representación de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 ha quedado obsoleta. Para obtener más información, consulte [características desusadas en SQL Server Reporting Services en SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  Después de exportar el informe a un documento de Word, puede modificar su contenido y diseñar informes con estilo de documento, como etiquetas postales, pedidos de compra o circulares.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItemsWord"></a> Elementos de informe en Word  
+##  <a name="ReportItemsWord"></a>Elementos de informe en Word  
  Los informes exportados a Word aparecen como una tabla anidada que representa el cuerpo del informe. Una región de datos Tablix se representa como una tabla anidada que refleja la estructura de la región de datos en el informe. Los cuadros de texto y los rectángulos se representan como una celda de la tabla. El valor del cuadro de texto se muestra dentro de la celda.  
   
  Las imágenes, gráficos, barras de datos, minigráficos, mapas, indicadores y medidores se representan como una imagen estática dentro de una celda de la tabla. Los hipervínculos y los vínculos de obtención de detalles de estos elementos de informe también se representan. No se admiten los mapas interactivos y otras áreas en las que se puede hacer clic dentro de un gráfico.  
   
  Los informes con columnas de estilo boletín no se representan en Word. Las imágenes y los colores de fondo de página y del cuerpo del informe no se representan.  
   
-##  <a name="Pagination"></a> Paginación  
+##  <a name="Pagination"></a>Expuesto  
  Cuando el informe se abre en Word, Word repagina de nuevo el informe completo basándose en el tamaño de página. La repaginación puede hacer que se inserten saltos de página en ubicaciones en las que no se pretendía agregarlos y, en algunos casos, puede hacer que el informe exportado tenga dos saltos de página seguidos en una fila o que se agreguen páginas en blanco. Puede intentar cambiar la paginación de Word ajustando los márgenes de página.  
   
  Este representador admite solamente saltos de página lógicos.  
@@ -54,7 +54,7 @@ ms.locfileid: "67285034"
   
  Cuando se representa, el informe crece a lo ancho tanto como se necesite, hasta 22 pulgadas, para mostrar el contenido. El ancho mínimo del informe se basa en la propiedad RDL Width del panel de propiedades.  
   
-##  <a name="DocumentProperties"></a> Propiedades de documento  
+##  <a name="DocumentProperties"></a>Propiedades de documento  
  El representador de Word escribe los metadatos siguientes en el archivo DOCX.  
   
 |Propiedades del elemento de informe|Descripción|  
@@ -63,7 +63,7 @@ ms.locfileid: "67285034"
 |Autor del informe|Autor|  
 |Descripción del informe|Comentarios|  
   
-##  <a name="ReportHeadersFooters"></a> Encabezados y pies de página  
+##  <a name="ReportHeadersFooters"></a>Encabezados y pies de página  
  Los encabezados y pies de página se representan como regiones de encabezado y pie de página en Word. Si en el encabezado o en el pie de página aparece un número de página del informe o una expresión que indica el número total de páginas del informe, se convierten en un campo de Word para que se muestre el número de página correcto en el informe representado. Si se ha establecido el alto del encabezado o del pie de página en el informe, Word no puede admitir este valor. En algunas circunstancias, la propiedad PrintOnFirstPage puede especificar si el texto de un encabezado o un pie de página se imprime o no en la primera página de un informe. Si el informe representado tiene varias páginas y cada una de ellas contiene solo una sección, puede establecer el valor de PrintOnFirstPage en False y el texto se eliminará de la primera página; en caso contrario, el texto se imprimirá, independientemente del valor de la propiedad PrintOnFirstPage.  
   
  El representador de Word intenta analizar todas las expresiones de los encabezados y pies de página cuando los informes se exportan a Word. Muchos tipos de expresiones se analizan correctamente y aparecen los valores esperados en los encabezados y en los pies de página de todas las páginas del informe.  
@@ -76,13 +76,13 @@ ms.locfileid: "67285034"
   
  Esto ocurre porque el representador de Word analiza el informe para ver si hay campos relacionados con la paginación, como **PageNumber** y **TotalPages** , y solo administra referencias simples, no llamadas a una función. En este caso, la expresión llama a la función **ToString** . Las dos expresiones siguientes son equivalentes y ambas se representan correctamente al obtener una vista previa del informe en el Generador de informes o en el Diseñador de informes, o al representar el informe publicado en el Administrador de informes o en una biblioteca de SharePoint. Sin embargo, el representador de Word solo analiza correctamente la segunda expresión y representa los números de página correctos.  
   
--   **Expresión compleja:**  la expresión es `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Expresión compleja:**  La expresión es`="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expresión con ejecuciones de texto:** Texto, **Promedio de ventas** y expresión, `=Avg(Fields!YTDPurchase.Value, "Sales)` y texto, **Número de página** y expresión `=Globals!PageNumber`  
+-   **Expresión con ejecuciones de texto:** Texto, **promedio de ventas**y expresión, `=Avg(Fields!YTDPurchase.Value, "Sales)`, y texto, **número de página**y expresión`=Globals!PageNumber`  
   
  Para evitar este problema, use varias ejecuciones de texto en vez de una expresión compleja cuando use expresiones en encabezados y pies de página. Las dos siguientes expresiones son equivalentes. La primera es una expresión compleja y la segunda usa ejecuciones de texto. El representador de Word solo analiza correctamente la segunda expresión.  
   
-##  <a name="Interactivity"></a> Interactividad  
+##  <a name="Interactivity"></a>Interactividad  
  En Word se admiten algunos elementos interactivos. A continuación se describen sus comportamientos específicos.  
   
 ### <a name="show-and-hide"></a>Mostrar u ocultar  
@@ -100,7 +100,7 @@ ms.locfileid: "67285034"
 ### <a name="bookmarks"></a>Marcadores  
  Los marcadores del informe se representan como marcadores de Word. Los vínculos de marcador se representan como hipervínculos que conectan con las etiquetas de marcador del documento. Las etiquetas de marcador deben tener menos de 40 caracteres. El único carácter especial que se puede utilizar en una etiqueta de marcador es el carácter de subrayado (_). Los caracteres especiales no compatibles se quitan del nombre de la etiqueta de marcador y, si el nombre tiene más de 40 caracteres, se trunca. Si hay nombres de marcador duplicados en el informe, los marcadores no se representan en Word.  
   
-##  <a name="WordStyleRendering"></a> Representación de estilos en Word  
+##  <a name="WordStyleRendering"></a>Representación de estilo de Word  
  A continuación se describe brevemente el modo en que se representan los estilos en Word.  
   
 ### <a name="color-palette"></a>Paleta de colores  
@@ -109,24 +109,25 @@ ms.locfileid: "67285034"
 ### <a name="border"></a>Borde  
  Los bordes de los elementos de informe, excepto el borde de página, se representan como bordes de celdas de tabla de Word.  
   
-##  <a name="SquigglyLines"></a> Líneas onduladas en los informes exportados  
+##  <a name="SquigglyLines"></a>Líneas onduladas en los informes exportados  
  Cuando se exportan y se ven en Word, los datos o las constantes del informe podrían estar subrayados con líneas onduladas rojas o verdes. Las líneas onduladas rojas identifican errores de ortografía. Las líneas onduladas verdes identifican errores gramaticales. Esto ocurre cuando el informe incluye palabras que no cumplen con la revisión (ortográfica y gramatical) del idioma de edición que se especifica en Word. Por ejemplo, los títulos de columna del informe en inglés probablemente aparecerán subrayados con líneas onduladas rojas cuando el informe se represente en una versión en español de Word. Los errores ortográficos percibidos en los informes son más comunes que los gramaticales porque los informes suelen incluir un texto breve, y no frases completas o párrafos.  
   
- La presencia de líneas onduladas en los informes implica que el informe tiene errores, que probablemente no lo sean. Puede quitar las líneas onduladas cambiando el idioma de revisión del informe. Para ello, seleccione el contenido del informe y especifique el idioma apropiado para el contenido. Puede seleccionar todo el contenido o una parte del mismo. En Word 2010, la opción de idioma, **Establecer idioma de revisión**, está en el área **Idioma** de la pestaña **Revisión** . Cuando actualice el contenido, tendrá que volver a guardar el documento.  
+ La presencia de líneas onduladas en los informes implica que el informe tiene errores, que probablemente no lo sean. Puede quitar las líneas onduladas cambiando el idioma de revisión del informe. Para ello, seleccione el contenido del informe y especifique el idioma apropiado para el contenido. Puede seleccionar todo el contenido o una parte del mismo. En Word 2010, la opción idioma, **establecer idioma de revisión**, está en el área **idioma** de la pestaña **revisar** . Después de actualizar el contenido, debe volver a guardar el documento.  
   
  Según la versión de idioma del programa de Office, las herramientas de revisión (por ejemplo, el diccionario) del idioma que elija se incluyen con el programa o se proporcionan en un paquete de idioma de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office que puede adquirir.  
   
  En los temas siguientes se proporciona información adicional sobre cómo configurar las opciones de Word y Office.  
   
--   Cambie el idioma de revisión en **Preferencias de idioma de Microsoft Office 2010** o en el cuadro de diálogo **Opciones de Word** de Word. Para obtener más información, vea [Habilitar el uso de otros idiomas en los programas de Office](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
+-   Cambie el idioma de revisión en **Preferencias de idioma de Microsoft Office 2010** o en el cuadro de diálogo **Opciones de Word** de Word. Para obtener más información, vea [Habilitar el uso de otros idiomas en los programas de Office](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1).  
   
--   Agregue paquetes de idioma de Office y, después, cambie el idioma de revisión. Para obtener más información, vea [Habilitar el uso de otros idiomas en los programas de Office](http://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) y [Opciones de idioma de Office 2010](http://office.microsoft.com/language/).  
+-   Agregue paquetes de idioma de Office y, después, cambie el idioma de revisión. Para obtener más información, vea [Habilitar el uso de otros idiomas en los programas de Office](https://office.microsoft.com/word-help/enable-the-use-of-other-languages-in-your-office-programs-HA010354783.aspx?CTT=1) y [Opciones de idioma de Office 2010](https://office.microsoft.com/language/).  
   
 > [!NOTE]  
 >  Cuando cambie el idioma de revisión en **Preferencias de idioma de Microsoft Office 2010** o en el cuadro de diálogo **Opciones de Word** en Word, el cambio se aplicará a todos los programas de Office.  
   
-##  <a name="WordLimitations"></a> Limitaciones de Word  
- [!INCLUDE[ofprword](../../includes/ofprword-md.md)]aplica las limitaciones siguientes:  
+##  <a name="WordLimitations"></a>Limitaciones de palabras  
+ 
+  [!INCLUDE[ofprword](../../includes/ofprword-md.md)]aplica las limitaciones siguientes:  
   
 -   Las tablas de Word admiten un máximo de 63 columnas. Si se intenta representar un informe que tiene más de 63 columnas, Word divide la tabla. Las columnas adicionales se colocan junto a las 63 columnas que se muestran en el cuerpo del informe. Por consiguiente, es posible que las columnas del informe no se alineen como se esperaba.  
   
@@ -136,13 +137,13 @@ ms.locfileid: "67285034"
   
 -   Una vez exportado el informe, Word lo pagina de nuevo. Esto puede hacer que aparezcan saltos de página adicionales en el informe representado.  
   
--   Word no repite las filas de encabezado en la página dos y siguientes, aunque se establezca la propiedad RepeatOnNewPage de la fila de encabezado estático en un tablix (tabla, matriz o lista) en `True`. Puede definir saltos de página explícitos en su informe para obligar a las filas de encabezado a aparecer en nuevas páginas. Sin embargo, dado que Word aplica su propia paginación al informe representado exportado a Word, los resultados podrían variar y la fila de encabezado podría no repetirse previsiblemente. La fila de encabezado estática es la fila que contiene los encabezados de columna.  
+-   Word no repite las filas de encabezado en la página dos y versiones posteriores, aunque establezca la propiedad RepeatOnNewPage de la fila de encabezado estático en un Tablix (tabla, matriz o `True`lista) en. Puede definir saltos de página explícitos en su informe para obligar a las filas de encabezado a aparecer en nuevas páginas. Sin embargo, dado que Word aplica su propia paginación al informe representado exportado a Word, los resultados podrían variar y la fila de encabezado podría no repetirse previsiblemente. La fila de encabezado estática es la fila que contiene los encabezados de columna.  
   
 -   Los cuadros de texto aumentan de tamaño cuando contienen espacios de no separación.  
   
 -   Cuando se exporta texto a Word, el texto con decoración en determinadas fuentes puede generar glifos inesperados en el informe representado o la pérdida de glifos en el mismo.  
   
-##  <a name="WordBenefits"></a> Ventajas de usar el representador de Word  
+##  <a name="WordBenefits"></a>Ventajas de usar el representador de Word  
  Además de hacer que las características nuevas de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 estén disponibles en los informes exportados, los archivos *.docx de los informes exportados suelen ser menores. Los informes exportados mediante el representador de Word suelen ser mucho menores que los mismos informes exportados mediante el representador de Word 2003.  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>Compatibilidad con versiones anteriores de los informes exportados  
@@ -150,14 +151,14 @@ ms.locfileid: "67285034"
   
  Si desactiva el modo de compatibilidad y después vuelve a guardar un informe, el diseño del informe puede cambiar de maneras inesperadas.  
   
-##  <a name="AvailabilityWord"></a> Disponibilidad del representador de Word 2003  
- En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el representador de Word predeterminado es la versión que representa en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Es la opción **Word** que aparece en los menús **Exportar** del Administrador de informes y SharePoint. La versión anterior, compatible solo con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, se denomina a partir de ahora Word 2003 y aparece en los menús con ese nombre. La opción de menú **Word 2003** no es visible de forma predeterminada, pero el administrador puede hacer que lo esté actualizando el archivo de configuración RSReportServer. Si desea exportar informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] con el representador de Word 2003, debe actualizar el archivo de configuración RSReportDesigner. Sin embargo, aunque se haga que el representador de Word 2003 esté visible, no está disponible en todos los escenarios. El archivo de configuración RSReportServer reside en el servidor de informes, por lo que las herramientas o productos desde los que exporte informes se deben conectar con un servidor de informes para leer el archivo de configuración. Si usa herramientas o productos en modo sin conexión o local, hacer que el representador de Word 2003 esté visible no tiene ningún efecto. La opción de menú **Word 2003** sigue sin estar disponible. Si hace que el representador de Word 2003 esté visible en el archivo de configuración RSReportDesigner, la opción de menú **Word 2003** siempre está disponible en la vista previa de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+##  <a name="AvailabilityWord"></a>Disponibilidad del representador de Word 2003  
+ En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el representador de Word predeterminado es la versión que representa en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Es la opción **Word** que aparece en los menús **Exportar** del Administrador de informes y SharePoint. La versión anterior, compatible solo con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, se denomina a partir de ahora Word 2003 y aparece en los menús con ese nombre. La opción de menú **Word 2003** no es visible de forma predeterminada, pero el administrador puede hacer que lo esté actualizando el archivo de configuración RSReportServer. Si desea exportar informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] con el representador de Word 2003, debe actualizar el archivo de configuración RSReportDesigner. Sin embargo, aunque se haga que el representador de Word 2003 esté visible, no está disponible en todos los escenarios. El archivo de configuración RSReportServer reside en el servidor de informes, por lo que las herramientas o productos desde los que exporte informes se deben conectar con un servidor de informes para leer el archivo de configuración. Si usa herramientas o productos en modo sin conexión o local, hacer que el representador de Word 2003 esté visible no tiene ningún efecto. La opción de menú **Word 2003** sigue sin estar disponible. Si hace que el representador de Word 2003 esté visible en el archivo de configuración RSReportDesigner, la opción de menú **Word 2003** siempre está disponible en la vista previa de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  La opción de menú **Word 2003** nunca está visible en los escenarios siguientes:  
   
 -   El Generador de informes está en modo sin conexión y se obtiene la vista previa de un informe en el Generador de informes. Esto es así en las versiones independiente y [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] del Generador de informes.  
   
--   El elemento web Visor de informes está en modo local y la granja de servidores de SharePoint no está integrada en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información, vea [Informes en modo local frente al modo conectado en el Visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
+-   El elemento web Visor de informes está en modo local y la granja de servidores de SharePoint no está integrada en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [informes en modo local frente a modo conectado en el visor de informes &#40;Reporting Services en modo de SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
  Si el representador **Word 2003** se configura para que esté visible, las opciones de menú **Word** y **Word 2003** estarán disponibles en los escenarios siguientes:  
   
@@ -165,7 +166,8 @@ ms.locfileid: "67285034"
   
 -   Sitio de SharePoint si Reporting Services está instalado en modo integrado de SharePoint.  
   
--   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y obtiene una vista previa del informe.  
+-   
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y obtiene una vista previa del informe.  
   
 -   Generador de informes está conectado a un servidor de informes. Puede tratarse de una versión de [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] o independiente del Generador de informes.  
   
@@ -177,19 +179,19 @@ ms.locfileid: "67285034"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- La extensión WORDOPENXML define el representador de Word para [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. La extensión WORD define la versión de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. `Visible = "false"` indica que el representador de Word 2003 está oculto. Para obtener más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ La extensión WORDOPENXML define el representador de Word para [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. La extensión WORD define la versión de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003. 
+  `Visible = "false"` indica que el representador de Word 2003 está oculto. Para obtener más información, consulte [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) y [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
-##  <a name="Differences"></a> Diferencias entre los representadores de 2003 de Word y Word  
+##  <a name="Differences"></a>Diferencias entre los representadores de Word y Word 2003  
  Los informes representados mediante el representador de Word o Word 2003 no se suelen distinguir visualmente. Sin embargo, puede observar pequeñas diferencias entre los dos formatos de Word o Word 2003.  
   
-##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
+##  <a name="DeviceInfo"></a>Configuración de la información del dispositivo  
  Puede cambiar parte de la configuración predeterminada de este representador si cambia la configuración de la información del dispositivo; por ejemplo, puede omitir los hipervínculos y los vínculos de obtención de detalles o expandir todos los elementos que se pueden alternar, independientemente de su estado original en el momento de generar la representación. Para obtener más información, consulte [Word Device Information Settings](../word-device-information-settings.md).  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Comportamientos de representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
   

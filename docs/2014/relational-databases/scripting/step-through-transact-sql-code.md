@@ -1,6 +1,6 @@
 ---
-title: Avanzar paso a paso por el código Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Avanzar paso a paso por el código Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e79a92bc1756003341cbb9e0581ade42a2bcee8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090007"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243156"
 ---
 # <a name="step-through-transact-sql-code"></a>Avanzar paso a paso por el código Transact-SQL
   El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] permite controlar las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan en una ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Puede detener el depurador en instrucciones individuales y, a continuación, ver el estado de los elementos de código en ese punto.  
@@ -51,13 +51,13 @@ ms.locfileid: "66090007"
   
 |Acción|Procedimiento|  
 |------------|---------------|  
-|Ejecutar todas las instrucciones desde la instrucción actual hasta el siguiente punto de interrupción|En el **depurar** menú, haga clic en **continuar**.<br /><br /> En el **depurar** barra de herramientas, haga clic en el **continuar** botón.|  
-|Ir a la siguiente instrucción o módulo|En el **depurar** menú, haga clic en **paso a paso**.<br /><br /> En el **depurar** barra de herramientas, haga clic en el **paso a paso** botón.<br /><br /> Presione F11.|  
-|Paso a paso por la siguiente instrucción o módulo|En el **depurar** menú, haga clic en **paso a paso por**.<br /><br /> En el **depurar** barra de herramientas, haga clic en el **saltar** botón.<br /><br /> Presione F10.|  
-|Salir de un módulo|En el **depurar** menú, haga clic en **paso a paso fuera**.<br /><br /> En el **depurar** barra de herramientas, haga clic en el **paso a paso fuera** botón.<br /><br /> Presione MAYÚS+F11.|  
+|Ejecutar todas las instrucciones desde la instrucción actual hasta el siguiente punto de interrupción|En el menú **depurar** , haga clic en **continuar**.<br /><br /> En la barra de herramientas **depurar** , haga clic en el botón **continuar** .|  
+|Ir a la siguiente instrucción o módulo|En el menú **depurar** , haga clic en **paso a paso por instrucciones**.<br /><br /> En la barra de herramientas **depurar** , haga clic en el botón **paso a paso por instrucciones** .<br /><br /> Presione F11.|  
+|Paso a paso por la siguiente instrucción o módulo|En el menú **depurar** , haga clic en **paso a paso por procedimientos**.<br /><br /> En la barra de herramientas **depurar** , haga clic en el botón **paso a paso por procedimientos** .<br /><br /> Presione F10.|  
+|Salir de un módulo|En el menú **depurar** , haga clic en **paso a paso para salir**.<br /><br /> En la barra de herramientas **depurar** , haga clic en el botón **paso a paso para salir** .<br /><br /> Presione MAYÚS+F11.|  
 |Ejecutar un proceso hasta la ubicación del cursor actual|Haga clic con el botón derecho en la ventana del Editor de consultas y, después, haga clic en **Ejecutar hasta el cursor**.<br /><br /> Presione CTRL+F10.|  
   
-## <a name="see-also"></a>Vea también  
- [Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)  
+## <a name="see-also"></a>Véase también  
+ [Información del depurador de Transact-SQL](transact-sql-debugger-information.md)  
   
   

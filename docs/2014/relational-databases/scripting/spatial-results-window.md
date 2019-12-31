@@ -1,6 +1,6 @@
 ---
-title: Ventana Resultados espaciales | Microsoft Docs
-ms.custom: ''
+title: Ventana Resultados espaciales
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,20 +10,20 @@ ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 606ac348ce4ee7bed65a7bcbe6d7ebbbd0a7f87d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c554959fedba58f743f1dd37d3c97554d0f00d3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063799"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243252"
 ---
 # <a name="spatial-results-window"></a>Ventana Resultados espaciales
-  La ventana **Resultados espaciales** proporciona herramientas de asignación visual para ver los datos espaciales. Para ver los resultados espaciales, los resultados de la consulta deben incluir una columna espacial con datos de geometría o de geografía.  
+  La ventana **resultados espaciales** proporciona herramientas de asignación visual para ver los datos espaciales. Para ver los resultados espaciales, los resultados de la consulta deben incluir una columna espacial con datos de geometría o de geografía.  
   
 > [!NOTE]  
 >  La ventana **Resultados espaciales** solo está disponible si los resultados se devuelven a una cuadrícula en la ventana **Resultados** . Si especifica que los resultados se deben devolver como texto, esta ventana no está disponible.  
   
-## <a name="options"></a>Opciones  
+## <a name="options"></a>Options  
  **Seleccionar columna espacial**  
  Especifique la columna espacial que desea ver en las columnas espaciales de los resultados de la consulta. Solo puede seleccionarse una columna cada vez.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "66063799"
  Esta opción no está disponible si solo se devuelven instancias de punto en una consulta.  
   
  **Seleccionar proyección**  
- Muestre los datos geográficos en una de las cuatro proyecciones: Equirectangular, Mercator, Robinson o Bonne.  
+ Muestre los datos de geografía en una de estas cuatro proyecciones: Equirectangular, Mercator, Robinson o Bonne.  
   
  Esta opción no está disponible para los datos de geometría.  
   
- **Zoom**  
+ **General**  
  Ajuste la presentación del mapa en una escala exponencial.  
   
  **Mostrar líneas de cuadrícula**  
@@ -48,10 +48,10 @@ ms.locfileid: "66063799"
 > [!NOTE]  
 >  Las instancias de punto no se pueden etiquetar.  
   
-## <a name="see-also"></a>Vea también  
- [Ver datos espaciales en el Explorador de objetos](view-spatial-data-in-object-explorer.md)   
- [Datos espaciales &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+## <a name="see-also"></a>Véase también  
+ [Ver datos espaciales en Explorador de objetos](view-spatial-data-in-object-explorer.md)   
+ [SQL Server de &#40;de datos espaciales&#41;](../spatial/spatial-data-sql-server.md)   
+ [SQL Server Management Studio de &#40;del editor de consultas de Motor de base de datos&#41;](database-engine-query-editor-sql-server-management-studio.md)   
  [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

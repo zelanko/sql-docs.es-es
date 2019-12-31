@@ -1,6 +1,5 @@
 ---
-title: Lado cliente y Formato XML en el servidor (SQLXML 4.0) | Microsoft Docs
-ms.custom: ''
+title: Formato XML del lado cliente y de servidor (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,20 +17,21 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d02eeb0ad64a62343fda53a1907cec2b4bb9e850
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 421c48590098f9dbf4ce075c213fcd1cda720649
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68220365"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247011"
 ---
-# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Lado cliente y Aplicación de formato XML en el servidor (SQLXML 4.0)
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Diferencias de aplicación de formato XML entre el cliente y el servidor (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   En este tema se describen las diferencias generales que existen entre la aplicación de formato XML del lado cliente y del lado servidor en SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>En el formato del cliente, no se admiten consultas de varios conjuntos de filas  
- Cuando la aplicación de formato XML es del lado cliente, no se admiten consultas que generen varios conjuntos de filas. Supongamos, por ejemplo, que tiene un directorio virtual en el que ha especificado que la aplicación formato se realice del lado cliente. Considere la posibilidad de esta plantilla de ejemplo, que tiene dos instrucciones SELECT en una  **\<SQL: >** bloque:  
+ Cuando la aplicación de formato XML es del lado cliente, no se admiten consultas que generen varios conjuntos de filas. Supongamos, por ejemplo, que tiene un directorio virtual en el que ha especificado que la aplicación formato se realice del lado cliente. Considere esta plantilla de ejemplo, que tiene dos instrucciones SELECT en un ** \<bloque SQL: query>** :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -42,21 +42,21 @@ ms.locfileid: "68220365"
 </ROOT>  
 ```  
   
- Si ejecuta esta plantilla en el código de la aplicación, se devolverá un error, puesto que el formato XML del lado cliente no admite el formato de varios conjuntos de filas. Si especifica las consultas en dos separar  **\<SQL: >** bloques, obtendrá los resultados deseados.  
+ Si ejecuta esta plantilla en el código de la aplicación, se devolverá un error, puesto que el formato XML del lado cliente no admite el formato de varios conjuntos de filas. Si especifica las consultas en dos bloques ** \<SQL: query>** independientes, obtendrá los resultados deseados.  
   
-## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>Mapas de forma diferente en el cliente marca de tiempo. Formato del lado servidor  
- En el XML en el servidor de formato, la columna de base de datos de **timestamp** tipo se asigna al tipo XDR i8 (cuando se especifica la opción XMLDATA en la consulta).  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp se asigna de distinto modo cuando la aplicación de formato se realiza en el cliente o en el servidor  
+ En el formato XML del servidor, la columna de base de datos de tipo **timestamp** se asigna al tipo XDR de i8 (cuando se especifica la opción XMLDATA en la consulta).  
   
- En XML en el cliente de formato, la columna de base de datos de **marca de tiempo** tipo se asigna a cualquiera la **uri** o el **bin.base64** tipo XDR (dependiendo de si el binario base64 opción se especifica en la consulta). El **bin.base64** tipo XDR es útil si usa las características de diagrama de actualización y la carga masiva, porque este tipo se convierte en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp** tipo. De esta forma, las operaciones de inserción, actualización o eliminación se realizan correctamente.  
+ En el formato XML del lado cliente, la columna de base de datos de tipo **timestamp** se asigna al **URI** o al tipo XDR **bin. base64** (dependiendo de si se especifica la opción Binary Base64 en la consulta). El tipo XDR **bin. base64** es útil si usa las características diagrama y de carga masiva, ya que este tipo se convierte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el tipo de **marca** de tiempo. De esta forma, las operaciones de inserción, actualización o eliminación se realizan correctamente.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>En el formato del servidor se usan tipos VARIANT profundos  
  En la aplicación de formato XML en el servidor, se usan los tipos profundos de un tipo VARIANT. Si aplica el formato XML del lado cliente, los datos VARIANT se convierten en una cadena Unicode y no se usan los subtipos de VARIANT.  
   
-## <a name="nested-mode-vs-auto-mode"></a>Informes en modo frente ANIDADOS. el modo AUTO  
+## <a name="nested-mode-vs-auto-mode"></a>Diferencias entre el modo NESTED y el modo AUTO  
  El modo NESTED de la instrucción FOR XML del lado cliente es similar al modo AUTO de la instrucción FOR XML del servidor, con las siguientes excepciones:  
   
 ### <a name="when-you-query-views-using-auto-mode-on-the-server-side-the-view-name-is-returned-as-the-element-name-in-the-resulting-xml"></a>Al consultar vistas utilizando el modo AUTO en el servidor, el nombre de la vista se devuelve como el nombre del elemento en el código XML resultante.  
- Por ejemplo, supongamos que la vista siguiente se crea en la tabla Person.Contact en la AdventureWorksdatabase:  
+ Por ejemplo, suponga que se crea la vista siguiente en la tabla person. contact de AdventureWorksdatabase:  
   
 ```  
 CREATE VIEW ContactView AS (SELECT ContactID as CID,  
@@ -77,7 +77,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Al ejecutar la plantilla, se devuelve el código XML siguiente. (Se muestran solo los resultados parciales). Tenga en cuenta que los nombres de elemento son los nombres de las vistas en la que se ejecutó la consulta.  
+ Al ejecutar la plantilla, se devuelve el código XML siguiente. (Solo se muestran resultados parciales). Tenga en cuenta que los nombres de elemento son los nombres de las vistas en las que se ejecuta la consulta.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -87,7 +87,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Al especificar el formato XML del lado cliente utilizando el modo NESTED correspondiente, los nombres de la tabla base se devuelven como los nombres de elemento en el código XML resultante. Por ejemplo, la siguiente plantilla modificada ejecuta la misma instrucción SELECT, pero el formato XML se realiza en el lado cliente (es decir, **client-side-xml** está establecido en true en la plantilla):  
+ Al especificar el formato XML del lado cliente utilizando el modo NESTED correspondiente, los nombres de la tabla base se devuelven como los nombres de elemento en el código XML resultante. Por ejemplo, la siguiente plantilla revisada ejecuta la misma instrucción SELECT, pero el formato XML se realiza en el lado cliente (es decir, **Client-Side-XML** se establece en true en la plantilla):  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -133,7 +133,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>   
 ```  
   
- Cuando se utiliza el modo NESTED de la instrucción FOR XML del lado cliente, los nombres de tabla se devuelven como nombres de elemento en el código XML resultante. (No se usan alias de tabla que se especifican en la consulta). Por ejemplo, fíjese en esta plantilla:  
+ Cuando se utiliza el modo NESTED de la instrucción FOR XML del lado cliente, los nombres de tabla se devuelven como nombres de elemento en el código XML resultante. (No se utilizan los alias de tabla especificados en la consulta). Por ejemplo, considere esta plantilla:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -181,7 +181,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Si el formato XML se realiza en el servidor (**client-side-xml = "0"** ), puede utilizar el alias para las columnas que devuelven consultas dbobject en qué tabla y columna reales se devuelven los nombres (aunque haya especificado alias). Por ejemplo, la plantilla siguiente ejecuta una consulta y el formato XML se realiza en el servidor (el **client-side-xml** no se especifica la opción y la **ejecutar en el cliente** opción no está seleccionada para el raíz virtual). La consulta especifica también el modo AUTO (no el modo NESTED del lado cliente).  
+ Si el formato XML se realiza en el servidor (**Client-Side-XML = "0"**), puede usar el alias para las columnas que devuelven las consultas dbobject en las que se devuelven los nombres reales de las tablas y columnas (aunque se hayan especificado alias). Por ejemplo, la siguiente plantilla ejecuta una consulta y el formato XML se realiza en el servidor (no se especifica la opción **Client-Side-XML** y la opción **ejecutar en el cliente** no está seleccionada para la raíz virtual). La consulta especifica también el modo AUTO (no el modo NESTED del lado cliente).  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -205,18 +205,18 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
-### <a name="client-side-vs-server-side-xpath"></a>Lado cliente y XPath del lado servidor  
+### <a name="client-side-vs-server-side-xpath"></a>Diferencias entre XPath en el cliente y en el servidor  
  No existen diferencias de funcionamiento entre XPath en el cliente y en el servidor, con las siguientes salvedades:  
   
 -   Las conversiones de datos que se aplican al utilizar consultas XPath del lado cliente son diferentes de las que se aplican cuando se utilizan consultas XPath en el servidor. XPath en el cliente utiliza CAST en lugar de CONVERT mode 126.  
   
--   Al especificar **client-side-xml = "0"** (false) en una plantilla, que está solicitando en formato XML del lado servidor. Por lo tanto, no es posible especificar FOR XML NESTED porque el servidor no reconoce la opción NESTED. Esto genera un error. Deben utilizarse los modos AUTO, RAW o EXPLICIT, que el servidor sí que reconoce.  
+-   Cuando se especifica **Client-Side-XML = "0"** (false) en una plantilla, se solicita el formato XML del lado servidor. Por lo tanto, no es posible especificar FOR XML NESTED porque el servidor no reconoce la opción NESTED. Esto genera un error. Deben utilizarse los modos AUTO, RAW o EXPLICIT, que el servidor sí que reconoce.  
   
--   Al especificar **client-side-xml = "1"** (true) en una plantilla, que solicita un formato XML del lado cliente. En este caso, puede especificarse FOR XML NESTED. Si se especifica FOR XML AUTO, el formato XML se produce en el servidor aunque **client-side-xml = "1"** se especifica en la plantilla.  
+-   Cuando se especifica **Client-Side-XML = "1"** (true) en una plantilla, se solicita el formato XML del lado cliente. En este caso, puede especificarse FOR XML NESTED. Si especifica FOR XML AUTO, el formato XML se produce en el lado servidor, aunque se especifica **Client-Side-XML = "1"** en la plantilla.  
   
-## <a name="see-also"></a>Vea también  
- [Para conocer las consideraciones de seguridad XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
- [Aplicación de formato XML del lado cliente &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
- [Aplicación de formato XML del lado servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
+## <a name="see-also"></a>Véase también  
+ [Consideraciones de seguridad de FOR XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [Formato XML del lado cliente &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
+ [Formato XML del lado servidor &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
   
   

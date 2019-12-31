@@ -1,6 +1,6 @@
 ---
-title: Iniciar la utilidad sqlcmd | Microsoft Docs
-ms.custom: ''
+title: Iniciar la utilidad sqlcmd
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec1ec91705dfb9194f42c079cb7b3d5100c9d396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80f8f63b4ddb3e8641ef503a615d57c63be35164
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090108"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243268"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Iniciar la utilidad sqlcmd
   Para empezar a usar `sqlcmd`, primero debe iniciar la utilidad y conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede conectarse a una instancia con nombre o a la instancia predeterminada. El primer paso consiste en iniciar la utilidad `sqlcmd`.  
@@ -34,26 +34,26 @@ ms.locfileid: "66090108"
   
 2.  En el símbolo del sistema, escriba `sqlcmd`.  
   
-3.  Presione ENTRAR.  
+3.  Presione Entrar.  
   
      Ahora tiene una conexión de confianza con la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se está ejecutando en el equipo.  
   
-     **1 >** es el `sqlcmd` símbolo del sistema que especifica el número de línea. Cada vez que presione ENTRAR, el número se incrementará en uno.  
+     **1>** es el `sqlcmd` símbolo del sistema que especifica el número de línea. Cada vez que presione ENTRAR, el número se incrementará en uno.  
   
 4.  Para finalizar la `sqlcmd` sesión, escriba `EXIT` en el `sqlcmd` símbolo del sistema.  
   
 ### <a name="to-start-the-sqlcmd-utility-and-connect-to-a-named-instance-of-sql-server"></a>Para iniciar la utilidad sqlcmd y conectar con una instancia con nombre de SQL Server  
   
-1.  Abra un símbolo ventana y escriba `sqlcmd -S` *Miservidor\nombredeinstancia*. Reemplace *myServer\instanceName* por el nombre del equipo y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que quiera conectarse.  
+1.  Abra una ventana del símbolo del sistema y `sqlcmd -S`escriba *myServer\instanceName*. Reemplace *myServer\instanceName* por el nombre del equipo y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que quiera conectarse.  
   
-2.  Presione ENTRAR.  
+2.  Presione Entrar.  
   
-     El `sqlcmd` símbolo del sistema (1 >) indica que está conectado a la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     El `sqlcmd` símbolo del sistema (1>) indica que está conectado a la instancia especificada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.  
   
     > [!NOTE]  
     >  Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] escritas están almacenadas en un búfer. Se ejecutan como un lote cuando se encuentra el comando GO.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Ejecutar archivos de scripts Transact-SQL mediante sqlcmd](sqlcmd-run-transact-sql-script-files.md)  
   
   

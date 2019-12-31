@@ -1,19 +1,20 @@
 ---
-title: Configurar PolyBase para obtener acceso a datos externos en Hadoop | Microsoft Docs
+title: 'Acceso a datos externos: Hadoop-polybase'
 description: Explica cómo configurar polybase en el almacenamiento de datos paralelos para conectarse a Hadoop externo.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.custom: seo-dt-2019, seo-lt-2019
+ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227124"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245392"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar PolyBase para obtener acceso a datos externos en Hadoop
 
@@ -48,7 +49,7 @@ En primer lugar, configure APS para usar su proveedor de Hadoop específico.
 
 2. Reinicie la región APS mediante la página estado del servicio en el [Configuration Manager del dispositivo](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a> Habilitar el cálculo de la aplicación  
+## <a id="pushdown"></a>Habilitar el cálculo de aplicación  
 
 Para mejorar el rendimiento de las consultas, habilite el cálculo de la aplicación para el clúster de Hadoop:  
   
@@ -296,7 +297,7 @@ ORDER BY CarSensor_Data.Speed DESC
 OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)  
 ```  
 
-### <a name="importing-data"></a>Importar datos  
+### <a name="importing-data"></a>Importación de datos  
 
 La siguiente consulta importa datos externos en APS. En este ejemplo se importan los datos de los controladores rápidos en APS para realizar análisis más profundos. Para mejorar el rendimiento, aprovecha la tecnología de almacén de columnas en APS.  
 

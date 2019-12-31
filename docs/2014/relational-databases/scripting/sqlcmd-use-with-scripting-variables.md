@@ -1,6 +1,6 @@
 ---
-title: Usar sqlcmd con variables de script | Microsoft Docs
-ms.custom: ''
+title: Usar sqlcmd con variables de script
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b394e91c01e4607c74f73d90630095af2e912941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090060"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243167"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Usar sqlcmd con variables de script
   Las variables que se usan en scripts se denominan variables de scripting. Las variables de scripting posibilitan el uso de un script en varias situaciones. Por ejemplo, si desea ejecutar un script en varios servidores, en lugar de modificar el script para cada servidor, puede usar una variable de scripting para el nombre del servidor. Al cambiar el nombre del servidor proporcionado a la variable de scripting, el mismo script puede ejecutarse en diferentes servidores.  
@@ -44,9 +44,9 @@ ms.locfileid: "66090060"
   
 3.  Shell de comandos (**SET X=Y**) establecido en el símbolo del sistema antes de iniciar **sqlcmd**  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd-v** X = Y  
   
-5.  **:Setvar** X Y  
+5.  **: Setvar** X Y  
   
 > [!NOTE]  
 >  Para ver las variables de entorno, en el **Panel de control**, abra **Sistema**y haga clic en la pestaña **Opciones avanzadas** .  
@@ -64,7 +64,8 @@ ms.locfileid: "66090060"
   
  `FROM Person.Person x`  
   
- `WHERE c.`BusinessEntityID `< 5;`  
+ 
+  `WHERE c.`BusinessEntityID `< 5;`  
   
  Después, puede especificar el nombre de la columna que desea que se devuelva mediante la opción `-v` :  
   
@@ -79,7 +80,7 @@ ms.locfileid: "66090060"
   
 -   Los nombres de variable no deben contener caracteres de espacio en blanco ni comillas.  
   
--   Los nombres de variable no deben tener la misma forma que una expresión variable, como *$(var)* .  
+-   Los nombres de variable no deben tener la misma forma que una expresión variable, como *$(var)*.  
   
 -   Las variables de scripting no distinguen entre mayúsculas y minúsculas.  
   
@@ -102,7 +103,7 @@ ms.locfileid: "66090060"
 ## <a name="sqlcmd-scripting-variables"></a>Variables de scripting sqlcmd  
  Las variables definidas mediante **sqlcmd** se denominan variables de scripting. En la siguiente tabla se enumeran las variables de scripting de **sqlcmd** .  
   
-|Variable|Opción relacionada|L/E|Default|  
+|Variable|Opción relacionada|L/E|Valor predeterminado|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -110,18 +111,18 @@ ms.locfileid: "66090060"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|L/E|"8" (segundos)|  
-|SQLCMDSTATTIMEOUT|-T|L/E|"0" = esperar indefinidamente|  
-|SQLCMDHEADERS|-H|L/E|"0"|  
-|SQLCMDCOLSEP|-S|L/E|"|  
+|SQLCMDSTATTIMEOUT|-t|L/E|"0" = esperar indefinidamente|  
+|SQLCMDHEADERS|-h|L/E|"0"|  
+|SQLCMDCOLSEP|-s|L/E|" "|  
 |SQLCMDCOLWIDTH|-w|L/E|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
-|SQLCMDERRORLEVEL|-M|L/E|"0"|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
+|SQLCMDERRORLEVEL|-m|L/E|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|L/E|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|L/E|"0" = ilimitado|  
 |SQLCMDEDITOR||L/E|"edit.com"|  
 |SQLCMDINI||R|""|  
   
- \* SQLCMDUSER, SQLCMDPASSWORD y SQLCMDSERVER se establecen cuando se usa **:Connect** .  
+ \*SQLCMDUSER, SQLCMDPASSWORD y SQLCMDSERVER se establecen cuando se usa **: Connect** .  
   
  L indica que el valor solo puede establecerse una vez durante la inicialización del programa.  
   
@@ -129,7 +130,7 @@ ms.locfileid: "66090060"
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-the-setvar-command-in-a-script"></a>A. Usar el comando setvar en un script  
+### <a name="a-using-the-setvar-command-in-a-script"></a>a. Usar el comando setvar en un script  
  Muchas opciones de **sqlcmd** pueden controlarse en un script mediante el comando **setvar** . En el siguiente ejemplo, se crea el script `test.sql` ; en él, la variable `SQLCMDLOGINTIMEOUT` está establecida en `60` segundos y otra variable de scripting, `server`, está establecida en `testserver`. El siguiente código está en `test.sql`.  
   
  `:setvar SQLCMDLOGINTIMEOUT 60`  
@@ -148,7 +149,7 @@ ms.locfileid: "66090060"
   
  `sqlcmd -i c:\test.sql`  
   
-### <a name="b-using-the-setvar-command-interactively"></a>b. Usar el comando setvar interactivamente  
+### <a name="b-using-the-setvar-command-interactively"></a>B. Usar el comando setvar interactivamente  
  En el ejemplo siguiente se muestra cómo establecer una variable de script de manera interactiva mediante el comando `setvar` .  
   
  `sqlcmd`  
@@ -165,7 +166,7 @@ ms.locfileid: "66090060"
   
  `1>`  
   
-### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>C. Usar variables de entorno del símbolo del sistema en sqlcmd  
+### <a name="c-using-command-prompt-environment-variables-within-sqlcmd"></a>c. Usar variables de entorno del símbolo del sistema en sqlcmd  
  En el ejemplo siguiente, se establecen cuatro variables de entorno `are` , a las que luego se llama desde `sqlcmd`.  
   
  `C:\>SET tablename=Person.Person`  
@@ -340,9 +341,9 @@ ms.locfileid: "66090060"
   
  `>2 GO`  
   
-## <a name="see-also"></a>Vea también  
- [Usar la utilidad sqlcmd](sqlcmd-use-the-utility.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)   
- [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+## <a name="see-also"></a>Véase también  
+ [Usar la utilidad SQLCMD](sqlcmd-use-the-utility.md)   
+ [Sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)   
+ [Referencia de la utilidad de símbolo del sistema &#40;Motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

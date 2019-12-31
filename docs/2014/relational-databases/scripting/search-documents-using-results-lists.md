@@ -1,6 +1,6 @@
 ---
-title: Buscar en documentos mediante las listas de resultados | Microsoft Docs
-ms.custom: ''
+title: Buscar en documentos mediante las listas de resultados
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 957b6e46cb8c3b4cc551c616a1b547c3c1cbdeb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03fa961955b963f0149fbfcd2dbdfc379bb8a7cf
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090159"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243310"
 ---
 # <a name="search-documents-using-results-lists"></a>Buscar en documentos mediante las listas de resultados
   Con el cuadro de diálogo **Buscar y reemplazar** es posible buscar y reemplazar texto en todos los archivos de un proyecto o una solución, o en una carpeta del sistema de archivos, aunque no estén abiertos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Las coincidencias de las búsquedas realizadas con el cuadro de diálogo **Buscar y reemplazar** aparecen en las ventanas Resultados de la búsqueda 1 y Resultados de la búsqueda 2, que permiten ver el texto exacto de la línea que contiene la coincidencia.  
@@ -53,19 +53,19 @@ ms.locfileid: "66090159"
   
 5.  Haga clic en **Reemplazar** para reemplazar el texto de búsqueda con el texto del cuadro **Reemplazar con** . Puede omitir una coincidencia específica si hace clic en **Buscar siguiente** o un archivo entero si hace clic en **Omitir archivo**.  
   
-     \- O bien  
+     \-de  
   
      Elija **Reemplazar todo** para reemplazar todas las coincidencias de búsqueda con el texto del cuadro **Reemplazar con** . Si desea deshacer algunos de los reemplazos en otro momento, seleccione **Mantener los archivos modificados abiertos después de Reemplazar todo** .  
   
     > [!NOTE]  
-    >  **Reemplazar todo** reemplaza todas las coincidencias de la búsqueda, incluidas aquellas que se encuentran en archivos que se han omitido mediante **Omitir archivo** o **Buscar siguiente**. Solo es posible utilizar **Deshacer** en los reemplazos realizados en archivos que permanecen abiertos tras la operación de reemplazo.  
+    >  **Reemplazar todo** reemplaza todas las coincidencias de la búsqueda, incluidas las de los archivos que se han omitido con **Omitir archivo** o **Buscar siguiente**. Solo es posible utilizar **Deshacer** en los reemplazos realizados en archivos que permanecen abiertos tras la operación de reemplazo.  
   
  La información de reemplazo aparece de forma predeterminada en la ventana Resultados de la búsqueda 1. Puede examinar los reemplazos si hace doble clic en cada entrada de la ventana Resultados de la búsqueda 1.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Véase también  
  [Buscar y reemplazar](search-and-replace.md)   
  [Buscar documentos de forma interactiva](search-documents-interactively.md)   
  [Buscar texto con caracteres comodín](search-text-with-wildcards.md)   
- [Buscar texto mediante expresiones regulares](search-text-with-regular-expressions.md)  
+ [Buscar texto con expresiones regulares](search-text-with-regular-expressions.md)  
   
   

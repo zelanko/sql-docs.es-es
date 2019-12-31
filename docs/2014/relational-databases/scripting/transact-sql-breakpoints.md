@@ -1,6 +1,6 @@
 ---
-title: Puntos de interrupción de Transact-SQL | Microsoft Docs
-ms.custom: ''
+title: Utilizar puntos de interrupción de Transact-SQL
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e170a2177ceefb0329e85f8fbf252cc62de76469
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 024f079d28c5ce144282bf09fff675fd308a8173
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063555"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243140"
 ---
 # <a name="transact-sql-breakpoints"></a>Utilizar puntos de interrupción de Transact-SQL
   Los puntos de interrupción especifican que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] pausa la ejecución en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede ver el estado de los elementos de código en ese momento.  
@@ -36,10 +36,10 @@ ms.locfileid: "66063555"
 |Describe cómo especificar una condición, que define si el punto de interrupción interrumpe basándose en la evaluación de una expresión de Transact SQL especificada.|[Especificar una condición de punto de interrupción](specify-a-breakpoint-condition.md)|  
 |Describe como especificar un número de llamadas, que causa que un punto de interrupción se interrumpa solo cuando la instrucción que lo contiene se ha ejecutado un número de veces especificado.|[Especificar un número de llamadas](specify-a-hit-count.md)|  
 |Describe cómo especificar un filtro, que hace que un punto de interrupción interrumpa únicamente en procesos o subprocesos especificados.|[Especificar un filtro del punto de interrupción](specify-a-breakpoint-filter.md)|  
-|Describe cómo especificar una acción **Cuándo se llama** , una operación personalizada que se realiza cuando se ejecuta la instrucción de punto de interrupción. Un ejemplo de lo anterior sería imprimir un mensaje.|[Especificar una acción del punto de interrupción](specify-a-breakpoint-action.md)|  
-|Describe cómo editar la ubicación de un punto de interrupción.|[Modificar la ubicación de un punto de interrupción](edit-a-breakpoint-location.md)|  
+|Describe cómo especificar una acción **Cuándo se llama** , una operación personalizada que se realiza cuando se ejecuta la instrucción de punto de interrupción. Un ejemplo de lo anterior sería imprimir un mensaje.|[Especificar una acción de punto de interrupción](specify-a-breakpoint-action.md)|  
+|Describe cómo editar la ubicación de un punto de interrupción.|[Editar una ubicación de punto de interrupción](edit-a-breakpoint-location.md)|  
   
-## <a name="see-also"></a>Vea también  
- [Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)  
+## <a name="see-also"></a>Véase también  
+ [Información del depurador de Transact-SQL](transact-sql-debugger-information.md)  
   
   

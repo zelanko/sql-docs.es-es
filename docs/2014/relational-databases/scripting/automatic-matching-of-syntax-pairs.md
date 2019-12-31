@@ -1,6 +1,6 @@
 ---
-title: Coincidencia automática de pares en la sintaxis | Microsoft Docs
-ms.custom: ''
+title: Coincidencia automática de pares en la sintaxis
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530747edf03e9790c2f728ec5485d305da046d08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49b121f776ec6a9d363236fab03a1da2228311a6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064148"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244801"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Coincidencia automática de pares en la sintaxis
   La coincidencia automática de pares en la sintaxis informa de manera inmediata sobre si están escritos correctamente los elementos de sintaxis que deben ir emparejados en el código. Esto se conoce como coincidencia de delimitadores en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , coincidencia de llaves en el Editor de consultas XMLA de Analysis Services y coincidencia de paréntesis en los editores MDX y DMX.  
@@ -36,9 +36,9 @@ ms.locfileid: "66064148"
 |Delimitador de apertura|Delimitador de cierre|  
 |--------------------|-----------------------|  
 |**(**|**)**|  
-|**BEGIN**|**END**|  
-|**BEGIN TRY**|**END TRY**|  
-|**BEGIN CATCH**|**END CATCH**|  
+|**INICIA**|**EXTREMO**|  
+|**INICIAR PRUEBA**|**END TRY**|  
+|**INICIAR DETECCIÓN**|**FINALIZAR CAPTURA**|  
   
  La coincidencia automática de delimitadores no reconoce los delimitadores de los identificadores entre corchetes ([ObjectName]) ni los de los identificadores entre comillas ("ObjectName"). La coincidencia de pares no hace coincidir los delimitadores de comillas simples para los literales de cadena ('cadena') porque la codificación en colores ya proporciona una indicación visual de si se ha delimitado la cadena.  
   

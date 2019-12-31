@@ -1,6 +1,5 @@
 ---
-title: Tipos de datos y XML (SQLXML 4.0) del comportamiento de carga de forma masiva | Microsoft Docs
-ms.custom: ''
+title: Tipos de datos y comportamiento de carga masiva XML (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,32 +13,33 @@ helpviewer_keywords:
 ms.assetid: d1ac1939-1f6c-4398-b7a7-a79ca608a4f1
 author: MightyPen
 ms.author: genemi
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 820d2b083544542d1c1414f978105fe992b0ce36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33619d0d3e1ec5d6684e3dc300317b1cc3666e79
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915149"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246729"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Tipos de datos y comportamiento de la carga masiva XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Los tipos de datos que se especifican en el esquema de asignación (tipo XSD o XDR y **SQL: DataType**) generalmente se ignoran, excepto en los casos siguientes:  
+  Normalmente, se omiten los tipos de datos que se especifican en el esquema de asignación (XSD o tipo XDR y **SQL: DataType**), excepto en los casos siguientes:  
   
  En XSD:  
   
--   Si el tipo es **dateTime** o **tiempo**, debe especificar el **SQL: DataType** porque la carga masiva XML realiza la conversión de datos antes de enviarlos a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Si el tipo es **DateTime** u **Time**, debe especificar **SQL: DataType** porque la carga masiva XML realiza la conversión de datos antes de enviar los datos a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Microsoft.  
   
--   Cuando se carga masiva en una columna de **uniqueidentifier** escriba [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y el valor XSD es un GUID que incluye llaves ({y}), se debe especificar **SQL: DataType = "uniqueidentifier"** a Quite las llaves antes de que el valor se inserta en la columna. Si **SQL: DataType** no se especifica, el valor se envía con las llaves y se produce un error en la inserción.  
+-   Cuando se realiza la carga masiva en una columna **** de tipo uniqueidentifier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en y el valor XSD es un GUID que incluye llaves ({y}), debe especificar **SQL: DataType = "uniqueidentifier"** para quitar las llaves antes de que se inserte el valor en la columna. Si no se especifica **SQL: DataType** , el valor se envía con las llaves y se produce un error en la inserción.  
   
- Para obtener más información acerca de **SQL: DataType**, consulte [conversiones de tipos de datos y la anotación SQL: DataType &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+ Para obtener más información sobre **SQL: DataType**, vea [conversiones de tipos de datos y la anotación sql: datatype &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  En XDR:  
   
--   Si el **dt: Type** es **datetime**, **tiempo**, **dateTime.tz**, o **time.tz**, debe especificar ambos el **dt: Type** y **SQL: DataType** porque la carga masiva XML realiza la conversión de datos antes de enviar los datos a los tipos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Si **DT: Type** es **DateTime**, **Time**, **DateTime.tz**o **Time.tz**, debe especificar los tipos de datos **DT: Type** y **SQL: DataType** , ya que la carga masiva XML realiza la conversión de datos antes de enviar los datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]a.  
   
--   Si los datos XML están de tipo **uuid**, **SQL: DataType** debe especificarse; **dt: Type = "uuid"** también es necesario, a menos que los datos son datos de cadena. Si no especifica **dt:uuid**, carga masiva XML acepta cadenas con llaves (y los quita si es necesario).  
+-   Si los datos XML son del tipo **UUID**, se debe especificar **SQL: DataType** ; **DT: type = "UUID"** también es necesario, a menos que los datos sean datos de cadena. Si no especifica **DT: UUID**, la carga masiva XML acepta cadenas con llaves (y las quita si es necesario).  
   
--   Si los datos XML son **bin.base64** o **bin.hex**, debe especificar el tipo de datos XML con **dt: Type**. A continuación, la carga masiva XML carga los datos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como una representación hexadecimal de los datos.  
+-   Si los datos XML son **bin. base64** o **bin. hex**, debe especificar el tipo de datos XML con **DT: Type**. A continuación, la carga masiva XML carga los datos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como una representación hexadecimal de los datos.  
   
   

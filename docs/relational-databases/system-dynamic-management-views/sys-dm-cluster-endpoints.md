@@ -1,5 +1,5 @@
 ---
-title: Sys. DM _ _cluster_endpoints (Transact-SQL) | Microsoft Docs
+title: Sys. dm_cluster_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
 ms.prod: sql
@@ -19,27 +19,27 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 05076a6b694ff5861c5a7862b1f8f913ddb67fd6
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: b6ec5de74d2da2a94c25ef121abc0157348554d5
+ms.sourcegitcommit: ef830f565ee07dc7d4388925cc3c86c5d2cfb4c7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73536171"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74947080"
 ---
-# <a name="sysdm_cluster_endpoints-transact-sql"></a>Sys. DM _ _cluster_endpoints (Transact-SQL)
+# <a name="sysdm_cluster_endpoints-transact-sql"></a>Sys. dm_cluster_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-|Nombre de columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|name|`sysname`|Nombre del servicio expuesto externamente en un clúster de macrodatos de SQL. Identificador único para el extremo. Clave para esta vista. No admite valores NULL. |  
+|nombre|`sysname`|Nombre del servicio expuesto externamente en un clúster de macrodatos de SQL. Identificador único para el extremo. Clave para esta vista. No admite valores NULL. |  
 |description|`nvarchar(4000)`|Descripción del servicio. No admite valores NULL. |
-|extremo|`sysname`|Dirección URL del extremo o atributo de conexión. No admite valores NULL. |
+|endpoint|`sysname`|Dirección URL del extremo o atributo de conexión. No admite valores NULL. |
 |protocol_desc|`sysname`|Descripción del Protocolo de extremo |
 
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Véase también
 
-Qué son [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)](.. /.. /big-data-cluster/big-data-cluster-overview.md)?
+[¿Qué [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]son ](../../big-data-cluster/big-data-cluster-overview.md)?

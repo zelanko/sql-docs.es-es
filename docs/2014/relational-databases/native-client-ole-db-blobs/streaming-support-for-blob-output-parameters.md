@@ -1,5 +1,5 @@
 ---
-title: Parámetros de salida de la compatibilidad con Streaming para BLOBs | Microsoft Docs
+title: Compatibilidad de streaming con parámetros de salida de BLOB | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -507,7 +507,7 @@ _Exit:
 }  
 ```  
   
-## <a name="see-also"></a>Vea también  
- [BLOB y objetos OLE](blobs-and-ole-objects.md)  
+## <a name="see-also"></a>Véase también  
+ [Blobs y objetos OLE](blobs-and-ole-objects.md)  
   
   

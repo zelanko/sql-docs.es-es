@@ -1,5 +1,7 @@
 ---
-title: Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS
+title: Tipos de datos admitidos de SQL Server y SSIS para dominios DQS
+description: Describe los cuatro tipos de datos de los dominios de Data Quality Services (DQS) (Data, decimal, integer y String) en SQL Server.
+ms.custom: seo-lt-2019
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 57950290bdf2b7f83463fa6b950db90a4bdbb9f0
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75257771"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558175"
 ---
-# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Compatibilidad con los tipos de datos en SQL Server y SSIS para dominios DQS
+# <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Tipos de datos admitidos de SQL Server y SSIS para dominios DQS
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -25,7 +27,7 @@ ms.locfileid: "75257771"
 > [!NOTE]  
 >  En los archivos .xlsx y .xls, el tipo de datos de la columna de origen está determinado por el tipo de datos más frecuente de las ocho primeras filas. Si una celda no se ajusta a dicho tipo de datos, se le asignará un valor NULL. De igual modo, en los archivos .csv, el tipo de datos de la columna de origen está determinado por el tipo de datos más frecuente de las ocho primeras filas.  
   
-##  <a name="SQLServer"></a>Tipos de datos de SQL Server admitidos  
+##  <a name="SQLServer"></a>Tipos de datos de SQL Server admitidos 
  En la tabla siguiente se proporciona información acerca de los tipos de datos de SQL Server admitidos para cada tipo de datos de dominio DQS:  
   
 |Tipo de datos de dominio DQS|Tipo de datos de SQL Server admitido|  

@@ -1,5 +1,7 @@
 ---
-title: Ejecutar DQSInstaller.exe para completar la instalación del servidor de calidad de datos
+title: Ejecutar DQSInstaller. exe para completar la instalación del servidor de calidad de datos
+description: Obtenga información acerca de cómo ejecutar DQSInstaller. exe para completar una instalación de SQL Server Data Quality Services (DQS).
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -9,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9921840e66adc166004143deca7f9310b6e242ca
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 19805b5c5d41b5b39217c88cf565d9bd64c1ed9c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75258593"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558005"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Ejecutar DQSInstaller.exe para completar la instalación del servidor de calidad de datos
 

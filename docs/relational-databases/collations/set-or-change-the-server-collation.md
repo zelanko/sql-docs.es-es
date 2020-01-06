@@ -1,7 +1,7 @@
 ---
 title: Configurar o cambiar la intercalación del servidor | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 12/05/2019
 ms.prod: sql
 ms.reviewer: carlrab
 ms.technology: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81a776a0bece59f98042fec6cbf7b191ec82be1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 019c62424398b05dfaa6efe2f91ab4c08b333cd2
+ms.sourcegitcommit: 0d34b654f0b3031041959e87f5b4d4f0a1af6a29
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140836"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74901913"
 ---
 # <a name="set-or-change-the-server-collation"></a>Configurar o cambiar la intercalación del servidor
 
@@ -43,7 +43,7 @@ ms.locfileid: "68140836"
   
 - Vuelva a generar la base de datos maestra al especificar la nueva intercalación en la propiedad SQLCOLLATION del comando **setup** . Por ejemplo:  
   
-    ```sql  
+    ```  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName
     /SQLSYSADMINACCOUNTS=accounts /[ SAPWD= StrongPassword ]
     /SQLCOLLATION=CollationName  
@@ -59,7 +59,6 @@ ms.locfileid: "68140836"
 > En lugar de cambiar la intercalación predeterminada de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede especificar una intercalación predeterminada para cada nueva base de datos que cree.  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Configuración de la intercalación del servidor en Instancia administrada
-
 La intercalación de nivel de servidor en Instancia administrada de Azure SQL se puede especificar al crear la instancia y no se puede cambiar posteriormente. Puede establecer la intercalación de nivel de servidor a través de [Azure Portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) o [PowerShell y la plantilla de Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) mientras crea la instancia. La intercalación de nivel de servidor predeterminada es **SQL_Latin1_General_CP1_CI_AS**. No se pueden especificar intercalaciones UTF-8 ni exclusivas de Unicode la intercalación como nivel de servidor.
 Si va a migrar bases de datos de SQL Server a Instancia administrada, compruebe la intercalación del servidor en la instancia de SQL Server de origen mediante la función `SERVERPROPERTY(N'Collation')` y cree una Instancia administrada que coincida con la intercalación de SQL Server. Es posible que la migración de una base de datos de SQL Server a Instancia administrada con intercalaciones de nivel de servidor que no coinciden produzca varios errores inesperados en las consultas. No se puede cambiar la intercalación de nivel de servidor en la Instancia administrada existente.
 

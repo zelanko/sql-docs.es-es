@@ -9,12 +9,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 78fff1f1a5f1e68989338a9d5b0274899267fd42
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 29f9245fcb3f827c51060834a37fbc3c01aa5e9b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119429"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247321"
 ---
 # <a name="database-engine-errors"></a>Errores del motor de base de datos
 
@@ -22,13 +22,13 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors--2-to-999"></a>Errores 2 a 999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
-|   [-2](mssqlserver-neg2-database-engine-error.md) |       |       |   Valor de tiempo de espera expirado. El tiempo de espera transcurrió antes de que se completase la operación, o bien el servidor no responde. (Microsoft SQL Server, error: -2).    |
-|   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   Error al establecer una conexión al servidor. La causa del problema en la conexión a SQL Server 2005 puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Interfaces de red de SQL, error: 28 - El servidor no admite el protocolo requerido) (Microsoft SQL Server, Error: -1).  |
-|   [2](mssqlserver-2-database-engine-error.md) |       |       |   Error al establecer una conexión al servidor. La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir la conexión con SQL Server) (Proveedor de datos SqlClient de .Net) |
+|   [-2](mssqlserver-neg2-database-engine-error.md) |       |       |   Tiempo de espera agotado. El tiempo de espera transcurrió antes de que se completase la operación, o bien el servidor no responde. (Microsoft SQL Server, error: -2).    |
+|   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   Error al establecer una conexión al servidor. La causa del problema en la conexión a SQL Server 2005 puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Interfaces de red de SQL; error: 28 - El servidor no admite el protocolo requerido) (Microsoft SQL Server, Error: -1).  |
+|   [2](mssqlserver-2-database-engine-error.md) |       |       |   Error al establecer una conexión al servidor. La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor de canalizaciones con nombre; error: 40 - No se pudo abrir la conexión con SQL Server) (Proveedor de datos SqlClient de .Net) |
 |   21  |   20  |   No  |   Advertencia: error irrecuperable %d en %S_DATE. Anote el error y la hora, y póngase en contacto con el administrador del sistema.    |
-|   [53](mssqlserver-53-database-engine-error.md)   |       |       |   Error al establecer una conexión al servidor. La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor de canalizaciones con nombre, error: 40 - No se pudo abrir la conexión con SQL Server) (Proveedor de datos SqlClient de .Net).    |
+|   [53](mssqlserver-53-database-engine-error.md)   |       |       |   Error al establecer una conexión al servidor. La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor de canalizaciones con nombre; error: 40 - No se pudo abrir la conexión con SQL Server) (Proveedor de datos SqlClient de .Net).    |
 |   101 |   15  |   No  |   No se permite la consulta en Waitfor.  |
 |   [102](mssqlserver-102-database-engine-error.md) |   15  |   No  |   Sintaxis incorrecta cerca de '%.*ls'.  |
 |   103 |   15  |   No  |   El %S_MSG que comienza por '%.*ls' es demasiado largo. La longitud máxima es %d.  |
@@ -159,7 +159,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   231 |   11  |   No  |   No hay tal valor predeterminado. id. = %ld, id. de base de datos = %d.    |
 |   232 |   16  |   No  |   Error de desbordamiento aritmético para el tipo %ls, valor = %f. |
 |   233 |   16  |   No  |   La columna "%.*ls" de la tabla "%.* ls" no puede tener valor NULL. |
-|   [233](mssqlserver-233-database-engine-error.md) |       |       |   Se ha establecido una conexión correctamente con el servidor, pero se ha producido un error durante el proceso de inicio de sesión. (proveedor: Proveedor de memoria compartida; error: 0 - No hay ningún proceso en el otro extremo de la canalización). (Microsoft SQL Server, Error: 233)   |
+|   [233](mssqlserver-233-database-engine-error.md) |       |       |   Se estableció correctamente una conexión con el servidor, pero luego se produjo un error durante el proceso de inicio de sesión. (proveedor: Proveedor de memoria compartida; error: 0 - No hay ningún proceso en el otro extremo de la canalización). (Microsoft SQL Server, Error: 233)   |
 |   234 |   16  |   No  |   Espacio de resultados insuficiente para convertir un valor de moneda a %ls. |
 |   235 |   16  |   No  |   No se puede convertir un valor char a money. La sintaxis del valor de tipo char es incorrecta.  |
 |   236 |   16  |   No  |   La conversión del tipo de datos char a money produce un error de desbordamiento en money. |
@@ -457,7 +457,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   610 |   16  |   Sí |   Valor de encabezado de una página no válido. Ejecute DBCC CHECKDB para comprobar si hay datos dañados.  |
 |   [611](mssqlserver-611-database-engine-error.md) |   16  |   No  |   No se puede insertar ni actualizar una fila porque el tamaño total de columna variable, incluida la sobrecarga, es %d bytes más del límite.  |
 |   613 |   21  |   No  |   No se encontró una entrada para el conjunto de filas de la tabla de trabajo con el id. de partición %I64d en la base de datos %d.    |
-|   615 |   21  |   Sí |   No se encontró el id. de base de datos %d con el nombre '%.*ls'. Es probable que la base de datos esté sin conexión. Espere unos minutos y vuelva a intentarlo. |
+|   615 |   21  |   Sí |   No se encontró el id. de base de datos %d con el nombre '%.*ls'. Es probable que la base de datos esté sin conexión. Espere unos minutos y pruebe otra vez. |
 |   [617](mssqlserver-617-database-engine-error.md) |   20  |   Sí |   No se encontró el descriptor del id. de objeto %ld del id. de base de datos %d en la tabla hash al intentar deshacer el hash. Falta una entrada en una tabla de trabajo. Vuelva a ejecutar la consulta. Si hay un cursor en el proceso, ciérrelo y vuelva a abrirlo.    |
 |   622 |   16  |   No  |   El grupo de archivos "%.*ls" no tiene archivos asignados. No se pueden rellenar tablas, índices y columnas de tipo text, ntext e image en este grupo de archivos hasta que se agregue un archivo. |
 |   627 |   16  |   No  |   No se puede usar SAVE TRANSACTION en una transacción distribuida.   |
@@ -578,7 +578,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-1000-to-1999"></a>Errores 1000 a 1999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   No  |   Línea %d: especificación de longitud o precisión %d no válida.   |
 |   1002    |   16  |   No  |   Línea %d: la escala %d especificada no es válida. |
@@ -1010,7 +1010,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-2000-to-2999"></a>Errores 2000 a 2999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   No  |   No se puede crear un procedimiento para la replicación con un número de grupo mayor que uno.   |
 |   2003    |   16  |   No  |   Los procedimientos con un número de grupo no pueden tener parámetros de tipo xml o CLR. El parámetro "%.*ls" del procedimiento "%.* ls" es de tipo "%ls".   |
@@ -1306,7 +1306,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   2711    |   16  |   No  |   La definición del objeto "%.*ls" en la base de datos de recursos contiene el carácter no ASCII "%.* ls". |
 |   2712    |   16  |   No  |   No se puede configurar la base de datos '%.*ls' como una base de datos de distribución porque tiene el seguimiento de cambios habilitado.   |
 |   2714    |   16  |   No  |   Ya hay un objeto con el nombre '%.*ls' en la base de datos.   |
-|   2715    |   16  |   No  |   Columna, parámetro o variable nº %d: no se puede encontrar el tipo de datos %.*ls.    |
+|   2715    |   16  |   No  |   Columna, parámetro o variable #%d: no se puede encontrar el tipo de datos %.*ls.    |
 |   2716    |   16  |   No  |   Columna, parámetro o variable #%d: no se puede especificar un ancho de columna en el tipo de datos %.*ls.   |
 |   2717    |   15  |   No  |   El tamaño (%d) dado a %S_MSG '%.*ls' supera el máximo permitido (%d). |
 |   2719    |   16  |   No  |   No se pudo actualizar la base de datos "%.*ls" debido a que contiene un usuario de nombre "sys" que es un nombre de usuario o de esquema reservado en esta versión de SQL Server.    |
@@ -1383,7 +1383,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-3000---3999"></a>Errores 3000 a 3999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   No  |   No se puede usar BACKUP o RESTORE para una instantánea de base de datos.   |
 |   3003    |   10  |   No  |   Esta copia de seguridad diferencial se basará en más de una copia de seguridad de archivos. Todas estas copias de seguridad de archivos deben restaurarse antes de intentar restaurar esta copia de seguridad diferencial.    |
@@ -1405,7 +1405,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   3019    |   16  |   No  |   El archivo de reinicio de punto de comprobación '%ls' procede de una operación RESTORE anterior interrumpida y no es coherente con el comando RESTORE actual. El comando RESTART debe usar la misma sintaxis que el comando interrumpido, además de la cláusula RESTART. Como alternativa, vuelva a emitir la instrucción actual sin la cláusula RESTART. |
 |   3021    |   16  |   No  |   No se puede hacer la copia de seguridad o restauración dentro de una transacción.  |
 |   3022    |   10  |   No  |   Esta copia de seguridad es una copia de seguridad de archivos de datos de lectura-escritura de una base de datos que utiliza el modelo de recuperación simple. Esto solo es apropiado si pretende establecer el grupo de archivos como de solo lectura y realizar a continuación una copia de seguridad diferencial de archivos. Vea los Libros en pantalla para obtener más información acerca de la administración de datos de solo lectura para el modelo de recuperación simple. In particular, vea cómo se usan las copias de seguridad parciales.   |
-|   3023    |   16  |   No  |   Las operaciones de copia de seguridad, manipulación de archivos (como ALTER DATABASE y ADD FILE) y cambios de cifrado en una base de datos deben hacerse en serie. Vuelva a emitir la instrucción al completar la operación actual de copia de seguridad o manipulación de archivos. |
+|   3023    |   16  |   No  |   La copia de seguridad, las operaciones de manipulación de archivos (como ALTER DATABASE ADD FILE) y los cambios de cifrado de una base de datos se deben serializar. Vuelva a emitir la instrucción al completar la operación actual de copia de seguridad o manipulación de archivos. |
 |   3024    |   16  |   No  |   Solo puede realizar una copia de seguridad completa de la base de datos maestra. Utilice BACKUP DATABASE para hacer la copia de toda la base de datos maestra.   |
 |   3025    |   16  |   No  |   Falta el nombre de la base de datos. Vuelva a emitir la instrucción con un nombre válido.  |
 |   3027    |   16  |   No  |   El grupo de archivos "%.*ls" no es parte de la base de datos "%.* ls".  |
@@ -1633,7 +1633,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   [3452](mssqlserver-3452-database-engine-error.md)   |   10  |   Sí |   En la recuperación de la base de datos "%.*ls" (%d) se detectó una posible incoherencia de valores de identidad en la tabla con identificador %d. Ejecute DBCC CHECKIDENT ("%.* ls"). |
 |   3453    |   16  |   No  |   Esta versión no puede rehacer creaciones de índice ni operaciones no registradas realizadas por SQL Server 7.0. No es posible realizar puestas al día.   |
 |   3454    |   10  |   Sí |   La recuperación está escribiendo un punto de comprobación en la base de datos '%.*ls' (%d). Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario.   |
-|   [3456](mssqlserver-3456-database-engine-error.md)   |   21  |   Sí |   No se pudo rehacer la entrada de registro %S_LSN para el identificador de transacción %S_XID de la página %S_PGID, base de datos '%.*ls' (identificador de base de datos %d). Página: LSN = %S_LSN, tipo = %ld. Registro: OpCode = %ld, contexto %ld, PrevPageLSN: %S_LSN. Restaure la base de datos desde una copia de seguridad o repárela.    |
+|   [3456](mssqlserver-3456-database-engine-error.md)   |   21  |   Sí |   No se pudo rehacer la entrada de registro %S_LSN para el identificador de transacción %S_XID de la página %S_PGID, base de datos '%.*ls' (identificador de base de datos %d). Página: LSN = %S_LSN, tipo = %ld. Log: OpCode = %ld, contexto %ld, PrevPageLSN: %S_LSN. Restaure la base de datos desde una copia de seguridad o repárela.    |
 |   3457    |   21  |   Sí |   El administrador de recursos del sistema de archivos transaccionales '%.*ls' no pudo realizar la recuperación. Para obtener más información, vea el mensaje de error asociado, donde se determina la acción apropiada que debe realizar el usuario.   |
 |   3458    |   16  |   No  |   La recuperación no puede examinar la base de datos "%.*ls" para las unidades de asignación quitadas debido a un error inesperado. Estas unidades de asignación no se pueden limpiar.   |
 |   3505    |   14  |   No  |   Solo el propietario de la base de datos "%.*ls" o un usuario con los permisos relevantes puede ejecutar la instrucción CHECKPOINT.   |
@@ -1765,7 +1765,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   3932    |   16  |   No  |   El nombre de punto de retorno "%.*ls" proporcionado es demasiado largo. La longitud máxima permitida es de %d caracteres. |
 |   3933    |   16  |   No  |   No se puede promover la transacción a una transacción distribuida porque hay un punto de retorno activo en esta transacción.  |
 |   3934    |   14  |   No  |   El usuario actual no puede utilizar este contexto de transacción FILESTREAM. Para obtener un contexto de transacción FILESTREAM válido, utilice GET_FILESTREAM_TRANSACTION_CONTEXT.  |
-|   3935    |   16  |   No  |   No se pudo inicializar un contexto de transacción FILESTREAM. Puede deberse a falta de recursos. Intente de nuevo la operación. Código de error: 0x%x.  |
+|   3935    |   16  |   No  |   No se pudo inicializar un contexto de transacción FILESTREAM. Puede deberse a falta de recursos. Vuelva a intentar la operación. Código de error: 0x%x.  |
 |   3936    |   16  |   No  |   No se pudo confirmar la transacción porque se ha producido un error al intentar vaciar datos de FILESTREAM en el disco. Es posible que se haya abierto el archivo en tiempo de confirmación o que se haya producido un error de E/S en disco. '%.*ls' era uno de los archivos implicados. Código de error: 0x%x  |
 |   [3937](mssqlserver-3937-database-engine-error.md)   |   16  |   No  |   Error al intentar revertir una transacción. Se produjo un error al intentar entregar una notificación de reversión al controlador de filtro FILESTREAM. Código de error: 0x%0x. |
 |   3938    |   18  |   No  |   La transacción se ha detenido porque entraba en conflicto con la ejecución de una operación de cierre de FILESTREAM que utilizaba la misma transacción. Se revertirá la transacción.  |
@@ -1781,7 +1781,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   3958    |   16  |   No  |   Se anuló la transacción al tener acceso a la fila con versión en la tabla "%.*ls" de la base de datos "%.* ls". No se encontró la fila con la versión solicitada. Posiblemente falta espacio para tempdb. Vea los Libros en pantalla para obtener más detalles acerca de cómo configurar tempdb para el control de versiones.  |
 |   3959    |   10  |   Sí |   El almacén de versiones está lleno. Puede que no se agreguen las nuevas versiones. Una transacción que necesita obtener acceso al almacén de versiones puede revertirse. Vea los Libros en pantalla para obtener más detalles acerca de cómo configurar tempdb para el control de versiones.   |
 |   3960    |   16  |   No  |   Se anuló la transacción de aislamiento de instantánea por un conflicto de actualización. No se puede usar el aislamiento de instantánea para tener acceso directo o indirecto a la tabla "%.*ls" de la base de datos "%.* ls" para actualizar, eliminar o insertar la fila que otra transacción ha modificado o eliminado. Vuelva a repetir la transacción o cambie el nivel de aislamiento de las instrucciones UPDATE y DELETE. |
-|   [3961](mssqlserver-3961-database-engine-error.md)   |   16  |   No  |   Error de la transacción de aislamiento de instantánea en la base de datos '%. * ls' porque el objeto al que tuvo acceso la instrucción ha sido modificado por una instrucción DDL de otra transacción simultánea desde el inicio de esta transacción. No se permite porque los metadatos no tienen control de versiones. Una actualización simultánea de los metadatos puede dar lugar a incoherencias si se combina con aislamiento de instantánea.  |
+|   [3961](mssqlserver-3961-database-engine-error.md)   |   16  |   No  |   Error de la transacción de aislamiento de instantánea en la base de datos '%. * ls' porque el objeto al que tuvo acceso la instrucción ha sido modificado por una instrucción DDL de otra transacción simultánea desde el inicio de esta transacción. Está deshabilitada porque los metadatos no tienen versiones. Una actualización simultánea de los metadatos puede dar lugar a incoherencias si se combina con el aislamiento de la instantánea.  |
 |   3962    |   16  |   No  |   No se admiten enlaces a otra transacción mientras se ejecuta una consulta interna de SQL Server. Compruebe la definición del desencadenador de inicio de sesión y quite sp_bindsession si hay alguno. Si este error no se produce durante la ejecución del desencadenador de inicio de sesión, póngase en contacto con el equipo de soporte técnico. |
 |   3963    |   16  |   No  |   Error de la transacción en la base de datos '%.*ls' porque no se admiten las transacciones distribuidas bajo aislamiento de instantánea. |
 |   3964    |   16  |   No  |   Error de la transacción porque no se permite el uso de la instrucción DDL en la transacción de aislamiento de instantánea. Como los metadatos no tienen control de versiones, un cambio en los metadatos puede dar lugar a incoherencias si se combina con aislamiento de instantánea.  |
@@ -1824,7 +1824,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-4000-to-4999"></a>Errores 4000 a 4999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   No  |   El cliente envía una sp_reset_connection mientras todavía hay solicitudes pendientes, el servidor se está desconectando.  |
 |   4002    |   16  |   No  |   La secuencia del protocolo de flujo TDS entrante es incorrecta. El flujo finalizó de forma inesperada. |
@@ -2287,7 +2287,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-5000-to-5999"></a>Errores 5000 a 5999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   5001    |   16  |   No  |   El usuario debe estar en la base de datos maestra.    |
 |   5002    |   16  |   No  |   La base de datos '%.*ls' no existe. Compruebe el nombre en sys.databases e intente la operación de nuevo.  |
@@ -2663,7 +2663,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-6000-to-6999"></a>Errores 6000 a 6999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   6001    |   10  |   No  |   SHUTDOWN está esperando a que se completen %d procesos. |
 |   6004    |   10  |   No  |   No tiene permiso para realizar esta acción.   |
@@ -3159,7 +3159,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-7000-to-7999"></a>Errores 7000 a 7999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   No  |   El tipo de datos del parámetro de identificador de documentos de OPENXML debe ser int. |
 |   7001    |   16  |   No  |   El tipo de datos del parámetro de marcas de OPENXML debe ser int.   |
@@ -3603,7 +3603,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-8000-to-8999"></a>Errores 8000 a 8999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   No  |   La secuencia del protocolo de llamada a procedimiento remoto (RPC) del flujo TDS entrante es incorrecta. La metainformación no es válida para el parámetro Sql Variant. |
 |   8002    |   16  |   No  |   La secuencia del protocolo de llamada a procedimiento remoto (RPC) del flujo TDS entrante es incorrecta. Parámetro %d ("%.*ls"): el tipo de datos 0x%02X (XML) tiene especificada una base de datos o un esquema no válidos.    |
@@ -3715,7 +3715,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   8149    |   16  |   No  |   Los objetos de OLE Automation no son compatibles con el modo de fibra. |
 |   8150    |   16  |   No  |   Se han especificado varias restricciones NULL para la columna "%.*ls", tabla "%.* ls". |
 |   8151    |   16  |   No  |   Se han definido restricciones PRIMARY KEY y UNIQUE para la columna "%.*ls", tabla "%.* ls". Solo se permite una de ellas.  |
-|   8152    |   16  |   No  |   Los datos de cadena o binarios se truncarían.   |
+|   8152    |   16  |   No  |   Los datos binarios o de tipo cadena se truncarían.   |
 |   8153    |   10  |   No  |   Advertencia: valor NULL eliminado por el agregado u otra operación SET.   |
 |   8154    |   15  |   No  |   La tabla '%.*ls' es ambigua. |
 |   8155    |   15  |   No  |   No se especificó ningún nombre de columna para la columna %d de '%.*ls'.  |
@@ -4110,7 +4110,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-9000-to-9999"></a>Errores 9000 a 9999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   [9001](mssqlserver-9001-database-engine-error.md)   |   10  |   Sí |   El registro de la base de datos '%.*ls' no está disponible. Vea los mensajes de error relacionados en el registro de eventos. Corrija los errores y reinicie la base de datos. |
 |   [9002](mssqlserver-9002-database-engine-error.md)   |   17  |   Sí |   El registro de transacciones de la base de datos '%.*ls' está lleno. Para saber por qué no se puede volver a utilizar el espacio del registro, vea la columna log_reuse_wait_desc de sys.databases    |
@@ -4278,8 +4278,8 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   9463    |   16  |   No  |   Análisis de XML: línea %d, carácter %d, xml:space tiene un valor no válido |
 |   9464    |   16  |   No  |   Análisis de XML: línea %d, carácter %d. El prefijo "xml" de espacio de nombres XML solo puede asociarse con el URI http://www.w3.org/XML/1998/namespace. Este URI no se puede utilizar con otros prefijos.   |
 |   9465    |   16  |   No  |   Análisis de XML: línea %d, carácter %d. El prefijo "xmlns" de espacio de nombres XML está reservado para su uso en XML.    |
-|   9466    |   16  |   No  |   Análisis de XML: línea %d, carácter %d. El URI de espacio de nombres xml del espacio de nombres XML (http://www.w3.org/XML/1998/namespace) ) se debe asignar solo al prefijo 'xml'.   |
-|   9467    |   16  |   No  |   Análisis de XML: línea %d, carácter %d. El URI de espacio de nombres xmlns (http://www.w3.org/2000/xmlns/) ) está reservado y no se debe utilizar.   |
+|   9466    |   16  |   No  |   Análisis de XML: línea %d, carácter %d. El URI de espacio de nombres xml del espacio de nombres XML (https://www.w3.org/XML/1998/namespace) ) se debe asignar solo al prefijo 'xml'.  |
+|   9467    |   16  |   No  |   Análisis de XML: línea %d, carácter %d. El URI de espacio de nombres xmlns (https://www.w3.org/2000/xmlns/) ) está reservado y no se debe utilizar.  |
 |   9480    |   16  |   No  |   Análisis de XML: línea %d, carácter %d, XML no compatible |
 |   9500    |   16  |   No  |   El tipo de datos '%.*.ls' utilizado en el método VALUE no es válido.  |
 |   9501    |   16  |   No  |   XQuery: no se puede resolver sql:variable("%.*ls"). La variable debe estar declarada como una variable TSQL escalar.   |
@@ -4518,15 +4518,15 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   9902    |   10  |   No  |   El catálogo de texto completo '%ls' ('%d') de la base de datos '%ls' ('%d') no tiene suficientes recursos del sistema. Si hay un rellenado en curso, se pausará hasta que estén disponibles más recursos. Código del motivo: %d. Error: %ls. Si aparece este mensaje frecuentemente, intente serializar la indización de texto completo para varios catálogos. |
 |   9903    |   10  |   No  |   El supervisor de estado de los catálogos de texto completo notificó un error en el catálogo de texto completo '%ls' (%d) en la base de datos '%ls' (%d). Código del motivo: %d. Error: %ls. El sistema reiniciará cualquier rellenado en curso desde el punto de comprobación anterior. Si aparece este mensaje frecuentemente, vea la información sobre solución de problemas en los Libros en pantalla de SQL Server. Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario.    |
 |   9904    |   10  |   No  |   El catálogo de texto completo '%ls' (%d) en la base de datos '%ls' (%d) se volverá a montar para recuperarse de un error. Código del motivo: %d. Error: %ls. Si aparece este mensaje frecuentemente, vea la información sobre solución de problemas en los Libros en pantalla de SQL Server. Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario. |
-|   9905    |   10  |   No  |   Información: cambio de estado solicitado por el indizador de texto completo para el catalogo "%ls" (%d) en la base de datos "%ls" "%d". Nuevo estado: %ls, motivo: %ls (%ls). |
+|   9905    |   10  |   No  |   Informativo: cambio de estado solicitado por el indizador de texto completo para el catalogo "%ls" (%d) en la base de datos "%ls" "%d". Nuevo estado: %ls, motivo: %ls (%ls). |
 |   9906    |   10  |   No  |   El supervisor de catálogos de texto completo notificó el catálogo '%ls' (%d) de la base de datos '%ls' (%d) en el estado %ls. Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario.   |
 |   9907    |   10  |   No  |   Error: el número total de elementos del id. de catálogo de texto completo "%d" en el id. de base de datos "%d" supera el límite admitido. Vea los Libros en pantalla para obtener ayuda acerca de solución de problemas. |
 |   9908    |   10  |   No  |   Cambiando el estado a %ls para el catálogo de texto completo '%ls' (%d) en la base de datos '%ls' (%d). Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario.  |
 |   9909    |   10  |   No  |   Advertencia: no se pudo cambiar el estado a %ls para el catálogo de texto completo "%ls" (%d) en la base de datos "%ls" (%d). Error: %ls.    |
 |   9910    |   10  |   No  |   Advertencia: error al rellenar %ls de texto completo para la tabla o vista indizada "%ls", base de datos "%ls" (id. de tabla o vista indizada "%d", id. de base de datos "%d"). Error: %ls.  |
-|   9911    |   10  |   No  |   Información: se inicializó el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Subtareas de rellenado: %d.    |
+|   9911    |   10  |   No  |   Informativo: se inicializó el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Subtareas de rellenado: %d.    |
 |   9912    |   10  |   No  |   Error: no se pudo inicializar el rellenado de %ls de texto completo para la tabla o vista indexada "%ls", base de datos "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Error: %d.  |
-|   9913    |   10  |   No  |   Información: se está reanudando el rellenado de texto completo para la tabla o vista indexada "%ls" de la base de datos "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Número anterior de documentos procesados: %d, error detectado: %d.   |
+|   9913    |   10  |   No  |   Informativo: se está reanudando el rellenado de texto completo para la tabla o vista indexada "%ls" de la base de datos "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Número anterior de documentos procesados: %d, error detectado: %d.   |
 |   9914    |   16  |   No  |   Error: no se pudo reanudar el rellenado de texto completo %ls de la tabla o vista indexada "%ls" de la base de datos "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Error: 0x%x. Repita la operación que desencadenó la reanudación o quite el índice y vuelva a crearlo. |
 |   9915    |   10  |   No  |   Se reinicializó el rellenado de %ls de texto completo para la tabla '%ls' (id. de tabla '%d', id. de base de datos '%d') tras un error temporal. Número de documentos procesados antes del error: %d, error detectado: %d. Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario.  |
 |   9916    |   10  |   No  |   Error: no se pudo reinicializar el rellenado de %ls de texto completo tras un error temporal para la tabla o vista indexada "%ls", base de datos "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Error: %d.  |
@@ -4539,8 +4539,8 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   9923    |   10  |   No  |   Advertencia: el rellenado de texto completo para la tabla o vista indexada "%ls" notificó falta de recursos al enviar un lote de datos al servicio MSFTESQL (id. de tabla o vista indexada "%d", id. de catálogo "%d", id. de base de datos "%d"). Error: %ls.  |
 |   9924    |   16  |   No  |   Error al generar de nuevo el catálogo de texto completo "%ls": el archivo de encabezado del catálogo es de solo lectura.   |
 |   9925    |   16  |   No  |   Error al generar de nuevo el catálogo de texto completo "%ls": el catálogo de texto completo es de solo lectura. |
-|   9926    |   10  |   No  |   Información: se alcanzó el límite de detención de MS Search. Es posible que la consulta de texto completo haya devuelto menos filas de las esperadas.   |
-|   9927    |   10  |   No  |   Información: la condición de búsqueda de texto completo contenía palabras irrelevantes.  |
+|   9926    |   10  |   No  |   Informativo: se alcanzó el límite de detención de MS Search. Es posible que la consulta de texto completo haya devuelto menos filas de las esperadas.   |
+|   9927    |   10  |   No  |   Informativo: la condición de búsqueda de texto completo contenía palabras irrelevantes.  |
 |   9928    |   16  |   No  |   La columna calculada '%.*ls' no se puede usar para la búsqueda de texto completo porque no es determinista o no persistente e imprecisa.   |
 |   9929    |   16  |   No  |   La columna calculada '%.*ls' no se puede usar como columna de tipo texto completo para una columna de tipo image o varbinary(MAX). Esta columna calculada debe ser determinista, precisa o persistente con un tamaño inferior o igual a %d caracteres. |
 |   9930    |   10  |   No  |   Se proporcionó un tipo de documento Null. La fila no tendrá índice de texto completo. |
@@ -4549,22 +4549,22 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   9933    |   10  |   No  |   Error interno: la fila no puede tener un índice de texto completo. El controlador de protocolo se invocó fuera de la secuencia. Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario.   |
 |   9934    |   10  |   No  |   No se encontró la fila. Se eliminó o actualizó mientras estaba en curso la indización.    |
 |   9935    |   10  |   No  |   Advertencia: el separador de palabras, filtro o controlador de protocolo usado por el catálogo "%ls" no existe en esta instancia. Use sp_help_fulltext_catalog_components y sp_help_fulltext_system_components para comprobar si hay componentes que no coinciden. Es recomendable volver a generar el catálogo.   |
-|   9936    |   10  |   No  |   Información: no se encontró ningún idioma de texto completo compatible.  |
+|   9936    |   10  |   No  |   Informativo: no se encontró ningún idioma de texto completo compatible.  |
 |   9937    |   16  |   No  |   Demasiadas columnas de texto completo o la consulta de texto completo es demasiado compleja para ejecutarla.    |
 |   9938    |   16  |   No  |   No se encuentra el rol o el usuario especificado '%.*ls'. |
 |   9939    |   16  |   No  |   El usuario o el rol actual '%.*ls' no tiene el permiso necesario para establecer el propietario.    |
 |   9940    |   10  |   No  |   Error: se ha finalizado el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d") a causa del error anterior. |
-|   9941    |   10  |   No  |   Información: el sistema ha suspendido el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"), porque la base de datos no está disponible. El sistema reanudará el rellenado cuando la base de datos vuelva a estar disponible |
-|   9942    |   10  |   No  |   Información: el usuario canceló el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d").    |
-|   9943    |   10  |   No  |   Información: se completó el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Número de documentos procesados: %d. Número de documentos con errores: %d. Número de documentos que se reintentarán: %d.   |
-|   9944    |   10  |   No  |   Información: se completó el paso de reintento de texto completo de rellenado de %ls para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Número de documentos de reintento procesados: %d. Número de documentos con errores: %d. |
+|   9941    |   10  |   No  |   Informativo: el sistema ha suspendido el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"), porque la base de datos no está disponible. El sistema reanudará el rellenado cuando la base de datos vuelva a estar disponible |
+|   9942    |   10  |   No  |   Informativo: el usuario canceló el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d").    |
+|   9943    |   10  |   No  |   Informativo: se completó el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Número de documentos procesados: %d. Número de documentos con errores: %d. Número de documentos que se reintentarán: %d.   |
+|   9944    |   10  |   No  |   Informativo: se completó el paso de reintento de texto completo de rellenado de %ls para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Número de documentos de reintento procesados: %d. Número de documentos con errores: %d. |
 |   9945    |   10  |   No  |   Error: se cancelaron todos los rellenados de texto completo en curso para el catálogo "%ls" ("%ls") de la base de datos "%ls" ("%d") a causa de un error. Error: 0x%x.  |
 |   9947    |   10  |   No  |   Advertencia: la identidad del catálogo de texto completo del directorio "%ls" no coincide con los datos de la base de datos "%.*ls". No se puede adjuntar el catálogo de texto completo.    |
 |   9948    |   10  |   No  |   Advertencia: la ruta del catálogo de texto completo "%ls" no es válida. Supera el límite de longitud, es una ruta de acceso relativa o es un directorio oculto. No se puede adjuntar el catálogo de texto completo. |
 |   9949    |   10  |   No  |   Advertencia: se pausaron todos los rellenados de texto completo en curso para el catálogo de texto completo "%ls" ("%d") de la base de datos "%ls" ("%d"). Código del motivo: %d. Error: %ls. Si aparece este mensaje frecuentemente, vea los Libros en pantalla para obtener más información acerca del ajuste del rendimiento de indizado. |
-|   9950    |   10  |   No  |   Información: El supervisor de estado de catálogos de texto completo notificó un error en el catálogo "%ls" (%d) en la base de datos "%ls" ("%d"). Código del motivo: %d. Error: %ls. El catálogo está dañado. Se detendrán todos los rellenados en curso. Vuelva a generar el catálogo para que se recupere del error e inicie el rellenado desde cero.  |
+|   9950    |   10  |   No  |   Informativo: El supervisor de estado de catálogos de texto completo notificó un error en el catálogo "%ls" (%d) en la base de datos "%ls" ("%d"). Código del motivo: %d. Error: %ls. El catálogo está dañado. Se detendrán todos los rellenados en curso. Vuelva a generar el catálogo para que se recupere del error e inicie el rellenado desde cero.  |
 |   9951    |   10  |   No  |   Advertencia: la base de datos %.*ls no se puede modificar durante la separación porque la base de datos tiene un estado de solo lectura, espera o cerrada. No se elimina el catálogo de texto completo y se omite "\@keepfulltextindexfile = false".  |
-|   9952    |   10  |   No  |   Información: el seguimiento automático de cambios de texto completo está desactivado para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d") por un error grave de rastreo. |
+|   9952    |   10  |   No  |   Informativo: el seguimiento automático de cambios de texto completo está desactivado para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d") por un error grave de rastreo. |
 |   9953    |   16  |   No  |   La ruta de acceso '%.*ls' tiene atributos no válidos. Debe ser un directorio. No puede estar oculta, ni ser de solo lectura ni estar en una unidad extraíble. |
 |   9954    |   16  |   No  |   SQL Server no pudo comunicarse con el servicio de demonio de filtro de texto completo (error de Windows: %ls). El proceso de demonio de filtro de texto completo no se inició. La funcionalidad de búsqueda de texto completo no estará disponible. |
 |   [9955](mssqlserver-9955-database-engine-error.md)   |   16  |   No  |   SQL Server no pudo crear la canalización con nombre '%ls' para comunicarse con el demonio de filtro de texto completo (error de Windows: %d). Quizá existe ya una canalización con nombre para un proceso de host de demonio de filtro, el sistema está bajo de recursos o la búsqueda del número de identificación de seguridad (SID) del grupo de cuentas de demonio de filtro dio error. Para resolver este error, termine los procesos de demonio de filtro de texto completo que se estén ejecutando y, si es necesario, configure de nuevo la cuenta de servicio del iniciador del demonio de texto completo.   |
@@ -4582,7 +4582,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   9970    |   16  |   No  |   No se pudo completar la operación de texto completo porque la clave de texto completo de la tabla o vista indizada '%.*ls' está sin conexión.   |
 |   9971    |   10  |   No  |   Advertencia: no se encontró ningún filtro apropiado para el objeto incrustado durante el rellenado del índice de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"), valor de clave de texto completo "%ls". No se pudo indizar algunos objetos incrustados de la fila. |
 |   9972    |   16  |   No  |   No se inició totalmente la base de datos o no tiene el estado ONLINE. Pruebe de nuevo el comando de texto completo DDL cuando se haya iniciado la base de datos y tenga el estado ONLINE.  |
-|   9973    |   10  |   No  |   Información: se pausó el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Número de documentos procesados: %d. Número de documentos con errores: %d.    |
+|   9973    |   10  |   No  |   Informativo: se pausó el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d"). Número de documentos procesados: %d. Número de documentos con errores: %d.    |
 |   9974    |   10  |   No  |   Advertencia: solo se puede pausar un rellenado completo en curso. Se omite el comando. Los otros tipos de rellenado pueden detenerse; se reanudarán cuando se vuelva a iniciar el mismo tipo de rastreo.    |
 |   9975    |   10  |   No  |   Advertencia: solo se puede reanudar un rellenado completo pausado. Se omite el comando.    |
 |   9977    |   10  |   No  |   Advertencia: el tiempo invertido en el último rellenado del catálogo de texto completo del directorio "%ls" no coincide con los datos de la base de datos "%.*ls". Se adjunta el catálogo de texto completo y puede que necesite volver a rellenarlo.    |
@@ -4591,14 +4591,14 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   9980    |   16  |   No  |   Los parámetros de variables no pueden pasarse a predicados de texto: contains, freetext, y funciones: containstable, freetexttable aplicadas a tabla remota.   |
 |   9982    |   16  |   No  |   No se puede usar la búsqueda de texto completo en la instancia de usuario.   |
 |   9983    |   16  |   No  |   El valor '%ls' para el componente de texto completo '%ls' supera la longitud permitida (%d caracteres). Reduzca la longitud del valor.  |
-|   9984    |   10  |   No  |   Información: se pausó el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d").   |
+|   9984    |   10  |   No  |   Informativo: se pausó el rellenado de %ls de texto completo para la tabla o vista indexada "%ls" (id. de tabla o vista indexada "%d", id. de base de datos "%d").   |
 |   9998    |   16  |   No  |   No se puede agregar la columna '%.*ls' al índice de texto completo. Los índices de texto completo están limitados a 1024 columnas. Cuando cree un índice de texto completo, agregue menos columnas.   |
-|   9999    |   16  |   No  |   La columna "%.*ls" de la tabla "%.* ls" no se puede usar para búsqueda de texto completo porque es un conjunto de columnas dispersas.  |
+|   9\.999    |   16  |   No  |   La columna "%.*ls" de la tabla "%.* ls" no se puede usar para búsqueda de texto completo porque es un conjunto de columnas dispersas.  |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-10000-to-10999"></a>Errores 10000 a 10999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   10000   |   16  |   No  |   Error desconocido del proveedor. |
 |   [10001](mssqlserver-10001-database-engine-error.md) |   16  |   No  |   El proveedor informó de un error grave inesperado.   |
@@ -4857,7 +4857,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-11000-to-12999"></a>Errores 11000 a 12999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   11000   |   16  |   No  |   Código de estado desconocido para la columna.    |
 |   11001   |   16  |   No  |   Se devolvió un valor distinto de NULL.   |
@@ -5004,7 +5004,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   11302   |   10  |   Sí |   Error al revertir. Se va a cerrar la base de datos (ubicación: %d).   |
 |   11303   |   10  |   Sí |   Error al liberar el espacio de registro reservado: %ls espacio %I64d, código %d, estado %d. |
 |   11304   |   10  |   Sí |   No se pudo registrar el resultado de una transacción de confirmación local en dos fases. Se va a dejar sin conexión la base de datos.  |
-|   11400   |   16  |   No  |   Error de la instrucción ALTER TABLE SWITCH. El índice "%.*ls" de la vista indexada "%.* ls" utiliza la función de partición "%.*ls", pero la tabla "%.* ls" utiliza la función de partición "%.*ls", que no es equivalente. El índice de la vista indexada "%.* ls" y la tabla "%.*ls" deben utilizar una función de partición equivalente.    |
+|   11 400   |   16  |   No  |   Error de la instrucción ALTER TABLE SWITCH. El índice "%.*ls" de la vista indexada "%.* ls" utiliza la función de partición "%.*ls", pero la tabla "%.* ls" utiliza la función de partición "%.*ls", que no es equivalente. El índice de la vista indexada "%.* ls" y la tabla "%.*ls" deben utilizar una función de partición equivalente.    |
 |   11401   |   16  |   No  |   Error de la instrucción ALTER TABLE SWITCH. La tabla "%.*ls" es %S_MSG, pero el índice "%.* ls" de la vista indexada "%.*ls" es %S_MSG.  |
 |   11402   |   16  |   No  |   Error de la instrucción ALTER TABLE SWITCH. %d vistas indexadas hacen referencia a la tabla de destino "%.*ls", pero solo %d vistas indexadas hacen referencia a la tabla de origen "%.* ls". Cada vista indizada de la tabla de destino debe tener al menos una vista indizada correspondiente en la tabla de origen.  |
 |   11403   |   16  |   No  |   Error de la instrucción ALTER TABLE SWITCH. La vista indexada "%.*ls" no está alineada con la tabla "%.* ls". La columna de partición "%.*ls" de la vista indexada calcula su valor a partir de una o más columnas o una expresión, en lugar de seleccionarla directamente de la columna de partición de la tabla "%.* ls". Cambie la definición de la vista indizada de forma que la columna de partición se seleccione directamente de la columna de partición de la tabla, '%.*ls'.  |
@@ -5064,7 +5064,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-13000-to-13999"></a>Errores 13000 a 13999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   13001   |   16  |   No  |   nombre de archivo   |
 |   13002   |   16  |   No  |   auditoría   |
@@ -5088,23 +5088,23 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   13027   |   0   |   No  |   especificación de conversión   |
 |   13028   |   0   |   No  |   índice   |
 |   13029   |   0   |   No  |   table   |
-|   13030   |   0   |   No  |   Base de datos    |
+|   13030   |   0   |   No  |   database    |
 |   13031   |   0   |   No  |   procedimiento   |
 |   13032   |   0   |   No  |   desencadenador |
 |   13033   |   0   |   No  |   ver    |
-|   13034   |   0   |   No  |   predeterminados |
-|   13035   |   0   |   No  |   regla    |
+|   13034   |   0   |   No  |   default |
+|   13035   |   0   |   No  |   rule    |
 |   13036   |   0   |   No  |   tabla del sistema    |
 |   13037   |   0   |   No  |   tipo desconocido    |
 |   13038   |   0   |   No  |   opción SET  |
-|   13039   |   0   |   No  |   column  |
-|   13040   |   0   |   No  |   Tipo    |
+|   13039   |   0   |   No  |   columna  |
+|   13040   |   0   |   No  |   type    |
 |   13041   |   0   |   No  |   cadena de caracteres    |
 |   13042   |   0   |   No  |   integer |
 |   13043   |   0   |   No  |   identificador  |
 |   13044   |   0   |   No  |   number  |
 |   13045   |   0   |   No  |   índices |
-|   13047   |   0   |   No  |   objeto  |
+|   13047   |   0   |   No  |   object  |
 |   13049   |   0   |   No  |   nombre de función integrada  |
 |   13050   |   0   |   No  |   función de agregado  |
 |   13051   |   0   |   No  |   XML INDEX   |
@@ -5112,7 +5112,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   13053   |   0   |   No  |   colección de esquemas xml   |
 |   13054   |   0   |   No  |   EXTENDED INDEX  |
 |   13055   |   0   |   No  |   SPATIAL INDEX   |
-|   13056   |   0   |   No  |   espacial |
+|   13056   |   0   |   No  |   spatial |
 |   13057   |   0   |   No  |   lote de guía de plan   |
 |   13058   |   0   |   No  |   geometry    |
 |   13059   |   0   |   No  |   prioridad de conversación   |
@@ -5123,7 +5123,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   13080   |   0   |   No  |   estadísticas  |
 |   13 081   |   0   |   No  |   archivo    |
 |   13 082   |   0   |   No  |   filegroup   |
-|   13 083   |   0   |   No  |   servidores  |
+|   13 083   |   0   |   No  |   server  |
 |   13 084   |   0   |   No  |   escritura   |
 |   13085   |   0   |   No  |   function    |
 |   13086   |   0   |   No  |   intercalación de base de datos  |
@@ -5131,12 +5131,12 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   13088   |   0   |   No  |   modificar   |
 |   13089   |   0   |   No  |   tipo de mensaje    |
 |   13090   |   0   |   No  |   contrato    |
-|   13092   |   0   |   No  |   del ssDE |
+|   13092   |   0   |   No  |   service |
 |   13093   |   0   |   No  |   cola   |
 |   13094   |   0   |   No  |   función con valores de tabla   |
 |   13095   |   0   |   No  |   notificación de eventos  |
 |   13096   |   0   |   No  |   sinónimo |
-|   13097   |   0   |   No  |   bloqueo    |
+|   13097   |   0   |   No  |   lock    |
 |   13098   |   0   |   No  |   subproceso  |
 |   13099   |   0   |   No  |   búfer de comunicaciones    |
 |   13100   |   0   |   No  |   Sección crítica de Common Language Runtime    |
@@ -5144,7 +5144,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   13102   |   10  |   No  |   DETACH  |
 |   13103   |   0   |   No  |   HASH    |
 |   13104   |   0   |   No  |   RANGE   |
-|   13105   |   0   |   No  |   crear  |
+|   13105   |   0   |   No  |   create  |
 |   13106   |   0   |   No  |   ruta   |
 |   13107   |   0   |   No  |   enlace de servicio remoto  |
 |   13108   |   0   |   No  |   Iniciador   |
@@ -5157,8 +5157,8 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   13115   |   0   |   No  |   login   |
 |   13116   |   0   |   No  |   certificado |
 |   13117   |   0   |   No  |   rol    |
-|   13118   |   0   |   No  |   buscar    |
-|   13119   |   0   |   No  |   extremo    |
+|   13118   |   0   |   No  |   find    |
+|   13119   |   0   |   No  |   endpoint    |
 |   13120   |   0   |   No  |   sql:variable    |
 |   13121   |   0   |   No  |   sql:column  |
 |   13122   |   0   |   No  |   espacio de nombres XML   |
@@ -5184,10 +5184,10 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   13142   |   0   |   No  |   una instrucción INSERT SELECT  |
 |   13143   |   16  |   No  |   función de partición  |
 |   13144   |   16  |   No  |   esquema de partición    |
-|   13145   |   16  |   No  |   cifrado  |
+|   13145   |   16  |   No  |   El cifrado  |
 |   13146   |   16  |   No  |   firma   |
 |   13147   |   16  |   No  |   password    |
-|   13148   |   16  |   No  |   cambiar el nombre  |
+|   13148   |   16  |   No  |   rename  |
 |   13149   |   16  |   No  |   finalizar diálogo  |
 |   13150   |   16  |   No  |   END CONVERSATION WITH ERROR |
 |   13151   |   16  |   No  |   MOVE CONVERSATION   |
@@ -5264,7 +5264,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   13224   |   10  |   No  |   Sincronización de roles    |
 |   13225   |   10  |   No  |   Force_Service_Allow_Data_Loss   |
 |   13226   |   10  |   No  |   add |
-|   13227   |   10  |   No  |   en  |
+|   13227   |   10  |   No  |   to  |
 |   13228   |   10  |   No  |   desde    |
 |   13229   |   10  |   No  |   enable  |
 |   13230   |   10  |   No  |   disable |
@@ -5275,7 +5275,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   13235   |   10  |   No  |   WHEN MATCHED    |
 |   13236   |   10  |   No  |   WHEN NOT MATCHED    |
 |   13237   |   10  |   No  |   WHEN SOURCE NOT MATCHED  |
-|   13238   |   10  |   No  |   ARRIBA |
+|   13238   |   10  |   No  |   TOP |
 |   13239   |   10  |   No  |   GROUP BY    |
 |   13240   |   10  |   No  |   HAVING  |
 |   13241   |   10  |   No  |   ORDER BY    |
@@ -5285,7 +5285,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   13245   |   10  |   No  |   WHERE   |
 |   13246   |   10  |   No  |   inesperado  |
 |   13254   |   10  |   No  |   event   |
-|   13255   |   10  |   No  |   target  |
+|   13255   |   10  |   No  |   Destino  |
 |   13256   |   10  |   No  |   acción de evento    |
 |   13257   |   10  |   No  |   sesión de eventos   |
 |   13258   |   10  |   No  |   paquete de eventos   |
@@ -5328,7 +5328,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   13295   |   10  |   No  |   longitud de huella digital de clave de proveedor de servicios criptográficos    |
 |   13296   |   10  |   No  |   longitud de datos BLOB de clave de proveedor de servicios criptográficos  |
 |   13297   |   16  |   No  |   etiqueta de algoritmo de cifrado    |
-|   13298   |   16  |   No  |   NAME    |
+|   13298   |   16  |   No  |   name    |
 |   13299   |   16  |   No  |   thumbprint  |
 |   13301   |   16  |   No  |   Longitud de IV (vector de la inicialización)    |
 |   13302   |   16  |   No  |   longitud de bit  |
@@ -5365,7 +5365,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-14000-to-14999"></a>Errores 14000 a 14999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   14002   |   16  |   No  |   No se encontró el subsistema 'Sync' con id. de tarea %ld.   |
 |   14003   |   16  |   No  |   Debe especificar un nombre de publicación. |
@@ -5387,7 +5387,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   14020   |   16  |   No  |   No se pudo obtener el id. de columna de la columna especificada. No se pudo replicar el esquema. |
 |   14021   |   16  |   No  |   La columna no se agregó correctamente al artículo.  |
 |   14022   |   16  |   No  |   El valor de \@property debe ser "description", "sync_object", "type", "ins_cmd", "del_cmd", "upd_cmd", "filter", "dest_table", "dest_object", "creation_script", "pre_creation_cmd", "status", "schema_option" o "destination_owner".   |
-|   14023   |   16  |   No  |   El tipo debe ser "[indexed view ]logbased[ (manualview|manualfilter|manualboth)]", "[serializable ]proc exec" o "(view|vista indizada|proc|func|agregado|synonym) schema only".    |
+|   14023   |   16  |   No  |   El tipo debe ser "[indexed view ]logbased[ (manualview|manualfilter|manualboth)]", "[serializable ]proc exec" o "(view|vista indizada|proc|func|aggregate|synonym) schema only".    |
 |   14024   |   16  |   No  |   El valor de la propiedad 'subscriber_provider' no puede ser NULL. |
 |   14025   |   10  |   No  |   El artículo se actualizó correctamente.  |
 |   14026   |   16  |   No  |   El valor de la propiedad 'subscriber_type' no es un tipo de suscriptor heterogéneo admitido. El valor debe ser 1 (suscriptor ODBC) o 3 (suscriptor OLEDB).    |
@@ -5530,7 +5530,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   14208   |   10  |   No  |   1..7 [1 = Correo electrónico, 2 = Buscapersonas (pager), 4 = NetSend]   |
 |   14209   |   10  |   No  |   0..127 [1 = domingo . 64 = sábado]    |
 |   14210   |   10  |   No  |   notificación    |
-|   14211   |   10  |   No  |   servidores  |
+|   14211   |   10  |   No  |   server  |
 |   14212   |   10  |   No  |   (todos los trabajos)  |
 |   14213   |   10  |   No  |   Detalles del trabajo principal:   |
 |   14214   |   10  |   No  |   Pasos del trabajo:  |
@@ -5897,7 +5897,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-15000-to-15999"></a>Errores 15000 a 15999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   15001   |   16  |   No  |   El objeto '%ls' no existe o no es un objeto válido para esta operación.    |
 |   15002   |   16  |   No  |   El procedimiento '%s' no se puede ejecutar dentro de una transacción. |
@@ -6410,7 +6410,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-16000-to-17999"></a>Errores 16000 a 17999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   16901   |   16  |   No  |   %hs: característica aún no implementada. |
 |   16902   |   16  |   No  |   %ls: el valor del parámetro %ls no es válido. |
@@ -6665,7 +6665,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-18000-to-18999"></a>Errores 18000 a 18999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   18002   |   20  |   Sí |   Excepción al ejecutar el procedimiento almacenado extendido "%.*ls" en la biblioteca "%.* ls". SQL Server está finalizando el proceso %d. Tipo de excepción: %ls; Código de excepción: 0x%lx. |
 |   18052   |   16  |   No  |   Error: %d, gravedad: %d, estado: %d. |
@@ -6886,7 +6886,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-19000-to-20999"></a>Errores 19000 a 20999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   19030   |   10  |   Sí |   Se inició el Id. de Seguimiento de SQL %d con el inicio de sesión "%s".  |
 |   19031   |   10  |   Sí |   Seguimiento de SQL detenido. Id. de seguimiento = '%d'. Nombre de inicio de sesión = '%s'.  |
@@ -7314,7 +7314,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-21000-to-21999"></a>Errores 21000 a 21999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   21000   |   16  |   No  |   No se puede suscribir a una publicación inactiva.    |
 |   21001   |   16  |   No  |   No se puede agregar un Agente de distribución en el suscriptor para una suscripción de inserción.  |
@@ -8077,7 +8077,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-22000-to-22999"></a>Errores 22000 a 22999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   22101   |   16  |   No  |   El valor suministrado para el argumento change_columns de la función CHANGE_TRACKING_IS_COLUMN_IN_MASK no es válido. El valor debe ser una máscara de bits devuelta por la función CHANGETABLE(CHANGES ...).   |
 |   22102   |   16  |   No  |   Los argumentos suministrados no son válidos para la opción CHANGES de la función CHANGETABLE.    |
@@ -8312,7 +8312,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   22981   |   16  |   No  |   El objeto no existe o se ha denegado el acceso.  |
 |   22982   |   16  |   No  |   No se pudieron crear los procedimientos almacenados internos utilizados para rellenar la tabla de cambios en la instancia de captura '%s' y la tabla de origen '%s.%s'. Consulte los errores anteriores en la sesión actual para identificar la causa y corregir los problemas asociados.    |
 |   22983   |   16  |   No  |   La captura de datos modificados utiliza el índice único '%s' en la tabla de origen '%s'. Para modificar o quitar el índice, debe deshabilitar primero la captura de datos modificados en la tabla. |
-|   22984   |   16  |   No  |   Se produjo un error mientras se esperaba el evento de caché del historial del registro LOG. Este error lo notifica la programación de tareas internas y podría ser transitorio. Intente de nuevo la operación.  |
+|   22984   |   16  |   No  |   Se produjo un error mientras se esperaba el evento de caché del historial del registro LOG. Este error lo notifica la programación de tareas internas y podría ser transitorio. Vuelva a intentar la operación.  |
 |   22985   |   16  |   No  |   La captura de datos modificados no se ha habilitado para la tabla de origen '%s.%s'. Especifique el nombre de una tabla habilitada para la captura de datos modificados. Para notificaciones sobre las tablas habilitadas para la captura de datos modificados, consulte la columna is_tracked_by_cdc en la vista de catálogo sys.tables. |
 |   22986   |   16  |   No  |   No se pudo asignar memoria para el rellenado de la captura de datos modificados. Compruebe que SQL Server tiene suficiente memoria para todas las operaciones. Compruebe la configuración de memoria virtual y física en el servidor y examine el uso de la memoria para ver si otra aplicación está consumiendo memoria excesiva.   |
 |   22987   |   16  |   No  |   Error durante el rellenado de la captura de datos modificados. Se escribieron datos BLOB en una o más columnas de objetos de gran tamaño. Compruebe que SQL Server tiene suficiente memoria para todas las operaciones. Compruebe la configuración de memoria virtual y física en el servidor y examine el uso de la memoria para ver si otra aplicación está consumiendo memoria excesiva.   |
@@ -8332,7 +8332,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-23000-to-25999"></a>Errores 23000 a 25999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   23003   |   17  |   No  |   Los permisos de recursos compartidos de WinFS se han dañado {Error: %ld}. Intente configurar de nuevo los permisos de recursos compartidos. |
 |   23100   |   16  |   No  |   Los parámetros de entrada no son válidos. |
@@ -8521,7 +8521,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-26000-to-27999"></a>Errores 26000 a 27999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   26010   |   10  |   Sí |   El servidor no pudo cargar el certificado que necesita para iniciar una conexión SSL. Devolvió el siguiente error: %#x. Compruebe los certificados para asegurarse de que son válidos. |
 |   26011   |   16  |   Sí |   El servidor no pudo inicializar el cifrado debido a un problema con una biblioteca de seguridad. Es posible que falte la biblioteca de seguridad. Compruebe que existe el archivo security.dll en el sistema.    |
@@ -8636,7 +8636,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-28000-to-30999"></a>Errores 28000 a 30999
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   28000   |   16  |   No  |   La clave de sesión descifrada tiene un tamaño inesperado.   |
 |   28001   |   16  |   No  |   Se recibió un mensaje dañado. Contiene marcas no válidas. Esto ocurrió en el mensaje con el id. de conversación '%.*ls', el iniciador %d y el número de secuencia de mensaje %I64d. |
@@ -8762,7 +8762,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 |   30045   |   17  |   No  |   Error de índice de texto completo durante la compresión y descompresión. Puede que el índice de texto completo esté dañado en el disco. Ejecute dbcc checkdatabase y vuelva a rellenar el índice.   |
 |   30046   |   16  |   No  |   SQL Server encontró el error 0x%x mientras se comunicaba con el proceso de host de demonio de filtro (FDHost) de texto completo. Asegúrese de que el proceso FDHost se esté ejecutando. Para reiniciar el proceso FDHost, ejecute el comando sp_fulltext_service 'restart_all_fdhosts' o reinicie la instancia de SQL Server.   |
 |   30047   |   16  |   No  |   El usuario no tiene permiso para %.*ls la lista de palabras irrelevantes "%.* ls".    |
-|   30048   |   10  |   No  |   Información: se omitirá la regla duplicada "%ls" del diccionario de sinónimos durante la carga del archivo de diccionario de sinónimos para el LCID %d. Se encontró una frase del diccionario de sinónimos duplicada en la sección <sub> de una regla de expansión o en la sección <pat> de una regla de reemplazo. Esto da lugar a ambigüedad y, por tanto, se omitirá la frase.  |
+|   30048   |   10  |   No  |   Informativo: se omitirá la regla duplicada "%ls" del diccionario de sinónimos durante la carga del archivo de diccionario de sinónimos para el LCID %d. Se encontró una frase del diccionario de sinónimos duplicada en la sección <sub> de una regla de expansión o en la sección <pat> de una regla de reemplazo. Esto da lugar a ambigüedad y, por tanto, se omitirá la frase.  |
 |   30049   |   17  |   No  |   Error interno del diccionario de sinónimos de texto completo (HRESULT = '0x%08x')  |
 |   30050   |   16  |   No  |   No se encontró el archivo de diccionario de sinónimos para el LCID '%d' ni el diccionario de sinónimos global. |
 |   30051   |   16  |   No  |   No se permiten frases con más de 512 caracteres Unicode en un archivo de diccionario de sinónimos. Frase: '%ls'.  |
@@ -8814,7 +8814,7 @@ La tabla contiene los números de mensajes de error y la descripción, que es el
 
 ## <a name="errors-31000-to-41400"></a>Errores 31000 a 41400
 
-| Error| Severity | Evento registrado | Descripción|
+| Error| severity | Evento registrado | Descripción|
 | :------ | :------| :------| :----------------------------- |
 |   31001   |   16  |   No  |   La sesión '%s' ya existe. Use un nombre de sesión diferente.  |
 |   31002   |   16  |   No  |   Esta operación solo la puede realizar el propietario de la sesión.   |

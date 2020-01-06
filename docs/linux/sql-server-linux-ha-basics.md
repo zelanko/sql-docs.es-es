@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d597033e6ad09a735e621518883cedda6bef29a2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586754"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243587"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Conceptos básicos sobre disponibilidad de SQL Server en implementaciones de Linux
 
@@ -57,7 +57,7 @@ En esta sección se describen las tareas comunes a todas las implementaciones de
 Copiar archivos de un servidor a otro es una tarea que cualquier persona que use [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux debería poder realizar. Esta tarea es muy importante para las configuraciones de grupos de disponibilidad.
 
 Pueden surgir cuestiones como problemas de permisos en las instalaciones basadas tanto en Linux como en Windows. Sin embargo, es posible que los usuarios familiarizados con copiar de un servidor a otro en Windows no sepan cómo hacerlo en Linux. Un método común es usar la utilidad de la línea de comandos `scp`, que significa "copia segura". En segundo plano, `scp` usa OpenSSH. SSH significa "shell seguro". En función de la distribución de Linux, es posible que OpenSSH no esté instalado de por sí. Si no lo está, OpenSSH debe instalarse primero. Para más información sobre cómo configurar OpenSSH, vea los siguientes vínculos relativos a cada distribución:
--   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
+-   [Red Hat Enterprise Linux (RHEL)](https://access.redhat.com/documentation/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh)
 -   [SUSE Linux Enterprise Server (SLES)](https://en.opensuse.org/SDB:Configure_openSSH)
 -   [Ubuntu](https://help.ubuntu.com/community/SSH/OpenSSH/Configuring)
 
@@ -116,7 +116,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 ```
 
 **Documentación del firewall:**
--   [RHEL](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
+-   [RHEL](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/high_availability_add-on_reference/s1-firewalls-haar)
 -   [SLES](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html)
 
 ### <a name="install-includessnoversion-mdincludesssnoversion-mdmd-packages-for-availability"></a>Instalación de paquetes de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para disponibilidad
@@ -127,7 +127,7 @@ En una instalación de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
 
 Cuando los grupos de disponibilidad o las instancias de clúster de conmutación por error se configuran en una configuración basada en Windows, son compatibles con clústeres. La compatibilidad con clústeres significa que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] tiene archivos DLL de recurso específicos que un WSFC conoce (sqagtres.dll y sqsrvres.dll para las instancias de clúster de conmutación por error; hadrres.dll para los grupos de disponibilidad) y que el WSFC usa para asegurarse de que la funcionalidad de agrupación en clúster de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] funciona y lo hace correctamente. Dado que la agrupación en clústeres es externa no solo por lo que respecta a [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], sino también a Linux, Microsoft tuvo que codificar el equivalente de un archivo DLL de recurso para las implementaciones de grupos de disponibilidad o instancias de clúster de conmutación por error basadas en Linux. Es el paquete *mssql-server-ha*, también conocido como agente de recursos de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para Pacemaker. Para instalar el paquete *mssql-server-ha*, vea [Instalación de los paquetes de alta disponibilidad y del Agente SQL Server](sql-server-linux-deploy-pacemaker-cluster.md#install-the-sql-server-ha-and-sql-server-agent-packages).
 
-Los otros paquetes opcionales para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux, a saber, la búsqueda de texto completo [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] (*mssql-server-fts*) y [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*), no son necesarios para la alta disponibilidad, ya sea de una instancia de clúster de conmutación por error o de un grupo de disponibilidad.
+Los otros paquetes opcionales para [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en Linux, la búsqueda de texto completo de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] (*mssql-server-fts*) y [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Integration Services (*mssql-server-is*) no se requieren para la alta disponibilidad, ya sea para una FCI o un AG.
 
 ## <a name="pacemaker-for-always-on-availability-groups-and-failover-cluster-instances-on-linux"></a>Pacemaker para grupos de disponibilidad e instancias de clúster de conmutación por error de AlwaysOn en Linux
 Como se indicó anteriormente, el único mecanismo de agrupación en clústeres compatible actualmente con Microsoft en relación con grupos de disponibilidad o instancias de clúster de conmutación por error es Pacemaker con Corosync. Esta sección cubre información básica para comprender la solución, además de cómo planearla e implementarla para configuraciones de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)].
@@ -163,7 +163,7 @@ En esta sección se documentan los conceptos y la terminología comunes de una i
 #### <a name="node"></a>Nodo
 Un nodo es un servidor que participa en el clúster. Un clúster de Pacemaker admite de forma nativa hasta 16 nodos. Este número puede ser mayor si Corosync no se está ejecutando en otros nodos, pero Corosync es necesario con [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Por lo tanto, el número máximo de nodos que un clúster puede tener en una configuración basada en [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] es 16; este es el límite de Pacemaker, y no tiene nada que ver con los límites máximos impuestos por [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] en relación con los grupos de disponibilidad y las instancias de clúster de conmutación por error. 
 
-#### <a name="resource"></a>Recurso
+#### <a name="resource"></a>Resource
 Tanto en WSFC como en un clúster de Pacemaker existe el concepto de recurso. Un recurso es una funcionalidad específica que se ejecuta en el contexto del clúster, como un disco o una dirección IP. Por ejemplo, en Pacemaker se pueden crear recursos de grupo de disponibilidad y de instancia de clúster de conmutación por error. Esto no difiere de lo que se lleva a cabo en un WSFC, donde hay un recurso de [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] para una instancia de clúster de conmutación por error o para un grupo de disponibilidad al configurar un grupo de disponibilidad, pero no es exactamente lo mismo, dadas las diferencias subyacentes en cuanto a la forma en que [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] se integra con Pacemaker.
 
 Pacemaker tiene recursos estándar y de clonación. Los recursos de clonación son aquellos que se ejecutan simultáneamente en todos los nodos. Un ejemplo sería una dirección IP que se ejecuta en varios nodos con fines de equilibrio de carga. Cualquier recurso que se cree para instancias de clúster de conmutación por error usa un recurso estándar, ya que solo un nodo puede hospedar una instancia de clúster de conmutación por error en un momento dado.

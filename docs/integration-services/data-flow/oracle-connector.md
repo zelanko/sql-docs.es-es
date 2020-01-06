@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a0ad547d26c86c43b0009cdf20acae33ed7e8ab7
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: ee00232a1c1e64d31b7b6360666bdeebba756db9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553235"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246949"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -22,7 +22,7 @@ ms.locfileid: "69553235"
 
 Microsoft Connector for Oracle permite exportar datos desde un origen de datos de Oracle y cargar datos en él en un paquete SSIS.
 
-## <a name="version-support"></a>Compatibilidad de versiones
+## <a name="version-support"></a>Compatibilidad con versiones
 
 Microsoft Connector for Oracle admite los siguientes productos de Microsoft SQL Server:
 
@@ -41,9 +41,9 @@ La base de datos de Oracle es compatible con todos los sistemas operativos y pla
 >
 > Microsoft Connector for Oracle Database no necesita el cliente Oracle en SQL Server 2019.
 
-## <a name="installation"></a>Installation
+## <a name="installation"></a>Instalación
 
-Si tiene que ejecutar el paquete en SQL Server, puede obtener el programa de instalación de Microsoft Connector for Oracle Database [aquí](https://www.microsoft.com/en-us/download/details.aspx?id=58228). A continuación, siga las instrucciones del asistente para la instalación.
+Si tiene que ejecutar el paquete en SQL Server, puede obtener el programa de instalación de Microsoft Connector for Oracle Database [aquí](https://www.microsoft.com/download/details.aspx?id=58228). A continuación, siga las instrucciones del asistente para la instalación.
 
 Después de instalar el conector, debe reiniciar el Servicio de integración de SQL Server para asegurarse de que el origen y el destino de Oracle funcionen correctamente.
 
@@ -61,10 +61,10 @@ Para diseñar un paquete SSIS que tenga como destino SQL Server 2017 y version
 
 **Vínculos de descarga:**
 
-- [SQL Server 2017: Microsoft Connector Version 5.0 for Oracle de Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=55179)
-- [SQL Server 2016: Microsoft Connector Version 4.0 for Oracle de Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=52950)
-- [SQL Server 2014: Microsoft Connector Version 3.0 for Oracle de Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=44582)
-- [SQL Server 2012: Microsoft Connector Version 2.0 for Oracle de Attunity](https://www.microsoft.com/en-us/download/details.aspx?id=29283)
+- [SQL Server 2017: Microsoft Connector Version 5.0 for Oracle de Attunity](https://www.microsoft.com/download/details.aspx?id=55179)
+- [SQL Server 2016: Microsoft Connector Version 4.0 for Oracle de Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
+- [SQL Server 2014: Microsoft Connector Version 3.0 for Oracle de Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
+- [SQL Server 2012: Microsoft Connector Version 2.0 for Oracle de Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 052bb7455c952600390a0960e9d7618ab0a315fc
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809778"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252241"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configuración del clúster de disco compartido de Red Hat Enterprise Linux para SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En esta guía se proporcionan instrucciones para crear un clúster de disco compartido de dos nodos para SQL Server en Red Hat Enterprise Linux. La capa de agrupación en clústeres se basa en el [complemento HA](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) de Red Hat Enterprise Linux (RHEL) sobre [Pacemaker](https://clusterlabs.org/). La instancia de SQL Server está activa en un nodo o en el otro.
+En esta guía se proporcionan instrucciones para crear un clúster de disco compartido de dos nodos para SQL Server en Red Hat Enterprise Linux. La capa de agrupación en clústeres se basa en el [complemento de alta disponibilidad](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) de Red Hat Enterprise Linux (RHEL) sobre [Pacemaker](https://clusterlabs.org/). La instancia de SQL Server está activa en un nodo o en el otro.
 
 > [!NOTE] 
 > El acceso al complemento de alta disponibilidad y la documentación de Red Hat exige una suscripción. 
@@ -36,7 +36,7 @@ Para obtener más información sobre la configuración del clúster, las opcione
 > En este momento, la integración de SQL Server con Pacemaker no es tan perfecta como con WSFC en Windows. Desde dentro de SQL no hay conocimiento sobre la presencia del clúster, toda la orquestación está fuera y Pacemaker controla el servicio como una instancia independiente. Además, por ejemplo, las DMV de clúster sys.dm_os_cluster_nodes y sys.dm_os_cluster_properties no crearán ningún registro.
 Para usar una cadena de conexión que apunte al nombre de servidor de una cadena y no use la dirección IP, se tiene que registrar en su servidor DNS la dirección IP usada para crear el recurso de IP virtual (como se explica en las secciones siguientes) con el nombre de servidor elegido.
 
-En las siguientes secciones se describen los pasos necesarios para configurar una solución de clúster de conmutación por error. 
+En las secciones siguientes, se describen los pasos necesarios para configurar una solución de clúster de conmutación por error. 
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -120,7 +120,7 @@ Hay varias soluciones para proporcionar almacenamiento compartido. En este tutor
 
 En el servidor NFS, haga lo siguiente:
 
-1. Instale `nfs-utils`.
+1. Instalar `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -175,7 +175,7 @@ En el servidor NFS, haga lo siguiente:
 
 Realice los pasos siguientes en todos los nodos del clúster:
 
-1.  Instale `nfs-utils`.
+1.  Instalar `nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -202,7 +202,7 @@ Para obtener más información sobre el uso de NFS, consulte los siguientes recu
 
 * [Servidores NFS y firewalls | Stack Exchange](https://unix.stackexchange.com/questions/243756/nfs-servers-and-firewalld)
 * [Montaje de un volumen NFS | Guía de administradores de red de Linux](https://www.tldp.org/LDP/nag2/x-087-2-nfs.mountd.html)
-* [Configuración del servidor NFS | Portal del cliente de Red Hat](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
+* [Configuración del servidor NFS | Portal del cliente de Red Hat](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/storage_administration_guide/nfs-serverconfig)
 
 ### <a name="mount-database-files-directory-to-point-to-the-shared-storage"></a>Montaje del directorio de archivos de base de datos para que apunte al almacenamiento compartido
 
@@ -253,10 +253,10 @@ Para obtener más información sobre el uso de NFS, consulte los siguientes recu
  
 En este momento, ambas instancias de SQL Server están configuradas para ejecutarse con los archivos de base de datos en el almacenamiento compartido. El siguiente paso consiste en configurar SQL Server para Pacemaker. 
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Instalación y configuración de Pacemaker en cada nodo del clúster
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>Instalación y configuración de Pacemaker en todos los nodos del clúster
 
 
-2. En ambos nodos del clúster, cree un archivo para almacenar el nombre de usuario de SQL Server y la contraseña para el inicio de sesión de Pacemaker. El comando siguiente crea y rellena este archivo:
+2. En ambos nodos del clúster, cree un archivo para almacenar el nombre de usuario de SQL Server y la contraseña para el inicio de sesión de Pacemaker. Con el siguiente comando se crea y rellena este archivo:
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd

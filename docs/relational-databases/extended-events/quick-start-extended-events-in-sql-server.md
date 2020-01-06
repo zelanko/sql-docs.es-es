@@ -1,6 +1,5 @@
 ---
-title: 'Inicio rápido: Eventos extendidos en SQL Server | Microsoft Docs'
-ms.custom: ''
+title: 'Inicio rápido: Eventos extendidos en SQL Server'
 ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -11,12 +10,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe13d14db11b95812217725bb4207ee30b50d62b
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798432"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242923"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Inicio rápido: Eventos extendidos en SQL Server
 
@@ -81,7 +80,7 @@ Puede comprender los pasos aunque decida no realizarlos. La demostración se ini
 - General
 - Eventos
 - Almacenamiento de datos
-- Avanzadas
+- Avanzado
 
 
 El texto y las capturas de pantalla de ayuda pueden ser ligeramente inexactas cuando la interfaz de usuario de SSMS se modifica con el paso de los meses o años. Aunque existan discrepancias o pequeñas diferencias, las capturas de pantalla siguen resultando útiles para la explicación.
@@ -378,7 +377,7 @@ A continuación, podemos ver parte de los resultados que se encuentran en format
 
 Existen varias características avanzadas en la interfaz de usuario de SSMS que puede usar para ver los datos que se han capturado de un evento extendido. Puede encontrar información en:
 
-- [Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)
+- [Visualización avanzada de datos de destino de eventos extendidos en SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)
 
 
 Los conceptos básicos comienzan con las opciones del menú contextual denominadas **View Target Data (Ver datos de destino)** y **Watch Live Data (Observar datos en directo)** .
@@ -414,7 +413,7 @@ En los siguientes artículos se describen escenarios específicos para las sesio
 
 - [Buscar los objetos que han obtenido más bloqueos](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - En este escenario se usa package0.histogram de destino, que procesa los datos de eventos sin procesar antes de mostrárselos.
-- [Determinar las consultas que mantienen bloqueos](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
+- [Determinar las consultas que retienen bloqueos](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
   - En este escenario se usa [target package0.pair_matching](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3), donde el par de eventos es sqlserver.lock_acquire y lock_release.
 
 
@@ -428,10 +427,10 @@ En la siguiente tabla se enumeran los términos que se usan en los eventos exten
 | :--- | :---------- |
 | sesión de eventos | Una construcción que se centra en torno a uno o más eventos, además de elementos complementarios como acciones y destinos. La instrucción CREATE EVENT SESSION construye cada sesión de eventos. Puede modificar una sesión de eventos para iniciarla y detenerla a su voluntad. <br/> <br/> A veces, se hace referencia a una sesión de eventos solo como *sesión*, cuando el contexto lo aclara significa *sesión de eventos*. <br/> <br/> Encontrará más información sobre las sesiones de eventos en [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | event | Una repetición específica en el sistema que se observa mediante una sesión de eventos activa. <br/> <br/> Por ejemplo, el evento *sql_statement_completed* representa el momento en que cualquier instrucción T-SQL se completa. El evento puede notificar su duración y otros datos. |
-| target | Un elemento que recibe los datos de salida de un evento capturado. El destino le muestra los datos. <br/> <br/> Entre los ejemplos se incluye *event_file*, su elemento Cousin útil y ligero, y la memoria *ring_buffer*. El sofisticado destino *histogram* realiza un procesamiento de los datos antes de mostrarlos. <br/> <br/> Puede usarse cualquier destino para cualquier sesión de eventos. Para más información, consulte [Destinos para eventos extendidos en SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
+| Destino | Un elemento que recibe los datos de salida de un evento capturado. El destino le muestra los datos. <br/> <br/> Entre los ejemplos se incluye *event_file*, su elemento Cousin útil y ligero, y la memoria *ring_buffer*. El sofisticado destino *histogram* realiza un procesamiento de los datos antes de mostrarlos. <br/> <br/> Puede usarse cualquier destino para cualquier sesión de eventos. Para más información, consulte [Destinos para eventos extendidos en SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
 | action | Un campo conocido del evento. Los datos del campo se envían al destino. El campo de acción está estrechamente relacionado con el *filtro de predicado*. |
 | filtro de predicado | Una prueba de datos en un campo de evento que se usa de forma que solo un subconjunto interesante de las repeticiones de evento se envíe al destino. <br/> <br/> Por ejemplo, un filtro podría incluir solo esas repeticiones del evento *sql_statement_completed* donde la instrucción T-SQL incluía la cadena *HAVING*. |
-| paquete | Un calificador de nombre adjunto a cada elemento de un conjunto de elementos que se centra en torno al núcleo de los eventos. <br/> <br/> Por ejemplo, un paquete puede tener eventos sobre texto T-SQL. Un evento puede tratar todas las instrucciones T-SQL en un lote delimitado por la instrucción GO. Mientras tanto, otro evento más reducido trata sobre las instrucciones T-SQL individuales. Además, para cualquier instrucción T-SQL, existen eventos de inicio y eventos completados. <br/> <br/> Los campos apropiados para los eventos también se encuentran en el paquete con los eventos. La mayoría de los destinos se encuentran en *package0* y se usan con eventos de muchos otros paquetes. |
+| Paquete | Un calificador de nombre adjunto a cada elemento de un conjunto de elementos que se centra en torno al núcleo de los eventos. <br/> <br/> Por ejemplo, un paquete puede tener eventos sobre texto T-SQL. Un evento puede tratar todas las instrucciones T-SQL en un lote delimitado por la instrucción GO. Mientras tanto, otro evento más reducido trata sobre las instrucciones T-SQL individuales. Además, para cualquier instrucción T-SQL, existen eventos de inicio y eventos completados. <br/> <br/> Los campos apropiados para los eventos también se encuentran en el paquete con los eventos. La mayoría de los destinos se encuentran en *package0* y se usan con eventos de muchos otros paquetes. |
 
 
 ## <a name="how-to-discover-the-available-events-in-packages"></a>Cómo detectar los eventos disponibles en los paquetes
@@ -494,7 +493,7 @@ En el siguiente vínculo encontrará una descripción sobre el uso de los evento
 
 Las descripciones de cómo usar eventos extendidos con Seguimiento de eventos para Windows (ETW) están disponibles en:
 
-- [Seguimiento de eventos para Windows de destino](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
+- [Seguimiento de eventos para Windows como destino](../../relational-databases/extended-events/event-tracing-for-windows-target.md)
 - [Supervisar la actividad del sistema mediante eventos extendidos](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 

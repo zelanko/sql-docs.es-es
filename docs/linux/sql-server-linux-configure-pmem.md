@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e1a935dcaa605caf9483fadd5707bafbfb6b83b
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: 9e6ef9592f980cab3e379fc27083ed34b8e94798
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531299"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243603"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Cómo configurar la memoria persistente (PMEM) para SQL Server en Linux
 
@@ -79,7 +79,7 @@ ndctl list
 
   Una vez que el dispositivo se haya configurado con ndctl, formateado y montado, puede colocar archivos de base de datos en él. También puede crear una base de datos. 
 
-1. Dado que los dispositivos PMEM son aptos para O_DIRECT, habilite la marca de seguimiento 3979 para deshabilitar el mecanismo de vaciado forzado. Esta marca de seguimiento es una marca de seguimiento de inicio y, como tal, debe habilitarse mediante la utilidad mssql-conf. Tenga en cuenta que se trata de un cambio de configuración de todo el servidor y no debe usar esta marca de seguimiento si tiene algún dispositivo O_DIRECT no compatible que necesite el mecanismo de vaciado forzado para garantizar la integridad de los datos. Para obtener más información, consulte https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
+1. Dado que los dispositivos PMEM son aptos para O_DIRECT, habilite la marca de seguimiento 3979 para deshabilitar el mecanismo de vaciado forzado. Esta marca de seguimiento es una marca de seguimiento de inicio y, como tal, debe habilitarse mediante la utilidad mssql-conf. Tenga en cuenta que se trata de un cambio de configuración de todo el servidor y no debe usar esta marca de seguimiento si tiene algún dispositivo O_DIRECT no compatible que necesite el mecanismo de vaciado forzado para garantizar la integridad de los datos. Para obtener más información, consulte https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 
 1. Reinicie SQL Server.
 

@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 68f3497e9f3f47d7e43c2bda0083bc25632d8221
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 0ee4c32568a52f5eb7664fa8f22250370f46f033
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032441"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325482"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalación de SQL Server Integration Services (SSIS) en Linux
 
@@ -36,11 +36,18 @@ Para instalar el paquete `mssql-server-is` en Ubuntu, siga estos pasos:
    ```
 
 2. Registre el repositorio de Ubuntu de Microsoft SQL Server.
-
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   ```
+::: moniker-end
 3. Ejecute los comandos siguientes para instalar SQL Server Integration Services.
 
    ```bash
@@ -78,10 +85,18 @@ Para instalar el paquete `mssql-server-is` en RHEL, siga estos pasos:
 
 1. Descargue el archivo de configuración del repositorio de Red Hat de Microsoft SQL Server.
 
+<!--SQL Server 2017 on Linux-->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
-
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+::: moniker-end
 1. Ejecute los comandos siguientes para instalar SQL Server Integration Services.
 
    ```bash
@@ -134,7 +149,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | Variable de entorno | Descripción |
 |---|---|
 | **ACCEPT_EULA** | Acepta el contrato de licencia de SQL Server cuando se establece en cualquier valor (por ejemplo, `Y`).|
-| **SSIS_PID** | Establece la edición de SQL Server o la clave de producto. Estos son los valores posibles:<br/>Evaluation<br/>Desarrollador<br/>Express <br/>Web <br/>Estándar<br/>Enterprise <br/>Una clave de producto<br/><br/>Si especifica una clave de producto, esta debe tener el formato `#####-#####-#####-#####-#####`, donde `#` es una letra o un número.  |
+| **SSIS_PID** | Establece la edición de SQL Server o la clave de producto. Estos son los valores posibles:<br/>Evaluación<br/>Desarrollador<br/>Express <br/>Web <br/>Estándar<br/>Enterprise <br/>Una clave de producto<br/><br/>Si especifica una clave de producto, esta debe tener el formato `#####-#####-#####-#####-#####`, donde `#` es una letra o un número.  |
 | | |
 
 ## <a name="next-steps"></a>Pasos siguientes
@@ -145,6 +160,6 @@ Para configurar opciones adicionales de SSIS en Linux, vea [Configuración de SQ
 
 ## <a name="related-content-about-ssis-on-linux"></a>Contenido relacionado sobre SSIS en Linux
 -   [Extracción, transformación y carga de datos en Linux con SSIS](sql-server-linux-migrate-ssis.md)
--   [Configuración de SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
+-   [Configurar SQL Server Integration Services en Linux con ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Limitaciones y problemas conocidos de SSIS en Linux](sql-server-linux-ssis-known-issues.md)
 -   [Programación de la ejecución de paquetes de SQL Server Integration Services en Linux con cron](sql-server-linux-schedule-ssis-packages.md)

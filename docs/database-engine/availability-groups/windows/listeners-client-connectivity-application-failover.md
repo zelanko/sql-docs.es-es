@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9ec10cd88bdaa5536674df78c9b73700575516
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e2116c0a587b82f289f5dba17968f3eb42e47c05
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020811"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228252"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Conexión a un agente de escucha del grupo de disponibilidad Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "68020811"
  Para usar un agente de escucha del grupo de disponibilidad y conectarse a la réplica principal para acceso de lectura/escritura, la cadena de conexión especifica el nombre DNS del agente de escucha del grupo de disponibilidad.  Si una réplica principal del grupo de disponibilidad cambia a una nueva réplica, las conexiones existentes que usan un nombre de red del agente de escucha del grupo de disponibilidad se desconectarán.  Las nuevas conexiones al agente de escucha del grupo de disponibilidad se dirigen a la nueva réplica principal. El siguiente es un ejemplo de una cadena de conexión básica para el proveedor ADO.NET (System.Data.SqlClient):  
   
 ```  
-Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI  
+Server=tcp: AGListener,1433;Database=MyDB;Integrated Security=SSPI  
 ```  
   
  Puede seguir eligiendo hacer referencia directamente a la instancia de SQL Server de las réplicas principal o secundaria en lugar de utilizar el nombre del servidor del agente de escucha del grupo de disponibilidad; sin embargo, si decide realizar esta acción, perderá la ventaja que supone dirigir automáticamente las nuevas conexiones a la réplica principal actual.  También perderá la ventaja del enrutamiento de solo lectura.  
@@ -116,7 +116,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
  El siguiente es un ejemplo de una cadena de conexión para el proveedor ADO.NET (System.Data.SqlClient) que designa el intento de solo lectura de la aplicación:  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
  En este ejemplo de cadena de comparación, el cliente intenta conectarse a la base de datos AdventureWorks mediante un agente de escucha del grupo de disponibilidad denominado `AGListener` en el puerto 1433 (también puede omitir el puerto si el agente de escucha del grupo de disponibilidad escucha en 1433).  La cadena de conexión tiene la propiedad **ApplicationIntent** establecida en **ReadOnly**, lo que la convierte en una *cadena de conexión de intención de lectura*.  Sin este valor, el servidor no habría intentado un enrutamiento de solo lectura de la conexión.  
@@ -163,7 +163,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
  El siguiente es un ejemplo de cadena de conexión del proveedor ADO.NET (System.Data.SqlClient) que habilita la conmutación por error de varias subredes:  
   
 ```  
-Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI; MultiSubnetFailover=True  
+Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; MultiSubnetFailover=True  
 ```  
   
  La opción de conexión **MultiSubnetFailover** debe establecerse en **True** aunque el grupo de disponibilidad solo abarque una única subred.  Esto permite preconfigurar nuevos clientes que puedan abarca en el futuro subredes sin necesidad de los cambios en la cadena de conexión de cliente y también optimiza el rendimiento de conmutación por error para conmutaciones por error de las subredes.  Cuando la opción de conexión **MultiSubnetFailover** no es necesaria, proporciona la ventaja de una conmutación por error más rápida de la subred.  Esto se debe a que el controlador cliente intentará abrir un socket de TCP para cada dirección IP en paralelo asociada al grupo de disponibilidad.  El controlador cliente esperará que la primera dirección IP responda y, una vez que lo haga, la utilizará para la conexión.  

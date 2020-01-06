@@ -10,12 +10,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d4132db44bb52835e277733365321d85342e670
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.openlocfilehash: 61c282e01a03a0b46de0c256025cb59c57304ddb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74095841"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245599"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>Formato de salida JSON anidada con el modo PATH (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ El modo**PATH** le permite crear objetos contenedores y anidar propiedades compl
   
 La alternativa es usar la opción **AUTO** para aplicar formato a la salida automáticamente en función de la estructura de la instrucción **SELECT**.
  -   Para más información sobre la opción **AUTO**, vea [Aplicar formato a la salida JSON automáticamente con el modo AUTO](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
- -   Para obtener información general de ambas opciones, vea [Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) (Aplicar formato JSON a los resultados de la consulta con FOR JSON).
+ -   Para obtener información general sobre ambas opciones, consulte [Format Query Results as JSON with FOR JSON](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md) (Aplicar formato a los resultados de la consulta como JSON con FOR JSON).
  
 Estos son algunos ejemplos de la cláusula **FOR JSON** con la opción **PATH** . Aplique formato a los resultados anidados utilizando nombres de columna separados por puntos o consultas anidadas, tal como se muestra en los ejemplos siguientes. De forma predeterminada los valores null no se incluyen en la salida de **FOR JSON**.  
 
@@ -35,7 +35,7 @@ La siguiente consulta da formato a las cinco primeras filas de la tabla Adventur
 
 La cláusula **FOR JSON PATH** usa el alias de columna o el nombre de columna para determinar el nombre de clave en la salida de JSON. Si un alias que contiene puntos, la opción PATH crea objetos anidados.  
 
- **Consulta**  
+ **Consultar**  
   
 ```sql  
 SELECT TOP 5   
@@ -86,13 +86,13 @@ SELECT TOP 5
 ## <a name="example---multiple-tables"></a>Ejemplo: varias tablas  
 Si se hace referencia a más de una tabla en una consulta, **FOR JSON PATH** anida cada columna mediante su alias. La siguiente consulta crea un objeto JSON por par (OrderHeader, OrderDetails) combinado en la consulta. 
   
- **Consulta**  
+ **Consultar**  
   
 ```sql  
-SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
-        OrderDate AS 'Order.Date',  
-        UnitPrice AS 'Product.Price',  
-        OrderQty AS 'Product.Quantity'  
+SELECT TOP 2 H.SalesOrderNumber AS 'Order.Number',  
+        H.OrderDate AS 'Order.Date',  
+        D.UnitPrice AS 'Product.Price',  
+        D.OrderQty AS 'Product.Quantity'  
 FROM Sales.SalesOrderHeader H  
    INNER JOIN Sales.SalesOrderDetail D  
      ON H.SalesOrderID = D.SalesOrderID  

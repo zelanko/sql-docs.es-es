@@ -10,27 +10,27 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 10ebcf94c673df4e8016ae2d0c84d7a5bd89824f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8a4ebe26cbbf768222c7b97b95fa7df238faded3
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959625"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001900"
 ---
-# <a name="azure-data-studio-extensibility-apis"></a>API de extensibilidad de Azure Data Studio
+# <a name="azure-data-studio-extensibility-apis"></a>API de extensibilidad de Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] proporciona una API que las extensiones pueden usar para interactuar con otras partes de Azure Data Studio, como el Explorador de objetos. Estas API están disponibles en el archivo [`src/sql/sqlops.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts) y se describen a continuación.
+[!INCLUDE[name-sos](../includes/name-sos.md)] proporciona una API que las extensiones pueden usar para interactuar con otras partes de Azure Data Studio, como el Explorador de objetos. Estas API están disponibles en el archivo [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) y se describen a continuación.
 
 ## <a name="connection-management"></a>Administración de las conexiones
-`sqlops.connection`
+`azdata.connection`
 
 ### <a name="top-level-functions"></a>Funciones de nivel superior
 
-- `getCurrentConnection(): Thenable<sqlops.connection.Connection>` Obtiene la conexión actual en función del editor activo o de la selección del Explorador de objetos.
+- `getCurrentConnection(): Thenable<azdata.connection.Connection>` Obtiene la conexión actual en función del editor activo o de la selección del Explorador de objetos.
 
-- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` Obtiene una lista de todas las conexiones del usuario que están activas. Devuelve una lista vacía si no hay ninguna conexión de este tipo.
+- `getActiveConnections(): Thenable<azdata.connection.Connection[]>` Obtiene una lista de todas las conexiones del usuario que están activas. Devuelve una lista vacía si no hay ninguna conexión de este tipo.
 
-- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` Obtiene un diccionario que contiene las credenciales asociadas a una conexión. De lo contrario, se devolverán como parte del diccionario de opciones en un objeto `sqlops.connection.Connection`, pero se eliminarán de ese objeto. 
+- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` Obtiene un diccionario que contiene las credenciales asociadas a una conexión. De lo contrario, se devolverán como parte del diccionario de opciones en un objeto `azdata.connection.Connection`, pero se eliminarán de ese objeto. 
 
 ### `Connection`
 - `options: { [name: string]: string }` El diccionario de las opciones de conexión
@@ -39,7 +39,7 @@ ms.locfileid: "67959625"
 
 ### <a name="example-code"></a>Código de ejemplo
 ```
-> let connection = sqlops.connection.getCurrentConnection();
+> let connection = azdata.connection.getCurrentConnection();
 connection: {
     providerName: 'MSSQL',
     connectionId: 'd97bb63a-466e-4ef0-ab6f-00cd44721dcc',
@@ -51,7 +51,7 @@ connection: {
     },
     ...
 }
-> let credentials = sqlops.connection.getCredentials(connection.connectionId);
+> let credentials = azdata.connection.getCredentials(connection.connectionId);
 credentials: {
     password: 'abc123'
 }
@@ -60,15 +60,15 @@ credentials: {
 
 ## <a name="object-explorer"></a>Explorador de objetos
 
-`sqlops.objectexplorer`
+`azdata.objectexplorer`
 
 
 ### <a name="top-level-functions"></a>Funciones de nivel superior
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtiene un nodo del Explorador de objetos correspondiente a la conexión y ruta de acceso especificadas. Si no se especifica ninguna ruta de acceso, devuelve el nodo de nivel superior para la conexión especificada. Si no hay ningún nodo en la ruta de acceso especificada, devuelve `undefined`. Nota: El `nodePath` de un objeto se genera mediante el back-end del servicio de herramientas de SQL y es difícil de construir a mano. Las futuras mejoras de la API permitirán obtener nodos basados en los metadatos que se proporcionen sobre el nodo, como el nombre, el tipo y el esquema.
+- `getNode(connectionId: string, nodePath?: string): Thenable<azdata.objectexplorer.ObjectExplorerNode>` Obtiene un nodo del Explorador de objetos correspondiente a la conexión y ruta de acceso especificadas. Si no se especifica ninguna ruta de acceso, devuelve el nodo de nivel superior para la conexión especificada. Si no hay ningún nodo en la ruta de acceso especificada, devuelve `undefined`. Nota: El `nodePath` de un objeto se genera mediante el back-end del servicio de herramientas de SQL y es difícil de construir a mano. Las futuras mejoras de la API permitirán obtener nodos basados en los metadatos que se proporcionen sobre el nodo, como el nombre, el tipo y el esquema.
 
-- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtiene todos los nodos de conexión del Explorador de objetos activos.
+- `getActiveConnectionNodes(): Thenable<azdata.objectexplorer.ObjectExplorerNode>` Obtiene todos los nodos de conexión del Explorador de objetos activos.
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Busca todos los nodos del Explorador de objetos que coinciden con los metadatos especificados. Los argumentos `schema`, `database` y `parentObjectNames` deben ser `undefined` cuando no son aplicables. `parentObjectNames` es una lista de objetos primarios que no son de base de datos, del nivel más alto al más bajo en el Explorador de objetos, en el que se encuentra el objeto deseado. Por ejemplo, al buscar una columna "column1" que pertenezca a una tabla "schema1.table1" y la base de datos "database1" con el identificador de conexión `connectionId`, llame a `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Consulte también la [lista de tipos que Azure Data Studio admite de forma predeterminada](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) para esta llamada API.
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<azdata.objectexplorer.ObjectExplorerNode[]>` Busca todos los nodos del Explorador de objetos que coinciden con los metadatos especificados. Los argumentos `schema`, `database` y `parentObjectNames` deben ser `undefined` cuando no son aplicables. `parentObjectNames` es una lista de objetos primarios que no son de base de datos, del nivel más alto al más bajo en el Explorador de objetos, en el que se encuentra el objeto deseado. Por ejemplo, al buscar una columna "column1" que pertenezca a una tabla "schema1.table1" y la base de datos "database1" con el identificador de conexión `connectionId`, llame a `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Consulte también la [lista de tipos que Azure Data Studio admite de forma predeterminada](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) para esta llamada API.
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
 - `connectionId: string` El identificador de la conexión en la que existe el nodo
@@ -85,7 +85,7 @@ credentials: {
 
 - `isLeaf: boolean` Si el nodo es un nodo hoja y, por tanto, no tiene ningún elemento secundario
 
-- `metadata: sqlops.ObjectMetadata` Metadatos que describen el objeto representado por este nodo
+- `metadata: azdata.ObjectMetadata` Metadatos que describen el objeto representado por este nodo
 
 - `errorMessage: string` Mensaje que se muestra si el nodo está en un estado de error
 
@@ -95,14 +95,14 @@ credentials: {
 
 - `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` Establece si el nodo está seleccionado. Si `clearOtherSelections` es true, borre las demás selecciones al crear la nueva selección. Si es false, deje las selecciones existentes. `clearOtherSelections` tiene como valor predeterminado true cuando `selected` es true y false cuando `selected` es false.
 
-- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Obtiene todos los nodos secundarios de este nodo. Devuelve una lista vacía si no hay elementos secundarios.
+- `getChildren(): Thenable<azdata.objectexplorer.ObjectExplorerNode[]>` Obtiene todos los nodos secundarios de este nodo. Devuelve una lista vacía si no hay elementos secundarios.
 
-- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtiene el nodo primario de este nodo. Devuelve undefined si no hay ningún primario.
+- `getParent(): Thenable<azdata.objectexplorer.ObjectExplorerNode>` Obtiene el nodo primario de este nodo. Devuelve undefined si no hay ningún primario.
 
 ### <a name="example-code"></a>Código de ejemplo
 
 ```cs
-private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplorerNode): Promise<void> {
+private async interactWithOENode(selectedNode: azdata.objectexplorer.ObjectExplorerNode): Promise<void> {
     let choices = ['Expand', 'Collapse', 'Select', 'Select (multi)', 'Deselect', 'Deselect (multi)'];
     if (selectedNode.isLeaf) {
         choices[0] += ' (is leaf)';
@@ -122,7 +122,7 @@ private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplo
     let children = await selectedNode.getChildren();
     children.forEach(child => choices.push(child.label));
     let choice = await vscode.window.showQuickPick(choices);
-    let nextNode: sqlops.objectexplorer.ObjectExplorerNode = undefined;
+    let nextNode: azdata.objectexplorer.ObjectExplorerNode = undefined;
     if (choice === choices[0]) {
         selectedNode.setExpandedState(vscode.TreeItemCollapsibleState.Expanded);
     } else if (choice === choices[1]) {
@@ -142,13 +142,13 @@ private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplo
         nextNode = childNode;
     }
     if (nextNode) {
-        let updatedNode = await sqlops.objectexplorer.getNode(nextNode.connectionId, nextNode.nodePath);
+        let updatedNode = await azdata.objectexplorer.getNode(nextNode.connectionId, nextNode.nodePath);
         this.interactWithOENode(updatedNode);
     }
 }
 
 vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
-    sqlops.objectexplorer.getActiveConnectionNodes().then(activeConnections => {
+    azdata.objectexplorer.getActiveConnectionNodes().then(activeConnections => {
         vscode.window.showQuickPick(activeConnections.map(connection => connection.label + ' ' + connection.connectionId)).then(selection => {
             let selectedNode = activeConnections.find(connection => connection.label + ' ' + connection.connectionId === selection);
             this.interactWithOENode(selectedNode);
@@ -159,6 +159,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## <a name="proposed-apis"></a>API propuestas
 
-Hemos agregado API propuestas para permitir que las extensiones muestren la interfaz de usuario personalizada en los cuadros de diálogo, los asistentes y las pestañas de documentos, entre otras funcionalidades. Consulte el [archivo de tipos de API propuestas](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts) para obtener más documentación, aunque tenga en cuenta que estas API están sujetas a cambios en cualquier momento. Puede encontrar ejemplos de cómo usar algunas de estas API en la [extensión de ejemplo "sqlservices"](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
+Hemos agregado API propuestas para permitir que las extensiones muestren la interfaz de usuario personalizada en los cuadros de diálogo, los asistentes y las pestañas de documentos, entre otras funcionalidades. Consulte el [archivo de tipos de API propuestas](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.proposed.d.ts) para obtener más documentación, aunque tenga en cuenta que estas API están sujetas a cambios en cualquier momento. Puede encontrar ejemplos de cómo usar algunas de estas API en la [extensión de ejemplo "sqlservices"](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
 
 

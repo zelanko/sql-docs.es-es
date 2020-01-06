@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Habilitar el widget de ejemplo de cinco consultas más lentas'
+title: Habilitar el widget de ejemplo de cinco consultas más lentas
 titleSuffix: Azure Data Studio
 description: En este tutorial se muestra cómo habilitar el widget de ejemplo de cinco consultas más lentas en el panel de base de datos.
 ms.prod: sql
@@ -8,18 +8,18 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 08/02/2019
-ms.openlocfilehash: 576e175e8135808a4221e96085e39e9c0850190b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3f940f0f18df676eae2ca101a2eccaa2be7169e2
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810873"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957049"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Agregar el widget de ejemplo *cinco consultas más lentas* al panel de base de datos
 
-En este tutorial se muestra el proceso de incorporación de uno de los widgets de ejemplo integrados de [!INCLUDE[name-sos](../includes/name-sos-short.md)] al *panel de base de datos* para ver rápidamente las cinco consultas más lentas de una base de datos. También se aprende a ver los detalles de las consultas lentas y los planes de consulta mediante características de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. En este tutorial se aprende a:
+En este tutorial se muestra el proceso de incorporación de uno de los widgets de ejemplo integrados de [!INCLUDE[name-sos](../includes/name-sos-short.md)] al *panel de base de datos* para ver rápidamente las cinco consultas más lentas de una base de datos. También se aprende a ver los detalles de las consultas lentas y los planes de consulta mediante características de [!INCLUDE[name-sos](../includes/name-sos-short.md)]. En este tutorial, aprenderá lo siguiente:
 
 > [!div class="checklist"]
 > * Habilitar Almacén de consultas en una base de datos
@@ -31,11 +31,11 @@ En este tutorial se muestra el proceso de incorporación de uno de los widgets d
 
 ## <a name="prerequisites"></a>Prerequisites
 
-En este tutorial se requiere la instancia de SQL Server o Azure SQL Database *TutorialDB*. Para crear la base de datos *TutorialDB*, complete alguno de los siguientes inicios rápidos:
+En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 
-* [Conectarse y consultar con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+* [Conectarse a una instancia de SQL Server y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
-* [Use [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] para conectarse y consultar la base de datos SQL de Azure](quickstart-sql-database.md)
+* [Conectarse a una instancia de Azure SQL Database y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 ## <a name="turn-on-query-store-for-your-database"></a>Activar Almacén de consultas para la base de datos
 
@@ -127,7 +127,7 @@ Para agregar el *widget de consultas lentas* al panel, edite el valor *dashboard
 
 2. Desde el *widget de consultas lento*, para ver información adicional de un widget de información, haga clic en los puntos suspensivos ( **...** ) de la esquina superior derecha y seleccione **Ejecutar consulta**.
 
-    ![Ejecutar consulta](media/tutorial-qds-sql-server/run-query.png)
+    ![Ejecución de la consulta](media/tutorial-qds-sql-server/run-query.png)
 
 3. Ahora debería ver una ventana de consulta nueva con los resultados.
 
@@ -143,7 +143,7 @@ Para agregar el *widget de consultas lentas* al panel, edite el valor *dashboard
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En este tutorial ha aprendido a realizar lo siguiente:
+En este tutorial, ha aprendido a:
 > [!div class="checklist"]
 > * Habilitar Almacén de consultas en una base de datos
 > * Agregar un widget de información al panel de base de datos

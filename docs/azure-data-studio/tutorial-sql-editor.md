@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: usar el editor de Transact-SQL para crear objetos de la base de datos'
+title: usar el editor de Transact-SQL para crear objetos de la base de datos
 titleSuffix: Azure Data Studio
 description: En este tutorial, se muestran las características principales de Azure Data Studio que simplifican el trabajo con T-SQL.
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
+ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278247"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957039"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: usar el editor de Transact-SQL para crear objetos de la base de datos ([!INCLUDE[name-sos](../includes/name-sos-short.md)])
 
@@ -31,9 +31,9 @@ En este tutorial, obtendrá información sobre cómo usar [!INCLUDE[name-sos-sho
 
 ## <a name="prerequisites"></a>Prerequisites
 
-En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete alguno de los siguientes inicios rápidos:
+En este tutorial se requiere la base de datos *TutorialDB* de SQL Server o Azure SQL Database. Para crear la base de datos *TutorialDB*, complete uno de los siguientes inicios rápidos:
 
-- [Conectarse y consultar SQL Server con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Conectarse a una instancia de SQL Server y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Conectarse a una instancia de Azure SQL Database y consultarla con [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f41567d5c27bfb1d77010d7e0d3fe187adf9a36c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892428"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257508"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +61,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
  Al iniciarse el servicio [!INCLUDE[ssDE](../../includes/ssde-md.md)] , se intenta registrar el nombre principal de servicio (SPN). Si la cuenta con la que se inicia SQL Server no tiene permiso para registrar un SPN en los servicios de dominio de Active Directory, esta llamada producirá un error y se registrará un mensaje de advertencia en el registro de eventos de la aplicación así como en el registro de errores de SQL Server. Para registrar el SPN, se debe ejecutar [!INCLUDE[ssDE](../../includes/ssde-md.md)] en una cuenta integrada, como Sistema local (no se recomienda) o Servicio de red, o bien, en una cuenta que tenga permiso para registrar un SPN, como la de administrador de dominio. Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en el sistema operativo  [!INCLUDE[win7](../../includes/win7-md.md)] o  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , se puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante una cuenta virtual o una cuenta de servicio administrada (MSA). Las cuentas virtuales y las MSA pueden registrar un SPN. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se ejecuta en ninguna de estas cuentas, el SPN no se registrará en el inicio y el administrador de dominio deberá hacerlo manualmente.  
   
 > [!NOTE]  
->  Cuando el dominio de Windows está configurado para ejecutarse en un nivel menor que el funcional de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2, la cuenta de servicio administrada no tendrá los permisos necesarios para registrar los SPN para el servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Si se requiere la autenticación Kerberos, el administrador de dominio debe registrar manualmente los SPN de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la cuenta de servicio administrada.  
-  
- El artículo de Knowledge Base [Cómo usar la autenticación Kerberos en SQL Server](https://support.microsoft.com/kb/319723)contiene información acerca de cómo conceder permisos de lectura o de escritura a un SPN para cuentas distintas de las de administrador de dominio.  
+>  Cuando el dominio de Windows está configurado para ejecutarse en un nivel menor que el funcional de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] Windows Server 2008 R2, la cuenta de servicio administrada no tendrá los permisos necesarios para registrar los SPN para el servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Si se requiere la autenticación Kerberos, el administrador de dominio debe registrar manualmente los SPN de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la cuenta de servicio administrada.
   
  Encontrará información adicional en [Implementar la delegación restringida de Kerberos con SQL Server 2008](https://technet.microsoft.com/library/ee191523.aspx)  
   
@@ -78,7 +76,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
     -   **\<FQDN>** es el nombre de dominio completo del servidor.  
   
-    -   **\<puerto>** en el número de puerto TCP.  
+    -   **\<puerto>** es el número de puerto TCP.  
   
     -   **\<nombreDeInstancia>** es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

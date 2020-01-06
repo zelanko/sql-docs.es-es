@@ -1,21 +1,21 @@
 ---
-title: 'Inicio rápido: Conexión a una base de datos de Azure SQL y consulta de ella'
+title: Conexión a una base de datos de Azure SQL y consulta de ella
 titleSuffix: Azure Data Studio
 description: En este inicio rápido se muestra cómo usar Azure Data Studio para conectarse a una base de datos SQL y ejecutar una consulta
-ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
+ms.date: 05/14/2019
+ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959434"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957079"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Inicio rápido: Uso de [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a una base de datos de Azure SQL y consultarla
 
@@ -40,25 +40,25 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para establecer una cone
 
 1. La primera vez que se ejecuta [!INCLUDE[name-sos](../includes/name-sos-short.md)], debe abrirse la **página principal**. Si no ve la **página principal**, seleccione **Ayuda** > **Página principal**. Seleccione **Nueva conexión** para abrir el panel **Conexión**:
    
-   ![Icono Nueva conexión](media/quickstart-sql-database/new-connection-icon.png)
+   ![Icono de Nueva conexión](media/quickstart-sql-database/new-connection-icon.png)
 
 2. En este artículo se usa el inicio de sesión de SQL, pero también se admite la autenticación de Windows. Rellene los campos siguientes con el nombre del servidor, el nombre del usuario y la contraseña del servidor de Azure SQL:
 
    | Configuración       | Valor sugerido | Descripción |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nombre del servidor** | Nombre completo del servidor | Algo como: **servername.database.windows.net**. |
-   | **Autenticación** | Inicio de sesión de SQL| En este tutorial se usa la autenticación de SQL. |
-   | **User name** | Nombre de usuario de la cuenta de administrador del servidor | Nombre de usuario de la cuenta usada para crear el servidor. |
-   | **Contraseña (inicio de sesión de SQL)** | Contraseña de la cuenta de administrador del servidor | Contraseña de la cuenta usada para crear el servidor. |
+   | **Autenticación** | Inicio de sesión SQL| En este tutorial se usa la autenticación de SQL. |
+   | **Nombre de usuario** | Nombre de usuario de la cuenta de administrador del servidor | Nombre de usuario de la cuenta usada para crear el servidor. |
+   | **Contraseña (Inicio de sesión de SQL)** | Contraseña de la cuenta de administrador del servidor | Contraseña de la cuenta usada para crear el servidor. |
    | **¿Desea guardar la contraseña?** | Sí o no | Seleccione **Sí** si no quiere escribir la contraseña cada vez. |
    | **Nombre de la base de datos** | *dejar en blanco* | Solo se está conectando al servidor aquí. |
-   | **Grupo de servidores** | Seleccione <Default> | Puede establecer este campo en un grupo de servidores específico que haya creado. | 
+   | **Grupo de servidores** | Seleccione <Default>. | Puede establecer este campo en un grupo de servidores específico que haya creado. | 
 
-   ![Icono Nueva conexión](media/quickstart-sql-database/new-connection-screen.png)  
+   ![Icono de Nueva conexión](media/quickstart-sql-database/new-connection-screen.png)  
 
 3. Seleccione **Conectar**.
 
-4. Si el servidor no tiene una regla de firewall que permita a Azure Data Studio conectarse, se abre el formulario **Crear nueva regla de firewall**. Rellene el formulario para crear una nueva regla de firewall. Para obtener detalles, vea [Reglas de firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4. Si el servidor no tiene una regla de firewall que permita a Azure Data Studio conectarse, se abrirá el formulario **Crear nueva regla de firewall**. Rellene el formulario para crear una nueva regla de firewall. Para obtener detalles, vea [Reglas de firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nueva regla de firewall](media/quickstart-sql-database/firewall.png)  
 
@@ -93,7 +93,7 @@ El editor de consultas se conecta a la base de datos **master**, pero lo que se 
 
 1. Conéctese a la base de datos **TutorialDB**.
 
-   ![Cambio de contexto](media/quickstart-sql-database/change-context2.png)
+   ![Cambiar el contexto](media/quickstart-sql-database/change-context2.png)
 
 
 
@@ -146,12 +146,12 @@ Reemplace la consulta anterior por esta y seleccione **Ejecutar**.
 
 Los resultados de la consulta muestran:
 
-   ![Selección de resultados](media/quickstart-sql-database/select-results2.png)
+   ![Seleccionar los resultados](media/quickstart-sql-database/select-results2.png)
 
 
-## <a name="clean-up-resources"></a>Limpiar recursos
+## <a name="clean-up-resources"></a>Limpieza de recursos
 
-Los artículos de inicio rápido posteriores se basan en los recursos creados aquí. Si planea trabajar en estos artículos, asegúrese de no eliminar estos recursos. De lo contrario, en Azure Portal, elimine los recursos que ya no necesite. Para obtener detalles, vea [Limpieza de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Los artículos de inicio rápido posteriores se basan en los recursos creados aquí. Si planea trabajar en estos artículos, asegúrese de no eliminar estos recursos. De lo contrario, en Azure Portal, elimine los recursos que ya no necesite. Para obtener más información, vea [Limpieza de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

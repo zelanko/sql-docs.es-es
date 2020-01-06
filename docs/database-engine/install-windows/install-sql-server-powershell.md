@@ -10,12 +10,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad6dc50d1144b0efa13bf4b429a1ca2103fefcd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f445d1b28c7f76274a2a64e813805f820d005aa6
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991062"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200472"
 ---
 # <a name="install-sql-server-powershell"></a>Instalar SQL Server PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,9 +34,9 @@ Debe instalar el software que proporciona compatibilidad con [!INCLUDE[ssNoVersi
  
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admite el inicio de sesiones de Windows PowerShell desde el árbol del Explorador de objetos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es compatible con los pasos de trabajo de Windows PowerShell.  
   
-Windows Server 2012 y versiones posteriores y Windows 8 y versiones posteriores incluyen PowerShell instalado y configurado. Para información sobre cómo instalar Windows PowerShell, vea [Instalación de Windows PowerShell](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell).  
+Windows Server 2012 y versiones posteriores y Windows 8 y versiones posteriores incluyen PowerShell instalado y configurado. Para información sobre cómo instalar Windows PowerShell, vea [Instalación de Windows PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell).  
 
-Para obtener más información, vea:   
+Para más información, consulte:   
 
 - [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   

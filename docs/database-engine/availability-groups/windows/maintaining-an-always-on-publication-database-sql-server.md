@@ -1,6 +1,6 @@
 ---
 title: Administración de una base de datos del publicador replicada como parte de un grupo de disponibilidad
-description: 'Una descripción sobre cómo administrar y mantener una base de datos que actúa como publicador en una replicación de SQL y también participa en un grupo de disponibilidad Always On. '
+description: Una descripción sobre cómo administrar y mantener una base de datos que actúa como publicador en una replicación de SQL y también participa en un grupo de disponibilidad Always On.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bdb26625e1b461e9f82342824f07f73a02f863bf
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.openlocfilehash: 7371acd7c96dbf4baa6edf31ca88d1994141663f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70846767"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75228187"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Administración de una base de datos del publicador replicada como parte de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

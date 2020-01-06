@@ -1,6 +1,7 @@
 ---
-title: Guardar eventos Showplan XML por separado (SQL Server Profiler) | Microsoft Docs
-ms.custom: ''
+title: Guardar eventos Showplan XML por separado
+titleSuffix: SQL Server Profiler
+ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4a3530d3796cf65dd66dd509e3f168183d4b274a
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 73a95255bcce173fa0ce2141b4f968d7efab7e57
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72908075"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165578"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Guardar eventos Showplan XML por separado (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "72908075"
   
 3. En la lista **Usar la plantilla**, seleccione una plantilla de seguimiento en la que se basará el seguimiento. Si no quiere usar una plantilla, seleccione **En blanco**.  
   
-4. Realice una de las siguientes operaciones:  
+4. Realice una de las siguientes acciones:  
   
     -   Active la casilla **Guardar en archivo** para capturar el seguimiento en un archivo. Especifique un valor en **Establecer el tamaño máximo de archivo (MB)** . 
     
@@ -63,7 +64,7 @@ ms.locfileid: "72908075"
   
 11. Para ver el archivo del evento **Showplan XML** en SQL Server Management Studio, en el menú **Archivo**, seleccione **Abrir**y, a continuación, **Archivo**. Navegue al directorio donde ha guardado el archivo o archivos de evento **Showplan XML** para seleccionar uno y abrirlo. Los archivos de evento**Showplan XML** tienen la extensión de archivo .SQLPlan.  
 
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Analyze queries with Showplan results in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md) (Analizar consultas con resultados de plan de presentación en SQL Server Profiler)  
   
   

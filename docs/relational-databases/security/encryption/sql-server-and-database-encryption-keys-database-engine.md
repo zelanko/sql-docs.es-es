@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
-author: aliceku
-ms.author: aliceku
-ms.openlocfilehash: fa61ee1fc916b4ff00a149ea41068e4b0231acd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: b035af17631253ea01e6ca79ba7702a378df1df9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111569"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957356"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server y claves de cifrado de base de datos (motor de base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68111569"
 
 La clave maestra de servicio solo puede abrirla la cuenta de servicio de Windows bajo la que se creó, o una entidad de seguridad con acceso al nombre y a la contraseña de la cuenta de servicio.
 
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usa el algoritmo de cifrado AES para proteger la clave maestra de servicio (SMK) y la clave maestra de la base de datos (DMK). AES es un algoritmo de cifrado más reciente que el algoritmo 3DES empleado en versiones anteriores. Después de actualizar una instancia de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], se deben volver a generar las claves SMK y DMK para actualizar las claves maestras al algoritmo AES. Para obtener más información sobre cómo volver a generar la SMK, vea [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usa el algoritmo de cifrado AES para proteger la clave maestra de servicio (SMK) y la clave maestra de la base de datos (DMK). AES es un algoritmo de cifrado más reciente que el algoritmo 3DES empleado en versiones anteriores. Después de actualizar una instancia de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , se deben volver a generar las claves SMK y DMK para actualizar las claves maestras al algoritmo AES. Para obtener más información sobre cómo volver a generar la SMK, vea [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
 
 ### <a name="database-master-key"></a>Clave maestra de base de datos
   
@@ -57,7 +57,7 @@ La clave maestra de servicio solo puede abrirla la cuenta de servicio de Windows
 -   Agregar o quitar una instancia del servidor de una implementación escalada de este servidor en la que varios servidores comparten una sola base de datos y la clave que proporciona el cifrado reversible para dicha base de datos.  
   
 ## <a name="important-security-information"></a>Información de seguridad importante  
- Para tener acceso a los objetos protegidos por la clave maestra de servicio, es necesaria la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se utilizó para crear la clave o la cuenta del equipo. Es decir, el equipo vinculado al sistema donde se creó la clave. Puede cambiar la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *o* la cuenta del equipo sin perder el acceso a la clave. Sin embargo, si cambia ambas, perderá el acceso a la clave maestra de servicio. Si pierde el acceso a la clave maestra de servicio sin uno de estos dos elementos, no podrá descifrar los datos y los objetos cifrados mediante la clave original.  
+ Para tener acceso a los objetos protegidos por la clave maestra de servicio, es necesaria la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se utilizó para crear la clave o la cuenta del equipo. Es decir, el equipo vinculado al sistema donde se creó la clave. Puede cambiar la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*o* la cuenta del equipo sin perder el acceso a la clave. Sin embargo, si cambia ambas, perderá el acceso a la clave maestra de servicio. Si pierde el acceso a la clave maestra de servicio sin uno de estos dos elementos, no podrá descifrar los datos y los objetos cifrados mediante la clave original.  
   
  Las conexiones protegidas con la clave maestra de servicio no se pueden restaurar sin dicha clave.  
   
@@ -67,7 +67,7 @@ La clave maestra de servicio solo puede abrirla la cuenta de servicio de Windows
 >  Si pierde todo tipo de acceso a las claves descritas anteriormente, también perderá el acceso a los objetos, las conexiones y los datos protegidos mediante esas claves. Puede restaurar la clave maestra de servicio, tal y como se describe en los vínculos que se muestran a continuación, o puede regresar al sistema de cifrado original para recuperar el acceso. No hay ninguna "puerta trasera" para recuperar el acceso.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Service Master Key](../../../relational-databases/security/encryption/service-master-key.md)  
+ [Clave maestra de servicio](../../../relational-databases/security/encryption/service-master-key.md)  
  Proporciona una breve explicación de la clave maestra de servicio y las prácticas recomendadas.  
   
  [Administración extensible de claves &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

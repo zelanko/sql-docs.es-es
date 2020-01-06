@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a175c38fb591dd5805ea3e8890cf9e60392178ce
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 9ee964e5c1c58ea54da3f3451c0ffdde29e71b23
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553216"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246940"
 ---
 # <a name="oracle-destination"></a>Destino de Oracle
 
@@ -56,7 +56,7 @@ Los tipos de errores de salida durante el proceso de carga compatibles son: conv
 
 La propiedad **Número máximo de errores (MaxErrors)** establece el número máximo de errores que se pueden generar. La ejecución se detiene y devuelve errores cuando se alcanza el número máximo y solo se incluyen en la tabla de destino los registros de ejecución antes de que se alcance el número máximo de errores. Consulte [Editor de destino de Oracle (página Administrador de conexiones)](#oracle-destination-editor-connection-manager-page) para ver los detalles de la configuración.
 
-## <a name="parallelism"></a>Parallelism
+## <a name="parallelism"></a>Paralelismo
 
 En el modo de carga por lotes, no hay ninguna restricción en la configuración de la ejecución en paralelo, pero el rendimiento podría verse afectado por el mecanismo de bloqueo de registros estándar. La cantidad de pérdida de rendimiento depende de la organización de los datos y las tablas.
 
@@ -81,16 +81,16 @@ En la tabla siguiente se describen las propiedades personalizadas del destino de
 
 |Nombre de propiedad|Tipo de datos|Descripción|Modo de carga|
 |:-|:-|:-|:-|
-|BatchSize|Integer|Tamaño de lote para la carga masiva. Es el número de filas cargadas como un lote.|Solo se usa en el modo por lotes.|
-|DefaultCodePage|Integer|La página de códigos que se usa cuando el origen de datos no tiene información de página de códigos. <br>**Nota**: Esta propiedad solo se establece mediante el **Editor avanzado**.|Se usa para ambos modos.|
+|BatchSize|Entero|Tamaño de lote para la carga masiva. Es el número de filas cargadas como un lote.|Solo se usa en el modo por lotes.|
+|DefaultCodePage|Entero|La página de códigos que se usa cuando el origen de datos no tiene información de página de códigos. <br>**Nota**: Esta propiedad solo se establece mediante el **Editor avanzado**.|Se usa para ambos modos.|
 |FastLoad|Boolean|Indica si se usa la carga rápida. El valor predeterminado es **false**. También se puede establecer en el [Editor del destino de Oracle (página Administrador de conexiones)](#oracle-destination-editor-connection-manager-page). |Se usa para ambos modos.|
-|MaxErrors|Integer|La cantidad de errores que pueden ocurrir antes de que se detenga el flujo de datos. El valor predeterminado es **0**, lo que significa que no hay ningún límite de número de errores.<br> Si está seleccionada la opción **Redirigir fila** en la página **Control de errores**. Antes de que se alcance el límite de número de errores, todos los errores se devuelven en la salida de error. Para más información, consulte [Control de errores](#error-handling).|Solo se usa en el modo de carga rápida.|
+|MaxErrors|Entero|La cantidad de errores que pueden ocurrir antes de que se detenga el flujo de datos. El valor predeterminado es **0**, lo que significa que no hay ningún límite de número de errores.<br> Si está seleccionada la opción **Redirigir fila** en la página **Control de errores**. Antes de que se alcance el límite de número de errores, todos los errores se devuelven en la salida de error. Para más información, consulte [Control de errores](#error-handling).|Solo se usa en el modo de carga rápida.|
 |NoLogging|Boolean|Si el registro de base de datos está deshabilitado. El valor predeterminado es **False**, lo que significa que el registro está habilitado.|Se usa para ambos modos.|
-|Parallel|Boolean|Si se permite la carga en paralelo. **True** indica que se permite que otras sesiones de carga se ejecuten en la misma tabla de destino.<br> Para más información, consulte [Paralelismo](#parallelism).|Solo se usa en el modo de carga rápida.|
+|Paralelo|Boolean|Si se permite la carga en paralelo. **True** indica que se permite que otras sesiones de carga se ejecuten en la misma tabla de destino.<br> Para más información, consulte [Paralelismo](#parallelism).|Solo se usa en el modo de carga rápida.|
 |TableName|String|El nombre de la tabla con los datos que se están usando.|Se usa para ambos modos.|
 |TableSubName|String|El subnombre o la subpartición. Este valor es opcional.<br> **Nota**: Esta propiedad solo se puede establecer en el **Editor avanzado**.|Solo se usa en el modo de carga rápida.|
-|TransactionSize|Integer|El número de inserciones que se pueden hacer en una sola transacción. El valor predeterminado es **BatchSize**.|Solo se usa en el modo por lotes.|
-|TransferBufferSize|Integer|El tamaño del búfer de transferencia. El valor predeterminado es 64 KB.|Solo se usa en el modo de carga rápida.|
+|TransactionSize|Entero|El número de inserciones que se pueden hacer en una sola transacción. El valor predeterminado es **BatchSize**.|Solo se usa en el modo por lotes.|
+|TransferBufferSize|Entero|El tamaño del búfer de transferencia. El valor predeterminado es 64 KB.|Solo se usa en el modo de carga rápida.|
 
 ## <a name="configuring-the-oracle-destination"></a>Configuración del destino de Oracle
 
@@ -131,7 +131,7 @@ Use la página **Administrador de conexiones** del cuadro de diálogo **Editor d
 
 Seleccione un administrador de conexiones existente de la lista o haga clic en **Nuevo** para crear un nuevo administrador de conexiones de Oracle.
 
-**Nueva**
+**Nuevo**
 
 Haga clic en **Nueva**. Se abrirá el cuadro de diálogo **Editor del administrador de conexiones de Oracle** donde puede crear un administrador de conexiones.
 
@@ -141,7 +141,7 @@ Elija el método para la selección de datos desde el origen. Las opciones se mu
 
 |Opción|Descripción|
 |:-|:-|
-|Nombre de tabla|Configure el destino de Oracle para que funcione en el modo por lotes. Opciones:<br><br> **Nombre de la tabla o la vista**: seleccione una tabla o vista disponible desde la base de datos de la lista.<br><br> **Tamaño de transacción**: indique el número de inserciones que puede haber en una sola transacción. El valor predeterminado es **BatchSize**.<br><br> **Tamaño del lote**: escriba el tamaño (el número de filas cargadas) del lote para la carga masiva.
+|Nombre de la tabla|Configure el destino de Oracle para que funcione en el modo por lotes. Opciones:<br><br> **Nombre de la tabla o la vista**: seleccione una tabla o vista disponible desde la base de datos de la lista.<br><br> **Tamaño de transacción**: indique el número de inserciones que puede haber en una sola transacción. El valor predeterminado es **BatchSize**.<br><br> **Tamaño del lote**: escriba el tamaño (el número de filas cargadas) del lote para la carga masiva.
 |Nombre de tabla – Carga rápida|Configure el destino de Oracle para que funcione en el modo de carga rápida (ruta directa). <br><br>Hay opciones disponibles:<br><br> **Nombre de la tabla o la vista**: seleccione una tabla o vista disponible desde la base de datos de la lista.<br><br> **Carga paralela**: si está habilitada la carga en paralelo. Para más información, consulte [Paralelismo](#parallelism).<br><br> **Sin registro**: active esta casilla para deshabilitar el registro de las bases de datos. Este registro es una base de datos de Oracle que se usa con fines de recuperación, sin relación con el seguimiento.<br><br> **Número máximo de errores**: el número máximo de errores que pueden ocurrir antes de que se detenga el flujo de datos. El valor predeterminado es 0, lo que significa que no hay ningún límite de número.<br><br> Todos los errores que puedan ocurrir se devuelven en la salida de error.<br><br> **Tamaño de búfer de transferencia (KB)** : indique el tamaño del búfer de transferencia. El tamaño predeterminado es 64 KB.|
 
 **Datos existentes de la vista**
@@ -199,7 +199,7 @@ Use la página Salida de error del cuadro de diálogo Editor de destino de Oracl
 **Comportamiento de error**
 
 Seleccione la forma en la que el origen de Oracle debe controlar los errores de un flujo: omitir el error, redirigir la fila o hacer que el componente no funcione.
-**Sección relacionada**: [Control de errores en los datos](https://docs.microsoft.com/en-us/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
+**Sección relacionada**: [Control de errores en los datos](https://docs.microsoft.com/sql/integration-services/data-flow/error-handling-in-data?view=sql-server-2017)
 
 **Truncamiento**
 

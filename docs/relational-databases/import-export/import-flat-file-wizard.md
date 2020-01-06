@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98be5f404118ab217ae7700dbf6ec8f02012610f
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 792cb1bcef1097c3eddaa325519b43a229bcccb4
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72907098"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190798"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Importación de archivos planos mediante el asistente de SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ PROSE analiza los patrones de datos del archivo de entrada e infiere los nombres
 
 Para comprender mejor la mejora de la experiencia de usuario del Asistente para la importación de archivos planos, vea este vídeo:
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prerequisites
 Esta característica solo está disponible para la versión 17.3 de SQL Server Management Studio (SSMS) u otras posteriores. Asegúrese de utilizar la última versión, que podrá encontrar [aquí](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -84,7 +84,7 @@ Esta página es simplemente un resumen en el que figura la configuración actual
 
 ![Asistente: resumen](media/import-flat-file-wizard/importffsummary.png)
 
-### <a name="step-6-results"></a>Paso 6: Resultado
+### <a name="step-6-results"></a>Paso 6: Results
 En esta página se indica si la importación se ha realizado correctamente. Si la operación se ha efectuado correctamente, aparecerá una marca de verificación verde. De lo contrario, deberá comprobar que no haya errores con los archivos de entrada o con la configuración.
 
 ![Asistente: resultados](media/import-flat-file-wizard/importffresults.png)

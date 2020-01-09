@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: d2519b1cc56081f8a35308ac41e11f46a7f97211
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215601"
----
 1. **En todos los servidores SQL Server, cree un inicio de sesión de servidor para Pacemaker**. La siguiente instrucción Transact-SQL crea un inicio de sesión:
 
    ```Transact-SQL

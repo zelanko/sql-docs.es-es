@@ -1,11 +1,3 @@
----
-ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68215632"
----
 ## <a name="connect-locally"></a>Conexión local
 
 En los pasos siguientes se usa **sqlcmd** para conectarse localmente a la nueva instancia de SQL Server.
@@ -54,7 +46,7 @@ En los pasos siguientes se crea una base de datos denominada `TestDB`.
 > [!TIP]
 > Para más información sobre cómo escribir consultas e instrucciones Transact-SQL, vea [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
-### <a name="insert-data"></a>Inserción de datos
+### <a name="insert-data"></a>Insertar datos
 
 Luego cree una tabla, `Inventory`, e inserte dos filas nuevas.
 
@@ -140,12 +132,12 @@ Para otros escenarios de instalación, vea los siguientes recursos:
 |||
 |---|---|
 | [Actualización](../linux/sql-server-linux-setup.md#upgrade) | Obtenga información sobre cómo actualizar una instalación existente de SQL Server en Linux |
-| [Desinstalar](../linux/sql-server-linux-setup.md#uninstall) | Desinstalación de SQL Server en Linux |
+| [Desinstalación](../linux/sql-server-linux-setup.md#uninstall) | Desinstalación de SQL Server en Linux |
 | [Instalación desatendida](../linux/sql-server-linux-setup.md#unattended) | Obtenga información sobre cómo crear un script para la instalación sin pedir confirmación |
 | [Instalación sin conexión](../linux/sql-server-linux-setup.md#offline) | Obtenga información sobre cómo descargar manualmente los paquetes de instalación sin conexión |
 
 > [!TIP]
-> Para obtener respuesta a las preguntas más frecuentes, vea [Preguntas más frecuentes sobre SQL Server en Linux](../linux/sql-server-linux-faq.md).
+> Para obtener respuesta a las preguntas más frecuentes, vea [Preguntas más frecuentes sobre SQL Server en Linux](../linux/sql-server-linux-faq.md).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

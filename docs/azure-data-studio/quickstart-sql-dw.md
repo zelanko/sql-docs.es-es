@@ -1,21 +1,21 @@
 ---
-title: 'Inicio rápido: conectarse a una instancia de Azure SQL Data Warehouse y realizar consultas'
+title: conectarse a una instancia de Azure SQL Data Warehouse y realizar consultas
 titleSuffix: Azure Data Studio
 description: En este inicio rápido, se muestra cómo usar Azure Data Studio para conectarse a una instancia de Azure SQL Data Warehouse y ejecutar una consulta.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/24/2018
+ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959403"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957112"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Inicio rápido: usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse y consultar datos en Azure SQL Data Warehouse
 
@@ -44,9 +44,9 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para establecer una cone
    | Configuración       | Valor sugerido | Descripción |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nombre del servidor** | Nombre completo del servidor | El nombre tiene que ser similar a este: **sqldwsample.database.windows.net** |
-   | **Autenticación** | Inicio de sesión de SQL| En este tutorial, se usa la autenticación de SQL. |
-   | **User name** | Cuenta de administrador del servidor | Se trata de la cuenta que especificó cuando creó el servidor. |
-   | **Contraseña (inicio de sesión de SQL)** | Contraseña de la cuenta de administrador del servidor | Se trata de la contraseña que especificó cuando creó el servidor. |
+   | **Autenticación** | Inicio de sesión SQL| En este tutorial, se usa la autenticación de SQL. |
+   | **Nombre de usuario** | La cuenta de administrador del servidor | Es la cuenta que especificó cuando creó el servidor. |
+   | **Contraseña (Inicio de sesión de SQL)** | La contraseña de la cuenta de administrador del servidor | Es la contraseña que especificó cuando creó el servidor. |
    | **¿Desea guardar la contraseña?** | Sí o no | Si no quiere escribir la contraseña cada vez, seleccione Sí. |
    | **Nombre de la base de datos** | *dejar en blanco* | Nombre de la base de datos a la que se va a conectar. |
    | **Grupo de servidores** | Seleccione <Default>. | Si ha creado un grupo de servidores, puede establecerlo en un grupo de servidores específico. | 
@@ -138,7 +138,7 @@ El editor de consultas aún está conectado a la base de datos *maestra*, pero l
    ![Seleccionar los resultados](media/quickstart-sql-dw/select-results.png)
 
 
-## <a name="clean-up-resources"></a>Limpiar recursos
+## <a name="clean-up-resources"></a>Limpieza de recursos
 
 Otros artículos de esta colección se basan en este inicio rápido. Si tiene previsto continuar trabajando con otras guías de inicio rápido posteriores, no elimine los recursos creados en este inicio rápido. Si no tiene previsto continuar, siga este procedimiento para eliminar los recursos creados por este inicio rápido en Azure Portal.
 Para limpiar los recursos, elimine los grupos de recursos que ya no necesite. Para obtener más información, vea [Limpieza de recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).

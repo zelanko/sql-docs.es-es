@@ -23,12 +23,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f0f45200e32fe61f9a8a19fd2cd3a6ff17fa9cd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.openlocfilehash: 00f139a5fa608f40f7979f74b187efcb68bcf2ff
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72903032"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776387"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "72903032"
   
     4.  Haga clic en **Avanzadas...** para obtener más opciones avanzadas de búsqueda. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo): página Opciones avanzadas](https://technet.microsoft.com/library/cc733110.aspx).  
   
-    5.  Haga clic en **Aceptar**.  
+    5.  Haga clic en **OK**.  
   
 4.  Para crear un inicio de sesión basado en una entidad de seguridad de Windows, seleccione **Autenticación de Windows**. Esta es la selección predeterminada.  
   
 5.  Para crear un inicio de sesión que se guarde en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , seleccione **Autenticación de SQL Server**.  
   
-    1.  En el cuadro **Contraseña** , escriba una contraseña para el nuevo usuario. Vuelva a escribir la contraseña en el cuadro **Confirmar contraseña** .  
+    1.  En el campo **Contraseña** , escriba una contraseña para el usuario nuevo. Vuelva a escribir esa contraseña en el cuadro **Confirmar contraseña** .  
   
     2.  Al cambiar una contraseña existente, seleccione **Especificar contraseña anterior**y escriba la contraseña anterior en el cuadro **Contraseña anterior** .  
   
@@ -101,7 +101,7 @@ ms.locfileid: "72903032"
  En el cuadro de diálogo **Inicio de sesión - Nuevo** también se ofrecen opciones en cuatro páginas adicionales: **Roles de servidor**, **Asignación de usuarios**, **Elementos protegibles** y **Estado**.  
   
 ### <a name="server-roles"></a>Roles del servidor  
- La página **Roles de servidor** enumera todos los roles posibles que se pueden asignar al nuevo inicio de sesión. Las siguientes opciones están disponibles:  
+ La página **Roles de servidor** enumera todos los roles posibles que se pueden asignar al nuevo inicio de sesión. Están disponibles las siguientes opciones:  
   
  Casilla**bulkadmin**  
  Los miembros del rol fijo de servidor **bulkadmin** pueden ejecutar la instrucción BULK INSERT.  
@@ -136,22 +136,22 @@ ms.locfileid: "72903032"
  **Usuarios asignados a este inicio de sesión**  
  Selecciona las bases de datos a las que se puede obtener acceso con este inicio de sesión. Cuando se seleccione una base de datos, sus roles de bases de datos válidos se mostrarán en el panel **Miembros del rol de base de datos para:** _nombre_baseDeDatos_ .  
   
- **Mapa**  
+ **Map**  
  Permite que el inicio de sesión obtenga acceso a las bases de datos que se muestran a continuación.  
   
  **Base de datos**  
  Muestra las bases de datos disponibles en el servidor.  
   
- **Usuario**  
+ **User**  
  Especifica el usuario de base de datos que se va a asignar al inicio de sesión. De forma predeterminada, el nombre del usuario de base de datos coincide con el inicio de sesión.  
   
  **Esquema predeterminado**  
  Especifica el esquema predeterminado del usuario. Cuando se crea un usuario por primera vez, el esquema predeterminado es **dbo**. Es posible especificar un esquema predeterminado que aún no existe. No puede especificar un esquema predeterminado para un usuario asignado a un grupo, un certificado o una clave asimétrica de Windows.  
   
- **Guest account enabled for:**  _database_name_  
+ **Cuenta de invitado habilitada para:** _nombre_baseDeDatos_  
  Atributo de solo lectura que indica si la cuenta de invitado está habilitada en la base de datos seleccionada. Utilice la página **Estado** del cuadro de diálogo **Propiedades de inicio de sesión** de la cuenta de invitado para habilitarla o deshabilitarla.  
   
- **Database role membership for:**  _database_name_  
+ **Miembros del rol de base de datos para:** _nombre_baseDeDatos_  
  Selecciona los roles para el usuario en la base de datos especificada. Todos los usuarios son miembros del rol **public** de todas las bases de datos, y no pueden eliminarse. Para obtener más información sobre los roles de base de datos, vea [Roles de nivel de base de datos](../../../relational-databases/security/authentication-access/database-level-roles.md).  
   
 ### <a name="securables"></a>Elementos protegibles  
@@ -191,7 +191,7 @@ ms.locfileid: "72903032"
  **Pestaña Explícito**  
  Enumere los posibles permisos del elemento protegible seleccionados en la cuadrícula superior. No todas las opciones están disponibles para todos los permisos explícitos.  
   
- **Permissions**  
+ **Permisos**  
  Nombre del permiso.  
   
  **Otorgante de permisos**  
@@ -203,10 +203,10 @@ ms.locfileid: "72903032"
  **WITH GRANT**  
  Refleja el estado de la opción WITH GRANT para el permiso indicado. Este cuadro es de solo lectura. Para aplicar este permiso, use la instrucción [GRANT](../../../t-sql/statements/grant-transact-sql.md) .  
   
- **Denegar**  
+ **Deny**  
  Active esta casilla para denegar el permiso al inicio de sesión. Desactívela para revocar el permiso.  
   
-### <a name="status"></a>Estado  
+### <a name="status"></a>Status  
  La página **Estado** enumera algunas de las opciones de autenticación y autorización que se pueden configurar en el inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seleccionado.  
   
  En esta página están disponibles las opciones siguientes:  
@@ -223,7 +223,7 @@ ms.locfileid: "72903032"
   
  Seleccione esta opción para habilitar o deshabilitar este inicio de sesión. Esta opción utiliza la instrucción ALTER LOGIN con las opciones ENABLE o DISABLE.  
   
- **SQL Server Authentication**  
+ **Autenticación de SQL Server**  
  La casilla **Inicio de sesión bloqueado** solo está disponible si el inicio de sesión se conecta usando la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y si este se ha bloqueado. Este valor es solo de lectura. Para desbloquear un inicio de sesión fuera el que se bloquea, ejecute ALTER LOGIN con la opción de UNLOCK.  
   
 ##  <a name="TsqlProcedure"></a> Creación de un inicio de sesión utilizando la autenticación de Windows mediante T-SQL  
@@ -243,7 +243,7 @@ ms.locfileid: "72903032"
   
     ```  
   
-## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>Creación de un inicio de sesión utilizando la autenticación de SQL Server mediante SSMS  
+## <a name="create-a-login-using-sql-server-authentication-using-t-sql"></a>Creación de un inicio de sesión utilizando la autenticación de SQL Server con T-SQL
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -273,6 +273,6 @@ ms.locfileid: "72903032"
 -   Para conceder un permiso a un inicio de sesión, vea [Conceder un permiso a una entidad de seguridad](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+ [Centro de seguridad para el Motor de base de datos de SQL Server y Azure SQL Database](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

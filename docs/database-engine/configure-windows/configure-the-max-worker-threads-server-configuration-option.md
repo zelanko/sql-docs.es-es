@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ea6d737dcb45a1b300b53c0b232b2b6565e6e750
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012528"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776422"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "68012528"
     |Número de CPU|Equipo de 32 bits|Equipo de 64 bits|  
     |------------|------------|------------| 
     |\<= 4 procesadores|256|512|
-    |\> 4 procesadores y \< 64 procesadores|256 + ((CPU lógicas - 4) * 8)|512 + [(CPU lógicas - 4) * 16]|
+    |\> 4 procesadores y \<= 64 procesadores|256 + ((CPU lógicas - 4) * 8)|512 + [(CPU lógicas - 4) * 16]|
     |\> 64 procesadores|256 + [(CPU lógicas - 4) * 32]|512 + [(CPU lógicas - 4) * 32]|
   
     > [!NOTE]  
@@ -123,7 +123,7 @@ ms.locfileid: "68012528"
   
 #### <a name="to-configure-the-max-worker-threads-option"></a>Para configurar la opción de máximo de subprocesos de trabajo  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   

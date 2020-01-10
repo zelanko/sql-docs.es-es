@@ -3,17 +3,17 @@ title: Configuración de repositorios de Linux para SQL Server 2017 y 2019
 description: Vea y configure repositorios de origen para SQL Server 2019 y SQL Server 2017 en Linux. El repositorio de origen afecta a la versión de SQL Server que se aplica durante la instalación y la actualización.
 author: VanMSFT
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: b71078e0d1d6af9bd35f248e8bbc324ac5c0e570
-ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.openlocfilehash: c1def0c2cfbdc4b3feed191e9eb2673b8e788f82
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73531330"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776382"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configuración de repositorios para instalar y actualizar SQL Server en Linux
 
@@ -173,10 +173,15 @@ En caso necesario, quite el repositorio antiguo. Use uno de los siguientes coman
 ::: zone pivot="ld2-rhel"
 Configure el nuevo repositorio que se va a usar para las instalaciones y las actualizaciones de SQL Server. Use uno de los siguientes comandos para configurar el repositorio que prefiera.
 
-| Repositorio | Versión | Comando |
+> [!NOTE]
+> Los siguientes comandos para SQL Server 2019 apunta al repositorio de RHEL 8. RHEL 8 no viene preinstalado con python2. SQL Server requiere RHEL 8. Para obtener más información, vea el siguiente blog sobre la instalación de python2 y su configuración como intérprete predeterminado: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+>
+> Si usa RHEL 7, cambie la ruta de acceso siguiente a `/rhel/7` en lugar de `/rhel/8`.
+
+| Repositorio | Versión | Get-Help |
 |---|---|---|
-| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo` |
-| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019-gdr.repo` |
+| **2019 CU** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo` |
+| **2019 GDR** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019-gdr.repo` |
 | **2017 CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **2017 GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
 
@@ -186,7 +191,7 @@ Configure el nuevo repositorio que se va a usar para las instalaciones y las act
 ::: zone pivot="ld2-sles"
 Configure el nuevo repositorio que se va a usar para las instalaciones y las actualizaciones de SQL Server. Use uno de los siguientes comandos para configurar el repositorio que prefiera.
 
-| Repositorio | Versión | Comando |
+| Repositorio | Versión | Get-Help |
 |---|---|---|
 | **2019 CU** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo` |
 | **2019 GDR** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019-gdr.repo` |
@@ -207,7 +212,7 @@ Configure el nuevo repositorio que se va a usar para las instalaciones y las act
 
 2. Use uno de los siguientes comandos para configurar el repositorio que prefiera.
 
-   | Repositorio | Versión | Comando |
+   | Repositorio | Versión | Get-Help |
    |---|---|---|
    | **2019 CU** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"` |
    | **2019 GDR** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019-gdr.list)"` |

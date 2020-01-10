@@ -1,6 +1,6 @@
 ---
 title: Ediciones y características admitidas de SQL Server 2019 en Linux
-ms.date: 10/23/2019
+ms.date: 01/08/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: 7327d63e9c22ab1020c885e9b372c444c485de8d
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72954997"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776555"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Ediciones y características admitidas de SQL Server 2019 en Linux
 
@@ -192,7 +192,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Especificación de idioma en la consulta|Sí|Sí|Sí|Sí|
 |Service Broker (mensajería)|Sí|Sí|No (solo cliente)|No (solo cliente)|
 |Transact-SQL, extremos|Sí|Sí|Sí|No|
-|Gráfico|Sí|Sí|Sí|Sí|  
+|Grafo|Sí|Sí|Sí|Sí|  
 
 
 <sup>1</sup> El escalado horizontal con varios nodos de cálculo exige un nodo principal.
@@ -225,9 +225,9 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 | &nbsp; | Ensamblados de CLR con el conjunto de permisos EXTERNAL_ACCESS o UNSAFE |
 | &nbsp; | Buffer Pool Extension |
 | **Agente SQL Server** |  Subsistemas: CmdExec, PowerShell, Agente de lectura de cola, SSIS, SSAS, SSRS |
-| &nbsp; | Trabajos |
+| &nbsp; | Alertas |
 | &nbsp; | Copia de seguridad administrada |
-| **Alta disponibilidad** | Creación de reflejo de base de datos  |
+| **Alta disponibilidad** | Creación de reflejo de la base de datos  |
 | **Seguridad** | Administración extensible de claves |
 | &nbsp; | Autenticación de AD para servidores vinculados | 
 | &nbsp; | Autenticación de AD para grupos de disponibilidad | 

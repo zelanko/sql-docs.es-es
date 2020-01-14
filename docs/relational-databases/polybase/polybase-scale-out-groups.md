@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 06f3568ac1bf3305628583934549d4334c4eedc4
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
+ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710472"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623237"
 ---
 # <a name="polybase-scale-out-groups"></a>Grupos de escalado horizontal de PolyBase
 
@@ -28,13 +28,13 @@ Una instancia de SQL Server independiente con PolyBase puede convertirse en un c
   
 Vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) y [Guía de PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
-![Grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Grupos de escalado horizontal de PolyBase")  
+![grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
   
 ## <a name="head-node"></a>Nodo principal  
 
 El nodo principal contiene la instancia de SQL Server a la que se envían las consultas PolyBase. Cada grupo de PolyBase solo puede tener un nodo principal. Un nodo principal es un grupo lógico del motor de base de datos de SQL, el motor de PolyBase y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server.
   
-## <a name="compute-node"></a>Nodo de proceso  
+## <a name="compute-node"></a>Nodo de ejecución  
 
 Un nodo de ejecución contiene la instancia de SQL Server que ayuda a escalar horizontalmente el procesamiento de las consultas de los datos externos. Un nodo de ejecución es un grupo lógico de SQL Server y el servicio de movimiento de datos de PolyBase de la instancia de SQL Server. Un grupo de PolyBase puede tener varios nodos de ejecución. El nodo principal y los nodos de ejecución deben ejecutar la misma versión de SQL Server.
 
@@ -47,7 +47,7 @@ Por ejemplo, supongamos que tiene una tabla externa de SQL Server con 12 partici
 > [!NOTE]
 >  Y es diferente de las lecturas de escalabilidad horizontal a través de Hadoop. 
 
-![Grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "Grupos de escalado horizontal de PolyBase")
+![grupos de escalado horizontal de PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
   
 ## <a name="distributed-query-processing"></a>Procesamiento de consultas distribuidas  
 
@@ -66,3 +66,10 @@ Después de instalar SQL Server, la instancia puede designarse como nodo princip
 Para configurar un grupo de escalado horizontal de PolyBase, consulte la guía siguiente:
 
 [Improve PolyBase scale-out groups on Windows](configure-scale-out-groups-windows.md) (mejora de los grupos de escalado horizontal de PolyBase en Windows)
+
+## <a name="see-also"></a>Consulte también
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+

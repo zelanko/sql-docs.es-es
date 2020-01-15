@@ -1,6 +1,6 @@
 ---
 title: Ediciones y características admitidas de SQL Server 2017 en Linux
-ms.date: 10/23/2019
+ms.date: 01/14/2020
 ms.prod: sql
 ms.technology: linux
 ms.topic: conceptual
@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 661d74060d9bb6f7097a5fe50291bdde23e0a591
-ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
+ms.openlocfilehash: a652bc56a826469017ba4de643c9d3e1822d4c22
+ms.sourcegitcommit: 0a9058c7da0da9587089a37debcec4fbd5e2e53a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928907"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952530"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y características admitidas de SQL Server 2017 en Linux
 
@@ -192,7 +192,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Especificación de idioma en la consulta|Sí|Sí|Sí|Sí|
 |Service Broker (mensajería)|Sí|Sí|No (solo cliente)|No (solo cliente)|
 |Transact-SQL, extremos|Sí|Sí|Sí|No|
-|Gráfico|Sí|Sí|Sí|Sí|  
+|Grafo|Sí|Sí|Sí|Sí|  
 
 
 <sup>1</sup> El escalado horizontal con varios nodos de cálculo exige un nodo principal.
@@ -215,9 +215,7 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 
 | Área | Característica o servicio no admitido |
 |-----|-----|
-| **Motor de base de datos** | Replicación transaccional |
-| &nbsp; | Replicación de mezcla |
-| &nbsp; | Captura de datos modificados (vea Agente SQL Server) |
+| **Motor de base de datos** | Replicación de mezcla |
 | &nbsp; | Stretch DB |
 | &nbsp; | PolyBase |
 | &nbsp; | Consulta distribuida con conexiones de terceros |
@@ -227,11 +225,10 @@ Las siguientes características y servicios no están disponibles para SQL Serv
 | &nbsp; | Ensamblados de CLR con el conjunto de permisos EXTERNAL_ACCESS o UNSAFE |
 | &nbsp; | Buffer Pool Extension |
 | **Agente SQL Server** |  Subsistemas: CmdExec, PowerShell, Agente de lectura de cola, SSIS, SSAS, SSRS |
-| &nbsp; | Trabajos |
+| &nbsp; | Alertas |
 | &nbsp; | Agente de registro del LOG |
-| &nbsp; | Captura de datos modificados (CDC) |
 | &nbsp; | Copia de seguridad administrada |
-| **Alta disponibilidad** | Creación de reflejo de base de datos  |
+| **Alta disponibilidad** | Creación de reflejo de la base de datos  |
 | **Seguridad** | Administración extensible de claves |
 | &nbsp; | Autenticación de AD para servidores vinculados | 
 | &nbsp; | Autenticación de AD para grupos de disponibilidad | 

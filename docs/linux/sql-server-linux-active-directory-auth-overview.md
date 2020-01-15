@@ -11,18 +11,18 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9f2e5632b073f96faf530db56d052d71f4a143f4
-ms.sourcegitcommit: f9286d02025ee1e15d0f1c124e951e8891fe3cc2
+ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2019
-ms.locfileid: "75329967"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831828"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticación de Active Directory para SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-En este artículo, se proporciona información general sobre la autenticación de Active Directory (AD) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux. La autenticación de AD también se conoce como autenticación integrada en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+En este artículo, se proporciona información general sobre la autenticación de Active Directory (AD) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en Linux. La autenticación de AD también se conoce como autenticación integrada en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 ## <a name="ad-authentication-overview"></a>Información general sobre la autenticación de AD
 
@@ -30,10 +30,10 @@ La autenticación de AD permite que los clientes unidos a un dominio en Windows 
 
 La autenticación de AD tiene las siguientes ventajas sobre la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:
 
-- Los usuarios se autentican mediante el inicio de sesión único, sin que se les pida una contraseña.   
+- Los usuarios se autentican mediante el inicio de sesión único, sin que se les pida una contraseña.
 - Al crear inicios de sesión para grupos de AD, puede administrar el acceso y los permisos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante pertenencias a grupos de AD.  
 - Cada usuario tiene una única identidad en toda la organización, por lo que no es necesario realizar un seguimiento de qué inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se corresponde con cada usuario.   
-- AD le permite implementar una directiva de contraseñas centralizada en toda su organización.   
+- AD le permite implementar una directiva de contraseñas centralizada en toda su organización.
 
 ## <a name="configuration-steps"></a>Pasos de configuración
 
